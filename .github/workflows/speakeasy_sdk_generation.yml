@@ -21,11 +21,11 @@ jobs:
       languages: |
         - python
       mode: direct
-      openapi_doc_auth_header: x-api-key
+      openapi_doc_auth_header: ""
       openapi_docs: |
         - https://api-eu.unified.to/openapi.json
       speakeasy_version: latest
     secrets:
       github_access_token: ${{ secrets.GITHUB_TOKEN }}
-      openapi_doc_auth_token: ${{ secrets.SPEC_TOKEN }}
+      openapi_doc_auth_token: ${{ secrets.OPENAPI_DOC_AUTH_TOKEN }}
       speakeasy_api_key: ${{ secrets.SPEAKEASY_API_KEY }}
