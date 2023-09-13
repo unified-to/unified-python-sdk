@@ -1,0 +1,14 @@
+# TicketingAgent
+
+
+## Fields
+
+| Field                                                                         | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `created_at`                                                                  | [datetime](https://docs.python.org/3/library/datetime.html#datetime-objects)  | :heavy_minus_sign:                                                            | N/A                                                                           |
+| `emails`                                                                      | list[[TicketingEmail](../../models/shared/ticketingemail.md)]                 | :heavy_minus_sign:                                                            | N/A                                                                           |
+| `id`                                                                          | *Optional[str]*                                                               | :heavy_minus_sign:                                                            | N/A                                                                           |
+| `name`                                                                        | *Optional[str]*                                                               | :heavy_minus_sign:                                                            | N/A                                                                           |
+| `raw`                                                                         | [PropertyTicketingAgentRaw](../../models/shared/propertyticketingagentraw.md) | :heavy_check_mark:                                                            | N/A                                                                           |
+| `telephones`                                                                  | list[[TicketingTelephone](../../models/shared/ticketingtelephone.md)]         | :heavy_minus_sign:                                                            | N/A                                                                           |
+| `updated_at`                                                                  | [datetime](https://docs.python.org/3/library/datetime.html#datetime-objects)  | :heavy_minus_sign:                                                            | N/A                                                                           |

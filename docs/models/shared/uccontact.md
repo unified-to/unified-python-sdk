@@ -1,0 +1,18 @@
+# UcContact
+
+A contact represents a person that optionally is associated with a call
+
+
+## Fields
+
+| Field                                                                         | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `company`                                                                     | *Optional[str]*                                                               | :heavy_minus_sign:                                                            | N/A                                                                           |
+| `created_at`                                                                  | [datetime](https://docs.python.org/3/library/datetime.html#datetime-objects)  | :heavy_minus_sign:                                                            | N/A                                                                           |
+| `emails`                                                                      | list[[UcEmail](../../models/shared/ucemail.md)]                               | :heavy_minus_sign:                                                            | An array of email addresses for this contact                                  |
+| `id`                                                                          | *Optional[str]*                                                               | :heavy_minus_sign:                                                            | N/A                                                                           |
+| `name`                                                                        | *Optional[str]*                                                               | :heavy_minus_sign:                                                            | N/A                                                                           |
+| `raw`                                                                         | [Optional[PropertyUcContactRaw]](../../models/shared/propertyuccontactraw.md) | :heavy_minus_sign:                                                            | The raw data returned by the integration for this contact                     |
+| `telephones`                                                                  | list[[UcTelephone](../../models/shared/uctelephone.md)]                       | :heavy_minus_sign:                                                            | An array of telephones for this contact                                       |
+| `title`                                                                       | *Optional[str]*                                                               | :heavy_minus_sign:                                                            | N/A                                                                           |
+| `updated_at`                                                                  | [datetime](https://docs.python.org/3/library/datetime.html#datetime-objects)  | :heavy_minus_sign:                                                            | N/A                                                                           |
