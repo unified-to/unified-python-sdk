@@ -673,7 +673,7 @@ req = operations.GetCrmConnectionIDCompanyRequest(
     order='consectetur',
     query='asperiores',
     sort='architecto',
-    updated_gte=dateutil.parser.parse('2021-05-10').date(),
+    updated_gte=dateutil.parser.isoparse('2021-05-10T22:41:33.400Z'),
 )
 
 res = s.crm.get_crm_connection_id_company(req, operations.GetCrmConnectionIDCompanySecurity(
@@ -757,7 +757,7 @@ req = operations.GetCrmConnectionIDContactRequest(
     order='eligendi',
     query='minima',
     sort='omnis',
-    updated_gte=dateutil.parser.parse('2022-09-10').date(),
+    updated_gte=dateutil.parser.isoparse('2022-09-10T11:36:46.786Z'),
 )
 
 res = s.crm.get_crm_connection_id_contact(req, operations.GetCrmConnectionIDContactSecurity(
@@ -841,7 +841,7 @@ req = operations.GetCrmConnectionIDDealRequest(
     order='dicta',
     query='hic',
     sort='praesentium',
-    updated_gte=dateutil.parser.parse('2022-12-24').date(),
+    updated_gte=dateutil.parser.isoparse('2022-12-24T18:19:51.545Z'),
 )
 
 res = s.crm.get_crm_connection_id_deal(req, operations.GetCrmConnectionIDDealSecurity(
@@ -926,7 +926,7 @@ req = operations.GetCrmConnectionIDEventRequest(
     order='iure',
     query='aliquid',
     sort='cum',
-    updated_gte=dateutil.parser.parse('2021-06-03').date(),
+    updated_gte=dateutil.parser.isoparse('2021-06-03T09:21:56.039Z'),
 )
 
 res = s.crm.get_crm_connection_id_event(req, operations.GetCrmConnectionIDEventSecurity(
@@ -1011,7 +1011,7 @@ req = operations.GetCrmConnectionIDFileRequest(
     order='debitis',
     query='quis',
     sort='eaque',
-    updated_gte=dateutil.parser.parse('2022-09-20').date(),
+    updated_gte=dateutil.parser.isoparse('2022-09-20T06:36:53.290Z'),
 )
 
 res = s.crm.get_crm_connection_id_file(req, operations.GetCrmConnectionIDFileSecurity(
@@ -1093,7 +1093,7 @@ req = operations.GetCrmConnectionIDLeadRequest(
     order='accusamus',
     query='animi',
     sort='necessitatibus',
-    updated_gte=dateutil.parser.parse('2022-01-08').date(),
+    updated_gte=dateutil.parser.isoparse('2022-01-08T01:01:32.152Z'),
 )
 
 res = s.crm.get_crm_connection_id_lead(req, operations.GetCrmConnectionIDLeadSecurity(
@@ -1175,7 +1175,7 @@ req = operations.GetCrmConnectionIDPipelineRequest(
     order='optio',
     query='nobis',
     sort='recusandae',
-    updated_gte=dateutil.parser.parse('2022-03-07').date(),
+    updated_gte=dateutil.parser.isoparse('2022-03-07T13:59:07.330Z'),
 )
 
 res = s.crm.get_crm_connection_id_pipeline(req, operations.GetCrmConnectionIDPipelineSecurity(
@@ -1257,7 +1257,7 @@ req = operations.GetCrmConnectionIDTeamRequest(
     order='doloremque',
     query='quas',
     sort='dolores',
-    updated_gte=dateutil.parser.parse('2022-07-17').date(),
+    updated_gte=dateutil.parser.isoparse('2022-07-17T03:35:07.023Z'),
 )
 
 res = s.crm.get_crm_connection_id_team(req, operations.GetCrmConnectionIDTeamSecurity(
@@ -1339,7 +1339,7 @@ req = operations.GetCrmConnectionIDUserRequest(
     order='eos',
     query='id',
     sort='modi',
-    updated_gte=dateutil.parser.parse('2021-02-14').date(),
+    updated_gte=dateutil.parser.isoparse('2021-02-14T21:03:13.786Z'),
 )
 
 res = s.crm.get_crm_connection_id_user(req, operations.GetCrmConnectionIDUserSecurity(
@@ -1427,7 +1427,7 @@ req = operations.PatchCrmConnectionIDCompanyIDRequest(
             region='tempora',
             region_code='quam',
         ),
-        created_at=dateutil.parser.parse('2022-08-19').date(),
+        created_at=dateutil.parser.isoparse('2022-08-19T22:52:38.662Z'),
         deal_ids=[
             'nesciunt',
         ],
@@ -1449,7 +1449,7 @@ req = operations.PatchCrmConnectionIDCompanyIDRequest(
                 type=shared.CrmTelephoneType.FAX,
             ),
         ],
-        updated_at=dateutil.parser.parse('2020-10-28').date(),
+        updated_at=dateutil.parser.isoparse('2020-10-28T03:30:55.690Z'),
         websites=[
             'ullam',
         ],
@@ -1547,7 +1547,7 @@ req = operations.PatchCrmConnectionIDContactIDRequest(
         company_ids=[
             'sed',
         ],
-        created_at=dateutil.parser.parse('2022-01-04').date(),
+        created_at=dateutil.parser.isoparse('2022-01-04T11:29:46.023Z'),
         deal_ids=[
             'quae',
         ],
@@ -1567,7 +1567,7 @@ req = operations.PatchCrmConnectionIDContactIDRequest(
             ),
         ],
         title='Dr.',
-        updated_at=dateutil.parser.parse('2022-01-22').date(),
+        updated_at=dateutil.parser.isoparse('2022-01-22T12:02:56.688Z'),
     ),
     connection_id='at',
     id='074009ef-8d29-4de1-9d70-97b5da08c57f',
@@ -1688,8 +1688,8 @@ s = unified_to.UnifiedTo()
 req = operations.PatchCrmConnectionIDDealIDRequest(
     crm_deal=shared.CrmDeal(
         amount=3738.4,
-        closed_at=dateutil.parser.parse('2020-08-24').date(),
-        created_at=dateutil.parser.parse('2022-03-03').date(),
+        closed_at=dateutil.parser.isoparse('2020-08-24T08:27:20.153Z'),
+        created_at=dateutil.parser.isoparse('2022-03-03T18:16:48.691Z'),
         currency='autem',
         id='82cb70f8-cfd5-4fb6-a91b-9a9f74846e2c',
         lost_reason='dolorem',
@@ -1702,7 +1702,7 @@ req = operations.PatchCrmConnectionIDDealIDRequest(
         tags=[
             'quibusdam',
         ],
-        updated_at=dateutil.parser.parse('2021-03-03').date(),
+        updated_at=dateutil.parser.isoparse('2021-03-03T07:16:13.857Z'),
         won_reason='nihil',
     ),
     connection_id='ad',
@@ -1755,7 +1755,7 @@ req = operations.PatchCrmConnectionIDEventIDRequest(
         contact_ids=[
             'corrupti',
         ],
-        created_at=dateutil.parser.parse('2021-02-14').date(),
+        created_at=dateutil.parser.isoparse('2021-02-14T11:02:35.160Z'),
         deal_ids=[
             'praesentium',
         ],
@@ -1773,8 +1773,8 @@ req = operations.PatchCrmConnectionIDEventIDRequest(
         id='5359d983-87f7-4a79-8d72-cd2484da2172',
         meeting=shared.PropertyCrmEventMeeting(
             description='omnis',
-            end_at=dateutil.parser.parse('2022-06-12').date(),
-            start_at=dateutil.parser.parse('2021-06-27').date(),
+            end_at=dateutil.parser.isoparse('2022-06-12T16:07:26.364Z'),
+            start_at=dateutil.parser.isoparse('2021-06-27T13:27:59.360Z'),
             title='Mrs.',
         ),
         note=shared.PropertyCrmEventNote(
@@ -1787,7 +1787,7 @@ req = operations.PatchCrmConnectionIDEventIDRequest(
             status='maiores',
         ),
         type=shared.CrmEventType.NOTE,
-        updated_at=dateutil.parser.parse('2022-07-27').date(),
+        updated_at=dateutil.parser.isoparse('2022-07-27T02:27:11.758Z'),
     ),
     connection_id='sint',
     id='ac1e41d8-a23c-423e-b4f2-dfa4a197f6de',
@@ -1950,7 +1950,7 @@ req = operations.PatchCrmConnectionIDFileIDRequest(
         activity_id='maiores',
         company_id='nam',
         contact_id='pariatur',
-        created_at=dateutil.parser.parse('2022-03-15').date(),
+        created_at=dateutil.parser.isoparse('2022-03-15T04:15:28.441Z'),
         deal_id='vitae',
         description='delectus',
         file_name='delectus',
@@ -1960,7 +1960,7 @@ req = operations.PatchCrmConnectionIDFileIDRequest(
         id='e2ae4fb5-cb35-4d17-a38f-1edb78359ecc',
         lead_id='minima',
         raw=shared.PropertyCrmFileRaw(),
-        updated_at=dateutil.parser.parse('2020-11-23').date(),
+        updated_at=dateutil.parser.isoparse('2020-11-23T21:12:07.453Z'),
         user_id='praesentium',
     ),
     connection_id='vel',
@@ -2016,7 +2016,7 @@ req = operations.PatchCrmConnectionIDLeadIDRequest(
         ),
         company_id='repudiandae',
         contact_id='reiciendis',
-        created_at=dateutil.parser.parse('2021-12-15').date(),
+        created_at=dateutil.parser.isoparse('2021-12-15T05:55:06.508Z'),
         creator_user_id='voluptatem',
         emails=[
             shared.CrmEmail(
@@ -2033,7 +2033,7 @@ req = operations.PatchCrmConnectionIDLeadIDRequest(
                 type=shared.CrmTelephoneType.MOBILE,
             ),
         ],
-        updated_at=dateutil.parser.parse('2022-12-18').date(),
+        updated_at=dateutil.parser.isoparse('2022-12-18T11:36:52.499Z'),
         user_id='dicta',
     ),
     connection_id='illo',
@@ -2077,13 +2077,13 @@ s = unified_to.UnifiedTo()
 req = operations.PatchCrmConnectionIDPipelineIDRequest(
     crm_pipeline=shared.CrmPipeline(
         active=False,
-        created_at=dateutil.parser.parse('2021-02-20').date(),
+        created_at=dateutil.parser.isoparse('2021-02-20T18:12:52.838Z'),
         deal_probability=False,
         display_order=6107.66,
         id='cbd795ee-65e0-476c-87ab-f616ea5c7164',
         name='Daisy Franey',
         raw=shared.PropertyCrmPipelineRaw(),
-        updated_at=dateutil.parser.parse('2022-12-15').date(),
+        updated_at=dateutil.parser.isoparse('2022-12-15T04:54:27.796Z'),
     ),
     connection_id='asperiores',
     id='2e09d19d-2fc2-4f9e-ae10-5944b935d237',
@@ -2125,12 +2125,12 @@ s = unified_to.UnifiedTo()
 
 req = operations.PatchCrmConnectionIDTeamIDRequest(
     crm_team=shared.CrmTeam(
-        created_at=dateutil.parser.parse('2022-01-04').date(),
+        created_at=dateutil.parser.isoparse('2022-01-04T13:54:43.971Z'),
         description='dolores',
         id='f90849d6-aed4-4aec-b753-7cd9222c9ff5',
         name='Miss Joanne Morar',
         raw=shared.PropertyCrmTeamRaw(),
-        updated_at=dateutil.parser.parse('2021-01-30').date(),
+        updated_at=dateutil.parser.isoparse('2021-01-30T22:59:32.750Z'),
         user_ids=[
             'laborum',
         ],
@@ -2186,7 +2186,7 @@ req = operations.PatchCrmConnectionIDUserIDRequest(
             region='nihil',
             region_code='voluptas',
         ),
-        created_at=dateutil.parser.parse('2021-03-06').date(),
+        created_at=dateutil.parser.isoparse('2021-03-06T07:25:14.438Z'),
         currency='voluptate',
         department='vitae',
         division='reiciendis',
@@ -2209,7 +2209,7 @@ req = operations.PatchCrmConnectionIDUserIDRequest(
         ],
         timezone='voluptatibus',
         title='Dr.',
-        updated_at=dateutil.parser.parse('2022-03-09').date(),
+        updated_at=dateutil.parser.isoparse('2022-03-09T00:13:28.384Z'),
     ),
     connection_id='corrupti',
     id='28da0131-9112-4964-a645-c1d81f29042f',
@@ -2262,7 +2262,7 @@ req = operations.PostCrmConnectionIDCompanyRequest(
             region='saepe',
             region_code='ipsa',
         ),
-        created_at=dateutil.parser.parse('2022-12-01').date(),
+        created_at=dateutil.parser.isoparse('2022-12-01T21:16:09.744Z'),
         deal_ids=[
             'harum',
         ],
@@ -2284,7 +2284,7 @@ req = operations.PostCrmConnectionIDCompanyRequest(
                 type=shared.CrmTelephoneType.MOBILE,
             ),
         ],
-        updated_at=dateutil.parser.parse('2020-02-02').date(),
+        updated_at=dateutil.parser.isoparse('2020-02-02T16:41:43.438Z'),
         websites=[
             'ex',
         ],
@@ -2342,7 +2342,7 @@ req = operations.PostCrmConnectionIDContactRequest(
         company_ids=[
             'iste',
         ],
-        created_at=dateutil.parser.parse('2022-03-20').date(),
+        created_at=dateutil.parser.isoparse('2022-03-20T19:25:56.778Z'),
         deal_ids=[
             'eaque',
         ],
@@ -2362,7 +2362,7 @@ req = operations.PostCrmConnectionIDContactRequest(
             ),
         ],
         title='Ms.',
-        updated_at=dateutil.parser.parse('2022-02-26').date(),
+        updated_at=dateutil.parser.isoparse('2022-02-26T21:44:20.533Z'),
     ),
     connection_id='adipisci',
 )
@@ -2404,8 +2404,8 @@ s = unified_to.UnifiedTo()
 req = operations.PostCrmConnectionIDDealRequest(
     crm_deal=shared.CrmDeal(
         amount=7937.52,
-        closed_at=dateutil.parser.parse('2022-05-03').date(),
-        created_at=dateutil.parser.parse('2022-01-08').date(),
+        closed_at=dateutil.parser.isoparse('2022-05-03T09:24:51.424Z'),
+        created_at=dateutil.parser.isoparse('2022-01-08T22:42:52.319Z'),
         currency='perspiciatis',
         id='c242c7b6-6a1f-430c-b3df-5b6719890f42',
         lost_reason='est',
@@ -2418,7 +2418,7 @@ req = operations.PostCrmConnectionIDDealRequest(
         tags=[
             'tempore',
         ],
-        updated_at=dateutil.parser.parse('2022-08-11').date(),
+        updated_at=dateutil.parser.isoparse('2022-08-11T19:14:18.431Z'),
         won_reason='aperiam',
     ),
     connection_id='minima',
@@ -2470,7 +2470,7 @@ req = operations.PostCrmConnectionIDEventRequest(
         contact_ids=[
             'reprehenderit',
         ],
-        created_at=dateutil.parser.parse('2022-09-06').date(),
+        created_at=dateutil.parser.isoparse('2022-09-06T00:55:33.119Z'),
         deal_ids=[
             'voluptates',
         ],
@@ -2488,8 +2488,8 @@ req = operations.PostCrmConnectionIDEventRequest(
         id='9c9c3f56-7e0e-4252-b65b-1d62fcdace1f',
         meeting=shared.PropertyCrmEventMeeting(
             description='consequatur',
-            end_at=dateutil.parser.parse('2022-11-10').date(),
-            start_at=dateutil.parser.parse('2022-08-12').date(),
+            end_at=dateutil.parser.isoparse('2022-11-10T21:53:17.505Z'),
+            start_at=dateutil.parser.isoparse('2022-08-12T01:19:59.870Z'),
             title='Miss',
         ),
         note=shared.PropertyCrmEventNote(
@@ -2502,7 +2502,7 @@ req = operations.PostCrmConnectionIDEventRequest(
             status='earum',
         ),
         type=shared.CrmEventType.NOTE,
-        updated_at=dateutil.parser.parse('2022-03-17').date(),
+        updated_at=dateutil.parser.isoparse('2022-03-17T16:09:49.019Z'),
     ),
     connection_id='quibusdam',
 )
@@ -2547,7 +2547,7 @@ req = operations.PostCrmConnectionIDFileRequest(
         activity_id='accusantium',
         company_id='nulla',
         contact_id='inventore',
-        created_at=dateutil.parser.parse('2021-04-23').date(),
+        created_at=dateutil.parser.isoparse('2021-04-23T13:22:50.149Z'),
         deal_id='excepturi',
         description='nostrum',
         file_name='sint',
@@ -2557,7 +2557,7 @@ req = operations.PostCrmConnectionIDFileRequest(
         id='9e39266c-bd95-4f7a-a2b2-4113695d1e66',
         lead_id='excepturi',
         raw=shared.PropertyCrmFileRaw(),
-        updated_at=dateutil.parser.parse('2021-01-03').date(),
+        updated_at=dateutil.parser.isoparse('2021-01-03T16:10:13.814Z'),
         user_id='placeat',
     ),
     connection_id='eligendi',
@@ -2612,7 +2612,7 @@ req = operations.PostCrmConnectionIDLeadRequest(
         ),
         company_id='ad',
         contact_id='incidunt',
-        created_at=dateutil.parser.parse('2022-10-05').date(),
+        created_at=dateutil.parser.isoparse('2022-10-05T13:16:43.183Z'),
         creator_user_id='atque',
         emails=[
             shared.CrmEmail(
@@ -2629,7 +2629,7 @@ req = operations.PostCrmConnectionIDLeadRequest(
                 type=shared.CrmTelephoneType.OTHER,
             ),
         ],
-        updated_at=dateutil.parser.parse('2022-07-30').date(),
+        updated_at=dateutil.parser.isoparse('2022-07-30T21:23:46.073Z'),
         user_id='dolorem',
     ),
     connection_id='explicabo',
@@ -2672,13 +2672,13 @@ s = unified_to.UnifiedTo()
 req = operations.PostCrmConnectionIDPipelineRequest(
     crm_pipeline=shared.CrmPipeline(
         active=False,
-        created_at=dateutil.parser.parse('2021-10-09').date(),
+        created_at=dateutil.parser.isoparse('2021-10-09T23:12:13.436Z'),
         deal_probability=False,
         display_order=5796.9,
         id='54b6fa22-0636-4982-8553-cb10006bef49',
         name='Martha Ward',
         raw=shared.PropertyCrmPipelineRaw(),
-        updated_at=dateutil.parser.parse('2022-08-17').date(),
+        updated_at=dateutil.parser.isoparse('2022-08-17T04:23:48.087Z'),
     ),
     connection_id='nesciunt',
 )
@@ -2719,12 +2719,12 @@ s = unified_to.UnifiedTo()
 
 req = operations.PostCrmConnectionIDTeamRequest(
     crm_team=shared.CrmTeam(
-        created_at=dateutil.parser.parse('2022-01-19').date(),
+        created_at=dateutil.parser.isoparse('2022-01-19T21:20:19.403Z'),
         description='eius',
         id='9366ac8e-e0f2-4bf1-9588-d40d03f3deba',
         name='Faye Kreiger',
         raw=shared.PropertyCrmTeamRaw(),
-        updated_at=dateutil.parser.parse('2022-01-25').date(),
+        updated_at=dateutil.parser.isoparse('2022-01-25T05:40:03.032Z'),
         user_ids=[
             'cupiditate',
         ],
@@ -2779,7 +2779,7 @@ req = operations.PostCrmConnectionIDUserRequest(
             region='dolore',
             region_code='perferendis',
         ),
-        created_at=dateutil.parser.parse('2022-03-25').date(),
+        created_at=dateutil.parser.isoparse('2022-03-25T18:04:46.803Z'),
         currency='libero',
         department='dolor',
         division='nesciunt',
@@ -2802,7 +2802,7 @@ req = operations.PostCrmConnectionIDUserRequest(
         ],
         timezone='quae',
         title='Mrs.',
-        updated_at=dateutil.parser.parse('2022-04-20').date(),
+        updated_at=dateutil.parser.isoparse('2022-04-20T19:05:05.653Z'),
     ),
     connection_id='laboriosam',
 )
@@ -2854,7 +2854,7 @@ req = operations.PutCrmConnectionIDCompanyIDRequest(
             region='saepe',
             region_code='assumenda',
         ),
-        created_at=dateutil.parser.parse('2022-08-27').date(),
+        created_at=dateutil.parser.isoparse('2022-08-27T00:13:35.019Z'),
         deal_ids=[
             'dolore',
         ],
@@ -2876,7 +2876,7 @@ req = operations.PutCrmConnectionIDCompanyIDRequest(
                 type=shared.CrmTelephoneType.MOBILE,
             ),
         ],
-        updated_at=dateutil.parser.parse('2022-10-16').date(),
+        updated_at=dateutil.parser.isoparse('2022-10-16T02:41:29.464Z'),
         websites=[
             'ex',
         ],
@@ -2974,7 +2974,7 @@ req = operations.PutCrmConnectionIDContactIDRequest(
         company_ids=[
             'quaerat',
         ],
-        created_at=dateutil.parser.parse('2020-11-15').date(),
+        created_at=dateutil.parser.isoparse('2020-11-15T07:36:34.212Z'),
         deal_ids=[
             'libero',
         ],
@@ -2994,7 +2994,7 @@ req = operations.PutCrmConnectionIDContactIDRequest(
             ),
         ],
         title='Ms.',
-        updated_at=dateutil.parser.parse('2020-06-03').date(),
+        updated_at=dateutil.parser.isoparse('2020-06-03T03:25:43.201Z'),
     ),
     connection_id='nemo',
     id='97ff4711-aa1b-4c74-b86c-ecc74f77b484',
@@ -3115,8 +3115,8 @@ s = unified_to.UnifiedTo()
 req = operations.PutCrmConnectionIDDealIDRequest(
     crm_deal=shared.CrmDeal(
         amount=4502.9,
-        closed_at=dateutil.parser.parse('2022-07-29').date(),
-        created_at=dateutil.parser.parse('2022-04-18').date(),
+        closed_at=dateutil.parser.isoparse('2022-07-29T20:23:21.998Z'),
+        created_at=dateutil.parser.isoparse('2022-04-18T00:26:00.845Z'),
         currency='quis',
         id='4aa432b4-7e17-463c-9208-c23e9802d82f',
         lost_reason='alias',
@@ -3129,7 +3129,7 @@ req = operations.PutCrmConnectionIDDealIDRequest(
         tags=[
             'ea',
         ],
-        updated_at=dateutil.parser.parse('2022-09-15').date(),
+        updated_at=dateutil.parser.isoparse('2022-09-15T14:22:34.731Z'),
         won_reason='repudiandae',
     ),
     connection_id='recusandae',
@@ -3182,7 +3182,7 @@ req = operations.PutCrmConnectionIDEventIDRequest(
         contact_ids=[
             'dolore',
         ],
-        created_at=dateutil.parser.parse('2022-04-24').date(),
+        created_at=dateutil.parser.isoparse('2022-04-24T17:49:43.208Z'),
         deal_ids=[
             'illum',
         ],
@@ -3200,8 +3200,8 @@ req = operations.PutCrmConnectionIDEventIDRequest(
         id='cc503f6c-39bc-4d0a-a290-f957f385189a',
         meeting=shared.PropertyCrmEventMeeting(
             description='possimus',
-            end_at=dateutil.parser.parse('2022-02-11').date(),
-            start_at=dateutil.parser.parse('2021-05-31').date(),
+            end_at=dateutil.parser.isoparse('2022-02-11T04:42:06.535Z'),
+            start_at=dateutil.parser.isoparse('2021-05-31T22:12:13.308Z'),
             title='Mr.',
         ),
         note=shared.PropertyCrmEventNote(
@@ -3214,7 +3214,7 @@ req = operations.PutCrmConnectionIDEventIDRequest(
             status='dolorem',
         ),
         type=shared.CrmEventType.EMAIL,
-        updated_at=dateutil.parser.parse('2021-02-13').date(),
+        updated_at=dateutil.parser.isoparse('2021-02-13T00:37:19.915Z'),
     ),
     connection_id='odio',
     id='9fb9de40-32ba-426f-9368-ba9216bcb415',
@@ -3377,7 +3377,7 @@ req = operations.PutCrmConnectionIDFileIDRequest(
         activity_id='quis',
         company_id='possimus',
         contact_id='reiciendis',
-        created_at=dateutil.parser.parse('2022-01-31').date(),
+        created_at=dateutil.parser.isoparse('2022-01-31T11:59:12.250Z'),
         deal_id='iste',
         description='ex',
         file_name='odit',
@@ -3387,7 +3387,7 @@ req = operations.PutCrmConnectionIDFileIDRequest(
         id='ef2b0a3e-42c1-4aa0-90e9-aac2e9135586',
         lead_id='fugiat',
         raw=shared.PropertyCrmFileRaw(),
-        updated_at=dateutil.parser.parse('2022-06-12').date(),
+        updated_at=dateutil.parser.isoparse('2022-06-12T01:32:42.693Z'),
         user_id='delectus',
     ),
     connection_id='sint',
@@ -3443,7 +3443,7 @@ req = operations.PutCrmConnectionIDLeadIDRequest(
         ),
         company_id='fuga',
         contact_id='assumenda',
-        created_at=dateutil.parser.parse('2022-10-30').date(),
+        created_at=dateutil.parser.isoparse('2022-10-30T18:31:55.664Z'),
         creator_user_id='beatae',
         emails=[
             shared.CrmEmail(
@@ -3460,7 +3460,7 @@ req = operations.PutCrmConnectionIDLeadIDRequest(
                 type=shared.CrmTelephoneType.MOBILE,
             ),
         ],
-        updated_at=dateutil.parser.parse('2022-12-22').date(),
+        updated_at=dateutil.parser.isoparse('2022-12-22T05:54:49.594Z'),
         user_id='nostrum',
     ),
     connection_id='doloremque',
@@ -3504,13 +3504,13 @@ s = unified_to.UnifiedTo()
 req = operations.PutCrmConnectionIDPipelineIDRequest(
     crm_pipeline=shared.CrmPipeline(
         active=False,
-        created_at=dateutil.parser.parse('2021-02-13').date(),
+        created_at=dateutil.parser.isoparse('2021-02-13T05:37:28.481Z'),
         deal_probability=False,
         display_order=7807.03,
         id='8b3a2875-c6c1-4fe6-86d0-7d2a9c87ae50',
         name='Gerald Keebler',
         raw=shared.PropertyCrmPipelineRaw(),
-        updated_at=dateutil.parser.parse('2022-05-17').date(),
+        updated_at=dateutil.parser.isoparse('2022-05-17T08:54:26.898Z'),
     ),
     connection_id='veritatis',
     id='d9136a7e-8d53-4213-b3f6-58752db764c5',
@@ -3552,12 +3552,12 @@ s = unified_to.UnifiedTo()
 
 req = operations.PutCrmConnectionIDTeamIDRequest(
     crm_team=shared.CrmTeam(
-        created_at=dateutil.parser.parse('2021-01-08').date(),
+        created_at=dateutil.parser.isoparse('2021-01-08T19:51:30.319Z'),
         description='doloremque',
         id='a56cebca-da29-4ca7-9181-c95671663c53',
         name='Candice Hane',
         raw=shared.PropertyCrmTeamRaw(),
-        updated_at=dateutil.parser.parse('2022-11-27').date(),
+        updated_at=dateutil.parser.isoparse('2022-11-27T21:57:18.105Z'),
         user_ids=[
             'autem',
         ],
@@ -3613,7 +3613,7 @@ req = operations.PutCrmConnectionIDUserIDRequest(
             region='sint',
             region_code='incidunt',
         ),
-        created_at=dateutil.parser.parse('2022-08-05').date(),
+        created_at=dateutil.parser.isoparse('2022-08-05T18:58:20.416Z'),
         currency='aperiam',
         department='itaque',
         division='quo',
@@ -3636,7 +3636,7 @@ req = operations.PutCrmConnectionIDUserIDRequest(
         ],
         timezone='dolores',
         title='Miss',
-        updated_at=dateutil.parser.parse('2021-05-08').date(),
+        updated_at=dateutil.parser.isoparse('2021-05-08T11:32:15.746Z'),
     ),
     connection_id='iure',
     id='3388e4d8-039e-4a5f-9b18-a244fd619039',

@@ -69,7 +69,7 @@ req = operations.GetCrmConnectionIDDealRequest(
     order='aspernatur',
     query='ut',
     sort='deserunt',
-    updated_gte=dateutil.parser.parse('2022-02-20').date(),
+    updated_gte=dateutil.parser.isoparse('2022-02-20T22:48:15.284Z'),
 )
 
 res = s.deal.get_crm_connection_id_deal(req, operations.GetCrmConnectionIDDealSecurity(
@@ -147,8 +147,8 @@ s = unified_to.UnifiedTo()
 req = operations.PatchCrmConnectionIDDealIDRequest(
     crm_deal=shared.CrmDeal(
         amount=2743.68,
-        closed_at=dateutil.parser.parse('2021-02-04').date(),
-        created_at=dateutil.parser.parse('2021-12-30').date(),
+        closed_at=dateutil.parser.isoparse('2021-02-04T20:36:14.764Z'),
+        created_at=dateutil.parser.isoparse('2021-12-30T15:49:38.515Z'),
         currency='hic',
         id='8f1bf0bc-8e1f-4206-95d8-31d0081090f6',
         lost_reason='nihil',
@@ -161,7 +161,7 @@ req = operations.PatchCrmConnectionIDDealIDRequest(
         tags=[
             'quos',
         ],
-        updated_at=dateutil.parser.parse('2022-03-17').date(),
+        updated_at=dateutil.parser.isoparse('2022-03-17T20:43:59.276Z'),
         won_reason='exercitationem',
     ),
     connection_id='molestiae',
@@ -205,8 +205,8 @@ s = unified_to.UnifiedTo()
 req = operations.PostCrmConnectionIDDealRequest(
     crm_deal=shared.CrmDeal(
         amount=6489.85,
-        closed_at=dateutil.parser.parse('2022-04-04').date(),
-        created_at=dateutil.parser.parse('2020-05-19').date(),
+        closed_at=dateutil.parser.isoparse('2022-04-04T11:17:39.742Z'),
+        created_at=dateutil.parser.isoparse('2020-05-19T07:26:52.477Z'),
         currency='natus',
         id='dda33dcd-6348-43e4-a7a9-8e4df37e45b8',
         lost_reason='omnis',
@@ -219,7 +219,7 @@ req = operations.PostCrmConnectionIDDealRequest(
         tags=[
             'numquam',
         ],
-        updated_at=dateutil.parser.parse('2022-08-25').date(),
+        updated_at=dateutil.parser.isoparse('2022-08-25T17:34:42.796Z'),
         won_reason='consectetur',
     ),
     connection_id='dicta',
@@ -262,8 +262,8 @@ s = unified_to.UnifiedTo()
 req = operations.PutCrmConnectionIDDealIDRequest(
     crm_deal=shared.CrmDeal(
         amount=551.24,
-        closed_at=dateutil.parser.parse('2022-12-18').date(),
-        created_at=dateutil.parser.parse('2022-04-06').date(),
+        closed_at=dateutil.parser.isoparse('2022-12-18T04:51:10.637Z'),
+        created_at=dateutil.parser.isoparse('2022-04-06T10:46:32.109Z'),
         currency='facere',
         id='354c092b-d734-4f02-849d-86f4bb20fe5d',
         lost_reason='provident',
@@ -276,7 +276,7 @@ req = operations.PutCrmConnectionIDDealIDRequest(
         tags=[
             'placeat',
         ],
-        updated_at=dateutil.parser.parse('2021-01-19').date(),
+        updated_at=dateutil.parser.isoparse('2021-01-19T07:13:22.442Z'),
         won_reason='modi',
     ),
     connection_id='enim',

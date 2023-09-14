@@ -245,7 +245,7 @@ req = operations.GetAtsConnectionIDApplicationRequest(
     order='deleniti',
     query='itaque',
     sort='dolorum',
-    updated_gte=dateutil.parser.parse('2022-05-23').date(),
+    updated_gte=dateutil.parser.isoparse('2022-05-23T15:36:15.509Z'),
 )
 
 res = s.ats.get_ats_connection_id_application(req, operations.GetAtsConnectionIDApplicationSecurity(
@@ -327,7 +327,7 @@ req = operations.GetAtsConnectionIDCandidateRequest(
     order='voluptas',
     query='asperiores',
     sort='aperiam',
-    updated_gte=dateutil.parser.parse('2022-09-09').date(),
+    updated_gte=dateutil.parser.isoparse('2022-09-09T19:48:26.093Z'),
 )
 
 res = s.ats.get_ats_connection_id_candidate(req, operations.GetAtsConnectionIDCandidateSecurity(
@@ -410,7 +410,7 @@ req = operations.GetAtsConnectionIDInterviewRequest(
     order='assumenda',
     query='nemo',
     sort='recusandae',
-    updated_gte=dateutil.parser.parse('2022-12-15').date(),
+    updated_gte=dateutil.parser.isoparse('2022-12-15T04:58:32.488Z'),
 )
 
 res = s.ats.get_ats_connection_id_interview(req, operations.GetAtsConnectionIDInterviewSecurity(
@@ -492,7 +492,7 @@ req = operations.GetAtsConnectionIDJobRequest(
     order='voluptas',
     query='voluptas',
     sort='voluptas',
-    updated_gte=dateutil.parser.parse('2022-04-02').date(),
+    updated_gte=dateutil.parser.isoparse('2022-04-02T16:36:53.419Z'),
 )
 
 res = s.ats.get_ats_connection_id_job(req, operations.GetAtsConnectionIDJobSecurity(
@@ -577,7 +577,7 @@ req = operations.GetAtsConnectionIDScorecardRequest(
     order='in',
     query='commodi',
     sort='quidem',
-    updated_gte=dateutil.parser.parse('2022-08-15').date(),
+    updated_gte=dateutil.parser.isoparse('2022-08-15T21:51:46.128Z'),
 )
 
 res = s.ats.get_ats_connection_id_scorecard(req, operations.GetAtsConnectionIDScorecardSecurity(
@@ -654,17 +654,17 @@ s = unified_to.UnifiedTo()
 
 req = operations.PatchAtsConnectionIDApplicationIDRequest(
     ats_application=shared.AtsApplication(
-        applied_at=dateutil.parser.parse('2022-02-08').date(),
+        applied_at=dateutil.parser.isoparse('2022-02-08T08:59:54.184Z'),
         candidate_id='rem',
-        created_at=dateutil.parser.parse('2022-04-02').date(),
+        created_at=dateutil.parser.isoparse('2022-04-02T00:47:15.232Z'),
         id='a55efd20-e457-4e18-98b6-a89fbe3a5aa8',
         job_id='accusamus',
         raw=shared.PropertyAtsApplicationRaw(),
-        rejected_at=dateutil.parser.parse('2022-06-16').date(),
+        rejected_at=dateutil.parser.isoparse('2022-06-16T13:22:48.429Z'),
         rejected_reason='fugit',
         source='ut',
         status=shared.AtsApplicationStatus.HIRED,
-        updated_at=dateutil.parser.parse('2022-05-14').date(),
+        updated_at=dateutil.parser.isoparse('2022-05-14T04:54:08.545Z'),
     ),
     connection_id='expedita',
     id='4075088e-5186-4206-9e90-4f3b1194b8ab',
@@ -717,7 +717,7 @@ req = operations.PatchAtsConnectionIDCandidateIDRequest(
             region_code='mollitia',
         ),
         company_name='veniam',
-        created_at=dateutil.parser.parse('2022-03-18').date(),
+        created_at=dateutil.parser.isoparse('2022-03-18T08:14:24.399Z'),
         emails=[
             shared.AtsEmail(
                 email='Avis_Littel@hotmail.com',
@@ -739,7 +739,7 @@ req = operations.PatchAtsConnectionIDCandidateIDRequest(
             ),
         ],
         title='Ms.',
-        updated_at=dateutil.parser.parse('2022-02-04').date(),
+        updated_at=dateutil.parser.isoparse('2022-02-04T04:20:12.809Z'),
     ),
     connection_id='consequuntur',
     id='9e973e92-2a57-4a15-be3e-060807e2b6e3',
@@ -783,16 +783,16 @@ req = operations.PatchAtsConnectionIDInterviewIDRequest(
     ats_interview=shared.AtsInterview(
         application_id='laborum',
         candidate_id='distinctio',
-        created_at=dateutil.parser.parse('2021-12-15').date(),
-        end_at=dateutil.parser.parse('2022-09-05').date(),
+        created_at=dateutil.parser.isoparse('2021-12-15T04:55:40.282Z'),
+        end_at=dateutil.parser.isoparse('2022-09-05T23:50:51.335Z'),
         external_event_xref='repellat',
         id='0597a60f-f2a5-44a3-9e94-764a3e865e79',
         job_id='quis',
         location='eum',
         raw=shared.PropertyAtsInterviewRaw(),
-        start_at=dateutil.parser.parse('2021-03-22').date(),
+        start_at=dateutil.parser.isoparse('2021-03-22T21:44:03.640Z'),
         status=shared.AtsInterviewStatus.SCHEDULED,
-        updated_at=dateutil.parser.parse('2022-11-26').date(),
+        updated_at=dateutil.parser.isoparse('2022-11-26T15:59:49.659Z'),
         user_ids=[
             'animi',
         ],
@@ -849,7 +849,7 @@ req = operations.PatchAtsConnectionIDJobIDRequest(
                 region_code='provident',
             ),
         ],
-        closed_at=dateutil.parser.parse('2020-10-06').date(),
+        closed_at=dateutil.parser.isoparse('2020-10-06T18:56:18.922Z'),
         compensation=[
             shared.AtsCompensation(
                 currency='hic',
@@ -859,7 +859,7 @@ req = operations.PatchAtsConnectionIDJobIDRequest(
                 type=shared.AtsCompensationType.STOCK_OPTIONS,
             ),
         ],
-        created_at=dateutil.parser.parse('2020-04-29').date(),
+        created_at=dateutil.parser.isoparse('2020-04-29T11:28:14.354Z'),
         departments=[
             'aliquid',
         ],
@@ -880,7 +880,7 @@ req = operations.PatchAtsConnectionIDJobIDRequest(
         ],
         remote=False,
         status=shared.AtsJobStatus.PENDING,
-        updated_at=dateutil.parser.parse('2022-12-10').date(),
+        updated_at=dateutil.parser.isoparse('2022-12-10T12:17:45.772Z'),
     ),
     connection_id='laborum',
     id='15db6a66-0659-4a1a-9eaa-b5851d6c645b',
@@ -924,14 +924,14 @@ req = operations.PatchAtsConnectionIDScorecardIDRequest(
     ats_scorecard=shared.AtsScorecard(
         application_id='voluptatem',
         candidate_id='molestias',
-        created_at=dateutil.parser.parse('2022-03-15').date(),
+        created_at=dateutil.parser.isoparse('2022-03-15T05:57:22.639Z'),
         id='1891baa0-fe1a-4de0-88e6-f8c5f350d8cd',
         interview_id='nam',
         interviewer_id='ipsam',
         job_id='culpa',
         raw=shared.PropertyAtsScorecardRaw(),
         recommendation=shared.AtsScorecardRecommendation.DEFINITELY_NO,
-        updated_at=dateutil.parser.parse('2022-12-02').date(),
+        updated_at=dateutil.parser.isoparse('2022-12-02T14:32:21.843Z'),
     ),
     connection_id='deleniti',
     id='14301042-1813-4d52-88ec-e7e253b66845',
@@ -973,17 +973,17 @@ s = unified_to.UnifiedTo()
 
 req = operations.PostAtsConnectionIDApplicationRequest(
     ats_application=shared.AtsApplication(
-        applied_at=dateutil.parser.parse('2022-03-21').date(),
+        applied_at=dateutil.parser.isoparse('2022-03-21T18:14:19.097Z'),
         candidate_id='autem',
-        created_at=dateutil.parser.parse('2021-11-01').date(),
+        created_at=dateutil.parser.isoparse('2021-11-01T18:57:38.460Z'),
         id='e205e16d-eab3-4fec-9578-a64584273a84',
         job_id='quasi',
         raw=shared.PropertyAtsApplicationRaw(),
-        rejected_at=dateutil.parser.parse('2021-04-19').date(),
+        rejected_at=dateutil.parser.isoparse('2021-04-19T03:31:22.925Z'),
         rejected_reason='dicta',
         source='nisi',
         status=shared.AtsApplicationStatus.REVIEWING,
-        updated_at=dateutil.parser.parse('2022-12-14').date(),
+        updated_at=dateutil.parser.isoparse('2022-12-14T21:58:33.872Z'),
     ),
     connection_id='cupiditate',
 )
@@ -1035,7 +1035,7 @@ req = operations.PostAtsConnectionIDCandidateRequest(
             region_code='minima',
         ),
         company_name='praesentium',
-        created_at=dateutil.parser.parse('2022-02-06').date(),
+        created_at=dateutil.parser.isoparse('2022-02-06T01:23:27.992Z'),
         emails=[
             shared.AtsEmail(
                 email='Katheryn.Johns52@hotmail.com',
@@ -1057,7 +1057,7 @@ req = operations.PostAtsConnectionIDCandidateRequest(
             ),
         ],
         title='Miss',
-        updated_at=dateutil.parser.parse('2022-07-08').date(),
+        updated_at=dateutil.parser.isoparse('2022-07-08T17:52:09.255Z'),
     ),
     connection_id='voluptate',
 )
@@ -1100,16 +1100,16 @@ req = operations.PostAtsConnectionIDInterviewRequest(
     ats_interview=shared.AtsInterview(
         application_id='sequi',
         candidate_id='dignissimos',
-        created_at=dateutil.parser.parse('2022-03-22').date(),
-        end_at=dateutil.parser.parse('2021-04-24').date(),
+        created_at=dateutil.parser.isoparse('2022-03-22T23:13:00.381Z'),
+        end_at=dateutil.parser.isoparse('2021-04-24T17:00:12.334Z'),
         external_event_xref='iure',
         id='2f64d1db-1f2c-4431-8661-e96349e1cf9e',
         job_id='alias',
         location='nisi',
         raw=shared.PropertyAtsInterviewRaw(),
-        start_at=dateutil.parser.parse('2022-04-10').date(),
+        start_at=dateutil.parser.isoparse('2022-04-10T19:32:47.130Z'),
         status=shared.AtsInterviewStatus.COMPLETE,
-        updated_at=dateutil.parser.parse('2022-10-11').date(),
+        updated_at=dateutil.parser.isoparse('2022-10-11T01:40:09.903Z'),
         user_ids=[
             'iusto',
         ],
@@ -1165,7 +1165,7 @@ req = operations.PostAtsConnectionIDJobRequest(
                 region_code='impedit',
             ),
         ],
-        closed_at=dateutil.parser.parse('2022-08-23').date(),
+        closed_at=dateutil.parser.isoparse('2022-08-23T12:57:35.673Z'),
         compensation=[
             shared.AtsCompensation(
                 currency='est',
@@ -1175,7 +1175,7 @@ req = operations.PostAtsConnectionIDJobRequest(
                 type=shared.AtsCompensationType.SALARY,
             ),
         ],
-        created_at=dateutil.parser.parse('2022-04-20').date(),
+        created_at=dateutil.parser.isoparse('2022-04-20T16:11:36.555Z'),
         departments=[
             'vitae',
         ],
@@ -1196,7 +1196,7 @@ req = operations.PostAtsConnectionIDJobRequest(
         ],
         remote=False,
         status=shared.AtsJobStatus.ARCHIVED,
-        updated_at=dateutil.parser.parse('2022-10-05').date(),
+        updated_at=dateutil.parser.isoparse('2022-10-05T07:59:39.108Z'),
     ),
     connection_id='aperiam',
 )
@@ -1239,14 +1239,14 @@ req = operations.PostAtsConnectionIDScorecardRequest(
     ats_scorecard=shared.AtsScorecard(
         application_id='totam',
         candidate_id='dolore',
-        created_at=dateutil.parser.parse('2020-11-09').date(),
+        created_at=dateutil.parser.isoparse('2020-11-09T00:25:03.486Z'),
         id='0672d1ad-879e-4eb9-a65b-85efbd02bae0',
         interview_id='expedita',
         interviewer_id='officiis',
         job_id='eos',
         raw=shared.PropertyAtsScorecardRaw(),
         recommendation=shared.AtsScorecardRecommendation.STRONG_YES,
-        updated_at=dateutil.parser.parse('2022-06-28').date(),
+        updated_at=dateutil.parser.isoparse('2022-06-28T19:16:42.798Z'),
     ),
     connection_id='odit',
 )
@@ -1287,17 +1287,17 @@ s = unified_to.UnifiedTo()
 
 req = operations.PutAtsConnectionIDApplicationIDRequest(
     ats_application=shared.AtsApplication(
-        applied_at=dateutil.parser.parse('2022-08-22').date(),
+        applied_at=dateutil.parser.isoparse('2022-08-22T23:12:04.283Z'),
         candidate_id='error',
-        created_at=dateutil.parser.parse('2022-04-13').date(),
+        created_at=dateutil.parser.isoparse('2022-04-13T22:13:24.007Z'),
         id='ea4b5197-f924-443d-a7ce-52b895c537c6',
         job_id='modi',
         raw=shared.PropertyAtsApplicationRaw(),
-        rejected_at=dateutil.parser.parse('2022-09-14').date(),
+        rejected_at=dateutil.parser.isoparse('2022-09-14T03:12:12.516Z'),
         rejected_reason='voluptates',
         source='maiores',
         status=shared.AtsApplicationStatus.OFFERED,
-        updated_at=dateutil.parser.parse('2022-04-10').date(),
+        updated_at=dateutil.parser.isoparse('2022-04-10T10:41:17.662Z'),
     ),
     connection_id='ratione',
     id='4896c3ca-5acf-4be2-bd57-07577929177d',
@@ -1350,7 +1350,7 @@ req = operations.PutAtsConnectionIDCandidateIDRequest(
             region_code='cum',
         ),
         company_name='dicta',
-        created_at=dateutil.parser.parse('2021-12-30').date(),
+        created_at=dateutil.parser.isoparse('2021-12-30T18:01:47.888Z'),
         emails=[
             shared.AtsEmail(
                 email='Chanel16@yahoo.com',
@@ -1372,7 +1372,7 @@ req = operations.PutAtsConnectionIDCandidateIDRequest(
             ),
         ],
         title='Mr.',
-        updated_at=dateutil.parser.parse('2022-09-01').date(),
+        updated_at=dateutil.parser.isoparse('2022-09-01T10:17:19.810Z'),
     ),
     connection_id='libero',
     id='197cd44e-2f52-4d82-9351-3bb6f48b656b',
@@ -1416,16 +1416,16 @@ req = operations.PutAtsConnectionIDInterviewIDRequest(
     ats_interview=shared.AtsInterview(
         application_id='minus',
         candidate_id='facere',
-        created_at=dateutil.parser.parse('2022-07-26').date(),
-        end_at=dateutil.parser.parse('2022-01-10').date(),
+        created_at=dateutil.parser.isoparse('2022-07-26T02:32:48.491Z'),
+        end_at=dateutil.parser.isoparse('2022-01-10T13:20:53.595Z'),
         external_event_xref='voluptatibus',
         id='2e4b2753-7a8c-4d9e-b319-c177d525f77b',
         job_id='illo',
         location='ab',
         raw=shared.PropertyAtsInterviewRaw(),
-        start_at=dateutil.parser.parse('2022-02-14').date(),
+        start_at=dateutil.parser.isoparse('2022-02-14T02:26:29.574Z'),
         status=shared.AtsInterviewStatus.COMPLETE,
-        updated_at=dateutil.parser.parse('2022-05-02').date(),
+        updated_at=dateutil.parser.isoparse('2022-05-02T04:00:18.906Z'),
         user_ids=[
             'eos',
         ],
@@ -1482,7 +1482,7 @@ req = operations.PutAtsConnectionIDJobIDRequest(
                 region_code='amet',
             ),
         ],
-        closed_at=dateutil.parser.parse('2022-11-18').date(),
+        closed_at=dateutil.parser.isoparse('2022-11-18T21:12:35.377Z'),
         compensation=[
             shared.AtsCompensation(
                 currency='laudantium',
@@ -1492,7 +1492,7 @@ req = operations.PutAtsConnectionIDJobIDRequest(
                 type=shared.AtsCompensationType.BONUS,
             ),
         ],
-        created_at=dateutil.parser.parse('2021-08-24').date(),
+        created_at=dateutil.parser.isoparse('2021-08-24T16:29:13.432Z'),
         departments=[
             'necessitatibus',
         ],
@@ -1513,7 +1513,7 @@ req = operations.PutAtsConnectionIDJobIDRequest(
         ],
         remote=False,
         status=shared.AtsJobStatus.OPEN,
-        updated_at=dateutil.parser.parse('2021-01-30').date(),
+        updated_at=dateutil.parser.isoparse('2021-01-30T14:43:38.066Z'),
     ),
     connection_id='amet',
     id='f2ceda7e-23f2-4257-811f-af4b7544e472',
@@ -1557,14 +1557,14 @@ req = operations.PutAtsConnectionIDScorecardIDRequest(
     ats_scorecard=shared.AtsScorecard(
         application_id='accusamus',
         candidate_id='rem',
-        created_at=dateutil.parser.parse('2022-11-10').date(),
+        created_at=dateutil.parser.isoparse('2022-11-10T05:40:49.537Z'),
         id='857a5b40-463a-47d5-b5f1-400e764ad733',
         interview_id='quaerat',
         interviewer_id='itaque',
         job_id='minus',
         raw=shared.PropertyAtsScorecardRaw(),
         recommendation=shared.AtsScorecardRecommendation.DEFINITELY_NO,
-        updated_at=dateutil.parser.parse('2022-01-14').date(),
+        updated_at=dateutil.parser.isoparse('2022-01-14T14:18:21.018Z'),
     ),
     connection_id='quas',
     id='1b36a080-88d1-400e-bada-200ef0422eb2',

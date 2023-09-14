@@ -64,7 +64,7 @@ req = operations.GetUnifiedWebhookRequest(
     offset=9427.54,
     order='eum',
     sort='rem',
-    updated_gte=dateutil.parser.parse('2022-05-29').date(),
+    updated_gte=dateutil.parser.isoparse('2022-05-29T07:20:34.094Z'),
 )
 
 res = s.webhook.get_unified_webhook(req, operations.GetUnifiedWebhookSecurity(
@@ -140,9 +140,9 @@ s = unified_to.UnifiedTo()
 
 req = operations.PostUnifiedWebhookConnectionIDObjectRequest(
     webhook=shared.Webhook(
-        checked_at=dateutil.parser.parse('2022-08-13').date(),
+        checked_at=dateutil.parser.isoparse('2022-08-13T23:23:14.155Z'),
         connection_id='minima',
-        created_at=dateutil.parser.parse('2020-02-03').date(),
+        created_at=dateutil.parser.isoparse('2020-02-03T17:57:01.294Z'),
         environment='fugiat',
         events=[
             shared.PropertyWebhookEvents.UPDATED,
@@ -156,7 +156,7 @@ req = operations.PostUnifiedWebhookConnectionIDObjectRequest(
         subscriptions=[
             'iure',
         ],
-        updated_at=dateutil.parser.parse('2021-05-13').date(),
+        updated_at=dateutil.parser.isoparse('2021-05-13T02:27:36.070Z'),
         workspace_id='debitis',
     ),
     connection_id='reiciendis',

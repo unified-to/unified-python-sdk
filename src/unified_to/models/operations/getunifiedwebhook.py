@@ -4,7 +4,7 @@ from __future__ import annotations
 import dataclasses
 import requests as requests_http
 from ..shared import webhook as shared_webhook
-from datetime import date
+from datetime import datetime
 from typing import Optional
 
 
@@ -26,7 +26,7 @@ class GetUnifiedWebhookRequest:
     offset: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
     order: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'order', 'style': 'form', 'explode': True }})
     sort: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': True }})
-    updated_gte: Optional[date] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'updated_gte', 'style': 'form', 'explode': True }})
+    updated_gte: Optional[datetime] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'updated_gte', 'style': 'form', 'explode': True }})
     r"""Return only results whose updated date is equal or greater to this value"""
     
 

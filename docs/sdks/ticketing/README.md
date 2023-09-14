@@ -200,7 +200,7 @@ req = operations.GetTicketingConnectionIDAgentRequest(
     order='debitis',
     query='dolore',
     sort='in',
-    updated_gte=dateutil.parser.parse('2022-01-15').date(),
+    updated_gte=dateutil.parser.isoparse('2022-01-15T17:11:52.134Z'),
 )
 
 res = s.ticketing.get_ticketing_connection_id_agent(req, operations.GetTicketingConnectionIDAgentSecurity(
@@ -282,7 +282,7 @@ req = operations.GetTicketingConnectionIDCustomerRequest(
     order='molestiae',
     query='eaque',
     sort='tempora',
-    updated_gte=dateutil.parser.parse('2022-03-06').date(),
+    updated_gte=dateutil.parser.isoparse('2022-03-06T22:27:54.190Z'),
 )
 
 res = s.ticketing.get_ticketing_connection_id_customer(req, operations.GetTicketingConnectionIDCustomerSecurity(
@@ -365,7 +365,7 @@ req = operations.GetTicketingConnectionIDNotesTicketIDRequest(
     query='harum',
     sort='veritatis',
     ticket_id='quas',
-    updated_gte=dateutil.parser.parse('2021-07-31').date(),
+    updated_gte=dateutil.parser.isoparse('2021-07-31T21:20:45.941Z'),
 )
 
 res = s.ticketing.get_ticketing_connection_id_notes_ticket_id(req, operations.GetTicketingConnectionIDNotesTicketIDSecurity(
@@ -450,7 +450,7 @@ req = operations.GetTicketingConnectionIDTicketRequest(
     order='velit',
     query='libero',
     sort='soluta',
-    updated_gte=dateutil.parser.parse('2022-01-21').date(),
+    updated_gte=dateutil.parser.isoparse('2022-01-21T15:01:10.881Z'),
 )
 
 res = s.ticketing.get_ticketing_connection_id_ticket(req, operations.GetTicketingConnectionIDTicketSecurity(
@@ -527,7 +527,7 @@ s = unified_to.UnifiedTo()
 
 req = operations.PatchTicketingConnectionIDAgentIDRequest(
     ticketing_agent=shared.TicketingAgent(
-        created_at=dateutil.parser.parse('2022-05-08').date(),
+        created_at=dateutil.parser.isoparse('2022-05-08T09:12:54.892Z'),
         emails=[
             shared.TicketingEmail(
                 email='Brad.Olson@gmail.com',
@@ -543,7 +543,7 @@ req = operations.PatchTicketingConnectionIDAgentIDRequest(
                 type=shared.TicketingTelephoneType.FAX,
             ),
         ],
-        updated_at=dateutil.parser.parse('2022-04-15').date(),
+        updated_at=dateutil.parser.isoparse('2022-04-15T11:30:38.762Z'),
     ),
     connection_id='cum',
     id='f7143356-f634-49a1-a424-9b211ce46b95',
@@ -585,7 +585,7 @@ s = unified_to.UnifiedTo()
 
 req = operations.PatchTicketingConnectionIDCustomerIDRequest(
     ticketing_customer=shared.TicketingCustomer(
-        created_at=dateutil.parser.parse('2022-07-29').date(),
+        created_at=dateutil.parser.isoparse('2022-07-29T08:43:35.611Z'),
         emails=[
             shared.TicketingEmail(
                 email='Brandi35@gmail.com',
@@ -604,7 +604,7 @@ req = operations.PatchTicketingConnectionIDCustomerIDRequest(
                 type=shared.TicketingTelephoneType.HOME,
             ),
         ],
-        updated_at=dateutil.parser.parse('2022-02-14').date(),
+        updated_at=dateutil.parser.isoparse('2022-02-14T22:17:14.340Z'),
     ),
     connection_id='aperiam',
     id='36f5c388-664f-4698-9530-a2e2aed6aaf8',
@@ -647,7 +647,7 @@ s = unified_to.UnifiedTo()
 req = operations.PatchTicketingConnectionIDNotesTicketIDIDRequest(
     ticketing_note=shared.TicketingNote(
         agent_id='ea',
-        created_at=dateutil.parser.parse('2022-03-24').date(),
+        created_at=dateutil.parser.isoparse('2022-03-24T22:55:36.292Z'),
         customer_id='eos',
         description='praesentium',
         id='d040c69a-3d90-46f6-abd5-ad7ec7394f25',
@@ -696,8 +696,8 @@ s = unified_to.UnifiedTo()
 req = operations.PatchTicketingConnectionIDTicketIDRequest(
     ticketing_ticket=shared.TicketingTicket(
         category='officia',
-        closed_at=dateutil.parser.parse('2022-01-28').date(),
-        created_at=dateutil.parser.parse('2022-02-09').date(),
+        closed_at=dateutil.parser.isoparse('2022-01-28T05:10:10.473Z'),
+        created_at=dateutil.parser.isoparse('2022-02-09T11:50:25.266Z'),
         customer_id='quam',
         description='dolorum',
         id='ef13402e-945f-4537-83ef-de1198221f9b',
@@ -710,7 +710,7 @@ req = operations.PatchTicketingConnectionIDTicketIDRequest(
         tags=[
             'deserunt',
         ],
-        updated_at=dateutil.parser.parse('2020-02-21').date(),
+        updated_at=dateutil.parser.isoparse('2020-02-21T15:04:19.759Z'),
     ),
     connection_id='repudiandae',
     id='69682ace-efb0-44f8-8512-caabea708ed5',
@@ -752,7 +752,7 @@ s = unified_to.UnifiedTo()
 
 req = operations.PostTicketingConnectionIDAgentRequest(
     ticketing_agent=shared.TicketingAgent(
-        created_at=dateutil.parser.parse('2022-05-21').date(),
+        created_at=dateutil.parser.isoparse('2022-05-21T16:53:45.567Z'),
         emails=[
             shared.TicketingEmail(
                 email='Raven.Frami@yahoo.com',
@@ -768,7 +768,7 @@ req = operations.PostTicketingConnectionIDAgentRequest(
                 type=shared.TicketingTelephoneType.HOME,
             ),
         ],
-        updated_at=dateutil.parser.parse('2020-03-13').date(),
+        updated_at=dateutil.parser.isoparse('2020-03-13T17:02:39.583Z'),
     ),
     connection_id='similique',
 )
@@ -809,7 +809,7 @@ s = unified_to.UnifiedTo()
 
 req = operations.PostTicketingConnectionIDCustomerRequest(
     ticketing_customer=shared.TicketingCustomer(
-        created_at=dateutil.parser.parse('2021-11-22').date(),
+        created_at=dateutil.parser.isoparse('2021-11-22T08:46:26.211Z'),
         emails=[
             shared.TicketingEmail(
                 email='Sabina.Gulgowski59@hotmail.com',
@@ -828,7 +828,7 @@ req = operations.PostTicketingConnectionIDCustomerRequest(
                 type=shared.TicketingTelephoneType.FAX,
             ),
         ],
-        updated_at=dateutil.parser.parse('2022-11-08').date(),
+        updated_at=dateutil.parser.isoparse('2022-11-08T14:43:03.666Z'),
     ),
     connection_id='debitis',
 )
@@ -870,7 +870,7 @@ s = unified_to.UnifiedTo()
 req = operations.PostTicketingConnectionIDNotesTicketIDRequest(
     ticketing_note=shared.TicketingNote(
         agent_id='quidem',
-        created_at=dateutil.parser.parse('2022-07-05').date(),
+        created_at=dateutil.parser.isoparse('2022-07-05T14:59:15.588Z'),
         customer_id='magnam',
         description='vel',
         id='030fe183-76c2-4bed-ae76-790ed0c16a7b',
@@ -918,8 +918,8 @@ s = unified_to.UnifiedTo()
 req = operations.PostTicketingConnectionIDTicketRequest(
     ticketing_ticket=shared.TicketingTicket(
         category='rem',
-        closed_at=dateutil.parser.parse('2022-12-31').date(),
-        created_at=dateutil.parser.parse('2022-09-20').date(),
+        closed_at=dateutil.parser.isoparse('2022-12-31T16:32:53.167Z'),
+        created_at=dateutil.parser.isoparse('2022-09-20T04:19:27.059Z'),
         customer_id='totam',
         description='unde',
         id='f6770ef0-4809-41a2-ba25-ee6c75af8a60',
@@ -932,7 +932,7 @@ req = operations.PostTicketingConnectionIDTicketRequest(
         tags=[
             'dolore',
         ],
-        updated_at=dateutil.parser.parse('2022-01-27').date(),
+        updated_at=dateutil.parser.isoparse('2022-01-27T16:39:01.281Z'),
     ),
     connection_id='perferendis',
 )
@@ -973,7 +973,7 @@ s = unified_to.UnifiedTo()
 
 req = operations.PutTicketingConnectionIDAgentIDRequest(
     ticketing_agent=shared.TicketingAgent(
-        created_at=dateutil.parser.parse('2022-02-01').date(),
+        created_at=dateutil.parser.isoparse('2022-02-01T01:30:25.348Z'),
         emails=[
             shared.TicketingEmail(
                 email='Sigrid_Hilll@yahoo.com',
@@ -989,7 +989,7 @@ req = operations.PutTicketingConnectionIDAgentIDRequest(
                 type=shared.TicketingTelephoneType.HOME,
             ),
         ],
-        updated_at=dateutil.parser.parse('2022-05-28').date(),
+        updated_at=dateutil.parser.isoparse('2022-05-28T17:33:55.487Z'),
     ),
     connection_id='assumenda',
     id='5a65b4d5-562d-49b7-99e2-d6fcf557629d',
@@ -1031,7 +1031,7 @@ s = unified_to.UnifiedTo()
 
 req = operations.PutTicketingConnectionIDCustomerIDRequest(
     ticketing_customer=shared.TicketingCustomer(
-        created_at=dateutil.parser.parse('2021-11-27').date(),
+        created_at=dateutil.parser.isoparse('2021-11-27T14:28:08.554Z'),
         emails=[
             shared.TicketingEmail(
                 email='Enola63@yahoo.com',
@@ -1050,7 +1050,7 @@ req = operations.PutTicketingConnectionIDCustomerIDRequest(
                 type=shared.TicketingTelephoneType.MOBILE,
             ),
         ],
-        updated_at=dateutil.parser.parse('2022-11-17').date(),
+        updated_at=dateutil.parser.isoparse('2022-11-17T00:52:06.013Z'),
     ),
     connection_id='autem',
     id='600da0e3-aa61-4c6f-a09d-852b53b32c8c',
@@ -1093,7 +1093,7 @@ s = unified_to.UnifiedTo()
 req = operations.PutTicketingConnectionIDNotesTicketIDIDRequest(
     ticketing_note=shared.TicketingNote(
         agent_id='dignissimos',
-        created_at=dateutil.parser.parse('2022-06-05').date(),
+        created_at=dateutil.parser.isoparse('2022-06-05T09:20:14.169Z'),
         customer_id='eligendi',
         description='esse',
         id='10e1673d-905c-4b4b-adef-3c127c390995',
@@ -1142,8 +1142,8 @@ s = unified_to.UnifiedTo()
 req = operations.PutTicketingConnectionIDTicketIDRequest(
     ticketing_ticket=shared.TicketingTicket(
         category='placeat',
-        closed_at=dateutil.parser.parse('2021-06-17').date(),
-        created_at=dateutil.parser.parse('2021-01-22').date(),
+        closed_at=dateutil.parser.isoparse('2021-06-17T09:59:15.139Z'),
+        created_at=dateutil.parser.isoparse('2021-01-22T11:03:32.954Z'),
         customer_id='aut',
         description='soluta',
         id='7d176492-6b0c-4f5e-acb6-ebabe5e0b99f',
@@ -1156,7 +1156,7 @@ req = operations.PutTicketingConnectionIDTicketIDRequest(
         tags=[
             'quas',
         ],
-        updated_at=dateutil.parser.parse('2021-10-30').date(),
+        updated_at=dateutil.parser.isoparse('2021-10-30T17:09:24.055Z'),
     ),
     connection_id='deserunt',
     id='87bb7aec-be56-49d7-8cb0-69907f989441',

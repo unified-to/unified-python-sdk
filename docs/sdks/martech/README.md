@@ -112,7 +112,7 @@ req = operations.GetMartechConnectionIDListRequest(
     order='excepturi',
     query='ipsa',
     sort='velit',
-    updated_gte=dateutil.parser.parse('2022-12-03').date(),
+    updated_gte=dateutil.parser.isoparse('2022-12-03T21:28:14.776Z'),
 )
 
 res = s.martech.get_martech_connection_id_list(req, operations.GetMartechConnectionIDListSecurity(
@@ -195,7 +195,7 @@ req = operations.GetMartechConnectionIDListIDMemberRequest(
     order='commodi',
     query='veritatis',
     sort='reiciendis',
-    updated_gte=dateutil.parser.parse('2020-05-30').date(),
+    updated_gte=dateutil.parser.isoparse('2020-05-30T08:39:08.252Z'),
 )
 
 res = s.martech.get_martech_connection_id_list_id_member(req, operations.GetMartechConnectionIDListIDMemberSecurity(
@@ -277,7 +277,7 @@ req = operations.PatchMartechConnectionIDListIDRequest(
         id='85e43734-a5d7-42d9-add7-85be5e7afe55',
         name='Kristina Kozey',
         raw=shared.PropertyMarketingListRaw(),
-        updated_at=dateutil.parser.parse('2022-11-15').date(),
+        updated_at=dateutil.parser.isoparse('2022-11-15T19:44:05.359Z'),
     ),
     connection_id='laudantium',
     id='1f44e3a2-3394-4a68-8c80-d30ff72164d0',
@@ -319,7 +319,7 @@ s = unified_to.UnifiedTo()
 
 req = operations.PatchMartechConnectionIDListIDMemberIDRequest(
     marketing_member=shared.MarketingMember(
-        created_at=dateutil.parser.parse('2021-11-04').date(),
+        created_at=dateutil.parser.isoparse('2021-11-04T00:39:44.335Z'),
         emails=[
             shared.MarketingEmail(
                 email='Zora_Volkman@gmail.com',
@@ -335,7 +335,7 @@ req = operations.PatchMartechConnectionIDListIDMemberIDRequest(
         tags=[
             'harum',
         ],
-        updated_at=dateutil.parser.parse('2022-04-25').date(),
+        updated_at=dateutil.parser.isoparse('2022-04-25T11:53:38.687Z'),
     ),
     connection_id='ipsam',
     id='b908d4e3-0491-4aa3-9d4a-839f03bab77b',
@@ -382,7 +382,7 @@ req = operations.PostMartechConnectionIDListRequest(
         id='8f031398-4507-4e0e-b9c7-e23ecb060465',
         name='Kate Cummerata',
         raw=shared.PropertyMarketingListRaw(),
-        updated_at=dateutil.parser.parse('2022-02-21').date(),
+        updated_at=dateutil.parser.isoparse('2022-02-21T18:28:51.367Z'),
     ),
     connection_id='autem',
 )
@@ -423,7 +423,7 @@ s = unified_to.UnifiedTo()
 
 req = operations.PostMartechConnectionIDListIDMemberRequest(
     marketing_member=shared.MarketingMember(
-        created_at=dateutil.parser.parse('2021-11-13').date(),
+        created_at=dateutil.parser.isoparse('2021-11-13T23:02:04.436Z'),
         emails=[
             shared.MarketingEmail(
                 email='Ines_Swift@yahoo.com',
@@ -439,7 +439,7 @@ req = operations.PostMartechConnectionIDListIDMemberRequest(
         tags=[
             'fugiat',
         ],
-        updated_at=dateutil.parser.parse('2022-04-07').date(),
+        updated_at=dateutil.parser.isoparse('2022-04-07T09:46:27.417Z'),
     ),
     connection_id='harum',
     list_id='inventore',
@@ -485,7 +485,7 @@ req = operations.PutMartechConnectionIDListIDRequest(
         id='e255fdc4-80d6-4e33-8867-5cbf186856a7',
         name='Jaime Conroy',
         raw=shared.PropertyMarketingListRaw(),
-        updated_at=dateutil.parser.parse('2021-03-04').date(),
+        updated_at=dateutil.parser.isoparse('2021-03-04T08:28:08.196Z'),
     ),
     connection_id='assumenda',
     id='0fc282c6-66af-43c3-b558-9bea5d264e41',
@@ -527,7 +527,7 @@ s = unified_to.UnifiedTo()
 
 req = operations.PutMartechConnectionIDListIDMemberIDRequest(
     marketing_member=shared.MarketingMember(
-        created_at=dateutil.parser.parse('2022-06-10').date(),
+        created_at=dateutil.parser.isoparse('2022-06-10T00:17:48.769Z'),
         emails=[
             shared.MarketingEmail(
                 email='Mark54@hotmail.com',
@@ -543,7 +543,7 @@ req = operations.PutMartechConnectionIDListIDMemberIDRequest(
         tags=[
             'nihil',
         ],
-        updated_at=dateutil.parser.parse('2022-03-31').date(),
+        updated_at=dateutil.parser.isoparse('2022-03-31T07:19:18.789Z'),
     ),
     connection_id='rem',
     id='860543c0-a304-49c3-8f6c-0276e7b21bad',

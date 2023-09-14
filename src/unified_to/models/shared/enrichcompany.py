@@ -2,11 +2,12 @@
 
 from __future__ import annotations
 import dataclasses
+import dateutil.parser
 from ..shared import enrichtelephone as shared_enrichtelephone
 from ..shared import property_enrichcompany_address as shared_property_enrichcompany_address
 from ..shared import property_enrichcompany_raw as shared_property_enrichcompany_raw
 from dataclasses_json import Undefined, dataclass_json
-from datetime import date
+from datetime import datetime
 from typing import Optional
 from unified_to import utils
 
@@ -21,7 +22,7 @@ class EnrichCompany:
     address: Optional[shared_property_enrichcompany_address.PropertyEnrichCompanyAddress] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('address'), 'exclude': lambda f: f is None }})
     r"""The address of the company"""
     alexa_rank: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('alexa_rank'), 'exclude': lambda f: f is None }})
-    created_at: Optional[date] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created_at'), 'encoder': utils.dateisoformat(True), 'decoder': utils.datefromisoformat, 'exclude': lambda f: f is None }})
+    created_at: Optional[datetime] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created_at'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'exclude': lambda f: f is None }})
     crunchbase_url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('crunchbase_url'), 'exclude': lambda f: f is None }})
     description: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('description'), 'exclude': lambda f: f is None }})
     domain: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('domain'), 'exclude': lambda f: f is None }})
@@ -42,7 +43,7 @@ class EnrichCompany:
     r"""An array of telephones for this company"""
     twitter_handle: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('twitter_handle'), 'exclude': lambda f: f is None }})
     twitter_url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('twitter_url'), 'exclude': lambda f: f is None }})
-    updated_at: Optional[date] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('updated_at'), 'encoder': utils.dateisoformat(True), 'decoder': utils.datefromisoformat, 'exclude': lambda f: f is None }})
+    updated_at: Optional[datetime] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('updated_at'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'exclude': lambda f: f is None }})
     year_founded: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('year_founded'), 'exclude': lambda f: f is None }})
     yelp_url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('yelp_url'), 'exclude': lambda f: f is None }})
     youtube_url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('youtube_url'), 'exclude': lambda f: f is None }})

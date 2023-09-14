@@ -20,7 +20,7 @@ s = unified_to.UnifiedTo()
 
 req = operations.GetUnifiedApicallRequest(
     connection_id='voluptate',
-    created_lte=dateutil.parser.parse('2022-04-12').date(),
+    created_lte=dateutil.parser.isoparse('2022-04-12T10:47:34.158Z'),
     env='eaque',
     error=False,
     external_xref='pariatur',
@@ -29,7 +29,7 @@ req = operations.GetUnifiedApicallRequest(
     offset=166.27,
     order='fugiat',
     sort='amet',
-    updated_gte=dateutil.parser.parse('2022-03-27').date(),
+    updated_gte=dateutil.parser.isoparse('2022-03-27T19:22:24.458Z'),
 )
 
 res = s.apicall.get_unified_apicall(req, operations.GetUnifiedApicallSecurity(

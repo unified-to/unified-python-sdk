@@ -67,7 +67,7 @@ req = operations.GetMartechConnectionIDListRequest(
     order='molestiae',
     query='ipsam',
     sort='quos',
-    updated_gte=dateutil.parser.parse('2020-09-30').date(),
+    updated_gte=dateutil.parser.isoparse('2020-09-30T08:18:10.798Z'),
 )
 
 res = s.list_.get_martech_connection_id_list(req, operations.GetMartechConnectionIDListSecurity(
@@ -148,7 +148,7 @@ req = operations.PatchMartechConnectionIDListIDRequest(
         id='34afb073-5cb6-4285-94a2-9aaa1e169156',
         name='Adrian Schuster',
         raw=shared.PropertyMarketingListRaw(),
-        updated_at=dateutil.parser.parse('2022-06-17').date(),
+        updated_at=dateutil.parser.isoparse('2022-06-17T09:25:28.057Z'),
     ),
     connection_id='perferendis',
     id='9505bf03-a93e-4944-80ca-37fb10789032',
@@ -194,7 +194,7 @@ req = operations.PostMartechConnectionIDListRequest(
         id='c333172e-2dd7-49ec-b4ba-7e88ddb36fd1',
         name='Lucas Schneider',
         raw=shared.PropertyMarketingListRaw(),
-        updated_at=dateutil.parser.parse('2022-03-20').date(),
+        updated_at=dateutil.parser.isoparse('2022-03-20T02:47:07.461Z'),
     ),
     connection_id='quas',
 )
@@ -239,7 +239,7 @@ req = operations.PutMartechConnectionIDListIDRequest(
         id='573474f0-a740-4fb4-ab44-1c3a09e76399',
         name='Ms. Eula Leffler',
         raw=shared.PropertyMarketingListRaw(),
-        updated_at=dateutil.parser.parse('2021-03-29').date(),
+        updated_at=dateutil.parser.isoparse('2021-03-29T15:45:25.588Z'),
     ),
     connection_id='odio',
     id='94455ebc-550a-41c4-a6b5-9c8366fdcc13',

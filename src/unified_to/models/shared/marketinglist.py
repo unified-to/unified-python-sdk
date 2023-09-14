@@ -2,9 +2,10 @@
 
 from __future__ import annotations
 import dataclasses
+import dateutil.parser
 from ..shared import property_marketinglist_raw as shared_property_marketinglist_raw
 from dataclasses_json import Undefined, dataclass_json
-from datetime import date
+from datetime import datetime
 from typing import Optional
 from unified_to import utils
 
@@ -19,6 +20,6 @@ class MarketingList:
     name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name'), 'exclude': lambda f: f is None }})
     raw: Optional[shared_property_marketinglist_raw.PropertyMarketingListRaw] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('raw'), 'exclude': lambda f: f is None }})
     r"""The raw data returned by the integration for this list"""
-    updated_at: Optional[date] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('updated_at'), 'encoder': utils.dateisoformat(True), 'decoder': utils.datefromisoformat, 'exclude': lambda f: f is None }})
+    updated_at: Optional[datetime] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('updated_at'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'exclude': lambda f: f is None }})
     
 

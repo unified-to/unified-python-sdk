@@ -30,7 +30,7 @@ req = operations.GetUnifiedIntegrationRequest(
     order='ea',
     sort='veniam',
     summary=False,
-    updated_gte=dateutil.parser.parse('2021-01-26').date(),
+    updated_gte=dateutil.parser.isoparse('2021-01-26T22:48:04.970Z'),
 )
 
 res = s.integration.get_unified_integration(req, operations.GetUnifiedIntegrationSecurity(

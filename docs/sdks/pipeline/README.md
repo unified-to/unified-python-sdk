@@ -67,7 +67,7 @@ req = operations.GetCrmConnectionIDPipelineRequest(
     order='sequi',
     query='culpa',
     sort='ratione',
-    updated_gte=dateutil.parser.parse('2022-03-30').date(),
+    updated_gte=dateutil.parser.isoparse('2022-03-30T02:59:59.063Z'),
 )
 
 res = s.pipeline.get_crm_connection_id_pipeline(req, operations.GetCrmConnectionIDPipelineSecurity(
@@ -145,13 +145,13 @@ s = unified_to.UnifiedTo()
 req = operations.PatchCrmConnectionIDPipelineIDRequest(
     crm_pipeline=shared.CrmPipeline(
         active=False,
-        created_at=dateutil.parser.parse('2022-01-06').date(),
+        created_at=dateutil.parser.isoparse('2022-01-06T01:33:11.339Z'),
         deal_probability=False,
         display_order=8302.16,
         id='4f62127a-607d-4160-a294-514c3db9ca9f',
         name='Brandy Powlowski',
         raw=shared.PropertyCrmPipelineRaw(),
-        updated_at=dateutil.parser.parse('2021-03-30').date(),
+        updated_at=dateutil.parser.isoparse('2021-03-30T20:29:28.566Z'),
     ),
     connection_id='quos',
     id='78703493-f49a-4a84-a5a3-283279b719d1',
@@ -194,13 +194,13 @@ s = unified_to.UnifiedTo()
 req = operations.PostCrmConnectionIDPipelineRequest(
     crm_pipeline=shared.CrmPipeline(
         active=False,
-        created_at=dateutil.parser.parse('2020-05-07').date(),
+        created_at=dateutil.parser.isoparse('2020-05-07T22:58:48.615Z'),
         deal_probability=False,
         display_order=6422.68,
         id='673d86e3-b35e-449a-b135-778ce54cacb0',
         name='Chris Terry',
         raw=shared.PropertyCrmPipelineRaw(),
-        updated_at=dateutil.parser.parse('2022-09-03').date(),
+        updated_at=dateutil.parser.isoparse('2022-09-03T20:01:11.409Z'),
     ),
     connection_id='voluptatem',
 )
@@ -242,13 +242,13 @@ s = unified_to.UnifiedTo()
 req = operations.PutCrmConnectionIDPipelineIDRequest(
     crm_pipeline=shared.CrmPipeline(
         active=False,
-        created_at=dateutil.parser.parse('2022-08-22').date(),
+        created_at=dateutil.parser.isoparse('2022-08-22T17:28:32.263Z'),
         deal_probability=False,
         display_order=6880.36,
         id='acf63b21-5186-4ab5-a3a0-22614315d156',
         name='Victor Mayer',
         raw=shared.PropertyCrmPipelineRaw(),
-        updated_at=dateutil.parser.parse('2022-11-25').date(),
+        updated_at=dateutil.parser.isoparse('2022-11-25T09:18:50.894Z'),
     ),
     connection_id='officia',
     id='fc7186ff-20b7-4a73-9f40-ca0d7657c164',

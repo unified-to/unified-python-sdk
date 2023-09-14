@@ -67,7 +67,7 @@ req = operations.GetAtsConnectionIDJobRequest(
     order='reiciendis',
     query='minus',
     sort='iure',
-    updated_gte=dateutil.parser.parse('2022-11-11').date(),
+    updated_gte=dateutil.parser.isoparse('2022-11-11T00:39:35.207Z'),
 )
 
 res = s.job.get_ats_connection_id_job(req, operations.GetAtsConnectionIDJobSecurity(
@@ -156,7 +156,7 @@ req = operations.PatchAtsConnectionIDJobIDRequest(
                 region_code='tempora',
             ),
         ],
-        closed_at=dateutil.parser.parse('2022-05-27').date(),
+        closed_at=dateutil.parser.isoparse('2022-05-27T21:54:13.074Z'),
         compensation=[
             shared.AtsCompensation(
                 currency='rem',
@@ -166,7 +166,7 @@ req = operations.PatchAtsConnectionIDJobIDRequest(
                 type=shared.AtsCompensationType.EQUITY,
             ),
         ],
-        created_at=dateutil.parser.parse('2022-08-10').date(),
+        created_at=dateutil.parser.isoparse('2022-08-10T22:57:33.587Z'),
         departments=[
             'aperiam',
         ],
@@ -187,7 +187,7 @@ req = operations.PatchAtsConnectionIDJobIDRequest(
         ],
         remote=False,
         status=shared.AtsJobStatus.PENDING,
-        updated_at=dateutil.parser.parse('2022-07-04').date(),
+        updated_at=dateutil.parser.isoparse('2022-07-04T21:18:33.130Z'),
     ),
     connection_id='unde',
     id='2bcd440e-a98b-4ecc-a048-6de0d56d73b0',
@@ -241,7 +241,7 @@ req = operations.PostAtsConnectionIDJobRequest(
                 region_code='ullam',
             ),
         ],
-        closed_at=dateutil.parser.parse('2022-07-06').date(),
+        closed_at=dateutil.parser.isoparse('2022-07-06T19:55:18.068Z'),
         compensation=[
             shared.AtsCompensation(
                 currency='enim',
@@ -251,7 +251,7 @@ req = operations.PostAtsConnectionIDJobRequest(
                 type=shared.AtsCompensationType.STOCK_OPTIONS,
             ),
         ],
-        created_at=dateutil.parser.parse('2022-01-28').date(),
+        created_at=dateutil.parser.isoparse('2022-01-28T21:56:06.312Z'),
         departments=[
             'consectetur',
         ],
@@ -272,7 +272,7 @@ req = operations.PostAtsConnectionIDJobRequest(
         ],
         remote=False,
         status=shared.AtsJobStatus.DRAFT,
-        updated_at=dateutil.parser.parse('2022-04-19').date(),
+        updated_at=dateutil.parser.isoparse('2022-04-19T01:37:46.134Z'),
     ),
     connection_id='eius',
 )
@@ -325,7 +325,7 @@ req = operations.PutAtsConnectionIDJobIDRequest(
                 region_code='unde',
             ),
         ],
-        closed_at=dateutil.parser.parse('2022-03-17').date(),
+        closed_at=dateutil.parser.isoparse('2022-03-17T10:24:00.538Z'),
         compensation=[
             shared.AtsCompensation(
                 currency='id',
@@ -335,7 +335,7 @@ req = operations.PutAtsConnectionIDJobIDRequest(
                 type=shared.AtsCompensationType.SALARY,
             ),
         ],
-        created_at=dateutil.parser.parse('2022-08-21').date(),
+        created_at=dateutil.parser.isoparse('2022-08-21T15:07:46.264Z'),
         departments=[
             'a',
         ],
@@ -356,7 +356,7 @@ req = operations.PutAtsConnectionIDJobIDRequest(
         ],
         remote=False,
         status=shared.AtsJobStatus.DRAFT,
-        updated_at=dateutil.parser.parse('2020-12-28').date(),
+        updated_at=dateutil.parser.isoparse('2020-12-28T11:43:36.436Z'),
     ),
     connection_id='dignissimos',
     id='0c43351c-3dd1-4eb8-b7f7-5f4f23f1c0a5',

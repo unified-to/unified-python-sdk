@@ -67,7 +67,7 @@ req = operations.GetTicketingConnectionIDCustomerRequest(
     order='natus',
     query='aperiam',
     sort='dicta',
-    updated_gte=dateutil.parser.parse('2022-06-25').date(),
+    updated_gte=dateutil.parser.isoparse('2022-06-25T18:37:10.473Z'),
 )
 
 res = s.customer.get_ticketing_connection_id_customer(req, operations.GetTicketingConnectionIDCustomerSecurity(
@@ -144,7 +144,7 @@ s = unified_to.UnifiedTo()
 
 req = operations.PatchTicketingConnectionIDCustomerIDRequest(
     ticketing_customer=shared.TicketingCustomer(
-        created_at=dateutil.parser.parse('2022-08-10').date(),
+        created_at=dateutil.parser.isoparse('2022-08-10T23:28:30.532Z'),
         emails=[
             shared.TicketingEmail(
                 email='Donny_OKeefe@yahoo.com',
@@ -163,7 +163,7 @@ req = operations.PatchTicketingConnectionIDCustomerIDRequest(
                 type=shared.TicketingTelephoneType.FAX,
             ),
         ],
-        updated_at=dateutil.parser.parse('2022-10-15').date(),
+        updated_at=dateutil.parser.isoparse('2022-10-15T18:32:49.022Z'),
     ),
     connection_id='voluptate',
     id='84893075-0a00-4e96-aec7-36d43194398c',
@@ -205,7 +205,7 @@ s = unified_to.UnifiedTo()
 
 req = operations.PostTicketingConnectionIDCustomerRequest(
     ticketing_customer=shared.TicketingCustomer(
-        created_at=dateutil.parser.parse('2022-06-17').date(),
+        created_at=dateutil.parser.isoparse('2022-06-17T14:22:05.995Z'),
         emails=[
             shared.TicketingEmail(
                 email='Nils22@gmail.com',
@@ -224,7 +224,7 @@ req = operations.PostTicketingConnectionIDCustomerRequest(
                 type=shared.TicketingTelephoneType.WORK,
             ),
         ],
-        updated_at=dateutil.parser.parse('2022-07-25').date(),
+        updated_at=dateutil.parser.isoparse('2022-07-25T05:00:03.848Z'),
     ),
     connection_id='voluptate',
 )
@@ -265,7 +265,7 @@ s = unified_to.UnifiedTo()
 
 req = operations.PutTicketingConnectionIDCustomerIDRequest(
     ticketing_customer=shared.TicketingCustomer(
-        created_at=dateutil.parser.parse('2022-09-26').date(),
+        created_at=dateutil.parser.isoparse('2022-09-26T16:23:23.443Z'),
         emails=[
             shared.TicketingEmail(
                 email='Shanny.Padberg@yahoo.com',
@@ -284,7 +284,7 @@ req = operations.PutTicketingConnectionIDCustomerIDRequest(
                 type=shared.TicketingTelephoneType.WORK,
             ),
         ],
-        updated_at=dateutil.parser.parse('2021-05-15').date(),
+        updated_at=dateutil.parser.isoparse('2021-05-15T13:31:18.582Z'),
     ),
     connection_id='explicabo',
     id='daa784ab-a3d2-430e-9f73-811a115382bd',

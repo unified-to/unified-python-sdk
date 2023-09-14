@@ -105,7 +105,7 @@ req = operations.GetCrmConnectionIDUserRequest(
     order='unde',
     query='consequatur',
     sort='quaerat',
-    updated_gte=dateutil.parser.parse('2022-03-13').date(),
+    updated_gte=dateutil.parser.isoparse('2022-03-13T04:13:10.861Z'),
 )
 
 res = s.user.get_crm_connection_id_user(req, operations.GetCrmConnectionIDUserSecurity(
@@ -259,7 +259,7 @@ req = operations.PatchCrmConnectionIDUserIDRequest(
             region='repellat',
             region_code='voluptatum',
         ),
-        created_at=dateutil.parser.parse('2021-04-22').date(),
+        created_at=dateutil.parser.isoparse('2021-04-22T20:59:04.118Z'),
         currency='amet',
         department='totam',
         division='ex',
@@ -282,7 +282,7 @@ req = operations.PatchCrmConnectionIDUserIDRequest(
         ],
         timezone='accusamus',
         title='Mrs.',
-        updated_at=dateutil.parser.parse('2022-04-24').date(),
+        updated_at=dateutil.parser.isoparse('2022-04-24T03:57:57.473Z'),
     ),
     connection_id='sit',
     id='e8fbc48d-dc7e-469b-9351-0505014dca10',
@@ -323,13 +323,13 @@ from unified_to.models import operations, shared
 s = unified_to.UnifiedTo()
 
 req = shared.User(
-    created_at=dateutil.parser.parse('2022-06-17').date(),
+    created_at=dateutil.parser.isoparse('2022-06-17T20:12:07.816Z'),
     email='Candido.Hahn@yahoo.com',
     environment='impedit',
     id='36e94889-2782-4d34-a0b8-fc0d59f57b9f',
     meta=shared.PropertyUserMeta(),
     name='Miss Ian Connelly',
-    updated_at=dateutil.parser.parse('2022-07-09').date(),
+    updated_at=dateutil.parser.isoparse('2022-07-09T07:24:05.365Z'),
     workspace_id='deleniti',
     workspace_ids=[
         'aperiam',
@@ -383,7 +383,7 @@ req = operations.PostCrmConnectionIDUserRequest(
             region='magnam',
             region_code='recusandae',
         ),
-        created_at=dateutil.parser.parse('2022-12-13').date(),
+        created_at=dateutil.parser.isoparse('2022-12-13T13:34:20.729Z'),
         currency='maiores',
         department='tempora',
         division='reprehenderit',
@@ -406,7 +406,7 @@ req = operations.PostCrmConnectionIDUserRequest(
         ],
         timezone='illo',
         title='Dr.',
-        updated_at=dateutil.parser.parse('2020-08-23').date(),
+        updated_at=dateutil.parser.isoparse('2020-08-23T15:43:14.003Z'),
     ),
     connection_id='sequi',
 )
@@ -458,7 +458,7 @@ req = operations.PutCrmConnectionIDUserIDRequest(
             region='omnis',
             region_code='itaque',
         ),
-        created_at=dateutil.parser.parse('2022-11-29').date(),
+        created_at=dateutil.parser.isoparse('2022-11-29T02:49:06.048Z'),
         currency='fugiat',
         department='provident',
         division='voluptatem',
@@ -481,7 +481,7 @@ req = operations.PutCrmConnectionIDUserIDRequest(
         ],
         timezone='maxime',
         title='Ms.',
-        updated_at=dateutil.parser.parse('2022-10-11').date(),
+        updated_at=dateutil.parser.isoparse('2022-10-11T03:37:06.147Z'),
     ),
     connection_id='vitae',
     id='cabdab76-7a44-44dd-8da0-abe58eb3d54b',
@@ -522,13 +522,13 @@ from unified_to.models import operations, shared
 s = unified_to.UnifiedTo()
 
 req = shared.User(
-    created_at=dateutil.parser.parse('2022-11-07').date(),
+    created_at=dateutil.parser.isoparse('2022-11-07T21:46:44.444Z'),
     email='Melissa_Dooley30@hotmail.com',
     environment='sint',
     id='b8e5c18b-25e8-47f6-8823-255be95c0cbc',
     meta=shared.PropertyUserMeta(),
     name='Billy Schmeler',
-    updated_at=dateutil.parser.parse('2022-06-05').date(),
+    updated_at=dateutil.parser.isoparse('2022-06-05T12:45:52.497Z'),
     workspace_id='quae',
     workspace_ids=[
         'quos',

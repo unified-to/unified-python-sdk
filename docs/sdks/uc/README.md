@@ -70,7 +70,7 @@ req = operations.GetUcConnectionIDAgentRequest(
     order='suscipit',
     query='explicabo',
     sort='quos',
-    updated_gte=dateutil.parser.parse('2022-10-16').date(),
+    updated_gte=dateutil.parser.isoparse('2022-10-16T11:52:18.503Z'),
 )
 
 res = s.uc.get_uc_connection_id_agent(req, operations.GetUcConnectionIDAgentSecurity(
@@ -116,7 +116,7 @@ req = operations.GetUcConnectionIDCallRequest(
     order='provident',
     query='maxime',
     sort='officiis',
-    updated_gte=dateutil.parser.parse('2022-11-01').date(),
+    updated_gte=dateutil.parser.isoparse('2022-11-01T07:11:20.903Z'),
 )
 
 res = s.uc.get_uc_connection_id_call(req, operations.GetUcConnectionIDCallSecurity(
@@ -161,7 +161,7 @@ req = operations.GetUcConnectionIDContactRequest(
     order='doloribus',
     query='earum',
     sort='commodi',
-    updated_gte=dateutil.parser.parse('2022-08-09').date(),
+    updated_gte=dateutil.parser.isoparse('2022-08-09T11:19:33.586Z'),
 )
 
 res = s.uc.get_uc_connection_id_contact(req, operations.GetUcConnectionIDContactSecurity(
@@ -239,7 +239,7 @@ s = unified_to.UnifiedTo()
 req = operations.PatchUcConnectionIDContactIDRequest(
     uc_contact=shared.UcContact(
         company='Kreiger - Gutmann',
-        created_at=dateutil.parser.parse('2022-06-03').date(),
+        created_at=dateutil.parser.isoparse('2022-06-03T00:19:22.099Z'),
         emails=[
             shared.UcEmail(
                 email='Leanna_Walsh26@yahoo.com',
@@ -256,7 +256,7 @@ req = operations.PatchUcConnectionIDContactIDRequest(
             ),
         ],
         title='Ms.',
-        updated_at=dateutil.parser.parse('2022-02-04').date(),
+        updated_at=dateutil.parser.isoparse('2022-02-04T19:42:40.275Z'),
     ),
     connection_id='laudantium',
     id='8f86996c-8e22-4be0-a3cf-47893bd23f86',
@@ -299,7 +299,7 @@ s = unified_to.UnifiedTo()
 req = operations.PostUcConnectionIDContactRequest(
     uc_contact=shared.UcContact(
         company='Abbott - Beatty',
-        created_at=dateutil.parser.parse('2021-10-06').date(),
+        created_at=dateutil.parser.isoparse('2021-10-06T16:45:34.362Z'),
         emails=[
             shared.UcEmail(
                 email='Ova.Kovacek@gmail.com',
@@ -316,7 +316,7 @@ req = operations.PostUcConnectionIDContactRequest(
             ),
         ],
         title='Miss',
-        updated_at=dateutil.parser.parse('2022-05-29').date(),
+        updated_at=dateutil.parser.isoparse('2022-05-29T03:50:25.472Z'),
     ),
     connection_id='expedita',
 )
@@ -358,7 +358,7 @@ s = unified_to.UnifiedTo()
 req = operations.PutUcConnectionIDContactIDRequest(
     uc_contact=shared.UcContact(
         company='Lynch - Zemlak',
-        created_at=dateutil.parser.parse('2022-11-29').date(),
+        created_at=dateutil.parser.isoparse('2022-11-29T18:41:38.693Z'),
         emails=[
             shared.UcEmail(
                 email='Cary.McKenzie@hotmail.com',
@@ -375,7 +375,7 @@ req = operations.PutUcConnectionIDContactIDRequest(
             ),
         ],
         title='Mr.',
-        updated_at=dateutil.parser.parse('2022-10-31').date(),
+        updated_at=dateutil.parser.isoparse('2022-10-31T15:11:09.832Z'),
     ),
     connection_id='reiciendis',
     id='5b9d3cb1-1a76-487d-b100-e8e2b9b0d746',

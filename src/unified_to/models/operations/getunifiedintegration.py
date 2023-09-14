@@ -4,7 +4,7 @@ from __future__ import annotations
 import dataclasses
 import requests as requests_http
 from ..shared import integration as shared_integration
-from datetime import date
+from datetime import datetime
 from enum import Enum
 from typing import Optional
 
@@ -40,7 +40,7 @@ class GetUnifiedIntegrationRequest:
     order: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'order', 'style': 'form', 'explode': True }})
     sort: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': True }})
     summary: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'summary', 'style': 'form', 'explode': True }})
-    updated_gte: Optional[date] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'updated_gte', 'style': 'form', 'explode': True }})
+    updated_gte: Optional[datetime] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'updated_gte', 'style': 'form', 'explode': True }})
     r"""Return only results whose updated date is equal or greater to this value"""
     
 

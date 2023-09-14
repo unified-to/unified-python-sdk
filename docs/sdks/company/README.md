@@ -112,7 +112,7 @@ req = operations.GetCrmConnectionIDCompanyRequest(
     order='pariatur',
     query='harum',
     sort='dolore',
-    updated_gte=dateutil.parser.parse('2021-09-11').date(),
+    updated_gte=dateutil.parser.isoparse('2021-09-11T06:54:38.386Z'),
 )
 
 res = s.company.get_crm_connection_id_company(req, operations.GetCrmConnectionIDCompanySecurity(
@@ -239,7 +239,7 @@ req = operations.PatchCrmConnectionIDCompanyIDRequest(
             region='quas',
             region_code='consequuntur',
         ),
-        created_at=dateutil.parser.parse('2022-10-03').date(),
+        created_at=dateutil.parser.isoparse('2022-10-03T16:02:53.877Z'),
         deal_ids=[
             'aliquid',
         ],
@@ -261,7 +261,7 @@ req = operations.PatchCrmConnectionIDCompanyIDRequest(
                 type=shared.CrmTelephoneType.OTHER,
             ),
         ],
-        updated_at=dateutil.parser.parse('2022-04-11').date(),
+        updated_at=dateutil.parser.isoparse('2022-04-11T06:13:47.031Z'),
         websites=[
             'ipsam',
         ],
@@ -356,7 +356,7 @@ req = operations.PostCrmConnectionIDCompanyRequest(
             region='mollitia',
             region_code='cumque',
         ),
-        created_at=dateutil.parser.parse('2022-09-08').date(),
+        created_at=dateutil.parser.isoparse('2022-09-08T12:56:45.780Z'),
         deal_ids=[
             'eum',
         ],
@@ -378,7 +378,7 @@ req = operations.PostCrmConnectionIDCompanyRequest(
                 type=shared.CrmTelephoneType.WORK,
             ),
         ],
-        updated_at=dateutil.parser.parse('2022-01-14').date(),
+        updated_at=dateutil.parser.isoparse('2022-01-14T22:16:14.005Z'),
         websites=[
             'numquam',
         ],
@@ -433,7 +433,7 @@ req = operations.PutCrmConnectionIDCompanyIDRequest(
             region='dignissimos',
             region_code='esse',
         ),
-        created_at=dateutil.parser.parse('2021-12-22').date(),
+        created_at=dateutil.parser.isoparse('2021-12-22T21:12:12.654Z'),
         deal_ids=[
             'esse',
         ],
@@ -455,7 +455,7 @@ req = operations.PutCrmConnectionIDCompanyIDRequest(
                 type=shared.CrmTelephoneType.HOME,
             ),
         ],
-        updated_at=dateutil.parser.parse('2022-01-07').date(),
+        updated_at=dateutil.parser.isoparse('2022-01-07T01:07:05.981Z'),
         websites=[
             'sequi',
         ],

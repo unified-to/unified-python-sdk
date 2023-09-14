@@ -67,7 +67,7 @@ req = operations.GetCrmConnectionIDTeamRequest(
     order='sunt',
     query='vitae',
     sort='ex',
-    updated_gte=dateutil.parser.parse('2022-01-05').date(),
+    updated_gte=dateutil.parser.isoparse('2022-01-05T07:41:51.025Z'),
 )
 
 res = s.team.get_crm_connection_id_team(req, operations.GetCrmConnectionIDTeamSecurity(
@@ -144,12 +144,12 @@ s = unified_to.UnifiedTo()
 
 req = operations.PatchCrmConnectionIDTeamIDRequest(
     crm_team=shared.CrmTeam(
-        created_at=dateutil.parser.parse('2020-04-24').date(),
+        created_at=dateutil.parser.isoparse('2020-04-24T00:39:17.172Z'),
         description='harum',
         id='3b6e241c-3109-4983-a63c-66dcbb7df6cb',
         name='Jenny Rolfson',
         raw=shared.PropertyCrmTeamRaw(),
-        updated_at=dateutil.parser.parse('2022-12-14').date(),
+        updated_at=dateutil.parser.isoparse('2022-12-14T00:49:36.543Z'),
         user_ids=[
             'praesentium',
         ],
@@ -194,12 +194,12 @@ s = unified_to.UnifiedTo()
 
 req = operations.PostCrmConnectionIDTeamRequest(
     crm_team=shared.CrmTeam(
-        created_at=dateutil.parser.parse('2022-12-18').date(),
+        created_at=dateutil.parser.isoparse('2022-12-18T11:11:12.745Z'),
         description='possimus',
         id='6c8b2a5f-0022-407e-8048-f90009ed2902',
         name='Brandy Tillman',
         raw=shared.PropertyCrmTeamRaw(),
-        updated_at=dateutil.parser.parse('2021-02-19').date(),
+        updated_at=dateutil.parser.isoparse('2021-02-19T10:57:16.366Z'),
         user_ids=[
             'iste',
         ],
@@ -243,12 +243,12 @@ s = unified_to.UnifiedTo()
 
 req = operations.PutCrmConnectionIDTeamIDRequest(
     crm_team=shared.CrmTeam(
-        created_at=dateutil.parser.parse('2022-09-20').date(),
+        created_at=dateutil.parser.isoparse('2022-09-20T15:32:20.854Z'),
         description='sunt',
         id='61e91500-323b-42c0-9b92-4771f5669e5b',
         name='Tricia Sawayn',
         raw=shared.PropertyCrmTeamRaw(),
-        updated_at=dateutil.parser.parse('2022-07-25').date(),
+        updated_at=dateutil.parser.isoparse('2022-07-25T07:35:50.345Z'),
         user_ids=[
             'ea',
         ],

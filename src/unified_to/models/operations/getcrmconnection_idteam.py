@@ -4,7 +4,7 @@ from __future__ import annotations
 import dataclasses
 import requests as requests_http
 from ..shared import crmteam as shared_crmteam
-from datetime import date
+from datetime import datetime
 from typing import Optional
 
 
@@ -27,7 +27,7 @@ class GetCrmConnectionIDTeamRequest:
     query: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'query', 'style': 'form', 'explode': True }})
     r"""Query string to search. eg. email address or name"""
     sort: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': True }})
-    updated_gte: Optional[date] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'updated_gte', 'style': 'form', 'explode': True }})
+    updated_gte: Optional[datetime] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'updated_gte', 'style': 'form', 'explode': True }})
     r"""Return only results whose updated date is equal or greater to this value"""
     
 

@@ -197,7 +197,7 @@ req = operations.GetCrmConnectionIDContactRequest(
     order='aperiam',
     query='dolores',
     sort='illum',
-    updated_gte=dateutil.parser.parse('2022-10-31').date(),
+    updated_gte=dateutil.parser.isoparse('2022-10-31T07:46:10.277Z'),
 )
 
 res = s.contact.get_crm_connection_id_contact(req, operations.GetCrmConnectionIDContactSecurity(
@@ -280,7 +280,7 @@ req = operations.GetUcConnectionIDContactRequest(
     order='ratione',
     query='iure',
     sort='tempora',
-    updated_gte=dateutil.parser.parse('2022-05-21').date(),
+    updated_gte=dateutil.parser.isoparse('2022-05-21T02:14:12.604Z'),
 )
 
 res = s.contact.get_uc_connection_id_contact(req, operations.GetUcConnectionIDContactSecurity(
@@ -371,7 +371,7 @@ req = operations.PatchCrmConnectionIDContactIDRequest(
         company_ids=[
             'ad',
         ],
-        created_at=dateutil.parser.parse('2022-11-07').date(),
+        created_at=dateutil.parser.isoparse('2022-11-07T21:20:17.353Z'),
         deal_ids=[
             'suscipit',
         ],
@@ -391,7 +391,7 @@ req = operations.PatchCrmConnectionIDContactIDRequest(
             ),
         ],
         title='Mrs.',
-        updated_at=dateutil.parser.parse('2022-01-12').date(),
+        updated_at=dateutil.parser.isoparse('2022-01-12T14:31:46.273Z'),
     ),
     connection_id='iste',
     id='390c5888-0983-4dab-b9ef-3ffdd9f7f079',
@@ -512,7 +512,7 @@ s = unified_to.UnifiedTo()
 req = operations.PatchUcConnectionIDContactIDRequest(
     uc_contact=shared.UcContact(
         company='Graham - Zboncak',
-        created_at=dateutil.parser.parse('2022-05-10').date(),
+        created_at=dateutil.parser.isoparse('2022-05-10T21:25:57.790Z'),
         emails=[
             shared.UcEmail(
                 email='Augustine.Davis50@hotmail.com',
@@ -529,7 +529,7 @@ req = operations.PatchUcConnectionIDContactIDRequest(
             ),
         ],
         title='Ms.',
-        updated_at=dateutil.parser.parse('2022-01-25').date(),
+        updated_at=dateutil.parser.isoparse('2022-01-25T19:10:58.985Z'),
     ),
     connection_id='unde',
     id='c3ddc5f1-11de-4a10-a6d5-41a4d190feb2',
@@ -585,7 +585,7 @@ req = operations.PostCrmConnectionIDContactRequest(
         company_ids=[
             'facilis',
         ],
-        created_at=dateutil.parser.parse('2022-01-29').date(),
+        created_at=dateutil.parser.isoparse('2022-01-29T03:16:14.679Z'),
         deal_ids=[
             'amet',
         ],
@@ -605,7 +605,7 @@ req = operations.PostCrmConnectionIDContactRequest(
             ),
         ],
         title='Ms.',
-        updated_at=dateutil.parser.parse('2022-11-30').date(),
+        updated_at=dateutil.parser.isoparse('2022-11-30T23:34:54.352Z'),
     ),
     connection_id='fuga',
 )
@@ -647,7 +647,7 @@ s = unified_to.UnifiedTo()
 req = operations.PostUcConnectionIDContactRequest(
     uc_contact=shared.UcContact(
         company='Braun and Sons',
-        created_at=dateutil.parser.parse('2020-05-06').date(),
+        created_at=dateutil.parser.isoparse('2020-05-06T08:27:54.041Z'),
         emails=[
             shared.UcEmail(
                 email='Caleb.Dickens1@yahoo.com',
@@ -664,7 +664,7 @@ req = operations.PostUcConnectionIDContactRequest(
             ),
         ],
         title='Mr.',
-        updated_at=dateutil.parser.parse('2021-05-16').date(),
+        updated_at=dateutil.parser.isoparse('2021-05-16T15:40:19.045Z'),
     ),
     connection_id='magnam',
 )
@@ -719,7 +719,7 @@ req = operations.PutCrmConnectionIDContactIDRequest(
         company_ids=[
             'hic',
         ],
-        created_at=dateutil.parser.parse('2022-10-10').date(),
+        created_at=dateutil.parser.isoparse('2022-10-10T04:57:04.387Z'),
         deal_ids=[
             'nobis',
         ],
@@ -739,7 +739,7 @@ req = operations.PutCrmConnectionIDContactIDRequest(
             ),
         ],
         title='Dr.',
-        updated_at=dateutil.parser.parse('2022-07-21').date(),
+        updated_at=dateutil.parser.isoparse('2022-07-21T21:21:59.349Z'),
     ),
     connection_id='nam',
     id='271a289c-57e8-454e-9043-9d2224656946',
@@ -860,7 +860,7 @@ s = unified_to.UnifiedTo()
 req = operations.PutUcConnectionIDContactIDRequest(
     uc_contact=shared.UcContact(
         company='Murphy, Pfannerstill and Feest',
-        created_at=dateutil.parser.parse('2022-06-26').date(),
+        created_at=dateutil.parser.isoparse('2022-06-26T16:56:56.149Z'),
         emails=[
             shared.UcEmail(
                 email='Dax_Boehm30@hotmail.com',
@@ -877,7 +877,7 @@ req = operations.PutUcConnectionIDContactIDRequest(
             ),
         ],
         title='Miss',
-        updated_at=dateutil.parser.parse('2021-06-23').date(),
+        updated_at=dateutil.parser.isoparse('2021-06-23T12:33:28.750Z'),
     ),
     connection_id='est',
     id='12d02529-270b-48d5-b22d-d895b8bcf24d',

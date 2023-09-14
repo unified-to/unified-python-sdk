@@ -67,7 +67,7 @@ req = operations.GetCrmConnectionIDLeadRequest(
     order='non',
     query='tempore',
     sort='quae',
-    updated_gte=dateutil.parser.parse('2022-08-03').date(),
+    updated_gte=dateutil.parser.isoparse('2022-08-03T04:30:42.588Z'),
 )
 
 res = s.lead.get_crm_connection_id_lead(req, operations.GetCrmConnectionIDLeadSecurity(
@@ -157,7 +157,7 @@ req = operations.PatchCrmConnectionIDLeadIDRequest(
         ),
         company_id='incidunt',
         contact_id='id',
-        created_at=dateutil.parser.parse('2021-10-20').date(),
+        created_at=dateutil.parser.isoparse('2021-10-20T07:58:35.149Z'),
         creator_user_id='quaerat',
         emails=[
             shared.CrmEmail(
@@ -174,7 +174,7 @@ req = operations.PatchCrmConnectionIDLeadIDRequest(
                 type=shared.CrmTelephoneType.HOME,
             ),
         ],
-        updated_at=dateutil.parser.parse('2022-04-13').date(),
+        updated_at=dateutil.parser.isoparse('2022-04-13T09:05:51.677Z'),
         user_id='autem',
     ),
     connection_id='ea',
@@ -230,7 +230,7 @@ req = operations.PostCrmConnectionIDLeadRequest(
         ),
         company_id='natus',
         contact_id='molestiae',
-        created_at=dateutil.parser.parse('2020-03-03').date(),
+        created_at=dateutil.parser.isoparse('2020-03-03T18:07:31.494Z'),
         creator_user_id='hic',
         emails=[
             shared.CrmEmail(
@@ -247,7 +247,7 @@ req = operations.PostCrmConnectionIDLeadRequest(
                 type=shared.CrmTelephoneType.WORK,
             ),
         ],
-        updated_at=dateutil.parser.parse('2022-04-24').date(),
+        updated_at=dateutil.parser.isoparse('2022-04-24T12:06:20.344Z'),
         user_id='odit',
     ),
     connection_id='aut',
@@ -302,7 +302,7 @@ req = operations.PutCrmConnectionIDLeadIDRequest(
         ),
         company_id='facere',
         contact_id='laudantium',
-        created_at=dateutil.parser.parse('2022-09-11').date(),
+        created_at=dateutil.parser.isoparse('2022-09-11T02:42:21.444Z'),
         creator_user_id='fuga',
         emails=[
             shared.CrmEmail(
@@ -319,7 +319,7 @@ req = operations.PutCrmConnectionIDLeadIDRequest(
                 type=shared.CrmTelephoneType.MOBILE,
             ),
         ],
-        updated_at=dateutil.parser.parse('2021-12-04').date(),
+        updated_at=dateutil.parser.isoparse('2021-12-04T00:59:07.070Z'),
         user_id='eveniet',
     ),
     connection_id='molestiae',

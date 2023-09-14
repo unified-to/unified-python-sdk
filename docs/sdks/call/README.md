@@ -26,7 +26,7 @@ req = operations.GetUcConnectionIDCallRequest(
     order='accusamus',
     query='doloremque',
     sort='nisi',
-    updated_gte=dateutil.parser.parse('2021-02-24').date(),
+    updated_gte=dateutil.parser.isoparse('2021-02-24T20:48:23.002Z'),
 )
 
 res = s.call.get_uc_connection_id_call(req, operations.GetUcConnectionIDCallSecurity(

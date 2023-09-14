@@ -196,7 +196,7 @@ req = operations.GetCrmConnectionIDEventRequest(
     order='facilis',
     query='sapiente',
     sort='maxime',
-    updated_gte=dateutil.parser.parse('2022-10-11').date(),
+    updated_gte=dateutil.parser.isoparse('2022-10-11T22:27:53.755Z'),
 )
 
 res = s.event.get_crm_connection_id_event(req, operations.GetCrmConnectionIDEventSecurity(
@@ -283,7 +283,7 @@ req = operations.PatchCrmConnectionIDEventIDRequest(
         contact_ids=[
             'commodi',
         ],
-        created_at=dateutil.parser.parse('2021-10-18').date(),
+        created_at=dateutil.parser.isoparse('2021-10-18T23:17:50.935Z'),
         deal_ids=[
             'qui',
         ],
@@ -301,8 +301,8 @@ req = operations.PatchCrmConnectionIDEventIDRequest(
         id='4cc6b788-90a3-4fd3-881d-a10f8c23df93',
         meeting=shared.PropertyCrmEventMeeting(
             description='quae',
-            end_at=dateutil.parser.parse('2021-01-28').date(),
-            start_at=dateutil.parser.parse('2022-02-09').date(),
+            end_at=dateutil.parser.isoparse('2021-01-28T19:50:54.435Z'),
+            start_at=dateutil.parser.isoparse('2022-02-09T08:20:37.262Z'),
             title='Dr.',
         ),
         note=shared.PropertyCrmEventNote(
@@ -315,7 +315,7 @@ req = operations.PatchCrmConnectionIDEventIDRequest(
             status='numquam',
         ),
         type=shared.CrmEventType.MEETING,
-        updated_at=dateutil.parser.parse('2020-08-13').date(),
+        updated_at=dateutil.parser.isoparse('2020-08-13T07:08:20.678Z'),
     ),
     connection_id='sint',
     id='43513772-6d15-4321-b832-a56d69180ff6',
@@ -484,7 +484,7 @@ req = operations.PostCrmConnectionIDEventRequest(
         contact_ids=[
             'architecto',
         ],
-        created_at=dateutil.parser.parse('2020-10-13').date(),
+        created_at=dateutil.parser.isoparse('2020-10-13T11:08:25.283Z'),
         deal_ids=[
             'alias',
         ],
@@ -502,8 +502,8 @@ req = operations.PostCrmConnectionIDEventRequest(
         id='7b51996b-5b4b-450e-af71-2b7a7ab0344b',
         meeting=shared.PropertyCrmEventMeeting(
             description='inventore',
-            end_at=dateutil.parser.parse('2022-11-20').date(),
-            start_at=dateutil.parser.parse('2022-08-01').date(),
+            end_at=dateutil.parser.isoparse('2022-11-20T13:22:34.695Z'),
+            start_at=dateutil.parser.isoparse('2022-08-01T07:59:36.823Z'),
             title='Ms.',
         ),
         note=shared.PropertyCrmEventNote(
@@ -516,7 +516,7 @@ req = operations.PostCrmConnectionIDEventRequest(
             status='rem',
         ),
         type=shared.CrmEventType.TASK,
-        updated_at=dateutil.parser.parse('2022-01-23').date(),
+        updated_at=dateutil.parser.isoparse('2022-01-23T07:05:36.436Z'),
     ),
     connection_id='velit',
 )
@@ -567,7 +567,7 @@ req = operations.PutCrmConnectionIDEventIDRequest(
         contact_ids=[
             'quod',
         ],
-        created_at=dateutil.parser.parse('2020-05-30').date(),
+        created_at=dateutil.parser.isoparse('2020-05-30T09:15:09.119Z'),
         deal_ids=[
             'dolor',
         ],
@@ -585,8 +585,8 @@ req = operations.PutCrmConnectionIDEventIDRequest(
         id='3e4e080a-a104-4186-ac75-9e02f3702c5c',
         meeting=shared.PropertyCrmEventMeeting(
             description='laudantium',
-            end_at=dateutil.parser.parse('2022-08-02').date(),
-            start_at=dateutil.parser.parse('2022-05-30').date(),
+            end_at=dateutil.parser.isoparse('2022-08-02T07:50:37.926Z'),
+            start_at=dateutil.parser.isoparse('2022-05-30T16:07:16.405Z'),
             title='Mr.',
         ),
         note=shared.PropertyCrmEventNote(
@@ -599,7 +599,7 @@ req = operations.PutCrmConnectionIDEventIDRequest(
             status='culpa',
         ),
         type=shared.CrmEventType.EMAIL,
-        updated_at=dateutil.parser.parse('2022-07-25').date(),
+        updated_at=dateutil.parser.isoparse('2022-07-25T01:13:49.601Z'),
     ),
     connection_id='alias',
     id='7bf375b4-4282-4821-bdb2-f69e59267c71',

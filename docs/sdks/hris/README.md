@@ -111,7 +111,7 @@ req = operations.GetHrisConnectionIDEmployeeRequest(
     order='corporis',
     query='explicabo',
     sort='distinctio',
-    updated_gte=dateutil.parser.parse('2021-08-12').date(),
+    updated_gte=dateutil.parser.isoparse('2021-08-12T22:16:16.253Z'),
 )
 
 res = s.hris.get_hris_connection_id_employee(req, operations.GetHrisConnectionIDEmployeeSecurity(
@@ -193,7 +193,7 @@ req = operations.GetHrisConnectionIDGroupRequest(
     order='illo',
     query='illo',
     sort='deleniti',
-    updated_gte=dateutil.parser.parse('2022-07-26').date(),
+    updated_gte=dateutil.parser.isoparse('2022-07-26T10:34:40.123Z'),
 )
 
 res = s.hris.get_hris_connection_id_group(req, operations.GetHrisConnectionIDGroupSecurity(
@@ -280,8 +280,8 @@ req = operations.PatchHrisConnectionIDEmployeeIDRequest(
             region='unde',
             region_code='autem',
         ),
-        created_at=dateutil.parser.parse('2022-07-11').date(),
-        date_of_birth=dateutil.parser.parse('2022-02-18').date(),
+        created_at=dateutil.parser.isoparse('2022-07-11T08:13:45.102Z'),
+        date_of_birth=dateutil.parser.isoparse('2022-02-18T07:36:00.073Z'),
         department='autem',
         division='placeat',
         emails=[
@@ -294,7 +294,7 @@ req = operations.PatchHrisConnectionIDEmployeeIDRequest(
         employment_status=shared.HrisEmployeeEmploymentStatus.INACTIVE,
         employment_type=shared.HrisEmployeeEmploymentType.INTERN,
         gender=shared.HrisEmployeeGender.INTERSEX,
-        hired_at=dateutil.parser.parse('2020-08-13').date(),
+        hired_at=dateutil.parser.isoparse('2020-08-13T08:33:47.369Z'),
         id='ef234c95-5b9b-4df2-990a-bd9bbcc2725e',
         location='impedit',
         manager_id='magni',
@@ -307,9 +307,9 @@ req = operations.PatchHrisConnectionIDEmployeeIDRequest(
                 type=shared.HrisTelephoneType.WORK,
             ),
         ],
-        terminated_at=dateutil.parser.parse('2022-06-27').date(),
+        terminated_at=dateutil.parser.isoparse('2022-06-27T13:37:26.116Z'),
         title='Mr.',
-        updated_at=dateutil.parser.parse('2021-10-27').date(),
+        updated_at=dateutil.parser.isoparse('2021-10-27T12:07:56.119Z'),
     ),
     connection_id='excepturi',
     id='ef68e45c-8add-4fac-b545-00430c6632b4',
@@ -351,7 +351,7 @@ s = unified_to.UnifiedTo()
 
 req = operations.PatchHrisConnectionIDGroupIDRequest(
     hris_group=shared.HrisGroup(
-        created_at=dateutil.parser.parse('2022-05-31').date(),
+        created_at=dateutil.parser.isoparse('2022-05-31T02:06:03.542Z'),
         description='inventore',
         employee_ids=[
             'sapiente',
@@ -365,7 +365,7 @@ req = operations.PatchHrisConnectionIDGroupIDRequest(
         parent_id='qui',
         raw=shared.PropertyHrisGroupRaw(),
         type=shared.HrisGroupType.DEPARTMENT,
-        updated_at=dateutil.parser.parse('2022-12-06').date(),
+        updated_at=dateutil.parser.isoparse('2022-12-06T03:55:58.108Z'),
     ),
     connection_id='quisquam',
     id='7c0f0f87-3f9d-45c2-9fd3-e0b4a4a4253c',
@@ -417,8 +417,8 @@ req = operations.PostHrisConnectionIDEmployeeRequest(
             region='pariatur',
             region_code='porro',
         ),
-        created_at=dateutil.parser.parse('2022-09-23').date(),
-        date_of_birth=dateutil.parser.parse('2021-07-11').date(),
+        created_at=dateutil.parser.isoparse('2022-09-23T16:00:07.090Z'),
+        date_of_birth=dateutil.parser.isoparse('2021-07-11T10:12:07.009Z'),
         department='itaque',
         division='sit',
         emails=[
@@ -431,7 +431,7 @@ req = operations.PostHrisConnectionIDEmployeeRequest(
         employment_status=shared.HrisEmployeeEmploymentStatus.ACTIVE,
         employment_type=shared.HrisEmployeeEmploymentType.FULL_TIME,
         gender=shared.HrisEmployeeGender.FEMALE,
-        hired_at=dateutil.parser.parse('2021-01-27').date(),
+        hired_at=dateutil.parser.isoparse('2021-01-27T23:42:02.589Z'),
         id='12a4ba9d-5998-4819-acfd-0c77c53e7e7d',
         location='eius',
         manager_id='accusamus',
@@ -444,9 +444,9 @@ req = operations.PostHrisConnectionIDEmployeeRequest(
                 type=shared.HrisTelephoneType.FAX,
             ),
         ],
-        terminated_at=dateutil.parser.parse('2021-06-09').date(),
+        terminated_at=dateutil.parser.isoparse('2021-06-09T00:38:41.199Z'),
         title='Mrs.',
-        updated_at=dateutil.parser.parse('2022-06-19').date(),
+        updated_at=dateutil.parser.isoparse('2022-06-19T22:55:28.813Z'),
     ),
     connection_id='saepe',
 )
@@ -487,7 +487,7 @@ s = unified_to.UnifiedTo()
 
 req = operations.PostHrisConnectionIDGroupRequest(
     hris_group=shared.HrisGroup(
-        created_at=dateutil.parser.parse('2022-10-11').date(),
+        created_at=dateutil.parser.isoparse('2022-10-11T00:06:05.180Z'),
         description='sint',
         employee_ids=[
             'ea',
@@ -501,7 +501,7 @@ req = operations.PostHrisConnectionIDGroupRequest(
         parent_id='voluptatum',
         raw=shared.PropertyHrisGroupRaw(),
         type=shared.HrisGroupType.SUB_DEPARTMENT,
-        updated_at=dateutil.parser.parse('2022-02-14').date(),
+        updated_at=dateutil.parser.isoparse('2022-02-14T18:55:03.442Z'),
     ),
     connection_id='commodi',
 )
@@ -552,8 +552,8 @@ req = operations.PutHrisConnectionIDEmployeeIDRequest(
             region='nisi',
             region_code='occaecati',
         ),
-        created_at=dateutil.parser.parse('2022-12-15').date(),
-        date_of_birth=dateutil.parser.parse('2020-03-31').date(),
+        created_at=dateutil.parser.isoparse('2022-12-15T12:15:10.431Z'),
+        date_of_birth=dateutil.parser.isoparse('2020-03-31T16:49:34.939Z'),
         department='odio',
         division='nihil',
         emails=[
@@ -566,7 +566,7 @@ req = operations.PutHrisConnectionIDEmployeeIDRequest(
         employment_status=shared.HrisEmployeeEmploymentStatus.INACTIVE,
         employment_type=shared.HrisEmployeeEmploymentType.OTHER,
         gender=shared.HrisEmployeeGender.INTERSEX,
-        hired_at=dateutil.parser.parse('2022-06-18').date(),
+        hired_at=dateutil.parser.isoparse('2022-06-18T09:54:51.929Z'),
         id='06e61b0d-3087-414c-a0a3-d98637ca85c3',
         location='delectus',
         manager_id='repudiandae',
@@ -579,9 +579,9 @@ req = operations.PutHrisConnectionIDEmployeeIDRequest(
                 type=shared.HrisTelephoneType.FAX,
             ),
         ],
-        terminated_at=dateutil.parser.parse('2021-02-20').date(),
+        terminated_at=dateutil.parser.isoparse('2021-02-20T15:13:08.610Z'),
         title='Mrs.',
-        updated_at=dateutil.parser.parse('2022-01-28').date(),
+        updated_at=dateutil.parser.isoparse('2022-01-28T12:53:07.770Z'),
     ),
     connection_id='placeat',
     id='98f13af2-8db2-4cf2-bf4f-3ded356d7e14',
@@ -623,7 +623,7 @@ s = unified_to.UnifiedTo()
 
 req = operations.PutHrisConnectionIDGroupIDRequest(
     hris_group=shared.HrisGroup(
-        created_at=dateutil.parser.parse('2022-08-29').date(),
+        created_at=dateutil.parser.isoparse('2022-08-29T10:06:09.751Z'),
         description='beatae',
         employee_ids=[
             'eligendi',
@@ -637,7 +637,7 @@ req = operations.PutHrisConnectionIDGroupIDRequest(
         parent_id='ab',
         raw=shared.PropertyHrisGroupRaw(),
         type=shared.HrisGroupType.DIVISION,
-        updated_at=dateutil.parser.parse('2020-11-07').date(),
+        updated_at=dateutil.parser.isoparse('2020-11-07T15:44:18.546Z'),
     ),
     connection_id='quasi',
     id='2c5ba825-fe22-4cd5-8ba6-fbfec932af68',

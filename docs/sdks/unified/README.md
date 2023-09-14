@@ -146,7 +146,7 @@ s = unified_to.UnifiedTo()
 
 req = operations.GetUnifiedApicallRequest(
     connection_id='magni',
-    created_lte=dateutil.parser.parse('2022-05-24').date(),
+    created_lte=dateutil.parser.isoparse('2022-05-24T09:06:17.139Z'),
     env='maxime',
     error=False,
     external_xref='vitae',
@@ -155,7 +155,7 @@ req = operations.GetUnifiedApicallRequest(
     offset=1150.28,
     order='blanditiis',
     sort='ipsam',
-    updated_gte=dateutil.parser.parse('2022-08-08').date(),
+    updated_gte=dateutil.parser.isoparse('2022-08-08T20:31:22.144Z'),
 )
 
 res = s.unified.get_unified_apicall(req, operations.GetUnifiedApicallSecurity(
@@ -239,7 +239,7 @@ req = operations.GetUnifiedConnectionRequest(
     offset=603.93,
     order='qui',
     sort='labore',
-    updated_gte=dateutil.parser.parse('2022-11-05').date(),
+    updated_gte=dateutil.parser.isoparse('2022-11-05T10:44:25.961Z'),
 )
 
 res = s.unified.get_unified_connection(req, operations.GetUnifiedConnectionSecurity(
@@ -323,7 +323,7 @@ req = operations.GetUnifiedIntegrationRequest(
     order='impedit',
     sort='optio',
     summary=False,
-    updated_gte=dateutil.parser.parse('2022-09-12').date(),
+    updated_gte=dateutil.parser.isoparse('2022-09-12T15:50:36.450Z'),
 )
 
 res = s.unified.get_unified_integration(req, operations.GetUnifiedIntegrationSecurity(
@@ -556,7 +556,7 @@ req = operations.GetUnifiedWebhookRequest(
     offset=9332.28,
     order='excepturi',
     sort='eligendi',
-    updated_gte=dateutil.parser.parse('2022-04-26').date(),
+    updated_gte=dateutil.parser.isoparse('2022-04-26T06:44:29.423Z'),
 )
 
 res = s.unified.get_unified_webhook(req, operations.GetUnifiedWebhookSecurity(
@@ -645,7 +645,7 @@ req = operations.PatchUnifiedConnectionIDRequest(
                 'ut',
             ],
             expires_in=3924.24,
-            expiry_date=dateutil.parser.parse('2021-01-28').date(),
+            expiry_date=dateutil.parser.isoparse('2021-01-28T23:49:19.065Z'),
             key='eum',
             meta=shared.PropertyPropertyConnectionAuthMeta(),
             name='Albert Schmidt MD',
@@ -662,7 +662,7 @@ req = operations.PatchUnifiedConnectionIDRequest(
         categories=[
             shared.PropertyConnectionCategories.AUTH,
         ],
-        created_at=dateutil.parser.parse('2021-02-21').date(),
+        created_at=dateutil.parser.isoparse('2021-02-21T07:53:55.382Z'),
         environment='laboriosam',
         external_xref='harum',
         id='626012eb-a057-4988-8672-0c3103f1a40c',
@@ -671,7 +671,7 @@ req = operations.PatchUnifiedConnectionIDRequest(
         permissions=[
             shared.PropertyConnectionPermissions.ATS_JOB_READ,
         ],
-        updated_at=dateutil.parser.parse('2022-02-08').date(),
+        updated_at=dateutil.parser.isoparse('2022-02-08T06:53:00.234Z'),
         workspace_id='quo',
     ),
     id='8688fd8e-c6fc-4031-a8f0-aaaeee004eba',
@@ -712,13 +712,13 @@ from unified_to.models import operations, shared
 s = unified_to.UnifiedTo()
 
 req = shared.User(
-    created_at=dateutil.parser.parse('2022-04-05').date(),
+    created_at=dateutil.parser.isoparse('2022-04-05T01:32:39.778Z'),
     email='Kavon12@hotmail.com',
     environment='harum',
     id='e509c508-7131-4f06-b0bc-e55a8687143c',
     meta=shared.PropertyUserMeta(),
     name='Mrs. Darryl Morar',
-    updated_at=dateutil.parser.parse('2021-07-05').date(),
+    updated_at=dateutil.parser.isoparse('2021-07-05T20:55:18.206Z'),
     workspace_id='sint',
     workspace_ids=[
         'odio',
@@ -773,7 +773,7 @@ req = shared.Connection(
             'in',
         ],
         expires_in=8765.83,
-        expiry_date=dateutil.parser.parse('2022-07-06').date(),
+        expiry_date=dateutil.parser.isoparse('2022-07-06T05:57:07.995Z'),
         key='voluptatum',
         meta=shared.PropertyPropertyConnectionAuthMeta(),
         name='Neil Grimes',
@@ -790,7 +790,7 @@ req = shared.Connection(
     categories=[
         shared.PropertyConnectionCategories.MARTECH,
     ],
-    created_at=dateutil.parser.parse('2022-09-06').date(),
+    created_at=dateutil.parser.isoparse('2022-09-06T07:44:31.963Z'),
     environment='totam',
     external_xref='laboriosam',
     id='2d2a31f9-b14a-4a6b-9ec7-f444232e9a5d',
@@ -799,7 +799,7 @@ req = shared.Connection(
     permissions=[
         shared.PropertyConnectionPermissions.ATS_INTERVIEW_READ,
     ],
-    updated_at=dateutil.parser.parse('2022-05-01').date(),
+    updated_at=dateutil.parser.isoparse('2022-05-01T01:22:05.452Z'),
     workspace_id='cumque',
 )
 
@@ -839,9 +839,9 @@ s = unified_to.UnifiedTo()
 
 req = operations.PostUnifiedWebhookConnectionIDObjectRequest(
     webhook=shared.Webhook(
-        checked_at=dateutil.parser.parse('2021-07-13').date(),
+        checked_at=dateutil.parser.isoparse('2021-07-13T18:24:14.540Z'),
         connection_id='sed',
-        created_at=dateutil.parser.parse('2021-12-08').date(),
+        created_at=dateutil.parser.isoparse('2021-12-08T04:18:23.721Z'),
         environment='cupiditate',
         events=[
             shared.PropertyWebhookEvents.CREATED,
@@ -855,7 +855,7 @@ req = operations.PostUnifiedWebhookConnectionIDObjectRequest(
         subscriptions=[
             'iusto',
         ],
-        updated_at=dateutil.parser.parse('2022-07-12').date(),
+        updated_at=dateutil.parser.isoparse('2022-07-12T13:27:28.756Z'),
         workspace_id='praesentium',
     ),
     connection_id='maiores',
@@ -914,7 +914,7 @@ req = operations.PutUnifiedConnectionIDRequest(
                 'voluptas',
             ],
             expires_in=2226.69,
-            expiry_date=dateutil.parser.parse('2020-12-30').date(),
+            expiry_date=dateutil.parser.isoparse('2020-12-30T11:42:07.241Z'),
             key='aut',
             meta=shared.PropertyPropertyConnectionAuthMeta(),
             name='Velma Baumbach',
@@ -931,7 +931,7 @@ req = operations.PutUnifiedConnectionIDRequest(
         categories=[
             shared.PropertyConnectionCategories.CRM,
         ],
-        created_at=dateutil.parser.parse('2022-07-24').date(),
+        created_at=dateutil.parser.isoparse('2022-07-24T05:34:55.315Z'),
         environment='adipisci',
         external_xref='voluptatem',
         id='d8f8b89d-9ca6-4075-a56f-c0ebe67155e2',
@@ -940,7 +940,7 @@ req = operations.PutUnifiedConnectionIDRequest(
         permissions=[
             shared.PropertyConnectionPermissions.ATS_SCORECARD_WRITE,
         ],
-        updated_at=dateutil.parser.parse('2022-04-26').date(),
+        updated_at=dateutil.parser.isoparse('2022-04-26T12:57:03.822Z'),
         workspace_id='ipsum',
     ),
     id='070d6e29-7f58-41fa-baaa-7d801088076f',
@@ -981,13 +981,13 @@ from unified_to.models import operations, shared
 s = unified_to.UnifiedTo()
 
 req = shared.User(
-    created_at=dateutil.parser.parse('2021-12-05').date(),
+    created_at=dateutil.parser.isoparse('2021-12-05T11:57:07.239Z'),
     email='Gillian.Walsh62@hotmail.com',
     environment='laudantium',
     id='14088269-b6a7-40b0-9d82-f94fffbd1e1e',
     meta=shared.PropertyUserMeta(),
     name='Debra Stiedemann',
-    updated_at=dateutil.parser.parse('2022-06-05').date(),
+    updated_at=dateutil.parser.isoparse('2022-06-05T07:44:58.092Z'),
     workspace_id='doloremque',
     workspace_ids=[
         'sequi',

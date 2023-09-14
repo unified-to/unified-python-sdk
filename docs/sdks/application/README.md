@@ -69,7 +69,7 @@ req = operations.GetAtsConnectionIDApplicationRequest(
     order='quidem',
     query='voluptatibus',
     sort='voluptas',
-    updated_gte=dateutil.parser.parse('2022-08-22').date(),
+    updated_gte=dateutil.parser.isoparse('2022-08-22T21:20:36.034Z'),
 )
 
 res = s.application.get_ats_connection_id_application(req, operations.GetAtsConnectionIDApplicationSecurity(
@@ -146,17 +146,17 @@ s = unified_to.UnifiedTo()
 
 req = operations.PatchAtsConnectionIDApplicationIDRequest(
     ats_application=shared.AtsApplication(
-        applied_at=dateutil.parser.parse('2021-09-28').date(),
+        applied_at=dateutil.parser.isoparse('2021-09-28T20:14:16.452Z'),
         candidate_id='alias',
-        created_at=dateutil.parser.parse('2022-01-24').date(),
+        created_at=dateutil.parser.isoparse('2022-01-24T12:18:47.570Z'),
         id='46ce2af7-a73c-4f3b-a453-f870b326b5a7',
         job_id='ipsum',
         raw=shared.PropertyAtsApplicationRaw(),
-        rejected_at=dateutil.parser.parse('2022-10-24').date(),
+        rejected_at=dateutil.parser.isoparse('2022-10-24T22:37:32.805Z'),
         rejected_reason='cupiditate',
         source='maxime',
         status=shared.AtsApplicationStatus.HIRED,
-        updated_at=dateutil.parser.parse('2022-10-07').date(),
+        updated_at=dateutil.parser.isoparse('2022-10-07T04:50:29.805Z'),
     ),
     connection_id='laborum',
     id='8422bb67-9d23-4227-95bf-0cbb1e31b8b9',
@@ -198,17 +198,17 @@ s = unified_to.UnifiedTo()
 
 req = operations.PostAtsConnectionIDApplicationRequest(
     ats_application=shared.AtsApplication(
-        applied_at=dateutil.parser.parse('2022-01-14').date(),
+        applied_at=dateutil.parser.isoparse('2022-01-14T21:26:14.171Z'),
         candidate_id='dolorem',
-        created_at=dateutil.parser.parse('2022-09-18').date(),
+        created_at=dateutil.parser.isoparse('2022-09-18T06:37:26.413Z'),
         id='3a1108e0-adcf-44b9-a187-9fce953f73ef',
         job_id='dignissimos',
         raw=shared.PropertyAtsApplicationRaw(),
-        rejected_at=dateutil.parser.parse('2020-11-08').date(),
+        rejected_at=dateutil.parser.isoparse('2020-11-08T11:03:10.206Z'),
         rejected_reason='quod',
         source='odio',
         status=shared.AtsApplicationStatus.BACKGROUND_CHECK,
-        updated_at=dateutil.parser.parse('2021-04-02').date(),
+        updated_at=dateutil.parser.isoparse('2021-04-02T18:28:29.036Z'),
     ),
     connection_id='ducimus',
 )
@@ -249,17 +249,17 @@ s = unified_to.UnifiedTo()
 
 req = operations.PutAtsConnectionIDApplicationIDRequest(
     ats_application=shared.AtsApplication(
-        applied_at=dateutil.parser.parse('2022-02-26').date(),
+        applied_at=dateutil.parser.isoparse('2022-02-26T17:44:28.591Z'),
         candidate_id='illum',
-        created_at=dateutil.parser.parse('2022-05-20').date(),
+        created_at=dateutil.parser.isoparse('2022-05-20T11:24:00.260Z'),
         id='c0f5d2cf-f7c7-40a4-9626-d436813f16d9',
         job_id='voluptatibus',
         raw=shared.PropertyAtsApplicationRaw(),
-        rejected_at=dateutil.parser.parse('2022-01-15').date(),
+        rejected_at=dateutil.parser.isoparse('2022-01-15T07:05:18.296Z'),
         rejected_reason='quisquam',
         source='saepe',
         status=shared.AtsApplicationStatus.FIRST_INTERVIEW,
-        updated_at=dateutil.parser.parse('2021-12-03').date(),
+        updated_at=dateutil.parser.isoparse('2021-12-03T14:20:49.127Z'),
     ),
     connection_id='veniam',
     id='6146c3e2-50fb-4008-842e-141aac366c8d',

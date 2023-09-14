@@ -69,7 +69,7 @@ req = operations.GetMartechConnectionIDListIDMemberRequest(
     order='numquam',
     query='dignissimos',
     sort='natus',
-    updated_gte=dateutil.parser.parse('2022-03-19').date(),
+    updated_gte=dateutil.parser.isoparse('2022-03-19T03:29:08.234Z'),
 )
 
 res = s.member.get_martech_connection_id_list_id_member(req, operations.GetMartechConnectionIDListIDMemberSecurity(
@@ -147,7 +147,7 @@ s = unified_to.UnifiedTo()
 
 req = operations.PatchMartechConnectionIDListIDMemberIDRequest(
     marketing_member=shared.MarketingMember(
-        created_at=dateutil.parser.parse('2022-08-11').date(),
+        created_at=dateutil.parser.isoparse('2022-08-11T15:05:29.161Z'),
         emails=[
             shared.MarketingEmail(
                 email='Ella32@yahoo.com',
@@ -163,7 +163,7 @@ req = operations.PatchMartechConnectionIDListIDMemberIDRequest(
         tags=[
             'nisi',
         ],
-        updated_at=dateutil.parser.parse('2022-07-05').date(),
+        updated_at=dateutil.parser.isoparse('2022-07-05T01:28:10.122Z'),
     ),
     connection_id='aliquam',
     id='1e43b234-2417-4d13-a3f6-2aa9ae4ae8ab',
@@ -206,7 +206,7 @@ s = unified_to.UnifiedTo()
 
 req = operations.PostMartechConnectionIDListIDMemberRequest(
     marketing_member=shared.MarketingMember(
-        created_at=dateutil.parser.parse('2021-10-26').date(),
+        created_at=dateutil.parser.isoparse('2021-10-26T01:34:29.397Z'),
         emails=[
             shared.MarketingEmail(
                 email='Elena80@hotmail.com',
@@ -222,7 +222,7 @@ req = operations.PostMartechConnectionIDListIDMemberRequest(
         tags=[
             'cum',
         ],
-        updated_at=dateutil.parser.parse('2022-10-14').date(),
+        updated_at=dateutil.parser.isoparse('2022-10-14T03:48:43.146Z'),
     ),
     connection_id='labore',
     list_id='modi',
@@ -264,7 +264,7 @@ s = unified_to.UnifiedTo()
 
 req = operations.PutMartechConnectionIDListIDMemberIDRequest(
     marketing_member=shared.MarketingMember(
-        created_at=dateutil.parser.parse('2021-09-21').date(),
+        created_at=dateutil.parser.isoparse('2021-09-21T15:05:12.667Z'),
         emails=[
             shared.MarketingEmail(
                 email='Geoffrey.Mitchell53@hotmail.com',
@@ -280,7 +280,7 @@ req = operations.PutMartechConnectionIDListIDMemberIDRequest(
         tags=[
             'suscipit',
         ],
-        updated_at=dateutil.parser.parse('2022-08-12').date(),
+        updated_at=dateutil.parser.isoparse('2022-08-12T05:09:42.944Z'),
     ),
     connection_id='optio',
     id='523105e7-c34c-4ab0-acb8-12a66148944a',

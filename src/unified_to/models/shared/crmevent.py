@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
+import dateutil.parser
 from ..shared import property_crmevent_call as shared_property_crmevent_call
 from ..shared import property_crmevent_email as shared_property_crmevent_email
 from ..shared import property_crmevent_meeting as shared_property_crmevent_meeting
@@ -9,7 +10,7 @@ from ..shared import property_crmevent_note as shared_property_crmevent_note
 from ..shared import property_crmevent_raw as shared_property_crmevent_raw
 from ..shared import property_crmevent_task as shared_property_crmevent_task
 from dataclasses_json import Undefined, dataclass_json
-from datetime import date
+from datetime import datetime
 from enum import Enum
 from typing import Optional
 from unified_to import utils
@@ -33,7 +34,7 @@ class CrmEvent:
     r"""An array of company IDs associated with this event"""
     contact_ids: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('contact_ids'), 'exclude': lambda f: f is None }})
     r"""An array of contact IDs associated with this event"""
-    created_at: Optional[date] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created_at'), 'encoder': utils.dateisoformat(True), 'decoder': utils.datefromisoformat, 'exclude': lambda f: f is None }})
+    created_at: Optional[datetime] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created_at'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'exclude': lambda f: f is None }})
     deal_ids: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('deal_ids'), 'exclude': lambda f: f is None }})
     r"""An array of deal IDs associated with this event"""
     email: Optional[shared_property_crmevent_email.PropertyCrmEventEmail] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('email'), 'exclude': lambda f: f is None }})
@@ -48,6 +49,6 @@ class CrmEvent:
     task: Optional[shared_property_crmevent_task.PropertyCrmEventTask] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('task'), 'exclude': lambda f: f is None }})
     r"""The task object, when type = task"""
     type: Optional[CrmEventType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type'), 'exclude': lambda f: f is None }})
-    updated_at: Optional[date] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('updated_at'), 'encoder': utils.dateisoformat(True), 'decoder': utils.datefromisoformat, 'exclude': lambda f: f is None }})
+    updated_at: Optional[datetime] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('updated_at'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'exclude': lambda f: f is None }})
     
 

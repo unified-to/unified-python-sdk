@@ -67,7 +67,7 @@ req = operations.GetAtsConnectionIDCandidateRequest(
     order='accusamus',
     query='totam',
     sort='reiciendis',
-    updated_gte=dateutil.parser.parse('2022-06-05').date(),
+    updated_gte=dateutil.parser.isoparse('2022-06-05T16:37:51.499Z'),
 )
 
 res = s.candidate.get_ats_connection_id_candidate(req, operations.GetAtsConnectionIDCandidateSecurity(
@@ -155,7 +155,7 @@ req = operations.PatchAtsConnectionIDCandidateIDRequest(
             region_code='consequuntur',
         ),
         company_name='veniam',
-        created_at=dateutil.parser.parse('2021-01-31').date(),
+        created_at=dateutil.parser.isoparse('2021-01-31T23:06:28.366Z'),
         emails=[
             shared.AtsEmail(
                 email='Dylan.Gerhold72@yahoo.com',
@@ -177,7 +177,7 @@ req = operations.PatchAtsConnectionIDCandidateIDRequest(
             ),
         ],
         title='Mr.',
-        updated_at=dateutil.parser.parse('2022-11-17').date(),
+        updated_at=dateutil.parser.isoparse('2022-11-17T22:55:28.189Z'),
     ),
     connection_id='nobis',
     id='e2169e51-0019-4c6d-85e3-4762799bfbbe',
@@ -230,7 +230,7 @@ req = operations.PostAtsConnectionIDCandidateRequest(
             region_code='nemo',
         ),
         company_name='illum',
-        created_at=dateutil.parser.parse('2022-07-04').date(),
+        created_at=dateutil.parser.isoparse('2022-07-04T05:44:09.732Z'),
         emails=[
             shared.AtsEmail(
                 email='Reynold_Walter32@yahoo.com',
@@ -252,7 +252,7 @@ req = operations.PostAtsConnectionIDCandidateRequest(
             ),
         ],
         title='Dr.',
-        updated_at=dateutil.parser.parse('2020-07-30').date(),
+        updated_at=dateutil.parser.isoparse('2020-07-30T17:13:23.320Z'),
     ),
     connection_id='consequatur',
 )
@@ -304,7 +304,7 @@ req = operations.PutAtsConnectionIDCandidateIDRequest(
             region_code='asperiores',
         ),
         company_name='rem',
-        created_at=dateutil.parser.parse('2022-08-15').date(),
+        created_at=dateutil.parser.isoparse('2022-08-15T01:59:03.683Z'),
         emails=[
             shared.AtsEmail(
                 email='Winona45@hotmail.com',
@@ -326,7 +326,7 @@ req = operations.PutAtsConnectionIDCandidateIDRequest(
             ),
         ],
         title='Mrs.',
-        updated_at=dateutil.parser.parse('2022-04-23').date(),
+        updated_at=dateutil.parser.isoparse('2022-04-23T19:34:08.217Z'),
     ),
     connection_id='nemo',
     id='0cf876ff-b901-4c6e-8bb4-e243cf789ffa',

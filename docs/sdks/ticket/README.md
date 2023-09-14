@@ -69,7 +69,7 @@ req = operations.GetTicketingConnectionIDTicketRequest(
     order='adipisci',
     query='occaecati',
     sort='exercitationem',
-    updated_gte=dateutil.parser.parse('2022-11-09').date(),
+    updated_gte=dateutil.parser.isoparse('2022-11-09T17:01:20.907Z'),
 )
 
 res = s.ticket.get_ticketing_connection_id_ticket(req, operations.GetTicketingConnectionIDTicketSecurity(
@@ -147,8 +147,8 @@ s = unified_to.UnifiedTo()
 req = operations.PatchTicketingConnectionIDTicketIDRequest(
     ticketing_ticket=shared.TicketingTicket(
         category='animi',
-        closed_at=dateutil.parser.parse('2022-06-11').date(),
-        created_at=dateutil.parser.parse('2022-11-29').date(),
+        closed_at=dateutil.parser.isoparse('2022-06-11T08:56:14.494Z'),
+        created_at=dateutil.parser.isoparse('2022-11-29T12:43:22.264Z'),
         customer_id='voluptatum',
         description='eius',
         id='439b3de8-756c-4cce-870c-d2147b6e6152',
@@ -161,7 +161,7 @@ req = operations.PatchTicketingConnectionIDTicketIDRequest(
         tags=[
             'doloremque',
         ],
-        updated_at=dateutil.parser.parse('2021-05-28').date(),
+        updated_at=dateutil.parser.isoparse('2021-05-28T17:29:45.347Z'),
     ),
     connection_id='eligendi',
     id='3a4b9a5b-f935-4dfe-974f-a4b1e9c097ed',
@@ -204,8 +204,8 @@ s = unified_to.UnifiedTo()
 req = operations.PostTicketingConnectionIDTicketRequest(
     ticketing_ticket=shared.TicketingTicket(
         category='animi',
-        closed_at=dateutil.parser.parse('2022-11-09').date(),
-        created_at=dateutil.parser.parse('2022-09-13').date(),
+        closed_at=dateutil.parser.isoparse('2022-11-09T20:11:20.304Z'),
+        created_at=dateutil.parser.isoparse('2022-09-13T02:47:18.896Z'),
         customer_id='numquam',
         description='fugit',
         id='e1a9237e-9984-4c80-b479-e891923c18ca',
@@ -218,7 +218,7 @@ req = operations.PostTicketingConnectionIDTicketRequest(
         tags=[
             'enim',
         ],
-        updated_at=dateutil.parser.parse('2022-06-24').date(),
+        updated_at=dateutil.parser.isoparse('2022-06-24T00:19:38.232Z'),
     ),
     connection_id='cupiditate',
 )
@@ -260,8 +260,8 @@ s = unified_to.UnifiedTo()
 req = operations.PutTicketingConnectionIDTicketIDRequest(
     ticketing_ticket=shared.TicketingTicket(
         category='explicabo',
-        closed_at=dateutil.parser.parse('2022-09-23').date(),
-        created_at=dateutil.parser.parse('2021-01-13').date(),
+        closed_at=dateutil.parser.isoparse('2022-09-23T16:36:11.812Z'),
+        created_at=dateutil.parser.isoparse('2021-01-13T15:10:22.653Z'),
         customer_id='consequuntur',
         description='doloremque',
         id='207e4fae-038c-4d7f-9bc2-cabaf7fc2ccb',
@@ -274,7 +274,7 @@ req = operations.PutTicketingConnectionIDTicketIDRequest(
         tags=[
             'aperiam',
         ],
-        updated_at=dateutil.parser.parse('2020-02-02').date(),
+        updated_at=dateutil.parser.isoparse('2020-02-02T17:11:25.452Z'),
     ),
     connection_id='nisi',
     id='8eaedb2e-e70b-4e06-9fb3-6add704080e0',

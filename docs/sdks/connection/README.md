@@ -69,7 +69,7 @@ req = operations.GetUnifiedConnectionRequest(
     offset=1979.82,
     order='provident',
     sort='ex',
-    updated_gte=dateutil.parser.parse('2021-03-13').date(),
+    updated_gte=dateutil.parser.isoparse('2021-03-13T14:26:08.551Z'),
 )
 
 res = s.connection.get_unified_connection(req, operations.GetUnifiedConnectionSecurity(
@@ -158,7 +158,7 @@ req = operations.PatchUnifiedConnectionIDRequest(
                 'illo',
             ],
             expires_in=7782.42,
-            expiry_date=dateutil.parser.parse('2022-03-18').date(),
+            expiry_date=dateutil.parser.isoparse('2022-03-18T01:27:23.704Z'),
             key='distinctio',
             meta=shared.PropertyPropertyConnectionAuthMeta(),
             name='Felipe Homenick',
@@ -175,7 +175,7 @@ req = operations.PatchUnifiedConnectionIDRequest(
         categories=[
             shared.PropertyConnectionCategories.ENRICH,
         ],
-        created_at=dateutil.parser.parse('2022-09-06').date(),
+        created_at=dateutil.parser.isoparse('2022-09-06T09:53:00.602Z'),
         environment='sequi',
         external_xref='beatae',
         id='7747dc91-5ad2-4caf-9dd6-723dc0f5ae2f',
@@ -184,7 +184,7 @@ req = operations.PatchUnifiedConnectionIDRequest(
         permissions=[
             shared.PropertyConnectionPermissions.TICKETING_CUSTOMER_READ,
         ],
-        updated_at=dateutil.parser.parse('2022-04-24').date(),
+        updated_at=dateutil.parser.isoparse('2022-04-24T15:26:26.341Z'),
         workspace_id='ducimus',
     ),
     id='00878756-143f-45a6-898b-55554080d40b',
@@ -238,7 +238,7 @@ req = shared.Connection(
             'laboriosam',
         ],
         expires_in=7203.19,
-        expiry_date=dateutil.parser.parse('2022-01-08').date(),
+        expiry_date=dateutil.parser.isoparse('2022-01-08T15:51:51.663Z'),
         key='consectetur',
         meta=shared.PropertyPropertyConnectionAuthMeta(),
         name='Ms. Wilbert McGlynn',
@@ -255,7 +255,7 @@ req = shared.Connection(
     categories=[
         shared.PropertyConnectionCategories.ENRICH,
     ],
-    created_at=dateutil.parser.parse('2022-07-28').date(),
+    created_at=dateutil.parser.isoparse('2022-07-28T08:20:43.554Z'),
     environment='ipsam',
     external_xref='nostrum',
     id='3819b474-b0ed-420e-9624-8fff639a910a',
@@ -264,7 +264,7 @@ req = shared.Connection(
     permissions=[
         shared.PropertyConnectionPermissions.HRIS_GROUP_WRITE,
     ],
-    updated_at=dateutil.parser.parse('2020-12-12').date(),
+    updated_at=dateutil.parser.isoparse('2020-12-12T11:22:41.690Z'),
     workspace_id='tempore',
 )
 
@@ -317,7 +317,7 @@ req = operations.PutUnifiedConnectionIDRequest(
                 'accusamus',
             ],
             expires_in=682.92,
-            expiry_date=dateutil.parser.parse('2020-08-18').date(),
+            expiry_date=dateutil.parser.isoparse('2020-08-18T14:47:31.331Z'),
             key='eaque',
             meta=shared.PropertyPropertyConnectionAuthMeta(),
             name='Miss Lois Cruickshank',
@@ -334,7 +334,7 @@ req = operations.PutUnifiedConnectionIDRequest(
         categories=[
             shared.PropertyConnectionCategories.MARTECH,
         ],
-        created_at=dateutil.parser.parse('2022-02-10').date(),
+        created_at=dateutil.parser.isoparse('2022-02-10T02:37:22.453Z'),
         environment='nobis',
         external_xref='asperiores',
         id='da8d0c54-9ef0-4300-8978-a61fa1cf2068',
@@ -343,7 +343,7 @@ req = operations.PutUnifiedConnectionIDRequest(
         permissions=[
             shared.PropertyConnectionPermissions.ATS_JOB_READ,
         ],
-        updated_at=dateutil.parser.parse('2022-07-16').date(),
+        updated_at=dateutil.parser.isoparse('2022-07-16T11:02:07.974Z'),
         workspace_id='quod',
     ),
     id='1ffc71dc-a163-4f2a-bc80-a97ff334cddf',

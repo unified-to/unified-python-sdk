@@ -67,7 +67,7 @@ req = operations.GetHrisConnectionIDGroupRequest(
     order='voluptates',
     query='alias',
     sort='placeat',
-    updated_gte=dateutil.parser.parse('2022-03-07').date(),
+    updated_gte=dateutil.parser.isoparse('2022-03-07T00:11:41.235Z'),
 )
 
 res = s.group.get_hris_connection_id_group(req, operations.GetHrisConnectionIDGroupSecurity(
@@ -144,7 +144,7 @@ s = unified_to.UnifiedTo()
 
 req = operations.PatchHrisConnectionIDGroupIDRequest(
     hris_group=shared.HrisGroup(
-        created_at=dateutil.parser.parse('2022-05-13').date(),
+        created_at=dateutil.parser.isoparse('2022-05-13T18:14:16.753Z'),
         description='aliquam',
         employee_ids=[
             'iusto',
@@ -158,7 +158,7 @@ req = operations.PatchHrisConnectionIDGroupIDRequest(
         parent_id='consectetur',
         raw=shared.PropertyHrisGroupRaw(),
         type=shared.HrisGroupType.DEPARTMENT,
-        updated_at=dateutil.parser.parse('2022-12-28').date(),
+        updated_at=dateutil.parser.isoparse('2022-12-28T08:43:09.661Z'),
     ),
     connection_id='delectus',
     id='3138f30d-f3db-4022-baa5-65fb8f652ebb',
@@ -200,7 +200,7 @@ s = unified_to.UnifiedTo()
 
 req = operations.PostHrisConnectionIDGroupRequest(
     hris_group=shared.HrisGroup(
-        created_at=dateutil.parser.parse('2021-04-22').date(),
+        created_at=dateutil.parser.isoparse('2021-04-22T16:44:51.151Z'),
         description='dolor',
         employee_ids=[
             'praesentium',
@@ -214,7 +214,7 @@ req = operations.PostHrisConnectionIDGroupRequest(
         parent_id='exercitationem',
         raw=shared.PropertyHrisGroupRaw(),
         type=shared.HrisGroupType.DEPARTMENT,
-        updated_at=dateutil.parser.parse('2022-08-30').date(),
+        updated_at=dateutil.parser.isoparse('2022-08-30T17:09:47.110Z'),
     ),
     connection_id='unde',
 )
@@ -255,7 +255,7 @@ s = unified_to.UnifiedTo()
 
 req = operations.PutHrisConnectionIDGroupIDRequest(
     hris_group=shared.HrisGroup(
-        created_at=dateutil.parser.parse('2022-04-06').date(),
+        created_at=dateutil.parser.isoparse('2022-04-06T01:39:03.213Z'),
         description='aut',
         employee_ids=[
             'expedita',
@@ -269,7 +269,7 @@ req = operations.PutHrisConnectionIDGroupIDRequest(
         parent_id='quidem',
         raw=shared.PropertyHrisGroupRaw(),
         type=shared.HrisGroupType.BUSINESS_UNIT,
-        updated_at=dateutil.parser.parse('2022-08-19').date(),
+        updated_at=dateutil.parser.isoparse('2022-08-19T01:14:09.290Z'),
     ),
     connection_id='voluptate',
     id='c7edaf39-d16f-4bf7-afd1-62b303e3023b',
