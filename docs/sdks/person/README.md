@@ -1,4 +1,4 @@
-# person
+# Person
 
 ### Available Operations
 

@@ -1,4 +1,4 @@
-# event
+# Event
 
 ### Available Operations
 

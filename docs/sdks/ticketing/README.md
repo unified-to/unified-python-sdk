@@ -1,4 +1,4 @@
-# ticketing
+# Ticketing
 
 ### Available Operations
 

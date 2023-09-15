@@ -1,4 +1,4 @@
-# deal
+# Deal
 
 ### Available Operations
 

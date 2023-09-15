@@ -1,4 +1,4 @@
-# enrich
+# Enrich
 
 ### Available Operations
 

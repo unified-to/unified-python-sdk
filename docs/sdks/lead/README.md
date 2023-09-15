@@ -1,4 +1,4 @@
-# lead
+# Lead
 
 ### Available Operations
 

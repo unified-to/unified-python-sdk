@@ -1,4 +1,4 @@
-# hris
+# Hris
 
 ### Available Operations
 

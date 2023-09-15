@@ -1,4 +1,4 @@
-# candidate
+# Candidate
 
 ### Available Operations
 

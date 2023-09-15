@@ -1,4 +1,4 @@
-# apicall
+# Apicall
 
 ### Available Operations
 

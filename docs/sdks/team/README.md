@@ -1,4 +1,4 @@
-# team
+# Team
 
 ### Available Operations
 

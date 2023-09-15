@@ -42,7 +42,7 @@ if res.status_code == 200:
 ## Available Resources and Operations
 
 
-### [agent](docs/sdks/agent/README.md)
+### [Agent](docs/sdks/agent/README.md)
 
 * [delete_ticketing_connection_id_agent_id](docs/sdks/agent/README.md#delete_ticketing_connection_id_agent_id) - Remove a agent
 * [get_ticketing_connection_id_agent](docs/sdks/agent/README.md#get_ticketing_connection_id_agent) - List all agents
@@ -52,12 +52,12 @@ if res.status_code == 200:
 * [post_ticketing_connection_id_agent](docs/sdks/agent/README.md#post_ticketing_connection_id_agent) - Create a agent
 * [put_ticketing_connection_id_agent_id](docs/sdks/agent/README.md#put_ticketing_connection_id_agent_id) - Update a agent
 
-### [apicall](docs/sdks/apicall/README.md)
+### [Apicall](docs/sdks/apicall/README.md)
 
 * [get_unified_apicall](docs/sdks/apicall/README.md#get_unified_apicall) - Returns API Calls
 * [get_unified_apicall_id](docs/sdks/apicall/README.md#get_unified_apicall_id) - Retrieve specific API Call by its ID
 
-### [application](docs/sdks/application/README.md)
+### [Application](docs/sdks/application/README.md)
 
 * [delete_ats_connection_id_application_id](docs/sdks/application/README.md#delete_ats_connection_id_application_id) - Remove an application
 * [get_ats_connection_id_application](docs/sdks/application/README.md#get_ats_connection_id_application) - List all applications
@@ -66,7 +66,7 @@ if res.status_code == 200:
 * [post_ats_connection_id_application](docs/sdks/application/README.md#post_ats_connection_id_application) - Create an application
 * [put_ats_connection_id_application_id](docs/sdks/application/README.md#put_ats_connection_id_application_id) - Update an application
 
-### [ats](docs/sdks/ats/README.md)
+### [Ats](docs/sdks/ats/README.md)
 
 * [delete_ats_connection_id_application_id](docs/sdks/ats/README.md#delete_ats_connection_id_application_id) - Remove an application
 * [delete_ats_connection_id_candidate_id](docs/sdks/ats/README.md#delete_ats_connection_id_candidate_id) - Remove a candidate
@@ -99,16 +99,16 @@ if res.status_code == 200:
 * [put_ats_connection_id_job_id](docs/sdks/ats/README.md#put_ats_connection_id_job_id) - Update a job
 * [put_ats_connection_id_scorecard_id](docs/sdks/ats/README.md#put_ats_connection_id_scorecard_id) - Update a scorecard
 
-### [auth](docs/sdks/auth/README.md)
+### [Auth](docs/sdks/auth/README.md)
 
 * [get_unified_integration_auth_workspace_id_integration_type](docs/sdks/auth/README.md#get_unified_integration_auth_workspace_id_integration_type) - Create connection indirectly
 * [get_unified_integration_login_workspace_id_integration_type](docs/sdks/auth/README.md#get_unified_integration_login_workspace_id_integration_type) - Sign in a user
 
-### [call](docs/sdks/call/README.md)
+### [Call](docs/sdks/call/README.md)
 
 * [get_uc_connection_id_call](docs/sdks/call/README.md#get_uc_connection_id_call) - List all calls
 
-### [candidate](docs/sdks/candidate/README.md)
+### [Candidate](docs/sdks/candidate/README.md)
 
 * [delete_ats_connection_id_candidate_id](docs/sdks/candidate/README.md#delete_ats_connection_id_candidate_id) - Remove a candidate
 * [get_ats_connection_id_candidate](docs/sdks/candidate/README.md#get_ats_connection_id_candidate) - List all candidates
@@ -117,7 +117,7 @@ if res.status_code == 200:
 * [post_ats_connection_id_candidate](docs/sdks/candidate/README.md#post_ats_connection_id_candidate) - Create a candidate
 * [put_ats_connection_id_candidate_id](docs/sdks/candidate/README.md#put_ats_connection_id_candidate_id) - Update a candidate
 
-### [company](docs/sdks/company/README.md)
+### [Company](docs/sdks/company/README.md)
 
 * [delete_crm_connection_id_company_id](docs/sdks/company/README.md#delete_crm_connection_id_company_id) - Remove a company
 * [delete_crm_connection_id_company_id_deal_deal_id](docs/sdks/company/README.md#delete_crm_connection_id_company_id_deal_deal_id) - Remove deal association from a company
@@ -130,7 +130,7 @@ if res.status_code == 200:
 * [put_crm_connection_id_company_id](docs/sdks/company/README.md#put_crm_connection_id_company_id) - Update a company
 * [put_crm_connection_id_company_id_deal_deal_id](docs/sdks/company/README.md#put_crm_connection_id_company_id_deal_deal_id) - Associate a deal with a company
 
-### [connection](docs/sdks/connection/README.md)
+### [Connection](docs/sdks/connection/README.md)
 
 * [delete_unified_connection_id](docs/sdks/connection/README.md#delete_unified_connection_id) - Remove connection
 * [get_unified_connection](docs/sdks/connection/README.md#get_unified_connection) - List all connections
@@ -139,7 +139,7 @@ if res.status_code == 200:
 * [post_unified_connection](docs/sdks/connection/README.md#post_unified_connection) - Create connection
 * [put_unified_connection_id](docs/sdks/connection/README.md#put_unified_connection_id) - Update connection
 
-### [contact](docs/sdks/contact/README.md)
+### [Contact](docs/sdks/contact/README.md)
 
 * [delete_crm_connection_id_contact_id](docs/sdks/contact/README.md#delete_crm_connection_id_contact_id) - Remove a contact
 * [delete_crm_connection_id_contact_id_company_company_id](docs/sdks/contact/README.md#delete_crm_connection_id_contact_id_company_company_id) - Remove company association from a contact
@@ -160,7 +160,7 @@ if res.status_code == 200:
 * [put_crm_connection_id_contact_id_deal_deal_id](docs/sdks/contact/README.md#put_crm_connection_id_contact_id_deal_deal_id) - Associate a deal with a contact
 * [put_uc_connection_id_contact_id](docs/sdks/contact/README.md#put_uc_connection_id_contact_id) - Update a contact
 
-### [crm](docs/sdks/crm/README.md)
+### [Crm](docs/sdks/crm/README.md)
 
 * [delete_crm_connection_id_company_id](docs/sdks/crm/README.md#delete_crm_connection_id_company_id) - Remove a company
 * [delete_crm_connection_id_company_id_deal_deal_id](docs/sdks/crm/README.md#delete_crm_connection_id_company_id_deal_deal_id) - Remove deal association from a company
@@ -235,7 +235,7 @@ if res.status_code == 200:
 * [put_crm_connection_id_team_id](docs/sdks/crm/README.md#put_crm_connection_id_team_id) - Update a team
 * [put_crm_connection_id_user_id](docs/sdks/crm/README.md#put_crm_connection_id_user_id) - Update a user
 
-### [customer](docs/sdks/customer/README.md)
+### [Customer](docs/sdks/customer/README.md)
 
 * [delete_ticketing_connection_id_customer_id](docs/sdks/customer/README.md#delete_ticketing_connection_id_customer_id) - Remove a customer
 * [get_ticketing_connection_id_customer](docs/sdks/customer/README.md#get_ticketing_connection_id_customer) - List all customers
@@ -244,7 +244,7 @@ if res.status_code == 200:
 * [post_ticketing_connection_id_customer](docs/sdks/customer/README.md#post_ticketing_connection_id_customer) - Create a customer
 * [put_ticketing_connection_id_customer_id](docs/sdks/customer/README.md#put_ticketing_connection_id_customer_id) - Update a customer
 
-### [deal](docs/sdks/deal/README.md)
+### [Deal](docs/sdks/deal/README.md)
 
 * [delete_crm_connection_id_deal_id](docs/sdks/deal/README.md#delete_crm_connection_id_deal_id) - Remove a deal
 * [get_crm_connection_id_deal](docs/sdks/deal/README.md#get_crm_connection_id_deal) - List all deals
@@ -253,7 +253,7 @@ if res.status_code == 200:
 * [post_crm_connection_id_deal](docs/sdks/deal/README.md#post_crm_connection_id_deal) - Create a deal
 * [put_crm_connection_id_deal_id](docs/sdks/deal/README.md#put_crm_connection_id_deal_id) - Update a deal
 
-### [document](docs/sdks/document/README.md)
+### [Document](docs/sdks/document/README.md)
 
 * [delete_ats_connection_id_scorecard_id](docs/sdks/document/README.md#delete_ats_connection_id_scorecard_id) - Remove a scorecard
 * [get_ats_connection_id_scorecard](docs/sdks/document/README.md#get_ats_connection_id_scorecard) - List all scorecards
@@ -262,7 +262,7 @@ if res.status_code == 200:
 * [post_ats_connection_id_scorecard](docs/sdks/document/README.md#post_ats_connection_id_scorecard) - Create a scorecard
 * [put_ats_connection_id_scorecard_id](docs/sdks/document/README.md#put_ats_connection_id_scorecard_id) - Update a scorecard
 
-### [employee](docs/sdks/employee/README.md)
+### [Employee](docs/sdks/employee/README.md)
 
 * [delete_hris_connection_id_employee_id](docs/sdks/employee/README.md#delete_hris_connection_id_employee_id) - Remove a Employee
 * [get_hris_connection_id_employee](docs/sdks/employee/README.md#get_hris_connection_id_employee) - List all Employees
@@ -271,12 +271,12 @@ if res.status_code == 200:
 * [post_hris_connection_id_employee](docs/sdks/employee/README.md#post_hris_connection_id_employee) - Create a Employee
 * [put_hris_connection_id_employee_id](docs/sdks/employee/README.md#put_hris_connection_id_employee_id) - Update a Employee
 
-### [enrich](docs/sdks/enrich/README.md)
+### [Enrich](docs/sdks/enrich/README.md)
 
 * [get_enrich_connection_id_company](docs/sdks/enrich/README.md#get_enrich_connection_id_company) - Retrieve enrichment information for a company
 * [get_enrich_connection_id_person](docs/sdks/enrich/README.md#get_enrich_connection_id_person) - Retrieve enrichment information for a person
 
-### [event](docs/sdks/event/README.md)
+### [Event](docs/sdks/event/README.md)
 
 * [delete_crm_connection_id_event_id](docs/sdks/event/README.md#delete_crm_connection_id_event_id) - Remove a event
 * [delete_crm_connection_id_event_id_company_company_id](docs/sdks/event/README.md#delete_crm_connection_id_event_id_company_company_id) - Remove company association from an event
@@ -294,7 +294,7 @@ if res.status_code == 200:
 * [put_crm_connection_id_event_id_contact_contact_id](docs/sdks/event/README.md#put_crm_connection_id_event_id_contact_contact_id) - Associate a contact with an event
 * [put_crm_connection_id_event_id_deal_deal_id](docs/sdks/event/README.md#put_crm_connection_id_event_id_deal_deal_id) - Associate a deal with an event
 
-### [file](docs/sdks/file/README.md)
+### [File](docs/sdks/file/README.md)
 
 * [delete_crm_connection_id_file_id](docs/sdks/file/README.md#delete_crm_connection_id_file_id) - Remove a file
 * [get_crm_connection_id_file](docs/sdks/file/README.md#get_crm_connection_id_file) - List all files
@@ -303,7 +303,7 @@ if res.status_code == 200:
 * [post_crm_connection_id_file](docs/sdks/file/README.md#post_crm_connection_id_file) - Create a file
 * [put_crm_connection_id_file_id](docs/sdks/file/README.md#put_crm_connection_id_file_id) - Update a file
 
-### [group](docs/sdks/group/README.md)
+### [Group](docs/sdks/group/README.md)
 
 * [delete_hris_connection_id_group_id](docs/sdks/group/README.md#delete_hris_connection_id_group_id) - Remove a Group
 * [get_hris_connection_id_group](docs/sdks/group/README.md#get_hris_connection_id_group) - List all Groups
@@ -312,7 +312,7 @@ if res.status_code == 200:
 * [post_hris_connection_id_group](docs/sdks/group/README.md#post_hris_connection_id_group) - Create a Group
 * [put_hris_connection_id_group_id](docs/sdks/group/README.md#put_hris_connection_id_group_id) - Update a Group
 
-### [hris](docs/sdks/hris/README.md)
+### [Hris](docs/sdks/hris/README.md)
 
 * [delete_hris_connection_id_employee_id](docs/sdks/hris/README.md#delete_hris_connection_id_employee_id) - Remove a Employee
 * [delete_hris_connection_id_group_id](docs/sdks/hris/README.md#delete_hris_connection_id_group_id) - Remove a Group
@@ -327,14 +327,14 @@ if res.status_code == 200:
 * [put_hris_connection_id_employee_id](docs/sdks/hris/README.md#put_hris_connection_id_employee_id) - Update a Employee
 * [put_hris_connection_id_group_id](docs/sdks/hris/README.md#put_hris_connection_id_group_id) - Update a Group
 
-### [integration](docs/sdks/integration/README.md)
+### [Integration](docs/sdks/integration/README.md)
 
 * [get_unified_integration](docs/sdks/integration/README.md#get_unified_integration) - Returns all integrations
 * [get_unified_integration_auth_workspace_id_integration_type](docs/sdks/integration/README.md#get_unified_integration_auth_workspace_id_integration_type) - Create connection indirectly
 * [get_unified_integration_integration_type](docs/sdks/integration/README.md#get_unified_integration_integration_type) - Retrieve an integration
 * [get_unified_integration_workspace_workspace_id](docs/sdks/integration/README.md#get_unified_integration_workspace_workspace_id) - Returns all activated integrations in a workspace
 
-### [interview](docs/sdks/interview/README.md)
+### [Interview](docs/sdks/interview/README.md)
 
 * [delete_ats_connection_id_interview_id](docs/sdks/interview/README.md#delete_ats_connection_id_interview_id) - Remove a interview
 * [get_ats_connection_id_interview](docs/sdks/interview/README.md#get_ats_connection_id_interview) - List all interviews
@@ -343,7 +343,7 @@ if res.status_code == 200:
 * [post_ats_connection_id_interview](docs/sdks/interview/README.md#post_ats_connection_id_interview) - Create a interview
 * [put_ats_connection_id_interview_id](docs/sdks/interview/README.md#put_ats_connection_id_interview_id) - Update a interview
 
-### [job](docs/sdks/job/README.md)
+### [Job](docs/sdks/job/README.md)
 
 * [delete_ats_connection_id_job_id](docs/sdks/job/README.md#delete_ats_connection_id_job_id) - Remove a job
 * [get_ats_connection_id_job](docs/sdks/job/README.md#get_ats_connection_id_job) - List all jobs
@@ -352,7 +352,7 @@ if res.status_code == 200:
 * [post_ats_connection_id_job](docs/sdks/job/README.md#post_ats_connection_id_job) - Create a job
 * [put_ats_connection_id_job_id](docs/sdks/job/README.md#put_ats_connection_id_job_id) - Update a job
 
-### [lead](docs/sdks/lead/README.md)
+### [Lead](docs/sdks/lead/README.md)
 
 * [delete_crm_connection_id_lead_id](docs/sdks/lead/README.md#delete_crm_connection_id_lead_id) - Remove a lead
 * [get_crm_connection_id_lead](docs/sdks/lead/README.md#get_crm_connection_id_lead) - List all leads
@@ -361,7 +361,7 @@ if res.status_code == 200:
 * [post_crm_connection_id_lead](docs/sdks/lead/README.md#post_crm_connection_id_lead) - Create a lead
 * [put_crm_connection_id_lead_id](docs/sdks/lead/README.md#put_crm_connection_id_lead_id) - Update a lead
 
-### [list_](docs/sdks/list/README.md)
+### [List](docs/sdks/list/README.md)
 
 * [delete_martech_connection_id_list_id](docs/sdks/list/README.md#delete_martech_connection_id_list_id) - Remove a list
 * [get_martech_connection_id_list](docs/sdks/list/README.md#get_martech_connection_id_list) - List all lists
@@ -370,11 +370,11 @@ if res.status_code == 200:
 * [post_martech_connection_id_list](docs/sdks/list/README.md#post_martech_connection_id_list) - Create a list
 * [put_martech_connection_id_list_id](docs/sdks/list/README.md#put_martech_connection_id_list_id) - Update a list
 
-### [login](docs/sdks/login/README.md)
+### [Login](docs/sdks/login/README.md)
 
 * [get_unified_integration_login_workspace_id_integration_type](docs/sdks/login/README.md#get_unified_integration_login_workspace_id_integration_type) - Sign in a user
 
-### [martech](docs/sdks/martech/README.md)
+### [Martech](docs/sdks/martech/README.md)
 
 * [delete_martech_connection_id_list_id](docs/sdks/martech/README.md#delete_martech_connection_id_list_id) - Remove a list
 * [delete_martech_connection_id_list_id_member_id](docs/sdks/martech/README.md#delete_martech_connection_id_list_id_member_id) - Remove member from a list
@@ -389,7 +389,7 @@ if res.status_code == 200:
 * [put_martech_connection_id_list_id](docs/sdks/martech/README.md#put_martech_connection_id_list_id) - Update a list
 * [put_martech_connection_id_list_id_member_id](docs/sdks/martech/README.md#put_martech_connection_id_list_id_member_id) - Update a member in a list
 
-### [member](docs/sdks/member/README.md)
+### [Member](docs/sdks/member/README.md)
 
 * [delete_martech_connection_id_list_id_member_id](docs/sdks/member/README.md#delete_martech_connection_id_list_id_member_id) - Remove member from a list
 * [get_martech_connection_id_list_id_member](docs/sdks/member/README.md#get_martech_connection_id_list_id_member) - List all members in a list
@@ -398,7 +398,7 @@ if res.status_code == 200:
 * [post_martech_connection_id_list_id_member](docs/sdks/member/README.md#post_martech_connection_id_list_id_member) - Create a member in a list
 * [put_martech_connection_id_list_id_member_id](docs/sdks/member/README.md#put_martech_connection_id_list_id_member_id) - Update a member in a list
 
-### [note](docs/sdks/note/README.md)
+### [Note](docs/sdks/note/README.md)
 
 * [delete_ticketing_connection_id_notes_ticket_id_id](docs/sdks/note/README.md#delete_ticketing_connection_id_notes_ticket_id_id) - Remove a note
 * [get_ticketing_connection_id_notes_ticket_id](docs/sdks/note/README.md#get_ticketing_connection_id_notes_ticket_id) - List all notes
@@ -407,7 +407,7 @@ if res.status_code == 200:
 * [post_ticketing_connection_id_notes_ticket_id](docs/sdks/note/README.md#post_ticketing_connection_id_notes_ticket_id) - Create a note
 * [put_ticketing_connection_id_notes_ticket_id_id](docs/sdks/note/README.md#put_ticketing_connection_id_notes_ticket_id_id) - Update a note
 
-### [passthrough](docs/sdks/passthrough/README.md)
+### [Passthrough](docs/sdks/passthrough/README.md)
 
 * [delete_passthrough_connection_id_path](docs/sdks/passthrough/README.md#delete_passthrough_connection_id_path) - Passthrough DELETE
 * [get_passthrough_connection_id_path](docs/sdks/passthrough/README.md#get_passthrough_connection_id_path) - Passthrough GET
@@ -415,11 +415,11 @@ if res.status_code == 200:
 * [post_passthrough_connection_id_path](docs/sdks/passthrough/README.md#post_passthrough_connection_id_path) - Passthrough POST
 * [put_passthrough_connection_id_path](docs/sdks/passthrough/README.md#put_passthrough_connection_id_path) - Passthrough PUT
 
-### [person](docs/sdks/person/README.md)
+### [Person](docs/sdks/person/README.md)
 
 * [get_enrich_connection_id_person](docs/sdks/person/README.md#get_enrich_connection_id_person) - Retrieve enrichment information for a person
 
-### [pipeline](docs/sdks/pipeline/README.md)
+### [Pipeline](docs/sdks/pipeline/README.md)
 
 * [delete_crm_connection_id_pipeline_id](docs/sdks/pipeline/README.md#delete_crm_connection_id_pipeline_id) - Remove a pipeline
 * [get_crm_connection_id_pipeline](docs/sdks/pipeline/README.md#get_crm_connection_id_pipeline) - List all pipelines
@@ -428,7 +428,7 @@ if res.status_code == 200:
 * [post_crm_connection_id_pipeline](docs/sdks/pipeline/README.md#post_crm_connection_id_pipeline) - Create a pipeline
 * [put_crm_connection_id_pipeline_id](docs/sdks/pipeline/README.md#put_crm_connection_id_pipeline_id) - Update a pipeline
 
-### [team](docs/sdks/team/README.md)
+### [Team](docs/sdks/team/README.md)
 
 * [delete_crm_connection_id_team_id](docs/sdks/team/README.md#delete_crm_connection_id_team_id) - Remove a team
 * [get_crm_connection_id_team](docs/sdks/team/README.md#get_crm_connection_id_team) - List all teams
@@ -437,7 +437,7 @@ if res.status_code == 200:
 * [post_crm_connection_id_team](docs/sdks/team/README.md#post_crm_connection_id_team) - Create a team
 * [put_crm_connection_id_team_id](docs/sdks/team/README.md#put_crm_connection_id_team_id) - Update a team
 
-### [ticket](docs/sdks/ticket/README.md)
+### [Ticket](docs/sdks/ticket/README.md)
 
 * [delete_ticketing_connection_id_ticket_id](docs/sdks/ticket/README.md#delete_ticketing_connection_id_ticket_id) - Remove a ticket
 * [get_ticketing_connection_id_ticket](docs/sdks/ticket/README.md#get_ticketing_connection_id_ticket) - List all tickets
@@ -446,7 +446,7 @@ if res.status_code == 200:
 * [post_ticketing_connection_id_ticket](docs/sdks/ticket/README.md#post_ticketing_connection_id_ticket) - Create a ticket
 * [put_ticketing_connection_id_ticket_id](docs/sdks/ticket/README.md#put_ticketing_connection_id_ticket_id) - Update a ticket
 
-### [ticketing](docs/sdks/ticketing/README.md)
+### [Ticketing](docs/sdks/ticketing/README.md)
 
 * [delete_ticketing_connection_id_agent_id](docs/sdks/ticketing/README.md#delete_ticketing_connection_id_agent_id) - Remove a agent
 * [delete_ticketing_connection_id_customer_id](docs/sdks/ticketing/README.md#delete_ticketing_connection_id_customer_id) - Remove a customer
@@ -473,7 +473,7 @@ if res.status_code == 200:
 * [put_ticketing_connection_id_notes_ticket_id_id](docs/sdks/ticketing/README.md#put_ticketing_connection_id_notes_ticket_id_id) - Update a note
 * [put_ticketing_connection_id_ticket_id](docs/sdks/ticketing/README.md#put_ticketing_connection_id_ticket_id) - Update a ticket
 
-### [uc](docs/sdks/uc/README.md)
+### [Uc](docs/sdks/uc/README.md)
 
 * [delete_uc_connection_id_contact_id](docs/sdks/uc/README.md#delete_uc_connection_id_contact_id) - Remove a contact
 * [get_uc_connection_id_agent](docs/sdks/uc/README.md#get_uc_connection_id_agent) - List all agents
@@ -484,7 +484,7 @@ if res.status_code == 200:
 * [post_uc_connection_id_contact](docs/sdks/uc/README.md#post_uc_connection_id_contact) - Create a contact
 * [put_uc_connection_id_contact_id](docs/sdks/uc/README.md#put_uc_connection_id_contact_id) - Update a contact
 
-### [unified](docs/sdks/unified/README.md)
+### [Unified](docs/sdks/unified/README.md)
 
 * [delete_unified_connection_id](docs/sdks/unified/README.md#delete_unified_connection_id) - Remove connection
 * [delete_unified_user](docs/sdks/unified/README.md#delete_unified_user) - Delete your user object
@@ -508,7 +508,7 @@ if res.status_code == 200:
 * [put_unified_connection_id](docs/sdks/unified/README.md#put_unified_connection_id) - Update connection
 * [put_unified_user](docs/sdks/unified/README.md#put_unified_user) - Updates your user object
 
-### [user](docs/sdks/user/README.md)
+### [User](docs/sdks/user/README.md)
 
 * [delete_crm_connection_id_user_id](docs/sdks/user/README.md#delete_crm_connection_id_user_id) - Remove a user
 * [delete_unified_user](docs/sdks/user/README.md#delete_unified_user) - Delete your user object
@@ -522,7 +522,7 @@ if res.status_code == 200:
 * [put_crm_connection_id_user_id](docs/sdks/user/README.md#put_crm_connection_id_user_id) - Update a user
 * [put_unified_user](docs/sdks/user/README.md#put_unified_user) - Updates your user object
 
-### [webhook](docs/sdks/webhook/README.md)
+### [Webhook](docs/sdks/webhook/README.md)
 
 * [delete_unified_webhook_id](docs/sdks/webhook/README.md#delete_unified_webhook_id) - Remove webhook subscription
 * [get_unified_webhook](docs/sdks/webhook/README.md#get_unified_webhook) - Returns all registered webhooks

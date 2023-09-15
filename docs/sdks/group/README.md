@@ -1,4 +1,4 @@
-# group
+# Group
 
 ### Available Operations
 

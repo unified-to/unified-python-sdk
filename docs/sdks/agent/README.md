@@ -1,4 +1,4 @@
-# agent
+# Agent
 
 ### Available Operations
 

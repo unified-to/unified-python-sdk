@@ -1,4 +1,4 @@
-# integration
+# Integration
 
 ### Available Operations
 

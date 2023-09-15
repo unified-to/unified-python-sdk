@@ -1,4 +1,4 @@
-# application
+# Application
 
 ### Available Operations
 

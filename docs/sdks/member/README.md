@@ -1,4 +1,4 @@
-# member
+# Member
 
 ### Available Operations
 

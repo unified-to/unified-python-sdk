@@ -1,4 +1,4 @@
-# ticket
+# Ticket
 
 ### Available Operations
 

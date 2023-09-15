@@ -1,4 +1,4 @@
-# contact
+# Contact
 
 ### Available Operations
 

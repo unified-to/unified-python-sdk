@@ -1,4 +1,4 @@
-# pipeline
+# Pipeline
 
 ### Available Operations
 
