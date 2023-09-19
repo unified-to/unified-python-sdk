@@ -3,13 +3,12 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import ticketingnote as shared_ticketingnote
 from typing import Optional
 
 
 
 @dataclasses.dataclass
-class PutTicketingConnectionIDNotesTicketIDIDSecurity:
+class DeleteTicketingConnectionIDNoteTicketIDIDSecurity:
     jwt: str = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header', 'field_name': 'authorization' }})
     
 
@@ -17,25 +16,24 @@ class PutTicketingConnectionIDNotesTicketIDIDSecurity:
 
 
 @dataclasses.dataclass
-class PutTicketingConnectionIDNotesTicketIDIDRequest:
+class DeleteTicketingConnectionIDNoteTicketIDIDRequest:
     connection_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': False }})
     r"""ID of the connection"""
     id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     r"""ID of the Note"""
     ticket_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'ticket_id', 'style': 'simple', 'explode': False }})
     r"""ID of the ticket"""
-    ticketing_note: Optional[shared_ticketingnote.TicketingNote] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
 
 
 
 @dataclasses.dataclass
-class PutTicketingConnectionIDNotesTicketIDIDResponse:
+class DeleteTicketingConnectionIDNoteTicketIDIDResponse:
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
-    ticketing_note: Optional[shared_ticketingnote.TicketingNote] = dataclasses.field(default=None)
+    delete_ticketing_connection_id_note_ticket_id_id_default_application_json_string: Optional[str] = dataclasses.field(default=None)
     r"""Successful"""
+    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
 

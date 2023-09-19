@@ -1,4 +1,4 @@
-# PutTicketingConnectionIDNotesTicketIDIDRequest
+# PutTicketingConnectionIDNoteTicketIDIDRequest
 
 
 ## Fields

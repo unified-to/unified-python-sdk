@@ -1,4 +1,4 @@
-# GetTicketingConnectionIDNotesTicketIDSecurity
+# PostTicketingConnectionIDNoteTicketIDSecurity
 
 
 ## Fields

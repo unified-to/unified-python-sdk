@@ -66,11 +66,11 @@ class Ticketing:
         return res
 
     
-    def delete_ticketing_connection_id_notes_ticket_id_id(self, request: operations.DeleteTicketingConnectionIDNotesTicketIDIDRequest, security: operations.DeleteTicketingConnectionIDNotesTicketIDIDSecurity) -> operations.DeleteTicketingConnectionIDNotesTicketIDIDResponse:
+    def delete_ticketing_connection_id_note_ticket_id_id(self, request: operations.DeleteTicketingConnectionIDNoteTicketIDIDRequest, security: operations.DeleteTicketingConnectionIDNoteTicketIDIDSecurity) -> operations.DeleteTicketingConnectionIDNoteTicketIDIDResponse:
         r"""Remove a note"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.DeleteTicketingConnectionIDNotesTicketIDIDRequest, base_url, '/ticketing/{connection_id}/notes/{ticket_id}/{id}', request)
+        url = utils.generate_url(operations.DeleteTicketingConnectionIDNoteTicketIDIDRequest, base_url, '/ticketing/{connection_id}/note/{ticket_id}/{id}', request)
         headers = {}
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
@@ -80,13 +80,13 @@ class Ticketing:
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
-        res = operations.DeleteTicketingConnectionIDNotesTicketIDIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        res = operations.DeleteTicketingConnectionIDNoteTicketIDIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
             raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
         else:
             if utils.match_content_type(content_type, 'application/json'):
-                res.delete_ticketing_connection_id_notes_ticket_id_id_default_application_json_string = http_res.content
+                res.delete_ticketing_connection_id_note_ticket_id_id_default_application_json_string = http_res.content
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
 
@@ -234,13 +234,13 @@ class Ticketing:
         return res
 
     
-    def get_ticketing_connection_id_notes_ticket_id(self, request: operations.GetTicketingConnectionIDNotesTicketIDRequest, security: operations.GetTicketingConnectionIDNotesTicketIDSecurity) -> operations.GetTicketingConnectionIDNotesTicketIDResponse:
+    def get_ticketing_connection_id_note_ticket_id(self, request: operations.GetTicketingConnectionIDNoteTicketIDRequest, security: operations.GetTicketingConnectionIDNoteTicketIDSecurity) -> operations.GetTicketingConnectionIDNoteTicketIDResponse:
         r"""List all notes"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.GetTicketingConnectionIDNotesTicketIDRequest, base_url, '/ticketing/{connection_id}/notes/{ticket_id}', request)
+        url = utils.generate_url(operations.GetTicketingConnectionIDNoteTicketIDRequest, base_url, '/ticketing/{connection_id}/note/{ticket_id}', request)
         headers = {}
-        query_params = utils.get_query_params(operations.GetTicketingConnectionIDNotesTicketIDRequest, request)
+        query_params = utils.get_query_params(operations.GetTicketingConnectionIDNoteTicketIDRequest, request)
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
@@ -249,7 +249,7 @@ class Ticketing:
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
-        res = operations.GetTicketingConnectionIDNotesTicketIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        res = operations.GetTicketingConnectionIDNoteTicketIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
@@ -263,11 +263,11 @@ class Ticketing:
         return res
 
     
-    def get_ticketing_connection_id_notes_ticket_id_id(self, request: operations.GetTicketingConnectionIDNotesTicketIDIDRequest, security: operations.GetTicketingConnectionIDNotesTicketIDIDSecurity) -> operations.GetTicketingConnectionIDNotesTicketIDIDResponse:
+    def get_ticketing_connection_id_note_ticket_id_id(self, request: operations.GetTicketingConnectionIDNoteTicketIDIDRequest, security: operations.GetTicketingConnectionIDNoteTicketIDIDSecurity) -> operations.GetTicketingConnectionIDNoteTicketIDIDResponse:
         r"""Retrieve a note"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.GetTicketingConnectionIDNotesTicketIDIDRequest, base_url, '/ticketing/{connection_id}/notes/{ticket_id}/{id}', request)
+        url = utils.generate_url(operations.GetTicketingConnectionIDNoteTicketIDIDRequest, base_url, '/ticketing/{connection_id}/note/{ticket_id}/{id}', request)
         headers = {}
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
@@ -277,7 +277,7 @@ class Ticketing:
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
-        res = operations.GetTicketingConnectionIDNotesTicketIDIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        res = operations.GetTicketingConnectionIDNoteTicketIDIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
@@ -410,11 +410,11 @@ class Ticketing:
         return res
 
     
-    def patch_ticketing_connection_id_notes_ticket_id_id(self, request: operations.PatchTicketingConnectionIDNotesTicketIDIDRequest, security: operations.PatchTicketingConnectionIDNotesTicketIDIDSecurity) -> operations.PatchTicketingConnectionIDNotesTicketIDIDResponse:
+    def patch_ticketing_connection_id_note_ticket_id_id(self, request: operations.PatchTicketingConnectionIDNoteTicketIDIDRequest, security: operations.PatchTicketingConnectionIDNoteTicketIDIDSecurity) -> operations.PatchTicketingConnectionIDNoteTicketIDIDResponse:
         r"""Update a note"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.PatchTicketingConnectionIDNotesTicketIDIDRequest, base_url, '/ticketing/{connection_id}/notes/{ticket_id}/{id}', request)
+        url = utils.generate_url(operations.PatchTicketingConnectionIDNoteTicketIDIDRequest, base_url, '/ticketing/{connection_id}/note/{ticket_id}/{id}', request)
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "ticketing_note", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
@@ -427,7 +427,7 @@ class Ticketing:
         http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
-        res = operations.PatchTicketingConnectionIDNotesTicketIDIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        res = operations.PatchTicketingConnectionIDNoteTicketIDIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
@@ -534,11 +534,11 @@ class Ticketing:
         return res
 
     
-    def post_ticketing_connection_id_notes_ticket_id(self, request: operations.PostTicketingConnectionIDNotesTicketIDRequest, security: operations.PostTicketingConnectionIDNotesTicketIDSecurity) -> operations.PostTicketingConnectionIDNotesTicketIDResponse:
+    def post_ticketing_connection_id_note_ticket_id(self, request: operations.PostTicketingConnectionIDNoteTicketIDRequest, security: operations.PostTicketingConnectionIDNoteTicketIDSecurity) -> operations.PostTicketingConnectionIDNoteTicketIDResponse:
         r"""Create a note"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.PostTicketingConnectionIDNotesTicketIDRequest, base_url, '/ticketing/{connection_id}/notes/{ticket_id}', request)
+        url = utils.generate_url(operations.PostTicketingConnectionIDNoteTicketIDRequest, base_url, '/ticketing/{connection_id}/note/{ticket_id}', request)
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "ticketing_note", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
@@ -551,7 +551,7 @@ class Ticketing:
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
-        res = operations.PostTicketingConnectionIDNotesTicketIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        res = operations.PostTicketingConnectionIDNoteTicketIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
@@ -658,11 +658,11 @@ class Ticketing:
         return res
 
     
-    def put_ticketing_connection_id_notes_ticket_id_id(self, request: operations.PutTicketingConnectionIDNotesTicketIDIDRequest, security: operations.PutTicketingConnectionIDNotesTicketIDIDSecurity) -> operations.PutTicketingConnectionIDNotesTicketIDIDResponse:
+    def put_ticketing_connection_id_note_ticket_id_id(self, request: operations.PutTicketingConnectionIDNoteTicketIDIDRequest, security: operations.PutTicketingConnectionIDNoteTicketIDIDSecurity) -> operations.PutTicketingConnectionIDNoteTicketIDIDResponse:
         r"""Update a note"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.PutTicketingConnectionIDNotesTicketIDIDRequest, base_url, '/ticketing/{connection_id}/notes/{ticket_id}/{id}', request)
+        url = utils.generate_url(operations.PutTicketingConnectionIDNoteTicketIDIDRequest, base_url, '/ticketing/{connection_id}/note/{ticket_id}/{id}', request)
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "ticketing_note", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
@@ -675,7 +675,7 @@ class Ticketing:
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
-        res = operations.PutTicketingConnectionIDNotesTicketIDIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        res = operations.PutTicketingConnectionIDNoteTicketIDIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):

@@ -9,7 +9,7 @@ from typing import Optional
 
 
 @dataclasses.dataclass
-class PostTicketingConnectionIDNotesTicketIDSecurity:
+class PatchTicketingConnectionIDNoteTicketIDIDSecurity:
     jwt: str = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header', 'field_name': 'authorization' }})
     
 
@@ -17,9 +17,11 @@ class PostTicketingConnectionIDNotesTicketIDSecurity:
 
 
 @dataclasses.dataclass
-class PostTicketingConnectionIDNotesTicketIDRequest:
+class PatchTicketingConnectionIDNoteTicketIDIDRequest:
     connection_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': False }})
     r"""ID of the connection"""
+    id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
+    r"""ID of the Note"""
     ticket_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'ticket_id', 'style': 'simple', 'explode': False }})
     r"""ID of the ticket"""
     ticketing_note: Optional[shared_ticketingnote.TicketingNote] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
@@ -29,7 +31,7 @@ class PostTicketingConnectionIDNotesTicketIDRequest:
 
 
 @dataclasses.dataclass
-class PostTicketingConnectionIDNotesTicketIDResponse:
+class PatchTicketingConnectionIDNoteTicketIDIDResponse:
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)

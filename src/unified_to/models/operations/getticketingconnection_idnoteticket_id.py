@@ -10,7 +10,7 @@ from typing import Optional
 
 
 @dataclasses.dataclass
-class GetTicketingConnectionIDNotesTicketIDSecurity:
+class GetTicketingConnectionIDNoteTicketIDSecurity:
     jwt: str = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header', 'field_name': 'authorization' }})
     
 
@@ -18,7 +18,7 @@ class GetTicketingConnectionIDNotesTicketIDSecurity:
 
 
 @dataclasses.dataclass
-class GetTicketingConnectionIDNotesTicketIDRequest:
+class GetTicketingConnectionIDNoteTicketIDRequest:
     connection_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': False }})
     r"""ID of the connection"""
     ticket_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'ticket_id', 'style': 'simple', 'explode': False }})
@@ -37,7 +37,7 @@ class GetTicketingConnectionIDNotesTicketIDRequest:
 
 
 @dataclasses.dataclass
-class GetTicketingConnectionIDNotesTicketIDResponse:
+class GetTicketingConnectionIDNoteTicketIDResponse:
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)

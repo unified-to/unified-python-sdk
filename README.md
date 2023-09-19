@@ -400,12 +400,12 @@ if res.status_code == 200:
 
 ### [Note](docs/sdks/note/README.md)
 
-* [delete_ticketing_connection_id_notes_ticket_id_id](docs/sdks/note/README.md#delete_ticketing_connection_id_notes_ticket_id_id) - Remove a note
-* [get_ticketing_connection_id_notes_ticket_id](docs/sdks/note/README.md#get_ticketing_connection_id_notes_ticket_id) - List all notes
-* [get_ticketing_connection_id_notes_ticket_id_id](docs/sdks/note/README.md#get_ticketing_connection_id_notes_ticket_id_id) - Retrieve a note
-* [patch_ticketing_connection_id_notes_ticket_id_id](docs/sdks/note/README.md#patch_ticketing_connection_id_notes_ticket_id_id) - Update a note
-* [post_ticketing_connection_id_notes_ticket_id](docs/sdks/note/README.md#post_ticketing_connection_id_notes_ticket_id) - Create a note
-* [put_ticketing_connection_id_notes_ticket_id_id](docs/sdks/note/README.md#put_ticketing_connection_id_notes_ticket_id_id) - Update a note
+* [delete_ticketing_connection_id_note_ticket_id_id](docs/sdks/note/README.md#delete_ticketing_connection_id_note_ticket_id_id) - Remove a note
+* [get_ticketing_connection_id_note_ticket_id](docs/sdks/note/README.md#get_ticketing_connection_id_note_ticket_id) - List all notes
+* [get_ticketing_connection_id_note_ticket_id_id](docs/sdks/note/README.md#get_ticketing_connection_id_note_ticket_id_id) - Retrieve a note
+* [patch_ticketing_connection_id_note_ticket_id_id](docs/sdks/note/README.md#patch_ticketing_connection_id_note_ticket_id_id) - Update a note
+* [post_ticketing_connection_id_note_ticket_id](docs/sdks/note/README.md#post_ticketing_connection_id_note_ticket_id) - Create a note
+* [put_ticketing_connection_id_note_ticket_id_id](docs/sdks/note/README.md#put_ticketing_connection_id_note_ticket_id_id) - Update a note
 
 ### [Passthrough](docs/sdks/passthrough/README.md)
 
@@ -450,27 +450,27 @@ if res.status_code == 200:
 
 * [delete_ticketing_connection_id_agent_id](docs/sdks/ticketing/README.md#delete_ticketing_connection_id_agent_id) - Remove a agent
 * [delete_ticketing_connection_id_customer_id](docs/sdks/ticketing/README.md#delete_ticketing_connection_id_customer_id) - Remove a customer
-* [delete_ticketing_connection_id_notes_ticket_id_id](docs/sdks/ticketing/README.md#delete_ticketing_connection_id_notes_ticket_id_id) - Remove a note
+* [delete_ticketing_connection_id_note_ticket_id_id](docs/sdks/ticketing/README.md#delete_ticketing_connection_id_note_ticket_id_id) - Remove a note
 * [delete_ticketing_connection_id_ticket_id](docs/sdks/ticketing/README.md#delete_ticketing_connection_id_ticket_id) - Remove a ticket
 * [get_ticketing_connection_id_agent](docs/sdks/ticketing/README.md#get_ticketing_connection_id_agent) - List all agents
 * [get_ticketing_connection_id_agent_id](docs/sdks/ticketing/README.md#get_ticketing_connection_id_agent_id) - Retrieve a agent
 * [get_ticketing_connection_id_customer](docs/sdks/ticketing/README.md#get_ticketing_connection_id_customer) - List all customers
 * [get_ticketing_connection_id_customer_id](docs/sdks/ticketing/README.md#get_ticketing_connection_id_customer_id) - Retrieve a customer
-* [get_ticketing_connection_id_notes_ticket_id](docs/sdks/ticketing/README.md#get_ticketing_connection_id_notes_ticket_id) - List all notes
-* [get_ticketing_connection_id_notes_ticket_id_id](docs/sdks/ticketing/README.md#get_ticketing_connection_id_notes_ticket_id_id) - Retrieve a note
+* [get_ticketing_connection_id_note_ticket_id](docs/sdks/ticketing/README.md#get_ticketing_connection_id_note_ticket_id) - List all notes
+* [get_ticketing_connection_id_note_ticket_id_id](docs/sdks/ticketing/README.md#get_ticketing_connection_id_note_ticket_id_id) - Retrieve a note
 * [get_ticketing_connection_id_ticket](docs/sdks/ticketing/README.md#get_ticketing_connection_id_ticket) - List all tickets
 * [get_ticketing_connection_id_ticket_id](docs/sdks/ticketing/README.md#get_ticketing_connection_id_ticket_id) - Retrieve a ticket
 * [patch_ticketing_connection_id_agent_id](docs/sdks/ticketing/README.md#patch_ticketing_connection_id_agent_id) - Update a agent
 * [patch_ticketing_connection_id_customer_id](docs/sdks/ticketing/README.md#patch_ticketing_connection_id_customer_id) - Update a customer
-* [patch_ticketing_connection_id_notes_ticket_id_id](docs/sdks/ticketing/README.md#patch_ticketing_connection_id_notes_ticket_id_id) - Update a note
+* [patch_ticketing_connection_id_note_ticket_id_id](docs/sdks/ticketing/README.md#patch_ticketing_connection_id_note_ticket_id_id) - Update a note
 * [patch_ticketing_connection_id_ticket_id](docs/sdks/ticketing/README.md#patch_ticketing_connection_id_ticket_id) - Update a ticket
 * [post_ticketing_connection_id_agent](docs/sdks/ticketing/README.md#post_ticketing_connection_id_agent) - Create a agent
 * [post_ticketing_connection_id_customer](docs/sdks/ticketing/README.md#post_ticketing_connection_id_customer) - Create a customer
-* [post_ticketing_connection_id_notes_ticket_id](docs/sdks/ticketing/README.md#post_ticketing_connection_id_notes_ticket_id) - Create a note
+* [post_ticketing_connection_id_note_ticket_id](docs/sdks/ticketing/README.md#post_ticketing_connection_id_note_ticket_id) - Create a note
 * [post_ticketing_connection_id_ticket](docs/sdks/ticketing/README.md#post_ticketing_connection_id_ticket) - Create a ticket
 * [put_ticketing_connection_id_agent_id](docs/sdks/ticketing/README.md#put_ticketing_connection_id_agent_id) - Update a agent
 * [put_ticketing_connection_id_customer_id](docs/sdks/ticketing/README.md#put_ticketing_connection_id_customer_id) - Update a customer
-* [put_ticketing_connection_id_notes_ticket_id_id](docs/sdks/ticketing/README.md#put_ticketing_connection_id_notes_ticket_id_id) - Update a note
+* [put_ticketing_connection_id_note_ticket_id_id](docs/sdks/ticketing/README.md#put_ticketing_connection_id_note_ticket_id_id) - Update a note
 * [put_ticketing_connection_id_ticket_id](docs/sdks/ticketing/README.md#put_ticketing_connection_id_ticket_id) - Update a ticket
 
 ### [Uc](docs/sdks/uc/README.md)
