@@ -12,7 +12,7 @@ class Hris:
         self.sdk_configuration = sdk_config
         
     
-    def delete_hris_connection_id_employee_id(self, request: operations.DeleteHrisConnectionIDEmployeeIDRequest, security: operations.DeleteHrisConnectionIDEmployeeIDSecurity) -> operations.DeleteHrisConnectionIDEmployeeIDResponse:
+    def delete_hris_connection_id_employee_id(self, request: operations.DeleteHrisConnectionIDEmployeeIDRequest) -> operations.DeleteHrisConnectionIDEmployeeIDResponse:
         r"""Remove a Employee"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -21,7 +21,7 @@ class Hris:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -39,7 +39,7 @@ class Hris:
         return res
 
     
-    def delete_hris_connection_id_group_id(self, request: operations.DeleteHrisConnectionIDGroupIDRequest, security: operations.DeleteHrisConnectionIDGroupIDSecurity) -> operations.DeleteHrisConnectionIDGroupIDResponse:
+    def delete_hris_connection_id_group_id(self, request: operations.DeleteHrisConnectionIDGroupIDRequest) -> operations.DeleteHrisConnectionIDGroupIDResponse:
         r"""Remove a Group"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -48,7 +48,7 @@ class Hris:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -66,7 +66,7 @@ class Hris:
         return res
 
     
-    def get_hris_connection_id_employee(self, request: operations.GetHrisConnectionIDEmployeeRequest, security: operations.GetHrisConnectionIDEmployeeSecurity) -> operations.GetHrisConnectionIDEmployeeResponse:
+    def get_hris_connection_id_employee(self, request: operations.GetHrisConnectionIDEmployeeRequest) -> operations.GetHrisConnectionIDEmployeeResponse:
         r"""List all Employees"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -76,7 +76,7 @@ class Hris:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -95,7 +95,7 @@ class Hris:
         return res
 
     
-    def get_hris_connection_id_employee_id(self, request: operations.GetHrisConnectionIDEmployeeIDRequest, security: operations.GetHrisConnectionIDEmployeeIDSecurity) -> operations.GetHrisConnectionIDEmployeeIDResponse:
+    def get_hris_connection_id_employee_id(self, request: operations.GetHrisConnectionIDEmployeeIDRequest) -> operations.GetHrisConnectionIDEmployeeIDResponse:
         r"""Retrieve a Employee"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -104,7 +104,7 @@ class Hris:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -123,7 +123,7 @@ class Hris:
         return res
 
     
-    def get_hris_connection_id_group(self, request: operations.GetHrisConnectionIDGroupRequest, security: operations.GetHrisConnectionIDGroupSecurity) -> operations.GetHrisConnectionIDGroupResponse:
+    def get_hris_connection_id_group(self, request: operations.GetHrisConnectionIDGroupRequest) -> operations.GetHrisConnectionIDGroupResponse:
         r"""List all Groups"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -133,7 +133,7 @@ class Hris:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -152,7 +152,7 @@ class Hris:
         return res
 
     
-    def get_hris_connection_id_group_id(self, request: operations.GetHrisConnectionIDGroupIDRequest, security: operations.GetHrisConnectionIDGroupIDSecurity) -> operations.GetHrisConnectionIDGroupIDResponse:
+    def get_hris_connection_id_group_id(self, request: operations.GetHrisConnectionIDGroupIDRequest) -> operations.GetHrisConnectionIDGroupIDResponse:
         r"""Retrieve a Group"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -161,7 +161,7 @@ class Hris:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -180,7 +180,7 @@ class Hris:
         return res
 
     
-    def patch_hris_connection_id_employee_id(self, request: operations.PatchHrisConnectionIDEmployeeIDRequest, security: operations.PatchHrisConnectionIDEmployeeIDSecurity) -> operations.PatchHrisConnectionIDEmployeeIDResponse:
+    def patch_hris_connection_id_employee_id(self, request: operations.PatchHrisConnectionIDEmployeeIDRequest) -> operations.PatchHrisConnectionIDEmployeeIDResponse:
         r"""Update a Employee"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -192,7 +192,7 @@ class Hris:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -211,7 +211,7 @@ class Hris:
         return res
 
     
-    def patch_hris_connection_id_group_id(self, request: operations.PatchHrisConnectionIDGroupIDRequest, security: operations.PatchHrisConnectionIDGroupIDSecurity) -> operations.PatchHrisConnectionIDGroupIDResponse:
+    def patch_hris_connection_id_group_id(self, request: operations.PatchHrisConnectionIDGroupIDRequest) -> operations.PatchHrisConnectionIDGroupIDResponse:
         r"""Update a Group"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -223,7 +223,7 @@ class Hris:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -242,7 +242,7 @@ class Hris:
         return res
 
     
-    def post_hris_connection_id_employee(self, request: operations.PostHrisConnectionIDEmployeeRequest, security: operations.PostHrisConnectionIDEmployeeSecurity) -> operations.PostHrisConnectionIDEmployeeResponse:
+    def post_hris_connection_id_employee(self, request: operations.PostHrisConnectionIDEmployeeRequest) -> operations.PostHrisConnectionIDEmployeeResponse:
         r"""Create a Employee"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -254,7 +254,7 @@ class Hris:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -273,7 +273,7 @@ class Hris:
         return res
 
     
-    def post_hris_connection_id_group(self, request: operations.PostHrisConnectionIDGroupRequest, security: operations.PostHrisConnectionIDGroupSecurity) -> operations.PostHrisConnectionIDGroupResponse:
+    def post_hris_connection_id_group(self, request: operations.PostHrisConnectionIDGroupRequest) -> operations.PostHrisConnectionIDGroupResponse:
         r"""Create a Group"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -285,7 +285,7 @@ class Hris:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -304,7 +304,7 @@ class Hris:
         return res
 
     
-    def put_hris_connection_id_employee_id(self, request: operations.PutHrisConnectionIDEmployeeIDRequest, security: operations.PutHrisConnectionIDEmployeeIDSecurity) -> operations.PutHrisConnectionIDEmployeeIDResponse:
+    def put_hris_connection_id_employee_id(self, request: operations.PutHrisConnectionIDEmployeeIDRequest) -> operations.PutHrisConnectionIDEmployeeIDResponse:
         r"""Update a Employee"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -316,7 +316,7 @@ class Hris:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -335,7 +335,7 @@ class Hris:
         return res
 
     
-    def put_hris_connection_id_group_id(self, request: operations.PutHrisConnectionIDGroupIDRequest, security: operations.PutHrisConnectionIDGroupIDSecurity) -> operations.PutHrisConnectionIDGroupIDResponse:
+    def put_hris_connection_id_group_id(self, request: operations.PutHrisConnectionIDGroupIDRequest) -> operations.PutHrisConnectionIDGroupIDResponse:
         r"""Update a Group"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -347,7 +347,7 @@ class Hris:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')

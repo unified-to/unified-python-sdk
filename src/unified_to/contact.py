@@ -12,7 +12,7 @@ class Contact:
         self.sdk_configuration = sdk_config
         
     
-    def delete_crm_connection_id_contact_id(self, request: operations.DeleteCrmConnectionIDContactIDRequest, security: operations.DeleteCrmConnectionIDContactIDSecurity) -> operations.DeleteCrmConnectionIDContactIDResponse:
+    def delete_crm_connection_id_contact_id(self, request: operations.DeleteCrmConnectionIDContactIDRequest) -> operations.DeleteCrmConnectionIDContactIDResponse:
         r"""Remove a contact"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -21,7 +21,7 @@ class Contact:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -39,7 +39,7 @@ class Contact:
         return res
 
     
-    def delete_crm_connection_id_contact_id_company_company_id(self, request: operations.DeleteCrmConnectionIDContactIDCompanyCompanyIDRequest, security: operations.DeleteCrmConnectionIDContactIDCompanyCompanyIDSecurity) -> operations.DeleteCrmConnectionIDContactIDCompanyCompanyIDResponse:
+    def delete_crm_connection_id_contact_id_company_company_id(self, request: operations.DeleteCrmConnectionIDContactIDCompanyCompanyIDRequest) -> operations.DeleteCrmConnectionIDContactIDCompanyCompanyIDResponse:
         r"""Remove company association from a contact"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -48,7 +48,7 @@ class Contact:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -67,7 +67,7 @@ class Contact:
         return res
 
     
-    def delete_crm_connection_id_contact_id_deal_deal_id(self, request: operations.DeleteCrmConnectionIDContactIDDealDealIDRequest, security: operations.DeleteCrmConnectionIDContactIDDealDealIDSecurity) -> operations.DeleteCrmConnectionIDContactIDDealDealIDResponse:
+    def delete_crm_connection_id_contact_id_deal_deal_id(self, request: operations.DeleteCrmConnectionIDContactIDDealDealIDRequest) -> operations.DeleteCrmConnectionIDContactIDDealDealIDResponse:
         r"""Remove deal association from a contact"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -76,7 +76,7 @@ class Contact:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -95,7 +95,7 @@ class Contact:
         return res
 
     
-    def delete_uc_connection_id_contact_id(self, request: operations.DeleteUcConnectionIDContactIDRequest, security: operations.DeleteUcConnectionIDContactIDSecurity) -> operations.DeleteUcConnectionIDContactIDResponse:
+    def delete_uc_connection_id_contact_id(self, request: operations.DeleteUcConnectionIDContactIDRequest) -> operations.DeleteUcConnectionIDContactIDResponse:
         r"""Remove a contact"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -104,7 +104,7 @@ class Contact:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -122,7 +122,7 @@ class Contact:
         return res
 
     
-    def get_crm_connection_id_contact(self, request: operations.GetCrmConnectionIDContactRequest, security: operations.GetCrmConnectionIDContactSecurity) -> operations.GetCrmConnectionIDContactResponse:
+    def get_crm_connection_id_contact(self, request: operations.GetCrmConnectionIDContactRequest) -> operations.GetCrmConnectionIDContactResponse:
         r"""List all contacts"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -132,7 +132,7 @@ class Contact:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -151,7 +151,7 @@ class Contact:
         return res
 
     
-    def get_crm_connection_id_contact_id(self, request: operations.GetCrmConnectionIDContactIDRequest, security: operations.GetCrmConnectionIDContactIDSecurity) -> operations.GetCrmConnectionIDContactIDResponse:
+    def get_crm_connection_id_contact_id(self, request: operations.GetCrmConnectionIDContactIDRequest) -> operations.GetCrmConnectionIDContactIDResponse:
         r"""Retrieve a contact"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -160,7 +160,7 @@ class Contact:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -179,7 +179,7 @@ class Contact:
         return res
 
     
-    def get_uc_connection_id_contact(self, request: operations.GetUcConnectionIDContactRequest, security: operations.GetUcConnectionIDContactSecurity) -> operations.GetUcConnectionIDContactResponse:
+    def get_uc_connection_id_contact(self, request: operations.GetUcConnectionIDContactRequest) -> operations.GetUcConnectionIDContactResponse:
         r"""List all contacts"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -189,7 +189,7 @@ class Contact:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -208,7 +208,7 @@ class Contact:
         return res
 
     
-    def get_uc_connection_id_contact_id(self, request: operations.GetUcConnectionIDContactIDRequest, security: operations.GetUcConnectionIDContactIDSecurity) -> operations.GetUcConnectionIDContactIDResponse:
+    def get_uc_connection_id_contact_id(self, request: operations.GetUcConnectionIDContactIDRequest) -> operations.GetUcConnectionIDContactIDResponse:
         r"""Retrieve a contact"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -217,7 +217,7 @@ class Contact:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -236,7 +236,7 @@ class Contact:
         return res
 
     
-    def patch_crm_connection_id_contact_id(self, request: operations.PatchCrmConnectionIDContactIDRequest, security: operations.PatchCrmConnectionIDContactIDSecurity) -> operations.PatchCrmConnectionIDContactIDResponse:
+    def patch_crm_connection_id_contact_id(self, request: operations.PatchCrmConnectionIDContactIDRequest) -> operations.PatchCrmConnectionIDContactIDResponse:
         r"""Update a contact"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -248,7 +248,7 @@ class Contact:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -267,7 +267,7 @@ class Contact:
         return res
 
     
-    def patch_crm_connection_id_contact_id_company_company_id(self, request: operations.PatchCrmConnectionIDContactIDCompanyCompanyIDRequest, security: operations.PatchCrmConnectionIDContactIDCompanyCompanyIDSecurity) -> operations.PatchCrmConnectionIDContactIDCompanyCompanyIDResponse:
+    def patch_crm_connection_id_contact_id_company_company_id(self, request: operations.PatchCrmConnectionIDContactIDCompanyCompanyIDRequest) -> operations.PatchCrmConnectionIDContactIDCompanyCompanyIDResponse:
         r"""Associate a company with a contact"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -276,7 +276,7 @@ class Contact:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('PATCH', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -295,7 +295,7 @@ class Contact:
         return res
 
     
-    def patch_crm_connection_id_contact_id_deal_deal_id(self, request: operations.PatchCrmConnectionIDContactIDDealDealIDRequest, security: operations.PatchCrmConnectionIDContactIDDealDealIDSecurity) -> operations.PatchCrmConnectionIDContactIDDealDealIDResponse:
+    def patch_crm_connection_id_contact_id_deal_deal_id(self, request: operations.PatchCrmConnectionIDContactIDDealDealIDRequest) -> operations.PatchCrmConnectionIDContactIDDealDealIDResponse:
         r"""Associate a deal with a contact"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -304,7 +304,7 @@ class Contact:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('PATCH', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -323,7 +323,7 @@ class Contact:
         return res
 
     
-    def patch_uc_connection_id_contact_id(self, request: operations.PatchUcConnectionIDContactIDRequest, security: operations.PatchUcConnectionIDContactIDSecurity) -> operations.PatchUcConnectionIDContactIDResponse:
+    def patch_uc_connection_id_contact_id(self, request: operations.PatchUcConnectionIDContactIDRequest) -> operations.PatchUcConnectionIDContactIDResponse:
         r"""Update a contact"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -335,7 +335,7 @@ class Contact:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -354,7 +354,7 @@ class Contact:
         return res
 
     
-    def post_crm_connection_id_contact(self, request: operations.PostCrmConnectionIDContactRequest, security: operations.PostCrmConnectionIDContactSecurity) -> operations.PostCrmConnectionIDContactResponse:
+    def post_crm_connection_id_contact(self, request: operations.PostCrmConnectionIDContactRequest) -> operations.PostCrmConnectionIDContactResponse:
         r"""Create a contact"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -366,7 +366,7 @@ class Contact:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -385,7 +385,7 @@ class Contact:
         return res
 
     
-    def post_uc_connection_id_contact(self, request: operations.PostUcConnectionIDContactRequest, security: operations.PostUcConnectionIDContactSecurity) -> operations.PostUcConnectionIDContactResponse:
+    def post_uc_connection_id_contact(self, request: operations.PostUcConnectionIDContactRequest) -> operations.PostUcConnectionIDContactResponse:
         r"""Create a contact"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -397,7 +397,7 @@ class Contact:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -416,7 +416,7 @@ class Contact:
         return res
 
     
-    def put_crm_connection_id_contact_id(self, request: operations.PutCrmConnectionIDContactIDRequest, security: operations.PutCrmConnectionIDContactIDSecurity) -> operations.PutCrmConnectionIDContactIDResponse:
+    def put_crm_connection_id_contact_id(self, request: operations.PutCrmConnectionIDContactIDRequest) -> operations.PutCrmConnectionIDContactIDResponse:
         r"""Update a contact"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -428,7 +428,7 @@ class Contact:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -447,7 +447,7 @@ class Contact:
         return res
 
     
-    def put_crm_connection_id_contact_id_company_company_id(self, request: operations.PutCrmConnectionIDContactIDCompanyCompanyIDRequest, security: operations.PutCrmConnectionIDContactIDCompanyCompanyIDSecurity) -> operations.PutCrmConnectionIDContactIDCompanyCompanyIDResponse:
+    def put_crm_connection_id_contact_id_company_company_id(self, request: operations.PutCrmConnectionIDContactIDCompanyCompanyIDRequest) -> operations.PutCrmConnectionIDContactIDCompanyCompanyIDResponse:
         r"""Associate a company with a contact"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -456,7 +456,7 @@ class Contact:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('PUT', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -475,7 +475,7 @@ class Contact:
         return res
 
     
-    def put_crm_connection_id_contact_id_deal_deal_id(self, request: operations.PutCrmConnectionIDContactIDDealDealIDRequest, security: operations.PutCrmConnectionIDContactIDDealDealIDSecurity) -> operations.PutCrmConnectionIDContactIDDealDealIDResponse:
+    def put_crm_connection_id_contact_id_deal_deal_id(self, request: operations.PutCrmConnectionIDContactIDDealDealIDRequest) -> operations.PutCrmConnectionIDContactIDDealDealIDResponse:
         r"""Associate a deal with a contact"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -484,7 +484,7 @@ class Contact:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('PUT', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -503,7 +503,7 @@ class Contact:
         return res
 
     
-    def put_uc_connection_id_contact_id(self, request: operations.PutUcConnectionIDContactIDRequest, security: operations.PutUcConnectionIDContactIDSecurity) -> operations.PutUcConnectionIDContactIDResponse:
+    def put_uc_connection_id_contact_id(self, request: operations.PutUcConnectionIDContactIDRequest) -> operations.PutUcConnectionIDContactIDResponse:
         r"""Update a contact"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -515,7 +515,7 @@ class Contact:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')

@@ -12,7 +12,7 @@ class Interview:
         self.sdk_configuration = sdk_config
         
     
-    def delete_ats_connection_id_interview_id(self, request: operations.DeleteAtsConnectionIDInterviewIDRequest, security: operations.DeleteAtsConnectionIDInterviewIDSecurity) -> operations.DeleteAtsConnectionIDInterviewIDResponse:
+    def delete_ats_connection_id_interview_id(self, request: operations.DeleteAtsConnectionIDInterviewIDRequest) -> operations.DeleteAtsConnectionIDInterviewIDResponse:
         r"""Remove a interview"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -21,7 +21,7 @@ class Interview:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -39,7 +39,7 @@ class Interview:
         return res
 
     
-    def get_ats_connection_id_interview(self, request: operations.GetAtsConnectionIDInterviewRequest, security: operations.GetAtsConnectionIDInterviewSecurity) -> operations.GetAtsConnectionIDInterviewResponse:
+    def get_ats_connection_id_interview(self, request: operations.GetAtsConnectionIDInterviewRequest) -> operations.GetAtsConnectionIDInterviewResponse:
         r"""List all interviews"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -49,7 +49,7 @@ class Interview:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -68,7 +68,7 @@ class Interview:
         return res
 
     
-    def get_ats_connection_id_interview_id(self, request: operations.GetAtsConnectionIDInterviewIDRequest, security: operations.GetAtsConnectionIDInterviewIDSecurity) -> operations.GetAtsConnectionIDInterviewIDResponse:
+    def get_ats_connection_id_interview_id(self, request: operations.GetAtsConnectionIDInterviewIDRequest) -> operations.GetAtsConnectionIDInterviewIDResponse:
         r"""Retrieve a interview"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -77,7 +77,7 @@ class Interview:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -96,7 +96,7 @@ class Interview:
         return res
 
     
-    def patch_ats_connection_id_interview_id(self, request: operations.PatchAtsConnectionIDInterviewIDRequest, security: operations.PatchAtsConnectionIDInterviewIDSecurity) -> operations.PatchAtsConnectionIDInterviewIDResponse:
+    def patch_ats_connection_id_interview_id(self, request: operations.PatchAtsConnectionIDInterviewIDRequest) -> operations.PatchAtsConnectionIDInterviewIDResponse:
         r"""Update a interview"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -108,7 +108,7 @@ class Interview:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -127,7 +127,7 @@ class Interview:
         return res
 
     
-    def post_ats_connection_id_interview(self, request: operations.PostAtsConnectionIDInterviewRequest, security: operations.PostAtsConnectionIDInterviewSecurity) -> operations.PostAtsConnectionIDInterviewResponse:
+    def post_ats_connection_id_interview(self, request: operations.PostAtsConnectionIDInterviewRequest) -> operations.PostAtsConnectionIDInterviewResponse:
         r"""Create a interview"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -139,7 +139,7 @@ class Interview:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -158,7 +158,7 @@ class Interview:
         return res
 
     
-    def put_ats_connection_id_interview_id(self, request: operations.PutAtsConnectionIDInterviewIDRequest, security: operations.PutAtsConnectionIDInterviewIDSecurity) -> operations.PutAtsConnectionIDInterviewIDResponse:
+    def put_ats_connection_id_interview_id(self, request: operations.PutAtsConnectionIDInterviewIDRequest) -> operations.PutAtsConnectionIDInterviewIDResponse:
         r"""Update a interview"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -170,7 +170,7 @@ class Interview:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')

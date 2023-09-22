@@ -12,7 +12,7 @@ class Passthrough:
         self.sdk_configuration = sdk_config
         
     
-    def delete_passthrough_connection_id_path(self, request: operations.DeletePassthroughConnectionIDPathRequest, security: operations.DeletePassthroughConnectionIDPathSecurity) -> operations.DeletePassthroughConnectionIDPathResponse:
+    def delete_passthrough_connection_id_path(self, request: operations.DeletePassthroughConnectionIDPathRequest) -> operations.DeletePassthroughConnectionIDPathResponse:
         r"""Passthrough DELETE"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -21,7 +21,7 @@ class Passthrough:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -40,7 +40,7 @@ class Passthrough:
         return res
 
     
-    def get_passthrough_connection_id_path(self, request: operations.GetPassthroughConnectionIDPathRequest, security: operations.GetPassthroughConnectionIDPathSecurity) -> operations.GetPassthroughConnectionIDPathResponse:
+    def get_passthrough_connection_id_path(self, request: operations.GetPassthroughConnectionIDPathRequest) -> operations.GetPassthroughConnectionIDPathResponse:
         r"""Passthrough GET"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -49,7 +49,7 @@ class Passthrough:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -68,7 +68,7 @@ class Passthrough:
         return res
 
     
-    def patch_passthrough_connection_id_path(self, request: operations.PatchPassthroughConnectionIDPathRequest, security: operations.PatchPassthroughConnectionIDPathSecurity) -> operations.PatchPassthroughConnectionIDPathResponse:
+    def patch_passthrough_connection_id_path(self, request: operations.PatchPassthroughConnectionIDPathRequest) -> operations.PatchPassthroughConnectionIDPathResponse:
         r"""Passthrough PUT"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -80,7 +80,7 @@ class Passthrough:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -99,7 +99,7 @@ class Passthrough:
         return res
 
     
-    def post_passthrough_connection_id_path(self, request: operations.PostPassthroughConnectionIDPathRequest, security: operations.PostPassthroughConnectionIDPathSecurity) -> operations.PostPassthroughConnectionIDPathResponse:
+    def post_passthrough_connection_id_path(self, request: operations.PostPassthroughConnectionIDPathRequest) -> operations.PostPassthroughConnectionIDPathResponse:
         r"""Passthrough POST"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -111,7 +111,7 @@ class Passthrough:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -130,7 +130,7 @@ class Passthrough:
         return res
 
     
-    def put_passthrough_connection_id_path(self, request: operations.PutPassthroughConnectionIDPathRequest, security: operations.PutPassthroughConnectionIDPathSecurity) -> operations.PutPassthroughConnectionIDPathResponse:
+    def put_passthrough_connection_id_path(self, request: operations.PutPassthroughConnectionIDPathRequest) -> operations.PutPassthroughConnectionIDPathResponse:
         r"""Passthrough PUT"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -142,7 +142,7 @@ class Passthrough:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')

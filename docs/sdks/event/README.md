@@ -26,18 +26,20 @@ Remove a event
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.DeleteCrmConnectionIDEventIDRequest(
     connection_id='unde',
     id='7e152297-510d-4a80-b122-92cc61c2a702',
 )
 
-res = s.event.delete_crm_connection_id_event_id(req, operations.DeleteCrmConnectionIDEventIDSecurity(
-    jwt="",
-))
+res = s.event.delete_crm_connection_id_event_id(req)
 
 if res.status_code == 200:
     # handle response
@@ -45,10 +47,9 @@ if res.status_code == 200:
 
 ### Parameters
 
-| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                          | [operations.DeleteCrmConnectionIDEventIDRequest](../../models/operations/deletecrmconnectionideventidrequest.md)   | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
-| `security`                                                                                                         | [operations.DeleteCrmConnectionIDEventIDSecurity](../../models/operations/deletecrmconnectionideventidsecurity.md) | :heavy_check_mark:                                                                                                 | The security requirements to use for the request.                                                                  |
+| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                        | [operations.DeleteCrmConnectionIDEventIDRequest](../../models/operations/deletecrmconnectionideventidrequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
 
 
 ### Response
@@ -64,9 +65,13 @@ Remove company association from an event
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.DeleteCrmConnectionIDEventIDCompanyCompanyIDRequest(
     company_id='distinctio',
@@ -74,9 +79,7 @@ req = operations.DeleteCrmConnectionIDEventIDCompanyCompanyIDRequest(
     id='97ee102d-a2de-435f-8e01-bf33eaab4540',
 )
 
-res = s.event.delete_crm_connection_id_event_id_company_company_id(req, operations.DeleteCrmConnectionIDEventIDCompanyCompanyIDSecurity(
-    jwt="",
-))
+res = s.event.delete_crm_connection_id_event_id_company_company_id(req)
 
 if res.crm_event is not None:
     # handle response
@@ -84,10 +87,9 @@ if res.crm_event is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                                          | Type                                                                                                                                               | Required                                                                                                                                           | Description                                                                                                                                        |
-| -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                          | [operations.DeleteCrmConnectionIDEventIDCompanyCompanyIDRequest](../../models/operations/deletecrmconnectionideventidcompanycompanyidrequest.md)   | :heavy_check_mark:                                                                                                                                 | The request object to use for the request.                                                                                                         |
-| `security`                                                                                                                                         | [operations.DeleteCrmConnectionIDEventIDCompanyCompanyIDSecurity](../../models/operations/deletecrmconnectionideventidcompanycompanyidsecurity.md) | :heavy_check_mark:                                                                                                                                 | The security requirements to use for the request.                                                                                                  |
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                        | [operations.DeleteCrmConnectionIDEventIDCompanyCompanyIDRequest](../../models/operations/deletecrmconnectionideventidcompanycompanyidrequest.md) | :heavy_check_mark:                                                                                                                               | The request object to use for the request.                                                                                                       |
 
 
 ### Response
@@ -103,9 +105,13 @@ Remove contact association from an event
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.DeleteCrmConnectionIDEventIDContactContactIDRequest(
     connection_id='dolores',
@@ -113,9 +119,7 @@ req = operations.DeleteCrmConnectionIDEventIDContactContactIDRequest(
     id='c1704bf1-cc9f-4c61-aae5-eb5f0c492b57',
 )
 
-res = s.event.delete_crm_connection_id_event_id_contact_contact_id(req, operations.DeleteCrmConnectionIDEventIDContactContactIDSecurity(
-    jwt="",
-))
+res = s.event.delete_crm_connection_id_event_id_contact_contact_id(req)
 
 if res.crm_event is not None:
     # handle response
@@ -123,10 +127,9 @@ if res.crm_event is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                                          | Type                                                                                                                                               | Required                                                                                                                                           | Description                                                                                                                                        |
-| -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                          | [operations.DeleteCrmConnectionIDEventIDContactContactIDRequest](../../models/operations/deletecrmconnectionideventidcontactcontactidrequest.md)   | :heavy_check_mark:                                                                                                                                 | The request object to use for the request.                                                                                                         |
-| `security`                                                                                                                                         | [operations.DeleteCrmConnectionIDEventIDContactContactIDSecurity](../../models/operations/deletecrmconnectionideventidcontactcontactidsecurity.md) | :heavy_check_mark:                                                                                                                                 | The security requirements to use for the request.                                                                                                  |
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                        | [operations.DeleteCrmConnectionIDEventIDContactContactIDRequest](../../models/operations/deletecrmconnectionideventidcontactcontactidrequest.md) | :heavy_check_mark:                                                                                                                               | The request object to use for the request.                                                                                                       |
 
 
 ### Response
@@ -142,9 +145,13 @@ Remove deal association from an event
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.DeleteCrmConnectionIDEventIDDealDealIDRequest(
     connection_id='ut',
@@ -152,9 +159,7 @@ req = operations.DeleteCrmConnectionIDEventIDDealDealIDRequest(
     id='d08a2267-aaee-479e-bc71-ad31becb83d2',
 )
 
-res = s.event.delete_crm_connection_id_event_id_deal_deal_id(req, operations.DeleteCrmConnectionIDEventIDDealDealIDSecurity(
-    jwt="",
-))
+res = s.event.delete_crm_connection_id_event_id_deal_deal_id(req)
 
 if res.crm_event is not None:
     # handle response
@@ -162,10 +167,9 @@ if res.crm_event is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                              | Type                                                                                                                                   | Required                                                                                                                               | Description                                                                                                                            |
-| -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                              | [operations.DeleteCrmConnectionIDEventIDDealDealIDRequest](../../models/operations/deletecrmconnectionideventiddealdealidrequest.md)   | :heavy_check_mark:                                                                                                                     | The request object to use for the request.                                                                                             |
-| `security`                                                                                                                             | [operations.DeleteCrmConnectionIDEventIDDealDealIDSecurity](../../models/operations/deletecrmconnectionideventiddealdealidsecurity.md) | :heavy_check_mark:                                                                                                                     | The security requirements to use for the request.                                                                                      |
+| Parameter                                                                                                                            | Type                                                                                                                                 | Required                                                                                                                             | Description                                                                                                                          |
+| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                            | [operations.DeleteCrmConnectionIDEventIDDealDealIDRequest](../../models/operations/deletecrmconnectionideventiddealdealidrequest.md) | :heavy_check_mark:                                                                                                                   | The request object to use for the request.                                                                                           |
 
 
 ### Response
@@ -182,9 +186,13 @@ List all events
 ```python
 import unified_to
 import dateutil.parser
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.GetCrmConnectionIDEventRequest(
     company_id='dolor',
@@ -199,9 +207,7 @@ req = operations.GetCrmConnectionIDEventRequest(
     updated_gte=dateutil.parser.isoparse('2022-10-11T22:27:53.755Z'),
 )
 
-res = s.event.get_crm_connection_id_event(req, operations.GetCrmConnectionIDEventSecurity(
-    jwt="",
-))
+res = s.event.get_crm_connection_id_event(req)
 
 if res.crm_events is not None:
     # handle response
@@ -209,10 +215,9 @@ if res.crm_events is not None:
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                | [operations.GetCrmConnectionIDEventRequest](../../models/operations/getcrmconnectionideventrequest.md)   | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-| `security`                                                                                               | [operations.GetCrmConnectionIDEventSecurity](../../models/operations/getcrmconnectionideventsecurity.md) | :heavy_check_mark:                                                                                       | The security requirements to use for the request.                                                        |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                              | [operations.GetCrmConnectionIDEventRequest](../../models/operations/getcrmconnectionideventrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 
 ### Response
@@ -228,18 +233,20 @@ Retrieve a event
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.GetCrmConnectionIDEventIDRequest(
     connection_id='nulla',
     id='9450a986-a495-4bac-b07f-06b28ecc8649',
 )
 
-res = s.event.get_crm_connection_id_event_id(req, operations.GetCrmConnectionIDEventIDSecurity(
-    jwt="",
-))
+res = s.event.get_crm_connection_id_event_id(req)
 
 if res.crm_event is not None:
     # handle response
@@ -247,10 +254,9 @@ if res.crm_event is not None:
 
 ### Parameters
 
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                    | [operations.GetCrmConnectionIDEventIDRequest](../../models/operations/getcrmconnectionideventidrequest.md)   | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
-| `security`                                                                                                   | [operations.GetCrmConnectionIDEventIDSecurity](../../models/operations/getcrmconnectionideventidsecurity.md) | :heavy_check_mark:                                                                                           | The security requirements to use for the request.                                                            |
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                  | [operations.GetCrmConnectionIDEventIDRequest](../../models/operations/getcrmconnectionideventidrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
 
 
 ### Response
@@ -269,7 +275,11 @@ import unified_to
 import dateutil.parser
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.PatchCrmConnectionIDEventIDRequest(
     crm_event=shared.CrmEvent(
@@ -321,9 +331,7 @@ req = operations.PatchCrmConnectionIDEventIDRequest(
     id='43513772-6d15-4321-b832-a56d69180ff6',
 )
 
-res = s.event.patch_crm_connection_id_event_id(req, operations.PatchCrmConnectionIDEventIDSecurity(
-    jwt="",
-))
+res = s.event.patch_crm_connection_id_event_id(req)
 
 if res.crm_event is not None:
     # handle response
@@ -331,10 +339,9 @@ if res.crm_event is not None:
 
 ### Parameters
 
-| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                        | [operations.PatchCrmConnectionIDEventIDRequest](../../models/operations/patchcrmconnectionideventidrequest.md)   | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
-| `security`                                                                                                       | [operations.PatchCrmConnectionIDEventIDSecurity](../../models/operations/patchcrmconnectionideventidsecurity.md) | :heavy_check_mark:                                                                                               | The security requirements to use for the request.                                                                |
+| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                      | [operations.PatchCrmConnectionIDEventIDRequest](../../models/operations/patchcrmconnectionideventidrequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
 
 
 ### Response
@@ -350,9 +357,13 @@ Associate a company with an event
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.PatchCrmConnectionIDEventIDCompanyCompanyIDRequest(
     company_id='consequatur',
@@ -360,9 +371,7 @@ req = operations.PatchCrmConnectionIDEventIDCompanyCompanyIDRequest(
     id='b9a6658e-69a4-4b84-bd38-2dbec75c68c6',
 )
 
-res = s.event.patch_crm_connection_id_event_id_company_company_id(req, operations.PatchCrmConnectionIDEventIDCompanyCompanyIDSecurity(
-    jwt="",
-))
+res = s.event.patch_crm_connection_id_event_id_company_company_id(req)
 
 if res.crm_event is not None:
     # handle response
@@ -370,10 +379,9 @@ if res.crm_event is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                        | [operations.PatchCrmConnectionIDEventIDCompanyCompanyIDRequest](../../models/operations/patchcrmconnectionideventidcompanycompanyidrequest.md)   | :heavy_check_mark:                                                                                                                               | The request object to use for the request.                                                                                                       |
-| `security`                                                                                                                                       | [operations.PatchCrmConnectionIDEventIDCompanyCompanyIDSecurity](../../models/operations/patchcrmconnectionideventidcompanycompanyidsecurity.md) | :heavy_check_mark:                                                                                                                               | The security requirements to use for the request.                                                                                                |
+| Parameter                                                                                                                                      | Type                                                                                                                                           | Required                                                                                                                                       | Description                                                                                                                                    |
+| ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                      | [operations.PatchCrmConnectionIDEventIDCompanyCompanyIDRequest](../../models/operations/patchcrmconnectionideventidcompanycompanyidrequest.md) | :heavy_check_mark:                                                                                                                             | The request object to use for the request.                                                                                                     |
 
 
 ### Response
@@ -389,9 +397,13 @@ Associate a contact with an event
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.PatchCrmConnectionIDEventIDContactContactIDRequest(
     connection_id='aut',
@@ -399,9 +411,7 @@ req = operations.PatchCrmConnectionIDEventIDContactContactIDRequest(
     id='59468ce3-04d8-4849-bf82-14c337f96bb0',
 )
 
-res = s.event.patch_crm_connection_id_event_id_contact_contact_id(req, operations.PatchCrmConnectionIDEventIDContactContactIDSecurity(
-    jwt="",
-))
+res = s.event.patch_crm_connection_id_event_id_contact_contact_id(req)
 
 if res.crm_event is not None:
     # handle response
@@ -409,10 +419,9 @@ if res.crm_event is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                        | [operations.PatchCrmConnectionIDEventIDContactContactIDRequest](../../models/operations/patchcrmconnectionideventidcontactcontactidrequest.md)   | :heavy_check_mark:                                                                                                                               | The request object to use for the request.                                                                                                       |
-| `security`                                                                                                                                       | [operations.PatchCrmConnectionIDEventIDContactContactIDSecurity](../../models/operations/patchcrmconnectionideventidcontactcontactidsecurity.md) | :heavy_check_mark:                                                                                                                               | The security requirements to use for the request.                                                                                                |
+| Parameter                                                                                                                                      | Type                                                                                                                                           | Required                                                                                                                                       | Description                                                                                                                                    |
+| ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                      | [operations.PatchCrmConnectionIDEventIDContactContactIDRequest](../../models/operations/patchcrmconnectionideventidcontactcontactidrequest.md) | :heavy_check_mark:                                                                                                                             | The request object to use for the request.                                                                                                     |
 
 
 ### Response
@@ -428,9 +437,13 @@ Associate a deal with an event
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.PatchCrmConnectionIDEventIDDealDealIDRequest(
     connection_id='porro',
@@ -438,9 +451,7 @@ req = operations.PatchCrmConnectionIDEventIDDealDealIDRequest(
     id='9e372db1-344b-4a9f-b8a5-c0ed7aab62e9',
 )
 
-res = s.event.patch_crm_connection_id_event_id_deal_deal_id(req, operations.PatchCrmConnectionIDEventIDDealDealIDSecurity(
-    jwt="",
-))
+res = s.event.patch_crm_connection_id_event_id_deal_deal_id(req)
 
 if res.crm_event is not None:
     # handle response
@@ -448,10 +459,9 @@ if res.crm_event is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                            | Type                                                                                                                                 | Required                                                                                                                             | Description                                                                                                                          |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                            | [operations.PatchCrmConnectionIDEventIDDealDealIDRequest](../../models/operations/patchcrmconnectionideventiddealdealidrequest.md)   | :heavy_check_mark:                                                                                                                   | The request object to use for the request.                                                                                           |
-| `security`                                                                                                                           | [operations.PatchCrmConnectionIDEventIDDealDealIDSecurity](../../models/operations/patchcrmconnectionideventiddealdealidsecurity.md) | :heavy_check_mark:                                                                                                                   | The security requirements to use for the request.                                                                                    |
+| Parameter                                                                                                                          | Type                                                                                                                               | Required                                                                                                                           | Description                                                                                                                        |
+| ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                          | [operations.PatchCrmConnectionIDEventIDDealDealIDRequest](../../models/operations/patchcrmconnectionideventiddealdealidrequest.md) | :heavy_check_mark:                                                                                                                 | The request object to use for the request.                                                                                         |
 
 
 ### Response
@@ -470,7 +480,11 @@ import unified_to
 import dateutil.parser
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.PostCrmConnectionIDEventRequest(
     crm_event=shared.CrmEvent(
@@ -521,9 +535,7 @@ req = operations.PostCrmConnectionIDEventRequest(
     connection_id='velit',
 )
 
-res = s.event.post_crm_connection_id_event(req, operations.PostCrmConnectionIDEventSecurity(
-    jwt="",
-))
+res = s.event.post_crm_connection_id_event(req)
 
 if res.crm_event is not None:
     # handle response
@@ -531,10 +543,9 @@ if res.crm_event is not None:
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                  | [operations.PostCrmConnectionIDEventRequest](../../models/operations/postcrmconnectionideventrequest.md)   | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
-| `security`                                                                                                 | [operations.PostCrmConnectionIDEventSecurity](../../models/operations/postcrmconnectionideventsecurity.md) | :heavy_check_mark:                                                                                         | The security requirements to use for the request.                                                          |
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                | [operations.PostCrmConnectionIDEventRequest](../../models/operations/postcrmconnectionideventrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
 
 
 ### Response
@@ -553,7 +564,11 @@ import unified_to
 import dateutil.parser
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.PutCrmConnectionIDEventIDRequest(
     crm_event=shared.CrmEvent(
@@ -605,9 +620,7 @@ req = operations.PutCrmConnectionIDEventIDRequest(
     id='7bf375b4-4282-4821-bdb2-f69e59267c71',
 )
 
-res = s.event.put_crm_connection_id_event_id(req, operations.PutCrmConnectionIDEventIDSecurity(
-    jwt="",
-))
+res = s.event.put_crm_connection_id_event_id(req)
 
 if res.crm_event is not None:
     # handle response
@@ -615,10 +628,9 @@ if res.crm_event is not None:
 
 ### Parameters
 
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                    | [operations.PutCrmConnectionIDEventIDRequest](../../models/operations/putcrmconnectionideventidrequest.md)   | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
-| `security`                                                                                                   | [operations.PutCrmConnectionIDEventIDSecurity](../../models/operations/putcrmconnectionideventidsecurity.md) | :heavy_check_mark:                                                                                           | The security requirements to use for the request.                                                            |
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                  | [operations.PutCrmConnectionIDEventIDRequest](../../models/operations/putcrmconnectionideventidrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
 
 
 ### Response
@@ -634,9 +646,13 @@ Associate a company with an event
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.PutCrmConnectionIDEventIDCompanyCompanyIDRequest(
     company_id='quo',
@@ -644,9 +660,7 @@ req = operations.PutCrmConnectionIDEventIDCompanyCompanyIDRequest(
     id='8d3cd425-8d03-458a-82c8-08fe2751a204',
 )
 
-res = s.event.put_crm_connection_id_event_id_company_company_id(req, operations.PutCrmConnectionIDEventIDCompanyCompanyIDSecurity(
-    jwt="",
-))
+res = s.event.put_crm_connection_id_event_id_company_company_id(req)
 
 if res.crm_event is not None:
     # handle response
@@ -654,10 +668,9 @@ if res.crm_event is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                                    | Type                                                                                                                                         | Required                                                                                                                                     | Description                                                                                                                                  |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                    | [operations.PutCrmConnectionIDEventIDCompanyCompanyIDRequest](../../models/operations/putcrmconnectionideventidcompanycompanyidrequest.md)   | :heavy_check_mark:                                                                                                                           | The request object to use for the request.                                                                                                   |
-| `security`                                                                                                                                   | [operations.PutCrmConnectionIDEventIDCompanyCompanyIDSecurity](../../models/operations/putcrmconnectionideventidcompanycompanyidsecurity.md) | :heavy_check_mark:                                                                                                                           | The security requirements to use for the request.                                                                                            |
+| Parameter                                                                                                                                  | Type                                                                                                                                       | Required                                                                                                                                   | Description                                                                                                                                |
+| ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                  | [operations.PutCrmConnectionIDEventIDCompanyCompanyIDRequest](../../models/operations/putcrmconnectionideventidcompanycompanyidrequest.md) | :heavy_check_mark:                                                                                                                         | The request object to use for the request.                                                                                                 |
 
 
 ### Response
@@ -673,9 +686,13 @@ Associate a contact with an event
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.PutCrmConnectionIDEventIDContactContactIDRequest(
     connection_id='ducimus',
@@ -683,9 +700,7 @@ req = operations.PutCrmConnectionIDEventIDContactContactIDRequest(
     id='0449e143-f961-49bb-bd40-d5a11fa436e6',
 )
 
-res = s.event.put_crm_connection_id_event_id_contact_contact_id(req, operations.PutCrmConnectionIDEventIDContactContactIDSecurity(
-    jwt="",
-))
+res = s.event.put_crm_connection_id_event_id_contact_contact_id(req)
 
 if res.crm_event is not None:
     # handle response
@@ -693,10 +708,9 @@ if res.crm_event is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                                    | Type                                                                                                                                         | Required                                                                                                                                     | Description                                                                                                                                  |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                    | [operations.PutCrmConnectionIDEventIDContactContactIDRequest](../../models/operations/putcrmconnectionideventidcontactcontactidrequest.md)   | :heavy_check_mark:                                                                                                                           | The request object to use for the request.                                                                                                   |
-| `security`                                                                                                                                   | [operations.PutCrmConnectionIDEventIDContactContactIDSecurity](../../models/operations/putcrmconnectionideventidcontactcontactidsecurity.md) | :heavy_check_mark:                                                                                                                           | The security requirements to use for the request.                                                                                            |
+| Parameter                                                                                                                                  | Type                                                                                                                                       | Required                                                                                                                                   | Description                                                                                                                                |
+| ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                  | [operations.PutCrmConnectionIDEventIDContactContactIDRequest](../../models/operations/putcrmconnectionideventidcontactcontactidrequest.md) | :heavy_check_mark:                                                                                                                         | The request object to use for the request.                                                                                                 |
 
 
 ### Response
@@ -712,9 +726,13 @@ Associate a deal with an event
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.PutCrmConnectionIDEventIDDealDealIDRequest(
     connection_id='sed',
@@ -722,9 +740,7 @@ req = operations.PutCrmConnectionIDEventIDDealDealIDRequest(
     id='9233f95c-9d23-4739-bc78-5b5db4f50018',
 )
 
-res = s.event.put_crm_connection_id_event_id_deal_deal_id(req, operations.PutCrmConnectionIDEventIDDealDealIDSecurity(
-    jwt="",
-))
+res = s.event.put_crm_connection_id_event_id_deal_deal_id(req)
 
 if res.crm_event is not None:
     # handle response
@@ -732,10 +748,9 @@ if res.crm_event is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                        | [operations.PutCrmConnectionIDEventIDDealDealIDRequest](../../models/operations/putcrmconnectionideventiddealdealidrequest.md)   | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
-| `security`                                                                                                                       | [operations.PutCrmConnectionIDEventIDDealDealIDSecurity](../../models/operations/putcrmconnectionideventiddealdealidsecurity.md) | :heavy_check_mark:                                                                                                               | The security requirements to use for the request.                                                                                |
+| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                      | [operations.PutCrmConnectionIDEventIDDealDealIDRequest](../../models/operations/putcrmconnectionideventiddealdealidrequest.md) | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
 
 
 ### Response

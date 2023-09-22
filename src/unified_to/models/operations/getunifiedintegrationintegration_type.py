@@ -9,14 +9,6 @@ from typing import Optional
 
 
 @dataclasses.dataclass
-class GetUnifiedIntegrationIntegrationTypeSecurity:
-    jwt: str = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header', 'field_name': 'authorization' }})
-    
-
-
-
-
-@dataclasses.dataclass
 class GetUnifiedIntegrationIntegrationTypeRequest:
     integration_type: str = dataclasses.field(metadata={'path_param': { 'field_name': 'integration_type', 'style': 'simple', 'explode': False }})
     r"""Type of the supported integration"""

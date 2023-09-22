@@ -12,9 +12,13 @@ Returns an authentication URL for the specified integration.  Once a successful 
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.GetUnifiedIntegrationLoginWorkspaceIDIntegrationTypeRequest(
     env='veniam',

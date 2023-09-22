@@ -16,22 +16,22 @@ pip install git+https://github.com/unified-to/unified-python-sdk.git
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
-
-
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
-
-req = operations.DeleteTicketingConnectionIDAgentIDRequest(
-    connection_id='corrupti',
-    id='9bd9d8d6-9a67-44e0-b467-cc8796ed151a',
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
 )
 
-res = s.agent.delete_ticketing_connection_id_agent_id(req, operations.DeleteTicketingConnectionIDAgentIDSecurity(
-    jwt="",
-))
+req = operations.DeleteTicketingConnectionIDAgentIDRequest(
+    connection_id='perferendis',
+    id='5dfc2ddf-7cc7-48ca-9ba9-28fc816742cb',
+)
+
+res = s.agent.delete_ticketing_connection_id_agent_id(req)
 
 if res.status_code == 200:
     # handle response
@@ -529,6 +529,32 @@ if res.status_code == 200:
 * [get_unified_webhook_id](docs/sdks/webhook/README.md#get_unified_webhook_id) - Retrieve webhook by its ID
 * [post_unified_webhook_connection_id_object](docs/sdks/webhook/README.md#post_unified_webhook_connection_id_object) - Create webhook subscription
 <!-- End SDK Available Operations -->
+
+
+
+<!-- Start Dev Containers -->
+
+
+
+<!-- End Dev Containers -->
+
+
+
+<!-- Start Pagination -->
+# Pagination
+
+Some of the endpoints in this SDK support pagination. To use pagination, you make your SDK calls as usual, but the
+returned response object will have a `Next` method that can be called to pull down the next group of results. If the
+return value of `Next` is `None`, then there are no more pages to be fetched.
+
+Here's an example of one such pagination call:
+
+
+<!-- End Pagination -->
+
+<!-- Placeholder for Future Speakeasy SDK Sections -->
+
+
 
 ### Maturity
 

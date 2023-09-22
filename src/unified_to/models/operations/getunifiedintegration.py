@@ -8,14 +8,6 @@ from datetime import datetime
 from enum import Enum
 from typing import Optional
 
-
-
-@dataclasses.dataclass
-class GetUnifiedIntegrationSecurity:
-    jwt: str = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header', 'field_name': 'authorization' }})
-    
-
-
 class GetUnifiedIntegrationCategories(str, Enum):
     PASSTHROUGH = 'passthrough'
     HRIS = 'hris'

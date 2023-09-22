@@ -22,18 +22,20 @@ Remove a user
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.DeleteCrmConnectionIDUserIDRequest(
     connection_id='deleniti',
     id='b1d187b5-1eb5-4fd3-8bfe-03490cf20254',
 )
 
-res = s.user.delete_crm_connection_id_user_id(req, operations.DeleteCrmConnectionIDUserIDSecurity(
-    jwt="",
-))
+res = s.user.delete_crm_connection_id_user_id(req)
 
 if res.status_code == 200:
     # handle response
@@ -41,10 +43,9 @@ if res.status_code == 200:
 
 ### Parameters
 
-| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                        | [operations.DeleteCrmConnectionIDUserIDRequest](../../models/operations/deletecrmconnectioniduseridrequest.md)   | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
-| `security`                                                                                                       | [operations.DeleteCrmConnectionIDUserIDSecurity](../../models/operations/deletecrmconnectioniduseridsecurity.md) | :heavy_check_mark:                                                                                               | The security requirements to use for the request.                                                                |
+| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                      | [operations.DeleteCrmConnectionIDUserIDRequest](../../models/operations/deletecrmconnectioniduseridrequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
 
 
 ### Response
@@ -60,24 +61,20 @@ Delete your user object
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 
-res = s.user.delete_unified_user(operations.DeleteUnifiedUserSecurity(
-    jwt="",
-))
+res = s.user.delete_unified_user()
 
 if res.status_code == 200:
     # handle response
 ```
-
-### Parameters
-
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `security`                                                                                   | [operations.DeleteUnifiedUserSecurity](../../models/operations/deleteunifiedusersecurity.md) | :heavy_check_mark:                                                                           | The security requirements to use for the request.                                            |
 
 
 ### Response
@@ -94,9 +91,13 @@ List all users
 ```python
 import unified_to
 import dateutil.parser
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.GetCrmConnectionIDUserRequest(
     connection_id='id',
@@ -108,9 +109,7 @@ req = operations.GetCrmConnectionIDUserRequest(
     updated_gte=dateutil.parser.isoparse('2022-03-13T04:13:10.861Z'),
 )
 
-res = s.user.get_crm_connection_id_user(req, operations.GetCrmConnectionIDUserSecurity(
-    jwt="",
-))
+res = s.user.get_crm_connection_id_user(req)
 
 if res.crm_users is not None:
     # handle response
@@ -118,10 +117,9 @@ if res.crm_users is not None:
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                              | [operations.GetCrmConnectionIDUserRequest](../../models/operations/getcrmconnectioniduserrequest.md)   | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
-| `security`                                                                                             | [operations.GetCrmConnectionIDUserSecurity](../../models/operations/getcrmconnectionidusersecurity.md) | :heavy_check_mark:                                                                                     | The security requirements to use for the request.                                                      |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `request`                                                                                            | [operations.GetCrmConnectionIDUserRequest](../../models/operations/getcrmconnectioniduserrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 
 ### Response
@@ -137,18 +135,20 @@ Retrieve a user
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.GetCrmConnectionIDUserIDRequest(
     connection_id='distinctio',
     id='462d6bc9-917f-498e-8792-b979a413d6a8',
 )
 
-res = s.user.get_crm_connection_id_user_id(req, operations.GetCrmConnectionIDUserIDSecurity(
-    jwt="",
-))
+res = s.user.get_crm_connection_id_user_id(req)
 
 if res.crm_user is not None:
     # handle response
@@ -156,10 +156,9 @@ if res.crm_user is not None:
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                  | [operations.GetCrmConnectionIDUserIDRequest](../../models/operations/getcrmconnectioniduseridrequest.md)   | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
-| `security`                                                                                                 | [operations.GetCrmConnectionIDUserIDSecurity](../../models/operations/getcrmconnectioniduseridsecurity.md) | :heavy_check_mark:                                                                                         | The security requirements to use for the request.                                                          |
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                | [operations.GetCrmConnectionIDUserIDRequest](../../models/operations/getcrmconnectioniduseridrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
 
 
 ### Response
@@ -175,24 +174,20 @@ Retrieve your user object
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 
-res = s.user.get_unified_user(operations.GetUnifiedUserSecurity(
-    jwt="",
-))
+res = s.user.get_unified_user()
 
 if res.user is not None:
     # handle response
 ```
-
-### Parameters
-
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `security`                                                                             | [operations.GetUnifiedUserSecurity](../../models/operations/getunifiedusersecurity.md) | :heavy_check_mark:                                                                     | The security requirements to use for the request.                                      |
 
 
 ### Response
@@ -208,24 +203,20 @@ Retrieve your user token
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 
-res = s.user.get_unified_user_token(operations.GetUnifiedUserTokenSecurity(
-    jwt="",
-))
+res = s.user.get_unified_user_token()
 
 if res.get_unified_user_token_200_application_json_string is not None:
     # handle response
 ```
-
-### Parameters
-
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `security`                                                                                       | [operations.GetUnifiedUserTokenSecurity](../../models/operations/getunifiedusertokensecurity.md) | :heavy_check_mark:                                                                               | The security requirements to use for the request.                                                |
 
 
 ### Response
@@ -244,7 +235,11 @@ import unified_to
 import dateutil.parser
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.PatchCrmConnectionIDUserIDRequest(
     crm_user=shared.CrmUser(
@@ -288,9 +283,7 @@ req = operations.PatchCrmConnectionIDUserIDRequest(
     id='e8fbc48d-dc7e-469b-9351-0505014dca10',
 )
 
-res = s.user.patch_crm_connection_id_user_id(req, operations.PatchCrmConnectionIDUserIDSecurity(
-    jwt="",
-))
+res = s.user.patch_crm_connection_id_user_id(req)
 
 if res.crm_user is not None:
     # handle response
@@ -298,10 +291,9 @@ if res.crm_user is not None:
 
 ### Parameters
 
-| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                      | [operations.PatchCrmConnectionIDUserIDRequest](../../models/operations/patchcrmconnectioniduseridrequest.md)   | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
-| `security`                                                                                                     | [operations.PatchCrmConnectionIDUserIDSecurity](../../models/operations/patchcrmconnectioniduseridsecurity.md) | :heavy_check_mark:                                                                                             | The security requirements to use for the request.                                                              |
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                    | [operations.PatchCrmConnectionIDUserIDRequest](../../models/operations/patchcrmconnectioniduseridrequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
 
 
 ### Response
@@ -318,9 +310,13 @@ Only the name field is updated.
 ```python
 import unified_to
 import dateutil.parser
-from unified_to.models import operations, shared
+from unified_to.models import shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = shared.User(
     created_at=dateutil.parser.isoparse('2022-06-17T20:12:07.816Z'),
@@ -336,9 +332,7 @@ req = shared.User(
     ],
 )
 
-res = s.user.patch_unified_user(req, operations.PatchUnifiedUserSecurity(
-    jwt="",
-))
+res = s.user.patch_unified_user(req)
 
 if res.user is not None:
     # handle response
@@ -346,10 +340,9 @@ if res.user is not None:
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `request`                                                                                  | [shared.User](../../models/shared/user.md)                                                 | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-| `security`                                                                                 | [operations.PatchUnifiedUserSecurity](../../models/operations/patchunifiedusersecurity.md) | :heavy_check_mark:                                                                         | The security requirements to use for the request.                                          |
+| Parameter                                  | Type                                       | Required                                   | Description                                |
+| ------------------------------------------ | ------------------------------------------ | ------------------------------------------ | ------------------------------------------ |
+| `request`                                  | [shared.User](../../models/shared/user.md) | :heavy_check_mark:                         | The request object to use for the request. |
 
 
 ### Response
@@ -368,7 +361,11 @@ import unified_to
 import dateutil.parser
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.PostCrmConnectionIDUserRequest(
     crm_user=shared.CrmUser(
@@ -411,9 +408,7 @@ req = operations.PostCrmConnectionIDUserRequest(
     connection_id='sequi',
 )
 
-res = s.user.post_crm_connection_id_user(req, operations.PostCrmConnectionIDUserSecurity(
-    jwt="",
-))
+res = s.user.post_crm_connection_id_user(req)
 
 if res.crm_user is not None:
     # handle response
@@ -421,10 +416,9 @@ if res.crm_user is not None:
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                | [operations.PostCrmConnectionIDUserRequest](../../models/operations/postcrmconnectioniduserrequest.md)   | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-| `security`                                                                                               | [operations.PostCrmConnectionIDUserSecurity](../../models/operations/postcrmconnectionidusersecurity.md) | :heavy_check_mark:                                                                                       | The security requirements to use for the request.                                                        |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                              | [operations.PostCrmConnectionIDUserRequest](../../models/operations/postcrmconnectioniduserrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 
 ### Response
@@ -443,7 +437,11 @@ import unified_to
 import dateutil.parser
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.PutCrmConnectionIDUserIDRequest(
     crm_user=shared.CrmUser(
@@ -487,9 +485,7 @@ req = operations.PutCrmConnectionIDUserIDRequest(
     id='cabdab76-7a44-44dd-8da0-abe58eb3d54b',
 )
 
-res = s.user.put_crm_connection_id_user_id(req, operations.PutCrmConnectionIDUserIDSecurity(
-    jwt="",
-))
+res = s.user.put_crm_connection_id_user_id(req)
 
 if res.crm_user is not None:
     # handle response
@@ -497,10 +493,9 @@ if res.crm_user is not None:
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                  | [operations.PutCrmConnectionIDUserIDRequest](../../models/operations/putcrmconnectioniduseridrequest.md)   | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
-| `security`                                                                                                 | [operations.PutCrmConnectionIDUserIDSecurity](../../models/operations/putcrmconnectioniduseridsecurity.md) | :heavy_check_mark:                                                                                         | The security requirements to use for the request.                                                          |
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                | [operations.PutCrmConnectionIDUserIDRequest](../../models/operations/putcrmconnectioniduseridrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
 
 
 ### Response
@@ -517,9 +512,13 @@ Only the name field is updated.
 ```python
 import unified_to
 import dateutil.parser
-from unified_to.models import operations, shared
+from unified_to.models import shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = shared.User(
     created_at=dateutil.parser.isoparse('2022-11-07T21:46:44.444Z'),
@@ -535,9 +534,7 @@ req = shared.User(
     ],
 )
 
-res = s.user.put_unified_user(req, operations.PutUnifiedUserSecurity(
-    jwt="",
-))
+res = s.user.put_unified_user(req)
 
 if res.user is not None:
     # handle response
@@ -545,10 +542,9 @@ if res.user is not None:
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `request`                                                                              | [shared.User](../../models/shared/user.md)                                             | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
-| `security`                                                                             | [operations.PutUnifiedUserSecurity](../../models/operations/putunifiedusersecurity.md) | :heavy_check_mark:                                                                     | The security requirements to use for the request.                                      |
+| Parameter                                  | Type                                       | Required                                   | Description                                |
+| ------------------------------------------ | ------------------------------------------ | ------------------------------------------ | ------------------------------------------ |
+| `request`                                  | [shared.User](../../models/shared/user.md) | :heavy_check_mark:                         | The request object to use for the request. |
 
 
 ### Response

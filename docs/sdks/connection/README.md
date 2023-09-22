@@ -17,17 +17,19 @@ Remove connection
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
-
-req = operations.DeleteUnifiedConnectionIDRequest(
-    id='bf60c321-f023-4b75-9236-7fe1a0cc8df7',
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
 )
 
-res = s.connection.delete_unified_connection_id(req, operations.DeleteUnifiedConnectionIDSecurity(
-    jwt="",
-))
+req = operations.DeleteUnifiedConnectionIDRequest(
+    id='b75d2367-fe1a-40cc-8df7-9f0a396d90c3',
+)
+
+res = s.connection.delete_unified_connection_id(req)
 
 if res.status_code == 200:
     # handle response
@@ -35,10 +37,9 @@ if res.status_code == 200:
 
 ### Parameters
 
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                    | [operations.DeleteUnifiedConnectionIDRequest](../../models/operations/deleteunifiedconnectionidrequest.md)   | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
-| `security`                                                                                                   | [operations.DeleteUnifiedConnectionIDSecurity](../../models/operations/deleteunifiedconnectionidsecurity.md) | :heavy_check_mark:                                                                                           | The security requirements to use for the request.                                                            |
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                  | [operations.DeleteUnifiedConnectionIDRequest](../../models/operations/deleteunifiedconnectionidrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
 
 
 ### Response
@@ -55,26 +56,28 @@ List all connections
 ```python
 import unified_to
 import dateutil.parser
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.GetUnifiedConnectionRequest(
     categories=[
-        operations.GetUnifiedConnectionCategories.ENRICH,
+        operations.GetUnifiedConnectionCategories.AUTH,
     ],
-    env='sapiente',
-    external_xref='aperiam',
-    limit=6277.17,
-    offset=1979.82,
-    order='provident',
-    sort='ex',
-    updated_gte=dateutil.parser.isoparse('2021-03-13T14:26:08.551Z'),
+    env='labore',
+    external_xref='expedita',
+    limit=4467.37,
+    offset=7898.7,
+    order='sunt',
+    sort='enim',
+    updated_gte=dateutil.parser.isoparse('2020-01-24T16:46:41.592Z'),
 )
 
-res = s.connection.get_unified_connection(req, operations.GetUnifiedConnectionSecurity(
-    jwt="",
-))
+res = s.connection.get_unified_connection(req)
 
 if res.connections is not None:
     # handle response
@@ -82,10 +85,9 @@ if res.connections is not None:
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `request`                                                                                          | [operations.GetUnifiedConnectionRequest](../../models/operations/getunifiedconnectionrequest.md)   | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
-| `security`                                                                                         | [operations.GetUnifiedConnectionSecurity](../../models/operations/getunifiedconnectionsecurity.md) | :heavy_check_mark:                                                                                 | The security requirements to use for the request.                                                  |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `request`                                                                                        | [operations.GetUnifiedConnectionRequest](../../models/operations/getunifiedconnectionrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
 
 
 ### Response
@@ -101,17 +103,19 @@ Retrieve connection
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
-
-req = operations.GetUnifiedConnectionIDRequest(
-    id='0c364b7c-15df-4bac-a188-b1c4ee2c8c6c',
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
 )
 
-res = s.connection.get_unified_connection_id(req, operations.GetUnifiedConnectionIDSecurity(
-    jwt="",
-))
+req = operations.GetUnifiedConnectionIDRequest(
+    id='bace188b-1c4e-4e2c-8c6c-e611feeb1c7c',
+)
+
+res = s.connection.get_unified_connection_id(req)
 
 if res.connection is not None:
     # handle response
@@ -119,10 +123,9 @@ if res.connection is not None:
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                              | [operations.GetUnifiedConnectionIDRequest](../../models/operations/getunifiedconnectionidrequest.md)   | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
-| `security`                                                                                             | [operations.GetUnifiedConnectionIDSecurity](../../models/operations/getunifiedconnectionidsecurity.md) | :heavy_check_mark:                                                                                     | The security requirements to use for the request.                                                      |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `request`                                                                                            | [operations.GetUnifiedConnectionIDRequest](../../models/operations/getunifiedconnectionidrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 
 ### Response
@@ -141,58 +144,60 @@ import unified_to
 import dateutil.parser
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.PatchUnifiedConnectionIDRequest(
     connection=shared.Connection(
         auth=shared.PropertyConnectionAuth(
-            access_token='recusandae',
-            api_url='ex',
-            app_id='beatae',
-            authorize_url='veritatis',
-            client_id='maiores',
-            client_secret='itaque',
-            consumer_key='vero',
-            consumer_secret='quidem',
+            access_token='distinctio',
+            api_url='possimus',
+            app_id='cum',
+            authorize_url='suscipit',
+            client_id='saepe',
+            client_secret='earum',
+            consumer_key='quod',
+            consumer_secret='nihil',
             emails=[
-                'illo',
+                'quaerat',
             ],
-            expires_in=7782.42,
-            expiry_date=dateutil.parser.isoparse('2022-03-18T01:27:23.704Z'),
-            key='distinctio',
+            expires_in=2159.59,
+            expiry_date=dateutil.parser.isoparse('2022-06-27T03:53:09.176Z'),
+            key='rerum',
             meta=shared.PropertyPropertyConnectionAuthMeta(),
-            name='Felipe Homenick',
+            name='Harry Hammes IV',
             other_auth_info=[
-                'quod',
+                'esse',
             ],
-            pem='nihil',
-            refresh_token='quaerat',
-            state='ipsum',
-            token='ducimus',
-            token_url='laudantium',
+            pem='magnam',
+            refresh_token='odio',
+            state='nulla',
+            token='impedit',
+            token_url='cupiditate',
         ),
-        auth_aws_arn='rerum',
+        auth_aws_arn='illo',
         categories=[
-            shared.PropertyConnectionCategories.ENRICH,
+            shared.PropertyConnectionCategories.AUTH,
         ],
-        created_at=dateutil.parser.isoparse('2022-09-06T09:53:00.602Z'),
-        environment='sequi',
-        external_xref='beatae',
-        id='7747dc91-5ad2-4caf-9dd6-723dc0f5ae2f',
-        integration_type='neque',
+        created_at=dateutil.parser.isoparse('2021-04-21T08:26:42.931Z'),
+        environment='fugit',
+        external_xref='maxime',
+        id='af5dd672-3dc0-4f5a-a2f3-a6b700878756',
+        integration_type='ab',
         is_paused=False,
         permissions=[
-            shared.PropertyConnectionPermissions.TICKETING_CUSTOMER_READ,
+            shared.PropertyConnectionPermissions.CRM_USER_WRITE,
         ],
-        updated_at=dateutil.parser.isoparse('2022-04-24T15:26:26.341Z'),
-        workspace_id='ducimus',
+        updated_at=dateutil.parser.isoparse('2022-01-16T17:11:29.866Z'),
+        workspace_id='corporis',
     ),
-    id='00878756-143f-45a6-898b-55554080d40b',
+    id='a6c98b55-5540-480d-80bc-acc6cbd6b5f3',
 )
 
-res = s.connection.patch_unified_connection_id(req, operations.PatchUnifiedConnectionIDSecurity(
-    jwt="",
-))
+res = s.connection.patch_unified_connection_id(req)
 
 if res.connection is not None:
     # handle response
@@ -200,10 +205,9 @@ if res.connection is not None:
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                  | [operations.PatchUnifiedConnectionIDRequest](../../models/operations/patchunifiedconnectionidrequest.md)   | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
-| `security`                                                                                                 | [operations.PatchUnifiedConnectionIDSecurity](../../models/operations/patchunifiedconnectionidsecurity.md) | :heavy_check_mark:                                                                                         | The security requirements to use for the request.                                                          |
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                | [operations.PatchUnifiedConnectionIDRequest](../../models/operations/patchunifiedconnectionidrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
 
 
 ### Response
@@ -220,57 +224,59 @@ Create connection
 ```python
 import unified_to
 import dateutil.parser
-from unified_to.models import operations, shared
+from unified_to.models import shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = shared.Connection(
     auth=shared.PropertyConnectionAuth(
-        access_token='nobis',
-        api_url='similique',
-        app_id='porro',
-        authorize_url='impedit',
-        client_id='nisi',
-        client_secret='cumque',
-        consumer_key='soluta',
-        consumer_secret='fugiat',
+        access_token='necessitatibus',
+        api_url='maxime',
+        app_id='cupiditate',
+        authorize_url='voluptatem',
+        client_id='provident',
+        client_secret='adipisci',
+        consumer_key='accusantium',
+        consumer_secret='magnam',
         emails=[
-            'laboriosam',
+            'repellat',
         ],
-        expires_in=7203.19,
-        expiry_date=dateutil.parser.isoparse('2022-01-08T15:51:51.663Z'),
-        key='consectetur',
+        expires_in=6076.31,
+        expiry_date=dateutil.parser.isoparse('2022-07-29T13:50:17.340Z'),
+        key='cum',
         meta=shared.PropertyPropertyConnectionAuthMeta(),
-        name='Ms. Wilbert McGlynn',
+        name='Rufus Conroy',
         other_auth_info=[
-            'accusantium',
+            'sequi',
         ],
-        pem='magnam',
-        refresh_token='repellat',
-        state='omnis',
-        token='explicabo',
-        token_url='vel',
+        pem='voluptatum',
+        refresh_token='quasi',
+        state='error',
+        token='nobis',
+        token_url='tempora',
     ),
-    auth_aws_arn='cum',
+    auth_aws_arn='voluptate',
     categories=[
-        shared.PropertyConnectionCategories.ENRICH,
+        shared.PropertyConnectionCategories.ATS,
     ],
-    created_at=dateutil.parser.isoparse('2022-07-28T08:20:43.554Z'),
-    environment='ipsam',
-    external_xref='nostrum',
-    id='3819b474-b0ed-420e-9624-8fff639a910a',
-    integration_type='nam',
+    created_at=dateutil.parser.isoparse('2022-11-28T03:21:08.707Z'),
+    environment='voluptates',
+    external_xref='possimus',
+    id='20e56248-fff6-439a-910a-bdcab6267669',
+    integration_type='laboriosam',
     is_paused=False,
     permissions=[
-        shared.PropertyConnectionPermissions.HRIS_GROUP_WRITE,
+        shared.PropertyConnectionPermissions.ATS_CANDIDATE_WRITE,
     ],
-    updated_at=dateutil.parser.isoparse('2020-12-12T11:22:41.690Z'),
-    workspace_id='tempore',
+    updated_at=dateutil.parser.isoparse('2022-01-26T21:22:49.757Z'),
+    workspace_id='quisquam',
 )
 
-res = s.connection.post_unified_connection(req, operations.PostUnifiedConnectionSecurity(
-    jwt="",
-))
+res = s.connection.post_unified_connection(req)
 
 if res.connection is not None:
     # handle response
@@ -278,10 +284,9 @@ if res.connection is not None:
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `request`                                                                                            | [shared.Connection](../../models/shared/connection.md)                                               | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
-| `security`                                                                                           | [operations.PostUnifiedConnectionSecurity](../../models/operations/postunifiedconnectionsecurity.md) | :heavy_check_mark:                                                                                   | The security requirements to use for the request.                                                    |
+| Parameter                                              | Type                                                   | Required                                               | Description                                            |
+| ------------------------------------------------------ | ------------------------------------------------------ | ------------------------------------------------------ | ------------------------------------------------------ |
+| `request`                                              | [shared.Connection](../../models/shared/connection.md) | :heavy_check_mark:                                     | The request object to use for the request.             |
 
 
 ### Response
@@ -300,58 +305,60 @@ import unified_to
 import dateutil.parser
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.PutUnifiedConnectionIDRequest(
     connection=shared.Connection(
         auth=shared.PropertyConnectionAuth(
-            access_token='commodi',
-            api_url='fugit',
-            app_id='suscipit',
-            authorize_url='voluptate',
-            client_id='nisi',
-            client_secret='aliquid',
-            consumer_key='provident',
-            consumer_secret='laboriosam',
+            access_token='eaque',
+            api_url='alias',
+            app_id='qui',
+            authorize_url='consequuntur',
+            client_id='vitae',
+            client_secret='quidem',
+            consumer_key='sequi',
+            consumer_secret='amet',
             emails=[
-                'accusamus',
+                'exercitationem',
             ],
-            expires_in=682.92,
-            expiry_date=dateutil.parser.isoparse('2020-08-18T14:47:31.331Z'),
-            key='eaque',
+            expires_in=8470.18,
+            expiry_date=dateutil.parser.isoparse('2021-10-18T19:31:06.005Z'),
+            key='similique',
             meta=shared.PropertyPropertyConnectionAuthMeta(),
-            name='Miss Lois Cruickshank',
+            name='Garry Fahey',
             other_auth_info=[
-                'amet',
+                'asperiores',
             ],
-            pem='exercitationem',
-            refresh_token='illum',
-            state='praesentium',
-            token='unde',
-            token_url='similique',
+            pem='temporibus',
+            refresh_token='id',
+            state='atque',
+            token='quibusdam',
+            token_url='sit',
         ),
-        auth_aws_arn='eligendi',
+        auth_aws_arn='quo',
         categories=[
-            shared.PropertyConnectionCategories.MARTECH,
+            shared.PropertyConnectionCategories.ATS,
         ],
-        created_at=dateutil.parser.isoparse('2022-02-10T02:37:22.453Z'),
-        environment='nobis',
-        external_xref='asperiores',
-        id='da8d0c54-9ef0-4300-8978-a61fa1cf2068',
-        integration_type='totam',
+        created_at=dateutil.parser.isoparse('2022-05-30T05:35:32.331Z'),
+        environment='vero',
+        external_xref='earum',
+        id='03004978-a61f-4a1c-b206-88f77c1ffc71',
+        integration_type='facere',
         is_paused=False,
         permissions=[
-            shared.PropertyConnectionPermissions.ATS_JOB_READ,
+            shared.PropertyConnectionPermissions.HRIS_GROUP_READ,
         ],
-        updated_at=dateutil.parser.isoparse('2022-07-16T11:02:07.974Z'),
-        workspace_id='quod',
+        updated_at=dateutil.parser.isoparse('2022-11-13T09:13:55.156Z'),
+        workspace_id='ex',
     ),
-    id='1ffc71dc-a163-4f2a-bc80-a97ff334cddf',
+    id='3f2a3c80-a97f-4f33-8cdd-f857a9e61876',
 )
 
-res = s.connection.put_unified_connection_id(req, operations.PutUnifiedConnectionIDSecurity(
-    jwt="",
-))
+res = s.connection.put_unified_connection_id(req)
 
 if res.connection is not None:
     # handle response
@@ -359,10 +366,9 @@ if res.connection is not None:
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                              | [operations.PutUnifiedConnectionIDRequest](../../models/operations/putunifiedconnectionidrequest.md)   | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
-| `security`                                                                                             | [operations.PutUnifiedConnectionIDSecurity](../../models/operations/putunifiedconnectionidsecurity.md) | :heavy_check_mark:                                                                                     | The security requirements to use for the request.                                                      |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `request`                                                                                            | [operations.PutUnifiedConnectionIDRequest](../../models/operations/putunifiedconnectionidrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 
 ### Response

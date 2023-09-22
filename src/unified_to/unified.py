@@ -12,7 +12,7 @@ class Unified:
         self.sdk_configuration = sdk_config
         
     
-    def delete_unified_connection_id(self, request: operations.DeleteUnifiedConnectionIDRequest, security: operations.DeleteUnifiedConnectionIDSecurity) -> operations.DeleteUnifiedConnectionIDResponse:
+    def delete_unified_connection_id(self, request: operations.DeleteUnifiedConnectionIDRequest) -> operations.DeleteUnifiedConnectionIDResponse:
         r"""Remove connection"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -21,7 +21,7 @@ class Unified:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -39,7 +39,7 @@ class Unified:
         return res
 
     
-    def delete_unified_user(self, security: operations.DeleteUnifiedUserSecurity) -> operations.DeleteUnifiedUserResponse:
+    def delete_unified_user(self) -> operations.DeleteUnifiedUserResponse:
         r"""Delete your user object"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -48,7 +48,7 @@ class Unified:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -66,7 +66,7 @@ class Unified:
         return res
 
     
-    def delete_unified_webhook_id(self, request: operations.DeleteUnifiedWebhookIDRequest, security: operations.DeleteUnifiedWebhookIDSecurity) -> operations.DeleteUnifiedWebhookIDResponse:
+    def delete_unified_webhook_id(self, request: operations.DeleteUnifiedWebhookIDRequest) -> operations.DeleteUnifiedWebhookIDResponse:
         r"""Remove webhook subscription"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -75,7 +75,7 @@ class Unified:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -93,7 +93,7 @@ class Unified:
         return res
 
     
-    def get_unified_apicall(self, request: operations.GetUnifiedApicallRequest, security: operations.GetUnifiedApicallSecurity) -> operations.GetUnifiedApicallResponse:
+    def get_unified_apicall(self, request: operations.GetUnifiedApicallRequest) -> operations.GetUnifiedApicallResponse:
         r"""Returns API Calls"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -103,7 +103,7 @@ class Unified:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -122,7 +122,7 @@ class Unified:
         return res
 
     
-    def get_unified_apicall_id(self, request: operations.GetUnifiedApicallIDRequest, security: operations.GetUnifiedApicallIDSecurity) -> operations.GetUnifiedApicallIDResponse:
+    def get_unified_apicall_id(self, request: operations.GetUnifiedApicallIDRequest) -> operations.GetUnifiedApicallIDResponse:
         r"""Retrieve specific API Call by its ID"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -131,7 +131,7 @@ class Unified:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -150,7 +150,7 @@ class Unified:
         return res
 
     
-    def get_unified_connection(self, request: operations.GetUnifiedConnectionRequest, security: operations.GetUnifiedConnectionSecurity) -> operations.GetUnifiedConnectionResponse:
+    def get_unified_connection(self, request: operations.GetUnifiedConnectionRequest) -> operations.GetUnifiedConnectionResponse:
         r"""List all connections"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -160,7 +160,7 @@ class Unified:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -179,7 +179,7 @@ class Unified:
         return res
 
     
-    def get_unified_connection_id(self, request: operations.GetUnifiedConnectionIDRequest, security: operations.GetUnifiedConnectionIDSecurity) -> operations.GetUnifiedConnectionIDResponse:
+    def get_unified_connection_id(self, request: operations.GetUnifiedConnectionIDRequest) -> operations.GetUnifiedConnectionIDResponse:
         r"""Retrieve connection"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -188,7 +188,7 @@ class Unified:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -207,7 +207,7 @@ class Unified:
         return res
 
     
-    def get_unified_integration(self, request: operations.GetUnifiedIntegrationRequest, security: operations.GetUnifiedIntegrationSecurity) -> operations.GetUnifiedIntegrationResponse:
+    def get_unified_integration(self, request: operations.GetUnifiedIntegrationRequest) -> operations.GetUnifiedIntegrationResponse:
         r"""Returns all integrations"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -217,7 +217,7 @@ class Unified:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -248,7 +248,7 @@ class Unified:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = self.sdk_configuration.client
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -266,7 +266,7 @@ class Unified:
         return res
 
     
-    def get_unified_integration_integration_type(self, request: operations.GetUnifiedIntegrationIntegrationTypeRequest, security: operations.GetUnifiedIntegrationIntegrationTypeSecurity) -> operations.GetUnifiedIntegrationIntegrationTypeResponse:
+    def get_unified_integration_integration_type(self, request: operations.GetUnifiedIntegrationIntegrationTypeRequest) -> operations.GetUnifiedIntegrationIntegrationTypeResponse:
         r"""Retrieve an integration"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -275,7 +275,7 @@ class Unified:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -306,7 +306,7 @@ class Unified:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = self.sdk_configuration.client
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -325,7 +325,7 @@ class Unified:
         return res
 
     
-    def get_unified_user(self, security: operations.GetUnifiedUserSecurity) -> operations.GetUnifiedUserResponse:
+    def get_unified_user(self) -> operations.GetUnifiedUserResponse:
         r"""Retrieve your user object"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -334,7 +334,7 @@ class Unified:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -353,7 +353,7 @@ class Unified:
         return res
 
     
-    def get_unified_user_token(self, security: operations.GetUnifiedUserTokenSecurity) -> operations.GetUnifiedUserTokenResponse:
+    def get_unified_user_token(self) -> operations.GetUnifiedUserTokenResponse:
         r"""Retrieve your user token"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -362,7 +362,7 @@ class Unified:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -380,7 +380,7 @@ class Unified:
         return res
 
     
-    def get_unified_webhook(self, request: operations.GetUnifiedWebhookRequest, security: operations.GetUnifiedWebhookSecurity) -> operations.GetUnifiedWebhookResponse:
+    def get_unified_webhook(self, request: operations.GetUnifiedWebhookRequest) -> operations.GetUnifiedWebhookResponse:
         r"""Returns all registered webhooks"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -390,7 +390,7 @@ class Unified:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -409,7 +409,7 @@ class Unified:
         return res
 
     
-    def get_unified_webhook_id(self, request: operations.GetUnifiedWebhookIDRequest, security: operations.GetUnifiedWebhookIDSecurity) -> operations.GetUnifiedWebhookIDResponse:
+    def get_unified_webhook_id(self, request: operations.GetUnifiedWebhookIDRequest) -> operations.GetUnifiedWebhookIDResponse:
         r"""Retrieve webhook by its ID"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -418,7 +418,7 @@ class Unified:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -437,7 +437,7 @@ class Unified:
         return res
 
     
-    def patch_unified_connection_id(self, request: operations.PatchUnifiedConnectionIDRequest, security: operations.PatchUnifiedConnectionIDSecurity) -> operations.PatchUnifiedConnectionIDResponse:
+    def patch_unified_connection_id(self, request: operations.PatchUnifiedConnectionIDRequest) -> operations.PatchUnifiedConnectionIDResponse:
         r"""Update connection"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -449,7 +449,7 @@ class Unified:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -468,7 +468,7 @@ class Unified:
         return res
 
     
-    def patch_unified_user(self, request: shared.User, security: operations.PatchUnifiedUserSecurity) -> operations.PatchUnifiedUserResponse:
+    def patch_unified_user(self, request: shared.User) -> operations.PatchUnifiedUserResponse:
         r"""Updates your user object
         Only the name field is updated.
         """
@@ -482,7 +482,7 @@ class Unified:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -501,7 +501,7 @@ class Unified:
         return res
 
     
-    def post_unified_connection(self, request: shared.Connection, security: operations.PostUnifiedConnectionSecurity) -> operations.PostUnifiedConnectionResponse:
+    def post_unified_connection(self, request: shared.Connection) -> operations.PostUnifiedConnectionResponse:
         r"""Create connection"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -513,7 +513,7 @@ class Unified:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -532,7 +532,7 @@ class Unified:
         return res
 
     
-    def post_unified_webhook_connection_id_object(self, request: operations.PostUnifiedWebhookConnectionIDObjectRequest, security: operations.PostUnifiedWebhookConnectionIDObjectSecurity) -> operations.PostUnifiedWebhookConnectionIDObjectResponse:
+    def post_unified_webhook_connection_id_object(self, request: operations.PostUnifiedWebhookConnectionIDObjectRequest) -> operations.PostUnifiedWebhookConnectionIDObjectResponse:
         r"""Create webhook subscription
         To maintain compatibility with the webhooks specification and Zapier webhooks, only the hook_url field is required in the payload when creating a Webhook.  When updated/new objects are found, the array of objects will be POSTed to the hook_url with the paramater hookId=<hookId>.
         """
@@ -547,7 +547,7 @@ class Unified:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('POST', url, params=query_params, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -566,7 +566,7 @@ class Unified:
         return res
 
     
-    def put_unified_connection_id(self, request: operations.PutUnifiedConnectionIDRequest, security: operations.PutUnifiedConnectionIDSecurity) -> operations.PutUnifiedConnectionIDResponse:
+    def put_unified_connection_id(self, request: operations.PutUnifiedConnectionIDRequest) -> operations.PutUnifiedConnectionIDResponse:
         r"""Update connection"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -578,7 +578,7 @@ class Unified:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -597,7 +597,7 @@ class Unified:
         return res
 
     
-    def put_unified_user(self, request: shared.User, security: operations.PutUnifiedUserSecurity) -> operations.PutUnifiedUserResponse:
+    def put_unified_user(self, request: shared.User) -> operations.PutUnifiedUserResponse:
         r"""Updates your user object
         Only the name field is updated.
         """
@@ -611,7 +611,7 @@ class Unified:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')

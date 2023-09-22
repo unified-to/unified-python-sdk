@@ -12,7 +12,7 @@ class Event:
         self.sdk_configuration = sdk_config
         
     
-    def delete_crm_connection_id_event_id(self, request: operations.DeleteCrmConnectionIDEventIDRequest, security: operations.DeleteCrmConnectionIDEventIDSecurity) -> operations.DeleteCrmConnectionIDEventIDResponse:
+    def delete_crm_connection_id_event_id(self, request: operations.DeleteCrmConnectionIDEventIDRequest) -> operations.DeleteCrmConnectionIDEventIDResponse:
         r"""Remove a event"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -21,7 +21,7 @@ class Event:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -39,7 +39,7 @@ class Event:
         return res
 
     
-    def delete_crm_connection_id_event_id_company_company_id(self, request: operations.DeleteCrmConnectionIDEventIDCompanyCompanyIDRequest, security: operations.DeleteCrmConnectionIDEventIDCompanyCompanyIDSecurity) -> operations.DeleteCrmConnectionIDEventIDCompanyCompanyIDResponse:
+    def delete_crm_connection_id_event_id_company_company_id(self, request: operations.DeleteCrmConnectionIDEventIDCompanyCompanyIDRequest) -> operations.DeleteCrmConnectionIDEventIDCompanyCompanyIDResponse:
         r"""Remove company association from an event"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -48,7 +48,7 @@ class Event:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -67,7 +67,7 @@ class Event:
         return res
 
     
-    def delete_crm_connection_id_event_id_contact_contact_id(self, request: operations.DeleteCrmConnectionIDEventIDContactContactIDRequest, security: operations.DeleteCrmConnectionIDEventIDContactContactIDSecurity) -> operations.DeleteCrmConnectionIDEventIDContactContactIDResponse:
+    def delete_crm_connection_id_event_id_contact_contact_id(self, request: operations.DeleteCrmConnectionIDEventIDContactContactIDRequest) -> operations.DeleteCrmConnectionIDEventIDContactContactIDResponse:
         r"""Remove contact association from an event"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -76,7 +76,7 @@ class Event:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -95,7 +95,7 @@ class Event:
         return res
 
     
-    def delete_crm_connection_id_event_id_deal_deal_id(self, request: operations.DeleteCrmConnectionIDEventIDDealDealIDRequest, security: operations.DeleteCrmConnectionIDEventIDDealDealIDSecurity) -> operations.DeleteCrmConnectionIDEventIDDealDealIDResponse:
+    def delete_crm_connection_id_event_id_deal_deal_id(self, request: operations.DeleteCrmConnectionIDEventIDDealDealIDRequest) -> operations.DeleteCrmConnectionIDEventIDDealDealIDResponse:
         r"""Remove deal association from an event"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -104,7 +104,7 @@ class Event:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -123,7 +123,7 @@ class Event:
         return res
 
     
-    def get_crm_connection_id_event(self, request: operations.GetCrmConnectionIDEventRequest, security: operations.GetCrmConnectionIDEventSecurity) -> operations.GetCrmConnectionIDEventResponse:
+    def get_crm_connection_id_event(self, request: operations.GetCrmConnectionIDEventRequest) -> operations.GetCrmConnectionIDEventResponse:
         r"""List all events"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -133,7 +133,7 @@ class Event:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -152,7 +152,7 @@ class Event:
         return res
 
     
-    def get_crm_connection_id_event_id(self, request: operations.GetCrmConnectionIDEventIDRequest, security: operations.GetCrmConnectionIDEventIDSecurity) -> operations.GetCrmConnectionIDEventIDResponse:
+    def get_crm_connection_id_event_id(self, request: operations.GetCrmConnectionIDEventIDRequest) -> operations.GetCrmConnectionIDEventIDResponse:
         r"""Retrieve a event"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -161,7 +161,7 @@ class Event:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -180,7 +180,7 @@ class Event:
         return res
 
     
-    def patch_crm_connection_id_event_id(self, request: operations.PatchCrmConnectionIDEventIDRequest, security: operations.PatchCrmConnectionIDEventIDSecurity) -> operations.PatchCrmConnectionIDEventIDResponse:
+    def patch_crm_connection_id_event_id(self, request: operations.PatchCrmConnectionIDEventIDRequest) -> operations.PatchCrmConnectionIDEventIDResponse:
         r"""Update a event"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -192,7 +192,7 @@ class Event:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -211,7 +211,7 @@ class Event:
         return res
 
     
-    def patch_crm_connection_id_event_id_company_company_id(self, request: operations.PatchCrmConnectionIDEventIDCompanyCompanyIDRequest, security: operations.PatchCrmConnectionIDEventIDCompanyCompanyIDSecurity) -> operations.PatchCrmConnectionIDEventIDCompanyCompanyIDResponse:
+    def patch_crm_connection_id_event_id_company_company_id(self, request: operations.PatchCrmConnectionIDEventIDCompanyCompanyIDRequest) -> operations.PatchCrmConnectionIDEventIDCompanyCompanyIDResponse:
         r"""Associate a company with an event"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -220,7 +220,7 @@ class Event:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('PATCH', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -239,7 +239,7 @@ class Event:
         return res
 
     
-    def patch_crm_connection_id_event_id_contact_contact_id(self, request: operations.PatchCrmConnectionIDEventIDContactContactIDRequest, security: operations.PatchCrmConnectionIDEventIDContactContactIDSecurity) -> operations.PatchCrmConnectionIDEventIDContactContactIDResponse:
+    def patch_crm_connection_id_event_id_contact_contact_id(self, request: operations.PatchCrmConnectionIDEventIDContactContactIDRequest) -> operations.PatchCrmConnectionIDEventIDContactContactIDResponse:
         r"""Associate a contact with an event"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -248,7 +248,7 @@ class Event:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('PATCH', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -267,7 +267,7 @@ class Event:
         return res
 
     
-    def patch_crm_connection_id_event_id_deal_deal_id(self, request: operations.PatchCrmConnectionIDEventIDDealDealIDRequest, security: operations.PatchCrmConnectionIDEventIDDealDealIDSecurity) -> operations.PatchCrmConnectionIDEventIDDealDealIDResponse:
+    def patch_crm_connection_id_event_id_deal_deal_id(self, request: operations.PatchCrmConnectionIDEventIDDealDealIDRequest) -> operations.PatchCrmConnectionIDEventIDDealDealIDResponse:
         r"""Associate a deal with an event"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -276,7 +276,7 @@ class Event:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('PATCH', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -295,7 +295,7 @@ class Event:
         return res
 
     
-    def post_crm_connection_id_event(self, request: operations.PostCrmConnectionIDEventRequest, security: operations.PostCrmConnectionIDEventSecurity) -> operations.PostCrmConnectionIDEventResponse:
+    def post_crm_connection_id_event(self, request: operations.PostCrmConnectionIDEventRequest) -> operations.PostCrmConnectionIDEventResponse:
         r"""Create a event"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -307,7 +307,7 @@ class Event:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -326,7 +326,7 @@ class Event:
         return res
 
     
-    def put_crm_connection_id_event_id(self, request: operations.PutCrmConnectionIDEventIDRequest, security: operations.PutCrmConnectionIDEventIDSecurity) -> operations.PutCrmConnectionIDEventIDResponse:
+    def put_crm_connection_id_event_id(self, request: operations.PutCrmConnectionIDEventIDRequest) -> operations.PutCrmConnectionIDEventIDResponse:
         r"""Update a event"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -338,7 +338,7 @@ class Event:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -357,7 +357,7 @@ class Event:
         return res
 
     
-    def put_crm_connection_id_event_id_company_company_id(self, request: operations.PutCrmConnectionIDEventIDCompanyCompanyIDRequest, security: operations.PutCrmConnectionIDEventIDCompanyCompanyIDSecurity) -> operations.PutCrmConnectionIDEventIDCompanyCompanyIDResponse:
+    def put_crm_connection_id_event_id_company_company_id(self, request: operations.PutCrmConnectionIDEventIDCompanyCompanyIDRequest) -> operations.PutCrmConnectionIDEventIDCompanyCompanyIDResponse:
         r"""Associate a company with an event"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -366,7 +366,7 @@ class Event:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('PUT', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -385,7 +385,7 @@ class Event:
         return res
 
     
-    def put_crm_connection_id_event_id_contact_contact_id(self, request: operations.PutCrmConnectionIDEventIDContactContactIDRequest, security: operations.PutCrmConnectionIDEventIDContactContactIDSecurity) -> operations.PutCrmConnectionIDEventIDContactContactIDResponse:
+    def put_crm_connection_id_event_id_contact_contact_id(self, request: operations.PutCrmConnectionIDEventIDContactContactIDRequest) -> operations.PutCrmConnectionIDEventIDContactContactIDResponse:
         r"""Associate a contact with an event"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -394,7 +394,7 @@ class Event:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('PUT', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -413,7 +413,7 @@ class Event:
         return res
 
     
-    def put_crm_connection_id_event_id_deal_deal_id(self, request: operations.PutCrmConnectionIDEventIDDealDealIDRequest, security: operations.PutCrmConnectionIDEventIDDealDealIDSecurity) -> operations.PutCrmConnectionIDEventIDDealDealIDResponse:
+    def put_crm_connection_id_event_id_deal_deal_id(self, request: operations.PutCrmConnectionIDEventIDDealDealIDRequest) -> operations.PutCrmConnectionIDEventIDDealDealIDResponse:
         r"""Associate a deal with an event"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -422,7 +422,7 @@ class Event:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('PUT', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')

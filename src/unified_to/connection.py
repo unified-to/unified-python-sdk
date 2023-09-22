@@ -12,7 +12,7 @@ class Connection:
         self.sdk_configuration = sdk_config
         
     
-    def delete_unified_connection_id(self, request: operations.DeleteUnifiedConnectionIDRequest, security: operations.DeleteUnifiedConnectionIDSecurity) -> operations.DeleteUnifiedConnectionIDResponse:
+    def delete_unified_connection_id(self, request: operations.DeleteUnifiedConnectionIDRequest) -> operations.DeleteUnifiedConnectionIDResponse:
         r"""Remove connection"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -21,7 +21,7 @@ class Connection:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -39,7 +39,7 @@ class Connection:
         return res
 
     
-    def get_unified_connection(self, request: operations.GetUnifiedConnectionRequest, security: operations.GetUnifiedConnectionSecurity) -> operations.GetUnifiedConnectionResponse:
+    def get_unified_connection(self, request: operations.GetUnifiedConnectionRequest) -> operations.GetUnifiedConnectionResponse:
         r"""List all connections"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -49,7 +49,7 @@ class Connection:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -68,7 +68,7 @@ class Connection:
         return res
 
     
-    def get_unified_connection_id(self, request: operations.GetUnifiedConnectionIDRequest, security: operations.GetUnifiedConnectionIDSecurity) -> operations.GetUnifiedConnectionIDResponse:
+    def get_unified_connection_id(self, request: operations.GetUnifiedConnectionIDRequest) -> operations.GetUnifiedConnectionIDResponse:
         r"""Retrieve connection"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -77,7 +77,7 @@ class Connection:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -96,7 +96,7 @@ class Connection:
         return res
 
     
-    def patch_unified_connection_id(self, request: operations.PatchUnifiedConnectionIDRequest, security: operations.PatchUnifiedConnectionIDSecurity) -> operations.PatchUnifiedConnectionIDResponse:
+    def patch_unified_connection_id(self, request: operations.PatchUnifiedConnectionIDRequest) -> operations.PatchUnifiedConnectionIDResponse:
         r"""Update connection"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -108,7 +108,7 @@ class Connection:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -127,7 +127,7 @@ class Connection:
         return res
 
     
-    def post_unified_connection(self, request: shared.Connection, security: operations.PostUnifiedConnectionSecurity) -> operations.PostUnifiedConnectionResponse:
+    def post_unified_connection(self, request: shared.Connection) -> operations.PostUnifiedConnectionResponse:
         r"""Create connection"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -139,7 +139,7 @@ class Connection:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -158,7 +158,7 @@ class Connection:
         return res
 
     
-    def put_unified_connection_id(self, request: operations.PutUnifiedConnectionIDRequest, security: operations.PutUnifiedConnectionIDSecurity) -> operations.PutUnifiedConnectionIDResponse:
+    def put_unified_connection_id(self, request: operations.PutUnifiedConnectionIDRequest) -> operations.PutUnifiedConnectionIDResponse:
         r"""Update connection"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -170,7 +170,7 @@ class Connection:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')

@@ -12,7 +12,7 @@ class User:
         self.sdk_configuration = sdk_config
         
     
-    def delete_crm_connection_id_user_id(self, request: operations.DeleteCrmConnectionIDUserIDRequest, security: operations.DeleteCrmConnectionIDUserIDSecurity) -> operations.DeleteCrmConnectionIDUserIDResponse:
+    def delete_crm_connection_id_user_id(self, request: operations.DeleteCrmConnectionIDUserIDRequest) -> operations.DeleteCrmConnectionIDUserIDResponse:
         r"""Remove a user"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -21,7 +21,7 @@ class User:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -39,7 +39,7 @@ class User:
         return res
 
     
-    def delete_unified_user(self, security: operations.DeleteUnifiedUserSecurity) -> operations.DeleteUnifiedUserResponse:
+    def delete_unified_user(self) -> operations.DeleteUnifiedUserResponse:
         r"""Delete your user object"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -48,7 +48,7 @@ class User:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -66,7 +66,7 @@ class User:
         return res
 
     
-    def get_crm_connection_id_user(self, request: operations.GetCrmConnectionIDUserRequest, security: operations.GetCrmConnectionIDUserSecurity) -> operations.GetCrmConnectionIDUserResponse:
+    def get_crm_connection_id_user(self, request: operations.GetCrmConnectionIDUserRequest) -> operations.GetCrmConnectionIDUserResponse:
         r"""List all users"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -76,7 +76,7 @@ class User:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -95,7 +95,7 @@ class User:
         return res
 
     
-    def get_crm_connection_id_user_id(self, request: operations.GetCrmConnectionIDUserIDRequest, security: operations.GetCrmConnectionIDUserIDSecurity) -> operations.GetCrmConnectionIDUserIDResponse:
+    def get_crm_connection_id_user_id(self, request: operations.GetCrmConnectionIDUserIDRequest) -> operations.GetCrmConnectionIDUserIDResponse:
         r"""Retrieve a user"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -104,7 +104,7 @@ class User:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -123,7 +123,7 @@ class User:
         return res
 
     
-    def get_unified_user(self, security: operations.GetUnifiedUserSecurity) -> operations.GetUnifiedUserResponse:
+    def get_unified_user(self) -> operations.GetUnifiedUserResponse:
         r"""Retrieve your user object"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -132,7 +132,7 @@ class User:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -151,7 +151,7 @@ class User:
         return res
 
     
-    def get_unified_user_token(self, security: operations.GetUnifiedUserTokenSecurity) -> operations.GetUnifiedUserTokenResponse:
+    def get_unified_user_token(self) -> operations.GetUnifiedUserTokenResponse:
         r"""Retrieve your user token"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -160,7 +160,7 @@ class User:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -178,7 +178,7 @@ class User:
         return res
 
     
-    def patch_crm_connection_id_user_id(self, request: operations.PatchCrmConnectionIDUserIDRequest, security: operations.PatchCrmConnectionIDUserIDSecurity) -> operations.PatchCrmConnectionIDUserIDResponse:
+    def patch_crm_connection_id_user_id(self, request: operations.PatchCrmConnectionIDUserIDRequest) -> operations.PatchCrmConnectionIDUserIDResponse:
         r"""Update a user"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -190,7 +190,7 @@ class User:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -209,7 +209,7 @@ class User:
         return res
 
     
-    def patch_unified_user(self, request: shared.User, security: operations.PatchUnifiedUserSecurity) -> operations.PatchUnifiedUserResponse:
+    def patch_unified_user(self, request: shared.User) -> operations.PatchUnifiedUserResponse:
         r"""Updates your user object
         Only the name field is updated.
         """
@@ -223,7 +223,7 @@ class User:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -242,7 +242,7 @@ class User:
         return res
 
     
-    def post_crm_connection_id_user(self, request: operations.PostCrmConnectionIDUserRequest, security: operations.PostCrmConnectionIDUserSecurity) -> operations.PostCrmConnectionIDUserResponse:
+    def post_crm_connection_id_user(self, request: operations.PostCrmConnectionIDUserRequest) -> operations.PostCrmConnectionIDUserResponse:
         r"""Create a user"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -254,7 +254,7 @@ class User:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -273,7 +273,7 @@ class User:
         return res
 
     
-    def put_crm_connection_id_user_id(self, request: operations.PutCrmConnectionIDUserIDRequest, security: operations.PutCrmConnectionIDUserIDSecurity) -> operations.PutCrmConnectionIDUserIDResponse:
+    def put_crm_connection_id_user_id(self, request: operations.PutCrmConnectionIDUserIDRequest) -> operations.PutCrmConnectionIDUserIDResponse:
         r"""Update a user"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -285,7 +285,7 @@ class User:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -304,7 +304,7 @@ class User:
         return res
 
     
-    def put_unified_user(self, request: shared.User, security: operations.PutUnifiedUserSecurity) -> operations.PutUnifiedUserResponse:
+    def put_unified_user(self, request: shared.User) -> operations.PutUnifiedUserResponse:
         r"""Updates your user object
         Only the name field is updated.
         """
@@ -318,7 +318,7 @@ class User:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')

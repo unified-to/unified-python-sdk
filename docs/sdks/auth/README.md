@@ -13,24 +13,28 @@ Returns an authorization URL for the specified integration.  Once a successful a
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.GetUnifiedIntegrationAuthWorkspaceIDIntegrationTypeRequest(
-    env='beatae',
-    external_xref='aliquid',
-    failure_redirect='modi',
-    integration_type='optio',
+    env='quia',
+    external_xref='ullam',
+    failure_redirect='quisquam',
+    integration_type='dicta',
     lang='voluptatibus',
     redirect=False,
     scopes=[
-        operations.GetUnifiedIntegrationAuthWorkspaceIDIntegrationTypeScopes.MARTECH_MEMBER_READ,
+        operations.GetUnifiedIntegrationAuthWorkspaceIDIntegrationTypeScopes.TICKETING_NOTE_WRITE,
     ],
-    state='officia',
-    subdomain='libero',
-    success_redirect='totam',
-    workspace_id='sequi',
+    state='quae',
+    subdomain='officiis',
+    success_redirect='architecto',
+    workspace_id='architecto',
 )
 
 res = s.auth.get_unified_integration_auth_workspace_id_integration_type(req)
@@ -59,18 +63,22 @@ Returns an authentication URL for the specified integration.  Once a successful 
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.GetUnifiedIntegrationLoginWorkspaceIDIntegrationTypeRequest(
-    env='aliquid',
-    failure_redirect='ea',
-    integration_type='impedit',
+    env='enim',
+    failure_redirect='optio',
+    integration_type='rem',
     redirect=False,
-    state='ducimus',
-    success_redirect='odit',
-    workspace_id='velit',
+    state='perferendis',
+    success_redirect='facilis',
+    workspace_id='reiciendis',
 )
 
 res = s.auth.get_unified_integration_login_workspace_id_integration_type(req)

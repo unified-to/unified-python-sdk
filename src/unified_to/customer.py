@@ -12,7 +12,7 @@ class Customer:
         self.sdk_configuration = sdk_config
         
     
-    def delete_ticketing_connection_id_customer_id(self, request: operations.DeleteTicketingConnectionIDCustomerIDRequest, security: operations.DeleteTicketingConnectionIDCustomerIDSecurity) -> operations.DeleteTicketingConnectionIDCustomerIDResponse:
+    def delete_ticketing_connection_id_customer_id(self, request: operations.DeleteTicketingConnectionIDCustomerIDRequest) -> operations.DeleteTicketingConnectionIDCustomerIDResponse:
         r"""Remove a customer"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -21,7 +21,7 @@ class Customer:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -39,7 +39,7 @@ class Customer:
         return res
 
     
-    def get_ticketing_connection_id_customer(self, request: operations.GetTicketingConnectionIDCustomerRequest, security: operations.GetTicketingConnectionIDCustomerSecurity) -> operations.GetTicketingConnectionIDCustomerResponse:
+    def get_ticketing_connection_id_customer(self, request: operations.GetTicketingConnectionIDCustomerRequest) -> operations.GetTicketingConnectionIDCustomerResponse:
         r"""List all customers"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -49,7 +49,7 @@ class Customer:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -68,7 +68,7 @@ class Customer:
         return res
 
     
-    def get_ticketing_connection_id_customer_id(self, request: operations.GetTicketingConnectionIDCustomerIDRequest, security: operations.GetTicketingConnectionIDCustomerIDSecurity) -> operations.GetTicketingConnectionIDCustomerIDResponse:
+    def get_ticketing_connection_id_customer_id(self, request: operations.GetTicketingConnectionIDCustomerIDRequest) -> operations.GetTicketingConnectionIDCustomerIDResponse:
         r"""Retrieve a customer"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -77,7 +77,7 @@ class Customer:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -96,7 +96,7 @@ class Customer:
         return res
 
     
-    def patch_ticketing_connection_id_customer_id(self, request: operations.PatchTicketingConnectionIDCustomerIDRequest, security: operations.PatchTicketingConnectionIDCustomerIDSecurity) -> operations.PatchTicketingConnectionIDCustomerIDResponse:
+    def patch_ticketing_connection_id_customer_id(self, request: operations.PatchTicketingConnectionIDCustomerIDRequest) -> operations.PatchTicketingConnectionIDCustomerIDResponse:
         r"""Update a customer"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -108,7 +108,7 @@ class Customer:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -127,7 +127,7 @@ class Customer:
         return res
 
     
-    def post_ticketing_connection_id_customer(self, request: operations.PostTicketingConnectionIDCustomerRequest, security: operations.PostTicketingConnectionIDCustomerSecurity) -> operations.PostTicketingConnectionIDCustomerResponse:
+    def post_ticketing_connection_id_customer(self, request: operations.PostTicketingConnectionIDCustomerRequest) -> operations.PostTicketingConnectionIDCustomerResponse:
         r"""Create a customer"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -139,7 +139,7 @@ class Customer:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -158,7 +158,7 @@ class Customer:
         return res
 
     
-    def put_ticketing_connection_id_customer_id(self, request: operations.PutTicketingConnectionIDCustomerIDRequest, security: operations.PutTicketingConnectionIDCustomerIDSecurity) -> operations.PutTicketingConnectionIDCustomerIDResponse:
+    def put_ticketing_connection_id_customer_id(self, request: operations.PutTicketingConnectionIDCustomerIDRequest) -> operations.PutTicketingConnectionIDCustomerIDResponse:
         r"""Update a customer"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -170,7 +170,7 @@ class Customer:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')

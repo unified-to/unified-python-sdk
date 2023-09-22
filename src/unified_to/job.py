@@ -12,7 +12,7 @@ class Job:
         self.sdk_configuration = sdk_config
         
     
-    def delete_ats_connection_id_job_id(self, request: operations.DeleteAtsConnectionIDJobIDRequest, security: operations.DeleteAtsConnectionIDJobIDSecurity) -> operations.DeleteAtsConnectionIDJobIDResponse:
+    def delete_ats_connection_id_job_id(self, request: operations.DeleteAtsConnectionIDJobIDRequest) -> operations.DeleteAtsConnectionIDJobIDResponse:
         r"""Remove a job"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -21,7 +21,7 @@ class Job:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -39,7 +39,7 @@ class Job:
         return res
 
     
-    def get_ats_connection_id_job(self, request: operations.GetAtsConnectionIDJobRequest, security: operations.GetAtsConnectionIDJobSecurity) -> operations.GetAtsConnectionIDJobResponse:
+    def get_ats_connection_id_job(self, request: operations.GetAtsConnectionIDJobRequest) -> operations.GetAtsConnectionIDJobResponse:
         r"""List all jobs"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -49,7 +49,7 @@ class Job:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -68,7 +68,7 @@ class Job:
         return res
 
     
-    def get_ats_connection_id_job_id(self, request: operations.GetAtsConnectionIDJobIDRequest, security: operations.GetAtsConnectionIDJobIDSecurity) -> operations.GetAtsConnectionIDJobIDResponse:
+    def get_ats_connection_id_job_id(self, request: operations.GetAtsConnectionIDJobIDRequest) -> operations.GetAtsConnectionIDJobIDResponse:
         r"""Retrieve a job"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -77,7 +77,7 @@ class Job:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -96,7 +96,7 @@ class Job:
         return res
 
     
-    def patch_ats_connection_id_job_id(self, request: operations.PatchAtsConnectionIDJobIDRequest, security: operations.PatchAtsConnectionIDJobIDSecurity) -> operations.PatchAtsConnectionIDJobIDResponse:
+    def patch_ats_connection_id_job_id(self, request: operations.PatchAtsConnectionIDJobIDRequest) -> operations.PatchAtsConnectionIDJobIDResponse:
         r"""Update a job"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -108,7 +108,7 @@ class Job:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -127,7 +127,7 @@ class Job:
         return res
 
     
-    def post_ats_connection_id_job(self, request: operations.PostAtsConnectionIDJobRequest, security: operations.PostAtsConnectionIDJobSecurity) -> operations.PostAtsConnectionIDJobResponse:
+    def post_ats_connection_id_job(self, request: operations.PostAtsConnectionIDJobRequest) -> operations.PostAtsConnectionIDJobResponse:
         r"""Create a job"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -139,7 +139,7 @@ class Job:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -158,7 +158,7 @@ class Job:
         return res
 
     
-    def put_ats_connection_id_job_id(self, request: operations.PutAtsConnectionIDJobIDRequest, security: operations.PutAtsConnectionIDJobIDSecurity) -> operations.PutAtsConnectionIDJobIDResponse:
+    def put_ats_connection_id_job_id(self, request: operations.PutAtsConnectionIDJobIDRequest) -> operations.PutAtsConnectionIDJobIDResponse:
         r"""Update a job"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -170,7 +170,7 @@ class Job:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')

@@ -12,7 +12,7 @@ class Application:
         self.sdk_configuration = sdk_config
         
     
-    def delete_ats_connection_id_application_id(self, request: operations.DeleteAtsConnectionIDApplicationIDRequest, security: operations.DeleteAtsConnectionIDApplicationIDSecurity) -> operations.DeleteAtsConnectionIDApplicationIDResponse:
+    def delete_ats_connection_id_application_id(self, request: operations.DeleteAtsConnectionIDApplicationIDRequest) -> operations.DeleteAtsConnectionIDApplicationIDResponse:
         r"""Remove an application"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -21,7 +21,7 @@ class Application:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -39,7 +39,7 @@ class Application:
         return res
 
     
-    def get_ats_connection_id_application(self, request: operations.GetAtsConnectionIDApplicationRequest, security: operations.GetAtsConnectionIDApplicationSecurity) -> operations.GetAtsConnectionIDApplicationResponse:
+    def get_ats_connection_id_application(self, request: operations.GetAtsConnectionIDApplicationRequest) -> operations.GetAtsConnectionIDApplicationResponse:
         r"""List all applications"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -49,7 +49,7 @@ class Application:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -68,7 +68,7 @@ class Application:
         return res
 
     
-    def get_ats_connection_id_application_id(self, request: operations.GetAtsConnectionIDApplicationIDRequest, security: operations.GetAtsConnectionIDApplicationIDSecurity) -> operations.GetAtsConnectionIDApplicationIDResponse:
+    def get_ats_connection_id_application_id(self, request: operations.GetAtsConnectionIDApplicationIDRequest) -> operations.GetAtsConnectionIDApplicationIDResponse:
         r"""Retrieve an application"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -77,7 +77,7 @@ class Application:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -96,7 +96,7 @@ class Application:
         return res
 
     
-    def patch_ats_connection_id_application_id(self, request: operations.PatchAtsConnectionIDApplicationIDRequest, security: operations.PatchAtsConnectionIDApplicationIDSecurity) -> operations.PatchAtsConnectionIDApplicationIDResponse:
+    def patch_ats_connection_id_application_id(self, request: operations.PatchAtsConnectionIDApplicationIDRequest) -> operations.PatchAtsConnectionIDApplicationIDResponse:
         r"""Update an application"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -108,7 +108,7 @@ class Application:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -127,7 +127,7 @@ class Application:
         return res
 
     
-    def post_ats_connection_id_application(self, request: operations.PostAtsConnectionIDApplicationRequest, security: operations.PostAtsConnectionIDApplicationSecurity) -> operations.PostAtsConnectionIDApplicationResponse:
+    def post_ats_connection_id_application(self, request: operations.PostAtsConnectionIDApplicationRequest) -> operations.PostAtsConnectionIDApplicationResponse:
         r"""Create an application"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -139,7 +139,7 @@ class Application:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -158,7 +158,7 @@ class Application:
         return res
 
     
-    def put_ats_connection_id_application_id(self, request: operations.PutAtsConnectionIDApplicationIDRequest, security: operations.PutAtsConnectionIDApplicationIDSecurity) -> operations.PutAtsConnectionIDApplicationIDResponse:
+    def put_ats_connection_id_application_id(self, request: operations.PutAtsConnectionIDApplicationIDRequest) -> operations.PutAtsConnectionIDApplicationIDResponse:
         r"""Update an application"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -170,7 +170,7 @@ class Application:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')

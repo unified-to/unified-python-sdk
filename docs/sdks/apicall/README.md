@@ -14,27 +14,29 @@ Returns API Calls
 ```python
 import unified_to
 import dateutil.parser
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
-
-req = operations.GetUnifiedApicallRequest(
-    connection_id='voluptate',
-    created_lte=dateutil.parser.isoparse('2022-04-12T10:47:34.158Z'),
-    env='eaque',
-    error=False,
-    external_xref='pariatur',
-    integration_type='nemo',
-    limit=9755.22,
-    offset=166.27,
-    order='fugiat',
-    sort='amet',
-    updated_gte=dateutil.parser.isoparse('2022-03-27T19:22:24.458Z'),
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
 )
 
-res = s.apicall.get_unified_apicall(req, operations.GetUnifiedApicallSecurity(
-    jwt="",
-))
+req = operations.GetUnifiedApicallRequest(
+    connection_id='perspiciatis',
+    created_lte=dateutil.parser.isoparse('2022-03-20T23:16:34.777Z'),
+    env='consequuntur',
+    error=False,
+    external_xref='blanditiis',
+    integration_type='error',
+    limit=503.7,
+    offset=5772.29,
+    order='rerum',
+    sort='adipisci',
+    updated_gte=dateutil.parser.isoparse('2020-03-14T00:51:21.656Z'),
+)
+
+res = s.apicall.get_unified_apicall(req)
 
 if res.api_calls is not None:
     # handle response
@@ -42,10 +44,9 @@ if res.api_calls is not None:
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `request`                                                                                    | [operations.GetUnifiedApicallRequest](../../models/operations/getunifiedapicallrequest.md)   | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
-| `security`                                                                                   | [operations.GetUnifiedApicallSecurity](../../models/operations/getunifiedapicallsecurity.md) | :heavy_check_mark:                                                                           | The security requirements to use for the request.                                            |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.GetUnifiedApicallRequest](../../models/operations/getunifiedapicallrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 
 ### Response
@@ -61,17 +62,19 @@ Retrieve specific API Call by its ID
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
-
-req = operations.GetUnifiedApicallIDRequest(
-    id='5fbb2587-0532-402c-b3d5-fe9b90c28909',
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
 )
 
-res = s.apicall.get_unified_apicall_id(req, operations.GetUnifiedApicallIDSecurity(
-    jwt="",
-))
+req = operations.GetUnifiedApicallIDRequest(
+    id='49a8d9cb-f486-4333-a3f9-b77f3a410067',
+)
+
+res = s.apicall.get_unified_apicall_id(req)
 
 if res.api_call is not None:
     # handle response
@@ -79,10 +82,9 @@ if res.api_call is not None:
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `request`                                                                                        | [operations.GetUnifiedApicallIDRequest](../../models/operations/getunifiedapicallidrequest.md)   | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-| `security`                                                                                       | [operations.GetUnifiedApicallIDSecurity](../../models/operations/getunifiedapicallidsecurity.md) | :heavy_check_mark:                                                                               | The security requirements to use for the request.                                                |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `request`                                                                                      | [operations.GetUnifiedApicallIDRequest](../../models/operations/getunifiedapicallidrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
 
 
 ### Response

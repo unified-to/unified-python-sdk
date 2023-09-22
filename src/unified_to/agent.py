@@ -12,7 +12,7 @@ class Agent:
         self.sdk_configuration = sdk_config
         
     
-    def delete_ticketing_connection_id_agent_id(self, request: operations.DeleteTicketingConnectionIDAgentIDRequest, security: operations.DeleteTicketingConnectionIDAgentIDSecurity) -> operations.DeleteTicketingConnectionIDAgentIDResponse:
+    def delete_ticketing_connection_id_agent_id(self, request: operations.DeleteTicketingConnectionIDAgentIDRequest) -> operations.DeleteTicketingConnectionIDAgentIDResponse:
         r"""Remove a agent"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -21,7 +21,7 @@ class Agent:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -39,7 +39,7 @@ class Agent:
         return res
 
     
-    def get_ticketing_connection_id_agent(self, request: operations.GetTicketingConnectionIDAgentRequest, security: operations.GetTicketingConnectionIDAgentSecurity) -> operations.GetTicketingConnectionIDAgentResponse:
+    def get_ticketing_connection_id_agent(self, request: operations.GetTicketingConnectionIDAgentRequest) -> operations.GetTicketingConnectionIDAgentResponse:
         r"""List all agents"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -49,7 +49,7 @@ class Agent:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -68,7 +68,7 @@ class Agent:
         return res
 
     
-    def get_ticketing_connection_id_agent_id(self, request: operations.GetTicketingConnectionIDAgentIDRequest, security: operations.GetTicketingConnectionIDAgentIDSecurity) -> operations.GetTicketingConnectionIDAgentIDResponse:
+    def get_ticketing_connection_id_agent_id(self, request: operations.GetTicketingConnectionIDAgentIDRequest) -> operations.GetTicketingConnectionIDAgentIDResponse:
         r"""Retrieve a agent"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -77,7 +77,7 @@ class Agent:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -96,7 +96,7 @@ class Agent:
         return res
 
     
-    def get_uc_connection_id_agent(self, request: operations.GetUcConnectionIDAgentRequest, security: operations.GetUcConnectionIDAgentSecurity) -> operations.GetUcConnectionIDAgentResponse:
+    def get_uc_connection_id_agent(self, request: operations.GetUcConnectionIDAgentRequest) -> operations.GetUcConnectionIDAgentResponse:
         r"""List all agents"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -106,7 +106,7 @@ class Agent:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -125,7 +125,7 @@ class Agent:
         return res
 
     
-    def patch_ticketing_connection_id_agent_id(self, request: operations.PatchTicketingConnectionIDAgentIDRequest, security: operations.PatchTicketingConnectionIDAgentIDSecurity) -> operations.PatchTicketingConnectionIDAgentIDResponse:
+    def patch_ticketing_connection_id_agent_id(self, request: operations.PatchTicketingConnectionIDAgentIDRequest) -> operations.PatchTicketingConnectionIDAgentIDResponse:
         r"""Update a agent"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -137,7 +137,7 @@ class Agent:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -156,7 +156,7 @@ class Agent:
         return res
 
     
-    def post_ticketing_connection_id_agent(self, request: operations.PostTicketingConnectionIDAgentRequest, security: operations.PostTicketingConnectionIDAgentSecurity) -> operations.PostTicketingConnectionIDAgentResponse:
+    def post_ticketing_connection_id_agent(self, request: operations.PostTicketingConnectionIDAgentRequest) -> operations.PostTicketingConnectionIDAgentResponse:
         r"""Create a agent"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -168,7 +168,7 @@ class Agent:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -187,7 +187,7 @@ class Agent:
         return res
 
     
-    def put_ticketing_connection_id_agent_id(self, request: operations.PutTicketingConnectionIDAgentIDRequest, security: operations.PutTicketingConnectionIDAgentIDSecurity) -> operations.PutTicketingConnectionIDAgentIDResponse:
+    def put_ticketing_connection_id_agent_id(self, request: operations.PutTicketingConnectionIDAgentIDRequest) -> operations.PutTicketingConnectionIDAgentIDResponse:
         r"""Update a agent"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -199,7 +199,7 @@ class Agent:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')

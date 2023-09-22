@@ -9,14 +9,6 @@ from typing import Optional
 
 
 @dataclasses.dataclass
-class GetUnifiedUserSecurity:
-    jwt: str = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header', 'field_name': 'authorization' }})
-    
-
-
-
-
-@dataclasses.dataclass
 class GetUnifiedUserResponse:
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()

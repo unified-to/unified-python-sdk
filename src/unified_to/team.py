@@ -12,7 +12,7 @@ class Team:
         self.sdk_configuration = sdk_config
         
     
-    def delete_crm_connection_id_team_id(self, request: operations.DeleteCrmConnectionIDTeamIDRequest, security: operations.DeleteCrmConnectionIDTeamIDSecurity) -> operations.DeleteCrmConnectionIDTeamIDResponse:
+    def delete_crm_connection_id_team_id(self, request: operations.DeleteCrmConnectionIDTeamIDRequest) -> operations.DeleteCrmConnectionIDTeamIDResponse:
         r"""Remove a team"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -21,7 +21,7 @@ class Team:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -39,7 +39,7 @@ class Team:
         return res
 
     
-    def get_crm_connection_id_team(self, request: operations.GetCrmConnectionIDTeamRequest, security: operations.GetCrmConnectionIDTeamSecurity) -> operations.GetCrmConnectionIDTeamResponse:
+    def get_crm_connection_id_team(self, request: operations.GetCrmConnectionIDTeamRequest) -> operations.GetCrmConnectionIDTeamResponse:
         r"""List all teams"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -49,7 +49,7 @@ class Team:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -68,7 +68,7 @@ class Team:
         return res
 
     
-    def get_crm_connection_id_team_id(self, request: operations.GetCrmConnectionIDTeamIDRequest, security: operations.GetCrmConnectionIDTeamIDSecurity) -> operations.GetCrmConnectionIDTeamIDResponse:
+    def get_crm_connection_id_team_id(self, request: operations.GetCrmConnectionIDTeamIDRequest) -> operations.GetCrmConnectionIDTeamIDResponse:
         r"""Retrieve a team"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -77,7 +77,7 @@ class Team:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -96,7 +96,7 @@ class Team:
         return res
 
     
-    def patch_crm_connection_id_team_id(self, request: operations.PatchCrmConnectionIDTeamIDRequest, security: operations.PatchCrmConnectionIDTeamIDSecurity) -> operations.PatchCrmConnectionIDTeamIDResponse:
+    def patch_crm_connection_id_team_id(self, request: operations.PatchCrmConnectionIDTeamIDRequest) -> operations.PatchCrmConnectionIDTeamIDResponse:
         r"""Update a team"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -108,7 +108,7 @@ class Team:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -127,7 +127,7 @@ class Team:
         return res
 
     
-    def post_crm_connection_id_team(self, request: operations.PostCrmConnectionIDTeamRequest, security: operations.PostCrmConnectionIDTeamSecurity) -> operations.PostCrmConnectionIDTeamResponse:
+    def post_crm_connection_id_team(self, request: operations.PostCrmConnectionIDTeamRequest) -> operations.PostCrmConnectionIDTeamResponse:
         r"""Create a team"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -139,7 +139,7 @@ class Team:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -158,7 +158,7 @@ class Team:
         return res
 
     
-    def put_crm_connection_id_team_id(self, request: operations.PutCrmConnectionIDTeamIDRequest, security: operations.PutCrmConnectionIDTeamIDSecurity) -> operations.PutCrmConnectionIDTeamIDResponse:
+    def put_crm_connection_id_team_id(self, request: operations.PutCrmConnectionIDTeamIDRequest) -> operations.PutCrmConnectionIDTeamIDResponse:
         r"""Update a team"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -170,7 +170,7 @@ class Team:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')

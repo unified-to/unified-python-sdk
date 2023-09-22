@@ -13,25 +13,27 @@ List all calls
 ```python
 import unified_to
 import dateutil.parser
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
-
-req = operations.GetUcConnectionIDCallRequest(
-    agent_id='reiciendis',
-    connection_id='repellat',
-    contact_id='nulla',
-    limit=6711.16,
-    offset=6176.57,
-    order='accusamus',
-    query='doloremque',
-    sort='nisi',
-    updated_gte=dateutil.parser.isoparse('2021-02-24T20:48:23.002Z'),
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
 )
 
-res = s.call.get_uc_connection_id_call(req, operations.GetUcConnectionIDCallSecurity(
-    jwt="",
-))
+req = operations.GetUcConnectionIDCallRequest(
+    agent_id='a',
+    connection_id='iste',
+    contact_id='dicta',
+    limit=5524.39,
+    offset=3563.15,
+    order='dolore',
+    query='modi',
+    sort='itaque',
+    updated_gte=dateutil.parser.isoparse('2022-03-15T19:59:59.350Z'),
+)
+
+res = s.call.get_uc_connection_id_call(req)
 
 if res.uc_calls is not None:
     # handle response
@@ -39,10 +41,9 @@ if res.uc_calls is not None:
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `request`                                                                                            | [operations.GetUcConnectionIDCallRequest](../../models/operations/getucconnectionidcallrequest.md)   | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
-| `security`                                                                                           | [operations.GetUcConnectionIDCallSecurity](../../models/operations/getucconnectionidcallsecurity.md) | :heavy_check_mark:                                                                                   | The security requirements to use for the request.                                                    |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `request`                                                                                          | [operations.GetUcConnectionIDCallRequest](../../models/operations/getucconnectionidcallrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
 
 
 ### Response

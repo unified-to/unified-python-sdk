@@ -12,7 +12,7 @@ class Webhook:
         self.sdk_configuration = sdk_config
         
     
-    def delete_unified_webhook_id(self, request: operations.DeleteUnifiedWebhookIDRequest, security: operations.DeleteUnifiedWebhookIDSecurity) -> operations.DeleteUnifiedWebhookIDResponse:
+    def delete_unified_webhook_id(self, request: operations.DeleteUnifiedWebhookIDRequest) -> operations.DeleteUnifiedWebhookIDResponse:
         r"""Remove webhook subscription"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -21,7 +21,7 @@ class Webhook:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -39,7 +39,7 @@ class Webhook:
         return res
 
     
-    def get_unified_webhook(self, request: operations.GetUnifiedWebhookRequest, security: operations.GetUnifiedWebhookSecurity) -> operations.GetUnifiedWebhookResponse:
+    def get_unified_webhook(self, request: operations.GetUnifiedWebhookRequest) -> operations.GetUnifiedWebhookResponse:
         r"""Returns all registered webhooks"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -49,7 +49,7 @@ class Webhook:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -68,7 +68,7 @@ class Webhook:
         return res
 
     
-    def get_unified_webhook_id(self, request: operations.GetUnifiedWebhookIDRequest, security: operations.GetUnifiedWebhookIDSecurity) -> operations.GetUnifiedWebhookIDResponse:
+    def get_unified_webhook_id(self, request: operations.GetUnifiedWebhookIDRequest) -> operations.GetUnifiedWebhookIDResponse:
         r"""Retrieve webhook by its ID"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -77,7 +77,7 @@ class Webhook:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -96,7 +96,7 @@ class Webhook:
         return res
 
     
-    def post_unified_webhook_connection_id_object(self, request: operations.PostUnifiedWebhookConnectionIDObjectRequest, security: operations.PostUnifiedWebhookConnectionIDObjectSecurity) -> operations.PostUnifiedWebhookConnectionIDObjectResponse:
+    def post_unified_webhook_connection_id_object(self, request: operations.PostUnifiedWebhookConnectionIDObjectRequest) -> operations.PostUnifiedWebhookConnectionIDObjectResponse:
         r"""Create webhook subscription
         To maintain compatibility with the webhooks specification and Zapier webhooks, only the hook_url field is required in the payload when creating a Webhook.  When updated/new objects are found, the array of objects will be POSTed to the hook_url with the paramater hookId=<hookId>.
         """
@@ -111,7 +111,7 @@ class Webhook:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('POST', url, params=query_params, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')

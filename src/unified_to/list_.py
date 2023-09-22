@@ -12,7 +12,7 @@ class List:
         self.sdk_configuration = sdk_config
         
     
-    def delete_martech_connection_id_list_id(self, request: operations.DeleteMartechConnectionIDListIDRequest, security: operations.DeleteMartechConnectionIDListIDSecurity) -> operations.DeleteMartechConnectionIDListIDResponse:
+    def delete_martech_connection_id_list_id(self, request: operations.DeleteMartechConnectionIDListIDRequest) -> operations.DeleteMartechConnectionIDListIDResponse:
         r"""Remove a list"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -21,7 +21,7 @@ class List:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -39,7 +39,7 @@ class List:
         return res
 
     
-    def get_martech_connection_id_list(self, request: operations.GetMartechConnectionIDListRequest, security: operations.GetMartechConnectionIDListSecurity) -> operations.GetMartechConnectionIDListResponse:
+    def get_martech_connection_id_list(self, request: operations.GetMartechConnectionIDListRequest) -> operations.GetMartechConnectionIDListResponse:
         r"""List all lists"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -49,7 +49,7 @@ class List:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -68,7 +68,7 @@ class List:
         return res
 
     
-    def get_martech_connection_id_list_id(self, request: operations.GetMartechConnectionIDListIDRequest, security: operations.GetMartechConnectionIDListIDSecurity) -> operations.GetMartechConnectionIDListIDResponse:
+    def get_martech_connection_id_list_id(self, request: operations.GetMartechConnectionIDListIDRequest) -> operations.GetMartechConnectionIDListIDResponse:
         r"""Retrieve a list"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -77,7 +77,7 @@ class List:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -96,7 +96,7 @@ class List:
         return res
 
     
-    def patch_martech_connection_id_list_id(self, request: operations.PatchMartechConnectionIDListIDRequest, security: operations.PatchMartechConnectionIDListIDSecurity) -> operations.PatchMartechConnectionIDListIDResponse:
+    def patch_martech_connection_id_list_id(self, request: operations.PatchMartechConnectionIDListIDRequest) -> operations.PatchMartechConnectionIDListIDResponse:
         r"""Update a list"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -108,7 +108,7 @@ class List:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -127,7 +127,7 @@ class List:
         return res
 
     
-    def post_martech_connection_id_list(self, request: operations.PostMartechConnectionIDListRequest, security: operations.PostMartechConnectionIDListSecurity) -> operations.PostMartechConnectionIDListResponse:
+    def post_martech_connection_id_list(self, request: operations.PostMartechConnectionIDListRequest) -> operations.PostMartechConnectionIDListResponse:
         r"""Create a list"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -139,7 +139,7 @@ class List:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -158,7 +158,7 @@ class List:
         return res
 
     
-    def put_martech_connection_id_list_id(self, request: operations.PutMartechConnectionIDListIDRequest, security: operations.PutMartechConnectionIDListIDSecurity) -> operations.PutMartechConnectionIDListIDResponse:
+    def put_martech_connection_id_list_id(self, request: operations.PutMartechConnectionIDListIDRequest) -> operations.PutMartechConnectionIDListIDResponse:
         r"""Update a list"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -170,7 +170,7 @@ class List:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')

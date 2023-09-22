@@ -12,7 +12,7 @@ class Enrich:
         self.sdk_configuration = sdk_config
         
     
-    def get_enrich_connection_id_company(self, request: operations.GetEnrichConnectionIDCompanyRequest, security: operations.GetEnrichConnectionIDCompanySecurity) -> operations.GetEnrichConnectionIDCompanyResponse:
+    def get_enrich_connection_id_company(self, request: operations.GetEnrichConnectionIDCompanyRequest) -> operations.GetEnrichConnectionIDCompanyResponse:
         r"""Retrieve enrichment information for a company"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -22,7 +22,7 @@ class Enrich:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -41,7 +41,7 @@ class Enrich:
         return res
 
     
-    def get_enrich_connection_id_person(self, request: operations.GetEnrichConnectionIDPersonRequest, security: operations.GetEnrichConnectionIDPersonSecurity) -> operations.GetEnrichConnectionIDPersonResponse:
+    def get_enrich_connection_id_person(self, request: operations.GetEnrichConnectionIDPersonRequest) -> operations.GetEnrichConnectionIDPersonResponse:
         r"""Retrieve enrichment information for a person"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -51,7 +51,7 @@ class Enrich:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')

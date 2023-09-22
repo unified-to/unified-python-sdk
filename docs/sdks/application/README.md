@@ -17,18 +17,20 @@ Remove an application
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
-
-req = operations.DeleteAtsConnectionIDApplicationIDRequest(
-    connection_id='rerum',
-    id='3fe49a8d-9cbf-4486-b332-3f9b77f3a410',
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
 )
 
-res = s.application.delete_ats_connection_id_application_id(req, operations.DeleteAtsConnectionIDApplicationIDSecurity(
-    jwt="",
-))
+req = operations.DeleteAtsConnectionIDApplicationIDRequest(
+    connection_id='quaerat',
+    id='ebf69280-d1ba-477a-89eb-f737ae4203ce',
+)
+
+res = s.application.delete_ats_connection_id_application_id(req)
 
 if res.status_code == 200:
     # handle response
@@ -36,10 +38,9 @@ if res.status_code == 200:
 
 ### Parameters
 
-| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                      | [operations.DeleteAtsConnectionIDApplicationIDRequest](../../models/operations/deleteatsconnectionidapplicationidrequest.md)   | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
-| `security`                                                                                                                     | [operations.DeleteAtsConnectionIDApplicationIDSecurity](../../models/operations/deleteatsconnectionidapplicationidsecurity.md) | :heavy_check_mark:                                                                                                             | The security requirements to use for the request.                                                                              |
+| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
+| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                    | [operations.DeleteAtsConnectionIDApplicationIDRequest](../../models/operations/deleteatsconnectionidapplicationidrequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
 
 
 ### Response
@@ -56,25 +57,27 @@ List all applications
 ```python
 import unified_to
 import dateutil.parser
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
-
-req = operations.GetAtsConnectionIDApplicationRequest(
-    candidate_id='ipsa',
-    connection_id='iure',
-    job_id='odio',
-    limit=3117.96,
-    offset=8810.05,
-    order='quidem',
-    query='voluptatibus',
-    sort='voluptas',
-    updated_gte=dateutil.parser.isoparse('2022-08-22T21:20:36.034Z'),
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
 )
 
-res = s.application.get_ats_connection_id_application(req, operations.GetAtsConnectionIDApplicationSecurity(
-    jwt="",
-))
+req = operations.GetAtsConnectionIDApplicationRequest(
+    candidate_id='ad',
+    connection_id='saepe',
+    job_id='suscipit',
+    limit=6457.85,
+    offset=5883.17,
+    order='minima',
+    query='repellendus',
+    sort='totam',
+    updated_gte=dateutil.parser.isoparse('2022-12-31T23:01:47.942Z'),
+)
+
+res = s.application.get_ats_connection_id_application(req)
 
 if res.ats_applications is not None:
     # handle response
@@ -82,10 +85,9 @@ if res.ats_applications is not None:
 
 ### Parameters
 
-| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                            | [operations.GetAtsConnectionIDApplicationRequest](../../models/operations/getatsconnectionidapplicationrequest.md)   | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
-| `security`                                                                                                           | [operations.GetAtsConnectionIDApplicationSecurity](../../models/operations/getatsconnectionidapplicationsecurity.md) | :heavy_check_mark:                                                                                                   | The security requirements to use for the request.                                                                    |
+| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                          | [operations.GetAtsConnectionIDApplicationRequest](../../models/operations/getatsconnectionidapplicationrequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
 
 
 ### Response
@@ -101,18 +103,20 @@ Retrieve an application
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
-
-req = operations.GetAtsConnectionIDApplicationIDRequest(
-    connection_id='atque',
-    id='0d1ba77a-89eb-4f73-bae4-203ce5e6a95d',
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
 )
 
-res = s.application.get_ats_connection_id_application_id(req, operations.GetAtsConnectionIDApplicationIDSecurity(
-    jwt="",
-))
+req = operations.GetAtsConnectionIDApplicationIDRequest(
+    connection_id='at',
+    id='446ce2af-7a73-4cf3-be45-3f870b326b5a',
+)
+
+res = s.application.get_ats_connection_id_application_id(req)
 
 if res.ats_application is not None:
     # handle response
@@ -120,10 +124,9 @@ if res.ats_application is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                | [operations.GetAtsConnectionIDApplicationIDRequest](../../models/operations/getatsconnectionidapplicationidrequest.md)   | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
-| `security`                                                                                                               | [operations.GetAtsConnectionIDApplicationIDSecurity](../../models/operations/getatsconnectionidapplicationidsecurity.md) | :heavy_check_mark:                                                                                                       | The security requirements to use for the request.                                                                        |
+| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
+| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                              | [operations.GetAtsConnectionIDApplicationIDRequest](../../models/operations/getatsconnectionidapplicationidrequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
 
 
 ### Response
@@ -142,29 +145,31 @@ import unified_to
 import dateutil.parser
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.PatchAtsConnectionIDApplicationIDRequest(
     ats_application=shared.AtsApplication(
-        applied_at=dateutil.parser.isoparse('2021-09-28T20:14:16.452Z'),
-        candidate_id='alias',
-        created_at=dateutil.parser.isoparse('2022-01-24T12:18:47.570Z'),
-        id='46ce2af7-a73c-4f3b-a453-f870b326b5a7',
-        job_id='ipsum',
+        applied_at=dateutil.parser.isoparse('2022-10-14T13:38:40.307Z'),
+        candidate_id='incidunt',
+        created_at=dateutil.parser.isoparse('2022-05-31T19:46:08.472Z'),
+        id='cdb1a842-2bb6-479d-a322-715bf0cbb1e3',
+        job_id='veritatis',
         raw=shared.PropertyAtsApplicationRaw(),
-        rejected_at=dateutil.parser.isoparse('2022-10-24T22:37:32.805Z'),
-        rejected_reason='cupiditate',
-        source='maxime',
-        status=shared.AtsApplicationStatus.HIRED,
-        updated_at=dateutil.parser.isoparse('2022-10-07T04:50:29.805Z'),
+        rejected_at=dateutil.parser.isoparse('2021-11-23T21:35:15.992Z'),
+        rejected_reason='tempore',
+        source='cupiditate',
+        status=shared.AtsApplicationStatus.NEW,
+        updated_at=dateutil.parser.isoparse('2022-05-16T23:21:11.104Z'),
     ),
-    connection_id='laborum',
-    id='8422bb67-9d23-4227-95bf-0cbb1e31b8b9',
+    connection_id='dolore',
+    id='43a1108e-0adc-4f4b-9218-79fce953f73e',
 )
 
-res = s.application.patch_ats_connection_id_application_id(req, operations.PatchAtsConnectionIDApplicationIDSecurity(
-    jwt="",
-))
+res = s.application.patch_ats_connection_id_application_id(req)
 
 if res.ats_application is not None:
     # handle response
@@ -172,10 +177,9 @@ if res.ats_application is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                    | [operations.PatchAtsConnectionIDApplicationIDRequest](../../models/operations/patchatsconnectionidapplicationidrequest.md)   | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
-| `security`                                                                                                                   | [operations.PatchAtsConnectionIDApplicationIDSecurity](../../models/operations/patchatsconnectionidapplicationidsecurity.md) | :heavy_check_mark:                                                                                                           | The security requirements to use for the request.                                                                            |
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                  | [operations.PatchAtsConnectionIDApplicationIDRequest](../../models/operations/patchatsconnectionidapplicationidrequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
 
 
 ### Response
@@ -194,28 +198,30 @@ import unified_to
 import dateutil.parser
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.PostAtsConnectionIDApplicationRequest(
     ats_application=shared.AtsApplication(
-        applied_at=dateutil.parser.isoparse('2022-01-14T21:26:14.171Z'),
-        candidate_id='dolorem',
-        created_at=dateutil.parser.isoparse('2022-09-18T06:37:26.413Z'),
-        id='3a1108e0-adcf-44b9-a187-9fce953f73ef',
-        job_id='dignissimos',
+        applied_at=dateutil.parser.isoparse('2021-07-10T23:11:25.857Z'),
+        candidate_id='hic',
+        created_at=dateutil.parser.isoparse('2021-05-27T13:58:14.379Z'),
+        id='7abd74dd-39c0-4f5d-acff-7c70a45626d4',
+        job_id='ratione',
         raw=shared.PropertyAtsApplicationRaw(),
-        rejected_at=dateutil.parser.isoparse('2020-11-08T11:03:10.206Z'),
-        rejected_reason='quod',
-        source='odio',
-        status=shared.AtsApplicationStatus.BACKGROUND_CHECK,
-        updated_at=dateutil.parser.isoparse('2021-04-02T18:28:29.036Z'),
+        rejected_at=dateutil.parser.isoparse('2022-06-28T08:50:44.084Z'),
+        rejected_reason='dicta',
+        source='dolor',
+        status=shared.AtsApplicationStatus.REJECTED,
+        updated_at=dateutil.parser.isoparse('2022-08-05T18:23:03.713Z'),
     ),
-    connection_id='ducimus',
+    connection_id='nulla',
 )
 
-res = s.application.post_ats_connection_id_application(req, operations.PostAtsConnectionIDApplicationSecurity(
-    jwt="",
-))
+res = s.application.post_ats_connection_id_application(req)
 
 if res.ats_application is not None:
     # handle response
@@ -223,10 +229,9 @@ if res.ats_application is not None:
 
 ### Parameters
 
-| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
-| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                              | [operations.PostAtsConnectionIDApplicationRequest](../../models/operations/postatsconnectionidapplicationrequest.md)   | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
-| `security`                                                                                                             | [operations.PostAtsConnectionIDApplicationSecurity](../../models/operations/postatsconnectionidapplicationsecurity.md) | :heavy_check_mark:                                                                                                     | The security requirements to use for the request.                                                                      |
+| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                            | [operations.PostAtsConnectionIDApplicationRequest](../../models/operations/postatsconnectionidapplicationrequest.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
 
 
 ### Response
@@ -245,29 +250,31 @@ import unified_to
 import dateutil.parser
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.PutAtsConnectionIDApplicationIDRequest(
     ats_application=shared.AtsApplication(
-        applied_at=dateutil.parser.isoparse('2022-02-26T17:44:28.591Z'),
-        candidate_id='illum',
-        created_at=dateutil.parser.isoparse('2022-05-20T11:24:00.260Z'),
-        id='c0f5d2cf-f7c7-40a4-9626-d436813f16d9',
-        job_id='voluptatibus',
+        applied_at=dateutil.parser.isoparse('2021-01-20T18:27:01.887Z'),
+        candidate_id='nostrum',
+        created_at=dateutil.parser.isoparse('2020-08-20T04:25:24.387Z'),
+        id='e6c55614-6c3e-4250-bb00-8c42e141aac3',
+        job_id='eum',
         raw=shared.PropertyAtsApplicationRaw(),
-        rejected_at=dateutil.parser.isoparse('2022-01-15T07:05:18.296Z'),
-        rejected_reason='quisquam',
-        source='saepe',
-        status=shared.AtsApplicationStatus.FIRST_INTERVIEW,
-        updated_at=dateutil.parser.isoparse('2021-12-03T14:20:49.127Z'),
+        rejected_at=dateutil.parser.isoparse('2022-04-01T11:18:05.592Z'),
+        rejected_reason='quas',
+        source='assumenda',
+        status=shared.AtsApplicationStatus.HIRED,
+        updated_at=dateutil.parser.isoparse('2022-04-10T15:05:31.822Z'),
     ),
-    connection_id='veniam',
-    id='6146c3e2-50fb-4008-842e-141aac366c8d',
+    connection_id='quasi',
+    id='44290747-4778-4a7b-9466-d28c10ab3cdc',
 )
 
-res = s.application.put_ats_connection_id_application_id(req, operations.PutAtsConnectionIDApplicationIDSecurity(
-    jwt="",
-))
+res = s.application.put_ats_connection_id_application_id(req)
 
 if res.ats_application is not None:
     # handle response
@@ -275,10 +282,9 @@ if res.ats_application is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                | [operations.PutAtsConnectionIDApplicationIDRequest](../../models/operations/putatsconnectionidapplicationidrequest.md)   | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
-| `security`                                                                                                               | [operations.PutAtsConnectionIDApplicationIDSecurity](../../models/operations/putatsconnectionidapplicationidsecurity.md) | :heavy_check_mark:                                                                                                       | The security requirements to use for the request.                                                                        |
+| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
+| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                              | [operations.PutAtsConnectionIDApplicationIDRequest](../../models/operations/putatsconnectionidapplicationidrequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
 
 
 ### Response

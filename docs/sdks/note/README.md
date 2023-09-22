@@ -17,9 +17,13 @@ Remove a note
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.DeleteTicketingConnectionIDNoteTicketIDIDRequest(
     connection_id='recusandae',
@@ -27,9 +31,7 @@ req = operations.DeleteTicketingConnectionIDNoteTicketIDIDRequest(
     ticket_id='exercitationem',
 )
 
-res = s.note.delete_ticketing_connection_id_note_ticket_id_id(req, operations.DeleteTicketingConnectionIDNoteTicketIDIDSecurity(
-    jwt="",
-))
+res = s.note.delete_ticketing_connection_id_note_ticket_id_id(req)
 
 if res.status_code == 200:
     # handle response
@@ -37,10 +39,9 @@ if res.status_code == 200:
 
 ### Parameters
 
-| Parameter                                                                                                                                    | Type                                                                                                                                         | Required                                                                                                                                     | Description                                                                                                                                  |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                    | [operations.DeleteTicketingConnectionIDNoteTicketIDIDRequest](../../models/operations/deleteticketingconnectionidnoteticketididrequest.md)   | :heavy_check_mark:                                                                                                                           | The request object to use for the request.                                                                                                   |
-| `security`                                                                                                                                   | [operations.DeleteTicketingConnectionIDNoteTicketIDIDSecurity](../../models/operations/deleteticketingconnectionidnoteticketididsecurity.md) | :heavy_check_mark:                                                                                                                           | The security requirements to use for the request.                                                                                            |
+| Parameter                                                                                                                                  | Type                                                                                                                                       | Required                                                                                                                                   | Description                                                                                                                                |
+| ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                  | [operations.DeleteTicketingConnectionIDNoteTicketIDIDRequest](../../models/operations/deleteticketingconnectionidnoteticketididrequest.md) | :heavy_check_mark:                                                                                                                         | The request object to use for the request.                                                                                                 |
 
 
 ### Response
@@ -57,9 +58,13 @@ List all notes
 ```python
 import unified_to
 import dateutil.parser
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.GetTicketingConnectionIDNoteTicketIDRequest(
     connection_id='molestiae',
@@ -72,9 +77,7 @@ req = operations.GetTicketingConnectionIDNoteTicketIDRequest(
     updated_gte=dateutil.parser.isoparse('2022-05-19T12:21:22.703Z'),
 )
 
-res = s.note.get_ticketing_connection_id_note_ticket_id(req, operations.GetTicketingConnectionIDNoteTicketIDSecurity(
-    jwt="",
-))
+res = s.note.get_ticketing_connection_id_note_ticket_id(req)
 
 if res.ticketing_notes is not None:
     # handle response
@@ -82,10 +85,9 @@ if res.ticketing_notes is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                          | Type                                                                                                                               | Required                                                                                                                           | Description                                                                                                                        |
-| ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                          | [operations.GetTicketingConnectionIDNoteTicketIDRequest](../../models/operations/getticketingconnectionidnoteticketidrequest.md)   | :heavy_check_mark:                                                                                                                 | The request object to use for the request.                                                                                         |
-| `security`                                                                                                                         | [operations.GetTicketingConnectionIDNoteTicketIDSecurity](../../models/operations/getticketingconnectionidnoteticketidsecurity.md) | :heavy_check_mark:                                                                                                                 | The security requirements to use for the request.                                                                                  |
+| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
+| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                        | [operations.GetTicketingConnectionIDNoteTicketIDRequest](../../models/operations/getticketingconnectionidnoteticketidrequest.md) | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
 
 
 ### Response
@@ -101,9 +103,13 @@ Retrieve a note
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.GetTicketingConnectionIDNoteTicketIDIDRequest(
     connection_id='eius',
@@ -111,9 +117,7 @@ req = operations.GetTicketingConnectionIDNoteTicketIDIDRequest(
     ticket_id='quos',
 )
 
-res = s.note.get_ticketing_connection_id_note_ticket_id_id(req, operations.GetTicketingConnectionIDNoteTicketIDIDSecurity(
-    jwt="",
-))
+res = s.note.get_ticketing_connection_id_note_ticket_id_id(req)
 
 if res.ticketing_note is not None:
     # handle response
@@ -121,10 +125,9 @@ if res.ticketing_note is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                              | Type                                                                                                                                   | Required                                                                                                                               | Description                                                                                                                            |
-| -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                              | [operations.GetTicketingConnectionIDNoteTicketIDIDRequest](../../models/operations/getticketingconnectionidnoteticketididrequest.md)   | :heavy_check_mark:                                                                                                                     | The request object to use for the request.                                                                                             |
-| `security`                                                                                                                             | [operations.GetTicketingConnectionIDNoteTicketIDIDSecurity](../../models/operations/getticketingconnectionidnoteticketididsecurity.md) | :heavy_check_mark:                                                                                                                     | The security requirements to use for the request.                                                                                      |
+| Parameter                                                                                                                            | Type                                                                                                                                 | Required                                                                                                                             | Description                                                                                                                          |
+| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                            | [operations.GetTicketingConnectionIDNoteTicketIDIDRequest](../../models/operations/getticketingconnectionidnoteticketididrequest.md) | :heavy_check_mark:                                                                                                                   | The request object to use for the request.                                                                                           |
 
 
 ### Response
@@ -143,7 +146,11 @@ import unified_to
 import dateutil.parser
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.PatchTicketingConnectionIDNoteTicketIDIDRequest(
     ticketing_note=shared.TicketingNote(
@@ -160,9 +167,7 @@ req = operations.PatchTicketingConnectionIDNoteTicketIDIDRequest(
     ticket_id='iure',
 )
 
-res = s.note.patch_ticketing_connection_id_note_ticket_id_id(req, operations.PatchTicketingConnectionIDNoteTicketIDIDSecurity(
-    jwt="",
-))
+res = s.note.patch_ticketing_connection_id_note_ticket_id_id(req)
 
 if res.ticketing_note is not None:
     # handle response
@@ -170,10 +175,9 @@ if res.ticketing_note is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                                  | Type                                                                                                                                       | Required                                                                                                                                   | Description                                                                                                                                |
-| ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                  | [operations.PatchTicketingConnectionIDNoteTicketIDIDRequest](../../models/operations/patchticketingconnectionidnoteticketididrequest.md)   | :heavy_check_mark:                                                                                                                         | The request object to use for the request.                                                                                                 |
-| `security`                                                                                                                                 | [operations.PatchTicketingConnectionIDNoteTicketIDIDSecurity](../../models/operations/patchticketingconnectionidnoteticketididsecurity.md) | :heavy_check_mark:                                                                                                                         | The security requirements to use for the request.                                                                                          |
+| Parameter                                                                                                                                | Type                                                                                                                                     | Required                                                                                                                                 | Description                                                                                                                              |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                | [operations.PatchTicketingConnectionIDNoteTicketIDIDRequest](../../models/operations/patchticketingconnectionidnoteticketididrequest.md) | :heavy_check_mark:                                                                                                                       | The request object to use for the request.                                                                                               |
 
 
 ### Response
@@ -192,7 +196,11 @@ import unified_to
 import dateutil.parser
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.PostTicketingConnectionIDNoteTicketIDRequest(
     ticketing_note=shared.TicketingNote(
@@ -208,9 +216,7 @@ req = operations.PostTicketingConnectionIDNoteTicketIDRequest(
     ticket_id='incidunt',
 )
 
-res = s.note.post_ticketing_connection_id_note_ticket_id(req, operations.PostTicketingConnectionIDNoteTicketIDSecurity(
-    jwt="",
-))
+res = s.note.post_ticketing_connection_id_note_ticket_id(req)
 
 if res.ticketing_note is not None:
     # handle response
@@ -218,10 +224,9 @@ if res.ticketing_note is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                            | Type                                                                                                                                 | Required                                                                                                                             | Description                                                                                                                          |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                            | [operations.PostTicketingConnectionIDNoteTicketIDRequest](../../models/operations/postticketingconnectionidnoteticketidrequest.md)   | :heavy_check_mark:                                                                                                                   | The request object to use for the request.                                                                                           |
-| `security`                                                                                                                           | [operations.PostTicketingConnectionIDNoteTicketIDSecurity](../../models/operations/postticketingconnectionidnoteticketidsecurity.md) | :heavy_check_mark:                                                                                                                   | The security requirements to use for the request.                                                                                    |
+| Parameter                                                                                                                          | Type                                                                                                                               | Required                                                                                                                           | Description                                                                                                                        |
+| ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                          | [operations.PostTicketingConnectionIDNoteTicketIDRequest](../../models/operations/postticketingconnectionidnoteticketidrequest.md) | :heavy_check_mark:                                                                                                                 | The request object to use for the request.                                                                                         |
 
 
 ### Response
@@ -240,7 +245,11 @@ import unified_to
 import dateutil.parser
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.PutTicketingConnectionIDNoteTicketIDIDRequest(
     ticketing_note=shared.TicketingNote(
@@ -257,9 +266,7 @@ req = operations.PutTicketingConnectionIDNoteTicketIDIDRequest(
     ticket_id='quasi',
 )
 
-res = s.note.put_ticketing_connection_id_note_ticket_id_id(req, operations.PutTicketingConnectionIDNoteTicketIDIDSecurity(
-    jwt="",
-))
+res = s.note.put_ticketing_connection_id_note_ticket_id_id(req)
 
 if res.ticketing_note is not None:
     # handle response
@@ -267,10 +274,9 @@ if res.ticketing_note is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                              | Type                                                                                                                                   | Required                                                                                                                               | Description                                                                                                                            |
-| -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                              | [operations.PutTicketingConnectionIDNoteTicketIDIDRequest](../../models/operations/putticketingconnectionidnoteticketididrequest.md)   | :heavy_check_mark:                                                                                                                     | The request object to use for the request.                                                                                             |
-| `security`                                                                                                                             | [operations.PutTicketingConnectionIDNoteTicketIDIDSecurity](../../models/operations/putticketingconnectionidnoteticketididsecurity.md) | :heavy_check_mark:                                                                                                                     | The security requirements to use for the request.                                                                                      |
+| Parameter                                                                                                                            | Type                                                                                                                                 | Required                                                                                                                             | Description                                                                                                                          |
+| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                            | [operations.PutTicketingConnectionIDNoteTicketIDIDRequest](../../models/operations/putticketingconnectionidnoteticketididrequest.md) | :heavy_check_mark:                                                                                                                   | The request object to use for the request.                                                                                           |
 
 
 ### Response

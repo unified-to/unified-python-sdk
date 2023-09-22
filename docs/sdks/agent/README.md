@@ -18,18 +18,20 @@ Remove a agent
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
-
-req = operations.DeleteTicketingConnectionIDAgentIDRequest(
-    connection_id='perferendis',
-    id='5dfc2ddf-7cc7-48ca-9ba9-28fc816742cb',
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
 )
 
-res = s.agent.delete_ticketing_connection_id_agent_id(req, operations.DeleteTicketingConnectionIDAgentIDSecurity(
-    jwt="",
-))
+req = operations.DeleteTicketingConnectionIDAgentIDRequest(
+    connection_id='esse',
+    id='39205929-396f-4ea7-996e-b10faaa2352c',
+)
+
+res = s.agent.delete_ticketing_connection_id_agent_id(req)
 
 if res.status_code == 200:
     # handle response
@@ -37,10 +39,9 @@ if res.status_code == 200:
 
 ### Parameters
 
-| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                      | [operations.DeleteTicketingConnectionIDAgentIDRequest](../../models/operations/deleteticketingconnectionidagentidrequest.md)   | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
-| `security`                                                                                                                     | [operations.DeleteTicketingConnectionIDAgentIDSecurity](../../models/operations/deleteticketingconnectionidagentidsecurity.md) | :heavy_check_mark:                                                                                                             | The security requirements to use for the request.                                                                              |
+| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
+| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                    | [operations.DeleteTicketingConnectionIDAgentIDRequest](../../models/operations/deleteticketingconnectionidagentidrequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
 
 
 ### Response
@@ -57,23 +58,25 @@ List all agents
 ```python
 import unified_to
 import dateutil.parser
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
-
-req = operations.GetTicketingConnectionIDAgentRequest(
-    connection_id='esse',
-    limit=2165.5,
-    offset=5684.34,
-    order='aspernatur',
-    query='perferendis',
-    sort='ad',
-    updated_gte=dateutil.parser.isoparse('2022-09-13T17:41:46.141Z'),
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
 )
 
-res = s.agent.get_ticketing_connection_id_agent(req, operations.GetTicketingConnectionIDAgentSecurity(
-    jwt="",
-))
+req = operations.GetTicketingConnectionIDAgentRequest(
+    connection_id='enim',
+    limit=6078.31,
+    offset=3637.11,
+    order='minima',
+    query='excepturi',
+    sort='accusantium',
+    updated_gte=dateutil.parser.isoparse('2022-05-14T11:45:33.094Z'),
+)
+
+res = s.agent.get_ticketing_connection_id_agent(req)
 
 if res.ticketing_agents is not None:
     # handle response
@@ -81,10 +84,9 @@ if res.ticketing_agents is not None:
 
 ### Parameters
 
-| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                            | [operations.GetTicketingConnectionIDAgentRequest](../../models/operations/getticketingconnectionidagentrequest.md)   | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
-| `security`                                                                                                           | [operations.GetTicketingConnectionIDAgentSecurity](../../models/operations/getticketingconnectionidagentsecurity.md) | :heavy_check_mark:                                                                                                   | The security requirements to use for the request.                                                                    |
+| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                          | [operations.GetTicketingConnectionIDAgentRequest](../../models/operations/getticketingconnectionidagentrequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
 
 
 ### Response
@@ -100,18 +102,20 @@ Retrieve a agent
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
-
-req = operations.GetTicketingConnectionIDAgentIDRequest(
-    connection_id='iste',
-    id='396fea75-96eb-410f-aaa2-352c5955907a',
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
 )
 
-res = s.agent.get_ticketing_connection_id_agent_id(req, operations.GetTicketingConnectionIDAgentIDSecurity(
-    jwt="",
-))
+req = operations.GetTicketingConnectionIDAgentIDRequest(
+    connection_id='doloribus',
+    id='f1a3a2fa-9467-4739-a51a-a52c3f5ad019',
+)
+
+res = s.agent.get_ticketing_connection_id_agent_id(req)
 
 if res.ticketing_agent is not None:
     # handle response
@@ -119,10 +123,9 @@ if res.ticketing_agent is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                | [operations.GetTicketingConnectionIDAgentIDRequest](../../models/operations/getticketingconnectionidagentidrequest.md)   | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
-| `security`                                                                                                               | [operations.GetTicketingConnectionIDAgentIDSecurity](../../models/operations/getticketingconnectionidagentidsecurity.md) | :heavy_check_mark:                                                                                                       | The security requirements to use for the request.                                                                        |
+| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
+| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                              | [operations.GetTicketingConnectionIDAgentIDRequest](../../models/operations/getticketingconnectionidagentidrequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
 
 
 ### Response
@@ -139,24 +142,26 @@ List all agents
 ```python
 import unified_to
 import dateutil.parser
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
-
-req = operations.GetUcConnectionIDAgentRequest(
-    connection_id='doloribus',
-    contact_id='sapiente',
-    limit=1020.44,
-    offset=6527.9,
-    order='dolorem',
-    query='culpa',
-    sort='consequuntur',
-    updated_gte=dateutil.parser.isoparse('2021-01-15T20:18:47.519Z'),
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
 )
 
-res = s.agent.get_uc_connection_id_agent(req, operations.GetUcConnectionIDAgentSecurity(
-    jwt="",
-))
+req = operations.GetUcConnectionIDAgentRequest(
+    connection_id='temporibus',
+    contact_id='laborum',
+    limit=960.98,
+    offset=9719.45,
+    order='voluptatibus',
+    query='vero',
+    sort='nihil',
+    updated_gte=dateutil.parser.isoparse('2021-01-17T23:08:44.457Z'),
+)
+
+res = s.agent.get_uc_connection_id_agent(req)
 
 if res.uc_agents is not None:
     # handle response
@@ -164,10 +169,9 @@ if res.uc_agents is not None:
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                              | [operations.GetUcConnectionIDAgentRequest](../../models/operations/getucconnectionidagentrequest.md)   | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
-| `security`                                                                                             | [operations.GetUcConnectionIDAgentSecurity](../../models/operations/getucconnectionidagentsecurity.md) | :heavy_check_mark:                                                                                     | The security requirements to use for the request.                                                      |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `request`                                                                                            | [operations.GetUcConnectionIDAgentRequest](../../models/operations/getucconnectionidagentrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 
 ### Response
@@ -186,35 +190,37 @@ import unified_to
 import dateutil.parser
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.PatchTicketingConnectionIDAgentIDRequest(
     ticketing_agent=shared.TicketingAgent(
-        created_at=dateutil.parser.isoparse('2022-06-30T02:19:51.375Z'),
+        created_at=dateutil.parser.isoparse('2022-05-25T05:33:11.349Z'),
         emails=[
             shared.TicketingEmail(
-                email='Jamil62@yahoo.com',
+                email='Myrtis44@yahoo.com',
                 type=shared.TicketingEmailType.WORK,
             ),
         ],
-        id='51aa52c3-f5ad-4019-9a1f-fe78f097b007',
-        name='Shawna Carter',
+        id='f15471b5-e6e1-43b9-9d48-8e1e91e450ad',
+        name='Joanna Rau',
         raw=shared.PropertyTicketingAgentRaw(),
         telephones=[
             shared.TicketingTelephone(
-                telephone='iusto',
+                telephone='modi',
                 type=shared.TicketingTelephoneType.WORK,
             ),
         ],
-        updated_at=dateutil.parser.isoparse('2022-05-13T20:56:04.612Z'),
+        updated_at=dateutil.parser.isoparse('2022-05-31T22:08:47.731Z'),
     ),
-    connection_id='accusamus',
-    id='6e13b99d-488e-41e9-9e45-0ad2abd44269',
+    connection_id='quos',
+    id='02d502a9-4bb4-4f63-8969-e9a3efa77dfb',
 )
 
-res = s.agent.patch_ticketing_connection_id_agent_id(req, operations.PatchTicketingConnectionIDAgentIDSecurity(
-    jwt="",
-))
+res = s.agent.patch_ticketing_connection_id_agent_id(req)
 
 if res.ticketing_agent is not None:
     # handle response
@@ -222,10 +228,9 @@ if res.ticketing_agent is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                    | [operations.PatchTicketingConnectionIDAgentIDRequest](../../models/operations/patchticketingconnectionidagentidrequest.md)   | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
-| `security`                                                                                                                   | [operations.PatchTicketingConnectionIDAgentIDSecurity](../../models/operations/patchticketingconnectionidagentidsecurity.md) | :heavy_check_mark:                                                                                                           | The security requirements to use for the request.                                                                            |
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                  | [operations.PatchTicketingConnectionIDAgentIDRequest](../../models/operations/patchticketingconnectionidagentidrequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
 
 
 ### Response
@@ -244,34 +249,36 @@ import unified_to
 import dateutil.parser
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.PostTicketingConnectionIDAgentRequest(
     ticketing_agent=shared.TicketingAgent(
-        created_at=dateutil.parser.isoparse('2022-12-17T07:42:55.593Z'),
+        created_at=dateutil.parser.isoparse('2022-09-14T10:27:07.590Z'),
         emails=[
             shared.TicketingEmail(
-                email='Rhoda14@gmail.com',
+                email='Raquel_Jenkins@hotmail.com',
                 type=shared.TicketingEmailType.OTHER,
             ),
         ],
-        id='94bb4f63-c969-4e9a-befa-77dfb14cd66a',
-        name='Alfred McClure',
+        id='395efb9b-a88f-43a6-a997-074ba4469b6e',
+        name='Ms. Julie Gusikowski',
         raw=shared.PropertyTicketingAgentRaw(),
         telephones=[
             shared.TicketingTelephone(
-                telephone='delectus',
-                type=shared.TicketingTelephoneType.FAX,
+                telephone='provident',
+                type=shared.TicketingTelephoneType.OTHER,
             ),
         ],
-        updated_at=dateutil.parser.isoparse('2021-07-20T13:32:41.687Z'),
+        updated_at=dateutil.parser.isoparse('2022-12-07T10:53:17.121Z'),
     ),
-    connection_id='id',
+    connection_id='mollitia',
 )
 
-res = s.agent.post_ticketing_connection_id_agent(req, operations.PostTicketingConnectionIDAgentSecurity(
-    jwt="",
-))
+res = s.agent.post_ticketing_connection_id_agent(req)
 
 if res.ticketing_agent is not None:
     # handle response
@@ -279,10 +286,9 @@ if res.ticketing_agent is not None:
 
 ### Parameters
 
-| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
-| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                              | [operations.PostTicketingConnectionIDAgentRequest](../../models/operations/postticketingconnectionidagentrequest.md)   | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
-| `security`                                                                                                             | [operations.PostTicketingConnectionIDAgentSecurity](../../models/operations/postticketingconnectionidagentsecurity.md) | :heavy_check_mark:                                                                                                     | The security requirements to use for the request.                                                                      |
+| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                            | [operations.PostTicketingConnectionIDAgentRequest](../../models/operations/postticketingconnectionidagentrequest.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
 
 
 ### Response
@@ -301,35 +307,37 @@ import unified_to
 import dateutil.parser
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.PutTicketingConnectionIDAgentIDRequest(
     ticketing_agent=shared.TicketingAgent(
-        created_at=dateutil.parser.isoparse('2021-12-07T18:13:34.827Z'),
+        created_at=dateutil.parser.isoparse('2021-01-16T22:43:33.071Z'),
         emails=[
             shared.TicketingEmail(
-                email='Daren.Nolan@hotmail.com',
-                type=shared.TicketingEmailType.HOME,
+                email='Holden.Ernser36@gmail.com',
+                type=shared.TicketingEmailType.WORK,
             ),
         ],
-        id='97074ba4-469b-46e2-9419-59890afa563e',
-        name='Vivian Boyle',
+        id='6fe4c8b7-11e5-4b7f-92ed-028921cddc69',
+        name='Dr. Rosemary Bartoletti',
         raw=shared.PropertyTicketingAgentRaw(),
         telephones=[
             shared.TicketingTelephone(
-                telephone='debitis',
-                type=shared.TicketingTelephoneType.HOME,
+                telephone='ipsam',
+                type=shared.TicketingTelephoneType.OTHER,
             ),
         ],
-        updated_at=dateutil.parser.isoparse('2021-05-22T23:02:53.221Z'),
+        updated_at=dateutil.parser.isoparse('2022-04-12T10:47:34.158Z'),
     ),
-    connection_id='facilis',
-    id='711e5b7f-d2ed-4028-921c-ddc692601fb5',
+    connection_id='eaque',
+    id='d5f0d30c-5fbb-4258-b053-202c73d5fe9b',
 )
 
-res = s.agent.put_ticketing_connection_id_agent_id(req, operations.PutTicketingConnectionIDAgentIDSecurity(
-    jwt="",
-))
+res = s.agent.put_ticketing_connection_id_agent_id(req)
 
 if res.ticketing_agent is not None:
     # handle response
@@ -337,10 +345,9 @@ if res.ticketing_agent is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                | [operations.PutTicketingConnectionIDAgentIDRequest](../../models/operations/putticketingconnectionidagentidrequest.md)   | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
-| `security`                                                                                                               | [operations.PutTicketingConnectionIDAgentIDSecurity](../../models/operations/putticketingconnectionidagentidsecurity.md) | :heavy_check_mark:                                                                                                       | The security requirements to use for the request.                                                                        |
+| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
+| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                              | [operations.PutTicketingConnectionIDAgentIDRequest](../../models/operations/putticketingconnectionidagentidrequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
 
 
 ### Response

@@ -12,7 +12,7 @@ class Document:
         self.sdk_configuration = sdk_config
         
     
-    def delete_ats_connection_id_scorecard_id(self, request: operations.DeleteAtsConnectionIDScorecardIDRequest, security: operations.DeleteAtsConnectionIDScorecardIDSecurity) -> operations.DeleteAtsConnectionIDScorecardIDResponse:
+    def delete_ats_connection_id_scorecard_id(self, request: operations.DeleteAtsConnectionIDScorecardIDRequest) -> operations.DeleteAtsConnectionIDScorecardIDResponse:
         r"""Remove a scorecard"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -21,7 +21,7 @@ class Document:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -39,7 +39,7 @@ class Document:
         return res
 
     
-    def get_ats_connection_id_scorecard(self, request: operations.GetAtsConnectionIDScorecardRequest, security: operations.GetAtsConnectionIDScorecardSecurity) -> operations.GetAtsConnectionIDScorecardResponse:
+    def get_ats_connection_id_scorecard(self, request: operations.GetAtsConnectionIDScorecardRequest) -> operations.GetAtsConnectionIDScorecardResponse:
         r"""List all scorecards"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -49,7 +49,7 @@ class Document:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -68,7 +68,7 @@ class Document:
         return res
 
     
-    def get_ats_connection_id_scorecard_id(self, request: operations.GetAtsConnectionIDScorecardIDRequest, security: operations.GetAtsConnectionIDScorecardIDSecurity) -> operations.GetAtsConnectionIDScorecardIDResponse:
+    def get_ats_connection_id_scorecard_id(self, request: operations.GetAtsConnectionIDScorecardIDRequest) -> operations.GetAtsConnectionIDScorecardIDResponse:
         r"""Retrieve a scorecard"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -77,7 +77,7 @@ class Document:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -96,7 +96,7 @@ class Document:
         return res
 
     
-    def patch_ats_connection_id_scorecard_id(self, request: operations.PatchAtsConnectionIDScorecardIDRequest, security: operations.PatchAtsConnectionIDScorecardIDSecurity) -> operations.PatchAtsConnectionIDScorecardIDResponse:
+    def patch_ats_connection_id_scorecard_id(self, request: operations.PatchAtsConnectionIDScorecardIDRequest) -> operations.PatchAtsConnectionIDScorecardIDResponse:
         r"""Update a scorecard"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -108,7 +108,7 @@ class Document:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -127,7 +127,7 @@ class Document:
         return res
 
     
-    def post_ats_connection_id_scorecard(self, request: operations.PostAtsConnectionIDScorecardRequest, security: operations.PostAtsConnectionIDScorecardSecurity) -> operations.PostAtsConnectionIDScorecardResponse:
+    def post_ats_connection_id_scorecard(self, request: operations.PostAtsConnectionIDScorecardRequest) -> operations.PostAtsConnectionIDScorecardResponse:
         r"""Create a scorecard"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -139,7 +139,7 @@ class Document:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -158,7 +158,7 @@ class Document:
         return res
 
     
-    def put_ats_connection_id_scorecard_id(self, request: operations.PutAtsConnectionIDScorecardIDRequest, security: operations.PutAtsConnectionIDScorecardIDSecurity) -> operations.PutAtsConnectionIDScorecardIDResponse:
+    def put_ats_connection_id_scorecard_id(self, request: operations.PutAtsConnectionIDScorecardIDRequest) -> operations.PutAtsConnectionIDScorecardIDResponse:
         r"""Update a scorecard"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -170,7 +170,7 @@ class Document:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')

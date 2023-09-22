@@ -12,7 +12,7 @@ class Apicall:
         self.sdk_configuration = sdk_config
         
     
-    def get_unified_apicall(self, request: operations.GetUnifiedApicallRequest, security: operations.GetUnifiedApicallSecurity) -> operations.GetUnifiedApicallResponse:
+    def get_unified_apicall(self, request: operations.GetUnifiedApicallRequest) -> operations.GetUnifiedApicallResponse:
         r"""Returns API Calls"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -22,7 +22,7 @@ class Apicall:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -41,7 +41,7 @@ class Apicall:
         return res
 
     
-    def get_unified_apicall_id(self, request: operations.GetUnifiedApicallIDRequest, security: operations.GetUnifiedApicallIDSecurity) -> operations.GetUnifiedApicallIDResponse:
+    def get_unified_apicall_id(self, request: operations.GetUnifiedApicallIDRequest) -> operations.GetUnifiedApicallIDResponse:
         r"""Retrieve specific API Call by its ID"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -50,7 +50,7 @@ class Apicall:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')

@@ -12,7 +12,7 @@ class Pipeline:
         self.sdk_configuration = sdk_config
         
     
-    def delete_crm_connection_id_pipeline_id(self, request: operations.DeleteCrmConnectionIDPipelineIDRequest, security: operations.DeleteCrmConnectionIDPipelineIDSecurity) -> operations.DeleteCrmConnectionIDPipelineIDResponse:
+    def delete_crm_connection_id_pipeline_id(self, request: operations.DeleteCrmConnectionIDPipelineIDRequest) -> operations.DeleteCrmConnectionIDPipelineIDResponse:
         r"""Remove a pipeline"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -21,7 +21,7 @@ class Pipeline:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -39,7 +39,7 @@ class Pipeline:
         return res
 
     
-    def get_crm_connection_id_pipeline(self, request: operations.GetCrmConnectionIDPipelineRequest, security: operations.GetCrmConnectionIDPipelineSecurity) -> operations.GetCrmConnectionIDPipelineResponse:
+    def get_crm_connection_id_pipeline(self, request: operations.GetCrmConnectionIDPipelineRequest) -> operations.GetCrmConnectionIDPipelineResponse:
         r"""List all pipelines"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -49,7 +49,7 @@ class Pipeline:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -68,7 +68,7 @@ class Pipeline:
         return res
 
     
-    def get_crm_connection_id_pipeline_id(self, request: operations.GetCrmConnectionIDPipelineIDRequest, security: operations.GetCrmConnectionIDPipelineIDSecurity) -> operations.GetCrmConnectionIDPipelineIDResponse:
+    def get_crm_connection_id_pipeline_id(self, request: operations.GetCrmConnectionIDPipelineIDRequest) -> operations.GetCrmConnectionIDPipelineIDResponse:
         r"""Retrieve a pipeline"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -77,7 +77,7 @@ class Pipeline:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -96,7 +96,7 @@ class Pipeline:
         return res
 
     
-    def patch_crm_connection_id_pipeline_id(self, request: operations.PatchCrmConnectionIDPipelineIDRequest, security: operations.PatchCrmConnectionIDPipelineIDSecurity) -> operations.PatchCrmConnectionIDPipelineIDResponse:
+    def patch_crm_connection_id_pipeline_id(self, request: operations.PatchCrmConnectionIDPipelineIDRequest) -> operations.PatchCrmConnectionIDPipelineIDResponse:
         r"""Update a pipeline"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -108,7 +108,7 @@ class Pipeline:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -127,7 +127,7 @@ class Pipeline:
         return res
 
     
-    def post_crm_connection_id_pipeline(self, request: operations.PostCrmConnectionIDPipelineRequest, security: operations.PostCrmConnectionIDPipelineSecurity) -> operations.PostCrmConnectionIDPipelineResponse:
+    def post_crm_connection_id_pipeline(self, request: operations.PostCrmConnectionIDPipelineRequest) -> operations.PostCrmConnectionIDPipelineResponse:
         r"""Create a pipeline"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -139,7 +139,7 @@ class Pipeline:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -158,7 +158,7 @@ class Pipeline:
         return res
 
     
-    def put_crm_connection_id_pipeline_id(self, request: operations.PutCrmConnectionIDPipelineIDRequest, security: operations.PutCrmConnectionIDPipelineIDSecurity) -> operations.PutCrmConnectionIDPipelineIDResponse:
+    def put_crm_connection_id_pipeline_id(self, request: operations.PutCrmConnectionIDPipelineIDRequest) -> operations.PutCrmConnectionIDPipelineIDResponse:
         r"""Update a pipeline"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -170,7 +170,7 @@ class Pipeline:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')

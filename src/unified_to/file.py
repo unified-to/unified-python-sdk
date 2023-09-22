@@ -12,7 +12,7 @@ class File:
         self.sdk_configuration = sdk_config
         
     
-    def delete_crm_connection_id_file_id(self, request: operations.DeleteCrmConnectionIDFileIDRequest, security: operations.DeleteCrmConnectionIDFileIDSecurity) -> operations.DeleteCrmConnectionIDFileIDResponse:
+    def delete_crm_connection_id_file_id(self, request: operations.DeleteCrmConnectionIDFileIDRequest) -> operations.DeleteCrmConnectionIDFileIDResponse:
         r"""Remove a file"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -21,7 +21,7 @@ class File:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -39,7 +39,7 @@ class File:
         return res
 
     
-    def get_crm_connection_id_file(self, request: operations.GetCrmConnectionIDFileRequest, security: operations.GetCrmConnectionIDFileSecurity) -> operations.GetCrmConnectionIDFileResponse:
+    def get_crm_connection_id_file(self, request: operations.GetCrmConnectionIDFileRequest) -> operations.GetCrmConnectionIDFileResponse:
         r"""List all files"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -49,7 +49,7 @@ class File:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -68,7 +68,7 @@ class File:
         return res
 
     
-    def get_crm_connection_id_file_id(self, request: operations.GetCrmConnectionIDFileIDRequest, security: operations.GetCrmConnectionIDFileIDSecurity) -> operations.GetCrmConnectionIDFileIDResponse:
+    def get_crm_connection_id_file_id(self, request: operations.GetCrmConnectionIDFileIDRequest) -> operations.GetCrmConnectionIDFileIDResponse:
         r"""Retrieve a file"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -77,7 +77,7 @@ class File:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -96,7 +96,7 @@ class File:
         return res
 
     
-    def patch_crm_connection_id_file_id(self, request: operations.PatchCrmConnectionIDFileIDRequest, security: operations.PatchCrmConnectionIDFileIDSecurity) -> operations.PatchCrmConnectionIDFileIDResponse:
+    def patch_crm_connection_id_file_id(self, request: operations.PatchCrmConnectionIDFileIDRequest) -> operations.PatchCrmConnectionIDFileIDResponse:
         r"""Update a file"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -108,7 +108,7 @@ class File:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -127,7 +127,7 @@ class File:
         return res
 
     
-    def post_crm_connection_id_file(self, request: operations.PostCrmConnectionIDFileRequest, security: operations.PostCrmConnectionIDFileSecurity) -> operations.PostCrmConnectionIDFileResponse:
+    def post_crm_connection_id_file(self, request: operations.PostCrmConnectionIDFileRequest) -> operations.PostCrmConnectionIDFileResponse:
         r"""Create a file"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -139,7 +139,7 @@ class File:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -158,7 +158,7 @@ class File:
         return res
 
     
-    def put_crm_connection_id_file_id(self, request: operations.PutCrmConnectionIDFileIDRequest, security: operations.PutCrmConnectionIDFileIDSecurity) -> operations.PutCrmConnectionIDFileIDResponse:
+    def put_crm_connection_id_file_id(self, request: operations.PutCrmConnectionIDFileIDRequest) -> operations.PutCrmConnectionIDFileIDResponse:
         r"""Update a file"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -170,7 +170,7 @@ class File:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')

@@ -7,14 +7,6 @@ from ..shared import webhook as shared_webhook
 from enum import Enum
 from typing import Optional
 
-
-
-@dataclasses.dataclass
-class PostUnifiedWebhookConnectionIDObjectSecurity:
-    jwt: str = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header', 'field_name': 'authorization' }})
-    
-
-
 class PostUnifiedWebhookConnectionIDObjectEvents(str, Enum):
     UPDATED = 'updated'
     CREATED = 'created'

@@ -10,14 +10,6 @@ from typing import Optional
 
 
 @dataclasses.dataclass
-class GetCrmConnectionIDPipelineSecurity:
-    jwt: str = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header', 'field_name': 'authorization' }})
-    
-
-
-
-
-@dataclasses.dataclass
 class GetCrmConnectionIDPipelineRequest:
     connection_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': False }})
     r"""ID of the connection"""
