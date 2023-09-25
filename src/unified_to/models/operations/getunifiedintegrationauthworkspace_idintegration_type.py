@@ -84,9 +84,12 @@ class GetUnifiedIntegrationAuthWorkspaceIDIntegrationTypeRequest:
 @dataclasses.dataclass
 class GetUnifiedIntegrationAuthWorkspaceIDIntegrationTypeResponse:
     content_type: str = dataclasses.field()
+    r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
+    r"""HTTP response status code for this operation"""
     get_unified_integration_auth_workspace_id_integration_type_200_application_json_string: Optional[str] = dataclasses.field(default=None)
     r"""Successful"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
+    r"""Raw HTTP response; suitable for custom response parsing"""
     
 

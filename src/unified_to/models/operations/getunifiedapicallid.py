@@ -20,9 +20,12 @@ class GetUnifiedApicallIDRequest:
 @dataclasses.dataclass
 class GetUnifiedApicallIDResponse:
     content_type: str = dataclasses.field()
+    r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
+    r"""HTTP response status code for this operation"""
     api_call: Optional[shared_apicall.APICall] = dataclasses.field(default=None)
     r"""Successful"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
+    r"""Raw HTTP response; suitable for custom response parsing"""
     
 

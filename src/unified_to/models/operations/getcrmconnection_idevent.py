@@ -35,9 +35,12 @@ class GetCrmConnectionIDEventRequest:
 @dataclasses.dataclass
 class GetCrmConnectionIDEventResponse:
     content_type: str = dataclasses.field()
+    r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
+    r"""HTTP response status code for this operation"""
     crm_events: Optional[list[shared_crmevent.CrmEvent]] = dataclasses.field(default=None)
     r"""Successful"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
+    r"""Raw HTTP response; suitable for custom response parsing"""
     
 

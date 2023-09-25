@@ -19,9 +19,12 @@ class DeleteUnifiedWebhookIDRequest:
 @dataclasses.dataclass
 class DeleteUnifiedWebhookIDResponse:
     content_type: str = dataclasses.field()
+    r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
+    r"""HTTP response status code for this operation"""
     delete_unified_webhook_id_default_application_json_string: Optional[str] = dataclasses.field(default=None)
     r"""Successful"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
+    r"""Raw HTTP response; suitable for custom response parsing"""
     
 
