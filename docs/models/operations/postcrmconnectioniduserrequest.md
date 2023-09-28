@@ -3,7 +3,7 @@
 
 ## Fields
 
-| Field                                                      | Type                                                       | Required                                                   | Description                                                |
-| ---------------------------------------------------------- | ---------------------------------------------------------- | ---------------------------------------------------------- | ---------------------------------------------------------- |
-| `crm_user`                                                 | [Optional[shared.CrmUser]](../../models/shared/crmuser.md) | :heavy_minus_sign:                                         | N/A                                                        |
-| `connection_id`                                            | *str*                                                      | :heavy_check_mark:                                         | ID of the connection                                       |
+| Field                                                          | Type                                                           | Required                                                       | Description                                                    |
+| -------------------------------------------------------------- | -------------------------------------------------------------- | -------------------------------------------------------------- | -------------------------------------------------------------- |
+| `crm_user`                                                     | [Optional[shared.CrmUser]](undefined/models/shared/crmuser.md) | :heavy_minus_sign:                                             | N/A                                                            |
+| `connection_id`                                                | *Optional[str]*                                                | :heavy_check_mark:                                             | ID of the connection                                           |

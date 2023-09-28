@@ -33,8 +33,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.DeleteHrisConnectionIDEmployeeIDRequest(
-    connection_id='excepturi',
-    id='3e34316c-f55b-4431-b553-ccf1c204c4ad',
+    connection_id='Laredo turquoise port',
+    id='<ID>',
 )
 
 res = s.hris.delete_hris_connection_id_employee_id(req)
@@ -72,8 +72,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.DeleteHrisConnectionIDGroupIDRequest(
-    connection_id='quod',
-    id='c9904c51-95b8-4648-8efa-78f1e2d3b901',
+    connection_id='consequently platforms Metal',
+    id='<ID>',
 )
 
 res = s.hris.delete_hris_connection_id_group_id(req)
@@ -112,13 +112,13 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetHrisConnectionIDEmployeeRequest(
-    connection_id='saepe',
-    limit=289.94,
-    offset=5725.89,
-    order='corporis',
-    query='explicabo',
-    sort='distinctio',
-    updated_gte=dateutil.parser.isoparse('2021-08-12T22:16:16.253Z'),
+    connection_id='initiatives greedily project',
+    limit=1798.52,
+    offset=6683.19,
+    order='Sports',
+    query='TLS',
+    sort='Jazz Trans',
+    updated_gte=dateutil.parser.isoparse('2021-04-09T17:32:06.988Z'),
 )
 
 res = s.hris.get_hris_connection_id_employee(req)
@@ -156,8 +156,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetHrisConnectionIDEmployeeIDRequest(
-    connection_id='tempora',
-    id='cbb19f71-3d95-4a41-a9c1-387271e18ea9',
+    connection_id='Keyboard cleverly Rubber',
+    id='<ID>',
 )
 
 res = s.hris.get_hris_connection_id_employee_id(req)
@@ -196,13 +196,13 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetHrisConnectionIDGroupRequest(
-    connection_id='debitis',
-    limit=2501.58,
-    offset=3333.54,
-    order='illo',
-    query='illo',
-    sort='deleniti',
-    updated_gte=dateutil.parser.isoparse('2022-07-26T10:34:40.123Z'),
+    connection_id='Loan',
+    limit=3486.96,
+    offset=9705.73,
+    order='Coordinator',
+    query='World',
+    sort='Dollar',
+    updated_gte=dateutil.parser.isoparse('2021-01-15T16:06:13.340Z'),
 )
 
 res = s.hris.get_hris_connection_id_group(req)
@@ -240,8 +240,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetHrisConnectionIDGroupIDRequest(
-    connection_id='optio',
-    id='c57fbd60-b1a7-48ed-a9a9-d4eea85658c2',
+    connection_id='behind',
+    id='<ID>',
 )
 
 res = s.hris.get_hris_connection_id_group_id(req)
@@ -282,48 +282,48 @@ s = unified_to.UnifiedTo(
 req = operations.PatchHrisConnectionIDEmployeeIDRequest(
     hris_employee=shared.HrisEmployee(
         address=shared.PropertyHrisEmployeeAddress(
-            address1='at',
-            address2='modi',
-            city='Findlay',
-            country='Saint Martin',
-            country_code='LI',
-            postal_code='69291-4598',
-            region='unde',
-            region_code='autem',
+            address1='Tennessee virtual',
+            address2='Assurance forecast',
+            city='Baton Rouge',
+            country='Bahamas',
+            country_code='TW',
+            postal_code='93632',
+            region='Bailey',
+            region_code='navigating Oregon',
         ),
-        created_at=dateutil.parser.isoparse('2022-07-11T08:13:45.102Z'),
-        date_of_birth=dateutil.parser.isoparse('2022-02-18T07:36:00.073Z'),
-        department='autem',
-        division='placeat',
+        created_at=dateutil.parser.isoparse('2023-01-31T08:11:49.561Z'),
+        date_of_birth=dateutil.parser.isoparse('2021-10-08T23:14:10.860Z'),
+        department='soupy web Robust',
+        division='Corporate loudly quantify',
         emails=[
             shared.HrisEmail(
-                email='Blaze97@yahoo.com',
+                email='Wendy_Kovacek@hotmail.com',
                 type=shared.HrisEmailType.OTHER,
             ),
         ],
-        employee_number='id',
+        employee_number='hydrate indigo transmit',
         employment_status=shared.HrisEmployeeEmploymentStatus.INACTIVE,
-        employment_type=shared.HrisEmployeeEmploymentType.INTERN,
+        employment_type=shared.HrisEmployeeEmploymentType.FULL_TIME,
         gender=shared.HrisEmployeeGender.INTERSEX,
-        hired_at=dateutil.parser.isoparse('2020-08-13T08:33:47.369Z'),
-        id='ef234c95-5b9b-4df2-990a-bd9bbcc2725e',
-        location='impedit',
-        manager_id='magni',
+        hired_at=dateutil.parser.isoparse('2021-07-20T11:37:42.486Z'),
+        id='<ID>',
+        location='withdrawal wonderfully',
+        manager_id='molestias white Gainesville',
         marital_status=shared.HrisEmployeeMaritalStatus.MARRIED,
-        name='Sabrina Schamberger Sr.',
+        name='tensely technologies',
         raw=shared.PropertyHrisEmployeeRaw(),
         telephones=[
             shared.HrisTelephone(
-                telephone='totam',
-                type=shared.HrisTelephoneType.WORK,
+                telephone='Northeast Music Hassium',
+                type=shared.HrisTelephoneType.MOBILE,
             ),
         ],
-        terminated_at=dateutil.parser.isoparse('2022-06-27T13:37:26.116Z'),
-        title='Mr.',
-        updated_at=dateutil.parser.isoparse('2021-10-27T12:07:56.119Z'),
+        terminated_at=dateutil.parser.isoparse('2023-08-07T01:58:28.622Z'),
+        title='failing Southwest Kuhn',
+        updated_at=dateutil.parser.isoparse('2023-05-18T01:32:56.083Z'),
     ),
-    connection_id='excepturi',
-    id='ef68e45c-8add-4fac-b545-00430c6632b4',
+    connection_id='South Money past',
+    id='<ID>',
 )
 
 res = s.hris.patch_hris_connection_id_employee_id(req)
@@ -363,24 +363,24 @@ s = unified_to.UnifiedTo(
 
 req = operations.PatchHrisConnectionIDGroupIDRequest(
     hris_group=shared.HrisGroup(
-        created_at=dateutil.parser.isoparse('2022-05-31T02:06:03.542Z'),
-        description='inventore',
+        created_at=dateutil.parser.isoparse('2023-10-19T05:30:26.390Z'),
+        description='Stand-alone asymmetric orchestration',
         employee_ids=[
-            'sapiente',
+            'shootdown',
         ],
-        id='df01c3e9-1e8f-47bc-a9d4-60a77eceb26d',
+        id='<ID>',
         is_active=False,
         manager_ids=[
-            'architecto',
+            '24/7',
         ],
-        name='Lorene Bosco',
-        parent_id='qui',
+        name='Agender trainer',
+        parent_id='Configuration Kids Sedan',
         raw=shared.PropertyHrisGroupRaw(),
-        type=shared.HrisGroupType.DEPARTMENT,
-        updated_at=dateutil.parser.isoparse('2022-12-06T03:55:58.108Z'),
+        type=shared.HrisGroupType.DIVISION,
+        updated_at=dateutil.parser.isoparse('2021-08-18T16:48:12.885Z'),
     ),
-    connection_id='quisquam',
-    id='7c0f0f87-3f9d-45c2-9fd3-e0b4a4a4253c',
+    connection_id='Intersex',
+    id='<ID>',
 )
 
 res = s.hris.patch_hris_connection_id_group_id(req)
@@ -421,47 +421,47 @@ s = unified_to.UnifiedTo(
 req = operations.PostHrisConnectionIDEmployeeRequest(
     hris_employee=shared.HrisEmployee(
         address=shared.PropertyHrisEmployeeAddress(
-            address1='amet',
-            address2='ipsa',
-            city='West Jaunitaland',
-            country='Bahrain',
-            country_code='YE',
-            postal_code='18494',
-            region='pariatur',
-            region_code='porro',
+            address1='Southeast ea withdrawal',
+            address2='Developer',
+            city='Grand Forks',
+            country='Cayman Islands',
+            country_code='BM',
+            postal_code='63867-8134',
+            region='teal Northwest firewall',
+            region_code='doubt Diesel COM',
         ),
-        created_at=dateutil.parser.isoparse('2022-09-23T16:00:07.090Z'),
-        date_of_birth=dateutil.parser.isoparse('2021-07-11T10:12:07.009Z'),
-        department='itaque',
-        division='sit',
+        created_at=dateutil.parser.isoparse('2022-09-25T20:39:21.870Z'),
+        date_of_birth=dateutil.parser.isoparse('2022-04-06T20:53:56.362Z'),
+        department='payment mull',
+        division='Blues red',
         emails=[
             shared.HrisEmail(
-                email='Timmothy68@yahoo.com',
-                type=shared.HrisEmailType.HOME,
+                email='Jacquelyn8@hotmail.com',
+                type=shared.HrisEmailType.WORK,
             ),
         ],
-        employee_number='culpa',
-        employment_status=shared.HrisEmployeeEmploymentStatus.ACTIVE,
-        employment_type=shared.HrisEmployeeEmploymentType.FULL_TIME,
-        gender=shared.HrisEmployeeGender.FEMALE,
-        hired_at=dateutil.parser.isoparse('2021-01-27T23:42:02.589Z'),
-        id='12a4ba9d-5998-4819-acfd-0c77c53e7e7d',
-        location='eius',
-        manager_id='accusamus',
+        employee_number='North Southeast',
+        employment_status=shared.HrisEmployeeEmploymentStatus.INACTIVE,
+        employment_type=shared.HrisEmployeeEmploymentType.VOLUNTEER,
+        gender=shared.HrisEmployeeGender.INTERSEX,
+        hired_at=dateutil.parser.isoparse('2021-03-26T14:20:42.258Z'),
+        id='<ID>',
+        location='East',
+        manager_id='Maserati',
         marital_status=shared.HrisEmployeeMaritalStatus.SINGLE,
-        name='Sophie Lesch',
+        name='Xenogender copy',
         raw=shared.PropertyHrisEmployeeRaw(),
         telephones=[
             shared.HrisTelephone(
-                telephone='consequatur',
-                type=shared.HrisTelephoneType.FAX,
+                telephone='hmph',
+                type=shared.HrisTelephoneType.WORK,
             ),
         ],
-        terminated_at=dateutil.parser.isoparse('2021-06-09T00:38:41.199Z'),
-        title='Mrs.',
-        updated_at=dateutil.parser.isoparse('2022-06-19T22:55:28.813Z'),
+        terminated_at=dateutil.parser.isoparse('2022-08-16T03:13:22.861Z'),
+        title='Regional synthesize',
+        updated_at=dateutil.parser.isoparse('2022-06-15T02:35:02.446Z'),
     ),
-    connection_id='saepe',
+    connection_id='past',
 )
 
 res = s.hris.post_hris_connection_id_employee(req)
@@ -501,23 +501,23 @@ s = unified_to.UnifiedTo(
 
 req = operations.PostHrisConnectionIDGroupRequest(
     hris_group=shared.HrisGroup(
-        created_at=dateutil.parser.isoparse('2022-10-11T00:06:05.180Z'),
-        description='sint',
+        created_at=dateutil.parser.isoparse('2021-02-23T15:35:38.483Z'),
+        description='Configurable stable product',
         employee_ids=[
-            'ea',
+            'Auto',
         ],
-        id='703fec31-c508-424d-989a-36a6b2d27eb7',
+        id='<ID>',
         is_active=False,
         manager_ids=[
-            'accusantium',
+            'JSON',
         ],
-        name='Harriet Orn DDS',
-        parent_id='voluptatum',
+        name='whereas Usability transmitting',
+        parent_id='invoice Cyclocross Electric',
         raw=shared.PropertyHrisGroupRaw(),
-        type=shared.HrisGroupType.SUB_DEPARTMENT,
-        updated_at=dateutil.parser.isoparse('2022-02-14T18:55:03.442Z'),
+        type=shared.HrisGroupType.GROUP,
+        updated_at=dateutil.parser.isoparse('2021-04-30T12:40:50.129Z'),
     ),
-    connection_id='commodi',
+    connection_id='Hybrid Schenectady',
 )
 
 res = s.hris.post_hris_connection_id_group(req)
@@ -558,48 +558,48 @@ s = unified_to.UnifiedTo(
 req = operations.PutHrisConnectionIDEmployeeIDRequest(
     hris_employee=shared.HrisEmployee(
         address=shared.PropertyHrisEmployeeAddress(
-            address1='debitis',
-            address2='commodi',
-            city='South Izaiahhaven',
-            country='Paraguay',
-            country_code='MS',
-            postal_code='72740-9977',
-            region='nisi',
-            region_code='occaecati',
+            address1='Northwest',
+            address2='and',
+            city='Uniquefield',
+            country='Virgin Islands, British',
+            country_code='AE',
+            postal_code='41682',
+            region='Adventure Avon',
+            region_code='bah South',
         ),
-        created_at=dateutil.parser.isoparse('2022-12-15T12:15:10.431Z'),
-        date_of_birth=dateutil.parser.isoparse('2020-03-31T16:49:34.939Z'),
-        department='odio',
-        division='nihil',
+        created_at=dateutil.parser.isoparse('2023-07-18T13:59:47.040Z'),
+        date_of_birth=dateutil.parser.isoparse('2022-04-19T17:38:57.783Z'),
+        department='West auxiliary',
+        division='volt',
         emails=[
             shared.HrisEmail(
-                email='Tamia.Doyle@gmail.com',
+                email='Kenton_Turcotte@gmail.com',
                 type=shared.HrisEmailType.HOME,
             ),
         ],
-        employee_number='iusto',
-        employment_status=shared.HrisEmployeeEmploymentStatus.INACTIVE,
-        employment_type=shared.HrisEmployeeEmploymentType.OTHER,
-        gender=shared.HrisEmployeeGender.INTERSEX,
-        hired_at=dateutil.parser.isoparse('2022-06-18T09:54:51.929Z'),
-        id='06e61b0d-3087-414c-a0a3-d98637ca85c3',
-        location='delectus',
-        manager_id='repudiandae',
+        employee_number='DNS coulomb Berkshire',
+        employment_status=shared.HrisEmployeeEmploymentStatus.ACTIVE,
+        employment_type=shared.HrisEmployeeEmploymentType.CASUAL,
+        gender=shared.HrisEmployeeGender.FEMALE,
+        hired_at=dateutil.parser.isoparse('2022-10-08T23:22:26.211Z'),
+        id='<ID>',
+        location='East primary',
+        manager_id='Tokelau',
         marital_status=shared.HrisEmployeeMaritalStatus.MARRIED,
-        name='Erin Kris',
+        name='Bespoke Investment',
         raw=shared.PropertyHrisEmployeeRaw(),
         telephones=[
             shared.HrisTelephone(
-                telephone='harum',
-                type=shared.HrisTelephoneType.FAX,
+                telephone='East Investment',
+                type=shared.HrisTelephoneType.OTHER,
             ),
         ],
-        terminated_at=dateutil.parser.isoparse('2021-02-20T15:13:08.610Z'),
-        title='Mrs.',
-        updated_at=dateutil.parser.isoparse('2022-01-28T12:53:07.770Z'),
+        terminated_at=dateutil.parser.isoparse('2022-03-28T08:29:30.386Z'),
+        title='unless',
+        updated_at=dateutil.parser.isoparse('2022-06-29T10:38:14.570Z'),
     ),
-    connection_id='placeat',
-    id='98f13af2-8db2-4cf2-bf4f-3ded356d7e14',
+    connection_id='Designer Tennessine',
+    id='<ID>',
 )
 
 res = s.hris.put_hris_connection_id_employee_id(req)
@@ -639,24 +639,24 @@ s = unified_to.UnifiedTo(
 
 req = operations.PutHrisConnectionIDGroupIDRequest(
     hris_group=shared.HrisGroup(
-        created_at=dateutil.parser.isoparse('2022-08-29T10:06:09.751Z'),
-        description='beatae',
+        created_at=dateutil.parser.isoparse('2022-08-10T12:11:42.375Z'),
+        description='Decentralized methodical projection',
         employee_ids=[
-            'eligendi',
+            'Credit',
         ],
-        id='d98196d5-5af6-49a1-84b7-9ae33681c23c',
+        id='<ID>',
         is_active=False,
         manager_ids=[
-            'dolorem',
+            'South',
         ],
-        name='Grant Klein PhD',
-        parent_id='ab',
+        name='Jeep brr Northwest',
+        parent_id='quickly Licensed',
         raw=shared.PropertyHrisGroupRaw(),
-        type=shared.HrisGroupType.DIVISION,
-        updated_at=dateutil.parser.isoparse('2020-11-07T15:44:18.546Z'),
+        type=shared.HrisGroupType.BUSINESS_UNIT,
+        updated_at=dateutil.parser.isoparse('2021-11-08T00:11:45.458Z'),
     ),
-    connection_id='quasi',
-    id='2c5ba825-fe22-4cd5-8ba6-fbfec932af68',
+    connection_id='vortals interface Gasoline',
+    id='<ID>',
 )
 
 res = s.hris.put_hris_connection_id_group_id(req)

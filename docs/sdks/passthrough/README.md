@@ -26,8 +26,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.DeletePassthroughConnectionIDPathRequest(
-    connection_id='fugiat',
-    path='debitis',
+    connection_id='Planner Checking Tricycle',
+    path='/usr/obj',
 )
 
 res = s.passthrough.delete_passthrough_connection_id_path(req)
@@ -65,8 +65,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetPassthroughConnectionIDPathRequest(
-    connection_id='minima',
-    path='ducimus',
+    connection_id='Global',
+    path='/private/var',
 )
 
 res = s.passthrough.get_passthrough_connection_id_path(req)
@@ -104,8 +104,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchPassthroughConnectionIDPathRequest(
-    connection_id='est',
-    path='dicta',
+    connection_id='average maroon',
+    path='/proc',
     undefined=shared.Undefined(),
 )
 
@@ -144,8 +144,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PostPassthroughConnectionIDPathRequest(
-    connection_id='architecto',
-    path='fugiat',
+    connection_id='Computer Hip',
+    path='/boot/defaults',
     undefined=shared.Undefined(),
 )
 
@@ -184,8 +184,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PutPassthroughConnectionIDPathRequest(
-    connection_id='eum',
-    path='vitae',
+    connection_id='Computer Oriental',
+    path='/usr/local/src',
     undefined=shared.Undefined(),
 )
 

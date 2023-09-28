@@ -27,8 +27,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.DeleteCrmConnectionIDPipelineIDRequest(
-    connection_id='laboriosam',
-    id='73d522b8-28a9-4030-a60f-024c79b4cc64',
+    connection_id='Customer',
+    id='<ID>',
 )
 
 res = s.pipeline.delete_crm_connection_id_pipeline_id(req)
@@ -67,13 +67,13 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetCrmConnectionIDPipelineRequest(
-    connection_id='eligendi',
-    limit=1687.36,
-    offset=7276.04,
-    order='sequi',
-    query='culpa',
-    sort='ratione',
-    updated_gte=dateutil.parser.isoparse('2022-03-30T02:59:59.063Z'),
+    connection_id='dirty Awesome Checking',
+    limit=9055.88,
+    offset=3443.76,
+    order='glom',
+    query='panel',
+    sort='Latin tightly',
+    updated_gte=dateutil.parser.isoparse('2022-03-01T15:47:43.244Z'),
 )
 
 res = s.pipeline.get_crm_connection_id_pipeline(req)
@@ -111,8 +111,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetCrmConnectionIDPipelineIDRequest(
-    connection_id='labore',
-    id='88ade62f-6aa5-458a-a5e2-083016ca34bb',
+    connection_id='Tricycle roughly markets',
+    id='<ID>',
 )
 
 res = s.pipeline.get_crm_connection_id_pipeline_id(req)
@@ -153,16 +153,16 @@ s = unified_to.UnifiedTo(
 req = operations.PatchCrmConnectionIDPipelineIDRequest(
     crm_pipeline=shared.CrmPipeline(
         active=False,
-        created_at=dateutil.parser.isoparse('2022-01-06T01:33:11.339Z'),
+        created_at=dateutil.parser.isoparse('2023-08-24T17:39:51.183Z'),
         deal_probability=False,
-        display_order=8302.16,
-        id='4f62127a-607d-4160-a294-514c3db9ca9f',
-        name='Brandy Powlowski',
+        display_order=664.58,
+        id='<ID>',
+        name='bandwidth',
         raw=shared.PropertyCrmPipelineRaw(),
-        updated_at=dateutil.parser.isoparse('2021-03-30T20:29:28.566Z'),
+        updated_at=dateutil.parser.isoparse('2023-11-27T01:55:15.440Z'),
     ),
-    connection_id='quos',
-    id='78703493-f49a-4a84-a5a3-283279b719d1',
+    connection_id='Chips',
+    id='<ID>',
 )
 
 res = s.pipeline.patch_crm_connection_id_pipeline_id(req)
@@ -203,15 +203,15 @@ s = unified_to.UnifiedTo(
 req = operations.PostCrmConnectionIDPipelineRequest(
     crm_pipeline=shared.CrmPipeline(
         active=False,
-        created_at=dateutil.parser.isoparse('2020-05-07T22:58:48.615Z'),
+        created_at=dateutil.parser.isoparse('2023-12-10T23:55:22.206Z'),
         deal_probability=False,
-        display_order=6422.68,
-        id='673d86e3-b35e-449a-b135-778ce54cacb0',
-        name='Chris Terry',
+        display_order=3879.73,
+        id='<ID>',
+        name='upward Mayaguez',
         raw=shared.PropertyCrmPipelineRaw(),
-        updated_at=dateutil.parser.isoparse('2022-09-03T20:01:11.409Z'),
+        updated_at=dateutil.parser.isoparse('2021-09-25T10:43:23.679Z'),
     ),
-    connection_id='voluptatem',
+    connection_id='Lead Health',
 )
 
 res = s.pipeline.post_crm_connection_id_pipeline(req)
@@ -252,16 +252,16 @@ s = unified_to.UnifiedTo(
 req = operations.PutCrmConnectionIDPipelineIDRequest(
     crm_pipeline=shared.CrmPipeline(
         active=False,
-        created_at=dateutil.parser.isoparse('2022-08-22T17:28:32.263Z'),
+        created_at=dateutil.parser.isoparse('2021-05-16T17:24:47.805Z'),
         deal_probability=False,
-        display_order=6880.36,
-        id='acf63b21-5186-4ab5-a3a0-22614315d156',
-        name='Victor Mayer',
+        display_order=5470.76,
+        id='<ID>',
+        name='West',
         raw=shared.PropertyCrmPipelineRaw(),
-        updated_at=dateutil.parser.isoparse('2022-11-25T09:18:50.894Z'),
+        updated_at=dateutil.parser.isoparse('2022-02-28T07:49:31.151Z'),
     ),
-    connection_id='officia',
-    id='fc7186ff-20b7-4a73-9f40-ca0d7657c164',
+    connection_id='optimizing',
+    id='<ID>',
 )
 
 res = s.pipeline.put_crm_connection_id_pipeline_id(req)

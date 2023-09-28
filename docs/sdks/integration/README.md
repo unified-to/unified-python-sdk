@@ -28,14 +28,14 @@ s = unified_to.UnifiedTo(
 req = operations.GetUnifiedIntegrationRequest(
     active=False,
     categories=[
-        operations.GetUnifiedIntegrationCategories.HRIS,
+        operations.GetUnifiedIntegrationCategories.ENRICH,
     ],
-    limit=2394.27,
-    offset=8487.85,
-    order='ea',
-    sort='veniam',
+    limit=7363.95,
+    offset=8214.4,
+    order='Nelda Implemented',
+    sort='cabinet',
     summary=False,
-    updated_gte=dateutil.parser.isoparse('2021-01-26T22:48:04.970Z'),
+    updated_gte=dateutil.parser.isoparse('2022-02-05T00:16:37.455Z'),
 )
 
 res = s.integration.get_unified_integration(req)
@@ -73,19 +73,19 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetUnifiedIntegrationAuthWorkspaceIDIntegrationTypeRequest(
-    env='earum',
-    external_xref='placeat',
-    failure_redirect='saepe',
-    integration_type='quod',
-    lang='odit',
+    env='Algerian',
+    external_xref='Cambridgeshire Surinam',
+    failure_redirect='Designer Drive',
+    integration_type='program Home',
+    lang='Plastic program',
     redirect=False,
     scopes=[
-        operations.GetUnifiedIntegrationAuthWorkspaceIDIntegrationTypeScopes.HRIS_GROUP_WRITE,
+        operations.GetUnifiedIntegrationAuthWorkspaceIDIntegrationTypeScopes.CRM_FILE_READ,
     ],
-    state='at',
-    subdomain='ea',
-    success_redirect='provident',
-    workspace_id='inventore',
+    state='Functionality Product',
+    subdomain='payment Developer Dynamic',
+    success_redirect='Northeast',
+    workspace_id='duh empower Kwanza',
 )
 
 res = s.integration.get_unified_integration_auth_workspace_id_integration_type(req)
@@ -123,7 +123,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetUnifiedIntegrationIntegrationTypeRequest(
-    integration_type='ea',
+    integration_type='Pizza Electric',
 )
 
 res = s.integration.get_unified_integration_integration_type(req)
@@ -163,11 +163,11 @@ s = unified_to.UnifiedTo(
 req = operations.GetUnifiedIntegrationWorkspaceWorkspaceIDRequest(
     active=False,
     categories=[
-        operations.GetUnifiedIntegrationWorkspaceWorkspaceIDCategories.UC,
+        operations.GetUnifiedIntegrationWorkspaceWorkspaceIDCategories.HRIS,
     ],
-    env='quam',
+    env='North Southeast exercitationem',
     summary=False,
-    workspace_id='delectus',
+    workspace_id='Bronze Plastic',
 )
 
 res = s.integration.get_unified_integration_workspace_workspace_id(req)

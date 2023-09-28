@@ -27,8 +27,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.DeleteHrisConnectionIDGroupIDRequest(
-    connection_id='ipsam',
-    id='8aaeacae-323a-431b-b7ba-1cc97716c802',
+    connection_id='consequently platforms Metal',
+    id='<ID>',
 )
 
 res = s.group.delete_hris_connection_id_group_id(req)
@@ -67,13 +67,13 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetHrisConnectionIDGroupRequest(
-    connection_id='minus',
-    limit=7864.46,
-    offset=5742.21,
-    order='voluptates',
-    query='alias',
-    sort='placeat',
-    updated_gte=dateutil.parser.isoparse('2022-03-07T00:11:41.235Z'),
+    connection_id='Loan',
+    limit=3486.96,
+    offset=9705.73,
+    order='Coordinator',
+    query='World',
+    sort='Dollar',
+    updated_gte=dateutil.parser.isoparse('2021-01-15T16:06:13.340Z'),
 )
 
 res = s.group.get_hris_connection_id_group(req)
@@ -111,8 +111,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetHrisConnectionIDGroupIDRequest(
-    connection_id='iste',
-    id='d323f1aa-63ed-49cf-9c85-6bcba51ef245',
+    connection_id='behind',
+    id='<ID>',
 )
 
 res = s.group.get_hris_connection_id_group_id(req)
@@ -152,24 +152,24 @@ s = unified_to.UnifiedTo(
 
 req = operations.PatchHrisConnectionIDGroupIDRequest(
     hris_group=shared.HrisGroup(
-        created_at=dateutil.parser.isoparse('2022-05-13T18:14:16.753Z'),
-        description='aliquam',
+        created_at=dateutil.parser.isoparse('2023-10-19T05:30:26.390Z'),
+        description='Stand-alone asymmetric orchestration',
         employee_ids=[
-            'iusto',
+            'shootdown',
         ],
-        id='facf116c-dd54-444a-b562-873c7dd9efaf',
+        id='<ID>',
         is_active=False,
         manager_ids=[
-            'labore',
+            '24/7',
         ],
-        name='Cristina Russel',
-        parent_id='consectetur',
+        name='Agender trainer',
+        parent_id='Configuration Kids Sedan',
         raw=shared.PropertyHrisGroupRaw(),
-        type=shared.HrisGroupType.DEPARTMENT,
-        updated_at=dateutil.parser.isoparse('2022-12-28T08:43:09.661Z'),
+        type=shared.HrisGroupType.DIVISION,
+        updated_at=dateutil.parser.isoparse('2021-08-18T16:48:12.885Z'),
     ),
-    connection_id='delectus',
-    id='3138f30d-f3db-4022-baa5-65fb8f652ebb',
+    connection_id='Intersex',
+    id='<ID>',
 )
 
 res = s.group.patch_hris_connection_id_group_id(req)
@@ -209,23 +209,23 @@ s = unified_to.UnifiedTo(
 
 req = operations.PostHrisConnectionIDGroupRequest(
     hris_group=shared.HrisGroup(
-        created_at=dateutil.parser.isoparse('2021-04-22T16:44:51.151Z'),
-        description='dolor',
+        created_at=dateutil.parser.isoparse('2021-02-23T15:35:38.483Z'),
+        description='Configurable stable product',
         employee_ids=[
-            'praesentium',
+            'Auto',
         ],
-        id='38387902-43b2-493d-ab30-e917f50fda04',
+        id='<ID>',
         is_active=False,
         manager_ids=[
-            'porro',
+            'JSON',
         ],
-        name='Wm Boyer',
-        parent_id='exercitationem',
+        name='whereas Usability transmitting',
+        parent_id='invoice Cyclocross Electric',
         raw=shared.PropertyHrisGroupRaw(),
-        type=shared.HrisGroupType.DEPARTMENT,
-        updated_at=dateutil.parser.isoparse('2022-08-30T17:09:47.110Z'),
+        type=shared.HrisGroupType.GROUP,
+        updated_at=dateutil.parser.isoparse('2021-04-30T12:40:50.129Z'),
     ),
-    connection_id='unde',
+    connection_id='Hybrid Schenectady',
 )
 
 res = s.group.post_hris_connection_id_group(req)
@@ -265,24 +265,24 @@ s = unified_to.UnifiedTo(
 
 req = operations.PutHrisConnectionIDGroupIDRequest(
     hris_group=shared.HrisGroup(
-        created_at=dateutil.parser.isoparse('2022-04-06T01:39:03.213Z'),
-        description='aut',
+        created_at=dateutil.parser.isoparse('2022-08-10T12:11:42.375Z'),
+        description='Decentralized methodical projection',
         employee_ids=[
-            'expedita',
+            'Credit',
         ],
-        id='c3bb7446-64eb-41d0-b388-b0d1bb17afee',
+        id='<ID>',
         is_active=False,
         manager_ids=[
-            'reprehenderit',
+            'South',
         ],
-        name='Latoya Hodkiewicz',
-        parent_id='quidem',
+        name='Jeep brr Northwest',
+        parent_id='quickly Licensed',
         raw=shared.PropertyHrisGroupRaw(),
         type=shared.HrisGroupType.BUSINESS_UNIT,
-        updated_at=dateutil.parser.isoparse('2022-08-19T01:14:09.290Z'),
+        updated_at=dateutil.parser.isoparse('2021-11-08T00:11:45.458Z'),
     ),
-    connection_id='voluptate',
-    id='c7edaf39-d16f-4bf7-afd1-62b303e3023b',
+    connection_id='vortals interface Gasoline',
+    id='<ID>',
 )
 
 res = s.group.put_hris_connection_id_group_id(req)

@@ -51,8 +51,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.DeleteAtsConnectionIDApplicationIDRequest(
-    connection_id='fuga',
-    id='4251904e-523c-47e0-bc71-78e4796f2a70',
+    connection_id='markets sievert meh',
+    id='<ID>',
 )
 
 res = s.ats.delete_ats_connection_id_application_id(req)
@@ -90,8 +90,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.DeleteAtsConnectionIDCandidateIDRequest(
-    connection_id='porro',
-    id='688282aa-4825-462f-a22e-9817ee17cbe6',
+    connection_id='multimedia',
+    id='<ID>',
 )
 
 res = s.ats.delete_ats_connection_id_candidate_id(req)
@@ -129,8 +129,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.DeleteAtsConnectionIDInterviewIDRequest(
-    connection_id='quasi',
-    id='e6b7b95b-c0ab-43c2-8c4f-3789fd871f99',
+    connection_id='redundant Health Hayes',
+    id='<ID>',
 )
 
 res = s.ats.delete_ats_connection_id_interview_id(req)
@@ -168,8 +168,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.DeleteAtsConnectionIDJobIDRequest(
-    connection_id='pariatur',
-    id='d2efd121-aa6f-41e6-b4bd-b04f15756082',
+    connection_id='Sedan Bedfordshire Hybrid',
+    id='<ID>',
 )
 
 res = s.ats.delete_ats_connection_id_job_id(req)
@@ -207,8 +207,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.DeleteAtsConnectionIDScorecardIDRequest(
-    connection_id='quibusdam',
-    id='68ea19f1-d170-4513-b9d0-8086a1840394',
+    connection_id='Agent intrepid',
+    id='<ID>',
 )
 
 res = s.ats.delete_ats_connection_id_scorecard_id(req)
@@ -247,15 +247,15 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetAtsConnectionIDApplicationRequest(
-    candidate_id='impedit',
-    connection_id='explicabo',
-    job_id='voluptas',
-    limit=120.36,
-    offset=4910.25,
-    order='dicta',
-    query='maiores',
-    sort='natus',
-    updated_gte=dateutil.parser.isoparse('2022-01-10T09:30:55.914Z'),
+    candidate_id='turquoise',
+    connection_id='Regional Bedfordshire',
+    job_id='Northwest portal Electric',
+    limit=576.8,
+    offset=7467.13,
+    order='Architect',
+    query='loosely contingency',
+    sort='female',
+    updated_gte=dateutil.parser.isoparse('2023-09-05T13:59:23.348Z'),
 )
 
 res = s.ats.get_ats_connection_id_application(req)
@@ -293,8 +293,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetAtsConnectionIDApplicationIDRequest(
-    connection_id='voluptas',
-    id='f0642dac-7af5-415c-8413-aa63aae8d678',
+    connection_id='Buckinghamshire functionalities',
+    id='<ID>',
 )
 
 res = s.ats.get_ats_connection_id_application_id(req)
@@ -333,13 +333,13 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetAtsConnectionIDCandidateRequest(
-    connection_id='vel',
-    limit=2870.51,
-    offset=8225.6,
-    order='facilis',
-    query='cum',
-    sort='commodi',
-    updated_gte=dateutil.parser.isoparse('2022-08-22T09:37:14.602Z'),
+    connection_id='Northwest forceful Moore',
+    limit=2623.89,
+    offset=7811.91,
+    order='Mouse whether deploy',
+    query='pink',
+    sort='huzzah thistle',
+    updated_gte=dateutil.parser.isoparse('2022-03-13T15:14:03.645Z'),
 )
 
 res = s.ats.get_ats_connection_id_candidate(req)
@@ -377,8 +377,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetAtsConnectionIDCandidateIDRequest(
-    connection_id='reiciendis',
-    id='d5e60b37-5ed4-4f6f-bee4-1f33317fe35b',
+    connection_id='ha Loan',
+    id='<ID>',
 )
 
 res = s.ats.get_ats_connection_id_candidate_id(req)
@@ -417,14 +417,14 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetAtsConnectionIDInterviewRequest(
-    application_id='laboriosam',
-    connection_id='ipsa',
-    limit=9167.27,
-    offset=7307.09,
-    order='vitae',
-    query='accusamus',
-    sort='similique',
-    updated_gte=dateutil.parser.isoparse('2022-11-13T12:32:25.289Z'),
+    application_id='Fresh Pickup converse',
+    connection_id='vortals',
+    limit=5167.08,
+    offset=6488.61,
+    order='Oregon Metal',
+    query='Account',
+    sort='haptic',
+    updated_gte=dateutil.parser.isoparse('2021-09-23T19:46:35.825Z'),
 )
 
 res = s.ats.get_ats_connection_id_interview(req)
@@ -462,8 +462,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetAtsConnectionIDInterviewIDRequest(
-    connection_id='voluptas',
-    id='555ba3c2-8744-4ed5-bb88-f3a8d8f5c0b2',
+    connection_id='Loan Gorgeous lux',
+    id='<ID>',
 )
 
 res = s.ats.get_ats_connection_id_interview_id(req)
@@ -502,13 +502,13 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetAtsConnectionIDJobRequest(
-    connection_id='reiciendis',
-    limit=1318.52,
-    offset=9944.01,
-    order='facilis',
-    query='voluptate',
-    sort='expedita',
-    updated_gte=dateutil.parser.isoparse('2022-05-22T17:05:01.514Z'),
+    connection_id='City katal',
+    limit=3542.62,
+    offset=5417.97,
+    order='publisher',
+    query='Folding',
+    sort='Kip gross recontextualize',
+    updated_gte=dateutil.parser.isoparse('2022-10-12T03:36:20.050Z'),
 )
 
 res = s.ats.get_ats_connection_id_job(req)
@@ -546,8 +546,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetAtsConnectionIDJobIDRequest(
-    connection_id='dolore',
-    id='a276b269-16fe-41f0-8f42-94e3698f447f',
+    connection_id='Jazz',
+    id='<ID>',
 )
 
 res = s.ats.get_ats_connection_id_job_id(req)
@@ -586,16 +586,16 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetAtsConnectionIDScorecardRequest(
-    application_id='ex',
-    candidate_id='sit',
-    connection_id='non',
-    interview_id='officiis',
-    limit=5058.66,
-    offset=7086.09,
-    order='quaerat',
-    query='incidunt',
-    sort='ipsam',
-    updated_gte=dateutil.parser.isoparse('2021-06-05T03:46:35.414Z'),
+    application_id='Licensed deep',
+    candidate_id='happily',
+    connection_id='lunch accusamus',
+    interview_id='for famously Southwest',
+    limit=950.05,
+    offset=6133.23,
+    order='withdrawal',
+    query='Bicycle copy Bronze',
+    sort='ouch non ut',
+    updated_gte=dateutil.parser.isoparse('2021-06-01T09:53:52.927Z'),
 )
 
 res = s.ats.get_ats_connection_id_scorecard(req)
@@ -633,8 +633,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetAtsConnectionIDScorecardIDRequest(
-    connection_id='sit',
-    id='ca55efd2-0e45-47e1-858b-6a89fbe3a5aa',
+    connection_id='East mobile Mini',
+    id='<ID>',
 )
 
 res = s.ats.get_ats_connection_id_scorecard_id(req)
@@ -674,20 +674,20 @@ s = unified_to.UnifiedTo(
 
 req = operations.PatchAtsConnectionIDApplicationIDRequest(
     ats_application=shared.AtsApplication(
-        applied_at=dateutil.parser.isoparse('2021-03-30T03:48:24.857Z'),
-        candidate_id='tempora',
-        created_at=dateutil.parser.isoparse('2022-09-14T18:19:59.469Z'),
-        id='4d0ab407-5088-4e51-8620-65e904f3b119',
-        job_id='labore',
+        applied_at=dateutil.parser.isoparse('2023-10-17T09:51:42.165Z'),
+        candidate_id='North et beyond',
+        created_at=dateutil.parser.isoparse('2023-01-08T08:26:22.845Z'),
+        id='<ID>',
+        job_id='ick Sausages Bronze',
         raw=shared.PropertyAtsApplicationRaw(),
-        rejected_at=dateutil.parser.isoparse('2021-12-03T11:25:52.746Z'),
-        rejected_reason='laborum',
-        source='nam',
-        status=shared.AtsApplicationStatus.REJECTED,
-        updated_at=dateutil.parser.isoparse('2022-12-31T00:19:10.437Z'),
+        rejected_at=dateutil.parser.isoparse('2023-10-18T00:47:25.469Z'),
+        rejected_reason='Avon Sum quis',
+        source='Carolina Wooden Pop',
+        status=shared.AtsApplicationStatus.HIRED,
+        updated_at=dateutil.parser.isoparse('2021-07-20T22:05:46.009Z'),
     ),
-    connection_id='amet',
-    id='a79f9dfe-0ab7-4da8-a50c-e187f86bc173',
+    connection_id='Baby Paucek',
+    id='<ID>',
 )
 
 res = s.ats.patch_ats_connection_id_application_id(req)
@@ -728,42 +728,42 @@ s = unified_to.UnifiedTo(
 req = operations.PatchAtsConnectionIDCandidateIDRequest(
     ats_candidate=shared.AtsCandidate(
         address=shared.PropertyAtsCandidateAddress(
-            address1='assumenda',
-            address2='ea',
-            city='Lindaside',
-            country='Timor-Leste',
-            country_code='TK',
-            postal_code='31495-8653',
-            region='repudiandae',
-            region_code='atque',
+            address1='closely Goyette plus',
+            address2='culpa',
+            city='Darrinshire',
+            country='Mongolia',
+            country_code='GW',
+            postal_code='05275',
+            region='TLS calculating',
+            region_code='up Argon Internal',
         ),
-        company_name='atque',
-        created_at=dateutil.parser.isoparse('2022-01-28T23:50:19.904Z'),
+        company_name='Fadel, Schulist and Koss',
+        created_at=dateutil.parser.isoparse('2022-12-09T07:16:54.728Z'),
         emails=[
             shared.AtsEmail(
-                email='Richie.Grant91@hotmail.com',
-                type=shared.AtsEmailType.WORK,
+                email='Gregory63@gmail.com',
+                type=shared.AtsEmailType.OTHER,
             ),
         ],
-        external_id='accusantium',
-        id='12563f94-e29e-4973-a922-a57a15be3e06',
-        image_url='ipsa',
-        name='Frank Krajcik',
+        external_id='Elegant',
+        id='<ID>',
+        image_url='Tricycle Yttrium Hybrid',
+        name='ornery whether',
         raw=shared.PropertyAtsCandidateRaw(),
         tags=[
-            'cum',
+            'Cadillac',
         ],
         telephones=[
             shared.AtsTelephone(
-                telephone='iure',
-                type=shared.AtsTelephoneType.MOBILE,
+                telephone='Marketing Cotton',
+                type=shared.AtsTelephoneType.HOME,
             ),
         ],
-        title='Mr.',
-        updated_at=dateutil.parser.isoparse('2021-07-27T21:33:31.354Z'),
+        title='East',
+        updated_at=dateutil.parser.isoparse('2023-10-31T11:53:36.953Z'),
     ),
-    connection_id='voluptatum',
-    id='845f0597-a60f-4f2a-94a3-1e94764a3e86',
+    connection_id='redundant Tricycle unloose',
+    id='<ID>',
 )
 
 res = s.ats.patch_ats_connection_id_candidate_id(req)
@@ -803,24 +803,24 @@ s = unified_to.UnifiedTo(
 
 req = operations.PatchAtsConnectionIDInterviewIDRequest(
     ats_interview=shared.AtsInterview(
-        application_id='nemo',
-        candidate_id='recusandae',
-        created_at=dateutil.parser.isoparse('2022-05-29T21:22:23.687Z'),
-        end_at=dateutil.parser.isoparse('2022-07-27T09:33:49.991Z'),
-        external_event_xref='reiciendis',
-        id='9251a5a9-da66-40ff-97bf-aad4f9efc1b4',
-        job_id='quis',
-        location='inventore',
+        application_id='SSD green pascal',
+        candidate_id='Buckinghamshire example',
+        created_at=dateutil.parser.isoparse('2021-08-24T08:30:07.073Z'),
+        end_at=dateutil.parser.isoparse('2021-06-27T04:06:46.373Z'),
+        external_event_xref='apropos Gadolinium',
+        id='<ID>',
+        job_id='transgender transmitting',
+        location='Investor synthesizing',
         raw=shared.PropertyAtsInterviewRaw(),
-        start_at=dateutil.parser.isoparse('2022-03-27T16:13:46.480Z'),
-        status=shared.AtsInterviewStatus.SCHEDULED,
-        updated_at=dateutil.parser.isoparse('2022-10-04T16:56:27.065Z'),
+        start_at=dateutil.parser.isoparse('2021-01-19T01:51:02.213Z'),
+        status=shared.AtsInterviewStatus.AWAITING_FEEDBACK,
+        updated_at=dateutil.parser.isoparse('2022-01-21T17:38:09.113Z'),
         user_ids=[
-            'aspernatur',
+            'Honda',
         ],
     ),
-    connection_id='eum',
-    id='48dc2f61-5199-4ebf-90e9-fe6c632ca3ae',
+    connection_id='Myrl Dram Trail',
+    id='<ID>',
 )
 
 res = s.ats.patch_ats_connection_id_interview_id(req)
@@ -862,51 +862,51 @@ req = operations.PatchAtsConnectionIDJobIDRequest(
     ats_job=shared.AtsJob(
         addresses=[
             shared.AtsAddress(
-                address1='nulla',
-                address2='consequatur',
-                city='North Jessefurt',
-                country='Moldova',
-                country_code='HM',
-                postal_code='01988',
-                region='ipsa',
-                region_code='tempora',
+                address1='Transexual',
+                address2='Planner redundant Towels',
+                city='Starkboro',
+                country='Chad',
+                country_code='NU',
+                postal_code='22603',
+                region='Cambridgeshire',
+                region_code='Account Copernicium at',
             ),
         ],
-        closed_at=dateutil.parser.isoparse('2022-07-12T06:51:18.031Z'),
+        closed_at=dateutil.parser.isoparse('2023-01-02T09:14:26.844Z'),
         compensation=[
             shared.AtsCompensation(
-                currency='dicta',
-                frequency=shared.AtsCompensationFrequency.YEAR,
-                max=4570.59,
-                min=5083.9,
-                type=shared.AtsCompensationType.OTHER,
+                currency='Metical',
+                frequency=shared.AtsCompensationFrequency.HOUR,
+                max=1424.24,
+                min=3626.17,
+                type=shared.AtsCompensationType.SALARY,
             ),
         ],
-        created_at=dateutil.parser.isoparse('2021-09-24T00:59:48.564Z'),
+        created_at=dateutil.parser.isoparse('2022-03-16T15:29:37.822Z'),
         departments=[
-            'architecto',
+            'Sports',
         ],
-        description='fugiat',
-        employment_type=shared.AtsJobEmploymentType.FULL_TIME,
+        description='Operative bi-directional capability',
+        employment_type=shared.AtsJobEmploymentType.INTERN,
         hiring_manager_ids=[
-            'dicta',
+            'Hop',
         ],
-        id='7476360a-15db-46a6-a065-9a1adeaab585',
-        language_locale='vitae',
-        name='Ruben Ryan',
+        id='<ID>',
+        language_locale='hence gracefully invoice',
+        name='Southeast vacantly Uranium',
         public_job_urls=[
-            'ad',
+            'Keith',
         ],
         raw=shared.PropertyAtsJobRaw(),
         recruiter_ids=[
-            'expedita',
+            'happily',
         ],
         remote=False,
-        status=shared.AtsJobStatus.ARCHIVED,
-        updated_at=dateutil.parser.isoparse('2021-07-11T19:18:20.130Z'),
+        status=shared.AtsJobStatus.OPEN,
+        updated_at=dateutil.parser.isoparse('2023-08-04T07:33:03.088Z'),
     ),
-    connection_id='aliquid',
-    id='1891baa0-fe1a-4de0-88e6-f8c5f350d8cd',
+    connection_id='Cis benchmark',
+    id='<ID>',
 )
 
 res = s.ats.patch_ats_connection_id_job_id(req)
@@ -946,19 +946,19 @@ s = unified_to.UnifiedTo(
 
 req = operations.PatchAtsConnectionIDScorecardIDRequest(
     ats_scorecard=shared.AtsScorecard(
-        application_id='nam',
-        candidate_id='ipsam',
-        created_at=dateutil.parser.isoparse('2022-07-22T07:25:32.550Z'),
-        id='41814301-0421-4813-9520-8ece7e253b66',
-        interview_id='voluptatum',
-        interviewer_id='magnam',
-        job_id='exercitationem',
+        application_id='Carter Hatchback functionalities',
+        candidate_id='disagree gold New',
+        created_at=dateutil.parser.isoparse('2023-05-08T15:11:07.692Z'),
+        id='<ID>',
+        interview_id='blue',
+        interviewer_id='North Buckinghamshire blur',
+        job_id='kelvin hack Fantastic',
         raw=shared.PropertyAtsScorecardRaw(),
         recommendation=shared.AtsScorecardRecommendation.DEFINITELY_NO,
-        updated_at=dateutil.parser.isoparse('2021-09-26T01:55:33.743Z'),
+        updated_at=dateutil.parser.isoparse('2022-11-18T04:49:38.005Z'),
     ),
-    connection_id='nobis',
-    id='6e205e16-deab-43fe-8957-8a64584273a8',
+    connection_id='hacking meter',
+    id='<ID>',
 )
 
 res = s.ats.patch_ats_connection_id_scorecard_id(req)
@@ -998,19 +998,19 @@ s = unified_to.UnifiedTo(
 
 req = operations.PostAtsConnectionIDApplicationRequest(
     ats_application=shared.AtsApplication(
-        applied_at=dateutil.parser.isoparse('2022-11-26T09:57:27.688Z'),
-        candidate_id='rem',
-        created_at=dateutil.parser.isoparse('2022-08-25T11:14:44.041Z'),
-        id='62309fb0-9299-421a-afb9-f58c4d86e68e',
-        job_id='modi',
+        applied_at=dateutil.parser.isoparse('2021-10-26T15:24:28.979Z'),
+        candidate_id='solid',
+        created_at=dateutil.parser.isoparse('2022-09-13T17:17:33.049Z'),
+        id='<ID>',
+        job_id='Gloves Pizza virtual',
         raw=shared.PropertyAtsApplicationRaw(),
-        rejected_at=dateutil.parser.isoparse('2021-03-31T11:58:23.065Z'),
-        rejected_reason='voluptatem',
-        source='ipsam',
-        status=shared.AtsApplicationStatus.SECOND_INTERVIEW,
-        updated_at=dateutil.parser.isoparse('2022-11-27T17:29:03.103Z'),
+        rejected_at=dateutil.parser.isoparse('2023-12-27T18:41:56.821Z'),
+        rejected_reason='Northwest Kids',
+        source='Human Tasty Loan',
+        status=shared.AtsApplicationStatus.NEW,
+        updated_at=dateutil.parser.isoparse('2022-11-01T21:08:50.319Z'),
     ),
-    connection_id='non',
+    connection_id='Jazz',
 )
 
 res = s.ats.post_ats_connection_id_application(req)
@@ -1051,41 +1051,41 @@ s = unified_to.UnifiedTo(
 req = operations.PostAtsConnectionIDCandidateRequest(
     ats_candidate=shared.AtsCandidate(
         address=shared.PropertyAtsCandidateAddress(
-            address1='maiores',
-            address2='enim',
-            city='Ryderfurt',
-            country='Kenya',
-            country_code='GT',
-            postal_code='63587',
-            region='hic',
-            region_code='necessitatibus',
+            address1='incubate',
+            address2='azure Trans',
+            city='Port Rory',
+            country='El Salvador',
+            country_code='CX',
+            postal_code='54222-0235',
+            region='modi fooey',
+            region_code='Metal TCP incidunt',
         ),
-        company_name='asperiores',
-        created_at=dateutil.parser.isoparse('2022-08-16T11:44:46.779Z'),
+        company_name='McCullough, Rosenbaum and Daugherty',
+        created_at=dateutil.parser.isoparse('2023-02-07T05:55:59.357Z'),
         emails=[
             shared.AtsEmail(
-                email='Virginie_Bergnaum67@hotmail.com',
-                type=shared.AtsEmailType.WORK,
+                email='Eleanora.Rogahn44@hotmail.com',
+                type=shared.AtsEmailType.HOME,
             ),
         ],
-        external_id='velit',
-        id='83c2beb4-7737-43c8-972f-64d1db1f2c43',
-        image_url='illo',
-        name='Dr. Gina Jaskolski',
+        external_id='South though',
+        id='<ID>',
+        image_url='Pants',
+        name='Raleigh',
         raw=shared.PropertyAtsCandidateRaw(),
         tags=[
-            'eum',
+            'morph',
         ],
         telephones=[
             shared.AtsTelephone(
-                telephone='velit',
-                type=shared.AtsTelephoneType.HOME,
+                telephone='lavender Sedan Folk',
+                type=shared.AtsTelephoneType.OTHER,
             ),
         ],
-        title='Ms.',
-        updated_at=dateutil.parser.isoparse('2022-08-25T07:25:33.000Z'),
+        title='Savings panel',
+        updated_at=dateutil.parser.isoparse('2022-02-09T15:32:35.578Z'),
     ),
-    connection_id='impedit',
+    connection_id='Ngultrum red glean',
 )
 
 res = s.ats.post_ats_connection_id_candidate(req)
@@ -1125,23 +1125,23 @@ s = unified_to.UnifiedTo(
 
 req = operations.PostAtsConnectionIDInterviewRequest(
     ats_interview=shared.AtsInterview(
-        application_id='voluptatibus',
-        candidate_id='iste',
-        created_at=dateutil.parser.isoparse('2022-12-29T01:38:46.899Z'),
-        end_at=dateutil.parser.isoparse('2022-01-26T00:00:57.040Z'),
-        external_event_xref='velit',
-        id='a437000a-e6b6-4bc9-b8f7-59eac55a9741',
-        job_id='vero',
-        location='consectetur',
+        application_id='round Hat Savings',
+        candidate_id='Northeast',
+        created_at=dateutil.parser.isoparse('2022-12-27T10:33:09.160Z'),
+        end_at=dateutil.parser.isoparse('2021-11-12T23:57:19.974Z'),
+        external_event_xref='platforms',
+        id='<ID>',
+        job_id='payment panel Identity',
+        location='Northwest Buckinghamshire',
         raw=shared.PropertyAtsInterviewRaw(),
-        start_at=dateutil.parser.isoparse('2022-12-02T07:11:00.455Z'),
-        status=shared.AtsInterviewStatus.SCHEDULED,
-        updated_at=dateutil.parser.isoparse('2022-10-26T04:37:41.230Z'),
+        start_at=dateutil.parser.isoparse('2022-11-02T05:07:18.592Z'),
+        status=shared.AtsInterviewStatus.COMPLETE,
+        updated_at=dateutil.parser.isoparse('2023-07-13T16:35:04.177Z'),
         user_ids=[
-            'iste',
+            'Chevrolet',
         ],
     ),
-    connection_id='ex',
+    connection_id='Shoes Northeast SMTP',
 )
 
 res = s.ats.post_ats_connection_id_interview(req)
@@ -1183,50 +1183,50 @@ req = operations.PostAtsConnectionIDJobRequest(
     ats_job=shared.AtsJob(
         addresses=[
             shared.AtsAddress(
-                address1='nemo',
-                address2='soluta',
-                city='Legroschester',
-                country='Latvia',
-                country_code='BZ',
-                postal_code='14002',
-                region='neque',
-                region_code='exercitationem',
+                address1='Forward',
+                address2='Electric fuchsia kelvin',
+                city='Fort Sibylmouth',
+                country='Solomon Islands',
+                country_code='DO',
+                postal_code='39037',
+                region='Rockford',
+                region_code='Trafficway eaque athwart',
             ),
         ],
-        closed_at=dateutil.parser.isoparse('2022-09-26T08:50:09.615Z'),
+        closed_at=dateutil.parser.isoparse('2022-04-22T19:01:40.265Z'),
         compensation=[
             shared.AtsCompensation(
-                currency='ipsum',
-                frequency=shared.AtsCompensationFrequency.HOUR,
-                max=8583.38,
-                min=7143.76,
-                type=shared.AtsCompensationType.OTHER,
+                currency='Gourde',
+                frequency=shared.AtsCompensationFrequency.YEAR,
+                max=5349.62,
+                min=526.63,
+                type=shared.AtsCompensationType.EQUITY,
             ),
         ],
-        created_at=dateutil.parser.isoparse('2022-11-03T21:52:43.365Z'),
+        created_at=dateutil.parser.isoparse('2021-04-02T18:44:02.642Z'),
         departments=[
-            'nostrum',
+            'Polonium',
         ],
-        description='omnis',
-        employment_type=shared.AtsJobEmploymentType.SEASONAL,
+        description='Progressive disintermediate matrix',
+        employment_type=shared.AtsJobEmploymentType.INTERN,
         hiring_manager_ids=[
-            'dicta',
+            'itaque',
         ],
-        id='abda8c07-0e10-484c-b067-2d1ad879eeb9',
-        language_locale='ea',
-        name='Brittany Prosacco',
+        id='<ID>',
+        language_locale='the joyfully',
+        name='Other because harbor',
         public_job_urls=[
-            'officiis',
+            'coil',
         ],
         raw=shared.PropertyAtsJobRaw(),
         recruiter_ids=[
-            'voluptatibus',
+            'JSON',
         ],
         remote=False,
-        status=shared.AtsJobStatus.OPEN,
-        updated_at=dateutil.parser.isoparse('2022-12-26T08:34:47.406Z'),
+        status=shared.AtsJobStatus.ARCHIVED,
+        updated_at=dateutil.parser.isoparse('2022-05-24T04:21:24.567Z'),
     ),
-    connection_id='quia',
+    connection_id='Coordinator applications',
 )
 
 res = s.ats.post_ats_connection_id_job(req)
@@ -1266,18 +1266,18 @@ s = unified_to.UnifiedTo(
 
 req = operations.PostAtsConnectionIDScorecardRequest(
     ats_scorecard=shared.AtsScorecard(
-        application_id='quidem',
-        candidate_id='fuga',
-        created_at=dateutil.parser.isoparse('2022-11-24T16:37:12.153Z'),
-        id='be2d7822-59e3-4ea4-b519-7f92443da7ce',
-        interview_id='corporis',
-        interviewer_id='qui',
-        job_id='expedita',
+        application_id='female bah',
+        candidate_id='if since',
+        created_at=dateutil.parser.isoparse('2022-02-26T00:06:29.981Z'),
+        id='<ID>',
+        interview_id='invoice',
+        interviewer_id='male',
+        job_id='Accountability',
         raw=shared.PropertyAtsScorecardRaw(),
-        recommendation=shared.AtsScorecardRecommendation.YES,
-        updated_at=dateutil.parser.isoparse('2022-05-07T19:45:21.246Z'),
+        recommendation=shared.AtsScorecardRecommendation.STRONG_YES,
+        updated_at=dateutil.parser.isoparse('2023-10-04T17:15:51.015Z'),
     ),
-    connection_id='placeat',
+    connection_id='Legacy tan',
 )
 
 res = s.ats.post_ats_connection_id_scorecard(req)
@@ -1317,20 +1317,20 @@ s = unified_to.UnifiedTo(
 
 req = operations.PutAtsConnectionIDApplicationIDRequest(
     ats_application=shared.AtsApplication(
-        applied_at=dateutil.parser.isoparse('2022-10-18T12:19:42.762Z'),
-        candidate_id='in',
-        created_at=dateutil.parser.isoparse('2021-09-13T18:43:27.876Z'),
-        id='454efb0b-3489-46c3-8a5a-cfbe2fd57075',
-        job_id='in',
+        applied_at=dateutil.parser.isoparse('2022-06-15T22:25:51.833Z'),
+        candidate_id='farad Indianapolis',
+        created_at=dateutil.parser.isoparse('2022-04-01T21:03:58.880Z'),
+        id='<ID>',
+        job_id='enable foreground',
         raw=shared.PropertyAtsApplicationRaw(),
-        rejected_at=dateutil.parser.isoparse('2022-06-07T17:40:07.973Z'),
-        rejected_reason='dolores',
-        source='error',
-        status=shared.AtsApplicationStatus.REVIEWING,
-        updated_at=dateutil.parser.isoparse('2022-07-19T18:05:42.224Z'),
+        rejected_at=dateutil.parser.isoparse('2022-11-06T11:41:30.414Z'),
+        rejected_reason='virtual North plum',
+        source='Fort solid',
+        status=shared.AtsApplicationStatus.SUBMITTED,
+        updated_at=dateutil.parser.isoparse('2021-02-21T04:47:57.079Z'),
     ),
-    connection_id='pariatur',
-    id='eac646ec-b573-4409-a3eb-1e5a2b12eb07',
+    connection_id='Southeast',
+    id='<ID>',
 )
 
 res = s.ats.put_ats_connection_id_application_id(req)
@@ -1371,42 +1371,42 @@ s = unified_to.UnifiedTo(
 req = operations.PutAtsConnectionIDCandidateIDRequest(
     ats_candidate=shared.AtsCandidate(
         address=shared.PropertyAtsCandidateAddress(
-            address1='maiores',
-            address2='veritatis',
-            city='South Salmacester',
-            country='Mayotte',
-            country_code='MK',
-            postal_code='33975',
-            region='enim',
-            region_code='hic',
+            address1='archive',
+            address2='Specialist Kyat',
+            city='New Dennis',
+            country='Mauritius',
+            country_code='TL',
+            postal_code='49105-9909',
+            region='copy olive',
+            region_code='withdrawal cumque person',
         ),
-        company_name='animi',
-        created_at=dateutil.parser.isoparse('2021-12-19T08:26:48.749Z'),
+        company_name='Kuhn and Sons',
+        created_at=dateutil.parser.isoparse('2022-01-28T10:51:00.922Z'),
         emails=[
             shared.AtsEmail(
-                email='Jazmyne.Bechtelar55@yahoo.com',
+                email='Hester.Jenkins@gmail.com',
                 type=shared.AtsEmailType.HOME,
             ),
         ],
-        external_id='assumenda',
-        id='bb30fcb3-3ea0-455b-997c-d44e2f52d82d',
-        image_url='amet',
-        name='Virginia Flatley',
+        external_id='Loan EXE',
+        id='<ID>',
+        image_url='deliver executive RSS',
+        name='because aha black',
         raw=shared.PropertyAtsCandidateRaw(),
         tags=[
-            'nisi',
+            'program',
         ],
         telephones=[
             shared.AtsTelephone(
-                telephone='voluptatibus',
-                type=shared.AtsTelephoneType.HOME,
+                telephone='empower exit Pangender',
+                type=shared.AtsTelephoneType.MOBILE,
             ),
         ],
-        title='Ms.',
-        updated_at=dateutil.parser.isoparse('2022-03-20T12:36:58.674Z'),
+        title='Corporate anenst Electronic',
+        updated_at=dateutil.parser.isoparse('2022-03-30T08:00:53.284Z'),
     ),
-    connection_id='quis',
-    id='6bcdb35f-f2e4-4b27-937a-8cd9e7319c17',
+    connection_id='Flerovium azure',
+    id='<ID>',
 )
 
 res = s.ats.put_ats_connection_id_candidate_id(req)
@@ -1446,24 +1446,24 @@ s = unified_to.UnifiedTo(
 
 req = operations.PutAtsConnectionIDInterviewIDRequest(
     ats_interview=shared.AtsInterview(
-        application_id='esse',
-        candidate_id='fugiat',
-        created_at=dateutil.parser.isoparse('2022-11-12T18:59:18.362Z'),
-        end_at=dateutil.parser.isoparse('2022-01-13T17:49:01.077Z'),
-        external_event_xref='iusto',
-        id='7b114eeb-52ff-4785-bc37-814d4c98e0c2',
-        job_id='nam',
-        location='expedita',
+        application_id='Generic capacitor',
+        candidate_id='Road disbelieve',
+        created_at=dateutil.parser.isoparse('2022-06-22T01:57:06.573Z'),
+        end_at=dateutil.parser.isoparse('2022-05-28T02:29:32.144Z'),
+        external_event_xref='architectures',
+        id='<ID>',
+        job_id='Casper 1080p South',
+        location='program siemens Cis',
         raw=shared.PropertyAtsInterviewRaw(),
-        start_at=dateutil.parser.isoparse('2021-10-26T16:10:32.283Z'),
-        status=shared.AtsInterviewStatus.COMPLETE,
-        updated_at=dateutil.parser.isoparse('2022-01-06T13:49:40.637Z'),
+        start_at=dateutil.parser.isoparse('2021-03-14T15:20:41.084Z'),
+        status=shared.AtsInterviewStatus.AWAITING_FEEDBACK,
+        updated_at=dateutil.parser.isoparse('2023-07-14T19:59:39.905Z'),
         user_ids=[
-            'corporis',
+            'East',
         ],
     ),
-    connection_id='vero',
-    id='ad636c60-0503-4d8b-b311-80f739ae9e05',
+    connection_id='ASCII yet Hybrid',
+    id='<ID>',
 )
 
 res = s.ats.put_ats_connection_id_interview_id(req)
@@ -1505,51 +1505,51 @@ req = operations.PutAtsConnectionIDJobIDRequest(
     ats_job=shared.AtsJob(
         addresses=[
             shared.AtsAddress(
-                address1='molestiae',
-                address2='itaque',
-                city='Lockmanton',
-                country='Micronesia',
-                country_code='TK',
-                postal_code='51022',
-                region='sunt',
-                region_code='a',
+                address1='cotton Washington',
+                address2='rosin meanwhile male',
+                city='East Sierra',
+                country='Somalia',
+                country_code='BQ',
+                postal_code='63475-6123',
+                region='lighthearted online Bicycle',
+                region_code='robust',
             ),
         ],
-        closed_at=dateutil.parser.isoparse('2022-06-02T10:52:44.468Z'),
+        closed_at=dateutil.parser.isoparse('2021-05-06T11:53:52.940Z'),
         compensation=[
             shared.AtsCompensation(
-                currency='atque',
-                frequency=shared.AtsCompensationFrequency.ONE_TIME,
-                max=8682.55,
-                min=2875.44,
-                type=shared.AtsCompensationType.EQUITY,
+                currency='Iranian Rial',
+                frequency=shared.AtsCompensationFrequency.YEAR,
+                max=5965.42,
+                min=5273.81,
+                type=shared.AtsCompensationType.BONUS,
             ),
         ],
-        created_at=dateutil.parser.isoparse('2022-12-20T04:33:32.836Z'),
+        created_at=dateutil.parser.isoparse('2023-07-19T02:36:00.215Z'),
         departments=[
-            'perferendis',
+            'embrace',
         ],
-        description='rerum',
-        employment_type=shared.AtsJobEmploymentType.CONSULTANT,
+        description='Programmable tertiary benchmark',
+        employment_type=shared.AtsJobEmploymentType.CONTRACTOR,
         hiring_manager_ids=[
-            'aperiam',
+            'New',
         ],
-        id='7f3c93c7-3b9d-4a3f-aced-a7e23f225741',
-        language_locale='illo',
-        name='Doug Wintheiser',
+        id='<ID>',
+        language_locale='Facilitator Gasoline application',
+        name='North impractical',
         public_job_urls=[
-            'in',
+            'clamber',
         ],
         raw=shared.PropertyAtsJobRaw(),
         recruiter_ids=[
-            'exercitationem',
+            'West',
         ],
         remote=False,
-        status=shared.AtsJobStatus.PENDING,
-        updated_at=dateutil.parser.isoparse('2022-01-29T18:21:22.366Z'),
+        status=shared.AtsJobStatus.CLOSED,
+        updated_at=dateutil.parser.isoparse('2023-02-01T04:41:47.094Z'),
     ),
-    connection_id='modi',
-    id='72e80285-7a5b-4404-a3a7-d575f1400e76',
+    connection_id='North',
+    id='<ID>',
 )
 
 res = s.ats.put_ats_connection_id_job_id(req)
@@ -1589,19 +1589,19 @@ s = unified_to.UnifiedTo(
 
 req = operations.PutAtsConnectionIDScorecardIDRequest(
     ats_scorecard=shared.AtsScorecard(
-        application_id='numquam',
-        candidate_id='dolorum',
-        created_at=dateutil.parser.isoparse('2021-08-23T14:57:18.247Z'),
-        id='334ec1b7-81b3-46a0-8088-d100efada200',
-        interview_id='eveniet',
-        interviewer_id='hic',
-        job_id='voluptatem',
+        application_id='East Granite',
+        candidate_id='South',
+        created_at=dateutil.parser.isoparse('2022-03-02T12:33:41.490Z'),
+        id='<ID>',
+        interview_id='Texas Technetium hack',
+        interviewer_id='Adventure Kyrgyz Organic',
+        job_id='Home Dynamic Integration',
         raw=shared.PropertyAtsScorecardRaw(),
         recommendation=shared.AtsScorecardRecommendation.NO,
-        updated_at=dateutil.parser.isoparse('2022-10-25T03:32:12.534Z'),
+        updated_at=dateutil.parser.isoparse('2023-11-13T03:01:57.066Z'),
     ),
-    connection_id='necessitatibus',
-    id='b2164cf9-ab83-466c-b23f-fda9e06bee48',
+    connection_id='Transexual Manager Rap',
+    id='<ID>',
 )
 
 res = s.ats.put_ats_connection_id_scorecard_id(req)

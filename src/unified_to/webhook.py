@@ -19,7 +19,7 @@ class Webhook:
         url = utils.generate_url(operations.DeleteUnifiedWebhookIDRequest, base_url, '/unified/webhook/{id}', request)
         headers = {}
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -47,7 +47,7 @@ class Webhook:
         headers = {}
         query_params = utils.get_query_params(operations.GetUnifiedWebhookRequest, request)
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -75,7 +75,7 @@ class Webhook:
         url = utils.generate_url(operations.GetUnifiedWebhookIDRequest, base_url, '/unified/webhook/{id}', request)
         headers = {}
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -104,12 +104,12 @@ class Webhook:
         
         url = utils.generate_url(operations.PostUnifiedWebhookConnectionIDObjectRequest, base_url, '/unified/webhook/{connection_id}/{object}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "webhook", 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "webhook", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         query_params = utils.get_query_params(operations.PostUnifiedWebhookConnectionIDObjectRequest, request)
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         

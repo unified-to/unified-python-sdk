@@ -5,6 +5,6 @@
 
 | Field                | Type                 | Required             | Description          |
 | -------------------- | -------------------- | -------------------- | -------------------- |
-| `connection_id`      | *str*                | :heavy_check_mark:   | ID of the connection |
-| `contact_id`         | *str*                | :heavy_check_mark:   | ID of the contact    |
-| `id`                 | *str*                | :heavy_check_mark:   | ID of the Event      |
+| `connection_id`      | *Optional[str]*      | :heavy_check_mark:   | ID of the connection |
+| `contact_id`         | *Optional[str]*      | :heavy_check_mark:   | ID of the contact    |
+| `id`                 | *Optional[str]*      | :heavy_check_mark:   | ID of the Event      |

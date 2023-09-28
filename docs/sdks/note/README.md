@@ -27,9 +27,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.DeleteTicketingConnectionIDNoteTicketIDIDRequest(
-    connection_id='recusandae',
-    id='9085075b-c253-4825-b343-fb0a4e66ea47',
-    ticket_id='exercitationem',
+    connection_id='DRAM Liaison',
+    id='<ID>',
+    ticket_id='Tasty exploit',
 )
 
 res = s.note.delete_ticketing_connection_id_note_ticket_id_id(req)
@@ -68,14 +68,14 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetTicketingConnectionIDNoteTicketIDRequest(
-    connection_id='molestiae',
-    limit=5096.38,
-    offset=8540.88,
-    order='ab',
-    query='voluptate',
-    sort='et',
-    ticket_id='recusandae',
-    updated_gte=dateutil.parser.isoparse('2022-05-19T12:21:22.703Z'),
+    connection_id='Account revolutionary',
+    limit=2310.88,
+    offset=6688.82,
+    order='AI',
+    query='stanch Investor attitude',
+    sort='Cotton',
+    ticket_id='Handmade Kia',
+    updated_gte=dateutil.parser.isoparse('2022-05-26T17:12:11.333Z'),
 )
 
 res = s.note.get_ticketing_connection_id_note_ticket_id(req)
@@ -113,9 +113,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetTicketingConnectionIDNoteTicketIDIDRequest(
-    connection_id='eius',
-    id='1818fc67-9b6b-42f2-9359-b855d015b62c',
-    ticket_id='quos',
+    connection_id='for',
+    id='<ID>',
+    ticket_id='female',
 )
 
 res = s.note.get_ticketing_connection_id_note_ticket_id_id(req)
@@ -155,17 +155,17 @@ s = unified_to.UnifiedTo(
 
 req = operations.PatchTicketingConnectionIDNoteTicketIDIDRequest(
     ticketing_note=shared.TicketingNote(
-        agent_id='cum',
-        created_at=dateutil.parser.isoparse('2022-07-23T08:55:47.914Z'),
-        customer_id='dolorum',
-        description='amet',
-        id='8a8a88c1-4420-40c2-8aeb-1ae1ecf8c349',
+        agent_id='compress Oganesson',
+        created_at=dateutil.parser.isoparse('2022-02-16T08:13:19.991Z'),
+        customer_id='demystify',
+        description='Fundamental demand-driven workforce',
+        id='<ID>',
         raw=shared.PropertyTicketingNoteRaw(),
-        updated_at='modi',
+        updated_at='Nissan',
     ),
-    connection_id='commodi',
-    id='bba7a05a-8b4a-49ec-9b36-88cca3632727',
-    ticket_id='iure',
+    connection_id='Chicken',
+    id='<ID>',
+    ticket_id='frictionless convergence officia',
 )
 
 res = s.note.patch_ticketing_connection_id_note_ticket_id_id(req)
@@ -205,16 +205,16 @@ s = unified_to.UnifiedTo(
 
 req = operations.PostTicketingConnectionIDNoteTicketIDRequest(
     ticketing_note=shared.TicketingNote(
-        agent_id='sit',
-        created_at=dateutil.parser.isoparse('2021-04-03T18:27:00.342Z'),
-        customer_id='vel',
-        description='autem',
-        id='e97e0541-0334-47d7-8ff2-491145fab9e5',
+        agent_id='Plantation blue',
+        created_at=dateutil.parser.isoparse('2021-06-11T06:54:31.529Z'),
+        customer_id='asymmetric',
+        description='Expanded intermediate attitude',
+        id='<ID>',
         raw=shared.PropertyTicketingNoteRaw(),
-        updated_at='perspiciatis',
+        updated_at='naturally',
     ),
-    connection_id='laborum',
-    ticket_id='incidunt',
+    connection_id='Wagon Sulfur',
+    ticket_id='digital',
 )
 
 res = s.note.post_ticketing_connection_id_note_ticket_id(req)
@@ -254,17 +254,17 @@ s = unified_to.UnifiedTo(
 
 req = operations.PutTicketingConnectionIDNoteTicketIDIDRequest(
     ticketing_note=shared.TicketingNote(
-        agent_id='fuga',
-        created_at=dateutil.parser.isoparse('2022-05-09T22:54:29.590Z'),
-        customer_id='amet',
-        description='nisi',
-        id='664eaa6b-f2ff-414e-8c1b-352accedacc5',
+        agent_id='SMTP Cis',
+        created_at=dateutil.parser.isoparse('2022-07-27T18:14:06.584Z'),
+        customer_id='Carolina',
+        description='Integrated asymmetric strategy',
+        id='<ID>',
         raw=shared.PropertyTicketingNoteRaw(),
-        updated_at='consequuntur',
+        updated_at='Northeast Morocco supposing',
     ),
-    connection_id='qui',
-    id='7814eca0-16bc-441e-a134-2d4104a25ef7',
-    ticket_id='quasi',
+    connection_id='DNS Fermium',
+    id='<ID>',
+    ticket_id='Southwest round',
 )
 
 res = s.note.put_ticketing_connection_id_note_ticket_id_id(req)

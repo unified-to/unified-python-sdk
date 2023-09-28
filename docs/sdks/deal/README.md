@@ -27,8 +27,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.DeleteCrmConnectionIDDealIDRequest(
-    connection_id='ducimus',
-    id='ed565076-21c5-48f4-9739-6564c20a0711',
+    connection_id='Fresh',
+    id='<ID>',
 )
 
 res = s.deal.delete_crm_connection_id_deal_id(req)
@@ -67,15 +67,15 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetCrmConnectionIDDealRequest(
-    company_id='similique',
-    connection_id='omnis',
-    contact_id='commodi',
-    limit=1166.35,
-    offset=8489.26,
-    order='aspernatur',
-    query='ut',
-    sort='deserunt',
-    updated_gte=dateutil.parser.isoparse('2022-02-20T22:48:15.284Z'),
+    company_id='Tools Card copying',
+    connection_id='Renminbi',
+    contact_id='till payment World',
+    limit=8656.16,
+    offset=4455.8,
+    order='global',
+    query='Program Bespoke Wisconsin',
+    sort='Netherlands under',
+    updated_gte=dateutil.parser.isoparse('2022-12-23T01:47:21.816Z'),
 )
 
 res = s.deal.get_crm_connection_id_deal(req)
@@ -113,8 +113,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetCrmConnectionIDDealIDRequest(
-    connection_id='facilis',
-    id='b8f532d8-92cf-4781-acb5-12c878240bf5',
+    connection_id='Concrete Director',
+    id='<ID>',
 )
 
 res = s.deal.get_crm_connection_id_deal_id(req)
@@ -154,26 +154,26 @@ s = unified_to.UnifiedTo(
 
 req = operations.PatchCrmConnectionIDDealIDRequest(
     crm_deal=shared.CrmDeal(
-        amount=2743.68,
-        closed_at=dateutil.parser.isoparse('2021-02-04T20:36:14.764Z'),
-        created_at=dateutil.parser.isoparse('2021-12-30T15:49:38.515Z'),
-        currency='hic',
-        id='8f1bf0bc-8e1f-4206-95d8-31d0081090f6',
-        lost_reason='nihil',
-        name='Loretta Howe',
-        pipeline='doloribus',
-        probability=1877.7,
+        amount=7725.78,
+        closed_at=dateutil.parser.isoparse('2021-10-28T08:42:49.591Z'),
+        created_at=dateutil.parser.isoparse('2023-04-23T15:03:53.999Z'),
+        currency='Afghani',
+        id='<ID>',
+        lost_reason='North',
+        name='midnight',
+        pipeline='envisioneer Functionality Loan',
+        probability=7051.73,
         raw=shared.PropertyCrmDealRaw(),
-        source='id',
-        stage='ex',
+        source='Krone',
+        stage='pascal aliquam gripping',
         tags=[
-            'quos',
+            'where',
         ],
-        updated_at=dateutil.parser.isoparse('2022-03-17T20:43:59.276Z'),
-        won_reason='exercitationem',
+        updated_at=dateutil.parser.isoparse('2022-04-05T10:21:22.505Z'),
+        won_reason='Savings kilogram',
     ),
-    connection_id='molestiae',
-    id='68dce742-409a-4215-a086-01489a5f63e3',
+    connection_id='Chair weber silver',
+    id='<ID>',
 )
 
 res = s.deal.patch_crm_connection_id_deal_id(req)
@@ -213,25 +213,25 @@ s = unified_to.UnifiedTo(
 
 req = operations.PostCrmConnectionIDDealRequest(
     crm_deal=shared.CrmDeal(
-        amount=6489.85,
-        closed_at=dateutil.parser.isoparse('2022-04-04T11:17:39.742Z'),
-        created_at=dateutil.parser.isoparse('2020-05-19T07:26:52.477Z'),
-        currency='natus',
-        id='dda33dcd-6348-43e4-a7a9-8e4df37e45b8',
-        lost_reason='omnis',
-        name='Bernice Schultz I',
-        pipeline='recusandae',
-        probability=784.86,
+        amount=6144.41,
+        closed_at=dateutil.parser.isoparse('2022-07-10T09:55:59.977Z'),
+        created_at=dateutil.parser.isoparse('2022-01-20T07:28:03.436Z'),
+        currency='Convertible Marks',
+        id='<ID>',
+        lost_reason='pfft female',
+        name='Expressway',
+        pipeline='withdrawal Extended busily',
+        probability=7998.22,
         raw=shared.PropertyCrmDealRaw(),
-        source='ipsum',
-        stage='error',
+        source='spiffy sometimes',
+        stage='transmitter',
         tags=[
-            'numquam',
+            'intermediate',
         ],
-        updated_at=dateutil.parser.isoparse('2022-08-25T17:34:42.796Z'),
-        won_reason='consectetur',
+        updated_at=dateutil.parser.isoparse('2022-10-06T18:34:11.762Z'),
+        won_reason='Cisgender input HTTP',
     ),
-    connection_id='dicta',
+    connection_id='accusantium Checking',
 )
 
 res = s.deal.post_crm_connection_id_deal(req)
@@ -271,26 +271,26 @@ s = unified_to.UnifiedTo(
 
 req = operations.PutCrmConnectionIDDealIDRequest(
     crm_deal=shared.CrmDeal(
-        amount=551.24,
-        closed_at=dateutil.parser.isoparse('2022-12-18T04:51:10.637Z'),
-        created_at=dateutil.parser.isoparse('2022-04-06T10:46:32.109Z'),
-        currency='facere',
-        id='354c092b-d734-4f02-849d-86f4bb20fe5d',
-        lost_reason='provident',
-        name='Ashley Schmeler',
-        pipeline='itaque',
-        probability=4920.7,
+        amount=4050.98,
+        closed_at=dateutil.parser.isoparse('2022-01-15T04:05:31.641Z'),
+        created_at=dateutil.parser.isoparse('2023-06-04T01:28:32.466Z'),
+        currency='Bermudian Dollar (customarily known as Bermuda Dollar)',
+        id='<ID>',
+        lost_reason='laudantium Southwest',
+        name='wail Developer',
+        pipeline='male Samarium Gourde',
+        probability=6728.74,
         raw=shared.PropertyCrmDealRaw(),
-        source='magnam',
-        stage='excepturi',
+        source='Stage Gasoline Metal',
+        stage='Corporate withdrawal Tasty',
         tags=[
-            'placeat',
+            'extranet',
         ],
-        updated_at=dateutil.parser.isoparse('2021-01-19T07:13:22.442Z'),
-        won_reason='modi',
+        updated_at=dateutil.parser.isoparse('2021-10-16T22:38:02.052Z'),
+        won_reason='phooey',
     ),
-    connection_id='enim',
-    id='a27f69e2-c9e6-4d10-a9db-3ad4c6b03108',
+    connection_id='Jazz',
+    id='<ID>',
 )
 
 res = s.deal.put_crm_connection_id_deal_id(req)

@@ -27,9 +27,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.DeleteMartechConnectionIDListIDMemberIDRequest(
-    connection_id='alias',
-    id='d2743fd6-c2a1-40e6-8297-8ec256a5b092',
-    list_id='magni',
+    connection_id='Southwest fib',
+    id='<ID>',
+    list_id='pascal',
 )
 
 res = s.member.delete_martech_connection_id_list_id_member_id(req)
@@ -68,14 +68,14 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetMartechConnectionIDListIDMemberRequest(
-    connection_id='iure',
-    limit=9859.05,
-    list_id='quod',
-    offset=8111.96,
-    order='numquam',
-    query='dignissimos',
-    sort='natus',
-    updated_gte=dateutil.parser.isoparse('2022-03-19T03:29:08.234Z'),
+    connection_id='fuchsia economics',
+    limit=3725.92,
+    list_id='Southwest',
+    offset=1114.27,
+    order='emulation',
+    query='male male',
+    sort='Arizona Oklahoma Land',
+    updated_gte=dateutil.parser.isoparse('2021-03-19T13:12:48.332Z'),
 )
 
 res = s.member.get_martech_connection_id_list_id_member(req)
@@ -113,9 +113,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetMartechConnectionIDListIDMemberIDRequest(
-    connection_id='optio',
-    id='977bbc57-f389-428a-8600-c58d67d63e4a',
-    list_id='officia',
+    connection_id='male',
+    id='<ID>',
+    list_id='Gasoline Home allot',
 )
 
 res = s.member.get_martech_connection_id_list_id_member_id(req)
@@ -155,27 +155,27 @@ s = unified_to.UnifiedTo(
 
 req = operations.PatchMartechConnectionIDListIDMemberIDRequest(
     marketing_member=shared.MarketingMember(
-        created_at=dateutil.parser.isoparse('2022-08-11T15:05:29.161Z'),
+        created_at=dateutil.parser.isoparse('2022-06-21T07:15:04.418Z'),
         emails=[
             shared.MarketingEmail(
-                email='Ella32@yahoo.com',
+                email='Zula_Bogan76@hotmail.com',
                 type=shared.MarketingEmailType.HOME,
             ),
         ],
-        id='9cfc6c0e-503f-4568-b1f1-d8ed87b28e8a',
+        id='<ID>',
         list_ids=[
-            'a',
+            'gadzooks',
         ],
-        name='Felipe Schmeler',
+        name='Haven Hatchback',
         raw=shared.PropertyMarketingMemberRaw(),
         tags=[
-            'nisi',
+            'mutiny',
         ],
-        updated_at=dateutil.parser.isoparse('2022-07-05T01:28:10.122Z'),
+        updated_at=dateutil.parser.isoparse('2021-08-13T23:04:27.910Z'),
     ),
-    connection_id='aliquam',
-    id='1e43b234-2417-4d13-a3f6-2aa9ae4ae8ab',
-    list_id='numquam',
+    connection_id='female',
+    id='<ID>',
+    list_id='yellow overriding Rock',
 )
 
 res = s.member.patch_martech_connection_id_list_id_member_id(req)
@@ -215,26 +215,26 @@ s = unified_to.UnifiedTo(
 
 req = operations.PostMartechConnectionIDListIDMemberRequest(
     marketing_member=shared.MarketingMember(
-        created_at=dateutil.parser.isoparse('2021-10-26T01:34:29.397Z'),
+        created_at=dateutil.parser.isoparse('2022-12-27T02:49:51.488Z'),
         emails=[
             shared.MarketingEmail(
-                email='Elena80@hotmail.com',
-                type=shared.MarketingEmailType.HOME,
+                email='Esta.Dach@hotmail.com',
+                type=shared.MarketingEmailType.OTHER,
             ),
         ],
-        id='e8ba5d4a-a4a5-408b-9380-c29aa8dd71bd',
+        id='<ID>',
         list_ids=[
-            'repellendus',
+            'virtual',
         ],
-        name='Miss Hubert Emard',
+        name='dolorum Wooden Granite',
         raw=shared.PropertyMarketingMemberRaw(),
         tags=[
-            'cum',
+            'Road',
         ],
-        updated_at=dateutil.parser.isoparse('2022-10-14T03:48:43.146Z'),
+        updated_at=dateutil.parser.isoparse('2021-06-09T19:47:01.060Z'),
     ),
-    connection_id='labore',
-    list_id='modi',
+    connection_id='Pennsylvania leverage sheath',
+    list_id='parse exercitationem',
 )
 
 res = s.member.post_martech_connection_id_list_id_member(req)
@@ -274,27 +274,27 @@ s = unified_to.UnifiedTo(
 
 req = operations.PutMartechConnectionIDListIDMemberIDRequest(
     marketing_member=shared.MarketingMember(
-        created_at=dateutil.parser.isoparse('2021-09-21T15:05:12.667Z'),
+        created_at=dateutil.parser.isoparse('2023-09-24T05:00:50.743Z'),
         emails=[
             shared.MarketingEmail(
-                email='Geoffrey.Mitchell53@hotmail.com',
+                email='Lorenz_Kautzer@hotmail.com',
                 type=shared.MarketingEmailType.HOME,
             ),
         ],
-        id='d418bb71-804f-4423-9543-935f377ac5c9',
+        id='<ID>',
         list_ids=[
-            'nam',
+            'SMS',
         ],
-        name='Gretchen Moore',
+        name='East platforms',
         raw=shared.PropertyMarketingMemberRaw(),
         tags=[
-            'suscipit',
+            'Estonia',
         ],
-        updated_at=dateutil.parser.isoparse('2022-08-12T05:09:42.944Z'),
+        updated_at=dateutil.parser.isoparse('2023-01-20T05:09:32.775Z'),
     ),
-    connection_id='optio',
-    id='523105e7-c34c-4ab0-acb8-12a66148944a',
-    list_id='voluptatum',
+    connection_id='following quia Intelligent',
+    id='<ID>',
+    list_id='Cab',
 )
 
 res = s.member.put_martech_connection_id_list_id_member_id(req)

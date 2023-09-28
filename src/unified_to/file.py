@@ -19,7 +19,7 @@ class File:
         url = utils.generate_url(operations.DeleteCrmConnectionIDFileIDRequest, base_url, '/crm/{connection_id}/file/{id}', request)
         headers = {}
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -47,7 +47,7 @@ class File:
         headers = {}
         query_params = utils.get_query_params(operations.GetCrmConnectionIDFileRequest, request)
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -75,7 +75,7 @@ class File:
         url = utils.generate_url(operations.GetCrmConnectionIDFileIDRequest, base_url, '/crm/{connection_id}/file/{id}', request)
         headers = {}
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -102,11 +102,11 @@ class File:
         
         url = utils.generate_url(operations.PatchCrmConnectionIDFileIDRequest, base_url, '/crm/{connection_id}/file/{id}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "crm_file", 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "crm_file", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -133,11 +133,11 @@ class File:
         
         url = utils.generate_url(operations.PostCrmConnectionIDFileRequest, base_url, '/crm/{connection_id}/file', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "crm_file", 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "crm_file", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -164,11 +164,11 @@ class File:
         
         url = utils.generate_url(operations.PutCrmConnectionIDFileIDRequest, base_url, '/crm/{connection_id}/file/{id}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "crm_file", 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "crm_file", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         

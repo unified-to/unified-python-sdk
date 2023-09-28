@@ -19,7 +19,7 @@ class Agent:
         url = utils.generate_url(operations.DeleteTicketingConnectionIDAgentIDRequest, base_url, '/ticketing/{connection_id}/agent/{id}', request)
         headers = {}
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -47,7 +47,7 @@ class Agent:
         headers = {}
         query_params = utils.get_query_params(operations.GetTicketingConnectionIDAgentRequest, request)
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -75,7 +75,7 @@ class Agent:
         url = utils.generate_url(operations.GetTicketingConnectionIDAgentIDRequest, base_url, '/ticketing/{connection_id}/agent/{id}', request)
         headers = {}
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -104,7 +104,7 @@ class Agent:
         headers = {}
         query_params = utils.get_query_params(operations.GetUcConnectionIDAgentRequest, request)
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -131,11 +131,11 @@ class Agent:
         
         url = utils.generate_url(operations.PatchTicketingConnectionIDAgentIDRequest, base_url, '/ticketing/{connection_id}/agent/{id}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "ticketing_agent", 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "ticketing_agent", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -162,11 +162,11 @@ class Agent:
         
         url = utils.generate_url(operations.PostTicketingConnectionIDAgentRequest, base_url, '/ticketing/{connection_id}/agent', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "ticketing_agent", 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "ticketing_agent", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -193,11 +193,11 @@ class Agent:
         
         url = utils.generate_url(operations.PutTicketingConnectionIDAgentIDRequest, base_url, '/ticketing/{connection_id}/agent/{id}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "ticketing_agent", 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "ticketing_agent", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         

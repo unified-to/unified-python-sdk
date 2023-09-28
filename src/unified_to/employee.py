@@ -19,7 +19,7 @@ class Employee:
         url = utils.generate_url(operations.DeleteHrisConnectionIDEmployeeIDRequest, base_url, '/hris/{connection_id}/employee/{id}', request)
         headers = {}
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -47,7 +47,7 @@ class Employee:
         headers = {}
         query_params = utils.get_query_params(operations.GetHrisConnectionIDEmployeeRequest, request)
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -75,7 +75,7 @@ class Employee:
         url = utils.generate_url(operations.GetHrisConnectionIDEmployeeIDRequest, base_url, '/hris/{connection_id}/employee/{id}', request)
         headers = {}
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -102,11 +102,11 @@ class Employee:
         
         url = utils.generate_url(operations.PatchHrisConnectionIDEmployeeIDRequest, base_url, '/hris/{connection_id}/employee/{id}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "hris_employee", 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "hris_employee", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -133,11 +133,11 @@ class Employee:
         
         url = utils.generate_url(operations.PostHrisConnectionIDEmployeeRequest, base_url, '/hris/{connection_id}/employee', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "hris_employee", 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "hris_employee", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -164,11 +164,11 @@ class Employee:
         
         url = utils.generate_url(operations.PutHrisConnectionIDEmployeeIDRequest, base_url, '/hris/{connection_id}/employee/{id}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "hris_employee", 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "hris_employee", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         

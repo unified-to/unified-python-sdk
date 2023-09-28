@@ -23,19 +23,19 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetUnifiedIntegrationAuthWorkspaceIDIntegrationTypeRequest(
-    env='quia',
-    external_xref='ullam',
-    failure_redirect='quisquam',
-    integration_type='dicta',
-    lang='voluptatibus',
+    env='Algerian',
+    external_xref='Cambridgeshire Surinam',
+    failure_redirect='Designer Drive',
+    integration_type='program Home',
+    lang='Plastic program',
     redirect=False,
     scopes=[
-        operations.GetUnifiedIntegrationAuthWorkspaceIDIntegrationTypeScopes.TICKETING_NOTE_WRITE,
+        operations.GetUnifiedIntegrationAuthWorkspaceIDIntegrationTypeScopes.CRM_FILE_READ,
     ],
-    state='quae',
-    subdomain='officiis',
-    success_redirect='architecto',
-    workspace_id='architecto',
+    state='Functionality Product',
+    subdomain='payment Developer Dynamic',
+    success_redirect='Northeast',
+    workspace_id='duh empower Kwanza',
 )
 
 res = s.auth.get_unified_integration_auth_workspace_id_integration_type(req)
@@ -73,13 +73,13 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetUnifiedIntegrationLoginWorkspaceIDIntegrationTypeRequest(
-    env='enim',
-    failure_redirect='optio',
-    integration_type='rem',
+    env='Rubber',
+    failure_redirect='gold Cambridgeshire',
+    integration_type='Plastic services pixel',
     redirect=False,
-    state='perferendis',
-    success_redirect='facilis',
-    workspace_id='reiciendis',
+    state='Volkswagen Southwest',
+    success_redirect='drive integrated Bicycle',
+    workspace_id='Fantastic recontextualize Frozen',
 )
 
 res = s.auth.get_unified_integration_login_workspace_id_integration_type(req)

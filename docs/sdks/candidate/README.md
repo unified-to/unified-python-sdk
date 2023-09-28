@@ -27,8 +27,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.DeleteAtsConnectionIDCandidateIDRequest(
-    connection_id='consequuntur',
-    id='defcce8f-1977-4773-a635-62a7b408f05e',
+    connection_id='multimedia',
+    id='<ID>',
 )
 
 res = s.candidate.delete_ats_connection_id_candidate_id(req)
@@ -67,13 +67,13 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetAtsConnectionIDCandidateRequest(
-    connection_id='neque',
-    limit=8163.65,
-    offset=3071.73,
-    order='quos',
-    query='doloribus',
-    sort='fugiat',
-    updated_gte=dateutil.parser.isoparse('2021-01-28T10:50:17.967Z'),
+    connection_id='Northwest forceful Moore',
+    limit=2623.89,
+    offset=7811.91,
+    order='Mouse whether deploy',
+    query='pink',
+    sort='huzzah thistle',
+    updated_gte=dateutil.parser.isoparse('2022-03-13T15:14:03.645Z'),
 )
 
 res = s.candidate.get_ats_connection_id_candidate(req)
@@ -111,8 +111,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetAtsConnectionIDCandidateIDRequest(
-    connection_id='velit',
-    id='13a1f5fd-9425-49c0-b36f-25ea944f3b75',
+    connection_id='ha Loan',
+    id='<ID>',
 )
 
 res = s.candidate.get_ats_connection_id_candidate_id(req)
@@ -153,42 +153,42 @@ s = unified_to.UnifiedTo(
 req = operations.PatchAtsConnectionIDCandidateIDRequest(
     ats_candidate=shared.AtsCandidate(
         address=shared.PropertyAtsCandidateAddress(
-            address1='ex',
-            address2='minus',
-            city='North Tylerview',
-            country='Senegal',
-            country_code='CZ',
-            postal_code='63113',
-            region='magni',
-            region_code='incidunt',
+            address1='closely Goyette plus',
+            address2='culpa',
+            city='Darrinshire',
+            country='Mongolia',
+            country_code='GW',
+            postal_code='05275',
+            region='TLS calculating',
+            region_code='up Argon Internal',
         ),
-        company_name='adipisci',
-        created_at=dateutil.parser.isoparse('2022-07-24T00:20:38.347Z'),
+        company_name='Fadel, Schulist and Koss',
+        created_at=dateutil.parser.isoparse('2022-12-09T07:16:54.728Z'),
         emails=[
             shared.AtsEmail(
-                email='Melyna.Quigley36@yahoo.com',
-                type=shared.AtsEmailType.HOME,
+                email='Gregory63@gmail.com',
+                type=shared.AtsEmailType.OTHER,
             ),
         ],
-        external_id='consequuntur',
-        id='3a45cefc-5fde-410a-8ce2-169e510019c6',
-        image_url='quibusdam',
-        name='Corey Walker',
+        external_id='Elegant',
+        id='<ID>',
+        image_url='Tricycle Yttrium Hybrid',
+        name='ornery whether',
         raw=shared.PropertyAtsCandidateRaw(),
         tags=[
-            'dignissimos',
+            'Cadillac',
         ],
         telephones=[
             shared.AtsTelephone(
-                telephone='laboriosam',
-                type=shared.AtsTelephoneType.WORK,
+                telephone='Marketing Cotton',
+                type=shared.AtsTelephoneType.HOME,
             ),
         ],
-        title='Ms.',
-        updated_at=dateutil.parser.isoparse('2021-10-28T15:35:10.950Z'),
+        title='East',
+        updated_at=dateutil.parser.isoparse('2023-10-31T11:53:36.953Z'),
     ),
-    connection_id='cum',
-    id='fbbe6949-fb2b-4b4e-8ae6-c3d5db3adebd',
+    connection_id='redundant Tricycle unloose',
+    id='<ID>',
 )
 
 res = s.candidate.patch_ats_connection_id_candidate_id(req)
@@ -229,41 +229,41 @@ s = unified_to.UnifiedTo(
 req = operations.PostAtsConnectionIDCandidateRequest(
     ats_candidate=shared.AtsCandidate(
         address=shared.PropertyAtsCandidateAddress(
-            address1='ad',
-            address2='facere',
-            city='Veumchester',
-            country='Faroe Islands',
-            country_code='SI',
-            postal_code='03656',
-            region='est',
-            region_code='occaecati',
+            address1='incubate',
+            address2='azure Trans',
+            city='Port Rory',
+            country='El Salvador',
+            country_code='CX',
+            postal_code='54222-0235',
+            region='modi fooey',
+            region_code='Metal TCP incidunt',
         ),
-        company_name='labore',
-        created_at=dateutil.parser.isoparse('2022-12-10T16:31:33.706Z'),
+        company_name='McCullough, Rosenbaum and Daugherty',
+        created_at=dateutil.parser.isoparse('2023-02-07T05:55:59.357Z'),
         emails=[
             shared.AtsEmail(
-                email='Green75@gmail.com',
-                type=shared.AtsEmailType.OTHER,
+                email='Eleanora.Rogahn44@hotmail.com',
+                type=shared.AtsEmailType.HOME,
             ),
         ],
-        external_id='nostrum',
-        id='e9d9a457-8adc-41ac-a00d-ec001ac802e2',
-        image_url='necessitatibus',
-        name='Jose Mante',
+        external_id='South though',
+        id='<ID>',
+        image_url='Pants',
+        name='Raleigh',
         raw=shared.PropertyAtsCandidateRaw(),
         tags=[
-            'laudantium',
+            'morph',
         ],
         telephones=[
             shared.AtsTelephone(
-                telephone='maiores',
-                type=shared.AtsTelephoneType.WORK,
+                telephone='lavender Sedan Folk',
+                type=shared.AtsTelephoneType.OTHER,
             ),
         ],
-        title='Dr.',
-        updated_at=dateutil.parser.isoparse('2022-10-06T09:51:21.294Z'),
+        title='Savings panel',
+        updated_at=dateutil.parser.isoparse('2022-02-09T15:32:35.578Z'),
     ),
-    connection_id='suscipit',
+    connection_id='Ngultrum red glean',
 )
 
 res = s.candidate.post_ats_connection_id_candidate(req)
@@ -304,42 +304,42 @@ s = unified_to.UnifiedTo(
 req = operations.PutAtsConnectionIDCandidateIDRequest(
     ats_candidate=shared.AtsCandidate(
         address=shared.PropertyAtsCandidateAddress(
-            address1='earum',
-            address2='doloribus',
-            city='West Jade',
-            country='Jersey',
-            country_code='RO',
-            postal_code='28501',
-            region='impedit',
-            region_code='beatae',
+            address1='archive',
+            address2='Specialist Kyat',
+            city='New Dennis',
+            country='Mauritius',
+            country_code='TL',
+            postal_code='49105-9909',
+            region='copy olive',
+            region_code='withdrawal cumque person',
         ),
-        company_name='incidunt',
-        created_at=dateutil.parser.isoparse('2022-11-11T05:11:31.731Z'),
+        company_name='Kuhn and Sons',
+        created_at=dateutil.parser.isoparse('2022-01-28T10:51:00.922Z'),
         emails=[
             shared.AtsEmail(
-                email='Maybell.Abshire@yahoo.com',
-                type=shared.AtsEmailType.WORK,
+                email='Hester.Jenkins@gmail.com',
+                type=shared.AtsEmailType.HOME,
             ),
         ],
-        external_id='id',
-        id='668151a4-72af-4923-8594-9f83f350cf87',
-        image_url='aliquid',
-        name='Tommie Rohan Sr.',
+        external_id='Loan EXE',
+        id='<ID>',
+        image_url='deliver executive RSS',
+        name='because aha black',
         raw=shared.PropertyAtsCandidateRaw(),
         tags=[
-            'minus',
+            'program',
         ],
         telephones=[
             shared.AtsTelephone(
-                telephone='commodi',
+                telephone='empower exit Pangender',
                 type=shared.AtsTelephoneType.MOBILE,
             ),
         ],
-        title='Miss',
-        updated_at=dateutil.parser.isoparse('2021-08-12T13:33:07.290Z'),
+        title='Corporate anenst Electronic',
+        updated_at=dateutil.parser.isoparse('2022-03-30T08:00:53.284Z'),
     ),
-    connection_id='modi',
-    id='e243cf78-9ffa-4fed-a53e-5ae6e0ac184c',
+    connection_id='Flerovium azure',
+    id='<ID>',
 )
 
 res = s.candidate.put_ats_connection_id_candidate_id(req)

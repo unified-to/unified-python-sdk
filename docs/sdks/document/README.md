@@ -27,8 +27,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.DeleteAtsConnectionIDScorecardIDRequest(
-    connection_id='facere',
-    id='9c337473-082b-494f-aab1-fd5671e9c326',
+    connection_id='Agent intrepid',
+    id='<ID>',
 )
 
 res = s.document.delete_ats_connection_id_scorecard_id(req)
@@ -67,16 +67,16 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetAtsConnectionIDScorecardRequest(
-    application_id='neque',
-    candidate_id='enim',
-    connection_id='eaque',
-    interview_id='officia',
-    limit=2702.53,
-    offset=4310.35,
-    order='molestiae',
-    query='architecto',
-    sort='aliquam',
-    updated_gte=dateutil.parser.isoparse('2022-07-12T22:54:11.511Z'),
+    application_id='Licensed deep',
+    candidate_id='happily',
+    connection_id='lunch accusamus',
+    interview_id='for famously Southwest',
+    limit=950.05,
+    offset=6133.23,
+    order='withdrawal',
+    query='Bicycle copy Bronze',
+    sort='ouch non ut',
+    updated_gte=dateutil.parser.isoparse('2021-06-01T09:53:52.927Z'),
 )
 
 res = s.document.get_ats_connection_id_scorecard(req)
@@ -114,8 +114,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetAtsConnectionIDScorecardIDRequest(
-    connection_id='blanditiis',
-    id='9ce0e991-594d-493a-b4c0-252fe3b4b4db',
+    connection_id='East mobile Mini',
+    id='<ID>',
 )
 
 res = s.document.get_ats_connection_id_scorecard_id(req)
@@ -155,19 +155,19 @@ s = unified_to.UnifiedTo(
 
 req = operations.PatchAtsConnectionIDScorecardIDRequest(
     ats_scorecard=shared.AtsScorecard(
-        application_id='atque',
-        candidate_id='tempore',
-        created_at=dateutil.parser.isoparse('2022-07-22T19:46:16.313Z'),
-        id='8ebb6e1d-2cf5-402b-afb2-cbc4635d5e65',
-        interview_id='at',
-        interviewer_id='culpa',
-        job_id='alias',
+        application_id='Carter Hatchback functionalities',
+        candidate_id='disagree gold New',
+        created_at=dateutil.parser.isoparse('2023-05-08T15:11:07.692Z'),
+        id='<ID>',
+        interview_id='blue',
+        interviewer_id='North Buckinghamshire blur',
+        job_id='kelvin hack Fantastic',
         raw=shared.PropertyAtsScorecardRaw(),
         recommendation=shared.AtsScorecardRecommendation.DEFINITELY_NO,
-        updated_at=dateutil.parser.isoparse('2021-06-03T11:24:52.324Z'),
+        updated_at=dateutil.parser.isoparse('2022-11-18T04:49:38.005Z'),
     ),
-    connection_id='dolor',
-    id='e951a1e3-0fda-4966-889d-7b78673e13a1',
+    connection_id='hacking meter',
+    id='<ID>',
 )
 
 res = s.document.patch_ats_connection_id_scorecard_id(req)
@@ -207,18 +207,18 @@ s = unified_to.UnifiedTo(
 
 req = operations.PostAtsConnectionIDScorecardRequest(
     ats_scorecard=shared.AtsScorecard(
-        application_id='eos',
-        candidate_id='dolorum',
-        created_at=dateutil.parser.isoparse('2022-04-19T16:37:31.203Z'),
-        id='99249459-4487-4f5c-8438-36b86b3cdf64',
-        interview_id='dicta',
-        interviewer_id='minima',
-        job_id='facilis',
+        application_id='female bah',
+        candidate_id='if since',
+        created_at=dateutil.parser.isoparse('2022-02-26T00:06:29.981Z'),
+        id='<ID>',
+        interview_id='invoice',
+        interviewer_id='male',
+        job_id='Accountability',
         raw=shared.PropertyAtsScorecardRaw(),
-        recommendation=shared.AtsScorecardRecommendation.DEFINITELY_NO,
-        updated_at=dateutil.parser.isoparse('2022-09-13T14:57:39.091Z'),
+        recommendation=shared.AtsScorecardRecommendation.STRONG_YES,
+        updated_at=dateutil.parser.isoparse('2023-10-04T17:15:51.015Z'),
     ),
-    connection_id='molestias',
+    connection_id='Legacy tan',
 )
 
 res = s.document.post_ats_connection_id_scorecard(req)
@@ -258,19 +258,19 @@ s = unified_to.UnifiedTo(
 
 req = operations.PutAtsConnectionIDScorecardIDRequest(
     ats_scorecard=shared.AtsScorecard(
-        application_id='hic',
-        candidate_id='error',
-        created_at=dateutil.parser.isoparse('2020-02-11T23:32:43.703Z'),
-        id='13f4eedb-e78b-4f60-a825-894ea763d5c7',
-        interview_id='fugit',
-        interviewer_id='voluptate',
-        job_id='provident',
+        application_id='East Granite',
+        candidate_id='South',
+        created_at=dateutil.parser.isoparse('2022-03-02T12:33:41.490Z'),
+        id='<ID>',
+        interview_id='Texas Technetium hack',
+        interviewer_id='Adventure Kyrgyz Organic',
+        job_id='Home Dynamic Integration',
         raw=shared.PropertyAtsScorecardRaw(),
         recommendation=shared.AtsScorecardRecommendation.NO,
-        updated_at=dateutil.parser.isoparse('2022-01-28T06:25:58.770Z'),
+        updated_at=dateutil.parser.isoparse('2023-11-13T03:01:57.066Z'),
     ),
-    connection_id='laudantium',
-    id='5148d6d5-49e5-4635-b33b-c0f970c42fc9',
+    connection_id='Transexual Manager Rap',
+    id='<ID>',
 )
 
 res = s.document.put_ats_connection_id_scorecard_id(req)

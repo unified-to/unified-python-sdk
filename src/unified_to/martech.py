@@ -19,7 +19,7 @@ class Martech:
         url = utils.generate_url(operations.DeleteMartechConnectionIDListIDRequest, base_url, '/martech/{connection_id}/list/{id}', request)
         headers = {}
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -46,7 +46,7 @@ class Martech:
         url = utils.generate_url(operations.DeleteMartechConnectionIDListIDMemberIDRequest, base_url, '/martech/{connection_id}/{list_id}/member/{id}', request)
         headers = {}
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -74,7 +74,7 @@ class Martech:
         headers = {}
         query_params = utils.get_query_params(operations.GetMartechConnectionIDListRequest, request)
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -102,7 +102,7 @@ class Martech:
         url = utils.generate_url(operations.GetMartechConnectionIDListIDRequest, base_url, '/martech/{connection_id}/list/{id}', request)
         headers = {}
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -131,7 +131,7 @@ class Martech:
         headers = {}
         query_params = utils.get_query_params(operations.GetMartechConnectionIDListIDMemberRequest, request)
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -159,7 +159,7 @@ class Martech:
         url = utils.generate_url(operations.GetMartechConnectionIDListIDMemberIDRequest, base_url, '/martech/{connection_id}/{list_id}/member/{id}', request)
         headers = {}
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -186,11 +186,11 @@ class Martech:
         
         url = utils.generate_url(operations.PatchMartechConnectionIDListIDRequest, base_url, '/martech/{connection_id}/list/{id}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "marketing_list", 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "marketing_list", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -217,11 +217,11 @@ class Martech:
         
         url = utils.generate_url(operations.PatchMartechConnectionIDListIDMemberIDRequest, base_url, '/martech/{connection_id}/{list_id}/member/{id}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "marketing_member", 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "marketing_member", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -248,11 +248,11 @@ class Martech:
         
         url = utils.generate_url(operations.PostMartechConnectionIDListRequest, base_url, '/martech/{connection_id}/list', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "marketing_list", 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "marketing_list", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -279,11 +279,11 @@ class Martech:
         
         url = utils.generate_url(operations.PostMartechConnectionIDListIDMemberRequest, base_url, '/martech/{connection_id}/{list_id}/member', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "marketing_member", 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "marketing_member", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -310,11 +310,11 @@ class Martech:
         
         url = utils.generate_url(operations.PutMartechConnectionIDListIDRequest, base_url, '/martech/{connection_id}/list/{id}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "marketing_list", 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "marketing_list", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -341,11 +341,11 @@ class Martech:
         
         url = utils.generate_url(operations.PutMartechConnectionIDListIDMemberIDRequest, base_url, '/martech/{connection_id}/{list_id}/member/{id}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "marketing_member", 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "marketing_member", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         

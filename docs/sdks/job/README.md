@@ -27,8 +27,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.DeleteAtsConnectionIDJobIDRequest(
-    connection_id='adipisci',
-    id='2e3b49db-e0f2-43b7-b6d9-948d6eded477',
+    connection_id='Sedan Bedfordshire Hybrid',
+    id='<ID>',
 )
 
 res = s.job.delete_ats_connection_id_job_id(req)
@@ -67,13 +67,13 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetAtsConnectionIDJobRequest(
-    connection_id='voluptas',
-    limit=5378.51,
-    offset=504.05,
-    order='reiciendis',
-    query='minus',
-    sort='iure',
-    updated_gte=dateutil.parser.isoparse('2022-11-11T00:39:35.207Z'),
+    connection_id='City katal',
+    limit=3542.62,
+    offset=5417.97,
+    order='publisher',
+    query='Folding',
+    sort='Kip gross recontextualize',
+    updated_gte=dateutil.parser.isoparse('2022-10-12T03:36:20.050Z'),
 )
 
 res = s.job.get_ats_connection_id_job(req)
@@ -111,8 +111,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetAtsConnectionIDJobIDRequest(
-    connection_id='iure',
-    id='a82e5e82-fd28-4d10-80a7-e91392ab44cb',
+    connection_id='Jazz',
+    id='<ID>',
 )
 
 res = s.job.get_ats_connection_id_job_id(req)
@@ -154,51 +154,51 @@ req = operations.PatchAtsConnectionIDJobIDRequest(
     ats_job=shared.AtsJob(
         addresses=[
             shared.AtsAddress(
-                address1='architecto',
-                address2='totam',
-                city='West Aaron',
-                country='Aruba',
-                country_code='LA',
-                postal_code='23078-3185',
-                region='illo',
-                region_code='tempora',
+                address1='Transexual',
+                address2='Planner redundant Towels',
+                city='Starkboro',
+                country='Chad',
+                country_code='NU',
+                postal_code='22603',
+                region='Cambridgeshire',
+                region_code='Account Copernicium at',
             ),
         ],
-        closed_at=dateutil.parser.isoparse('2022-05-27T21:54:13.074Z'),
+        closed_at=dateutil.parser.isoparse('2023-01-02T09:14:26.844Z'),
         compensation=[
             shared.AtsCompensation(
-                currency='rem',
+                currency='Metical',
                 frequency=shared.AtsCompensationFrequency.HOUR,
-                max=6129.79,
-                min=7255.92,
-                type=shared.AtsCompensationType.EQUITY,
+                max=1424.24,
+                min=3626.17,
+                type=shared.AtsCompensationType.SALARY,
             ),
         ],
-        created_at=dateutil.parser.isoparse('2022-08-10T22:57:33.587Z'),
+        created_at=dateutil.parser.isoparse('2022-03-16T15:29:37.822Z'),
         departments=[
-            'aperiam',
+            'Sports',
         ],
-        description='similique',
-        employment_type=shared.AtsJobEmploymentType.FREELANCE,
+        description='Operative bi-directional capability',
+        employment_type=shared.AtsJobEmploymentType.INTERN,
         hiring_manager_ids=[
-            'pariatur',
+            'Hop',
         ],
-        id='fde410c3-7daa-4918-aa49-d9625d3caffc',
-        language_locale='inventore',
-        name='Guy Von',
+        id='<ID>',
+        language_locale='hence gracefully invoice',
+        name='Southeast vacantly Uranium',
         public_job_urls=[
-            'modi',
+            'Keith',
         ],
         raw=shared.PropertyAtsJobRaw(),
         recruiter_ids=[
-            'quaerat',
+            'happily',
         ],
         remote=False,
-        status=shared.AtsJobStatus.PENDING,
-        updated_at=dateutil.parser.isoparse('2022-07-04T21:18:33.130Z'),
+        status=shared.AtsJobStatus.OPEN,
+        updated_at=dateutil.parser.isoparse('2023-08-04T07:33:03.088Z'),
     ),
-    connection_id='unde',
-    id='2bcd440e-a98b-4ecc-a048-6de0d56d73b0',
+    connection_id='Cis benchmark',
+    id='<ID>',
 )
 
 res = s.job.patch_ats_connection_id_job_id(req)
@@ -240,50 +240,50 @@ req = operations.PostAtsConnectionIDJobRequest(
     ats_job=shared.AtsJob(
         addresses=[
             shared.AtsAddress(
-                address1='quae',
-                address2='quis',
-                city='North Consuelo',
-                country='Turkmenistan',
-                country_code='LK',
-                postal_code='74149-9447',
-                region='iure',
-                region_code='ullam',
+                address1='Forward',
+                address2='Electric fuchsia kelvin',
+                city='Fort Sibylmouth',
+                country='Solomon Islands',
+                country_code='DO',
+                postal_code='39037',
+                region='Rockford',
+                region_code='Trafficway eaque athwart',
             ),
         ],
-        closed_at=dateutil.parser.isoparse('2022-07-06T19:55:18.068Z'),
+        closed_at=dateutil.parser.isoparse('2022-04-22T19:01:40.265Z'),
         compensation=[
             shared.AtsCompensation(
-                currency='enim',
-                frequency=shared.AtsCompensationFrequency.WEEK,
-                max=3432.31,
-                min=6902.62,
-                type=shared.AtsCompensationType.STOCK_OPTIONS,
+                currency='Gourde',
+                frequency=shared.AtsCompensationFrequency.YEAR,
+                max=5349.62,
+                min=526.63,
+                type=shared.AtsCompensationType.EQUITY,
             ),
         ],
-        created_at=dateutil.parser.isoparse('2022-01-28T21:56:06.312Z'),
+        created_at=dateutil.parser.isoparse('2021-04-02T18:44:02.642Z'),
         departments=[
-            'consectetur',
+            'Polonium',
         ],
-        description='vero',
-        employment_type=shared.AtsJobEmploymentType.CONTRACTOR,
+        description='Progressive disintermediate matrix',
+        employment_type=shared.AtsJobEmploymentType.INTERN,
         hiring_manager_ids=[
-            'optio',
+            'itaque',
         ],
-        id='fcc6a91e-c526-424d-8001-4ef45cea11ac',
-        language_locale='minima',
-        name='Henrietta Powlowski',
+        id='<ID>',
+        language_locale='the joyfully',
+        name='Other because harbor',
         public_job_urls=[
-            'nostrum',
+            'coil',
         ],
         raw=shared.PropertyAtsJobRaw(),
         recruiter_ids=[
-            'corrupti',
+            'JSON',
         ],
         remote=False,
-        status=shared.AtsJobStatus.DRAFT,
-        updated_at=dateutil.parser.isoparse('2022-04-19T01:37:46.134Z'),
+        status=shared.AtsJobStatus.ARCHIVED,
+        updated_at=dateutil.parser.isoparse('2022-05-24T04:21:24.567Z'),
     ),
-    connection_id='eius',
+    connection_id='Coordinator applications',
 )
 
 res = s.job.post_ats_connection_id_job(req)
@@ -325,51 +325,51 @@ req = operations.PutAtsConnectionIDJobIDRequest(
     ats_job=shared.AtsJob(
         addresses=[
             shared.AtsAddress(
-                address1='voluptatem',
-                address2='magnam',
-                city='West Randibury',
-                country='Rwanda',
-                country_code='MK',
-                postal_code='89820-0695',
-                region='doloribus',
-                region_code='unde',
+                address1='cotton Washington',
+                address2='rosin meanwhile male',
+                city='East Sierra',
+                country='Somalia',
+                country_code='BQ',
+                postal_code='63475-6123',
+                region='lighthearted online Bicycle',
+                region_code='robust',
             ),
         ],
-        closed_at=dateutil.parser.isoparse('2022-03-17T10:24:00.538Z'),
+        closed_at=dateutil.parser.isoparse('2021-05-06T11:53:52.940Z'),
         compensation=[
             shared.AtsCompensation(
-                currency='id',
-                frequency=shared.AtsCompensationFrequency.WEEK,
-                max=1012.53,
-                min=7482.56,
-                type=shared.AtsCompensationType.SALARY,
+                currency='Iranian Rial',
+                frequency=shared.AtsCompensationFrequency.YEAR,
+                max=5965.42,
+                min=5273.81,
+                type=shared.AtsCompensationType.BONUS,
             ),
         ],
-        created_at=dateutil.parser.isoparse('2022-08-21T15:07:46.264Z'),
+        created_at=dateutil.parser.isoparse('2023-07-19T02:36:00.215Z'),
         departments=[
-            'a',
+            'embrace',
         ],
-        description='architecto',
-        employment_type=shared.AtsJobEmploymentType.FREELANCE,
+        description='Programmable tertiary benchmark',
+        employment_type=shared.AtsJobEmploymentType.CONTRACTOR,
         hiring_manager_ids=[
-            'vitae',
+            'New',
         ],
-        id='4718c6fa-2fad-40c0-ac5d-95472cdd14fc',
-        language_locale='eius',
-        name='Miss Bridget King',
+        id='<ID>',
+        language_locale='Facilitator Gasoline application',
+        name='North impractical',
         public_job_urls=[
-            'fuga',
+            'clamber',
         ],
         raw=shared.PropertyAtsJobRaw(),
         recruiter_ids=[
-            'laudantium',
+            'West',
         ],
         remote=False,
-        status=shared.AtsJobStatus.DRAFT,
-        updated_at=dateutil.parser.isoparse('2020-12-28T11:43:36.436Z'),
+        status=shared.AtsJobStatus.CLOSED,
+        updated_at=dateutil.parser.isoparse('2023-02-01T04:41:47.094Z'),
     ),
-    connection_id='dignissimos',
-    id='0c43351c-3dd1-4eb8-b7f7-5f4f23f1c0a5',
+    connection_id='North',
+    id='<ID>',
 )
 
 res = s.job.put_ats_connection_id_job_id(req)

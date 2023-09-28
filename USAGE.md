@@ -12,8 +12,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.DeleteTicketingConnectionIDAgentIDRequest(
-    connection_id='corrupti',
-    id='9bd9d8d6-9a67-44e0-b467-cc8796ed151a',
+    connection_id='navigate',
+    id='<ID>',
 )
 
 res = s.agent.delete_ticketing_connection_id_agent_id(req)

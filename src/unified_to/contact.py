@@ -19,7 +19,7 @@ class Contact:
         url = utils.generate_url(operations.DeleteCrmConnectionIDContactIDRequest, base_url, '/crm/{connection_id}/contact/{id}', request)
         headers = {}
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -46,7 +46,7 @@ class Contact:
         url = utils.generate_url(operations.DeleteCrmConnectionIDContactIDCompanyCompanyIDRequest, base_url, '/crm/{connection_id}/contact/{id}/company/{company_id}', request)
         headers = {}
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -74,7 +74,7 @@ class Contact:
         url = utils.generate_url(operations.DeleteCrmConnectionIDContactIDDealDealIDRequest, base_url, '/crm/{connection_id}/contact/{id}/deal/{deal_id}', request)
         headers = {}
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -102,7 +102,7 @@ class Contact:
         url = utils.generate_url(operations.DeleteUcConnectionIDContactIDRequest, base_url, '/uc/{connection_id}/contact/{id}', request)
         headers = {}
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -130,7 +130,7 @@ class Contact:
         headers = {}
         query_params = utils.get_query_params(operations.GetCrmConnectionIDContactRequest, request)
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -158,7 +158,7 @@ class Contact:
         url = utils.generate_url(operations.GetCrmConnectionIDContactIDRequest, base_url, '/crm/{connection_id}/contact/{id}', request)
         headers = {}
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -187,7 +187,7 @@ class Contact:
         headers = {}
         query_params = utils.get_query_params(operations.GetUcConnectionIDContactRequest, request)
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -215,7 +215,7 @@ class Contact:
         url = utils.generate_url(operations.GetUcConnectionIDContactIDRequest, base_url, '/uc/{connection_id}/contact/{id}', request)
         headers = {}
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -242,11 +242,11 @@ class Contact:
         
         url = utils.generate_url(operations.PatchCrmConnectionIDContactIDRequest, base_url, '/crm/{connection_id}/contact/{id}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "crm_contact", 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "crm_contact", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -274,7 +274,7 @@ class Contact:
         url = utils.generate_url(operations.PatchCrmConnectionIDContactIDCompanyCompanyIDRequest, base_url, '/crm/{connection_id}/contact/{id}/company/{company_id}', request)
         headers = {}
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -302,7 +302,7 @@ class Contact:
         url = utils.generate_url(operations.PatchCrmConnectionIDContactIDDealDealIDRequest, base_url, '/crm/{connection_id}/contact/{id}/deal/{deal_id}', request)
         headers = {}
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -329,11 +329,11 @@ class Contact:
         
         url = utils.generate_url(operations.PatchUcConnectionIDContactIDRequest, base_url, '/uc/{connection_id}/contact/{id}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "uc_contact", 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "uc_contact", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -360,11 +360,11 @@ class Contact:
         
         url = utils.generate_url(operations.PostCrmConnectionIDContactRequest, base_url, '/crm/{connection_id}/contact', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "crm_contact", 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "crm_contact", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -391,11 +391,11 @@ class Contact:
         
         url = utils.generate_url(operations.PostUcConnectionIDContactRequest, base_url, '/uc/{connection_id}/contact', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "uc_contact", 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "uc_contact", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -422,11 +422,11 @@ class Contact:
         
         url = utils.generate_url(operations.PutCrmConnectionIDContactIDRequest, base_url, '/crm/{connection_id}/contact/{id}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "crm_contact", 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "crm_contact", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -454,7 +454,7 @@ class Contact:
         url = utils.generate_url(operations.PutCrmConnectionIDContactIDCompanyCompanyIDRequest, base_url, '/crm/{connection_id}/contact/{id}/company/{company_id}', request)
         headers = {}
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -482,7 +482,7 @@ class Contact:
         url = utils.generate_url(operations.PutCrmConnectionIDContactIDDealDealIDRequest, base_url, '/crm/{connection_id}/contact/{id}/deal/{deal_id}', request)
         headers = {}
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -509,11 +509,11 @@ class Contact:
         
         url = utils.generate_url(operations.PutUcConnectionIDContactIDRequest, base_url, '/uc/{connection_id}/contact/{id}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "uc_contact", 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "uc_contact", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         

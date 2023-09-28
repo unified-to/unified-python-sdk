@@ -27,8 +27,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.DeleteMartechConnectionIDListIDRequest(
-    connection_id='molestiae',
-    id='866db8a7-49e3-4984-911c-c75e4f0c004b',
+    connection_id='Minivan',
+    id='<ID>',
 )
 
 res = s.list_.delete_martech_connection_id_list_id(req)
@@ -67,13 +67,13 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetMartechConnectionIDListRequest(
-    connection_id='minima',
-    limit=7315.15,
-    offset=6991.28,
-    order='molestiae',
-    query='ipsam',
-    sort='quos',
-    updated_gte=dateutil.parser.isoparse('2020-09-30T08:18:10.798Z'),
+    connection_id='silver DeKalb',
+    limit=9799.48,
+    offset=4800.63,
+    order='Bedfordshire',
+    query='Hip Pass',
+    sort='since',
+    updated_gte=dateutil.parser.isoparse('2022-03-26T19:40:00.770Z'),
 )
 
 res = s.list_.get_martech_connection_id_list(req)
@@ -111,8 +111,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetMartechConnectionIDListIDRequest(
-    connection_id='cupiditate',
-    id='4562f006-9685-4fcd-9a17-3d84bbe24f29',
+    connection_id='Jewelery orange',
+    id='<ID>',
 )
 
 res = s.list_.get_martech_connection_id_list_id(req)
@@ -152,14 +152,14 @@ s = unified_to.UnifiedTo(
 
 req = operations.PatchMartechConnectionIDListIDRequest(
     marketing_list=shared.MarketingList(
-        created_at='praesentium',
-        id='34afb073-5cb6-4285-94a2-9aaa1e169156',
-        name='Adrian Schuster',
+        created_at='Funk',
+        id='<ID>',
+        name='lime Fiat',
         raw=shared.PropertyMarketingListRaw(),
-        updated_at=dateutil.parser.isoparse('2022-06-17T09:25:28.057Z'),
+        updated_at=dateutil.parser.isoparse('2021-01-15T20:51:24.192Z'),
     ),
-    connection_id='perferendis',
-    id='9505bf03-a93e-4944-80ca-37fb10789032',
+    connection_id='male sheepishly Intelligent',
+    id='<ID>',
 )
 
 res = s.list_.patch_martech_connection_id_list_id(req)
@@ -199,13 +199,13 @@ s = unified_to.UnifiedTo(
 
 req = operations.PostMartechConnectionIDListRequest(
     marketing_list=shared.MarketingList(
-        created_at='deserunt',
-        id='c333172e-2dd7-49ec-b4ba-7e88ddb36fd1',
-        name='Lucas Schneider',
+        created_at='synergistic Transexual Steel',
+        id='<ID>',
+        name='Virginia whoever Bicycle',
         raw=shared.PropertyMarketingListRaw(),
-        updated_at=dateutil.parser.isoparse('2022-03-20T02:47:07.461Z'),
+        updated_at=dateutil.parser.isoparse('2023-04-27T09:56:39.589Z'),
     ),
-    connection_id='quas',
+    connection_id='Hybrid',
 )
 
 res = s.list_.post_martech_connection_id_list(req)
@@ -245,14 +245,14 @@ s = unified_to.UnifiedTo(
 
 req = operations.PutMartechConnectionIDListIDRequest(
     marketing_list=shared.MarketingList(
-        created_at='autem',
-        id='573474f0-a740-4fb4-ab44-1c3a09e76399',
-        name='Ms. Eula Leffler',
+        created_at='Underpass initiatives',
+        id='<ID>',
+        name='North Progressive Assistant',
         raw=shared.PropertyMarketingListRaw(),
-        updated_at=dateutil.parser.isoparse('2021-03-29T15:45:25.588Z'),
+        updated_at=dateutil.parser.isoparse('2023-10-03T22:31:39.028Z'),
     ),
-    connection_id='odio',
-    id='94455ebc-550a-41c4-a6b5-9c8366fdcc13',
+    connection_id='Security Legacy onto',
+    id='<ID>',
 )
 
 res = s.list_.put_martech_connection_id_list_id(req)
