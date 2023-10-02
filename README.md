@@ -120,15 +120,12 @@ if res.status_code == 200:
 ### [company](docs/sdks/company/README.md)
 
 * [delete_crm_connection_id_company_id](docs/sdks/company/README.md#delete_crm_connection_id_company_id) - Remove a company
-* [delete_crm_connection_id_company_id_deal_deal_id](docs/sdks/company/README.md#delete_crm_connection_id_company_id_deal_deal_id) - Remove deal association from a company
 * [get_crm_connection_id_company](docs/sdks/company/README.md#get_crm_connection_id_company) - List all companies
 * [get_crm_connection_id_company_id](docs/sdks/company/README.md#get_crm_connection_id_company_id) - Retrieve a company
 * [get_enrich_connection_id_company](docs/sdks/company/README.md#get_enrich_connection_id_company) - Retrieve enrichment information for a company
 * [patch_crm_connection_id_company_id](docs/sdks/company/README.md#patch_crm_connection_id_company_id) - Update a company
-* [patch_crm_connection_id_company_id_deal_deal_id](docs/sdks/company/README.md#patch_crm_connection_id_company_id_deal_deal_id) - Associate a deal with a company
 * [post_crm_connection_id_company](docs/sdks/company/README.md#post_crm_connection_id_company) - Create a company
 * [put_crm_connection_id_company_id](docs/sdks/company/README.md#put_crm_connection_id_company_id) - Update a company
-* [put_crm_connection_id_company_id_deal_deal_id](docs/sdks/company/README.md#put_crm_connection_id_company_id_deal_deal_id) - Associate a deal with a company
 
 ### [connection](docs/sdks/connection/README.md)
 
@@ -142,36 +139,24 @@ if res.status_code == 200:
 ### [contact](docs/sdks/contact/README.md)
 
 * [delete_crm_connection_id_contact_id](docs/sdks/contact/README.md#delete_crm_connection_id_contact_id) - Remove a contact
-* [delete_crm_connection_id_contact_id_company_company_id](docs/sdks/contact/README.md#delete_crm_connection_id_contact_id_company_company_id) - Remove company association from a contact
-* [delete_crm_connection_id_contact_id_deal_deal_id](docs/sdks/contact/README.md#delete_crm_connection_id_contact_id_deal_deal_id) - Remove deal association from a contact
 * [delete_uc_connection_id_contact_id](docs/sdks/contact/README.md#delete_uc_connection_id_contact_id) - Remove a contact
 * [get_crm_connection_id_contact](docs/sdks/contact/README.md#get_crm_connection_id_contact) - List all contacts
 * [get_crm_connection_id_contact_id](docs/sdks/contact/README.md#get_crm_connection_id_contact_id) - Retrieve a contact
 * [get_uc_connection_id_contact](docs/sdks/contact/README.md#get_uc_connection_id_contact) - List all contacts
 * [get_uc_connection_id_contact_id](docs/sdks/contact/README.md#get_uc_connection_id_contact_id) - Retrieve a contact
 * [patch_crm_connection_id_contact_id](docs/sdks/contact/README.md#patch_crm_connection_id_contact_id) - Update a contact
-* [patch_crm_connection_id_contact_id_company_company_id](docs/sdks/contact/README.md#patch_crm_connection_id_contact_id_company_company_id) - Associate a company with a contact
-* [patch_crm_connection_id_contact_id_deal_deal_id](docs/sdks/contact/README.md#patch_crm_connection_id_contact_id_deal_deal_id) - Associate a deal with a contact
 * [patch_uc_connection_id_contact_id](docs/sdks/contact/README.md#patch_uc_connection_id_contact_id) - Update a contact
 * [post_crm_connection_id_contact](docs/sdks/contact/README.md#post_crm_connection_id_contact) - Create a contact
 * [post_uc_connection_id_contact](docs/sdks/contact/README.md#post_uc_connection_id_contact) - Create a contact
 * [put_crm_connection_id_contact_id](docs/sdks/contact/README.md#put_crm_connection_id_contact_id) - Update a contact
-* [put_crm_connection_id_contact_id_company_company_id](docs/sdks/contact/README.md#put_crm_connection_id_contact_id_company_company_id) - Associate a company with a contact
-* [put_crm_connection_id_contact_id_deal_deal_id](docs/sdks/contact/README.md#put_crm_connection_id_contact_id_deal_deal_id) - Associate a deal with a contact
 * [put_uc_connection_id_contact_id](docs/sdks/contact/README.md#put_uc_connection_id_contact_id) - Update a contact
 
 ### [crm](docs/sdks/crm/README.md)
 
 * [delete_crm_connection_id_company_id](docs/sdks/crm/README.md#delete_crm_connection_id_company_id) - Remove a company
-* [delete_crm_connection_id_company_id_deal_deal_id](docs/sdks/crm/README.md#delete_crm_connection_id_company_id_deal_deal_id) - Remove deal association from a company
 * [delete_crm_connection_id_contact_id](docs/sdks/crm/README.md#delete_crm_connection_id_contact_id) - Remove a contact
-* [delete_crm_connection_id_contact_id_company_company_id](docs/sdks/crm/README.md#delete_crm_connection_id_contact_id_company_company_id) - Remove company association from a contact
-* [delete_crm_connection_id_contact_id_deal_deal_id](docs/sdks/crm/README.md#delete_crm_connection_id_contact_id_deal_deal_id) - Remove deal association from a contact
 * [delete_crm_connection_id_deal_id](docs/sdks/crm/README.md#delete_crm_connection_id_deal_id) - Remove a deal
 * [delete_crm_connection_id_event_id](docs/sdks/crm/README.md#delete_crm_connection_id_event_id) - Remove a event
-* [delete_crm_connection_id_event_id_company_company_id](docs/sdks/crm/README.md#delete_crm_connection_id_event_id_company_company_id) - Remove company association from an event
-* [delete_crm_connection_id_event_id_contact_contact_id](docs/sdks/crm/README.md#delete_crm_connection_id_event_id_contact_contact_id) - Remove contact association from an event
-* [delete_crm_connection_id_event_id_deal_deal_id](docs/sdks/crm/README.md#delete_crm_connection_id_event_id_deal_deal_id) - Remove deal association from an event
 * [delete_crm_connection_id_file_id](docs/sdks/crm/README.md#delete_crm_connection_id_file_id) - Remove a file
 * [delete_crm_connection_id_lead_id](docs/sdks/crm/README.md#delete_crm_connection_id_lead_id) - Remove a lead
 * [delete_crm_connection_id_pipeline_id](docs/sdks/crm/README.md#delete_crm_connection_id_pipeline_id) - Remove a pipeline
@@ -196,15 +181,9 @@ if res.status_code == 200:
 * [get_crm_connection_id_user](docs/sdks/crm/README.md#get_crm_connection_id_user) - List all users
 * [get_crm_connection_id_user_id](docs/sdks/crm/README.md#get_crm_connection_id_user_id) - Retrieve a user
 * [patch_crm_connection_id_company_id](docs/sdks/crm/README.md#patch_crm_connection_id_company_id) - Update a company
-* [patch_crm_connection_id_company_id_deal_deal_id](docs/sdks/crm/README.md#patch_crm_connection_id_company_id_deal_deal_id) - Associate a deal with a company
 * [patch_crm_connection_id_contact_id](docs/sdks/crm/README.md#patch_crm_connection_id_contact_id) - Update a contact
-* [patch_crm_connection_id_contact_id_company_company_id](docs/sdks/crm/README.md#patch_crm_connection_id_contact_id_company_company_id) - Associate a company with a contact
-* [patch_crm_connection_id_contact_id_deal_deal_id](docs/sdks/crm/README.md#patch_crm_connection_id_contact_id_deal_deal_id) - Associate a deal with a contact
 * [patch_crm_connection_id_deal_id](docs/sdks/crm/README.md#patch_crm_connection_id_deal_id) - Update a deal
 * [patch_crm_connection_id_event_id](docs/sdks/crm/README.md#patch_crm_connection_id_event_id) - Update a event
-* [patch_crm_connection_id_event_id_company_company_id](docs/sdks/crm/README.md#patch_crm_connection_id_event_id_company_company_id) - Associate a company with an event
-* [patch_crm_connection_id_event_id_contact_contact_id](docs/sdks/crm/README.md#patch_crm_connection_id_event_id_contact_contact_id) - Associate a contact with an event
-* [patch_crm_connection_id_event_id_deal_deal_id](docs/sdks/crm/README.md#patch_crm_connection_id_event_id_deal_deal_id) - Associate a deal with an event
 * [patch_crm_connection_id_file_id](docs/sdks/crm/README.md#patch_crm_connection_id_file_id) - Update a file
 * [patch_crm_connection_id_lead_id](docs/sdks/crm/README.md#patch_crm_connection_id_lead_id) - Update a lead
 * [patch_crm_connection_id_pipeline_id](docs/sdks/crm/README.md#patch_crm_connection_id_pipeline_id) - Update a pipeline
@@ -220,15 +199,9 @@ if res.status_code == 200:
 * [post_crm_connection_id_team](docs/sdks/crm/README.md#post_crm_connection_id_team) - Create a team
 * [post_crm_connection_id_user](docs/sdks/crm/README.md#post_crm_connection_id_user) - Create a user
 * [put_crm_connection_id_company_id](docs/sdks/crm/README.md#put_crm_connection_id_company_id) - Update a company
-* [put_crm_connection_id_company_id_deal_deal_id](docs/sdks/crm/README.md#put_crm_connection_id_company_id_deal_deal_id) - Associate a deal with a company
 * [put_crm_connection_id_contact_id](docs/sdks/crm/README.md#put_crm_connection_id_contact_id) - Update a contact
-* [put_crm_connection_id_contact_id_company_company_id](docs/sdks/crm/README.md#put_crm_connection_id_contact_id_company_company_id) - Associate a company with a contact
-* [put_crm_connection_id_contact_id_deal_deal_id](docs/sdks/crm/README.md#put_crm_connection_id_contact_id_deal_deal_id) - Associate a deal with a contact
 * [put_crm_connection_id_deal_id](docs/sdks/crm/README.md#put_crm_connection_id_deal_id) - Update a deal
 * [put_crm_connection_id_event_id](docs/sdks/crm/README.md#put_crm_connection_id_event_id) - Update a event
-* [put_crm_connection_id_event_id_company_company_id](docs/sdks/crm/README.md#put_crm_connection_id_event_id_company_company_id) - Associate a company with an event
-* [put_crm_connection_id_event_id_contact_contact_id](docs/sdks/crm/README.md#put_crm_connection_id_event_id_contact_contact_id) - Associate a contact with an event
-* [put_crm_connection_id_event_id_deal_deal_id](docs/sdks/crm/README.md#put_crm_connection_id_event_id_deal_deal_id) - Associate a deal with an event
 * [put_crm_connection_id_file_id](docs/sdks/crm/README.md#put_crm_connection_id_file_id) - Update a file
 * [put_crm_connection_id_lead_id](docs/sdks/crm/README.md#put_crm_connection_id_lead_id) - Update a lead
 * [put_crm_connection_id_pipeline_id](docs/sdks/crm/README.md#put_crm_connection_id_pipeline_id) - Update a pipeline
@@ -279,20 +252,11 @@ if res.status_code == 200:
 ### [event](docs/sdks/event/README.md)
 
 * [delete_crm_connection_id_event_id](docs/sdks/event/README.md#delete_crm_connection_id_event_id) - Remove a event
-* [delete_crm_connection_id_event_id_company_company_id](docs/sdks/event/README.md#delete_crm_connection_id_event_id_company_company_id) - Remove company association from an event
-* [delete_crm_connection_id_event_id_contact_contact_id](docs/sdks/event/README.md#delete_crm_connection_id_event_id_contact_contact_id) - Remove contact association from an event
-* [delete_crm_connection_id_event_id_deal_deal_id](docs/sdks/event/README.md#delete_crm_connection_id_event_id_deal_deal_id) - Remove deal association from an event
 * [get_crm_connection_id_event](docs/sdks/event/README.md#get_crm_connection_id_event) - List all events
 * [get_crm_connection_id_event_id](docs/sdks/event/README.md#get_crm_connection_id_event_id) - Retrieve a event
 * [patch_crm_connection_id_event_id](docs/sdks/event/README.md#patch_crm_connection_id_event_id) - Update a event
-* [patch_crm_connection_id_event_id_company_company_id](docs/sdks/event/README.md#patch_crm_connection_id_event_id_company_company_id) - Associate a company with an event
-* [patch_crm_connection_id_event_id_contact_contact_id](docs/sdks/event/README.md#patch_crm_connection_id_event_id_contact_contact_id) - Associate a contact with an event
-* [patch_crm_connection_id_event_id_deal_deal_id](docs/sdks/event/README.md#patch_crm_connection_id_event_id_deal_deal_id) - Associate a deal with an event
 * [post_crm_connection_id_event](docs/sdks/event/README.md#post_crm_connection_id_event) - Create a event
 * [put_crm_connection_id_event_id](docs/sdks/event/README.md#put_crm_connection_id_event_id) - Update a event
-* [put_crm_connection_id_event_id_company_company_id](docs/sdks/event/README.md#put_crm_connection_id_event_id_company_company_id) - Associate a company with an event
-* [put_crm_connection_id_event_id_contact_contact_id](docs/sdks/event/README.md#put_crm_connection_id_event_id_contact_contact_id) - Associate a contact with an event
-* [put_crm_connection_id_event_id_deal_deal_id](docs/sdks/event/README.md#put_crm_connection_id_event_id_deal_deal_id) - Associate a deal with an event
 
 ### [file](docs/sdks/file/README.md)
 

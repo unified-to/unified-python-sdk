@@ -4,22 +4,16 @@
 ### Available Operations
 
 * [delete_crm_connection_id_contact_id](#delete_crm_connection_id_contact_id) - Remove a contact
-* [delete_crm_connection_id_contact_id_company_company_id](#delete_crm_connection_id_contact_id_company_company_id) - Remove company association from a contact
-* [delete_crm_connection_id_contact_id_deal_deal_id](#delete_crm_connection_id_contact_id_deal_deal_id) - Remove deal association from a contact
 * [delete_uc_connection_id_contact_id](#delete_uc_connection_id_contact_id) - Remove a contact
 * [get_crm_connection_id_contact](#get_crm_connection_id_contact) - List all contacts
 * [get_crm_connection_id_contact_id](#get_crm_connection_id_contact_id) - Retrieve a contact
 * [get_uc_connection_id_contact](#get_uc_connection_id_contact) - List all contacts
 * [get_uc_connection_id_contact_id](#get_uc_connection_id_contact_id) - Retrieve a contact
 * [patch_crm_connection_id_contact_id](#patch_crm_connection_id_contact_id) - Update a contact
-* [patch_crm_connection_id_contact_id_company_company_id](#patch_crm_connection_id_contact_id_company_company_id) - Associate a company with a contact
-* [patch_crm_connection_id_contact_id_deal_deal_id](#patch_crm_connection_id_contact_id_deal_deal_id) - Associate a deal with a contact
 * [patch_uc_connection_id_contact_id](#patch_uc_connection_id_contact_id) - Update a contact
 * [post_crm_connection_id_contact](#post_crm_connection_id_contact) - Create a contact
 * [post_uc_connection_id_contact](#post_uc_connection_id_contact) - Create a contact
 * [put_crm_connection_id_contact_id](#put_crm_connection_id_contact_id) - Update a contact
-* [put_crm_connection_id_contact_id_company_company_id](#put_crm_connection_id_contact_id_company_company_id) - Associate a company with a contact
-* [put_crm_connection_id_contact_id_deal_deal_id](#put_crm_connection_id_contact_id_deal_deal_id) - Associate a deal with a contact
 * [put_uc_connection_id_contact_id](#put_uc_connection_id_contact_id) - Update a contact
 
 ## delete_crm_connection_id_contact_id
@@ -59,86 +53,6 @@ if res.status_code == 200:
 ### Response
 
 **[operations.DeleteCrmConnectionIDContactIDResponse](../../models/operations/deletecrmconnectionidcontactidresponse.md)**
-
-
-## delete_crm_connection_id_contact_id_company_company_id
-
-Remove company association from a contact
-
-### Example Usage
-
-```python
-import unified_to
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.DeleteCrmConnectionIDContactIDCompanyCompanyIDRequest(
-    company_id='unaware',
-    connection_id='Nissan',
-    id='<ID>',
-)
-
-res = s.contact.delete_crm_connection_id_contact_id_company_company_id(req)
-
-if res.crm_contact is not None:
-    # handle response
-```
-
-### Parameters
-
-| Parameter                                                                                                                                            | Type                                                                                                                                                 | Required                                                                                                                                             | Description                                                                                                                                          |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                            | [operations.DeleteCrmConnectionIDContactIDCompanyCompanyIDRequest](../../models/operations/deletecrmconnectionidcontactidcompanycompanyidrequest.md) | :heavy_check_mark:                                                                                                                                   | The request object to use for the request.                                                                                                           |
-
-
-### Response
-
-**[operations.DeleteCrmConnectionIDContactIDCompanyCompanyIDResponse](../../models/operations/deletecrmconnectionidcontactidcompanycompanyidresponse.md)**
-
-
-## delete_crm_connection_id_contact_id_deal_deal_id
-
-Remove deal association from a contact
-
-### Example Usage
-
-```python
-import unified_to
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.DeleteCrmConnectionIDContactIDDealDealIDRequest(
-    connection_id='auxiliary ew',
-    deal_id='foreground Electronics Northeast',
-    id='<ID>',
-)
-
-res = s.contact.delete_crm_connection_id_contact_id_deal_deal_id(req)
-
-if res.crm_contact is not None:
-    # handle response
-```
-
-### Parameters
-
-| Parameter                                                                                                                                | Type                                                                                                                                     | Required                                                                                                                                 | Description                                                                                                                              |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                | [operations.DeleteCrmConnectionIDContactIDDealDealIDRequest](../../models/operations/deletecrmconnectionidcontactiddealdealidrequest.md) | :heavy_check_mark:                                                                                                                       | The request object to use for the request.                                                                                               |
-
-
-### Response
-
-**[operations.DeleteCrmConnectionIDContactIDDealDealIDResponse](../../models/operations/deletecrmconnectionidcontactiddealdealidresponse.md)**
 
 
 ## delete_uc_connection_id_contact_id
@@ -428,86 +342,6 @@ if res.crm_contact is not None:
 **[operations.PatchCrmConnectionIDContactIDResponse](../../models/operations/patchcrmconnectionidcontactidresponse.md)**
 
 
-## patch_crm_connection_id_contact_id_company_company_id
-
-Associate a company with a contact
-
-### Example Usage
-
-```python
-import unified_to
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.PatchCrmConnectionIDContactIDCompanyCompanyIDRequest(
-    company_id='Folsom Selenium methodologies',
-    connection_id='Platinum seamless Southwest',
-    id='<ID>',
-)
-
-res = s.contact.patch_crm_connection_id_contact_id_company_company_id(req)
-
-if res.crm_contact is not None:
-    # handle response
-```
-
-### Parameters
-
-| Parameter                                                                                                                                          | Type                                                                                                                                               | Required                                                                                                                                           | Description                                                                                                                                        |
-| -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                          | [operations.PatchCrmConnectionIDContactIDCompanyCompanyIDRequest](../../models/operations/patchcrmconnectionidcontactidcompanycompanyidrequest.md) | :heavy_check_mark:                                                                                                                                 | The request object to use for the request.                                                                                                         |
-
-
-### Response
-
-**[operations.PatchCrmConnectionIDContactIDCompanyCompanyIDResponse](../../models/operations/patchcrmconnectionidcontactidcompanycompanyidresponse.md)**
-
-
-## patch_crm_connection_id_contact_id_deal_deal_id
-
-Associate a deal with a contact
-
-### Example Usage
-
-```python
-import unified_to
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.PatchCrmConnectionIDContactIDDealDealIDRequest(
-    connection_id='pascal Genderflux Metal',
-    deal_id='line',
-    id='<ID>',
-)
-
-res = s.contact.patch_crm_connection_id_contact_id_deal_deal_id(req)
-
-if res.crm_contact is not None:
-    # handle response
-```
-
-### Parameters
-
-| Parameter                                                                                                                              | Type                                                                                                                                   | Required                                                                                                                               | Description                                                                                                                            |
-| -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                              | [operations.PatchCrmConnectionIDContactIDDealDealIDRequest](../../models/operations/patchcrmconnectionidcontactiddealdealidrequest.md) | :heavy_check_mark:                                                                                                                     | The request object to use for the request.                                                                                             |
-
-
-### Response
-
-**[operations.PatchCrmConnectionIDContactIDDealDealIDResponse](../../models/operations/patchcrmconnectionidcontactiddealdealidresponse.md)**
-
-
 ## patch_uc_connection_id_contact_id
 
 Update a contact
@@ -780,86 +614,6 @@ if res.crm_contact is not None:
 ### Response
 
 **[operations.PutCrmConnectionIDContactIDResponse](../../models/operations/putcrmconnectionidcontactidresponse.md)**
-
-
-## put_crm_connection_id_contact_id_company_company_id
-
-Associate a company with a contact
-
-### Example Usage
-
-```python
-import unified_to
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.PutCrmConnectionIDContactIDCompanyCompanyIDRequest(
-    company_id='till Jazz ugh',
-    connection_id='Arizona tomorrow Chrysler',
-    id='<ID>',
-)
-
-res = s.contact.put_crm_connection_id_contact_id_company_company_id(req)
-
-if res.crm_contact is not None:
-    # handle response
-```
-
-### Parameters
-
-| Parameter                                                                                                                                      | Type                                                                                                                                           | Required                                                                                                                                       | Description                                                                                                                                    |
-| ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                      | [operations.PutCrmConnectionIDContactIDCompanyCompanyIDRequest](../../models/operations/putcrmconnectionidcontactidcompanycompanyidrequest.md) | :heavy_check_mark:                                                                                                                             | The request object to use for the request.                                                                                                     |
-
-
-### Response
-
-**[operations.PutCrmConnectionIDContactIDCompanyCompanyIDResponse](../../models/operations/putcrmconnectionidcontactidcompanycompanyidresponse.md)**
-
-
-## put_crm_connection_id_contact_id_deal_deal_id
-
-Associate a deal with a contact
-
-### Example Usage
-
-```python
-import unified_to
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.PutCrmConnectionIDContactIDDealDealIDRequest(
-    connection_id='Indiana relationships Coordinator',
-    deal_id='Dinar person',
-    id='<ID>',
-)
-
-res = s.contact.put_crm_connection_id_contact_id_deal_deal_id(req)
-
-if res.crm_contact is not None:
-    # handle response
-```
-
-### Parameters
-
-| Parameter                                                                                                                          | Type                                                                                                                               | Required                                                                                                                           | Description                                                                                                                        |
-| ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                          | [operations.PutCrmConnectionIDContactIDDealDealIDRequest](../../models/operations/putcrmconnectionidcontactiddealdealidrequest.md) | :heavy_check_mark:                                                                                                                 | The request object to use for the request.                                                                                         |
-
-
-### Response
-
-**[operations.PutCrmConnectionIDContactIDDealDealIDResponse](../../models/operations/putcrmconnectionidcontactiddealdealidresponse.md)**
 
 
 ## put_uc_connection_id_contact_id

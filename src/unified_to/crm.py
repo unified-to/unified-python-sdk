@@ -39,34 +39,6 @@ class Crm:
         return res
 
     
-    def delete_crm_connection_id_company_id_deal_deal_id(self, request: operations.DeleteCrmConnectionIDCompanyIDDealDealIDRequest) -> operations.DeleteCrmConnectionIDCompanyIDDealDealIDResponse:
-        r"""Remove deal association from a company"""
-        base_url = utils.template_url(*self.sdk_configuration.get_server_details())
-        
-        url = utils.generate_url(operations.DeleteCrmConnectionIDCompanyIDDealDealIDRequest, base_url, '/crm/{connection_id}/company/{id}/deal/{deal_id}', request)
-        headers = {}
-        headers['Accept'] = 'application/json'
-        headers['user-agent'] = self.sdk_configuration.user_agent
-        
-        client = self.sdk_configuration.security_client
-        
-        http_res = client.request('DELETE', url, headers=headers)
-        content_type = http_res.headers.get('Content-Type')
-
-        res = operations.DeleteCrmConnectionIDCompanyIDDealDealIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
-        
-        if http_res.status_code == 200:
-            if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[shared.CrmCompany])
-                res.crm_company = out
-            else:
-                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
-        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
-            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
-
-        return res
-
-    
     def delete_crm_connection_id_contact_id(self, request: operations.DeleteCrmConnectionIDContactIDRequest) -> operations.DeleteCrmConnectionIDContactIDResponse:
         r"""Remove a contact"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -90,62 +62,6 @@ class Crm:
                 res.delete_crm_connection_id_contact_id_default_application_json_string = http_res.content
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
-
-        return res
-
-    
-    def delete_crm_connection_id_contact_id_company_company_id(self, request: operations.DeleteCrmConnectionIDContactIDCompanyCompanyIDRequest) -> operations.DeleteCrmConnectionIDContactIDCompanyCompanyIDResponse:
-        r"""Remove company association from a contact"""
-        base_url = utils.template_url(*self.sdk_configuration.get_server_details())
-        
-        url = utils.generate_url(operations.DeleteCrmConnectionIDContactIDCompanyCompanyIDRequest, base_url, '/crm/{connection_id}/contact/{id}/company/{company_id}', request)
-        headers = {}
-        headers['Accept'] = 'application/json'
-        headers['user-agent'] = self.sdk_configuration.user_agent
-        
-        client = self.sdk_configuration.security_client
-        
-        http_res = client.request('DELETE', url, headers=headers)
-        content_type = http_res.headers.get('Content-Type')
-
-        res = operations.DeleteCrmConnectionIDContactIDCompanyCompanyIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
-        
-        if http_res.status_code == 200:
-            if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[shared.CrmContact])
-                res.crm_contact = out
-            else:
-                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
-        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
-            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
-
-        return res
-
-    
-    def delete_crm_connection_id_contact_id_deal_deal_id(self, request: operations.DeleteCrmConnectionIDContactIDDealDealIDRequest) -> operations.DeleteCrmConnectionIDContactIDDealDealIDResponse:
-        r"""Remove deal association from a contact"""
-        base_url = utils.template_url(*self.sdk_configuration.get_server_details())
-        
-        url = utils.generate_url(operations.DeleteCrmConnectionIDContactIDDealDealIDRequest, base_url, '/crm/{connection_id}/contact/{id}/deal/{deal_id}', request)
-        headers = {}
-        headers['Accept'] = 'application/json'
-        headers['user-agent'] = self.sdk_configuration.user_agent
-        
-        client = self.sdk_configuration.security_client
-        
-        http_res = client.request('DELETE', url, headers=headers)
-        content_type = http_res.headers.get('Content-Type')
-
-        res = operations.DeleteCrmConnectionIDContactIDDealDealIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
-        
-        if http_res.status_code == 200:
-            if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[shared.CrmContact])
-                res.crm_contact = out
-            else:
-                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
-        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
-            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
 
         return res
 
@@ -200,90 +116,6 @@ class Crm:
                 res.delete_crm_connection_id_event_id_default_application_json_string = http_res.content
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
-
-        return res
-
-    
-    def delete_crm_connection_id_event_id_company_company_id(self, request: operations.DeleteCrmConnectionIDEventIDCompanyCompanyIDRequest) -> operations.DeleteCrmConnectionIDEventIDCompanyCompanyIDResponse:
-        r"""Remove company association from an event"""
-        base_url = utils.template_url(*self.sdk_configuration.get_server_details())
-        
-        url = utils.generate_url(operations.DeleteCrmConnectionIDEventIDCompanyCompanyIDRequest, base_url, '/crm/{connection_id}/event/{id}/company/{company_id}', request)
-        headers = {}
-        headers['Accept'] = 'application/json'
-        headers['user-agent'] = self.sdk_configuration.user_agent
-        
-        client = self.sdk_configuration.security_client
-        
-        http_res = client.request('DELETE', url, headers=headers)
-        content_type = http_res.headers.get('Content-Type')
-
-        res = operations.DeleteCrmConnectionIDEventIDCompanyCompanyIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
-        
-        if http_res.status_code == 200:
-            if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[shared.CrmEvent])
-                res.crm_event = out
-            else:
-                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
-        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
-            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
-
-        return res
-
-    
-    def delete_crm_connection_id_event_id_contact_contact_id(self, request: operations.DeleteCrmConnectionIDEventIDContactContactIDRequest) -> operations.DeleteCrmConnectionIDEventIDContactContactIDResponse:
-        r"""Remove contact association from an event"""
-        base_url = utils.template_url(*self.sdk_configuration.get_server_details())
-        
-        url = utils.generate_url(operations.DeleteCrmConnectionIDEventIDContactContactIDRequest, base_url, '/crm/{connection_id}/event/{id}/contact/{contact_id}', request)
-        headers = {}
-        headers['Accept'] = 'application/json'
-        headers['user-agent'] = self.sdk_configuration.user_agent
-        
-        client = self.sdk_configuration.security_client
-        
-        http_res = client.request('DELETE', url, headers=headers)
-        content_type = http_res.headers.get('Content-Type')
-
-        res = operations.DeleteCrmConnectionIDEventIDContactContactIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
-        
-        if http_res.status_code == 200:
-            if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[shared.CrmEvent])
-                res.crm_event = out
-            else:
-                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
-        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
-            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
-
-        return res
-
-    
-    def delete_crm_connection_id_event_id_deal_deal_id(self, request: operations.DeleteCrmConnectionIDEventIDDealDealIDRequest) -> operations.DeleteCrmConnectionIDEventIDDealDealIDResponse:
-        r"""Remove deal association from an event"""
-        base_url = utils.template_url(*self.sdk_configuration.get_server_details())
-        
-        url = utils.generate_url(operations.DeleteCrmConnectionIDEventIDDealDealIDRequest, base_url, '/crm/{connection_id}/event/{id}/deal/{deal_id}', request)
-        headers = {}
-        headers['Accept'] = 'application/json'
-        headers['user-agent'] = self.sdk_configuration.user_agent
-        
-        client = self.sdk_configuration.security_client
-        
-        http_res = client.request('DELETE', url, headers=headers)
-        content_type = http_res.headers.get('Content-Type')
-
-        res = operations.DeleteCrmConnectionIDEventIDDealDealIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
-        
-        if http_res.status_code == 200:
-            if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[shared.CrmEvent])
-                res.crm_event = out
-            else:
-                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
-        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
-            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
 
         return res
 
@@ -967,34 +799,6 @@ class Crm:
         return res
 
     
-    def patch_crm_connection_id_company_id_deal_deal_id(self, request: operations.PatchCrmConnectionIDCompanyIDDealDealIDRequest) -> operations.PatchCrmConnectionIDCompanyIDDealDealIDResponse:
-        r"""Associate a deal with a company"""
-        base_url = utils.template_url(*self.sdk_configuration.get_server_details())
-        
-        url = utils.generate_url(operations.PatchCrmConnectionIDCompanyIDDealDealIDRequest, base_url, '/crm/{connection_id}/company/{id}/deal/{deal_id}', request)
-        headers = {}
-        headers['Accept'] = 'application/json'
-        headers['user-agent'] = self.sdk_configuration.user_agent
-        
-        client = self.sdk_configuration.security_client
-        
-        http_res = client.request('PATCH', url, headers=headers)
-        content_type = http_res.headers.get('Content-Type')
-
-        res = operations.PatchCrmConnectionIDCompanyIDDealDealIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
-        
-        if http_res.status_code == 200:
-            if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[shared.CrmCompany])
-                res.crm_company = out
-            else:
-                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
-        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
-            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
-
-        return res
-
-    
     def patch_crm_connection_id_contact_id(self, request: operations.PatchCrmConnectionIDContactIDRequest) -> operations.PatchCrmConnectionIDContactIDResponse:
         r"""Update a contact"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -1013,62 +817,6 @@ class Crm:
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.PatchCrmConnectionIDContactIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
-        
-        if http_res.status_code == 200:
-            if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[shared.CrmContact])
-                res.crm_contact = out
-            else:
-                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
-        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
-            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
-
-        return res
-
-    
-    def patch_crm_connection_id_contact_id_company_company_id(self, request: operations.PatchCrmConnectionIDContactIDCompanyCompanyIDRequest) -> operations.PatchCrmConnectionIDContactIDCompanyCompanyIDResponse:
-        r"""Associate a company with a contact"""
-        base_url = utils.template_url(*self.sdk_configuration.get_server_details())
-        
-        url = utils.generate_url(operations.PatchCrmConnectionIDContactIDCompanyCompanyIDRequest, base_url, '/crm/{connection_id}/contact/{id}/company/{company_id}', request)
-        headers = {}
-        headers['Accept'] = 'application/json'
-        headers['user-agent'] = self.sdk_configuration.user_agent
-        
-        client = self.sdk_configuration.security_client
-        
-        http_res = client.request('PATCH', url, headers=headers)
-        content_type = http_res.headers.get('Content-Type')
-
-        res = operations.PatchCrmConnectionIDContactIDCompanyCompanyIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
-        
-        if http_res.status_code == 200:
-            if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[shared.CrmContact])
-                res.crm_contact = out
-            else:
-                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
-        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
-            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
-
-        return res
-
-    
-    def patch_crm_connection_id_contact_id_deal_deal_id(self, request: operations.PatchCrmConnectionIDContactIDDealDealIDRequest) -> operations.PatchCrmConnectionIDContactIDDealDealIDResponse:
-        r"""Associate a deal with a contact"""
-        base_url = utils.template_url(*self.sdk_configuration.get_server_details())
-        
-        url = utils.generate_url(operations.PatchCrmConnectionIDContactIDDealDealIDRequest, base_url, '/crm/{connection_id}/contact/{id}/deal/{deal_id}', request)
-        headers = {}
-        headers['Accept'] = 'application/json'
-        headers['user-agent'] = self.sdk_configuration.user_agent
-        
-        client = self.sdk_configuration.security_client
-        
-        http_res = client.request('PATCH', url, headers=headers)
-        content_type = http_res.headers.get('Content-Type')
-
-        res = operations.PatchCrmConnectionIDContactIDDealDealIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
@@ -1131,90 +879,6 @@ class Crm:
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.PatchCrmConnectionIDEventIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
-        
-        if http_res.status_code == 200:
-            if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[shared.CrmEvent])
-                res.crm_event = out
-            else:
-                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
-        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
-            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
-
-        return res
-
-    
-    def patch_crm_connection_id_event_id_company_company_id(self, request: operations.PatchCrmConnectionIDEventIDCompanyCompanyIDRequest) -> operations.PatchCrmConnectionIDEventIDCompanyCompanyIDResponse:
-        r"""Associate a company with an event"""
-        base_url = utils.template_url(*self.sdk_configuration.get_server_details())
-        
-        url = utils.generate_url(operations.PatchCrmConnectionIDEventIDCompanyCompanyIDRequest, base_url, '/crm/{connection_id}/event/{id}/company/{company_id}', request)
-        headers = {}
-        headers['Accept'] = 'application/json'
-        headers['user-agent'] = self.sdk_configuration.user_agent
-        
-        client = self.sdk_configuration.security_client
-        
-        http_res = client.request('PATCH', url, headers=headers)
-        content_type = http_res.headers.get('Content-Type')
-
-        res = operations.PatchCrmConnectionIDEventIDCompanyCompanyIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
-        
-        if http_res.status_code == 200:
-            if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[shared.CrmEvent])
-                res.crm_event = out
-            else:
-                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
-        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
-            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
-
-        return res
-
-    
-    def patch_crm_connection_id_event_id_contact_contact_id(self, request: operations.PatchCrmConnectionIDEventIDContactContactIDRequest) -> operations.PatchCrmConnectionIDEventIDContactContactIDResponse:
-        r"""Associate a contact with an event"""
-        base_url = utils.template_url(*self.sdk_configuration.get_server_details())
-        
-        url = utils.generate_url(operations.PatchCrmConnectionIDEventIDContactContactIDRequest, base_url, '/crm/{connection_id}/event/{id}/contact/{contact_id}', request)
-        headers = {}
-        headers['Accept'] = 'application/json'
-        headers['user-agent'] = self.sdk_configuration.user_agent
-        
-        client = self.sdk_configuration.security_client
-        
-        http_res = client.request('PATCH', url, headers=headers)
-        content_type = http_res.headers.get('Content-Type')
-
-        res = operations.PatchCrmConnectionIDEventIDContactContactIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
-        
-        if http_res.status_code == 200:
-            if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[shared.CrmEvent])
-                res.crm_event = out
-            else:
-                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
-        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
-            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
-
-        return res
-
-    
-    def patch_crm_connection_id_event_id_deal_deal_id(self, request: operations.PatchCrmConnectionIDEventIDDealDealIDRequest) -> operations.PatchCrmConnectionIDEventIDDealDealIDResponse:
-        r"""Associate a deal with an event"""
-        base_url = utils.template_url(*self.sdk_configuration.get_server_details())
-        
-        url = utils.generate_url(operations.PatchCrmConnectionIDEventIDDealDealIDRequest, base_url, '/crm/{connection_id}/event/{id}/deal/{deal_id}', request)
-        headers = {}
-        headers['Accept'] = 'application/json'
-        headers['user-agent'] = self.sdk_configuration.user_agent
-        
-        client = self.sdk_configuration.security_client
-        
-        http_res = client.request('PATCH', url, headers=headers)
-        content_type = http_res.headers.get('Content-Type')
-
-        res = operations.PatchCrmConnectionIDEventIDDealDealIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
@@ -1693,34 +1357,6 @@ class Crm:
         return res
 
     
-    def put_crm_connection_id_company_id_deal_deal_id(self, request: operations.PutCrmConnectionIDCompanyIDDealDealIDRequest) -> operations.PutCrmConnectionIDCompanyIDDealDealIDResponse:
-        r"""Associate a deal with a company"""
-        base_url = utils.template_url(*self.sdk_configuration.get_server_details())
-        
-        url = utils.generate_url(operations.PutCrmConnectionIDCompanyIDDealDealIDRequest, base_url, '/crm/{connection_id}/company/{id}/deal/{deal_id}', request)
-        headers = {}
-        headers['Accept'] = 'application/json'
-        headers['user-agent'] = self.sdk_configuration.user_agent
-        
-        client = self.sdk_configuration.security_client
-        
-        http_res = client.request('PUT', url, headers=headers)
-        content_type = http_res.headers.get('Content-Type')
-
-        res = operations.PutCrmConnectionIDCompanyIDDealDealIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
-        
-        if http_res.status_code == 200:
-            if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[shared.CrmCompany])
-                res.crm_company = out
-            else:
-                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
-        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
-            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
-
-        return res
-
-    
     def put_crm_connection_id_contact_id(self, request: operations.PutCrmConnectionIDContactIDRequest) -> operations.PutCrmConnectionIDContactIDResponse:
         r"""Update a contact"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -1739,62 +1375,6 @@ class Crm:
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.PutCrmConnectionIDContactIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
-        
-        if http_res.status_code == 200:
-            if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[shared.CrmContact])
-                res.crm_contact = out
-            else:
-                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
-        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
-            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
-
-        return res
-
-    
-    def put_crm_connection_id_contact_id_company_company_id(self, request: operations.PutCrmConnectionIDContactIDCompanyCompanyIDRequest) -> operations.PutCrmConnectionIDContactIDCompanyCompanyIDResponse:
-        r"""Associate a company with a contact"""
-        base_url = utils.template_url(*self.sdk_configuration.get_server_details())
-        
-        url = utils.generate_url(operations.PutCrmConnectionIDContactIDCompanyCompanyIDRequest, base_url, '/crm/{connection_id}/contact/{id}/company/{company_id}', request)
-        headers = {}
-        headers['Accept'] = 'application/json'
-        headers['user-agent'] = self.sdk_configuration.user_agent
-        
-        client = self.sdk_configuration.security_client
-        
-        http_res = client.request('PUT', url, headers=headers)
-        content_type = http_res.headers.get('Content-Type')
-
-        res = operations.PutCrmConnectionIDContactIDCompanyCompanyIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
-        
-        if http_res.status_code == 200:
-            if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[shared.CrmContact])
-                res.crm_contact = out
-            else:
-                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
-        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
-            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
-
-        return res
-
-    
-    def put_crm_connection_id_contact_id_deal_deal_id(self, request: operations.PutCrmConnectionIDContactIDDealDealIDRequest) -> operations.PutCrmConnectionIDContactIDDealDealIDResponse:
-        r"""Associate a deal with a contact"""
-        base_url = utils.template_url(*self.sdk_configuration.get_server_details())
-        
-        url = utils.generate_url(operations.PutCrmConnectionIDContactIDDealDealIDRequest, base_url, '/crm/{connection_id}/contact/{id}/deal/{deal_id}', request)
-        headers = {}
-        headers['Accept'] = 'application/json'
-        headers['user-agent'] = self.sdk_configuration.user_agent
-        
-        client = self.sdk_configuration.security_client
-        
-        http_res = client.request('PUT', url, headers=headers)
-        content_type = http_res.headers.get('Content-Type')
-
-        res = operations.PutCrmConnectionIDContactIDDealDealIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
@@ -1857,90 +1437,6 @@ class Crm:
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.PutCrmConnectionIDEventIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
-        
-        if http_res.status_code == 200:
-            if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[shared.CrmEvent])
-                res.crm_event = out
-            else:
-                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
-        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
-            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
-
-        return res
-
-    
-    def put_crm_connection_id_event_id_company_company_id(self, request: operations.PutCrmConnectionIDEventIDCompanyCompanyIDRequest) -> operations.PutCrmConnectionIDEventIDCompanyCompanyIDResponse:
-        r"""Associate a company with an event"""
-        base_url = utils.template_url(*self.sdk_configuration.get_server_details())
-        
-        url = utils.generate_url(operations.PutCrmConnectionIDEventIDCompanyCompanyIDRequest, base_url, '/crm/{connection_id}/event/{id}/company/{company_id}', request)
-        headers = {}
-        headers['Accept'] = 'application/json'
-        headers['user-agent'] = self.sdk_configuration.user_agent
-        
-        client = self.sdk_configuration.security_client
-        
-        http_res = client.request('PUT', url, headers=headers)
-        content_type = http_res.headers.get('Content-Type')
-
-        res = operations.PutCrmConnectionIDEventIDCompanyCompanyIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
-        
-        if http_res.status_code == 200:
-            if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[shared.CrmEvent])
-                res.crm_event = out
-            else:
-                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
-        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
-            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
-
-        return res
-
-    
-    def put_crm_connection_id_event_id_contact_contact_id(self, request: operations.PutCrmConnectionIDEventIDContactContactIDRequest) -> operations.PutCrmConnectionIDEventIDContactContactIDResponse:
-        r"""Associate a contact with an event"""
-        base_url = utils.template_url(*self.sdk_configuration.get_server_details())
-        
-        url = utils.generate_url(operations.PutCrmConnectionIDEventIDContactContactIDRequest, base_url, '/crm/{connection_id}/event/{id}/contact/{contact_id}', request)
-        headers = {}
-        headers['Accept'] = 'application/json'
-        headers['user-agent'] = self.sdk_configuration.user_agent
-        
-        client = self.sdk_configuration.security_client
-        
-        http_res = client.request('PUT', url, headers=headers)
-        content_type = http_res.headers.get('Content-Type')
-
-        res = operations.PutCrmConnectionIDEventIDContactContactIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
-        
-        if http_res.status_code == 200:
-            if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[shared.CrmEvent])
-                res.crm_event = out
-            else:
-                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
-        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
-            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
-
-        return res
-
-    
-    def put_crm_connection_id_event_id_deal_deal_id(self, request: operations.PutCrmConnectionIDEventIDDealDealIDRequest) -> operations.PutCrmConnectionIDEventIDDealDealIDResponse:
-        r"""Associate a deal with an event"""
-        base_url = utils.template_url(*self.sdk_configuration.get_server_details())
-        
-        url = utils.generate_url(operations.PutCrmConnectionIDEventIDDealDealIDRequest, base_url, '/crm/{connection_id}/event/{id}/deal/{deal_id}', request)
-        headers = {}
-        headers['Accept'] = 'application/json'
-        headers['user-agent'] = self.sdk_configuration.user_agent
-        
-        client = self.sdk_configuration.security_client
-        
-        http_res = client.request('PUT', url, headers=headers)
-        content_type = http_res.headers.get('Content-Type')
-
-        res = operations.PutCrmConnectionIDEventIDDealDealIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):

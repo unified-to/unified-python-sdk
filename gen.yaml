@@ -1,6 +1,6 @@
 configVersion: 1.0.0
 management:
-  docChecksum: 5bd36b53552fa02e224d43312e46580b
+  docChecksum: cedc7f87e9bac1ed8066efdaf5290f13
   docVersion: "1.0"
   speakeasyVersion: 1.92.3
   generationVersion: 2.143.2
@@ -18,7 +18,7 @@ features:
     globalSecurity: 2.81.1
     globalServerURLs: 2.82.0
 python:
-  version: 0.5.1
+  version: 0.5.2
   author: Unified API Inc
   clientServerStatusCodesAsErrors: true
   description: Python Client SDK for Unified.to
