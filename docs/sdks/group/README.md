@@ -3,16 +3,16 @@
 
 ### Available Operations
 
-* [delete_hris_connection_id_group_id](#delete_hris_connection_id_group_id) - Remove a Group
-* [get_hris_connection_id_group](#get_hris_connection_id_group) - List all Groups
-* [get_hris_connection_id_group_id](#get_hris_connection_id_group_id) - Retrieve a Group
-* [patch_hris_connection_id_group_id](#patch_hris_connection_id_group_id) - Update a Group
-* [post_hris_connection_id_group](#post_hris_connection_id_group) - Create a Group
-* [put_hris_connection_id_group_id](#put_hris_connection_id_group_id) - Update a Group
+* [delete_hris_connection_id_group_id](#delete_hris_connection_id_group_id) - Remove a group
+* [get_hris_connection_id_group](#get_hris_connection_id_group) - List all groups
+* [get_hris_connection_id_group_id](#get_hris_connection_id_group_id) - Retrieve a group
+* [patch_hris_connection_id_group_id](#patch_hris_connection_id_group_id) - Update a group
+* [post_hris_connection_id_group](#post_hris_connection_id_group) - Create a group
+* [put_hris_connection_id_group_id](#put_hris_connection_id_group_id) - Update a group
 
 ## delete_hris_connection_id_group_id
 
-Remove a Group
+Remove a group
 
 ### Example Usage
 
@@ -51,7 +51,7 @@ if res.status_code == 200:
 
 ## get_hris_connection_id_group
 
-List all Groups
+List all groups
 
 ### Example Usage
 
@@ -96,7 +96,7 @@ if res.hris_groups is not None:
 
 ## get_hris_connection_id_group_id
 
-Retrieve a Group
+Retrieve a group
 
 ### Example Usage
 
@@ -135,7 +135,7 @@ if res.hris_group is not None:
 
 ## patch_hris_connection_id_group_id
 
-Update a Group
+Update a group
 
 ### Example Usage
 
@@ -192,7 +192,7 @@ if res.hris_group is not None:
 
 ## post_hris_connection_id_group
 
-Create a Group
+Create a group
 
 ### Example Usage
 
@@ -248,7 +248,7 @@ if res.hris_group is not None:
 
 ## put_hris_connection_id_group_id
 
-Update a Group
+Update a group
 
 ### Example Usage
 

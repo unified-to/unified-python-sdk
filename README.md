@@ -237,12 +237,12 @@ if res.status_code == 200:
 
 ### [employee](docs/sdks/employee/README.md)
 
-* [delete_hris_connection_id_employee_id](docs/sdks/employee/README.md#delete_hris_connection_id_employee_id) - Remove a Employee
-* [get_hris_connection_id_employee](docs/sdks/employee/README.md#get_hris_connection_id_employee) - List all Employees
-* [get_hris_connection_id_employee_id](docs/sdks/employee/README.md#get_hris_connection_id_employee_id) - Retrieve a Employee
-* [patch_hris_connection_id_employee_id](docs/sdks/employee/README.md#patch_hris_connection_id_employee_id) - Update a Employee
-* [post_hris_connection_id_employee](docs/sdks/employee/README.md#post_hris_connection_id_employee) - Create a Employee
-* [put_hris_connection_id_employee_id](docs/sdks/employee/README.md#put_hris_connection_id_employee_id) - Update a Employee
+* [delete_hris_connection_id_employee_id](docs/sdks/employee/README.md#delete_hris_connection_id_employee_id) - Remove an employee
+* [get_hris_connection_id_employee](docs/sdks/employee/README.md#get_hris_connection_id_employee) - List all employees
+* [get_hris_connection_id_employee_id](docs/sdks/employee/README.md#get_hris_connection_id_employee_id) - Retrieve an employee
+* [patch_hris_connection_id_employee_id](docs/sdks/employee/README.md#patch_hris_connection_id_employee_id) - Update an employee
+* [post_hris_connection_id_employee](docs/sdks/employee/README.md#post_hris_connection_id_employee) - Create an employee
+* [put_hris_connection_id_employee_id](docs/sdks/employee/README.md#put_hris_connection_id_employee_id) - Update an employee
 
 ### [enrich](docs/sdks/enrich/README.md)
 
@@ -269,27 +269,27 @@ if res.status_code == 200:
 
 ### [group](docs/sdks/group/README.md)
 
-* [delete_hris_connection_id_group_id](docs/sdks/group/README.md#delete_hris_connection_id_group_id) - Remove a Group
-* [get_hris_connection_id_group](docs/sdks/group/README.md#get_hris_connection_id_group) - List all Groups
-* [get_hris_connection_id_group_id](docs/sdks/group/README.md#get_hris_connection_id_group_id) - Retrieve a Group
-* [patch_hris_connection_id_group_id](docs/sdks/group/README.md#patch_hris_connection_id_group_id) - Update a Group
-* [post_hris_connection_id_group](docs/sdks/group/README.md#post_hris_connection_id_group) - Create a Group
-* [put_hris_connection_id_group_id](docs/sdks/group/README.md#put_hris_connection_id_group_id) - Update a Group
+* [delete_hris_connection_id_group_id](docs/sdks/group/README.md#delete_hris_connection_id_group_id) - Remove a group
+* [get_hris_connection_id_group](docs/sdks/group/README.md#get_hris_connection_id_group) - List all groups
+* [get_hris_connection_id_group_id](docs/sdks/group/README.md#get_hris_connection_id_group_id) - Retrieve a group
+* [patch_hris_connection_id_group_id](docs/sdks/group/README.md#patch_hris_connection_id_group_id) - Update a group
+* [post_hris_connection_id_group](docs/sdks/group/README.md#post_hris_connection_id_group) - Create a group
+* [put_hris_connection_id_group_id](docs/sdks/group/README.md#put_hris_connection_id_group_id) - Update a group
 
 ### [hris](docs/sdks/hris/README.md)
 
-* [delete_hris_connection_id_employee_id](docs/sdks/hris/README.md#delete_hris_connection_id_employee_id) - Remove a Employee
-* [delete_hris_connection_id_group_id](docs/sdks/hris/README.md#delete_hris_connection_id_group_id) - Remove a Group
-* [get_hris_connection_id_employee](docs/sdks/hris/README.md#get_hris_connection_id_employee) - List all Employees
-* [get_hris_connection_id_employee_id](docs/sdks/hris/README.md#get_hris_connection_id_employee_id) - Retrieve a Employee
-* [get_hris_connection_id_group](docs/sdks/hris/README.md#get_hris_connection_id_group) - List all Groups
-* [get_hris_connection_id_group_id](docs/sdks/hris/README.md#get_hris_connection_id_group_id) - Retrieve a Group
-* [patch_hris_connection_id_employee_id](docs/sdks/hris/README.md#patch_hris_connection_id_employee_id) - Update a Employee
-* [patch_hris_connection_id_group_id](docs/sdks/hris/README.md#patch_hris_connection_id_group_id) - Update a Group
-* [post_hris_connection_id_employee](docs/sdks/hris/README.md#post_hris_connection_id_employee) - Create a Employee
-* [post_hris_connection_id_group](docs/sdks/hris/README.md#post_hris_connection_id_group) - Create a Group
-* [put_hris_connection_id_employee_id](docs/sdks/hris/README.md#put_hris_connection_id_employee_id) - Update a Employee
-* [put_hris_connection_id_group_id](docs/sdks/hris/README.md#put_hris_connection_id_group_id) - Update a Group
+* [delete_hris_connection_id_employee_id](docs/sdks/hris/README.md#delete_hris_connection_id_employee_id) - Remove an employee
+* [delete_hris_connection_id_group_id](docs/sdks/hris/README.md#delete_hris_connection_id_group_id) - Remove a group
+* [get_hris_connection_id_employee](docs/sdks/hris/README.md#get_hris_connection_id_employee) - List all employees
+* [get_hris_connection_id_employee_id](docs/sdks/hris/README.md#get_hris_connection_id_employee_id) - Retrieve an employee
+* [get_hris_connection_id_group](docs/sdks/hris/README.md#get_hris_connection_id_group) - List all groups
+* [get_hris_connection_id_group_id](docs/sdks/hris/README.md#get_hris_connection_id_group_id) - Retrieve a group
+* [patch_hris_connection_id_employee_id](docs/sdks/hris/README.md#patch_hris_connection_id_employee_id) - Update an employee
+* [patch_hris_connection_id_group_id](docs/sdks/hris/README.md#patch_hris_connection_id_group_id) - Update a group
+* [post_hris_connection_id_employee](docs/sdks/hris/README.md#post_hris_connection_id_employee) - Create an employee
+* [post_hris_connection_id_group](docs/sdks/hris/README.md#post_hris_connection_id_group) - Create a group
+* [put_hris_connection_id_employee_id](docs/sdks/hris/README.md#put_hris_connection_id_employee_id) - Update an employee
+* [put_hris_connection_id_group_id](docs/sdks/hris/README.md#put_hris_connection_id_group_id) - Update a group
 
 ### [integration](docs/sdks/integration/README.md)
 

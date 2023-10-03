@@ -3,16 +3,16 @@
 
 ### Available Operations
 
-* [delete_hris_connection_id_employee_id](#delete_hris_connection_id_employee_id) - Remove a Employee
-* [get_hris_connection_id_employee](#get_hris_connection_id_employee) - List all Employees
-* [get_hris_connection_id_employee_id](#get_hris_connection_id_employee_id) - Retrieve a Employee
-* [patch_hris_connection_id_employee_id](#patch_hris_connection_id_employee_id) - Update a Employee
-* [post_hris_connection_id_employee](#post_hris_connection_id_employee) - Create a Employee
-* [put_hris_connection_id_employee_id](#put_hris_connection_id_employee_id) - Update a Employee
+* [delete_hris_connection_id_employee_id](#delete_hris_connection_id_employee_id) - Remove an employee
+* [get_hris_connection_id_employee](#get_hris_connection_id_employee) - List all employees
+* [get_hris_connection_id_employee_id](#get_hris_connection_id_employee_id) - Retrieve an employee
+* [patch_hris_connection_id_employee_id](#patch_hris_connection_id_employee_id) - Update an employee
+* [post_hris_connection_id_employee](#post_hris_connection_id_employee) - Create an employee
+* [put_hris_connection_id_employee_id](#put_hris_connection_id_employee_id) - Update an employee
 
 ## delete_hris_connection_id_employee_id
 
-Remove a Employee
+Remove an employee
 
 ### Example Usage
 
@@ -51,7 +51,7 @@ if res.status_code == 200:
 
 ## get_hris_connection_id_employee
 
-List all Employees
+List all employees
 
 ### Example Usage
 
@@ -96,7 +96,7 @@ if res.hris_employees is not None:
 
 ## get_hris_connection_id_employee_id
 
-Retrieve a Employee
+Retrieve an employee
 
 ### Example Usage
 
@@ -135,7 +135,7 @@ if res.hris_employee is not None:
 
 ## patch_hris_connection_id_employee_id
 
-Update a Employee
+Update an employee
 
 ### Example Usage
 
@@ -217,7 +217,7 @@ if res.hris_employee is not None:
 
 ## post_hris_connection_id_employee
 
-Create a Employee
+Create an employee
 
 ### Example Usage
 
@@ -298,7 +298,7 @@ if res.hris_employee is not None:
 
 ## put_hris_connection_id_employee_id
 
-Update a Employee
+Update an employee
 
 ### Example Usage
 

@@ -13,7 +13,7 @@ class Hris:
         
     
     def delete_hris_connection_id_employee_id(self, request: operations.DeleteHrisConnectionIDEmployeeIDRequest) -> operations.DeleteHrisConnectionIDEmployeeIDResponse:
-        r"""Remove a Employee"""
+        r"""Remove an employee"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.DeleteHrisConnectionIDEmployeeIDRequest, base_url, '/hris/{connection_id}/employee/{id}', request)
@@ -40,7 +40,7 @@ class Hris:
 
     
     def delete_hris_connection_id_group_id(self, request: operations.DeleteHrisConnectionIDGroupIDRequest) -> operations.DeleteHrisConnectionIDGroupIDResponse:
-        r"""Remove a Group"""
+        r"""Remove a group"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.DeleteHrisConnectionIDGroupIDRequest, base_url, '/hris/{connection_id}/group/{id}', request)
@@ -67,7 +67,7 @@ class Hris:
 
     
     def get_hris_connection_id_employee(self, request: operations.GetHrisConnectionIDEmployeeRequest) -> operations.GetHrisConnectionIDEmployeeResponse:
-        r"""List all Employees"""
+        r"""List all employees"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.GetHrisConnectionIDEmployeeRequest, base_url, '/hris/{connection_id}/employee', request)
@@ -96,7 +96,7 @@ class Hris:
 
     
     def get_hris_connection_id_employee_id(self, request: operations.GetHrisConnectionIDEmployeeIDRequest) -> operations.GetHrisConnectionIDEmployeeIDResponse:
-        r"""Retrieve a Employee"""
+        r"""Retrieve an employee"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.GetHrisConnectionIDEmployeeIDRequest, base_url, '/hris/{connection_id}/employee/{id}', request)
@@ -124,7 +124,7 @@ class Hris:
 
     
     def get_hris_connection_id_group(self, request: operations.GetHrisConnectionIDGroupRequest) -> operations.GetHrisConnectionIDGroupResponse:
-        r"""List all Groups"""
+        r"""List all groups"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.GetHrisConnectionIDGroupRequest, base_url, '/hris/{connection_id}/group', request)
@@ -153,7 +153,7 @@ class Hris:
 
     
     def get_hris_connection_id_group_id(self, request: operations.GetHrisConnectionIDGroupIDRequest) -> operations.GetHrisConnectionIDGroupIDResponse:
-        r"""Retrieve a Group"""
+        r"""Retrieve a group"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.GetHrisConnectionIDGroupIDRequest, base_url, '/hris/{connection_id}/group/{id}', request)
@@ -181,7 +181,7 @@ class Hris:
 
     
     def patch_hris_connection_id_employee_id(self, request: operations.PatchHrisConnectionIDEmployeeIDRequest) -> operations.PatchHrisConnectionIDEmployeeIDResponse:
-        r"""Update a Employee"""
+        r"""Update an employee"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.PatchHrisConnectionIDEmployeeIDRequest, base_url, '/hris/{connection_id}/employee/{id}', request)
@@ -212,7 +212,7 @@ class Hris:
 
     
     def patch_hris_connection_id_group_id(self, request: operations.PatchHrisConnectionIDGroupIDRequest) -> operations.PatchHrisConnectionIDGroupIDResponse:
-        r"""Update a Group"""
+        r"""Update a group"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.PatchHrisConnectionIDGroupIDRequest, base_url, '/hris/{connection_id}/group/{id}', request)
@@ -243,7 +243,7 @@ class Hris:
 
     
     def post_hris_connection_id_employee(self, request: operations.PostHrisConnectionIDEmployeeRequest) -> operations.PostHrisConnectionIDEmployeeResponse:
-        r"""Create a Employee"""
+        r"""Create an employee"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.PostHrisConnectionIDEmployeeRequest, base_url, '/hris/{connection_id}/employee', request)
@@ -274,7 +274,7 @@ class Hris:
 
     
     def post_hris_connection_id_group(self, request: operations.PostHrisConnectionIDGroupRequest) -> operations.PostHrisConnectionIDGroupResponse:
-        r"""Create a Group"""
+        r"""Create a group"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.PostHrisConnectionIDGroupRequest, base_url, '/hris/{connection_id}/group', request)
@@ -305,7 +305,7 @@ class Hris:
 
     
     def put_hris_connection_id_employee_id(self, request: operations.PutHrisConnectionIDEmployeeIDRequest) -> operations.PutHrisConnectionIDEmployeeIDResponse:
-        r"""Update a Employee"""
+        r"""Update an employee"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.PutHrisConnectionIDEmployeeIDRequest, base_url, '/hris/{connection_id}/employee/{id}', request)
@@ -336,7 +336,7 @@ class Hris:
 
     
     def put_hris_connection_id_group_id(self, request: operations.PutHrisConnectionIDGroupIDRequest) -> operations.PutHrisConnectionIDGroupIDResponse:
-        r"""Update a Group"""
+        r"""Update a group"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.PutHrisConnectionIDGroupIDRequest, base_url, '/hris/{connection_id}/group/{id}', request)
