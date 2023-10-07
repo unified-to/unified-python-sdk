@@ -26,16 +26,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetUnifiedIntegrationRequest(
-    active=False,
     categories=[
         operations.GetUnifiedIntegrationCategories.ENRICH,
     ],
-    limit=7363.95,
-    offset=8214.4,
-    order='Nelda Implemented',
-    sort='cabinet',
-    summary=False,
-    updated_gte=dateutil.parser.isoparse('2022-02-05T00:16:37.455Z'),
 )
 
 res = s.integration.get_unified_integration(req)
@@ -73,19 +66,11 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetUnifiedIntegrationAuthWorkspaceIDIntegrationTypeRequest(
-    env='Algerian',
-    external_xref='Cambridgeshire Surinam',
-    failure_redirect='Designer Drive',
-    integration_type='program Home',
-    lang='Plastic program',
-    redirect=False,
+    integration_type='Algerian',
     scopes=[
-        operations.GetUnifiedIntegrationAuthWorkspaceIDIntegrationTypeScopes.CRM_FILE_READ,
+        operations.GetUnifiedIntegrationAuthWorkspaceIDIntegrationTypeScopes.MARTECH_MEMBER_WRITE,
     ],
-    state='Functionality Product',
-    subdomain='payment Developer Dynamic',
-    success_redirect='Northeast',
-    workspace_id='duh empower Kwanza',
+    workspace_id='hound',
 )
 
 res = s.integration.get_unified_integration_auth_workspace_id_integration_type(req)
@@ -161,13 +146,10 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetUnifiedIntegrationWorkspaceWorkspaceIDRequest(
-    active=False,
     categories=[
         operations.GetUnifiedIntegrationWorkspaceWorkspaceIDCategories.HRIS,
     ],
-    env='North Southeast exercitationem',
-    summary=False,
-    workspace_id='Bronze Plastic',
+    workspace_id='North Southeast exercitationem',
 )
 
 res = s.integration.get_unified_integration_workspace_workspace_id(req)

@@ -23,19 +23,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetUnifiedApicallRequest(
-    connection_id='delectus green Hybrid',
-    created_lte=dateutil.parser.isoparse('2021-04-02T21:36:49.952Z'),
-    env='Fantastic Iodine indexing',
-    error=False,
-    external_xref='Music',
-    integration_type='Soft',
-    limit=2390.64,
-    offset=3757.34,
-    order='mobile envisioneer',
-    sort='North payment opposite',
-    updated_gte=dateutil.parser.isoparse('2021-08-11T16:18:13.644Z'),
-)
+req = operations.GetUnifiedApicallRequest()
 
 res = s.apicall.get_unified_apicall(req)
 

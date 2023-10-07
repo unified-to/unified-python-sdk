@@ -102,12 +102,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetCrmConnectionIDUserRequest(
     connection_id='suit Electronic Tampa',
-    limit=2883.34,
-    offset=8886.55,
-    order='despite',
-    query='frightfully Fitness',
-    sort='success servant',
-    updated_gte=dateutil.parser.isoparse('2023-02-23T05:53:04.259Z'),
 )
 
 res = s.user.get_crm_connection_id_user(req)
@@ -244,43 +238,18 @@ s = unified_to.UnifiedTo(
 
 req = operations.PatchCrmConnectionIDUserIDRequest(
     crm_user=shared.CrmUser(
-        active=False,
-        address=shared.PropertyCrmUserAddress(
-            address1='Customer',
-            address2='violet groupware blanditiis',
-            city='South Phoebeshire',
-            country='Thailand',
-            country_code='NO',
-            postal_code='30801-4594',
-            region='portals Vanadium',
-            region_code='Future',
-        ),
-        created_at=dateutil.parser.isoparse('2023-01-04T02:42:28.788Z'),
-        currency='Guinea Franc',
-        department='Gloves global rosin',
-        division='Berkshire Europium',
+        address=shared.PropertyCrmUserAddress(),
         emails=[
-            shared.CrmEmail(
-                email='Wade.Dach@gmail.com',
-                type=shared.CrmEmailType.WORK,
-            ),
+            shared.CrmEmail(),
         ],
-        id='<ID>',
-        image_url='Checking',
-        language_locale='Sedan Porsche matrix',
-        name='superstructure Nissan sedately',
         raw=shared.PropertyCrmUserRaw(),
         telephones=[
             shared.CrmTelephone(
-                telephone='unto ubiquitous input',
-                type=shared.CrmTelephoneType.MOBILE,
+                telephone='Customer',
             ),
         ],
-        timezone='America/Tijuana',
-        title='Computer Bicycle',
-        updated_at=dateutil.parser.isoparse('2021-12-13T16:36:33.886Z'),
     ),
-    connection_id='gold generating',
+    connection_id='violet groupware blanditiis',
     id='<ID>',
 )
 
@@ -320,16 +289,11 @@ s = unified_to.UnifiedTo(
 )
 
 req = shared.User(
-    created_at=dateutil.parser.isoparse('2022-04-24T15:25:24.483Z'),
-    email='Emmalee.Quitzon@yahoo.com',
-    environment='Bicycle',
-    id='<ID>',
     meta=shared.PropertyUserMeta(),
-    name='vice compressing',
-    updated_at=dateutil.parser.isoparse('2023-05-05T16:52:20.023Z'),
-    workspace_id='Hybrid methodologies',
+    name='virtual female',
+    workspace_id='Jewelery',
     workspace_ids=[
-        'Potassium',
+        'interfaces',
     ],
 )
 
@@ -370,43 +334,18 @@ s = unified_to.UnifiedTo(
 
 req = operations.PostCrmConnectionIDUserRequest(
     crm_user=shared.CrmUser(
-        active=False,
-        address=shared.PropertyCrmUserAddress(
-            address1='driver East',
-            address2='relationships Computer navigate',
-            city='Homestead',
-            country='Cayman Islands',
-            country_code='BW',
-            postal_code='34958',
-            region='South',
-            region_code='morph an colossal',
-        ),
-        created_at=dateutil.parser.isoparse('2021-02-02T08:27:21.693Z'),
-        currency='Cayman Islands Dollar',
-        department='um',
-        division='West sievert generating',
+        address=shared.PropertyCrmUserAddress(),
         emails=[
-            shared.CrmEmail(
-                email='Jadon_Schumm45@gmail.com',
-                type=shared.CrmEmailType.HOME,
-            ),
+            shared.CrmEmail(),
         ],
-        id='<ID>',
-        image_url='radian Borders Southeast',
-        language_locale='Silicon Awesome Industrial',
-        name='Mouse Accounts',
         raw=shared.PropertyCrmUserRaw(),
         telephones=[
             shared.CrmTelephone(
-                telephone='ohm Southeast ROI',
-                type=shared.CrmTelephoneType.MOBILE,
+                telephone='driver East',
             ),
         ],
-        timezone='Europe/Bratislava',
-        title='Money',
-        updated_at=dateutil.parser.isoparse('2023-12-09T10:24:50.054Z'),
     ),
-    connection_id='competent calculate',
+    connection_id='relationships Computer navigate',
 )
 
 res = s.user.post_crm_connection_id_user(req)
@@ -446,43 +385,18 @@ s = unified_to.UnifiedTo(
 
 req = operations.PutCrmConnectionIDUserIDRequest(
     crm_user=shared.CrmUser(
-        active=False,
-        address=shared.PropertyCrmUserAddress(
-            address1='Honduras',
-            address2='Oxygen Libyan Burundi',
-            city='North Gertrudefield',
-            country='Belgium',
-            country_code='DK',
-            postal_code='00781',
-            region='Wagon',
-            region_code='how overriding',
-        ),
-        created_at=dateutil.parser.isoparse('2023-03-13T00:47:15.649Z'),
-        currency='Pakistan Rupee',
-        department='Tricycle vaguely',
-        division='Severn bluetooth Argon',
+        address=shared.PropertyCrmUserAddress(),
         emails=[
-            shared.CrmEmail(
-                email='Karl_Stehr4@hotmail.com',
-                type=shared.CrmEmailType.WORK,
-            ),
+            shared.CrmEmail(),
         ],
-        id='<ID>',
-        image_url='AGP romance didactic',
-        language_locale='ROI Polarised',
-        name='olive synthesizing',
         raw=shared.PropertyCrmUserRaw(),
         telephones=[
             shared.CrmTelephone(
-                telephone='Honda Indiana',
-                type=shared.CrmTelephoneType.FAX,
+                telephone='Honduras',
             ),
         ],
-        timezone='Asia/Novosibirsk',
-        title='compelling red compressing',
-        updated_at=dateutil.parser.isoparse('2022-09-03T15:59:05.095Z'),
     ),
-    connection_id='relationships',
+    connection_id='Oxygen Libyan Burundi',
     id='<ID>',
 )
 
@@ -522,16 +436,11 @@ s = unified_to.UnifiedTo(
 )
 
 req = shared.User(
-    created_at=dateutil.parser.isoparse('2023-07-31T04:46:29.769Z'),
-    email='Selena59@yahoo.com',
-    environment='Bedfordshire Lucia',
-    id='<ID>',
     meta=shared.PropertyUserMeta(),
-    name='Bicycle hacking South',
-    updated_at=dateutil.parser.isoparse('2023-03-15T15:08:26.238Z'),
-    workspace_id='Card defect',
+    name='invoice Convertible Country',
+    workspace_id='Ergonomic',
     workspace_ids=[
-        'repudiandae',
+        'becquerel',
     ],
 )
 

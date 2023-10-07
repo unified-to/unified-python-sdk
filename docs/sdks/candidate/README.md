@@ -68,12 +68,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetAtsConnectionIDCandidateRequest(
     connection_id='Northwest forceful Moore',
-    limit=2623.89,
-    offset=7811.91,
-    order='Mouse whether deploy',
-    query='pink',
-    sort='huzzah thistle',
-    updated_gte=dateutil.parser.isoparse('2022-03-13T15:14:03.645Z'),
 )
 
 res = s.candidate.get_ats_connection_id_candidate(req)
@@ -152,42 +146,23 @@ s = unified_to.UnifiedTo(
 
 req = operations.PatchAtsConnectionIDCandidateIDRequest(
     ats_candidate=shared.AtsCandidate(
-        address=shared.PropertyAtsCandidateAddress(
-            address1='closely Goyette plus',
-            address2='culpa',
-            city='Darrinshire',
-            country='Mongolia',
-            country_code='GW',
-            postal_code='05275',
-            region='TLS calculating',
-            region_code='up Argon Internal',
-        ),
-        company_name='Fadel, Schulist and Koss',
-        created_at=dateutil.parser.isoparse('2022-12-09T07:16:54.728Z'),
+        address=shared.PropertyAtsCandidateAddress(),
         emails=[
             shared.AtsEmail(
-                email='Gregory63@gmail.com',
-                type=shared.AtsEmailType.OTHER,
+                email='Stella57@hotmail.com',
             ),
         ],
-        external_id='Elegant',
-        id='<ID>',
-        image_url='Tricycle Yttrium Hybrid',
-        name='ornery whether',
         raw=shared.PropertyAtsCandidateRaw(),
         tags=[
-            'Cadillac',
+            'Chips',
         ],
         telephones=[
             shared.AtsTelephone(
-                telephone='Marketing Cotton',
-                type=shared.AtsTelephoneType.HOME,
+                telephone='culpa',
             ),
         ],
-        title='East',
-        updated_at=dateutil.parser.isoparse('2023-10-31T11:53:36.953Z'),
     ),
-    connection_id='redundant Tricycle unloose',
+    connection_id='Unbranded Country',
     id='<ID>',
 )
 
@@ -228,42 +203,23 @@ s = unified_to.UnifiedTo(
 
 req = operations.PostAtsConnectionIDCandidateRequest(
     ats_candidate=shared.AtsCandidate(
-        address=shared.PropertyAtsCandidateAddress(
-            address1='incubate',
-            address2='azure Trans',
-            city='Port Rory',
-            country='El Salvador',
-            country_code='CX',
-            postal_code='54222-0235',
-            region='modi fooey',
-            region_code='Metal TCP incidunt',
-        ),
-        company_name='McCullough, Rosenbaum and Daugherty',
-        created_at=dateutil.parser.isoparse('2023-02-07T05:55:59.357Z'),
+        address=shared.PropertyAtsCandidateAddress(),
         emails=[
             shared.AtsEmail(
-                email='Eleanora.Rogahn44@hotmail.com',
-                type=shared.AtsEmailType.HOME,
+                email='Elmore.Mante@gmail.com',
             ),
         ],
-        external_id='South though',
-        id='<ID>',
-        image_url='Pants',
-        name='Raleigh',
         raw=shared.PropertyAtsCandidateRaw(),
         tags=[
-            'morph',
+            'than',
         ],
         telephones=[
             shared.AtsTelephone(
-                telephone='lavender Sedan Folk',
-                type=shared.AtsTelephoneType.OTHER,
+                telephone='Wooden siemens Wooden',
             ),
         ],
-        title='Savings panel',
-        updated_at=dateutil.parser.isoparse('2022-02-09T15:32:35.578Z'),
     ),
-    connection_id='Ngultrum red glean',
+    connection_id='Jazz Ball',
 )
 
 res = s.candidate.post_ats_connection_id_candidate(req)
@@ -303,42 +259,23 @@ s = unified_to.UnifiedTo(
 
 req = operations.PutAtsConnectionIDCandidateIDRequest(
     ats_candidate=shared.AtsCandidate(
-        address=shared.PropertyAtsCandidateAddress(
-            address1='archive',
-            address2='Specialist Kyat',
-            city='New Dennis',
-            country='Mauritius',
-            country_code='TL',
-            postal_code='49105-9909',
-            region='copy olive',
-            region_code='withdrawal cumque person',
-        ),
-        company_name='Kuhn and Sons',
-        created_at=dateutil.parser.isoparse('2022-01-28T10:51:00.922Z'),
+        address=shared.PropertyAtsCandidateAddress(),
         emails=[
             shared.AtsEmail(
-                email='Hester.Jenkins@gmail.com',
-                type=shared.AtsEmailType.HOME,
+                email='Giovanny_Botsford@gmail.com',
             ),
         ],
-        external_id='Loan EXE',
-        id='<ID>',
-        image_url='deliver executive RSS',
-        name='because aha black',
         raw=shared.PropertyAtsCandidateRaw(),
         tags=[
-            'program',
+            'deploy',
         ],
         telephones=[
             shared.AtsTelephone(
-                telephone='empower exit Pangender',
-                type=shared.AtsTelephoneType.MOBILE,
+                telephone='knowledge officiis',
             ),
         ],
-        title='Corporate anenst Electronic',
-        updated_at=dateutil.parser.isoparse('2022-03-30T08:00:53.284Z'),
     ),
-    connection_id='Flerovium azure',
+    connection_id='Personal Madagascar',
     id='<ID>',
 )
 

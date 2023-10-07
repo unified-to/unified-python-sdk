@@ -67,15 +67,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetCrmConnectionIDDealRequest(
-    company_id='Tools Card copying',
-    connection_id='Renminbi',
-    contact_id='till payment World',
-    limit=8656.16,
-    offset=4455.8,
-    order='global',
-    query='Program Bespoke Wisconsin',
-    sort='Netherlands under',
-    updated_gte=dateutil.parser.isoparse('2022-12-23T01:47:21.816Z'),
+    connection_id='Tools Card copying',
 )
 
 res = s.deal.get_crm_connection_id_deal(req)
@@ -154,25 +146,12 @@ s = unified_to.UnifiedTo(
 
 req = operations.PatchCrmConnectionIDDealIDRequest(
     crm_deal=shared.CrmDeal(
-        amount=7725.78,
-        closed_at=dateutil.parser.isoparse('2021-10-28T08:42:49.591Z'),
-        created_at=dateutil.parser.isoparse('2023-04-23T15:03:53.999Z'),
-        currency='Afghani',
-        id='<ID>',
-        lost_reason='North',
-        name='midnight',
-        pipeline='envisioneer Functionality Loan',
-        probability=7051.73,
         raw=shared.PropertyCrmDealRaw(),
-        source='Krone',
-        stage='pascal aliquam gripping',
         tags=[
-            'where',
+            'Bicycle',
         ],
-        updated_at=dateutil.parser.isoparse('2022-04-05T10:21:22.505Z'),
-        won_reason='Savings kilogram',
     ),
-    connection_id='Chair weber silver',
+    connection_id='partnerships',
     id='<ID>',
 )
 
@@ -213,25 +192,12 @@ s = unified_to.UnifiedTo(
 
 req = operations.PostCrmConnectionIDDealRequest(
     crm_deal=shared.CrmDeal(
-        amount=6144.41,
-        closed_at=dateutil.parser.isoparse('2022-07-10T09:55:59.977Z'),
-        created_at=dateutil.parser.isoparse('2022-01-20T07:28:03.436Z'),
-        currency='Convertible Marks',
-        id='<ID>',
-        lost_reason='pfft female',
-        name='Expressway',
-        pipeline='withdrawal Extended busily',
-        probability=7998.22,
         raw=shared.PropertyCrmDealRaw(),
-        source='spiffy sometimes',
-        stage='transmitter',
         tags=[
-            'intermediate',
+            'M2F',
         ],
-        updated_at=dateutil.parser.isoparse('2022-10-06T18:34:11.762Z'),
-        won_reason='Cisgender input HTTP',
     ),
-    connection_id='accusantium Checking',
+    connection_id='Borders pfft',
 )
 
 res = s.deal.post_crm_connection_id_deal(req)
@@ -271,25 +237,12 @@ s = unified_to.UnifiedTo(
 
 req = operations.PutCrmConnectionIDDealIDRequest(
     crm_deal=shared.CrmDeal(
-        amount=4050.98,
-        closed_at=dateutil.parser.isoparse('2022-01-15T04:05:31.641Z'),
-        created_at=dateutil.parser.isoparse('2023-06-04T01:28:32.466Z'),
-        currency='Bermudian Dollar (customarily known as Bermuda Dollar)',
-        id='<ID>',
-        lost_reason='laudantium Southwest',
-        name='wail Developer',
-        pipeline='male Samarium Gourde',
-        probability=6728.74,
         raw=shared.PropertyCrmDealRaw(),
-        source='Stage Gasoline Metal',
-        stage='Corporate withdrawal Tasty',
         tags=[
-            'extranet',
+            'Account',
         ],
-        updated_at=dateutil.parser.isoparse('2021-10-16T22:38:02.052Z'),
-        won_reason='phooey',
     ),
-    connection_id='Jazz',
+    connection_id='payment',
     id='<ID>',
 )
 

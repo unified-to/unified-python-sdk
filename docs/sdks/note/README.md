@@ -69,13 +69,7 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetTicketingConnectionIDNoteTicketIDRequest(
     connection_id='Account revolutionary',
-    limit=2310.88,
-    offset=6688.82,
-    order='AI',
-    query='stanch Investor attitude',
-    sort='Cotton',
-    ticket_id='Handmade Kia',
-    updated_gte=dateutil.parser.isoparse('2022-05-26T17:12:11.333Z'),
+    ticket_id='Associate',
 )
 
 res = s.note.get_ticketing_connection_id_note_ticket_id(req)
@@ -155,17 +149,11 @@ s = unified_to.UnifiedTo(
 
 req = operations.PatchTicketingConnectionIDNoteTicketIDIDRequest(
     ticketing_note=shared.TicketingNote(
-        agent_id='compress Oganesson',
-        created_at=dateutil.parser.isoparse('2022-02-16T08:13:19.991Z'),
-        customer_id='demystify',
-        description='Fundamental demand-driven workforce',
-        id='<ID>',
         raw=shared.PropertyTicketingNoteRaw(),
-        updated_at='Nissan',
     ),
-    connection_id='Chicken',
+    connection_id='compress Oganesson',
     id='<ID>',
-    ticket_id='frictionless convergence officia',
+    ticket_id='York Fantastic',
 )
 
 res = s.note.patch_ticketing_connection_id_note_ticket_id_id(req)
@@ -205,16 +193,10 @@ s = unified_to.UnifiedTo(
 
 req = operations.PostTicketingConnectionIDNoteTicketIDRequest(
     ticketing_note=shared.TicketingNote(
-        agent_id='Plantation blue',
-        created_at=dateutil.parser.isoparse('2021-06-11T06:54:31.529Z'),
-        customer_id='asymmetric',
-        description='Expanded intermediate attitude',
-        id='<ID>',
         raw=shared.PropertyTicketingNoteRaw(),
-        updated_at='naturally',
     ),
-    connection_id='Wagon Sulfur',
-    ticket_id='digital',
+    connection_id='Plantation blue',
+    ticket_id='Ford',
 )
 
 res = s.note.post_ticketing_connection_id_note_ticket_id(req)
@@ -254,17 +236,11 @@ s = unified_to.UnifiedTo(
 
 req = operations.PutTicketingConnectionIDNoteTicketIDIDRequest(
     ticketing_note=shared.TicketingNote(
-        agent_id='SMTP Cis',
-        created_at=dateutil.parser.isoparse('2022-07-27T18:14:06.584Z'),
-        customer_id='Carolina',
-        description='Integrated asymmetric strategy',
-        id='<ID>',
         raw=shared.PropertyTicketingNoteRaw(),
-        updated_at='Northeast Morocco supposing',
     ),
-    connection_id='DNS Fermium',
+    connection_id='SMTP Cis',
     id='<ID>',
-    ticket_id='Southwest round',
+    ticket_id='East benchmark',
 )
 
 res = s.note.put_ticketing_connection_id_note_ticket_id_id(req)

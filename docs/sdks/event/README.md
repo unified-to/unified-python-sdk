@@ -67,16 +67,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetCrmConnectionIDEventRequest(
-    company_id='Zirconium Avon Bedfordshire',
-    connection_id='Hybrid grey Ferrari',
-    contact_id='Checking Southeast',
-    deal_id='Graham till Caesium',
-    limit=2928.84,
-    offset=5904.77,
-    order='furthermore Tricycle Hop',
-    query='auxiliary',
-    sort='Southeast Bicycle Gorgeous',
-    updated_gte=dateutil.parser.isoparse('2023-01-15T23:49:53.643Z'),
+    connection_id='Zirconium Avon Bedfordshire',
 )
 
 res = s.event.get_crm_connection_id_event(req)
@@ -155,51 +146,30 @@ s = unified_to.UnifiedTo(
 
 req = operations.PatchCrmConnectionIDEventIDRequest(
     crm_event=shared.CrmEvent(
-        call=shared.PropertyCrmEventCall(
-            description='Optional zero defect function',
-            duration=5434.61,
-        ),
+        call=shared.PropertyCrmEventCall(),
         company_ids=[
-            'silver',
+            'parse',
         ],
         contact_ids=[
-            'redefine',
+            'intranet',
         ],
-        created_at=dateutil.parser.isoparse('2021-07-21T06:46:42.528Z'),
         deal_ids=[
-            'Solutions',
+            'silver',
         ],
         email=shared.PropertyCrmEventEmail(
-            body='French',
             cc=[
-                'Checking',
+                'redefine',
             ],
-            from_='SDD Toyota Northeast',
-            subject='Convertible',
             to=[
-                'Electronics',
+                'Baby',
             ],
         ),
-        id='<ID>',
-        meeting=shared.PropertyCrmEventMeeting(
-            description='Monitored mission-critical customer loyalty',
-            end_at=dateutil.parser.isoparse('2022-09-22T17:43:00.863Z'),
-            start_at=dateutil.parser.isoparse('2023-04-24T06:40:04.926Z'),
-            title='Kip Switchable Chicken',
-        ),
-        note=shared.PropertyCrmEventNote(
-            description='Cross-group high-level functionalities',
-        ),
+        meeting=shared.PropertyCrmEventMeeting(),
+        note=shared.PropertyCrmEventNote(),
         raw=shared.PropertyCrmEventRaw(),
-        task=shared.PropertyCrmEventTask(
-            description='Horizontal empowering forecast',
-            name='Principal extremely Jast',
-            status='striped Concrete Bronze',
-        ),
-        type=shared.CrmEventType.NOTE,
-        updated_at=dateutil.parser.isoparse('2021-02-18T21:34:24.992Z'),
+        task=shared.PropertyCrmEventTask(),
     ),
-    connection_id='Dinar benchmark till',
+    connection_id='Steel',
     id='<ID>',
 )
 
@@ -240,51 +210,30 @@ s = unified_to.UnifiedTo(
 
 req = operations.PostCrmConnectionIDEventRequest(
     crm_event=shared.CrmEvent(
-        call=shared.PropertyCrmEventCall(
-            description='Visionary bandwidth-monitored hardware',
-            duration=9256.02,
-        ),
+        call=shared.PropertyCrmEventCall(),
         company_ids=[
-            'Kentucky',
+            'carburize',
         ],
         contact_ids=[
-            'Rustic',
+            'SDR',
         ],
-        created_at=dateutil.parser.isoparse('2023-02-12T10:03:55.861Z'),
         deal_ids=[
-            'agonizing',
+            'Kentucky',
         ],
         email=shared.PropertyCrmEventEmail(
-            body='protocol',
             cc=[
-                'Ratke',
+                'Rustic',
             ],
-            from_='woman',
-            subject='East Soft',
             to=[
-                'Southeast',
+                'male',
             ],
         ),
-        id='<ID>',
-        meeting=shared.PropertyCrmEventMeeting(
-            description='Streamlined intangible time-frame',
-            end_at=dateutil.parser.isoparse('2022-04-18T21:50:55.608Z'),
-            start_at=dateutil.parser.isoparse('2021-08-24T14:06:25.626Z'),
-            title='violet Synergized blah',
-        ),
-        note=shared.PropertyCrmEventNote(
-            description='Mandatory eco-centric toolset',
-        ),
+        meeting=shared.PropertyCrmEventMeeting(),
+        note=shared.PropertyCrmEventNote(),
         raw=shared.PropertyCrmEventRaw(),
-        task=shared.PropertyCrmEventTask(
-            description='Team-oriented dynamic forecast',
-            name='Grocery',
-            status='excitedly Bacon',
-        ),
-        type=shared.CrmEventType.EMAIL,
-        updated_at=dateutil.parser.isoparse('2021-09-09T20:12:06.214Z'),
+        task=shared.PropertyCrmEventTask(),
     ),
-    connection_id='Progressive',
+    connection_id='Hat',
 )
 
 res = s.event.post_crm_connection_id_event(req)
@@ -324,51 +273,30 @@ s = unified_to.UnifiedTo(
 
 req = operations.PutCrmConnectionIDEventIDRequest(
     crm_event=shared.CrmEvent(
-        call=shared.PropertyCrmEventCall(
-            description='Re-engineered composite time-frame',
-            duration=5444.58,
-        ),
+        call=shared.PropertyCrmEventCall(),
         company_ids=[
-            'DNS',
+            'Iron',
         ],
         contact_ids=[
-            'Skokie',
+            'marshmallow',
         ],
-        created_at=dateutil.parser.isoparse('2022-07-05T01:37:36.877Z'),
         deal_ids=[
-            'lux',
+            'DNS',
         ],
         email=shared.PropertyCrmEventEmail(
-            body='Hatchback card',
             cc=[
-                'Gasoline',
+                'Skokie',
             ],
-            from_='Caribbean',
-            subject='Account medium',
             to=[
-                'copy',
+                'calculating',
             ],
         ),
-        id='<ID>',
-        meeting=shared.PropertyCrmEventMeeting(
-            description='Inverse optimizing model',
-            end_at=dateutil.parser.isoparse('2022-03-21T17:32:41.888Z'),
-            start_at=dateutil.parser.isoparse('2022-10-17T10:31:48.119Z'),
-            title='male henry Hat',
-        ),
-        note=shared.PropertyCrmEventNote(
-            description='Self-enabling asymmetric functionalities',
-        ),
+        meeting=shared.PropertyCrmEventMeeting(),
+        note=shared.PropertyCrmEventNote(),
         raw=shared.PropertyCrmEventRaw(),
-        task=shared.PropertyCrmEventTask(
-            description='Reduced 4th generation analyzer',
-            name='Savings Female nor',
-            status='Customer sky',
-        ),
-        type=shared.CrmEventType.NOTE,
-        updated_at=dateutil.parser.isoparse('2023-07-27T14:02:37.510Z'),
+        task=shared.PropertyCrmEventTask(),
     ),
-    connection_id='transparent',
+    connection_id='Blues firewall engineer',
     id='<ID>',
 )
 
