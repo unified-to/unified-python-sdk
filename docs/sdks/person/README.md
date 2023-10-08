@@ -23,10 +23,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetEnrichConnectionIDPersonRequest(
     connection_id='Iowa Account',
-    email='Jaiden_Weimann24@gmail.com',
-    linkedin_url='paradigms integrate Creative',
-    name='Investment',
-    twitter='Hills',
 )
 
 res = s.person.get_enrich_connection_id_person(req)

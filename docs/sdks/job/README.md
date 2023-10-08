@@ -68,12 +68,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetAtsConnectionIDJobRequest(
     connection_id='City katal',
-    limit=3542.62,
-    offset=5417.97,
-    order='publisher',
-    query='Folding',
-    sort='Kip gross recontextualize',
-    updated_gte=dateutil.parser.isoparse('2022-10-12T03:36:20.050Z'),
 )
 
 res = s.job.get_ats_connection_id_job(req)
@@ -153,51 +147,28 @@ s = unified_to.UnifiedTo(
 req = operations.PatchAtsConnectionIDJobIDRequest(
     ats_job=shared.AtsJob(
         addresses=[
-            shared.AtsAddress(
-                address1='Transexual',
-                address2='Planner redundant Towels',
-                city='Starkboro',
-                country='Chad',
-                country_code='NU',
-                postal_code='22603',
-                region='Cambridgeshire',
-                region_code='Account Copernicium at',
-            ),
+            shared.AtsAddress(),
         ],
-        closed_at=dateutil.parser.isoparse('2023-01-02T09:14:26.844Z'),
         compensation=[
             shared.AtsCompensation(
-                currency='Metical',
-                frequency=shared.AtsCompensationFrequency.HOUR,
-                max=1424.24,
-                min=3626.17,
-                type=shared.AtsCompensationType.SALARY,
+                type=shared.AtsCompensationType.BONUS,
             ),
         ],
-        created_at=dateutil.parser.isoparse('2022-03-16T15:29:37.822Z'),
         departments=[
-            'Sports',
+            'Transexual',
         ],
-        description='Operative bi-directional capability',
-        employment_type=shared.AtsJobEmploymentType.INTERN,
         hiring_manager_ids=[
-            'Hop',
+            'leach',
         ],
-        id='<ID>',
-        language_locale='hence gracefully invoice',
-        name='Southeast vacantly Uranium',
         public_job_urls=[
-            'Keith',
+            'national',
         ],
         raw=shared.PropertyAtsJobRaw(),
         recruiter_ids=[
-            'happily',
+            'Kia',
         ],
-        remote=False,
-        status=shared.AtsJobStatus.OPEN,
-        updated_at=dateutil.parser.isoparse('2023-08-04T07:33:03.088Z'),
     ),
-    connection_id='Cis benchmark',
+    connection_id='Ferrari Facilitator',
     id='<ID>',
 )
 
@@ -239,51 +210,28 @@ s = unified_to.UnifiedTo(
 req = operations.PostAtsConnectionIDJobRequest(
     ats_job=shared.AtsJob(
         addresses=[
-            shared.AtsAddress(
-                address1='Forward',
-                address2='Electric fuchsia kelvin',
-                city='Fort Sibylmouth',
-                country='Solomon Islands',
-                country_code='DO',
-                postal_code='39037',
-                region='Rockford',
-                region_code='Trafficway eaque athwart',
-            ),
+            shared.AtsAddress(),
         ],
-        closed_at=dateutil.parser.isoparse('2022-04-22T19:01:40.265Z'),
         compensation=[
             shared.AtsCompensation(
-                currency='Gourde',
-                frequency=shared.AtsCompensationFrequency.YEAR,
-                max=5349.62,
-                min=526.63,
-                type=shared.AtsCompensationType.EQUITY,
+                type=shared.AtsCompensationType.SALARY,
             ),
         ],
-        created_at=dateutil.parser.isoparse('2021-04-02T18:44:02.642Z'),
         departments=[
-            'Polonium',
+            'Forward',
         ],
-        description='Progressive disintermediate matrix',
-        employment_type=shared.AtsJobEmploymentType.INTERN,
         hiring_manager_ids=[
-            'itaque',
+            'Americium',
         ],
-        id='<ID>',
-        language_locale='the joyfully',
-        name='Other because harbor',
         public_job_urls=[
-            'coil',
+            'shiny',
         ],
         raw=shared.PropertyAtsJobRaw(),
         recruiter_ids=[
-            'JSON',
+            'yellow',
         ],
-        remote=False,
-        status=shared.AtsJobStatus.ARCHIVED,
-        updated_at=dateutil.parser.isoparse('2022-05-24T04:21:24.567Z'),
     ),
-    connection_id='Coordinator applications',
+    connection_id='neatly Diesel virtual',
 )
 
 res = s.job.post_ats_connection_id_job(req)
@@ -324,51 +272,28 @@ s = unified_to.UnifiedTo(
 req = operations.PutAtsConnectionIDJobIDRequest(
     ats_job=shared.AtsJob(
         addresses=[
-            shared.AtsAddress(
-                address1='cotton Washington',
-                address2='rosin meanwhile male',
-                city='East Sierra',
-                country='Somalia',
-                country_code='BQ',
-                postal_code='63475-6123',
-                region='lighthearted online Bicycle',
-                region_code='robust',
-            ),
+            shared.AtsAddress(),
         ],
-        closed_at=dateutil.parser.isoparse('2021-05-06T11:53:52.940Z'),
         compensation=[
             shared.AtsCompensation(
-                currency='Iranian Rial',
-                frequency=shared.AtsCompensationFrequency.YEAR,
-                max=5965.42,
-                min=5273.81,
-                type=shared.AtsCompensationType.BONUS,
+                type=shared.AtsCompensationType.STOCK_OPTIONS,
             ),
         ],
-        created_at=dateutil.parser.isoparse('2023-07-19T02:36:00.215Z'),
         departments=[
-            'embrace',
+            'cotton',
         ],
-        description='Programmable tertiary benchmark',
-        employment_type=shared.AtsJobEmploymentType.CONTRACTOR,
         hiring_manager_ids=[
-            'New',
+            'Washington',
         ],
-        id='<ID>',
-        language_locale='Facilitator Gasoline application',
-        name='North impractical',
         public_job_urls=[
-            'clamber',
+            'Hybrid',
         ],
         raw=shared.PropertyAtsJobRaw(),
         recruiter_ids=[
-            'West',
+            'henry',
         ],
-        remote=False,
-        status=shared.AtsJobStatus.CLOSED,
-        updated_at=dateutil.parser.isoparse('2023-02-01T04:41:47.094Z'),
     ),
-    connection_id='North',
+    connection_id='male Intelligent',
     id='<ID>',
 )
 

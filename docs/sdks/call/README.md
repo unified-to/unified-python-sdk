@@ -23,15 +23,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetUcConnectionIDCallRequest(
-    agent_id='Directives',
-    connection_id='female than',
-    contact_id='reintermediate Enid Applications',
-    limit=1980.39,
-    offset=3478,
-    order='white Oklahoma Functionality',
-    query='pricing whether Hillsboro',
-    sort='Wooden desensitize SCSI',
-    updated_gte=dateutil.parser.isoparse('2021-11-03T12:40:46.997Z'),
+    connection_id='Directives',
 )
 
 res = s.call.get_uc_connection_id_call(req)

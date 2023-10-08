@@ -63,15 +63,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetUnifiedWebhookRequest(
-    env='Investor methodical Fitness',
-    limit=8087.22,
-    object='Franc past salmon',
-    offset=5240.75,
-    order='program',
-    sort='below JSON',
-    updated_gte=dateutil.parser.isoparse('2022-05-29T13:22:55.562Z'),
-)
+req = operations.GetUnifiedWebhookRequest()
 
 res = s.webhook.get_unified_webhook(req)
 
@@ -148,30 +140,24 @@ s = unified_to.UnifiedTo(
 
 req = operations.PostUnifiedWebhookConnectionIDObjectRequest(
     webhook=shared.Webhook(
-        checked_at=dateutil.parser.isoparse('2021-02-25T07:12:08.980Z'),
-        connection_id='deposit 1080p Passenger',
-        created_at=dateutil.parser.isoparse('2023-02-21T14:58:56.193Z'),
-        environment='Minnesota Soap',
+        connection_id='drat',
         events=[
             shared.PropertyWebhookEvents.UPDATED,
         ],
-        hook_url='Table female ken',
-        id='<ID>',
-        include_raw=False,
-        integration_type='chocolate',
-        interval=1710.16,
-        object_type=shared.WebhookObjectType.ENRICH_COMPANY,
+        hook_url='siemens National',
+        integration_type='GB Rustic deposit',
+        interval=6073.96,
+        object_type=shared.WebhookObjectType.CRM_CONTACT,
         subscriptions=[
-            'female',
+            'Diesel',
         ],
-        updated_at=dateutil.parser.isoparse('2022-08-02T17:13:06.397Z'),
-        workspace_id='hertz',
+        workspace_id='female ken',
     ),
-    connection_id='Borders',
+    connection_id='chocolate',
     events=[
-        operations.PostUnifiedWebhookConnectionIDObjectEvents.CREATED,
+        operations.PostUnifiedWebhookConnectionIDObjectEvents.UPDATED,
     ],
-    object='scalable',
+    object='female driver',
 )
 
 res = s.webhook.post_unified_webhook_connection_id_object(req)

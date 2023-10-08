@@ -68,12 +68,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetHrisConnectionIDGroupRequest(
     connection_id='Loan',
-    limit=3486.96,
-    offset=9705.73,
-    order='Coordinator',
-    query='World',
-    sort='Dollar',
-    updated_gte=dateutil.parser.isoparse('2021-01-15T16:06:13.340Z'),
 )
 
 res = s.group.get_hris_connection_id_group(req)
@@ -152,23 +146,15 @@ s = unified_to.UnifiedTo(
 
 req = operations.PatchHrisConnectionIDGroupIDRequest(
     hris_group=shared.HrisGroup(
-        created_at=dateutil.parser.isoparse('2023-10-19T05:30:26.390Z'),
-        description='Stand-alone asymmetric orchestration',
         employee_ids=[
-            'shootdown',
+            'gosh',
         ],
-        id='<ID>',
-        is_active=False,
         manager_ids=[
-            '24/7',
+            'Northwest',
         ],
-        name='Agender trainer',
-        parent_id='Configuration Kids Sedan',
         raw=shared.PropertyHrisGroupRaw(),
-        type=shared.HrisGroupType.DIVISION,
-        updated_at=dateutil.parser.isoparse('2021-08-18T16:48:12.885Z'),
     ),
-    connection_id='Intersex',
+    connection_id='grey East Agender',
     id='<ID>',
 )
 
@@ -209,23 +195,15 @@ s = unified_to.UnifiedTo(
 
 req = operations.PostHrisConnectionIDGroupRequest(
     hris_group=shared.HrisGroup(
-        created_at=dateutil.parser.isoparse('2021-02-23T15:35:38.483Z'),
-        description='Configurable stable product',
         employee_ids=[
-            'Auto',
+            'Bhutan',
         ],
-        id='<ID>',
-        is_active=False,
         manager_ids=[
-            'JSON',
+            'Polestar',
         ],
-        name='whereas Usability transmitting',
-        parent_id='invoice Cyclocross Electric',
         raw=shared.PropertyHrisGroupRaw(),
-        type=shared.HrisGroupType.GROUP,
-        updated_at=dateutil.parser.isoparse('2021-04-30T12:40:50.129Z'),
     ),
-    connection_id='Hybrid Schenectady',
+    connection_id='Cab XSS',
 )
 
 res = s.group.post_hris_connection_id_group(req)
@@ -265,23 +243,15 @@ s = unified_to.UnifiedTo(
 
 req = operations.PutHrisConnectionIDGroupIDRequest(
     hris_group=shared.HrisGroup(
-        created_at=dateutil.parser.isoparse('2022-08-10T12:11:42.375Z'),
-        description='Decentralized methodical projection',
         employee_ids=[
-            'Credit',
+            'panel',
         ],
-        id='<ID>',
-        is_active=False,
         manager_ids=[
-            'South',
+            'And',
         ],
-        name='Jeep brr Northwest',
-        parent_id='quickly Licensed',
         raw=shared.PropertyHrisGroupRaw(),
-        type=shared.HrisGroupType.BUSINESS_UNIT,
-        updated_at=dateutil.parser.isoparse('2021-11-08T00:11:45.458Z'),
     ),
-    connection_id='vortals interface Gasoline',
+    connection_id='Small woman solid',
     id='<ID>',
 )
 
