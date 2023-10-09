@@ -428,14 +428,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetCrmConnectionIDCompanyRequest(
     connection_id='indexing',
-    contact_id='Porsche firewall',
-    deal_id='Hafnium Computers',
-    limit=902.85,
-    offset=2893.88,
-    order='Interactions relationships juxtapose',
-    query='newton Luxembourg',
-    sort='Dakota quantifying Actinium',
-    updated_gte=dateutil.parser.isoparse('2022-09-27T07:42:48.074Z'),
 )
 
 res = s.crm.get_crm_connection_id_company(req)
@@ -513,15 +505,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetCrmConnectionIDContactRequest(
-    company_id='Southeast Human Southeast',
-    connection_id='magenta loose',
-    deal_id='intuitive',
-    limit=9605,
-    offset=8572.44,
-    order='Music Electronics',
-    query='Elegant',
-    sort='North Analyst Otis',
-    updated_gte=dateutil.parser.isoparse('2022-09-18T15:42:24.943Z'),
+    connection_id='Southeast Human Southeast',
 )
 
 res = s.crm.get_crm_connection_id_contact(req)
@@ -599,15 +583,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetCrmConnectionIDDealRequest(
-    company_id='Tools Card copying',
-    connection_id='Renminbi',
-    contact_id='till payment World',
-    limit=8656.16,
-    offset=4455.8,
-    order='global',
-    query='Program Bespoke Wisconsin',
-    sort='Netherlands under',
-    updated_gte=dateutil.parser.isoparse('2022-12-23T01:47:21.816Z'),
+    connection_id='Tools Card copying',
 )
 
 res = s.crm.get_crm_connection_id_deal(req)
@@ -685,16 +661,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetCrmConnectionIDEventRequest(
-    company_id='Zirconium Avon Bedfordshire',
-    connection_id='Hybrid grey Ferrari',
-    contact_id='Checking Southeast',
-    deal_id='Graham till Caesium',
-    limit=2928.84,
-    offset=5904.77,
-    order='furthermore Tricycle Hop',
-    query='auxiliary',
-    sort='Southeast Bicycle Gorgeous',
-    updated_gte=dateutil.parser.isoparse('2023-01-15T23:49:53.643Z'),
+    connection_id='Zirconium Avon Bedfordshire',
 )
 
 res = s.crm.get_crm_connection_id_event(req)
@@ -772,16 +739,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetCrmConnectionIDFileRequest(
-    company_id='reboot',
-    connection_id='customise far',
-    contact_id='Electronic proactive',
-    deal_id='withdrawal deposit Gloves',
-    limit=1588.79,
-    offset=3754.81,
-    order='Implemented fairly meh',
-    query='FTP Producer',
-    sort='soprano deliverables',
-    updated_gte=dateutil.parser.isoparse('2022-03-02T03:00:09.711Z'),
+    connection_id='reboot',
 )
 
 res = s.crm.get_crm_connection_id_file(req)
@@ -860,12 +818,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetCrmConnectionIDLeadRequest(
     connection_id='Computer Hop',
-    limit=7411.81,
-    offset=9004.32,
-    order='Operations candela Integration',
-    query='impactful transform',
-    sort='Tala defense Southwest',
-    updated_gte=dateutil.parser.isoparse('2021-09-29T00:37:32.184Z'),
 )
 
 res = s.crm.get_crm_connection_id_lead(req)
@@ -944,12 +896,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetCrmConnectionIDPipelineRequest(
     connection_id='dirty Awesome Checking',
-    limit=9055.88,
-    offset=3443.76,
-    order='glom',
-    query='panel',
-    sort='Latin tightly',
-    updated_gte=dateutil.parser.isoparse('2022-03-01T15:47:43.244Z'),
 )
 
 res = s.crm.get_crm_connection_id_pipeline(req)
@@ -1028,12 +974,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetCrmConnectionIDTeamRequest(
     connection_id='bath Lamborghini',
-    limit=1042.31,
-    offset=1586.42,
-    order='Diesel Bike virtual',
-    query='bakery',
-    sort='Senior',
-    updated_gte=dateutil.parser.isoparse('2021-12-04T23:56:00.028Z'),
 )
 
 res = s.crm.get_crm_connection_id_team(req)
@@ -1112,12 +1052,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetCrmConnectionIDUserRequest(
     connection_id='suit Electronic Tampa',
-    limit=2883.34,
-    offset=8886.55,
-    order='despite',
-    query='frightfully Fitness',
-    sort='success servant',
-    updated_gte=dateutil.parser.isoparse('2023-02-23T05:53:04.259Z'),
 )
 
 res = s.crm.get_crm_connection_id_user(req)
@@ -1196,45 +1130,27 @@ s = unified_to.UnifiedTo(
 
 req = operations.PatchCrmConnectionIDCompanyIDRequest(
     crm_company=shared.CrmCompany(
-        active=False,
-        address=shared.PropertyCrmCompanyAddress(
-            address1='invoice',
-            address2='indexing Ford',
-            city='McAllen',
-            country='Netherlands',
-            country_code='PF',
-            postal_code='93486',
-            region='Steel impactful',
-            region_code='Dong',
-        ),
-        created_at=dateutil.parser.isoparse('2023-07-25T08:43:38.995Z'),
+        address=shared.PropertyCrmCompanyAddress(),
         deal_ids=[
-            'usefully',
+            'Soft',
         ],
         emails=[
-            shared.CrmEmail(
-                email='Annabel31@gmail.com',
-                type=shared.CrmEmailType.WORK,
-            ),
+            shared.CrmEmail(),
         ],
-        id='<ID>',
-        name='Toys Vermont Astatine',
         raw=shared.PropertyCrmCompanyRaw(),
         tags=[
-            'Trigender',
+            'invoice',
         ],
         telephones=[
             shared.CrmTelephone(
-                telephone='female',
-                type=shared.CrmTelephoneType.HOME,
+                telephone='miniature Quality',
             ),
         ],
-        updated_at=dateutil.parser.isoparse('2021-12-22T11:39:56.432Z'),
         websites=[
-            'Latin',
+            'redefine',
         ],
     ),
-    connection_id='North kilogram connecting',
+    connection_id='invoice National',
     id='<ID>',
 )
 
@@ -1275,43 +1191,24 @@ s = unified_to.UnifiedTo(
 
 req = operations.PatchCrmConnectionIDContactIDRequest(
     crm_contact=shared.CrmContact(
-        address=shared.PropertyCrmContactAddress(
-            address1='until instantly Taiwan',
-            address2='disintermediate ah Southwest',
-            city='San Antonio',
-            country='Djibouti',
-            country_code='LA',
-            postal_code='23695',
-            region='grey around',
-            region_code='Folding',
-        ),
-        company='Johnson - Gerlach',
+        address=shared.PropertyCrmContactAddress(),
         company_ids=[
-            'Personal',
+            'Bicycle',
         ],
-        created_at=dateutil.parser.isoparse('2022-07-24T05:16:20.203Z'),
         deal_ids=[
-            'generation',
+            'instantly',
         ],
         emails=[
-            shared.CrmEmail(
-                email='Leora_Konopelski27@hotmail.com',
-                type=shared.CrmEmailType.OTHER,
-            ),
+            shared.CrmEmail(),
         ],
-        id='<ID>',
-        name='Innovative indeed brand',
         raw=shared.PropertyCrmContactRaw(),
         telephones=[
             shared.CrmTelephone(
-                telephone='unsung Borders',
-                type=shared.CrmTelephoneType.HOME,
+                telephone='stimulating',
             ),
         ],
-        title='withdrawal',
-        updated_at=dateutil.parser.isoparse('2022-05-05T23:37:21.563Z'),
     ),
-    connection_id='markets radian',
+    connection_id='synergy',
     id='<ID>',
 )
 
@@ -1352,25 +1249,12 @@ s = unified_to.UnifiedTo(
 
 req = operations.PatchCrmConnectionIDDealIDRequest(
     crm_deal=shared.CrmDeal(
-        amount=7725.78,
-        closed_at=dateutil.parser.isoparse('2021-10-28T08:42:49.591Z'),
-        created_at=dateutil.parser.isoparse('2023-04-23T15:03:53.999Z'),
-        currency='Afghani',
-        id='<ID>',
-        lost_reason='North',
-        name='midnight',
-        pipeline='envisioneer Functionality Loan',
-        probability=7051.73,
         raw=shared.PropertyCrmDealRaw(),
-        source='Krone',
-        stage='pascal aliquam gripping',
         tags=[
-            'where',
+            'Bicycle',
         ],
-        updated_at=dateutil.parser.isoparse('2022-04-05T10:21:22.505Z'),
-        won_reason='Savings kilogram',
     ),
-    connection_id='Chair weber silver',
+    connection_id='partnerships',
     id='<ID>',
 )
 
@@ -1411,51 +1295,30 @@ s = unified_to.UnifiedTo(
 
 req = operations.PatchCrmConnectionIDEventIDRequest(
     crm_event=shared.CrmEvent(
-        call=shared.PropertyCrmEventCall(
-            description='Optional zero defect function',
-            duration=5434.61,
-        ),
+        call=shared.PropertyCrmEventCall(),
         company_ids=[
-            'silver',
+            'parse',
         ],
         contact_ids=[
-            'redefine',
+            'intranet',
         ],
-        created_at=dateutil.parser.isoparse('2021-07-21T06:46:42.528Z'),
         deal_ids=[
-            'Solutions',
+            'silver',
         ],
         email=shared.PropertyCrmEventEmail(
-            body='French',
             cc=[
-                'Checking',
+                'redefine',
             ],
-            from_='SDD Toyota Northeast',
-            subject='Convertible',
             to=[
-                'Electronics',
+                'Baby',
             ],
         ),
-        id='<ID>',
-        meeting=shared.PropertyCrmEventMeeting(
-            description='Monitored mission-critical customer loyalty',
-            end_at=dateutil.parser.isoparse('2022-09-22T17:43:00.863Z'),
-            start_at=dateutil.parser.isoparse('2023-04-24T06:40:04.926Z'),
-            title='Kip Switchable Chicken',
-        ),
-        note=shared.PropertyCrmEventNote(
-            description='Cross-group high-level functionalities',
-        ),
+        meeting=shared.PropertyCrmEventMeeting(),
+        note=shared.PropertyCrmEventNote(),
         raw=shared.PropertyCrmEventRaw(),
-        task=shared.PropertyCrmEventTask(
-            description='Horizontal empowering forecast',
-            name='Principal extremely Jast',
-            status='striped Concrete Bronze',
-        ),
-        type=shared.CrmEventType.NOTE,
-        updated_at=dateutil.parser.isoparse('2021-02-18T21:34:24.992Z'),
+        task=shared.PropertyCrmEventTask(),
     ),
-    connection_id='Dinar benchmark till',
+    connection_id='Steel',
     id='<ID>',
 )
 
@@ -1496,24 +1359,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.PatchCrmConnectionIDFileIDRequest(
     crm_file=shared.CrmFile(
-        active=False,
-        activity_id='duh Handmade harness',
-        company_id='CFP',
-        contact_id='unaware yellow generating',
-        created_at=dateutil.parser.isoparse('2021-05-04T04:54:33.785Z'),
-        deal_id='channels SUV',
-        description='De-engineered didactic hardware',
-        file_name='metical_silver_yellow.html',
-        file_size=6861.53,
-        file_type='video',
-        file_url='navigate Funk',
-        id='<ID>',
-        lead_id='internal',
         raw=shared.PropertyCrmFileRaw(),
-        updated_at=dateutil.parser.isoparse('2023-02-21T13:46:42.012Z'),
-        user_id='Interactions',
     ),
-    connection_id='Handcrafted',
+    connection_id='duh Handmade harness',
     id='<ID>',
 )
 
@@ -1554,40 +1402,18 @@ s = unified_to.UnifiedTo(
 
 req = operations.PatchCrmConnectionIDLeadIDRequest(
     crm_lead=shared.CrmLead(
-        active=False,
-        address=shared.PropertyCrmLeadAddress(
-            address1='Cambridgeshire',
-            address2='Oriental farad male',
-            city='D\'Amorebury',
-            country='Reunion',
-            country_code='UY',
-            postal_code='87017-9001',
-            region='Buckinghamshire Electric',
-            region_code='South gee',
-        ),
-        company_id='Gasoline conglomeration Tennessine',
-        contact_id='grow hub',
-        created_at=dateutil.parser.isoparse('2023-06-09T15:23:12.644Z'),
-        creator_user_id='voluptates',
+        address=shared.PropertyCrmLeadAddress(),
         emails=[
-            shared.CrmEmail(
-                email='Jeffrey.Denesik52@yahoo.com',
-                type=shared.CrmEmailType.HOME,
-            ),
+            shared.CrmEmail(),
         ],
-        id='<ID>',
-        name='whiteboard lumen',
         raw=shared.PropertyCrmLeadRaw(),
         telephones=[
             shared.CrmTelephone(
-                telephone='Cheese before against',
-                type=shared.CrmTelephoneType.FAX,
+                telephone='Cambridgeshire',
             ),
         ],
-        updated_at=dateutil.parser.isoparse('2022-07-12T14:19:50.007Z'),
-        user_id='Games yellow Towels',
     ),
-    connection_id='brr misuse',
+    connection_id='Oriental farad male',
     id='<ID>',
 )
 
@@ -1628,16 +1454,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.PatchCrmConnectionIDPipelineIDRequest(
     crm_pipeline=shared.CrmPipeline(
-        active=False,
-        created_at=dateutil.parser.isoparse('2023-08-24T17:39:51.183Z'),
-        deal_probability=False,
-        display_order=664.58,
-        id='<ID>',
-        name='bandwidth',
         raw=shared.PropertyCrmPipelineRaw(),
-        updated_at=dateutil.parser.isoparse('2023-11-27T01:55:15.440Z'),
     ),
-    connection_id='Chips',
+    connection_id='Bedfordshire bandwidth a',
     id='<ID>',
 )
 
@@ -1678,17 +1497,12 @@ s = unified_to.UnifiedTo(
 
 req = operations.PatchCrmConnectionIDTeamIDRequest(
     crm_team=shared.CrmTeam(
-        created_at=dateutil.parser.isoparse('2021-05-20T12:47:48.451Z'),
-        description='Automated executive emulation',
-        id='<ID>',
-        name='Internal experiences',
         raw=shared.PropertyCrmTeamRaw(),
-        updated_at=dateutil.parser.isoparse('2022-05-22T09:41:53.599Z'),
         user_ids=[
-            'lumen',
+            'Arizona',
         ],
     ),
-    connection_id='up Candace',
+    connection_id='Internal experiences',
     id='<ID>',
 )
 
@@ -1729,43 +1543,18 @@ s = unified_to.UnifiedTo(
 
 req = operations.PatchCrmConnectionIDUserIDRequest(
     crm_user=shared.CrmUser(
-        active=False,
-        address=shared.PropertyCrmUserAddress(
-            address1='Customer',
-            address2='violet groupware blanditiis',
-            city='South Phoebeshire',
-            country='Thailand',
-            country_code='NO',
-            postal_code='30801-4594',
-            region='portals Vanadium',
-            region_code='Future',
-        ),
-        created_at=dateutil.parser.isoparse('2023-01-04T02:42:28.788Z'),
-        currency='Guinea Franc',
-        department='Gloves global rosin',
-        division='Berkshire Europium',
+        address=shared.PropertyCrmUserAddress(),
         emails=[
-            shared.CrmEmail(
-                email='Wade.Dach@gmail.com',
-                type=shared.CrmEmailType.WORK,
-            ),
+            shared.CrmEmail(),
         ],
-        id='<ID>',
-        image_url='Checking',
-        language_locale='Sedan Porsche matrix',
-        name='superstructure Nissan sedately',
         raw=shared.PropertyCrmUserRaw(),
         telephones=[
             shared.CrmTelephone(
-                telephone='unto ubiquitous input',
-                type=shared.CrmTelephoneType.MOBILE,
+                telephone='Customer',
             ),
         ],
-        timezone='America/Tijuana',
-        title='Computer Bicycle',
-        updated_at=dateutil.parser.isoparse('2021-12-13T16:36:33.886Z'),
     ),
-    connection_id='gold generating',
+    connection_id='violet groupware blanditiis',
     id='<ID>',
 )
 
@@ -1806,45 +1595,27 @@ s = unified_to.UnifiedTo(
 
 req = operations.PostCrmConnectionIDCompanyRequest(
     crm_company=shared.CrmCompany(
-        active=False,
-        address=shared.PropertyCrmCompanyAddress(
-            address1='consequently gosh',
-            address2='phooey',
-            city='Antonettaville',
-            country='Lebanon',
-            country_code='SI',
-            postal_code='79462',
-            region='orchid Oxygen Kids',
-            region_code='Electric utilisation',
-        ),
-        created_at=dateutil.parser.isoparse('2021-10-01T08:46:18.197Z'),
+        address=shared.PropertyCrmCompanyAddress(),
         deal_ids=[
-            'Tennessee',
+            'Personal',
         ],
         emails=[
-            shared.CrmEmail(
-                email='Jaida.McDermott26@yahoo.com',
-                type=shared.CrmEmailType.OTHER,
-            ),
+            shared.CrmEmail(),
         ],
-        id='<ID>',
-        name='Hydrogen Wooden',
         raw=shared.PropertyCrmCompanyRaw(),
         tags=[
-            'CSS',
+            'gosh',
         ],
         telephones=[
             shared.CrmTelephone(
-                telephone='Account invoice',
-                type=shared.CrmTelephoneType.MOBILE,
+                telephone='phooey',
             ),
         ],
-        updated_at=dateutil.parser.isoparse('2021-09-12T17:31:24.634Z'),
         websites=[
-            'Intuitive',
+            'primary',
         ],
     ),
-    connection_id='Gasoline',
+    connection_id='neural',
 )
 
 res = s.crm.post_crm_connection_id_company(req)
@@ -1884,43 +1655,24 @@ s = unified_to.UnifiedTo(
 
 req = operations.PostCrmConnectionIDContactRequest(
     crm_contact=shared.CrmContact(
-        address=shared.PropertyCrmContactAddress(
-            address1='orchid',
-            address2='invoice wherever watt',
-            city='Rempelcester',
-            country='Nepal',
-            country_code='FI',
-            postal_code='27896-6482',
-            region='swig',
-            region_code='Recumbent',
-        ),
-        company='Fritsch - Bernhard',
+        address=shared.PropertyCrmContactAddress(),
         company_ids=[
-            'Executive',
+            'integrated',
         ],
-        created_at=dateutil.parser.isoparse('2021-07-26T17:34:53.280Z'),
         deal_ids=[
-            'Southwest',
+            'Mobility',
         ],
         emails=[
-            shared.CrmEmail(
-                email='Colby24@hotmail.com',
-                type=shared.CrmEmailType.HOME,
-            ),
+            shared.CrmEmail(),
         ],
-        id='<ID>',
-        name='farad',
         raw=shared.PropertyCrmContactRaw(),
         telephones=[
             shared.CrmTelephone(
-                telephone='Dynamic withdrawal',
-                type=shared.CrmTelephoneType.WORK,
+                telephone='who SUV',
             ),
         ],
-        title='second Fresh',
-        updated_at=dateutil.parser.isoparse('2023-01-03T09:41:22.581Z'),
     ),
-    connection_id='what',
+    connection_id='sievert Tungsten',
 )
 
 res = s.crm.post_crm_connection_id_contact(req)
@@ -1960,25 +1712,12 @@ s = unified_to.UnifiedTo(
 
 req = operations.PostCrmConnectionIDDealRequest(
     crm_deal=shared.CrmDeal(
-        amount=6144.41,
-        closed_at=dateutil.parser.isoparse('2022-07-10T09:55:59.977Z'),
-        created_at=dateutil.parser.isoparse('2022-01-20T07:28:03.436Z'),
-        currency='Convertible Marks',
-        id='<ID>',
-        lost_reason='pfft female',
-        name='Expressway',
-        pipeline='withdrawal Extended busily',
-        probability=7998.22,
         raw=shared.PropertyCrmDealRaw(),
-        source='spiffy sometimes',
-        stage='transmitter',
         tags=[
-            'intermediate',
+            'M2F',
         ],
-        updated_at=dateutil.parser.isoparse('2022-10-06T18:34:11.762Z'),
-        won_reason='Cisgender input HTTP',
     ),
-    connection_id='accusantium Checking',
+    connection_id='Borders pfft',
 )
 
 res = s.crm.post_crm_connection_id_deal(req)
@@ -2018,51 +1757,30 @@ s = unified_to.UnifiedTo(
 
 req = operations.PostCrmConnectionIDEventRequest(
     crm_event=shared.CrmEvent(
-        call=shared.PropertyCrmEventCall(
-            description='Visionary bandwidth-monitored hardware',
-            duration=9256.02,
-        ),
+        call=shared.PropertyCrmEventCall(),
         company_ids=[
-            'Kentucky',
+            'carburize',
         ],
         contact_ids=[
-            'Rustic',
+            'SDR',
         ],
-        created_at=dateutil.parser.isoparse('2023-02-12T10:03:55.861Z'),
         deal_ids=[
-            'agonizing',
+            'Kentucky',
         ],
         email=shared.PropertyCrmEventEmail(
-            body='protocol',
             cc=[
-                'Ratke',
+                'Rustic',
             ],
-            from_='woman',
-            subject='East Soft',
             to=[
-                'Southeast',
+                'male',
             ],
         ),
-        id='<ID>',
-        meeting=shared.PropertyCrmEventMeeting(
-            description='Streamlined intangible time-frame',
-            end_at=dateutil.parser.isoparse('2022-04-18T21:50:55.608Z'),
-            start_at=dateutil.parser.isoparse('2021-08-24T14:06:25.626Z'),
-            title='violet Synergized blah',
-        ),
-        note=shared.PropertyCrmEventNote(
-            description='Mandatory eco-centric toolset',
-        ),
+        meeting=shared.PropertyCrmEventMeeting(),
+        note=shared.PropertyCrmEventNote(),
         raw=shared.PropertyCrmEventRaw(),
-        task=shared.PropertyCrmEventTask(
-            description='Team-oriented dynamic forecast',
-            name='Grocery',
-            status='excitedly Bacon',
-        ),
-        type=shared.CrmEventType.EMAIL,
-        updated_at=dateutil.parser.isoparse('2021-09-09T20:12:06.214Z'),
+        task=shared.PropertyCrmEventTask(),
     ),
-    connection_id='Progressive',
+    connection_id='Hat',
 )
 
 res = s.crm.post_crm_connection_id_event(req)
@@ -2102,24 +1820,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.PostCrmConnectionIDFileRequest(
     crm_file=shared.CrmFile(
-        active=False,
-        activity_id='tan impedit Pickup',
-        company_id='Manager',
-        contact_id='Florida Shoes East',
-        created_at=dateutil.parser.isoparse('2023-01-08T11:37:24.708Z'),
-        deal_id='Agent',
-        description='Multi-lateral well-modulated portal',
-        file_name='panel_city.wav',
-        file_size=1401.73,
-        file_type='application',
-        file_url='for Chips under',
-        id='<ID>',
-        lead_id='abaft Checking',
         raw=shared.PropertyCrmFileRaw(),
-        updated_at=dateutil.parser.isoparse('2023-02-25T09:46:59.608Z'),
-        user_id='Mexico withdrawal',
     ),
-    connection_id='national Lead',
+    connection_id='tan impedit Pickup',
 )
 
 res = s.crm.post_crm_connection_id_file(req)
@@ -2159,40 +1862,18 @@ s = unified_to.UnifiedTo(
 
 req = operations.PostCrmConnectionIDLeadRequest(
     crm_lead=shared.CrmLead(
-        active=False,
-        address=shared.PropertyCrmLeadAddress(
-            address1='XSS Country knowledge',
-            address2='structure',
-            city='Giovaniton',
-            country='Ghana',
-            country_code='CO',
-            postal_code='34495-0585',
-            region='Modern',
-            region_code='Diesel',
-        ),
-        company_id='yuppify',
-        contact_id='demanding scratch male',
-        created_at=dateutil.parser.isoparse('2023-03-07T11:22:05.657Z'),
-        creator_user_id='masticate South',
+        address=shared.PropertyCrmLeadAddress(),
         emails=[
-            shared.CrmEmail(
-                email='Gregorio37@gmail.com',
-                type=shared.CrmEmailType.HOME,
-            ),
+            shared.CrmEmail(),
         ],
-        id='<ID>',
-        name='Granite Tools',
         raw=shared.PropertyCrmLeadRaw(),
         telephones=[
             shared.CrmTelephone(
-                telephone='Hassium Balanced male',
-                type=shared.CrmTelephoneType.WORK,
+                telephone='XSS Country knowledge',
             ),
         ],
-        updated_at=dateutil.parser.isoparse('2021-06-26T11:56:58.926Z'),
-        user_id='Consultant',
     ),
-    connection_id='solutions gosh',
+    connection_id='structure',
 )
 
 res = s.crm.post_crm_connection_id_lead(req)
@@ -2232,16 +1913,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.PostCrmConnectionIDPipelineRequest(
     crm_pipeline=shared.CrmPipeline(
-        active=False,
-        created_at=dateutil.parser.isoparse('2023-12-10T23:55:22.206Z'),
-        deal_probability=False,
-        display_order=3879.73,
-        id='<ID>',
-        name='upward Mayaguez',
         raw=shared.PropertyCrmPipelineRaw(),
-        updated_at=dateutil.parser.isoparse('2021-09-25T10:43:23.679Z'),
     ),
-    connection_id='Lead Health',
+    connection_id='Interface alpaca program',
 )
 
 res = s.crm.post_crm_connection_id_pipeline(req)
@@ -2281,17 +1955,12 @@ s = unified_to.UnifiedTo(
 
 req = operations.PostCrmConnectionIDTeamRequest(
     crm_team=shared.CrmTeam(
-        created_at=dateutil.parser.isoparse('2022-02-12T08:57:03.070Z'),
-        description='Organic transitional portal',
-        id='<ID>',
-        name='male bandwidth',
         raw=shared.PropertyCrmTeamRaw(),
-        updated_at=dateutil.parser.isoparse('2022-12-29T15:50:04.365Z'),
         user_ids=[
-            'meter',
+            'local',
         ],
     ),
-    connection_id='Guaynabo AGP East',
+    connection_id='pascal male bandwidth',
 )
 
 res = s.crm.post_crm_connection_id_team(req)
@@ -2331,43 +2000,18 @@ s = unified_to.UnifiedTo(
 
 req = operations.PostCrmConnectionIDUserRequest(
     crm_user=shared.CrmUser(
-        active=False,
-        address=shared.PropertyCrmUserAddress(
-            address1='driver East',
-            address2='relationships Computer navigate',
-            city='Homestead',
-            country='Cayman Islands',
-            country_code='BW',
-            postal_code='34958',
-            region='South',
-            region_code='morph an colossal',
-        ),
-        created_at=dateutil.parser.isoparse('2021-02-02T08:27:21.693Z'),
-        currency='Cayman Islands Dollar',
-        department='um',
-        division='West sievert generating',
+        address=shared.PropertyCrmUserAddress(),
         emails=[
-            shared.CrmEmail(
-                email='Jadon_Schumm45@gmail.com',
-                type=shared.CrmEmailType.HOME,
-            ),
+            shared.CrmEmail(),
         ],
-        id='<ID>',
-        image_url='radian Borders Southeast',
-        language_locale='Silicon Awesome Industrial',
-        name='Mouse Accounts',
         raw=shared.PropertyCrmUserRaw(),
         telephones=[
             shared.CrmTelephone(
-                telephone='ohm Southeast ROI',
-                type=shared.CrmTelephoneType.MOBILE,
+                telephone='driver East',
             ),
         ],
-        timezone='Europe/Bratislava',
-        title='Money',
-        updated_at=dateutil.parser.isoparse('2023-12-09T10:24:50.054Z'),
     ),
-    connection_id='competent calculate',
+    connection_id='relationships Computer navigate',
 )
 
 res = s.crm.post_crm_connection_id_user(req)
@@ -2407,45 +2051,27 @@ s = unified_to.UnifiedTo(
 
 req = operations.PutCrmConnectionIDCompanyIDRequest(
     crm_company=shared.CrmCompany(
-        active=False,
-        address=shared.PropertyCrmCompanyAddress(
-            address1='Northwest Northwest',
-            address2='portals Diesel',
-            city='Azusa',
-            country='Qatar',
-            country_code='CG',
-            postal_code='52396',
-            region='Tuna sticky lest',
-            region_code='Soft boo Missoula',
-        ),
-        created_at=dateutil.parser.isoparse('2022-05-14T19:17:30.970Z'),
+        address=shared.PropertyCrmCompanyAddress(),
         deal_ids=[
-            'Hybrid',
+            'dicta',
         ],
         emails=[
-            shared.CrmEmail(
-                email='Vance_Cruickshank93@gmail.com',
-                type=shared.CrmEmailType.HOME,
-            ),
+            shared.CrmEmail(),
         ],
-        id='<ID>',
-        name='lest Northwest',
         raw=shared.PropertyCrmCompanyRaw(),
         tags=[
-            'East',
+            'background',
         ],
         telephones=[
             shared.CrmTelephone(
-                telephone='Bronze round',
-                type=shared.CrmTelephoneType.MOBILE,
+                telephone='veniam secondary',
             ),
         ],
-        updated_at=dateutil.parser.isoparse('2022-02-21T09:41:36.696Z'),
         websites=[
-            'Keyboard',
+            'Southwest',
         ],
     ),
-    connection_id='orange Bespoke',
+    connection_id='Calcium',
     id='<ID>',
 )
 
@@ -2486,43 +2112,24 @@ s = unified_to.UnifiedTo(
 
 req = operations.PutCrmConnectionIDContactIDRequest(
     crm_contact=shared.CrmContact(
-        address=shared.PropertyCrmContactAddress(
-            address1='idolized',
-            address2='Southeast Specialist background',
-            city='New Orlando',
-            country='Switzerland',
-            country_code='GL',
-            postal_code='95864',
-            region='Intersex mmm',
-            region_code='Specialist',
-        ),
-        company='Mann and Sons',
+        address=shared.PropertyCrmContactAddress(),
         company_ids=[
-            'impedit',
+            'Outdoors',
         ],
-        created_at=dateutil.parser.isoparse('2023-10-28T10:36:29.710Z'),
         deal_ids=[
-            'transmitting',
+            'Credit',
         ],
         emails=[
-            shared.CrmEmail(
-                email='Marjorie.Feeney14@hotmail.com',
-                type=shared.CrmEmailType.OTHER,
-            ),
+            shared.CrmEmail(),
         ],
-        id='<ID>',
-        name='shuttle',
         raw=shared.PropertyCrmContactRaw(),
         telephones=[
             shared.CrmTelephone(
-                telephone='Bolivia',
-                type=shared.CrmTelephoneType.MOBILE,
+                telephone='Specialist background',
             ),
         ],
-        title='Austria reinvent',
-        updated_at=dateutil.parser.isoparse('2023-03-20T11:49:01.796Z'),
     ),
-    connection_id='hic truck',
+    connection_id='quo gloomy',
     id='<ID>',
 )
 
@@ -2563,25 +2170,12 @@ s = unified_to.UnifiedTo(
 
 req = operations.PutCrmConnectionIDDealIDRequest(
     crm_deal=shared.CrmDeal(
-        amount=4050.98,
-        closed_at=dateutil.parser.isoparse('2022-01-15T04:05:31.641Z'),
-        created_at=dateutil.parser.isoparse('2023-06-04T01:28:32.466Z'),
-        currency='Bermudian Dollar (customarily known as Bermuda Dollar)',
-        id='<ID>',
-        lost_reason='laudantium Southwest',
-        name='wail Developer',
-        pipeline='male Samarium Gourde',
-        probability=6728.74,
         raw=shared.PropertyCrmDealRaw(),
-        source='Stage Gasoline Metal',
-        stage='Corporate withdrawal Tasty',
         tags=[
-            'extranet',
+            'Account',
         ],
-        updated_at=dateutil.parser.isoparse('2021-10-16T22:38:02.052Z'),
-        won_reason='phooey',
     ),
-    connection_id='Jazz',
+    connection_id='payment',
     id='<ID>',
 )
 
@@ -2622,51 +2216,30 @@ s = unified_to.UnifiedTo(
 
 req = operations.PutCrmConnectionIDEventIDRequest(
     crm_event=shared.CrmEvent(
-        call=shared.PropertyCrmEventCall(
-            description='Re-engineered composite time-frame',
-            duration=5444.58,
-        ),
+        call=shared.PropertyCrmEventCall(),
         company_ids=[
-            'DNS',
+            'Iron',
         ],
         contact_ids=[
-            'Skokie',
+            'marshmallow',
         ],
-        created_at=dateutil.parser.isoparse('2022-07-05T01:37:36.877Z'),
         deal_ids=[
-            'lux',
+            'DNS',
         ],
         email=shared.PropertyCrmEventEmail(
-            body='Hatchback card',
             cc=[
-                'Gasoline',
+                'Skokie',
             ],
-            from_='Caribbean',
-            subject='Account medium',
             to=[
-                'copy',
+                'calculating',
             ],
         ),
-        id='<ID>',
-        meeting=shared.PropertyCrmEventMeeting(
-            description='Inverse optimizing model',
-            end_at=dateutil.parser.isoparse('2022-03-21T17:32:41.888Z'),
-            start_at=dateutil.parser.isoparse('2022-10-17T10:31:48.119Z'),
-            title='male henry Hat',
-        ),
-        note=shared.PropertyCrmEventNote(
-            description='Self-enabling asymmetric functionalities',
-        ),
+        meeting=shared.PropertyCrmEventMeeting(),
+        note=shared.PropertyCrmEventNote(),
         raw=shared.PropertyCrmEventRaw(),
-        task=shared.PropertyCrmEventTask(
-            description='Reduced 4th generation analyzer',
-            name='Savings Female nor',
-            status='Customer sky',
-        ),
-        type=shared.CrmEventType.NOTE,
-        updated_at=dateutil.parser.isoparse('2023-07-27T14:02:37.510Z'),
+        task=shared.PropertyCrmEventTask(),
     ),
-    connection_id='transparent',
+    connection_id='Blues firewall engineer',
     id='<ID>',
 )
 
@@ -2707,24 +2280,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.PutCrmConnectionIDFileIDRequest(
     crm_file=shared.CrmFile(
-        active=False,
-        activity_id='Cotton',
-        company_id='Northeast',
-        contact_id='Computer',
-        created_at=dateutil.parser.isoparse('2021-04-09T13:10:01.367Z'),
-        deal_id='toward confiscate East',
-        description='Devolved upward-trending matrices',
-        file_name='generation_tactics.wav',
-        file_size=4770.09,
-        file_type='audio',
-        file_url='framework azure Metal',
-        id='<ID>',
-        lead_id='ampere costume',
         raw=shared.PropertyCrmFileRaw(),
-        updated_at=dateutil.parser.isoparse('2023-05-15T05:04:24.130Z'),
-        user_id='Research payment',
     ),
-    connection_id='East Associate Mazda',
+    connection_id='Cotton',
     id='<ID>',
 )
 
@@ -2765,40 +2323,18 @@ s = unified_to.UnifiedTo(
 
 req = operations.PutCrmConnectionIDLeadIDRequest(
     crm_lead=shared.CrmLead(
-        active=False,
-        address=shared.PropertyCrmLeadAddress(
-            address1='Extension',
-            address2='supposing Dorado Assistant',
-            city='South Gate',
-            country='Reunion',
-            country_code='IS',
-            postal_code='73732-2192',
-            region='JBOD phew',
-            region_code='Southeast Framingham female',
-        ),
-        company_id='deposit male',
-        contact_id='bunch edge',
-        created_at=dateutil.parser.isoparse('2021-04-03T18:08:02.798Z'),
-        creator_user_id='East Panama',
+        address=shared.PropertyCrmLeadAddress(),
         emails=[
-            shared.CrmEmail(
-                email='Jamal20@yahoo.com',
-                type=shared.CrmEmailType.WORK,
-            ),
+            shared.CrmEmail(),
         ],
-        id='<ID>',
-        name='pianist',
         raw=shared.PropertyCrmLeadRaw(),
         telephones=[
             shared.CrmTelephone(
-                telephone='caricature female',
-                type=shared.CrmTelephoneType.HOME,
+                telephone='Extension',
             ),
         ],
-        updated_at=dateutil.parser.isoparse('2022-08-09T07:11:50.077Z'),
-        user_id='Designer Folding',
     ),
-    connection_id='Lanthanum wink Regional',
+    connection_id='supposing Dorado Assistant',
     id='<ID>',
 )
 
@@ -2839,16 +2375,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.PutCrmConnectionIDPipelineIDRequest(
     crm_pipeline=shared.CrmPipeline(
-        active=False,
-        created_at=dateutil.parser.isoparse('2021-05-16T17:24:47.805Z'),
-        deal_probability=False,
-        display_order=5470.76,
-        id='<ID>',
-        name='West',
         raw=shared.PropertyCrmPipelineRaw(),
-        updated_at=dateutil.parser.isoparse('2022-02-28T07:49:31.151Z'),
     ),
-    connection_id='optimizing',
+    connection_id='back',
     id='<ID>',
 )
 
@@ -2889,17 +2418,12 @@ s = unified_to.UnifiedTo(
 
 req = operations.PutCrmConnectionIDTeamIDRequest(
     crm_team=shared.CrmTeam(
-        created_at=dateutil.parser.isoparse('2023-08-14T23:28:53.515Z'),
-        description='Inverse multi-tasking task-force',
-        id='<ID>',
-        name='Indonesia Orchestrator Division',
         raw=shared.PropertyCrmTeamRaw(),
-        updated_at=dateutil.parser.isoparse('2022-10-23T23:13:25.973Z'),
         user_ids=[
-            'thoroughly',
+            'immense',
         ],
     ),
-    connection_id='delectus',
+    connection_id='duh Indonesia',
     id='<ID>',
 )
 
@@ -2940,43 +2464,18 @@ s = unified_to.UnifiedTo(
 
 req = operations.PutCrmConnectionIDUserIDRequest(
     crm_user=shared.CrmUser(
-        active=False,
-        address=shared.PropertyCrmUserAddress(
-            address1='Honduras',
-            address2='Oxygen Libyan Burundi',
-            city='North Gertrudefield',
-            country='Belgium',
-            country_code='DK',
-            postal_code='00781',
-            region='Wagon',
-            region_code='how overriding',
-        ),
-        created_at=dateutil.parser.isoparse('2023-03-13T00:47:15.649Z'),
-        currency='Pakistan Rupee',
-        department='Tricycle vaguely',
-        division='Severn bluetooth Argon',
+        address=shared.PropertyCrmUserAddress(),
         emails=[
-            shared.CrmEmail(
-                email='Karl_Stehr4@hotmail.com',
-                type=shared.CrmEmailType.WORK,
-            ),
+            shared.CrmEmail(),
         ],
-        id='<ID>',
-        image_url='AGP romance didactic',
-        language_locale='ROI Polarised',
-        name='olive synthesizing',
         raw=shared.PropertyCrmUserRaw(),
         telephones=[
             shared.CrmTelephone(
-                telephone='Honda Indiana',
-                type=shared.CrmTelephoneType.FAX,
+                telephone='Honduras',
             ),
         ],
-        timezone='Asia/Novosibirsk',
-        title='compelling red compressing',
-        updated_at=dateutil.parser.isoparse('2022-09-03T15:59:05.095Z'),
     ),
-    connection_id='relationships',
+    connection_id='Oxygen Libyan Burundi',
     id='<ID>',
 )
 

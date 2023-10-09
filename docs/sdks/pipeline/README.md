@@ -68,12 +68,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetCrmConnectionIDPipelineRequest(
     connection_id='dirty Awesome Checking',
-    limit=9055.88,
-    offset=3443.76,
-    order='glom',
-    query='panel',
-    sort='Latin tightly',
-    updated_gte=dateutil.parser.isoparse('2022-03-01T15:47:43.244Z'),
 )
 
 res = s.pipeline.get_crm_connection_id_pipeline(req)
@@ -152,16 +146,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.PatchCrmConnectionIDPipelineIDRequest(
     crm_pipeline=shared.CrmPipeline(
-        active=False,
-        created_at=dateutil.parser.isoparse('2023-08-24T17:39:51.183Z'),
-        deal_probability=False,
-        display_order=664.58,
-        id='<ID>',
-        name='bandwidth',
         raw=shared.PropertyCrmPipelineRaw(),
-        updated_at=dateutil.parser.isoparse('2023-11-27T01:55:15.440Z'),
     ),
-    connection_id='Chips',
+    connection_id='Bedfordshire bandwidth a',
     id='<ID>',
 )
 
@@ -202,16 +189,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.PostCrmConnectionIDPipelineRequest(
     crm_pipeline=shared.CrmPipeline(
-        active=False,
-        created_at=dateutil.parser.isoparse('2023-12-10T23:55:22.206Z'),
-        deal_probability=False,
-        display_order=3879.73,
-        id='<ID>',
-        name='upward Mayaguez',
         raw=shared.PropertyCrmPipelineRaw(),
-        updated_at=dateutil.parser.isoparse('2021-09-25T10:43:23.679Z'),
     ),
-    connection_id='Lead Health',
+    connection_id='Interface alpaca program',
 )
 
 res = s.pipeline.post_crm_connection_id_pipeline(req)
@@ -251,16 +231,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.PutCrmConnectionIDPipelineIDRequest(
     crm_pipeline=shared.CrmPipeline(
-        active=False,
-        created_at=dateutil.parser.isoparse('2021-05-16T17:24:47.805Z'),
-        deal_probability=False,
-        display_order=5470.76,
-        id='<ID>',
-        name='West',
         raw=shared.PropertyCrmPipelineRaw(),
-        updated_at=dateutil.parser.isoparse('2022-02-28T07:49:31.151Z'),
     ),
-    connection_id='optimizing',
+    connection_id='back',
     id='<ID>',
 )
 

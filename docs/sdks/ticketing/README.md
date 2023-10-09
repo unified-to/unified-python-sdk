@@ -204,12 +204,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetTicketingConnectionIDAgentRequest(
     connection_id='East Steel Frozen',
-    limit=8285.04,
-    offset=5507.07,
-    order='Korea West Ryan',
-    query='invoice coulomb soluta',
-    sort='adored',
-    updated_gte=dateutil.parser.isoparse('2023-11-15T19:25:12.859Z'),
 )
 
 res = s.ticketing.get_ticketing_connection_id_agent(req)
@@ -288,12 +282,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetTicketingConnectionIDCustomerRequest(
     connection_id='SDD because Salad',
-    limit=8049.62,
-    offset=4323.42,
-    order='override',
-    query='Rolls 1080p',
-    sort='quantifying Southeast Kansas',
-    updated_gte=dateutil.parser.isoparse('2023-12-20T19:18:39.254Z'),
 )
 
 res = s.ticketing.get_ticketing_connection_id_customer(req)
@@ -372,13 +360,7 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetTicketingConnectionIDNoteTicketIDRequest(
     connection_id='Account revolutionary',
-    limit=2310.88,
-    offset=6688.82,
-    order='AI',
-    query='stanch Investor attitude',
-    sort='Cotton',
-    ticket_id='Handmade Kia',
-    updated_gte=dateutil.parser.isoparse('2022-05-26T17:12:11.333Z'),
+    ticket_id='Associate',
 )
 
 res = s.ticketing.get_ticketing_connection_id_note_ticket_id(req)
@@ -457,15 +439,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetTicketingConnectionIDTicketRequest(
-    agent_id='New',
-    connection_id='hertz Savings Steel',
-    customer_id='payment biopsy Kids',
-    limit=7673.64,
-    offset=5134.74,
-    order='quantifying orange',
-    query='male dynamic',
-    sort='Sedan Tricycle Honda',
-    updated_gte=dateutil.parser.isoparse('2022-08-06T21:30:52.879Z'),
+    connection_id='New',
 )
 
 res = s.ticketing.get_ticketing_connection_id_ticket(req)
@@ -544,25 +518,19 @@ s = unified_to.UnifiedTo(
 
 req = operations.PatchTicketingConnectionIDAgentIDRequest(
     ticketing_agent=shared.TicketingAgent(
-        created_at=dateutil.parser.isoparse('2022-06-01T22:24:40.372Z'),
         emails=[
             shared.TicketingEmail(
-                email='Antonette63@gmail.com',
-                type=shared.TicketingEmailType.HOME,
+                email='Albertha.Bernier63@yahoo.com',
             ),
         ],
-        id='<ID>',
-        name='Hop',
         raw=shared.PropertyTicketingAgentRaw(),
         telephones=[
             shared.TicketingTelephone(
-                telephone='driver',
-                type=shared.TicketingTelephoneType.WORK,
+                telephone='Borders parse',
             ),
         ],
-        updated_at=dateutil.parser.isoparse('2022-07-09T08:35:36.354Z'),
     ),
-    connection_id='Soft Diesel Springs',
+    connection_id='driver',
     id='<ID>',
 )
 
@@ -603,28 +571,22 @@ s = unified_to.UnifiedTo(
 
 req = operations.PatchTicketingConnectionIDCustomerIDRequest(
     ticketing_customer=shared.TicketingCustomer(
-        created_at=dateutil.parser.isoparse('2023-01-22T19:33:25.134Z'),
         emails=[
             shared.TicketingEmail(
-                email='Ora.Labadie94@yahoo.com',
-                type=shared.TicketingEmailType.HOME,
+                email='Jaren_Ryan@hotmail.com',
             ),
         ],
-        id='<ID>',
-        name='sensitise whiteboard Smyrna',
         raw=shared.PropertyTicketingCustomerRaw(),
         tags=[
-            'Hialeah',
+            'Waco',
         ],
         telephones=[
             shared.TicketingTelephone(
-                telephone='connect',
-                type=shared.TicketingTelephoneType.WORK,
+                telephone='youthfully orange',
             ),
         ],
-        updated_at=dateutil.parser.isoparse('2023-12-28T17:48:45.929Z'),
     ),
-    connection_id='Tennessine',
+    connection_id='Smyrna Hialeah auxiliary',
     id='<ID>',
 )
 
@@ -665,17 +627,11 @@ s = unified_to.UnifiedTo(
 
 req = operations.PatchTicketingConnectionIDNoteTicketIDIDRequest(
     ticketing_note=shared.TicketingNote(
-        agent_id='compress Oganesson',
-        created_at=dateutil.parser.isoparse('2022-02-16T08:13:19.991Z'),
-        customer_id='demystify',
-        description='Fundamental demand-driven workforce',
-        id='<ID>',
         raw=shared.PropertyTicketingNoteRaw(),
-        updated_at='Nissan',
     ),
-    connection_id='Chicken',
+    connection_id='compress Oganesson',
     id='<ID>',
-    ticket_id='frictionless convergence officia',
+    ticket_id='York Fantastic',
 )
 
 res = s.ticketing.patch_ticketing_connection_id_note_ticket_id_id(req)
@@ -715,24 +671,12 @@ s = unified_to.UnifiedTo(
 
 req = operations.PatchTicketingConnectionIDTicketIDRequest(
     ticketing_ticket=shared.TicketingTicket(
-        category='Representative calculate',
-        closed_at=dateutil.parser.isoparse('2023-12-03T14:58:54.732Z'),
-        created_at=dateutil.parser.isoparse('2022-09-11T04:52:37.095Z'),
-        customer_id='indigo extend given',
-        description='Profound motivating utilisation',
-        id='<ID>',
-        priority='Hill Jazz',
         raw=shared.PropertyTicketingTicketRaw(),
-        source='West Macedonia City',
-        source_ref='orange West doubtfully',
-        status=shared.TicketingTicketStatus.CLOSED,
-        subject='Pizza',
         tags=[
-            'definition',
+            'Polygender',
         ],
-        updated_at=dateutil.parser.isoparse('2021-10-05T23:17:22.031Z'),
     ),
-    connection_id='engage henry',
+    connection_id='calculate midst female',
     id='<ID>',
 )
 
@@ -773,25 +717,19 @@ s = unified_to.UnifiedTo(
 
 req = operations.PostTicketingConnectionIDAgentRequest(
     ticketing_agent=shared.TicketingAgent(
-        created_at=dateutil.parser.isoparse('2022-12-14T10:20:29.412Z'),
         emails=[
             shared.TicketingEmail(
-                email='Eleazar_Beatty22@gmail.com',
-                type=shared.TicketingEmailType.OTHER,
+                email='Adele80@yahoo.com',
             ),
         ],
-        id='<ID>',
-        name='exploit our wireless',
         raw=shared.PropertyTicketingAgentRaw(),
         telephones=[
             shared.TicketingTelephone(
-                telephone='Korea wireless Ferrari',
-                type=shared.TicketingTelephoneType.HOME,
+                telephone='Unbranded Sedan',
             ),
         ],
-        updated_at=dateutil.parser.isoparse('2022-04-24T13:41:54.208Z'),
     ),
-    connection_id='capacity copy Blues',
+    connection_id='wireless absent',
 )
 
 res = s.ticketing.post_ticketing_connection_id_agent(req)
@@ -831,28 +769,22 @@ s = unified_to.UnifiedTo(
 
 req = operations.PostTicketingConnectionIDCustomerRequest(
     ticketing_customer=shared.TicketingCustomer(
-        created_at=dateutil.parser.isoparse('2022-05-23T15:06:12.012Z'),
         emails=[
             shared.TicketingEmail(
-                email='Austin44@yahoo.com',
-                type=shared.TicketingEmailType.WORK,
+                email='Jaquelin.Boyer@yahoo.com',
             ),
         ],
-        id='<ID>',
-        name='Configuration neural',
         raw=shared.PropertyTicketingCustomerRaw(),
         tags=[
-            'engineer',
+            'withdrawal',
         ],
         telephones=[
             shared.TicketingTelephone(
-                telephone='Gasoline North gorgeous',
-                type=shared.TicketingTelephoneType.FAX,
+                telephone='Configuration neural',
             ),
         ],
-        updated_at=dateutil.parser.isoparse('2022-10-09T07:25:23.111Z'),
     ),
-    connection_id='mole purple',
+    connection_id='Product Hybrid',
 )
 
 res = s.ticketing.post_ticketing_connection_id_customer(req)
@@ -892,16 +824,10 @@ s = unified_to.UnifiedTo(
 
 req = operations.PostTicketingConnectionIDNoteTicketIDRequest(
     ticketing_note=shared.TicketingNote(
-        agent_id='Plantation blue',
-        created_at=dateutil.parser.isoparse('2021-06-11T06:54:31.529Z'),
-        customer_id='asymmetric',
-        description='Expanded intermediate attitude',
-        id='<ID>',
         raw=shared.PropertyTicketingNoteRaw(),
-        updated_at='naturally',
     ),
-    connection_id='Wagon Sulfur',
-    ticket_id='digital',
+    connection_id='Plantation blue',
+    ticket_id='Ford',
 )
 
 res = s.ticketing.post_ticketing_connection_id_note_ticket_id(req)
@@ -941,24 +867,12 @@ s = unified_to.UnifiedTo(
 
 req = operations.PostTicketingConnectionIDTicketRequest(
     ticketing_ticket=shared.TicketingTicket(
-        category='North',
-        closed_at=dateutil.parser.isoparse('2021-08-03T02:12:35.164Z'),
-        created_at=dateutil.parser.isoparse('2023-05-12T14:26:26.768Z'),
-        customer_id='mull hierarchy',
-        description='Triple-buffered solution-oriented info-mediaries',
-        id='<ID>',
-        priority='person Idaho',
         raw=shared.PropertyTicketingTicketRaw(),
-        source='Convertible whenever feed',
-        source_ref='solid Electric Bespoke',
-        status=shared.TicketingTicketStatus.CLOSED,
-        subject='sint uplift',
         tags=[
-            'Idaho',
+            'Alabama',
         ],
-        updated_at=dateutil.parser.isoparse('2022-06-24T01:04:15.890Z'),
     ),
-    connection_id='Oriental outrage',
+    connection_id='Jewelery',
 )
 
 res = s.ticketing.post_ticketing_connection_id_ticket(req)
@@ -998,25 +912,19 @@ s = unified_to.UnifiedTo(
 
 req = operations.PutTicketingConnectionIDAgentIDRequest(
     ticketing_agent=shared.TicketingAgent(
-        created_at=dateutil.parser.isoparse('2022-12-19T19:47:13.993Z'),
         emails=[
             shared.TicketingEmail(
-                email='Augustus_Kessler34@hotmail.com',
-                type=shared.TicketingEmailType.OTHER,
+                email='Samara_Botsford@yahoo.com',
             ),
         ],
-        id='<ID>',
-        name='reintermediate impression Refined',
         raw=shared.PropertyTicketingAgentRaw(),
         telephones=[
             shared.TicketingTelephone(
-                telephone='asynchronous',
-                type=shared.TicketingTelephoneType.FAX,
+                telephone='newton Coordinator Refined',
             ),
         ],
-        updated_at=dateutil.parser.isoparse('2021-04-29T18:13:42.824Z'),
     ),
-    connection_id='synergistic Uzbekistan green',
+    connection_id='asynchronous',
     id='<ID>',
 )
 
@@ -1057,28 +965,22 @@ s = unified_to.UnifiedTo(
 
 req = operations.PutTicketingConnectionIDCustomerIDRequest(
     ticketing_customer=shared.TicketingCustomer(
-        created_at=dateutil.parser.isoparse('2021-04-21T09:25:32.395Z'),
         emails=[
             shared.TicketingEmail(
-                email='Shawna42@hotmail.com',
-                type=shared.TicketingEmailType.HOME,
+                email='Raleigh.Torp42@gmail.com',
             ),
         ],
-        id='<ID>',
-        name='gray',
         raw=shared.PropertyTicketingCustomerRaw(),
         tags=[
-            'Associate',
+            'copy',
         ],
         telephones=[
             shared.TicketingTelephone(
-                telephone='Sausages ivory Small',
-                type=shared.TicketingTelephoneType.MOBILE,
+                telephone='Developer Buckinghamshire Sausages',
             ),
         ],
-        updated_at=dateutil.parser.isoparse('2022-09-01T05:56:15.314Z'),
     ),
-    connection_id='mobile Cotton',
+    connection_id='kilogram',
     id='<ID>',
 )
 
@@ -1119,17 +1021,11 @@ s = unified_to.UnifiedTo(
 
 req = operations.PutTicketingConnectionIDNoteTicketIDIDRequest(
     ticketing_note=shared.TicketingNote(
-        agent_id='SMTP Cis',
-        created_at=dateutil.parser.isoparse('2022-07-27T18:14:06.584Z'),
-        customer_id='Carolina',
-        description='Integrated asymmetric strategy',
-        id='<ID>',
         raw=shared.PropertyTicketingNoteRaw(),
-        updated_at='Northeast Morocco supposing',
     ),
-    connection_id='DNS Fermium',
+    connection_id='SMTP Cis',
     id='<ID>',
-    ticket_id='Southwest round',
+    ticket_id='East benchmark',
 )
 
 res = s.ticketing.put_ticketing_connection_id_note_ticket_id_id(req)
@@ -1169,24 +1065,12 @@ s = unified_to.UnifiedTo(
 
 req = operations.PutTicketingConnectionIDTicketIDRequest(
     ticketing_ticket=shared.TicketingTicket(
-        category='North Finland',
-        closed_at=dateutil.parser.isoparse('2023-12-08T00:37:44.739Z'),
-        created_at=dateutil.parser.isoparse('2023-04-01T07:24:49.830Z'),
-        customer_id='Marketing',
-        description='Future-proofed high-level system engine',
-        id='<ID>',
-        priority='drat knottily',
         raw=shared.PropertyTicketingTicketRaw(),
-        source='Upgradable knuckle',
-        source_ref='anenst',
-        status=shared.TicketingTicketStatus.ACTIVE,
-        subject='indexing Wooden Crew',
         tags=[
-            'anti',
+            'driver',
         ],
-        updated_at=dateutil.parser.isoparse('2023-08-10T07:27:15.153Z'),
     ),
-    connection_id='neural orchestrate',
+    connection_id='Finland',
     id='<ID>',
 )
 

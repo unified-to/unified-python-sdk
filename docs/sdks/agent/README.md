@@ -69,12 +69,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetTicketingConnectionIDAgentRequest(
     connection_id='East Steel Frozen',
-    limit=8285.04,
-    offset=5507.07,
-    order='Korea West Ryan',
-    query='invoice coulomb soluta',
-    sort='adored',
-    updated_gte=dateutil.parser.isoparse('2023-11-15T19:25:12.859Z'),
 )
 
 res = s.agent.get_ticketing_connection_id_agent(req)
@@ -153,13 +147,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetUcConnectionIDAgentRequest(
     connection_id='Regional East Sedan',
-    contact_id='blue',
-    limit=7827.68,
-    offset=2116.69,
-    order='Bicycle',
-    query='Bacon officia iterate',
-    sort='sticky vote lumen',
-    updated_gte=dateutil.parser.isoparse('2021-07-05T19:53:29.041Z'),
 )
 
 res = s.agent.get_uc_connection_id_agent(req)
@@ -199,25 +186,19 @@ s = unified_to.UnifiedTo(
 
 req = operations.PatchTicketingConnectionIDAgentIDRequest(
     ticketing_agent=shared.TicketingAgent(
-        created_at=dateutil.parser.isoparse('2022-06-01T22:24:40.372Z'),
         emails=[
             shared.TicketingEmail(
-                email='Antonette63@gmail.com',
-                type=shared.TicketingEmailType.HOME,
+                email='Albertha.Bernier63@yahoo.com',
             ),
         ],
-        id='<ID>',
-        name='Hop',
         raw=shared.PropertyTicketingAgentRaw(),
         telephones=[
             shared.TicketingTelephone(
-                telephone='driver',
-                type=shared.TicketingTelephoneType.WORK,
+                telephone='Borders parse',
             ),
         ],
-        updated_at=dateutil.parser.isoparse('2022-07-09T08:35:36.354Z'),
     ),
-    connection_id='Soft Diesel Springs',
+    connection_id='driver',
     id='<ID>',
 )
 
@@ -258,25 +239,19 @@ s = unified_to.UnifiedTo(
 
 req = operations.PostTicketingConnectionIDAgentRequest(
     ticketing_agent=shared.TicketingAgent(
-        created_at=dateutil.parser.isoparse('2022-12-14T10:20:29.412Z'),
         emails=[
             shared.TicketingEmail(
-                email='Eleazar_Beatty22@gmail.com',
-                type=shared.TicketingEmailType.OTHER,
+                email='Adele80@yahoo.com',
             ),
         ],
-        id='<ID>',
-        name='exploit our wireless',
         raw=shared.PropertyTicketingAgentRaw(),
         telephones=[
             shared.TicketingTelephone(
-                telephone='Korea wireless Ferrari',
-                type=shared.TicketingTelephoneType.HOME,
+                telephone='Unbranded Sedan',
             ),
         ],
-        updated_at=dateutil.parser.isoparse('2022-04-24T13:41:54.208Z'),
     ),
-    connection_id='capacity copy Blues',
+    connection_id='wireless absent',
 )
 
 res = s.agent.post_ticketing_connection_id_agent(req)
@@ -316,25 +291,19 @@ s = unified_to.UnifiedTo(
 
 req = operations.PutTicketingConnectionIDAgentIDRequest(
     ticketing_agent=shared.TicketingAgent(
-        created_at=dateutil.parser.isoparse('2022-12-19T19:47:13.993Z'),
         emails=[
             shared.TicketingEmail(
-                email='Augustus_Kessler34@hotmail.com',
-                type=shared.TicketingEmailType.OTHER,
+                email='Samara_Botsford@yahoo.com',
             ),
         ],
-        id='<ID>',
-        name='reintermediate impression Refined',
         raw=shared.PropertyTicketingAgentRaw(),
         telephones=[
             shared.TicketingTelephone(
-                telephone='asynchronous',
-                type=shared.TicketingTelephoneType.FAX,
+                telephone='newton Coordinator Refined',
             ),
         ],
-        updated_at=dateutil.parser.isoparse('2021-04-29T18:13:42.824Z'),
     ),
-    connection_id='synergistic Uzbekistan green',
+    connection_id='asynchronous',
     id='<ID>',
 )
 

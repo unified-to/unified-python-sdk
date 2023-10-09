@@ -112,15 +112,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetCrmConnectionIDContactRequest(
-    company_id='Southeast Human Southeast',
-    connection_id='magenta loose',
-    deal_id='intuitive',
-    limit=9605,
-    offset=8572.44,
-    order='Music Electronics',
-    query='Elegant',
-    sort='North Analyst Otis',
-    updated_gte=dateutil.parser.isoparse('2022-09-18T15:42:24.943Z'),
+    connection_id='Southeast Human Southeast',
 )
 
 res = s.contact.get_crm_connection_id_contact(req)
@@ -198,14 +190,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetUcConnectionIDContactRequest(
-    agent_id='Refined Practical',
-    connection_id='inasmuch Dodge',
-    limit=7215.14,
-    offset=2910.48,
-    order='Vermont',
-    query='maroon JBOD',
-    sort='hertz',
-    updated_gte=dateutil.parser.isoparse('2023-01-29T17:06:35.136Z'),
+    connection_id='Refined Practical',
 )
 
 res = s.contact.get_uc_connection_id_contact(req)
@@ -284,43 +269,24 @@ s = unified_to.UnifiedTo(
 
 req = operations.PatchCrmConnectionIDContactIDRequest(
     crm_contact=shared.CrmContact(
-        address=shared.PropertyCrmContactAddress(
-            address1='until instantly Taiwan',
-            address2='disintermediate ah Southwest',
-            city='San Antonio',
-            country='Djibouti',
-            country_code='LA',
-            postal_code='23695',
-            region='grey around',
-            region_code='Folding',
-        ),
-        company='Johnson - Gerlach',
+        address=shared.PropertyCrmContactAddress(),
         company_ids=[
-            'Personal',
+            'Bicycle',
         ],
-        created_at=dateutil.parser.isoparse('2022-07-24T05:16:20.203Z'),
         deal_ids=[
-            'generation',
+            'instantly',
         ],
         emails=[
-            shared.CrmEmail(
-                email='Leora_Konopelski27@hotmail.com',
-                type=shared.CrmEmailType.OTHER,
-            ),
+            shared.CrmEmail(),
         ],
-        id='<ID>',
-        name='Innovative indeed brand',
         raw=shared.PropertyCrmContactRaw(),
         telephones=[
             shared.CrmTelephone(
-                telephone='unsung Borders',
-                type=shared.CrmTelephoneType.HOME,
+                telephone='stimulating',
             ),
         ],
-        title='withdrawal',
-        updated_at=dateutil.parser.isoparse('2022-05-05T23:37:21.563Z'),
     ),
-    connection_id='markets radian',
+    connection_id='synergy',
     id='<ID>',
 )
 
@@ -361,27 +327,19 @@ s = unified_to.UnifiedTo(
 
 req = operations.PatchUcConnectionIDContactIDRequest(
     uc_contact=shared.UcContact(
-        company='Wilderman, Cremin and Gislason',
-        created_at=dateutil.parser.isoparse('2023-07-18T06:13:06.229Z'),
         emails=[
             shared.UcEmail(
-                email='Henry.Leannon@gmail.com',
-                type=shared.UcEmailType.OTHER,
+                email='Van84@hotmail.com',
             ),
         ],
-        id='<ID>',
-        name='quirky digital',
         raw=shared.PropertyUcContactRaw(),
         telephones=[
             shared.UcTelephone(
-                telephone='Lead 24/7 overriding',
-                type=shared.UcTelephoneType.OTHER,
+                telephone='Denar',
             ),
         ],
-        title='Small Legacy',
-        updated_at=dateutil.parser.isoparse('2022-07-11T16:02:41.922Z'),
     ),
-    connection_id='Bohrium',
+    connection_id='strategy Synergized',
     id='<ID>',
 )
 
@@ -422,43 +380,24 @@ s = unified_to.UnifiedTo(
 
 req = operations.PostCrmConnectionIDContactRequest(
     crm_contact=shared.CrmContact(
-        address=shared.PropertyCrmContactAddress(
-            address1='orchid',
-            address2='invoice wherever watt',
-            city='Rempelcester',
-            country='Nepal',
-            country_code='FI',
-            postal_code='27896-6482',
-            region='swig',
-            region_code='Recumbent',
-        ),
-        company='Fritsch - Bernhard',
+        address=shared.PropertyCrmContactAddress(),
         company_ids=[
-            'Executive',
+            'integrated',
         ],
-        created_at=dateutil.parser.isoparse('2021-07-26T17:34:53.280Z'),
         deal_ids=[
-            'Southwest',
+            'Mobility',
         ],
         emails=[
-            shared.CrmEmail(
-                email='Colby24@hotmail.com',
-                type=shared.CrmEmailType.HOME,
-            ),
+            shared.CrmEmail(),
         ],
-        id='<ID>',
-        name='farad',
         raw=shared.PropertyCrmContactRaw(),
         telephones=[
             shared.CrmTelephone(
-                telephone='Dynamic withdrawal',
-                type=shared.CrmTelephoneType.WORK,
+                telephone='who SUV',
             ),
         ],
-        title='second Fresh',
-        updated_at=dateutil.parser.isoparse('2023-01-03T09:41:22.581Z'),
     ),
-    connection_id='what',
+    connection_id='sievert Tungsten',
 )
 
 res = s.contact.post_crm_connection_id_contact(req)
@@ -498,27 +437,19 @@ s = unified_to.UnifiedTo(
 
 req = operations.PostUcConnectionIDContactRequest(
     uc_contact=shared.UcContact(
-        company='Howell and Sons',
-        created_at=dateutil.parser.isoparse('2022-12-18T04:56:44.573Z'),
         emails=[
             shared.UcEmail(
-                email='Garret81@hotmail.com',
-                type=shared.UcEmailType.HOME,
+                email='Gilda_Jacobs@gmail.com',
             ),
         ],
-        id='<ID>',
-        name='Southeast Gasoline extend',
         raw=shared.PropertyUcContactRaw(),
         telephones=[
             shared.UcTelephone(
-                telephone='Togo Division Human',
-                type=shared.UcTelephoneType.HOME,
+                telephone='Account Orchestrator',
             ),
         ],
-        title='COM that',
-        updated_at=dateutil.parser.isoparse('2023-02-07T16:19:58.439Z'),
     ),
-    connection_id='Tennessee',
+    connection_id='extend grey Avon',
 )
 
 res = s.contact.post_uc_connection_id_contact(req)
@@ -558,43 +489,24 @@ s = unified_to.UnifiedTo(
 
 req = operations.PutCrmConnectionIDContactIDRequest(
     crm_contact=shared.CrmContact(
-        address=shared.PropertyCrmContactAddress(
-            address1='idolized',
-            address2='Southeast Specialist background',
-            city='New Orlando',
-            country='Switzerland',
-            country_code='GL',
-            postal_code='95864',
-            region='Intersex mmm',
-            region_code='Specialist',
-        ),
-        company='Mann and Sons',
+        address=shared.PropertyCrmContactAddress(),
         company_ids=[
-            'impedit',
+            'Outdoors',
         ],
-        created_at=dateutil.parser.isoparse('2023-10-28T10:36:29.710Z'),
         deal_ids=[
-            'transmitting',
+            'Credit',
         ],
         emails=[
-            shared.CrmEmail(
-                email='Marjorie.Feeney14@hotmail.com',
-                type=shared.CrmEmailType.OTHER,
-            ),
+            shared.CrmEmail(),
         ],
-        id='<ID>',
-        name='shuttle',
         raw=shared.PropertyCrmContactRaw(),
         telephones=[
             shared.CrmTelephone(
-                telephone='Bolivia',
-                type=shared.CrmTelephoneType.MOBILE,
+                telephone='Specialist background',
             ),
         ],
-        title='Austria reinvent',
-        updated_at=dateutil.parser.isoparse('2023-03-20T11:49:01.796Z'),
     ),
-    connection_id='hic truck',
+    connection_id='quo gloomy',
     id='<ID>',
 )
 
@@ -635,27 +547,19 @@ s = unified_to.UnifiedTo(
 
 req = operations.PutUcConnectionIDContactIDRequest(
     uc_contact=shared.UcContact(
-        company='Feeney, Gusikowski and Douglas',
-        created_at=dateutil.parser.isoparse('2021-05-15T18:36:56.888Z'),
         emails=[
             shared.UcEmail(
-                email='Katrina.Walker@gmail.com',
-                type=shared.UcEmailType.HOME,
+                email='Darien12@hotmail.com',
             ),
         ],
-        id='<ID>',
-        name='Investment Hip Southwest',
         raw=shared.PropertyUcContactRaw(),
         telephones=[
             shared.UcTelephone(
-                telephone='powerless Shirt',
-                type=shared.UcTelephoneType.FAX,
+                telephone='reboot',
             ),
         ],
-        title='Wooden Buckinghamshire',
-        updated_at=dateutil.parser.isoparse('2022-10-29T19:58:07.810Z'),
     ),
-    connection_id='doubtfully',
+    connection_id='payment hem',
     id='<ID>',
 )
 

@@ -67,14 +67,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetAtsConnectionIDInterviewRequest(
-    application_id='Fresh Pickup converse',
-    connection_id='vortals',
-    limit=5167.08,
-    offset=6488.61,
-    order='Oregon Metal',
-    query='Account',
-    sort='haptic',
-    updated_gte=dateutil.parser.isoparse('2021-09-23T19:46:35.825Z'),
+    connection_id='Fresh Pickup converse',
 )
 
 res = s.interview.get_ats_connection_id_interview(req)
@@ -153,23 +146,12 @@ s = unified_to.UnifiedTo(
 
 req = operations.PatchAtsConnectionIDInterviewIDRequest(
     ats_interview=shared.AtsInterview(
-        application_id='SSD green pascal',
-        candidate_id='Buckinghamshire example',
-        created_at=dateutil.parser.isoparse('2021-08-24T08:30:07.073Z'),
-        end_at=dateutil.parser.isoparse('2021-06-27T04:06:46.373Z'),
-        external_event_xref='apropos Gadolinium',
-        id='<ID>',
-        job_id='transgender transmitting',
-        location='Investor synthesizing',
         raw=shared.PropertyAtsInterviewRaw(),
-        start_at=dateutil.parser.isoparse('2021-01-19T01:51:02.213Z'),
-        status=shared.AtsInterviewStatus.AWAITING_FEEDBACK,
-        updated_at=dateutil.parser.isoparse('2022-01-21T17:38:09.113Z'),
         user_ids=[
-            'Honda',
+            'coulomb',
         ],
     ),
-    connection_id='Myrl Dram Trail',
+    connection_id='green pascal illo',
     id='<ID>',
 )
 
@@ -210,23 +192,12 @@ s = unified_to.UnifiedTo(
 
 req = operations.PostAtsConnectionIDInterviewRequest(
     ats_interview=shared.AtsInterview(
-        application_id='round Hat Savings',
-        candidate_id='Northeast',
-        created_at=dateutil.parser.isoparse('2022-12-27T10:33:09.160Z'),
-        end_at=dateutil.parser.isoparse('2021-11-12T23:57:19.974Z'),
-        external_event_xref='platforms',
-        id='<ID>',
-        job_id='payment panel Identity',
-        location='Northwest Buckinghamshire',
         raw=shared.PropertyAtsInterviewRaw(),
-        start_at=dateutil.parser.isoparse('2022-11-02T05:07:18.592Z'),
-        status=shared.AtsInterviewStatus.COMPLETE,
-        updated_at=dateutil.parser.isoparse('2023-07-13T16:35:04.177Z'),
         user_ids=[
-            'Chevrolet',
+            'Tricycle',
         ],
     ),
-    connection_id='Shoes Northeast SMTP',
+    connection_id='Hat Savings Electronic',
 )
 
 res = s.interview.post_ats_connection_id_interview(req)
@@ -266,23 +237,12 @@ s = unified_to.UnifiedTo(
 
 req = operations.PutAtsConnectionIDInterviewIDRequest(
     ats_interview=shared.AtsInterview(
-        application_id='Generic capacitor',
-        candidate_id='Road disbelieve',
-        created_at=dateutil.parser.isoparse('2022-06-22T01:57:06.573Z'),
-        end_at=dateutil.parser.isoparse('2022-05-28T02:29:32.144Z'),
-        external_event_xref='architectures',
-        id='<ID>',
-        job_id='Casper 1080p South',
-        location='program siemens Cis',
         raw=shared.PropertyAtsInterviewRaw(),
-        start_at=dateutil.parser.isoparse('2021-03-14T15:20:41.084Z'),
-        status=shared.AtsInterviewStatus.AWAITING_FEEDBACK,
-        updated_at=dateutil.parser.isoparse('2023-07-14T19:59:39.905Z'),
         user_ids=[
-            'East',
+            'amet',
         ],
     ),
-    connection_id='ASCII yet Hybrid',
+    connection_id='capacitor Auto',
     id='<ID>',
 )
 
