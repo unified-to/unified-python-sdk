@@ -67,16 +67,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetCrmConnectionIDFileRequest(
-    company_id='reboot',
-    connection_id='customise far',
-    contact_id='Electronic proactive',
-    deal_id='withdrawal deposit Gloves',
-    limit=1588.79,
-    offset=3754.81,
-    order='Implemented fairly meh',
-    query='FTP Producer',
-    sort='soprano deliverables',
-    updated_gte=dateutil.parser.isoparse('2022-03-02T03:00:09.711Z'),
+    connection_id='reboot',
 )
 
 res = s.file.get_crm_connection_id_file(req)
@@ -155,24 +146,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.PatchCrmConnectionIDFileIDRequest(
     crm_file=shared.CrmFile(
-        active=False,
-        activity_id='duh Handmade harness',
-        company_id='CFP',
-        contact_id='unaware yellow generating',
-        created_at=dateutil.parser.isoparse('2021-05-04T04:54:33.785Z'),
-        deal_id='channels SUV',
-        description='De-engineered didactic hardware',
-        file_name='metical_silver_yellow.html',
-        file_size=6861.53,
-        file_type='video',
-        file_url='navigate Funk',
-        id='<ID>',
-        lead_id='internal',
         raw=shared.PropertyCrmFileRaw(),
-        updated_at=dateutil.parser.isoparse('2023-02-21T13:46:42.012Z'),
-        user_id='Interactions',
     ),
-    connection_id='Handcrafted',
+    connection_id='duh Handmade harness',
     id='<ID>',
 )
 
@@ -213,24 +189,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.PostCrmConnectionIDFileRequest(
     crm_file=shared.CrmFile(
-        active=False,
-        activity_id='tan impedit Pickup',
-        company_id='Manager',
-        contact_id='Florida Shoes East',
-        created_at=dateutil.parser.isoparse('2023-01-08T11:37:24.708Z'),
-        deal_id='Agent',
-        description='Multi-lateral well-modulated portal',
-        file_name='panel_city.wav',
-        file_size=1401.73,
-        file_type='application',
-        file_url='for Chips under',
-        id='<ID>',
-        lead_id='abaft Checking',
         raw=shared.PropertyCrmFileRaw(),
-        updated_at=dateutil.parser.isoparse('2023-02-25T09:46:59.608Z'),
-        user_id='Mexico withdrawal',
     ),
-    connection_id='national Lead',
+    connection_id='tan impedit Pickup',
 )
 
 res = s.file.post_crm_connection_id_file(req)
@@ -270,24 +231,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.PutCrmConnectionIDFileIDRequest(
     crm_file=shared.CrmFile(
-        active=False,
-        activity_id='Cotton',
-        company_id='Northeast',
-        contact_id='Computer',
-        created_at=dateutil.parser.isoparse('2021-04-09T13:10:01.367Z'),
-        deal_id='toward confiscate East',
-        description='Devolved upward-trending matrices',
-        file_name='generation_tactics.wav',
-        file_size=4770.09,
-        file_type='audio',
-        file_url='framework azure Metal',
-        id='<ID>',
-        lead_id='ampere costume',
         raw=shared.PropertyCrmFileRaw(),
-        updated_at=dateutil.parser.isoparse('2023-05-15T05:04:24.130Z'),
-        user_id='Research payment',
     ),
-    connection_id='East Associate Mazda',
+    connection_id='Cotton',
     id='<ID>',
 )
 

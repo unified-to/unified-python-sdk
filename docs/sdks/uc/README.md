@@ -70,13 +70,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetUcConnectionIDAgentRequest(
     connection_id='Regional East Sedan',
-    contact_id='blue',
-    limit=7827.68,
-    offset=2116.69,
-    order='Bicycle',
-    query='Bacon officia iterate',
-    sort='sticky vote lumen',
-    updated_gte=dateutil.parser.isoparse('2021-07-05T19:53:29.041Z'),
 )
 
 res = s.uc.get_uc_connection_id_agent(req)
@@ -115,15 +108,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetUcConnectionIDCallRequest(
-    agent_id='Directives',
-    connection_id='female than',
-    contact_id='reintermediate Enid Applications',
-    limit=1980.39,
-    offset=3478,
-    order='white Oklahoma Functionality',
-    query='pricing whether Hillsboro',
-    sort='Wooden desensitize SCSI',
-    updated_gte=dateutil.parser.isoparse('2021-11-03T12:40:46.997Z'),
+    connection_id='Directives',
 )
 
 res = s.uc.get_uc_connection_id_call(req)
@@ -162,14 +147,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetUcConnectionIDContactRequest(
-    agent_id='Refined Practical',
-    connection_id='inasmuch Dodge',
-    limit=7215.14,
-    offset=2910.48,
-    order='Vermont',
-    query='maroon JBOD',
-    sort='hertz',
-    updated_gte=dateutil.parser.isoparse('2023-01-29T17:06:35.136Z'),
+    connection_id='Refined Practical',
 )
 
 res = s.uc.get_uc_connection_id_contact(req)
@@ -248,27 +226,19 @@ s = unified_to.UnifiedTo(
 
 req = operations.PatchUcConnectionIDContactIDRequest(
     uc_contact=shared.UcContact(
-        company='Wilderman, Cremin and Gislason',
-        created_at=dateutil.parser.isoparse('2023-07-18T06:13:06.229Z'),
         emails=[
             shared.UcEmail(
-                email='Henry.Leannon@gmail.com',
-                type=shared.UcEmailType.OTHER,
+                email='Van84@hotmail.com',
             ),
         ],
-        id='<ID>',
-        name='quirky digital',
         raw=shared.PropertyUcContactRaw(),
         telephones=[
             shared.UcTelephone(
-                telephone='Lead 24/7 overriding',
-                type=shared.UcTelephoneType.OTHER,
+                telephone='Denar',
             ),
         ],
-        title='Small Legacy',
-        updated_at=dateutil.parser.isoparse('2022-07-11T16:02:41.922Z'),
     ),
-    connection_id='Bohrium',
+    connection_id='strategy Synergized',
     id='<ID>',
 )
 
@@ -309,27 +279,19 @@ s = unified_to.UnifiedTo(
 
 req = operations.PostUcConnectionIDContactRequest(
     uc_contact=shared.UcContact(
-        company='Howell and Sons',
-        created_at=dateutil.parser.isoparse('2022-12-18T04:56:44.573Z'),
         emails=[
             shared.UcEmail(
-                email='Garret81@hotmail.com',
-                type=shared.UcEmailType.HOME,
+                email='Gilda_Jacobs@gmail.com',
             ),
         ],
-        id='<ID>',
-        name='Southeast Gasoline extend',
         raw=shared.PropertyUcContactRaw(),
         telephones=[
             shared.UcTelephone(
-                telephone='Togo Division Human',
-                type=shared.UcTelephoneType.HOME,
+                telephone='Account Orchestrator',
             ),
         ],
-        title='COM that',
-        updated_at=dateutil.parser.isoparse('2023-02-07T16:19:58.439Z'),
     ),
-    connection_id='Tennessee',
+    connection_id='extend grey Avon',
 )
 
 res = s.uc.post_uc_connection_id_contact(req)
@@ -369,27 +331,19 @@ s = unified_to.UnifiedTo(
 
 req = operations.PutUcConnectionIDContactIDRequest(
     uc_contact=shared.UcContact(
-        company='Feeney, Gusikowski and Douglas',
-        created_at=dateutil.parser.isoparse('2021-05-15T18:36:56.888Z'),
         emails=[
             shared.UcEmail(
-                email='Katrina.Walker@gmail.com',
-                type=shared.UcEmailType.HOME,
+                email='Darien12@hotmail.com',
             ),
         ],
-        id='<ID>',
-        name='Investment Hip Southwest',
         raw=shared.PropertyUcContactRaw(),
         telephones=[
             shared.UcTelephone(
-                telephone='powerless Shirt',
-                type=shared.UcTelephoneType.FAX,
+                telephone='reboot',
             ),
         ],
-        title='Wooden Buckinghamshire',
-        updated_at=dateutil.parser.isoparse('2022-10-29T19:58:07.810Z'),
     ),
-    connection_id='doubtfully',
+    connection_id='payment hem',
     id='<ID>',
 )
 

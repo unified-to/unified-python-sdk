@@ -68,12 +68,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetCrmConnectionIDTeamRequest(
     connection_id='bath Lamborghini',
-    limit=1042.31,
-    offset=1586.42,
-    order='Diesel Bike virtual',
-    query='bakery',
-    sort='Senior',
-    updated_gte=dateutil.parser.isoparse('2021-12-04T23:56:00.028Z'),
 )
 
 res = s.team.get_crm_connection_id_team(req)
@@ -152,17 +146,12 @@ s = unified_to.UnifiedTo(
 
 req = operations.PatchCrmConnectionIDTeamIDRequest(
     crm_team=shared.CrmTeam(
-        created_at=dateutil.parser.isoparse('2021-05-20T12:47:48.451Z'),
-        description='Automated executive emulation',
-        id='<ID>',
-        name='Internal experiences',
         raw=shared.PropertyCrmTeamRaw(),
-        updated_at=dateutil.parser.isoparse('2022-05-22T09:41:53.599Z'),
         user_ids=[
-            'lumen',
+            'Arizona',
         ],
     ),
-    connection_id='up Candace',
+    connection_id='Internal experiences',
     id='<ID>',
 )
 
@@ -203,17 +192,12 @@ s = unified_to.UnifiedTo(
 
 req = operations.PostCrmConnectionIDTeamRequest(
     crm_team=shared.CrmTeam(
-        created_at=dateutil.parser.isoparse('2022-02-12T08:57:03.070Z'),
-        description='Organic transitional portal',
-        id='<ID>',
-        name='male bandwidth',
         raw=shared.PropertyCrmTeamRaw(),
-        updated_at=dateutil.parser.isoparse('2022-12-29T15:50:04.365Z'),
         user_ids=[
-            'meter',
+            'local',
         ],
     ),
-    connection_id='Guaynabo AGP East',
+    connection_id='pascal male bandwidth',
 )
 
 res = s.team.post_crm_connection_id_team(req)
@@ -253,17 +237,12 @@ s = unified_to.UnifiedTo(
 
 req = operations.PutCrmConnectionIDTeamIDRequest(
     crm_team=shared.CrmTeam(
-        created_at=dateutil.parser.isoparse('2023-08-14T23:28:53.515Z'),
-        description='Inverse multi-tasking task-force',
-        id='<ID>',
-        name='Indonesia Orchestrator Division',
         raw=shared.PropertyCrmTeamRaw(),
-        updated_at=dateutil.parser.isoparse('2022-10-23T23:13:25.973Z'),
         user_ids=[
-            'thoroughly',
+            'immense',
         ],
     ),
-    connection_id='delectus',
+    connection_id='duh Indonesia',
     id='<ID>',
 )
 

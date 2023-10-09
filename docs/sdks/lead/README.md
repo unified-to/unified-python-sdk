@@ -68,12 +68,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetCrmConnectionIDLeadRequest(
     connection_id='Computer Hop',
-    limit=7411.81,
-    offset=9004.32,
-    order='Operations candela Integration',
-    query='impactful transform',
-    sort='Tala defense Southwest',
-    updated_gte=dateutil.parser.isoparse('2021-09-29T00:37:32.184Z'),
 )
 
 res = s.lead.get_crm_connection_id_lead(req)
@@ -152,40 +146,18 @@ s = unified_to.UnifiedTo(
 
 req = operations.PatchCrmConnectionIDLeadIDRequest(
     crm_lead=shared.CrmLead(
-        active=False,
-        address=shared.PropertyCrmLeadAddress(
-            address1='Cambridgeshire',
-            address2='Oriental farad male',
-            city='D\'Amorebury',
-            country='Reunion',
-            country_code='UY',
-            postal_code='87017-9001',
-            region='Buckinghamshire Electric',
-            region_code='South gee',
-        ),
-        company_id='Gasoline conglomeration Tennessine',
-        contact_id='grow hub',
-        created_at=dateutil.parser.isoparse('2023-06-09T15:23:12.644Z'),
-        creator_user_id='voluptates',
+        address=shared.PropertyCrmLeadAddress(),
         emails=[
-            shared.CrmEmail(
-                email='Jeffrey.Denesik52@yahoo.com',
-                type=shared.CrmEmailType.HOME,
-            ),
+            shared.CrmEmail(),
         ],
-        id='<ID>',
-        name='whiteboard lumen',
         raw=shared.PropertyCrmLeadRaw(),
         telephones=[
             shared.CrmTelephone(
-                telephone='Cheese before against',
-                type=shared.CrmTelephoneType.FAX,
+                telephone='Cambridgeshire',
             ),
         ],
-        updated_at=dateutil.parser.isoparse('2022-07-12T14:19:50.007Z'),
-        user_id='Games yellow Towels',
     ),
-    connection_id='brr misuse',
+    connection_id='Oriental farad male',
     id='<ID>',
 )
 
@@ -226,40 +198,18 @@ s = unified_to.UnifiedTo(
 
 req = operations.PostCrmConnectionIDLeadRequest(
     crm_lead=shared.CrmLead(
-        active=False,
-        address=shared.PropertyCrmLeadAddress(
-            address1='XSS Country knowledge',
-            address2='structure',
-            city='Giovaniton',
-            country='Ghana',
-            country_code='CO',
-            postal_code='34495-0585',
-            region='Modern',
-            region_code='Diesel',
-        ),
-        company_id='yuppify',
-        contact_id='demanding scratch male',
-        created_at=dateutil.parser.isoparse('2023-03-07T11:22:05.657Z'),
-        creator_user_id='masticate South',
+        address=shared.PropertyCrmLeadAddress(),
         emails=[
-            shared.CrmEmail(
-                email='Gregorio37@gmail.com',
-                type=shared.CrmEmailType.HOME,
-            ),
+            shared.CrmEmail(),
         ],
-        id='<ID>',
-        name='Granite Tools',
         raw=shared.PropertyCrmLeadRaw(),
         telephones=[
             shared.CrmTelephone(
-                telephone='Hassium Balanced male',
-                type=shared.CrmTelephoneType.WORK,
+                telephone='XSS Country knowledge',
             ),
         ],
-        updated_at=dateutil.parser.isoparse('2021-06-26T11:56:58.926Z'),
-        user_id='Consultant',
     ),
-    connection_id='solutions gosh',
+    connection_id='structure',
 )
 
 res = s.lead.post_crm_connection_id_lead(req)
@@ -299,40 +249,18 @@ s = unified_to.UnifiedTo(
 
 req = operations.PutCrmConnectionIDLeadIDRequest(
     crm_lead=shared.CrmLead(
-        active=False,
-        address=shared.PropertyCrmLeadAddress(
-            address1='Extension',
-            address2='supposing Dorado Assistant',
-            city='South Gate',
-            country='Reunion',
-            country_code='IS',
-            postal_code='73732-2192',
-            region='JBOD phew',
-            region_code='Southeast Framingham female',
-        ),
-        company_id='deposit male',
-        contact_id='bunch edge',
-        created_at=dateutil.parser.isoparse('2021-04-03T18:08:02.798Z'),
-        creator_user_id='East Panama',
+        address=shared.PropertyCrmLeadAddress(),
         emails=[
-            shared.CrmEmail(
-                email='Jamal20@yahoo.com',
-                type=shared.CrmEmailType.WORK,
-            ),
+            shared.CrmEmail(),
         ],
-        id='<ID>',
-        name='pianist',
         raw=shared.PropertyCrmLeadRaw(),
         telephones=[
             shared.CrmTelephone(
-                telephone='caricature female',
-                type=shared.CrmTelephoneType.HOME,
+                telephone='Extension',
             ),
         ],
-        updated_at=dateutil.parser.isoparse('2022-08-09T07:11:50.077Z'),
-        user_id='Designer Folding',
     ),
-    connection_id='Lanthanum wink Regional',
+    connection_id='supposing Dorado Assistant',
     id='<ID>',
 )
 

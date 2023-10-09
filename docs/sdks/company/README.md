@@ -69,14 +69,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetCrmConnectionIDCompanyRequest(
     connection_id='indexing',
-    contact_id='Porsche firewall',
-    deal_id='Hafnium Computers',
-    limit=902.85,
-    offset=2893.88,
-    order='Interactions relationships juxtapose',
-    query='newton Luxembourg',
-    sort='Dakota quantifying Actinium',
-    updated_gte=dateutil.parser.isoparse('2022-09-27T07:42:48.074Z'),
 )
 
 res = s.company.get_crm_connection_id_company(req)
@@ -154,8 +146,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetEnrichConnectionIDCompanyRequest(
     connection_id='female Computers Central',
-    domain='scientific-facet.biz',
-    name='Outdoors embrace interface',
 )
 
 res = s.company.get_enrich_connection_id_company(req)
@@ -195,45 +185,27 @@ s = unified_to.UnifiedTo(
 
 req = operations.PatchCrmConnectionIDCompanyIDRequest(
     crm_company=shared.CrmCompany(
-        active=False,
-        address=shared.PropertyCrmCompanyAddress(
-            address1='invoice',
-            address2='indexing Ford',
-            city='McAllen',
-            country='Netherlands',
-            country_code='PF',
-            postal_code='93486',
-            region='Steel impactful',
-            region_code='Dong',
-        ),
-        created_at=dateutil.parser.isoparse('2023-07-25T08:43:38.995Z'),
+        address=shared.PropertyCrmCompanyAddress(),
         deal_ids=[
-            'usefully',
+            'Soft',
         ],
         emails=[
-            shared.CrmEmail(
-                email='Annabel31@gmail.com',
-                type=shared.CrmEmailType.WORK,
-            ),
+            shared.CrmEmail(),
         ],
-        id='<ID>',
-        name='Toys Vermont Astatine',
         raw=shared.PropertyCrmCompanyRaw(),
         tags=[
-            'Trigender',
+            'invoice',
         ],
         telephones=[
             shared.CrmTelephone(
-                telephone='female',
-                type=shared.CrmTelephoneType.HOME,
+                telephone='miniature Quality',
             ),
         ],
-        updated_at=dateutil.parser.isoparse('2021-12-22T11:39:56.432Z'),
         websites=[
-            'Latin',
+            'redefine',
         ],
     ),
-    connection_id='North kilogram connecting',
+    connection_id='invoice National',
     id='<ID>',
 )
 
@@ -274,45 +246,27 @@ s = unified_to.UnifiedTo(
 
 req = operations.PostCrmConnectionIDCompanyRequest(
     crm_company=shared.CrmCompany(
-        active=False,
-        address=shared.PropertyCrmCompanyAddress(
-            address1='consequently gosh',
-            address2='phooey',
-            city='Antonettaville',
-            country='Lebanon',
-            country_code='SI',
-            postal_code='79462',
-            region='orchid Oxygen Kids',
-            region_code='Electric utilisation',
-        ),
-        created_at=dateutil.parser.isoparse('2021-10-01T08:46:18.197Z'),
+        address=shared.PropertyCrmCompanyAddress(),
         deal_ids=[
-            'Tennessee',
+            'Personal',
         ],
         emails=[
-            shared.CrmEmail(
-                email='Jaida.McDermott26@yahoo.com',
-                type=shared.CrmEmailType.OTHER,
-            ),
+            shared.CrmEmail(),
         ],
-        id='<ID>',
-        name='Hydrogen Wooden',
         raw=shared.PropertyCrmCompanyRaw(),
         tags=[
-            'CSS',
+            'gosh',
         ],
         telephones=[
             shared.CrmTelephone(
-                telephone='Account invoice',
-                type=shared.CrmTelephoneType.MOBILE,
+                telephone='phooey',
             ),
         ],
-        updated_at=dateutil.parser.isoparse('2021-09-12T17:31:24.634Z'),
         websites=[
-            'Intuitive',
+            'primary',
         ],
     ),
-    connection_id='Gasoline',
+    connection_id='neural',
 )
 
 res = s.company.post_crm_connection_id_company(req)
@@ -352,45 +306,27 @@ s = unified_to.UnifiedTo(
 
 req = operations.PutCrmConnectionIDCompanyIDRequest(
     crm_company=shared.CrmCompany(
-        active=False,
-        address=shared.PropertyCrmCompanyAddress(
-            address1='Northwest Northwest',
-            address2='portals Diesel',
-            city='Azusa',
-            country='Qatar',
-            country_code='CG',
-            postal_code='52396',
-            region='Tuna sticky lest',
-            region_code='Soft boo Missoula',
-        ),
-        created_at=dateutil.parser.isoparse('2022-05-14T19:17:30.970Z'),
+        address=shared.PropertyCrmCompanyAddress(),
         deal_ids=[
-            'Hybrid',
+            'dicta',
         ],
         emails=[
-            shared.CrmEmail(
-                email='Vance_Cruickshank93@gmail.com',
-                type=shared.CrmEmailType.HOME,
-            ),
+            shared.CrmEmail(),
         ],
-        id='<ID>',
-        name='lest Northwest',
         raw=shared.PropertyCrmCompanyRaw(),
         tags=[
-            'East',
+            'background',
         ],
         telephones=[
             shared.CrmTelephone(
-                telephone='Bronze round',
-                type=shared.CrmTelephoneType.MOBILE,
+                telephone='veniam secondary',
             ),
         ],
-        updated_at=dateutil.parser.isoparse('2022-02-21T09:41:36.696Z'),
         websites=[
-            'Keyboard',
+            'Southwest',
         ],
     ),
-    connection_id='orange Bespoke',
+    connection_id='Calcium',
     id='<ID>',
 )
 

@@ -24,8 +24,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetEnrichConnectionIDCompanyRequest(
     connection_id='female Computers Central',
-    domain='scientific-facet.biz',
-    name='Outdoors embrace interface',
 )
 
 res = s.enrich.get_enrich_connection_id_company(req)
@@ -64,10 +62,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetEnrichConnectionIDPersonRequest(
     connection_id='Iowa Account',
-    email='Jaiden_Weimann24@gmail.com',
-    linkedin_url='paradigms integrate Creative',
-    name='Investment',
-    twitter='Hills',
 )
 
 res = s.enrich.get_enrich_connection_id_person(req)

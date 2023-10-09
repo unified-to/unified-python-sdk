@@ -22,13 +22,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetUnifiedIntegrationLoginWorkspaceIDIntegrationTypeRequest(
-    env='Rubber',
-    failure_redirect='gold Cambridgeshire',
-    integration_type='Plastic services pixel',
-    redirect=False,
-    state='Volkswagen Southwest',
-    success_redirect='drive integrated Bicycle',
-    workspace_id='Fantastic recontextualize Frozen',
+    integration_type='Rubber',
+    workspace_id='gold Cambridgeshire',
 )
 
 res = s.login.get_unified_integration_login_workspace_id_integration_type(req)

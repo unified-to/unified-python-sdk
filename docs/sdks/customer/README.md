@@ -68,12 +68,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetTicketingConnectionIDCustomerRequest(
     connection_id='SDD because Salad',
-    limit=8049.62,
-    offset=4323.42,
-    order='override',
-    query='Rolls 1080p',
-    sort='quantifying Southeast Kansas',
-    updated_gte=dateutil.parser.isoparse('2023-12-20T19:18:39.254Z'),
 )
 
 res = s.customer.get_ticketing_connection_id_customer(req)
@@ -152,28 +146,22 @@ s = unified_to.UnifiedTo(
 
 req = operations.PatchTicketingConnectionIDCustomerIDRequest(
     ticketing_customer=shared.TicketingCustomer(
-        created_at=dateutil.parser.isoparse('2023-01-22T19:33:25.134Z'),
         emails=[
             shared.TicketingEmail(
-                email='Ora.Labadie94@yahoo.com',
-                type=shared.TicketingEmailType.HOME,
+                email='Jaren_Ryan@hotmail.com',
             ),
         ],
-        id='<ID>',
-        name='sensitise whiteboard Smyrna',
         raw=shared.PropertyTicketingCustomerRaw(),
         tags=[
-            'Hialeah',
+            'Waco',
         ],
         telephones=[
             shared.TicketingTelephone(
-                telephone='connect',
-                type=shared.TicketingTelephoneType.WORK,
+                telephone='youthfully orange',
             ),
         ],
-        updated_at=dateutil.parser.isoparse('2023-12-28T17:48:45.929Z'),
     ),
-    connection_id='Tennessine',
+    connection_id='Smyrna Hialeah auxiliary',
     id='<ID>',
 )
 
@@ -214,28 +202,22 @@ s = unified_to.UnifiedTo(
 
 req = operations.PostTicketingConnectionIDCustomerRequest(
     ticketing_customer=shared.TicketingCustomer(
-        created_at=dateutil.parser.isoparse('2022-05-23T15:06:12.012Z'),
         emails=[
             shared.TicketingEmail(
-                email='Austin44@yahoo.com',
-                type=shared.TicketingEmailType.WORK,
+                email='Jaquelin.Boyer@yahoo.com',
             ),
         ],
-        id='<ID>',
-        name='Configuration neural',
         raw=shared.PropertyTicketingCustomerRaw(),
         tags=[
-            'engineer',
+            'withdrawal',
         ],
         telephones=[
             shared.TicketingTelephone(
-                telephone='Gasoline North gorgeous',
-                type=shared.TicketingTelephoneType.FAX,
+                telephone='Configuration neural',
             ),
         ],
-        updated_at=dateutil.parser.isoparse('2022-10-09T07:25:23.111Z'),
     ),
-    connection_id='mole purple',
+    connection_id='Product Hybrid',
 )
 
 res = s.customer.post_ticketing_connection_id_customer(req)
@@ -275,28 +257,22 @@ s = unified_to.UnifiedTo(
 
 req = operations.PutTicketingConnectionIDCustomerIDRequest(
     ticketing_customer=shared.TicketingCustomer(
-        created_at=dateutil.parser.isoparse('2021-04-21T09:25:32.395Z'),
         emails=[
             shared.TicketingEmail(
-                email='Shawna42@hotmail.com',
-                type=shared.TicketingEmailType.HOME,
+                email='Raleigh.Torp42@gmail.com',
             ),
         ],
-        id='<ID>',
-        name='gray',
         raw=shared.PropertyTicketingCustomerRaw(),
         tags=[
-            'Associate',
+            'copy',
         ],
         telephones=[
             shared.TicketingTelephone(
-                telephone='Sausages ivory Small',
-                type=shared.TicketingTelephoneType.MOBILE,
+                telephone='Developer Buckinghamshire Sausages',
             ),
         ],
-        updated_at=dateutil.parser.isoparse('2022-09-01T05:56:15.314Z'),
     ),
-    connection_id='mobile Cotton',
+    connection_id='kilogram',
     id='<ID>',
 )
 

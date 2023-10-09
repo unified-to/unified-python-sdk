@@ -147,19 +147,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetUnifiedApicallRequest(
-    connection_id='delectus green Hybrid',
-    created_lte=dateutil.parser.isoparse('2021-04-02T21:36:49.952Z'),
-    env='Fantastic Iodine indexing',
-    error=False,
-    external_xref='Music',
-    integration_type='Soft',
-    limit=2390.64,
-    offset=3757.34,
-    order='mobile envisioneer',
-    sort='North payment opposite',
-    updated_gte=dateutil.parser.isoparse('2021-08-11T16:18:13.644Z'),
-)
+req = operations.GetUnifiedApicallRequest()
 
 res = s.unified.get_unified_apicall(req)
 
@@ -238,13 +226,6 @@ req = operations.GetUnifiedConnectionRequest(
     categories=[
         operations.GetUnifiedConnectionCategories.ATS,
     ],
-    env='copying invoice coulomb',
-    external_xref='Islands West',
-    limit=7809.21,
-    offset=2750.2,
-    order='Volkswagen architect',
-    sort='consequently synthesizing Technician',
-    updated_gte=dateutil.parser.isoparse('2021-11-09T20:41:53.442Z'),
 )
 
 res = s.unified.get_unified_connection(req)
@@ -321,16 +302,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetUnifiedIntegrationRequest(
-    active=False,
     categories=[
         operations.GetUnifiedIntegrationCategories.ENRICH,
     ],
-    limit=7363.95,
-    offset=8214.4,
-    order='Nelda Implemented',
-    sort='cabinet',
-    summary=False,
-    updated_gte=dateutil.parser.isoparse('2022-02-05T00:16:37.455Z'),
 )
 
 res = s.unified.get_unified_integration(req)
@@ -368,19 +342,11 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetUnifiedIntegrationAuthWorkspaceIDIntegrationTypeRequest(
-    env='Algerian',
-    external_xref='Cambridgeshire Surinam',
-    failure_redirect='Designer Drive',
-    integration_type='program Home',
-    lang='Plastic program',
-    redirect=False,
+    integration_type='Algerian',
     scopes=[
-        operations.GetUnifiedIntegrationAuthWorkspaceIDIntegrationTypeScopes.CRM_FILE_READ,
+        operations.GetUnifiedIntegrationAuthWorkspaceIDIntegrationTypeScopes.MARTECH_MEMBER_WRITE,
     ],
-    state='Functionality Product',
-    subdomain='payment Developer Dynamic',
-    success_redirect='Northeast',
-    workspace_id='duh empower Kwanza',
+    workspace_id='hound',
 )
 
 res = s.unified.get_unified_integration_auth_workspace_id_integration_type(req)
@@ -456,13 +422,10 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetUnifiedIntegrationWorkspaceWorkspaceIDRequest(
-    active=False,
     categories=[
         operations.GetUnifiedIntegrationWorkspaceWorkspaceIDCategories.HRIS,
     ],
-    env='North Southeast exercitationem',
-    summary=False,
-    workspace_id='Bronze Plastic',
+    workspace_id='North Southeast exercitationem',
 )
 
 res = s.unified.get_unified_integration_workspace_workspace_id(req)
@@ -558,15 +521,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetUnifiedWebhookRequest(
-    env='Investor methodical Fitness',
-    limit=8087.22,
-    object='Franc past salmon',
-    offset=5240.75,
-    order='program',
-    sort='below JSON',
-    updated_gte=dateutil.parser.isoparse('2022-05-29T13:22:55.562Z'),
-)
+req = operations.GetUnifiedWebhookRequest()
 
 res = s.unified.get_unified_webhook(req)
 
@@ -644,46 +599,21 @@ s = unified_to.UnifiedTo(
 req = operations.PatchUnifiedConnectionIDRequest(
     connection=shared.Connection(
         auth=shared.PropertyConnectionAuth(
-            access_token='Northwest Cupertino',
-            api_url='Center Curium Electric',
-            app_id='female fragrant',
-            authorize_url='Electric Bicycle payment',
-            client_id='transmitting North',
-            client_secret='mole Gasoline morph',
-            consumer_key='Keyboard Antimony primary',
-            consumer_secret='yearly',
             emails=[
-                'athwart',
+                'Executive',
             ],
-            expires_in=3185.09,
-            expiry_date=dateutil.parser.isoparse('2022-08-12T13:21:47.977Z'),
-            key='<key>',
             meta=shared.PropertyPropertyConnectionAuthMeta(),
-            name='inside Rupee',
             other_auth_info=[
-                'Future',
+                'Cupertino',
             ],
-            pem='guard Internal',
-            refresh_token='Diesel',
-            state='copy Cotton Bicycle',
-            token='drive gold',
-            token_url='now',
         ),
-        auth_aws_arn='yum',
         categories=[
-            shared.PropertyConnectionCategories.HRIS,
+            shared.PropertyConnectionCategories.MARTECH,
         ],
-        created_at=dateutil.parser.isoparse('2021-06-18T22:02:30.822Z'),
-        environment='Northwest Balanced',
-        external_xref='boo',
-        id='<ID>',
-        integration_type='Soft',
-        is_paused=False,
+        integration_type='India',
         permissions=[
-            shared.PropertyConnectionPermissions.CRM_LEAD_READ,
+            shared.PropertyConnectionPermissions.ATS_APPLICATION_WRITE,
         ],
-        updated_at=dateutil.parser.isoparse('2022-07-27T15:43:44.767Z'),
-        workspace_id='extend',
     ),
     id='<ID>',
 )
@@ -724,16 +654,11 @@ s = unified_to.UnifiedTo(
 )
 
 req = shared.User(
-    created_at=dateutil.parser.isoparse('2022-04-24T15:25:24.483Z'),
-    email='Emmalee.Quitzon@yahoo.com',
-    environment='Bicycle',
-    id='<ID>',
     meta=shared.PropertyUserMeta(),
-    name='vice compressing',
-    updated_at=dateutil.parser.isoparse('2023-05-05T16:52:20.023Z'),
-    workspace_id='Hybrid methodologies',
+    name='virtual female',
+    workspace_id='Jewelery',
     workspace_ids=[
-        'Potassium',
+        'interfaces',
     ],
 )
 
@@ -774,46 +699,21 @@ s = unified_to.UnifiedTo(
 
 req = shared.Connection(
     auth=shared.PropertyConnectionAuth(
-        access_token='asperiores indexing',
-        api_url='plus pace global',
-        app_id='And port',
-        authorize_url='West whiteboard',
-        client_id='Folk',
-        client_secret='Northwest Modern',
-        consumer_key='Southeast deposit',
-        consumer_secret='Falls irritating up',
         emails=[
-            'intuitive',
+            'RSS',
         ],
-        expires_in=4121.5,
-        expiry_date=dateutil.parser.isoparse('2021-01-21T03:25:42.786Z'),
-        key='<key>',
         meta=shared.PropertyPropertyConnectionAuthMeta(),
-        name='membership Classical schnitzel',
         other_auth_info=[
-            'Convertible',
+            'locate',
         ],
-        pem='magenta Riel bolívar',
-        refresh_token='Pula',
-        state='white',
-        token='Northwest',
-        token_url='unbutton',
     ),
-    auth_aws_arn='Investor circuit',
     categories=[
-        shared.PropertyConnectionCategories.ATS,
+        shared.PropertyConnectionCategories.CRM,
     ],
-    created_at=dateutil.parser.isoparse('2023-01-25T14:37:40.202Z'),
-    environment='Hat watt',
-    external_xref='Sausages tan',
-    id='<ID>',
-    integration_type='Principal Extended velit',
-    is_paused=False,
+    integration_type='plus pace global',
     permissions=[
-        shared.PropertyConnectionPermissions.CRM_FILE_WRITE,
+        shared.PropertyConnectionPermissions.TICKETING_AGENT_WRITE,
     ],
-    updated_at=dateutil.parser.isoparse('2021-09-22T05:13:05.778Z'),
-    workspace_id='Auto',
 )
 
 res = s.unified.post_unified_connection(req)
@@ -853,30 +753,24 @@ s = unified_to.UnifiedTo(
 
 req = operations.PostUnifiedWebhookConnectionIDObjectRequest(
     webhook=shared.Webhook(
-        checked_at=dateutil.parser.isoparse('2021-02-25T07:12:08.980Z'),
-        connection_id='deposit 1080p Passenger',
-        created_at=dateutil.parser.isoparse('2023-02-21T14:58:56.193Z'),
-        environment='Minnesota Soap',
+        connection_id='drat',
         events=[
             shared.PropertyWebhookEvents.UPDATED,
         ],
-        hook_url='Table female ken',
-        id='<ID>',
-        include_raw=False,
-        integration_type='chocolate',
-        interval=1710.16,
-        object_type=shared.WebhookObjectType.ENRICH_COMPANY,
+        hook_url='siemens National',
+        integration_type='GB Rustic deposit',
+        interval=6073.96,
+        object_type=shared.WebhookObjectType.CRM_CONTACT,
         subscriptions=[
-            'female',
+            'Diesel',
         ],
-        updated_at=dateutil.parser.isoparse('2022-08-02T17:13:06.397Z'),
-        workspace_id='hertz',
+        workspace_id='female ken',
     ),
-    connection_id='Borders',
+    connection_id='chocolate',
     events=[
-        operations.PostUnifiedWebhookConnectionIDObjectEvents.CREATED,
+        operations.PostUnifiedWebhookConnectionIDObjectEvents.UPDATED,
     ],
-    object='scalable',
+    object='female driver',
 )
 
 res = s.unified.post_unified_webhook_connection_id_object(req)
@@ -917,46 +811,21 @@ s = unified_to.UnifiedTo(
 req = operations.PutUnifiedConnectionIDRequest(
     connection=shared.Connection(
         auth=shared.PropertyConnectionAuth(
-            access_token='female Buckinghamshire',
-            api_url='Web',
-            app_id='pumpkin Account',
-            authorize_url='dolorem Hybrid white',
-            client_id='ohm',
-            client_secret='Pennsylvania Executive',
-            consumer_key='silver Account Accountability',
-            consumer_secret='Mouse',
             emails=[
-                'oh',
+                'Assurance',
             ],
-            expires_in=8946.31,
-            expiry_date=dateutil.parser.isoparse('2022-01-29T12:35:08.478Z'),
-            key='<key>',
             meta=shared.PropertyPropertyConnectionAuthMeta(),
-            name='incidentally shrimp bypass',
             other_auth_info=[
-                'invoice',
+                'Avon',
             ],
-            pem='recent midst Northeast',
-            refresh_token='Product',
-            state='circuit precious',
-            token='gee collaborative withdrawal',
-            token_url='Platinum',
         ),
-        auth_aws_arn='suddenly Fiat',
         categories=[
-            shared.PropertyConnectionCategories.UC,
+            shared.PropertyConnectionCategories.MARTECH,
         ],
-        created_at=dateutil.parser.isoparse('2022-09-20T19:51:21.025Z'),
-        environment='redundant Southeast Camren',
-        external_xref='firewall',
-        id='<ID>',
-        integration_type='Beauty',
-        is_paused=False,
+        integration_type='Web',
         permissions=[
-            shared.PropertyConnectionPermissions.WEBHOOK,
+            shared.PropertyConnectionPermissions.CRM_FILE_READ,
         ],
-        updated_at=dateutil.parser.isoparse('2023-12-30T14:20:47.994Z'),
-        workspace_id='parse Peso Investment',
     ),
     id='<ID>',
 )
@@ -997,16 +866,11 @@ s = unified_to.UnifiedTo(
 )
 
 req = shared.User(
-    created_at=dateutil.parser.isoparse('2023-07-31T04:46:29.769Z'),
-    email='Selena59@yahoo.com',
-    environment='Bedfordshire Lucia',
-    id='<ID>',
     meta=shared.PropertyUserMeta(),
-    name='Bicycle hacking South',
-    updated_at=dateutil.parser.isoparse('2023-03-15T15:08:26.238Z'),
-    workspace_id='Card defect',
+    name='invoice Convertible Country',
+    workspace_id='Ergonomic',
     workspace_ids=[
-        'repudiandae',
+        'becquerel',
     ],
 )
 

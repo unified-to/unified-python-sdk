@@ -114,12 +114,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetMartechConnectionIDListRequest(
     connection_id='silver DeKalb',
-    limit=9799.48,
-    offset=4800.63,
-    order='Bedfordshire',
-    query='Hip Pass',
-    sort='since',
-    updated_gte=dateutil.parser.isoparse('2022-03-26T19:40:00.770Z'),
 )
 
 res = s.martech.get_martech_connection_id_list(req)
@@ -198,13 +192,7 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetMartechConnectionIDListIDMemberRequest(
     connection_id='fuchsia economics',
-    limit=3725.92,
-    list_id='Southwest',
-    offset=1114.27,
-    order='emulation',
-    query='male male',
-    sort='Arizona Oklahoma Land',
-    updated_gte=dateutil.parser.isoparse('2021-03-19T13:12:48.332Z'),
+    list_id='Bronze cackle',
 )
 
 res = s.martech.get_martech_connection_id_list_id_member(req)
@@ -284,13 +272,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.PatchMartechConnectionIDListIDRequest(
     marketing_list=shared.MarketingList(
-        created_at='Funk',
-        id='<ID>',
-        name='lime Fiat',
         raw=shared.PropertyMarketingListRaw(),
-        updated_at=dateutil.parser.isoparse('2021-01-15T20:51:24.192Z'),
     ),
-    connection_id='male sheepishly Intelligent',
+    connection_id='Funk',
     id='<ID>',
 )
 
@@ -331,27 +315,22 @@ s = unified_to.UnifiedTo(
 
 req = operations.PatchMartechConnectionIDListIDMemberIDRequest(
     marketing_member=shared.MarketingMember(
-        created_at=dateutil.parser.isoparse('2022-06-21T07:15:04.418Z'),
         emails=[
             shared.MarketingEmail(
-                email='Zula_Bogan76@hotmail.com',
-                type=shared.MarketingEmailType.HOME,
+                email='Otto93@yahoo.com',
             ),
         ],
-        id='<ID>',
         list_ids=[
-            'gadzooks',
+            'Accounts',
         ],
-        name='Haven Hatchback',
         raw=shared.PropertyMarketingMemberRaw(),
         tags=[
-            'mutiny',
+            'capacitor',
         ],
-        updated_at=dateutil.parser.isoparse('2021-08-13T23:04:27.910Z'),
     ),
-    connection_id='female',
+    connection_id='yowza online',
     id='<ID>',
-    list_id='yellow overriding Rock',
+    list_id='to XSS',
 )
 
 res = s.martech.patch_martech_connection_id_list_id_member_id(req)
@@ -391,13 +370,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.PostMartechConnectionIDListRequest(
     marketing_list=shared.MarketingList(
-        created_at='synergistic Transexual Steel',
-        id='<ID>',
-        name='Virginia whoever Bicycle',
         raw=shared.PropertyMarketingListRaw(),
-        updated_at=dateutil.parser.isoparse('2023-04-27T09:56:39.589Z'),
     ),
-    connection_id='Hybrid',
+    connection_id='synergistic Transexual Steel',
 )
 
 res = s.martech.post_martech_connection_id_list(req)
@@ -437,26 +412,21 @@ s = unified_to.UnifiedTo(
 
 req = operations.PostMartechConnectionIDListIDMemberRequest(
     marketing_member=shared.MarketingMember(
-        created_at=dateutil.parser.isoparse('2022-12-27T02:49:51.488Z'),
         emails=[
             shared.MarketingEmail(
-                email='Esta.Dach@hotmail.com',
-                type=shared.MarketingEmailType.OTHER,
+                email='Tomas37@yahoo.com',
             ),
         ],
-        id='<ID>',
         list_ids=[
-            'virtual',
+            'drive',
         ],
-        name='dolorum Wooden Granite',
         raw=shared.PropertyMarketingMemberRaw(),
         tags=[
-            'Road',
+            'virtual',
         ],
-        updated_at=dateutil.parser.isoparse('2021-06-09T19:47:01.060Z'),
     ),
-    connection_id='Pennsylvania leverage sheath',
-    list_id='parse exercitationem',
+    connection_id='dolorum Wooden Granite',
+    list_id='Green Convertible newton',
 )
 
 res = s.martech.post_martech_connection_id_list_id_member(req)
@@ -496,13 +466,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.PutMartechConnectionIDListIDRequest(
     marketing_list=shared.MarketingList(
-        created_at='Underpass initiatives',
-        id='<ID>',
-        name='North Progressive Assistant',
         raw=shared.PropertyMarketingListRaw(),
-        updated_at=dateutil.parser.isoparse('2023-10-03T22:31:39.028Z'),
     ),
-    connection_id='Security Legacy onto',
+    connection_id='Underpass initiatives',
     id='<ID>',
 )
 
@@ -543,27 +509,22 @@ s = unified_to.UnifiedTo(
 
 req = operations.PutMartechConnectionIDListIDMemberIDRequest(
     marketing_member=shared.MarketingMember(
-        created_at=dateutil.parser.isoparse('2023-09-24T05:00:50.743Z'),
         emails=[
             shared.MarketingEmail(
-                email='Lorenz_Kautzer@hotmail.com',
-                type=shared.MarketingEmailType.HOME,
+                email='Mikayla_Nader@hotmail.com',
             ),
         ],
-        id='<ID>',
         list_ids=[
-            'SMS',
+            'octave',
         ],
-        name='East platforms',
         raw=shared.PropertyMarketingMemberRaw(),
         tags=[
-            'Estonia',
+            'SMS',
         ],
-        updated_at=dateutil.parser.isoparse('2023-01-20T05:09:32.775Z'),
     ),
-    connection_id='following quia Intelligent',
+    connection_id='East platforms',
     id='<ID>',
-    list_id='Cab',
+    list_id='Frozen',
 )
 
 res = s.martech.put_martech_connection_id_list_id_member_id(req)

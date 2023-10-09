@@ -67,15 +67,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetAtsConnectionIDApplicationRequest(
-    candidate_id='turquoise',
-    connection_id='Regional Bedfordshire',
-    job_id='Northwest portal Electric',
-    limit=576.8,
-    offset=7467.13,
-    order='Architect',
-    query='loosely contingency',
-    sort='female',
-    updated_gte=dateutil.parser.isoparse('2023-09-05T13:59:23.348Z'),
+    connection_id='turquoise',
 )
 
 res = s.application.get_ats_connection_id_application(req)
@@ -154,19 +146,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.PatchAtsConnectionIDApplicationIDRequest(
     ats_application=shared.AtsApplication(
-        applied_at=dateutil.parser.isoparse('2023-10-17T09:51:42.165Z'),
-        candidate_id='North et beyond',
-        created_at=dateutil.parser.isoparse('2023-01-08T08:26:22.845Z'),
-        id='<ID>',
-        job_id='ick Sausages Bronze',
         raw=shared.PropertyAtsApplicationRaw(),
-        rejected_at=dateutil.parser.isoparse('2023-10-18T00:47:25.469Z'),
-        rejected_reason='Avon Sum quis',
-        source='Carolina Wooden Pop',
-        status=shared.AtsApplicationStatus.HIRED,
-        updated_at=dateutil.parser.isoparse('2021-07-20T22:05:46.009Z'),
     ),
-    connection_id='Baby Paucek',
+    connection_id='mole Northeast Southwest',
     id='<ID>',
 )
 
@@ -207,19 +189,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.PostAtsConnectionIDApplicationRequest(
     ats_application=shared.AtsApplication(
-        applied_at=dateutil.parser.isoparse('2021-10-26T15:24:28.979Z'),
-        candidate_id='solid',
-        created_at=dateutil.parser.isoparse('2022-09-13T17:17:33.049Z'),
-        id='<ID>',
-        job_id='Gloves Pizza virtual',
         raw=shared.PropertyAtsApplicationRaw(),
-        rejected_at=dateutil.parser.isoparse('2023-12-27T18:41:56.821Z'),
-        rejected_reason='Northwest Kids',
-        source='Human Tasty Loan',
-        status=shared.AtsApplicationStatus.NEW,
-        updated_at=dateutil.parser.isoparse('2022-11-01T21:08:50.319Z'),
     ),
-    connection_id='Jazz',
+    connection_id='Berkshire',
 )
 
 res = s.application.post_ats_connection_id_application(req)
@@ -259,19 +231,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.PutAtsConnectionIDApplicationIDRequest(
     ats_application=shared.AtsApplication(
-        applied_at=dateutil.parser.isoparse('2022-06-15T22:25:51.833Z'),
-        candidate_id='farad Indianapolis',
-        created_at=dateutil.parser.isoparse('2022-04-01T21:03:58.880Z'),
-        id='<ID>',
-        job_id='enable foreground',
         raw=shared.PropertyAtsApplicationRaw(),
-        rejected_at=dateutil.parser.isoparse('2022-11-06T11:41:30.414Z'),
-        rejected_reason='virtual North plum',
-        source='Fort solid',
-        status=shared.AtsApplicationStatus.SUBMITTED,
-        updated_at=dateutil.parser.isoparse('2021-02-21T04:47:57.079Z'),
     ),
-    connection_id='Southeast',
+    connection_id='input Electric',
     id='<ID>',
 )
 

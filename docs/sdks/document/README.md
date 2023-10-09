@@ -67,16 +67,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetAtsConnectionIDScorecardRequest(
-    application_id='Licensed deep',
-    candidate_id='happily',
-    connection_id='lunch accusamus',
-    interview_id='for famously Southwest',
-    limit=950.05,
-    offset=6133.23,
-    order='withdrawal',
-    query='Bicycle copy Bronze',
-    sort='ouch non ut',
-    updated_gte=dateutil.parser.isoparse('2021-06-01T09:53:52.927Z'),
+    connection_id='Licensed deep',
 )
 
 res = s.document.get_ats_connection_id_scorecard(req)
@@ -155,18 +146,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.PatchAtsConnectionIDScorecardIDRequest(
     ats_scorecard=shared.AtsScorecard(
-        application_id='Carter Hatchback functionalities',
-        candidate_id='disagree gold New',
-        created_at=dateutil.parser.isoparse('2023-05-08T15:11:07.692Z'),
-        id='<ID>',
-        interview_id='blue',
-        interviewer_id='North Buckinghamshire blur',
-        job_id='kelvin hack Fantastic',
         raw=shared.PropertyAtsScorecardRaw(),
-        recommendation=shared.AtsScorecardRecommendation.DEFINITELY_NO,
-        updated_at=dateutil.parser.isoparse('2022-11-18T04:49:38.005Z'),
     ),
-    connection_id='hacking meter',
+    connection_id='Carter Hatchback functionalities',
     id='<ID>',
 )
 
@@ -207,18 +189,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.PostAtsConnectionIDScorecardRequest(
     ats_scorecard=shared.AtsScorecard(
-        application_id='female bah',
-        candidate_id='if since',
-        created_at=dateutil.parser.isoparse('2022-02-26T00:06:29.981Z'),
-        id='<ID>',
-        interview_id='invoice',
-        interviewer_id='male',
-        job_id='Accountability',
         raw=shared.PropertyAtsScorecardRaw(),
-        recommendation=shared.AtsScorecardRecommendation.STRONG_YES,
-        updated_at=dateutil.parser.isoparse('2023-10-04T17:15:51.015Z'),
     ),
-    connection_id='Legacy tan',
+    connection_id='female bah',
 )
 
 res = s.document.post_ats_connection_id_scorecard(req)
@@ -258,18 +231,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.PutAtsConnectionIDScorecardIDRequest(
     ats_scorecard=shared.AtsScorecard(
-        application_id='East Granite',
-        candidate_id='South',
-        created_at=dateutil.parser.isoparse('2022-03-02T12:33:41.490Z'),
-        id='<ID>',
-        interview_id='Texas Technetium hack',
-        interviewer_id='Adventure Kyrgyz Organic',
-        job_id='Home Dynamic Integration',
         raw=shared.PropertyAtsScorecardRaw(),
-        recommendation=shared.AtsScorecardRecommendation.NO,
-        updated_at=dateutil.parser.isoparse('2023-11-13T03:01:57.066Z'),
     ),
-    connection_id='Transexual Manager Rap',
+    connection_id='East Granite',
     id='<ID>',
 )
 
