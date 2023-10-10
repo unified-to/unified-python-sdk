@@ -19,6 +19,7 @@ class AtsTelephoneType(str, Enum):
 
 @dataclasses.dataclass
 class AtsTelephone:
+    r"""A unified telephone object"""
     telephone: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('telephone') }})
     type: Optional[AtsTelephoneType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type'), 'exclude': lambda f: f is None }})
     

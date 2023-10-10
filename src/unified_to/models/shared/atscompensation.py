@@ -28,6 +28,7 @@ class AtsCompensationType(str, Enum):
 
 @dataclasses.dataclass
 class AtsCompensation:
+    r"""Unified compensation object for a job"""
     type: AtsCompensationType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type') }})
     currency: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('currency'), 'exclude': lambda f: f is None }})
     frequency: Optional[AtsCompensationFrequency] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('frequency'), 'exclude': lambda f: f is None }})

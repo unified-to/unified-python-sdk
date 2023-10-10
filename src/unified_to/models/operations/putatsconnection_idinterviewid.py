@@ -15,6 +15,7 @@ class PutAtsConnectionIDInterviewIDRequest:
     id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     r"""ID of the Interview"""
     ats_interview: Optional[shared_atsinterview.AtsInterview] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    r"""An interview between a candidate for a specific job"""
     
 
 

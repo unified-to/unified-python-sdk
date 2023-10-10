@@ -15,6 +15,7 @@ class PatchAtsConnectionIDApplicationIDRequest:
     id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     r"""ID of the Application"""
     ats_application: Optional[shared_atsapplication.AtsApplication] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    r"""An application is an association object between a candidate and a job"""
     
 
 

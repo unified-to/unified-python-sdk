@@ -13,6 +13,7 @@ class PostAtsConnectionIDJobRequest:
     connection_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': False }})
     r"""ID of the connection"""
     ats_job: Optional[shared_atsjob.AtsJob] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    r"""An opened position/job"""
     
 
 

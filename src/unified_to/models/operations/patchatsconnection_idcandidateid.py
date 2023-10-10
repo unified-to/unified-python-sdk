@@ -15,6 +15,7 @@ class PatchAtsConnectionIDCandidateIDRequest:
     id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     r"""ID of the Candidate"""
     ats_candidate: Optional[shared_atscandidate.AtsCandidate] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    r"""A candidate looking for work"""
     
 
 
