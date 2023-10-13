@@ -3,178 +3,14 @@
 
 ### Available Operations
 
-* [delete_martech_connection_id_list_id](#delete_martech_connection_id_list_id) - Remove a list
-* [get_martech_connection_id_list](#get_martech_connection_id_list) - List all lists
-* [get_martech_connection_id_list_id](#get_martech_connection_id_list_id) - Retrieve a list
-* [patch_martech_connection_id_list_id](#patch_martech_connection_id_list_id) - Update a list
-* [post_martech_connection_id_list](#post_martech_connection_id_list) - Create a list
-* [put_martech_connection_id_list_id](#put_martech_connection_id_list_id) - Update a list
+* [create_martech_list](#create_martech_list) - Create a list
+* [get_martech_list](#get_martech_list) - Retrieve a list
+* [list_martech_lists](#list_martech_lists) - List all lists
+* [patch_martech_list](#patch_martech_list) - Update a list
+* [remove_martech_list](#remove_martech_list) - Remove a list
+* [update_martech_list](#update_martech_list) - Update a list
 
-## delete_martech_connection_id_list_id
-
-Remove a list
-
-### Example Usage
-
-```python
-import unified_to
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.DeleteMartechConnectionIDListIDRequest(
-    connection_id='Minivan',
-    id='<ID>',
-)
-
-res = s.list_.delete_martech_connection_id_list_id(req)
-
-if res.status_code == 200:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
-| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                              | [operations.DeleteMartechConnectionIDListIDRequest](../../models/operations/deletemartechconnectionidlistidrequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
-
-
-### Response
-
-**[operations.DeleteMartechConnectionIDListIDResponse](../../models/operations/deletemartechconnectionidlistidresponse.md)**
-
-
-## get_martech_connection_id_list
-
-List all lists
-
-### Example Usage
-
-```python
-import unified_to
-import dateutil.parser
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.GetMartechConnectionIDListRequest(
-    connection_id='silver DeKalb',
-)
-
-res = s.list_.get_martech_connection_id_list(req)
-
-if res.marketing_lists is not None:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                    | [operations.GetMartechConnectionIDListRequest](../../models/operations/getmartechconnectionidlistrequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
-
-
-### Response
-
-**[operations.GetMartechConnectionIDListResponse](../../models/operations/getmartechconnectionidlistresponse.md)**
-
-
-## get_martech_connection_id_list_id
-
-Retrieve a list
-
-### Example Usage
-
-```python
-import unified_to
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.GetMartechConnectionIDListIDRequest(
-    connection_id='Jewelery orange',
-    id='<ID>',
-)
-
-res = s.list_.get_martech_connection_id_list_id(req)
-
-if res.marketing_list is not None:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                        | [operations.GetMartechConnectionIDListIDRequest](../../models/operations/getmartechconnectionidlistidrequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
-
-
-### Response
-
-**[operations.GetMartechConnectionIDListIDResponse](../../models/operations/getmartechconnectionidlistidresponse.md)**
-
-
-## patch_martech_connection_id_list_id
-
-Update a list
-
-### Example Usage
-
-```python
-import unified_to
-import dateutil.parser
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.PatchMartechConnectionIDListIDRequest(
-    marketing_list=shared.MarketingList(
-        raw=shared.PropertyMarketingListRaw(),
-    ),
-    connection_id='Funk',
-    id='<ID>',
-)
-
-res = s.list_.patch_martech_connection_id_list_id(req)
-
-if res.marketing_list is not None:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                            | [operations.PatchMartechConnectionIDListIDRequest](../../models/operations/patchmartechconnectionidlistidrequest.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
-
-
-### Response
-
-**[operations.PatchMartechConnectionIDListIDResponse](../../models/operations/patchmartechconnectionidlistidresponse.md)**
-
-
-## post_martech_connection_id_list
+## create_martech_list
 
 Create a list
 
@@ -191,14 +27,14 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PostMartechConnectionIDListRequest(
+req = operations.CreateMartechListRequest(
     marketing_list=shared.MarketingList(
         raw=shared.PropertyMarketingListRaw(),
     ),
-    connection_id='synergistic Transexual Steel',
+    connection_id='Architect responsive',
 )
 
-res = s.list_.post_martech_connection_id_list(req)
+res = s.list_.create_martech_list(req)
 
 if res.marketing_list is not None:
     # handle response
@@ -207,17 +43,97 @@ if res.marketing_list is not None:
 
 ### Parameters
 
-| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                      | [operations.PostMartechConnectionIDListRequest](../../models/operations/postmartechconnectionidlistrequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.CreateMartechListRequest](../../models/operations/createmartechlistrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 
 ### Response
 
-**[operations.PostMartechConnectionIDListResponse](../../models/operations/postmartechconnectionidlistresponse.md)**
+**[operations.CreateMartechListResponse](../../models/operations/createmartechlistresponse.md)**
 
 
-## put_martech_connection_id_list_id
+## get_martech_list
+
+Retrieve a list
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
+
+req = operations.GetMartechListRequest(
+    connection_id='Franklin Bicycle Victoria',
+    id='<ID>',
+)
+
+res = s.list_.get_martech_list(req)
+
+if res.marketing_list is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [operations.GetMartechListRequest](../../models/operations/getmartechlistrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+
+
+### Response
+
+**[operations.GetMartechListResponse](../../models/operations/getmartechlistresponse.md)**
+
+
+## list_martech_lists
+
+List all lists
+
+### Example Usage
+
+```python
+import unified_to
+import dateutil.parser
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
+
+req = operations.ListMartechListsRequest(
+    connection_id='DeKalb magenta black',
+)
+
+res = s.list_.list_martech_lists(req)
+
+if res.marketing_lists is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.ListMartechListsRequest](../../models/operations/listmartechlistsrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+
+
+### Response
+
+**[operations.ListMartechListsResponse](../../models/operations/listmartechlistsresponse.md)**
+
+
+## patch_martech_list
 
 Update a list
 
@@ -234,15 +150,15 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PutMartechConnectionIDListIDRequest(
+req = operations.PatchMartechListRequest(
     marketing_list=shared.MarketingList(
         raw=shared.PropertyMarketingListRaw(),
     ),
-    connection_id='Underpass initiatives',
+    connection_id='Operations Liaison',
     id='<ID>',
 )
 
-res = s.list_.put_martech_connection_id_list_id(req)
+res = s.list_.patch_martech_list(req)
 
 if res.marketing_list is not None:
     # handle response
@@ -251,12 +167,96 @@ if res.marketing_list is not None:
 
 ### Parameters
 
-| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                        | [operations.PutMartechConnectionIDListIDRequest](../../models/operations/putmartechconnectionidlistidrequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.PatchMartechListRequest](../../models/operations/patchmartechlistrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
 
 
 ### Response
 
-**[operations.PutMartechConnectionIDListIDResponse](../../models/operations/putmartechconnectionidlistidresponse.md)**
+**[operations.PatchMartechListResponse](../../models/operations/patchmartechlistresponse.md)**
+
+
+## remove_martech_list
+
+Remove a list
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
+
+req = operations.RemoveMartechListRequest(
+    connection_id='misty',
+    id='<ID>',
+)
+
+res = s.list_.remove_martech_list(req)
+
+if res.status_code == 200:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.RemoveMartechListRequest](../../models/operations/removemartechlistrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+
+
+### Response
+
+**[operations.RemoveMartechListResponse](../../models/operations/removemartechlistresponse.md)**
+
+
+## update_martech_list
+
+Update a list
+
+### Example Usage
+
+```python
+import unified_to
+import dateutil.parser
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
+
+req = operations.UpdateMartechListRequest(
+    marketing_list=shared.MarketingList(
+        raw=shared.PropertyMarketingListRaw(),
+    ),
+    connection_id='Secured Kia Stroman',
+    id='<ID>',
+)
+
+res = s.list_.update_martech_list(req)
+
+if res.marketing_list is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.UpdateMartechListRequest](../../models/operations/updatemartechlistrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+
+
+### Response
+
+**[operations.UpdateMartechListResponse](../../models/operations/updatemartechlistresponse.md)**
 

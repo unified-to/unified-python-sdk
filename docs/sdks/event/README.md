@@ -3,199 +3,14 @@
 
 ### Available Operations
 
-* [delete_crm_connection_id_event_id](#delete_crm_connection_id_event_id) - Remove a event
-* [get_crm_connection_id_event](#get_crm_connection_id_event) - List all events
-* [get_crm_connection_id_event_id](#get_crm_connection_id_event_id) - Retrieve a event
-* [patch_crm_connection_id_event_id](#patch_crm_connection_id_event_id) - Update a event
-* [post_crm_connection_id_event](#post_crm_connection_id_event) - Create a event
-* [put_crm_connection_id_event_id](#put_crm_connection_id_event_id) - Update a event
+* [create_crm_event](#create_crm_event) - Create a event
+* [get_crm_event](#get_crm_event) - Retrieve a event
+* [list_crm_events](#list_crm_events) - List all events
+* [patch_crm_event](#patch_crm_event) - Update a event
+* [remove_crm_event](#remove_crm_event) - Remove a event
+* [update_crm_event](#update_crm_event) - Update a event
 
-## delete_crm_connection_id_event_id
-
-Remove a event
-
-### Example Usage
-
-```python
-import unified_to
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.DeleteCrmConnectionIDEventIDRequest(
-    connection_id='Wooden Latin',
-    id='<ID>',
-)
-
-res = s.event.delete_crm_connection_id_event_id(req)
-
-if res.status_code == 200:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                        | [operations.DeleteCrmConnectionIDEventIDRequest](../../models/operations/deletecrmconnectionideventidrequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
-
-
-### Response
-
-**[operations.DeleteCrmConnectionIDEventIDResponse](../../models/operations/deletecrmconnectionideventidresponse.md)**
-
-
-## get_crm_connection_id_event
-
-List all events
-
-### Example Usage
-
-```python
-import unified_to
-import dateutil.parser
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.GetCrmConnectionIDEventRequest(
-    connection_id='Zirconium Avon Bedfordshire',
-)
-
-res = s.event.get_crm_connection_id_event(req)
-
-if res.crm_events is not None:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                              | [operations.GetCrmConnectionIDEventRequest](../../models/operations/getcrmconnectionideventrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
-
-
-### Response
-
-**[operations.GetCrmConnectionIDEventResponse](../../models/operations/getcrmconnectionideventresponse.md)**
-
-
-## get_crm_connection_id_event_id
-
-Retrieve a event
-
-### Example Usage
-
-```python
-import unified_to
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.GetCrmConnectionIDEventIDRequest(
-    connection_id='Future equalise',
-    id='<ID>',
-)
-
-res = s.event.get_crm_connection_id_event_id(req)
-
-if res.crm_event is not None:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                  | [operations.GetCrmConnectionIDEventIDRequest](../../models/operations/getcrmconnectionideventidrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
-
-
-### Response
-
-**[operations.GetCrmConnectionIDEventIDResponse](../../models/operations/getcrmconnectionideventidresponse.md)**
-
-
-## patch_crm_connection_id_event_id
-
-Update a event
-
-### Example Usage
-
-```python
-import unified_to
-import dateutil.parser
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.PatchCrmConnectionIDEventIDRequest(
-    crm_event=shared.CrmEvent(
-        call=shared.PropertyCrmEventCall(),
-        company_ids=[
-            'parse',
-        ],
-        contact_ids=[
-            'intranet',
-        ],
-        deal_ids=[
-            'silver',
-        ],
-        email=shared.PropertyCrmEventEmail(
-            cc=[
-                'redefine',
-            ],
-            to=[
-                'Baby',
-            ],
-        ),
-        meeting=shared.PropertyCrmEventMeeting(),
-        note=shared.PropertyCrmEventNote(),
-        raw=shared.PropertyCrmEventRaw(),
-        task=shared.PropertyCrmEventTask(),
-    ),
-    connection_id='Steel',
-    id='<ID>',
-)
-
-res = s.event.patch_crm_connection_id_event_id(req)
-
-if res.crm_event is not None:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                      | [operations.PatchCrmConnectionIDEventIDRequest](../../models/operations/patchcrmconnectionideventidrequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
-
-
-### Response
-
-**[operations.PatchCrmConnectionIDEventIDResponse](../../models/operations/patchcrmconnectionideventidresponse.md)**
-
-
-## post_crm_connection_id_event
+## create_crm_event
 
 Create a event
 
@@ -212,24 +27,24 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PostCrmConnectionIDEventRequest(
+req = operations.CreateCrmEventRequest(
     crm_event=shared.CrmEvent(
         call=shared.PropertyCrmEventCall(),
         company_ids=[
-            'carburize',
+            'repeatedly',
         ],
         contact_ids=[
-            'SDR',
+            'Sedan',
         ],
         deal_ids=[
-            'Kentucky',
+            'altruistic',
         ],
         email=shared.PropertyCrmEventEmail(
             cc=[
-                'Rustic',
+                'Hills',
             ],
             to=[
-                'male',
+                'Bronze',
             ],
         ),
         meeting=shared.PropertyCrmEventMeeting(),
@@ -237,10 +52,10 @@ req = operations.PostCrmConnectionIDEventRequest(
         raw=shared.PropertyCrmEventRaw(),
         task=shared.PropertyCrmEventTask(),
     ),
-    connection_id='Hat',
+    connection_id='Savings',
 )
 
-res = s.event.post_crm_connection_id_event(req)
+res = s.event.create_crm_event(req)
 
 if res.crm_event is not None:
     # handle response
@@ -249,17 +64,97 @@ if res.crm_event is not None:
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                | [operations.PostCrmConnectionIDEventRequest](../../models/operations/postcrmconnectionideventrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [operations.CreateCrmEventRequest](../../models/operations/createcrmeventrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
 
 
 ### Response
 
-**[operations.PostCrmConnectionIDEventResponse](../../models/operations/postcrmconnectionideventresponse.md)**
+**[operations.CreateCrmEventResponse](../../models/operations/createcrmeventresponse.md)**
 
 
-## put_crm_connection_id_event_id
+## get_crm_event
+
+Retrieve a event
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
+
+req = operations.GetCrmEventRequest(
+    connection_id='Metal South blockchains',
+    id='<ID>',
+)
+
+res = s.event.get_crm_event(req)
+
+if res.crm_event is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| `request`                                                                      | [operations.GetCrmEventRequest](../../models/operations/getcrmeventrequest.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
+
+
+### Response
+
+**[operations.GetCrmEventResponse](../../models/operations/getcrmeventresponse.md)**
+
+
+## list_crm_events
+
+List all events
+
+### Example Usage
+
+```python
+import unified_to
+import dateutil.parser
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
+
+req = operations.ListCrmEventsRequest(
+    connection_id='invoice gratefully',
+)
+
+res = s.event.list_crm_events(req)
+
+if res.crm_events is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `request`                                                                          | [operations.ListCrmEventsRequest](../../models/operations/listcrmeventsrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+
+
+### Response
+
+**[operations.ListCrmEventsResponse](../../models/operations/listcrmeventsresponse.md)**
+
+
+## patch_crm_event
 
 Update a event
 
@@ -276,24 +171,24 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PutCrmConnectionIDEventIDRequest(
+req = operations.PatchCrmEventRequest(
     crm_event=shared.CrmEvent(
         call=shared.PropertyCrmEventCall(),
         company_ids=[
-            'Iron',
+            'XML',
         ],
         contact_ids=[
-            'marshmallow',
+            'Accountability',
         ],
         deal_ids=[
-            'DNS',
+            'copying',
         ],
         email=shared.PropertyCrmEventEmail(
             cc=[
-                'Skokie',
+                'after',
             ],
             to=[
-                'calculating',
+                'Research',
             ],
         ),
         meeting=shared.PropertyCrmEventMeeting(),
@@ -301,11 +196,11 @@ req = operations.PutCrmConnectionIDEventIDRequest(
         raw=shared.PropertyCrmEventRaw(),
         task=shared.PropertyCrmEventTask(),
     ),
-    connection_id='Blues firewall engineer',
+    connection_id='female',
     id='<ID>',
 )
 
-res = s.event.put_crm_connection_id_event_id(req)
+res = s.event.patch_crm_event(req)
 
 if res.crm_event is not None:
     # handle response
@@ -314,12 +209,117 @@ if res.crm_event is not None:
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                  | [operations.PutCrmConnectionIDEventIDRequest](../../models/operations/putcrmconnectionideventidrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `request`                                                                          | [operations.PatchCrmEventRequest](../../models/operations/patchcrmeventrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
 
 
 ### Response
 
-**[operations.PutCrmConnectionIDEventIDResponse](../../models/operations/putcrmconnectionideventidresponse.md)**
+**[operations.PatchCrmEventResponse](../../models/operations/patchcrmeventresponse.md)**
+
+
+## remove_crm_event
+
+Remove a event
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
+
+req = operations.RemoveCrmEventRequest(
+    connection_id='card',
+    id='<ID>',
+)
+
+res = s.event.remove_crm_event(req)
+
+if res.status_code == 200:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [operations.RemoveCrmEventRequest](../../models/operations/removecrmeventrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+
+
+### Response
+
+**[operations.RemoveCrmEventResponse](../../models/operations/removecrmeventresponse.md)**
+
+
+## update_crm_event
+
+Update a event
+
+### Example Usage
+
+```python
+import unified_to
+import dateutil.parser
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
+
+req = operations.UpdateCrmEventRequest(
+    crm_event=shared.CrmEvent(
+        call=shared.PropertyCrmEventCall(),
+        company_ids=[
+            'Account',
+        ],
+        contact_ids=[
+            'DRAM',
+        ],
+        deal_ids=[
+            'input',
+        ],
+        email=shared.PropertyCrmEventEmail(
+            cc=[
+                'Bicycle',
+            ],
+            to=[
+                'Wagon',
+            ],
+        ),
+        meeting=shared.PropertyCrmEventMeeting(),
+        note=shared.PropertyCrmEventNote(),
+        raw=shared.PropertyCrmEventRaw(),
+        task=shared.PropertyCrmEventTask(),
+    ),
+    connection_id='Accountability',
+    id='<ID>',
+)
+
+res = s.event.update_crm_event(req)
+
+if res.crm_event is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [operations.UpdateCrmEventRequest](../../models/operations/updatecrmeventrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+
+
+### Response
+
+**[operations.UpdateCrmEventResponse](../../models/operations/updatecrmeventresponse.md)**
 

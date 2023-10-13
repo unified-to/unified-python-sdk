@@ -3,10 +3,10 @@
 
 ### Available Operations
 
-* [get_enrich_connection_id_company](#get_enrich_connection_id_company) - Retrieve enrichment information for a company
-* [get_enrich_connection_id_person](#get_enrich_connection_id_person) - Retrieve enrichment information for a person
+* [list_enrich_companies](#list_enrich_companies) - Retrieve enrichment information for a company
+* [list_enrich_people](#list_enrich_people) - Retrieve enrichment information for a person
 
-## get_enrich_connection_id_company
+## list_enrich_companies
 
 Retrieve enrichment information for a company
 
@@ -22,11 +22,11 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetEnrichConnectionIDCompanyRequest(
-    connection_id='female Computers Central',
+req = operations.ListEnrichCompaniesRequest(
+    connection_id='Chips',
 )
 
-res = s.enrich.get_enrich_connection_id_company(req)
+res = s.enrich.list_enrich_companies(req)
 
 if res.enrich_company is not None:
     # handle response
@@ -35,17 +35,17 @@ if res.enrich_company is not None:
 
 ### Parameters
 
-| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                        | [operations.GetEnrichConnectionIDCompanyRequest](../../models/operations/getenrichconnectionidcompanyrequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `request`                                                                                      | [operations.ListEnrichCompaniesRequest](../../models/operations/listenrichcompaniesrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
 
 
 ### Response
 
-**[operations.GetEnrichConnectionIDCompanyResponse](../../models/operations/getenrichconnectionidcompanyresponse.md)**
+**[operations.ListEnrichCompaniesResponse](../../models/operations/listenrichcompaniesresponse.md)**
 
 
-## get_enrich_connection_id_person
+## list_enrich_people
 
 Retrieve enrichment information for a person
 
@@ -61,11 +61,11 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetEnrichConnectionIDPersonRequest(
-    connection_id='Iowa Account',
+req = operations.ListEnrichPeopleRequest(
+    connection_id='Passenger',
 )
 
-res = s.enrich.get_enrich_connection_id_person(req)
+res = s.enrich.list_enrich_people(req)
 
 if res.enrich_person is not None:
     # handle response
@@ -74,12 +74,12 @@ if res.enrich_person is not None:
 
 ### Parameters
 
-| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                      | [operations.GetEnrichConnectionIDPersonRequest](../../models/operations/getenrichconnectionidpersonrequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.ListEnrichPeopleRequest](../../models/operations/listenrichpeoplerequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
 
 
 ### Response
 
-**[operations.GetEnrichConnectionIDPersonResponse](../../models/operations/getenrichconnectionidpersonresponse.md)**
+**[operations.ListEnrichPeopleResponse](../../models/operations/listenrichpeopleresponse.md)**
 

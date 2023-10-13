@@ -12,40 +12,72 @@ class Uc:
         self.sdk_configuration = sdk_config
         
     
-    def delete_uc_connection_id_contact_id(self, request: operations.DeleteUcConnectionIDContactIDRequest) -> operations.DeleteUcConnectionIDContactIDResponse:
-        r"""Remove a contact"""
+    def create_uc_contact(self, request: operations.CreateUcContactRequest) -> operations.CreateUcContactResponse:
+        r"""Create a contact"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.DeleteUcConnectionIDContactIDRequest, base_url, '/uc/{connection_id}/contact/{id}', request)
+        url = utils.generate_url(operations.CreateUcContactRequest, base_url, '/uc/{connection_id}/contact', request)
+        headers = {}
+        req_content_type, data, form = utils.serialize_request_body(request, "uc_contact", False, True, 'json')
+        if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
+            headers['content-type'] = req_content_type
+        headers['Accept'] = 'application/json'
+        headers['user-agent'] = self.sdk_configuration.user_agent
+        
+        client = self.sdk_configuration.security_client
+        
+        http_res = client.request('POST', url, data=data, files=form, headers=headers)
+        content_type = http_res.headers.get('Content-Type')
+
+        res = operations.CreateUcContactResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        
+        if http_res.status_code == 200:
+            if utils.match_content_type(content_type, 'application/json'):
+                out = utils.unmarshal_json(http_res.text, Optional[shared.UcContact])
+                res.uc_contact = out
+            else:
+                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
+        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
+            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
+
+        return res
+
+    
+    def get_uc_contact(self, request: operations.GetUcContactRequest) -> operations.GetUcContactResponse:
+        r"""Retrieve a contact"""
+        base_url = utils.template_url(*self.sdk_configuration.get_server_details())
+        
+        url = utils.generate_url(operations.GetUcContactRequest, base_url, '/uc/{connection_id}/contact/{id}', request)
         headers = {}
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
-        http_res = client.request('DELETE', url, headers=headers)
+        http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
-        res = operations.DeleteUcConnectionIDContactIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        res = operations.GetUcContactResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
-        if http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
-            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
-        else:
+        if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                res.delete_uc_connection_id_contact_id_default_application_json_string = http_res.content
+                out = utils.unmarshal_json(http_res.text, Optional[shared.UcContact])
+                res.uc_contact = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
+        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
+            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
 
         return res
 
     
-    def get_uc_connection_id_agent(self, request: operations.GetUcConnectionIDAgentRequest) -> operations.GetUcConnectionIDAgentResponse:
+    def list_uc_agents(self, request: operations.ListUcAgentsRequest) -> operations.ListUcAgentsResponse:
         r"""List all agents"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.GetUcConnectionIDAgentRequest, base_url, '/uc/{connection_id}/agent', request)
+        url = utils.generate_url(operations.ListUcAgentsRequest, base_url, '/uc/{connection_id}/agent', request)
         headers = {}
-        query_params = utils.get_query_params(operations.GetUcConnectionIDAgentRequest, request)
+        query_params = utils.get_query_params(operations.ListUcAgentsRequest, request)
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
@@ -54,7 +86,7 @@ class Uc:
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
-        res = operations.GetUcConnectionIDAgentResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        res = operations.ListUcAgentsResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
@@ -68,13 +100,13 @@ class Uc:
         return res
 
     
-    def get_uc_connection_id_call(self, request: operations.GetUcConnectionIDCallRequest) -> operations.GetUcConnectionIDCallResponse:
+    def list_uc_calls(self, request: operations.ListUcCallsRequest) -> operations.ListUcCallsResponse:
         r"""List all calls"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.GetUcConnectionIDCallRequest, base_url, '/uc/{connection_id}/call', request)
+        url = utils.generate_url(operations.ListUcCallsRequest, base_url, '/uc/{connection_id}/call', request)
         headers = {}
-        query_params = utils.get_query_params(operations.GetUcConnectionIDCallRequest, request)
+        query_params = utils.get_query_params(operations.ListUcCallsRequest, request)
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
@@ -83,7 +115,7 @@ class Uc:
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
-        res = operations.GetUcConnectionIDCallResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        res = operations.ListUcCallsResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
@@ -97,13 +129,13 @@ class Uc:
         return res
 
     
-    def get_uc_connection_id_contact(self, request: operations.GetUcConnectionIDContactRequest) -> operations.GetUcConnectionIDContactResponse:
+    def list_uc_contacts(self, request: operations.ListUcContactsRequest) -> operations.ListUcContactsResponse:
         r"""List all contacts"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.GetUcConnectionIDContactRequest, base_url, '/uc/{connection_id}/contact', request)
+        url = utils.generate_url(operations.ListUcContactsRequest, base_url, '/uc/{connection_id}/contact', request)
         headers = {}
-        query_params = utils.get_query_params(operations.GetUcConnectionIDContactRequest, request)
+        query_params = utils.get_query_params(operations.ListUcContactsRequest, request)
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
@@ -112,7 +144,7 @@ class Uc:
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
-        res = operations.GetUcConnectionIDContactResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        res = operations.ListUcContactsResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
@@ -126,39 +158,11 @@ class Uc:
         return res
 
     
-    def get_uc_connection_id_contact_id(self, request: operations.GetUcConnectionIDContactIDRequest) -> operations.GetUcConnectionIDContactIDResponse:
-        r"""Retrieve a contact"""
-        base_url = utils.template_url(*self.sdk_configuration.get_server_details())
-        
-        url = utils.generate_url(operations.GetUcConnectionIDContactIDRequest, base_url, '/uc/{connection_id}/contact/{id}', request)
-        headers = {}
-        headers['Accept'] = 'application/json'
-        headers['user-agent'] = self.sdk_configuration.user_agent
-        
-        client = self.sdk_configuration.security_client
-        
-        http_res = client.request('GET', url, headers=headers)
-        content_type = http_res.headers.get('Content-Type')
-
-        res = operations.GetUcConnectionIDContactIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
-        
-        if http_res.status_code == 200:
-            if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[shared.UcContact])
-                res.uc_contact = out
-            else:
-                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
-        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
-            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
-
-        return res
-
-    
-    def patch_uc_connection_id_contact_id(self, request: operations.PatchUcConnectionIDContactIDRequest) -> operations.PatchUcConnectionIDContactIDResponse:
+    def patch_uc_contact(self, request: operations.PatchUcContactRequest) -> operations.PatchUcContactResponse:
         r"""Update a contact"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.PatchUcConnectionIDContactIDRequest, base_url, '/uc/{connection_id}/contact/{id}', request)
+        url = utils.generate_url(operations.PatchUcContactRequest, base_url, '/uc/{connection_id}/contact/{id}', request)
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "uc_contact", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
@@ -171,7 +175,7 @@ class Uc:
         http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
-        res = operations.PatchUcConnectionIDContactIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        res = operations.PatchUcContactResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
@@ -185,42 +189,38 @@ class Uc:
         return res
 
     
-    def post_uc_connection_id_contact(self, request: operations.PostUcConnectionIDContactRequest) -> operations.PostUcConnectionIDContactResponse:
-        r"""Create a contact"""
+    def remove_uc_contact(self, request: operations.RemoveUcContactRequest) -> operations.RemoveUcContactResponse:
+        r"""Remove a contact"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.PostUcConnectionIDContactRequest, base_url, '/uc/{connection_id}/contact', request)
+        url = utils.generate_url(operations.RemoveUcContactRequest, base_url, '/uc/{connection_id}/contact/{id}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "uc_contact", False, True, 'json')
-        if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
-            headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
-        http_res = client.request('POST', url, data=data, files=form, headers=headers)
+        http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
-        res = operations.PostUcConnectionIDContactResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        res = operations.RemoveUcContactResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
-        if http_res.status_code == 200:
+        if http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
+            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
+        else:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[shared.UcContact])
-                res.uc_contact = out
+                res.remove_uc_contact_default_application_json_string = http_res.content
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
-        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
-            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
 
         return res
 
     
-    def put_uc_connection_id_contact_id(self, request: operations.PutUcConnectionIDContactIDRequest) -> operations.PutUcConnectionIDContactIDResponse:
+    def update_uc_contact(self, request: operations.UpdateUcContactRequest) -> operations.UpdateUcContactResponse:
         r"""Update a contact"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.PutUcConnectionIDContactIDRequest, base_url, '/uc/{connection_id}/contact/{id}', request)
+        url = utils.generate_url(operations.UpdateUcContactRequest, base_url, '/uc/{connection_id}/contact/{id}', request)
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "uc_contact", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
@@ -233,7 +233,7 @@ class Uc:
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
-        res = operations.PutUcConnectionIDContactIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        res = operations.UpdateUcContactResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):

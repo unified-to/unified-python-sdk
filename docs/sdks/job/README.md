@@ -3,198 +3,14 @@
 
 ### Available Operations
 
-* [delete_ats_connection_id_job_id](#delete_ats_connection_id_job_id) - Remove a job
-* [get_ats_connection_id_job](#get_ats_connection_id_job) - List all jobs
-* [get_ats_connection_id_job_id](#get_ats_connection_id_job_id) - Retrieve a job
-* [patch_ats_connection_id_job_id](#patch_ats_connection_id_job_id) - Update a job
-* [post_ats_connection_id_job](#post_ats_connection_id_job) - Create a job
-* [put_ats_connection_id_job_id](#put_ats_connection_id_job_id) - Update a job
+* [create_ats_job](#create_ats_job) - Create a job
+* [get_ats_job](#get_ats_job) - Retrieve a job
+* [list_ats_jobs](#list_ats_jobs) - List all jobs
+* [patch_ats_job](#patch_ats_job) - Update a job
+* [remove_ats_job](#remove_ats_job) - Remove a job
+* [update_ats_job](#update_ats_job) - Update a job
 
-## delete_ats_connection_id_job_id
-
-Remove a job
-
-### Example Usage
-
-```python
-import unified_to
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.DeleteAtsConnectionIDJobIDRequest(
-    connection_id='Sedan Bedfordshire Hybrid',
-    id='<ID>',
-)
-
-res = s.job.delete_ats_connection_id_job_id(req)
-
-if res.status_code == 200:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                    | [operations.DeleteAtsConnectionIDJobIDRequest](../../models/operations/deleteatsconnectionidjobidrequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
-
-
-### Response
-
-**[operations.DeleteAtsConnectionIDJobIDResponse](../../models/operations/deleteatsconnectionidjobidresponse.md)**
-
-
-## get_ats_connection_id_job
-
-List all jobs
-
-### Example Usage
-
-```python
-import unified_to
-import dateutil.parser
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.GetAtsConnectionIDJobRequest(
-    connection_id='City katal',
-)
-
-res = s.job.get_ats_connection_id_job(req)
-
-if res.ats_jobs is not None:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `request`                                                                                          | [operations.GetAtsConnectionIDJobRequest](../../models/operations/getatsconnectionidjobrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
-
-
-### Response
-
-**[operations.GetAtsConnectionIDJobResponse](../../models/operations/getatsconnectionidjobresponse.md)**
-
-
-## get_ats_connection_id_job_id
-
-Retrieve a job
-
-### Example Usage
-
-```python
-import unified_to
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.GetAtsConnectionIDJobIDRequest(
-    connection_id='Jazz',
-    id='<ID>',
-)
-
-res = s.job.get_ats_connection_id_job_id(req)
-
-if res.ats_job is not None:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                              | [operations.GetAtsConnectionIDJobIDRequest](../../models/operations/getatsconnectionidjobidrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
-
-
-### Response
-
-**[operations.GetAtsConnectionIDJobIDResponse](../../models/operations/getatsconnectionidjobidresponse.md)**
-
-
-## patch_ats_connection_id_job_id
-
-Update a job
-
-### Example Usage
-
-```python
-import unified_to
-import dateutil.parser
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.PatchAtsConnectionIDJobIDRequest(
-    ats_job=shared.AtsJob(
-        addresses=[
-            shared.AtsAddress(),
-        ],
-        compensation=[
-            shared.AtsCompensation(
-                type=shared.AtsCompensationType.BONUS,
-            ),
-        ],
-        departments=[
-            'Transexual',
-        ],
-        hiring_manager_ids=[
-            'leach',
-        ],
-        public_job_urls=[
-            'national',
-        ],
-        raw=shared.PropertyAtsJobRaw(),
-        recruiter_ids=[
-            'Kia',
-        ],
-    ),
-    connection_id='Ferrari Facilitator',
-    id='<ID>',
-)
-
-res = s.job.patch_ats_connection_id_job_id(req)
-
-if res.ats_job is not None:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                  | [operations.PatchAtsConnectionIDJobIDRequest](../../models/operations/patchatsconnectionidjobidrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
-
-
-### Response
-
-**[operations.PatchAtsConnectionIDJobIDResponse](../../models/operations/patchatsconnectionidjobidresponse.md)**
-
-
-## post_ats_connection_id_job
+## create_ats_job
 
 Create a job
 
@@ -211,7 +27,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PostAtsConnectionIDJobRequest(
+req = operations.CreateAtsJobRequest(
     ats_job=shared.AtsJob(
         addresses=[
             shared.AtsAddress(),
@@ -222,23 +38,23 @@ req = operations.PostAtsConnectionIDJobRequest(
             ),
         ],
         departments=[
-            'Forward',
+            'Loan',
         ],
         hiring_manager_ids=[
-            'Americium',
+            'driver',
         ],
         public_job_urls=[
-            'shiny',
+            'Transmasculine',
         ],
         raw=shared.PropertyAtsJobRaw(),
         recruiter_ids=[
-            'yellow',
+            'Mini',
         ],
     ),
-    connection_id='neatly Diesel virtual',
+    connection_id='Savings Customer Loan',
 )
 
-res = s.job.post_ats_connection_id_job(req)
+res = s.job.create_ats_job(req)
 
 if res.ats_job is not None:
     # handle response
@@ -247,17 +63,97 @@ if res.ats_job is not None:
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `request`                                                                                            | [operations.PostAtsConnectionIDJobRequest](../../models/operations/postatsconnectionidjobrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `request`                                                                        | [operations.CreateAtsJobRequest](../../models/operations/createatsjobrequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
 
 
 ### Response
 
-**[operations.PostAtsConnectionIDJobResponse](../../models/operations/postatsconnectionidjobresponse.md)**
+**[operations.CreateAtsJobResponse](../../models/operations/createatsjobresponse.md)**
 
 
-## put_ats_connection_id_job_id
+## get_ats_job
+
+Retrieve a job
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
+
+req = operations.GetAtsJobRequest(
+    connection_id='runway',
+    id='<ID>',
+)
+
+res = s.job.get_ats_job(req)
+
+if res.ats_job is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                  | Type                                                                       | Required                                                                   | Description                                                                |
+| -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| `request`                                                                  | [operations.GetAtsJobRequest](../../models/operations/getatsjobrequest.md) | :heavy_check_mark:                                                         | The request object to use for the request.                                 |
+
+
+### Response
+
+**[operations.GetAtsJobResponse](../../models/operations/getatsjobresponse.md)**
+
+
+## list_ats_jobs
+
+List all jobs
+
+### Example Usage
+
+```python
+import unified_to
+import dateutil.parser
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
+
+req = operations.ListAtsJobsRequest(
+    connection_id='niches SQL',
+)
+
+res = s.job.list_ats_jobs(req)
+
+if res.ats_jobs is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| `request`                                                                      | [operations.ListAtsJobsRequest](../../models/operations/listatsjobsrequest.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
+
+
+### Response
+
+**[operations.ListAtsJobsResponse](../../models/operations/listatsjobsresponse.md)**
+
+
+## patch_ats_job
 
 Update a job
 
@@ -274,35 +170,35 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PutAtsConnectionIDJobIDRequest(
+req = operations.PatchAtsJobRequest(
     ats_job=shared.AtsJob(
         addresses=[
             shared.AtsAddress(),
         ],
         compensation=[
             shared.AtsCompensation(
-                type=shared.AtsCompensationType.STOCK_OPTIONS,
+                type=shared.AtsCompensationType.BONUS,
             ),
         ],
         departments=[
-            'cotton',
+            'indigo',
         ],
         hiring_manager_ids=[
-            'Washington',
+            'Bedfordshire',
         ],
         public_job_urls=[
-            'Hybrid',
+            'North',
         ],
         raw=shared.PropertyAtsJobRaw(),
         recruiter_ids=[
-            'henry',
+            'mainland',
         ],
     ),
-    connection_id='male Intelligent',
+    connection_id='gold Principal',
     id='<ID>',
 )
 
-res = s.job.put_ats_connection_id_job_id(req)
+res = s.job.patch_ats_job(req)
 
 if res.ats_job is not None:
     # handle response
@@ -311,12 +207,116 @@ if res.ats_job is not None:
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                              | [operations.PutAtsConnectionIDJobIDRequest](../../models/operations/putatsconnectionidjobidrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| `request`                                                                      | [operations.PatchAtsJobRequest](../../models/operations/patchatsjobrequest.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
 
 
 ### Response
 
-**[operations.PutAtsConnectionIDJobIDResponse](../../models/operations/putatsconnectionidjobidresponse.md)**
+**[operations.PatchAtsJobResponse](../../models/operations/patchatsjobresponse.md)**
+
+
+## remove_ats_job
+
+Remove a job
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
+
+req = operations.RemoveAtsJobRequest(
+    connection_id='Aruba',
+    id='<ID>',
+)
+
+res = s.job.remove_ats_job(req)
+
+if res.status_code == 200:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `request`                                                                        | [operations.RemoveAtsJobRequest](../../models/operations/removeatsjobrequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
+
+
+### Response
+
+**[operations.RemoveAtsJobResponse](../../models/operations/removeatsjobresponse.md)**
+
+
+## update_ats_job
+
+Update a job
+
+### Example Usage
+
+```python
+import unified_to
+import dateutil.parser
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
+
+req = operations.UpdateAtsJobRequest(
+    ats_job=shared.AtsJob(
+        addresses=[
+            shared.AtsAddress(),
+        ],
+        compensation=[
+            shared.AtsCompensation(
+                type=shared.AtsCompensationType.EQUITY,
+            ),
+        ],
+        departments=[
+            'Plastic',
+        ],
+        hiring_manager_ids=[
+            'West',
+        ],
+        public_job_urls=[
+            'Direct',
+        ],
+        raw=shared.PropertyAtsJobRaw(),
+        recruiter_ids=[
+            'SMS',
+        ],
+    ),
+    connection_id='euthanise system',
+    id='<ID>',
+)
+
+res = s.job.update_ats_job(req)
+
+if res.ats_job is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `request`                                                                        | [operations.UpdateAtsJobRequest](../../models/operations/updateatsjobrequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
+
+
+### Response
+
+**[operations.UpdateAtsJobResponse](../../models/operations/updateatsjobresponse.md)**
 

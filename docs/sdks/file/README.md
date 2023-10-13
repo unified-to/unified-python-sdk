@@ -3,178 +3,14 @@
 
 ### Available Operations
 
-* [delete_crm_connection_id_file_id](#delete_crm_connection_id_file_id) - Remove a file
-* [get_crm_connection_id_file](#get_crm_connection_id_file) - List all files
-* [get_crm_connection_id_file_id](#get_crm_connection_id_file_id) - Retrieve a file
-* [patch_crm_connection_id_file_id](#patch_crm_connection_id_file_id) - Update a file
-* [post_crm_connection_id_file](#post_crm_connection_id_file) - Create a file
-* [put_crm_connection_id_file_id](#put_crm_connection_id_file_id) - Update a file
+* [create_crm_file](#create_crm_file) - Create a file
+* [get_crm_file](#get_crm_file) - Retrieve a file
+* [list_crm_files](#list_crm_files) - List all files
+* [patch_crm_file](#patch_crm_file) - Update a file
+* [remove_crm_file](#remove_crm_file) - Remove a file
+* [update_crm_file](#update_crm_file) - Update a file
 
-## delete_crm_connection_id_file_id
-
-Remove a file
-
-### Example Usage
-
-```python
-import unified_to
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.DeleteCrmConnectionIDFileIDRequest(
-    connection_id='Bicycle',
-    id='<ID>',
-)
-
-res = s.file.delete_crm_connection_id_file_id(req)
-
-if res.status_code == 200:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                      | [operations.DeleteCrmConnectionIDFileIDRequest](../../models/operations/deletecrmconnectionidfileidrequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
-
-
-### Response
-
-**[operations.DeleteCrmConnectionIDFileIDResponse](../../models/operations/deletecrmconnectionidfileidresponse.md)**
-
-
-## get_crm_connection_id_file
-
-List all files
-
-### Example Usage
-
-```python
-import unified_to
-import dateutil.parser
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.GetCrmConnectionIDFileRequest(
-    connection_id='reboot',
-)
-
-res = s.file.get_crm_connection_id_file(req)
-
-if res.crm_files is not None:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `request`                                                                                            | [operations.GetCrmConnectionIDFileRequest](../../models/operations/getcrmconnectionidfilerequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
-
-
-### Response
-
-**[operations.GetCrmConnectionIDFileResponse](../../models/operations/getcrmconnectionidfileresponse.md)**
-
-
-## get_crm_connection_id_file_id
-
-Retrieve a file
-
-### Example Usage
-
-```python
-import unified_to
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.GetCrmConnectionIDFileIDRequest(
-    connection_id='Bicycle',
-    id='<ID>',
-)
-
-res = s.file.get_crm_connection_id_file_id(req)
-
-if res.crm_file is not None:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                | [operations.GetCrmConnectionIDFileIDRequest](../../models/operations/getcrmconnectionidfileidrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-
-
-### Response
-
-**[operations.GetCrmConnectionIDFileIDResponse](../../models/operations/getcrmconnectionidfileidresponse.md)**
-
-
-## patch_crm_connection_id_file_id
-
-Update a file
-
-### Example Usage
-
-```python
-import unified_to
-import dateutil.parser
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.PatchCrmConnectionIDFileIDRequest(
-    crm_file=shared.CrmFile(
-        raw=shared.PropertyCrmFileRaw(),
-    ),
-    connection_id='duh Handmade harness',
-    id='<ID>',
-)
-
-res = s.file.patch_crm_connection_id_file_id(req)
-
-if res.crm_file is not None:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                    | [operations.PatchCrmConnectionIDFileIDRequest](../../models/operations/patchcrmconnectionidfileidrequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
-
-
-### Response
-
-**[operations.PatchCrmConnectionIDFileIDResponse](../../models/operations/patchcrmconnectionidfileidresponse.md)**
-
-
-## post_crm_connection_id_file
+## create_crm_file
 
 Create a file
 
@@ -191,14 +27,14 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PostCrmConnectionIDFileRequest(
+req = operations.CreateCrmFileRequest(
     crm_file=shared.CrmFile(
         raw=shared.PropertyCrmFileRaw(),
     ),
-    connection_id='tan impedit Pickup',
+    connection_id='ASCII Wooden the',
 )
 
-res = s.file.post_crm_connection_id_file(req)
+res = s.file.create_crm_file(req)
 
 if res.crm_file is not None:
     # handle response
@@ -207,17 +43,97 @@ if res.crm_file is not None:
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                              | [operations.PostCrmConnectionIDFileRequest](../../models/operations/postcrmconnectionidfilerequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `request`                                                                          | [operations.CreateCrmFileRequest](../../models/operations/createcrmfilerequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
 
 
 ### Response
 
-**[operations.PostCrmConnectionIDFileResponse](../../models/operations/postcrmconnectionidfileresponse.md)**
+**[operations.CreateCrmFileResponse](../../models/operations/createcrmfileresponse.md)**
 
 
-## put_crm_connection_id_file_id
+## get_crm_file
+
+Retrieve a file
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
+
+req = operations.GetCrmFileRequest(
+    connection_id='ease',
+    id='<ID>',
+)
+
+res = s.file.get_crm_file(req)
+
+if res.crm_file is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                    | Type                                                                         | Required                                                                     | Description                                                                  |
+| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| `request`                                                                    | [operations.GetCrmFileRequest](../../models/operations/getcrmfilerequest.md) | :heavy_check_mark:                                                           | The request object to use for the request.                                   |
+
+
+### Response
+
+**[operations.GetCrmFileResponse](../../models/operations/getcrmfileresponse.md)**
+
+
+## list_crm_files
+
+List all files
+
+### Example Usage
+
+```python
+import unified_to
+import dateutil.parser
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
+
+req = operations.ListCrmFilesRequest(
+    connection_id='lavender Genderflux Southeast',
+)
+
+res = s.file.list_crm_files(req)
+
+if res.crm_files is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `request`                                                                        | [operations.ListCrmFilesRequest](../../models/operations/listcrmfilesrequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
+
+
+### Response
+
+**[operations.ListCrmFilesResponse](../../models/operations/listcrmfilesresponse.md)**
+
+
+## patch_crm_file
 
 Update a file
 
@@ -234,15 +150,15 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PutCrmConnectionIDFileIDRequest(
+req = operations.PatchCrmFileRequest(
     crm_file=shared.CrmFile(
         raw=shared.PropertyCrmFileRaw(),
     ),
-    connection_id='Cotton',
+    connection_id='bluetooth',
     id='<ID>',
 )
 
-res = s.file.put_crm_connection_id_file_id(req)
+res = s.file.patch_crm_file(req)
 
 if res.crm_file is not None:
     # handle response
@@ -251,12 +167,96 @@ if res.crm_file is not None:
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                | [operations.PutCrmConnectionIDFileIDRequest](../../models/operations/putcrmconnectionidfileidrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `request`                                                                        | [operations.PatchCrmFileRequest](../../models/operations/patchcrmfilerequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
 
 
 ### Response
 
-**[operations.PutCrmConnectionIDFileIDResponse](../../models/operations/putcrmconnectionidfileidresponse.md)**
+**[operations.PatchCrmFileResponse](../../models/operations/patchcrmfileresponse.md)**
+
+
+## remove_crm_file
+
+Remove a file
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
+
+req = operations.RemoveCrmFileRequest(
+    connection_id='cash',
+    id='<ID>',
+)
+
+res = s.file.remove_crm_file(req)
+
+if res.status_code == 200:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `request`                                                                          | [operations.RemoveCrmFileRequest](../../models/operations/removecrmfilerequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+
+
+### Response
+
+**[operations.RemoveCrmFileResponse](../../models/operations/removecrmfileresponse.md)**
+
+
+## update_crm_file
+
+Update a file
+
+### Example Usage
+
+```python
+import unified_to
+import dateutil.parser
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
+
+req = operations.UpdateCrmFileRequest(
+    crm_file=shared.CrmFile(
+        raw=shared.PropertyCrmFileRaw(),
+    ),
+    connection_id='Orchestrator',
+    id='<ID>',
+)
+
+res = s.file.update_crm_file(req)
+
+if res.crm_file is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `request`                                                                          | [operations.UpdateCrmFileRequest](../../models/operations/updatecrmfilerequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+
+
+### Response
+
+**[operations.UpdateCrmFileResponse](../../models/operations/updatecrmfileresponse.md)**
 

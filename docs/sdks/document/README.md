@@ -3,178 +3,14 @@
 
 ### Available Operations
 
-* [delete_ats_connection_id_scorecard_id](#delete_ats_connection_id_scorecard_id) - Remove a scorecard
-* [get_ats_connection_id_scorecard](#get_ats_connection_id_scorecard) - List all scorecards
-* [get_ats_connection_id_scorecard_id](#get_ats_connection_id_scorecard_id) - Retrieve a scorecard
-* [patch_ats_connection_id_scorecard_id](#patch_ats_connection_id_scorecard_id) - Update a scorecard
-* [post_ats_connection_id_scorecard](#post_ats_connection_id_scorecard) - Create a scorecard
-* [put_ats_connection_id_scorecard_id](#put_ats_connection_id_scorecard_id) - Update a scorecard
+* [create_ats_scorecard](#create_ats_scorecard) - Create a scorecard
+* [get_ats_scorecard](#get_ats_scorecard) - Retrieve a scorecard
+* [list_ats_scorecards](#list_ats_scorecards) - List all scorecards
+* [patch_ats_scorecard](#patch_ats_scorecard) - Update a scorecard
+* [remove_ats_scorecard](#remove_ats_scorecard) - Remove a scorecard
+* [update_ats_scorecard](#update_ats_scorecard) - Update a scorecard
 
-## delete_ats_connection_id_scorecard_id
-
-Remove a scorecard
-
-### Example Usage
-
-```python
-import unified_to
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.DeleteAtsConnectionIDScorecardIDRequest(
-    connection_id='Agent intrepid',
-    id='<ID>',
-)
-
-res = s.document.delete_ats_connection_id_scorecard_id(req)
-
-if res.status_code == 200:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                | [operations.DeleteAtsConnectionIDScorecardIDRequest](../../models/operations/deleteatsconnectionidscorecardidrequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
-
-
-### Response
-
-**[operations.DeleteAtsConnectionIDScorecardIDResponse](../../models/operations/deleteatsconnectionidscorecardidresponse.md)**
-
-
-## get_ats_connection_id_scorecard
-
-List all scorecards
-
-### Example Usage
-
-```python
-import unified_to
-import dateutil.parser
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.GetAtsConnectionIDScorecardRequest(
-    connection_id='Licensed deep',
-)
-
-res = s.document.get_ats_connection_id_scorecard(req)
-
-if res.ats_scorecards is not None:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                      | [operations.GetAtsConnectionIDScorecardRequest](../../models/operations/getatsconnectionidscorecardrequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
-
-
-### Response
-
-**[operations.GetAtsConnectionIDScorecardResponse](../../models/operations/getatsconnectionidscorecardresponse.md)**
-
-
-## get_ats_connection_id_scorecard_id
-
-Retrieve a scorecard
-
-### Example Usage
-
-```python
-import unified_to
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.GetAtsConnectionIDScorecardIDRequest(
-    connection_id='East mobile Mini',
-    id='<ID>',
-)
-
-res = s.document.get_ats_connection_id_scorecard_id(req)
-
-if res.ats_scorecard is not None:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                          | [operations.GetAtsConnectionIDScorecardIDRequest](../../models/operations/getatsconnectionidscorecardidrequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
-
-
-### Response
-
-**[operations.GetAtsConnectionIDScorecardIDResponse](../../models/operations/getatsconnectionidscorecardidresponse.md)**
-
-
-## patch_ats_connection_id_scorecard_id
-
-Update a scorecard
-
-### Example Usage
-
-```python
-import unified_to
-import dateutil.parser
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.PatchAtsConnectionIDScorecardIDRequest(
-    ats_scorecard=shared.AtsScorecard(
-        raw=shared.PropertyAtsScorecardRaw(),
-    ),
-    connection_id='Carter Hatchback functionalities',
-    id='<ID>',
-)
-
-res = s.document.patch_ats_connection_id_scorecard_id(req)
-
-if res.ats_scorecard is not None:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
-| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                              | [operations.PatchAtsConnectionIDScorecardIDRequest](../../models/operations/patchatsconnectionidscorecardidrequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
-
-
-### Response
-
-**[operations.PatchAtsConnectionIDScorecardIDResponse](../../models/operations/patchatsconnectionidscorecardidresponse.md)**
-
-
-## post_ats_connection_id_scorecard
+## create_ats_scorecard
 
 Create a scorecard
 
@@ -191,14 +27,14 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PostAtsConnectionIDScorecardRequest(
+req = operations.CreateAtsScorecardRequest(
     ats_scorecard=shared.AtsScorecard(
         raw=shared.PropertyAtsScorecardRaw(),
     ),
-    connection_id='female bah',
+    connection_id='Northwest Account',
 )
 
-res = s.document.post_ats_connection_id_scorecard(req)
+res = s.document.create_ats_scorecard(req)
 
 if res.ats_scorecard is not None:
     # handle response
@@ -207,17 +43,97 @@ if res.ats_scorecard is not None:
 
 ### Parameters
 
-| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                        | [operations.PostAtsConnectionIDScorecardRequest](../../models/operations/postatsconnectionidscorecardrequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.CreateAtsScorecardRequest](../../models/operations/createatsscorecardrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 
 ### Response
 
-**[operations.PostAtsConnectionIDScorecardResponse](../../models/operations/postatsconnectionidscorecardresponse.md)**
+**[operations.CreateAtsScorecardResponse](../../models/operations/createatsscorecardresponse.md)**
 
 
-## put_ats_connection_id_scorecard_id
+## get_ats_scorecard
+
+Retrieve a scorecard
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
+
+req = operations.GetAtsScorecardRequest(
+    connection_id='Executive',
+    id='<ID>',
+)
+
+res = s.document.get_ats_scorecard(req)
+
+if res.ats_scorecard is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `request`                                                                              | [operations.GetAtsScorecardRequest](../../models/operations/getatsscorecardrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+
+
+### Response
+
+**[operations.GetAtsScorecardResponse](../../models/operations/getatsscorecardresponse.md)**
+
+
+## list_ats_scorecards
+
+List all scorecards
+
+### Example Usage
+
+```python
+import unified_to
+import dateutil.parser
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
+
+req = operations.ListAtsScorecardsRequest(
+    connection_id='Hybrid Bugatti',
+)
+
+res = s.document.list_ats_scorecards(req)
+
+if res.ats_scorecards is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.ListAtsScorecardsRequest](../../models/operations/listatsscorecardsrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+
+
+### Response
+
+**[operations.ListAtsScorecardsResponse](../../models/operations/listatsscorecardsresponse.md)**
+
+
+## patch_ats_scorecard
 
 Update a scorecard
 
@@ -234,15 +150,15 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PutAtsConnectionIDScorecardIDRequest(
+req = operations.PatchAtsScorecardRequest(
     ats_scorecard=shared.AtsScorecard(
         raw=shared.PropertyAtsScorecardRaw(),
     ),
-    connection_id='East Granite',
+    connection_id='eek',
     id='<ID>',
 )
 
-res = s.document.put_ats_connection_id_scorecard_id(req)
+res = s.document.patch_ats_scorecard(req)
 
 if res.ats_scorecard is not None:
     # handle response
@@ -251,12 +167,96 @@ if res.ats_scorecard is not None:
 
 ### Parameters
 
-| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                          | [operations.PutAtsConnectionIDScorecardIDRequest](../../models/operations/putatsconnectionidscorecardidrequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.PatchAtsScorecardRequest](../../models/operations/patchatsscorecardrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 
 ### Response
 
-**[operations.PutAtsConnectionIDScorecardIDResponse](../../models/operations/putatsconnectionidscorecardidresponse.md)**
+**[operations.PatchAtsScorecardResponse](../../models/operations/patchatsscorecardresponse.md)**
+
+
+## remove_ats_scorecard
+
+Remove a scorecard
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
+
+req = operations.RemoveAtsScorecardRequest(
+    connection_id='Cambridgeshire maximized',
+    id='<ID>',
+)
+
+res = s.document.remove_ats_scorecard(req)
+
+if res.status_code == 200:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.RemoveAtsScorecardRequest](../../models/operations/removeatsscorecardrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+
+
+### Response
+
+**[operations.RemoveAtsScorecardResponse](../../models/operations/removeatsscorecardresponse.md)**
+
+
+## update_ats_scorecard
+
+Update a scorecard
+
+### Example Usage
+
+```python
+import unified_to
+import dateutil.parser
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
+
+req = operations.UpdateAtsScorecardRequest(
+    ats_scorecard=shared.AtsScorecard(
+        raw=shared.PropertyAtsScorecardRaw(),
+    ),
+    connection_id='grey',
+    id='<ID>',
+)
+
+res = s.document.update_ats_scorecard(req)
+
+if res.ats_scorecard is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.UpdateAtsScorecardRequest](../../models/operations/updateatsscorecardrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+
+
+### Response
+
+**[operations.UpdateAtsScorecardResponse](../../models/operations/updateatsscorecardresponse.md)**
 

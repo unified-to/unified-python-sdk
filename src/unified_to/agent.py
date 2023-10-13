@@ -12,40 +12,72 @@ class Agent:
         self.sdk_configuration = sdk_config
         
     
-    def delete_ticketing_connection_id_agent_id(self, request: operations.DeleteTicketingConnectionIDAgentIDRequest) -> operations.DeleteTicketingConnectionIDAgentIDResponse:
-        r"""Remove a agent"""
+    def create_ticketing_agent(self, request: operations.CreateTicketingAgentRequest) -> operations.CreateTicketingAgentResponse:
+        r"""Create a agent"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.DeleteTicketingConnectionIDAgentIDRequest, base_url, '/ticketing/{connection_id}/agent/{id}', request)
+        url = utils.generate_url(operations.CreateTicketingAgentRequest, base_url, '/ticketing/{connection_id}/agent', request)
+        headers = {}
+        req_content_type, data, form = utils.serialize_request_body(request, "ticketing_agent", False, True, 'json')
+        if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
+            headers['content-type'] = req_content_type
+        headers['Accept'] = 'application/json'
+        headers['user-agent'] = self.sdk_configuration.user_agent
+        
+        client = self.sdk_configuration.security_client
+        
+        http_res = client.request('POST', url, data=data, files=form, headers=headers)
+        content_type = http_res.headers.get('Content-Type')
+
+        res = operations.CreateTicketingAgentResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        
+        if http_res.status_code == 200:
+            if utils.match_content_type(content_type, 'application/json'):
+                out = utils.unmarshal_json(http_res.text, Optional[shared.TicketingAgent])
+                res.ticketing_agent = out
+            else:
+                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
+        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
+            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
+
+        return res
+
+    
+    def get_ticketing_agent(self, request: operations.GetTicketingAgentRequest) -> operations.GetTicketingAgentResponse:
+        r"""Retrieve a agent"""
+        base_url = utils.template_url(*self.sdk_configuration.get_server_details())
+        
+        url = utils.generate_url(operations.GetTicketingAgentRequest, base_url, '/ticketing/{connection_id}/agent/{id}', request)
         headers = {}
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
-        http_res = client.request('DELETE', url, headers=headers)
+        http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
-        res = operations.DeleteTicketingConnectionIDAgentIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        res = operations.GetTicketingAgentResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
-        if http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
-            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
-        else:
+        if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                res.delete_ticketing_connection_id_agent_id_default_application_json_string = http_res.content
+                out = utils.unmarshal_json(http_res.text, Optional[shared.TicketingAgent])
+                res.ticketing_agent = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
+        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
+            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
 
         return res
 
     
-    def get_ticketing_connection_id_agent(self, request: operations.GetTicketingConnectionIDAgentRequest) -> operations.GetTicketingConnectionIDAgentResponse:
+    def list_ticketing_agents(self, request: operations.ListTicketingAgentsRequest) -> operations.ListTicketingAgentsResponse:
         r"""List all agents"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.GetTicketingConnectionIDAgentRequest, base_url, '/ticketing/{connection_id}/agent', request)
+        url = utils.generate_url(operations.ListTicketingAgentsRequest, base_url, '/ticketing/{connection_id}/agent', request)
         headers = {}
-        query_params = utils.get_query_params(operations.GetTicketingConnectionIDAgentRequest, request)
+        query_params = utils.get_query_params(operations.ListTicketingAgentsRequest, request)
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
@@ -54,7 +86,7 @@ class Agent:
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
-        res = operations.GetTicketingConnectionIDAgentResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        res = operations.ListTicketingAgentsResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
@@ -68,41 +100,13 @@ class Agent:
         return res
 
     
-    def get_ticketing_connection_id_agent_id(self, request: operations.GetTicketingConnectionIDAgentIDRequest) -> operations.GetTicketingConnectionIDAgentIDResponse:
-        r"""Retrieve a agent"""
-        base_url = utils.template_url(*self.sdk_configuration.get_server_details())
-        
-        url = utils.generate_url(operations.GetTicketingConnectionIDAgentIDRequest, base_url, '/ticketing/{connection_id}/agent/{id}', request)
-        headers = {}
-        headers['Accept'] = 'application/json'
-        headers['user-agent'] = self.sdk_configuration.user_agent
-        
-        client = self.sdk_configuration.security_client
-        
-        http_res = client.request('GET', url, headers=headers)
-        content_type = http_res.headers.get('Content-Type')
-
-        res = operations.GetTicketingConnectionIDAgentIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
-        
-        if http_res.status_code == 200:
-            if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[shared.TicketingAgent])
-                res.ticketing_agent = out
-            else:
-                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
-        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
-            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
-
-        return res
-
-    
-    def get_uc_connection_id_agent(self, request: operations.GetUcConnectionIDAgentRequest) -> operations.GetUcConnectionIDAgentResponse:
+    def list_uc_agents(self, request: operations.ListUcAgentsRequest) -> operations.ListUcAgentsResponse:
         r"""List all agents"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.GetUcConnectionIDAgentRequest, base_url, '/uc/{connection_id}/agent', request)
+        url = utils.generate_url(operations.ListUcAgentsRequest, base_url, '/uc/{connection_id}/agent', request)
         headers = {}
-        query_params = utils.get_query_params(operations.GetUcConnectionIDAgentRequest, request)
+        query_params = utils.get_query_params(operations.ListUcAgentsRequest, request)
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
@@ -111,7 +115,7 @@ class Agent:
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
-        res = operations.GetUcConnectionIDAgentResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        res = operations.ListUcAgentsResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
@@ -125,11 +129,11 @@ class Agent:
         return res
 
     
-    def patch_ticketing_connection_id_agent_id(self, request: operations.PatchTicketingConnectionIDAgentIDRequest) -> operations.PatchTicketingConnectionIDAgentIDResponse:
+    def patch_ticketing_agent(self, request: operations.PatchTicketingAgentRequest) -> operations.PatchTicketingAgentResponse:
         r"""Update a agent"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.PatchTicketingConnectionIDAgentIDRequest, base_url, '/ticketing/{connection_id}/agent/{id}', request)
+        url = utils.generate_url(operations.PatchTicketingAgentRequest, base_url, '/ticketing/{connection_id}/agent/{id}', request)
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "ticketing_agent", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
@@ -142,7 +146,7 @@ class Agent:
         http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
-        res = operations.PatchTicketingConnectionIDAgentIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        res = operations.PatchTicketingAgentResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
@@ -156,42 +160,38 @@ class Agent:
         return res
 
     
-    def post_ticketing_connection_id_agent(self, request: operations.PostTicketingConnectionIDAgentRequest) -> operations.PostTicketingConnectionIDAgentResponse:
-        r"""Create a agent"""
+    def remove_ticketing_agent(self, request: operations.RemoveTicketingAgentRequest) -> operations.RemoveTicketingAgentResponse:
+        r"""Remove a agent"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.PostTicketingConnectionIDAgentRequest, base_url, '/ticketing/{connection_id}/agent', request)
+        url = utils.generate_url(operations.RemoveTicketingAgentRequest, base_url, '/ticketing/{connection_id}/agent/{id}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "ticketing_agent", False, True, 'json')
-        if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
-            headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
-        http_res = client.request('POST', url, data=data, files=form, headers=headers)
+        http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
-        res = operations.PostTicketingConnectionIDAgentResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        res = operations.RemoveTicketingAgentResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
-        if http_res.status_code == 200:
+        if http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
+            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
+        else:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[shared.TicketingAgent])
-                res.ticketing_agent = out
+                res.remove_ticketing_agent_default_application_json_string = http_res.content
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
-        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
-            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
 
         return res
 
     
-    def put_ticketing_connection_id_agent_id(self, request: operations.PutTicketingConnectionIDAgentIDRequest) -> operations.PutTicketingConnectionIDAgentIDResponse:
+    def update_ticketing_agent(self, request: operations.UpdateTicketingAgentRequest) -> operations.UpdateTicketingAgentResponse:
         r"""Update a agent"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.PutTicketingConnectionIDAgentIDRequest, base_url, '/ticketing/{connection_id}/agent/{id}', request)
+        url = utils.generate_url(operations.UpdateTicketingAgentRequest, base_url, '/ticketing/{connection_id}/agent/{id}', request)
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "ticketing_agent", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
@@ -204,7 +204,7 @@ class Agent:
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
-        res = operations.PutTicketingConnectionIDAgentIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        res = operations.UpdateTicketingAgentResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):

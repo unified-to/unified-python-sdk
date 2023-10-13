@@ -3,701 +3,24 @@
 
 ### Available Operations
 
-* [delete_unified_connection_id](#delete_unified_connection_id) - Remove connection
-* [delete_unified_user](#delete_unified_user) - Delete your user object
-* [delete_unified_webhook_id](#delete_unified_webhook_id) - Remove webhook subscription
-* [get_unified_apicall](#get_unified_apicall) - Returns API Calls
-* [get_unified_apicall_id](#get_unified_apicall_id) - Retrieve specific API Call by its ID
-* [get_unified_connection](#get_unified_connection) - List all connections
-* [get_unified_connection_id](#get_unified_connection_id) - Retrieve connection
-* [get_unified_integration](#get_unified_integration) - Returns all integrations
-* [get_unified_integration_auth_workspace_id_integration_type](#get_unified_integration_auth_workspace_id_integration_type) - Create connection indirectly
-* [get_unified_integration_integration_type](#get_unified_integration_integration_type) - Retrieve an integration
-* [get_unified_integration_workspace_workspace_id](#get_unified_integration_workspace_workspace_id) - Returns all activated integrations in a workspace
-* [get_unified_user](#get_unified_user) - Retrieve your user object
-* [get_unified_user_token](#get_unified_user_token) - Retrieve your user token
-* [get_unified_webhook](#get_unified_webhook) - Returns all registered webhooks
-* [get_unified_webhook_id](#get_unified_webhook_id) - Retrieve webhook by its ID
-* [patch_unified_connection_id](#patch_unified_connection_id) - Update connection
-* [patch_unified_user](#patch_unified_user) - Updates your user object
-* [post_unified_connection](#post_unified_connection) - Create connection
-* [post_unified_webhook_connection_id_object](#post_unified_webhook_connection_id_object) - Create webhook subscription
-* [put_unified_connection_id](#put_unified_connection_id) - Update connection
-* [put_unified_user](#put_unified_user) - Updates your user object
-
-## delete_unified_connection_id
-
-Remove connection
-
-### Example Usage
-
-```python
-import unified_to
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.DeleteUnifiedConnectionIDRequest(
-    id='<ID>',
-)
-
-res = s.unified.delete_unified_connection_id(req)
-
-if res.status_code == 200:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                  | [operations.DeleteUnifiedConnectionIDRequest](../../models/operations/deleteunifiedconnectionidrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
-
-
-### Response
-
-**[operations.DeleteUnifiedConnectionIDResponse](../../models/operations/deleteunifiedconnectionidresponse.md)**
-
-
-## delete_unified_user
-
-Delete your user object
-
-### Example Usage
-
-```python
-import unified_to
-from unified_to.models import shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-
-res = s.unified.delete_unified_user()
-
-if res.status_code == 200:
-    # handle response
-    pass
-```
-
-
-### Response
-
-**[operations.DeleteUnifiedUserResponse](../../models/operations/deleteunifieduserresponse.md)**
-
-
-## delete_unified_webhook_id
-
-Remove webhook subscription
-
-### Example Usage
-
-```python
-import unified_to
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.DeleteUnifiedWebhookIDRequest(
-    id='<ID>',
-)
-
-res = s.unified.delete_unified_webhook_id(req)
-
-if res.status_code == 200:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `request`                                                                                            | [operations.DeleteUnifiedWebhookIDRequest](../../models/operations/deleteunifiedwebhookidrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
-
-
-### Response
-
-**[operations.DeleteUnifiedWebhookIDResponse](../../models/operations/deleteunifiedwebhookidresponse.md)**
-
-
-## get_unified_apicall
-
-Returns API Calls
-
-### Example Usage
-
-```python
-import unified_to
-import dateutil.parser
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.GetUnifiedApicallRequest()
-
-res = s.unified.get_unified_apicall(req)
-
-if res.api_calls is not None:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `request`                                                                                  | [operations.GetUnifiedApicallRequest](../../models/operations/getunifiedapicallrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-
-
-### Response
-
-**[operations.GetUnifiedApicallResponse](../../models/operations/getunifiedapicallresponse.md)**
-
-
-## get_unified_apicall_id
-
-Retrieve specific API Call by its ID
-
-### Example Usage
-
-```python
-import unified_to
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.GetUnifiedApicallIDRequest(
-    id='<ID>',
-)
-
-res = s.unified.get_unified_apicall_id(req)
-
-if res.api_call is not None:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `request`                                                                                      | [operations.GetUnifiedApicallIDRequest](../../models/operations/getunifiedapicallidrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
-
-
-### Response
-
-**[operations.GetUnifiedApicallIDResponse](../../models/operations/getunifiedapicallidresponse.md)**
-
-
-## get_unified_connection
-
-List all connections
-
-### Example Usage
-
-```python
-import unified_to
-import dateutil.parser
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.GetUnifiedConnectionRequest(
-    categories=[
-        operations.GetUnifiedConnectionCategories.ATS,
-    ],
-)
-
-res = s.unified.get_unified_connection(req)
-
-if res.connections is not None:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `request`                                                                                        | [operations.GetUnifiedConnectionRequest](../../models/operations/getunifiedconnectionrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-
-
-### Response
-
-**[operations.GetUnifiedConnectionResponse](../../models/operations/getunifiedconnectionresponse.md)**
-
-
-## get_unified_connection_id
-
-Retrieve connection
-
-### Example Usage
-
-```python
-import unified_to
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.GetUnifiedConnectionIDRequest(
-    id='<ID>',
-)
-
-res = s.unified.get_unified_connection_id(req)
-
-if res.connection is not None:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `request`                                                                                            | [operations.GetUnifiedConnectionIDRequest](../../models/operations/getunifiedconnectionidrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
-
-
-### Response
-
-**[operations.GetUnifiedConnectionIDResponse](../../models/operations/getunifiedconnectionidresponse.md)**
-
-
-## get_unified_integration
-
-Returns all integrations
-
-### Example Usage
-
-```python
-import unified_to
-import dateutil.parser
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.GetUnifiedIntegrationRequest(
-    categories=[
-        operations.GetUnifiedIntegrationCategories.ENRICH,
-    ],
-)
-
-res = s.unified.get_unified_integration(req)
-
-if res.integrations is not None:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `request`                                                                                          | [operations.GetUnifiedIntegrationRequest](../../models/operations/getunifiedintegrationrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
-
-
-### Response
-
-**[operations.GetUnifiedIntegrationResponse](../../models/operations/getunifiedintegrationresponse.md)**
-
-
-## get_unified_integration_auth_workspace_id_integration_type
-
-Returns an authorization URL for the specified integration.  Once a successful authorization occurs, a new connection is created.
-
-### Example Usage
-
-```python
-import unified_to
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.GetUnifiedIntegrationAuthWorkspaceIDIntegrationTypeRequest(
-    integration_type='Algerian',
-    scopes=[
-        operations.GetUnifiedIntegrationAuthWorkspaceIDIntegrationTypeScopes.MARTECH_MEMBER_WRITE,
-    ],
-    workspace_id='hound',
-)
-
-res = s.unified.get_unified_integration_auth_workspace_id_integration_type(req)
-
-if res.get_unified_integration_auth_workspace_id_integration_type_200_application_json_string is not None:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                                                                                                      | Type                                                                                                                                                           | Required                                                                                                                                                       | Description                                                                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                      | [operations.GetUnifiedIntegrationAuthWorkspaceIDIntegrationTypeRequest](../../models/operations/getunifiedintegrationauthworkspaceidintegrationtyperequest.md) | :heavy_check_mark:                                                                                                                                             | The request object to use for the request.                                                                                                                     |
-
-
-### Response
-
-**[operations.GetUnifiedIntegrationAuthWorkspaceIDIntegrationTypeResponse](../../models/operations/getunifiedintegrationauthworkspaceidintegrationtyperesponse.md)**
-
-
-## get_unified_integration_integration_type
-
-Retrieve an integration
-
-### Example Usage
-
-```python
-import unified_to
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.GetUnifiedIntegrationIntegrationTypeRequest(
-    integration_type='Pizza Electric',
-)
-
-res = s.unified.get_unified_integration_integration_type(req)
-
-if res.integration is not None:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                        | [operations.GetUnifiedIntegrationIntegrationTypeRequest](../../models/operations/getunifiedintegrationintegrationtyperequest.md) | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
-
-
-### Response
-
-**[operations.GetUnifiedIntegrationIntegrationTypeResponse](../../models/operations/getunifiedintegrationintegrationtyperesponse.md)**
-
-
-## get_unified_integration_workspace_workspace_id
-
-No authentication required as this is to be used by front-end interface
-
-### Example Usage
-
-```python
-import unified_to
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.GetUnifiedIntegrationWorkspaceWorkspaceIDRequest(
-    categories=[
-        operations.GetUnifiedIntegrationWorkspaceWorkspaceIDCategories.HRIS,
-    ],
-    workspace_id='North Southeast exercitationem',
-)
-
-res = s.unified.get_unified_integration_workspace_workspace_id(req)
-
-if res.integrations is not None:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                                                                                  | Type                                                                                                                                       | Required                                                                                                                                   | Description                                                                                                                                |
-| ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                  | [operations.GetUnifiedIntegrationWorkspaceWorkspaceIDRequest](../../models/operations/getunifiedintegrationworkspaceworkspaceidrequest.md) | :heavy_check_mark:                                                                                                                         | The request object to use for the request.                                                                                                 |
-
-
-### Response
-
-**[operations.GetUnifiedIntegrationWorkspaceWorkspaceIDResponse](../../models/operations/getunifiedintegrationworkspaceworkspaceidresponse.md)**
-
-
-## get_unified_user
-
-Retrieve your user object
-
-### Example Usage
-
-```python
-import unified_to
-from unified_to.models import shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-
-res = s.unified.get_unified_user()
-
-if res.user is not None:
-    # handle response
-    pass
-```
-
-
-### Response
-
-**[operations.GetUnifiedUserResponse](../../models/operations/getunifieduserresponse.md)**
-
-
-## get_unified_user_token
-
-Retrieve your user token
-
-### Example Usage
-
-```python
-import unified_to
-from unified_to.models import shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-
-res = s.unified.get_unified_user_token()
-
-if res.get_unified_user_token_200_application_json_string is not None:
-    # handle response
-    pass
-```
-
-
-### Response
-
-**[operations.GetUnifiedUserTokenResponse](../../models/operations/getunifiedusertokenresponse.md)**
-
-
-## get_unified_webhook
-
-Returns all registered webhooks
-
-### Example Usage
-
-```python
-import unified_to
-import dateutil.parser
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.GetUnifiedWebhookRequest()
-
-res = s.unified.get_unified_webhook(req)
-
-if res.webhooks is not None:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `request`                                                                                  | [operations.GetUnifiedWebhookRequest](../../models/operations/getunifiedwebhookrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-
-
-### Response
-
-**[operations.GetUnifiedWebhookResponse](../../models/operations/getunifiedwebhookresponse.md)**
-
-
-## get_unified_webhook_id
-
-Retrieve webhook by its ID
-
-### Example Usage
-
-```python
-import unified_to
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.GetUnifiedWebhookIDRequest(
-    id='<ID>',
-)
-
-res = s.unified.get_unified_webhook_id(req)
-
-if res.webhook is not None:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `request`                                                                                      | [operations.GetUnifiedWebhookIDRequest](../../models/operations/getunifiedwebhookidrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
-
-
-### Response
-
-**[operations.GetUnifiedWebhookIDResponse](../../models/operations/getunifiedwebhookidresponse.md)**
-
-
-## patch_unified_connection_id
-
-Update connection
-
-### Example Usage
-
-```python
-import unified_to
-import dateutil.parser
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.PatchUnifiedConnectionIDRequest(
-    connection=shared.Connection(
-        auth=shared.PropertyConnectionAuth(
-            emails=[
-                'Executive',
-            ],
-            meta=shared.PropertyPropertyConnectionAuthMeta(),
-            other_auth_info=[
-                'Cupertino',
-            ],
-        ),
-        categories=[
-            shared.PropertyConnectionCategories.MARTECH,
-        ],
-        integration_type='India',
-        permissions=[
-            shared.PropertyConnectionPermissions.ATS_APPLICATION_WRITE,
-        ],
-    ),
-    id='<ID>',
-)
-
-res = s.unified.patch_unified_connection_id(req)
-
-if res.connection is not None:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                | [operations.PatchUnifiedConnectionIDRequest](../../models/operations/patchunifiedconnectionidrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-
-
-### Response
-
-**[operations.PatchUnifiedConnectionIDResponse](../../models/operations/patchunifiedconnectionidresponse.md)**
-
-
-## patch_unified_user
-
-Only the name field is updated.
-
-### Example Usage
-
-```python
-import unified_to
-import dateutil.parser
-from unified_to.models import shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = shared.User(
-    meta=shared.PropertyUserMeta(),
-    name='virtual female',
-    workspace_id='Jewelery',
-    workspace_ids=[
-        'interfaces',
-    ],
-)
-
-res = s.unified.patch_unified_user(req)
-
-if res.user is not None:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                  | Type                                       | Required                                   | Description                                |
-| ------------------------------------------ | ------------------------------------------ | ------------------------------------------ | ------------------------------------------ |
-| `request`                                  | [shared.User](../../models/shared/user.md) | :heavy_check_mark:                         | The request object to use for the request. |
-
-
-### Response
-
-**[operations.PatchUnifiedUserResponse](../../models/operations/patchunifieduserresponse.md)**
-
-
-## post_unified_connection
+* [create_unified_connection](#create_unified_connection) - Create connection
+* [create_unified_webhook](#create_unified_webhook) - Create webhook subscription
+* [get_unified_apicall](#get_unified_apicall) - Retrieve specific API Call by its ID
+* [get_unified_connection](#get_unified_connection) - Retrieve connection
+* [get_unified_integration](#get_unified_integration) - Retrieve an integration
+* [get_unified_integration_auth](#get_unified_integration_auth) - Create connection indirectly
+* [get_unified_webhook](#get_unified_webhook) - Retrieve webhook by its ID
+* [list_unified_apicalls](#list_unified_apicalls) - Returns API Calls
+* [list_unified_connections](#list_unified_connections) - List all connections
+* [list_unified_integration_workspaces](#list_unified_integration_workspaces) - Returns all activated integrations in a workspace
+* [list_unified_integrations](#list_unified_integrations) - Returns all integrations
+* [list_unified_webhooks](#list_unified_webhooks) - Returns all registered webhooks
+* [patch_unified_connection](#patch_unified_connection) - Update connection
+* [remove_unified_connection](#remove_unified_connection) - Remove connection
+* [remove_unified_webhook](#remove_unified_webhook) - Remove webhook subscription
+* [update_unified_connection](#update_unified_connection) - Update connection
+
+## create_unified_connection
 
 Create connection
 
@@ -717,23 +40,23 @@ s = unified_to.UnifiedTo(
 req = shared.Connection(
     auth=shared.PropertyConnectionAuth(
         emails=[
-            'RSS',
+            'likewise',
         ],
         meta=shared.PropertyPropertyConnectionAuthMeta(),
         other_auth_info=[
-            'locate',
+            'Rwanda',
         ],
     ),
     categories=[
         shared.PropertyConnectionCategories.CRM,
     ],
-    integration_type='plus pace global',
+    integration_type='Maserati',
     permissions=[
-        shared.PropertyConnectionPermissions.TICKETING_AGENT_WRITE,
+        shared.PropertyConnectionPermissions.CRM_LEAD_WRITE,
     ],
 )
 
-res = s.unified.post_unified_connection(req)
+res = s.unified.create_unified_connection(req)
 
 if res.connection is not None:
     # handle response
@@ -749,10 +72,10 @@ if res.connection is not None:
 
 ### Response
 
-**[operations.PostUnifiedConnectionResponse](../../models/operations/postunifiedconnectionresponse.md)**
+**[operations.CreateUnifiedConnectionResponse](../../models/operations/createunifiedconnectionresponse.md)**
 
 
-## post_unified_webhook_connection_id_object
+## create_unified_webhook
 
 To maintain compatibility with the webhooks specification and Zapier webhooks, only the hook_url field is required in the payload when creating a Webhook.  When updated/new objects are found, the array of objects will be POSTed to the hook_url with the paramater hookId=<hookId>.
 
@@ -769,29 +92,29 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PostUnifiedWebhookConnectionIDObjectRequest(
+req = operations.CreateUnifiedWebhookRequest(
     webhook=shared.Webhook(
-        connection_id='drat',
+        connection_id='East male',
         events=[
-            shared.PropertyWebhookEvents.UPDATED,
+            shared.PropertyWebhookEvents.CREATED,
         ],
-        hook_url='siemens National',
-        integration_type='GB Rustic deposit',
-        interval=6073.96,
-        object_type=shared.WebhookObjectType.CRM_CONTACT,
+        hook_url='ah Account Bedfordshire',
+        integration_type='Tenge',
+        interval=4915.71,
+        object_type=shared.WebhookObjectType.MARTECH_MEMBER,
         subscriptions=[
-            'Diesel',
+            'delightfully',
         ],
-        workspace_id='female ken',
+        workspace_id='up Vatu',
     ),
-    connection_id='chocolate',
+    connection_id='Fitness grey Directives',
     events=[
-        operations.PostUnifiedWebhookConnectionIDObjectEvents.UPDATED,
+        operations.CreateUnifiedWebhookEvents.CREATED,
     ],
-    object='female driver',
+    object='Chair Kilback',
 )
 
-res = s.unified.post_unified_webhook_connection_id_object(req)
+res = s.unified.create_unified_webhook(req)
 
 if res.webhook is not None:
     # handle response
@@ -800,17 +123,418 @@ if res.webhook is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                        | [operations.PostUnifiedWebhookConnectionIDObjectRequest](../../models/operations/postunifiedwebhookconnectionidobjectrequest.md) | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `request`                                                                                        | [operations.CreateUnifiedWebhookRequest](../../models/operations/createunifiedwebhookrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
 
 
 ### Response
 
-**[operations.PostUnifiedWebhookConnectionIDObjectResponse](../../models/operations/postunifiedwebhookconnectionidobjectresponse.md)**
+**[operations.CreateUnifiedWebhookResponse](../../models/operations/createunifiedwebhookresponse.md)**
 
 
-## put_unified_connection_id
+## get_unified_apicall
+
+Retrieve specific API Call by its ID
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
+
+req = operations.GetUnifiedApicallRequest(
+    id='<ID>',
+)
+
+res = s.unified.get_unified_apicall(req)
+
+if res.api_call is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.GetUnifiedApicallRequest](../../models/operations/getunifiedapicallrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+
+
+### Response
+
+**[operations.GetUnifiedApicallResponse](../../models/operations/getunifiedapicallresponse.md)**
+
+
+## get_unified_connection
+
+Retrieve connection
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
+
+req = operations.GetUnifiedConnectionRequest(
+    id='<ID>',
+)
+
+res = s.unified.get_unified_connection(req)
+
+if res.connection is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `request`                                                                                        | [operations.GetUnifiedConnectionRequest](../../models/operations/getunifiedconnectionrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+
+
+### Response
+
+**[operations.GetUnifiedConnectionResponse](../../models/operations/getunifiedconnectionresponse.md)**
+
+
+## get_unified_integration
+
+Retrieve an integration
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
+
+req = operations.GetUnifiedIntegrationRequest(
+    integration_type='Berkelium panel',
+)
+
+res = s.unified.get_unified_integration(req)
+
+if res.integration is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `request`                                                                                          | [operations.GetUnifiedIntegrationRequest](../../models/operations/getunifiedintegrationrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+
+
+### Response
+
+**[operations.GetUnifiedIntegrationResponse](../../models/operations/getunifiedintegrationresponse.md)**
+
+
+## get_unified_integration_auth
+
+Returns an authorization URL for the specified integration.  Once a successful authorization occurs, a new connection is created.
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
+
+req = operations.GetUnifiedIntegrationAuthRequest(
+    integration_type='Reggae Van pascal',
+    scopes=[
+        operations.GetUnifiedIntegrationAuthScopes.ATS_SCORECARD_READ,
+    ],
+    workspace_id='Xenogender North groupware',
+)
+
+res = s.unified.get_unified_integration_auth(req)
+
+if res.get_unified_integration_auth_200_application_json_string is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                  | [operations.GetUnifiedIntegrationAuthRequest](../../models/operations/getunifiedintegrationauthrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+
+
+### Response
+
+**[operations.GetUnifiedIntegrationAuthResponse](../../models/operations/getunifiedintegrationauthresponse.md)**
+
+
+## get_unified_webhook
+
+Retrieve webhook by its ID
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
+
+req = operations.GetUnifiedWebhookRequest(
+    id='<ID>',
+)
+
+res = s.unified.get_unified_webhook(req)
+
+if res.webhook is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.GetUnifiedWebhookRequest](../../models/operations/getunifiedwebhookrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+
+
+### Response
+
+**[operations.GetUnifiedWebhookResponse](../../models/operations/getunifiedwebhookresponse.md)**
+
+
+## list_unified_apicalls
+
+Returns API Calls
+
+### Example Usage
+
+```python
+import unified_to
+import dateutil.parser
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
+
+req = operations.ListUnifiedApicallsRequest()
+
+res = s.unified.list_unified_apicalls(req)
+
+if res.api_calls is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `request`                                                                                      | [operations.ListUnifiedApicallsRequest](../../models/operations/listunifiedapicallsrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+
+
+### Response
+
+**[operations.ListUnifiedApicallsResponse](../../models/operations/listunifiedapicallsresponse.md)**
+
+
+## list_unified_connections
+
+List all connections
+
+### Example Usage
+
+```python
+import unified_to
+import dateutil.parser
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
+
+req = operations.ListUnifiedConnectionsRequest(
+    categories=[
+        operations.ListUnifiedConnectionsCategories.CRM,
+    ],
+)
+
+res = s.unified.list_unified_connections(req)
+
+if res.connections is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `request`                                                                                            | [operations.ListUnifiedConnectionsRequest](../../models/operations/listunifiedconnectionsrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+
+
+### Response
+
+**[operations.ListUnifiedConnectionsResponse](../../models/operations/listunifiedconnectionsresponse.md)**
+
+
+## list_unified_integration_workspaces
+
+No authentication required as this is to be used by front-end interface
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
+
+req = operations.ListUnifiedIntegrationWorkspacesRequest(
+    categories=[
+        operations.ListUnifiedIntegrationWorkspacesCategories.MARTECH,
+    ],
+    workspace_id='Country Market Representative',
+)
+
+res = s.unified.list_unified_integration_workspaces(req)
+
+if res.integrations is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
+| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                | [operations.ListUnifiedIntegrationWorkspacesRequest](../../models/operations/listunifiedintegrationworkspacesrequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
+
+
+### Response
+
+**[operations.ListUnifiedIntegrationWorkspacesResponse](../../models/operations/listunifiedintegrationworkspacesresponse.md)**
+
+
+## list_unified_integrations
+
+Returns all integrations
+
+### Example Usage
+
+```python
+import unified_to
+import dateutil.parser
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
+
+req = operations.ListUnifiedIntegrationsRequest(
+    categories=[
+        operations.ListUnifiedIntegrationsCategories.AUTH,
+    ],
+)
+
+res = s.unified.list_unified_integrations(req)
+
+if res.integrations is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                              | [operations.ListUnifiedIntegrationsRequest](../../models/operations/listunifiedintegrationsrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+
+
+### Response
+
+**[operations.ListUnifiedIntegrationsResponse](../../models/operations/listunifiedintegrationsresponse.md)**
+
+
+## list_unified_webhooks
+
+Returns all registered webhooks
+
+### Example Usage
+
+```python
+import unified_to
+import dateutil.parser
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
+
+req = operations.ListUnifiedWebhooksRequest()
+
+res = s.unified.list_unified_webhooks(req)
+
+if res.webhooks is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `request`                                                                                      | [operations.ListUnifiedWebhooksRequest](../../models/operations/listunifiedwebhooksrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+
+
+### Response
+
+**[operations.ListUnifiedWebhooksResponse](../../models/operations/listunifiedwebhooksresponse.md)**
+
+
+## patch_unified_connection
 
 Update connection
 
@@ -827,21 +551,21 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PutUnifiedConnectionIDRequest(
+req = operations.PatchUnifiedConnectionRequest(
     connection=shared.Connection(
         auth=shared.PropertyConnectionAuth(
             emails=[
-                'Assurance',
+                'International',
             ],
             meta=shared.PropertyPropertyConnectionAuthMeta(),
             other_auth_info=[
-                'Avon',
+                'square',
             ],
         ),
         categories=[
-            shared.PropertyConnectionCategories.MARTECH,
+            shared.PropertyConnectionCategories.ATS,
         ],
-        integration_type='Web',
+        integration_type='Montana',
         permissions=[
             shared.PropertyConnectionPermissions.CRM_FILE_READ,
         ],
@@ -849,7 +573,7 @@ req = operations.PutUnifiedConnectionIDRequest(
     id='<ID>',
 )
 
-res = s.unified.put_unified_connection_id(req)
+res = s.unified.patch_unified_connection(req)
 
 if res.connection is not None:
     # handle response
@@ -860,24 +584,23 @@ if res.connection is not None:
 
 | Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
 | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `request`                                                                                            | [operations.PutUnifiedConnectionIDRequest](../../models/operations/putunifiedconnectionidrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `request`                                                                                            | [operations.PatchUnifiedConnectionRequest](../../models/operations/patchunifiedconnectionrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 
 ### Response
 
-**[operations.PutUnifiedConnectionIDResponse](../../models/operations/putunifiedconnectionidresponse.md)**
+**[operations.PatchUnifiedConnectionResponse](../../models/operations/patchunifiedconnectionresponse.md)**
 
 
-## put_unified_user
+## remove_unified_connection
 
-Only the name field is updated.
+Remove connection
 
 ### Example Usage
 
 ```python
 import unified_to
-import dateutil.parser
-from unified_to.models import shared
+from unified_to.models import operations, shared
 
 s = unified_to.UnifiedTo(
     security=shared.Security(
@@ -885,30 +608,122 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = shared.User(
-    meta=shared.PropertyUserMeta(),
-    name='invoice Convertible Country',
-    workspace_id='Ergonomic',
-    workspace_ids=[
-        'becquerel',
-    ],
+req = operations.RemoveUnifiedConnectionRequest(
+    id='<ID>',
 )
 
-res = s.unified.put_unified_user(req)
+res = s.unified.remove_unified_connection(req)
 
-if res.user is not None:
+if res.status_code == 200:
     # handle response
     pass
 ```
 
 ### Parameters
 
-| Parameter                                  | Type                                       | Required                                   | Description                                |
-| ------------------------------------------ | ------------------------------------------ | ------------------------------------------ | ------------------------------------------ |
-| `request`                                  | [shared.User](../../models/shared/user.md) | :heavy_check_mark:                         | The request object to use for the request. |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                              | [operations.RemoveUnifiedConnectionRequest](../../models/operations/removeunifiedconnectionrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 
 ### Response
 
-**[operations.PutUnifiedUserResponse](../../models/operations/putunifieduserresponse.md)**
+**[operations.RemoveUnifiedConnectionResponse](../../models/operations/removeunifiedconnectionresponse.md)**
+
+
+## remove_unified_webhook
+
+Remove webhook subscription
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
+
+req = operations.RemoveUnifiedWebhookRequest(
+    id='<ID>',
+)
+
+res = s.unified.remove_unified_webhook(req)
+
+if res.status_code == 200:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `request`                                                                                        | [operations.RemoveUnifiedWebhookRequest](../../models/operations/removeunifiedwebhookrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+
+
+### Response
+
+**[operations.RemoveUnifiedWebhookResponse](../../models/operations/removeunifiedwebhookresponse.md)**
+
+
+## update_unified_connection
+
+Update connection
+
+### Example Usage
+
+```python
+import unified_to
+import dateutil.parser
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
+
+req = operations.UpdateUnifiedConnectionRequest(
+    connection=shared.Connection(
+        auth=shared.PropertyConnectionAuth(
+            emails=[
+                'tan',
+            ],
+            meta=shared.PropertyPropertyConnectionAuthMeta(),
+            other_auth_info=[
+                'revitalize',
+            ],
+        ),
+        categories=[
+            shared.PropertyConnectionCategories.CRM,
+        ],
+        integration_type='from',
+        permissions=[
+            shared.PropertyConnectionPermissions.ATS_APPLICATION_READ,
+        ],
+    ),
+    id='<ID>',
+)
+
+res = s.unified.update_unified_connection(req)
+
+if res.connection is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                              | [operations.UpdateUnifiedConnectionRequest](../../models/operations/updateunifiedconnectionrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+
+
+### Response
+
+**[operations.UpdateUnifiedConnectionResponse](../../models/operations/updateunifiedconnectionresponse.md)**
 

@@ -1,9 +1,0 @@
-# PostCrmConnectionIDContactRequest
-
-
-## Fields
-
-| Field                                                                                    | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `crm_contact`                                                                            | [Optional[shared.CrmContact]](../../models/shared/crmcontact.md)                         | :heavy_minus_sign:                                                                       | A contact represents a person that optionally is associated with a deal and/or a company |
-| `connection_id`                                                                          | *str*                                                                                    | :heavy_check_mark:                                                                       | ID of the connection                                                                     |

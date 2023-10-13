@@ -3,9 +3,9 @@
 
 ### Available Operations
 
-* [get_uc_connection_id_call](#get_uc_connection_id_call) - List all calls
+* [list_uc_calls](#list_uc_calls) - List all calls
 
-## get_uc_connection_id_call
+## list_uc_calls
 
 List all calls
 
@@ -22,11 +22,11 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetUcConnectionIDCallRequest(
-    connection_id='Directives',
+req = operations.ListUcCallsRequest(
+    connection_id='optical',
 )
 
-res = s.call.get_uc_connection_id_call(req)
+res = s.call.list_uc_calls(req)
 
 if res.uc_calls is not None:
     # handle response
@@ -35,12 +35,12 @@ if res.uc_calls is not None:
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `request`                                                                                          | [operations.GetUcConnectionIDCallRequest](../../models/operations/getucconnectionidcallrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| `request`                                                                      | [operations.ListUcCallsRequest](../../models/operations/listuccallsrequest.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
 
 
 ### Response
 
-**[operations.GetUcConnectionIDCallResponse](../../models/operations/getucconnectionidcallresponse.md)**
+**[operations.ListUcCallsResponse](../../models/operations/listuccallsresponse.md)**
 

@@ -12,40 +12,72 @@ class Lead:
         self.sdk_configuration = sdk_config
         
     
-    def delete_crm_connection_id_lead_id(self, request: operations.DeleteCrmConnectionIDLeadIDRequest) -> operations.DeleteCrmConnectionIDLeadIDResponse:
-        r"""Remove a lead"""
+    def create_crm_lead(self, request: operations.CreateCrmLeadRequest) -> operations.CreateCrmLeadResponse:
+        r"""Create a lead"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.DeleteCrmConnectionIDLeadIDRequest, base_url, '/crm/{connection_id}/lead/{id}', request)
+        url = utils.generate_url(operations.CreateCrmLeadRequest, base_url, '/crm/{connection_id}/lead', request)
+        headers = {}
+        req_content_type, data, form = utils.serialize_request_body(request, "crm_lead", False, True, 'json')
+        if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
+            headers['content-type'] = req_content_type
+        headers['Accept'] = 'application/json'
+        headers['user-agent'] = self.sdk_configuration.user_agent
+        
+        client = self.sdk_configuration.security_client
+        
+        http_res = client.request('POST', url, data=data, files=form, headers=headers)
+        content_type = http_res.headers.get('Content-Type')
+
+        res = operations.CreateCrmLeadResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        
+        if http_res.status_code == 200:
+            if utils.match_content_type(content_type, 'application/json'):
+                out = utils.unmarshal_json(http_res.text, Optional[shared.CrmLead])
+                res.crm_lead = out
+            else:
+                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
+        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
+            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
+
+        return res
+
+    
+    def get_crm_lead(self, request: operations.GetCrmLeadRequest) -> operations.GetCrmLeadResponse:
+        r"""Retrieve a lead"""
+        base_url = utils.template_url(*self.sdk_configuration.get_server_details())
+        
+        url = utils.generate_url(operations.GetCrmLeadRequest, base_url, '/crm/{connection_id}/lead/{id}', request)
         headers = {}
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
-        http_res = client.request('DELETE', url, headers=headers)
+        http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
-        res = operations.DeleteCrmConnectionIDLeadIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        res = operations.GetCrmLeadResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
-        if http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
-            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
-        else:
+        if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                res.delete_crm_connection_id_lead_id_default_application_json_string = http_res.content
+                out = utils.unmarshal_json(http_res.text, Optional[shared.CrmLead])
+                res.crm_lead = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
+        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
+            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
 
         return res
 
     
-    def get_crm_connection_id_lead(self, request: operations.GetCrmConnectionIDLeadRequest) -> operations.GetCrmConnectionIDLeadResponse:
+    def list_crm_leads(self, request: operations.ListCrmLeadsRequest) -> operations.ListCrmLeadsResponse:
         r"""List all leads"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.GetCrmConnectionIDLeadRequest, base_url, '/crm/{connection_id}/lead', request)
+        url = utils.generate_url(operations.ListCrmLeadsRequest, base_url, '/crm/{connection_id}/lead', request)
         headers = {}
-        query_params = utils.get_query_params(operations.GetCrmConnectionIDLeadRequest, request)
+        query_params = utils.get_query_params(operations.ListCrmLeadsRequest, request)
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
@@ -54,7 +86,7 @@ class Lead:
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
-        res = operations.GetCrmConnectionIDLeadResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        res = operations.ListCrmLeadsResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
@@ -68,39 +100,11 @@ class Lead:
         return res
 
     
-    def get_crm_connection_id_lead_id(self, request: operations.GetCrmConnectionIDLeadIDRequest) -> operations.GetCrmConnectionIDLeadIDResponse:
-        r"""Retrieve a lead"""
-        base_url = utils.template_url(*self.sdk_configuration.get_server_details())
-        
-        url = utils.generate_url(operations.GetCrmConnectionIDLeadIDRequest, base_url, '/crm/{connection_id}/lead/{id}', request)
-        headers = {}
-        headers['Accept'] = 'application/json'
-        headers['user-agent'] = self.sdk_configuration.user_agent
-        
-        client = self.sdk_configuration.security_client
-        
-        http_res = client.request('GET', url, headers=headers)
-        content_type = http_res.headers.get('Content-Type')
-
-        res = operations.GetCrmConnectionIDLeadIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
-        
-        if http_res.status_code == 200:
-            if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[shared.CrmLead])
-                res.crm_lead = out
-            else:
-                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
-        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
-            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
-
-        return res
-
-    
-    def patch_crm_connection_id_lead_id(self, request: operations.PatchCrmConnectionIDLeadIDRequest) -> operations.PatchCrmConnectionIDLeadIDResponse:
+    def patch_crm_lead(self, request: operations.PatchCrmLeadRequest) -> operations.PatchCrmLeadResponse:
         r"""Update a lead"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.PatchCrmConnectionIDLeadIDRequest, base_url, '/crm/{connection_id}/lead/{id}', request)
+        url = utils.generate_url(operations.PatchCrmLeadRequest, base_url, '/crm/{connection_id}/lead/{id}', request)
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "crm_lead", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
@@ -113,7 +117,7 @@ class Lead:
         http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
-        res = operations.PatchCrmConnectionIDLeadIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        res = operations.PatchCrmLeadResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
@@ -127,42 +131,38 @@ class Lead:
         return res
 
     
-    def post_crm_connection_id_lead(self, request: operations.PostCrmConnectionIDLeadRequest) -> operations.PostCrmConnectionIDLeadResponse:
-        r"""Create a lead"""
+    def remove_crm_lead(self, request: operations.RemoveCrmLeadRequest) -> operations.RemoveCrmLeadResponse:
+        r"""Remove a lead"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.PostCrmConnectionIDLeadRequest, base_url, '/crm/{connection_id}/lead', request)
+        url = utils.generate_url(operations.RemoveCrmLeadRequest, base_url, '/crm/{connection_id}/lead/{id}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "crm_lead", False, True, 'json')
-        if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
-            headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
-        http_res = client.request('POST', url, data=data, files=form, headers=headers)
+        http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
-        res = operations.PostCrmConnectionIDLeadResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        res = operations.RemoveCrmLeadResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
-        if http_res.status_code == 200:
+        if http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
+            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
+        else:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[shared.CrmLead])
-                res.crm_lead = out
+                res.remove_crm_lead_default_application_json_string = http_res.content
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
-        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
-            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
 
         return res
 
     
-    def put_crm_connection_id_lead_id(self, request: operations.PutCrmConnectionIDLeadIDRequest) -> operations.PutCrmConnectionIDLeadIDResponse:
+    def update_crm_lead(self, request: operations.UpdateCrmLeadRequest) -> operations.UpdateCrmLeadResponse:
         r"""Update a lead"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.PutCrmConnectionIDLeadIDRequest, base_url, '/crm/{connection_id}/lead/{id}', request)
+        url = utils.generate_url(operations.UpdateCrmLeadRequest, base_url, '/crm/{connection_id}/lead/{id}', request)
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "crm_lead", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
@@ -175,7 +175,7 @@ class Lead:
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
-        res = operations.PutCrmConnectionIDLeadIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        res = operations.UpdateCrmLeadResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):

@@ -12,67 +12,72 @@ class User:
         self.sdk_configuration = sdk_config
         
     
-    def delete_crm_connection_id_user_id(self, request: operations.DeleteCrmConnectionIDUserIDRequest) -> operations.DeleteCrmConnectionIDUserIDResponse:
-        r"""Remove a user"""
+    def create_crm_user(self, request: operations.CreateCrmUserRequest) -> operations.CreateCrmUserResponse:
+        r"""Create a user"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.DeleteCrmConnectionIDUserIDRequest, base_url, '/crm/{connection_id}/user/{id}', request)
+        url = utils.generate_url(operations.CreateCrmUserRequest, base_url, '/crm/{connection_id}/user', request)
+        headers = {}
+        req_content_type, data, form = utils.serialize_request_body(request, "crm_user", False, True, 'json')
+        if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
+            headers['content-type'] = req_content_type
+        headers['Accept'] = 'application/json'
+        headers['user-agent'] = self.sdk_configuration.user_agent
+        
+        client = self.sdk_configuration.security_client
+        
+        http_res = client.request('POST', url, data=data, files=form, headers=headers)
+        content_type = http_res.headers.get('Content-Type')
+
+        res = operations.CreateCrmUserResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        
+        if http_res.status_code == 200:
+            if utils.match_content_type(content_type, 'application/json'):
+                out = utils.unmarshal_json(http_res.text, Optional[shared.CrmUser])
+                res.crm_user = out
+            else:
+                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
+        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
+            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
+
+        return res
+
+    
+    def get_crm_user(self, request: operations.GetCrmUserRequest) -> operations.GetCrmUserResponse:
+        r"""Retrieve a user"""
+        base_url = utils.template_url(*self.sdk_configuration.get_server_details())
+        
+        url = utils.generate_url(operations.GetCrmUserRequest, base_url, '/crm/{connection_id}/user/{id}', request)
         headers = {}
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
-        http_res = client.request('DELETE', url, headers=headers)
+        http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
-        res = operations.DeleteCrmConnectionIDUserIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        res = operations.GetCrmUserResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
-        if http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
-            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
-        else:
+        if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                res.delete_crm_connection_id_user_id_default_application_json_string = http_res.content
+                out = utils.unmarshal_json(http_res.text, Optional[shared.CrmUser])
+                res.crm_user = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
+        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
+            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
 
         return res
 
     
-    def delete_unified_user(self) -> operations.DeleteUnifiedUserResponse:
-        r"""Delete your user object"""
-        base_url = utils.template_url(*self.sdk_configuration.get_server_details())
-        
-        url = base_url + '/unified/user'
-        headers = {}
-        headers['Accept'] = 'application/json'
-        headers['user-agent'] = self.sdk_configuration.user_agent
-        
-        client = self.sdk_configuration.security_client
-        
-        http_res = client.request('DELETE', url, headers=headers)
-        content_type = http_res.headers.get('Content-Type')
-
-        res = operations.DeleteUnifiedUserResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
-        
-        if http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
-            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
-        else:
-            if utils.match_content_type(content_type, 'application/json'):
-                res.delete_unified_user_default_application_json_string = http_res.content
-            else:
-                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
-
-        return res
-
-    
-    def get_crm_connection_id_user(self, request: operations.GetCrmConnectionIDUserRequest) -> operations.GetCrmConnectionIDUserResponse:
+    def list_crm_users(self, request: operations.ListCrmUsersRequest) -> operations.ListCrmUsersResponse:
         r"""List all users"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.GetCrmConnectionIDUserRequest, base_url, '/crm/{connection_id}/user', request)
+        url = utils.generate_url(operations.ListCrmUsersRequest, base_url, '/crm/{connection_id}/user', request)
         headers = {}
-        query_params = utils.get_query_params(operations.GetCrmConnectionIDUserRequest, request)
+        query_params = utils.get_query_params(operations.ListCrmUsersRequest, request)
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
@@ -81,7 +86,7 @@ class User:
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
-        res = operations.GetCrmConnectionIDUserResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        res = operations.ListCrmUsersResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
@@ -95,94 +100,11 @@ class User:
         return res
 
     
-    def get_crm_connection_id_user_id(self, request: operations.GetCrmConnectionIDUserIDRequest) -> operations.GetCrmConnectionIDUserIDResponse:
-        r"""Retrieve a user"""
-        base_url = utils.template_url(*self.sdk_configuration.get_server_details())
-        
-        url = utils.generate_url(operations.GetCrmConnectionIDUserIDRequest, base_url, '/crm/{connection_id}/user/{id}', request)
-        headers = {}
-        headers['Accept'] = 'application/json'
-        headers['user-agent'] = self.sdk_configuration.user_agent
-        
-        client = self.sdk_configuration.security_client
-        
-        http_res = client.request('GET', url, headers=headers)
-        content_type = http_res.headers.get('Content-Type')
-
-        res = operations.GetCrmConnectionIDUserIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
-        
-        if http_res.status_code == 200:
-            if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[shared.CrmUser])
-                res.crm_user = out
-            else:
-                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
-        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
-            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
-
-        return res
-
-    
-    def get_unified_user(self) -> operations.GetUnifiedUserResponse:
-        r"""Retrieve your user object"""
-        base_url = utils.template_url(*self.sdk_configuration.get_server_details())
-        
-        url = base_url + '/unified/user'
-        headers = {}
-        headers['Accept'] = 'application/json'
-        headers['user-agent'] = self.sdk_configuration.user_agent
-        
-        client = self.sdk_configuration.security_client
-        
-        http_res = client.request('GET', url, headers=headers)
-        content_type = http_res.headers.get('Content-Type')
-
-        res = operations.GetUnifiedUserResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
-        
-        if http_res.status_code == 200:
-            if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[shared.User])
-                res.user = out
-            else:
-                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
-        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
-            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
-
-        return res
-
-    
-    def get_unified_user_token(self) -> operations.GetUnifiedUserTokenResponse:
-        r"""Retrieve your user token"""
-        base_url = utils.template_url(*self.sdk_configuration.get_server_details())
-        
-        url = base_url + '/unified/user/token'
-        headers = {}
-        headers['Accept'] = 'application/json'
-        headers['user-agent'] = self.sdk_configuration.user_agent
-        
-        client = self.sdk_configuration.security_client
-        
-        http_res = client.request('GET', url, headers=headers)
-        content_type = http_res.headers.get('Content-Type')
-
-        res = operations.GetUnifiedUserTokenResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
-        
-        if http_res.status_code == 200:
-            if utils.match_content_type(content_type, 'application/json'):
-                res.get_unified_user_token_200_application_json_string = http_res.content
-            else:
-                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
-        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
-            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
-
-        return res
-
-    
-    def patch_crm_connection_id_user_id(self, request: operations.PatchCrmConnectionIDUserIDRequest) -> operations.PatchCrmConnectionIDUserIDResponse:
+    def patch_crm_user(self, request: operations.PatchCrmUserRequest) -> operations.PatchCrmUserResponse:
         r"""Update a user"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.PatchCrmConnectionIDUserIDRequest, base_url, '/crm/{connection_id}/user/{id}', request)
+        url = utils.generate_url(operations.PatchCrmUserRequest, base_url, '/crm/{connection_id}/user/{id}', request)
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "crm_user", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
@@ -195,7 +117,7 @@ class User:
         http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
-        res = operations.PatchCrmConnectionIDUserIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        res = operations.PatchCrmUserResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
@@ -209,75 +131,38 @@ class User:
         return res
 
     
-    def patch_unified_user(self, request: shared.User) -> operations.PatchUnifiedUserResponse:
-        r"""Updates your user object
-        Only the name field is updated.
-        """
+    def remove_crm_user(self, request: operations.RemoveCrmUserRequest) -> operations.RemoveCrmUserResponse:
+        r"""Remove a user"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = base_url + '/unified/user'
+        url = utils.generate_url(operations.RemoveCrmUserRequest, base_url, '/crm/{connection_id}/user/{id}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "request", False, True, 'json')
-        if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
-            headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
-        http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
+        http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
-        res = operations.PatchUnifiedUserResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        res = operations.RemoveCrmUserResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
-        if http_res.status_code == 200:
+        if http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
+            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
+        else:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[shared.User])
-                res.user = out
+                res.remove_crm_user_default_application_json_string = http_res.content
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
-        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
-            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
 
         return res
 
     
-    def post_crm_connection_id_user(self, request: operations.PostCrmConnectionIDUserRequest) -> operations.PostCrmConnectionIDUserResponse:
-        r"""Create a user"""
-        base_url = utils.template_url(*self.sdk_configuration.get_server_details())
-        
-        url = utils.generate_url(operations.PostCrmConnectionIDUserRequest, base_url, '/crm/{connection_id}/user', request)
-        headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "crm_user", False, True, 'json')
-        if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
-            headers['content-type'] = req_content_type
-        headers['Accept'] = 'application/json'
-        headers['user-agent'] = self.sdk_configuration.user_agent
-        
-        client = self.sdk_configuration.security_client
-        
-        http_res = client.request('POST', url, data=data, files=form, headers=headers)
-        content_type = http_res.headers.get('Content-Type')
-
-        res = operations.PostCrmConnectionIDUserResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
-        
-        if http_res.status_code == 200:
-            if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[shared.CrmUser])
-                res.crm_user = out
-            else:
-                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
-        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
-            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
-
-        return res
-
-    
-    def put_crm_connection_id_user_id(self, request: operations.PutCrmConnectionIDUserIDRequest) -> operations.PutCrmConnectionIDUserIDResponse:
+    def update_crm_user(self, request: operations.UpdateCrmUserRequest) -> operations.UpdateCrmUserResponse:
         r"""Update a user"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.PutCrmConnectionIDUserIDRequest, base_url, '/crm/{connection_id}/user/{id}', request)
+        url = utils.generate_url(operations.UpdateCrmUserRequest, base_url, '/crm/{connection_id}/user/{id}', request)
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "crm_user", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
@@ -290,45 +175,12 @@ class User:
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
-        res = operations.PutCrmConnectionIDUserIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        res = operations.UpdateCrmUserResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
                 out = utils.unmarshal_json(http_res.text, Optional[shared.CrmUser])
                 res.crm_user = out
-            else:
-                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
-        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
-            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
-
-        return res
-
-    
-    def put_unified_user(self, request: shared.User) -> operations.PutUnifiedUserResponse:
-        r"""Updates your user object
-        Only the name field is updated.
-        """
-        base_url = utils.template_url(*self.sdk_configuration.get_server_details())
-        
-        url = base_url + '/unified/user'
-        headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "request", False, True, 'json')
-        if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
-            headers['content-type'] = req_content_type
-        headers['Accept'] = 'application/json'
-        headers['user-agent'] = self.sdk_configuration.user_agent
-        
-        client = self.sdk_configuration.security_client
-        
-        http_res = client.request('PUT', url, data=data, files=form, headers=headers)
-        content_type = http_res.headers.get('Content-Type')
-
-        res = operations.PutUnifiedUserResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
-        
-        if http_res.status_code == 200:
-            if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[shared.User])
-                res.user = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
         elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:

@@ -12,40 +12,72 @@ class Pipeline:
         self.sdk_configuration = sdk_config
         
     
-    def delete_crm_connection_id_pipeline_id(self, request: operations.DeleteCrmConnectionIDPipelineIDRequest) -> operations.DeleteCrmConnectionIDPipelineIDResponse:
-        r"""Remove a pipeline"""
+    def create_crm_pipeline(self, request: operations.CreateCrmPipelineRequest) -> operations.CreateCrmPipelineResponse:
+        r"""Create a pipeline"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.DeleteCrmConnectionIDPipelineIDRequest, base_url, '/crm/{connection_id}/pipeline/{id}', request)
+        url = utils.generate_url(operations.CreateCrmPipelineRequest, base_url, '/crm/{connection_id}/pipeline', request)
+        headers = {}
+        req_content_type, data, form = utils.serialize_request_body(request, "crm_pipeline", False, True, 'json')
+        if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
+            headers['content-type'] = req_content_type
+        headers['Accept'] = 'application/json'
+        headers['user-agent'] = self.sdk_configuration.user_agent
+        
+        client = self.sdk_configuration.security_client
+        
+        http_res = client.request('POST', url, data=data, files=form, headers=headers)
+        content_type = http_res.headers.get('Content-Type')
+
+        res = operations.CreateCrmPipelineResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        
+        if http_res.status_code == 200:
+            if utils.match_content_type(content_type, 'application/json'):
+                out = utils.unmarshal_json(http_res.text, Optional[shared.CrmPipeline])
+                res.crm_pipeline = out
+            else:
+                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
+        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
+            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
+
+        return res
+
+    
+    def get_crm_pipeline(self, request: operations.GetCrmPipelineRequest) -> operations.GetCrmPipelineResponse:
+        r"""Retrieve a pipeline"""
+        base_url = utils.template_url(*self.sdk_configuration.get_server_details())
+        
+        url = utils.generate_url(operations.GetCrmPipelineRequest, base_url, '/crm/{connection_id}/pipeline/{id}', request)
         headers = {}
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
-        http_res = client.request('DELETE', url, headers=headers)
+        http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
-        res = operations.DeleteCrmConnectionIDPipelineIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        res = operations.GetCrmPipelineResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
-        if http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
-            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
-        else:
+        if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                res.delete_crm_connection_id_pipeline_id_default_application_json_string = http_res.content
+                out = utils.unmarshal_json(http_res.text, Optional[shared.CrmPipeline])
+                res.crm_pipeline = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
+        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
+            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
 
         return res
 
     
-    def get_crm_connection_id_pipeline(self, request: operations.GetCrmConnectionIDPipelineRequest) -> operations.GetCrmConnectionIDPipelineResponse:
+    def list_crm_pipelines(self, request: operations.ListCrmPipelinesRequest) -> operations.ListCrmPipelinesResponse:
         r"""List all pipelines"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.GetCrmConnectionIDPipelineRequest, base_url, '/crm/{connection_id}/pipeline', request)
+        url = utils.generate_url(operations.ListCrmPipelinesRequest, base_url, '/crm/{connection_id}/pipeline', request)
         headers = {}
-        query_params = utils.get_query_params(operations.GetCrmConnectionIDPipelineRequest, request)
+        query_params = utils.get_query_params(operations.ListCrmPipelinesRequest, request)
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
@@ -54,7 +86,7 @@ class Pipeline:
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
-        res = operations.GetCrmConnectionIDPipelineResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        res = operations.ListCrmPipelinesResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
@@ -68,39 +100,11 @@ class Pipeline:
         return res
 
     
-    def get_crm_connection_id_pipeline_id(self, request: operations.GetCrmConnectionIDPipelineIDRequest) -> operations.GetCrmConnectionIDPipelineIDResponse:
-        r"""Retrieve a pipeline"""
-        base_url = utils.template_url(*self.sdk_configuration.get_server_details())
-        
-        url = utils.generate_url(operations.GetCrmConnectionIDPipelineIDRequest, base_url, '/crm/{connection_id}/pipeline/{id}', request)
-        headers = {}
-        headers['Accept'] = 'application/json'
-        headers['user-agent'] = self.sdk_configuration.user_agent
-        
-        client = self.sdk_configuration.security_client
-        
-        http_res = client.request('GET', url, headers=headers)
-        content_type = http_res.headers.get('Content-Type')
-
-        res = operations.GetCrmConnectionIDPipelineIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
-        
-        if http_res.status_code == 200:
-            if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[shared.CrmPipeline])
-                res.crm_pipeline = out
-            else:
-                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
-        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
-            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
-
-        return res
-
-    
-    def patch_crm_connection_id_pipeline_id(self, request: operations.PatchCrmConnectionIDPipelineIDRequest) -> operations.PatchCrmConnectionIDPipelineIDResponse:
+    def patch_crm_pipeline(self, request: operations.PatchCrmPipelineRequest) -> operations.PatchCrmPipelineResponse:
         r"""Update a pipeline"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.PatchCrmConnectionIDPipelineIDRequest, base_url, '/crm/{connection_id}/pipeline/{id}', request)
+        url = utils.generate_url(operations.PatchCrmPipelineRequest, base_url, '/crm/{connection_id}/pipeline/{id}', request)
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "crm_pipeline", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
@@ -113,7 +117,7 @@ class Pipeline:
         http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
-        res = operations.PatchCrmConnectionIDPipelineIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        res = operations.PatchCrmPipelineResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
@@ -127,42 +131,38 @@ class Pipeline:
         return res
 
     
-    def post_crm_connection_id_pipeline(self, request: operations.PostCrmConnectionIDPipelineRequest) -> operations.PostCrmConnectionIDPipelineResponse:
-        r"""Create a pipeline"""
+    def remove_crm_pipeline(self, request: operations.RemoveCrmPipelineRequest) -> operations.RemoveCrmPipelineResponse:
+        r"""Remove a pipeline"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.PostCrmConnectionIDPipelineRequest, base_url, '/crm/{connection_id}/pipeline', request)
+        url = utils.generate_url(operations.RemoveCrmPipelineRequest, base_url, '/crm/{connection_id}/pipeline/{id}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "crm_pipeline", False, True, 'json')
-        if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
-            headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
-        http_res = client.request('POST', url, data=data, files=form, headers=headers)
+        http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
-        res = operations.PostCrmConnectionIDPipelineResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        res = operations.RemoveCrmPipelineResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
-        if http_res.status_code == 200:
+        if http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
+            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
+        else:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[shared.CrmPipeline])
-                res.crm_pipeline = out
+                res.remove_crm_pipeline_default_application_json_string = http_res.content
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
-        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
-            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
 
         return res
 
     
-    def put_crm_connection_id_pipeline_id(self, request: operations.PutCrmConnectionIDPipelineIDRequest) -> operations.PutCrmConnectionIDPipelineIDResponse:
+    def update_crm_pipeline(self, request: operations.UpdateCrmPipelineRequest) -> operations.UpdateCrmPipelineResponse:
         r"""Update a pipeline"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.PutCrmConnectionIDPipelineIDRequest, base_url, '/crm/{connection_id}/pipeline/{id}', request)
+        url = utils.generate_url(operations.UpdateCrmPipelineRequest, base_url, '/crm/{connection_id}/pipeline/{id}', request)
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "crm_pipeline", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
@@ -175,7 +175,7 @@ class Pipeline:
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
-        res = operations.PutCrmConnectionIDPipelineIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        res = operations.UpdateCrmPipelineResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):

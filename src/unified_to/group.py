@@ -12,40 +12,72 @@ class Group:
         self.sdk_configuration = sdk_config
         
     
-    def delete_hris_connection_id_group_id(self, request: operations.DeleteHrisConnectionIDGroupIDRequest) -> operations.DeleteHrisConnectionIDGroupIDResponse:
-        r"""Remove a group"""
+    def create_hris_group(self, request: operations.CreateHrisGroupRequest) -> operations.CreateHrisGroupResponse:
+        r"""Create a group"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.DeleteHrisConnectionIDGroupIDRequest, base_url, '/hris/{connection_id}/group/{id}', request)
+        url = utils.generate_url(operations.CreateHrisGroupRequest, base_url, '/hris/{connection_id}/group', request)
+        headers = {}
+        req_content_type, data, form = utils.serialize_request_body(request, "hris_group", False, True, 'json')
+        if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
+            headers['content-type'] = req_content_type
+        headers['Accept'] = 'application/json'
+        headers['user-agent'] = self.sdk_configuration.user_agent
+        
+        client = self.sdk_configuration.security_client
+        
+        http_res = client.request('POST', url, data=data, files=form, headers=headers)
+        content_type = http_res.headers.get('Content-Type')
+
+        res = operations.CreateHrisGroupResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        
+        if http_res.status_code == 200:
+            if utils.match_content_type(content_type, 'application/json'):
+                out = utils.unmarshal_json(http_res.text, Optional[shared.HrisGroup])
+                res.hris_group = out
+            else:
+                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
+        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
+            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
+
+        return res
+
+    
+    def get_hris_group(self, request: operations.GetHrisGroupRequest) -> operations.GetHrisGroupResponse:
+        r"""Retrieve a group"""
+        base_url = utils.template_url(*self.sdk_configuration.get_server_details())
+        
+        url = utils.generate_url(operations.GetHrisGroupRequest, base_url, '/hris/{connection_id}/group/{id}', request)
         headers = {}
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
-        http_res = client.request('DELETE', url, headers=headers)
+        http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
-        res = operations.DeleteHrisConnectionIDGroupIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        res = operations.GetHrisGroupResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
-        if http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
-            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
-        else:
+        if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                res.delete_hris_connection_id_group_id_default_application_json_string = http_res.content
+                out = utils.unmarshal_json(http_res.text, Optional[shared.HrisGroup])
+                res.hris_group = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
+        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
+            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
 
         return res
 
     
-    def get_hris_connection_id_group(self, request: operations.GetHrisConnectionIDGroupRequest) -> operations.GetHrisConnectionIDGroupResponse:
+    def list_hris_groups(self, request: operations.ListHrisGroupsRequest) -> operations.ListHrisGroupsResponse:
         r"""List all groups"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.GetHrisConnectionIDGroupRequest, base_url, '/hris/{connection_id}/group', request)
+        url = utils.generate_url(operations.ListHrisGroupsRequest, base_url, '/hris/{connection_id}/group', request)
         headers = {}
-        query_params = utils.get_query_params(operations.GetHrisConnectionIDGroupRequest, request)
+        query_params = utils.get_query_params(operations.ListHrisGroupsRequest, request)
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
@@ -54,7 +86,7 @@ class Group:
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
-        res = operations.GetHrisConnectionIDGroupResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        res = operations.ListHrisGroupsResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
@@ -68,39 +100,11 @@ class Group:
         return res
 
     
-    def get_hris_connection_id_group_id(self, request: operations.GetHrisConnectionIDGroupIDRequest) -> operations.GetHrisConnectionIDGroupIDResponse:
-        r"""Retrieve a group"""
-        base_url = utils.template_url(*self.sdk_configuration.get_server_details())
-        
-        url = utils.generate_url(operations.GetHrisConnectionIDGroupIDRequest, base_url, '/hris/{connection_id}/group/{id}', request)
-        headers = {}
-        headers['Accept'] = 'application/json'
-        headers['user-agent'] = self.sdk_configuration.user_agent
-        
-        client = self.sdk_configuration.security_client
-        
-        http_res = client.request('GET', url, headers=headers)
-        content_type = http_res.headers.get('Content-Type')
-
-        res = operations.GetHrisConnectionIDGroupIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
-        
-        if http_res.status_code == 200:
-            if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[shared.HrisGroup])
-                res.hris_group = out
-            else:
-                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
-        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
-            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
-
-        return res
-
-    
-    def patch_hris_connection_id_group_id(self, request: operations.PatchHrisConnectionIDGroupIDRequest) -> operations.PatchHrisConnectionIDGroupIDResponse:
+    def patch_hris_group(self, request: operations.PatchHrisGroupRequest) -> operations.PatchHrisGroupResponse:
         r"""Update a group"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.PatchHrisConnectionIDGroupIDRequest, base_url, '/hris/{connection_id}/group/{id}', request)
+        url = utils.generate_url(operations.PatchHrisGroupRequest, base_url, '/hris/{connection_id}/group/{id}', request)
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "hris_group", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
@@ -113,7 +117,7 @@ class Group:
         http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
-        res = operations.PatchHrisConnectionIDGroupIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        res = operations.PatchHrisGroupResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
@@ -127,42 +131,38 @@ class Group:
         return res
 
     
-    def post_hris_connection_id_group(self, request: operations.PostHrisConnectionIDGroupRequest) -> operations.PostHrisConnectionIDGroupResponse:
-        r"""Create a group"""
+    def remove_hris_group(self, request: operations.RemoveHrisGroupRequest) -> operations.RemoveHrisGroupResponse:
+        r"""Remove a group"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.PostHrisConnectionIDGroupRequest, base_url, '/hris/{connection_id}/group', request)
+        url = utils.generate_url(operations.RemoveHrisGroupRequest, base_url, '/hris/{connection_id}/group/{id}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "hris_group", False, True, 'json')
-        if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
-            headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
-        http_res = client.request('POST', url, data=data, files=form, headers=headers)
+        http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
-        res = operations.PostHrisConnectionIDGroupResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        res = operations.RemoveHrisGroupResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
-        if http_res.status_code == 200:
+        if http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
+            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
+        else:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[shared.HrisGroup])
-                res.hris_group = out
+                res.remove_hris_group_default_application_json_string = http_res.content
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
-        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
-            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
 
         return res
 
     
-    def put_hris_connection_id_group_id(self, request: operations.PutHrisConnectionIDGroupIDRequest) -> operations.PutHrisConnectionIDGroupIDResponse:
+    def update_hris_group(self, request: operations.UpdateHrisGroupRequest) -> operations.UpdateHrisGroupResponse:
         r"""Update a group"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.PutHrisConnectionIDGroupIDRequest, base_url, '/hris/{connection_id}/group/{id}', request)
+        url = utils.generate_url(operations.UpdateHrisGroupRequest, base_url, '/hris/{connection_id}/group/{id}', request)
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "hris_group", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
@@ -175,7 +175,7 @@ class Group:
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
-        res = operations.PutHrisConnectionIDGroupIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        res = operations.UpdateHrisGroupResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):

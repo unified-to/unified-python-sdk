@@ -12,40 +12,72 @@ class Candidate:
         self.sdk_configuration = sdk_config
         
     
-    def delete_ats_connection_id_candidate_id(self, request: operations.DeleteAtsConnectionIDCandidateIDRequest) -> operations.DeleteAtsConnectionIDCandidateIDResponse:
-        r"""Remove a candidate"""
+    def create_ats_candidate(self, request: operations.CreateAtsCandidateRequest) -> operations.CreateAtsCandidateResponse:
+        r"""Create a candidate"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.DeleteAtsConnectionIDCandidateIDRequest, base_url, '/ats/{connection_id}/candidate/{id}', request)
+        url = utils.generate_url(operations.CreateAtsCandidateRequest, base_url, '/ats/{connection_id}/candidate', request)
+        headers = {}
+        req_content_type, data, form = utils.serialize_request_body(request, "ats_candidate", False, True, 'json')
+        if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
+            headers['content-type'] = req_content_type
+        headers['Accept'] = 'application/json'
+        headers['user-agent'] = self.sdk_configuration.user_agent
+        
+        client = self.sdk_configuration.security_client
+        
+        http_res = client.request('POST', url, data=data, files=form, headers=headers)
+        content_type = http_res.headers.get('Content-Type')
+
+        res = operations.CreateAtsCandidateResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        
+        if http_res.status_code == 200:
+            if utils.match_content_type(content_type, 'application/json'):
+                out = utils.unmarshal_json(http_res.text, Optional[shared.AtsCandidate])
+                res.ats_candidate = out
+            else:
+                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
+        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
+            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
+
+        return res
+
+    
+    def get_ats_candidate(self, request: operations.GetAtsCandidateRequest) -> operations.GetAtsCandidateResponse:
+        r"""Retrieve a candidate"""
+        base_url = utils.template_url(*self.sdk_configuration.get_server_details())
+        
+        url = utils.generate_url(operations.GetAtsCandidateRequest, base_url, '/ats/{connection_id}/candidate/{id}', request)
         headers = {}
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
-        http_res = client.request('DELETE', url, headers=headers)
+        http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
-        res = operations.DeleteAtsConnectionIDCandidateIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        res = operations.GetAtsCandidateResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
-        if http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
-            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
-        else:
+        if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                res.delete_ats_connection_id_candidate_id_default_application_json_string = http_res.content
+                out = utils.unmarshal_json(http_res.text, Optional[shared.AtsCandidate])
+                res.ats_candidate = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
+        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
+            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
 
         return res
 
     
-    def get_ats_connection_id_candidate(self, request: operations.GetAtsConnectionIDCandidateRequest) -> operations.GetAtsConnectionIDCandidateResponse:
+    def list_ats_candidates(self, request: operations.ListAtsCandidatesRequest) -> operations.ListAtsCandidatesResponse:
         r"""List all candidates"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.GetAtsConnectionIDCandidateRequest, base_url, '/ats/{connection_id}/candidate', request)
+        url = utils.generate_url(operations.ListAtsCandidatesRequest, base_url, '/ats/{connection_id}/candidate', request)
         headers = {}
-        query_params = utils.get_query_params(operations.GetAtsConnectionIDCandidateRequest, request)
+        query_params = utils.get_query_params(operations.ListAtsCandidatesRequest, request)
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
@@ -54,7 +86,7 @@ class Candidate:
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
-        res = operations.GetAtsConnectionIDCandidateResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        res = operations.ListAtsCandidatesResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
@@ -68,39 +100,11 @@ class Candidate:
         return res
 
     
-    def get_ats_connection_id_candidate_id(self, request: operations.GetAtsConnectionIDCandidateIDRequest) -> operations.GetAtsConnectionIDCandidateIDResponse:
-        r"""Retrieve a candidate"""
-        base_url = utils.template_url(*self.sdk_configuration.get_server_details())
-        
-        url = utils.generate_url(operations.GetAtsConnectionIDCandidateIDRequest, base_url, '/ats/{connection_id}/candidate/{id}', request)
-        headers = {}
-        headers['Accept'] = 'application/json'
-        headers['user-agent'] = self.sdk_configuration.user_agent
-        
-        client = self.sdk_configuration.security_client
-        
-        http_res = client.request('GET', url, headers=headers)
-        content_type = http_res.headers.get('Content-Type')
-
-        res = operations.GetAtsConnectionIDCandidateIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
-        
-        if http_res.status_code == 200:
-            if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[shared.AtsCandidate])
-                res.ats_candidate = out
-            else:
-                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
-        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
-            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
-
-        return res
-
-    
-    def patch_ats_connection_id_candidate_id(self, request: operations.PatchAtsConnectionIDCandidateIDRequest) -> operations.PatchAtsConnectionIDCandidateIDResponse:
+    def patch_ats_candidate(self, request: operations.PatchAtsCandidateRequest) -> operations.PatchAtsCandidateResponse:
         r"""Update a candidate"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.PatchAtsConnectionIDCandidateIDRequest, base_url, '/ats/{connection_id}/candidate/{id}', request)
+        url = utils.generate_url(operations.PatchAtsCandidateRequest, base_url, '/ats/{connection_id}/candidate/{id}', request)
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "ats_candidate", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
@@ -113,7 +117,7 @@ class Candidate:
         http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
-        res = operations.PatchAtsConnectionIDCandidateIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        res = operations.PatchAtsCandidateResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
@@ -127,42 +131,38 @@ class Candidate:
         return res
 
     
-    def post_ats_connection_id_candidate(self, request: operations.PostAtsConnectionIDCandidateRequest) -> operations.PostAtsConnectionIDCandidateResponse:
-        r"""Create a candidate"""
+    def remove_ats_candidate(self, request: operations.RemoveAtsCandidateRequest) -> operations.RemoveAtsCandidateResponse:
+        r"""Remove a candidate"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.PostAtsConnectionIDCandidateRequest, base_url, '/ats/{connection_id}/candidate', request)
+        url = utils.generate_url(operations.RemoveAtsCandidateRequest, base_url, '/ats/{connection_id}/candidate/{id}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "ats_candidate", False, True, 'json')
-        if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
-            headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
-        http_res = client.request('POST', url, data=data, files=form, headers=headers)
+        http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
-        res = operations.PostAtsConnectionIDCandidateResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        res = operations.RemoveAtsCandidateResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
-        if http_res.status_code == 200:
+        if http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
+            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
+        else:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[shared.AtsCandidate])
-                res.ats_candidate = out
+                res.remove_ats_candidate_default_application_json_string = http_res.content
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
-        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
-            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
 
         return res
 
     
-    def put_ats_connection_id_candidate_id(self, request: operations.PutAtsConnectionIDCandidateIDRequest) -> operations.PutAtsConnectionIDCandidateIDResponse:
+    def update_ats_candidate(self, request: operations.UpdateAtsCandidateRequest) -> operations.UpdateAtsCandidateResponse:
         r"""Update a candidate"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.PutAtsConnectionIDCandidateIDRequest, base_url, '/ats/{connection_id}/candidate/{id}', request)
+        url = utils.generate_url(operations.UpdateAtsCandidateRequest, base_url, '/ats/{connection_id}/candidate/{id}', request)
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "ats_candidate", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
@@ -175,7 +175,7 @@ class Candidate:
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
-        res = operations.PutAtsConnectionIDCandidateIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        res = operations.UpdateAtsCandidateResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):

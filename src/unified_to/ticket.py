@@ -12,40 +12,72 @@ class Ticket:
         self.sdk_configuration = sdk_config
         
     
-    def delete_ticketing_connection_id_ticket_id(self, request: operations.DeleteTicketingConnectionIDTicketIDRequest) -> operations.DeleteTicketingConnectionIDTicketIDResponse:
-        r"""Remove a ticket"""
+    def create_ticketing_ticket(self, request: operations.CreateTicketingTicketRequest) -> operations.CreateTicketingTicketResponse:
+        r"""Create a ticket"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.DeleteTicketingConnectionIDTicketIDRequest, base_url, '/ticketing/{connection_id}/ticket/{id}', request)
+        url = utils.generate_url(operations.CreateTicketingTicketRequest, base_url, '/ticketing/{connection_id}/ticket', request)
+        headers = {}
+        req_content_type, data, form = utils.serialize_request_body(request, "ticketing_ticket", False, True, 'json')
+        if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
+            headers['content-type'] = req_content_type
+        headers['Accept'] = 'application/json'
+        headers['user-agent'] = self.sdk_configuration.user_agent
+        
+        client = self.sdk_configuration.security_client
+        
+        http_res = client.request('POST', url, data=data, files=form, headers=headers)
+        content_type = http_res.headers.get('Content-Type')
+
+        res = operations.CreateTicketingTicketResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        
+        if http_res.status_code == 200:
+            if utils.match_content_type(content_type, 'application/json'):
+                out = utils.unmarshal_json(http_res.text, Optional[shared.TicketingTicket])
+                res.ticketing_ticket = out
+            else:
+                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
+        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
+            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
+
+        return res
+
+    
+    def get_ticketing_ticket(self, request: operations.GetTicketingTicketRequest) -> operations.GetTicketingTicketResponse:
+        r"""Retrieve a ticket"""
+        base_url = utils.template_url(*self.sdk_configuration.get_server_details())
+        
+        url = utils.generate_url(operations.GetTicketingTicketRequest, base_url, '/ticketing/{connection_id}/ticket/{id}', request)
         headers = {}
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
-        http_res = client.request('DELETE', url, headers=headers)
+        http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
-        res = operations.DeleteTicketingConnectionIDTicketIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        res = operations.GetTicketingTicketResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
-        if http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
-            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
-        else:
+        if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                res.delete_ticketing_connection_id_ticket_id_default_application_json_string = http_res.content
+                out = utils.unmarshal_json(http_res.text, Optional[shared.TicketingTicket])
+                res.ticketing_ticket = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
+        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
+            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
 
         return res
 
     
-    def get_ticketing_connection_id_ticket(self, request: operations.GetTicketingConnectionIDTicketRequest) -> operations.GetTicketingConnectionIDTicketResponse:
+    def list_ticketing_tickets(self, request: operations.ListTicketingTicketsRequest) -> operations.ListTicketingTicketsResponse:
         r"""List all tickets"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.GetTicketingConnectionIDTicketRequest, base_url, '/ticketing/{connection_id}/ticket', request)
+        url = utils.generate_url(operations.ListTicketingTicketsRequest, base_url, '/ticketing/{connection_id}/ticket', request)
         headers = {}
-        query_params = utils.get_query_params(operations.GetTicketingConnectionIDTicketRequest, request)
+        query_params = utils.get_query_params(operations.ListTicketingTicketsRequest, request)
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
@@ -54,7 +86,7 @@ class Ticket:
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
-        res = operations.GetTicketingConnectionIDTicketResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        res = operations.ListTicketingTicketsResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
@@ -68,39 +100,11 @@ class Ticket:
         return res
 
     
-    def get_ticketing_connection_id_ticket_id(self, request: operations.GetTicketingConnectionIDTicketIDRequest) -> operations.GetTicketingConnectionIDTicketIDResponse:
-        r"""Retrieve a ticket"""
-        base_url = utils.template_url(*self.sdk_configuration.get_server_details())
-        
-        url = utils.generate_url(operations.GetTicketingConnectionIDTicketIDRequest, base_url, '/ticketing/{connection_id}/ticket/{id}', request)
-        headers = {}
-        headers['Accept'] = 'application/json'
-        headers['user-agent'] = self.sdk_configuration.user_agent
-        
-        client = self.sdk_configuration.security_client
-        
-        http_res = client.request('GET', url, headers=headers)
-        content_type = http_res.headers.get('Content-Type')
-
-        res = operations.GetTicketingConnectionIDTicketIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
-        
-        if http_res.status_code == 200:
-            if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[shared.TicketingTicket])
-                res.ticketing_ticket = out
-            else:
-                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
-        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
-            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
-
-        return res
-
-    
-    def patch_ticketing_connection_id_ticket_id(self, request: operations.PatchTicketingConnectionIDTicketIDRequest) -> operations.PatchTicketingConnectionIDTicketIDResponse:
+    def patch_ticketing_ticket(self, request: operations.PatchTicketingTicketRequest) -> operations.PatchTicketingTicketResponse:
         r"""Update a ticket"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.PatchTicketingConnectionIDTicketIDRequest, base_url, '/ticketing/{connection_id}/ticket/{id}', request)
+        url = utils.generate_url(operations.PatchTicketingTicketRequest, base_url, '/ticketing/{connection_id}/ticket/{id}', request)
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "ticketing_ticket", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
@@ -113,7 +117,7 @@ class Ticket:
         http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
-        res = operations.PatchTicketingConnectionIDTicketIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        res = operations.PatchTicketingTicketResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
@@ -127,42 +131,38 @@ class Ticket:
         return res
 
     
-    def post_ticketing_connection_id_ticket(self, request: operations.PostTicketingConnectionIDTicketRequest) -> operations.PostTicketingConnectionIDTicketResponse:
-        r"""Create a ticket"""
+    def remove_ticketing_ticket(self, request: operations.RemoveTicketingTicketRequest) -> operations.RemoveTicketingTicketResponse:
+        r"""Remove a ticket"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.PostTicketingConnectionIDTicketRequest, base_url, '/ticketing/{connection_id}/ticket', request)
+        url = utils.generate_url(operations.RemoveTicketingTicketRequest, base_url, '/ticketing/{connection_id}/ticket/{id}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "ticketing_ticket", False, True, 'json')
-        if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
-            headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
-        http_res = client.request('POST', url, data=data, files=form, headers=headers)
+        http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
-        res = operations.PostTicketingConnectionIDTicketResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        res = operations.RemoveTicketingTicketResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
-        if http_res.status_code == 200:
+        if http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
+            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
+        else:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[shared.TicketingTicket])
-                res.ticketing_ticket = out
+                res.remove_ticketing_ticket_default_application_json_string = http_res.content
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
-        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
-            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
 
         return res
 
     
-    def put_ticketing_connection_id_ticket_id(self, request: operations.PutTicketingConnectionIDTicketIDRequest) -> operations.PutTicketingConnectionIDTicketIDResponse:
+    def update_ticketing_ticket(self, request: operations.UpdateTicketingTicketRequest) -> operations.UpdateTicketingTicketResponse:
         r"""Update a ticket"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.PutTicketingConnectionIDTicketIDRequest, base_url, '/ticketing/{connection_id}/ticket/{id}', request)
+        url = utils.generate_url(operations.UpdateTicketingTicketRequest, base_url, '/ticketing/{connection_id}/ticket/{id}', request)
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "ticketing_ticket", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
@@ -175,7 +175,7 @@ class Ticket:
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
-        res = operations.PutTicketingConnectionIDTicketIDResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        res = operations.UpdateTicketingTicketResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):

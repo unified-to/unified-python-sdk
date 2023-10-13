@@ -3,181 +3,14 @@
 
 ### Available Operations
 
-* [delete_crm_connection_id_team_id](#delete_crm_connection_id_team_id) - Remove a team
-* [get_crm_connection_id_team](#get_crm_connection_id_team) - List all teams
-* [get_crm_connection_id_team_id](#get_crm_connection_id_team_id) - Retrieve a team
-* [patch_crm_connection_id_team_id](#patch_crm_connection_id_team_id) - Update a team
-* [post_crm_connection_id_team](#post_crm_connection_id_team) - Create a team
-* [put_crm_connection_id_team_id](#put_crm_connection_id_team_id) - Update a team
+* [create_crm_team](#create_crm_team) - Create a team
+* [get_crm_team](#get_crm_team) - Retrieve a team
+* [list_crm_teams](#list_crm_teams) - List all teams
+* [patch_crm_team](#patch_crm_team) - Update a team
+* [remove_crm_team](#remove_crm_team) - Remove a team
+* [update_crm_team](#update_crm_team) - Update a team
 
-## delete_crm_connection_id_team_id
-
-Remove a team
-
-### Example Usage
-
-```python
-import unified_to
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.DeleteCrmConnectionIDTeamIDRequest(
-    connection_id='Diverse',
-    id='<ID>',
-)
-
-res = s.team.delete_crm_connection_id_team_id(req)
-
-if res.status_code == 200:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                      | [operations.DeleteCrmConnectionIDTeamIDRequest](../../models/operations/deletecrmconnectionidteamidrequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
-
-
-### Response
-
-**[operations.DeleteCrmConnectionIDTeamIDResponse](../../models/operations/deletecrmconnectionidteamidresponse.md)**
-
-
-## get_crm_connection_id_team
-
-List all teams
-
-### Example Usage
-
-```python
-import unified_to
-import dateutil.parser
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.GetCrmConnectionIDTeamRequest(
-    connection_id='bath Lamborghini',
-)
-
-res = s.team.get_crm_connection_id_team(req)
-
-if res.crm_teams is not None:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `request`                                                                                            | [operations.GetCrmConnectionIDTeamRequest](../../models/operations/getcrmconnectionidteamrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
-
-
-### Response
-
-**[operations.GetCrmConnectionIDTeamResponse](../../models/operations/getcrmconnectionidteamresponse.md)**
-
-
-## get_crm_connection_id_team_id
-
-Retrieve a team
-
-### Example Usage
-
-```python
-import unified_to
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.GetCrmConnectionIDTeamIDRequest(
-    connection_id='Intelligent invoice Tesla',
-    id='<ID>',
-)
-
-res = s.team.get_crm_connection_id_team_id(req)
-
-if res.crm_team is not None:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                | [operations.GetCrmConnectionIDTeamIDRequest](../../models/operations/getcrmconnectionidteamidrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-
-
-### Response
-
-**[operations.GetCrmConnectionIDTeamIDResponse](../../models/operations/getcrmconnectionidteamidresponse.md)**
-
-
-## patch_crm_connection_id_team_id
-
-Update a team
-
-### Example Usage
-
-```python
-import unified_to
-import dateutil.parser
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.PatchCrmConnectionIDTeamIDRequest(
-    crm_team=shared.CrmTeam(
-        raw=shared.PropertyCrmTeamRaw(),
-        user_ids=[
-            'Arizona',
-        ],
-    ),
-    connection_id='Internal experiences',
-    id='<ID>',
-)
-
-res = s.team.patch_crm_connection_id_team_id(req)
-
-if res.crm_team is not None:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                    | [operations.PatchCrmConnectionIDTeamIDRequest](../../models/operations/patchcrmconnectionidteamidrequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
-
-
-### Response
-
-**[operations.PatchCrmConnectionIDTeamIDResponse](../../models/operations/patchcrmconnectionidteamidresponse.md)**
-
-
-## post_crm_connection_id_team
+## create_crm_team
 
 Create a team
 
@@ -194,17 +27,17 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PostCrmConnectionIDTeamRequest(
+req = operations.CreateCrmTeamRequest(
     crm_team=shared.CrmTeam(
         raw=shared.PropertyCrmTeamRaw(),
         user_ids=[
-            'local',
+            'exercitationem',
         ],
     ),
-    connection_id='pascal male bandwidth',
+    connection_id='as New Senior',
 )
 
-res = s.team.post_crm_connection_id_team(req)
+res = s.team.create_crm_team(req)
 
 if res.crm_team is not None:
     # handle response
@@ -213,17 +46,97 @@ if res.crm_team is not None:
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                              | [operations.PostCrmConnectionIDTeamRequest](../../models/operations/postcrmconnectionidteamrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `request`                                                                          | [operations.CreateCrmTeamRequest](../../models/operations/createcrmteamrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
 
 
 ### Response
 
-**[operations.PostCrmConnectionIDTeamResponse](../../models/operations/postcrmconnectionidteamresponse.md)**
+**[operations.CreateCrmTeamResponse](../../models/operations/createcrmteamresponse.md)**
 
 
-## put_crm_connection_id_team_id
+## get_crm_team
+
+Retrieve a team
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
+
+req = operations.GetCrmTeamRequest(
+    connection_id='digital awful',
+    id='<ID>',
+)
+
+res = s.team.get_crm_team(req)
+
+if res.crm_team is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                    | Type                                                                         | Required                                                                     | Description                                                                  |
+| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| `request`                                                                    | [operations.GetCrmTeamRequest](../../models/operations/getcrmteamrequest.md) | :heavy_check_mark:                                                           | The request object to use for the request.                                   |
+
+
+### Response
+
+**[operations.GetCrmTeamResponse](../../models/operations/getcrmteamresponse.md)**
+
+
+## list_crm_teams
+
+List all teams
+
+### Example Usage
+
+```python
+import unified_to
+import dateutil.parser
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
+
+req = operations.ListCrmTeamsRequest(
+    connection_id='Classical microchip Wooden',
+)
+
+res = s.team.list_crm_teams(req)
+
+if res.crm_teams is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `request`                                                                        | [operations.ListCrmTeamsRequest](../../models/operations/listcrmteamsrequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
+
+
+### Response
+
+**[operations.ListCrmTeamsResponse](../../models/operations/listcrmteamsresponse.md)**
+
+
+## patch_crm_team
 
 Update a team
 
@@ -240,18 +153,18 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PutCrmConnectionIDTeamIDRequest(
+req = operations.PatchCrmTeamRequest(
     crm_team=shared.CrmTeam(
         raw=shared.PropertyCrmTeamRaw(),
         user_ids=[
-            'immense',
+            'Account',
         ],
     ),
-    connection_id='duh Indonesia',
+    connection_id='Transexual compress redefine',
     id='<ID>',
 )
 
-res = s.team.put_crm_connection_id_team_id(req)
+res = s.team.patch_crm_team(req)
 
 if res.crm_team is not None:
     # handle response
@@ -260,12 +173,99 @@ if res.crm_team is not None:
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                | [operations.PutCrmConnectionIDTeamIDRequest](../../models/operations/putcrmconnectionidteamidrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `request`                                                                        | [operations.PatchCrmTeamRequest](../../models/operations/patchcrmteamrequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
 
 
 ### Response
 
-**[operations.PutCrmConnectionIDTeamIDResponse](../../models/operations/putcrmconnectionidteamidresponse.md)**
+**[operations.PatchCrmTeamResponse](../../models/operations/patchcrmteamresponse.md)**
+
+
+## remove_crm_team
+
+Remove a team
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
+
+req = operations.RemoveCrmTeamRequest(
+    connection_id='Sol',
+    id='<ID>',
+)
+
+res = s.team.remove_crm_team(req)
+
+if res.status_code == 200:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `request`                                                                          | [operations.RemoveCrmTeamRequest](../../models/operations/removecrmteamrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+
+
+### Response
+
+**[operations.RemoveCrmTeamResponse](../../models/operations/removecrmteamresponse.md)**
+
+
+## update_crm_team
+
+Update a team
+
+### Example Usage
+
+```python
+import unified_to
+import dateutil.parser
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
+
+req = operations.UpdateCrmTeamRequest(
+    crm_team=shared.CrmTeam(
+        raw=shared.PropertyCrmTeamRaw(),
+        user_ids=[
+            'Carbon',
+        ],
+    ),
+    connection_id='Dakota',
+    id='<ID>',
+)
+
+res = s.team.update_crm_team(req)
+
+if res.crm_team is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `request`                                                                          | [operations.UpdateCrmTeamRequest](../../models/operations/updatecrmteamrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+
+
+### Response
+
+**[operations.UpdateCrmTeamResponse](../../models/operations/updatecrmteamresponse.md)**
 

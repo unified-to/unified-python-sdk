@@ -3,134 +3,13 @@
 
 ### Available Operations
 
-* [delete_passthrough_connection_id_path](#delete_passthrough_connection_id_path) - Passthrough DELETE
-* [get_passthrough_connection_id_path](#get_passthrough_connection_id_path) - Passthrough GET
-* [patch_passthrough_connection_id_path](#patch_passthrough_connection_id_path) - Passthrough PUT
-* [post_passthrough_connection_id_path](#post_passthrough_connection_id_path) - Passthrough POST
-* [put_passthrough_connection_id_path](#put_passthrough_connection_id_path) - Passthrough PUT
+* [create_passthrough](#create_passthrough) - Passthrough POST
+* [list_passthroughs](#list_passthroughs) - Passthrough GET
+* [patch_passthrough](#patch_passthrough) - Passthrough PUT
+* [remove_passthrough](#remove_passthrough) - Passthrough DELETE
+* [update_passthrough](#update_passthrough) - Passthrough PUT
 
-## delete_passthrough_connection_id_path
-
-Passthrough DELETE
-
-### Example Usage
-
-```python
-import unified_to
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.DeletePassthroughConnectionIDPathRequest(
-    connection_id='Planner Checking Tricycle',
-    path='/usr/obj',
-)
-
-res = s.passthrough.delete_passthrough_connection_id_path(req)
-
-if res.undefined is not None:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
-| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                  | [operations.DeletePassthroughConnectionIDPathRequest](../../models/operations/deletepassthroughconnectionidpathrequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
-
-
-### Response
-
-**[operations.DeletePassthroughConnectionIDPathResponse](../../models/operations/deletepassthroughconnectionidpathresponse.md)**
-
-
-## get_passthrough_connection_id_path
-
-Passthrough GET
-
-### Example Usage
-
-```python
-import unified_to
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.GetPassthroughConnectionIDPathRequest(
-    connection_id='Global',
-    path='/private/var',
-)
-
-res = s.passthrough.get_passthrough_connection_id_path(req)
-
-if res.undefined is not None:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                            | [operations.GetPassthroughConnectionIDPathRequest](../../models/operations/getpassthroughconnectionidpathrequest.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
-
-
-### Response
-
-**[operations.GetPassthroughConnectionIDPathResponse](../../models/operations/getpassthroughconnectionidpathresponse.md)**
-
-
-## patch_passthrough_connection_id_path
-
-Passthrough PUT
-
-### Example Usage
-
-```python
-import unified_to
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.PatchPassthroughConnectionIDPathRequest(
-    connection_id='average maroon',
-    path='/proc',
-    undefined=shared.Undefined(),
-)
-
-res = s.passthrough.patch_passthrough_connection_id_path(req)
-
-if res.undefined is not None:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                | [operations.PatchPassthroughConnectionIDPathRequest](../../models/operations/patchpassthroughconnectionidpathrequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
-
-
-### Response
-
-**[operations.PatchPassthroughConnectionIDPathResponse](../../models/operations/patchpassthroughconnectionidpathresponse.md)**
-
-
-## post_passthrough_connection_id_path
+## create_passthrough
 
 Passthrough POST
 
@@ -146,13 +25,13 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PostPassthroughConnectionIDPathRequest(
-    connection_id='Computer Hip',
-    path='/boot/defaults',
+req = operations.CreatePassthroughRequest(
+    connection_id='UTF8',
+    path='/home',
     undefined=shared.Undefined(),
 )
 
-res = s.passthrough.post_passthrough_connection_id_path(req)
+res = s.passthrough.create_passthrough(req)
 
 if res.undefined is not None:
     # handle response
@@ -161,17 +40,57 @@ if res.undefined is not None:
 
 ### Parameters
 
-| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
-| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                              | [operations.PostPassthroughConnectionIDPathRequest](../../models/operations/postpassthroughconnectionidpathrequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.CreatePassthroughRequest](../../models/operations/createpassthroughrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 
 ### Response
 
-**[operations.PostPassthroughConnectionIDPathResponse](../../models/operations/postpassthroughconnectionidpathresponse.md)**
+**[operations.CreatePassthroughResponse](../../models/operations/createpassthroughresponse.md)**
 
 
-## put_passthrough_connection_id_path
+## list_passthroughs
+
+Passthrough GET
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
+
+req = operations.ListPassthroughsRequest(
+    connection_id='circuit Loan',
+    path='/usr',
+)
+
+res = s.passthrough.list_passthroughs(req)
+
+if res.undefined is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.ListPassthroughsRequest](../../models/operations/listpassthroughsrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+
+
+### Response
+
+**[operations.ListPassthroughsResponse](../../models/operations/listpassthroughsresponse.md)**
+
+
+## patch_passthrough
 
 Passthrough PUT
 
@@ -187,13 +106,13 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PutPassthroughConnectionIDPathRequest(
-    connection_id='Computer Oriental',
-    path='/usr/local/src',
+req = operations.PatchPassthroughRequest(
+    connection_id='VGA',
+    path='/opt/lib',
     undefined=shared.Undefined(),
 )
 
-res = s.passthrough.put_passthrough_connection_id_path(req)
+res = s.passthrough.patch_passthrough(req)
 
 if res.undefined is not None:
     # handle response
@@ -202,12 +121,93 @@ if res.undefined is not None:
 
 ### Parameters
 
-| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                            | [operations.PutPassthroughConnectionIDPathRequest](../../models/operations/putpassthroughconnectionidpathrequest.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.PatchPassthroughRequest](../../models/operations/patchpassthroughrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
 
 
 ### Response
 
-**[operations.PutPassthroughConnectionIDPathResponse](../../models/operations/putpassthroughconnectionidpathresponse.md)**
+**[operations.PatchPassthroughResponse](../../models/operations/patchpassthroughresponse.md)**
+
+
+## remove_passthrough
+
+Passthrough DELETE
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
+
+req = operations.RemovePassthroughRequest(
+    connection_id='Maine',
+    path='/boot',
+)
+
+res = s.passthrough.remove_passthrough(req)
+
+if res.undefined is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.RemovePassthroughRequest](../../models/operations/removepassthroughrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+
+
+### Response
+
+**[operations.RemovePassthroughResponse](../../models/operations/removepassthroughresponse.md)**
+
+
+## update_passthrough
+
+Passthrough PUT
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
+
+req = operations.UpdatePassthroughRequest(
+    connection_id='Manager',
+    path='/private/var',
+    undefined=shared.Undefined(),
+)
+
+res = s.passthrough.update_passthrough(req)
+
+if res.undefined is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.UpdatePassthroughRequest](../../models/operations/updatepassthroughrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+
+
+### Response
+
+**[operations.UpdatePassthroughResponse](../../models/operations/updatepassthroughresponse.md)**
 

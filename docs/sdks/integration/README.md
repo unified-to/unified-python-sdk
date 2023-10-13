@@ -3,20 +3,19 @@
 
 ### Available Operations
 
-* [get_unified_integration](#get_unified_integration) - Returns all integrations
-* [get_unified_integration_auth_workspace_id_integration_type](#get_unified_integration_auth_workspace_id_integration_type) - Create connection indirectly
-* [get_unified_integration_integration_type](#get_unified_integration_integration_type) - Retrieve an integration
-* [get_unified_integration_workspace_workspace_id](#get_unified_integration_workspace_workspace_id) - Returns all activated integrations in a workspace
+* [get_unified_integration](#get_unified_integration) - Retrieve an integration
+* [get_unified_integration_auth](#get_unified_integration_auth) - Create connection indirectly
+* [list_unified_integration_workspaces](#list_unified_integration_workspaces) - Returns all activated integrations in a workspace
+* [list_unified_integrations](#list_unified_integrations) - Returns all integrations
 
 ## get_unified_integration
 
-Returns all integrations
+Retrieve an integration
 
 ### Example Usage
 
 ```python
 import unified_to
-import dateutil.parser
 from unified_to.models import operations, shared
 
 s = unified_to.UnifiedTo(
@@ -26,14 +25,12 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetUnifiedIntegrationRequest(
-    categories=[
-        operations.GetUnifiedIntegrationCategories.ENRICH,
-    ],
+    integration_type='Berkelium panel',
 )
 
 res = s.integration.get_unified_integration(req)
 
-if res.integrations is not None:
+if res.integration is not None:
     # handle response
     pass
 ```
@@ -50,7 +47,7 @@ if res.integrations is not None:
 **[operations.GetUnifiedIntegrationResponse](../../models/operations/getunifiedintegrationresponse.md)**
 
 
-## get_unified_integration_auth_workspace_id_integration_type
+## get_unified_integration_auth
 
 Returns an authorization URL for the specified integration.  Once a successful authorization occurs, a new connection is created.
 
@@ -66,73 +63,34 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetUnifiedIntegrationAuthWorkspaceIDIntegrationTypeRequest(
-    integration_type='Algerian',
+req = operations.GetUnifiedIntegrationAuthRequest(
+    integration_type='Reggae Van pascal',
     scopes=[
-        operations.GetUnifiedIntegrationAuthWorkspaceIDIntegrationTypeScopes.MARTECH_MEMBER_WRITE,
+        operations.GetUnifiedIntegrationAuthScopes.ATS_SCORECARD_READ,
     ],
-    workspace_id='hound',
+    workspace_id='Xenogender North groupware',
 )
 
-res = s.integration.get_unified_integration_auth_workspace_id_integration_type(req)
+res = s.integration.get_unified_integration_auth(req)
 
-if res.get_unified_integration_auth_workspace_id_integration_type_200_application_json_string is not None:
+if res.get_unified_integration_auth_200_application_json_string is not None:
     # handle response
     pass
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                                                      | Type                                                                                                                                                           | Required                                                                                                                                                       | Description                                                                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                      | [operations.GetUnifiedIntegrationAuthWorkspaceIDIntegrationTypeRequest](../../models/operations/getunifiedintegrationauthworkspaceidintegrationtyperequest.md) | :heavy_check_mark:                                                                                                                                             | The request object to use for the request.                                                                                                                     |
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                  | [operations.GetUnifiedIntegrationAuthRequest](../../models/operations/getunifiedintegrationauthrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
 
 
 ### Response
 
-**[operations.GetUnifiedIntegrationAuthWorkspaceIDIntegrationTypeResponse](../../models/operations/getunifiedintegrationauthworkspaceidintegrationtyperesponse.md)**
+**[operations.GetUnifiedIntegrationAuthResponse](../../models/operations/getunifiedintegrationauthresponse.md)**
 
 
-## get_unified_integration_integration_type
-
-Retrieve an integration
-
-### Example Usage
-
-```python
-import unified_to
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.GetUnifiedIntegrationIntegrationTypeRequest(
-    integration_type='Pizza Electric',
-)
-
-res = s.integration.get_unified_integration_integration_type(req)
-
-if res.integration is not None:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                        | [operations.GetUnifiedIntegrationIntegrationTypeRequest](../../models/operations/getunifiedintegrationintegrationtyperequest.md) | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
-
-
-### Response
-
-**[operations.GetUnifiedIntegrationIntegrationTypeResponse](../../models/operations/getunifiedintegrationintegrationtyperesponse.md)**
-
-
-## get_unified_integration_workspace_workspace_id
+## list_unified_integration_workspaces
 
 No authentication required as this is to be used by front-end interface
 
@@ -148,14 +106,14 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetUnifiedIntegrationWorkspaceWorkspaceIDRequest(
+req = operations.ListUnifiedIntegrationWorkspacesRequest(
     categories=[
-        operations.GetUnifiedIntegrationWorkspaceWorkspaceIDCategories.HRIS,
+        operations.ListUnifiedIntegrationWorkspacesCategories.MARTECH,
     ],
-    workspace_id='North Southeast exercitationem',
+    workspace_id='Country Market Representative',
 )
 
-res = s.integration.get_unified_integration_workspace_workspace_id(req)
+res = s.integration.list_unified_integration_workspaces(req)
 
 if res.integrations is not None:
     # handle response
@@ -164,12 +122,54 @@ if res.integrations is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                                  | Type                                                                                                                                       | Required                                                                                                                                   | Description                                                                                                                                |
-| ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                  | [operations.GetUnifiedIntegrationWorkspaceWorkspaceIDRequest](../../models/operations/getunifiedintegrationworkspaceworkspaceidrequest.md) | :heavy_check_mark:                                                                                                                         | The request object to use for the request.                                                                                                 |
+| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
+| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                | [operations.ListUnifiedIntegrationWorkspacesRequest](../../models/operations/listunifiedintegrationworkspacesrequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
 
 
 ### Response
 
-**[operations.GetUnifiedIntegrationWorkspaceWorkspaceIDResponse](../../models/operations/getunifiedintegrationworkspaceworkspaceidresponse.md)**
+**[operations.ListUnifiedIntegrationWorkspacesResponse](../../models/operations/listunifiedintegrationworkspacesresponse.md)**
+
+
+## list_unified_integrations
+
+Returns all integrations
+
+### Example Usage
+
+```python
+import unified_to
+import dateutil.parser
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
+
+req = operations.ListUnifiedIntegrationsRequest(
+    categories=[
+        operations.ListUnifiedIntegrationsCategories.AUTH,
+    ],
+)
+
+res = s.integration.list_unified_integrations(req)
+
+if res.integrations is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                              | [operations.ListUnifiedIntegrationsRequest](../../models/operations/listunifiedintegrationsrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+
+
+### Response
+
+**[operations.ListUnifiedIntegrationsResponse](../../models/operations/listunifiedintegrationsresponse.md)**
 

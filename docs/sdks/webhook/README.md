@@ -3,128 +3,12 @@
 
 ### Available Operations
 
-* [delete_unified_webhook_id](#delete_unified_webhook_id) - Remove webhook subscription
-* [get_unified_webhook](#get_unified_webhook) - Returns all registered webhooks
-* [get_unified_webhook_id](#get_unified_webhook_id) - Retrieve webhook by its ID
-* [post_unified_webhook_connection_id_object](#post_unified_webhook_connection_id_object) - Create webhook subscription
+* [create_unified_webhook](#create_unified_webhook) - Create webhook subscription
+* [get_unified_webhook](#get_unified_webhook) - Retrieve webhook by its ID
+* [list_unified_webhooks](#list_unified_webhooks) - Returns all registered webhooks
+* [remove_unified_webhook](#remove_unified_webhook) - Remove webhook subscription
 
-## delete_unified_webhook_id
-
-Remove webhook subscription
-
-### Example Usage
-
-```python
-import unified_to
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.DeleteUnifiedWebhookIDRequest(
-    id='<ID>',
-)
-
-res = s.webhook.delete_unified_webhook_id(req)
-
-if res.status_code == 200:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `request`                                                                                            | [operations.DeleteUnifiedWebhookIDRequest](../../models/operations/deleteunifiedwebhookidrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
-
-
-### Response
-
-**[operations.DeleteUnifiedWebhookIDResponse](../../models/operations/deleteunifiedwebhookidresponse.md)**
-
-
-## get_unified_webhook
-
-Returns all registered webhooks
-
-### Example Usage
-
-```python
-import unified_to
-import dateutil.parser
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.GetUnifiedWebhookRequest()
-
-res = s.webhook.get_unified_webhook(req)
-
-if res.webhooks is not None:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `request`                                                                                  | [operations.GetUnifiedWebhookRequest](../../models/operations/getunifiedwebhookrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-
-
-### Response
-
-**[operations.GetUnifiedWebhookResponse](../../models/operations/getunifiedwebhookresponse.md)**
-
-
-## get_unified_webhook_id
-
-Retrieve webhook by its ID
-
-### Example Usage
-
-```python
-import unified_to
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.GetUnifiedWebhookIDRequest(
-    id='<ID>',
-)
-
-res = s.webhook.get_unified_webhook_id(req)
-
-if res.webhook is not None:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `request`                                                                                      | [operations.GetUnifiedWebhookIDRequest](../../models/operations/getunifiedwebhookidrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
-
-
-### Response
-
-**[operations.GetUnifiedWebhookIDResponse](../../models/operations/getunifiedwebhookidresponse.md)**
-
-
-## post_unified_webhook_connection_id_object
+## create_unified_webhook
 
 To maintain compatibility with the webhooks specification and Zapier webhooks, only the hook_url field is required in the payload when creating a Webhook.  When updated/new objects are found, the array of objects will be POSTed to the hook_url with the paramater hookId=<hookId>.
 
@@ -141,29 +25,29 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PostUnifiedWebhookConnectionIDObjectRequest(
+req = operations.CreateUnifiedWebhookRequest(
     webhook=shared.Webhook(
-        connection_id='drat',
+        connection_id='East male',
         events=[
-            shared.PropertyWebhookEvents.UPDATED,
+            shared.PropertyWebhookEvents.CREATED,
         ],
-        hook_url='siemens National',
-        integration_type='GB Rustic deposit',
-        interval=6073.96,
-        object_type=shared.WebhookObjectType.CRM_CONTACT,
+        hook_url='ah Account Bedfordshire',
+        integration_type='Tenge',
+        interval=4915.71,
+        object_type=shared.WebhookObjectType.MARTECH_MEMBER,
         subscriptions=[
-            'Diesel',
+            'delightfully',
         ],
-        workspace_id='female ken',
+        workspace_id='up Vatu',
     ),
-    connection_id='chocolate',
+    connection_id='Fitness grey Directives',
     events=[
-        operations.PostUnifiedWebhookConnectionIDObjectEvents.UPDATED,
+        operations.CreateUnifiedWebhookEvents.CREATED,
     ],
-    object='female driver',
+    object='Chair Kilback',
 )
 
-res = s.webhook.post_unified_webhook_connection_id_object(req)
+res = s.webhook.create_unified_webhook(req)
 
 if res.webhook is not None:
     # handle response
@@ -172,12 +56,128 @@ if res.webhook is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                        | [operations.PostUnifiedWebhookConnectionIDObjectRequest](../../models/operations/postunifiedwebhookconnectionidobjectrequest.md) | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `request`                                                                                        | [operations.CreateUnifiedWebhookRequest](../../models/operations/createunifiedwebhookrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
 
 
 ### Response
 
-**[operations.PostUnifiedWebhookConnectionIDObjectResponse](../../models/operations/postunifiedwebhookconnectionidobjectresponse.md)**
+**[operations.CreateUnifiedWebhookResponse](../../models/operations/createunifiedwebhookresponse.md)**
+
+
+## get_unified_webhook
+
+Retrieve webhook by its ID
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
+
+req = operations.GetUnifiedWebhookRequest(
+    id='<ID>',
+)
+
+res = s.webhook.get_unified_webhook(req)
+
+if res.webhook is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.GetUnifiedWebhookRequest](../../models/operations/getunifiedwebhookrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+
+
+### Response
+
+**[operations.GetUnifiedWebhookResponse](../../models/operations/getunifiedwebhookresponse.md)**
+
+
+## list_unified_webhooks
+
+Returns all registered webhooks
+
+### Example Usage
+
+```python
+import unified_to
+import dateutil.parser
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
+
+req = operations.ListUnifiedWebhooksRequest()
+
+res = s.webhook.list_unified_webhooks(req)
+
+if res.webhooks is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `request`                                                                                      | [operations.ListUnifiedWebhooksRequest](../../models/operations/listunifiedwebhooksrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+
+
+### Response
+
+**[operations.ListUnifiedWebhooksResponse](../../models/operations/listunifiedwebhooksresponse.md)**
+
+
+## remove_unified_webhook
+
+Remove webhook subscription
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
+
+req = operations.RemoveUnifiedWebhookRequest(
+    id='<ID>',
+)
+
+res = s.webhook.remove_unified_webhook(req)
+
+if res.status_code == 200:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `request`                                                                                        | [operations.RemoveUnifiedWebhookRequest](../../models/operations/removeunifiedwebhookrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+
+
+### Response
+
+**[operations.RemoveUnifiedWebhookResponse](../../models/operations/removeunifiedwebhookresponse.md)**
 

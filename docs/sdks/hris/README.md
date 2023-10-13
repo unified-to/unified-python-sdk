@@ -3,365 +3,20 @@
 
 ### Available Operations
 
-* [delete_hris_connection_id_employee_id](#delete_hris_connection_id_employee_id) - Remove an employee
-* [delete_hris_connection_id_group_id](#delete_hris_connection_id_group_id) - Remove a group
-* [get_hris_connection_id_employee](#get_hris_connection_id_employee) - List all employees
-* [get_hris_connection_id_employee_id](#get_hris_connection_id_employee_id) - Retrieve an employee
-* [get_hris_connection_id_group](#get_hris_connection_id_group) - List all groups
-* [get_hris_connection_id_group_id](#get_hris_connection_id_group_id) - Retrieve a group
-* [patch_hris_connection_id_employee_id](#patch_hris_connection_id_employee_id) - Update an employee
-* [patch_hris_connection_id_group_id](#patch_hris_connection_id_group_id) - Update a group
-* [post_hris_connection_id_employee](#post_hris_connection_id_employee) - Create an employee
-* [post_hris_connection_id_group](#post_hris_connection_id_group) - Create a group
-* [put_hris_connection_id_employee_id](#put_hris_connection_id_employee_id) - Update an employee
-* [put_hris_connection_id_group_id](#put_hris_connection_id_group_id) - Update a group
-
-## delete_hris_connection_id_employee_id
-
-Remove an employee
-
-### Example Usage
-
-```python
-import unified_to
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.DeleteHrisConnectionIDEmployeeIDRequest(
-    connection_id='Laredo turquoise port',
-    id='<ID>',
-)
-
-res = s.hris.delete_hris_connection_id_employee_id(req)
-
-if res.status_code == 200:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                | [operations.DeleteHrisConnectionIDEmployeeIDRequest](../../models/operations/deletehrisconnectionidemployeeidrequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
-
-
-### Response
-
-**[operations.DeleteHrisConnectionIDEmployeeIDResponse](../../models/operations/deletehrisconnectionidemployeeidresponse.md)**
-
-
-## delete_hris_connection_id_group_id
-
-Remove a group
-
-### Example Usage
-
-```python
-import unified_to
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.DeleteHrisConnectionIDGroupIDRequest(
-    connection_id='consequently platforms Metal',
-    id='<ID>',
-)
-
-res = s.hris.delete_hris_connection_id_group_id(req)
-
-if res.status_code == 200:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                          | [operations.DeleteHrisConnectionIDGroupIDRequest](../../models/operations/deletehrisconnectionidgroupidrequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
-
-
-### Response
-
-**[operations.DeleteHrisConnectionIDGroupIDResponse](../../models/operations/deletehrisconnectionidgroupidresponse.md)**
-
-
-## get_hris_connection_id_employee
-
-List all employees
-
-### Example Usage
-
-```python
-import unified_to
-import dateutil.parser
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.GetHrisConnectionIDEmployeeRequest(
-    connection_id='initiatives greedily project',
-)
-
-res = s.hris.get_hris_connection_id_employee(req)
-
-if res.hris_employees is not None:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                      | [operations.GetHrisConnectionIDEmployeeRequest](../../models/operations/gethrisconnectionidemployeerequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
-
-
-### Response
-
-**[operations.GetHrisConnectionIDEmployeeResponse](../../models/operations/gethrisconnectionidemployeeresponse.md)**
-
-
-## get_hris_connection_id_employee_id
-
-Retrieve an employee
-
-### Example Usage
-
-```python
-import unified_to
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.GetHrisConnectionIDEmployeeIDRequest(
-    connection_id='Keyboard cleverly Rubber',
-    id='<ID>',
-)
-
-res = s.hris.get_hris_connection_id_employee_id(req)
-
-if res.hris_employee is not None:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                          | [operations.GetHrisConnectionIDEmployeeIDRequest](../../models/operations/gethrisconnectionidemployeeidrequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
-
-
-### Response
-
-**[operations.GetHrisConnectionIDEmployeeIDResponse](../../models/operations/gethrisconnectionidemployeeidresponse.md)**
-
-
-## get_hris_connection_id_group
-
-List all groups
-
-### Example Usage
-
-```python
-import unified_to
-import dateutil.parser
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.GetHrisConnectionIDGroupRequest(
-    connection_id='Loan',
-)
-
-res = s.hris.get_hris_connection_id_group(req)
-
-if res.hris_groups is not None:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                | [operations.GetHrisConnectionIDGroupRequest](../../models/operations/gethrisconnectionidgrouprequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-
-
-### Response
-
-**[operations.GetHrisConnectionIDGroupResponse](../../models/operations/gethrisconnectionidgroupresponse.md)**
-
-
-## get_hris_connection_id_group_id
-
-Retrieve a group
-
-### Example Usage
-
-```python
-import unified_to
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.GetHrisConnectionIDGroupIDRequest(
-    connection_id='behind',
-    id='<ID>',
-)
-
-res = s.hris.get_hris_connection_id_group_id(req)
-
-if res.hris_group is not None:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                    | [operations.GetHrisConnectionIDGroupIDRequest](../../models/operations/gethrisconnectionidgroupidrequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
-
-
-### Response
-
-**[operations.GetHrisConnectionIDGroupIDResponse](../../models/operations/gethrisconnectionidgroupidresponse.md)**
-
-
-## patch_hris_connection_id_employee_id
-
-Update an employee
-
-### Example Usage
-
-```python
-import unified_to
-import dateutil.parser
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.PatchHrisConnectionIDEmployeeIDRequest(
-    hris_employee=shared.HrisEmployee(
-        address=shared.PropertyHrisEmployeeAddress(),
-        emails=[
-            shared.HrisEmail(
-                email='Brennan.Senger@yahoo.com',
-            ),
-        ],
-        raw=shared.PropertyHrisEmployeeRaw(),
-        telephones=[
-            shared.HrisTelephone(
-                telephone='Assurance forecast',
-            ),
-        ],
-    ),
-    connection_id='Bahamas if fictionalise',
-    id='<ID>',
-)
-
-res = s.hris.patch_hris_connection_id_employee_id(req)
-
-if res.hris_employee is not None:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
-| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                              | [operations.PatchHrisConnectionIDEmployeeIDRequest](../../models/operations/patchhrisconnectionidemployeeidrequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
-
-
-### Response
-
-**[operations.PatchHrisConnectionIDEmployeeIDResponse](../../models/operations/patchhrisconnectionidemployeeidresponse.md)**
-
-
-## patch_hris_connection_id_group_id
-
-Update a group
-
-### Example Usage
-
-```python
-import unified_to
-import dateutil.parser
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.PatchHrisConnectionIDGroupIDRequest(
-    hris_group=shared.HrisGroup(
-        employee_ids=[
-            'gosh',
-        ],
-        manager_ids=[
-            'Northwest',
-        ],
-        raw=shared.PropertyHrisGroupRaw(),
-    ),
-    connection_id='grey East Agender',
-    id='<ID>',
-)
-
-res = s.hris.patch_hris_connection_id_group_id(req)
-
-if res.hris_group is not None:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                        | [operations.PatchHrisConnectionIDGroupIDRequest](../../models/operations/patchhrisconnectionidgroupidrequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
-
-
-### Response
-
-**[operations.PatchHrisConnectionIDGroupIDResponse](../../models/operations/patchhrisconnectionidgroupidresponse.md)**
-
-
-## post_hris_connection_id_employee
+* [create_hris_employee](#create_hris_employee) - Create an employee
+* [create_hris_group](#create_hris_group) - Create a group
+* [get_hris_employee](#get_hris_employee) - Retrieve an employee
+* [get_hris_group](#get_hris_group) - Retrieve a group
+* [list_hris_employees](#list_hris_employees) - List all employees
+* [list_hris_groups](#list_hris_groups) - List all groups
+* [patch_hris_employee](#patch_hris_employee) - Update an employee
+* [patch_hris_group](#patch_hris_group) - Update a group
+* [remove_hris_employee](#remove_hris_employee) - Remove an employee
+* [remove_hris_group](#remove_hris_group) - Remove a group
+* [update_hris_employee](#update_hris_employee) - Update an employee
+* [update_hris_group](#update_hris_group) - Update a group
+
+## create_hris_employee
 
 Create an employee
 
@@ -378,25 +33,25 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PostHrisConnectionIDEmployeeRequest(
+req = operations.CreateHrisEmployeeRequest(
     hris_employee=shared.HrisEmployee(
         address=shared.PropertyHrisEmployeeAddress(),
         emails=[
             shared.HrisEmail(
-                email='Berry.Reinger@hotmail.com',
+                email='Adriel_Hansen@hotmail.com',
             ),
         ],
         raw=shared.PropertyHrisEmployeeRaw(),
         telephones=[
             shared.HrisTelephone(
-                telephone='Chicken Southwest',
+                telephone='Gloves with',
             ),
         ],
     ),
-    connection_id='generate Forward Diesel',
+    connection_id='ack Recycled',
 )
 
-res = s.hris.post_hris_connection_id_employee(req)
+res = s.hris.create_hris_employee(req)
 
 if res.hris_employee is not None:
     # handle response
@@ -405,17 +60,17 @@ if res.hris_employee is not None:
 
 ### Parameters
 
-| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                        | [operations.PostHrisConnectionIDEmployeeRequest](../../models/operations/posthrisconnectionidemployeerequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.CreateHrisEmployeeRequest](../../models/operations/createhrisemployeerequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 
 ### Response
 
-**[operations.PostHrisConnectionIDEmployeeResponse](../../models/operations/posthrisconnectionidemployeeresponse.md)**
+**[operations.CreateHrisEmployeeResponse](../../models/operations/createhrisemployeeresponse.md)**
 
 
-## post_hris_connection_id_group
+## create_hris_group
 
 Create a group
 
@@ -432,20 +87,20 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PostHrisConnectionIDGroupRequest(
+req = operations.CreateHrisGroupRequest(
     hris_group=shared.HrisGroup(
         employee_ids=[
-            'Bhutan',
+            'transmitter',
         ],
         manager_ids=[
-            'Polestar',
+            'dependable',
         ],
         raw=shared.PropertyHrisGroupRaw(),
     ),
-    connection_id='Cab XSS',
+    connection_id='Technetium',
 )
 
-res = s.hris.post_hris_connection_id_group(req)
+res = s.hris.create_hris_group(req)
 
 if res.hris_group is not None:
     # handle response
@@ -454,17 +109,177 @@ if res.hris_group is not None:
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                  | [operations.PostHrisConnectionIDGroupRequest](../../models/operations/posthrisconnectionidgrouprequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `request`                                                                              | [operations.CreateHrisGroupRequest](../../models/operations/createhrisgrouprequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
 
 
 ### Response
 
-**[operations.PostHrisConnectionIDGroupResponse](../../models/operations/posthrisconnectionidgroupresponse.md)**
+**[operations.CreateHrisGroupResponse](../../models/operations/createhrisgroupresponse.md)**
 
 
-## put_hris_connection_id_employee_id
+## get_hris_employee
+
+Retrieve an employee
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
+
+req = operations.GetHrisEmployeeRequest(
+    connection_id='Automated',
+    id='<ID>',
+)
+
+res = s.hris.get_hris_employee(req)
+
+if res.hris_employee is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `request`                                                                              | [operations.GetHrisEmployeeRequest](../../models/operations/gethrisemployeerequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+
+
+### Response
+
+**[operations.GetHrisEmployeeResponse](../../models/operations/gethrisemployeeresponse.md)**
+
+
+## get_hris_group
+
+Retrieve a group
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
+
+req = operations.GetHrisGroupRequest(
+    connection_id='Cedi state Cadillac',
+    id='<ID>',
+)
+
+res = s.hris.get_hris_group(req)
+
+if res.hris_group is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `request`                                                                        | [operations.GetHrisGroupRequest](../../models/operations/gethrisgrouprequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
+
+
+### Response
+
+**[operations.GetHrisGroupResponse](../../models/operations/gethrisgroupresponse.md)**
+
+
+## list_hris_employees
+
+List all employees
+
+### Example Usage
+
+```python
+import unified_to
+import dateutil.parser
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
+
+req = operations.ListHrisEmployeesRequest(
+    connection_id='Table moratorium',
+)
+
+res = s.hris.list_hris_employees(req)
+
+if res.hris_employees is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.ListHrisEmployeesRequest](../../models/operations/listhrisemployeesrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+
+
+### Response
+
+**[operations.ListHrisEmployeesResponse](../../models/operations/listhrisemployeesresponse.md)**
+
+
+## list_hris_groups
+
+List all groups
+
+### Example Usage
+
+```python
+import unified_to
+import dateutil.parser
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
+
+req = operations.ListHrisGroupsRequest(
+    connection_id='Bronze Rubber',
+)
+
+res = s.hris.list_hris_groups(req)
+
+if res.hris_groups is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [operations.ListHrisGroupsRequest](../../models/operations/listhrisgroupsrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+
+
+### Response
+
+**[operations.ListHrisGroupsResponse](../../models/operations/listhrisgroupsresponse.md)**
+
+
+## patch_hris_employee
 
 Update an employee
 
@@ -481,26 +296,26 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PutHrisConnectionIDEmployeeIDRequest(
+req = operations.PatchHrisEmployeeRequest(
     hris_employee=shared.HrisEmployee(
         address=shared.PropertyHrisEmployeeAddress(),
         emails=[
             shared.HrisEmail(
-                email='Bert90@gmail.com',
+                email='Zetta.Cassin@yahoo.com',
             ),
         ],
         raw=shared.PropertyHrisEmployeeRaw(),
         telephones=[
             shared.HrisTelephone(
-                telephone='mobile',
+                telephone='shameful',
             ),
         ],
     ),
-    connection_id='a online olive',
+    connection_id='barring transmitting Hybrid',
     id='<ID>',
 )
 
-res = s.hris.put_hris_connection_id_employee_id(req)
+res = s.hris.patch_hris_employee(req)
 
 if res.hris_employee is not None:
     # handle response
@@ -509,17 +324,17 @@ if res.hris_employee is not None:
 
 ### Parameters
 
-| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                          | [operations.PutHrisConnectionIDEmployeeIDRequest](../../models/operations/puthrisconnectionidemployeeidrequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.PatchHrisEmployeeRequest](../../models/operations/patchhrisemployeerequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 
 ### Response
 
-**[operations.PutHrisConnectionIDEmployeeIDResponse](../../models/operations/puthrisconnectionidemployeeidresponse.md)**
+**[operations.PatchHrisEmployeeResponse](../../models/operations/patchhrisemployeeresponse.md)**
 
 
-## put_hris_connection_id_group_id
+## patch_hris_group
 
 Update a group
 
@@ -536,21 +351,21 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PutHrisConnectionIDGroupIDRequest(
+req = operations.PatchHrisGroupRequest(
     hris_group=shared.HrisGroup(
         employee_ids=[
-            'panel',
+            'scalable',
         ],
         manager_ids=[
-            'And',
+            'Bespoke',
         ],
         raw=shared.PropertyHrisGroupRaw(),
     ),
-    connection_id='Small woman solid',
+    connection_id='bluetooth West',
     id='<ID>',
 )
 
-res = s.hris.put_hris_connection_id_group_id(req)
+res = s.hris.patch_hris_group(req)
 
 if res.hris_group is not None:
     # handle response
@@ -559,12 +374,197 @@ if res.hris_group is not None:
 
 ### Parameters
 
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                    | [operations.PutHrisConnectionIDGroupIDRequest](../../models/operations/puthrisconnectionidgroupidrequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [operations.PatchHrisGroupRequest](../../models/operations/patchhrisgrouprequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
 
 
 ### Response
 
-**[operations.PutHrisConnectionIDGroupIDResponse](../../models/operations/puthrisconnectionidgroupidresponse.md)**
+**[operations.PatchHrisGroupResponse](../../models/operations/patchhrisgroupresponse.md)**
+
+
+## remove_hris_employee
+
+Remove an employee
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
+
+req = operations.RemoveHrisEmployeeRequest(
+    connection_id='Architect',
+    id='<ID>',
+)
+
+res = s.hris.remove_hris_employee(req)
+
+if res.status_code == 200:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.RemoveHrisEmployeeRequest](../../models/operations/removehrisemployeerequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+
+
+### Response
+
+**[operations.RemoveHrisEmployeeResponse](../../models/operations/removehrisemployeeresponse.md)**
+
+
+## remove_hris_group
+
+Remove a group
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
+
+req = operations.RemoveHrisGroupRequest(
+    connection_id='Human Soft Unbranded',
+    id='<ID>',
+)
+
+res = s.hris.remove_hris_group(req)
+
+if res.status_code == 200:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `request`                                                                              | [operations.RemoveHrisGroupRequest](../../models/operations/removehrisgrouprequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+
+
+### Response
+
+**[operations.RemoveHrisGroupResponse](../../models/operations/removehrisgroupresponse.md)**
+
+
+## update_hris_employee
+
+Update an employee
+
+### Example Usage
+
+```python
+import unified_to
+import dateutil.parser
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
+
+req = operations.UpdateHrisEmployeeRequest(
+    hris_employee=shared.HrisEmployee(
+        address=shared.PropertyHrisEmployeeAddress(),
+        emails=[
+            shared.HrisEmail(
+                email='Abbie_Aufderhar@gmail.com',
+            ),
+        ],
+        raw=shared.PropertyHrisEmployeeRaw(),
+        telephones=[
+            shared.HrisTelephone(
+                telephone='Web Borders North',
+            ),
+        ],
+    ),
+    connection_id='Jewelery slap',
+    id='<ID>',
+)
+
+res = s.hris.update_hris_employee(req)
+
+if res.hris_employee is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.UpdateHrisEmployeeRequest](../../models/operations/updatehrisemployeerequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+
+
+### Response
+
+**[operations.UpdateHrisEmployeeResponse](../../models/operations/updatehrisemployeeresponse.md)**
+
+
+## update_hris_group
+
+Update a group
+
+### Example Usage
+
+```python
+import unified_to
+import dateutil.parser
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
+
+req = operations.UpdateHrisGroupRequest(
+    hris_group=shared.HrisGroup(
+        employee_ids=[
+            'disintermediate',
+        ],
+        manager_ids=[
+            'schemas',
+        ],
+        raw=shared.PropertyHrisGroupRaw(),
+    ),
+    connection_id='bashfully',
+    id='<ID>',
+)
+
+res = s.hris.update_hris_group(req)
+
+if res.hris_group is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `request`                                                                              | [operations.UpdateHrisGroupRequest](../../models/operations/updatehrisgrouprequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+
+
+### Response
+
+**[operations.UpdateHrisGroupResponse](../../models/operations/updatehrisgroupresponse.md)**
 

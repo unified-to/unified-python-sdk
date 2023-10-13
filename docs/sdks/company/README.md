@@ -3,236 +3,15 @@
 
 ### Available Operations
 
-* [delete_crm_connection_id_company_id](#delete_crm_connection_id_company_id) - Remove a company
-* [get_crm_connection_id_company](#get_crm_connection_id_company) - List all companies
-* [get_crm_connection_id_company_id](#get_crm_connection_id_company_id) - Retrieve a company
-* [get_enrich_connection_id_company](#get_enrich_connection_id_company) - Retrieve enrichment information for a company
-* [patch_crm_connection_id_company_id](#patch_crm_connection_id_company_id) - Update a company
-* [post_crm_connection_id_company](#post_crm_connection_id_company) - Create a company
-* [put_crm_connection_id_company_id](#put_crm_connection_id_company_id) - Update a company
-
-## delete_crm_connection_id_company_id
-
-Remove a company
-
-### Example Usage
-
-```python
-import unified_to
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.DeleteCrmConnectionIDCompanyIDRequest(
-    connection_id='hertz morph',
-    id='<ID>',
-)
-
-res = s.company.delete_crm_connection_id_company_id(req)
-
-if res.status_code == 200:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                            | [operations.DeleteCrmConnectionIDCompanyIDRequest](../../models/operations/deletecrmconnectionidcompanyidrequest.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
-
-
-### Response
-
-**[operations.DeleteCrmConnectionIDCompanyIDResponse](../../models/operations/deletecrmconnectionidcompanyidresponse.md)**
-
-
-## get_crm_connection_id_company
-
-List all companies
-
-### Example Usage
-
-```python
-import unified_to
-import dateutil.parser
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.GetCrmConnectionIDCompanyRequest(
-    connection_id='indexing',
-)
-
-res = s.company.get_crm_connection_id_company(req)
-
-if res.crm_companies is not None:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                  | [operations.GetCrmConnectionIDCompanyRequest](../../models/operations/getcrmconnectionidcompanyrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
-
-
-### Response
-
-**[operations.GetCrmConnectionIDCompanyResponse](../../models/operations/getcrmconnectionidcompanyresponse.md)**
-
-
-## get_crm_connection_id_company_id
-
-Retrieve a company
-
-### Example Usage
-
-```python
-import unified_to
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.GetCrmConnectionIDCompanyIDRequest(
-    connection_id='Netherlands',
-    id='<ID>',
-)
-
-res = s.company.get_crm_connection_id_company_id(req)
-
-if res.crm_company is not None:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                      | [operations.GetCrmConnectionIDCompanyIDRequest](../../models/operations/getcrmconnectionidcompanyidrequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
-
-
-### Response
-
-**[operations.GetCrmConnectionIDCompanyIDResponse](../../models/operations/getcrmconnectionidcompanyidresponse.md)**
-
-
-## get_enrich_connection_id_company
-
-Retrieve enrichment information for a company
-
-### Example Usage
-
-```python
-import unified_to
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.GetEnrichConnectionIDCompanyRequest(
-    connection_id='female Computers Central',
-)
-
-res = s.company.get_enrich_connection_id_company(req)
-
-if res.enrich_company is not None:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                        | [operations.GetEnrichConnectionIDCompanyRequest](../../models/operations/getenrichconnectionidcompanyrequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
-
-
-### Response
-
-**[operations.GetEnrichConnectionIDCompanyResponse](../../models/operations/getenrichconnectionidcompanyresponse.md)**
-
-
-## patch_crm_connection_id_company_id
-
-Update a company
-
-### Example Usage
-
-```python
-import unified_to
-import dateutil.parser
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.PatchCrmConnectionIDCompanyIDRequest(
-    crm_company=shared.CrmCompany(
-        address=shared.PropertyCrmCompanyAddress(),
-        deal_ids=[
-            'Soft',
-        ],
-        emails=[
-            shared.CrmEmail(),
-        ],
-        raw=shared.PropertyCrmCompanyRaw(),
-        tags=[
-            'invoice',
-        ],
-        telephones=[
-            shared.CrmTelephone(
-                telephone='miniature Quality',
-            ),
-        ],
-        websites=[
-            'redefine',
-        ],
-    ),
-    connection_id='invoice National',
-    id='<ID>',
-)
-
-res = s.company.patch_crm_connection_id_company_id(req)
-
-if res.crm_company is not None:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                          | [operations.PatchCrmConnectionIDCompanyIDRequest](../../models/operations/patchcrmconnectionidcompanyidrequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
-
-
-### Response
-
-**[operations.PatchCrmConnectionIDCompanyIDResponse](../../models/operations/patchcrmconnectionidcompanyidresponse.md)**
-
-
-## post_crm_connection_id_company
+* [create_crm_company](#create_crm_company) - Create a company
+* [get_crm_company](#get_crm_company) - Retrieve a company
+* [list_crm_companies](#list_crm_companies) - List all companies
+* [list_enrich_companies](#list_enrich_companies) - Retrieve enrichment information for a company
+* [patch_crm_company](#patch_crm_company) - Update a company
+* [remove_crm_company](#remove_crm_company) - Remove a company
+* [update_crm_company](#update_crm_company) - Update a company
+
+## create_crm_company
 
 Create a company
 
@@ -249,32 +28,32 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PostCrmConnectionIDCompanyRequest(
+req = operations.CreateCrmCompanyRequest(
     crm_company=shared.CrmCompany(
         address=shared.PropertyCrmCompanyAddress(),
         deal_ids=[
-            'Personal',
+            'connecting',
         ],
         emails=[
             shared.CrmEmail(),
         ],
         raw=shared.PropertyCrmCompanyRaw(),
         tags=[
-            'gosh',
+            'carouse',
         ],
         telephones=[
             shared.CrmTelephone(
-                telephone='phooey',
+                telephone='Germany',
             ),
         ],
         websites=[
-            'primary',
+            'yippee',
         ],
     ),
-    connection_id='neural',
+    connection_id='magenta Data woot',
 )
 
-res = s.company.post_crm_connection_id_company(req)
+res = s.company.create_crm_company(req)
 
 if res.crm_company is not None:
     # handle response
@@ -283,17 +62,136 @@ if res.crm_company is not None:
 
 ### Parameters
 
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                    | [operations.PostCrmConnectionIDCompanyRequest](../../models/operations/postcrmconnectionidcompanyrequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.CreateCrmCompanyRequest](../../models/operations/createcrmcompanyrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
 
 
 ### Response
 
-**[operations.PostCrmConnectionIDCompanyResponse](../../models/operations/postcrmconnectionidcompanyresponse.md)**
+**[operations.CreateCrmCompanyResponse](../../models/operations/createcrmcompanyresponse.md)**
 
 
-## put_crm_connection_id_company_id
+## get_crm_company
+
+Retrieve a company
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
+
+req = operations.GetCrmCompanyRequest(
+    connection_id='THX Strategist deposit',
+    id='<ID>',
+)
+
+res = s.company.get_crm_company(req)
+
+if res.crm_company is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `request`                                                                          | [operations.GetCrmCompanyRequest](../../models/operations/getcrmcompanyrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+
+
+### Response
+
+**[operations.GetCrmCompanyResponse](../../models/operations/getcrmcompanyresponse.md)**
+
+
+## list_crm_companies
+
+List all companies
+
+### Example Usage
+
+```python
+import unified_to
+import dateutil.parser
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
+
+req = operations.ListCrmCompaniesRequest(
+    connection_id='Jazz solid Lamborghini',
+)
+
+res = s.company.list_crm_companies(req)
+
+if res.crm_companies is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.ListCrmCompaniesRequest](../../models/operations/listcrmcompaniesrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+
+
+### Response
+
+**[operations.ListCrmCompaniesResponse](../../models/operations/listcrmcompaniesresponse.md)**
+
+
+## list_enrich_companies
+
+Retrieve enrichment information for a company
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
+
+req = operations.ListEnrichCompaniesRequest(
+    connection_id='Chips',
+)
+
+res = s.company.list_enrich_companies(req)
+
+if res.enrich_company is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `request`                                                                                      | [operations.ListEnrichCompaniesRequest](../../models/operations/listenrichcompaniesrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+
+
+### Response
+
+**[operations.ListEnrichCompaniesResponse](../../models/operations/listenrichcompaniesresponse.md)**
+
+
+## patch_crm_company
 
 Update a company
 
@@ -310,33 +208,33 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PutCrmConnectionIDCompanyIDRequest(
+req = operations.PatchCrmCompanyRequest(
     crm_company=shared.CrmCompany(
         address=shared.PropertyCrmCompanyAddress(),
         deal_ids=[
-            'dicta',
+            'Producer',
         ],
         emails=[
             shared.CrmEmail(),
         ],
         raw=shared.PropertyCrmCompanyRaw(),
         tags=[
-            'background',
+            'Corporate',
         ],
         telephones=[
             shared.CrmTelephone(
-                telephone='veniam secondary',
+                telephone='haptic Phased',
             ),
         ],
         websites=[
-            'Southwest',
+            'Investment',
         ],
     ),
-    connection_id='Calcium',
+    connection_id='Trans',
     id='<ID>',
 )
 
-res = s.company.put_crm_connection_id_company_id(req)
+res = s.company.patch_crm_company(req)
 
 if res.crm_company is not None:
     # handle response
@@ -345,12 +243,114 @@ if res.crm_company is not None:
 
 ### Parameters
 
-| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                      | [operations.PutCrmConnectionIDCompanyIDRequest](../../models/operations/putcrmconnectionidcompanyidrequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `request`                                                                              | [operations.PatchCrmCompanyRequest](../../models/operations/patchcrmcompanyrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
 
 
 ### Response
 
-**[operations.PutCrmConnectionIDCompanyIDResponse](../../models/operations/putcrmconnectionidcompanyidresponse.md)**
+**[operations.PatchCrmCompanyResponse](../../models/operations/patchcrmcompanyresponse.md)**
+
+
+## remove_crm_company
+
+Remove a company
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
+
+req = operations.RemoveCrmCompanyRequest(
+    connection_id='Mayaguez index wireless',
+    id='<ID>',
+)
+
+res = s.company.remove_crm_company(req)
+
+if res.status_code == 200:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.RemoveCrmCompanyRequest](../../models/operations/removecrmcompanyrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+
+
+### Response
+
+**[operations.RemoveCrmCompanyResponse](../../models/operations/removecrmcompanyresponse.md)**
+
+
+## update_crm_company
+
+Update a company
+
+### Example Usage
+
+```python
+import unified_to
+import dateutil.parser
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
+
+req = operations.UpdateCrmCompanyRequest(
+    crm_company=shared.CrmCompany(
+        address=shared.PropertyCrmCompanyAddress(),
+        deal_ids=[
+            'SMS',
+        ],
+        emails=[
+            shared.CrmEmail(),
+        ],
+        raw=shared.PropertyCrmCompanyRaw(),
+        tags=[
+            'barrel',
+        ],
+        telephones=[
+            shared.CrmTelephone(
+                telephone='Account alarm infrastructure',
+            ),
+        ],
+        websites=[
+            'Visionary',
+        ],
+    ),
+    connection_id='Southeast ad',
+    id='<ID>',
+)
+
+res = s.company.update_crm_company(req)
+
+if res.crm_company is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.UpdateCrmCompanyRequest](../../models/operations/updatecrmcompanyrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+
+
+### Response
+
+**[operations.UpdateCrmCompanyResponse](../../models/operations/updatecrmcompanyresponse.md)**
 

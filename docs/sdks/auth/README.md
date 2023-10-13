@@ -3,10 +3,10 @@
 
 ### Available Operations
 
-* [get_unified_integration_auth_workspace_id_integration_type](#get_unified_integration_auth_workspace_id_integration_type) - Create connection indirectly
-* [get_unified_integration_login_workspace_id_integration_type](#get_unified_integration_login_workspace_id_integration_type) - Sign in a user
+* [get_unified_integration_auth](#get_unified_integration_auth) - Create connection indirectly
+* [get_unified_integration_login](#get_unified_integration_login) - Sign in a user
 
-## get_unified_integration_auth_workspace_id_integration_type
+## get_unified_integration_auth
 
 Returns an authorization URL for the specified integration.  Once a successful authorization occurs, a new connection is created.
 
@@ -22,34 +22,34 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetUnifiedIntegrationAuthWorkspaceIDIntegrationTypeRequest(
-    integration_type='Algerian',
+req = operations.GetUnifiedIntegrationAuthRequest(
+    integration_type='Reggae Van pascal',
     scopes=[
-        operations.GetUnifiedIntegrationAuthWorkspaceIDIntegrationTypeScopes.MARTECH_MEMBER_WRITE,
+        operations.GetUnifiedIntegrationAuthScopes.ATS_SCORECARD_READ,
     ],
-    workspace_id='hound',
+    workspace_id='Xenogender North groupware',
 )
 
-res = s.auth.get_unified_integration_auth_workspace_id_integration_type(req)
+res = s.auth.get_unified_integration_auth(req)
 
-if res.get_unified_integration_auth_workspace_id_integration_type_200_application_json_string is not None:
+if res.get_unified_integration_auth_200_application_json_string is not None:
     # handle response
     pass
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                                                      | Type                                                                                                                                                           | Required                                                                                                                                                       | Description                                                                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                      | [operations.GetUnifiedIntegrationAuthWorkspaceIDIntegrationTypeRequest](../../models/operations/getunifiedintegrationauthworkspaceidintegrationtyperequest.md) | :heavy_check_mark:                                                                                                                                             | The request object to use for the request.                                                                                                                     |
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                  | [operations.GetUnifiedIntegrationAuthRequest](../../models/operations/getunifiedintegrationauthrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
 
 
 ### Response
 
-**[operations.GetUnifiedIntegrationAuthWorkspaceIDIntegrationTypeResponse](../../models/operations/getunifiedintegrationauthworkspaceidintegrationtyperesponse.md)**
+**[operations.GetUnifiedIntegrationAuthResponse](../../models/operations/getunifiedintegrationauthresponse.md)**
 
 
-## get_unified_integration_login_workspace_id_integration_type
+## get_unified_integration_login
 
 Returns an authentication URL for the specified integration.  Once a successful authentication occurs, the name and emails are returned.
 
@@ -65,26 +65,26 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetUnifiedIntegrationLoginWorkspaceIDIntegrationTypeRequest(
-    integration_type='Rubber',
-    workspace_id='gold Cambridgeshire',
+req = operations.GetUnifiedIntegrationLoginRequest(
+    integration_type='Bicycle markets Soft',
+    workspace_id='bus Strontium',
 )
 
-res = s.auth.get_unified_integration_login_workspace_id_integration_type(req)
+res = s.auth.get_unified_integration_login(req)
 
-if res.get_unified_integration_login_workspace_id_integration_type_200_application_json_string is not None:
+if res.get_unified_integration_login_200_application_json_string is not None:
     # handle response
     pass
 ```
 
 ### Parameters
 
-| Parameter                                                                                                                                                        | Type                                                                                                                                                             | Required                                                                                                                                                         | Description                                                                                                                                                      |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                        | [operations.GetUnifiedIntegrationLoginWorkspaceIDIntegrationTypeRequest](../../models/operations/getunifiedintegrationloginworkspaceidintegrationtyperequest.md) | :heavy_check_mark:                                                                                                                                               | The request object to use for the request.                                                                                                                       |
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                    | [operations.GetUnifiedIntegrationLoginRequest](../../models/operations/getunifiedintegrationloginrequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
 
 
 ### Response
 
-**[operations.GetUnifiedIntegrationLoginWorkspaceIDIntegrationTypeResponse](../../models/operations/getunifiedintegrationloginworkspaceidintegrationtyperesponse.md)**
+**[operations.GetUnifiedIntegrationLoginResponse](../../models/operations/getunifiedintegrationloginresponse.md)**
 

@@ -12,13 +12,13 @@ class Call:
         self.sdk_configuration = sdk_config
         
     
-    def get_uc_connection_id_call(self, request: operations.GetUcConnectionIDCallRequest) -> operations.GetUcConnectionIDCallResponse:
+    def list_uc_calls(self, request: operations.ListUcCallsRequest) -> operations.ListUcCallsResponse:
         r"""List all calls"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.GetUcConnectionIDCallRequest, base_url, '/uc/{connection_id}/call', request)
+        url = utils.generate_url(operations.ListUcCallsRequest, base_url, '/uc/{connection_id}/call', request)
         headers = {}
-        query_params = utils.get_query_params(operations.GetUcConnectionIDCallRequest, request)
+        query_params = utils.get_query_params(operations.ListUcCallsRequest, request)
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
@@ -27,7 +27,7 @@ class Call:
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
-        res = operations.GetUcConnectionIDCallResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        res = operations.ListUcCallsResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):

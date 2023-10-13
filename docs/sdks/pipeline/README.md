@@ -3,178 +3,14 @@
 
 ### Available Operations
 
-* [delete_crm_connection_id_pipeline_id](#delete_crm_connection_id_pipeline_id) - Remove a pipeline
-* [get_crm_connection_id_pipeline](#get_crm_connection_id_pipeline) - List all pipelines
-* [get_crm_connection_id_pipeline_id](#get_crm_connection_id_pipeline_id) - Retrieve a pipeline
-* [patch_crm_connection_id_pipeline_id](#patch_crm_connection_id_pipeline_id) - Update a pipeline
-* [post_crm_connection_id_pipeline](#post_crm_connection_id_pipeline) - Create a pipeline
-* [put_crm_connection_id_pipeline_id](#put_crm_connection_id_pipeline_id) - Update a pipeline
+* [create_crm_pipeline](#create_crm_pipeline) - Create a pipeline
+* [get_crm_pipeline](#get_crm_pipeline) - Retrieve a pipeline
+* [list_crm_pipelines](#list_crm_pipelines) - List all pipelines
+* [patch_crm_pipeline](#patch_crm_pipeline) - Update a pipeline
+* [remove_crm_pipeline](#remove_crm_pipeline) - Remove a pipeline
+* [update_crm_pipeline](#update_crm_pipeline) - Update a pipeline
 
-## delete_crm_connection_id_pipeline_id
-
-Remove a pipeline
-
-### Example Usage
-
-```python
-import unified_to
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.DeleteCrmConnectionIDPipelineIDRequest(
-    connection_id='Customer',
-    id='<ID>',
-)
-
-res = s.pipeline.delete_crm_connection_id_pipeline_id(req)
-
-if res.status_code == 200:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
-| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                              | [operations.DeleteCrmConnectionIDPipelineIDRequest](../../models/operations/deletecrmconnectionidpipelineidrequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
-
-
-### Response
-
-**[operations.DeleteCrmConnectionIDPipelineIDResponse](../../models/operations/deletecrmconnectionidpipelineidresponse.md)**
-
-
-## get_crm_connection_id_pipeline
-
-List all pipelines
-
-### Example Usage
-
-```python
-import unified_to
-import dateutil.parser
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.GetCrmConnectionIDPipelineRequest(
-    connection_id='dirty Awesome Checking',
-)
-
-res = s.pipeline.get_crm_connection_id_pipeline(req)
-
-if res.crm_pipelines is not None:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                    | [operations.GetCrmConnectionIDPipelineRequest](../../models/operations/getcrmconnectionidpipelinerequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
-
-
-### Response
-
-**[operations.GetCrmConnectionIDPipelineResponse](../../models/operations/getcrmconnectionidpipelineresponse.md)**
-
-
-## get_crm_connection_id_pipeline_id
-
-Retrieve a pipeline
-
-### Example Usage
-
-```python
-import unified_to
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.GetCrmConnectionIDPipelineIDRequest(
-    connection_id='Tricycle roughly markets',
-    id='<ID>',
-)
-
-res = s.pipeline.get_crm_connection_id_pipeline_id(req)
-
-if res.crm_pipeline is not None:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                        | [operations.GetCrmConnectionIDPipelineIDRequest](../../models/operations/getcrmconnectionidpipelineidrequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
-
-
-### Response
-
-**[operations.GetCrmConnectionIDPipelineIDResponse](../../models/operations/getcrmconnectionidpipelineidresponse.md)**
-
-
-## patch_crm_connection_id_pipeline_id
-
-Update a pipeline
-
-### Example Usage
-
-```python
-import unified_to
-import dateutil.parser
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.PatchCrmConnectionIDPipelineIDRequest(
-    crm_pipeline=shared.CrmPipeline(
-        raw=shared.PropertyCrmPipelineRaw(),
-    ),
-    connection_id='Bedfordshire bandwidth a',
-    id='<ID>',
-)
-
-res = s.pipeline.patch_crm_connection_id_pipeline_id(req)
-
-if res.crm_pipeline is not None:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                            | [operations.PatchCrmConnectionIDPipelineIDRequest](../../models/operations/patchcrmconnectionidpipelineidrequest.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
-
-
-### Response
-
-**[operations.PatchCrmConnectionIDPipelineIDResponse](../../models/operations/patchcrmconnectionidpipelineidresponse.md)**
-
-
-## post_crm_connection_id_pipeline
+## create_crm_pipeline
 
 Create a pipeline
 
@@ -191,14 +27,14 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PostCrmConnectionIDPipelineRequest(
+req = operations.CreateCrmPipelineRequest(
     crm_pipeline=shared.CrmPipeline(
         raw=shared.PropertyCrmPipelineRaw(),
     ),
-    connection_id='Interface alpaca program',
+    connection_id='Paradigm Vista fuchsia',
 )
 
-res = s.pipeline.post_crm_connection_id_pipeline(req)
+res = s.pipeline.create_crm_pipeline(req)
 
 if res.crm_pipeline is not None:
     # handle response
@@ -207,17 +43,97 @@ if res.crm_pipeline is not None:
 
 ### Parameters
 
-| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                      | [operations.PostCrmConnectionIDPipelineRequest](../../models/operations/postcrmconnectionidpipelinerequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.CreateCrmPipelineRequest](../../models/operations/createcrmpipelinerequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 
 ### Response
 
-**[operations.PostCrmConnectionIDPipelineResponse](../../models/operations/postcrmconnectionidpipelineresponse.md)**
+**[operations.CreateCrmPipelineResponse](../../models/operations/createcrmpipelineresponse.md)**
 
 
-## put_crm_connection_id_pipeline_id
+## get_crm_pipeline
+
+Retrieve a pipeline
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
+
+req = operations.GetCrmPipelineRequest(
+    connection_id='withdrawal Southeast',
+    id='<ID>',
+)
+
+res = s.pipeline.get_crm_pipeline(req)
+
+if res.crm_pipeline is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [operations.GetCrmPipelineRequest](../../models/operations/getcrmpipelinerequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+
+
+### Response
+
+**[operations.GetCrmPipelineResponse](../../models/operations/getcrmpipelineresponse.md)**
+
+
+## list_crm_pipelines
+
+List all pipelines
+
+### Example Usage
+
+```python
+import unified_to
+import dateutil.parser
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
+
+req = operations.ListCrmPipelinesRequest(
+    connection_id='primary',
+)
+
+res = s.pipeline.list_crm_pipelines(req)
+
+if res.crm_pipelines is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.ListCrmPipelinesRequest](../../models/operations/listcrmpipelinesrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+
+
+### Response
+
+**[operations.ListCrmPipelinesResponse](../../models/operations/listcrmpipelinesresponse.md)**
+
+
+## patch_crm_pipeline
 
 Update a pipeline
 
@@ -234,15 +150,15 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PutCrmConnectionIDPipelineIDRequest(
+req = operations.PatchCrmPipelineRequest(
     crm_pipeline=shared.CrmPipeline(
         raw=shared.PropertyCrmPipelineRaw(),
     ),
-    connection_id='back',
+    connection_id='imperfect Costa Southwest',
     id='<ID>',
 )
 
-res = s.pipeline.put_crm_connection_id_pipeline_id(req)
+res = s.pipeline.patch_crm_pipeline(req)
 
 if res.crm_pipeline is not None:
     # handle response
@@ -251,12 +167,96 @@ if res.crm_pipeline is not None:
 
 ### Parameters
 
-| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                        | [operations.PutCrmConnectionIDPipelineIDRequest](../../models/operations/putcrmconnectionidpipelineidrequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.PatchCrmPipelineRequest](../../models/operations/patchcrmpipelinerequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
 
 
 ### Response
 
-**[operations.PutCrmConnectionIDPipelineIDResponse](../../models/operations/putcrmconnectionidpipelineidresponse.md)**
+**[operations.PatchCrmPipelineResponse](../../models/operations/patchcrmpipelineresponse.md)**
+
+
+## remove_crm_pipeline
+
+Remove a pipeline
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
+
+req = operations.RemoveCrmPipelineRequest(
+    connection_id='Hybrid merrily',
+    id='<ID>',
+)
+
+res = s.pipeline.remove_crm_pipeline(req)
+
+if res.status_code == 200:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.RemoveCrmPipelineRequest](../../models/operations/removecrmpipelinerequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+
+
+### Response
+
+**[operations.RemoveCrmPipelineResponse](../../models/operations/removecrmpipelineresponse.md)**
+
+
+## update_crm_pipeline
+
+Update a pipeline
+
+### Example Usage
+
+```python
+import unified_to
+import dateutil.parser
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
+
+req = operations.UpdateCrmPipelineRequest(
+    crm_pipeline=shared.CrmPipeline(
+        raw=shared.PropertyCrmPipelineRaw(),
+    ),
+    connection_id='needily',
+    id='<ID>',
+)
+
+res = s.pipeline.update_crm_pipeline(req)
+
+if res.crm_pipeline is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.UpdateCrmPipelineRequest](../../models/operations/updatecrmpipelinerequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+
+
+### Response
+
+**[operations.UpdateCrmPipelineResponse](../../models/operations/updatecrmpipelineresponse.md)**
 

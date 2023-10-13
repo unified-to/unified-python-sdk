@@ -12,13 +12,13 @@ class Person:
         self.sdk_configuration = sdk_config
         
     
-    def get_enrich_connection_id_person(self, request: operations.GetEnrichConnectionIDPersonRequest) -> operations.GetEnrichConnectionIDPersonResponse:
+    def list_enrich_people(self, request: operations.ListEnrichPeopleRequest) -> operations.ListEnrichPeopleResponse:
         r"""Retrieve enrichment information for a person"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.GetEnrichConnectionIDPersonRequest, base_url, '/enrich/{connection_id}/person', request)
+        url = utils.generate_url(operations.ListEnrichPeopleRequest, base_url, '/enrich/{connection_id}/person', request)
         headers = {}
-        query_params = utils.get_query_params(operations.GetEnrichConnectionIDPersonRequest, request)
+        query_params = utils.get_query_params(operations.ListEnrichPeopleRequest, request)
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
@@ -27,7 +27,7 @@ class Person:
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
-        res = operations.GetEnrichConnectionIDPersonResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        res = operations.ListEnrichPeopleResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):

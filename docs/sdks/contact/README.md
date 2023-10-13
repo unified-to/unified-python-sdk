@@ -3,22 +3,133 @@
 
 ### Available Operations
 
-* [delete_crm_connection_id_contact_id](#delete_crm_connection_id_contact_id) - Remove a contact
-* [delete_uc_connection_id_contact_id](#delete_uc_connection_id_contact_id) - Remove a contact
-* [get_crm_connection_id_contact](#get_crm_connection_id_contact) - List all contacts
-* [get_crm_connection_id_contact_id](#get_crm_connection_id_contact_id) - Retrieve a contact
-* [get_uc_connection_id_contact](#get_uc_connection_id_contact) - List all contacts
-* [get_uc_connection_id_contact_id](#get_uc_connection_id_contact_id) - Retrieve a contact
-* [patch_crm_connection_id_contact_id](#patch_crm_connection_id_contact_id) - Update a contact
-* [patch_uc_connection_id_contact_id](#patch_uc_connection_id_contact_id) - Update a contact
-* [post_crm_connection_id_contact](#post_crm_connection_id_contact) - Create a contact
-* [post_uc_connection_id_contact](#post_uc_connection_id_contact) - Create a contact
-* [put_crm_connection_id_contact_id](#put_crm_connection_id_contact_id) - Update a contact
-* [put_uc_connection_id_contact_id](#put_uc_connection_id_contact_id) - Update a contact
+* [create_crm_contact](#create_crm_contact) - Create a contact
+* [create_uc_contact](#create_uc_contact) - Create a contact
+* [get_crm_contact](#get_crm_contact) - Retrieve a contact
+* [get_uc_contact](#get_uc_contact) - Retrieve a contact
+* [list_crm_contacts](#list_crm_contacts) - List all contacts
+* [list_uc_contacts](#list_uc_contacts) - List all contacts
+* [patch_crm_contact](#patch_crm_contact) - Update a contact
+* [patch_uc_contact](#patch_uc_contact) - Update a contact
+* [remove_crm_contact](#remove_crm_contact) - Remove a contact
+* [remove_uc_contact](#remove_uc_contact) - Remove a contact
+* [update_crm_contact](#update_crm_contact) - Update a contact
+* [update_uc_contact](#update_uc_contact) - Update a contact
 
-## delete_crm_connection_id_contact_id
+## create_crm_contact
 
-Remove a contact
+Create a contact
+
+### Example Usage
+
+```python
+import unified_to
+import dateutil.parser
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
+
+req = operations.CreateCrmContactRequest(
+    crm_contact=shared.CrmContact(
+        address=shared.PropertyCrmContactAddress(),
+        company_ids=[
+            'Mendelevium',
+        ],
+        deal_ids=[
+            'Account',
+        ],
+        emails=[
+            shared.CrmEmail(),
+        ],
+        raw=shared.PropertyCrmContactRaw(),
+        telephones=[
+            shared.CrmTelephone(
+                telephone='towards',
+            ),
+        ],
+    ),
+    connection_id='Cambridgeshire Passenger Producer',
+)
+
+res = s.contact.create_crm_contact(req)
+
+if res.crm_contact is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.CreateCrmContactRequest](../../models/operations/createcrmcontactrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+
+
+### Response
+
+**[operations.CreateCrmContactResponse](../../models/operations/createcrmcontactresponse.md)**
+
+
+## create_uc_contact
+
+Create a contact
+
+### Example Usage
+
+```python
+import unified_to
+import dateutil.parser
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
+
+req = operations.CreateUcContactRequest(
+    uc_contact=shared.UcContact(
+        emails=[
+            shared.UcEmail(
+                email='Dulce_Becker30@yahoo.com',
+            ),
+        ],
+        raw=shared.PropertyUcContactRaw(),
+        telephones=[
+            shared.UcTelephone(
+                telephone='indigo indeed',
+            ),
+        ],
+    ),
+    connection_id='meanwhile',
+)
+
+res = s.contact.create_uc_contact(req)
+
+if res.uc_contact is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `request`                                                                              | [operations.CreateUcContactRequest](../../models/operations/createuccontactrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+
+
+### Response
+
+**[operations.CreateUcContactResponse](../../models/operations/createuccontactresponse.md)**
+
+
+## get_crm_contact
+
+Retrieve a contact
 
 ### Example Usage
 
@@ -32,33 +143,33 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.DeleteCrmConnectionIDContactIDRequest(
-    connection_id='chargesheet',
+req = operations.GetCrmContactRequest(
+    connection_id='Oregon',
     id='<ID>',
 )
 
-res = s.contact.delete_crm_connection_id_contact_id(req)
+res = s.contact.get_crm_contact(req)
 
-if res.status_code == 200:
+if res.crm_contact is not None:
     # handle response
     pass
 ```
 
 ### Parameters
 
-| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                            | [operations.DeleteCrmConnectionIDContactIDRequest](../../models/operations/deletecrmconnectionidcontactidrequest.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `request`                                                                          | [operations.GetCrmContactRequest](../../models/operations/getcrmcontactrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
 
 
 ### Response
 
-**[operations.DeleteCrmConnectionIDContactIDResponse](../../models/operations/deletecrmconnectionidcontactidresponse.md)**
+**[operations.GetCrmContactResponse](../../models/operations/getcrmcontactresponse.md)**
 
 
-## delete_uc_connection_id_contact_id
+## get_uc_contact
 
-Remove a contact
+Retrieve a contact
 
 ### Example Usage
 
@@ -72,31 +183,31 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.DeleteUcConnectionIDContactIDRequest(
-    connection_id='Southeast Modern commonly',
+req = operations.GetUcContactRequest(
+    connection_id='JBOD ivory fool',
     id='<ID>',
 )
 
-res = s.contact.delete_uc_connection_id_contact_id(req)
+res = s.contact.get_uc_contact(req)
 
-if res.status_code == 200:
+if res.uc_contact is not None:
     # handle response
     pass
 ```
 
 ### Parameters
 
-| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                          | [operations.DeleteUcConnectionIDContactIDRequest](../../models/operations/deleteucconnectionidcontactidrequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
+| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `request`                                                                        | [operations.GetUcContactRequest](../../models/operations/getuccontactrequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
 
 
 ### Response
 
-**[operations.DeleteUcConnectionIDContactIDResponse](../../models/operations/deleteucconnectionidcontactidresponse.md)**
+**[operations.GetUcContactResponse](../../models/operations/getuccontactresponse.md)**
 
 
-## get_crm_connection_id_contact
+## list_crm_contacts
 
 List all contacts
 
@@ -113,11 +224,11 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetCrmConnectionIDContactRequest(
-    connection_id='Southeast Human Southeast',
+req = operations.ListCrmContactsRequest(
+    connection_id='Awesome index steradian',
 )
 
-res = s.contact.get_crm_connection_id_contact(req)
+res = s.contact.list_crm_contacts(req)
 
 if res.crm_contacts is not None:
     # handle response
@@ -126,57 +237,17 @@ if res.crm_contacts is not None:
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                  | [operations.GetCrmConnectionIDContactRequest](../../models/operations/getcrmconnectionidcontactrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `request`                                                                              | [operations.ListCrmContactsRequest](../../models/operations/listcrmcontactsrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
 
 
 ### Response
 
-**[operations.GetCrmConnectionIDContactResponse](../../models/operations/getcrmconnectionidcontactresponse.md)**
+**[operations.ListCrmContactsResponse](../../models/operations/listcrmcontactsresponse.md)**
 
 
-## get_crm_connection_id_contact_id
-
-Retrieve a contact
-
-### Example Usage
-
-```python
-import unified_to
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.GetCrmConnectionIDContactIDRequest(
-    connection_id='Account fountain visionary',
-    id='<ID>',
-)
-
-res = s.contact.get_crm_connection_id_contact_id(req)
-
-if res.crm_contact is not None:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                      | [operations.GetCrmConnectionIDContactIDRequest](../../models/operations/getcrmconnectionidcontactidrequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
-
-
-### Response
-
-**[operations.GetCrmConnectionIDContactIDResponse](../../models/operations/getcrmconnectionidcontactidresponse.md)**
-
-
-## get_uc_connection_id_contact
+## list_uc_contacts
 
 List all contacts
 
@@ -193,11 +264,11 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetUcConnectionIDContactRequest(
-    connection_id='Refined Practical',
+req = operations.ListUcContactsRequest(
+    connection_id='Bicycle male',
 )
 
-res = s.contact.get_uc_connection_id_contact(req)
+res = s.contact.list_uc_contacts(req)
 
 if res.uc_contacts is not None:
     # handle response
@@ -206,57 +277,17 @@ if res.uc_contacts is not None:
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                | [operations.GetUcConnectionIDContactRequest](../../models/operations/getucconnectionidcontactrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [operations.ListUcContactsRequest](../../models/operations/listuccontactsrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
 
 
 ### Response
 
-**[operations.GetUcConnectionIDContactResponse](../../models/operations/getucconnectionidcontactresponse.md)**
+**[operations.ListUcContactsResponse](../../models/operations/listuccontactsresponse.md)**
 
 
-## get_uc_connection_id_contact_id
-
-Retrieve a contact
-
-### Example Usage
-
-```python
-import unified_to
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.GetUcConnectionIDContactIDRequest(
-    connection_id='Land',
-    id='<ID>',
-)
-
-res = s.contact.get_uc_connection_id_contact_id(req)
-
-if res.uc_contact is not None:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                    | [operations.GetUcConnectionIDContactIDRequest](../../models/operations/getucconnectionidcontactidrequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
-
-
-### Response
-
-**[operations.GetUcConnectionIDContactIDResponse](../../models/operations/getucconnectionidcontactidresponse.md)**
-
-
-## patch_crm_connection_id_contact_id
+## patch_crm_contact
 
 Update a contact
 
@@ -273,14 +304,14 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PatchCrmConnectionIDContactIDRequest(
+req = operations.PatchCrmContactRequest(
     crm_contact=shared.CrmContact(
         address=shared.PropertyCrmContactAddress(),
         company_ids=[
-            'Bicycle',
+            'architecture',
         ],
         deal_ids=[
-            'instantly',
+            'Buckinghamshire',
         ],
         emails=[
             shared.CrmEmail(),
@@ -288,15 +319,15 @@ req = operations.PatchCrmConnectionIDContactIDRequest(
         raw=shared.PropertyCrmContactRaw(),
         telephones=[
             shared.CrmTelephone(
-                telephone='stimulating',
+                telephone='Practical',
             ),
         ],
     ),
-    connection_id='synergy',
+    connection_id='Future Diesel',
     id='<ID>',
 )
 
-res = s.contact.patch_crm_connection_id_contact_id(req)
+res = s.contact.patch_crm_contact(req)
 
 if res.crm_contact is not None:
     # handle response
@@ -305,17 +336,17 @@ if res.crm_contact is not None:
 
 ### Parameters
 
-| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                          | [operations.PatchCrmConnectionIDContactIDRequest](../../models/operations/patchcrmconnectionidcontactidrequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `request`                                                                              | [operations.PatchCrmContactRequest](../../models/operations/patchcrmcontactrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
 
 
 ### Response
 
-**[operations.PatchCrmConnectionIDContactIDResponse](../../models/operations/patchcrmconnectionidcontactidresponse.md)**
+**[operations.PatchCrmContactResponse](../../models/operations/patchcrmcontactresponse.md)**
 
 
-## patch_uc_connection_id_contact_id
+## patch_uc_contact
 
 Update a contact
 
@@ -332,25 +363,25 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PatchUcConnectionIDContactIDRequest(
+req = operations.PatchUcContactRequest(
     uc_contact=shared.UcContact(
         emails=[
             shared.UcEmail(
-                email='Van84@hotmail.com',
+                email='Norene_Boehm97@hotmail.com',
             ),
         ],
         raw=shared.PropertyUcContactRaw(),
         telephones=[
             shared.UcTelephone(
-                telephone='Denar',
+                telephone='male',
             ),
         ],
     ),
-    connection_id='strategy Synergized',
+    connection_id='South Pants candela',
     id='<ID>',
 )
 
-res = s.contact.patch_uc_connection_id_contact_id(req)
+res = s.contact.patch_uc_contact(req)
 
 if res.uc_contact is not None:
     # handle response
@@ -359,19 +390,99 @@ if res.uc_contact is not None:
 
 ### Parameters
 
-| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                        | [operations.PatchUcConnectionIDContactIDRequest](../../models/operations/patchucconnectionidcontactidrequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [operations.PatchUcContactRequest](../../models/operations/patchuccontactrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
 
 
 ### Response
 
-**[operations.PatchUcConnectionIDContactIDResponse](../../models/operations/patchucconnectionidcontactidresponse.md)**
+**[operations.PatchUcContactResponse](../../models/operations/patchuccontactresponse.md)**
 
 
-## post_crm_connection_id_contact
+## remove_crm_contact
 
-Create a contact
+Remove a contact
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
+
+req = operations.RemoveCrmContactRequest(
+    connection_id='Folk granular Concrete',
+    id='<ID>',
+)
+
+res = s.contact.remove_crm_contact(req)
+
+if res.status_code == 200:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.RemoveCrmContactRequest](../../models/operations/removecrmcontactrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+
+
+### Response
+
+**[operations.RemoveCrmContactResponse](../../models/operations/removecrmcontactresponse.md)**
+
+
+## remove_uc_contact
+
+Remove a contact
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
+
+req = operations.RemoveUcContactRequest(
+    connection_id='Configurable',
+    id='<ID>',
+)
+
+res = s.contact.remove_uc_contact(req)
+
+if res.status_code == 200:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `request`                                                                              | [operations.RemoveUcContactRequest](../../models/operations/removeuccontactrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+
+
+### Response
+
+**[operations.RemoveUcContactResponse](../../models/operations/removeuccontactresponse.md)**
+
+
+## update_crm_contact
+
+Update a contact
 
 ### Example Usage
 
@@ -386,14 +497,14 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PostCrmConnectionIDContactRequest(
+req = operations.UpdateCrmContactRequest(
     crm_contact=shared.CrmContact(
         address=shared.PropertyCrmContactAddress(),
         company_ids=[
-            'integrated',
+            'Universal',
         ],
         deal_ids=[
-            'Mobility',
+            'Harbors',
         ],
         emails=[
             shared.CrmEmail(),
@@ -401,14 +512,15 @@ req = operations.PostCrmConnectionIDContactRequest(
         raw=shared.PropertyCrmContactRaw(),
         telephones=[
             shared.CrmTelephone(
-                telephone='who SUV',
+                telephone='Analyst Des green',
             ),
         ],
     ),
-    connection_id='sievert Tungsten',
+    connection_id='man panel',
+    id='<ID>',
 )
 
-res = s.contact.post_crm_connection_id_contact(req)
+res = s.contact.update_crm_contact(req)
 
 if res.crm_contact is not None:
     # handle response
@@ -417,70 +529,17 @@ if res.crm_contact is not None:
 
 ### Parameters
 
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                    | [operations.PostCrmConnectionIDContactRequest](../../models/operations/postcrmconnectionidcontactrequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.UpdateCrmContactRequest](../../models/operations/updatecrmcontactrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
 
 
 ### Response
 
-**[operations.PostCrmConnectionIDContactResponse](../../models/operations/postcrmconnectionidcontactresponse.md)**
+**[operations.UpdateCrmContactResponse](../../models/operations/updatecrmcontactresponse.md)**
 
 
-## post_uc_connection_id_contact
-
-Create a contact
-
-### Example Usage
-
-```python
-import unified_to
-import dateutil.parser
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.PostUcConnectionIDContactRequest(
-    uc_contact=shared.UcContact(
-        emails=[
-            shared.UcEmail(
-                email='Gilda_Jacobs@gmail.com',
-            ),
-        ],
-        raw=shared.PropertyUcContactRaw(),
-        telephones=[
-            shared.UcTelephone(
-                telephone='Account Orchestrator',
-            ),
-        ],
-    ),
-    connection_id='extend grey Avon',
-)
-
-res = s.contact.post_uc_connection_id_contact(req)
-
-if res.uc_contact is not None:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                  | [operations.PostUcConnectionIDContactRequest](../../models/operations/postucconnectionidcontactrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
-
-
-### Response
-
-**[operations.PostUcConnectionIDContactResponse](../../models/operations/postucconnectionidcontactresponse.md)**
-
-
-## put_crm_connection_id_contact_id
+## update_uc_contact
 
 Update a contact
 
@@ -497,84 +556,25 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PutCrmConnectionIDContactIDRequest(
-    crm_contact=shared.CrmContact(
-        address=shared.PropertyCrmContactAddress(),
-        company_ids=[
-            'Outdoors',
-        ],
-        deal_ids=[
-            'Credit',
-        ],
-        emails=[
-            shared.CrmEmail(),
-        ],
-        raw=shared.PropertyCrmContactRaw(),
-        telephones=[
-            shared.CrmTelephone(
-                telephone='Specialist background',
-            ),
-        ],
-    ),
-    connection_id='quo gloomy',
-    id='<ID>',
-)
-
-res = s.contact.put_crm_connection_id_contact_id(req)
-
-if res.crm_contact is not None:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                      | [operations.PutCrmConnectionIDContactIDRequest](../../models/operations/putcrmconnectionidcontactidrequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
-
-
-### Response
-
-**[operations.PutCrmConnectionIDContactIDResponse](../../models/operations/putcrmconnectionidcontactidresponse.md)**
-
-
-## put_uc_connection_id_contact_id
-
-Update a contact
-
-### Example Usage
-
-```python
-import unified_to
-import dateutil.parser
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.PutUcConnectionIDContactIDRequest(
+req = operations.UpdateUcContactRequest(
     uc_contact=shared.UcContact(
         emails=[
             shared.UcEmail(
-                email='Darien12@hotmail.com',
+                email='Kianna.Witting90@gmail.com',
             ),
         ],
         raw=shared.PropertyUcContactRaw(),
         telephones=[
             shared.UcTelephone(
-                telephone='reboot',
+                telephone='Illinois Electronic Northwest',
             ),
         ],
     ),
-    connection_id='payment hem',
+    connection_id='Cruiser',
     id='<ID>',
 )
 
-res = s.contact.put_uc_connection_id_contact_id(req)
+res = s.contact.update_uc_contact(req)
 
 if res.uc_contact is not None:
     # handle response
@@ -583,12 +583,12 @@ if res.uc_contact is not None:
 
 ### Parameters
 
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                    | [operations.PutUcConnectionIDContactIDRequest](../../models/operations/putucconnectionidcontactidrequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `request`                                                                              | [operations.UpdateUcContactRequest](../../models/operations/updateuccontactrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
 
 
 ### Response
 
-**[operations.PutUcConnectionIDContactIDResponse](../../models/operations/putucconnectionidcontactidresponse.md)**
+**[operations.UpdateUcContactResponse](../../models/operations/updateuccontactresponse.md)**
 

@@ -3,182 +3,14 @@
 
 ### Available Operations
 
-* [delete_ticketing_connection_id_note_ticket_id_id](#delete_ticketing_connection_id_note_ticket_id_id) - Remove a note
-* [get_ticketing_connection_id_note_ticket_id](#get_ticketing_connection_id_note_ticket_id) - List all notes
-* [get_ticketing_connection_id_note_ticket_id_id](#get_ticketing_connection_id_note_ticket_id_id) - Retrieve a note
-* [patch_ticketing_connection_id_note_ticket_id_id](#patch_ticketing_connection_id_note_ticket_id_id) - Update a note
-* [post_ticketing_connection_id_note_ticket_id](#post_ticketing_connection_id_note_ticket_id) - Create a note
-* [put_ticketing_connection_id_note_ticket_id_id](#put_ticketing_connection_id_note_ticket_id_id) - Update a note
+* [create_ticketing_note](#create_ticketing_note) - Create a note
+* [get_ticketing_note](#get_ticketing_note) - Retrieve a note
+* [list_ticketing_notes](#list_ticketing_notes) - List all notes
+* [patch_ticketing_note](#patch_ticketing_note) - Update a note
+* [remove_ticketing_note](#remove_ticketing_note) - Remove a note
+* [update_ticketing_note](#update_ticketing_note) - Update a note
 
-## delete_ticketing_connection_id_note_ticket_id_id
-
-Remove a note
-
-### Example Usage
-
-```python
-import unified_to
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.DeleteTicketingConnectionIDNoteTicketIDIDRequest(
-    connection_id='DRAM Liaison',
-    id='<ID>',
-    ticket_id='Tasty exploit',
-)
-
-res = s.note.delete_ticketing_connection_id_note_ticket_id_id(req)
-
-if res.status_code == 200:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                                                                                  | Type                                                                                                                                       | Required                                                                                                                                   | Description                                                                                                                                |
-| ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                  | [operations.DeleteTicketingConnectionIDNoteTicketIDIDRequest](../../models/operations/deleteticketingconnectionidnoteticketididrequest.md) | :heavy_check_mark:                                                                                                                         | The request object to use for the request.                                                                                                 |
-
-
-### Response
-
-**[operations.DeleteTicketingConnectionIDNoteTicketIDIDResponse](../../models/operations/deleteticketingconnectionidnoteticketididresponse.md)**
-
-
-## get_ticketing_connection_id_note_ticket_id
-
-List all notes
-
-### Example Usage
-
-```python
-import unified_to
-import dateutil.parser
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.GetTicketingConnectionIDNoteTicketIDRequest(
-    connection_id='Account revolutionary',
-    ticket_id='Associate',
-)
-
-res = s.note.get_ticketing_connection_id_note_ticket_id(req)
-
-if res.ticketing_notes is not None:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                        | [operations.GetTicketingConnectionIDNoteTicketIDRequest](../../models/operations/getticketingconnectionidnoteticketidrequest.md) | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
-
-
-### Response
-
-**[operations.GetTicketingConnectionIDNoteTicketIDResponse](../../models/operations/getticketingconnectionidnoteticketidresponse.md)**
-
-
-## get_ticketing_connection_id_note_ticket_id_id
-
-Retrieve a note
-
-### Example Usage
-
-```python
-import unified_to
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.GetTicketingConnectionIDNoteTicketIDIDRequest(
-    connection_id='for',
-    id='<ID>',
-    ticket_id='female',
-)
-
-res = s.note.get_ticketing_connection_id_note_ticket_id_id(req)
-
-if res.ticketing_note is not None:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                                                                            | Type                                                                                                                                 | Required                                                                                                                             | Description                                                                                                                          |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                            | [operations.GetTicketingConnectionIDNoteTicketIDIDRequest](../../models/operations/getticketingconnectionidnoteticketididrequest.md) | :heavy_check_mark:                                                                                                                   | The request object to use for the request.                                                                                           |
-
-
-### Response
-
-**[operations.GetTicketingConnectionIDNoteTicketIDIDResponse](../../models/operations/getticketingconnectionidnoteticketididresponse.md)**
-
-
-## patch_ticketing_connection_id_note_ticket_id_id
-
-Update a note
-
-### Example Usage
-
-```python
-import unified_to
-import dateutil.parser
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.PatchTicketingConnectionIDNoteTicketIDIDRequest(
-    ticketing_note=shared.TicketingNote(
-        raw=shared.PropertyTicketingNoteRaw(),
-    ),
-    connection_id='compress Oganesson',
-    id='<ID>',
-    ticket_id='York Fantastic',
-)
-
-res = s.note.patch_ticketing_connection_id_note_ticket_id_id(req)
-
-if res.ticketing_note is not None:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                                                                                | Type                                                                                                                                     | Required                                                                                                                                 | Description                                                                                                                              |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                | [operations.PatchTicketingConnectionIDNoteTicketIDIDRequest](../../models/operations/patchticketingconnectionidnoteticketididrequest.md) | :heavy_check_mark:                                                                                                                       | The request object to use for the request.                                                                                               |
-
-
-### Response
-
-**[operations.PatchTicketingConnectionIDNoteTicketIDIDResponse](../../models/operations/patchticketingconnectionidnoteticketididresponse.md)**
-
-
-## post_ticketing_connection_id_note_ticket_id
+## create_ticketing_note
 
 Create a note
 
@@ -195,15 +27,15 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PostTicketingConnectionIDNoteTicketIDRequest(
+req = operations.CreateTicketingNoteRequest(
     ticketing_note=shared.TicketingNote(
         raw=shared.PropertyTicketingNoteRaw(),
     ),
-    connection_id='Plantation blue',
-    ticket_id='Ford',
+    connection_id='Books kilogram hmph',
+    ticket_id='Dakota function interface',
 )
 
-res = s.note.post_ticketing_connection_id_note_ticket_id(req)
+res = s.note.create_ticketing_note(req)
 
 if res.ticketing_note is not None:
     # handle response
@@ -212,17 +44,99 @@ if res.ticketing_note is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                          | Type                                                                                                                               | Required                                                                                                                           | Description                                                                                                                        |
-| ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                          | [operations.PostTicketingConnectionIDNoteTicketIDRequest](../../models/operations/postticketingconnectionidnoteticketidrequest.md) | :heavy_check_mark:                                                                                                                 | The request object to use for the request.                                                                                         |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `request`                                                                                      | [operations.CreateTicketingNoteRequest](../../models/operations/createticketingnoterequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
 
 
 ### Response
 
-**[operations.PostTicketingConnectionIDNoteTicketIDResponse](../../models/operations/postticketingconnectionidnoteticketidresponse.md)**
+**[operations.CreateTicketingNoteResponse](../../models/operations/createticketingnoteresponse.md)**
 
 
-## put_ticketing_connection_id_note_ticket_id_id
+## get_ticketing_note
+
+Retrieve a note
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
+
+req = operations.GetTicketingNoteRequest(
+    connection_id='joule program',
+    id='<ID>',
+    ticket_id='Fitness Applications Switchable',
+)
+
+res = s.note.get_ticketing_note(req)
+
+if res.ticketing_note is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.GetTicketingNoteRequest](../../models/operations/getticketingnoterequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+
+
+### Response
+
+**[operations.GetTicketingNoteResponse](../../models/operations/getticketingnoteresponse.md)**
+
+
+## list_ticketing_notes
+
+List all notes
+
+### Example Usage
+
+```python
+import unified_to
+import dateutil.parser
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
+
+req = operations.ListTicketingNotesRequest(
+    connection_id='Hybrid North',
+    ticket_id='Kroon Marvin Ford',
+)
+
+res = s.note.list_ticketing_notes(req)
+
+if res.ticketing_notes is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.ListTicketingNotesRequest](../../models/operations/listticketingnotesrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+
+
+### Response
+
+**[operations.ListTicketingNotesResponse](../../models/operations/listticketingnotesresponse.md)**
+
+
+## patch_ticketing_note
 
 Update a note
 
@@ -239,16 +153,16 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PutTicketingConnectionIDNoteTicketIDIDRequest(
+req = operations.PatchTicketingNoteRequest(
     ticketing_note=shared.TicketingNote(
         raw=shared.PropertyTicketingNoteRaw(),
     ),
-    connection_id='SMTP Cis',
+    connection_id='Bicycle Southwest Darmstadtium',
     id='<ID>',
-    ticket_id='East benchmark',
+    ticket_id='index',
 )
 
-res = s.note.put_ticketing_connection_id_note_ticket_id_id(req)
+res = s.note.patch_ticketing_note(req)
 
 if res.ticketing_note is not None:
     # handle response
@@ -257,12 +171,98 @@ if res.ticketing_note is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                            | Type                                                                                                                                 | Required                                                                                                                             | Description                                                                                                                          |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                            | [operations.PutTicketingConnectionIDNoteTicketIDIDRequest](../../models/operations/putticketingconnectionidnoteticketididrequest.md) | :heavy_check_mark:                                                                                                                   | The request object to use for the request.                                                                                           |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.PatchTicketingNoteRequest](../../models/operations/patchticketingnoterequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 
 ### Response
 
-**[operations.PutTicketingConnectionIDNoteTicketIDIDResponse](../../models/operations/putticketingconnectionidnoteticketididresponse.md)**
+**[operations.PatchTicketingNoteResponse](../../models/operations/patchticketingnoteresponse.md)**
+
+
+## remove_ticketing_note
+
+Remove a note
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
+
+req = operations.RemoveTicketingNoteRequest(
+    connection_id='Granite hm West',
+    id='<ID>',
+    ticket_id='in',
+)
+
+res = s.note.remove_ticketing_note(req)
+
+if res.status_code == 200:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `request`                                                                                      | [operations.RemoveTicketingNoteRequest](../../models/operations/removeticketingnoterequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+
+
+### Response
+
+**[operations.RemoveTicketingNoteResponse](../../models/operations/removeticketingnoteresponse.md)**
+
+
+## update_ticketing_note
+
+Update a note
+
+### Example Usage
+
+```python
+import unified_to
+import dateutil.parser
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
+
+req = operations.UpdateTicketingNoteRequest(
+    ticketing_note=shared.TicketingNote(
+        raw=shared.PropertyTicketingNoteRaw(),
+    ),
+    connection_id='via among Quality',
+    id='<ID>',
+    ticket_id='Brand when',
+)
+
+res = s.note.update_ticketing_note(req)
+
+if res.ticketing_note is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `request`                                                                                      | [operations.UpdateTicketingNoteRequest](../../models/operations/updateticketingnoterequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+
+
+### Response
+
+**[operations.UpdateTicketingNoteResponse](../../models/operations/updateticketingnoteresponse.md)**
 
