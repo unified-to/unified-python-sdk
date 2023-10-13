@@ -35,6 +35,7 @@ res = s.list_.delete_martech_connection_id_list_id(req)
 
 if res.status_code == 200:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -74,6 +75,7 @@ res = s.list_.get_martech_connection_id_list(req)
 
 if res.marketing_lists is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -113,6 +115,7 @@ res = s.list_.get_martech_connection_id_list_id(req)
 
 if res.marketing_list is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -156,6 +159,7 @@ res = s.list_.patch_martech_connection_id_list_id(req)
 
 if res.marketing_list is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -198,6 +202,7 @@ res = s.list_.post_martech_connection_id_list(req)
 
 if res.marketing_list is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -241,6 +246,7 @@ res = s.list_.put_martech_connection_id_list_id(req)
 
 if res.marketing_list is not None:
     # handle response
+    pass
 ```
 
 ### Parameters

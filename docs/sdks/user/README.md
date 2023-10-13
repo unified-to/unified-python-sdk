@@ -40,6 +40,7 @@ res = s.user.delete_crm_connection_id_user_id(req)
 
 if res.status_code == 200:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -75,6 +76,7 @@ res = s.user.delete_unified_user()
 
 if res.status_code == 200:
     # handle response
+    pass
 ```
 
 
@@ -108,6 +110,7 @@ res = s.user.get_crm_connection_id_user(req)
 
 if res.crm_users is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -147,6 +150,7 @@ res = s.user.get_crm_connection_id_user_id(req)
 
 if res.crm_user is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -182,6 +186,7 @@ res = s.user.get_unified_user()
 
 if res.user is not None:
     # handle response
+    pass
 ```
 
 
@@ -211,6 +216,7 @@ res = s.user.get_unified_user_token()
 
 if res.get_unified_user_token_200_application_json_string is not None:
     # handle response
+    pass
 ```
 
 
@@ -257,6 +263,7 @@ res = s.user.patch_crm_connection_id_user_id(req)
 
 if res.crm_user is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -301,6 +308,7 @@ res = s.user.patch_unified_user(req)
 
 if res.user is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -352,6 +360,7 @@ res = s.user.post_crm_connection_id_user(req)
 
 if res.crm_user is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -404,6 +413,7 @@ res = s.user.put_crm_connection_id_user_id(req)
 
 if res.crm_user is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -448,6 +458,7 @@ res = s.user.put_unified_user(req)
 
 if res.user is not None:
     # handle response
+    pass
 ```
 
 ### Parameters

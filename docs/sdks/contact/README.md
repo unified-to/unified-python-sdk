@@ -41,6 +41,7 @@ res = s.contact.delete_crm_connection_id_contact_id(req)
 
 if res.status_code == 200:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -80,6 +81,7 @@ res = s.contact.delete_uc_connection_id_contact_id(req)
 
 if res.status_code == 200:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -119,6 +121,7 @@ res = s.contact.get_crm_connection_id_contact(req)
 
 if res.crm_contacts is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -158,6 +161,7 @@ res = s.contact.get_crm_connection_id_contact_id(req)
 
 if res.crm_contact is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -197,6 +201,7 @@ res = s.contact.get_uc_connection_id_contact(req)
 
 if res.uc_contacts is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -236,6 +241,7 @@ res = s.contact.get_uc_connection_id_contact_id(req)
 
 if res.uc_contact is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -294,6 +300,7 @@ res = s.contact.patch_crm_connection_id_contact_id(req)
 
 if res.crm_contact is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -347,6 +354,7 @@ res = s.contact.patch_uc_connection_id_contact_id(req)
 
 if res.uc_contact is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -404,6 +412,7 @@ res = s.contact.post_crm_connection_id_contact(req)
 
 if res.crm_contact is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -456,6 +465,7 @@ res = s.contact.post_uc_connection_id_contact(req)
 
 if res.uc_contact is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -514,6 +524,7 @@ res = s.contact.put_crm_connection_id_contact_id(req)
 
 if res.crm_contact is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -567,6 +578,7 @@ res = s.contact.put_uc_connection_id_contact_id(req)
 
 if res.uc_contact is not None:
     # handle response
+    pass
 ```
 
 ### Parameters

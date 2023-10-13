@@ -35,6 +35,7 @@ res = s.pipeline.delete_crm_connection_id_pipeline_id(req)
 
 if res.status_code == 200:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -74,6 +75,7 @@ res = s.pipeline.get_crm_connection_id_pipeline(req)
 
 if res.crm_pipelines is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -113,6 +115,7 @@ res = s.pipeline.get_crm_connection_id_pipeline_id(req)
 
 if res.crm_pipeline is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -156,6 +159,7 @@ res = s.pipeline.patch_crm_connection_id_pipeline_id(req)
 
 if res.crm_pipeline is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -198,6 +202,7 @@ res = s.pipeline.post_crm_connection_id_pipeline(req)
 
 if res.crm_pipeline is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -241,6 +246,7 @@ res = s.pipeline.put_crm_connection_id_pipeline_id(req)
 
 if res.crm_pipeline is not None:
     # handle response
+    pass
 ```
 
 ### Parameters

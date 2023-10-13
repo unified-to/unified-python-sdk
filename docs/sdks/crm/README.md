@@ -83,6 +83,7 @@ res = s.crm.delete_crm_connection_id_company_id(req)
 
 if res.status_code == 200:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -122,6 +123,7 @@ res = s.crm.delete_crm_connection_id_contact_id(req)
 
 if res.status_code == 200:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -161,6 +163,7 @@ res = s.crm.delete_crm_connection_id_deal_id(req)
 
 if res.status_code == 200:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -200,6 +203,7 @@ res = s.crm.delete_crm_connection_id_event_id(req)
 
 if res.status_code == 200:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -239,6 +243,7 @@ res = s.crm.delete_crm_connection_id_file_id(req)
 
 if res.status_code == 200:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -278,6 +283,7 @@ res = s.crm.delete_crm_connection_id_lead_id(req)
 
 if res.status_code == 200:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -317,6 +323,7 @@ res = s.crm.delete_crm_connection_id_pipeline_id(req)
 
 if res.status_code == 200:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -356,6 +363,7 @@ res = s.crm.delete_crm_connection_id_team_id(req)
 
 if res.status_code == 200:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -395,6 +403,7 @@ res = s.crm.delete_crm_connection_id_user_id(req)
 
 if res.status_code == 200:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -434,6 +443,7 @@ res = s.crm.get_crm_connection_id_company(req)
 
 if res.crm_companies is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -473,6 +483,7 @@ res = s.crm.get_crm_connection_id_company_id(req)
 
 if res.crm_company is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -512,6 +523,7 @@ res = s.crm.get_crm_connection_id_contact(req)
 
 if res.crm_contacts is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -551,6 +563,7 @@ res = s.crm.get_crm_connection_id_contact_id(req)
 
 if res.crm_contact is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -590,6 +603,7 @@ res = s.crm.get_crm_connection_id_deal(req)
 
 if res.crm_deals is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -629,6 +643,7 @@ res = s.crm.get_crm_connection_id_deal_id(req)
 
 if res.crm_deal is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -668,6 +683,7 @@ res = s.crm.get_crm_connection_id_event(req)
 
 if res.crm_events is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -707,6 +723,7 @@ res = s.crm.get_crm_connection_id_event_id(req)
 
 if res.crm_event is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -746,6 +763,7 @@ res = s.crm.get_crm_connection_id_file(req)
 
 if res.crm_files is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -785,6 +803,7 @@ res = s.crm.get_crm_connection_id_file_id(req)
 
 if res.crm_file is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -824,6 +843,7 @@ res = s.crm.get_crm_connection_id_lead(req)
 
 if res.crm_leads is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -863,6 +883,7 @@ res = s.crm.get_crm_connection_id_lead_id(req)
 
 if res.crm_lead is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -902,6 +923,7 @@ res = s.crm.get_crm_connection_id_pipeline(req)
 
 if res.crm_pipelines is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -941,6 +963,7 @@ res = s.crm.get_crm_connection_id_pipeline_id(req)
 
 if res.crm_pipeline is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -980,6 +1003,7 @@ res = s.crm.get_crm_connection_id_team(req)
 
 if res.crm_teams is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -1019,6 +1043,7 @@ res = s.crm.get_crm_connection_id_team_id(req)
 
 if res.crm_team is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -1058,6 +1083,7 @@ res = s.crm.get_crm_connection_id_user(req)
 
 if res.crm_users is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -1097,6 +1123,7 @@ res = s.crm.get_crm_connection_id_user_id(req)
 
 if res.crm_user is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -1158,6 +1185,7 @@ res = s.crm.patch_crm_connection_id_company_id(req)
 
 if res.crm_company is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -1216,6 +1244,7 @@ res = s.crm.patch_crm_connection_id_contact_id(req)
 
 if res.crm_contact is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -1262,6 +1291,7 @@ res = s.crm.patch_crm_connection_id_deal_id(req)
 
 if res.crm_deal is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -1326,6 +1356,7 @@ res = s.crm.patch_crm_connection_id_event_id(req)
 
 if res.crm_event is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -1369,6 +1400,7 @@ res = s.crm.patch_crm_connection_id_file_id(req)
 
 if res.crm_file is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -1421,6 +1453,7 @@ res = s.crm.patch_crm_connection_id_lead_id(req)
 
 if res.crm_lead is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -1464,6 +1497,7 @@ res = s.crm.patch_crm_connection_id_pipeline_id(req)
 
 if res.crm_pipeline is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -1510,6 +1544,7 @@ res = s.crm.patch_crm_connection_id_team_id(req)
 
 if res.crm_team is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -1562,6 +1597,7 @@ res = s.crm.patch_crm_connection_id_user_id(req)
 
 if res.crm_user is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -1622,6 +1658,7 @@ res = s.crm.post_crm_connection_id_company(req)
 
 if res.crm_company is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -1679,6 +1716,7 @@ res = s.crm.post_crm_connection_id_contact(req)
 
 if res.crm_contact is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -1724,6 +1762,7 @@ res = s.crm.post_crm_connection_id_deal(req)
 
 if res.crm_deal is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -1787,6 +1826,7 @@ res = s.crm.post_crm_connection_id_event(req)
 
 if res.crm_event is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -1829,6 +1869,7 @@ res = s.crm.post_crm_connection_id_file(req)
 
 if res.crm_file is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -1880,6 +1921,7 @@ res = s.crm.post_crm_connection_id_lead(req)
 
 if res.crm_lead is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -1922,6 +1964,7 @@ res = s.crm.post_crm_connection_id_pipeline(req)
 
 if res.crm_pipeline is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -1967,6 +2010,7 @@ res = s.crm.post_crm_connection_id_team(req)
 
 if res.crm_team is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -2018,6 +2062,7 @@ res = s.crm.post_crm_connection_id_user(req)
 
 if res.crm_user is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -2079,6 +2124,7 @@ res = s.crm.put_crm_connection_id_company_id(req)
 
 if res.crm_company is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -2137,6 +2183,7 @@ res = s.crm.put_crm_connection_id_contact_id(req)
 
 if res.crm_contact is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -2183,6 +2230,7 @@ res = s.crm.put_crm_connection_id_deal_id(req)
 
 if res.crm_deal is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -2247,6 +2295,7 @@ res = s.crm.put_crm_connection_id_event_id(req)
 
 if res.crm_event is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -2290,6 +2339,7 @@ res = s.crm.put_crm_connection_id_file_id(req)
 
 if res.crm_file is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -2342,6 +2392,7 @@ res = s.crm.put_crm_connection_id_lead_id(req)
 
 if res.crm_lead is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -2385,6 +2436,7 @@ res = s.crm.put_crm_connection_id_pipeline_id(req)
 
 if res.crm_pipeline is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -2431,6 +2483,7 @@ res = s.crm.put_crm_connection_id_team_id(req)
 
 if res.crm_team is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -2483,6 +2536,7 @@ res = s.crm.put_crm_connection_id_user_id(req)
 
 if res.crm_user is not None:
     # handle response
+    pass
 ```
 
 ### Parameters

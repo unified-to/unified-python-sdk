@@ -35,6 +35,7 @@ res = s.candidate.delete_ats_connection_id_candidate_id(req)
 
 if res.status_code == 200:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -74,6 +75,7 @@ res = s.candidate.get_ats_connection_id_candidate(req)
 
 if res.ats_candidates is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -113,6 +115,7 @@ res = s.candidate.get_ats_connection_id_candidate_id(req)
 
 if res.ats_candidate is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -170,6 +173,7 @@ res = s.candidate.patch_ats_connection_id_candidate_id(req)
 
 if res.ats_candidate is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -226,6 +230,7 @@ res = s.candidate.post_ats_connection_id_candidate(req)
 
 if res.ats_candidate is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -283,6 +288,7 @@ res = s.candidate.put_ats_connection_id_candidate_id(req)
 
 if res.ats_candidate is not None:
     # handle response
+    pass
 ```
 
 ### Parameters

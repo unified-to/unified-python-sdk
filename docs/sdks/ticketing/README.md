@@ -53,6 +53,7 @@ res = s.ticketing.delete_ticketing_connection_id_agent_id(req)
 
 if res.status_code == 200:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -92,6 +93,7 @@ res = s.ticketing.delete_ticketing_connection_id_customer_id(req)
 
 if res.status_code == 200:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -132,6 +134,7 @@ res = s.ticketing.delete_ticketing_connection_id_note_ticket_id_id(req)
 
 if res.status_code == 200:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -171,6 +174,7 @@ res = s.ticketing.delete_ticketing_connection_id_ticket_id(req)
 
 if res.status_code == 200:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -210,6 +214,7 @@ res = s.ticketing.get_ticketing_connection_id_agent(req)
 
 if res.ticketing_agents is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -249,6 +254,7 @@ res = s.ticketing.get_ticketing_connection_id_agent_id(req)
 
 if res.ticketing_agent is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -288,6 +294,7 @@ res = s.ticketing.get_ticketing_connection_id_customer(req)
 
 if res.ticketing_customers is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -327,6 +334,7 @@ res = s.ticketing.get_ticketing_connection_id_customer_id(req)
 
 if res.ticketing_customer is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -367,6 +375,7 @@ res = s.ticketing.get_ticketing_connection_id_note_ticket_id(req)
 
 if res.ticketing_notes is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -407,6 +416,7 @@ res = s.ticketing.get_ticketing_connection_id_note_ticket_id_id(req)
 
 if res.ticketing_note is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -446,6 +456,7 @@ res = s.ticketing.get_ticketing_connection_id_ticket(req)
 
 if res.ticketing_tickets is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -485,6 +496,7 @@ res = s.ticketing.get_ticketing_connection_id_ticket_id(req)
 
 if res.ticketing_ticket is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -538,6 +550,7 @@ res = s.ticketing.patch_ticketing_connection_id_agent_id(req)
 
 if res.ticketing_agent is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -594,6 +607,7 @@ res = s.ticketing.patch_ticketing_connection_id_customer_id(req)
 
 if res.ticketing_customer is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -638,6 +652,7 @@ res = s.ticketing.patch_ticketing_connection_id_note_ticket_id_id(req)
 
 if res.ticketing_note is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -684,6 +699,7 @@ res = s.ticketing.patch_ticketing_connection_id_ticket_id(req)
 
 if res.ticketing_ticket is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -736,6 +752,7 @@ res = s.ticketing.post_ticketing_connection_id_agent(req)
 
 if res.ticketing_agent is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -791,6 +808,7 @@ res = s.ticketing.post_ticketing_connection_id_customer(req)
 
 if res.ticketing_customer is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -834,6 +852,7 @@ res = s.ticketing.post_ticketing_connection_id_note_ticket_id(req)
 
 if res.ticketing_note is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -879,6 +898,7 @@ res = s.ticketing.post_ticketing_connection_id_ticket(req)
 
 if res.ticketing_ticket is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -932,6 +952,7 @@ res = s.ticketing.put_ticketing_connection_id_agent_id(req)
 
 if res.ticketing_agent is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -988,6 +1009,7 @@ res = s.ticketing.put_ticketing_connection_id_customer_id(req)
 
 if res.ticketing_customer is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -1032,6 +1054,7 @@ res = s.ticketing.put_ticketing_connection_id_note_ticket_id_id(req)
 
 if res.ticketing_note is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -1078,6 +1101,7 @@ res = s.ticketing.put_ticketing_connection_id_ticket_id(req)
 
 if res.ticketing_ticket is not None:
     # handle response
+    pass
 ```
 
 ### Parameters

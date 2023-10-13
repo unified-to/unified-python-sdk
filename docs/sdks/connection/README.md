@@ -34,6 +34,7 @@ res = s.connection.delete_unified_connection_id(req)
 
 if res.status_code == 200:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -75,6 +76,7 @@ res = s.connection.get_unified_connection(req)
 
 if res.connections is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -113,6 +115,7 @@ res = s.connection.get_unified_connection_id(req)
 
 if res.connection is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -170,6 +173,7 @@ res = s.connection.patch_unified_connection_id(req)
 
 if res.connection is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -224,6 +228,7 @@ res = s.connection.post_unified_connection(req)
 
 if res.connection is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -281,6 +286,7 @@ res = s.connection.put_unified_connection_id(req)
 
 if res.connection is not None:
     # handle response
+    pass
 ```
 
 ### Parameters

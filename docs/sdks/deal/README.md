@@ -35,6 +35,7 @@ res = s.deal.delete_crm_connection_id_deal_id(req)
 
 if res.status_code == 200:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -74,6 +75,7 @@ res = s.deal.get_crm_connection_id_deal(req)
 
 if res.crm_deals is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -113,6 +115,7 @@ res = s.deal.get_crm_connection_id_deal_id(req)
 
 if res.crm_deal is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -159,6 +162,7 @@ res = s.deal.patch_crm_connection_id_deal_id(req)
 
 if res.crm_deal is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -204,6 +208,7 @@ res = s.deal.post_crm_connection_id_deal(req)
 
 if res.crm_deal is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -250,6 +255,7 @@ res = s.deal.put_crm_connection_id_deal_id(req)
 
 if res.crm_deal is not None:
     # handle response
+    pass
 ```
 
 ### Parameters

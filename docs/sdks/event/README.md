@@ -35,6 +35,7 @@ res = s.event.delete_crm_connection_id_event_id(req)
 
 if res.status_code == 200:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -74,6 +75,7 @@ res = s.event.get_crm_connection_id_event(req)
 
 if res.crm_events is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -113,6 +115,7 @@ res = s.event.get_crm_connection_id_event_id(req)
 
 if res.crm_event is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -177,6 +180,7 @@ res = s.event.patch_crm_connection_id_event_id(req)
 
 if res.crm_event is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -240,6 +244,7 @@ res = s.event.post_crm_connection_id_event(req)
 
 if res.crm_event is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -304,6 +309,7 @@ res = s.event.put_crm_connection_id_event_id(req)
 
 if res.crm_event is not None:
     # handle response
+    pass
 ```
 
 ### Parameters

@@ -36,6 +36,7 @@ res = s.company.delete_crm_connection_id_company_id(req)
 
 if res.status_code == 200:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -75,6 +76,7 @@ res = s.company.get_crm_connection_id_company(req)
 
 if res.crm_companies is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -114,6 +116,7 @@ res = s.company.get_crm_connection_id_company_id(req)
 
 if res.crm_company is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -152,6 +155,7 @@ res = s.company.get_enrich_connection_id_company(req)
 
 if res.enrich_company is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -213,6 +217,7 @@ res = s.company.patch_crm_connection_id_company_id(req)
 
 if res.crm_company is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -273,6 +278,7 @@ res = s.company.post_crm_connection_id_company(req)
 
 if res.crm_company is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -334,6 +340,7 @@ res = s.company.put_crm_connection_id_company_id(req)
 
 if res.crm_company is not None:
     # handle response
+    pass
 ```
 
 ### Parameters

@@ -41,6 +41,7 @@ res = s.martech.delete_martech_connection_id_list_id(req)
 
 if res.status_code == 200:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -81,6 +82,7 @@ res = s.martech.delete_martech_connection_id_list_id_member_id(req)
 
 if res.status_code == 200:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -120,6 +122,7 @@ res = s.martech.get_martech_connection_id_list(req)
 
 if res.marketing_lists is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -159,6 +162,7 @@ res = s.martech.get_martech_connection_id_list_id(req)
 
 if res.marketing_list is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -199,6 +203,7 @@ res = s.martech.get_martech_connection_id_list_id_member(req)
 
 if res.marketing_members is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -239,6 +244,7 @@ res = s.martech.get_martech_connection_id_list_id_member_id(req)
 
 if res.marketing_member is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -282,6 +288,7 @@ res = s.martech.patch_martech_connection_id_list_id(req)
 
 if res.marketing_list is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -337,6 +344,7 @@ res = s.martech.patch_martech_connection_id_list_id_member_id(req)
 
 if res.marketing_member is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -379,6 +387,7 @@ res = s.martech.post_martech_connection_id_list(req)
 
 if res.marketing_list is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -433,6 +442,7 @@ res = s.martech.post_martech_connection_id_list_id_member(req)
 
 if res.marketing_member is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -476,6 +486,7 @@ res = s.martech.put_martech_connection_id_list_id(req)
 
 if res.marketing_list is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -531,6 +542,7 @@ res = s.martech.put_martech_connection_id_list_id_member_id(req)
 
 if res.marketing_member is not None:
     # handle response
+    pass
 ```
 
 ### Parameters

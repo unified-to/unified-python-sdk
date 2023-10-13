@@ -35,6 +35,7 @@ res = s.lead.delete_crm_connection_id_lead_id(req)
 
 if res.status_code == 200:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -74,6 +75,7 @@ res = s.lead.get_crm_connection_id_lead(req)
 
 if res.crm_leads is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -113,6 +115,7 @@ res = s.lead.get_crm_connection_id_lead_id(req)
 
 if res.crm_lead is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -165,6 +168,7 @@ res = s.lead.patch_crm_connection_id_lead_id(req)
 
 if res.crm_lead is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -216,6 +220,7 @@ res = s.lead.post_crm_connection_id_lead(req)
 
 if res.crm_lead is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -268,6 +273,7 @@ res = s.lead.put_crm_connection_id_lead_id(req)
 
 if res.crm_lead is not None:
     # handle response
+    pass
 ```
 
 ### Parameters

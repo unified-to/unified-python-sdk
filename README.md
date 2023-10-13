@@ -35,6 +35,7 @@ res = s.agent.delete_ticketing_connection_id_agent_id(req)
 
 if res.status_code == 200:
     # handle response
+    pass
 ```
 <!-- End SDK Example Usage -->
 

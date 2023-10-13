@@ -35,6 +35,7 @@ res = s.job.delete_ats_connection_id_job_id(req)
 
 if res.status_code == 200:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -74,6 +75,7 @@ res = s.job.get_ats_connection_id_job(req)
 
 if res.ats_jobs is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -113,6 +115,7 @@ res = s.job.get_ats_connection_id_job_id(req)
 
 if res.ats_job is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -176,6 +179,7 @@ res = s.job.patch_ats_connection_id_job_id(req)
 
 if res.ats_job is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -238,6 +242,7 @@ res = s.job.post_ats_connection_id_job(req)
 
 if res.ats_job is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -301,6 +306,7 @@ res = s.job.put_ats_connection_id_job_id(req)
 
 if res.ats_job is not None:
     # handle response
+    pass
 ```
 
 ### Parameters

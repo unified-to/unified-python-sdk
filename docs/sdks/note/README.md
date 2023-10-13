@@ -36,6 +36,7 @@ res = s.note.delete_ticketing_connection_id_note_ticket_id_id(req)
 
 if res.status_code == 200:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -76,6 +77,7 @@ res = s.note.get_ticketing_connection_id_note_ticket_id(req)
 
 if res.ticketing_notes is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -116,6 +118,7 @@ res = s.note.get_ticketing_connection_id_note_ticket_id_id(req)
 
 if res.ticketing_note is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -160,6 +163,7 @@ res = s.note.patch_ticketing_connection_id_note_ticket_id_id(req)
 
 if res.ticketing_note is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -203,6 +207,7 @@ res = s.note.post_ticketing_connection_id_note_ticket_id(req)
 
 if res.ticketing_note is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -247,6 +252,7 @@ res = s.note.put_ticketing_connection_id_note_ticket_id_id(req)
 
 if res.ticketing_note is not None:
     # handle response
+    pass
 ```
 
 ### Parameters

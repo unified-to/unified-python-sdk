@@ -34,6 +34,7 @@ res = s.auth.get_unified_integration_auth_workspace_id_integration_type(req)
 
 if res.get_unified_integration_auth_workspace_id_integration_type_200_application_json_string is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -73,6 +74,7 @@ res = s.auth.get_unified_integration_login_workspace_id_integration_type(req)
 
 if res.get_unified_integration_login_workspace_id_integration_type_200_application_json_string is not None:
     # handle response
+    pass
 ```
 
 ### Parameters

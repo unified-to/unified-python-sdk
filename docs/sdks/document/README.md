@@ -35,6 +35,7 @@ res = s.document.delete_ats_connection_id_scorecard_id(req)
 
 if res.status_code == 200:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -74,6 +75,7 @@ res = s.document.get_ats_connection_id_scorecard(req)
 
 if res.ats_scorecards is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -113,6 +115,7 @@ res = s.document.get_ats_connection_id_scorecard_id(req)
 
 if res.ats_scorecard is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -156,6 +159,7 @@ res = s.document.patch_ats_connection_id_scorecard_id(req)
 
 if res.ats_scorecard is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -198,6 +202,7 @@ res = s.document.post_ats_connection_id_scorecard(req)
 
 if res.ats_scorecard is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -241,6 +246,7 @@ res = s.document.put_ats_connection_id_scorecard_id(req)
 
 if res.ats_scorecard is not None:
     # handle response
+    pass
 ```
 
 ### Parameters

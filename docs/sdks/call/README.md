@@ -30,6 +30,7 @@ res = s.call.get_uc_connection_id_call(req)
 
 if res.uc_calls is not None:
     # handle response
+    pass
 ```
 
 ### Parameters

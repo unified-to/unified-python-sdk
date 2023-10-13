@@ -41,6 +41,7 @@ res = s.hris.delete_hris_connection_id_employee_id(req)
 
 if res.status_code == 200:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -80,6 +81,7 @@ res = s.hris.delete_hris_connection_id_group_id(req)
 
 if res.status_code == 200:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -119,6 +121,7 @@ res = s.hris.get_hris_connection_id_employee(req)
 
 if res.hris_employees is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -158,6 +161,7 @@ res = s.hris.get_hris_connection_id_employee_id(req)
 
 if res.hris_employee is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -197,6 +201,7 @@ res = s.hris.get_hris_connection_id_group(req)
 
 if res.hris_groups is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -236,6 +241,7 @@ res = s.hris.get_hris_connection_id_group_id(req)
 
 if res.hris_group is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -290,6 +296,7 @@ res = s.hris.patch_hris_connection_id_employee_id(req)
 
 if res.hris_employee is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -339,6 +346,7 @@ res = s.hris.patch_hris_connection_id_group_id(req)
 
 if res.hris_group is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -392,6 +400,7 @@ res = s.hris.post_hris_connection_id_employee(req)
 
 if res.hris_employee is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -440,6 +449,7 @@ res = s.hris.post_hris_connection_id_group(req)
 
 if res.hris_group is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -494,6 +504,7 @@ res = s.hris.put_hris_connection_id_employee_id(req)
 
 if res.hris_employee is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -543,6 +554,7 @@ res = s.hris.put_hris_connection_id_group_id(req)
 
 if res.hris_group is not None:
     # handle response
+    pass
 ```
 
 ### Parameters

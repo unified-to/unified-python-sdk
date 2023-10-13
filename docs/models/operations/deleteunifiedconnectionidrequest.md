@@ -5,4 +5,4 @@
 
 | Field                | Type                 | Required             | Description          |
 | -------------------- | -------------------- | -------------------- | -------------------- |
-| `id`                 | *Optional[str]*      | :heavy_check_mark:   | ID of the Connection |
+| `id`                 | *str*                | :heavy_check_mark:   | ID of the Connection |

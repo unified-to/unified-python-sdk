@@ -35,6 +35,7 @@ res = s.integration.get_unified_integration(req)
 
 if res.integrations is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -77,6 +78,7 @@ res = s.integration.get_unified_integration_auth_workspace_id_integration_type(r
 
 if res.get_unified_integration_auth_workspace_id_integration_type_200_application_json_string is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -115,6 +117,7 @@ res = s.integration.get_unified_integration_integration_type(req)
 
 if res.integration is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -156,6 +159,7 @@ res = s.integration.get_unified_integration_workspace_workspace_id(req)
 
 if res.integrations is not None:
     # handle response
+    pass
 ```
 
 ### Parameters

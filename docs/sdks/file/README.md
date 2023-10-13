@@ -35,6 +35,7 @@ res = s.file.delete_crm_connection_id_file_id(req)
 
 if res.status_code == 200:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -74,6 +75,7 @@ res = s.file.get_crm_connection_id_file(req)
 
 if res.crm_files is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -113,6 +115,7 @@ res = s.file.get_crm_connection_id_file_id(req)
 
 if res.crm_file is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -156,6 +159,7 @@ res = s.file.patch_crm_connection_id_file_id(req)
 
 if res.crm_file is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -198,6 +202,7 @@ res = s.file.post_crm_connection_id_file(req)
 
 if res.crm_file is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -241,6 +246,7 @@ res = s.file.put_crm_connection_id_file_id(req)
 
 if res.crm_file is not None:
     # handle response
+    pass
 ```
 
 ### Parameters

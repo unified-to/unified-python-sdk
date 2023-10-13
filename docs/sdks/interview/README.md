@@ -35,6 +35,7 @@ res = s.interview.delete_ats_connection_id_interview_id(req)
 
 if res.status_code == 200:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -74,6 +75,7 @@ res = s.interview.get_ats_connection_id_interview(req)
 
 if res.ats_interviews is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -113,6 +115,7 @@ res = s.interview.get_ats_connection_id_interview_id(req)
 
 if res.ats_interview is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -159,6 +162,7 @@ res = s.interview.patch_ats_connection_id_interview_id(req)
 
 if res.ats_interview is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -204,6 +208,7 @@ res = s.interview.post_ats_connection_id_interview(req)
 
 if res.ats_interview is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -250,6 +255,7 @@ res = s.interview.put_ats_connection_id_interview_id(req)
 
 if res.ats_interview is not None:
     # handle response
+    pass
 ```
 
 ### Parameters

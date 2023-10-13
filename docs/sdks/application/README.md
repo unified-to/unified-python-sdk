@@ -35,6 +35,7 @@ res = s.application.delete_ats_connection_id_application_id(req)
 
 if res.status_code == 200:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -74,6 +75,7 @@ res = s.application.get_ats_connection_id_application(req)
 
 if res.ats_applications is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -113,6 +115,7 @@ res = s.application.get_ats_connection_id_application_id(req)
 
 if res.ats_application is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -156,6 +159,7 @@ res = s.application.patch_ats_connection_id_application_id(req)
 
 if res.ats_application is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -198,6 +202,7 @@ res = s.application.post_ats_connection_id_application(req)
 
 if res.ats_application is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -241,6 +246,7 @@ res = s.application.put_ats_connection_id_application_id(req)
 
 if res.ats_application is not None:
     # handle response
+    pass
 ```
 
 ### Parameters

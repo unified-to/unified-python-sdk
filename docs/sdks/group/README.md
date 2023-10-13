@@ -35,6 +35,7 @@ res = s.group.delete_hris_connection_id_group_id(req)
 
 if res.status_code == 200:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -74,6 +75,7 @@ res = s.group.get_hris_connection_id_group(req)
 
 if res.hris_groups is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -113,6 +115,7 @@ res = s.group.get_hris_connection_id_group_id(req)
 
 if res.hris_group is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -162,6 +165,7 @@ res = s.group.patch_hris_connection_id_group_id(req)
 
 if res.hris_group is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -210,6 +214,7 @@ res = s.group.post_hris_connection_id_group(req)
 
 if res.hris_group is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -259,6 +264,7 @@ res = s.group.put_hris_connection_id_group_id(req)
 
 if res.hris_group is not None:
     # handle response
+    pass
 ```
 
 ### Parameters

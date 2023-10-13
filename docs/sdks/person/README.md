@@ -29,6 +29,7 @@ res = s.person.get_enrich_connection_id_person(req)
 
 if res.enrich_person is not None:
     # handle response
+    pass
 ```
 
 ### Parameters

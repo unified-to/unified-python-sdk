@@ -35,6 +35,7 @@ res = s.team.delete_crm_connection_id_team_id(req)
 
 if res.status_code == 200:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -74,6 +75,7 @@ res = s.team.get_crm_connection_id_team(req)
 
 if res.crm_teams is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -113,6 +115,7 @@ res = s.team.get_crm_connection_id_team_id(req)
 
 if res.crm_team is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -159,6 +162,7 @@ res = s.team.patch_crm_connection_id_team_id(req)
 
 if res.crm_team is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -204,6 +208,7 @@ res = s.team.post_crm_connection_id_team(req)
 
 if res.crm_team is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -250,6 +255,7 @@ res = s.team.put_crm_connection_id_team_id(req)
 
 if res.crm_team is not None:
     # handle response
+    pass
 ```
 
 ### Parameters

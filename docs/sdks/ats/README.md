@@ -59,6 +59,7 @@ res = s.ats.delete_ats_connection_id_application_id(req)
 
 if res.status_code == 200:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -98,6 +99,7 @@ res = s.ats.delete_ats_connection_id_candidate_id(req)
 
 if res.status_code == 200:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -137,6 +139,7 @@ res = s.ats.delete_ats_connection_id_interview_id(req)
 
 if res.status_code == 200:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -176,6 +179,7 @@ res = s.ats.delete_ats_connection_id_job_id(req)
 
 if res.status_code == 200:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -215,6 +219,7 @@ res = s.ats.delete_ats_connection_id_scorecard_id(req)
 
 if res.status_code == 200:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -254,6 +259,7 @@ res = s.ats.get_ats_connection_id_application(req)
 
 if res.ats_applications is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -293,6 +299,7 @@ res = s.ats.get_ats_connection_id_application_id(req)
 
 if res.ats_application is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -332,6 +339,7 @@ res = s.ats.get_ats_connection_id_candidate(req)
 
 if res.ats_candidates is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -371,6 +379,7 @@ res = s.ats.get_ats_connection_id_candidate_id(req)
 
 if res.ats_candidate is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -410,6 +419,7 @@ res = s.ats.get_ats_connection_id_interview(req)
 
 if res.ats_interviews is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -449,6 +459,7 @@ res = s.ats.get_ats_connection_id_interview_id(req)
 
 if res.ats_interview is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -488,6 +499,7 @@ res = s.ats.get_ats_connection_id_job(req)
 
 if res.ats_jobs is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -527,6 +539,7 @@ res = s.ats.get_ats_connection_id_job_id(req)
 
 if res.ats_job is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -566,6 +579,7 @@ res = s.ats.get_ats_connection_id_scorecard(req)
 
 if res.ats_scorecards is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -605,6 +619,7 @@ res = s.ats.get_ats_connection_id_scorecard_id(req)
 
 if res.ats_scorecard is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -648,6 +663,7 @@ res = s.ats.patch_ats_connection_id_application_id(req)
 
 if res.ats_application is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -705,6 +721,7 @@ res = s.ats.patch_ats_connection_id_candidate_id(req)
 
 if res.ats_candidate is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -751,6 +768,7 @@ res = s.ats.patch_ats_connection_id_interview_id(req)
 
 if res.ats_interview is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -814,6 +832,7 @@ res = s.ats.patch_ats_connection_id_job_id(req)
 
 if res.ats_job is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -857,6 +876,7 @@ res = s.ats.patch_ats_connection_id_scorecard_id(req)
 
 if res.ats_scorecard is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -899,6 +919,7 @@ res = s.ats.post_ats_connection_id_application(req)
 
 if res.ats_application is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -955,6 +976,7 @@ res = s.ats.post_ats_connection_id_candidate(req)
 
 if res.ats_candidate is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -1000,6 +1022,7 @@ res = s.ats.post_ats_connection_id_interview(req)
 
 if res.ats_interview is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -1062,6 +1085,7 @@ res = s.ats.post_ats_connection_id_job(req)
 
 if res.ats_job is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -1104,6 +1128,7 @@ res = s.ats.post_ats_connection_id_scorecard(req)
 
 if res.ats_scorecard is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -1147,6 +1172,7 @@ res = s.ats.put_ats_connection_id_application_id(req)
 
 if res.ats_application is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -1204,6 +1230,7 @@ res = s.ats.put_ats_connection_id_candidate_id(req)
 
 if res.ats_candidate is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -1250,6 +1277,7 @@ res = s.ats.put_ats_connection_id_interview_id(req)
 
 if res.ats_interview is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -1313,6 +1341,7 @@ res = s.ats.put_ats_connection_id_job_id(req)
 
 if res.ats_job is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -1356,6 +1385,7 @@ res = s.ats.put_ats_connection_id_scorecard_id(req)
 
 if res.ats_scorecard is not None:
     # handle response
+    pass
 ```
 
 ### Parameters

@@ -49,6 +49,7 @@ res = s.unified.delete_unified_connection_id(req)
 
 if res.status_code == 200:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -84,6 +85,7 @@ res = s.unified.delete_unified_user()
 
 if res.status_code == 200:
     # handle response
+    pass
 ```
 
 
@@ -116,6 +118,7 @@ res = s.unified.delete_unified_webhook_id(req)
 
 if res.status_code == 200:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -153,6 +156,7 @@ res = s.unified.get_unified_apicall(req)
 
 if res.api_calls is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -191,6 +195,7 @@ res = s.unified.get_unified_apicall_id(req)
 
 if res.api_call is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -232,6 +237,7 @@ res = s.unified.get_unified_connection(req)
 
 if res.connections is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -270,6 +276,7 @@ res = s.unified.get_unified_connection_id(req)
 
 if res.connection is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -311,6 +318,7 @@ res = s.unified.get_unified_integration(req)
 
 if res.integrations is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -353,6 +361,7 @@ res = s.unified.get_unified_integration_auth_workspace_id_integration_type(req)
 
 if res.get_unified_integration_auth_workspace_id_integration_type_200_application_json_string is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -391,6 +400,7 @@ res = s.unified.get_unified_integration_integration_type(req)
 
 if res.integration is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -432,6 +442,7 @@ res = s.unified.get_unified_integration_workspace_workspace_id(req)
 
 if res.integrations is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -467,6 +478,7 @@ res = s.unified.get_unified_user()
 
 if res.user is not None:
     # handle response
+    pass
 ```
 
 
@@ -496,6 +508,7 @@ res = s.unified.get_unified_user_token()
 
 if res.get_unified_user_token_200_application_json_string is not None:
     # handle response
+    pass
 ```
 
 
@@ -527,6 +540,7 @@ res = s.unified.get_unified_webhook(req)
 
 if res.webhooks is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -565,6 +579,7 @@ res = s.unified.get_unified_webhook_id(req)
 
 if res.webhook is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -622,6 +637,7 @@ res = s.unified.patch_unified_connection_id(req)
 
 if res.connection is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -666,6 +682,7 @@ res = s.unified.patch_unified_user(req)
 
 if res.user is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -720,6 +737,7 @@ res = s.unified.post_unified_connection(req)
 
 if res.connection is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -777,6 +795,7 @@ res = s.unified.post_unified_webhook_connection_id_object(req)
 
 if res.webhook is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -834,6 +853,7 @@ res = s.unified.put_unified_connection_id(req)
 
 if res.connection is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -878,6 +898,7 @@ res = s.unified.put_unified_user(req)
 
 if res.user is not None:
     # handle response
+    pass
 ```
 
 ### Parameters

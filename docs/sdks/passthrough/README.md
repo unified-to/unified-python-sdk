@@ -34,6 +34,7 @@ res = s.passthrough.delete_passthrough_connection_id_path(req)
 
 if res.undefined is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -73,6 +74,7 @@ res = s.passthrough.get_passthrough_connection_id_path(req)
 
 if res.undefined is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -113,6 +115,7 @@ res = s.passthrough.patch_passthrough_connection_id_path(req)
 
 if res.undefined is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -153,6 +156,7 @@ res = s.passthrough.post_passthrough_connection_id_path(req)
 
 if res.undefined is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -193,6 +197,7 @@ res = s.passthrough.put_passthrough_connection_id_path(req)
 
 if res.undefined is not None:
     # handle response
+    pass
 ```
 
 ### Parameters

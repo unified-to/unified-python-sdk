@@ -30,6 +30,7 @@ res = s.enrich.get_enrich_connection_id_company(req)
 
 if res.enrich_company is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -68,6 +69,7 @@ res = s.enrich.get_enrich_connection_id_person(req)
 
 if res.enrich_person is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
