@@ -51,6 +51,9 @@ req = operations.CreateCrmCompanyRequest(
         ],
     ),
     connection_id='magenta Data woot',
+    fields_=[
+        'payment',
+    ],
 )
 
 res = s.company.create_crm_company(req)
@@ -90,6 +93,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetCrmCompanyRequest(
     connection_id='THX Strategist deposit',
+    fields_=[
+        'snag',
+    ],
     id='<ID>',
 )
 
@@ -131,6 +137,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListCrmCompaniesRequest(
     connection_id='Jazz solid Lamborghini',
+    fields_=[
+        'Sleek',
+    ],
 )
 
 res = s.company.list_crm_companies(req)
@@ -231,6 +240,9 @@ req = operations.PatchCrmCompanyRequest(
         ],
     ),
     connection_id='Trans',
+    fields_=[
+        'Money',
+    ],
     id='<ID>',
 )
 
@@ -333,6 +345,9 @@ req = operations.UpdateCrmCompanyRequest(
         ],
     ),
     connection_id='Southeast ad',
+    fields_=[
+        'Practical',
+    ],
     id='<ID>',
 )
 

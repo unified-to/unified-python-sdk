@@ -14,6 +14,8 @@ class UpdateTicketingTicketRequest:
     r"""ID of the connection"""
     id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     r"""ID of the Ticket"""
+    fields_: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
+    r"""Comma-delimited fields to return"""
     ticketing_ticket: Optional[shared_ticketingticket.TicketingTicket] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 

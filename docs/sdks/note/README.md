@@ -32,7 +32,10 @@ req = operations.CreateTicketingNoteRequest(
         raw=shared.PropertyTicketingNoteRaw(),
     ),
     connection_id='Books kilogram hmph',
-    ticket_id='Dakota function interface',
+    fields_=[
+        'yowza',
+    ],
+    ticket_id='Markets executive Hoeger',
 )
 
 res = s.note.create_ticketing_note(req)
@@ -72,8 +75,11 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetTicketingNoteRequest(
     connection_id='joule program',
+    fields_=[
+        'SUV',
+    ],
     id='<ID>',
-    ticket_id='Fitness Applications Switchable',
+    ticket_id='payment Architect',
 )
 
 res = s.note.get_ticketing_note(req)
@@ -114,7 +120,10 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListTicketingNotesRequest(
     connection_id='Hybrid North',
-    ticket_id='Kroon Marvin Ford',
+    fields_=[
+        'hosepipe',
+    ],
+    ticket_id='Marvin',
 )
 
 res = s.note.list_ticketing_notes(req)
@@ -158,8 +167,11 @@ req = operations.PatchTicketingNoteRequest(
         raw=shared.PropertyTicketingNoteRaw(),
     ),
     connection_id='Bicycle Southwest Darmstadtium',
+    fields_=[
+        'Plastic',
+    ],
     id='<ID>',
-    ticket_id='index',
+    ticket_id='Investor bypass EXE',
 )
 
 res = s.note.patch_ticketing_note(req)
@@ -244,8 +256,11 @@ req = operations.UpdateTicketingNoteRequest(
         raw=shared.PropertyTicketingNoteRaw(),
     ),
     connection_id='via among Quality',
+    fields_=[
+        'bluetooth',
+    ],
     id='<ID>',
-    ticket_id='Brand when',
+    ticket_id='when',
 )
 
 res = s.note.update_ticketing_note(req)

@@ -24,6 +24,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListUcCallsRequest(
     connection_id='optical',
+    fields_=[
+        'South',
+    ],
 )
 
 res = s.call.list_uc_calls(req)

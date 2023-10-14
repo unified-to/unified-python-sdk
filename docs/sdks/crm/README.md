@@ -98,6 +98,9 @@ req = operations.CreateCrmCompanyRequest(
         ],
     ),
     connection_id='magenta Data woot',
+    fields_=[
+        'payment',
+    ],
 )
 
 res = s.crm.create_crm_company(req)
@@ -156,6 +159,9 @@ req = operations.CreateCrmContactRequest(
         ],
     ),
     connection_id='Cambridgeshire Passenger Producer',
+    fields_=[
+        'Krypton',
+    ],
 )
 
 res = s.crm.create_crm_contact(req)
@@ -202,6 +208,9 @@ req = operations.CreateCrmDealRequest(
         ],
     ),
     connection_id='Music Rap',
+    fields_=[
+        'wind',
+    ],
 )
 
 res = s.crm.create_crm_deal(req)
@@ -266,6 +275,9 @@ req = operations.CreateCrmEventRequest(
         task=shared.PropertyCrmEventTask(),
     ),
     connection_id='Savings',
+    fields_=[
+        'within',
+    ],
 )
 
 res = s.crm.create_crm_event(req)
@@ -309,6 +321,9 @@ req = operations.CreateCrmFileRequest(
         raw=shared.PropertyCrmFileRaw(),
     ),
     connection_id='ASCII Wooden the',
+    fields_=[
+        'Tungsten',
+    ],
 )
 
 res = s.crm.create_crm_file(req)
@@ -361,6 +376,9 @@ req = operations.CreateCrmLeadRequest(
         ],
     ),
     connection_id='ability Einsteinium Orchestrator',
+    fields_=[
+        'orchid',
+    ],
 )
 
 res = s.crm.create_crm_lead(req)
@@ -404,6 +422,9 @@ req = operations.CreateCrmPipelineRequest(
         raw=shared.PropertyCrmPipelineRaw(),
     ),
     connection_id='Paradigm Vista fuchsia',
+    fields_=[
+        'Hatchback',
+    ],
 )
 
 res = s.crm.create_crm_pipeline(req)
@@ -450,6 +471,9 @@ req = operations.CreateCrmTeamRequest(
         ],
     ),
     connection_id='as New Senior',
+    fields_=[
+        'Buckinghamshire',
+    ],
 )
 
 res = s.crm.create_crm_team(req)
@@ -502,6 +526,9 @@ req = operations.CreateCrmUserRequest(
         ],
     ),
     connection_id='Incredible Virginia',
+    fields_=[
+        'Keyboard',
+    ],
 )
 
 res = s.crm.create_crm_user(req)
@@ -541,6 +568,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetCrmCompanyRequest(
     connection_id='THX Strategist deposit',
+    fields_=[
+        'snag',
+    ],
     id='<ID>',
 )
 
@@ -581,6 +611,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetCrmContactRequest(
     connection_id='Oregon',
+    fields_=[
+        'methodology',
+    ],
     id='<ID>',
 )
 
@@ -621,6 +654,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetCrmDealRequest(
     connection_id='male orange',
+    fields_=[
+        'Reduced',
+    ],
     id='<ID>',
 )
 
@@ -661,6 +697,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetCrmEventRequest(
     connection_id='Metal South blockchains',
+    fields_=[
+        'comics',
+    ],
     id='<ID>',
 )
 
@@ -701,6 +740,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetCrmFileRequest(
     connection_id='ease',
+    fields_=[
+        'bypassing',
+    ],
     id='<ID>',
 )
 
@@ -741,6 +783,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetCrmLeadRequest(
     connection_id='Handmade Keyboard yum',
+    fields_=[
+        'magnetic',
+    ],
     id='<ID>',
 )
 
@@ -781,6 +826,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetCrmPipelineRequest(
     connection_id='withdrawal Southeast',
+    fields_=[
+        'evolve',
+    ],
     id='<ID>',
 )
 
@@ -821,6 +869,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetCrmTeamRequest(
     connection_id='digital awful',
+    fields_=[
+        'Peru',
+    ],
     id='<ID>',
 )
 
@@ -861,6 +912,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetCrmUserRequest(
     connection_id='Bespoke Dollar',
+    fields_=[
+        'unto',
+    ],
     id='<ID>',
 )
 
@@ -902,6 +956,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListCrmCompaniesRequest(
     connection_id='Jazz solid Lamborghini',
+    fields_=[
+        'Sleek',
+    ],
 )
 
 res = s.crm.list_crm_companies(req)
@@ -942,6 +999,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListCrmContactsRequest(
     connection_id='Awesome index steradian',
+    fields_=[
+        'District',
+    ],
 )
 
 res = s.crm.list_crm_contacts(req)
@@ -982,6 +1042,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListCrmDealsRequest(
     connection_id='Lamborghini',
+    fields_=[
+        'female',
+    ],
 )
 
 res = s.crm.list_crm_deals(req)
@@ -1022,6 +1085,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListCrmEventsRequest(
     connection_id='invoice gratefully',
+    fields_=[
+        'impactful',
+    ],
 )
 
 res = s.crm.list_crm_events(req)
@@ -1062,6 +1128,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListCrmFilesRequest(
     connection_id='lavender Genderflux Southeast',
+    fields_=[
+        'invoice',
+    ],
 )
 
 res = s.crm.list_crm_files(req)
@@ -1102,6 +1171,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListCrmLeadsRequest(
     connection_id='International',
+    fields_=[
+        'ratione',
+    ],
 )
 
 res = s.crm.list_crm_leads(req)
@@ -1142,6 +1214,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListCrmPipelinesRequest(
     connection_id='primary',
+    fields_=[
+        'female',
+    ],
 )
 
 res = s.crm.list_crm_pipelines(req)
@@ -1182,6 +1257,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListCrmTeamsRequest(
     connection_id='Classical microchip Wooden',
+    fields_=[
+        'Lutetium',
+    ],
 )
 
 res = s.crm.list_crm_teams(req)
@@ -1222,6 +1300,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListCrmUsersRequest(
     connection_id='careless Costa',
+    fields_=[
+        'olive',
+    ],
 )
 
 res = s.crm.list_crm_users(req)
@@ -1283,6 +1364,9 @@ req = operations.PatchCrmCompanyRequest(
         ],
     ),
     connection_id='Trans',
+    fields_=[
+        'Money',
+    ],
     id='<ID>',
 )
 
@@ -1342,6 +1426,9 @@ req = operations.PatchCrmContactRequest(
         ],
     ),
     connection_id='Future Diesel',
+    fields_=[
+        'syndicate',
+    ],
     id='<ID>',
 )
 
@@ -1389,6 +1476,9 @@ req = operations.PatchCrmDealRequest(
         ],
     ),
     connection_id='Platinum female',
+    fields_=[
+        'Berkshire',
+    ],
     id='<ID>',
 )
 
@@ -1454,6 +1544,9 @@ req = operations.PatchCrmEventRequest(
         task=shared.PropertyCrmEventTask(),
     ),
     connection_id='female',
+    fields_=[
+        'Connecticut',
+    ],
     id='<ID>',
 )
 
@@ -1498,6 +1591,9 @@ req = operations.PatchCrmFileRequest(
         raw=shared.PropertyCrmFileRaw(),
     ),
     connection_id='bluetooth',
+    fields_=[
+        'Bronze',
+    ],
     id='<ID>',
 )
 
@@ -1551,6 +1647,9 @@ req = operations.PatchCrmLeadRequest(
         ],
     ),
     connection_id='Ball Chips',
+    fields_=[
+        'Southwest',
+    ],
     id='<ID>',
 )
 
@@ -1595,6 +1694,9 @@ req = operations.PatchCrmPipelineRequest(
         raw=shared.PropertyCrmPipelineRaw(),
     ),
     connection_id='imperfect Costa Southwest',
+    fields_=[
+        'excluding',
+    ],
     id='<ID>',
 )
 
@@ -1642,6 +1744,9 @@ req = operations.PatchCrmTeamRequest(
         ],
     ),
     connection_id='Transexual compress redefine',
+    fields_=[
+        'gold',
+    ],
     id='<ID>',
 )
 
@@ -1695,6 +1800,9 @@ req = operations.PatchCrmUserRequest(
         ],
     ),
     connection_id='katal Industrial Classical',
+    fields_=[
+        'boo',
+    ],
     id='<ID>',
 )
 
@@ -2117,6 +2225,9 @@ req = operations.UpdateCrmCompanyRequest(
         ],
     ),
     connection_id='Southeast ad',
+    fields_=[
+        'Practical',
+    ],
     id='<ID>',
 )
 
@@ -2176,6 +2287,9 @@ req = operations.UpdateCrmContactRequest(
         ],
     ),
     connection_id='man panel',
+    fields_=[
+        'Mauritania',
+    ],
     id='<ID>',
 )
 
@@ -2223,6 +2337,9 @@ req = operations.UpdateCrmDealRequest(
         ],
     ),
     connection_id='Shirt',
+    fields_=[
+        'whiteboard',
+    ],
     id='<ID>',
 )
 
@@ -2288,6 +2405,9 @@ req = operations.UpdateCrmEventRequest(
         task=shared.PropertyCrmEventTask(),
     ),
     connection_id='Accountability',
+    fields_=[
+        'Manager',
+    ],
     id='<ID>',
 )
 
@@ -2332,6 +2452,9 @@ req = operations.UpdateCrmFileRequest(
         raw=shared.PropertyCrmFileRaw(),
     ),
     connection_id='Orchestrator',
+    fields_=[
+        'male',
+    ],
     id='<ID>',
 )
 
@@ -2385,6 +2508,9 @@ req = operations.UpdateCrmLeadRequest(
         ],
     ),
     connection_id='Pickup Polestar Checking',
+    fields_=[
+        'Concrete',
+    ],
     id='<ID>',
 )
 
@@ -2429,6 +2555,9 @@ req = operations.UpdateCrmPipelineRequest(
         raw=shared.PropertyCrmPipelineRaw(),
     ),
     connection_id='needily',
+    fields_=[
+        'Androgyne',
+    ],
     id='<ID>',
 )
 
@@ -2476,6 +2605,9 @@ req = operations.UpdateCrmTeamRequest(
         ],
     ),
     connection_id='Dakota',
+    fields_=[
+        'female',
+    ],
     id='<ID>',
 )
 
@@ -2529,6 +2661,9 @@ req = operations.UpdateCrmUserRequest(
         ],
     ),
     connection_id='Savings',
+    fields_=[
+        'Corwin',
+    ],
     id='<ID>',
 )
 

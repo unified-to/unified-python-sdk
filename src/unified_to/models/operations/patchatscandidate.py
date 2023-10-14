@@ -16,6 +16,8 @@ class PatchAtsCandidateRequest:
     r"""ID of the Candidate"""
     ats_candidate: Optional[shared_atscandidate.AtsCandidate] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     r"""A candidate looking for work"""
+    fields_: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
+    r"""Comma-delimited fields to return"""
     
 
 

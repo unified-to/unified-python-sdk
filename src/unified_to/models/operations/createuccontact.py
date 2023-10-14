@@ -12,6 +12,8 @@ from typing import Optional
 class CreateUcContactRequest:
     connection_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': False }})
     r"""ID of the connection"""
+    fields_: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
+    r"""Comma-delimited fields to return"""
     uc_contact: Optional[shared_uccontact.UcContact] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     r"""A contact represents a person that optionally is associated with a call"""
     

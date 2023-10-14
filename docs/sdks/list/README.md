@@ -32,6 +32,9 @@ req = operations.CreateMartechListRequest(
         raw=shared.PropertyMarketingListRaw(),
     ),
     connection_id='Architect responsive',
+    fields_=[
+        'Recycled',
+    ],
 )
 
 res = s.list_.create_martech_list(req)
@@ -71,6 +74,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetMartechListRequest(
     connection_id='Franklin Bicycle Victoria',
+    fields_=[
+        'Fish',
+    ],
     id='<ID>',
 )
 
@@ -112,6 +118,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListMartechListsRequest(
     connection_id='DeKalb magenta black',
+    fields_=[
+        'provided',
+    ],
 )
 
 res = s.list_.list_martech_lists(req)
@@ -155,6 +164,9 @@ req = operations.PatchMartechListRequest(
         raw=shared.PropertyMarketingListRaw(),
     ),
     connection_id='Operations Liaison',
+    fields_=[
+        'phooey',
+    ],
     id='<ID>',
 )
 
@@ -239,6 +251,9 @@ req = operations.UpdateMartechListRequest(
         raw=shared.PropertyMarketingListRaw(),
     ),
     connection_id='Secured Kia Stroman',
+    fields_=[
+        'invoice',
+    ],
     id='<ID>',
 )
 

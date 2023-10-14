@@ -462,7 +462,6 @@ Returns all integrations
 
 ```python
 import unified_to
-import dateutil.parser
 from unified_to.models import operations, shared
 
 s = unified_to.UnifiedTo(

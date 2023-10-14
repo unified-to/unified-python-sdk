@@ -41,6 +41,9 @@ req = operations.CreateCrmLeadRequest(
         ],
     ),
     connection_id='ability Einsteinium Orchestrator',
+    fields_=[
+        'orchid',
+    ],
 )
 
 res = s.lead.create_crm_lead(req)
@@ -80,6 +83,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetCrmLeadRequest(
     connection_id='Handmade Keyboard yum',
+    fields_=[
+        'magnetic',
+    ],
     id='<ID>',
 )
 
@@ -121,6 +127,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListCrmLeadsRequest(
     connection_id='International',
+    fields_=[
+        'ratione',
+    ],
 )
 
 res = s.lead.list_crm_leads(req)
@@ -173,6 +182,9 @@ req = operations.PatchCrmLeadRequest(
         ],
     ),
     connection_id='Ball Chips',
+    fields_=[
+        'Southwest',
+    ],
     id='<ID>',
 )
 
@@ -266,6 +278,9 @@ req = operations.UpdateCrmLeadRequest(
         ],
     ),
     connection_id='Pickup Polestar Checking',
+    fields_=[
+        'Concrete',
+    ],
     id='<ID>',
 )
 

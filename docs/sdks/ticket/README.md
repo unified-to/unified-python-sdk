@@ -35,6 +35,9 @@ req = operations.CreateTicketingTicketRequest(
         ],
     ),
     connection_id='indigo',
+    fields_=[
+        'silver',
+    ],
 )
 
 res = s.ticket.create_ticketing_ticket(req)
@@ -74,6 +77,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetTicketingTicketRequest(
     connection_id='Zimbabwe Dollar',
+    fields_=[
+        'Alaska',
+    ],
     id='<ID>',
 )
 
@@ -115,6 +121,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListTicketingTicketsRequest(
     connection_id='Tools Southwest',
+    fields_=[
+        'invoice',
+    ],
 )
 
 res = s.ticket.list_ticketing_tickets(req)
@@ -161,6 +170,9 @@ req = operations.PatchTicketingTicketRequest(
         ],
     ),
     connection_id='Pizza Concrete',
+    fields_=[
+        'redefine',
+    ],
     id='<ID>',
 )
 
@@ -248,6 +260,9 @@ req = operations.UpdateTicketingTicketRequest(
         ],
     ),
     connection_id='Agender caring optimal',
+    fields_=[
+        'tan',
+    ],
     id='<ID>',
 )
 

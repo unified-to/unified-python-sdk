@@ -49,6 +49,9 @@ req = operations.CreateHrisEmployeeRequest(
         ],
     ),
     connection_id='ack Recycled',
+    fields_=[
+        'Southwest',
+    ],
 )
 
 res = s.hris.create_hris_employee(req)
@@ -98,6 +101,9 @@ req = operations.CreateHrisGroupRequest(
         raw=shared.PropertyHrisGroupRaw(),
     ),
     connection_id='Technetium',
+    fields_=[
+        'Tactics',
+    ],
 )
 
 res = s.hris.create_hris_group(req)
@@ -137,6 +143,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetHrisEmployeeRequest(
     connection_id='Automated',
+    fields_=[
+        'West',
+    ],
     id='<ID>',
 )
 
@@ -177,6 +186,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetHrisGroupRequest(
     connection_id='Cedi state Cadillac',
+    fields_=[
+        'optical',
+    ],
     id='<ID>',
 )
 
@@ -218,6 +230,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListHrisEmployeesRequest(
     connection_id='Table moratorium',
+    fields_=[
+        'payment',
+    ],
 )
 
 res = s.hris.list_hris_employees(req)
@@ -258,6 +273,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListHrisGroupsRequest(
     connection_id='Bronze Rubber',
+    fields_=[
+        'feel',
+    ],
 )
 
 res = s.hris.list_hris_groups(req)
@@ -312,6 +330,9 @@ req = operations.PatchHrisEmployeeRequest(
         ],
     ),
     connection_id='barring transmitting Hybrid',
+    fields_=[
+        'Mesa',
+    ],
     id='<ID>',
 )
 
@@ -362,6 +383,9 @@ req = operations.PatchHrisGroupRequest(
         raw=shared.PropertyHrisGroupRaw(),
     ),
     connection_id='bluetooth West',
+    fields_=[
+        'Intersex',
+    ],
     id='<ID>',
 )
 
@@ -497,6 +521,9 @@ req = operations.UpdateHrisEmployeeRequest(
         ],
     ),
     connection_id='Jewelery slap',
+    fields_=[
+        'secrete',
+    ],
     id='<ID>',
 )
 
@@ -547,6 +574,9 @@ req = operations.UpdateHrisGroupRequest(
         raw=shared.PropertyHrisGroupRaw(),
     ),
     connection_id='bashfully',
+    fields_=[
+        'Avon',
+    ],
     id='<ID>',
 )
 

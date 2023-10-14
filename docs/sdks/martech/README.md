@@ -38,6 +38,9 @@ req = operations.CreateMartechListRequest(
         raw=shared.PropertyMarketingListRaw(),
     ),
     connection_id='Architect responsive',
+    fields_=[
+        'Recycled',
+    ],
 )
 
 res = s.martech.create_martech_list(req)
@@ -92,7 +95,10 @@ req = operations.CreateMartechMemberRequest(
         ],
     ),
     connection_id='South Electronic calculate',
-    list_id='ew scalable Hassium',
+    fields_=[
+        'translate',
+    ],
+    list_id='scalable',
 )
 
 res = s.martech.create_martech_member(req)
@@ -132,6 +138,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetMartechListRequest(
     connection_id='Franklin Bicycle Victoria',
+    fields_=[
+        'Fish',
+    ],
     id='<ID>',
 )
 
@@ -172,8 +181,11 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetMartechMemberRequest(
     connection_id='Yuan',
+    fields_=[
+        'Gibraltar',
+    ],
     id='<ID>',
-    list_id='vertical Northeast',
+    list_id='Iceland',
 )
 
 res = s.martech.get_martech_member(req)
@@ -214,6 +226,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListMartechListsRequest(
     connection_id='DeKalb magenta black',
+    fields_=[
+        'provided',
+    ],
 )
 
 res = s.martech.list_martech_lists(req)
@@ -254,7 +269,10 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListMartechMembersRequest(
     connection_id='Money',
-    list_id='structure',
+    fields_=[
+        'Practical',
+    ],
+    list_id='Thallium Bike outrageous',
 )
 
 res = s.martech.list_martech_members(req)
@@ -298,6 +316,9 @@ req = operations.PatchMartechListRequest(
         raw=shared.PropertyMarketingListRaw(),
     ),
     connection_id='Operations Liaison',
+    fields_=[
+        'phooey',
+    ],
     id='<ID>',
 )
 
@@ -353,8 +374,11 @@ req = operations.PatchMartechMemberRequest(
         ],
     ),
     connection_id='Unbranded overriding Money',
+    fields_=[
+        'Brand',
+    ],
     id='<ID>',
-    list_id='as variant West',
+    list_id='West integrated',
 )
 
 res = s.martech.patch_martech_member(req)
@@ -479,6 +503,9 @@ req = operations.UpdateMartechListRequest(
         raw=shared.PropertyMarketingListRaw(),
     ),
     connection_id='Secured Kia Stroman',
+    fields_=[
+        'invoice',
+    ],
     id='<ID>',
 )
 
@@ -534,8 +561,11 @@ req = operations.UpdateMartechMemberRequest(
         ],
     ),
     connection_id='Checking deploy Hermaphrodite',
+    fields_=[
+        'navigate',
+    ],
     id='<ID>',
-    list_id='Bespoke below',
+    list_id='methodologies state Computer',
 )
 
 res = s.martech.update_martech_member(req)

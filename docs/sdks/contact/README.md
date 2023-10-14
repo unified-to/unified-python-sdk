@@ -53,6 +53,9 @@ req = operations.CreateCrmContactRequest(
         ],
     ),
     connection_id='Cambridgeshire Passenger Producer',
+    fields_=[
+        'Krypton',
+    ],
 )
 
 res = s.contact.create_crm_contact(req)
@@ -106,6 +109,9 @@ req = operations.CreateUcContactRequest(
         ],
     ),
     connection_id='meanwhile',
+    fields_=[
+        'whose',
+    ],
 )
 
 res = s.contact.create_uc_contact(req)
@@ -145,6 +151,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetCrmContactRequest(
     connection_id='Oregon',
+    fields_=[
+        'methodology',
+    ],
     id='<ID>',
 )
 
@@ -185,6 +194,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetUcContactRequest(
     connection_id='JBOD ivory fool',
+    fields_=[
+        'Mouse',
+    ],
     id='<ID>',
 )
 
@@ -226,6 +238,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListCrmContactsRequest(
     connection_id='Awesome index steradian',
+    fields_=[
+        'District',
+    ],
 )
 
 res = s.contact.list_crm_contacts(req)
@@ -266,6 +281,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListUcContactsRequest(
     connection_id='Bicycle male',
+    fields_=[
+        'East',
+    ],
 )
 
 res = s.contact.list_uc_contacts(req)
@@ -324,6 +342,9 @@ req = operations.PatchCrmContactRequest(
         ],
     ),
     connection_id='Future Diesel',
+    fields_=[
+        'syndicate',
+    ],
     id='<ID>',
 )
 
@@ -378,6 +399,9 @@ req = operations.PatchUcContactRequest(
         ],
     ),
     connection_id='South Pants candela',
+    fields_=[
+        'Investor',
+    ],
     id='<ID>',
 )
 
@@ -517,6 +541,9 @@ req = operations.UpdateCrmContactRequest(
         ],
     ),
     connection_id='man panel',
+    fields_=[
+        'Mauritania',
+    ],
     id='<ID>',
 )
 
@@ -571,6 +598,9 @@ req = operations.UpdateUcContactRequest(
         ],
     ),
     connection_id='Cruiser',
+    fields_=[
+        'Awesome',
+    ],
     id='<ID>',
 )
 

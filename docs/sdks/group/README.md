@@ -38,6 +38,9 @@ req = operations.CreateHrisGroupRequest(
         raw=shared.PropertyHrisGroupRaw(),
     ),
     connection_id='Technetium',
+    fields_=[
+        'Tactics',
+    ],
 )
 
 res = s.group.create_hris_group(req)
@@ -77,6 +80,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetHrisGroupRequest(
     connection_id='Cedi state Cadillac',
+    fields_=[
+        'optical',
+    ],
     id='<ID>',
 )
 
@@ -118,6 +124,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListHrisGroupsRequest(
     connection_id='Bronze Rubber',
+    fields_=[
+        'feel',
+    ],
 )
 
 res = s.group.list_hris_groups(req)
@@ -167,6 +176,9 @@ req = operations.PatchHrisGroupRequest(
         raw=shared.PropertyHrisGroupRaw(),
     ),
     connection_id='bluetooth West',
+    fields_=[
+        'Intersex',
+    ],
     id='<ID>',
 )
 
@@ -257,6 +269,9 @@ req = operations.UpdateHrisGroupRequest(
         raw=shared.PropertyHrisGroupRaw(),
     ),
     connection_id='bashfully',
+    fields_=[
+        'Avon',
+    ],
     id='<ID>',
 )
 

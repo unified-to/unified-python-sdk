@@ -43,6 +43,9 @@ req = operations.CreateHrisEmployeeRequest(
         ],
     ),
     connection_id='ack Recycled',
+    fields_=[
+        'Southwest',
+    ],
 )
 
 res = s.employee.create_hris_employee(req)
@@ -82,6 +85,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetHrisEmployeeRequest(
     connection_id='Automated',
+    fields_=[
+        'West',
+    ],
     id='<ID>',
 )
 
@@ -123,6 +129,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListHrisEmployeesRequest(
     connection_id='Table moratorium',
+    fields_=[
+        'payment',
+    ],
 )
 
 res = s.employee.list_hris_employees(req)
@@ -177,6 +186,9 @@ req = operations.PatchHrisEmployeeRequest(
         ],
     ),
     connection_id='barring transmitting Hybrid',
+    fields_=[
+        'Mesa',
+    ],
     id='<ID>',
 )
 
@@ -272,6 +284,9 @@ req = operations.UpdateHrisEmployeeRequest(
         ],
     ),
     connection_id='Jewelery slap',
+    fields_=[
+        'secrete',
+    ],
     id='<ID>',
 )
 

@@ -16,6 +16,8 @@ class PatchAtsScorecardRequest:
     r"""ID of the Document"""
     ats_scorecard: Optional[shared_atsscorecard.AtsScorecard] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     r"""A scorecard is feedback/assessment of a candidate's interview"""
+    fields_: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
+    r"""Comma-delimited fields to return"""
     
 
 

@@ -41,6 +41,9 @@ req = operations.CreateCrmUserRequest(
         ],
     ),
     connection_id='Incredible Virginia',
+    fields_=[
+        'Keyboard',
+    ],
 )
 
 res = s.user.create_crm_user(req)
@@ -80,6 +83,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetCrmUserRequest(
     connection_id='Bespoke Dollar',
+    fields_=[
+        'unto',
+    ],
     id='<ID>',
 )
 
@@ -121,6 +127,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListCrmUsersRequest(
     connection_id='careless Costa',
+    fields_=[
+        'olive',
+    ],
 )
 
 res = s.user.list_crm_users(req)
@@ -173,6 +182,9 @@ req = operations.PatchCrmUserRequest(
         ],
     ),
     connection_id='katal Industrial Classical',
+    fields_=[
+        'boo',
+    ],
     id='<ID>',
 )
 
@@ -266,6 +278,9 @@ req = operations.UpdateCrmUserRequest(
         ],
     ),
     connection_id='Savings',
+    fields_=[
+        'Corwin',
+    ],
     id='<ID>',
 )
 

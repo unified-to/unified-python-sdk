@@ -45,6 +45,9 @@ req = operations.CreateTicketingCustomerRequest(
         ],
     ),
     connection_id='Osmium blissfully',
+    fields_=[
+        '24/7',
+    ],
 )
 
 res = s.customer.create_ticketing_customer(req)
@@ -84,6 +87,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetTicketingCustomerRequest(
     connection_id='benchmark',
+    fields_=[
+        'Cambridgeshire',
+    ],
     id='<ID>',
 )
 
@@ -125,6 +131,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListTicketingCustomersRequest(
     connection_id='Carrollton yellow',
+    fields_=[
+        'until',
+    ],
 )
 
 res = s.customer.list_ticketing_customers(req)
@@ -181,6 +190,9 @@ req = operations.PatchTicketingCustomerRequest(
         ],
     ),
     connection_id='Fermium Northeast Metal',
+    fields_=[
+        'Rustic',
+    ],
     id='<ID>',
 )
 
@@ -278,6 +290,9 @@ req = operations.UpdateTicketingCustomerRequest(
         ],
     ),
     connection_id='Avon Southwest',
+    fields_=[
+        'Soft',
+    ],
     id='<ID>',
 )
 

@@ -44,6 +44,9 @@ req = operations.CreateUcContactRequest(
         ],
     ),
     connection_id='meanwhile',
+    fields_=[
+        'whose',
+    ],
 )
 
 res = s.uc.create_uc_contact(req)
@@ -83,6 +86,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetUcContactRequest(
     connection_id='JBOD ivory fool',
+    fields_=[
+        'Mouse',
+    ],
     id='<ID>',
 )
 
@@ -124,6 +130,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListUcAgentsRequest(
     connection_id='Representative',
+    fields_=[
+        'olive',
+    ],
 )
 
 res = s.uc.list_uc_agents(req)
@@ -164,6 +173,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListUcCallsRequest(
     connection_id='optical',
+    fields_=[
+        'South',
+    ],
 )
 
 res = s.uc.list_uc_calls(req)
@@ -204,6 +216,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListUcContactsRequest(
     connection_id='Bicycle male',
+    fields_=[
+        'East',
+    ],
 )
 
 res = s.uc.list_uc_contacts(req)
@@ -257,6 +272,9 @@ req = operations.PatchUcContactRequest(
         ],
     ),
     connection_id='South Pants candela',
+    fields_=[
+        'Investor',
+    ],
     id='<ID>',
 )
 
@@ -351,6 +369,9 @@ req = operations.UpdateUcContactRequest(
         ],
     ),
     connection_id='Cruiser',
+    fields_=[
+        'Awesome',
+    ],
     id='<ID>',
 )
 

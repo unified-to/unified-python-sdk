@@ -16,6 +16,8 @@ class UpdateTicketingNoteRequest:
     r"""ID of the Note"""
     ticket_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'ticket_id', 'style': 'simple', 'explode': False }})
     r"""ID of the ticket"""
+    fields_: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
+    r"""Comma-delimited fields to return"""
     ticketing_note: Optional[shared_ticketingnote.TicketingNote] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 

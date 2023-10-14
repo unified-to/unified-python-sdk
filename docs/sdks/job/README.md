@@ -52,6 +52,9 @@ req = operations.CreateAtsJobRequest(
         ],
     ),
     connection_id='Savings Customer Loan',
+    fields_=[
+        'SMS',
+    ],
 )
 
 res = s.job.create_ats_job(req)
@@ -91,6 +94,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetAtsJobRequest(
     connection_id='runway',
+    fields_=[
+        'Bronze',
+    ],
     id='<ID>',
 )
 
@@ -132,6 +138,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListAtsJobsRequest(
     connection_id='niches SQL',
+    fields_=[
+        '1080p',
+    ],
 )
 
 res = s.job.list_ats_jobs(req)
@@ -195,6 +204,9 @@ req = operations.PatchAtsJobRequest(
         ],
     ),
     connection_id='gold Principal',
+    fields_=[
+        'BMW',
+    ],
     id='<ID>',
 )
 
@@ -299,6 +311,9 @@ req = operations.UpdateAtsJobRequest(
         ],
     ),
     connection_id='euthanise system',
+    fields_=[
+        'payment',
+    ],
     id='<ID>',
 )
 

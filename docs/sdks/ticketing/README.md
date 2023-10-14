@@ -60,6 +60,9 @@ req = operations.CreateTicketingAgentRequest(
         ],
     ),
     connection_id='smoothly Algeria',
+    fields_=[
+        'payment',
+    ],
 )
 
 res = s.ticketing.create_ticketing_agent(req)
@@ -116,6 +119,9 @@ req = operations.CreateTicketingCustomerRequest(
         ],
     ),
     connection_id='Osmium blissfully',
+    fields_=[
+        '24/7',
+    ],
 )
 
 res = s.ticketing.create_ticketing_customer(req)
@@ -159,7 +165,10 @@ req = operations.CreateTicketingNoteRequest(
         raw=shared.PropertyTicketingNoteRaw(),
     ),
     connection_id='Books kilogram hmph',
-    ticket_id='Dakota function interface',
+    fields_=[
+        'yowza',
+    ],
+    ticket_id='Markets executive Hoeger',
 )
 
 res = s.ticketing.create_ticketing_note(req)
@@ -206,6 +215,9 @@ req = operations.CreateTicketingTicketRequest(
         ],
     ),
     connection_id='indigo',
+    fields_=[
+        'silver',
+    ],
 )
 
 res = s.ticketing.create_ticketing_ticket(req)
@@ -245,6 +257,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetTicketingAgentRequest(
     connection_id='Lamborghini',
+    fields_=[
+        'SAS',
+    ],
     id='<ID>',
 )
 
@@ -285,6 +300,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetTicketingCustomerRequest(
     connection_id='benchmark',
+    fields_=[
+        'Cambridgeshire',
+    ],
     id='<ID>',
 )
 
@@ -325,8 +343,11 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetTicketingNoteRequest(
     connection_id='joule program',
+    fields_=[
+        'SUV',
+    ],
     id='<ID>',
-    ticket_id='Fitness Applications Switchable',
+    ticket_id='payment Architect',
 )
 
 res = s.ticketing.get_ticketing_note(req)
@@ -366,6 +387,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetTicketingTicketRequest(
     connection_id='Zimbabwe Dollar',
+    fields_=[
+        'Alaska',
+    ],
     id='<ID>',
 )
 
@@ -407,6 +431,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListTicketingAgentsRequest(
     connection_id='Mazda',
+    fields_=[
+        'Home',
+    ],
 )
 
 res = s.ticketing.list_ticketing_agents(req)
@@ -447,6 +474,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListTicketingCustomersRequest(
     connection_id='Carrollton yellow',
+    fields_=[
+        'until',
+    ],
 )
 
 res = s.ticketing.list_ticketing_customers(req)
@@ -487,7 +517,10 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListTicketingNotesRequest(
     connection_id='Hybrid North',
-    ticket_id='Kroon Marvin Ford',
+    fields_=[
+        'hosepipe',
+    ],
+    ticket_id='Marvin',
 )
 
 res = s.ticketing.list_ticketing_notes(req)
@@ -528,6 +561,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListTicketingTicketsRequest(
     connection_id='Tools Southwest',
+    fields_=[
+        'invoice',
+    ],
 )
 
 res = s.ticketing.list_ticketing_tickets(req)
@@ -581,6 +617,9 @@ req = operations.PatchTicketingAgentRequest(
         ],
     ),
     connection_id='by',
+    fields_=[
+        'Bedfordshire',
+    ],
     id='<ID>',
 )
 
@@ -638,6 +677,9 @@ req = operations.PatchTicketingCustomerRequest(
         ],
     ),
     connection_id='Fermium Northeast Metal',
+    fields_=[
+        'Rustic',
+    ],
     id='<ID>',
 )
 
@@ -682,8 +724,11 @@ req = operations.PatchTicketingNoteRequest(
         raw=shared.PropertyTicketingNoteRaw(),
     ),
     connection_id='Bicycle Southwest Darmstadtium',
+    fields_=[
+        'Plastic',
+    ],
     id='<ID>',
-    ticket_id='index',
+    ticket_id='Investor bypass EXE',
 )
 
 res = s.ticketing.patch_ticketing_note(req)
@@ -730,6 +775,9 @@ req = operations.PatchTicketingTicketRequest(
         ],
     ),
     connection_id='Pizza Concrete',
+    fields_=[
+        'redefine',
+    ],
     id='<ID>',
 )
 
@@ -945,6 +993,9 @@ req = operations.UpdateTicketingAgentRequest(
         ],
     ),
     connection_id='beside Usability Bedfordshire',
+    fields_=[
+        'SSD',
+    ],
     id='<ID>',
 )
 
@@ -1002,6 +1053,9 @@ req = operations.UpdateTicketingCustomerRequest(
         ],
     ),
     connection_id='Avon Southwest',
+    fields_=[
+        'Soft',
+    ],
     id='<ID>',
 )
 
@@ -1046,8 +1100,11 @@ req = operations.UpdateTicketingNoteRequest(
         raw=shared.PropertyTicketingNoteRaw(),
     ),
     connection_id='via among Quality',
+    fields_=[
+        'bluetooth',
+    ],
     id='<ID>',
-    ticket_id='Brand when',
+    ticket_id='when',
 )
 
 res = s.ticketing.update_ticketing_note(req)
@@ -1094,6 +1151,9 @@ req = operations.UpdateTicketingTicketRequest(
         ],
     ),
     connection_id='Agender caring optimal',
+    fields_=[
+        'tan',
+    ],
     id='<ID>',
 )
 

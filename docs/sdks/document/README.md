@@ -32,6 +32,9 @@ req = operations.CreateAtsScorecardRequest(
         raw=shared.PropertyAtsScorecardRaw(),
     ),
     connection_id='Northwest Account',
+    fields_=[
+        'Yuan',
+    ],
 )
 
 res = s.document.create_ats_scorecard(req)
@@ -71,6 +74,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetAtsScorecardRequest(
     connection_id='Executive',
+    fields_=[
+        'Berkelium',
+    ],
     id='<ID>',
 )
 
@@ -112,6 +118,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListAtsScorecardsRequest(
     connection_id='Hybrid Bugatti',
+    fields_=[
+        'frantically',
+    ],
 )
 
 res = s.document.list_ats_scorecards(req)
@@ -155,6 +164,9 @@ req = operations.PatchAtsScorecardRequest(
         raw=shared.PropertyAtsScorecardRaw(),
     ),
     connection_id='eek',
+    fields_=[
+        'engage',
+    ],
     id='<ID>',
 )
 
@@ -239,6 +251,9 @@ req = operations.UpdateAtsScorecardRequest(
         raw=shared.PropertyAtsScorecardRaw(),
     ),
     connection_id='grey',
+    fields_=[
+        'Baby',
+    ],
     id='<ID>',
 )
 

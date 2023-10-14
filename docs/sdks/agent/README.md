@@ -43,6 +43,9 @@ req = operations.CreateTicketingAgentRequest(
         ],
     ),
     connection_id='smoothly Algeria',
+    fields_=[
+        'payment',
+    ],
 )
 
 res = s.agent.create_ticketing_agent(req)
@@ -82,6 +85,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetTicketingAgentRequest(
     connection_id='Lamborghini',
+    fields_=[
+        'SAS',
+    ],
     id='<ID>',
 )
 
@@ -123,6 +129,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListTicketingAgentsRequest(
     connection_id='Mazda',
+    fields_=[
+        'Home',
+    ],
 )
 
 res = s.agent.list_ticketing_agents(req)
@@ -163,6 +172,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListUcAgentsRequest(
     connection_id='Representative',
+    fields_=[
+        'olive',
+    ],
 )
 
 res = s.agent.list_uc_agents(req)
@@ -216,6 +228,9 @@ req = operations.PatchTicketingAgentRequest(
         ],
     ),
     connection_id='by',
+    fields_=[
+        'Bedfordshire',
+    ],
     id='<ID>',
 )
 
@@ -310,6 +325,9 @@ req = operations.UpdateTicketingAgentRequest(
         ],
     ),
     connection_id='beside Usability Bedfordshire',
+    fields_=[
+        'SSD',
+    ],
     id='<ID>',
 )
 

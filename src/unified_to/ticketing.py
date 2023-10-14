@@ -21,12 +21,13 @@ class Ticketing:
         req_content_type, data, form = utils.serialize_request_body(request, "ticketing_agent", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
+        query_params = utils.get_query_params(operations.CreateTicketingAgentRequest, request)
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
-        http_res = client.request('POST', url, data=data, files=form, headers=headers)
+        http_res = client.request('POST', url, params=query_params, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.CreateTicketingAgentResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -52,12 +53,13 @@ class Ticketing:
         req_content_type, data, form = utils.serialize_request_body(request, "ticketing_customer", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
+        query_params = utils.get_query_params(operations.CreateTicketingCustomerRequest, request)
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
-        http_res = client.request('POST', url, data=data, files=form, headers=headers)
+        http_res = client.request('POST', url, params=query_params, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.CreateTicketingCustomerResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -78,17 +80,18 @@ class Ticketing:
         r"""Create a note"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.CreateTicketingNoteRequest, base_url, '/ticketing/{connection_id}/note/{ticket_id}', request)
+        url = utils.generate_url(operations.CreateTicketingNoteRequest, base_url, '/ticketing/{connection_id}/{ticket_id}/note', request)
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "ticketing_note", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
+        query_params = utils.get_query_params(operations.CreateTicketingNoteRequest, request)
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
-        http_res = client.request('POST', url, data=data, files=form, headers=headers)
+        http_res = client.request('POST', url, params=query_params, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.CreateTicketingNoteResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -114,12 +117,13 @@ class Ticketing:
         req_content_type, data, form = utils.serialize_request_body(request, "ticketing_ticket", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
+        query_params = utils.get_query_params(operations.CreateTicketingTicketRequest, request)
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
-        http_res = client.request('POST', url, data=data, files=form, headers=headers)
+        http_res = client.request('POST', url, params=query_params, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.CreateTicketingTicketResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -142,12 +146,13 @@ class Ticketing:
         
         url = utils.generate_url(operations.GetTicketingAgentRequest, base_url, '/ticketing/{connection_id}/agent/{id}', request)
         headers = {}
+        query_params = utils.get_query_params(operations.GetTicketingAgentRequest, request)
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
-        http_res = client.request('GET', url, headers=headers)
+        http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.GetTicketingAgentResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -170,12 +175,13 @@ class Ticketing:
         
         url = utils.generate_url(operations.GetTicketingCustomerRequest, base_url, '/ticketing/{connection_id}/customer/{id}', request)
         headers = {}
+        query_params = utils.get_query_params(operations.GetTicketingCustomerRequest, request)
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
-        http_res = client.request('GET', url, headers=headers)
+        http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.GetTicketingCustomerResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -196,14 +202,15 @@ class Ticketing:
         r"""Retrieve a note"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.GetTicketingNoteRequest, base_url, '/ticketing/{connection_id}/note/{ticket_id}/{id}', request)
+        url = utils.generate_url(operations.GetTicketingNoteRequest, base_url, '/ticketing/{connection_id}/{ticket_id}/note/{id}', request)
         headers = {}
+        query_params = utils.get_query_params(operations.GetTicketingNoteRequest, request)
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
-        http_res = client.request('GET', url, headers=headers)
+        http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.GetTicketingNoteResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -226,12 +233,13 @@ class Ticketing:
         
         url = utils.generate_url(operations.GetTicketingTicketRequest, base_url, '/ticketing/{connection_id}/ticket/{id}', request)
         headers = {}
+        query_params = utils.get_query_params(operations.GetTicketingTicketRequest, request)
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
-        http_res = client.request('GET', url, headers=headers)
+        http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.GetTicketingTicketResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -310,7 +318,7 @@ class Ticketing:
         r"""List all notes"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.ListTicketingNotesRequest, base_url, '/ticketing/{connection_id}/note/{ticket_id}', request)
+        url = utils.generate_url(operations.ListTicketingNotesRequest, base_url, '/ticketing/{connection_id}/{ticket_id}/note', request)
         headers = {}
         query_params = utils.get_query_params(operations.ListTicketingNotesRequest, request)
         headers['Accept'] = 'application/json'
@@ -373,12 +381,13 @@ class Ticketing:
         req_content_type, data, form = utils.serialize_request_body(request, "ticketing_agent", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
+        query_params = utils.get_query_params(operations.PatchTicketingAgentRequest, request)
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
-        http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
+        http_res = client.request('PATCH', url, params=query_params, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.PatchTicketingAgentResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -404,12 +413,13 @@ class Ticketing:
         req_content_type, data, form = utils.serialize_request_body(request, "ticketing_customer", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
+        query_params = utils.get_query_params(operations.PatchTicketingCustomerRequest, request)
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
-        http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
+        http_res = client.request('PATCH', url, params=query_params, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.PatchTicketingCustomerResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -430,17 +440,18 @@ class Ticketing:
         r"""Update a note"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.PatchTicketingNoteRequest, base_url, '/ticketing/{connection_id}/note/{ticket_id}/{id}', request)
+        url = utils.generate_url(operations.PatchTicketingNoteRequest, base_url, '/ticketing/{connection_id}/{ticket_id}/note/{id}', request)
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "ticketing_note", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
+        query_params = utils.get_query_params(operations.PatchTicketingNoteRequest, request)
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
-        http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
+        http_res = client.request('PATCH', url, params=query_params, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.PatchTicketingNoteResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -466,12 +477,13 @@ class Ticketing:
         req_content_type, data, form = utils.serialize_request_body(request, "ticketing_ticket", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
+        query_params = utils.get_query_params(operations.PatchTicketingTicketRequest, request)
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
-        http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
+        http_res = client.request('PATCH', url, params=query_params, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.PatchTicketingTicketResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -546,7 +558,7 @@ class Ticketing:
         r"""Remove a note"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.RemoveTicketingNoteRequest, base_url, '/ticketing/{connection_id}/note/{ticket_id}/{id}', request)
+        url = utils.generate_url(operations.RemoveTicketingNoteRequest, base_url, '/ticketing/{connection_id}/{ticket_id}/note/{id}', request)
         headers = {}
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
@@ -605,12 +617,13 @@ class Ticketing:
         req_content_type, data, form = utils.serialize_request_body(request, "ticketing_agent", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
+        query_params = utils.get_query_params(operations.UpdateTicketingAgentRequest, request)
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
-        http_res = client.request('PUT', url, data=data, files=form, headers=headers)
+        http_res = client.request('PUT', url, params=query_params, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.UpdateTicketingAgentResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -636,12 +649,13 @@ class Ticketing:
         req_content_type, data, form = utils.serialize_request_body(request, "ticketing_customer", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
+        query_params = utils.get_query_params(operations.UpdateTicketingCustomerRequest, request)
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
-        http_res = client.request('PUT', url, data=data, files=form, headers=headers)
+        http_res = client.request('PUT', url, params=query_params, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.UpdateTicketingCustomerResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -662,17 +676,18 @@ class Ticketing:
         r"""Update a note"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.UpdateTicketingNoteRequest, base_url, '/ticketing/{connection_id}/note/{ticket_id}/{id}', request)
+        url = utils.generate_url(operations.UpdateTicketingNoteRequest, base_url, '/ticketing/{connection_id}/{ticket_id}/note/{id}', request)
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "ticketing_note", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
+        query_params = utils.get_query_params(operations.UpdateTicketingNoteRequest, request)
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
-        http_res = client.request('PUT', url, data=data, files=form, headers=headers)
+        http_res = client.request('PUT', url, params=query_params, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.UpdateTicketingNoteResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -698,12 +713,13 @@ class Ticketing:
         req_content_type, data, form = utils.serialize_request_body(request, "ticketing_ticket", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
+        query_params = utils.get_query_params(operations.UpdateTicketingTicketRequest, request)
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
-        http_res = client.request('PUT', url, data=data, files=form, headers=headers)
+        http_res = client.request('PUT', url, params=query_params, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.UpdateTicketingTicketResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)

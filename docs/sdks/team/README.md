@@ -35,6 +35,9 @@ req = operations.CreateCrmTeamRequest(
         ],
     ),
     connection_id='as New Senior',
+    fields_=[
+        'Buckinghamshire',
+    ],
 )
 
 res = s.team.create_crm_team(req)
@@ -74,6 +77,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetCrmTeamRequest(
     connection_id='digital awful',
+    fields_=[
+        'Peru',
+    ],
     id='<ID>',
 )
 
@@ -115,6 +121,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListCrmTeamsRequest(
     connection_id='Classical microchip Wooden',
+    fields_=[
+        'Lutetium',
+    ],
 )
 
 res = s.team.list_crm_teams(req)
@@ -161,6 +170,9 @@ req = operations.PatchCrmTeamRequest(
         ],
     ),
     connection_id='Transexual compress redefine',
+    fields_=[
+        'gold',
+    ],
     id='<ID>',
 )
 
@@ -248,6 +260,9 @@ req = operations.UpdateCrmTeamRequest(
         ],
     ),
     connection_id='Dakota',
+    fields_=[
+        'female',
+    ],
     id='<ID>',
 )
 

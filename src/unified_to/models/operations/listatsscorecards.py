@@ -17,6 +17,8 @@ class ListAtsScorecardsRequest:
     r"""The application ID to filter results"""
     candidate_id: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'candidate_id', 'style': 'form', 'explode': True }})
     r"""The candidate ID to filter results"""
+    fields_: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
+    r"""Comma-delimited fields to return"""
     interview_id: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'interview_id', 'style': 'form', 'explode': True }})
     r"""The interview ID to filter results"""
     limit: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})

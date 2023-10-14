@@ -16,6 +16,8 @@ class PatchAtsInterviewRequest:
     r"""ID of the Interview"""
     ats_interview: Optional[shared_atsinterview.AtsInterview] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     r"""An interview between a candidate for a specific job"""
+    fields_: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
+    r"""Comma-delimited fields to return"""
     
 
 

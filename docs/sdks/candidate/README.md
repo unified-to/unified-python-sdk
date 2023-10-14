@@ -46,6 +46,9 @@ req = operations.CreateAtsCandidateRequest(
         ],
     ),
     connection_id='bypass Creative Legacy',
+    fields_=[
+        'Bronze',
+    ],
 )
 
 res = s.candidate.create_ats_candidate(req)
@@ -85,6 +88,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetAtsCandidateRequest(
     connection_id='Markets',
+    fields_=[
+        'payment',
+    ],
     id='<ID>',
 )
 
@@ -126,6 +132,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListAtsCandidatesRequest(
     connection_id='mole clearly',
+    fields_=[
+        'Van',
+    ],
 )
 
 res = s.candidate.list_ats_candidates(req)
@@ -183,6 +192,9 @@ req = operations.PatchAtsCandidateRequest(
         ],
     ),
     connection_id='World Van transitional',
+    fields_=[
+        'green',
+    ],
     id='<ID>',
 )
 
@@ -281,6 +293,9 @@ req = operations.UpdateAtsCandidateRequest(
         ],
     ),
     connection_id='Zackery male Gloves',
+    fields_=[
+        'threadbare',
+    ],
     id='<ID>',
 )
 
