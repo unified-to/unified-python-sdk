@@ -32,9 +32,6 @@ req = operations.CreateCrmFileRequest(
         raw=shared.PropertyCrmFileRaw(),
     ),
     connection_id='ASCII Wooden the',
-    fields_=[
-        'Tungsten',
-    ],
 )
 
 res = s.file.create_crm_file(req)
@@ -164,9 +161,6 @@ req = operations.PatchCrmFileRequest(
         raw=shared.PropertyCrmFileRaw(),
     ),
     connection_id='bluetooth',
-    fields_=[
-        'Bronze',
-    ],
     id='<ID>',
 )
 
@@ -251,9 +245,6 @@ req = operations.UpdateCrmFileRequest(
         raw=shared.PropertyCrmFileRaw(),
     ),
     connection_id='Orchestrator',
-    fields_=[
-        'male',
-    ],
     id='<ID>',
 )
 

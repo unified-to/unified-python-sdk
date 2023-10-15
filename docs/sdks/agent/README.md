@@ -43,9 +43,6 @@ req = operations.CreateTicketingAgentRequest(
         ],
     ),
     connection_id='smoothly Algeria',
-    fields_=[
-        'payment',
-    ],
 )
 
 res = s.agent.create_ticketing_agent(req)
@@ -228,9 +225,6 @@ req = operations.PatchTicketingAgentRequest(
         ],
     ),
     connection_id='by',
-    fields_=[
-        'Bedfordshire',
-    ],
     id='<ID>',
 )
 
@@ -325,9 +319,6 @@ req = operations.UpdateTicketingAgentRequest(
         ],
     ),
     connection_id='beside Usability Bedfordshire',
-    fields_=[
-        'SSD',
-    ],
     id='<ID>',
 )
 

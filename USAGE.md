@@ -27,9 +27,6 @@ req = operations.CreateTicketingAgentRequest(
         ],
     ),
     connection_id='smoothly Algeria',
-    fields_=[
-        'payment',
-    ],
 )
 
 res = s.agent.create_ticketing_agent(req)

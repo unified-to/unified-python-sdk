@@ -46,9 +46,6 @@ req = operations.CreateAtsCandidateRequest(
         ],
     ),
     connection_id='bypass Creative Legacy',
-    fields_=[
-        'Bronze',
-    ],
 )
 
 res = s.candidate.create_ats_candidate(req)
@@ -192,9 +189,6 @@ req = operations.PatchAtsCandidateRequest(
         ],
     ),
     connection_id='World Van transitional',
-    fields_=[
-        'green',
-    ],
     id='<ID>',
 )
 
@@ -293,9 +287,6 @@ req = operations.UpdateAtsCandidateRequest(
         ],
     ),
     connection_id='Zackery male Gloves',
-    fields_=[
-        'threadbare',
-    ],
     id='<ID>',
 )
 

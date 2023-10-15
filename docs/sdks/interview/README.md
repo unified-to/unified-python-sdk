@@ -35,9 +35,6 @@ req = operations.CreateAtsInterviewRequest(
         ],
     ),
     connection_id='Frozen',
-    fields_=[
-        'deposit',
-    ],
 )
 
 res = s.interview.create_ats_interview(req)
@@ -170,9 +167,6 @@ req = operations.PatchAtsInterviewRequest(
         ],
     ),
     connection_id='Francium',
-    fields_=[
-        'Cambridgeshire',
-    ],
     id='<ID>',
 )
 
@@ -260,9 +254,6 @@ req = operations.UpdateAtsInterviewRequest(
         ],
     ),
     connection_id='Account omnis Gorgeous',
-    fields_=[
-        'magenta',
-    ],
     id='<ID>',
 )
 

@@ -41,9 +41,6 @@ req = operations.CreateCrmLeadRequest(
         ],
     ),
     connection_id='ability Einsteinium Orchestrator',
-    fields_=[
-        'orchid',
-    ],
 )
 
 res = s.lead.create_crm_lead(req)
@@ -182,9 +179,6 @@ req = operations.PatchCrmLeadRequest(
         ],
     ),
     connection_id='Ball Chips',
-    fields_=[
-        'Southwest',
-    ],
     id='<ID>',
 )
 
@@ -278,9 +272,6 @@ req = operations.UpdateCrmLeadRequest(
         ],
     ),
     connection_id='Pickup Polestar Checking',
-    fields_=[
-        'Concrete',
-    ],
     id='<ID>',
 )
 

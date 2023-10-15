@@ -35,9 +35,6 @@ req = operations.CreateCrmTeamRequest(
         ],
     ),
     connection_id='as New Senior',
-    fields_=[
-        'Buckinghamshire',
-    ],
 )
 
 res = s.team.create_crm_team(req)
@@ -170,9 +167,6 @@ req = operations.PatchCrmTeamRequest(
         ],
     ),
     connection_id='Transexual compress redefine',
-    fields_=[
-        'gold',
-    ],
     id='<ID>',
 )
 
@@ -260,9 +254,6 @@ req = operations.UpdateCrmTeamRequest(
         ],
     ),
     connection_id='Dakota',
-    fields_=[
-        'female',
-    ],
     id='<ID>',
 )
 

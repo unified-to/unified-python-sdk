@@ -56,9 +56,6 @@ req = operations.CreateAtsApplicationRequest(
         raw=shared.PropertyAtsApplicationRaw(),
     ),
     connection_id='incidentally Mandatory meanwhile',
-    fields_=[
-        'Human',
-    ],
 )
 
 res = s.ats.create_ats_application(req)
@@ -116,9 +113,6 @@ req = operations.CreateAtsCandidateRequest(
         ],
     ),
     connection_id='bypass Creative Legacy',
-    fields_=[
-        'Bronze',
-    ],
 )
 
 res = s.ats.create_ats_candidate(req)
@@ -165,9 +159,6 @@ req = operations.CreateAtsInterviewRequest(
         ],
     ),
     connection_id='Frozen',
-    fields_=[
-        'deposit',
-    ],
 )
 
 res = s.ats.create_ats_interview(req)
@@ -231,9 +222,6 @@ req = operations.CreateAtsJobRequest(
         ],
     ),
     connection_id='Savings Customer Loan',
-    fields_=[
-        'SMS',
-    ],
 )
 
 res = s.ats.create_ats_job(req)
@@ -277,9 +265,6 @@ req = operations.CreateAtsScorecardRequest(
         raw=shared.PropertyAtsScorecardRaw(),
     ),
     connection_id='Northwest Account',
-    fields_=[
-        'Yuan',
-    ],
 )
 
 res = s.ats.create_ats_scorecard(req)
@@ -753,9 +738,6 @@ req = operations.PatchAtsApplicationRequest(
         raw=shared.PropertyAtsApplicationRaw(),
     ),
     connection_id='South grey',
-    fields_=[
-        'Technician',
-    ],
     id='<ID>',
 )
 
@@ -814,9 +796,6 @@ req = operations.PatchAtsCandidateRequest(
         ],
     ),
     connection_id='World Van transitional',
-    fields_=[
-        'green',
-    ],
     id='<ID>',
 )
 
@@ -864,9 +843,6 @@ req = operations.PatchAtsInterviewRequest(
         ],
     ),
     connection_id='Francium',
-    fields_=[
-        'Cambridgeshire',
-    ],
     id='<ID>',
 )
 
@@ -931,9 +907,6 @@ req = operations.PatchAtsJobRequest(
         ],
     ),
     connection_id='gold Principal',
-    fields_=[
-        'BMW',
-    ],
     id='<ID>',
 )
 
@@ -978,9 +951,6 @@ req = operations.PatchAtsScorecardRequest(
         raw=shared.PropertyAtsScorecardRaw(),
     ),
     connection_id='eek',
-    fields_=[
-        'engage',
-    ],
     id='<ID>',
 )
 
@@ -1225,9 +1195,6 @@ req = operations.UpdateAtsApplicationRequest(
         raw=shared.PropertyAtsApplicationRaw(),
     ),
     connection_id='Rosie',
-    fields_=[
-        'triangular',
-    ],
     id='<ID>',
 )
 
@@ -1286,9 +1253,6 @@ req = operations.UpdateAtsCandidateRequest(
         ],
     ),
     connection_id='Zackery male Gloves',
-    fields_=[
-        'threadbare',
-    ],
     id='<ID>',
 )
 
@@ -1336,9 +1300,6 @@ req = operations.UpdateAtsInterviewRequest(
         ],
     ),
     connection_id='Account omnis Gorgeous',
-    fields_=[
-        'magenta',
-    ],
     id='<ID>',
 )
 
@@ -1403,9 +1364,6 @@ req = operations.UpdateAtsJobRequest(
         ],
     ),
     connection_id='euthanise system',
-    fields_=[
-        'payment',
-    ],
     id='<ID>',
 )
 
@@ -1450,9 +1408,6 @@ req = operations.UpdateAtsScorecardRequest(
         raw=shared.PropertyAtsScorecardRaw(),
     ),
     connection_id='grey',
-    fields_=[
-        'Baby',
-    ],
     id='<ID>',
 )
 

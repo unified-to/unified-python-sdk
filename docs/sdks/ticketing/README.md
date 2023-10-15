@@ -60,9 +60,6 @@ req = operations.CreateTicketingAgentRequest(
         ],
     ),
     connection_id='smoothly Algeria',
-    fields_=[
-        'payment',
-    ],
 )
 
 res = s.ticketing.create_ticketing_agent(req)
@@ -119,9 +116,6 @@ req = operations.CreateTicketingCustomerRequest(
         ],
     ),
     connection_id='Osmium blissfully',
-    fields_=[
-        '24/7',
-    ],
 )
 
 res = s.ticketing.create_ticketing_customer(req)
@@ -165,10 +159,7 @@ req = operations.CreateTicketingNoteRequest(
         raw=shared.PropertyTicketingNoteRaw(),
     ),
     connection_id='Books kilogram hmph',
-    fields_=[
-        'yowza',
-    ],
-    ticket_id='Markets executive Hoeger',
+    ticket_id='Dakota function interface',
 )
 
 res = s.ticketing.create_ticketing_note(req)
@@ -215,9 +206,6 @@ req = operations.CreateTicketingTicketRequest(
         ],
     ),
     connection_id='indigo',
-    fields_=[
-        'silver',
-    ],
 )
 
 res = s.ticketing.create_ticketing_ticket(req)
@@ -617,9 +605,6 @@ req = operations.PatchTicketingAgentRequest(
         ],
     ),
     connection_id='by',
-    fields_=[
-        'Bedfordshire',
-    ],
     id='<ID>',
 )
 
@@ -677,9 +662,6 @@ req = operations.PatchTicketingCustomerRequest(
         ],
     ),
     connection_id='Fermium Northeast Metal',
-    fields_=[
-        'Rustic',
-    ],
     id='<ID>',
 )
 
@@ -724,11 +706,8 @@ req = operations.PatchTicketingNoteRequest(
         raw=shared.PropertyTicketingNoteRaw(),
     ),
     connection_id='Bicycle Southwest Darmstadtium',
-    fields_=[
-        'Plastic',
-    ],
     id='<ID>',
-    ticket_id='Investor bypass EXE',
+    ticket_id='index',
 )
 
 res = s.ticketing.patch_ticketing_note(req)
@@ -775,9 +754,6 @@ req = operations.PatchTicketingTicketRequest(
         ],
     ),
     connection_id='Pizza Concrete',
-    fields_=[
-        'redefine',
-    ],
     id='<ID>',
 )
 
@@ -993,9 +969,6 @@ req = operations.UpdateTicketingAgentRequest(
         ],
     ),
     connection_id='beside Usability Bedfordshire',
-    fields_=[
-        'SSD',
-    ],
     id='<ID>',
 )
 
@@ -1053,9 +1026,6 @@ req = operations.UpdateTicketingCustomerRequest(
         ],
     ),
     connection_id='Avon Southwest',
-    fields_=[
-        'Soft',
-    ],
     id='<ID>',
 )
 
@@ -1100,11 +1070,8 @@ req = operations.UpdateTicketingNoteRequest(
         raw=shared.PropertyTicketingNoteRaw(),
     ),
     connection_id='via among Quality',
-    fields_=[
-        'bluetooth',
-    ],
     id='<ID>',
-    ticket_id='when',
+    ticket_id='Brand when',
 )
 
 res = s.ticketing.update_ticketing_note(req)
@@ -1151,9 +1118,6 @@ req = operations.UpdateTicketingTicketRequest(
         ],
     ),
     connection_id='Agender caring optimal',
-    fields_=[
-        'tan',
-    ],
     id='<ID>',
 )
 

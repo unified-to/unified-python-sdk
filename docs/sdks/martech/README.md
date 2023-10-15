@@ -38,9 +38,6 @@ req = operations.CreateMartechListRequest(
         raw=shared.PropertyMarketingListRaw(),
     ),
     connection_id='Architect responsive',
-    fields_=[
-        'Recycled',
-    ],
 )
 
 res = s.martech.create_martech_list(req)
@@ -95,10 +92,7 @@ req = operations.CreateMartechMemberRequest(
         ],
     ),
     connection_id='South Electronic calculate',
-    fields_=[
-        'translate',
-    ],
-    list_id='scalable',
+    list_id='ew scalable Hassium',
 )
 
 res = s.martech.create_martech_member(req)
@@ -316,9 +310,6 @@ req = operations.PatchMartechListRequest(
         raw=shared.PropertyMarketingListRaw(),
     ),
     connection_id='Operations Liaison',
-    fields_=[
-        'phooey',
-    ],
     id='<ID>',
 )
 
@@ -374,11 +365,8 @@ req = operations.PatchMartechMemberRequest(
         ],
     ),
     connection_id='Unbranded overriding Money',
-    fields_=[
-        'Brand',
-    ],
     id='<ID>',
-    list_id='West integrated',
+    list_id='as variant West',
 )
 
 res = s.martech.patch_martech_member(req)
@@ -503,9 +491,6 @@ req = operations.UpdateMartechListRequest(
         raw=shared.PropertyMarketingListRaw(),
     ),
     connection_id='Secured Kia Stroman',
-    fields_=[
-        'invoice',
-    ],
     id='<ID>',
 )
 
@@ -561,11 +546,8 @@ req = operations.UpdateMartechMemberRequest(
         ],
     ),
     connection_id='Checking deploy Hermaphrodite',
-    fields_=[
-        'navigate',
-    ],
     id='<ID>',
-    list_id='methodologies state Computer',
+    list_id='Bespoke below',
 )
 
 res = s.martech.update_martech_member(req)

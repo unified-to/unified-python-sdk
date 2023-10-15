@@ -32,9 +32,6 @@ req = operations.CreateCrmPipelineRequest(
         raw=shared.PropertyCrmPipelineRaw(),
     ),
     connection_id='Paradigm Vista fuchsia',
-    fields_=[
-        'Hatchback',
-    ],
 )
 
 res = s.pipeline.create_crm_pipeline(req)
@@ -164,9 +161,6 @@ req = operations.PatchCrmPipelineRequest(
         raw=shared.PropertyCrmPipelineRaw(),
     ),
     connection_id='imperfect Costa Southwest',
-    fields_=[
-        'excluding',
-    ],
     id='<ID>',
 )
 
@@ -251,9 +245,6 @@ req = operations.UpdateCrmPipelineRequest(
         raw=shared.PropertyCrmPipelineRaw(),
     ),
     connection_id='needily',
-    fields_=[
-        'Androgyne',
-    ],
     id='<ID>',
 )
 

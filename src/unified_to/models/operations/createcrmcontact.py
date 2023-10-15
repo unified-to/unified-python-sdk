@@ -14,8 +14,6 @@ class CreateCrmContactRequest:
     r"""ID of the connection"""
     crm_contact: Optional[shared_crmcontact.CrmContact] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     r"""A contact represents a person that optionally is associated with a deal and/or a company"""
-    fields_: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
-    r"""Comma-delimited fields to return"""
     
 
 

@@ -16,8 +16,6 @@ class UpdateAtsJobRequest:
     r"""ID of the Job"""
     ats_job: Optional[shared_atsjob.AtsJob] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     r"""An opened position/job"""
-    fields_: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
-    r"""Comma-delimited fields to return"""
     
 
 

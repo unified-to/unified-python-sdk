@@ -32,9 +32,6 @@ req = operations.CreateMartechListRequest(
         raw=shared.PropertyMarketingListRaw(),
     ),
     connection_id='Architect responsive',
-    fields_=[
-        'Recycled',
-    ],
 )
 
 res = s.list_.create_martech_list(req)
@@ -164,9 +161,6 @@ req = operations.PatchMartechListRequest(
         raw=shared.PropertyMarketingListRaw(),
     ),
     connection_id='Operations Liaison',
-    fields_=[
-        'phooey',
-    ],
     id='<ID>',
 )
 
@@ -251,9 +245,6 @@ req = operations.UpdateMartechListRequest(
         raw=shared.PropertyMarketingListRaw(),
     ),
     connection_id='Secured Kia Stroman',
-    fields_=[
-        'invoice',
-    ],
     id='<ID>',
 )
 

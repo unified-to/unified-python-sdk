@@ -32,9 +32,6 @@ req = operations.CreateAtsScorecardRequest(
         raw=shared.PropertyAtsScorecardRaw(),
     ),
     connection_id='Northwest Account',
-    fields_=[
-        'Yuan',
-    ],
 )
 
 res = s.document.create_ats_scorecard(req)
@@ -164,9 +161,6 @@ req = operations.PatchAtsScorecardRequest(
         raw=shared.PropertyAtsScorecardRaw(),
     ),
     connection_id='eek',
-    fields_=[
-        'engage',
-    ],
     id='<ID>',
 )
 
@@ -251,9 +245,6 @@ req = operations.UpdateAtsScorecardRequest(
         raw=shared.PropertyAtsScorecardRaw(),
     ),
     connection_id='grey',
-    fields_=[
-        'Baby',
-    ],
     id='<ID>',
 )
 

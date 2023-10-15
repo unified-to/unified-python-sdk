@@ -43,10 +43,7 @@ req = operations.CreateMartechMemberRequest(
         ],
     ),
     connection_id='South Electronic calculate',
-    fields_=[
-        'translate',
-    ],
-    list_id='scalable',
+    list_id='ew scalable Hassium',
 )
 
 res = s.member.create_martech_member(req)
@@ -189,11 +186,8 @@ req = operations.PatchMartechMemberRequest(
         ],
     ),
     connection_id='Unbranded overriding Money',
-    fields_=[
-        'Brand',
-    ],
     id='<ID>',
-    list_id='West integrated',
+    list_id='as variant West',
 )
 
 res = s.member.patch_martech_member(req)
@@ -289,11 +283,8 @@ req = operations.UpdateMartechMemberRequest(
         ],
     ),
     connection_id='Checking deploy Hermaphrodite',
-    fields_=[
-        'navigate',
-    ],
     id='<ID>',
-    list_id='methodologies state Computer',
+    list_id='Bespoke below',
 )
 
 res = s.member.update_martech_member(req)

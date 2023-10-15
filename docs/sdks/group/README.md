@@ -38,9 +38,6 @@ req = operations.CreateHrisGroupRequest(
         raw=shared.PropertyHrisGroupRaw(),
     ),
     connection_id='Technetium',
-    fields_=[
-        'Tactics',
-    ],
 )
 
 res = s.group.create_hris_group(req)
@@ -176,9 +173,6 @@ req = operations.PatchHrisGroupRequest(
         raw=shared.PropertyHrisGroupRaw(),
     ),
     connection_id='bluetooth West',
-    fields_=[
-        'Intersex',
-    ],
     id='<ID>',
 )
 
@@ -269,9 +263,6 @@ req = operations.UpdateHrisGroupRequest(
         raw=shared.PropertyHrisGroupRaw(),
     ),
     connection_id='bashfully',
-    fields_=[
-        'Avon',
-    ],
     id='<ID>',
 )
 

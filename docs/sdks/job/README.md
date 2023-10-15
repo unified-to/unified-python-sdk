@@ -52,9 +52,6 @@ req = operations.CreateAtsJobRequest(
         ],
     ),
     connection_id='Savings Customer Loan',
-    fields_=[
-        'SMS',
-    ],
 )
 
 res = s.job.create_ats_job(req)
@@ -204,9 +201,6 @@ req = operations.PatchAtsJobRequest(
         ],
     ),
     connection_id='gold Principal',
-    fields_=[
-        'BMW',
-    ],
     id='<ID>',
 )
 
@@ -311,9 +305,6 @@ req = operations.UpdateAtsJobRequest(
         ],
     ),
     connection_id='euthanise system',
-    fields_=[
-        'payment',
-    ],
     id='<ID>',
 )
 

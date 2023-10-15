@@ -45,9 +45,6 @@ req = operations.CreateTicketingCustomerRequest(
         ],
     ),
     connection_id='Osmium blissfully',
-    fields_=[
-        '24/7',
-    ],
 )
 
 res = s.customer.create_ticketing_customer(req)
@@ -190,9 +187,6 @@ req = operations.PatchTicketingCustomerRequest(
         ],
     ),
     connection_id='Fermium Northeast Metal',
-    fields_=[
-        'Rustic',
-    ],
     id='<ID>',
 )
 
@@ -290,9 +284,6 @@ req = operations.UpdateTicketingCustomerRequest(
         ],
     ),
     connection_id='Avon Southwest',
-    fields_=[
-        'Soft',
-    ],
     id='<ID>',
 )
 

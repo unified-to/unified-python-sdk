@@ -35,9 +35,6 @@ req = operations.CreateCrmDealRequest(
         ],
     ),
     connection_id='Music Rap',
-    fields_=[
-        'wind',
-    ],
 )
 
 res = s.deal.create_crm_deal(req)
@@ -170,9 +167,6 @@ req = operations.PatchCrmDealRequest(
         ],
     ),
     connection_id='Platinum female',
-    fields_=[
-        'Berkshire',
-    ],
     id='<ID>',
 )
 
@@ -260,9 +254,6 @@ req = operations.UpdateCrmDealRequest(
         ],
     ),
     connection_id='Shirt',
-    fields_=[
-        'whiteboard',
-    ],
     id='<ID>',
 )
 

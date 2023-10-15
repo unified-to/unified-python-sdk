@@ -44,9 +44,6 @@ req = operations.CreateUcContactRequest(
         ],
     ),
     connection_id='meanwhile',
-    fields_=[
-        'whose',
-    ],
 )
 
 res = s.uc.create_uc_contact(req)
@@ -272,9 +269,6 @@ req = operations.PatchUcContactRequest(
         ],
     ),
     connection_id='South Pants candela',
-    fields_=[
-        'Investor',
-    ],
     id='<ID>',
 )
 
@@ -369,9 +363,6 @@ req = operations.UpdateUcContactRequest(
         ],
     ),
     connection_id='Cruiser',
-    fields_=[
-        'Awesome',
-    ],
     id='<ID>',
 )
 

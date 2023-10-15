@@ -53,9 +53,6 @@ req = operations.CreateCrmEventRequest(
         task=shared.PropertyCrmEventTask(),
     ),
     connection_id='Savings',
-    fields_=[
-        'within',
-    ],
 )
 
 res = s.event.create_crm_event(req)
@@ -206,9 +203,6 @@ req = operations.PatchCrmEventRequest(
         task=shared.PropertyCrmEventTask(),
     ),
     connection_id='female',
-    fields_=[
-        'Connecticut',
-    ],
     id='<ID>',
 )
 
@@ -314,9 +308,6 @@ req = operations.UpdateCrmEventRequest(
         task=shared.PropertyCrmEventTask(),
     ),
     connection_id='Accountability',
-    fields_=[
-        'Manager',
-    ],
     id='<ID>',
 )
 

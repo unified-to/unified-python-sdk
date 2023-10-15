@@ -35,9 +35,6 @@ req = operations.CreateTicketingTicketRequest(
         ],
     ),
     connection_id='indigo',
-    fields_=[
-        'silver',
-    ],
 )
 
 res = s.ticket.create_ticketing_ticket(req)
@@ -170,9 +167,6 @@ req = operations.PatchTicketingTicketRequest(
         ],
     ),
     connection_id='Pizza Concrete',
-    fields_=[
-        'redefine',
-    ],
     id='<ID>',
 )
 
@@ -260,9 +254,6 @@ req = operations.UpdateTicketingTicketRequest(
         ],
     ),
     connection_id='Agender caring optimal',
-    fields_=[
-        'tan',
-    ],
     id='<ID>',
 )
 

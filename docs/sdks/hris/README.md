@@ -49,9 +49,6 @@ req = operations.CreateHrisEmployeeRequest(
         ],
     ),
     connection_id='ack Recycled',
-    fields_=[
-        'Southwest',
-    ],
 )
 
 res = s.hris.create_hris_employee(req)
@@ -101,9 +98,6 @@ req = operations.CreateHrisGroupRequest(
         raw=shared.PropertyHrisGroupRaw(),
     ),
     connection_id='Technetium',
-    fields_=[
-        'Tactics',
-    ],
 )
 
 res = s.hris.create_hris_group(req)
@@ -330,9 +324,6 @@ req = operations.PatchHrisEmployeeRequest(
         ],
     ),
     connection_id='barring transmitting Hybrid',
-    fields_=[
-        'Mesa',
-    ],
     id='<ID>',
 )
 
@@ -383,9 +374,6 @@ req = operations.PatchHrisGroupRequest(
         raw=shared.PropertyHrisGroupRaw(),
     ),
     connection_id='bluetooth West',
-    fields_=[
-        'Intersex',
-    ],
     id='<ID>',
 )
 
@@ -521,9 +509,6 @@ req = operations.UpdateHrisEmployeeRequest(
         ],
     ),
     connection_id='Jewelery slap',
-    fields_=[
-        'secrete',
-    ],
     id='<ID>',
 )
 
@@ -574,9 +559,6 @@ req = operations.UpdateHrisGroupRequest(
         raw=shared.PropertyHrisGroupRaw(),
     ),
     connection_id='bashfully',
-    fields_=[
-        'Avon',
-    ],
     id='<ID>',
 )
 

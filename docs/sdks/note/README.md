@@ -32,10 +32,7 @@ req = operations.CreateTicketingNoteRequest(
         raw=shared.PropertyTicketingNoteRaw(),
     ),
     connection_id='Books kilogram hmph',
-    fields_=[
-        'yowza',
-    ],
-    ticket_id='Markets executive Hoeger',
+    ticket_id='Dakota function interface',
 )
 
 res = s.note.create_ticketing_note(req)
@@ -167,11 +164,8 @@ req = operations.PatchTicketingNoteRequest(
         raw=shared.PropertyTicketingNoteRaw(),
     ),
     connection_id='Bicycle Southwest Darmstadtium',
-    fields_=[
-        'Plastic',
-    ],
     id='<ID>',
-    ticket_id='Investor bypass EXE',
+    ticket_id='index',
 )
 
 res = s.note.patch_ticketing_note(req)
@@ -256,11 +250,8 @@ req = operations.UpdateTicketingNoteRequest(
         raw=shared.PropertyTicketingNoteRaw(),
     ),
     connection_id='via among Quality',
-    fields_=[
-        'bluetooth',
-    ],
     id='<ID>',
-    ticket_id='when',
+    ticket_id='Brand when',
 )
 
 res = s.note.update_ticketing_note(req)

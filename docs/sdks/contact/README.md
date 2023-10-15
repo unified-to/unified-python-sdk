@@ -53,9 +53,6 @@ req = operations.CreateCrmContactRequest(
         ],
     ),
     connection_id='Cambridgeshire Passenger Producer',
-    fields_=[
-        'Krypton',
-    ],
 )
 
 res = s.contact.create_crm_contact(req)
@@ -109,9 +106,6 @@ req = operations.CreateUcContactRequest(
         ],
     ),
     connection_id='meanwhile',
-    fields_=[
-        'whose',
-    ],
 )
 
 res = s.contact.create_uc_contact(req)
@@ -342,9 +336,6 @@ req = operations.PatchCrmContactRequest(
         ],
     ),
     connection_id='Future Diesel',
-    fields_=[
-        'syndicate',
-    ],
     id='<ID>',
 )
 
@@ -399,9 +390,6 @@ req = operations.PatchUcContactRequest(
         ],
     ),
     connection_id='South Pants candela',
-    fields_=[
-        'Investor',
-    ],
     id='<ID>',
 )
 
@@ -541,9 +529,6 @@ req = operations.UpdateCrmContactRequest(
         ],
     ),
     connection_id='man panel',
-    fields_=[
-        'Mauritania',
-    ],
     id='<ID>',
 )
 
@@ -598,9 +583,6 @@ req = operations.UpdateUcContactRequest(
         ],
     ),
     connection_id='Cruiser',
-    fields_=[
-        'Awesome',
-    ],
     id='<ID>',
 )
 

@@ -21,13 +21,12 @@ class Ats:
         req_content_type, data, form = utils.serialize_request_body(request, "ats_application", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
-        query_params = utils.get_query_params(operations.CreateAtsApplicationRequest, request)
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
-        http_res = client.request('POST', url, params=query_params, data=data, files=form, headers=headers)
+        http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.CreateAtsApplicationResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -53,13 +52,12 @@ class Ats:
         req_content_type, data, form = utils.serialize_request_body(request, "ats_candidate", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
-        query_params = utils.get_query_params(operations.CreateAtsCandidateRequest, request)
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
-        http_res = client.request('POST', url, params=query_params, data=data, files=form, headers=headers)
+        http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.CreateAtsCandidateResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -85,13 +83,12 @@ class Ats:
         req_content_type, data, form = utils.serialize_request_body(request, "ats_interview", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
-        query_params = utils.get_query_params(operations.CreateAtsInterviewRequest, request)
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
-        http_res = client.request('POST', url, params=query_params, data=data, files=form, headers=headers)
+        http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.CreateAtsInterviewResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -117,13 +114,12 @@ class Ats:
         req_content_type, data, form = utils.serialize_request_body(request, "ats_job", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
-        query_params = utils.get_query_params(operations.CreateAtsJobRequest, request)
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
-        http_res = client.request('POST', url, params=query_params, data=data, files=form, headers=headers)
+        http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.CreateAtsJobResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -149,13 +145,12 @@ class Ats:
         req_content_type, data, form = utils.serialize_request_body(request, "ats_scorecard", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
-        query_params = utils.get_query_params(operations.CreateAtsScorecardRequest, request)
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
-        http_res = client.request('POST', url, params=query_params, data=data, files=form, headers=headers)
+        http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.CreateAtsScorecardResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -471,13 +466,12 @@ class Ats:
         req_content_type, data, form = utils.serialize_request_body(request, "ats_application", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
-        query_params = utils.get_query_params(operations.PatchAtsApplicationRequest, request)
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
-        http_res = client.request('PATCH', url, params=query_params, data=data, files=form, headers=headers)
+        http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.PatchAtsApplicationResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -503,13 +497,12 @@ class Ats:
         req_content_type, data, form = utils.serialize_request_body(request, "ats_candidate", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
-        query_params = utils.get_query_params(operations.PatchAtsCandidateRequest, request)
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
-        http_res = client.request('PATCH', url, params=query_params, data=data, files=form, headers=headers)
+        http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.PatchAtsCandidateResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -535,13 +528,12 @@ class Ats:
         req_content_type, data, form = utils.serialize_request_body(request, "ats_interview", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
-        query_params = utils.get_query_params(operations.PatchAtsInterviewRequest, request)
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
-        http_res = client.request('PATCH', url, params=query_params, data=data, files=form, headers=headers)
+        http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.PatchAtsInterviewResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -567,13 +559,12 @@ class Ats:
         req_content_type, data, form = utils.serialize_request_body(request, "ats_job", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
-        query_params = utils.get_query_params(operations.PatchAtsJobRequest, request)
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
-        http_res = client.request('PATCH', url, params=query_params, data=data, files=form, headers=headers)
+        http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.PatchAtsJobResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -599,13 +590,12 @@ class Ats:
         req_content_type, data, form = utils.serialize_request_body(request, "ats_scorecard", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
-        query_params = utils.get_query_params(operations.PatchAtsScorecardRequest, request)
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
-        http_res = client.request('PATCH', url, params=query_params, data=data, files=form, headers=headers)
+        http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.PatchAtsScorecardResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -766,13 +756,12 @@ class Ats:
         req_content_type, data, form = utils.serialize_request_body(request, "ats_application", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
-        query_params = utils.get_query_params(operations.UpdateAtsApplicationRequest, request)
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
-        http_res = client.request('PUT', url, params=query_params, data=data, files=form, headers=headers)
+        http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.UpdateAtsApplicationResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -798,13 +787,12 @@ class Ats:
         req_content_type, data, form = utils.serialize_request_body(request, "ats_candidate", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
-        query_params = utils.get_query_params(operations.UpdateAtsCandidateRequest, request)
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
-        http_res = client.request('PUT', url, params=query_params, data=data, files=form, headers=headers)
+        http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.UpdateAtsCandidateResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -830,13 +818,12 @@ class Ats:
         req_content_type, data, form = utils.serialize_request_body(request, "ats_interview", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
-        query_params = utils.get_query_params(operations.UpdateAtsInterviewRequest, request)
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
-        http_res = client.request('PUT', url, params=query_params, data=data, files=form, headers=headers)
+        http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.UpdateAtsInterviewResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -862,13 +849,12 @@ class Ats:
         req_content_type, data, form = utils.serialize_request_body(request, "ats_job", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
-        query_params = utils.get_query_params(operations.UpdateAtsJobRequest, request)
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
-        http_res = client.request('PUT', url, params=query_params, data=data, files=form, headers=headers)
+        http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.UpdateAtsJobResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -894,13 +880,12 @@ class Ats:
         req_content_type, data, form = utils.serialize_request_body(request, "ats_scorecard", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
-        query_params = utils.get_query_params(operations.UpdateAtsScorecardRequest, request)
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
-        http_res = client.request('PUT', url, params=query_params, data=data, files=form, headers=headers)
+        http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.UpdateAtsScorecardResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)

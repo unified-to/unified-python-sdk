@@ -32,9 +32,6 @@ req = operations.CreateAtsApplicationRequest(
         raw=shared.PropertyAtsApplicationRaw(),
     ),
     connection_id='incidentally Mandatory meanwhile',
-    fields_=[
-        'Human',
-    ],
 )
 
 res = s.application.create_ats_application(req)
@@ -164,9 +161,6 @@ req = operations.PatchAtsApplicationRequest(
         raw=shared.PropertyAtsApplicationRaw(),
     ),
     connection_id='South grey',
-    fields_=[
-        'Technician',
-    ],
     id='<ID>',
 )
 
@@ -251,9 +245,6 @@ req = operations.UpdateAtsApplicationRequest(
         raw=shared.PropertyAtsApplicationRaw(),
     ),
     connection_id='Rosie',
-    fields_=[
-        'triangular',
-    ],
     id='<ID>',
 )
 

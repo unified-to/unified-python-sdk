@@ -16,8 +16,6 @@ class UpdateCrmCompanyRequest:
     r"""ID of the Company"""
     crm_company: Optional[shared_crmcompany.CrmCompany] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     r"""A company represents an organization that optionally is associated with a deal and/or contacts"""
-    fields_: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
-    r"""Comma-delimited fields to return"""
     
 
 

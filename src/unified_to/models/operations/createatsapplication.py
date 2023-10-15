@@ -14,8 +14,6 @@ class CreateAtsApplicationRequest:
     r"""ID of the connection"""
     ats_application: Optional[shared_atsapplication.AtsApplication] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     r"""An application is an association object between a candidate and a job"""
-    fields_: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
-    r"""Comma-delimited fields to return"""
     
 
 

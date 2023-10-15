@@ -16,8 +16,6 @@ class PatchCrmDealRequest:
     r"""ID of the Deal"""
     crm_deal: Optional[shared_crmdeal.CrmDeal] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     r"""A deal represents an opportunity with companies and/or contacts"""
-    fields_: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
-    r"""Comma-delimited fields to return"""
     
 
 

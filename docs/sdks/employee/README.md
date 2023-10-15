@@ -43,9 +43,6 @@ req = operations.CreateHrisEmployeeRequest(
         ],
     ),
     connection_id='ack Recycled',
-    fields_=[
-        'Southwest',
-    ],
 )
 
 res = s.employee.create_hris_employee(req)
@@ -186,9 +183,6 @@ req = operations.PatchHrisEmployeeRequest(
         ],
     ),
     connection_id='barring transmitting Hybrid',
-    fields_=[
-        'Mesa',
-    ],
     id='<ID>',
 )
 
@@ -284,9 +278,6 @@ req = operations.UpdateHrisEmployeeRequest(
         ],
     ),
     connection_id='Jewelery slap',
-    fields_=[
-        'secrete',
-    ],
     id='<ID>',
 )
 
