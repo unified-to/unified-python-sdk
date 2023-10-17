@@ -12,7 +12,7 @@ from ..shared import property_crmevent_task as shared_property_crmevent_task
 from dataclasses_json import Undefined, dataclass_json
 from datetime import datetime
 from enum import Enum
-from typing import Optional
+from typing import List, Optional
 from unified_to import utils
 
 class CrmEventType(str, Enum):
@@ -24,18 +24,17 @@ class CrmEventType(str, Enum):
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class CrmEvent:
     r"""An event represents an event, activity, or engagement and is always associated with a deal, contact, or company"""
     call: Optional[shared_property_crmevent_call.PropertyCrmEventCall] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('call'), 'exclude': lambda f: f is None }})
     r"""The call object, when type = call"""
-    company_ids: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('company_ids'), 'exclude': lambda f: f is None }})
+    company_ids: Optional[List[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('company_ids'), 'exclude': lambda f: f is None }})
     r"""An array of company IDs associated with this event"""
-    contact_ids: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('contact_ids'), 'exclude': lambda f: f is None }})
+    contact_ids: Optional[List[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('contact_ids'), 'exclude': lambda f: f is None }})
     r"""An array of contact IDs associated with this event"""
     created_at: Optional[datetime] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created_at'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'exclude': lambda f: f is None }})
-    deal_ids: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('deal_ids'), 'exclude': lambda f: f is None }})
+    deal_ids: Optional[List[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('deal_ids'), 'exclude': lambda f: f is None }})
     r"""An array of deal IDs associated with this event"""
     email: Optional[shared_property_crmevent_email.PropertyCrmEventEmail] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('email'), 'exclude': lambda f: f is None }})
     r"""The email object, when type = email"""

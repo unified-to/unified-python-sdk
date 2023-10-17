@@ -7,13 +7,11 @@ from ..shared import integration as shared_integration
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class GetUnifiedIntegrationRequest:
     integration_type: str = dataclasses.field(metadata={'path_param': { 'field_name': 'integration_type', 'style': 'simple', 'explode': False }})
     r"""Type of the supported integration"""
     
-
 
 
 

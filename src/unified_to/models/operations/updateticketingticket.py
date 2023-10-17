@@ -7,7 +7,6 @@ from ..shared import ticketingticket as shared_ticketingticket
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class UpdateTicketingTicketRequest:
     connection_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': False }})
@@ -16,7 +15,6 @@ class UpdateTicketingTicketRequest:
     r"""ID of the Ticket"""
     ticketing_ticket: Optional[shared_ticketingticket.TicketingTicket] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
-
 
 
 

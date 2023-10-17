@@ -5,8 +5,7 @@ import dataclasses
 import requests as requests_http
 from ..shared import crmcontact as shared_crmcontact
 from datetime import datetime
-from typing import Optional
-
+from typing import List, Optional
 
 
 @dataclasses.dataclass
@@ -17,7 +16,7 @@ class ListCrmContactsRequest:
     r"""The company ID to filter results"""
     deal_id: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'deal_id', 'style': 'form', 'explode': True }})
     r"""The deal ID to filter results"""
-    fields_: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
+    fields_: Optional[List[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
     r"""Comma-delimited fields to return"""
     limit: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
     offset: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
@@ -31,14 +30,13 @@ class ListCrmContactsRequest:
 
 
 
-
 @dataclasses.dataclass
 class ListCrmContactsResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    crm_contacts: Optional[list[shared_crmcontact.CrmContact]] = dataclasses.field(default=None)
+    crm_contacts: Optional[List[shared_crmcontact.CrmContact]] = dataclasses.field(default=None)
     r"""Successful"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""

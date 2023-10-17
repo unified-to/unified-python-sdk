@@ -5,8 +5,7 @@ import dataclasses
 import requests as requests_http
 from ..shared import ucagent as shared_ucagent
 from datetime import datetime
-from typing import Optional
-
+from typing import List, Optional
 
 
 @dataclasses.dataclass
@@ -14,7 +13,7 @@ class ListUcAgentsRequest:
     connection_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': False }})
     r"""ID of the connection"""
     contact_id: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'contact_id', 'style': 'form', 'explode': True }})
-    fields_: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
+    fields_: Optional[List[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
     r"""Comma-delimited fields to return"""
     limit: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
     offset: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
@@ -28,7 +27,6 @@ class ListUcAgentsRequest:
 
 
 
-
 @dataclasses.dataclass
 class ListUcAgentsResponse:
     content_type: str = dataclasses.field()
@@ -37,7 +35,7 @@ class ListUcAgentsResponse:
     r"""HTTP response status code for this operation"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""
-    uc_agents: Optional[list[shared_ucagent.UcAgent]] = dataclasses.field(default=None)
+    uc_agents: Optional[List[shared_ucagent.UcAgent]] = dataclasses.field(default=None)
     r"""Successful"""
     
 

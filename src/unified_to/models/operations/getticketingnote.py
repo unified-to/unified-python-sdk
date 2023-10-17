@@ -4,8 +4,7 @@ from __future__ import annotations
 import dataclasses
 import requests as requests_http
 from ..shared import ticketingnote as shared_ticketingnote
-from typing import Optional
-
+from typing import List, Optional
 
 
 @dataclasses.dataclass
@@ -16,10 +15,9 @@ class GetTicketingNoteRequest:
     r"""ID of the Note"""
     ticket_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'ticket_id', 'style': 'simple', 'explode': False }})
     r"""ID of the ticket"""
-    fields_: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
+    fields_: Optional[List[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
     r"""Comma-delimited fields to return"""
     
-
 
 
 

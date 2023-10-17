@@ -5,8 +5,7 @@ import dataclasses
 import requests as requests_http
 from ..shared import atsscorecard as shared_atsscorecard
 from datetime import datetime
-from typing import Optional
-
+from typing import List, Optional
 
 
 @dataclasses.dataclass
@@ -17,7 +16,7 @@ class ListAtsScorecardsRequest:
     r"""The application ID to filter results"""
     candidate_id: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'candidate_id', 'style': 'form', 'explode': True }})
     r"""The candidate ID to filter results"""
-    fields_: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
+    fields_: Optional[List[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
     r"""Comma-delimited fields to return"""
     interview_id: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'interview_id', 'style': 'form', 'explode': True }})
     r"""The interview ID to filter results"""
@@ -33,14 +32,13 @@ class ListAtsScorecardsRequest:
 
 
 
-
 @dataclasses.dataclass
 class ListAtsScorecardsResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    ats_scorecards: Optional[list[shared_atsscorecard.AtsScorecard]] = dataclasses.field(default=None)
+    ats_scorecards: Optional[List[shared_atsscorecard.AtsScorecard]] = dataclasses.field(default=None)
     r"""Successful"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""

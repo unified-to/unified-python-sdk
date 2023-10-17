@@ -7,7 +7,7 @@ from ..shared import property_integrationsupport_outbound_fields as shared_prope
 from ..shared import property_integrationsupport_webhook_events as shared_property_integrationsupport_webhook_events
 from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
-from typing import Optional
+from typing import Dict, List, Optional
 from unified_to import utils
 
 class IntegrationSupportWebhookType(str, Enum):
@@ -17,7 +17,6 @@ class IntegrationSupportWebhookType(str, Enum):
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class IntegrationSupport:
     inbound_fields: Optional[shared_property_integrationsupport_inbound_fields.PropertyIntegrationSupportInboundFields] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('inbound_fields'), 'exclude': lambda f: f is None }})
@@ -37,14 +36,14 @@ class IntegrationSupport:
     list_sort_by_name: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('list_sort_by_name'), 'exclude': lambda f: f is None }})
     list_sort_by_updated_at: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('list_sort_by_updated_at'), 'exclude': lambda f: f is None }})
     list_updated_gte: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('list_updated_gte'), 'exclude': lambda f: f is None }})
-    methods: Optional[dict[str, bool]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('methods'), 'exclude': lambda f: f is None }})
+    methods: Optional[Dict[str, bool]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('methods'), 'exclude': lambda f: f is None }})
     outbound_fields: Optional[shared_property_integrationsupport_outbound_fields.PropertyIntegrationSupportOutboundFields] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('outbound_fields'), 'exclude': lambda f: f is None }})
     search_domain: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('search_domain'), 'exclude': lambda f: f is None }})
     search_email: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('search_email'), 'exclude': lambda f: f is None }})
     search_linkedin_url: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('search_linkedin_url'), 'exclude': lambda f: f is None }})
     search_name: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('search_name'), 'exclude': lambda f: f is None }})
     search_twitter: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('search_twitter'), 'exclude': lambda f: f is None }})
-    webhook_events: Optional[list[shared_property_integrationsupport_webhook_events.PropertyIntegrationSupportWebhookEvents]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('webhook_events'), 'exclude': lambda f: f is None }})
+    webhook_events: Optional[List[shared_property_integrationsupport_webhook_events.PropertyIntegrationSupportWebhookEvents]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('webhook_events'), 'exclude': lambda f: f is None }})
     webhook_type: Optional[IntegrationSupportWebhookType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('webhook_type'), 'exclude': lambda f: f is None }})
     
 

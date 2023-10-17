@@ -16,7 +16,6 @@ class APICallType(str, Enum):
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class APICall:
     r"""An API call made to Unified or a API callback/webhook made from Unified"""

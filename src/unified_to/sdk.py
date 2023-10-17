@@ -25,7 +25,7 @@ from .integration import Integration
 from .interview import Interview
 from .job import Job
 from .lead import Lead
-from .list_ import List
+from .list import ListT
 from .login import Login
 from .martech import Martech
 from .member import Member
@@ -41,6 +41,7 @@ from .uc import Uc
 from .unified import Unified
 from .user import User
 from .webhook import Webhook
+from typing import Dict
 from unified_to import utils
 from unified_to.models import shared
 
@@ -70,7 +71,7 @@ class UnifiedTo:
     interview: Interview
     job: Job
     lead: Lead
-    list_: List
+    list: ListT
     login: Login
     martech: Martech
     member: Member
@@ -92,7 +93,7 @@ class UnifiedTo:
                  security: shared.Security = None,
                  server_idx: int = None,
                  server_url: str = None,
-                 url_params: dict[str, str] = None,
+                 url_params: Dict[str, str] = None,
                  client: requests_http.Session = None,
                  retry_config: utils.RetryConfig = None
                  ) -> None:
@@ -105,7 +106,7 @@ class UnifiedTo:
         :param server_url: The server URL to use for all operations
         :type server_url: str
         :param url_params: Parameters to optionally template the server URL with
-        :type url_params: dict[str, str]
+        :type url_params: Dict[str, str]
         :param client: The requests.Session HTTP client to use for all operations
         :type client: requests_http.Session
         :param retry_config: The utils.RetryConfig to use globally
@@ -151,7 +152,7 @@ class UnifiedTo:
         self.interview = Interview(self.sdk_configuration)
         self.job = Job(self.sdk_configuration)
         self.lead = Lead(self.sdk_configuration)
-        self.list_ = List(self.sdk_configuration)
+        self.list = ListT(self.sdk_configuration)
         self.login = Login(self.sdk_configuration)
         self.martech = Martech(self.sdk_configuration)
         self.member = Member(self.sdk_configuration)

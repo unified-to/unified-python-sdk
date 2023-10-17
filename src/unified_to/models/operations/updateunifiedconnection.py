@@ -7,7 +7,6 @@ from ..shared import connection as shared_connection
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class UpdateUnifiedConnectionRequest:
     id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
@@ -15,7 +14,6 @@ class UpdateUnifiedConnectionRequest:
     connection: Optional[shared_connection.Connection] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     r"""A connection represents a specific authentication of an integration."""
     
-
 
 
 

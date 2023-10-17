@@ -7,7 +7,6 @@ from ..shared import uccontact as shared_uccontact
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class PatchUcContactRequest:
     connection_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': False }})
@@ -17,7 +16,6 @@ class PatchUcContactRequest:
     uc_contact: Optional[shared_uccontact.UcContact] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     r"""A contact represents a person that optionally is associated with a call"""
     
-
 
 
 

@@ -7,7 +7,6 @@ from ..shared import atsapplication as shared_atsapplication
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class UpdateAtsApplicationRequest:
     connection_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': False }})
@@ -17,7 +16,6 @@ class UpdateAtsApplicationRequest:
     ats_application: Optional[shared_atsapplication.AtsApplication] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     r"""An application is an association object between a candidate and a job"""
     
-
 
 
 

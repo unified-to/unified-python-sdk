@@ -7,7 +7,6 @@ from ..shared import crmcompany as shared_crmcompany
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class CreateCrmCompanyRequest:
     connection_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': False }})
@@ -15,7 +14,6 @@ class CreateCrmCompanyRequest:
     crm_company: Optional[shared_crmcompany.CrmCompany] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     r"""A company represents an organization that optionally is associated with a deal and/or contacts"""
     
-
 
 
 

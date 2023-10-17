@@ -16,7 +16,6 @@ class CrmTelephoneType(str, Enum):
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class CrmTelephone:
     telephone: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('telephone') }})

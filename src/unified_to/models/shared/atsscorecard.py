@@ -18,7 +18,6 @@ class AtsScorecardRecommendation(str, Enum):
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class AtsScorecard:
     r"""A scorecard is feedback/assessment of a candidate's interview"""

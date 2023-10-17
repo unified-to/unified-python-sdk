@@ -7,7 +7,6 @@ from ..shared import hrisemployee as shared_hrisemployee
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class PatchHrisEmployeeRequest:
     connection_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': False }})
@@ -16,7 +15,6 @@ class PatchHrisEmployeeRequest:
     r"""ID of the Employee"""
     hris_employee: Optional[shared_hrisemployee.HrisEmployee] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
-
 
 
 

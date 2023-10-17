@@ -7,14 +7,12 @@ from ..shared import undefined as shared_undefined
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class RemovePassthroughRequest:
     connection_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': False }})
     r"""ID of the connection"""
     path: str = dataclasses.field(metadata={'path_param': { 'field_name': 'path', 'style': 'simple', 'explode': False }})
     
-
 
 
 

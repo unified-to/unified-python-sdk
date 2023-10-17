@@ -16,7 +16,6 @@ class PropertyUcCallTelephoneType(str, Enum):
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class PropertyUcCallTelephone:
     r"""The telephone number called"""

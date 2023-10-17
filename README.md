@@ -339,7 +339,7 @@ if res.ticketing_agent is not None:
 * [remove_crm_lead](docs/sdks/lead/README.md#remove_crm_lead) - Remove a lead
 * [update_crm_lead](docs/sdks/lead/README.md#update_crm_lead) - Update a lead
 
-### [list_](docs/sdks/list/README.md)
+### [list](docs/sdks/list/README.md)
 
 * [create_martech_list](docs/sdks/list/README.md#create_martech_list) - Create a list
 * [get_martech_list](docs/sdks/list/README.md#get_martech_list) - Retrieve a list

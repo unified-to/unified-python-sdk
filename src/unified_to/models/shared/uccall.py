@@ -12,7 +12,6 @@ from unified_to import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class UcCall:
     agency_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('agency_id') }})

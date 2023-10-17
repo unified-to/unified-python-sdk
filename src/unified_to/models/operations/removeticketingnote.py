@@ -6,7 +6,6 @@ import requests as requests_http
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class RemoveTicketingNoteRequest:
     connection_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': False }})
@@ -16,7 +15,6 @@ class RemoveTicketingNoteRequest:
     ticket_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'ticket_id', 'style': 'simple', 'explode': False }})
     r"""ID of the ticket"""
     
-
 
 
 

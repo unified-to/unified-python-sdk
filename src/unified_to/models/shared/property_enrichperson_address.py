@@ -8,7 +8,6 @@ from unified_to import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class PropertyEnrichPersonAddress:
     r"""The address of the person"""

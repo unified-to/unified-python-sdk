@@ -8,19 +8,18 @@ from ..shared import property_connection_categories as shared_property_connectio
 from ..shared import property_connection_permissions as shared_property_connection_permissions
 from dataclasses_json import Undefined, dataclass_json
 from datetime import datetime
-from typing import Optional
+from typing import List, Optional
 from unified_to import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class Connection:
     r"""A connection represents a specific authentication of an integration."""
-    categories: list[shared_property_connection_categories.PropertyConnectionCategories] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('categories') }})
+    categories: List[shared_property_connection_categories.PropertyConnectionCategories] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('categories') }})
     r"""The Integration categories that this connection supports"""
     integration_type: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('integration_type') }})
-    permissions: list[shared_property_connection_permissions.PropertyConnectionPermissions] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('permissions') }})
+    permissions: List[shared_property_connection_permissions.PropertyConnectionPermissions] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('permissions') }})
     auth: Optional[shared_property_connection_auth.PropertyConnectionAuth] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('auth'), 'exclude': lambda f: f is None }})
     r"""An authentication object that represents a specific authorized user's connection to an integration."""
     auth_aws_arn: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('auth_aws_arn'), 'exclude': lambda f: f is None }})

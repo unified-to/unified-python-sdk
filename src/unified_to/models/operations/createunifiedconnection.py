@@ -7,7 +7,6 @@ from ..shared import connection as shared_connection
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class CreateUnifiedConnectionResponse:
     content_type: str = dataclasses.field()

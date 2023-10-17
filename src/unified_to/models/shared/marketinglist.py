@@ -11,7 +11,6 @@ from unified_to import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class MarketingList:
     r"""Mailing List"""

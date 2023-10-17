@@ -4,7 +4,6 @@ from __future__ import annotations
 import dataclasses
 
 
-
 @dataclasses.dataclass
 class PropertyCrmDealRaw:
     r"""The raw data returned by the integration for this deal"""

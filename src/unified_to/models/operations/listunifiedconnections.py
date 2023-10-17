@@ -6,7 +6,7 @@ import requests as requests_http
 from ..shared import connection as shared_connection
 from datetime import datetime
 from enum import Enum
-from typing import Optional
+from typing import List, Optional
 
 class ListUnifiedConnectionsCategories(str, Enum):
     PASSTHROUGH = 'passthrough'
@@ -20,10 +20,9 @@ class ListUnifiedConnectionsCategories(str, Enum):
     UC = 'uc'
 
 
-
 @dataclasses.dataclass
 class ListUnifiedConnectionsRequest:
-    categories: Optional[list[ListUnifiedConnectionsCategories]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'categories', 'style': 'form', 'explode': True }})
+    categories: Optional[List[ListUnifiedConnectionsCategories]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'categories', 'style': 'form', 'explode': True }})
     r"""Filter the results on these categories"""
     env: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'env', 'style': 'form', 'explode': True }})
     external_xref: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'external_xref', 'style': 'form', 'explode': True }})
@@ -38,14 +37,13 @@ class ListUnifiedConnectionsRequest:
 
 
 
-
 @dataclasses.dataclass
 class ListUnifiedConnectionsResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    connections: Optional[list[shared_connection.Connection]] = dataclasses.field(default=None)
+    connections: Optional[List[shared_connection.Connection]] = dataclasses.field(default=None)
     r"""Successful"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""

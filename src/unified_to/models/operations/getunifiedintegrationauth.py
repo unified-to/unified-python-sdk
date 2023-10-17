@@ -4,7 +4,7 @@ from __future__ import annotations
 import dataclasses
 import requests as requests_http
 from enum import Enum
-from typing import Optional
+from typing import List, Optional
 
 class GetUnifiedIntegrationAuthScopes(str, Enum):
     ATS_SCORECARD_READ = 'ats_scorecard_read'
@@ -55,7 +55,6 @@ class GetUnifiedIntegrationAuthScopes(str, Enum):
     WEBHOOK = 'webhook'
 
 
-
 @dataclasses.dataclass
 class GetUnifiedIntegrationAuthRequest:
     integration_type: str = dataclasses.field(metadata={'path_param': { 'field_name': 'integration_type', 'style': 'simple', 'explode': False }})
@@ -70,14 +69,13 @@ class GetUnifiedIntegrationAuthRequest:
     lang: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'lang', 'style': 'form', 'explode': True }})
     r"""Language: en, fr, es, it, pt, zh, hi"""
     redirect: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'redirect', 'style': 'form', 'explode': True }})
-    scopes: Optional[list[GetUnifiedIntegrationAuthScopes]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'scopes', 'style': 'form', 'explode': True }})
+    scopes: Optional[List[GetUnifiedIntegrationAuthScopes]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'scopes', 'style': 'form', 'explode': True }})
     state: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'state', 'style': 'form', 'explode': True }})
     r"""Extra state to send back to your success URL"""
     subdomain: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'subdomain', 'style': 'form', 'explode': True }})
     success_redirect: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'success_redirect', 'style': 'form', 'explode': True }})
     r"""The URL where you want the user to be redirect to after a successful authentication.  The connection ID will be appended with (id=<connectionId>) to this URL, as will the state that was provided."""
     
-
 
 
 

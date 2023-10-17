@@ -25,7 +25,6 @@ class AtsCompensationType(str, Enum):
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class AtsCompensation:
     r"""Unified compensation object for a job"""

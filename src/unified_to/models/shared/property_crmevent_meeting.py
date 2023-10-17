@@ -10,7 +10,6 @@ from unified_to import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class PropertyCrmEventMeeting:
     r"""The meeting object, when type = meeting"""

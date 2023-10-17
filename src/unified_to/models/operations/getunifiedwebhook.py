@@ -7,13 +7,11 @@ from ..shared import webhook as shared_webhook
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class GetUnifiedWebhookRequest:
     id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     r"""ID of the Webhook"""
     
-
 
 
 

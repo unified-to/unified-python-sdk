@@ -7,7 +7,7 @@ from ..shared import property_atsinterview_raw as shared_property_atsinterview_r
 from dataclasses_json import Undefined, dataclass_json
 from datetime import datetime
 from enum import Enum
-from typing import Optional
+from typing import List, Optional
 from unified_to import utils
 
 class AtsInterviewStatus(str, Enum):
@@ -17,7 +17,6 @@ class AtsInterviewStatus(str, Enum):
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class AtsInterview:
     r"""An interview between a candidate for a specific job"""
@@ -33,6 +32,6 @@ class AtsInterview:
     start_at: Optional[datetime] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('start_at'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'exclude': lambda f: f is None }})
     status: Optional[AtsInterviewStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
     updated_at: Optional[datetime] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('updated_at'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'exclude': lambda f: f is None }})
-    user_ids: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('user_ids'), 'exclude': lambda f: f is None }})
+    user_ids: Optional[List[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('user_ids'), 'exclude': lambda f: f is None }})
     
 

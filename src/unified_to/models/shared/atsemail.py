@@ -14,7 +14,6 @@ class AtsEmailType(str, Enum):
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class AtsEmail:
     r"""An unified email object"""

@@ -7,7 +7,6 @@ from ..shared import marketingmember as shared_marketingmember
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class CreateMartechMemberRequest:
     connection_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': False }})
@@ -17,7 +16,6 @@ class CreateMartechMemberRequest:
     marketing_member: Optional[shared_marketingmember.MarketingMember] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     r"""A member represents a person"""
     
-
 
 
 

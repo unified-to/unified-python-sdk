@@ -5,8 +5,7 @@ import dataclasses
 import requests as requests_http
 from ..shared import atsapplication as shared_atsapplication
 from datetime import datetime
-from typing import Optional
-
+from typing import List, Optional
 
 
 @dataclasses.dataclass
@@ -15,7 +14,7 @@ class ListAtsApplicationsRequest:
     r"""ID of the connection"""
     candidate_id: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'candidate_id', 'style': 'form', 'explode': True }})
     r"""The candidate ID to filter results"""
-    fields_: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
+    fields_: Optional[List[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
     r"""Comma-delimited fields to return"""
     job_id: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'job_id', 'style': 'form', 'explode': True }})
     r"""The job ID to filter results"""
@@ -31,14 +30,13 @@ class ListAtsApplicationsRequest:
 
 
 
-
 @dataclasses.dataclass
 class ListAtsApplicationsResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    ats_applications: Optional[list[shared_atsapplication.AtsApplication]] = dataclasses.field(default=None)
+    ats_applications: Optional[List[shared_atsapplication.AtsApplication]] = dataclasses.field(default=None)
     r"""Successful"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""

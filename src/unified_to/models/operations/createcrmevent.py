@@ -7,7 +7,6 @@ from ..shared import crmevent as shared_crmevent
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class CreateCrmEventRequest:
     connection_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': False }})
@@ -15,7 +14,6 @@ class CreateCrmEventRequest:
     crm_event: Optional[shared_crmevent.CrmEvent] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     r"""An event represents an event, activity, or engagement and is always associated with a deal, contact, or company"""
     
-
 
 
 

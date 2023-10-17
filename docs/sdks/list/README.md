@@ -1,5 +1,5 @@
-# List
-(*list_*)
+# ListT
+(*list*)
 
 ### Available Operations
 
@@ -34,7 +34,7 @@ req = operations.CreateMartechListRequest(
     connection_id='Architect responsive',
 )
 
-res = s.list_.create_martech_list(req)
+res = s.list.create_martech_list(req)
 
 if res.marketing_list is not None:
     # handle response
@@ -77,7 +77,7 @@ req = operations.GetMartechListRequest(
     id='<ID>',
 )
 
-res = s.list_.get_martech_list(req)
+res = s.list.get_martech_list(req)
 
 if res.marketing_list is not None:
     # handle response
@@ -120,7 +120,7 @@ req = operations.ListMartechListsRequest(
     ],
 )
 
-res = s.list_.list_martech_lists(req)
+res = s.list.list_martech_lists(req)
 
 if res.marketing_lists is not None:
     # handle response
@@ -164,7 +164,7 @@ req = operations.PatchMartechListRequest(
     id='<ID>',
 )
 
-res = s.list_.patch_martech_list(req)
+res = s.list.patch_martech_list(req)
 
 if res.marketing_list is not None:
     # handle response
@@ -204,7 +204,7 @@ req = operations.RemoveMartechListRequest(
     id='<ID>',
 )
 
-res = s.list_.remove_martech_list(req)
+res = s.list.remove_martech_list(req)
 
 if res.status_code == 200:
     # handle response
@@ -248,7 +248,7 @@ req = operations.UpdateMartechListRequest(
     id='<ID>',
 )
 
-res = s.list_.update_martech_list(req)
+res = s.list.update_martech_list(req)
 
 if res.marketing_list is not None:
     # handle response

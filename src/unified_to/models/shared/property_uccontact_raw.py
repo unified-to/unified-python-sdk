@@ -4,7 +4,6 @@ from __future__ import annotations
 import dataclasses
 
 
-
 @dataclasses.dataclass
 class PropertyUcContactRaw:
     r"""The raw data returned by the integration for this contact"""

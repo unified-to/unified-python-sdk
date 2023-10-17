@@ -7,7 +7,6 @@ from ..shared import ticketingnote as shared_ticketingnote
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class PatchTicketingNoteRequest:
     connection_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': False }})
@@ -18,7 +17,6 @@ class PatchTicketingNoteRequest:
     r"""ID of the ticket"""
     ticketing_note: Optional[shared_ticketingnote.TicketingNote] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
-
 
 
 

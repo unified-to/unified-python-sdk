@@ -16,7 +16,6 @@ class AtsTelephoneType(str, Enum):
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class AtsTelephone:
     r"""A unified telephone object"""

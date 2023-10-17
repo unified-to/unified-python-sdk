@@ -7,7 +7,6 @@ from ..shared import atscandidate as shared_atscandidate
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class CreateAtsCandidateRequest:
     connection_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': False }})
@@ -15,7 +14,6 @@ class CreateAtsCandidateRequest:
     ats_candidate: Optional[shared_atscandidate.AtsCandidate] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     r"""A candidate looking for work"""
     
-
 
 
 

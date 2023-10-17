@@ -7,7 +7,6 @@ from ..shared import marketinglist as shared_marketinglist
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class CreateMartechListRequest:
     connection_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': False }})
@@ -15,7 +14,6 @@ class CreateMartechListRequest:
     marketing_list: Optional[shared_marketinglist.MarketingList] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     r"""Mailing List"""
     
-
 
 
 

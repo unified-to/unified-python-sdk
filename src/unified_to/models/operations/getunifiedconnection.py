@@ -7,13 +7,11 @@ from ..shared import connection as shared_connection
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class GetUnifiedConnectionRequest:
     id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     r"""ID of the Connection"""
     
-
 
 
 

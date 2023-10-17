@@ -7,7 +7,6 @@ from ..shared import crmpipeline as shared_crmpipeline
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class UpdateCrmPipelineRequest:
     connection_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': False }})
@@ -16,7 +15,6 @@ class UpdateCrmPipelineRequest:
     r"""ID of the Pipeline"""
     crm_pipeline: Optional[shared_crmpipeline.CrmPipeline] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
-
 
 
 

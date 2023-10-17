@@ -7,7 +7,6 @@ from ..shared import enrichperson as shared_enrichperson
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class ListEnrichPeopleRequest:
     connection_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': False }})
@@ -21,7 +20,6 @@ class ListEnrichPeopleRequest:
     twitter: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'twitter', 'style': 'form', 'explode': True }})
     r"""The twitter handle of the person to search"""
     
-
 
 
 

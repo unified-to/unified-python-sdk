@@ -7,13 +7,11 @@ from ..shared import apicall as shared_apicall
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class GetUnifiedApicallRequest:
     id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     r"""ID of the Apicall"""
     
-
 
 
 

@@ -7,7 +7,6 @@ from ..shared import undefined as shared_undefined
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class CreatePassthroughRequest:
     connection_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': False }})
@@ -16,7 +15,6 @@ class CreatePassthroughRequest:
     undefined: Optional[shared_undefined.Undefined] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     r"""integration-specific payload"""
     
-
 
 
 

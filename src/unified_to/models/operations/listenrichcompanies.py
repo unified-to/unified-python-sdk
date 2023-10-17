@@ -7,7 +7,6 @@ from ..shared import enrichcompany as shared_enrichcompany
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class ListEnrichCompaniesRequest:
     connection_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': False }})
@@ -17,7 +16,6 @@ class ListEnrichCompaniesRequest:
     name: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'name', 'style': 'form', 'explode': True }})
     r"""The name of the company to search"""
     
-
 
 
 

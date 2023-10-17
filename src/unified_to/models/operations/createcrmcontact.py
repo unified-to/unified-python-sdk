@@ -7,7 +7,6 @@ from ..shared import crmcontact as shared_crmcontact
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class CreateCrmContactRequest:
     connection_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': False }})
@@ -15,7 +14,6 @@ class CreateCrmContactRequest:
     crm_contact: Optional[shared_crmcontact.CrmContact] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     r"""A contact represents a person that optionally is associated with a deal and/or a company"""
     
-
 
 
 

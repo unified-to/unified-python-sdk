@@ -8,7 +8,6 @@ from unified_to import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class PropertyCrmEventNote:
     r"""The note object, when type = note"""

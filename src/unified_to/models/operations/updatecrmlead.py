@@ -7,7 +7,6 @@ from ..shared import crmlead as shared_crmlead
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class UpdateCrmLeadRequest:
     connection_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': False }})
@@ -16,7 +15,6 @@ class UpdateCrmLeadRequest:
     r"""ID of the Lead"""
     crm_lead: Optional[shared_crmlead.CrmLead] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
-
 
 
 

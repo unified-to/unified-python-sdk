@@ -5,8 +5,7 @@ import dataclasses
 import requests as requests_http
 from ..shared import webhook as shared_webhook
 from datetime import datetime
-from typing import Optional
-
+from typing import List, Optional
 
 
 @dataclasses.dataclass
@@ -24,7 +23,6 @@ class ListUnifiedWebhooksRequest:
 
 
 
-
 @dataclasses.dataclass
 class ListUnifiedWebhooksResponse:
     content_type: str = dataclasses.field()
@@ -33,7 +31,7 @@ class ListUnifiedWebhooksResponse:
     r"""HTTP response status code for this operation"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""
-    webhooks: Optional[list[shared_webhook.Webhook]] = dataclasses.field(default=None)
+    webhooks: Optional[List[shared_webhook.Webhook]] = dataclasses.field(default=None)
     r"""Successful"""
     
 

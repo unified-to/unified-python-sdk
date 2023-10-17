@@ -5,8 +5,7 @@ import dataclasses
 import requests as requests_http
 from ..shared import ticketingticket as shared_ticketingticket
 from datetime import datetime
-from typing import Optional
-
+from typing import List, Optional
 
 
 @dataclasses.dataclass
@@ -17,7 +16,7 @@ class ListTicketingTicketsRequest:
     r"""The agent ID to filter results"""
     customer_id: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'customer_id', 'style': 'form', 'explode': True }})
     r"""The customer ID to filter results"""
-    fields_: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
+    fields_: Optional[List[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
     r"""Comma-delimited fields to return"""
     limit: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
     offset: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
@@ -31,7 +30,6 @@ class ListTicketingTicketsRequest:
 
 
 
-
 @dataclasses.dataclass
 class ListTicketingTicketsResponse:
     content_type: str = dataclasses.field()
@@ -40,7 +38,7 @@ class ListTicketingTicketsResponse:
     r"""HTTP response status code for this operation"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""
-    ticketing_tickets: Optional[list[shared_ticketingticket.TicketingTicket]] = dataclasses.field(default=None)
+    ticketing_tickets: Optional[List[shared_ticketingticket.TicketingTicket]] = dataclasses.field(default=None)
     r"""Successful"""
     
 

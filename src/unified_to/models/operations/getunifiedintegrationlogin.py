@@ -6,7 +6,6 @@ import requests as requests_http
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class GetUnifiedIntegrationLoginRequest:
     integration_type: str = dataclasses.field(metadata={'path_param': { 'field_name': 'integration_type', 'style': 'simple', 'explode': False }})
@@ -22,7 +21,6 @@ class GetUnifiedIntegrationLoginRequest:
     success_redirect: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'success_redirect', 'style': 'form', 'explode': True }})
     r"""The URL where you want the user to be redirect to after a successful authentication.  The connection ID will be appended with (id=<connectionId>) to this URL, as will the state that was provided."""
     
-
 
 
 

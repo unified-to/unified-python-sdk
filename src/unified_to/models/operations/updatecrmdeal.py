@@ -7,7 +7,6 @@ from ..shared import crmdeal as shared_crmdeal
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class UpdateCrmDealRequest:
     connection_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': False }})
@@ -17,7 +16,6 @@ class UpdateCrmDealRequest:
     crm_deal: Optional[shared_crmdeal.CrmDeal] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     r"""A deal represents an opportunity with companies and/or contacts"""
     
-
 
 
 

@@ -7,7 +7,6 @@ from ..shared import hrisgroup as shared_hrisgroup
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class PatchHrisGroupRequest:
     connection_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': False }})
@@ -16,7 +15,6 @@ class PatchHrisGroupRequest:
     r"""ID of the Group"""
     hris_group: Optional[shared_hrisgroup.HrisGroup] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
-
 
 
 

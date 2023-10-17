@@ -7,14 +7,12 @@ from ..shared import hrisemployee as shared_hrisemployee
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class CreateHrisEmployeeRequest:
     connection_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': False }})
     r"""ID of the connection"""
     hris_employee: Optional[shared_hrisemployee.HrisEmployee] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
-
 
 
 

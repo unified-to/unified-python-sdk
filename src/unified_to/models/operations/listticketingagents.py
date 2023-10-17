@@ -5,15 +5,14 @@ import dataclasses
 import requests as requests_http
 from ..shared import ticketingagent as shared_ticketingagent
 from datetime import datetime
-from typing import Optional
-
+from typing import List, Optional
 
 
 @dataclasses.dataclass
 class ListTicketingAgentsRequest:
     connection_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': False }})
     r"""ID of the connection"""
-    fields_: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
+    fields_: Optional[List[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
     r"""Comma-delimited fields to return"""
     limit: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
     offset: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
@@ -27,7 +26,6 @@ class ListTicketingAgentsRequest:
 
 
 
-
 @dataclasses.dataclass
 class ListTicketingAgentsResponse:
     content_type: str = dataclasses.field()
@@ -36,7 +34,7 @@ class ListTicketingAgentsResponse:
     r"""HTTP response status code for this operation"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""
-    ticketing_agents: Optional[list[shared_ticketingagent.TicketingAgent]] = dataclasses.field(default=None)
+    ticketing_agents: Optional[List[shared_ticketingagent.TicketingAgent]] = dataclasses.field(default=None)
     r"""Successful"""
     
 

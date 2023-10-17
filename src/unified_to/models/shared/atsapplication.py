@@ -26,7 +26,6 @@ class AtsApplicationStatus(str, Enum):
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class AtsApplication:
     r"""An application is an association object between a candidate and a job"""
