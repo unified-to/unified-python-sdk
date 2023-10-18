@@ -34,7 +34,7 @@ req = operations.CreateUnifiedWebhookRequest(
         hook_url='male',
         integration_type='Representative',
         interval=9342.25,
-        object_type=shared.WebhookObjectType.CRM_DEAL,
+        object_type=shared.WebhookObjectType.CRM_CONTACT,
         subscriptions=[
             'Account',
         ],

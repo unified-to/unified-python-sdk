@@ -25,7 +25,7 @@ s = unified_to.UnifiedTo(
 req = operations.GetUnifiedIntegrationAuthRequest(
     integration_type='supposing',
     scopes=[
-        operations.GetUnifiedIntegrationAuthScopes.TICKETING_NOTE_READ,
+        operations.GetUnifiedIntegrationAuthScopes.TICKETING_CUSTOMER_READ,
     ],
     workspace_id='Van',
 )

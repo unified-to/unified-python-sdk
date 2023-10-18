@@ -42,7 +42,7 @@ req = shared.Connection(
     ],
     integration_type='revolutionize',
     permissions=[
-        shared.PropertyConnectionPermissions.TICKETING_AGENT_WRITE,
+        shared.PropertyConnectionPermissions.CRM_PIPELINE_WRITE,
     ],
 )
 
@@ -179,7 +179,7 @@ req = operations.PatchUnifiedConnectionRequest(
         ],
         integration_type='Northeast',
         permissions=[
-            shared.PropertyConnectionPermissions.MARTECH_LIST_READ,
+            shared.PropertyConnectionPermissions.CRM_LEAD_READ,
         ],
     ),
     id='<ID>',
@@ -276,7 +276,7 @@ req = operations.UpdateUnifiedConnectionRequest(
         ],
         integration_type='Cambridgeshire',
         permissions=[
-            shared.PropertyConnectionPermissions.CRM_TEAM_WRITE,
+            shared.PropertyConnectionPermissions.CRM_EVENT_WRITE,
         ],
     ),
     id='<ID>',

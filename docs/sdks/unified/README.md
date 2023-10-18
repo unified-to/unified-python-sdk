@@ -52,7 +52,7 @@ req = shared.Connection(
     ],
     integration_type='revolutionize',
     permissions=[
-        shared.PropertyConnectionPermissions.TICKETING_AGENT_WRITE,
+        shared.PropertyConnectionPermissions.CRM_PIPELINE_WRITE,
     ],
 )
 
@@ -101,7 +101,7 @@ req = operations.CreateUnifiedWebhookRequest(
         hook_url='male',
         integration_type='Representative',
         interval=9342.25,
-        object_type=shared.WebhookObjectType.CRM_DEAL,
+        object_type=shared.WebhookObjectType.CRM_CONTACT,
         subscriptions=[
             'Account',
         ],
@@ -269,7 +269,7 @@ s = unified_to.UnifiedTo(
 req = operations.GetUnifiedIntegrationAuthRequest(
     integration_type='supposing',
     scopes=[
-        operations.GetUnifiedIntegrationAuthScopes.TICKETING_NOTE_READ,
+        operations.GetUnifiedIntegrationAuthScopes.TICKETING_CUSTOMER_READ,
     ],
     workspace_id='Van',
 )
@@ -566,7 +566,7 @@ req = operations.PatchUnifiedConnectionRequest(
         ],
         integration_type='Northeast',
         permissions=[
-            shared.PropertyConnectionPermissions.MARTECH_LIST_READ,
+            shared.PropertyConnectionPermissions.CRM_LEAD_READ,
         ],
     ),
     id='<ID>',
@@ -702,7 +702,7 @@ req = operations.UpdateUnifiedConnectionRequest(
         ],
         integration_type='Cambridgeshire',
         permissions=[
-            shared.PropertyConnectionPermissions.CRM_TEAM_WRITE,
+            shared.PropertyConnectionPermissions.CRM_EVENT_WRITE,
         ],
     ),
     id='<ID>',

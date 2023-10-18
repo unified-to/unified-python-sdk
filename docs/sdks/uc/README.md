@@ -5,7 +5,6 @@
 
 * [create_uc_contact](#create_uc_contact) - Create a contact
 * [get_uc_contact](#get_uc_contact) - Retrieve a contact
-* [list_uc_agents](#list_uc_agents) - List all agents
 * [list_uc_calls](#list_uc_calls) - List all calls
 * [list_uc_contacts](#list_uc_contacts) - List all contacts
 * [patch_uc_contact](#patch_uc_contact) - Update a contact
@@ -106,49 +105,6 @@ if res.uc_contact is not None:
 ### Response
 
 **[operations.GetUcContactResponse](../../models/operations/getuccontactresponse.md)**
-
-
-## list_uc_agents
-
-List all agents
-
-### Example Usage
-
-```python
-import unified_to
-import dateutil.parser
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.ListUcAgentsRequest(
-    connection_id='Ohio',
-    fields_=[
-        'huzzah',
-    ],
-)
-
-res = s.uc.list_uc_agents(req)
-
-if res.uc_agents is not None:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `request`                                                                        | [operations.ListUcAgentsRequest](../../models/operations/listucagentsrequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
-
-
-### Response
-
-**[operations.ListUcAgentsResponse](../../models/operations/listucagentsresponse.md)**
 
 
 ## list_uc_calls

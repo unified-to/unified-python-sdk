@@ -19,9 +19,7 @@ from .crmevent import *
 from .crmfile import *
 from .crmlead import *
 from .crmpipeline import *
-from .crmteam import *
 from .crmtelephone import *
-from .crmuser import *
 from .enrichcompany import *
 from .enrichemail import *
 from .enrichperson import *
@@ -60,9 +58,6 @@ from .property_crmfile_raw import *
 from .property_crmlead_address import *
 from .property_crmlead_raw import *
 from .property_crmpipeline_raw import *
-from .property_crmteam_raw import *
-from .property_crmuser_address import *
-from .property_crmuser_raw import *
 from .property_enrichcompany_address import *
 from .property_enrichcompany_raw import *
 from .property_enrichperson_address import *
@@ -77,23 +72,19 @@ from .property_integrationsupport_webhook_events import *
 from .property_marketinglist_raw import *
 from .property_marketingmember_raw import *
 from .property_property_connection_auth_meta import *
-from .property_ticketingagent_raw import *
 from .property_ticketingcustomer_raw import *
 from .property_ticketingnote_raw import *
 from .property_ticketingticket_raw import *
-from .property_ucagent_raw import *
 from .property_uccall_raw import *
 from .property_uccall_telephone import *
 from .property_uccontact_raw import *
 from .property_webhook_events import *
 from .security import *
-from .ticketingagent import *
 from .ticketingcustomer import *
 from .ticketingemail import *
 from .ticketingnote import *
 from .ticketingtelephone import *
 from .ticketingticket import *
-from .ucagent import *
 from .uccall import *
 from .uccontact import *
 from .ucemail import *
@@ -101,4 +92,4 @@ from .uctelephone import *
 from .undefined import *
 from .webhook import *
 
-__all__ = ["APICall","APICallType","AtsAddress","AtsApplication","AtsApplicationStatus","AtsCandidate","AtsCompensation","AtsCompensationFrequency","AtsCompensationType","AtsEmail","AtsEmailType","AtsInterview","AtsInterviewStatus","AtsJob","AtsJobEmploymentType","AtsJobStatus","AtsScorecard","AtsScorecardRecommendation","AtsTelephone","AtsTelephoneType","Connection","CrmCompany","CrmContact","CrmDeal","CrmEmail","CrmEmailType","CrmEvent","CrmEventType","CrmFile","CrmLead","CrmPipeline","CrmTeam","CrmTelephone","CrmTelephoneType","CrmUser","EnrichCompany","EnrichEmail","EnrichEmailType","EnrichPerson","EnrichPersonGender","EnrichPersonWorkHistory","EnrichTelephone","EnrichTelephoneType","HrisEmail","HrisEmailType","HrisEmployee","HrisEmployeeEmploymentStatus","HrisEmployeeEmploymentType","HrisEmployeeGender","HrisEmployeeMaritalStatus","HrisGroup","HrisGroupType","HrisTelephone","HrisTelephoneType","Integration","IntegrationSupport","IntegrationSupportWebhookType","MarketingEmail","MarketingEmailType","MarketingList","MarketingMember","PropertyAtsApplicationRaw","PropertyAtsCandidateAddress","PropertyAtsCandidateRaw","PropertyAtsInterviewRaw","PropertyAtsJobRaw","PropertyAtsScorecardRaw","PropertyConnectionAuth","PropertyConnectionCategories","PropertyConnectionPermissions","PropertyCrmCompanyAddress","PropertyCrmCompanyRaw","PropertyCrmContactAddress","PropertyCrmContactRaw","PropertyCrmDealRaw","PropertyCrmEventCall","PropertyCrmEventEmail","PropertyCrmEventMeeting","PropertyCrmEventNote","PropertyCrmEventRaw","PropertyCrmEventTask","PropertyCrmFileRaw","PropertyCrmLeadAddress","PropertyCrmLeadRaw","PropertyCrmPipelineRaw","PropertyCrmTeamRaw","PropertyCrmUserAddress","PropertyCrmUserRaw","PropertyEnrichCompanyAddress","PropertyEnrichCompanyRaw","PropertyEnrichPersonAddress","PropertyEnrichPersonRaw","PropertyHrisEmployeeAddress","PropertyHrisEmployeeRaw","PropertyHrisGroupRaw","PropertyIntegrationCategories","PropertyIntegrationSupportInboundFields","PropertyIntegrationSupportOutboundFields","PropertyIntegrationSupportWebhookEvents","PropertyMarketingListRaw","PropertyMarketingMemberRaw","PropertyPropertyConnectionAuthMeta","PropertyTicketingAgentRaw","PropertyTicketingCustomerRaw","PropertyTicketingNoteRaw","PropertyTicketingTicketRaw","PropertyUcAgentRaw","PropertyUcCallRaw","PropertyUcCallTelephone","PropertyUcCallTelephoneType","PropertyUcContactRaw","PropertyWebhookEvents","Security","TicketingAgent","TicketingCustomer","TicketingEmail","TicketingEmailType","TicketingNote","TicketingTelephone","TicketingTelephoneType","TicketingTicket","TicketingTicketStatus","UcAgent","UcCall","UcContact","UcEmail","UcEmailType","UcTelephone","UcTelephoneType","Undefined","Webhook","WebhookObjectType"]
+__all__ = ["APICall","APICallType","AtsAddress","AtsApplication","AtsApplicationStatus","AtsCandidate","AtsCompensation","AtsCompensationFrequency","AtsCompensationType","AtsEmail","AtsEmailType","AtsInterview","AtsInterviewStatus","AtsJob","AtsJobEmploymentType","AtsJobStatus","AtsScorecard","AtsScorecardRecommendation","AtsTelephone","AtsTelephoneType","Connection","CrmCompany","CrmContact","CrmDeal","CrmEmail","CrmEmailType","CrmEvent","CrmEventType","CrmFile","CrmLead","CrmPipeline","CrmTelephone","CrmTelephoneType","EnrichCompany","EnrichEmail","EnrichEmailType","EnrichPerson","EnrichPersonGender","EnrichPersonWorkHistory","EnrichTelephone","EnrichTelephoneType","HrisEmail","HrisEmailType","HrisEmployee","HrisEmployeeEmploymentStatus","HrisEmployeeEmploymentType","HrisEmployeeGender","HrisEmployeeMaritalStatus","HrisGroup","HrisGroupType","HrisTelephone","HrisTelephoneType","Integration","IntegrationSupport","IntegrationSupportWebhookType","MarketingEmail","MarketingEmailType","MarketingList","MarketingMember","PropertyAtsApplicationRaw","PropertyAtsCandidateAddress","PropertyAtsCandidateRaw","PropertyAtsInterviewRaw","PropertyAtsJobRaw","PropertyAtsScorecardRaw","PropertyConnectionAuth","PropertyConnectionCategories","PropertyConnectionPermissions","PropertyCrmCompanyAddress","PropertyCrmCompanyRaw","PropertyCrmContactAddress","PropertyCrmContactRaw","PropertyCrmDealRaw","PropertyCrmEventCall","PropertyCrmEventEmail","PropertyCrmEventMeeting","PropertyCrmEventNote","PropertyCrmEventRaw","PropertyCrmEventTask","PropertyCrmFileRaw","PropertyCrmLeadAddress","PropertyCrmLeadRaw","PropertyCrmPipelineRaw","PropertyEnrichCompanyAddress","PropertyEnrichCompanyRaw","PropertyEnrichPersonAddress","PropertyEnrichPersonRaw","PropertyHrisEmployeeAddress","PropertyHrisEmployeeRaw","PropertyHrisGroupRaw","PropertyIntegrationCategories","PropertyIntegrationSupportInboundFields","PropertyIntegrationSupportOutboundFields","PropertyIntegrationSupportWebhookEvents","PropertyMarketingListRaw","PropertyMarketingMemberRaw","PropertyPropertyConnectionAuthMeta","PropertyTicketingCustomerRaw","PropertyTicketingNoteRaw","PropertyTicketingTicketRaw","PropertyUcCallRaw","PropertyUcCallTelephone","PropertyUcCallTelephoneType","PropertyUcContactRaw","PropertyWebhookEvents","Security","TicketingCustomer","TicketingEmail","TicketingEmailType","TicketingNote","TicketingTelephone","TicketingTelephoneType","TicketingTicket","TicketingTicketStatus","UcCall","UcContact","UcEmail","UcEmailType","UcTelephone","UcTelephoneType","Undefined","Webhook","WebhookObjectType"]

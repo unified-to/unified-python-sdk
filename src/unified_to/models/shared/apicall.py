@@ -18,7 +18,6 @@ class APICallType(str, Enum):
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class APICall:
-    r"""An API call made to Unified or a API callback/webhook made from Unified"""
     integration_type: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('integration_type') }})
     method: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('method') }})
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})

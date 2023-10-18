@@ -18,7 +18,6 @@ pip install git+https://github.com/unified-to/unified-python-sdk.git
 <!-- Start SDK Example Usage -->
 ```python
 import unified_to
-import dateutil.parser
 from unified_to.models import operations, shared
 
 s = unified_to.UnifiedTo(
@@ -27,26 +26,13 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.CreateTicketingAgentRequest(
-    ticketing_agent=shared.TicketingAgent(
-        emails=[
-            shared.TicketingEmail(
-                email='Paolo.Cole8@yahoo.com',
-            ),
-        ],
-        raw=shared.PropertyTicketingAgentRaw(),
-        telephones=[
-            shared.TicketingTelephone(
-                telephone='Seaborgium',
-            ),
-        ],
-    ),
-    connection_id='Manager',
+req = operations.GetUnifiedApicallRequest(
+    id='<ID>',
 )
 
-res = s.agent.create_ticketing_agent(req)
+res = s.apicall.get_unified_apicall(req)
 
-if res.ticketing_agent is not None:
+if res.api_call is not None:
     # handle response
     pass
 ```
@@ -55,16 +41,6 @@ if res.ticketing_agent is not None:
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-
-### [agent](docs/sdks/agent/README.md)
-
-* [create_ticketing_agent](docs/sdks/agent/README.md#create_ticketing_agent) - Create a agent
-* [get_ticketing_agent](docs/sdks/agent/README.md#get_ticketing_agent) - Retrieve a agent
-* [list_ticketing_agents](docs/sdks/agent/README.md#list_ticketing_agents) - List all agents
-* [list_uc_agents](docs/sdks/agent/README.md#list_uc_agents) - List all agents
-* [patch_ticketing_agent](docs/sdks/agent/README.md#patch_ticketing_agent) - Update a agent
-* [remove_ticketing_agent](docs/sdks/agent/README.md#remove_ticketing_agent) - Remove a agent
-* [update_ticketing_agent](docs/sdks/agent/README.md#update_ticketing_agent) - Update a agent
 
 ### [apicall](docs/sdks/apicall/README.md)
 
@@ -174,8 +150,6 @@ if res.ticketing_agent is not None:
 * [create_crm_file](docs/sdks/crm/README.md#create_crm_file) - Create a file
 * [create_crm_lead](docs/sdks/crm/README.md#create_crm_lead) - Create a lead
 * [create_crm_pipeline](docs/sdks/crm/README.md#create_crm_pipeline) - Create a pipeline
-* [create_crm_team](docs/sdks/crm/README.md#create_crm_team) - Create a team
-* [create_crm_user](docs/sdks/crm/README.md#create_crm_user) - Create a user
 * [get_crm_company](docs/sdks/crm/README.md#get_crm_company) - Retrieve a company
 * [get_crm_contact](docs/sdks/crm/README.md#get_crm_contact) - Retrieve a contact
 * [get_crm_deal](docs/sdks/crm/README.md#get_crm_deal) - Retrieve a deal
@@ -183,8 +157,6 @@ if res.ticketing_agent is not None:
 * [get_crm_file](docs/sdks/crm/README.md#get_crm_file) - Retrieve a file
 * [get_crm_lead](docs/sdks/crm/README.md#get_crm_lead) - Retrieve a lead
 * [get_crm_pipeline](docs/sdks/crm/README.md#get_crm_pipeline) - Retrieve a pipeline
-* [get_crm_team](docs/sdks/crm/README.md#get_crm_team) - Retrieve a team
-* [get_crm_user](docs/sdks/crm/README.md#get_crm_user) - Retrieve a user
 * [list_crm_companies](docs/sdks/crm/README.md#list_crm_companies) - List all companies
 * [list_crm_contacts](docs/sdks/crm/README.md#list_crm_contacts) - List all contacts
 * [list_crm_deals](docs/sdks/crm/README.md#list_crm_deals) - List all deals
@@ -192,8 +164,6 @@ if res.ticketing_agent is not None:
 * [list_crm_files](docs/sdks/crm/README.md#list_crm_files) - List all files
 * [list_crm_leads](docs/sdks/crm/README.md#list_crm_leads) - List all leads
 * [list_crm_pipelines](docs/sdks/crm/README.md#list_crm_pipelines) - List all pipelines
-* [list_crm_teams](docs/sdks/crm/README.md#list_crm_teams) - List all teams
-* [list_crm_users](docs/sdks/crm/README.md#list_crm_users) - List all users
 * [patch_crm_company](docs/sdks/crm/README.md#patch_crm_company) - Update a company
 * [patch_crm_contact](docs/sdks/crm/README.md#patch_crm_contact) - Update a contact
 * [patch_crm_deal](docs/sdks/crm/README.md#patch_crm_deal) - Update a deal
@@ -201,8 +171,6 @@ if res.ticketing_agent is not None:
 * [patch_crm_file](docs/sdks/crm/README.md#patch_crm_file) - Update a file
 * [patch_crm_lead](docs/sdks/crm/README.md#patch_crm_lead) - Update a lead
 * [patch_crm_pipeline](docs/sdks/crm/README.md#patch_crm_pipeline) - Update a pipeline
-* [patch_crm_team](docs/sdks/crm/README.md#patch_crm_team) - Update a team
-* [patch_crm_user](docs/sdks/crm/README.md#patch_crm_user) - Update a user
 * [remove_crm_company](docs/sdks/crm/README.md#remove_crm_company) - Remove a company
 * [remove_crm_contact](docs/sdks/crm/README.md#remove_crm_contact) - Remove a contact
 * [remove_crm_deal](docs/sdks/crm/README.md#remove_crm_deal) - Remove a deal
@@ -210,8 +178,6 @@ if res.ticketing_agent is not None:
 * [remove_crm_file](docs/sdks/crm/README.md#remove_crm_file) - Remove a file
 * [remove_crm_lead](docs/sdks/crm/README.md#remove_crm_lead) - Remove a lead
 * [remove_crm_pipeline](docs/sdks/crm/README.md#remove_crm_pipeline) - Remove a pipeline
-* [remove_crm_team](docs/sdks/crm/README.md#remove_crm_team) - Remove a team
-* [remove_crm_user](docs/sdks/crm/README.md#remove_crm_user) - Remove a user
 * [update_crm_company](docs/sdks/crm/README.md#update_crm_company) - Update a company
 * [update_crm_contact](docs/sdks/crm/README.md#update_crm_contact) - Update a contact
 * [update_crm_deal](docs/sdks/crm/README.md#update_crm_deal) - Update a deal
@@ -219,8 +185,6 @@ if res.ticketing_agent is not None:
 * [update_crm_file](docs/sdks/crm/README.md#update_crm_file) - Update a file
 * [update_crm_lead](docs/sdks/crm/README.md#update_crm_lead) - Update a lead
 * [update_crm_pipeline](docs/sdks/crm/README.md#update_crm_pipeline) - Update a pipeline
-* [update_crm_team](docs/sdks/crm/README.md#update_crm_team) - Update a team
-* [update_crm_user](docs/sdks/crm/README.md#update_crm_user) - Update a user
 
 ### [customer](docs/sdks/customer/README.md)
 
@@ -406,15 +370,6 @@ if res.ticketing_agent is not None:
 * [remove_crm_pipeline](docs/sdks/pipeline/README.md#remove_crm_pipeline) - Remove a pipeline
 * [update_crm_pipeline](docs/sdks/pipeline/README.md#update_crm_pipeline) - Update a pipeline
 
-### [team](docs/sdks/team/README.md)
-
-* [create_crm_team](docs/sdks/team/README.md#create_crm_team) - Create a team
-* [get_crm_team](docs/sdks/team/README.md#get_crm_team) - Retrieve a team
-* [list_crm_teams](docs/sdks/team/README.md#list_crm_teams) - List all teams
-* [patch_crm_team](docs/sdks/team/README.md#patch_crm_team) - Update a team
-* [remove_crm_team](docs/sdks/team/README.md#remove_crm_team) - Remove a team
-* [update_crm_team](docs/sdks/team/README.md#update_crm_team) - Update a team
-
 ### [ticket](docs/sdks/ticket/README.md)
 
 * [create_ticketing_ticket](docs/sdks/ticket/README.md#create_ticketing_ticket) - Create a ticket
@@ -426,27 +381,21 @@ if res.ticketing_agent is not None:
 
 ### [ticketing](docs/sdks/ticketing/README.md)
 
-* [create_ticketing_agent](docs/sdks/ticketing/README.md#create_ticketing_agent) - Create a agent
 * [create_ticketing_customer](docs/sdks/ticketing/README.md#create_ticketing_customer) - Create a customer
 * [create_ticketing_note](docs/sdks/ticketing/README.md#create_ticketing_note) - Create a note
 * [create_ticketing_ticket](docs/sdks/ticketing/README.md#create_ticketing_ticket) - Create a ticket
-* [get_ticketing_agent](docs/sdks/ticketing/README.md#get_ticketing_agent) - Retrieve a agent
 * [get_ticketing_customer](docs/sdks/ticketing/README.md#get_ticketing_customer) - Retrieve a customer
 * [get_ticketing_note](docs/sdks/ticketing/README.md#get_ticketing_note) - Retrieve a note
 * [get_ticketing_ticket](docs/sdks/ticketing/README.md#get_ticketing_ticket) - Retrieve a ticket
-* [list_ticketing_agents](docs/sdks/ticketing/README.md#list_ticketing_agents) - List all agents
 * [list_ticketing_customers](docs/sdks/ticketing/README.md#list_ticketing_customers) - List all customers
 * [list_ticketing_notes](docs/sdks/ticketing/README.md#list_ticketing_notes) - List all notes
 * [list_ticketing_tickets](docs/sdks/ticketing/README.md#list_ticketing_tickets) - List all tickets
-* [patch_ticketing_agent](docs/sdks/ticketing/README.md#patch_ticketing_agent) - Update a agent
 * [patch_ticketing_customer](docs/sdks/ticketing/README.md#patch_ticketing_customer) - Update a customer
 * [patch_ticketing_note](docs/sdks/ticketing/README.md#patch_ticketing_note) - Update a note
 * [patch_ticketing_ticket](docs/sdks/ticketing/README.md#patch_ticketing_ticket) - Update a ticket
-* [remove_ticketing_agent](docs/sdks/ticketing/README.md#remove_ticketing_agent) - Remove a agent
 * [remove_ticketing_customer](docs/sdks/ticketing/README.md#remove_ticketing_customer) - Remove a customer
 * [remove_ticketing_note](docs/sdks/ticketing/README.md#remove_ticketing_note) - Remove a note
 * [remove_ticketing_ticket](docs/sdks/ticketing/README.md#remove_ticketing_ticket) - Remove a ticket
-* [update_ticketing_agent](docs/sdks/ticketing/README.md#update_ticketing_agent) - Update a agent
 * [update_ticketing_customer](docs/sdks/ticketing/README.md#update_ticketing_customer) - Update a customer
 * [update_ticketing_note](docs/sdks/ticketing/README.md#update_ticketing_note) - Update a note
 * [update_ticketing_ticket](docs/sdks/ticketing/README.md#update_ticketing_ticket) - Update a ticket
@@ -455,7 +404,6 @@ if res.ticketing_agent is not None:
 
 * [create_uc_contact](docs/sdks/uc/README.md#create_uc_contact) - Create a contact
 * [get_uc_contact](docs/sdks/uc/README.md#get_uc_contact) - Retrieve a contact
-* [list_uc_agents](docs/sdks/uc/README.md#list_uc_agents) - List all agents
 * [list_uc_calls](docs/sdks/uc/README.md#list_uc_calls) - List all calls
 * [list_uc_contacts](docs/sdks/uc/README.md#list_uc_contacts) - List all contacts
 * [patch_uc_contact](docs/sdks/uc/README.md#patch_uc_contact) - Update a contact
@@ -480,15 +428,6 @@ if res.ticketing_agent is not None:
 * [remove_unified_connection](docs/sdks/unified/README.md#remove_unified_connection) - Remove connection
 * [remove_unified_webhook](docs/sdks/unified/README.md#remove_unified_webhook) - Remove webhook subscription
 * [update_unified_connection](docs/sdks/unified/README.md#update_unified_connection) - Update connection
-
-### [user](docs/sdks/user/README.md)
-
-* [create_crm_user](docs/sdks/user/README.md#create_crm_user) - Create a user
-* [get_crm_user](docs/sdks/user/README.md#get_crm_user) - Retrieve a user
-* [list_crm_users](docs/sdks/user/README.md#list_crm_users) - List all users
-* [patch_crm_user](docs/sdks/user/README.md#patch_crm_user) - Update a user
-* [remove_crm_user](docs/sdks/user/README.md#remove_crm_user) - Remove a user
-* [update_crm_user](docs/sdks/user/README.md#update_crm_user) - Update a user
 
 ### [webhook](docs/sdks/webhook/README.md)
 

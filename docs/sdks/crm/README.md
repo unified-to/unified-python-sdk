@@ -10,8 +10,6 @@
 * [create_crm_file](#create_crm_file) - Create a file
 * [create_crm_lead](#create_crm_lead) - Create a lead
 * [create_crm_pipeline](#create_crm_pipeline) - Create a pipeline
-* [create_crm_team](#create_crm_team) - Create a team
-* [create_crm_user](#create_crm_user) - Create a user
 * [get_crm_company](#get_crm_company) - Retrieve a company
 * [get_crm_contact](#get_crm_contact) - Retrieve a contact
 * [get_crm_deal](#get_crm_deal) - Retrieve a deal
@@ -19,8 +17,6 @@
 * [get_crm_file](#get_crm_file) - Retrieve a file
 * [get_crm_lead](#get_crm_lead) - Retrieve a lead
 * [get_crm_pipeline](#get_crm_pipeline) - Retrieve a pipeline
-* [get_crm_team](#get_crm_team) - Retrieve a team
-* [get_crm_user](#get_crm_user) - Retrieve a user
 * [list_crm_companies](#list_crm_companies) - List all companies
 * [list_crm_contacts](#list_crm_contacts) - List all contacts
 * [list_crm_deals](#list_crm_deals) - List all deals
@@ -28,8 +24,6 @@
 * [list_crm_files](#list_crm_files) - List all files
 * [list_crm_leads](#list_crm_leads) - List all leads
 * [list_crm_pipelines](#list_crm_pipelines) - List all pipelines
-* [list_crm_teams](#list_crm_teams) - List all teams
-* [list_crm_users](#list_crm_users) - List all users
 * [patch_crm_company](#patch_crm_company) - Update a company
 * [patch_crm_contact](#patch_crm_contact) - Update a contact
 * [patch_crm_deal](#patch_crm_deal) - Update a deal
@@ -37,8 +31,6 @@
 * [patch_crm_file](#patch_crm_file) - Update a file
 * [patch_crm_lead](#patch_crm_lead) - Update a lead
 * [patch_crm_pipeline](#patch_crm_pipeline) - Update a pipeline
-* [patch_crm_team](#patch_crm_team) - Update a team
-* [patch_crm_user](#patch_crm_user) - Update a user
 * [remove_crm_company](#remove_crm_company) - Remove a company
 * [remove_crm_contact](#remove_crm_contact) - Remove a contact
 * [remove_crm_deal](#remove_crm_deal) - Remove a deal
@@ -46,8 +38,6 @@
 * [remove_crm_file](#remove_crm_file) - Remove a file
 * [remove_crm_lead](#remove_crm_lead) - Remove a lead
 * [remove_crm_pipeline](#remove_crm_pipeline) - Remove a pipeline
-* [remove_crm_team](#remove_crm_team) - Remove a team
-* [remove_crm_user](#remove_crm_user) - Remove a user
 * [update_crm_company](#update_crm_company) - Update a company
 * [update_crm_contact](#update_crm_contact) - Update a contact
 * [update_crm_deal](#update_crm_deal) - Update a deal
@@ -55,8 +45,6 @@
 * [update_crm_file](#update_crm_file) - Update a file
 * [update_crm_lead](#update_crm_lead) - Update a lead
 * [update_crm_pipeline](#update_crm_pipeline) - Update a pipeline
-* [update_crm_team](#update_crm_team) - Update a team
-* [update_crm_user](#update_crm_user) - Update a user
 
 ## create_crm_company
 
@@ -425,104 +413,6 @@ if res.crm_pipeline is not None:
 **[operations.CreateCrmPipelineResponse](../../models/operations/createcrmpipelineresponse.md)**
 
 
-## create_crm_team
-
-Create a team
-
-### Example Usage
-
-```python
-import unified_to
-import dateutil.parser
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.CreateCrmTeamRequest(
-    crm_team=shared.CrmTeam(
-        raw=shared.PropertyCrmTeamRaw(),
-        user_ids=[
-            'exercitationem',
-        ],
-    ),
-    connection_id='who',
-)
-
-res = s.crm.create_crm_team(req)
-
-if res.crm_team is not None:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `request`                                                                          | [operations.CreateCrmTeamRequest](../../models/operations/createcrmteamrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
-
-
-### Response
-
-**[operations.CreateCrmTeamResponse](../../models/operations/createcrmteamresponse.md)**
-
-
-## create_crm_user
-
-Create a user
-
-### Example Usage
-
-```python
-import unified_to
-import dateutil.parser
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.CreateCrmUserRequest(
-    crm_user=shared.CrmUser(
-        address=shared.PropertyCrmUserAddress(),
-        emails=[
-            shared.CrmEmail(),
-        ],
-        raw=shared.PropertyCrmUserRaw(),
-        telephones=[
-            shared.CrmTelephone(
-                telephone='zero',
-            ),
-        ],
-    ),
-    connection_id='male',
-)
-
-res = s.crm.create_crm_user(req)
-
-if res.crm_user is not None:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `request`                                                                          | [operations.CreateCrmUserRequest](../../models/operations/createcrmuserrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
-
-
-### Response
-
-**[operations.CreateCrmUserResponse](../../models/operations/createcrmuserresponse.md)**
-
-
 ## get_crm_company
 
 Retrieve a company
@@ -824,92 +714,6 @@ if res.crm_pipeline is not None:
 **[operations.GetCrmPipelineResponse](../../models/operations/getcrmpipelineresponse.md)**
 
 
-## get_crm_team
-
-Retrieve a team
-
-### Example Usage
-
-```python
-import unified_to
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.GetCrmTeamRequest(
-    connection_id='online',
-    fields_=[
-        'Outdoors',
-    ],
-    id='<ID>',
-)
-
-res = s.crm.get_crm_team(req)
-
-if res.crm_team is not None:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                    | Type                                                                         | Required                                                                     | Description                                                                  |
-| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| `request`                                                                    | [operations.GetCrmTeamRequest](../../models/operations/getcrmteamrequest.md) | :heavy_check_mark:                                                           | The request object to use for the request.                                   |
-
-
-### Response
-
-**[operations.GetCrmTeamResponse](../../models/operations/getcrmteamresponse.md)**
-
-
-## get_crm_user
-
-Retrieve a user
-
-### Example Usage
-
-```python
-import unified_to
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.GetCrmUserRequest(
-    connection_id='adipisci',
-    fields_=[
-        'connect',
-    ],
-    id='<ID>',
-)
-
-res = s.crm.get_crm_user(req)
-
-if res.crm_user is not None:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                    | Type                                                                         | Required                                                                     | Description                                                                  |
-| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| `request`                                                                    | [operations.GetCrmUserRequest](../../models/operations/getcrmuserrequest.md) | :heavy_check_mark:                                                           | The request object to use for the request.                                   |
-
-
-### Response
-
-**[operations.GetCrmUserResponse](../../models/operations/getcrmuserresponse.md)**
-
-
 ## list_crm_companies
 
 List all companies
@@ -1209,92 +1013,6 @@ if res.crm_pipelines is not None:
 ### Response
 
 **[operations.ListCrmPipelinesResponse](../../models/operations/listcrmpipelinesresponse.md)**
-
-
-## list_crm_teams
-
-List all teams
-
-### Example Usage
-
-```python
-import unified_to
-import dateutil.parser
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.ListCrmTeamsRequest(
-    connection_id='Celsius',
-    fields_=[
-        'microchip',
-    ],
-)
-
-res = s.crm.list_crm_teams(req)
-
-if res.crm_teams is not None:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `request`                                                                        | [operations.ListCrmTeamsRequest](../../models/operations/listcrmteamsrequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
-
-
-### Response
-
-**[operations.ListCrmTeamsResponse](../../models/operations/listcrmteamsresponse.md)**
-
-
-## list_crm_users
-
-List all users
-
-### Example Usage
-
-```python
-import unified_to
-import dateutil.parser
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.ListCrmUsersRequest(
-    connection_id='CFA',
-    fields_=[
-        'Costa',
-    ],
-)
-
-res = s.crm.list_crm_users(req)
-
-if res.crm_users is not None:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `request`                                                                        | [operations.ListCrmUsersRequest](../../models/operations/listcrmusersrequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
-
-
-### Response
-
-**[operations.ListCrmUsersResponse](../../models/operations/listcrmusersresponse.md)**
 
 
 ## patch_crm_company
@@ -1671,106 +1389,6 @@ if res.crm_pipeline is not None:
 **[operations.PatchCrmPipelineResponse](../../models/operations/patchcrmpipelineresponse.md)**
 
 
-## patch_crm_team
-
-Update a team
-
-### Example Usage
-
-```python
-import unified_to
-import dateutil.parser
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.PatchCrmTeamRequest(
-    crm_team=shared.CrmTeam(
-        raw=shared.PropertyCrmTeamRaw(),
-        user_ids=[
-            'Account',
-        ],
-    ),
-    connection_id='Customer',
-    id='<ID>',
-)
-
-res = s.crm.patch_crm_team(req)
-
-if res.crm_team is not None:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `request`                                                                        | [operations.PatchCrmTeamRequest](../../models/operations/patchcrmteamrequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
-
-
-### Response
-
-**[operations.PatchCrmTeamResponse](../../models/operations/patchcrmteamresponse.md)**
-
-
-## patch_crm_user
-
-Update a user
-
-### Example Usage
-
-```python
-import unified_to
-import dateutil.parser
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.PatchCrmUserRequest(
-    crm_user=shared.CrmUser(
-        address=shared.PropertyCrmUserAddress(),
-        emails=[
-            shared.CrmEmail(),
-        ],
-        raw=shared.PropertyCrmUserRaw(),
-        telephones=[
-            shared.CrmTelephone(
-                telephone='Demiflux',
-            ),
-        ],
-    ),
-    connection_id='grey',
-    id='<ID>',
-)
-
-res = s.crm.patch_crm_user(req)
-
-if res.crm_user is not None:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `request`                                                                        | [operations.PatchCrmUserRequest](../../models/operations/patchcrmuserrequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
-
-
-### Response
-
-**[operations.PatchCrmUserResponse](../../models/operations/patchcrmuserresponse.md)**
-
-
 ## remove_crm_company
 
 Remove a company
@@ -2049,86 +1667,6 @@ if res.status_code == 200:
 ### Response
 
 **[operations.RemoveCrmPipelineResponse](../../models/operations/removecrmpipelineresponse.md)**
-
-
-## remove_crm_team
-
-Remove a team
-
-### Example Usage
-
-```python
-import unified_to
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.RemoveCrmTeamRequest(
-    connection_id='Cotton',
-    id='<ID>',
-)
-
-res = s.crm.remove_crm_team(req)
-
-if res.status_code == 200:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `request`                                                                          | [operations.RemoveCrmTeamRequest](../../models/operations/removecrmteamrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
-
-
-### Response
-
-**[operations.RemoveCrmTeamResponse](../../models/operations/removecrmteamresponse.md)**
-
-
-## remove_crm_user
-
-Remove a user
-
-### Example Usage
-
-```python
-import unified_to
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.RemoveCrmUserRequest(
-    connection_id='yellow',
-    id='<ID>',
-)
-
-res = s.crm.remove_crm_user(req)
-
-if res.status_code == 200:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `request`                                                                          | [operations.RemoveCrmUserRequest](../../models/operations/removecrmuserrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
-
-
-### Response
-
-**[operations.RemoveCrmUserResponse](../../models/operations/removecrmuserresponse.md)**
 
 
 ## update_crm_company
@@ -2503,104 +2041,4 @@ if res.crm_pipeline is not None:
 ### Response
 
 **[operations.UpdateCrmPipelineResponse](../../models/operations/updatecrmpipelineresponse.md)**
-
-
-## update_crm_team
-
-Update a team
-
-### Example Usage
-
-```python
-import unified_to
-import dateutil.parser
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.UpdateCrmTeamRequest(
-    crm_team=shared.CrmTeam(
-        raw=shared.PropertyCrmTeamRaw(),
-        user_ids=[
-            'Carbon',
-        ],
-    ),
-    connection_id='East',
-    id='<ID>',
-)
-
-res = s.crm.update_crm_team(req)
-
-if res.crm_team is not None:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `request`                                                                          | [operations.UpdateCrmTeamRequest](../../models/operations/updatecrmteamrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
-
-
-### Response
-
-**[operations.UpdateCrmTeamResponse](../../models/operations/updatecrmteamresponse.md)**
-
-
-## update_crm_user
-
-Update a user
-
-### Example Usage
-
-```python
-import unified_to
-import dateutil.parser
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.UpdateCrmUserRequest(
-    crm_user=shared.CrmUser(
-        address=shared.PropertyCrmUserAddress(),
-        emails=[
-            shared.CrmEmail(),
-        ],
-        raw=shared.PropertyCrmUserRaw(),
-        telephones=[
-            shared.CrmTelephone(
-                telephone='benchmark',
-            ),
-        ],
-    ),
-    connection_id='Rustic',
-    id='<ID>',
-)
-
-res = s.crm.update_crm_user(req)
-
-if res.crm_user is not None:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `request`                                                                          | [operations.UpdateCrmUserRequest](../../models/operations/updatecrmuserrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
-
-
-### Response
-
-**[operations.UpdateCrmUserResponse](../../models/operations/updatecrmuserresponse.md)**
 

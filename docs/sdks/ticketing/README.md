@@ -3,83 +3,24 @@
 
 ### Available Operations
 
-* [create_ticketing_agent](#create_ticketing_agent) - Create a agent
 * [create_ticketing_customer](#create_ticketing_customer) - Create a customer
 * [create_ticketing_note](#create_ticketing_note) - Create a note
 * [create_ticketing_ticket](#create_ticketing_ticket) - Create a ticket
-* [get_ticketing_agent](#get_ticketing_agent) - Retrieve a agent
 * [get_ticketing_customer](#get_ticketing_customer) - Retrieve a customer
 * [get_ticketing_note](#get_ticketing_note) - Retrieve a note
 * [get_ticketing_ticket](#get_ticketing_ticket) - Retrieve a ticket
-* [list_ticketing_agents](#list_ticketing_agents) - List all agents
 * [list_ticketing_customers](#list_ticketing_customers) - List all customers
 * [list_ticketing_notes](#list_ticketing_notes) - List all notes
 * [list_ticketing_tickets](#list_ticketing_tickets) - List all tickets
-* [patch_ticketing_agent](#patch_ticketing_agent) - Update a agent
 * [patch_ticketing_customer](#patch_ticketing_customer) - Update a customer
 * [patch_ticketing_note](#patch_ticketing_note) - Update a note
 * [patch_ticketing_ticket](#patch_ticketing_ticket) - Update a ticket
-* [remove_ticketing_agent](#remove_ticketing_agent) - Remove a agent
 * [remove_ticketing_customer](#remove_ticketing_customer) - Remove a customer
 * [remove_ticketing_note](#remove_ticketing_note) - Remove a note
 * [remove_ticketing_ticket](#remove_ticketing_ticket) - Remove a ticket
-* [update_ticketing_agent](#update_ticketing_agent) - Update a agent
 * [update_ticketing_customer](#update_ticketing_customer) - Update a customer
 * [update_ticketing_note](#update_ticketing_note) - Update a note
 * [update_ticketing_ticket](#update_ticketing_ticket) - Update a ticket
-
-## create_ticketing_agent
-
-Create a agent
-
-### Example Usage
-
-```python
-import unified_to
-import dateutil.parser
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.CreateTicketingAgentRequest(
-    ticketing_agent=shared.TicketingAgent(
-        emails=[
-            shared.TicketingEmail(
-                email='Paolo.Cole8@yahoo.com',
-            ),
-        ],
-        raw=shared.PropertyTicketingAgentRaw(),
-        telephones=[
-            shared.TicketingTelephone(
-                telephone='Seaborgium',
-            ),
-        ],
-    ),
-    connection_id='Manager',
-)
-
-res = s.ticketing.create_ticketing_agent(req)
-
-if res.ticketing_agent is not None:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `request`                                                                                        | [operations.CreateTicketingAgentRequest](../../models/operations/createticketingagentrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-
-
-### Response
-
-**[operations.CreateTicketingAgentResponse](../../models/operations/createticketingagentresponse.md)**
-
 
 ## create_ticketing_customer
 
@@ -227,49 +168,6 @@ if res.ticketing_ticket is not None:
 **[operations.CreateTicketingTicketResponse](../../models/operations/createticketingticketresponse.md)**
 
 
-## get_ticketing_agent
-
-Retrieve a agent
-
-### Example Usage
-
-```python
-import unified_to
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.GetTicketingAgentRequest(
-    connection_id='Tennessee',
-    fields_=[
-        'connect',
-    ],
-    id='<ID>',
-)
-
-res = s.ticketing.get_ticketing_agent(req)
-
-if res.ticketing_agent is not None:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `request`                                                                                  | [operations.GetTicketingAgentRequest](../../models/operations/getticketingagentrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-
-
-### Response
-
-**[operations.GetTicketingAgentResponse](../../models/operations/getticketingagentresponse.md)**
-
-
 ## get_ticketing_customer
 
 Retrieve a customer
@@ -400,49 +298,6 @@ if res.ticketing_ticket is not None:
 **[operations.GetTicketingTicketResponse](../../models/operations/getticketingticketresponse.md)**
 
 
-## list_ticketing_agents
-
-List all agents
-
-### Example Usage
-
-```python
-import unified_to
-import dateutil.parser
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.ListTicketingAgentsRequest(
-    connection_id='transparent',
-    fields_=[
-        'Corporate',
-    ],
-)
-
-res = s.ticketing.list_ticketing_agents(req)
-
-if res.ticketing_agents is not None:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `request`                                                                                      | [operations.ListTicketingAgentsRequest](../../models/operations/listticketingagentsrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
-
-
-### Response
-
-**[operations.ListTicketingAgentsResponse](../../models/operations/listticketingagentsresponse.md)**
-
-
 ## list_ticketing_customers
 
 List all customers
@@ -571,60 +426,6 @@ if res.ticketing_tickets is not None:
 ### Response
 
 **[operations.ListTicketingTicketsResponse](../../models/operations/listticketingticketsresponse.md)**
-
-
-## patch_ticketing_agent
-
-Update a agent
-
-### Example Usage
-
-```python
-import unified_to
-import dateutil.parser
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.PatchTicketingAgentRequest(
-    ticketing_agent=shared.TicketingAgent(
-        emails=[
-            shared.TicketingEmail(
-                email='Danyka87@hotmail.com',
-            ),
-        ],
-        raw=shared.PropertyTicketingAgentRaw(),
-        telephones=[
-            shared.TicketingTelephone(
-                telephone='fuchsia',
-            ),
-        ],
-    ),
-    connection_id='Small',
-    id='<ID>',
-)
-
-res = s.ticketing.patch_ticketing_agent(req)
-
-if res.ticketing_agent is not None:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `request`                                                                                      | [operations.PatchTicketingAgentRequest](../../models/operations/patchticketingagentrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
-
-
-### Response
-
-**[operations.PatchTicketingAgentResponse](../../models/operations/patchticketingagentresponse.md)**
 
 
 ## patch_ticketing_customer
@@ -776,46 +577,6 @@ if res.ticketing_ticket is not None:
 **[operations.PatchTicketingTicketResponse](../../models/operations/patchticketingticketresponse.md)**
 
 
-## remove_ticketing_agent
-
-Remove a agent
-
-### Example Usage
-
-```python
-import unified_to
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.RemoveTicketingAgentRequest(
-    connection_id='Northwest',
-    id='<ID>',
-)
-
-res = s.ticketing.remove_ticketing_agent(req)
-
-if res.status_code == 200:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `request`                                                                                        | [operations.RemoveTicketingAgentRequest](../../models/operations/removeticketingagentrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-
-
-### Response
-
-**[operations.RemoveTicketingAgentResponse](../../models/operations/removeticketingagentresponse.md)**
-
-
 ## remove_ticketing_customer
 
 Remove a customer
@@ -935,60 +696,6 @@ if res.status_code == 200:
 ### Response
 
 **[operations.RemoveTicketingTicketResponse](../../models/operations/removeticketingticketresponse.md)**
-
-
-## update_ticketing_agent
-
-Update a agent
-
-### Example Usage
-
-```python
-import unified_to
-import dateutil.parser
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
-
-req = operations.UpdateTicketingAgentRequest(
-    ticketing_agent=shared.TicketingAgent(
-        emails=[
-            shared.TicketingEmail(
-                email='Lorenz39@hotmail.com',
-            ),
-        ],
-        raw=shared.PropertyTicketingAgentRaw(),
-        telephones=[
-            shared.TicketingTelephone(
-                telephone='Philippines',
-            ),
-        ],
-    ),
-    connection_id='SMS',
-    id='<ID>',
-)
-
-res = s.ticketing.update_ticketing_agent(req)
-
-if res.ticketing_agent is not None:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `request`                                                                                        | [operations.UpdateTicketingAgentRequest](../../models/operations/updateticketingagentrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-
-
-### Response
-
-**[operations.UpdateTicketingAgentResponse](../../models/operations/updateticketingagentresponse.md)**
 
 
 ## update_ticketing_customer
