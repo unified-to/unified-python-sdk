@@ -40,11 +40,11 @@ req = operations.CreateTicketingCustomerRequest(
         ],
         telephones=[
             shared.TicketingTelephone(
-                telephone='Cargo Georgia earum',
+                telephone='tepid',
             ),
         ],
     ),
-    connection_id='Osmium blissfully',
+    connection_id='Bedfordshire',
 )
 
 res = s.customer.create_ticketing_customer(req)
@@ -83,9 +83,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetTicketingCustomerRequest(
-    connection_id='benchmark',
+    connection_id='Berkshire',
     fields_=[
-        'Cambridgeshire',
+        'Gloves',
     ],
     id='<ID>',
 )
@@ -127,9 +127,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListTicketingCustomersRequest(
-    connection_id='Carrollton yellow',
+    connection_id='adapter',
     fields_=[
-        'until',
+        'Unions',
     ],
 )
 
@@ -182,11 +182,11 @@ req = operations.PatchTicketingCustomerRequest(
         ],
         telephones=[
             shared.TicketingTelephone(
-                telephone='psst',
+                telephone='Frozen',
             ),
         ],
     ),
-    connection_id='Fermium Northeast Metal',
+    connection_id='calculating',
     id='<ID>',
 )
 
@@ -226,7 +226,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveTicketingCustomerRequest(
-    connection_id='salmon',
+    connection_id='West',
     id='<ID>',
 )
 
@@ -279,11 +279,11 @@ req = operations.UpdateTicketingCustomerRequest(
         ],
         telephones=[
             shared.TicketingTelephone(
-                telephone='navigating',
+                telephone='Sleek',
             ),
         ],
     ),
-    connection_id='Avon Southwest',
+    connection_id='Bolivia',
     id='<ID>',
 )
 

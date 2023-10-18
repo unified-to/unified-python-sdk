@@ -1,13 +1,11 @@
 # AtsCandidate
 
-A candidate looking for work
-
 
 ## Fields
 
 | Field                                                                                       | Type                                                                                        | Required                                                                                    | Description                                                                                 |
 | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| `address`                                                                                   | [Optional[PropertyAtsCandidateAddress]](../../models/shared/propertyatscandidateaddress.md) | :heavy_minus_sign:                                                                          | Unified address object                                                                      |
+| `address`                                                                                   | [Optional[PropertyAtsCandidateAddress]](../../models/shared/propertyatscandidateaddress.md) | :heavy_minus_sign:                                                                          | N/A                                                                                         |
 | `company_name`                                                                              | *Optional[str]*                                                                             | :heavy_minus_sign:                                                                          | N/A                                                                                         |
 | `created_at`                                                                                | [date](https://docs.python.org/3/library/datetime.html#date-objects)                        | :heavy_minus_sign:                                                                          | N/A                                                                                         |
 | `emails`                                                                                    | List[[AtsEmail](../../models/shared/atsemail.md)]                                           | :heavy_minus_sign:                                                                          | N/A                                                                                         |

@@ -40,9 +40,9 @@ req = shared.Connection(
     categories=[
         shared.PropertyConnectionCategories.CRM,
     ],
-    integration_type='Maserati',
+    integration_type='revolutionize',
     permissions=[
-        shared.PropertyConnectionPermissions.CRM_LEAD_WRITE,
+        shared.PropertyConnectionPermissions.TICKETING_AGENT_WRITE,
     ],
 )
 
@@ -177,9 +177,9 @@ req = operations.PatchUnifiedConnectionRequest(
         categories=[
             shared.PropertyConnectionCategories.ATS,
         ],
-        integration_type='Montana',
+        integration_type='Northeast',
         permissions=[
-            shared.PropertyConnectionPermissions.CRM_FILE_READ,
+            shared.PropertyConnectionPermissions.MARTECH_LIST_READ,
         ],
     ),
     id='<ID>',
@@ -274,9 +274,9 @@ req = operations.UpdateUnifiedConnectionRequest(
         categories=[
             shared.PropertyConnectionCategories.CRM,
         ],
-        integration_type='from',
+        integration_type='Cambridgeshire',
         permissions=[
-            shared.PropertyConnectionPermissions.ATS_APPLICATION_READ,
+            shared.PropertyConnectionPermissions.CRM_TEAM_WRITE,
         ],
     ),
     id='<ID>',

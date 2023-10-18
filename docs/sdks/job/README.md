@@ -51,7 +51,7 @@ req = operations.CreateAtsJobRequest(
             'Mini',
         ],
     ),
-    connection_id='Savings Customer Loan',
+    connection_id='health',
 )
 
 res = s.job.create_ats_job(req)
@@ -90,9 +90,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetAtsJobRequest(
-    connection_id='runway',
+    connection_id='Southwest',
     fields_=[
-        'Bronze',
+        'panel',
     ],
     id='<ID>',
 )
@@ -134,9 +134,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListAtsJobsRequest(
-    connection_id='niches SQL',
+    connection_id='firmware',
     fields_=[
-        '1080p',
+        'Praseodymium',
     ],
 )
 
@@ -200,7 +200,7 @@ req = operations.PatchAtsJobRequest(
             'mainland',
         ],
     ),
-    connection_id='gold Principal',
+    connection_id='microchip',
     id='<ID>',
 )
 
@@ -240,7 +240,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveAtsJobRequest(
-    connection_id='Aruba',
+    connection_id='Northeast',
     id='<ID>',
 )
 
@@ -304,7 +304,7 @@ req = operations.UpdateAtsJobRequest(
             'SMS',
         ],
     ),
-    connection_id='euthanise system',
+    connection_id='asperiores',
     id='<ID>',
 )
 

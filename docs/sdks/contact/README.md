@@ -48,11 +48,11 @@ req = operations.CreateCrmContactRequest(
         raw=shared.PropertyCrmContactRaw(),
         telephones=[
             shared.CrmTelephone(
-                telephone='towards',
+                telephone='Chips',
             ),
         ],
     ),
-    connection_id='Cambridgeshire Passenger Producer',
+    connection_id='superb',
 )
 
 res = s.contact.create_crm_contact(req)
@@ -101,11 +101,11 @@ req = operations.CreateUcContactRequest(
         raw=shared.PropertyUcContactRaw(),
         telephones=[
             shared.UcTelephone(
-                telephone='indigo indeed',
+                telephone='challenge',
             ),
         ],
     ),
-    connection_id='meanwhile',
+    connection_id='azure',
 )
 
 res = s.contact.create_uc_contact(req)
@@ -144,9 +144,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetCrmContactRequest(
-    connection_id='Oregon',
+    connection_id='North',
     fields_=[
-        'methodology',
+        'Silver',
     ],
     id='<ID>',
 )
@@ -187,9 +187,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetUcContactRequest(
-    connection_id='JBOD ivory fool',
+    connection_id='for',
     fields_=[
-        'Mouse',
+        'deposit',
     ],
     id='<ID>',
 )
@@ -231,9 +231,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListCrmContactsRequest(
-    connection_id='Awesome index steradian',
+    connection_id='female',
     fields_=[
-        'District',
+        'Research',
     ],
 )
 
@@ -274,9 +274,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListUcContactsRequest(
-    connection_id='Bicycle male',
+    connection_id='application',
     fields_=[
-        'East',
+        'Xenogender',
     ],
 )
 
@@ -331,11 +331,11 @@ req = operations.PatchCrmContactRequest(
         raw=shared.PropertyCrmContactRaw(),
         telephones=[
             shared.CrmTelephone(
-                telephone='Practical',
+                telephone='morph',
             ),
         ],
     ),
-    connection_id='Future Diesel',
+    connection_id='array',
     id='<ID>',
 )
 
@@ -385,11 +385,11 @@ req = operations.PatchUcContactRequest(
         raw=shared.PropertyUcContactRaw(),
         telephones=[
             shared.UcTelephone(
-                telephone='male',
+                telephone='Borders',
             ),
         ],
     ),
-    connection_id='South Pants candela',
+    connection_id='Carolina',
     id='<ID>',
 )
 
@@ -429,7 +429,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveCrmContactRequest(
-    connection_id='Folk granular Concrete',
+    connection_id='plum',
     id='<ID>',
 )
 
@@ -469,7 +469,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveUcContactRequest(
-    connection_id='Configurable',
+    connection_id='Plastic',
     id='<ID>',
 )
 
@@ -524,11 +524,11 @@ req = operations.UpdateCrmContactRequest(
         raw=shared.PropertyCrmContactRaw(),
         telephones=[
             shared.CrmTelephone(
-                telephone='Analyst Des green',
+                telephone='relieved',
             ),
         ],
     ),
-    connection_id='man panel',
+    connection_id='backing',
     id='<ID>',
 )
 
@@ -578,11 +578,11 @@ req = operations.UpdateUcContactRequest(
         raw=shared.PropertyUcContactRaw(),
         telephones=[
             shared.UcTelephone(
-                telephone='Illinois Electronic Northwest',
+                telephone='Convertible',
             ),
         ],
     ),
-    connection_id='Cruiser',
+    connection_id='Wooden',
     id='<ID>',
 )
 

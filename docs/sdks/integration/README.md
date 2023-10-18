@@ -25,7 +25,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetUnifiedIntegrationRequest(
-    integration_type='Berkelium panel',
+    integration_type='Mobility',
 )
 
 res = s.integration.get_unified_integration(req)
@@ -64,11 +64,11 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetUnifiedIntegrationAuthRequest(
-    integration_type='Reggae Van pascal',
+    integration_type='supposing',
     scopes=[
-        operations.GetUnifiedIntegrationAuthScopes.ATS_SCORECARD_READ,
+        operations.GetUnifiedIntegrationAuthScopes.TICKETING_NOTE_READ,
     ],
-    workspace_id='Xenogender North groupware',
+    workspace_id='Van',
 )
 
 res = s.integration.get_unified_integration_auth(req)
@@ -110,7 +110,7 @@ req = operations.ListUnifiedIntegrationWorkspacesRequest(
     categories=[
         operations.ListUnifiedIntegrationWorkspacesCategories.MARTECH,
     ],
-    workspace_id='Country Market Representative',
+    workspace_id='supposing',
 )
 
 res = s.integration.list_unified_integration_workspaces(req)

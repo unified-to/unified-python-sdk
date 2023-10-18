@@ -39,11 +39,11 @@ req = operations.CreateUcContactRequest(
         raw=shared.PropertyUcContactRaw(),
         telephones=[
             shared.UcTelephone(
-                telephone='indigo indeed',
+                telephone='challenge',
             ),
         ],
     ),
-    connection_id='meanwhile',
+    connection_id='azure',
 )
 
 res = s.uc.create_uc_contact(req)
@@ -82,9 +82,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetUcContactRequest(
-    connection_id='JBOD ivory fool',
+    connection_id='for',
     fields_=[
-        'Mouse',
+        'deposit',
     ],
     id='<ID>',
 )
@@ -126,9 +126,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListUcAgentsRequest(
-    connection_id='Representative',
+    connection_id='Ohio',
     fields_=[
-        'olive',
+        'huzzah',
     ],
 )
 
@@ -169,9 +169,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListUcCallsRequest(
-    connection_id='optical',
+    connection_id='Liberia',
     fields_=[
-        'South',
+        'Cargo',
     ],
 )
 
@@ -212,9 +212,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListUcContactsRequest(
-    connection_id='Bicycle male',
+    connection_id='application',
     fields_=[
-        'East',
+        'Xenogender',
     ],
 )
 
@@ -264,11 +264,11 @@ req = operations.PatchUcContactRequest(
         raw=shared.PropertyUcContactRaw(),
         telephones=[
             shared.UcTelephone(
-                telephone='male',
+                telephone='Borders',
             ),
         ],
     ),
-    connection_id='South Pants candela',
+    connection_id='Carolina',
     id='<ID>',
 )
 
@@ -308,7 +308,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveUcContactRequest(
-    connection_id='Configurable',
+    connection_id='Plastic',
     id='<ID>',
 )
 
@@ -358,11 +358,11 @@ req = operations.UpdateUcContactRequest(
         raw=shared.PropertyUcContactRaw(),
         telephones=[
             shared.UcTelephone(
-                telephone='Illinois Electronic Northwest',
+                telephone='Convertible',
             ),
         ],
     ),
-    connection_id='Cruiser',
+    connection_id='Wooden',
     id='<ID>',
 )
 

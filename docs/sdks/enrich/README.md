@@ -23,7 +23,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListEnrichCompaniesRequest(
-    connection_id='Chips',
+    connection_id='Bike',
 )
 
 res = s.enrich.list_enrich_companies(req)
@@ -62,7 +62,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListEnrichPeopleRequest(
-    connection_id='Passenger',
+    connection_id='Southwest',
 )
 
 res = s.enrich.list_enrich_people(req)

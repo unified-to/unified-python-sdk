@@ -31,7 +31,7 @@ req = operations.CreateAtsApplicationRequest(
     ats_application=shared.AtsApplication(
         raw=shared.PropertyAtsApplicationRaw(),
     ),
-    connection_id='incidentally Mandatory meanwhile',
+    connection_id='Hassium',
 )
 
 res = s.application.create_ats_application(req)
@@ -70,9 +70,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetAtsApplicationRequest(
-    connection_id='anenst Balboa',
+    connection_id='mobile',
     fields_=[
-        'navigate',
+        'Key',
     ],
     id='<ID>',
 )
@@ -114,9 +114,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListAtsApplicationsRequest(
-    connection_id='Summit',
+    connection_id='Cambodia',
     fields_=[
-        'violet',
+        'models',
     ],
 )
 
@@ -160,7 +160,7 @@ req = operations.PatchAtsApplicationRequest(
     ats_application=shared.AtsApplication(
         raw=shared.PropertyAtsApplicationRaw(),
     ),
-    connection_id='South grey',
+    connection_id='Lead',
     id='<ID>',
 )
 
@@ -200,7 +200,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveAtsApplicationRequest(
-    connection_id='sexy mesh application',
+    connection_id='gently',
     id='<ID>',
 )
 
@@ -244,7 +244,7 @@ req = operations.UpdateAtsApplicationRequest(
     ats_application=shared.AtsApplication(
         raw=shared.PropertyAtsApplicationRaw(),
     ),
-    connection_id='Rosie',
+    connection_id='Keyboard',
     id='<ID>',
 )
 

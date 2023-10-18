@@ -34,7 +34,7 @@ req = operations.CreateAtsInterviewRequest(
             'Metrics',
         ],
     ),
-    connection_id='Frozen',
+    connection_id='Bar',
 )
 
 res = s.interview.create_ats_interview(req)
@@ -73,9 +73,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetAtsInterviewRequest(
-    connection_id='syndicate longingly Mobility',
+    connection_id='yum',
     fields_=[
-        'grease',
+        'programming',
     ],
     id='<ID>',
 )
@@ -117,9 +117,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListAtsInterviewsRequest(
-    connection_id='Northeast',
+    connection_id='Bronze',
     fields_=[
-        'Ergonomic',
+        'Wooden',
     ],
 )
 
@@ -166,7 +166,7 @@ req = operations.PatchAtsInterviewRequest(
             'courageously',
         ],
     ),
-    connection_id='Francium',
+    connection_id='Handmade',
     id='<ID>',
 )
 
@@ -206,7 +206,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveAtsInterviewRequest(
-    connection_id='Polynesia redefine pfft',
+    connection_id='green',
     id='<ID>',
 )
 
@@ -253,7 +253,7 @@ req = operations.UpdateAtsInterviewRequest(
             'maroon',
         ],
     ),
-    connection_id='Account omnis Gorgeous',
+    connection_id='maroon',
     id='<ID>',
 )
 

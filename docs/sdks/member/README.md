@@ -42,8 +42,8 @@ req = operations.CreateMartechMemberRequest(
             'SAS',
         ],
     ),
-    connection_id='South Electronic calculate',
-    list_id='ew scalable Hassium',
+    connection_id='bobcat',
+    list_id='global',
 )
 
 res = s.member.create_martech_member(req)
@@ -82,12 +82,12 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetMartechMemberRequest(
-    connection_id='Yuan',
+    connection_id='Japan',
     fields_=[
-        'Gibraltar',
+        'orange',
     ],
     id='<ID>',
-    list_id='Iceland',
+    list_id='Gibraltar',
 )
 
 res = s.member.get_martech_member(req)
@@ -127,11 +127,11 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListMartechMembersRequest(
-    connection_id='Money',
+    connection_id='Frida',
     fields_=[
-        'Practical',
+        'structure',
     ],
-    list_id='Thallium Bike outrageous',
+    list_id='Thallium',
 )
 
 res = s.member.list_martech_members(req)
@@ -185,9 +185,9 @@ req = operations.PatchMartechMemberRequest(
             'Synchronised',
         ],
     ),
-    connection_id='Unbranded overriding Money',
+    connection_id='electric',
     id='<ID>',
-    list_id='as variant West',
+    list_id='psst',
 )
 
 res = s.member.patch_martech_member(req)
@@ -226,9 +226,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveMartechMemberRequest(
-    connection_id='Fitness',
+    connection_id='integrated',
     id='<ID>',
-    list_id='HTTP solid',
+    list_id='Analyst',
 )
 
 res = s.member.remove_martech_member(req)
@@ -282,9 +282,9 @@ req = operations.UpdateMartechMemberRequest(
             'Bike',
         ],
     ),
-    connection_id='Checking deploy Hermaphrodite',
+    connection_id='Hyundai',
     id='<ID>',
-    list_id='Bespoke below',
+    list_id='North',
 )
 
 res = s.member.update_martech_member(req)

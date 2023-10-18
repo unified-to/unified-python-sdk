@@ -37,11 +37,11 @@ req = operations.CreateTicketingAgentRequest(
         raw=shared.PropertyTicketingAgentRaw(),
         telephones=[
             shared.TicketingTelephone(
-                telephone='scarcely Soap navigating',
+                telephone='Seaborgium',
             ),
         ],
     ),
-    connection_id='smoothly Algeria',
+    connection_id='Manager',
 )
 
 res = s.agent.create_ticketing_agent(req)

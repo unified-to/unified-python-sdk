@@ -43,14 +43,14 @@ req = operations.CreateCrmCompanyRequest(
         ],
         telephones=[
             shared.CrmTelephone(
-                telephone='Germany',
+                telephone='Car',
             ),
         ],
         websites=[
-            'yippee',
+            'experiences',
         ],
     ),
-    connection_id='magenta Data woot',
+    connection_id='soluta',
 )
 
 res = s.company.create_crm_company(req)
@@ -89,9 +89,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetCrmCompanyRequest(
-    connection_id='THX Strategist deposit',
+    connection_id='forenenst',
     fields_=[
-        'snag',
+        'Mini',
     ],
     id='<ID>',
 )
@@ -133,9 +133,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListCrmCompaniesRequest(
-    connection_id='Jazz solid Lamborghini',
+    connection_id='override',
     fields_=[
-        'Sleek',
+        'withdrawal',
     ],
 )
 
@@ -175,7 +175,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListEnrichCompaniesRequest(
-    connection_id='Chips',
+    connection_id='Bike',
 )
 
 res = s.company.list_enrich_companies(req)
@@ -229,14 +229,14 @@ req = operations.PatchCrmCompanyRequest(
         ],
         telephones=[
             shared.CrmTelephone(
-                telephone='haptic Phased',
+                telephone='indexing',
             ),
         ],
         websites=[
-            'Investment',
+            'array',
         ],
     ),
-    connection_id='Trans',
+    connection_id='Genderflux',
     id='<ID>',
 )
 
@@ -276,7 +276,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveCrmCompanyRequest(
-    connection_id='Mayaguez index wireless',
+    connection_id='although',
     id='<ID>',
 )
 
@@ -331,14 +331,14 @@ req = operations.UpdateCrmCompanyRequest(
         ],
         telephones=[
             shared.CrmTelephone(
-                telephone='Account alarm infrastructure',
+                telephone='except',
             ),
         ],
         websites=[
-            'Visionary',
+            'enterprise',
         ],
     ),
-    connection_id='Southeast ad',
+    connection_id='alarm',
     id='<ID>',
 )
 

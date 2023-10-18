@@ -55,7 +55,7 @@ req = operations.CreateAtsApplicationRequest(
     ats_application=shared.AtsApplication(
         raw=shared.PropertyAtsApplicationRaw(),
     ),
-    connection_id='incidentally Mandatory meanwhile',
+    connection_id='Hassium',
 )
 
 res = s.ats.create_ats_application(req)
@@ -108,11 +108,11 @@ req = operations.CreateAtsCandidateRequest(
         ],
         telephones=[
             shared.AtsTelephone(
-                telephone='but Pop fluid',
+                telephone='who',
             ),
         ],
     ),
-    connection_id='bypass Creative Legacy',
+    connection_id='New',
 )
 
 res = s.ats.create_ats_candidate(req)
@@ -158,7 +158,7 @@ req = operations.CreateAtsInterviewRequest(
             'Metrics',
         ],
     ),
-    connection_id='Frozen',
+    connection_id='Bar',
 )
 
 res = s.ats.create_ats_interview(req)
@@ -221,7 +221,7 @@ req = operations.CreateAtsJobRequest(
             'Mini',
         ],
     ),
-    connection_id='Savings Customer Loan',
+    connection_id='health',
 )
 
 res = s.ats.create_ats_job(req)
@@ -264,7 +264,7 @@ req = operations.CreateAtsScorecardRequest(
     ats_scorecard=shared.AtsScorecard(
         raw=shared.PropertyAtsScorecardRaw(),
     ),
-    connection_id='Northwest Account',
+    connection_id='Brunei',
 )
 
 res = s.ats.create_ats_scorecard(req)
@@ -303,9 +303,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetAtsApplicationRequest(
-    connection_id='anenst Balboa',
+    connection_id='mobile',
     fields_=[
-        'navigate',
+        'Key',
     ],
     id='<ID>',
 )
@@ -346,9 +346,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetAtsCandidateRequest(
-    connection_id='Markets',
+    connection_id='Generic',
     fields_=[
-        'payment',
+        'hub',
     ],
     id='<ID>',
 )
@@ -389,9 +389,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetAtsInterviewRequest(
-    connection_id='syndicate longingly Mobility',
+    connection_id='yum',
     fields_=[
-        'grease',
+        'programming',
     ],
     id='<ID>',
 )
@@ -432,9 +432,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetAtsJobRequest(
-    connection_id='runway',
+    connection_id='Southwest',
     fields_=[
-        'Bronze',
+        'panel',
     ],
     id='<ID>',
 )
@@ -475,9 +475,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetAtsScorecardRequest(
-    connection_id='Executive',
+    connection_id='Cordoba',
     fields_=[
-        'Berkelium',
+        'Nissan',
     ],
     id='<ID>',
 )
@@ -519,9 +519,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListAtsApplicationsRequest(
-    connection_id='Summit',
+    connection_id='Cambodia',
     fields_=[
-        'violet',
+        'models',
     ],
 )
 
@@ -562,9 +562,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListAtsCandidatesRequest(
-    connection_id='mole clearly',
+    connection_id='Mobility',
     fields_=[
-        'Van',
+        'Cambridgeshire',
     ],
 )
 
@@ -605,9 +605,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListAtsInterviewsRequest(
-    connection_id='Northeast',
+    connection_id='Bronze',
     fields_=[
-        'Ergonomic',
+        'Wooden',
     ],
 )
 
@@ -648,9 +648,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListAtsJobsRequest(
-    connection_id='niches SQL',
+    connection_id='firmware',
     fields_=[
-        '1080p',
+        'Praseodymium',
     ],
 )
 
@@ -691,9 +691,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListAtsScorecardsRequest(
-    connection_id='Hybrid Bugatti',
+    connection_id='synthesizing',
     fields_=[
-        'frantically',
+        'surprised',
     ],
 )
 
@@ -737,7 +737,7 @@ req = operations.PatchAtsApplicationRequest(
     ats_application=shared.AtsApplication(
         raw=shared.PropertyAtsApplicationRaw(),
     ),
-    connection_id='South grey',
+    connection_id='Lead',
     id='<ID>',
 )
 
@@ -791,11 +791,11 @@ req = operations.PatchAtsCandidateRequest(
         ],
         telephones=[
             shared.AtsTelephone(
-                telephone='payment Books',
+                telephone='esse',
             ),
         ],
     ),
-    connection_id='World Van transitional',
+    connection_id='Dynamic',
     id='<ID>',
 )
 
@@ -842,7 +842,7 @@ req = operations.PatchAtsInterviewRequest(
             'courageously',
         ],
     ),
-    connection_id='Francium',
+    connection_id='Handmade',
     id='<ID>',
 )
 
@@ -906,7 +906,7 @@ req = operations.PatchAtsJobRequest(
             'mainland',
         ],
     ),
-    connection_id='gold Principal',
+    connection_id='microchip',
     id='<ID>',
 )
 
@@ -950,7 +950,7 @@ req = operations.PatchAtsScorecardRequest(
     ats_scorecard=shared.AtsScorecard(
         raw=shared.PropertyAtsScorecardRaw(),
     ),
-    connection_id='eek',
+    connection_id='Falls',
     id='<ID>',
 )
 
@@ -990,7 +990,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveAtsApplicationRequest(
-    connection_id='sexy mesh application',
+    connection_id='gently',
     id='<ID>',
 )
 
@@ -1030,7 +1030,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveAtsCandidateRequest(
-    connection_id='Accountability Recumbent Ball',
+    connection_id='male',
     id='<ID>',
 )
 
@@ -1070,7 +1070,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveAtsInterviewRequest(
-    connection_id='Polynesia redefine pfft',
+    connection_id='green',
     id='<ID>',
 )
 
@@ -1110,7 +1110,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveAtsJobRequest(
-    connection_id='Aruba',
+    connection_id='Northeast',
     id='<ID>',
 )
 
@@ -1150,7 +1150,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveAtsScorecardRequest(
-    connection_id='Cambridgeshire maximized',
+    connection_id='approach',
     id='<ID>',
 )
 
@@ -1194,7 +1194,7 @@ req = operations.UpdateAtsApplicationRequest(
     ats_application=shared.AtsApplication(
         raw=shared.PropertyAtsApplicationRaw(),
     ),
-    connection_id='Rosie',
+    connection_id='Keyboard',
     id='<ID>',
 )
 
@@ -1248,11 +1248,11 @@ req = operations.UpdateAtsCandidateRequest(
         ],
         telephones=[
             shared.AtsTelephone(
-                telephone='DNS monetize Dynamic',
+                telephone='now',
             ),
         ],
     ),
-    connection_id='Zackery male Gloves',
+    connection_id='Gloves',
     id='<ID>',
 )
 
@@ -1299,7 +1299,7 @@ req = operations.UpdateAtsInterviewRequest(
             'maroon',
         ],
     ),
-    connection_id='Account omnis Gorgeous',
+    connection_id='maroon',
     id='<ID>',
 )
 
@@ -1363,7 +1363,7 @@ req = operations.UpdateAtsJobRequest(
             'SMS',
         ],
     ),
-    connection_id='euthanise system',
+    connection_id='asperiores',
     id='<ID>',
 )
 
@@ -1407,7 +1407,7 @@ req = operations.UpdateAtsScorecardRequest(
     ats_scorecard=shared.AtsScorecard(
         raw=shared.PropertyAtsScorecardRaw(),
     ),
-    connection_id='grey',
+    connection_id='East',
     id='<ID>',
 )
 

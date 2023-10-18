@@ -34,7 +34,7 @@ req = operations.CreateCrmDealRequest(
             'Toys',
         ],
     ),
-    connection_id='Music Rap',
+    connection_id='hacking',
 )
 
 res = s.deal.create_crm_deal(req)
@@ -73,9 +73,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetCrmDealRequest(
-    connection_id='male orange',
+    connection_id='payment',
     fields_=[
-        'Reduced',
+        'mint',
     ],
     id='<ID>',
 )
@@ -117,9 +117,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListCrmDealsRequest(
-    connection_id='Lamborghini',
+    connection_id='Southeast',
     fields_=[
-        'female',
+        'synthesize',
     ],
 )
 
@@ -166,7 +166,7 @@ req = operations.PatchCrmDealRequest(
             'consign',
         ],
     ),
-    connection_id='Platinum female',
+    connection_id='withdrawal',
     id='<ID>',
 )
 
@@ -206,7 +206,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveCrmDealRequest(
-    connection_id='Nihonium',
+    connection_id='Handmade',
     id='<ID>',
 )
 
@@ -253,7 +253,7 @@ req = operations.UpdateCrmDealRequest(
             'South',
         ],
     ),
-    connection_id='Shirt',
+    connection_id='global',
     id='<ID>',
 )
 

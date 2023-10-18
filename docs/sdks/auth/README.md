@@ -23,11 +23,11 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetUnifiedIntegrationAuthRequest(
-    integration_type='Reggae Van pascal',
+    integration_type='supposing',
     scopes=[
-        operations.GetUnifiedIntegrationAuthScopes.ATS_SCORECARD_READ,
+        operations.GetUnifiedIntegrationAuthScopes.TICKETING_NOTE_READ,
     ],
-    workspace_id='Xenogender North groupware',
+    workspace_id='Van',
 )
 
 res = s.auth.get_unified_integration_auth(req)
@@ -66,8 +66,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetUnifiedIntegrationLoginRequest(
-    integration_type='Bicycle markets Soft',
-    workspace_id='bus Strontium',
+    integration_type='when',
+    workspace_id='Tricycle',
 )
 
 res = s.auth.get_unified_integration_login(req)

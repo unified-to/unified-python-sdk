@@ -31,7 +31,7 @@ req = operations.CreateCrmFileRequest(
     crm_file=shared.CrmFile(
         raw=shared.PropertyCrmFileRaw(),
     ),
-    connection_id='ASCII Wooden the',
+    connection_id='loyally',
 )
 
 res = s.file.create_crm_file(req)
@@ -70,9 +70,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetCrmFileRequest(
-    connection_id='ease',
+    connection_id='Southwest',
     fields_=[
-        'bypassing',
+        'sexy',
     ],
     id='<ID>',
 )
@@ -114,9 +114,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListCrmFilesRequest(
-    connection_id='lavender Genderflux Southeast',
+    connection_id='Bicycle',
     fields_=[
-        'invoice',
+        'Genderflux',
     ],
 )
 
@@ -160,7 +160,7 @@ req = operations.PatchCrmFileRequest(
     crm_file=shared.CrmFile(
         raw=shared.PropertyCrmFileRaw(),
     ),
-    connection_id='bluetooth',
+    connection_id='Health',
     id='<ID>',
 )
 
@@ -200,7 +200,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveCrmFileRequest(
-    connection_id='cash',
+    connection_id='Zambia',
     id='<ID>',
 )
 
@@ -244,7 +244,7 @@ req = operations.UpdateCrmFileRequest(
     crm_file=shared.CrmFile(
         raw=shared.PropertyCrmFileRaw(),
     ),
-    connection_id='Orchestrator',
+    connection_id='Plano',
     id='<ID>',
 )
 

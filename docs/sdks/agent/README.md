@@ -38,11 +38,11 @@ req = operations.CreateTicketingAgentRequest(
         raw=shared.PropertyTicketingAgentRaw(),
         telephones=[
             shared.TicketingTelephone(
-                telephone='scarcely Soap navigating',
+                telephone='Seaborgium',
             ),
         ],
     ),
-    connection_id='smoothly Algeria',
+    connection_id='Manager',
 )
 
 res = s.agent.create_ticketing_agent(req)
@@ -81,9 +81,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetTicketingAgentRequest(
-    connection_id='Lamborghini',
+    connection_id='Tennessee',
     fields_=[
-        'SAS',
+        'connect',
     ],
     id='<ID>',
 )
@@ -125,9 +125,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListTicketingAgentsRequest(
-    connection_id='Mazda',
+    connection_id='transparent',
     fields_=[
-        'Home',
+        'Corporate',
     ],
 )
 
@@ -168,9 +168,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListUcAgentsRequest(
-    connection_id='Representative',
+    connection_id='Ohio',
     fields_=[
-        'olive',
+        'huzzah',
     ],
 )
 
@@ -220,11 +220,11 @@ req = operations.PatchTicketingAgentRequest(
         raw=shared.PropertyTicketingAgentRaw(),
         telephones=[
             shared.TicketingTelephone(
-                telephone='envious',
+                telephone='fuchsia',
             ),
         ],
     ),
-    connection_id='by',
+    connection_id='Small',
     id='<ID>',
 )
 
@@ -264,7 +264,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveTicketingAgentRequest(
-    connection_id='monitor',
+    connection_id='Northwest',
     id='<ID>',
 )
 
@@ -314,11 +314,11 @@ req = operations.UpdateTicketingAgentRequest(
         raw=shared.PropertyTicketingAgentRaw(),
         telephones=[
             shared.TicketingTelephone(
-                telephone='female',
+                telephone='Philippines',
             ),
         ],
     ),
-    connection_id='beside Usability Bedfordshire',
+    connection_id='SMS',
     id='<ID>',
 )
 

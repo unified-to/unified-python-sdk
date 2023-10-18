@@ -52,7 +52,7 @@ req = operations.CreateCrmEventRequest(
         raw=shared.PropertyCrmEventRaw(),
         task=shared.PropertyCrmEventTask(),
     ),
-    connection_id='Savings',
+    connection_id='Northwest',
 )
 
 res = s.event.create_crm_event(req)
@@ -91,9 +91,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetCrmEventRequest(
-    connection_id='Metal South blockchains',
+    connection_id='Technetium',
     fields_=[
-        'comics',
+        'Ergonomic',
     ],
     id='<ID>',
 )
@@ -135,9 +135,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListCrmEventsRequest(
-    connection_id='invoice gratefully',
+    connection_id='withdrawal',
     fields_=[
-        'impactful',
+        'empower',
     ],
 )
 
@@ -202,7 +202,7 @@ req = operations.PatchCrmEventRequest(
         raw=shared.PropertyCrmEventRaw(),
         task=shared.PropertyCrmEventTask(),
     ),
-    connection_id='female',
+    connection_id='Metal',
     id='<ID>',
 )
 
@@ -242,7 +242,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveCrmEventRequest(
-    connection_id='card',
+    connection_id='enterprise',
     id='<ID>',
 )
 
@@ -307,7 +307,7 @@ req = operations.UpdateCrmEventRequest(
         raw=shared.PropertyCrmEventRaw(),
         task=shared.PropertyCrmEventTask(),
     ),
-    connection_id='Accountability',
+    connection_id='Borders',
     id='<ID>',
 )
 

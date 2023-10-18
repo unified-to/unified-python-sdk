@@ -36,11 +36,11 @@ req = operations.CreateCrmLeadRequest(
         raw=shared.PropertyCrmLeadRaw(),
         telephones=[
             shared.CrmTelephone(
-                telephone='port steradian prize',
+                telephone='Designer',
             ),
         ],
     ),
-    connection_id='ability Einsteinium Orchestrator',
+    connection_id='Soft',
 )
 
 res = s.lead.create_crm_lead(req)
@@ -79,9 +79,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetCrmLeadRequest(
-    connection_id='Handmade Keyboard yum',
+    connection_id='how',
     fields_=[
-        'magnetic',
+        'Curium',
     ],
     id='<ID>',
 )
@@ -123,9 +123,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListCrmLeadsRequest(
-    connection_id='International',
+    connection_id='Implementation',
     fields_=[
-        'ratione',
+        'dam',
     ],
 )
 
@@ -174,11 +174,11 @@ req = operations.PatchCrmLeadRequest(
         raw=shared.PropertyCrmLeadRaw(),
         telephones=[
             shared.CrmTelephone(
-                telephone='teal Hat',
+                telephone='deposit',
             ),
         ],
     ),
-    connection_id='Ball Chips',
+    connection_id='Bike',
     id='<ID>',
 )
 
@@ -218,7 +218,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveCrmLeadRequest(
-    connection_id='Southeast',
+    connection_id='Springs',
     id='<ID>',
 )
 
@@ -267,11 +267,11 @@ req = operations.UpdateCrmLeadRequest(
         raw=shared.PropertyCrmLeadRaw(),
         telephones=[
             shared.CrmTelephone(
-                telephone='compelling',
+                telephone='Northwest',
             ),
         ],
     ),
-    connection_id='Pickup Polestar Checking',
+    connection_id='violation',
     id='<ID>',
 )
 

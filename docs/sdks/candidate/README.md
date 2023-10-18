@@ -41,11 +41,11 @@ req = operations.CreateAtsCandidateRequest(
         ],
         telephones=[
             shared.AtsTelephone(
-                telephone='but Pop fluid',
+                telephone='who',
             ),
         ],
     ),
-    connection_id='bypass Creative Legacy',
+    connection_id='New',
 )
 
 res = s.candidate.create_ats_candidate(req)
@@ -84,9 +84,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetAtsCandidateRequest(
-    connection_id='Markets',
+    connection_id='Generic',
     fields_=[
-        'payment',
+        'hub',
     ],
     id='<ID>',
 )
@@ -128,9 +128,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListAtsCandidatesRequest(
-    connection_id='mole clearly',
+    connection_id='Mobility',
     fields_=[
-        'Van',
+        'Cambridgeshire',
     ],
 )
 
@@ -184,11 +184,11 @@ req = operations.PatchAtsCandidateRequest(
         ],
         telephones=[
             shared.AtsTelephone(
-                telephone='payment Books',
+                telephone='esse',
             ),
         ],
     ),
-    connection_id='World Van transitional',
+    connection_id='Dynamic',
     id='<ID>',
 )
 
@@ -228,7 +228,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveAtsCandidateRequest(
-    connection_id='Accountability Recumbent Ball',
+    connection_id='male',
     id='<ID>',
 )
 
@@ -282,11 +282,11 @@ req = operations.UpdateAtsCandidateRequest(
         ],
         telephones=[
             shared.AtsTelephone(
-                telephone='DNS monetize Dynamic',
+                telephone='now',
             ),
         ],
     ),
-    connection_id='Zackery male Gloves',
+    connection_id='Gloves',
     id='<ID>',
 )
 

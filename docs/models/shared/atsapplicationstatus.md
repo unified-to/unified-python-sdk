@@ -17,3 +17,4 @@
 | `ACCEPTED`         | ACCEPTED           |
 | `HIRED`            | HIRED              |
 | `REJECTED`         | REJECTED           |
+| `WITHDRAWN`        | WITHDRAWN          |

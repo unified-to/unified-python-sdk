@@ -50,9 +50,9 @@ req = shared.Connection(
     categories=[
         shared.PropertyConnectionCategories.CRM,
     ],
-    integration_type='Maserati',
+    integration_type='revolutionize',
     permissions=[
-        shared.PropertyConnectionPermissions.CRM_LEAD_WRITE,
+        shared.PropertyConnectionPermissions.TICKETING_AGENT_WRITE,
     ],
 )
 
@@ -94,24 +94,24 @@ s = unified_to.UnifiedTo(
 
 req = operations.CreateUnifiedWebhookRequest(
     webhook=shared.Webhook(
-        connection_id='East male',
+        connection_id='Lead',
         events=[
-            shared.PropertyWebhookEvents.CREATED,
+            shared.PropertyWebhookEvents.UPDATED,
         ],
-        hook_url='ah Account Bedfordshire',
-        integration_type='Tenge',
-        interval=4915.71,
-        object_type=shared.WebhookObjectType.MARTECH_MEMBER,
+        hook_url='male',
+        integration_type='Representative',
+        interval=9342.25,
+        object_type=shared.WebhookObjectType.CRM_DEAL,
         subscriptions=[
-            'delightfully',
+            'Account',
         ],
-        workspace_id='up Vatu',
+        workspace_id='Bedfordshire',
     ),
-    connection_id='Fitness grey Directives',
+    connection_id='East',
     events=[
-        operations.CreateUnifiedWebhookEvents.CREATED,
+        operations.CreateUnifiedWebhookEvents.UPDATED,
     ],
-    object='Chair Kilback',
+    object='wireless',
 )
 
 res = s.unified.create_unified_webhook(req)
@@ -228,7 +228,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetUnifiedIntegrationRequest(
-    integration_type='Berkelium panel',
+    integration_type='Mobility',
 )
 
 res = s.unified.get_unified_integration(req)
@@ -267,11 +267,11 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetUnifiedIntegrationAuthRequest(
-    integration_type='Reggae Van pascal',
+    integration_type='supposing',
     scopes=[
-        operations.GetUnifiedIntegrationAuthScopes.ATS_SCORECARD_READ,
+        operations.GetUnifiedIntegrationAuthScopes.TICKETING_NOTE_READ,
     ],
-    workspace_id='Xenogender North groupware',
+    workspace_id='Van',
 )
 
 res = s.unified.get_unified_integration_auth(req)
@@ -432,7 +432,7 @@ req = operations.ListUnifiedIntegrationWorkspacesRequest(
     categories=[
         operations.ListUnifiedIntegrationWorkspacesCategories.MARTECH,
     ],
-    workspace_id='Country Market Representative',
+    workspace_id='supposing',
 )
 
 res = s.unified.list_unified_integration_workspaces(req)
@@ -564,9 +564,9 @@ req = operations.PatchUnifiedConnectionRequest(
         categories=[
             shared.PropertyConnectionCategories.ATS,
         ],
-        integration_type='Montana',
+        integration_type='Northeast',
         permissions=[
-            shared.PropertyConnectionPermissions.CRM_FILE_READ,
+            shared.PropertyConnectionPermissions.MARTECH_LIST_READ,
         ],
     ),
     id='<ID>',
@@ -700,9 +700,9 @@ req = operations.UpdateUnifiedConnectionRequest(
         categories=[
             shared.PropertyConnectionCategories.CRM,
         ],
-        integration_type='from',
+        integration_type='Cambridgeshire',
         permissions=[
-            shared.PropertyConnectionPermissions.ATS_APPLICATION_READ,
+            shared.PropertyConnectionPermissions.CRM_TEAM_WRITE,
         ],
     ),
     id='<ID>',

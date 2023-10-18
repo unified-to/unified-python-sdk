@@ -31,8 +31,8 @@ req = operations.CreateTicketingNoteRequest(
     ticketing_note=shared.TicketingNote(
         raw=shared.PropertyTicketingNoteRaw(),
     ),
-    connection_id='Books kilogram hmph',
-    ticket_id='Dakota function interface',
+    connection_id='Cruiser',
+    ticket_id='kilogram',
 )
 
 res = s.note.create_ticketing_note(req)
@@ -71,12 +71,12 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetTicketingNoteRequest(
-    connection_id='joule program',
+    connection_id='SSD',
     fields_=[
-        'SUV',
+        'intranet',
     ],
     id='<ID>',
-    ticket_id='payment Architect',
+    ticket_id='Fresh',
 )
 
 res = s.note.get_ticketing_note(req)
@@ -116,11 +116,11 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListTicketingNotesRequest(
-    connection_id='Hybrid North',
+    connection_id='Data',
     fields_=[
-        'hosepipe',
+        'because',
     ],
-    ticket_id='Marvin',
+    ticket_id='Zimbabwe',
 )
 
 res = s.note.list_ticketing_notes(req)
@@ -163,9 +163,9 @@ req = operations.PatchTicketingNoteRequest(
     ticketing_note=shared.TicketingNote(
         raw=shared.PropertyTicketingNoteRaw(),
     ),
-    connection_id='Bicycle Southwest Darmstadtium',
+    connection_id='soon',
     id='<ID>',
-    ticket_id='index',
+    ticket_id='Strategist',
 )
 
 res = s.note.patch_ticketing_note(req)
@@ -204,9 +204,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveTicketingNoteRequest(
-    connection_id='Granite hm West',
+    connection_id='Bicycle',
     id='<ID>',
-    ticket_id='in',
+    ticket_id='hm',
 )
 
 res = s.note.remove_ticketing_note(req)
@@ -249,9 +249,9 @@ req = operations.UpdateTicketingNoteRequest(
     ticketing_note=shared.TicketingNote(
         raw=shared.PropertyTicketingNoteRaw(),
     ),
-    connection_id='via among Quality',
+    connection_id='lavender',
     id='<ID>',
-    ticket_id='Brand when',
+    ticket_id='waterspout',
 )
 
 res = s.note.update_ticketing_note(req)

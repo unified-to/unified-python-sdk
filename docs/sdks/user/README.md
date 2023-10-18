@@ -36,11 +36,11 @@ req = operations.CreateCrmUserRequest(
         raw=shared.PropertyCrmUserRaw(),
         telephones=[
             shared.CrmTelephone(
-                telephone='await male',
+                telephone='zero',
             ),
         ],
     ),
-    connection_id='Incredible Virginia',
+    connection_id='male',
 )
 
 res = s.user.create_crm_user(req)
@@ -79,9 +79,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetCrmUserRequest(
-    connection_id='Bespoke Dollar',
+    connection_id='adipisci',
     fields_=[
-        'unto',
+        'connect',
     ],
     id='<ID>',
 )
@@ -123,9 +123,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListCrmUsersRequest(
-    connection_id='careless Costa',
+    connection_id='CFA',
     fields_=[
-        'olive',
+        'Costa',
     ],
 )
 
@@ -174,11 +174,11 @@ req = operations.PatchCrmUserRequest(
         raw=shared.PropertyCrmUserRaw(),
         telephones=[
             shared.CrmTelephone(
-                telephone='Bronze composite',
+                telephone='Demiflux',
             ),
         ],
     ),
-    connection_id='katal Industrial Classical',
+    connection_id='grey',
     id='<ID>',
 )
 
@@ -218,7 +218,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveCrmUserRequest(
-    connection_id='Southeast',
+    connection_id='yellow',
     id='<ID>',
 )
 
@@ -267,11 +267,11 @@ req = operations.UpdateCrmUserRequest(
         raw=shared.PropertyCrmUserRaw(),
         telephones=[
             shared.CrmTelephone(
-                telephone='Idaho green',
+                telephone='benchmark',
             ),
         ],
     ),
-    connection_id='Savings',
+    connection_id='Rustic',
     id='<ID>',
 )
 
