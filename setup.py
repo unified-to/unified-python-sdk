@@ -10,7 +10,7 @@ except FileNotFoundError:
 
 setuptools.setup(
     name="Unified-php-sdk",
-    version="0.7.2",
+    version="0.8.0",
     author="Unified API Inc",
     description="Python Client SDK for Unified.to",
     long_description=long_description,
