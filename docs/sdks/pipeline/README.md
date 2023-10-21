@@ -31,7 +31,7 @@ req = operations.CreateCrmPipelineRequest(
     crm_pipeline=shared.CrmPipeline(
         raw=shared.PropertyCrmPipelineRaw(),
     ),
-    connection_id='Mazda',
+    connection_id='string',
 )
 
 res = s.pipeline.create_crm_pipeline(req)
@@ -70,9 +70,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetCrmPipelineRequest(
-    connection_id='withdrawal',
+    connection_id='string',
     fields_=[
-        'online',
+        'string',
     ],
     id='<ID>',
 )
@@ -114,9 +114,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListCrmPipelinesRequest(
-    connection_id='Southeast',
+    connection_id='string',
     fields_=[
-        'Concrete',
+        'string',
     ],
 )
 
@@ -160,7 +160,7 @@ req = operations.PatchCrmPipelineRequest(
     crm_pipeline=shared.CrmPipeline(
         raw=shared.PropertyCrmPipelineRaw(),
     ),
-    connection_id='unimpressively',
+    connection_id='string',
     id='<ID>',
 )
 
@@ -200,7 +200,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveCrmPipelineRequest(
-    connection_id='protocol',
+    connection_id='string',
     id='<ID>',
 )
 
@@ -244,7 +244,7 @@ req = operations.UpdateCrmPipelineRequest(
     crm_pipeline=shared.CrmPipeline(
         raw=shared.PropertyCrmPipelineRaw(),
     ),
-    connection_id='functionalities',
+    connection_id='string',
     id='<ID>',
 )
 

@@ -40,19 +40,19 @@ s = unified_to.UnifiedTo(
 req = shared.Connection(
     auth=shared.PropertyConnectionAuth(
         emails=[
-            'likewise',
+            'string',
         ],
         meta=shared.PropertyPropertyConnectionAuthMeta(),
         other_auth_info=[
-            'Rwanda',
+            'string',
         ],
     ),
     categories=[
-        shared.PropertyConnectionCategories.CRM,
+        shared.PropertyConnectionCategories.UC,
     ],
-    integration_type='revolutionize',
+    integration_type='string',
     permissions=[
-        shared.PropertyConnectionPermissions.CRM_PIPELINE_WRITE,
+        shared.PropertyConnectionPermissions.CRM_DEAL_WRITE,
     ],
 )
 
@@ -94,24 +94,24 @@ s = unified_to.UnifiedTo(
 
 req = operations.CreateUnifiedWebhookRequest(
     webhook=shared.Webhook(
-        connection_id='Lead',
+        connection_id='string',
         events=[
-            shared.PropertyWebhookEvents.UPDATED,
+            shared.PropertyWebhookEvents.CREATED,
         ],
-        hook_url='male',
-        integration_type='Representative',
-        interval=9342.25,
-        object_type=shared.WebhookObjectType.CRM_CONTACT,
+        hook_url='string',
+        integration_type='string',
+        interval=188.12,
+        object_type=shared.WebhookObjectType.CRM_LEAD,
         subscriptions=[
-            'Account',
+            'string',
         ],
-        workspace_id='Bedfordshire',
+        workspace_id='string',
     ),
-    connection_id='East',
+    connection_id='string',
     events=[
-        operations.CreateUnifiedWebhookEvents.UPDATED,
+        operations.CreateUnifiedWebhookEvents.CREATED,
     ],
-    object='wireless',
+    object='string',
 )
 
 res = s.unified.create_unified_webhook(req)
@@ -228,7 +228,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetUnifiedIntegrationRequest(
-    integration_type='Mobility',
+    integration_type='string',
 )
 
 res = s.unified.get_unified_integration(req)
@@ -267,11 +267,11 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetUnifiedIntegrationAuthRequest(
-    integration_type='supposing',
+    integration_type='string',
     scopes=[
-        operations.GetUnifiedIntegrationAuthScopes.TICKETING_CUSTOMER_READ,
+        operations.GetUnifiedIntegrationAuthScopes.HRIS_GROUP_READ,
     ],
-    workspace_id='Van',
+    workspace_id='string',
 )
 
 res = s.unified.get_unified_integration_auth(req)
@@ -432,7 +432,7 @@ req = operations.ListUnifiedIntegrationWorkspacesRequest(
     categories=[
         operations.ListUnifiedIntegrationWorkspacesCategories.MARTECH,
     ],
-    workspace_id='supposing',
+    workspace_id='string',
 )
 
 res = s.unified.list_unified_integration_workspaces(req)
@@ -554,19 +554,19 @@ req = operations.PatchUnifiedConnectionRequest(
     connection=shared.Connection(
         auth=shared.PropertyConnectionAuth(
             emails=[
-                'International',
+                'string',
             ],
             meta=shared.PropertyPropertyConnectionAuthMeta(),
             other_auth_info=[
-                'square',
+                'string',
             ],
         ),
         categories=[
-            shared.PropertyConnectionCategories.ATS,
+            shared.PropertyConnectionCategories.ENRICH,
         ],
-        integration_type='Northeast',
+        integration_type='string',
         permissions=[
-            shared.PropertyConnectionPermissions.CRM_LEAD_READ,
+            shared.PropertyConnectionPermissions.MARTECH_MEMBER_WRITE,
         ],
     ),
     id='<ID>',
@@ -690,19 +690,19 @@ req = operations.UpdateUnifiedConnectionRequest(
     connection=shared.Connection(
         auth=shared.PropertyConnectionAuth(
             emails=[
-                'tan',
+                'string',
             ],
             meta=shared.PropertyPropertyConnectionAuthMeta(),
             other_auth_info=[
-                'revitalize',
+                'string',
             ],
         ),
         categories=[
-            shared.PropertyConnectionCategories.CRM,
+            shared.PropertyConnectionCategories.TICKETING,
         ],
-        integration_type='Cambridgeshire',
+        integration_type='string',
         permissions=[
-            shared.PropertyConnectionPermissions.CRM_EVENT_WRITE,
+            shared.PropertyConnectionPermissions.CRM_LEAD_READ,
         ],
     ),
     id='<ID>',

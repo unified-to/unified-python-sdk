@@ -25,7 +25,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetUnifiedIntegrationRequest(
-    integration_type='Mobility',
+    integration_type='string',
 )
 
 res = s.integration.get_unified_integration(req)
@@ -64,11 +64,11 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetUnifiedIntegrationAuthRequest(
-    integration_type='supposing',
+    integration_type='string',
     scopes=[
-        operations.GetUnifiedIntegrationAuthScopes.TICKETING_CUSTOMER_READ,
+        operations.GetUnifiedIntegrationAuthScopes.HRIS_GROUP_READ,
     ],
-    workspace_id='Van',
+    workspace_id='string',
 )
 
 res = s.integration.get_unified_integration_auth(req)
@@ -110,7 +110,7 @@ req = operations.ListUnifiedIntegrationWorkspacesRequest(
     categories=[
         operations.ListUnifiedIntegrationWorkspacesCategories.MARTECH,
     ],
-    workspace_id='supposing',
+    workspace_id='string',
 )
 
 res = s.integration.list_unified_integration_workspaces(req)

@@ -27,24 +27,24 @@ s = unified_to.UnifiedTo(
 
 req = operations.CreateUnifiedWebhookRequest(
     webhook=shared.Webhook(
-        connection_id='Lead',
+        connection_id='string',
         events=[
-            shared.PropertyWebhookEvents.UPDATED,
+            shared.PropertyWebhookEvents.CREATED,
         ],
-        hook_url='male',
-        integration_type='Representative',
-        interval=9342.25,
-        object_type=shared.WebhookObjectType.CRM_CONTACT,
+        hook_url='string',
+        integration_type='string',
+        interval=188.12,
+        object_type=shared.WebhookObjectType.CRM_LEAD,
         subscriptions=[
-            'Account',
+            'string',
         ],
-        workspace_id='Bedfordshire',
+        workspace_id='string',
     ),
-    connection_id='East',
+    connection_id='string',
     events=[
-        operations.CreateUnifiedWebhookEvents.UPDATED,
+        operations.CreateUnifiedWebhookEvents.CREATED,
     ],
-    object='wireless',
+    object='string',
 )
 
 res = s.webhook.create_unified_webhook(req)

@@ -22,7 +22,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListEnrichPeopleRequest(
-    connection_id='Southwest',
+    connection_id='string',
 )
 
 res = s.person.list_enrich_people(req)

@@ -26,8 +26,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreatePassthroughRequest(
-    connection_id='turquoise',
-    path='/var',
+    connection_id='string',
+    path='/etc/periodic',
     undefined=shared.Undefined(),
 )
 
@@ -67,8 +67,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListPassthroughsRequest(
-    connection_id='nisi',
-    path='/etc/ppp',
+    connection_id='string',
+    path='/selinux',
 )
 
 res = s.passthrough.list_passthroughs(req)
@@ -107,8 +107,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchPassthroughRequest(
-    connection_id='brand',
-    path='/var/mail',
+    connection_id='string',
+    path='/mnt',
     undefined=shared.Undefined(),
 )
 
@@ -148,8 +148,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemovePassthroughRequest(
-    connection_id='North',
-    path='/opt/bin',
+    connection_id='string',
+    path='/Applications',
 )
 
 res = s.passthrough.remove_passthrough(req)
@@ -188,8 +188,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdatePassthroughRequest(
-    connection_id='Northwest',
-    path='/var/mail',
+    connection_id='string',
+    path='/dev',
     undefined=shared.Undefined(),
 )
 

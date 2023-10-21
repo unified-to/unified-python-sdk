@@ -37,7 +37,7 @@ req = operations.CreateMartechListRequest(
     marketing_list=shared.MarketingList(
         raw=shared.PropertyMarketingListRaw(),
     ),
-    connection_id='Latin',
+    connection_id='string',
 )
 
 res = s.martech.create_martech_list(req)
@@ -84,15 +84,15 @@ req = operations.CreateMartechMemberRequest(
             ),
         ],
         list_ids=[
-            'input',
+            'string',
         ],
         raw=shared.PropertyMarketingMemberRaw(),
         tags=[
-            'SAS',
+            'string',
         ],
     ),
-    connection_id='bobcat',
-    list_id='global',
+    connection_id='string',
+    list_id='string',
 )
 
 res = s.martech.create_martech_member(req)
@@ -131,9 +131,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetMartechListRequest(
-    connection_id='red',
+    connection_id='string',
     fields_=[
-        'users',
+        'string',
     ],
     id='<ID>',
 )
@@ -174,12 +174,12 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetMartechMemberRequest(
-    connection_id='Japan',
+    connection_id='string',
     fields_=[
-        'orange',
+        'string',
     ],
     id='<ID>',
-    list_id='Gibraltar',
+    list_id='string',
 )
 
 res = s.martech.get_martech_member(req)
@@ -219,9 +219,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListMartechListsRequest(
-    connection_id='above',
+    connection_id='string',
     fields_=[
-        'Fantastic',
+        'string',
     ],
 )
 
@@ -262,11 +262,11 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListMartechMembersRequest(
-    connection_id='Frida',
+    connection_id='string',
     fields_=[
-        'structure',
+        'string',
     ],
-    list_id='Thallium',
+    list_id='string',
 )
 
 res = s.martech.list_martech_members(req)
@@ -309,7 +309,7 @@ req = operations.PatchMartechListRequest(
     marketing_list=shared.MarketingList(
         raw=shared.PropertyMarketingListRaw(),
     ),
-    connection_id='Classical',
+    connection_id='string',
     id='<ID>',
 )
 
@@ -357,16 +357,16 @@ req = operations.PatchMartechMemberRequest(
             ),
         ],
         list_ids=[
-            'Handcrafted',
+            'string',
         ],
         raw=shared.PropertyMarketingMemberRaw(),
         tags=[
-            'Synchronised',
+            'string',
         ],
     ),
-    connection_id='electric',
+    connection_id='string',
     id='<ID>',
-    list_id='psst',
+    list_id='string',
 )
 
 res = s.martech.patch_martech_member(req)
@@ -405,7 +405,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveMartechListRequest(
-    connection_id='Northwest',
+    connection_id='string',
     id='<ID>',
 )
 
@@ -445,9 +445,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveMartechMemberRequest(
-    connection_id='integrated',
+    connection_id='string',
     id='<ID>',
-    list_id='Analyst',
+    list_id='string',
 )
 
 res = s.martech.remove_martech_member(req)
@@ -490,7 +490,7 @@ req = operations.UpdateMartechListRequest(
     marketing_list=shared.MarketingList(
         raw=shared.PropertyMarketingListRaw(),
     ),
-    connection_id='innocently',
+    connection_id='string',
     id='<ID>',
 )
 
@@ -538,16 +538,16 @@ req = operations.UpdateMartechMemberRequest(
             ),
         ],
         list_ids=[
-            'connect',
+            'string',
         ],
         raw=shared.PropertyMarketingMemberRaw(),
         tags=[
-            'Bike',
+            'string',
         ],
     ),
-    connection_id='Hyundai',
+    connection_id='string',
     id='<ID>',
-    list_id='North',
+    list_id='string',
 )
 
 res = s.martech.update_martech_member(req)

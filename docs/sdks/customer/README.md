@@ -36,15 +36,15 @@ req = operations.CreateTicketingCustomerRequest(
         ],
         raw=shared.PropertyTicketingCustomerRaw(),
         tags=[
-            'Borders',
+            'string',
         ],
         telephones=[
             shared.TicketingTelephone(
-                telephone='tepid',
+                telephone='string',
             ),
         ],
     ),
-    connection_id='Bedfordshire',
+    connection_id='string',
 )
 
 res = s.customer.create_ticketing_customer(req)
@@ -83,9 +83,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetTicketingCustomerRequest(
-    connection_id='Berkshire',
+    connection_id='string',
     fields_=[
-        'Gloves',
+        'string',
     ],
     id='<ID>',
 )
@@ -127,9 +127,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListTicketingCustomersRequest(
-    connection_id='adapter',
+    connection_id='string',
     fields_=[
-        'Unions',
+        'string',
     ],
 )
 
@@ -178,15 +178,15 @@ req = operations.PatchTicketingCustomerRequest(
         ],
         raw=shared.PropertyTicketingCustomerRaw(),
         tags=[
-            'Brownsville',
+            'string',
         ],
         telephones=[
             shared.TicketingTelephone(
-                telephone='Frozen',
+                telephone='string',
             ),
         ],
     ),
-    connection_id='calculating',
+    connection_id='string',
     id='<ID>',
 )
 
@@ -226,7 +226,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveTicketingCustomerRequest(
-    connection_id='West',
+    connection_id='string',
     id='<ID>',
 )
 
@@ -275,15 +275,15 @@ req = operations.UpdateTicketingCustomerRequest(
         ],
         raw=shared.PropertyTicketingCustomerRaw(),
         tags=[
-            'Barium',
+            'string',
         ],
         telephones=[
             shared.TicketingTelephone(
-                telephone='Sleek',
+                telephone='string',
             ),
         ],
     ),
-    connection_id='Bolivia',
+    connection_id='string',
     id='<ID>',
 )
 

@@ -31,8 +31,8 @@ req = operations.CreateTicketingNoteRequest(
     ticketing_note=shared.TicketingNote(
         raw=shared.PropertyTicketingNoteRaw(),
     ),
-    connection_id='Cruiser',
-    ticket_id='kilogram',
+    connection_id='string',
+    ticket_id='string',
 )
 
 res = s.note.create_ticketing_note(req)
@@ -71,12 +71,12 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetTicketingNoteRequest(
-    connection_id='SSD',
+    connection_id='string',
     fields_=[
-        'intranet',
+        'string',
     ],
     id='<ID>',
-    ticket_id='Fresh',
+    ticket_id='string',
 )
 
 res = s.note.get_ticketing_note(req)
@@ -116,11 +116,11 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListTicketingNotesRequest(
-    connection_id='Data',
+    connection_id='string',
     fields_=[
-        'because',
+        'string',
     ],
-    ticket_id='Zimbabwe',
+    ticket_id='string',
 )
 
 res = s.note.list_ticketing_notes(req)
@@ -163,9 +163,9 @@ req = operations.PatchTicketingNoteRequest(
     ticketing_note=shared.TicketingNote(
         raw=shared.PropertyTicketingNoteRaw(),
     ),
-    connection_id='soon',
+    connection_id='string',
     id='<ID>',
-    ticket_id='Strategist',
+    ticket_id='string',
 )
 
 res = s.note.patch_ticketing_note(req)
@@ -204,9 +204,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveTicketingNoteRequest(
-    connection_id='Bicycle',
+    connection_id='string',
     id='<ID>',
-    ticket_id='hm',
+    ticket_id='string',
 )
 
 res = s.note.remove_ticketing_note(req)
@@ -249,9 +249,9 @@ req = operations.UpdateTicketingNoteRequest(
     ticketing_note=shared.TicketingNote(
         raw=shared.PropertyTicketingNoteRaw(),
     ),
-    connection_id='lavender',
+    connection_id='string',
     id='<ID>',
-    ticket_id='waterspout',
+    ticket_id='string',
 )
 
 res = s.note.update_ticketing_note(req)

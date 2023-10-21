@@ -38,11 +38,11 @@ req = operations.CreateHrisEmployeeRequest(
         raw=shared.PropertyHrisEmployeeRaw(),
         telephones=[
             shared.HrisTelephone(
-                telephone='composite',
+                telephone='string',
             ),
         ],
     ),
-    connection_id='redefine',
+    connection_id='string',
 )
 
 res = s.employee.create_hris_employee(req)
@@ -81,9 +81,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetHrisEmployeeRequest(
-    connection_id='Louisiana',
+    connection_id='string',
     fields_=[
-        'Afghanistan',
+        'string',
     ],
     id='<ID>',
 )
@@ -125,9 +125,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListHrisEmployeesRequest(
-    connection_id='overriding',
+    connection_id='string',
     fields_=[
-        'Krona',
+        'string',
     ],
 )
 
@@ -178,11 +178,11 @@ req = operations.PatchHrisEmployeeRequest(
         raw=shared.PropertyHrisEmployeeRaw(),
         telephones=[
             shared.HrisTelephone(
-                telephone='cyan',
+                telephone='string',
             ),
         ],
     ),
-    connection_id='farad',
+    connection_id='string',
     id='<ID>',
 )
 
@@ -222,7 +222,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveHrisEmployeeRequest(
-    connection_id='Chicken',
+    connection_id='string',
     id='<ID>',
 )
 
@@ -273,11 +273,11 @@ req = operations.UpdateHrisEmployeeRequest(
         raw=shared.PropertyHrisEmployeeRaw(),
         telephones=[
             shared.HrisTelephone(
-                telephone='Mazda',
+                telephone='string',
             ),
         ],
     ),
-    connection_id='Brand',
+    connection_id='string',
     id='<ID>',
 )
 

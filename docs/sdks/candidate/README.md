@@ -37,15 +37,15 @@ req = operations.CreateAtsCandidateRequest(
         ],
         raw=shared.PropertyAtsCandidateRaw(),
         tags=[
-            'radian',
+            'string',
         ],
         telephones=[
             shared.AtsTelephone(
-                telephone='who',
+                telephone='string',
             ),
         ],
     ),
-    connection_id='New',
+    connection_id='string',
 )
 
 res = s.candidate.create_ats_candidate(req)
@@ -84,9 +84,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetAtsCandidateRequest(
-    connection_id='Generic',
+    connection_id='string',
     fields_=[
-        'hub',
+        'string',
     ],
     id='<ID>',
 )
@@ -128,9 +128,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListAtsCandidatesRequest(
-    connection_id='Mobility',
+    connection_id='string',
     fields_=[
-        'Cambridgeshire',
+        'string',
     ],
 )
 
@@ -180,15 +180,15 @@ req = operations.PatchAtsCandidateRequest(
         ],
         raw=shared.PropertyAtsCandidateRaw(),
         tags=[
-            'Credit',
+            'string',
         ],
         telephones=[
             shared.AtsTelephone(
-                telephone='esse',
+                telephone='string',
             ),
         ],
     ),
-    connection_id='Dynamic',
+    connection_id='string',
     id='<ID>',
 )
 
@@ -228,7 +228,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveAtsCandidateRequest(
-    connection_id='male',
+    connection_id='string',
     id='<ID>',
 )
 
@@ -278,15 +278,15 @@ req = operations.UpdateAtsCandidateRequest(
         ],
         raw=shared.PropertyAtsCandidateRaw(),
         tags=[
-            'B2C',
+            'string',
         ],
         telephones=[
             shared.AtsTelephone(
-                telephone='now',
+                telephone='string',
             ),
         ],
     ),
-    connection_id='Gloves',
+    connection_id='string',
     id='<ID>',
 )
 

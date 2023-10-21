@@ -23,9 +23,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListUcCallsRequest(
-    connection_id='Liberia',
+    connection_id='string',
     fields_=[
-        'Cargo',
+        'string',
     ],
 )
 

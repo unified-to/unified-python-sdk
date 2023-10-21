@@ -55,7 +55,7 @@ req = operations.CreateAtsApplicationRequest(
     ats_application=shared.AtsApplication(
         raw=shared.PropertyAtsApplicationRaw(),
     ),
-    connection_id='Hassium',
+    connection_id='string',
 )
 
 res = s.ats.create_ats_application(req)
@@ -104,15 +104,15 @@ req = operations.CreateAtsCandidateRequest(
         ],
         raw=shared.PropertyAtsCandidateRaw(),
         tags=[
-            'radian',
+            'string',
         ],
         telephones=[
             shared.AtsTelephone(
-                telephone='who',
+                telephone='string',
             ),
         ],
     ),
-    connection_id='New',
+    connection_id='string',
 )
 
 res = s.ats.create_ats_candidate(req)
@@ -155,10 +155,10 @@ req = operations.CreateAtsInterviewRequest(
     ats_interview=shared.AtsInterview(
         raw=shared.PropertyAtsInterviewRaw(),
         user_ids=[
-            'Metrics',
+            'string',
         ],
     ),
-    connection_id='Bar',
+    connection_id='string',
 )
 
 res = s.ats.create_ats_interview(req)
@@ -208,20 +208,20 @@ req = operations.CreateAtsJobRequest(
             ),
         ],
         departments=[
-            'Loan',
+            'string',
         ],
         hiring_manager_ids=[
-            'driver',
+            'string',
         ],
         public_job_urls=[
-            'Transmasculine',
+            'string',
         ],
         raw=shared.PropertyAtsJobRaw(),
         recruiter_ids=[
-            'Mini',
+            'string',
         ],
     ),
-    connection_id='health',
+    connection_id='string',
 )
 
 res = s.ats.create_ats_job(req)
@@ -264,7 +264,7 @@ req = operations.CreateAtsScorecardRequest(
     ats_scorecard=shared.AtsScorecard(
         raw=shared.PropertyAtsScorecardRaw(),
     ),
-    connection_id='Brunei',
+    connection_id='string',
 )
 
 res = s.ats.create_ats_scorecard(req)
@@ -303,9 +303,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetAtsApplicationRequest(
-    connection_id='mobile',
+    connection_id='string',
     fields_=[
-        'Key',
+        'string',
     ],
     id='<ID>',
 )
@@ -346,9 +346,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetAtsCandidateRequest(
-    connection_id='Generic',
+    connection_id='string',
     fields_=[
-        'hub',
+        'string',
     ],
     id='<ID>',
 )
@@ -389,9 +389,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetAtsInterviewRequest(
-    connection_id='yum',
+    connection_id='string',
     fields_=[
-        'programming',
+        'string',
     ],
     id='<ID>',
 )
@@ -432,9 +432,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetAtsJobRequest(
-    connection_id='Southwest',
+    connection_id='string',
     fields_=[
-        'panel',
+        'string',
     ],
     id='<ID>',
 )
@@ -475,9 +475,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetAtsScorecardRequest(
-    connection_id='Cordoba',
+    connection_id='string',
     fields_=[
-        'Nissan',
+        'string',
     ],
     id='<ID>',
 )
@@ -519,9 +519,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListAtsApplicationsRequest(
-    connection_id='Cambodia',
+    connection_id='string',
     fields_=[
-        'models',
+        'string',
     ],
 )
 
@@ -562,9 +562,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListAtsCandidatesRequest(
-    connection_id='Mobility',
+    connection_id='string',
     fields_=[
-        'Cambridgeshire',
+        'string',
     ],
 )
 
@@ -605,9 +605,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListAtsInterviewsRequest(
-    connection_id='Bronze',
+    connection_id='string',
     fields_=[
-        'Wooden',
+        'string',
     ],
 )
 
@@ -648,9 +648,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListAtsJobsRequest(
-    connection_id='firmware',
+    connection_id='string',
     fields_=[
-        'Praseodymium',
+        'string',
     ],
 )
 
@@ -691,9 +691,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListAtsScorecardsRequest(
-    connection_id='synthesizing',
+    connection_id='string',
     fields_=[
-        'surprised',
+        'string',
     ],
 )
 
@@ -737,7 +737,7 @@ req = operations.PatchAtsApplicationRequest(
     ats_application=shared.AtsApplication(
         raw=shared.PropertyAtsApplicationRaw(),
     ),
-    connection_id='Lead',
+    connection_id='string',
     id='<ID>',
 )
 
@@ -787,15 +787,15 @@ req = operations.PatchAtsCandidateRequest(
         ],
         raw=shared.PropertyAtsCandidateRaw(),
         tags=[
-            'Credit',
+            'string',
         ],
         telephones=[
             shared.AtsTelephone(
-                telephone='esse',
+                telephone='string',
             ),
         ],
     ),
-    connection_id='Dynamic',
+    connection_id='string',
     id='<ID>',
 )
 
@@ -839,10 +839,10 @@ req = operations.PatchAtsInterviewRequest(
     ats_interview=shared.AtsInterview(
         raw=shared.PropertyAtsInterviewRaw(),
         user_ids=[
-            'courageously',
+            'string',
         ],
     ),
-    connection_id='Handmade',
+    connection_id='string',
     id='<ID>',
 )
 
@@ -893,20 +893,20 @@ req = operations.PatchAtsJobRequest(
             ),
         ],
         departments=[
-            'indigo',
+            'string',
         ],
         hiring_manager_ids=[
-            'Bedfordshire',
+            'string',
         ],
         public_job_urls=[
-            'North',
+            'string',
         ],
         raw=shared.PropertyAtsJobRaw(),
         recruiter_ids=[
-            'mainland',
+            'string',
         ],
     ),
-    connection_id='microchip',
+    connection_id='string',
     id='<ID>',
 )
 
@@ -950,7 +950,7 @@ req = operations.PatchAtsScorecardRequest(
     ats_scorecard=shared.AtsScorecard(
         raw=shared.PropertyAtsScorecardRaw(),
     ),
-    connection_id='Falls',
+    connection_id='string',
     id='<ID>',
 )
 
@@ -990,7 +990,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveAtsApplicationRequest(
-    connection_id='gently',
+    connection_id='string',
     id='<ID>',
 )
 
@@ -1030,7 +1030,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveAtsCandidateRequest(
-    connection_id='male',
+    connection_id='string',
     id='<ID>',
 )
 
@@ -1070,7 +1070,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveAtsInterviewRequest(
-    connection_id='green',
+    connection_id='string',
     id='<ID>',
 )
 
@@ -1110,7 +1110,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveAtsJobRequest(
-    connection_id='Northeast',
+    connection_id='string',
     id='<ID>',
 )
 
@@ -1150,7 +1150,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveAtsScorecardRequest(
-    connection_id='approach',
+    connection_id='string',
     id='<ID>',
 )
 
@@ -1194,7 +1194,7 @@ req = operations.UpdateAtsApplicationRequest(
     ats_application=shared.AtsApplication(
         raw=shared.PropertyAtsApplicationRaw(),
     ),
-    connection_id='Keyboard',
+    connection_id='string',
     id='<ID>',
 )
 
@@ -1244,15 +1244,15 @@ req = operations.UpdateAtsCandidateRequest(
         ],
         raw=shared.PropertyAtsCandidateRaw(),
         tags=[
-            'B2C',
+            'string',
         ],
         telephones=[
             shared.AtsTelephone(
-                telephone='now',
+                telephone='string',
             ),
         ],
     ),
-    connection_id='Gloves',
+    connection_id='string',
     id='<ID>',
 )
 
@@ -1296,10 +1296,10 @@ req = operations.UpdateAtsInterviewRequest(
     ats_interview=shared.AtsInterview(
         raw=shared.PropertyAtsInterviewRaw(),
         user_ids=[
-            'maroon',
+            'string',
         ],
     ),
-    connection_id='maroon',
+    connection_id='string',
     id='<ID>',
 )
 
@@ -1350,20 +1350,20 @@ req = operations.UpdateAtsJobRequest(
             ),
         ],
         departments=[
-            'Plastic',
+            'string',
         ],
         hiring_manager_ids=[
-            'West',
+            'string',
         ],
         public_job_urls=[
-            'Direct',
+            'string',
         ],
         raw=shared.PropertyAtsJobRaw(),
         recruiter_ids=[
-            'SMS',
+            'string',
         ],
     ),
-    connection_id='asperiores',
+    connection_id='string',
     id='<ID>',
 )
 
@@ -1407,7 +1407,7 @@ req = operations.UpdateAtsScorecardRequest(
     ats_scorecard=shared.AtsScorecard(
         raw=shared.PropertyAtsScorecardRaw(),
     ),
-    connection_id='East',
+    connection_id='string',
     id='<ID>',
 )
 

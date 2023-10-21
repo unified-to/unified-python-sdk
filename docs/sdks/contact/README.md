@@ -37,10 +37,10 @@ req = operations.CreateCrmContactRequest(
     crm_contact=shared.CrmContact(
         address=shared.PropertyCrmContactAddress(),
         company_ids=[
-            'Mendelevium',
+            'string',
         ],
         deal_ids=[
-            'Account',
+            'string',
         ],
         emails=[
             shared.CrmEmail(),
@@ -48,11 +48,11 @@ req = operations.CreateCrmContactRequest(
         raw=shared.PropertyCrmContactRaw(),
         telephones=[
             shared.CrmTelephone(
-                telephone='Chips',
+                telephone='string',
             ),
         ],
     ),
-    connection_id='superb',
+    connection_id='string',
 )
 
 res = s.contact.create_crm_contact(req)
@@ -101,11 +101,11 @@ req = operations.CreateUcContactRequest(
         raw=shared.PropertyUcContactRaw(),
         telephones=[
             shared.UcTelephone(
-                telephone='challenge',
+                telephone='string',
             ),
         ],
     ),
-    connection_id='azure',
+    connection_id='string',
 )
 
 res = s.contact.create_uc_contact(req)
@@ -144,9 +144,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetCrmContactRequest(
-    connection_id='North',
+    connection_id='string',
     fields_=[
-        'Silver',
+        'string',
     ],
     id='<ID>',
 )
@@ -187,9 +187,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetUcContactRequest(
-    connection_id='for',
+    connection_id='string',
     fields_=[
-        'deposit',
+        'string',
     ],
     id='<ID>',
 )
@@ -231,9 +231,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListCrmContactsRequest(
-    connection_id='female',
+    connection_id='string',
     fields_=[
-        'Research',
+        'string',
     ],
 )
 
@@ -274,9 +274,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListUcContactsRequest(
-    connection_id='application',
+    connection_id='string',
     fields_=[
-        'Xenogender',
+        'string',
     ],
 )
 
@@ -320,10 +320,10 @@ req = operations.PatchCrmContactRequest(
     crm_contact=shared.CrmContact(
         address=shared.PropertyCrmContactAddress(),
         company_ids=[
-            'architecture',
+            'string',
         ],
         deal_ids=[
-            'Buckinghamshire',
+            'string',
         ],
         emails=[
             shared.CrmEmail(),
@@ -331,11 +331,11 @@ req = operations.PatchCrmContactRequest(
         raw=shared.PropertyCrmContactRaw(),
         telephones=[
             shared.CrmTelephone(
-                telephone='morph',
+                telephone='string',
             ),
         ],
     ),
-    connection_id='array',
+    connection_id='string',
     id='<ID>',
 )
 
@@ -385,11 +385,11 @@ req = operations.PatchUcContactRequest(
         raw=shared.PropertyUcContactRaw(),
         telephones=[
             shared.UcTelephone(
-                telephone='Borders',
+                telephone='string',
             ),
         ],
     ),
-    connection_id='Carolina',
+    connection_id='string',
     id='<ID>',
 )
 
@@ -429,7 +429,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveCrmContactRequest(
-    connection_id='plum',
+    connection_id='string',
     id='<ID>',
 )
 
@@ -469,7 +469,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveUcContactRequest(
-    connection_id='Plastic',
+    connection_id='string',
     id='<ID>',
 )
 
@@ -513,10 +513,10 @@ req = operations.UpdateCrmContactRequest(
     crm_contact=shared.CrmContact(
         address=shared.PropertyCrmContactAddress(),
         company_ids=[
-            'Universal',
+            'string',
         ],
         deal_ids=[
-            'Harbors',
+            'string',
         ],
         emails=[
             shared.CrmEmail(),
@@ -524,11 +524,11 @@ req = operations.UpdateCrmContactRequest(
         raw=shared.PropertyCrmContactRaw(),
         telephones=[
             shared.CrmTelephone(
-                telephone='relieved',
+                telephone='string',
             ),
         ],
     ),
-    connection_id='backing',
+    connection_id='string',
     id='<ID>',
 )
 
@@ -578,11 +578,11 @@ req = operations.UpdateUcContactRequest(
         raw=shared.PropertyUcContactRaw(),
         telephones=[
             shared.UcTelephone(
-                telephone='Convertible',
+                telephone='string',
             ),
         ],
     ),
-    connection_id='Wooden',
+    connection_id='string',
     id='<ID>',
 )
 

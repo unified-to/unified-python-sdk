@@ -31,7 +31,7 @@ req = operations.CreateMartechListRequest(
     marketing_list=shared.MarketingList(
         raw=shared.PropertyMarketingListRaw(),
     ),
-    connection_id='Latin',
+    connection_id='string',
 )
 
 res = s.list.create_martech_list(req)
@@ -70,9 +70,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetMartechListRequest(
-    connection_id='red',
+    connection_id='string',
     fields_=[
-        'users',
+        'string',
     ],
     id='<ID>',
 )
@@ -114,9 +114,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListMartechListsRequest(
-    connection_id='above',
+    connection_id='string',
     fields_=[
-        'Fantastic',
+        'string',
     ],
 )
 
@@ -160,7 +160,7 @@ req = operations.PatchMartechListRequest(
     marketing_list=shared.MarketingList(
         raw=shared.PropertyMarketingListRaw(),
     ),
-    connection_id='Classical',
+    connection_id='string',
     id='<ID>',
 )
 
@@ -200,7 +200,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveMartechListRequest(
-    connection_id='Northwest',
+    connection_id='string',
     id='<ID>',
 )
 
@@ -244,7 +244,7 @@ req = operations.UpdateMartechListRequest(
     marketing_list=shared.MarketingList(
         raw=shared.PropertyMarketingListRaw(),
     ),
-    connection_id='innocently',
+    connection_id='string',
     id='<ID>',
 )
 

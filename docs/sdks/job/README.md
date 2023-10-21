@@ -38,20 +38,20 @@ req = operations.CreateAtsJobRequest(
             ),
         ],
         departments=[
-            'Loan',
+            'string',
         ],
         hiring_manager_ids=[
-            'driver',
+            'string',
         ],
         public_job_urls=[
-            'Transmasculine',
+            'string',
         ],
         raw=shared.PropertyAtsJobRaw(),
         recruiter_ids=[
-            'Mini',
+            'string',
         ],
     ),
-    connection_id='health',
+    connection_id='string',
 )
 
 res = s.job.create_ats_job(req)
@@ -90,9 +90,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetAtsJobRequest(
-    connection_id='Southwest',
+    connection_id='string',
     fields_=[
-        'panel',
+        'string',
     ],
     id='<ID>',
 )
@@ -134,9 +134,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListAtsJobsRequest(
-    connection_id='firmware',
+    connection_id='string',
     fields_=[
-        'Praseodymium',
+        'string',
     ],
 )
 
@@ -187,20 +187,20 @@ req = operations.PatchAtsJobRequest(
             ),
         ],
         departments=[
-            'indigo',
+            'string',
         ],
         hiring_manager_ids=[
-            'Bedfordshire',
+            'string',
         ],
         public_job_urls=[
-            'North',
+            'string',
         ],
         raw=shared.PropertyAtsJobRaw(),
         recruiter_ids=[
-            'mainland',
+            'string',
         ],
     ),
-    connection_id='microchip',
+    connection_id='string',
     id='<ID>',
 )
 
@@ -240,7 +240,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveAtsJobRequest(
-    connection_id='Northeast',
+    connection_id='string',
     id='<ID>',
 )
 
@@ -291,20 +291,20 @@ req = operations.UpdateAtsJobRequest(
             ),
         ],
         departments=[
-            'Plastic',
+            'string',
         ],
         hiring_manager_ids=[
-            'West',
+            'string',
         ],
         public_job_urls=[
-            'Direct',
+            'string',
         ],
         raw=shared.PropertyAtsJobRaw(),
         recruiter_ids=[
-            'SMS',
+            'string',
         ],
     ),
-    connection_id='asperiores',
+    connection_id='string',
     id='<ID>',
 )
 

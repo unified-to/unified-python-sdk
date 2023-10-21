@@ -31,7 +31,7 @@ req = operations.CreateAtsScorecardRequest(
     ats_scorecard=shared.AtsScorecard(
         raw=shared.PropertyAtsScorecardRaw(),
     ),
-    connection_id='Brunei',
+    connection_id='string',
 )
 
 res = s.document.create_ats_scorecard(req)
@@ -70,9 +70,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetAtsScorecardRequest(
-    connection_id='Cordoba',
+    connection_id='string',
     fields_=[
-        'Nissan',
+        'string',
     ],
     id='<ID>',
 )
@@ -114,9 +114,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListAtsScorecardsRequest(
-    connection_id='synthesizing',
+    connection_id='string',
     fields_=[
-        'surprised',
+        'string',
     ],
 )
 
@@ -160,7 +160,7 @@ req = operations.PatchAtsScorecardRequest(
     ats_scorecard=shared.AtsScorecard(
         raw=shared.PropertyAtsScorecardRaw(),
     ),
-    connection_id='Falls',
+    connection_id='string',
     id='<ID>',
 )
 
@@ -200,7 +200,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveAtsScorecardRequest(
-    connection_id='approach',
+    connection_id='string',
     id='<ID>',
 )
 
@@ -244,7 +244,7 @@ req = operations.UpdateAtsScorecardRequest(
     ats_scorecard=shared.AtsScorecard(
         raw=shared.PropertyAtsScorecardRaw(),
     ),
-    connection_id='East',
+    connection_id='string',
     id='<ID>',
 )
 

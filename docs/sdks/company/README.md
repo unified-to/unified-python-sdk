@@ -32,25 +32,25 @@ req = operations.CreateCrmCompanyRequest(
     crm_company=shared.CrmCompany(
         address=shared.PropertyCrmCompanyAddress(),
         deal_ids=[
-            'connecting',
+            'string',
         ],
         emails=[
             shared.CrmEmail(),
         ],
         raw=shared.PropertyCrmCompanyRaw(),
         tags=[
-            'carouse',
+            'string',
         ],
         telephones=[
             shared.CrmTelephone(
-                telephone='Car',
+                telephone='string',
             ),
         ],
         websites=[
-            'experiences',
+            'string',
         ],
     ),
-    connection_id='soluta',
+    connection_id='string',
 )
 
 res = s.company.create_crm_company(req)
@@ -89,9 +89,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetCrmCompanyRequest(
-    connection_id='forenenst',
+    connection_id='string',
     fields_=[
-        'Mini',
+        'string',
     ],
     id='<ID>',
 )
@@ -133,9 +133,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListCrmCompaniesRequest(
-    connection_id='override',
+    connection_id='string',
     fields_=[
-        'withdrawal',
+        'string',
     ],
 )
 
@@ -175,7 +175,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListEnrichCompaniesRequest(
-    connection_id='Bike',
+    connection_id='string',
 )
 
 res = s.company.list_enrich_companies(req)
@@ -218,25 +218,25 @@ req = operations.PatchCrmCompanyRequest(
     crm_company=shared.CrmCompany(
         address=shared.PropertyCrmCompanyAddress(),
         deal_ids=[
-            'Producer',
+            'string',
         ],
         emails=[
             shared.CrmEmail(),
         ],
         raw=shared.PropertyCrmCompanyRaw(),
         tags=[
-            'Corporate',
+            'string',
         ],
         telephones=[
             shared.CrmTelephone(
-                telephone='indexing',
+                telephone='string',
             ),
         ],
         websites=[
-            'array',
+            'string',
         ],
     ),
-    connection_id='Genderflux',
+    connection_id='string',
     id='<ID>',
 )
 
@@ -276,7 +276,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveCrmCompanyRequest(
-    connection_id='although',
+    connection_id='string',
     id='<ID>',
 )
 
@@ -320,25 +320,25 @@ req = operations.UpdateCrmCompanyRequest(
     crm_company=shared.CrmCompany(
         address=shared.PropertyCrmCompanyAddress(),
         deal_ids=[
-            'SMS',
+            'string',
         ],
         emails=[
             shared.CrmEmail(),
         ],
         raw=shared.PropertyCrmCompanyRaw(),
         tags=[
-            'barrel',
+            'string',
         ],
         telephones=[
             shared.CrmTelephone(
-                telephone='except',
+                telephone='string',
             ),
         ],
         websites=[
-            'enterprise',
+            'string',
         ],
     ),
-    connection_id='alarm',
+    connection_id='string',
     id='<ID>',
 )
 

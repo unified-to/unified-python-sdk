@@ -31,10 +31,10 @@ req = operations.CreateCrmDealRequest(
     crm_deal=shared.CrmDeal(
         raw=shared.PropertyCrmDealRaw(),
         tags=[
-            'Toys',
+            'string',
         ],
     ),
-    connection_id='hacking',
+    connection_id='string',
 )
 
 res = s.deal.create_crm_deal(req)
@@ -73,9 +73,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetCrmDealRequest(
-    connection_id='payment',
+    connection_id='string',
     fields_=[
-        'mint',
+        'string',
     ],
     id='<ID>',
 )
@@ -117,9 +117,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListCrmDealsRequest(
-    connection_id='Southeast',
+    connection_id='string',
     fields_=[
-        'synthesize',
+        'string',
     ],
 )
 
@@ -163,10 +163,10 @@ req = operations.PatchCrmDealRequest(
     crm_deal=shared.CrmDeal(
         raw=shared.PropertyCrmDealRaw(),
         tags=[
-            'consign',
+            'string',
         ],
     ),
-    connection_id='withdrawal',
+    connection_id='string',
     id='<ID>',
 )
 
@@ -206,7 +206,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveCrmDealRequest(
-    connection_id='Handmade',
+    connection_id='string',
     id='<ID>',
 )
 
@@ -250,10 +250,10 @@ req = operations.UpdateCrmDealRequest(
     crm_deal=shared.CrmDeal(
         raw=shared.PropertyCrmDealRaw(),
         tags=[
-            'South',
+            'string',
         ],
     ),
-    connection_id='global',
+    connection_id='string',
     id='<ID>',
 )
 

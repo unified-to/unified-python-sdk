@@ -36,11 +36,11 @@ req = operations.CreateCrmLeadRequest(
         raw=shared.PropertyCrmLeadRaw(),
         telephones=[
             shared.CrmTelephone(
-                telephone='Designer',
+                telephone='string',
             ),
         ],
     ),
-    connection_id='Soft',
+    connection_id='string',
 )
 
 res = s.lead.create_crm_lead(req)
@@ -79,9 +79,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetCrmLeadRequest(
-    connection_id='how',
+    connection_id='string',
     fields_=[
-        'Curium',
+        'string',
     ],
     id='<ID>',
 )
@@ -123,9 +123,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListCrmLeadsRequest(
-    connection_id='Implementation',
+    connection_id='string',
     fields_=[
-        'dam',
+        'string',
     ],
 )
 
@@ -174,11 +174,11 @@ req = operations.PatchCrmLeadRequest(
         raw=shared.PropertyCrmLeadRaw(),
         telephones=[
             shared.CrmTelephone(
-                telephone='deposit',
+                telephone='string',
             ),
         ],
     ),
-    connection_id='Bike',
+    connection_id='string',
     id='<ID>',
 )
 
@@ -218,7 +218,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveCrmLeadRequest(
-    connection_id='Springs',
+    connection_id='string',
     id='<ID>',
 )
 
@@ -267,11 +267,11 @@ req = operations.UpdateCrmLeadRequest(
         raw=shared.PropertyCrmLeadRaw(),
         telephones=[
             shared.CrmTelephone(
-                telephone='Northwest',
+                telephone='string',
             ),
         ],
     ),
-    connection_id='violation',
+    connection_id='string',
     id='<ID>',
 )
 

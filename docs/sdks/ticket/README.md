@@ -31,10 +31,10 @@ req = operations.CreateTicketingTicketRequest(
     ticketing_ticket=shared.TicketingTicket(
         raw=shared.PropertyTicketingTicketRaw(),
         tags=[
-            'sky',
+            'string',
         ],
     ),
-    connection_id='Cheese',
+    connection_id='string',
 )
 
 res = s.ticket.create_ticketing_ticket(req)
@@ -73,9 +73,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetTicketingTicketRequest(
-    connection_id='Marks',
+    connection_id='string',
     fields_=[
-        'Dollar',
+        'string',
     ],
     id='<ID>',
 )
@@ -117,9 +117,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListTicketingTicketsRequest(
-    connection_id='Cisgender',
+    connection_id='string',
     fields_=[
-        'archive',
+        'string',
     ],
 )
 
@@ -163,10 +163,10 @@ req = operations.PatchTicketingTicketRequest(
     ticketing_ticket=shared.TicketingTicket(
         raw=shared.PropertyTicketingTicketRaw(),
         tags=[
-            'Bespoke',
+            'string',
         ],
     ),
-    connection_id='program',
+    connection_id='string',
     id='<ID>',
 )
 
@@ -206,7 +206,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveTicketingTicketRequest(
-    connection_id='communities',
+    connection_id='string',
     id='<ID>',
 )
 
@@ -250,10 +250,10 @@ req = operations.UpdateTicketingTicketRequest(
     ticketing_ticket=shared.TicketingTicket(
         raw=shared.PropertyTicketingTicketRaw(),
         tags=[
-            'Rhode',
+            'string',
         ],
     ),
-    connection_id='gee',
+    connection_id='string',
     id='<ID>',
 )
 

@@ -31,10 +31,10 @@ req = operations.CreateAtsInterviewRequest(
     ats_interview=shared.AtsInterview(
         raw=shared.PropertyAtsInterviewRaw(),
         user_ids=[
-            'Metrics',
+            'string',
         ],
     ),
-    connection_id='Bar',
+    connection_id='string',
 )
 
 res = s.interview.create_ats_interview(req)
@@ -73,9 +73,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetAtsInterviewRequest(
-    connection_id='yum',
+    connection_id='string',
     fields_=[
-        'programming',
+        'string',
     ],
     id='<ID>',
 )
@@ -117,9 +117,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListAtsInterviewsRequest(
-    connection_id='Bronze',
+    connection_id='string',
     fields_=[
-        'Wooden',
+        'string',
     ],
 )
 
@@ -163,10 +163,10 @@ req = operations.PatchAtsInterviewRequest(
     ats_interview=shared.AtsInterview(
         raw=shared.PropertyAtsInterviewRaw(),
         user_ids=[
-            'courageously',
+            'string',
         ],
     ),
-    connection_id='Handmade',
+    connection_id='string',
     id='<ID>',
 )
 
@@ -206,7 +206,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveAtsInterviewRequest(
-    connection_id='green',
+    connection_id='string',
     id='<ID>',
 )
 
@@ -250,10 +250,10 @@ req = operations.UpdateAtsInterviewRequest(
     ats_interview=shared.AtsInterview(
         raw=shared.PropertyAtsInterviewRaw(),
         user_ids=[
-            'maroon',
+            'string',
         ],
     ),
-    connection_id='maroon',
+    connection_id='string',
     id='<ID>',
 )
 

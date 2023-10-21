@@ -23,11 +23,11 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetUnifiedIntegrationAuthRequest(
-    integration_type='supposing',
+    integration_type='string',
     scopes=[
-        operations.GetUnifiedIntegrationAuthScopes.TICKETING_CUSTOMER_READ,
+        operations.GetUnifiedIntegrationAuthScopes.HRIS_GROUP_READ,
     ],
-    workspace_id='Van',
+    workspace_id='string',
 )
 
 res = s.auth.get_unified_integration_auth(req)
@@ -66,8 +66,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetUnifiedIntegrationLoginRequest(
-    integration_type='when',
-    workspace_id='Tricycle',
+    integration_type='string',
+    workspace_id='string',
 )
 
 res = s.auth.get_unified_integration_login(req)

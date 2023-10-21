@@ -35,15 +35,15 @@ req = operations.CreateMartechMemberRequest(
             ),
         ],
         list_ids=[
-            'input',
+            'string',
         ],
         raw=shared.PropertyMarketingMemberRaw(),
         tags=[
-            'SAS',
+            'string',
         ],
     ),
-    connection_id='bobcat',
-    list_id='global',
+    connection_id='string',
+    list_id='string',
 )
 
 res = s.member.create_martech_member(req)
@@ -82,12 +82,12 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetMartechMemberRequest(
-    connection_id='Japan',
+    connection_id='string',
     fields_=[
-        'orange',
+        'string',
     ],
     id='<ID>',
-    list_id='Gibraltar',
+    list_id='string',
 )
 
 res = s.member.get_martech_member(req)
@@ -127,11 +127,11 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListMartechMembersRequest(
-    connection_id='Frida',
+    connection_id='string',
     fields_=[
-        'structure',
+        'string',
     ],
-    list_id='Thallium',
+    list_id='string',
 )
 
 res = s.member.list_martech_members(req)
@@ -178,16 +178,16 @@ req = operations.PatchMartechMemberRequest(
             ),
         ],
         list_ids=[
-            'Handcrafted',
+            'string',
         ],
         raw=shared.PropertyMarketingMemberRaw(),
         tags=[
-            'Synchronised',
+            'string',
         ],
     ),
-    connection_id='electric',
+    connection_id='string',
     id='<ID>',
-    list_id='psst',
+    list_id='string',
 )
 
 res = s.member.patch_martech_member(req)
@@ -226,9 +226,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveMartechMemberRequest(
-    connection_id='integrated',
+    connection_id='string',
     id='<ID>',
-    list_id='Analyst',
+    list_id='string',
 )
 
 res = s.member.remove_martech_member(req)
@@ -275,16 +275,16 @@ req = operations.UpdateMartechMemberRequest(
             ),
         ],
         list_ids=[
-            'connect',
+            'string',
         ],
         raw=shared.PropertyMarketingMemberRaw(),
         tags=[
-            'Bike',
+            'string',
         ],
     ),
-    connection_id='Hyundai',
+    connection_id='string',
     id='<ID>',
-    list_id='North',
+    list_id='string',
 )
 
 res = s.member.update_martech_member(req)

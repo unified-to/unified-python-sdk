@@ -38,11 +38,11 @@ req = operations.CreateUcContactRequest(
         raw=shared.PropertyUcContactRaw(),
         telephones=[
             shared.UcTelephone(
-                telephone='challenge',
+                telephone='string',
             ),
         ],
     ),
-    connection_id='azure',
+    connection_id='string',
 )
 
 res = s.uc.create_uc_contact(req)
@@ -81,9 +81,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetUcContactRequest(
-    connection_id='for',
+    connection_id='string',
     fields_=[
-        'deposit',
+        'string',
     ],
     id='<ID>',
 )
@@ -125,9 +125,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListUcCallsRequest(
-    connection_id='Liberia',
+    connection_id='string',
     fields_=[
-        'Cargo',
+        'string',
     ],
 )
 
@@ -168,9 +168,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListUcContactsRequest(
-    connection_id='application',
+    connection_id='string',
     fields_=[
-        'Xenogender',
+        'string',
     ],
 )
 
@@ -220,11 +220,11 @@ req = operations.PatchUcContactRequest(
         raw=shared.PropertyUcContactRaw(),
         telephones=[
             shared.UcTelephone(
-                telephone='Borders',
+                telephone='string',
             ),
         ],
     ),
-    connection_id='Carolina',
+    connection_id='string',
     id='<ID>',
 )
 
@@ -264,7 +264,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveUcContactRequest(
-    connection_id='Plastic',
+    connection_id='string',
     id='<ID>',
 )
 
@@ -314,11 +314,11 @@ req = operations.UpdateUcContactRequest(
         raw=shared.PropertyUcContactRaw(),
         telephones=[
             shared.UcTelephone(
-                telephone='Convertible',
+                telephone='string',
             ),
         ],
     ),
-    connection_id='Wooden',
+    connection_id='string',
     id='<ID>',
 )
 

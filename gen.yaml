@@ -2,8 +2,8 @@ configVersion: 1.0.0
 management:
   docChecksum: 4126d967cc24454108f210573073a398
   docVersion: "1.0"
-  speakeasyVersion: 1.102.1
-  generationVersion: 2.166.0
+  speakeasyVersion: 1.104.0
+  generationVersion: 2.169.0
 generation:
   comments:
     disableComments: false
@@ -15,11 +15,11 @@ generation:
   tagNamespacingDisabled: false
 features:
   python:
-    core: 3.2.3
+    core: 3.3.0
     globalSecurity: 2.82.0
     globalServerURLs: 2.82.0
 python:
-  version: 0.8.0
+  version: 0.9.0
   author: Unified API Inc
   clientServerStatusCodesAsErrors: true
   description: Python Client SDK for Unified.to

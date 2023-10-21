@@ -31,20 +31,20 @@ req = operations.CreateCrmEventRequest(
     crm_event=shared.CrmEvent(
         call=shared.PropertyCrmEventCall(),
         company_ids=[
-            'repeatedly',
+            'string',
         ],
         contact_ids=[
-            'Sedan',
+            'string',
         ],
         deal_ids=[
-            'altruistic',
+            'string',
         ],
         email=shared.PropertyCrmEventEmail(
             cc=[
-                'Hills',
+                'string',
             ],
             to=[
-                'Bronze',
+                'string',
             ],
         ),
         meeting=shared.PropertyCrmEventMeeting(),
@@ -52,7 +52,7 @@ req = operations.CreateCrmEventRequest(
         raw=shared.PropertyCrmEventRaw(),
         task=shared.PropertyCrmEventTask(),
     ),
-    connection_id='Northwest',
+    connection_id='string',
 )
 
 res = s.event.create_crm_event(req)
@@ -91,9 +91,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetCrmEventRequest(
-    connection_id='Technetium',
+    connection_id='string',
     fields_=[
-        'Ergonomic',
+        'string',
     ],
     id='<ID>',
 )
@@ -135,9 +135,9 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListCrmEventsRequest(
-    connection_id='withdrawal',
+    connection_id='string',
     fields_=[
-        'empower',
+        'string',
     ],
 )
 
@@ -181,20 +181,20 @@ req = operations.PatchCrmEventRequest(
     crm_event=shared.CrmEvent(
         call=shared.PropertyCrmEventCall(),
         company_ids=[
-            'XML',
+            'string',
         ],
         contact_ids=[
-            'Accountability',
+            'string',
         ],
         deal_ids=[
-            'copying',
+            'string',
         ],
         email=shared.PropertyCrmEventEmail(
             cc=[
-                'after',
+                'string',
             ],
             to=[
-                'Research',
+                'string',
             ],
         ),
         meeting=shared.PropertyCrmEventMeeting(),
@@ -202,7 +202,7 @@ req = operations.PatchCrmEventRequest(
         raw=shared.PropertyCrmEventRaw(),
         task=shared.PropertyCrmEventTask(),
     ),
-    connection_id='Metal',
+    connection_id='string',
     id='<ID>',
 )
 
@@ -242,7 +242,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveCrmEventRequest(
-    connection_id='enterprise',
+    connection_id='string',
     id='<ID>',
 )
 
@@ -286,20 +286,20 @@ req = operations.UpdateCrmEventRequest(
     crm_event=shared.CrmEvent(
         call=shared.PropertyCrmEventCall(),
         company_ids=[
-            'Account',
+            'string',
         ],
         contact_ids=[
-            'DRAM',
+            'string',
         ],
         deal_ids=[
-            'input',
+            'string',
         ],
         email=shared.PropertyCrmEventEmail(
             cc=[
-                'Bicycle',
+                'string',
             ],
             to=[
-                'Wagon',
+                'string',
             ],
         ),
         meeting=shared.PropertyCrmEventMeeting(),
@@ -307,7 +307,7 @@ req = operations.UpdateCrmEventRequest(
         raw=shared.PropertyCrmEventRaw(),
         task=shared.PropertyCrmEventTask(),
     ),
-    connection_id='Borders',
+    connection_id='string',
     id='<ID>',
 )
 
