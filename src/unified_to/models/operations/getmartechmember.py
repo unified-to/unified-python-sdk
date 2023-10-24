@@ -13,8 +13,6 @@ class GetMartechMemberRequest:
     r"""ID of the connection"""
     id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     r"""ID of the Member"""
-    list_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'list_id', 'style': 'simple', 'explode': False }})
-    r"""ID of the list"""
     fields_: Optional[List[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
     r"""Comma-delimited fields to return"""
     

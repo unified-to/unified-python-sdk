@@ -319,26 +319,26 @@ if res.api_call is not None:
 ### [martech](docs/sdks/martech/README.md)
 
 * [create_martech_list](docs/sdks/martech/README.md#create_martech_list) - Create a list
-* [create_martech_member](docs/sdks/martech/README.md#create_martech_member) - Create a member in a list
+* [create_martech_member](docs/sdks/martech/README.md#create_martech_member) - Create a member
 * [get_martech_list](docs/sdks/martech/README.md#get_martech_list) - Retrieve a list
-* [get_martech_member](docs/sdks/martech/README.md#get_martech_member) - Retrieve a member from a list
+* [get_martech_member](docs/sdks/martech/README.md#get_martech_member) - Retrieve a member
 * [list_martech_lists](docs/sdks/martech/README.md#list_martech_lists) - List all lists
-* [list_martech_members](docs/sdks/martech/README.md#list_martech_members) - List all members in a list
+* [list_martech_members](docs/sdks/martech/README.md#list_martech_members) - List all members
 * [patch_martech_list](docs/sdks/martech/README.md#patch_martech_list) - Update a list
-* [patch_martech_member](docs/sdks/martech/README.md#patch_martech_member) - Update a member in a list
+* [patch_martech_member](docs/sdks/martech/README.md#patch_martech_member) - Update a member
 * [remove_martech_list](docs/sdks/martech/README.md#remove_martech_list) - Remove a list
-* [remove_martech_member](docs/sdks/martech/README.md#remove_martech_member) - Remove member from a list
+* [remove_martech_member](docs/sdks/martech/README.md#remove_martech_member) - Remove member
 * [update_martech_list](docs/sdks/martech/README.md#update_martech_list) - Update a list
-* [update_martech_member](docs/sdks/martech/README.md#update_martech_member) - Update a member in a list
+* [update_martech_member](docs/sdks/martech/README.md#update_martech_member) - Update a member
 
 ### [member](docs/sdks/member/README.md)
 
-* [create_martech_member](docs/sdks/member/README.md#create_martech_member) - Create a member in a list
-* [get_martech_member](docs/sdks/member/README.md#get_martech_member) - Retrieve a member from a list
-* [list_martech_members](docs/sdks/member/README.md#list_martech_members) - List all members in a list
-* [patch_martech_member](docs/sdks/member/README.md#patch_martech_member) - Update a member in a list
-* [remove_martech_member](docs/sdks/member/README.md#remove_martech_member) - Remove member from a list
-* [update_martech_member](docs/sdks/member/README.md#update_martech_member) - Update a member in a list
+* [create_martech_member](docs/sdks/member/README.md#create_martech_member) - Create a member
+* [get_martech_member](docs/sdks/member/README.md#get_martech_member) - Retrieve a member
+* [list_martech_members](docs/sdks/member/README.md#list_martech_members) - List all members
+* [patch_martech_member](docs/sdks/member/README.md#patch_martech_member) - Update a member
+* [remove_martech_member](docs/sdks/member/README.md#remove_martech_member) - Remove member
+* [update_martech_member](docs/sdks/member/README.md#update_martech_member) - Update a member
 
 ### [note](docs/sdks/note/README.md)
 

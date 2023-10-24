@@ -44,10 +44,10 @@ class Martech:
 
     
     def create_martech_member(self, request: operations.CreateMartechMemberRequest) -> operations.CreateMartechMemberResponse:
-        r"""Create a member in a list"""
+        r"""Create a member"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.CreateMartechMemberRequest, base_url, '/martech/{connection_id}/{list_id}/member', request)
+        url = utils.generate_url(operations.CreateMartechMemberRequest, base_url, '/martech/{connection_id}/member', request)
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "marketing_member", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
@@ -104,10 +104,10 @@ class Martech:
 
     
     def get_martech_member(self, request: operations.GetMartechMemberRequest) -> operations.GetMartechMemberResponse:
-        r"""Retrieve a member from a list"""
+        r"""Retrieve a member"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.GetMartechMemberRequest, base_url, '/martech/{connection_id}/{list_id}/member/{id}', request)
+        url = utils.generate_url(operations.GetMartechMemberRequest, base_url, '/martech/{connection_id}/member/{id}', request)
         headers = {}
         query_params = utils.get_query_params(operations.GetMartechMemberRequest, request)
         headers['Accept'] = 'application/json'
@@ -162,10 +162,10 @@ class Martech:
 
     
     def list_martech_members(self, request: operations.ListMartechMembersRequest) -> operations.ListMartechMembersResponse:
-        r"""List all members in a list"""
+        r"""List all members"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.ListMartechMembersRequest, base_url, '/martech/{connection_id}/{list_id}/member', request)
+        url = utils.generate_url(operations.ListMartechMembersRequest, base_url, '/martech/{connection_id}/member', request)
         headers = {}
         query_params = utils.get_query_params(operations.ListMartechMembersRequest, request)
         headers['Accept'] = 'application/json'
@@ -222,10 +222,10 @@ class Martech:
 
     
     def patch_martech_member(self, request: operations.PatchMartechMemberRequest) -> operations.PatchMartechMemberResponse:
-        r"""Update a member in a list"""
+        r"""Update a member"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.PatchMartechMemberRequest, base_url, '/martech/{connection_id}/{list_id}/member/{id}', request)
+        url = utils.generate_url(operations.PatchMartechMemberRequest, base_url, '/martech/{connection_id}/member/{id}', request)
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "marketing_member", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
@@ -280,10 +280,10 @@ class Martech:
 
     
     def remove_martech_member(self, request: operations.RemoveMartechMemberRequest) -> operations.RemoveMartechMemberResponse:
-        r"""Remove member from a list"""
+        r"""Remove member"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.RemoveMartechMemberRequest, base_url, '/martech/{connection_id}/{list_id}/member/{id}', request)
+        url = utils.generate_url(operations.RemoveMartechMemberRequest, base_url, '/martech/{connection_id}/member/{id}', request)
         headers = {}
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
@@ -338,10 +338,10 @@ class Martech:
 
     
     def update_martech_member(self, request: operations.UpdateMartechMemberRequest) -> operations.UpdateMartechMemberResponse:
-        r"""Update a member in a list"""
+        r"""Update a member"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.UpdateMartechMemberRequest, base_url, '/martech/{connection_id}/{list_id}/member/{id}', request)
+        url = utils.generate_url(operations.UpdateMartechMemberRequest, base_url, '/martech/{connection_id}/member/{id}', request)
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "marketing_member", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):

@@ -3,16 +3,16 @@
 
 ### Available Operations
 
-* [create_martech_member](#create_martech_member) - Create a member in a list
-* [get_martech_member](#get_martech_member) - Retrieve a member from a list
-* [list_martech_members](#list_martech_members) - List all members in a list
-* [patch_martech_member](#patch_martech_member) - Update a member in a list
-* [remove_martech_member](#remove_martech_member) - Remove member from a list
-* [update_martech_member](#update_martech_member) - Update a member in a list
+* [create_martech_member](#create_martech_member) - Create a member
+* [get_martech_member](#get_martech_member) - Retrieve a member
+* [list_martech_members](#list_martech_members) - List all members
+* [patch_martech_member](#patch_martech_member) - Update a member
+* [remove_martech_member](#remove_martech_member) - Remove member
+* [update_martech_member](#update_martech_member) - Update a member
 
 ## create_martech_member
 
-Create a member in a list
+Create a member
 
 ### Example Usage
 
@@ -43,7 +43,6 @@ req = operations.CreateMartechMemberRequest(
         ],
     ),
     connection_id='string',
-    list_id='string',
 )
 
 res = s.member.create_martech_member(req)
@@ -67,7 +66,7 @@ if res.marketing_member is not None:
 
 ## get_martech_member
 
-Retrieve a member from a list
+Retrieve a member
 
 ### Example Usage
 
@@ -87,7 +86,6 @@ req = operations.GetMartechMemberRequest(
         'string',
     ],
     id='<ID>',
-    list_id='string',
 )
 
 res = s.member.get_martech_member(req)
@@ -111,7 +109,7 @@ if res.marketing_member is not None:
 
 ## list_martech_members
 
-List all members in a list
+List all members
 
 ### Example Usage
 
@@ -131,7 +129,6 @@ req = operations.ListMartechMembersRequest(
     fields_=[
         'string',
     ],
-    list_id='string',
 )
 
 res = s.member.list_martech_members(req)
@@ -155,7 +152,7 @@ if res.marketing_members is not None:
 
 ## patch_martech_member
 
-Update a member in a list
+Update a member
 
 ### Example Usage
 
@@ -187,7 +184,6 @@ req = operations.PatchMartechMemberRequest(
     ),
     connection_id='string',
     id='<ID>',
-    list_id='string',
 )
 
 res = s.member.patch_martech_member(req)
@@ -211,7 +207,7 @@ if res.marketing_member is not None:
 
 ## remove_martech_member
 
-Remove member from a list
+Remove member
 
 ### Example Usage
 
@@ -228,7 +224,6 @@ s = unified_to.UnifiedTo(
 req = operations.RemoveMartechMemberRequest(
     connection_id='string',
     id='<ID>',
-    list_id='string',
 )
 
 res = s.member.remove_martech_member(req)
@@ -252,7 +247,7 @@ if res.status_code == 200:
 
 ## update_martech_member
 
-Update a member in a list
+Update a member
 
 ### Example Usage
 
@@ -284,7 +279,6 @@ req = operations.UpdateMartechMemberRequest(
     ),
     connection_id='string',
     id='<ID>',
-    list_id='string',
 )
 
 res = s.member.update_martech_member(req)

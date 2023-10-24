@@ -47,7 +47,7 @@ class Ticketing:
         r"""Create a note"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.CreateTicketingNoteRequest, base_url, '/ticketing/{connection_id}/{ticket_id}/note', request)
+        url = utils.generate_url(operations.CreateTicketingNoteRequest, base_url, '/ticketing/{connection_id}/note', request)
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "ticketing_note", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
@@ -138,7 +138,7 @@ class Ticketing:
         r"""Retrieve a note"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.GetTicketingNoteRequest, base_url, '/ticketing/{connection_id}/{ticket_id}/note/{id}', request)
+        url = utils.generate_url(operations.GetTicketingNoteRequest, base_url, '/ticketing/{connection_id}/note/{id}', request)
         headers = {}
         query_params = utils.get_query_params(operations.GetTicketingNoteRequest, request)
         headers['Accept'] = 'application/json'
@@ -225,7 +225,7 @@ class Ticketing:
         r"""List all notes"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.ListTicketingNotesRequest, base_url, '/ticketing/{connection_id}/{ticket_id}/note', request)
+        url = utils.generate_url(operations.ListTicketingNotesRequest, base_url, '/ticketing/{connection_id}/note', request)
         headers = {}
         query_params = utils.get_query_params(operations.ListTicketingNotesRequest, request)
         headers['Accept'] = 'application/json'
@@ -314,7 +314,7 @@ class Ticketing:
         r"""Update a note"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.PatchTicketingNoteRequest, base_url, '/ticketing/{connection_id}/{ticket_id}/note/{id}', request)
+        url = utils.generate_url(operations.PatchTicketingNoteRequest, base_url, '/ticketing/{connection_id}/note/{id}', request)
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "ticketing_note", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
@@ -403,7 +403,7 @@ class Ticketing:
         r"""Remove a note"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.RemoveTicketingNoteRequest, base_url, '/ticketing/{connection_id}/{ticket_id}/note/{id}', request)
+        url = utils.generate_url(operations.RemoveTicketingNoteRequest, base_url, '/ticketing/{connection_id}/note/{id}', request)
         headers = {}
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
@@ -488,7 +488,7 @@ class Ticketing:
         r"""Update a note"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.UpdateTicketingNoteRequest, base_url, '/ticketing/{connection_id}/{ticket_id}/note/{id}', request)
+        url = utils.generate_url(operations.UpdateTicketingNoteRequest, base_url, '/ticketing/{connection_id}/note/{id}', request)
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "ticketing_note", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):

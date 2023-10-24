@@ -32,7 +32,6 @@ req = operations.CreateTicketingNoteRequest(
         raw=shared.PropertyTicketingNoteRaw(),
     ),
     connection_id='string',
-    ticket_id='string',
 )
 
 res = s.note.create_ticketing_note(req)
@@ -76,7 +75,6 @@ req = operations.GetTicketingNoteRequest(
         'string',
     ],
     id='<ID>',
-    ticket_id='string',
 )
 
 res = s.note.get_ticketing_note(req)
@@ -120,7 +118,6 @@ req = operations.ListTicketingNotesRequest(
     fields_=[
         'string',
     ],
-    ticket_id='string',
 )
 
 res = s.note.list_ticketing_notes(req)
@@ -165,7 +162,6 @@ req = operations.PatchTicketingNoteRequest(
     ),
     connection_id='string',
     id='<ID>',
-    ticket_id='string',
 )
 
 res = s.note.patch_ticketing_note(req)
@@ -206,7 +202,6 @@ s = unified_to.UnifiedTo(
 req = operations.RemoveTicketingNoteRequest(
     connection_id='string',
     id='<ID>',
-    ticket_id='string',
 )
 
 res = s.note.remove_ticketing_note(req)
@@ -251,7 +246,6 @@ req = operations.UpdateTicketingNoteRequest(
     ),
     connection_id='string',
     id='<ID>',
-    ticket_id='string',
 )
 
 res = s.note.update_ticketing_note(req)
