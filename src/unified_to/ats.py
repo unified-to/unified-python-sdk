@@ -74,6 +74,37 @@ class Ats:
         return res
 
     
+    def create_ats_document(self, request: operations.CreateAtsDocumentRequest) -> operations.CreateAtsDocumentResponse:
+        r"""Create a document"""
+        base_url = utils.template_url(*self.sdk_configuration.get_server_details())
+        
+        url = utils.generate_url(operations.CreateAtsDocumentRequest, base_url, '/ats/{connection_id}/document', request)
+        headers = {}
+        req_content_type, data, form = utils.serialize_request_body(request, "ats_document", False, True, 'json')
+        if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
+            headers['content-type'] = req_content_type
+        headers['Accept'] = 'application/json'
+        headers['user-agent'] = self.sdk_configuration.user_agent
+        
+        client = self.sdk_configuration.security_client
+        
+        http_res = client.request('POST', url, data=data, files=form, headers=headers)
+        content_type = http_res.headers.get('Content-Type')
+
+        res = operations.CreateAtsDocumentResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        
+        if http_res.status_code == 200:
+            if utils.match_content_type(content_type, 'application/json'):
+                out = utils.unmarshal_json(http_res.text, Optional[shared.AtsDocument])
+                res.ats_document = out
+            else:
+                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
+        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
+            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
+
+        return res
+
+    
     def create_ats_interview(self, request: operations.CreateAtsInterviewRequest) -> operations.CreateAtsInterviewResponse:
         r"""Create a interview"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -225,6 +256,35 @@ class Ats:
         return res
 
     
+    def get_ats_document(self, request: operations.GetAtsDocumentRequest) -> operations.GetAtsDocumentResponse:
+        r"""Retrieve a document"""
+        base_url = utils.template_url(*self.sdk_configuration.get_server_details())
+        
+        url = utils.generate_url(operations.GetAtsDocumentRequest, base_url, '/ats/{connection_id}/document/{id}', request)
+        headers = {}
+        query_params = utils.get_query_params(operations.GetAtsDocumentRequest, request)
+        headers['Accept'] = 'application/json'
+        headers['user-agent'] = self.sdk_configuration.user_agent
+        
+        client = self.sdk_configuration.security_client
+        
+        http_res = client.request('GET', url, params=query_params, headers=headers)
+        content_type = http_res.headers.get('Content-Type')
+
+        res = operations.GetAtsDocumentResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        
+        if http_res.status_code == 200:
+            if utils.match_content_type(content_type, 'application/json'):
+                out = utils.unmarshal_json(http_res.text, Optional[shared.AtsDocument])
+                res.ats_document = out
+            else:
+                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
+        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
+            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
+
+        return res
+
+    
     def get_ats_interview(self, request: operations.GetAtsInterviewRequest) -> operations.GetAtsInterviewResponse:
         r"""Retrieve a interview"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -362,6 +422,35 @@ class Ats:
             if utils.match_content_type(content_type, 'application/json'):
                 out = utils.unmarshal_json(http_res.text, Optional[List[shared.AtsCandidate]])
                 res.ats_candidates = out
+            else:
+                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
+        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
+            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
+
+        return res
+
+    
+    def list_ats_documents(self, request: operations.ListAtsDocumentsRequest) -> operations.ListAtsDocumentsResponse:
+        r"""List all documents"""
+        base_url = utils.template_url(*self.sdk_configuration.get_server_details())
+        
+        url = utils.generate_url(operations.ListAtsDocumentsRequest, base_url, '/ats/{connection_id}/document', request)
+        headers = {}
+        query_params = utils.get_query_params(operations.ListAtsDocumentsRequest, request)
+        headers['Accept'] = 'application/json'
+        headers['user-agent'] = self.sdk_configuration.user_agent
+        
+        client = self.sdk_configuration.security_client
+        
+        http_res = client.request('GET', url, params=query_params, headers=headers)
+        content_type = http_res.headers.get('Content-Type')
+
+        res = operations.ListAtsDocumentsResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        
+        if http_res.status_code == 200:
+            if utils.match_content_type(content_type, 'application/json'):
+                out = utils.unmarshal_json(http_res.text, Optional[List[shared.AtsDocument]])
+                res.ats_documents = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
         elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
@@ -519,6 +608,37 @@ class Ats:
         return res
 
     
+    def patch_ats_document(self, request: operations.PatchAtsDocumentRequest) -> operations.PatchAtsDocumentResponse:
+        r"""Update a document"""
+        base_url = utils.template_url(*self.sdk_configuration.get_server_details())
+        
+        url = utils.generate_url(operations.PatchAtsDocumentRequest, base_url, '/ats/{connection_id}/document/{id}', request)
+        headers = {}
+        req_content_type, data, form = utils.serialize_request_body(request, "ats_document", False, True, 'json')
+        if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
+            headers['content-type'] = req_content_type
+        headers['Accept'] = 'application/json'
+        headers['user-agent'] = self.sdk_configuration.user_agent
+        
+        client = self.sdk_configuration.security_client
+        
+        http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
+        content_type = http_res.headers.get('Content-Type')
+
+        res = operations.PatchAtsDocumentResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        
+        if http_res.status_code == 200:
+            if utils.match_content_type(content_type, 'application/json'):
+                out = utils.unmarshal_json(http_res.text, Optional[shared.AtsDocument])
+                res.ats_document = out
+            else:
+                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
+        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
+            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
+
+        return res
+
+    
     def patch_ats_interview(self, request: operations.PatchAtsInterviewRequest) -> operations.PatchAtsInterviewResponse:
         r"""Update a interview"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -666,6 +786,33 @@ class Ats:
         return res
 
     
+    def remove_ats_document(self, request: operations.RemoveAtsDocumentRequest) -> operations.RemoveAtsDocumentResponse:
+        r"""Remove a document"""
+        base_url = utils.template_url(*self.sdk_configuration.get_server_details())
+        
+        url = utils.generate_url(operations.RemoveAtsDocumentRequest, base_url, '/ats/{connection_id}/document/{id}', request)
+        headers = {}
+        headers['Accept'] = 'application/json'
+        headers['user-agent'] = self.sdk_configuration.user_agent
+        
+        client = self.sdk_configuration.security_client
+        
+        http_res = client.request('DELETE', url, headers=headers)
+        content_type = http_res.headers.get('Content-Type')
+
+        res = operations.RemoveAtsDocumentResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        
+        if http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
+            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
+        else:
+            if utils.match_content_type(content_type, 'application/json'):
+                res.remove_ats_document_default_application_json_string = http_res.content
+            else:
+                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
+
+        return res
+
+    
     def remove_ats_interview(self, request: operations.RemoveAtsInterviewRequest) -> operations.RemoveAtsInterviewResponse:
         r"""Remove a interview"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -801,6 +948,37 @@ class Ats:
             if utils.match_content_type(content_type, 'application/json'):
                 out = utils.unmarshal_json(http_res.text, Optional[shared.AtsCandidate])
                 res.ats_candidate = out
+            else:
+                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
+        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
+            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
+
+        return res
+
+    
+    def update_ats_document(self, request: operations.UpdateAtsDocumentRequest) -> operations.UpdateAtsDocumentResponse:
+        r"""Update a document"""
+        base_url = utils.template_url(*self.sdk_configuration.get_server_details())
+        
+        url = utils.generate_url(operations.UpdateAtsDocumentRequest, base_url, '/ats/{connection_id}/document/{id}', request)
+        headers = {}
+        req_content_type, data, form = utils.serialize_request_body(request, "ats_document", False, True, 'json')
+        if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
+            headers['content-type'] = req_content_type
+        headers['Accept'] = 'application/json'
+        headers['user-agent'] = self.sdk_configuration.user_agent
+        
+        client = self.sdk_configuration.security_client
+        
+        http_res = client.request('PUT', url, data=data, files=form, headers=headers)
+        content_type = http_res.headers.get('Content-Type')
+
+        res = operations.UpdateAtsDocumentResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        
+        if http_res.status_code == 200:
+            if utils.match_content_type(content_type, 'application/json'):
+                out = utils.unmarshal_json(http_res.text, Optional[shared.AtsDocument])
+                res.ats_document = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
         elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:

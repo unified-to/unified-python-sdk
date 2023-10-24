@@ -32,6 +32,7 @@ from .note import Note
 from .passthrough import Passthrough
 from .person import Person
 from .pipeline import Pipeline
+from .scorecard import Scorecard
 from .sdkconfiguration import SDKConfiguration
 from .ticket import Ticket
 from .ticketing import Ticketing
@@ -75,6 +76,7 @@ class UnifiedTo:
     passthrough: Passthrough
     person: Person
     pipeline: Pipeline
+    scorecard: Scorecard
     ticket: Ticket
     ticketing: Ticketing
     uc: Uc
@@ -153,6 +155,7 @@ class UnifiedTo:
         self.passthrough = Passthrough(self.sdk_configuration)
         self.person = Person(self.sdk_configuration)
         self.pipeline = Pipeline(self.sdk_configuration)
+        self.scorecard = Scorecard(self.sdk_configuration)
         self.ticket = Ticket(self.sdk_configuration)
         self.ticketing = Ticketing(self.sdk_configuration)
         self.uc = Uc(self.sdk_configuration)

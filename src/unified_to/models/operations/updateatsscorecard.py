@@ -12,7 +12,7 @@ class UpdateAtsScorecardRequest:
     connection_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': False }})
     r"""ID of the connection"""
     id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
-    r"""ID of the Document"""
+    r"""ID of the Scorecard"""
     ats_scorecard: Optional[shared_atsscorecard.AtsScorecard] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 

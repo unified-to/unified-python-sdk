@@ -7,24 +7,24 @@ from typing import Optional
 
 
 @dataclasses.dataclass
-class RemoveAtsScorecardRequest:
+class RemoveAtsDocumentRequest:
     connection_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': False }})
     r"""ID of the connection"""
     id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
-    r"""ID of the Scorecard"""
+    r"""ID of the Document"""
     
 
 
 
 @dataclasses.dataclass
-class RemoveAtsScorecardResponse:
+class RemoveAtsDocumentResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""
-    remove_ats_scorecard_default_application_json_string: Optional[str] = dataclasses.field(default=None)
+    remove_ats_document_default_application_json_string: Optional[str] = dataclasses.field(default=None)
     r"""Successful"""
     
 
