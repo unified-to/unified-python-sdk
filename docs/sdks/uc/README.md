@@ -82,7 +82,7 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetUcContactRequest(
     connection_id='string',
-    fields_=[
+    fields=[
         'string',
     ],
     id='<ID>',
@@ -126,7 +126,7 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListUcCallsRequest(
     connection_id='string',
-    fields_=[
+    fields=[
         'string',
     ],
 )
@@ -169,7 +169,7 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListUcContactsRequest(
     connection_id='string',
-    fields_=[
+    fields=[
         'string',
     ],
 )

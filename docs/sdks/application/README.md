@@ -71,7 +71,7 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetAtsApplicationRequest(
     connection_id='string',
-    fields_=[
+    fields=[
         'string',
     ],
     id='<ID>',
@@ -115,7 +115,7 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListAtsApplicationsRequest(
     connection_id='string',
-    fields_=[
+    fields=[
         'string',
     ],
 )

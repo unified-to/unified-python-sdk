@@ -24,7 +24,7 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListUcCallsRequest(
     connection_id='string',
-    fields_=[
+    fields=[
         'string',
     ],
 )

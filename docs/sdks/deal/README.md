@@ -74,7 +74,7 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetCrmDealRequest(
     connection_id='string',
-    fields_=[
+    fields=[
         'string',
     ],
     id='<ID>',
@@ -118,7 +118,7 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListCrmDealsRequest(
     connection_id='string',
-    fields_=[
+    fields=[
         'string',
     ],
 )

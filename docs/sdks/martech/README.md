@@ -131,7 +131,7 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetMartechListRequest(
     connection_id='string',
-    fields_=[
+    fields=[
         'string',
     ],
     id='<ID>',
@@ -174,7 +174,7 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetMartechMemberRequest(
     connection_id='string',
-    fields_=[
+    fields=[
         'string',
     ],
     id='<ID>',
@@ -218,7 +218,7 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListMartechListsRequest(
     connection_id='string',
-    fields_=[
+    fields=[
         'string',
     ],
 )
@@ -261,7 +261,7 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListMartechMembersRequest(
     connection_id='string',
-    fields_=[
+    fields=[
         'string',
     ],
 )

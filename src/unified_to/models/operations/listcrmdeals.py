@@ -16,7 +16,7 @@ class ListCrmDealsRequest:
     r"""The company ID to filter results"""
     contact_id: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'contact_id', 'style': 'form', 'explode': True }})
     r"""The contact ID to filter results"""
-    fields_: Optional[List[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
+    fields: Optional[List[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
     r"""Comma-delimited fields to return"""
     limit: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
     offset: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})

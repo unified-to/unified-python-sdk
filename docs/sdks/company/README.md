@@ -90,7 +90,7 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetCrmCompanyRequest(
     connection_id='string',
-    fields_=[
+    fields=[
         'string',
     ],
     id='<ID>',
@@ -134,7 +134,7 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListCrmCompaniesRequest(
     connection_id='string',
-    fields_=[
+    fields=[
         'string',
     ],
 )

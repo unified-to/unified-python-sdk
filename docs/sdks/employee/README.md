@@ -82,7 +82,7 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetHrisEmployeeRequest(
     connection_id='string',
-    fields_=[
+    fields=[
         'string',
     ],
     id='<ID>',
@@ -126,7 +126,7 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListHrisEmployeesRequest(
     connection_id='string',
-    fields_=[
+    fields=[
         'string',
     ],
 )

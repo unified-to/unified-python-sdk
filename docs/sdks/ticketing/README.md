@@ -185,7 +185,7 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetTicketingCustomerRequest(
     connection_id='string',
-    fields_=[
+    fields=[
         'string',
     ],
     id='<ID>',
@@ -228,7 +228,7 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetTicketingNoteRequest(
     connection_id='string',
-    fields_=[
+    fields=[
         'string',
     ],
     id='<ID>',
@@ -271,7 +271,7 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetTicketingTicketRequest(
     connection_id='string',
-    fields_=[
+    fields=[
         'string',
     ],
     id='<ID>',
@@ -315,7 +315,7 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListTicketingCustomersRequest(
     connection_id='string',
-    fields_=[
+    fields=[
         'string',
     ],
 )
@@ -358,7 +358,7 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListTicketingNotesRequest(
     connection_id='string',
-    fields_=[
+    fields=[
         'string',
     ],
 )
@@ -401,7 +401,7 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListTicketingTicketsRequest(
     connection_id='string',
-    fields_=[
+    fields=[
         'string',
     ],
 )

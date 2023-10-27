@@ -80,7 +80,7 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetCrmLeadRequest(
     connection_id='string',
-    fields_=[
+    fields=[
         'string',
     ],
     id='<ID>',
@@ -124,7 +124,7 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListCrmLeadsRequest(
     connection_id='string',
-    fields_=[
+    fields=[
         'string',
     ],
 )

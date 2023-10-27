@@ -71,7 +71,7 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetCrmFileRequest(
     connection_id='string',
-    fields_=[
+    fields=[
         'string',
     ],
     id='<ID>',
@@ -115,7 +115,7 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListCrmFilesRequest(
     connection_id='string',
-    fields_=[
+    fields=[
         'string',
     ],
 )

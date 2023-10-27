@@ -85,7 +85,7 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetAtsCandidateRequest(
     connection_id='string',
-    fields_=[
+    fields=[
         'string',
     ],
     id='<ID>',
@@ -129,7 +129,7 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListAtsCandidatesRequest(
     connection_id='string',
-    fields_=[
+    fields=[
         'string',
     ],
 )

@@ -71,7 +71,7 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetCrmPipelineRequest(
     connection_id='string',
-    fields_=[
+    fields=[
         'string',
     ],
     id='<ID>',
@@ -115,7 +115,7 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListCrmPipelinesRequest(
     connection_id='string',
-    fields_=[
+    fields=[
         'string',
     ],
 )

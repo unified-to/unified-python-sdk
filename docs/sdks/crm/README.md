@@ -431,7 +431,7 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetCrmCompanyRequest(
     connection_id='string',
-    fields_=[
+    fields=[
         'string',
     ],
     id='<ID>',
@@ -474,7 +474,7 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetCrmContactRequest(
     connection_id='string',
-    fields_=[
+    fields=[
         'string',
     ],
     id='<ID>',
@@ -517,7 +517,7 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetCrmDealRequest(
     connection_id='string',
-    fields_=[
+    fields=[
         'string',
     ],
     id='<ID>',
@@ -560,7 +560,7 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetCrmEventRequest(
     connection_id='string',
-    fields_=[
+    fields=[
         'string',
     ],
     id='<ID>',
@@ -603,7 +603,7 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetCrmFileRequest(
     connection_id='string',
-    fields_=[
+    fields=[
         'string',
     ],
     id='<ID>',
@@ -646,7 +646,7 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetCrmLeadRequest(
     connection_id='string',
-    fields_=[
+    fields=[
         'string',
     ],
     id='<ID>',
@@ -689,7 +689,7 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetCrmPipelineRequest(
     connection_id='string',
-    fields_=[
+    fields=[
         'string',
     ],
     id='<ID>',
@@ -733,7 +733,7 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListCrmCompaniesRequest(
     connection_id='string',
-    fields_=[
+    fields=[
         'string',
     ],
 )
@@ -776,7 +776,7 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListCrmContactsRequest(
     connection_id='string',
-    fields_=[
+    fields=[
         'string',
     ],
 )
@@ -819,7 +819,7 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListCrmDealsRequest(
     connection_id='string',
-    fields_=[
+    fields=[
         'string',
     ],
 )
@@ -862,7 +862,7 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListCrmEventsRequest(
     connection_id='string',
-    fields_=[
+    fields=[
         'string',
     ],
 )
@@ -905,7 +905,7 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListCrmFilesRequest(
     connection_id='string',
-    fields_=[
+    fields=[
         'string',
     ],
 )
@@ -948,7 +948,7 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListCrmLeadsRequest(
     connection_id='string',
-    fields_=[
+    fields=[
         'string',
     ],
 )
@@ -991,7 +991,7 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListCrmPipelinesRequest(
     connection_id='string',
-    fields_=[
+    fields=[
         'string',
     ],
 )

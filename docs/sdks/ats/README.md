@@ -353,7 +353,7 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetAtsApplicationRequest(
     connection_id='string',
-    fields_=[
+    fields=[
         'string',
     ],
     id='<ID>',
@@ -396,7 +396,7 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetAtsCandidateRequest(
     connection_id='string',
-    fields_=[
+    fields=[
         'string',
     ],
     id='<ID>',
@@ -439,7 +439,7 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetAtsDocumentRequest(
     connection_id='string',
-    fields_=[
+    fields=[
         'string',
     ],
     id='<ID>',
@@ -482,7 +482,7 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetAtsInterviewRequest(
     connection_id='string',
-    fields_=[
+    fields=[
         'string',
     ],
     id='<ID>',
@@ -525,7 +525,7 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetAtsJobRequest(
     connection_id='string',
-    fields_=[
+    fields=[
         'string',
     ],
     id='<ID>',
@@ -568,7 +568,7 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetAtsScorecardRequest(
     connection_id='string',
-    fields_=[
+    fields=[
         'string',
     ],
     id='<ID>',
@@ -612,7 +612,7 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListAtsApplicationsRequest(
     connection_id='string',
-    fields_=[
+    fields=[
         'string',
     ],
 )
@@ -655,7 +655,7 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListAtsCandidatesRequest(
     connection_id='string',
-    fields_=[
+    fields=[
         'string',
     ],
 )
@@ -698,7 +698,7 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListAtsDocumentsRequest(
     connection_id='string',
-    fields_=[
+    fields=[
         'string',
     ],
 )
@@ -741,7 +741,7 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListAtsInterviewsRequest(
     connection_id='string',
-    fields_=[
+    fields=[
         'string',
     ],
 )
@@ -784,7 +784,7 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListAtsJobsRequest(
     connection_id='string',
-    fields_=[
+    fields=[
         'string',
     ],
 )
@@ -827,7 +827,7 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListAtsScorecardsRequest(
     connection_id='string',
-    fields_=[
+    fields=[
         'string',
     ],
 )

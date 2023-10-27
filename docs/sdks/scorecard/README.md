@@ -71,7 +71,7 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetAtsScorecardRequest(
     connection_id='string',
-    fields_=[
+    fields=[
         'string',
     ],
     id='<ID>',
@@ -115,7 +115,7 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListAtsScorecardsRequest(
     connection_id='string',
-    fields_=[
+    fields=[
         'string',
     ],
 )
