@@ -476,8 +476,6 @@ Here's an example of one such pagination call:
 # Error Handling
 
 Handling errors in your SDK should largely match your expectations.  All operations return a response object or raise an error.  If Error objects are specified in your OpenAPI Spec, the SDK will raise the appropriate Error type.
-
-
 <!-- End Error Handling -->
 
 
@@ -566,8 +564,6 @@ http_client = requests.Session()
 http_client.headers.update({'x-custom-header': 'someValue'})
 s = unified_to.UnifiedTo(client: http_client)
 ```
-
-
 <!-- End Custom HTTP Client -->
 
 <!-- Placeholder for Future Speakeasy SDK Sections -->

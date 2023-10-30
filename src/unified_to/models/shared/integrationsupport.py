@@ -27,6 +27,7 @@ class IntegrationSupport:
     list_contact_id: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('list_contact_id'), 'exclude': lambda f: f is None }})
     list_customer_id: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('list_customer_id'), 'exclude': lambda f: f is None }})
     list_deal_id: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('list_deal_id'), 'exclude': lambda f: f is None }})
+    list_invoice_id: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('list_invoice_id'), 'exclude': lambda f: f is None }})
     list_job_id: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('list_job_id'), 'exclude': lambda f: f is None }})
     list_limit: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('list_limit'), 'exclude': lambda f: f is None }})
     list_offset: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('list_offset'), 'exclude': lambda f: f is None }})

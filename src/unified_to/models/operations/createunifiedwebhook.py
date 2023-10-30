@@ -21,7 +21,6 @@ class CreateUnifiedWebhookRequest:
     events: Optional[List[CreateUnifiedWebhookEvents]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'events', 'style': 'form', 'explode': True }})
     r"""Which events to subscribe to."""
     webhook: Optional[shared_webhook.Webhook] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
-    r"""A webhook is used to POST new/updated information to your server."""
     
 
 
