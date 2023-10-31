@@ -48,11 +48,11 @@ req = shared.Connection(
         ],
     ),
     categories=[
-        shared.PropertyConnectionCategories.UC,
+        shared.PropertyConnectionCategories.ACCOUNTING,
     ],
     integration_type='string',
     permissions=[
-        shared.PropertyConnectionPermissions.CRM_DEAL_WRITE,
+        shared.PropertyConnectionPermissions.CRM_COMPANY_WRITE,
     ],
 )
 
@@ -101,7 +101,7 @@ req = operations.CreateUnifiedWebhookRequest(
         hook_url='string',
         integration_type='string',
         interval=188.12,
-        object_type=shared.WebhookObjectType.CRM_LEAD,
+        object_type=shared.WebhookObjectType.CRM_EVENT,
         subscriptions=[
             'string',
         ],
@@ -269,7 +269,7 @@ s = unified_to.UnifiedTo(
 req = operations.GetUnifiedIntegrationAuthRequest(
     integration_type='string',
     scopes=[
-        operations.GetUnifiedIntegrationAuthScopes.HRIS_GROUP_READ,
+        operations.GetUnifiedIntegrationAuthScopes.HRIS_EMPLOYEE_WRITE,
     ],
     workspace_id='string',
 )
@@ -389,7 +389,7 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListUnifiedConnectionsRequest(
     categories=[
-        operations.ListUnifiedConnectionsCategories.CRM,
+        operations.ListUnifiedConnectionsCategories.ENRICH,
     ],
 )
 
@@ -430,7 +430,7 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListUnifiedIntegrationWorkspacesRequest(
     categories=[
-        operations.ListUnifiedIntegrationWorkspacesCategories.MARTECH,
+        operations.ListUnifiedIntegrationWorkspacesCategories.TICKETING,
     ],
     workspace_id='string',
 )
@@ -562,11 +562,11 @@ req = operations.PatchUnifiedConnectionRequest(
             ],
         ),
         categories=[
-            shared.PropertyConnectionCategories.ENRICH,
+            shared.PropertyConnectionCategories.MARTECH,
         ],
         integration_type='string',
         permissions=[
-            shared.PropertyConnectionPermissions.MARTECH_MEMBER_WRITE,
+            shared.PropertyConnectionPermissions.MARTECH_LIST_WRITE,
         ],
     ),
     id='<ID>',
@@ -702,7 +702,7 @@ req = operations.UpdateUnifiedConnectionRequest(
         ],
         integration_type='string',
         permissions=[
-            shared.PropertyConnectionPermissions.CRM_LEAD_READ,
+            shared.PropertyConnectionPermissions.CRM_DEAL_WRITE,
         ],
     ),
     id='<ID>',

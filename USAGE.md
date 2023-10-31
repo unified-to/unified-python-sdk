@@ -3,6 +3,7 @@
 
 ```python
 import unified_to
+import dateutil.parser
 from unified_to.models import operations, shared
 
 s = unified_to.UnifiedTo(
@@ -11,13 +12,28 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetUnifiedApicallRequest(
-    id='<ID>',
+req = operations.CreateAccountingCustomerRequest(
+    accounting_customer=shared.AccountingCustomer(
+        billing_address=shared.PropertyAccountingCustomerBillingAddress(),
+        emails=[
+            shared.AccountingEmail(
+                email='Kevon_Schultz42@gmail.com',
+            ),
+        ],
+        raw=shared.PropertyAccountingCustomerRaw(),
+        shipping_address=shared.PropertyAccountingCustomerShippingAddress(),
+        telephones=[
+            shared.AccountingTelephone(
+                telephone='string',
+            ),
+        ],
+    ),
+    connection_id='string',
 )
 
-res = s.apicall.get_unified_apicall(req)
+res = s.accounting.create_accounting_customer(req)
 
-if res.api_call is not None:
+if res.accounting_customer is not None:
     # handle response
     pass
 ```

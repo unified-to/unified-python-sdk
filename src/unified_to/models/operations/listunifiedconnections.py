@@ -18,6 +18,7 @@ class ListUnifiedConnectionsCategories(str, Enum):
     MARTECH = 'martech'
     TICKETING = 'ticketing'
     UC = 'uc'
+    ACCOUNTING = 'accounting'
 
 
 @dataclasses.dataclass

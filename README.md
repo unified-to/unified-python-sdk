@@ -18,6 +18,7 @@ pip install git+https://github.com/unified-to/unified-python-sdk.git
 <!-- Start SDK Example Usage -->
 ```python
 import unified_to
+import dateutil.parser
 from unified_to.models import operations, shared
 
 s = unified_to.UnifiedTo(
@@ -26,13 +27,28 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetUnifiedApicallRequest(
-    id='<ID>',
+req = operations.CreateAccountingCustomerRequest(
+    accounting_customer=shared.AccountingCustomer(
+        billing_address=shared.PropertyAccountingCustomerBillingAddress(),
+        emails=[
+            shared.AccountingEmail(
+                email='Kevon_Schultz42@gmail.com',
+            ),
+        ],
+        raw=shared.PropertyAccountingCustomerRaw(),
+        shipping_address=shared.PropertyAccountingCustomerShippingAddress(),
+        telephones=[
+            shared.AccountingTelephone(
+                telephone='string',
+            ),
+        ],
+    ),
+    connection_id='string',
 )
 
-res = s.apicall.get_unified_apicall(req)
+res = s.accounting.create_accounting_customer(req)
 
-if res.api_call is not None:
+if res.accounting_customer is not None:
     # handle response
     pass
 ```
@@ -41,6 +57,27 @@ if res.api_call is not None:
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
+
+### [accounting](docs/sdks/accounting/README.md)
+
+* [create_accounting_customer](docs/sdks/accounting/README.md#create_accounting_customer) - Create a customer
+* [create_accounting_invoice](docs/sdks/accounting/README.md#create_accounting_invoice) - Create a invoice
+* [create_accounting_payment](docs/sdks/accounting/README.md#create_accounting_payment) - Create a payment
+* [get_accounting_customer](docs/sdks/accounting/README.md#get_accounting_customer) - Retrieve a customer
+* [get_accounting_invoice](docs/sdks/accounting/README.md#get_accounting_invoice) - Retrieve a invoice
+* [get_accounting_payment](docs/sdks/accounting/README.md#get_accounting_payment) - Retrieve a payment
+* [list_accounting_customers](docs/sdks/accounting/README.md#list_accounting_customers) - List all customers
+* [list_accounting_invoices](docs/sdks/accounting/README.md#list_accounting_invoices) - List all invoices
+* [list_accounting_payments](docs/sdks/accounting/README.md#list_accounting_payments) - List all payments
+* [patch_accounting_customer](docs/sdks/accounting/README.md#patch_accounting_customer) - Update a customer
+* [patch_accounting_invoice](docs/sdks/accounting/README.md#patch_accounting_invoice) - Update a invoice
+* [patch_accounting_payment](docs/sdks/accounting/README.md#patch_accounting_payment) - Update a payment
+* [remove_accounting_customer](docs/sdks/accounting/README.md#remove_accounting_customer) - Remove a customer
+* [remove_accounting_invoice](docs/sdks/accounting/README.md#remove_accounting_invoice) - Remove a invoice
+* [remove_accounting_payment](docs/sdks/accounting/README.md#remove_accounting_payment) - Remove a payment
+* [update_accounting_customer](docs/sdks/accounting/README.md#update_accounting_customer) - Update a customer
+* [update_accounting_invoice](docs/sdks/accounting/README.md#update_accounting_invoice) - Update a invoice
+* [update_accounting_payment](docs/sdks/accounting/README.md#update_accounting_payment) - Update a payment
 
 ### [apicall](docs/sdks/apicall/README.md)
 
@@ -194,11 +231,17 @@ if res.api_call is not None:
 
 ### [customer](docs/sdks/customer/README.md)
 
+* [create_accounting_customer](docs/sdks/customer/README.md#create_accounting_customer) - Create a customer
 * [create_ticketing_customer](docs/sdks/customer/README.md#create_ticketing_customer) - Create a customer
+* [get_accounting_customer](docs/sdks/customer/README.md#get_accounting_customer) - Retrieve a customer
 * [get_ticketing_customer](docs/sdks/customer/README.md#get_ticketing_customer) - Retrieve a customer
+* [list_accounting_customers](docs/sdks/customer/README.md#list_accounting_customers) - List all customers
 * [list_ticketing_customers](docs/sdks/customer/README.md#list_ticketing_customers) - List all customers
+* [patch_accounting_customer](docs/sdks/customer/README.md#patch_accounting_customer) - Update a customer
 * [patch_ticketing_customer](docs/sdks/customer/README.md#patch_ticketing_customer) - Update a customer
+* [remove_accounting_customer](docs/sdks/customer/README.md#remove_accounting_customer) - Remove a customer
 * [remove_ticketing_customer](docs/sdks/customer/README.md#remove_ticketing_customer) - Remove a customer
+* [update_accounting_customer](docs/sdks/customer/README.md#update_accounting_customer) - Update a customer
 * [update_ticketing_customer](docs/sdks/customer/README.md#update_ticketing_customer) - Update a customer
 
 ### [deal](docs/sdks/deal/README.md)
@@ -291,6 +334,15 @@ if res.api_call is not None:
 * [remove_ats_interview](docs/sdks/interview/README.md#remove_ats_interview) - Remove a interview
 * [update_ats_interview](docs/sdks/interview/README.md#update_ats_interview) - Update a interview
 
+### [invoice](docs/sdks/invoice/README.md)
+
+* [create_accounting_invoice](docs/sdks/invoice/README.md#create_accounting_invoice) - Create a invoice
+* [get_accounting_invoice](docs/sdks/invoice/README.md#get_accounting_invoice) - Retrieve a invoice
+* [list_accounting_invoices](docs/sdks/invoice/README.md#list_accounting_invoices) - List all invoices
+* [patch_accounting_invoice](docs/sdks/invoice/README.md#patch_accounting_invoice) - Update a invoice
+* [remove_accounting_invoice](docs/sdks/invoice/README.md#remove_accounting_invoice) - Remove a invoice
+* [update_accounting_invoice](docs/sdks/invoice/README.md#update_accounting_invoice) - Update a invoice
+
 ### [job](docs/sdks/job/README.md)
 
 * [create_ats_job](docs/sdks/job/README.md#create_ats_job) - Create a job
@@ -362,6 +414,15 @@ if res.api_call is not None:
 * [patch_passthrough](docs/sdks/passthrough/README.md#patch_passthrough) - Passthrough PUT
 * [remove_passthrough](docs/sdks/passthrough/README.md#remove_passthrough) - Passthrough DELETE
 * [update_passthrough](docs/sdks/passthrough/README.md#update_passthrough) - Passthrough PUT
+
+### [payment](docs/sdks/payment/README.md)
+
+* [create_accounting_payment](docs/sdks/payment/README.md#create_accounting_payment) - Create a payment
+* [get_accounting_payment](docs/sdks/payment/README.md#get_accounting_payment) - Retrieve a payment
+* [list_accounting_payments](docs/sdks/payment/README.md#list_accounting_payments) - List all payments
+* [patch_accounting_payment](docs/sdks/payment/README.md#patch_accounting_payment) - Update a payment
+* [remove_accounting_payment](docs/sdks/payment/README.md#remove_accounting_payment) - Remove a payment
+* [update_accounting_payment](docs/sdks/payment/README.md#update_accounting_payment) - Update a payment
 
 ### [person](docs/sdks/person/README.md)
 
@@ -497,6 +558,7 @@ For example:
 
 ```python
 import unified_to
+import dateutil.parser
 from unified_to.models import operations, shared
 
 s = unified_to.UnifiedTo(
@@ -506,13 +568,28 @@ s = unified_to.UnifiedTo(
     server_idx=1
 )
 
-req = operations.GetUnifiedApicallRequest(
-    id='<ID>',
+req = operations.CreateAccountingCustomerRequest(
+    accounting_customer=shared.AccountingCustomer(
+        billing_address=shared.PropertyAccountingCustomerBillingAddress(),
+        emails=[
+            shared.AccountingEmail(
+                email='Kevon_Schultz42@gmail.com',
+            ),
+        ],
+        raw=shared.PropertyAccountingCustomerRaw(),
+        shipping_address=shared.PropertyAccountingCustomerShippingAddress(),
+        telephones=[
+            shared.AccountingTelephone(
+                telephone='string',
+            ),
+        ],
+    ),
+    connection_id='string',
 )
 
-res = s.apicall.get_unified_apicall(req)
+res = s.accounting.create_accounting_customer(req)
 
-if res.api_call is not None:
+if res.accounting_customer is not None:
     # handle response
     pass
 ```
@@ -525,6 +602,7 @@ The default server can also be overridden globally by passing a URL to the `serv
 
 ```python
 import unified_to
+import dateutil.parser
 from unified_to.models import operations, shared
 
 s = unified_to.UnifiedTo(
@@ -534,13 +612,28 @@ s = unified_to.UnifiedTo(
     server_url="https://api.unified.to"
 )
 
-req = operations.GetUnifiedApicallRequest(
-    id='<ID>',
+req = operations.CreateAccountingCustomerRequest(
+    accounting_customer=shared.AccountingCustomer(
+        billing_address=shared.PropertyAccountingCustomerBillingAddress(),
+        emails=[
+            shared.AccountingEmail(
+                email='Kevon_Schultz42@gmail.com',
+            ),
+        ],
+        raw=shared.PropertyAccountingCustomerRaw(),
+        shipping_address=shared.PropertyAccountingCustomerShippingAddress(),
+        telephones=[
+            shared.AccountingTelephone(
+                telephone='string',
+            ),
+        ],
+    ),
+    connection_id='string',
 )
 
-res = s.apicall.get_unified_apicall(req)
+res = s.accounting.create_accounting_customer(req)
 
-if res.api_call is not None:
+if res.accounting_customer is not None:
     # handle response
     pass
 ```

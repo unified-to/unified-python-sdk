@@ -13,3 +13,4 @@ class PropertyIntegrationCategories(str, Enum):
     MARTECH = 'martech'
     TICKETING = 'ticketing'
     UC = 'uc'
+    ACCOUNTING = 'accounting'

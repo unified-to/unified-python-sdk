@@ -11,6 +11,9 @@ from typing import List, Optional
 from unified_to import utils
 
 class WebhookObjectType(str, Enum):
+    ACCOUNTING_CUSTOMER = 'accounting_customer'
+    ACCOUNTING_INVOICE = 'accounting_invoice'
+    ACCOUNTING_PAYMENT = 'accounting_payment'
     ATS_APPLICATION = 'ats_application'
     ATS_CANDIDATE = 'ats_candidate'
     ATS_DOCUMENT = 'ats_document'

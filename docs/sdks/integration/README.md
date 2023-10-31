@@ -66,7 +66,7 @@ s = unified_to.UnifiedTo(
 req = operations.GetUnifiedIntegrationAuthRequest(
     integration_type='string',
     scopes=[
-        operations.GetUnifiedIntegrationAuthScopes.HRIS_GROUP_READ,
+        operations.GetUnifiedIntegrationAuthScopes.HRIS_EMPLOYEE_WRITE,
     ],
     workspace_id='string',
 )
@@ -108,7 +108,7 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListUnifiedIntegrationWorkspacesRequest(
     categories=[
-        operations.ListUnifiedIntegrationWorkspacesCategories.MARTECH,
+        operations.ListUnifiedIntegrationWorkspacesCategories.TICKETING,
     ],
     workspace_id='string',
 )

@@ -14,3 +14,4 @@
 | `MARTECH`     | martech       |
 | `TICKETING`   | ticketing     |
 | `UC`          | uc            |
+| `ACCOUNTING`  | accounting    |

@@ -1,0 +1,16 @@
+# ListAccountingInvoicesRequest
+
+
+## Fields
+
+| Field                                                                    | Type                                                                     | Required                                                                 | Description                                                              |
+| ------------------------------------------------------------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ |
+| `connection_id`                                                          | *str*                                                                    | :heavy_check_mark:                                                       | ID of the connection                                                     |
+| `customer_id`                                                            | *Optional[str]*                                                          | :heavy_minus_sign:                                                       | The customer ID to filter results                                        |
+| `fields`                                                                 | List[*str*]                                                              | :heavy_minus_sign:                                                       | Comma-delimited fields to return                                         |
+| `limit`                                                                  | *Optional[float]*                                                        | :heavy_minus_sign:                                                       | N/A                                                                      |
+| `offset`                                                                 | *Optional[float]*                                                        | :heavy_minus_sign:                                                       | N/A                                                                      |
+| `order`                                                                  | *Optional[str]*                                                          | :heavy_minus_sign:                                                       | N/A                                                                      |
+| `query`                                                                  | *Optional[str]*                                                          | :heavy_minus_sign:                                                       | Query string to search. eg. email address or name                        |
+| `sort`                                                                   | *Optional[str]*                                                          | :heavy_minus_sign:                                                       | N/A                                                                      |
+| `updated_gte`                                                            | [date](https://docs.python.org/3/library/datetime.html#date-objects)     | :heavy_minus_sign:                                                       | Return only results whose updated date is equal or greater to this value |
