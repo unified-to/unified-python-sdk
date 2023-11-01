@@ -1,4 +1,4 @@
-# ListUnifiedIntegrationWorkspacesCategories
+# ListUnifiedIntegrationsQueryParamCategories
 
 
 ## Values

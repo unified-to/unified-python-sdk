@@ -1,5 +1,5 @@
 # Unified
-(*unified*)
+(*.unified*)
 
 ### Available Operations
 
@@ -101,7 +101,7 @@ req = operations.CreateUnifiedWebhookRequest(
         hook_url='string',
         integration_type='string',
         interval=188.12,
-        object_type=shared.WebhookObjectType.CRM_EVENT,
+        object_type=shared.ObjectType.CRM_EVENT,
         subscriptions=[
             'string',
         ],
@@ -109,7 +109,7 @@ req = operations.CreateUnifiedWebhookRequest(
     ),
     connection_id='string',
     events=[
-        operations.CreateUnifiedWebhookEvents.CREATED,
+        operations.Events.CREATED,
     ],
     object='string',
 )
@@ -269,14 +269,14 @@ s = unified_to.UnifiedTo(
 req = operations.GetUnifiedIntegrationAuthRequest(
     integration_type='string',
     scopes=[
-        operations.GetUnifiedIntegrationAuthScopes.HRIS_EMPLOYEE_WRITE,
+        operations.Scopes.HRIS_EMPLOYEE_WRITE,
     ],
     workspace_id='string',
 )
 
 res = s.unified.get_unified_integration_auth(req)
 
-if res.get_unified_integration_auth_200_application_json_string is not None:
+if res.res is not None:
     # handle response
     pass
 ```
@@ -389,7 +389,7 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListUnifiedConnectionsRequest(
     categories=[
-        operations.ListUnifiedConnectionsCategories.ENRICH,
+        operations.Categories.ENRICH,
     ],
 )
 
@@ -430,7 +430,7 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListUnifiedIntegrationWorkspacesRequest(
     categories=[
-        operations.ListUnifiedIntegrationWorkspacesCategories.TICKETING,
+        operations.QueryParamCategories.TICKETING,
     ],
     workspace_id='string',
 )
@@ -472,7 +472,7 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListUnifiedIntegrationsRequest(
     categories=[
-        operations.ListUnifiedIntegrationsCategories.AUTH,
+        operations.ListUnifiedIntegrationsQueryParamCategories.AUTH,
     ],
 )
 

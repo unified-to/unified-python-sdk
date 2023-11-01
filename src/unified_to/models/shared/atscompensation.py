@@ -7,7 +7,7 @@ from enum import Enum
 from typing import Optional
 from unified_to import utils
 
-class AtsCompensationFrequency(str, Enum):
+class Frequency(str, Enum):
     ONE_TIME = 'ONE_TIME'
     DAY = 'DAY'
     QUARTER = 'QUARTER'
@@ -29,7 +29,7 @@ class AtsCompensationType(str, Enum):
 class AtsCompensation:
     type: AtsCompensationType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type') }})
     currency: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('currency'), 'exclude': lambda f: f is None }})
-    frequency: Optional[AtsCompensationFrequency] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('frequency'), 'exclude': lambda f: f is None }})
+    frequency: Optional[Frequency] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('frequency'), 'exclude': lambda f: f is None }})
     max: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('max'), 'exclude': lambda f: f is None }})
     min: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('min'), 'exclude': lambda f: f is None }})
     

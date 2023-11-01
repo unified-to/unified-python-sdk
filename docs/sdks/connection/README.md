@@ -1,5 +1,5 @@
 # Connection
-(*connection*)
+(*.connection*)
 
 ### Available Operations
 
@@ -123,7 +123,7 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListUnifiedConnectionsRequest(
     categories=[
-        operations.ListUnifiedConnectionsCategories.ENRICH,
+        operations.Categories.ENRICH,
     ],
 )
 

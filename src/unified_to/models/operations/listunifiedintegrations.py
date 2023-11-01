@@ -7,7 +7,7 @@ from ..shared import integration as shared_integration
 from enum import Enum
 from typing import List, Optional
 
-class ListUnifiedIntegrationsCategories(str, Enum):
+class ListUnifiedIntegrationsQueryParamCategories(str, Enum):
     PASSTHROUGH = 'passthrough'
     HRIS = 'hris'
     ATS = 'ats'
@@ -24,7 +24,7 @@ class ListUnifiedIntegrationsCategories(str, Enum):
 class ListUnifiedIntegrationsRequest:
     active: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'active', 'style': 'form', 'explode': True }})
     r"""Filter the results for only the workspace's active integrations"""
-    categories: Optional[List[ListUnifiedIntegrationsCategories]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'categories', 'style': 'form', 'explode': True }})
+    categories: Optional[List[ListUnifiedIntegrationsQueryParamCategories]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'categories', 'style': 'form', 'explode': True }})
     r"""Filter the results on these categories"""
     env: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'env', 'style': 'form', 'explode': True }})
     limit: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})

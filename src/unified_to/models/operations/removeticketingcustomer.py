@@ -24,7 +24,7 @@ class RemoveTicketingCustomerResponse:
     r"""HTTP response status code for this operation"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""
-    remove_ticketing_customer_default_application_json_string: Optional[str] = dataclasses.field(default=None)
+    res: Optional[str] = dataclasses.field(default=None)
     r"""Successful"""
     
 

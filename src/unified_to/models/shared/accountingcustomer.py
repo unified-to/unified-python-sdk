@@ -14,7 +14,7 @@ from enum import Enum
 from typing import List, Optional
 from unified_to import utils
 
-class AccountingCustomerTaxExemption(str, Enum):
+class TaxExemption(str, Enum):
     FEDERAL_GOV = 'FEDERAL_GOV'
     REGION_GOV = 'REGION_GOV'
     LOCAL_GOV = 'LOCAL_GOV'
@@ -40,7 +40,7 @@ class AccountingCustomer:
     name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name'), 'exclude': lambda f: f is None }})
     raw: Optional[shared_property_accountingcustomer_raw.PropertyAccountingCustomerRaw] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('raw'), 'exclude': lambda f: f is None }})
     shipping_address: Optional[shared_property_accountingcustomer_shipping_address.PropertyAccountingCustomerShippingAddress] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('shipping_address'), 'exclude': lambda f: f is None }})
-    tax_exemption: Optional[AccountingCustomerTaxExemption] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('tax_exemption'), 'exclude': lambda f: f is None }})
+    tax_exemption: Optional[TaxExemption] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('tax_exemption'), 'exclude': lambda f: f is None }})
     telephones: Optional[List[shared_accountingtelephone.AccountingTelephone]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('telephones'), 'exclude': lambda f: f is None }})
     updated_at: Optional[datetime] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('updated_at'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'exclude': lambda f: f is None }})
     

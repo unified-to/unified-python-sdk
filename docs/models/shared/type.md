@@ -1,4 +1,4 @@
-# AccountingEmailType
+# Type
 
 
 ## Values

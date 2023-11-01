@@ -1,5 +1,5 @@
 # Accounting
-(*accounting*)
+(*.accounting*)
 
 ### Available Operations
 

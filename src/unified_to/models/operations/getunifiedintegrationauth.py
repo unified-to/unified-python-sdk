@@ -6,7 +6,7 @@ import requests as requests_http
 from enum import Enum
 from typing import List, Optional
 
-class GetUnifiedIntegrationAuthScopes(str, Enum):
+class Scopes(str, Enum):
     AUTH_LOGIN = 'auth_login'
     ACCOUNTING_INVOICE_READ = 'accounting_invoice_read'
     ACCOUNTING_INVOICE_WRITE = 'accounting_invoice_write'
@@ -72,7 +72,7 @@ class GetUnifiedIntegrationAuthRequest:
     lang: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'lang', 'style': 'form', 'explode': True }})
     r"""Language: en, fr, es, it, pt, zh, hi"""
     redirect: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'redirect', 'style': 'form', 'explode': True }})
-    scopes: Optional[List[GetUnifiedIntegrationAuthScopes]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'scopes', 'style': 'form', 'explode': True }})
+    scopes: Optional[List[Scopes]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'scopes', 'style': 'form', 'explode': True }})
     state: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'state', 'style': 'form', 'explode': True }})
     r"""Extra state to send back to your success URL"""
     subdomain: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'subdomain', 'style': 'form', 'explode': True }})
@@ -88,9 +88,9 @@ class GetUnifiedIntegrationAuthResponse:
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    get_unified_integration_auth_200_application_json_string: Optional[str] = dataclasses.field(default=None)
-    r"""Successful"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""
+    res: Optional[str] = dataclasses.field(default=None)
+    r"""Successful"""
     
 

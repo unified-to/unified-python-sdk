@@ -1,5 +1,5 @@
 # Employee
-(*employee*)
+(*.employee*)
 
 ### Available Operations
 

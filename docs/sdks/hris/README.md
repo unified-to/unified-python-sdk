@@ -1,5 +1,5 @@
 # Hris
-(*hris*)
+(*.hris*)
 
 ### Available Operations
 

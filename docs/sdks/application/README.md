@@ -1,5 +1,5 @@
 # Application
-(*application*)
+(*.application*)
 
 ### Available Operations
 

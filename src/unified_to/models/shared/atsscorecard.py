@@ -10,7 +10,7 @@ from enum import Enum
 from typing import Optional
 from unified_to import utils
 
-class AtsScorecardRecommendation(str, Enum):
+class Recommendation(str, Enum):
     DEFINITELY_NO = 'DEFINITELY_NO'
     NO = 'NO'
     YES = 'YES'
@@ -29,7 +29,7 @@ class AtsScorecard:
     interview_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('interview_id'), 'exclude': lambda f: f is None }})
     interviewer_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('interviewer_id'), 'exclude': lambda f: f is None }})
     job_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('job_id'), 'exclude': lambda f: f is None }})
-    recommendation: Optional[AtsScorecardRecommendation] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('recommendation'), 'exclude': lambda f: f is None }})
+    recommendation: Optional[Recommendation] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('recommendation'), 'exclude': lambda f: f is None }})
     updated_at: Optional[datetime] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('updated_at'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'exclude': lambda f: f is None }})
     
 

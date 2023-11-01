@@ -14,7 +14,7 @@ from enum import Enum
 from typing import List, Optional
 from unified_to import utils
 
-class EnrichPersonGender(str, Enum):
+class Gender(str, Enum):
     MALE = 'MALE'
     FEMALE = 'FEMALE'
 
@@ -35,7 +35,7 @@ class EnrichPerson:
     emails: Optional[List[shared_enrichemail.EnrichEmail]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('emails'), 'exclude': lambda f: f is None }})
     r"""An array of email addresses for this person"""
     facebook_url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('facebook_url'), 'exclude': lambda f: f is None }})
-    gender: Optional[EnrichPersonGender] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('gender'), 'exclude': lambda f: f is None }})
+    gender: Optional[Gender] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('gender'), 'exclude': lambda f: f is None }})
     github_url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('github_url'), 'exclude': lambda f: f is None }})
     github_username: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('github_username'), 'exclude': lambda f: f is None }})
     id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id'), 'exclude': lambda f: f is None }})

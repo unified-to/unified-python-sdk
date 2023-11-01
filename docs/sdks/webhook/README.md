@@ -1,5 +1,5 @@
 # Webhook
-(*webhook*)
+(*.webhook*)
 
 ### Available Operations
 
@@ -34,7 +34,7 @@ req = operations.CreateUnifiedWebhookRequest(
         hook_url='string',
         integration_type='string',
         interval=188.12,
-        object_type=shared.WebhookObjectType.CRM_EVENT,
+        object_type=shared.ObjectType.CRM_EVENT,
         subscriptions=[
             'string',
         ],
@@ -42,7 +42,7 @@ req = operations.CreateUnifiedWebhookRequest(
     ),
     connection_id='string',
     events=[
-        operations.CreateUnifiedWebhookEvents.CREATED,
+        operations.Events.CREATED,
     ],
     object='string',
 )

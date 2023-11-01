@@ -1,5 +1,5 @@
 # Login
-(*login*)
+(*.login*)
 
 ### Available Operations
 
@@ -28,7 +28,7 @@ req = operations.GetUnifiedIntegrationLoginRequest(
 
 res = s.login.get_unified_integration_login(req)
 
-if res.get_unified_integration_login_200_application_json_string is not None:
+if res.res is not None:
     # handle response
     pass
 ```

@@ -13,7 +13,7 @@ from enum import Enum
 from typing import List, Optional
 from unified_to import utils
 
-class HrisEmployeeEmploymentStatus(str, Enum):
+class EmploymentStatus(str, Enum):
     ACTIVE = 'ACTIVE'
     INACTIVE = 'INACTIVE'
 
@@ -36,7 +36,7 @@ class HrisEmployeeGender(str, Enum):
     TRANS = 'TRANS'
     NON_BINARY = 'NON_BINARY'
 
-class HrisEmployeeMaritalStatus(str, Enum):
+class MaritalStatus(str, Enum):
     MARRIED = 'MARRIED'
     SINGLE = 'SINGLE'
 
@@ -52,7 +52,7 @@ class HrisEmployee:
     division: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('division'), 'exclude': lambda f: f is None }})
     emails: Optional[List[shared_hrisemail.HrisEmail]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('emails'), 'exclude': lambda f: f is None }})
     employee_number: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('employee_number'), 'exclude': lambda f: f is None }})
-    employment_status: Optional[HrisEmployeeEmploymentStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('employment_status'), 'exclude': lambda f: f is None }})
+    employment_status: Optional[EmploymentStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('employment_status'), 'exclude': lambda f: f is None }})
     employment_type: Optional[HrisEmployeeEmploymentType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('employment_type'), 'exclude': lambda f: f is None }})
     gender: Optional[HrisEmployeeGender] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('gender'), 'exclude': lambda f: f is None }})
     hired_at: Optional[datetime] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('hired_at'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'exclude': lambda f: f is None }})
@@ -61,7 +61,7 @@ class HrisEmployee:
     language_locale: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('language_locale'), 'exclude': lambda f: f is None }})
     location: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('location'), 'exclude': lambda f: f is None }})
     manager_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('manager_id'), 'exclude': lambda f: f is None }})
-    marital_status: Optional[HrisEmployeeMaritalStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('marital_status'), 'exclude': lambda f: f is None }})
+    marital_status: Optional[MaritalStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('marital_status'), 'exclude': lambda f: f is None }})
     name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name'), 'exclude': lambda f: f is None }})
     raw: Optional[shared_property_hrisemployee_raw.PropertyHrisEmployeeRaw] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('raw'), 'exclude': lambda f: f is None }})
     telephones: Optional[List[shared_hristelephone.HrisTelephone]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('telephones'), 'exclude': lambda f: f is None }})

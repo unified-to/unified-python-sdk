@@ -1,5 +1,5 @@
 # Auth
-(*auth*)
+(*.auth*)
 
 ### Available Operations
 
@@ -25,14 +25,14 @@ s = unified_to.UnifiedTo(
 req = operations.GetUnifiedIntegrationAuthRequest(
     integration_type='string',
     scopes=[
-        operations.GetUnifiedIntegrationAuthScopes.HRIS_EMPLOYEE_WRITE,
+        operations.Scopes.HRIS_EMPLOYEE_WRITE,
     ],
     workspace_id='string',
 )
 
 res = s.auth.get_unified_integration_auth(req)
 
-if res.get_unified_integration_auth_200_application_json_string is not None:
+if res.res is not None:
     # handle response
     pass
 ```
@@ -72,7 +72,7 @@ req = operations.GetUnifiedIntegrationLoginRequest(
 
 res = s.auth.get_unified_integration_login(req)
 
-if res.get_unified_integration_login_200_application_json_string is not None:
+if res.res is not None:
     # handle response
     pass
 ```

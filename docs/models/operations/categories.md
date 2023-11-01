@@ -1,4 +1,4 @@
-# ListUnifiedIntegrationsCategories
+# Categories
 
 
 ## Values

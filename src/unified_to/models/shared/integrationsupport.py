@@ -10,7 +10,7 @@ from enum import Enum
 from typing import Dict, List, Optional
 from unified_to import utils
 
-class IntegrationSupportWebhookType(str, Enum):
+class WebhookType(str, Enum):
     VIRTUAL = 'virtual'
     NONE = 'none'
     NATIVE = 'native'
@@ -45,6 +45,6 @@ class IntegrationSupport:
     search_name: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('search_name'), 'exclude': lambda f: f is None }})
     search_twitter: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('search_twitter'), 'exclude': lambda f: f is None }})
     webhook_events: Optional[List[shared_property_integrationsupport_webhook_events.PropertyIntegrationSupportWebhookEvents]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('webhook_events'), 'exclude': lambda f: f is None }})
-    webhook_type: Optional[IntegrationSupportWebhookType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('webhook_type'), 'exclude': lambda f: f is None }})
+    webhook_type: Optional[WebhookType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('webhook_type'), 'exclude': lambda f: f is None }})
     
 

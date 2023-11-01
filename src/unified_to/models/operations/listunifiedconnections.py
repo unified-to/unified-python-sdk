@@ -8,7 +8,7 @@ from datetime import datetime
 from enum import Enum
 from typing import List, Optional
 
-class ListUnifiedConnectionsCategories(str, Enum):
+class Categories(str, Enum):
     PASSTHROUGH = 'passthrough'
     HRIS = 'hris'
     ATS = 'ats'
@@ -23,7 +23,7 @@ class ListUnifiedConnectionsCategories(str, Enum):
 
 @dataclasses.dataclass
 class ListUnifiedConnectionsRequest:
-    categories: Optional[List[ListUnifiedConnectionsCategories]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'categories', 'style': 'form', 'explode': True }})
+    categories: Optional[List[Categories]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'categories', 'style': 'form', 'explode': True }})
     r"""Filter the results on these categories"""
     env: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'env', 'style': 'form', 'explode': True }})
     external_xref: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'external_xref', 'style': 'form', 'explode': True }})
