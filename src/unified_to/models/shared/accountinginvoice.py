@@ -3,8 +3,8 @@
 from __future__ import annotations
 import dataclasses
 import dateutil.parser
-from ..shared import accountinglineitem as shared_accountinglineitem
-from ..shared import property_accountinginvoice_raw as shared_property_accountinginvoice_raw
+from .accountinglineitem import AccountingLineitem
+from .property_accountinginvoice_raw import PropertyAccountingInvoiceRaw
 from dataclasses_json import Undefined, dataclass_json
 from datetime import datetime
 from typing import List, Optional
@@ -23,11 +23,11 @@ class AccountingInvoice:
     due_at: Optional[datetime] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('due_at'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'exclude': lambda f: f is None }})
     id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id'), 'exclude': lambda f: f is None }})
     invoice_number: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('invoice_number'), 'exclude': lambda f: f is None }})
-    lineitems: Optional[List[shared_accountinglineitem.AccountingLineitem]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('lineitems'), 'exclude': lambda f: f is None }})
+    lineitems: Optional[List[AccountingLineitem]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('lineitems'), 'exclude': lambda f: f is None }})
     notes: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('notes'), 'exclude': lambda f: f is None }})
     paid_amount: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('paid_amount'), 'exclude': lambda f: f is None }})
     paid_at: Optional[datetime] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('paid_at'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'exclude': lambda f: f is None }})
-    raw: Optional[shared_property_accountinginvoice_raw.PropertyAccountingInvoiceRaw] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('raw'), 'exclude': lambda f: f is None }})
+    raw: Optional[PropertyAccountingInvoiceRaw] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('raw'), 'exclude': lambda f: f is None }})
     refund_amount: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('refund_amount'), 'exclude': lambda f: f is None }})
     refund_reason: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('refund_reason'), 'exclude': lambda f: f is None }})
     refunded_at: Optional[datetime] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('refunded_at'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'exclude': lambda f: f is None }})

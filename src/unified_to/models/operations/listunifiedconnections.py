@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import connection as shared_connection
+from ...models.shared import connection as shared_connection
 from datetime import datetime
 from enum import Enum
 from typing import List, Optional

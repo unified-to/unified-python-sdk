@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import marketinglist as shared_marketinglist
+from ...models.shared import marketinglist as shared_marketinglist
 from typing import List, Optional
 
 

@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import integration as shared_integration
+from ...models.shared import integration as shared_integration
 from enum import Enum
 from typing import List, Optional
 

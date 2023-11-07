@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import atsdocument as shared_atsdocument
+from ...models.shared import atsdocument as shared_atsdocument
 from datetime import datetime
 from typing import List, Optional
 

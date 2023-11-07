@@ -3,9 +3,9 @@
 from __future__ import annotations
 import dataclasses
 import dateutil.parser
-from ..shared import property_connection_auth as shared_property_connection_auth
-from ..shared import property_connection_categories as shared_property_connection_categories
-from ..shared import property_connection_permissions as shared_property_connection_permissions
+from .property_connection_auth import PropertyConnectionAuth
+from .property_connection_categories import PropertyConnectionCategories
+from .property_connection_permissions import PropertyConnectionPermissions
 from dataclasses_json import Undefined, dataclass_json
 from datetime import datetime
 from typing import List, Optional
@@ -16,11 +16,11 @@ from unified_to import utils
 @dataclasses.dataclass
 class Connection:
     r"""A connection represents a specific authentication of an integration."""
-    categories: List[shared_property_connection_categories.PropertyConnectionCategories] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('categories') }})
+    categories: List[PropertyConnectionCategories] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('categories') }})
     r"""The Integration categories that this connection supports"""
     integration_type: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('integration_type') }})
-    permissions: List[shared_property_connection_permissions.PropertyConnectionPermissions] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('permissions') }})
-    auth: Optional[shared_property_connection_auth.PropertyConnectionAuth] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('auth'), 'exclude': lambda f: f is None }})
+    permissions: List[PropertyConnectionPermissions] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('permissions') }})
+    auth: Optional[PropertyConnectionAuth] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('auth'), 'exclude': lambda f: f is None }})
     r"""An authentication object that represents a specific authorized user's connection to an integration."""
     auth_aws_arn: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('auth_aws_arn'), 'exclude': lambda f: f is None }})
     created_at: Optional[datetime] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created_at'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'exclude': lambda f: f is None }})

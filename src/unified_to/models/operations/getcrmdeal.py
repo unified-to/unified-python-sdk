@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import crmdeal as shared_crmdeal
+from ...models.shared import crmdeal as shared_crmdeal
 from typing import List, Optional
 
 

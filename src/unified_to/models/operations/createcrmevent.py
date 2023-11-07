@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import crmevent as shared_crmevent
+from ...models.shared import crmevent as shared_crmevent
 from typing import Optional
 
 

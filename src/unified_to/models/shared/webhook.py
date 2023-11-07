@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import dateutil.parser
-from ..shared import property_webhook_events as shared_property_webhook_events
+from .property_webhook_events import PropertyWebhookEvents
 from dataclasses_json import Undefined, dataclass_json
 from datetime import datetime
 from enum import Enum
@@ -46,7 +46,7 @@ class ObjectType(str, Enum):
 class Webhook:
     r"""A webhook is used to POST new/updated information to your server."""
     connection_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('connection_id') }})
-    events: List[shared_property_webhook_events.PropertyWebhookEvents] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('events') }})
+    events: List[PropertyWebhookEvents] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('events') }})
     hook_url: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('hook_url') }})
     integration_type: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('integration_type') }})
     interval: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('interval') }})

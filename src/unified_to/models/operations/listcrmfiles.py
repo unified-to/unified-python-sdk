@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import crmfile as shared_crmfile
+from ...models.shared import crmfile as shared_crmfile
 from datetime import datetime
 from typing import List, Optional
 

@@ -3,9 +3,9 @@
 from __future__ import annotations
 import dataclasses
 import dateutil.parser
-from ..shared import enrichtelephone as shared_enrichtelephone
-from ..shared import property_enrichcompany_address as shared_property_enrichcompany_address
-from ..shared import property_enrichcompany_raw as shared_property_enrichcompany_raw
+from .enrichtelephone import EnrichTelephone
+from .property_enrichcompany_address import PropertyEnrichCompanyAddress
+from .property_enrichcompany_raw import PropertyEnrichCompanyRaw
 from dataclasses_json import Undefined, dataclass_json
 from datetime import datetime
 from typing import List, Optional
@@ -16,9 +16,9 @@ from unified_to import utils
 @dataclasses.dataclass
 class EnrichCompany:
     r"""A company object from an enrichment integration"""
-    raw: shared_property_enrichcompany_raw.PropertyEnrichCompanyRaw = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('raw') }})
+    raw: PropertyEnrichCompanyRaw = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('raw') }})
     r"""The raw data returned by the integration for this company"""
-    address: Optional[shared_property_enrichcompany_address.PropertyEnrichCompanyAddress] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('address'), 'exclude': lambda f: f is None }})
+    address: Optional[PropertyEnrichCompanyAddress] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('address'), 'exclude': lambda f: f is None }})
     r"""The address of the company"""
     alexa_rank: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('alexa_rank'), 'exclude': lambda f: f is None }})
     created_at: Optional[datetime] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created_at'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'exclude': lambda f: f is None }})
@@ -38,7 +38,7 @@ class EnrichCompany:
     revenue: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('revenue'), 'exclude': lambda f: f is None }})
     sic_code: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('sic_code'), 'exclude': lambda f: f is None }})
     stock: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('stock'), 'exclude': lambda f: f is None }})
-    telephones: Optional[List[shared_enrichtelephone.EnrichTelephone]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('telephones'), 'exclude': lambda f: f is None }})
+    telephones: Optional[List[EnrichTelephone]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('telephones'), 'exclude': lambda f: f is None }})
     r"""An array of telephones for this company"""
     twitter_handle: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('twitter_handle'), 'exclude': lambda f: f is None }})
     twitter_url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('twitter_url'), 'exclude': lambda f: f is None }})

@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import crmlead as shared_crmlead
+from ...models.shared import crmlead as shared_crmlead
 from typing import Optional
 
 

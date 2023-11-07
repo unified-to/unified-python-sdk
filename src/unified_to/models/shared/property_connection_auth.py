@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import dateutil.parser
-from ..shared import property_property_connection_auth_meta as shared_property_property_connection_auth_meta
+from .property_property_connection_auth_meta import PropertyPropertyConnectionAuthMeta
 from dataclasses_json import Undefined, dataclass_json
 from datetime import datetime
 from typing import List, Optional
@@ -26,7 +26,7 @@ class PropertyConnectionAuth:
     expires_in: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('expires_in'), 'exclude': lambda f: f is None }})
     expiry_date: Optional[datetime] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('expiry_date'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'exclude': lambda f: f is None }})
     key: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('key'), 'exclude': lambda f: f is None }})
-    meta: Optional[shared_property_property_connection_auth_meta.PropertyPropertyConnectionAuthMeta] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('meta'), 'exclude': lambda f: f is None }})
+    meta: Optional[PropertyPropertyConnectionAuthMeta] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('meta'), 'exclude': lambda f: f is None }})
     name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name'), 'exclude': lambda f: f is None }})
     other_auth_info: Optional[List[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('other_auth_info'), 'exclude': lambda f: f is None }})
     r"""When integration.auth_type = \\"other\\", this field contains the authentication credentials in the same order as token_names"""

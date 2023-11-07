@@ -17,8 +17,8 @@ pip install git+https://github.com/unified-to/unified-python-sdk.git
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
 ```python
-import unified_to
 import dateutil.parser
+import unified_to
 from unified_to.models import operations, shared
 
 s = unified_to.UnifiedTo(
@@ -79,19 +79,38 @@ if res.accounting_customer is not None:
 * [update_accounting_invoice](docs/sdks/accounting/README.md#update_accounting_invoice) - Update a invoice
 * [update_accounting_payment](docs/sdks/accounting/README.md#update_accounting_payment) - Update a payment
 
-### [.apicall](docs/sdks/apicall/README.md)
+### [.customer](docs/sdks/customer/README.md)
 
-* [get_unified_apicall](docs/sdks/apicall/README.md#get_unified_apicall) - Retrieve specific API Call by its ID
-* [list_unified_apicalls](docs/sdks/apicall/README.md#list_unified_apicalls) - Returns API Calls
+* [create_accounting_customer](docs/sdks/customer/README.md#create_accounting_customer) - Create a customer
+* [create_ticketing_customer](docs/sdks/customer/README.md#create_ticketing_customer) - Create a customer
+* [get_accounting_customer](docs/sdks/customer/README.md#get_accounting_customer) - Retrieve a customer
+* [get_ticketing_customer](docs/sdks/customer/README.md#get_ticketing_customer) - Retrieve a customer
+* [list_accounting_customers](docs/sdks/customer/README.md#list_accounting_customers) - List all customers
+* [list_ticketing_customers](docs/sdks/customer/README.md#list_ticketing_customers) - List all customers
+* [patch_accounting_customer](docs/sdks/customer/README.md#patch_accounting_customer) - Update a customer
+* [patch_ticketing_customer](docs/sdks/customer/README.md#patch_ticketing_customer) - Update a customer
+* [remove_accounting_customer](docs/sdks/customer/README.md#remove_accounting_customer) - Remove a customer
+* [remove_ticketing_customer](docs/sdks/customer/README.md#remove_ticketing_customer) - Remove a customer
+* [update_accounting_customer](docs/sdks/customer/README.md#update_accounting_customer) - Update a customer
+* [update_ticketing_customer](docs/sdks/customer/README.md#update_ticketing_customer) - Update a customer
 
-### [.application](docs/sdks/application/README.md)
+### [.invoice](docs/sdks/invoice/README.md)
 
-* [create_ats_application](docs/sdks/application/README.md#create_ats_application) - Create an application
-* [get_ats_application](docs/sdks/application/README.md#get_ats_application) - Retrieve an application
-* [list_ats_applications](docs/sdks/application/README.md#list_ats_applications) - List all applications
-* [patch_ats_application](docs/sdks/application/README.md#patch_ats_application) - Update an application
-* [remove_ats_application](docs/sdks/application/README.md#remove_ats_application) - Remove an application
-* [update_ats_application](docs/sdks/application/README.md#update_ats_application) - Update an application
+* [create_accounting_invoice](docs/sdks/invoice/README.md#create_accounting_invoice) - Create a invoice
+* [get_accounting_invoice](docs/sdks/invoice/README.md#get_accounting_invoice) - Retrieve a invoice
+* [list_accounting_invoices](docs/sdks/invoice/README.md#list_accounting_invoices) - List all invoices
+* [patch_accounting_invoice](docs/sdks/invoice/README.md#patch_accounting_invoice) - Update a invoice
+* [remove_accounting_invoice](docs/sdks/invoice/README.md#remove_accounting_invoice) - Remove a invoice
+* [update_accounting_invoice](docs/sdks/invoice/README.md#update_accounting_invoice) - Update a invoice
+
+### [.payment](docs/sdks/payment/README.md)
+
+* [create_accounting_payment](docs/sdks/payment/README.md#create_accounting_payment) - Create a payment
+* [get_accounting_payment](docs/sdks/payment/README.md#get_accounting_payment) - Retrieve a payment
+* [list_accounting_payments](docs/sdks/payment/README.md#list_accounting_payments) - List all payments
+* [patch_accounting_payment](docs/sdks/payment/README.md#patch_accounting_payment) - Update a payment
+* [remove_accounting_payment](docs/sdks/payment/README.md#remove_accounting_payment) - Remove a payment
+* [update_accounting_payment](docs/sdks/payment/README.md#update_accounting_payment) - Update a payment
 
 ### [.ats](docs/sdks/ats/README.md)
 
@@ -132,14 +151,14 @@ if res.accounting_customer is not None:
 * [update_ats_job](docs/sdks/ats/README.md#update_ats_job) - Update a job
 * [update_ats_scorecard](docs/sdks/ats/README.md#update_ats_scorecard) - Update a scorecard
 
-### [.auth](docs/sdks/auth/README.md)
+### [.application](docs/sdks/application/README.md)
 
-* [get_unified_integration_auth](docs/sdks/auth/README.md#get_unified_integration_auth) - Create connection indirectly
-* [get_unified_integration_login](docs/sdks/auth/README.md#get_unified_integration_login) - Sign in a user
-
-### [.call](docs/sdks/call/README.md)
-
-* [list_uc_calls](docs/sdks/call/README.md#list_uc_calls) - List all calls
+* [create_ats_application](docs/sdks/application/README.md#create_ats_application) - Create an application
+* [get_ats_application](docs/sdks/application/README.md#get_ats_application) - Retrieve an application
+* [list_ats_applications](docs/sdks/application/README.md#list_ats_applications) - List all applications
+* [patch_ats_application](docs/sdks/application/README.md#patch_ats_application) - Update an application
+* [remove_ats_application](docs/sdks/application/README.md#remove_ats_application) - Remove an application
+* [update_ats_application](docs/sdks/application/README.md#update_ats_application) - Update an application
 
 ### [.candidate](docs/sdks/candidate/README.md)
 
@@ -150,39 +169,41 @@ if res.accounting_customer is not None:
 * [remove_ats_candidate](docs/sdks/candidate/README.md#remove_ats_candidate) - Remove a candidate
 * [update_ats_candidate](docs/sdks/candidate/README.md#update_ats_candidate) - Update a candidate
 
-### [.company](docs/sdks/company/README.md)
+### [.document](docs/sdks/document/README.md)
 
-* [create_crm_company](docs/sdks/company/README.md#create_crm_company) - Create a company
-* [get_crm_company](docs/sdks/company/README.md#get_crm_company) - Retrieve a company
-* [list_crm_companies](docs/sdks/company/README.md#list_crm_companies) - List all companies
-* [list_enrich_companies](docs/sdks/company/README.md#list_enrich_companies) - Retrieve enrichment information for a company
-* [patch_crm_company](docs/sdks/company/README.md#patch_crm_company) - Update a company
-* [remove_crm_company](docs/sdks/company/README.md#remove_crm_company) - Remove a company
-* [update_crm_company](docs/sdks/company/README.md#update_crm_company) - Update a company
+* [create_ats_document](docs/sdks/document/README.md#create_ats_document) - Create a document
+* [get_ats_document](docs/sdks/document/README.md#get_ats_document) - Retrieve a document
+* [list_ats_documents](docs/sdks/document/README.md#list_ats_documents) - List all documents
+* [patch_ats_document](docs/sdks/document/README.md#patch_ats_document) - Update a document
+* [remove_ats_document](docs/sdks/document/README.md#remove_ats_document) - Remove a document
+* [update_ats_document](docs/sdks/document/README.md#update_ats_document) - Update a document
 
-### [.connection](docs/sdks/connection/README.md)
+### [.interview](docs/sdks/interview/README.md)
 
-* [create_unified_connection](docs/sdks/connection/README.md#create_unified_connection) - Create connection
-* [get_unified_connection](docs/sdks/connection/README.md#get_unified_connection) - Retrieve connection
-* [list_unified_connections](docs/sdks/connection/README.md#list_unified_connections) - List all connections
-* [patch_unified_connection](docs/sdks/connection/README.md#patch_unified_connection) - Update connection
-* [remove_unified_connection](docs/sdks/connection/README.md#remove_unified_connection) - Remove connection
-* [update_unified_connection](docs/sdks/connection/README.md#update_unified_connection) - Update connection
+* [create_ats_interview](docs/sdks/interview/README.md#create_ats_interview) - Create a interview
+* [get_ats_interview](docs/sdks/interview/README.md#get_ats_interview) - Retrieve a interview
+* [list_ats_interviews](docs/sdks/interview/README.md#list_ats_interviews) - List all interviews
+* [patch_ats_interview](docs/sdks/interview/README.md#patch_ats_interview) - Update a interview
+* [remove_ats_interview](docs/sdks/interview/README.md#remove_ats_interview) - Remove a interview
+* [update_ats_interview](docs/sdks/interview/README.md#update_ats_interview) - Update a interview
 
-### [.contact](docs/sdks/contact/README.md)
+### [.job](docs/sdks/job/README.md)
 
-* [create_crm_contact](docs/sdks/contact/README.md#create_crm_contact) - Create a contact
-* [create_uc_contact](docs/sdks/contact/README.md#create_uc_contact) - Create a contact
-* [get_crm_contact](docs/sdks/contact/README.md#get_crm_contact) - Retrieve a contact
-* [get_uc_contact](docs/sdks/contact/README.md#get_uc_contact) - Retrieve a contact
-* [list_crm_contacts](docs/sdks/contact/README.md#list_crm_contacts) - List all contacts
-* [list_uc_contacts](docs/sdks/contact/README.md#list_uc_contacts) - List all contacts
-* [patch_crm_contact](docs/sdks/contact/README.md#patch_crm_contact) - Update a contact
-* [patch_uc_contact](docs/sdks/contact/README.md#patch_uc_contact) - Update a contact
-* [remove_crm_contact](docs/sdks/contact/README.md#remove_crm_contact) - Remove a contact
-* [remove_uc_contact](docs/sdks/contact/README.md#remove_uc_contact) - Remove a contact
-* [update_crm_contact](docs/sdks/contact/README.md#update_crm_contact) - Update a contact
-* [update_uc_contact](docs/sdks/contact/README.md#update_uc_contact) - Update a contact
+* [create_ats_job](docs/sdks/job/README.md#create_ats_job) - Create a job
+* [get_ats_job](docs/sdks/job/README.md#get_ats_job) - Retrieve a job
+* [list_ats_jobs](docs/sdks/job/README.md#list_ats_jobs) - List all jobs
+* [patch_ats_job](docs/sdks/job/README.md#patch_ats_job) - Update a job
+* [remove_ats_job](docs/sdks/job/README.md#remove_ats_job) - Remove a job
+* [update_ats_job](docs/sdks/job/README.md#update_ats_job) - Update a job
+
+### [.scorecard](docs/sdks/scorecard/README.md)
+
+* [create_ats_scorecard](docs/sdks/scorecard/README.md#create_ats_scorecard) - Create a scorecard
+* [get_ats_scorecard](docs/sdks/scorecard/README.md#get_ats_scorecard) - Retrieve a scorecard
+* [list_ats_scorecards](docs/sdks/scorecard/README.md#list_ats_scorecards) - List all scorecards
+* [patch_ats_scorecard](docs/sdks/scorecard/README.md#patch_ats_scorecard) - Update a scorecard
+* [remove_ats_scorecard](docs/sdks/scorecard/README.md#remove_ats_scorecard) - Remove a scorecard
+* [update_ats_scorecard](docs/sdks/scorecard/README.md#update_ats_scorecard) - Update a scorecard
 
 ### [.crm](docs/sdks/crm/README.md)
 
@@ -229,20 +250,30 @@ if res.accounting_customer is not None:
 * [update_crm_lead](docs/sdks/crm/README.md#update_crm_lead) - Update a lead
 * [update_crm_pipeline](docs/sdks/crm/README.md#update_crm_pipeline) - Update a pipeline
 
-### [.customer](docs/sdks/customer/README.md)
+### [.company](docs/sdks/company/README.md)
 
-* [create_accounting_customer](docs/sdks/customer/README.md#create_accounting_customer) - Create a customer
-* [create_ticketing_customer](docs/sdks/customer/README.md#create_ticketing_customer) - Create a customer
-* [get_accounting_customer](docs/sdks/customer/README.md#get_accounting_customer) - Retrieve a customer
-* [get_ticketing_customer](docs/sdks/customer/README.md#get_ticketing_customer) - Retrieve a customer
-* [list_accounting_customers](docs/sdks/customer/README.md#list_accounting_customers) - List all customers
-* [list_ticketing_customers](docs/sdks/customer/README.md#list_ticketing_customers) - List all customers
-* [patch_accounting_customer](docs/sdks/customer/README.md#patch_accounting_customer) - Update a customer
-* [patch_ticketing_customer](docs/sdks/customer/README.md#patch_ticketing_customer) - Update a customer
-* [remove_accounting_customer](docs/sdks/customer/README.md#remove_accounting_customer) - Remove a customer
-* [remove_ticketing_customer](docs/sdks/customer/README.md#remove_ticketing_customer) - Remove a customer
-* [update_accounting_customer](docs/sdks/customer/README.md#update_accounting_customer) - Update a customer
-* [update_ticketing_customer](docs/sdks/customer/README.md#update_ticketing_customer) - Update a customer
+* [create_crm_company](docs/sdks/company/README.md#create_crm_company) - Create a company
+* [get_crm_company](docs/sdks/company/README.md#get_crm_company) - Retrieve a company
+* [list_crm_companies](docs/sdks/company/README.md#list_crm_companies) - List all companies
+* [list_enrich_companies](docs/sdks/company/README.md#list_enrich_companies) - Retrieve enrichment information for a company
+* [patch_crm_company](docs/sdks/company/README.md#patch_crm_company) - Update a company
+* [remove_crm_company](docs/sdks/company/README.md#remove_crm_company) - Remove a company
+* [update_crm_company](docs/sdks/company/README.md#update_crm_company) - Update a company
+
+### [.contact](docs/sdks/contact/README.md)
+
+* [create_crm_contact](docs/sdks/contact/README.md#create_crm_contact) - Create a contact
+* [create_uc_contact](docs/sdks/contact/README.md#create_uc_contact) - Create a contact
+* [get_crm_contact](docs/sdks/contact/README.md#get_crm_contact) - Retrieve a contact
+* [get_uc_contact](docs/sdks/contact/README.md#get_uc_contact) - Retrieve a contact
+* [list_crm_contacts](docs/sdks/contact/README.md#list_crm_contacts) - List all contacts
+* [list_uc_contacts](docs/sdks/contact/README.md#list_uc_contacts) - List all contacts
+* [patch_crm_contact](docs/sdks/contact/README.md#patch_crm_contact) - Update a contact
+* [patch_uc_contact](docs/sdks/contact/README.md#patch_uc_contact) - Update a contact
+* [remove_crm_contact](docs/sdks/contact/README.md#remove_crm_contact) - Remove a contact
+* [remove_uc_contact](docs/sdks/contact/README.md#remove_uc_contact) - Remove a contact
+* [update_crm_contact](docs/sdks/contact/README.md#update_crm_contact) - Update a contact
+* [update_uc_contact](docs/sdks/contact/README.md#update_uc_contact) - Update a contact
 
 ### [.deal](docs/sdks/deal/README.md)
 
@@ -252,29 +283,6 @@ if res.accounting_customer is not None:
 * [patch_crm_deal](docs/sdks/deal/README.md#patch_crm_deal) - Update a deal
 * [remove_crm_deal](docs/sdks/deal/README.md#remove_crm_deal) - Remove a deal
 * [update_crm_deal](docs/sdks/deal/README.md#update_crm_deal) - Update a deal
-
-### [.document](docs/sdks/document/README.md)
-
-* [create_ats_document](docs/sdks/document/README.md#create_ats_document) - Create a document
-* [get_ats_document](docs/sdks/document/README.md#get_ats_document) - Retrieve a document
-* [list_ats_documents](docs/sdks/document/README.md#list_ats_documents) - List all documents
-* [patch_ats_document](docs/sdks/document/README.md#patch_ats_document) - Update a document
-* [remove_ats_document](docs/sdks/document/README.md#remove_ats_document) - Remove a document
-* [update_ats_document](docs/sdks/document/README.md#update_ats_document) - Update a document
-
-### [.employee](docs/sdks/employee/README.md)
-
-* [create_hris_employee](docs/sdks/employee/README.md#create_hris_employee) - Create an employee
-* [get_hris_employee](docs/sdks/employee/README.md#get_hris_employee) - Retrieve an employee
-* [list_hris_employees](docs/sdks/employee/README.md#list_hris_employees) - List all employees
-* [patch_hris_employee](docs/sdks/employee/README.md#patch_hris_employee) - Update an employee
-* [remove_hris_employee](docs/sdks/employee/README.md#remove_hris_employee) - Remove an employee
-* [update_hris_employee](docs/sdks/employee/README.md#update_hris_employee) - Update an employee
-
-### [.enrich](docs/sdks/enrich/README.md)
-
-* [list_enrich_companies](docs/sdks/enrich/README.md#list_enrich_companies) - Retrieve enrichment information for a company
-* [list_enrich_people](docs/sdks/enrich/README.md#list_enrich_people) - Retrieve enrichment information for a person
 
 ### [.event](docs/sdks/event/README.md)
 
@@ -294,14 +302,32 @@ if res.accounting_customer is not None:
 * [remove_crm_file](docs/sdks/file/README.md#remove_crm_file) - Remove a file
 * [update_crm_file](docs/sdks/file/README.md#update_crm_file) - Update a file
 
-### [.group](docs/sdks/group/README.md)
+### [.lead](docs/sdks/lead/README.md)
 
-* [create_hris_group](docs/sdks/group/README.md#create_hris_group) - Create a group
-* [get_hris_group](docs/sdks/group/README.md#get_hris_group) - Retrieve a group
-* [list_hris_groups](docs/sdks/group/README.md#list_hris_groups) - List all groups
-* [patch_hris_group](docs/sdks/group/README.md#patch_hris_group) - Update a group
-* [remove_hris_group](docs/sdks/group/README.md#remove_hris_group) - Remove a group
-* [update_hris_group](docs/sdks/group/README.md#update_hris_group) - Update a group
+* [create_crm_lead](docs/sdks/lead/README.md#create_crm_lead) - Create a lead
+* [get_crm_lead](docs/sdks/lead/README.md#get_crm_lead) - Retrieve a lead
+* [list_crm_leads](docs/sdks/lead/README.md#list_crm_leads) - List all leads
+* [patch_crm_lead](docs/sdks/lead/README.md#patch_crm_lead) - Update a lead
+* [remove_crm_lead](docs/sdks/lead/README.md#remove_crm_lead) - Remove a lead
+* [update_crm_lead](docs/sdks/lead/README.md#update_crm_lead) - Update a lead
+
+### [.pipeline](docs/sdks/pipeline/README.md)
+
+* [create_crm_pipeline](docs/sdks/pipeline/README.md#create_crm_pipeline) - Create a pipeline
+* [get_crm_pipeline](docs/sdks/pipeline/README.md#get_crm_pipeline) - Retrieve a pipeline
+* [list_crm_pipelines](docs/sdks/pipeline/README.md#list_crm_pipelines) - List all pipelines
+* [patch_crm_pipeline](docs/sdks/pipeline/README.md#patch_crm_pipeline) - Update a pipeline
+* [remove_crm_pipeline](docs/sdks/pipeline/README.md#remove_crm_pipeline) - Remove a pipeline
+* [update_crm_pipeline](docs/sdks/pipeline/README.md#update_crm_pipeline) - Update a pipeline
+
+### [.enrich](docs/sdks/enrich/README.md)
+
+* [list_enrich_companies](docs/sdks/enrich/README.md#list_enrich_companies) - Retrieve enrichment information for a company
+* [list_enrich_people](docs/sdks/enrich/README.md#list_enrich_people) - Retrieve enrichment information for a person
+
+### [.person](docs/sdks/person/README.md)
+
+* [list_enrich_people](docs/sdks/person/README.md#list_enrich_people) - Retrieve enrichment information for a person
 
 ### [.hris](docs/sdks/hris/README.md)
 
@@ -318,61 +344,23 @@ if res.accounting_customer is not None:
 * [update_hris_employee](docs/sdks/hris/README.md#update_hris_employee) - Update an employee
 * [update_hris_group](docs/sdks/hris/README.md#update_hris_group) - Update a group
 
-### [.integration](docs/sdks/integration/README.md)
+### [.employee](docs/sdks/employee/README.md)
 
-* [get_unified_integration](docs/sdks/integration/README.md#get_unified_integration) - Retrieve an integration
-* [get_unified_integration_auth](docs/sdks/integration/README.md#get_unified_integration_auth) - Create connection indirectly
-* [list_unified_integration_workspaces](docs/sdks/integration/README.md#list_unified_integration_workspaces) - Returns all activated integrations in a workspace
-* [list_unified_integrations](docs/sdks/integration/README.md#list_unified_integrations) - Returns all integrations
+* [create_hris_employee](docs/sdks/employee/README.md#create_hris_employee) - Create an employee
+* [get_hris_employee](docs/sdks/employee/README.md#get_hris_employee) - Retrieve an employee
+* [list_hris_employees](docs/sdks/employee/README.md#list_hris_employees) - List all employees
+* [patch_hris_employee](docs/sdks/employee/README.md#patch_hris_employee) - Update an employee
+* [remove_hris_employee](docs/sdks/employee/README.md#remove_hris_employee) - Remove an employee
+* [update_hris_employee](docs/sdks/employee/README.md#update_hris_employee) - Update an employee
 
-### [.interview](docs/sdks/interview/README.md)
+### [.group](docs/sdks/group/README.md)
 
-* [create_ats_interview](docs/sdks/interview/README.md#create_ats_interview) - Create a interview
-* [get_ats_interview](docs/sdks/interview/README.md#get_ats_interview) - Retrieve a interview
-* [list_ats_interviews](docs/sdks/interview/README.md#list_ats_interviews) - List all interviews
-* [patch_ats_interview](docs/sdks/interview/README.md#patch_ats_interview) - Update a interview
-* [remove_ats_interview](docs/sdks/interview/README.md#remove_ats_interview) - Remove a interview
-* [update_ats_interview](docs/sdks/interview/README.md#update_ats_interview) - Update a interview
-
-### [.invoice](docs/sdks/invoice/README.md)
-
-* [create_accounting_invoice](docs/sdks/invoice/README.md#create_accounting_invoice) - Create a invoice
-* [get_accounting_invoice](docs/sdks/invoice/README.md#get_accounting_invoice) - Retrieve a invoice
-* [list_accounting_invoices](docs/sdks/invoice/README.md#list_accounting_invoices) - List all invoices
-* [patch_accounting_invoice](docs/sdks/invoice/README.md#patch_accounting_invoice) - Update a invoice
-* [remove_accounting_invoice](docs/sdks/invoice/README.md#remove_accounting_invoice) - Remove a invoice
-* [update_accounting_invoice](docs/sdks/invoice/README.md#update_accounting_invoice) - Update a invoice
-
-### [.job](docs/sdks/job/README.md)
-
-* [create_ats_job](docs/sdks/job/README.md#create_ats_job) - Create a job
-* [get_ats_job](docs/sdks/job/README.md#get_ats_job) - Retrieve a job
-* [list_ats_jobs](docs/sdks/job/README.md#list_ats_jobs) - List all jobs
-* [patch_ats_job](docs/sdks/job/README.md#patch_ats_job) - Update a job
-* [remove_ats_job](docs/sdks/job/README.md#remove_ats_job) - Remove a job
-* [update_ats_job](docs/sdks/job/README.md#update_ats_job) - Update a job
-
-### [.lead](docs/sdks/lead/README.md)
-
-* [create_crm_lead](docs/sdks/lead/README.md#create_crm_lead) - Create a lead
-* [get_crm_lead](docs/sdks/lead/README.md#get_crm_lead) - Retrieve a lead
-* [list_crm_leads](docs/sdks/lead/README.md#list_crm_leads) - List all leads
-* [patch_crm_lead](docs/sdks/lead/README.md#patch_crm_lead) - Update a lead
-* [remove_crm_lead](docs/sdks/lead/README.md#remove_crm_lead) - Remove a lead
-* [update_crm_lead](docs/sdks/lead/README.md#update_crm_lead) - Update a lead
-
-### [.list](docs/sdks/list/README.md)
-
-* [create_martech_list](docs/sdks/list/README.md#create_martech_list) - Create a list
-* [get_martech_list](docs/sdks/list/README.md#get_martech_list) - Retrieve a list
-* [list_martech_lists](docs/sdks/list/README.md#list_martech_lists) - List all lists
-* [patch_martech_list](docs/sdks/list/README.md#patch_martech_list) - Update a list
-* [remove_martech_list](docs/sdks/list/README.md#remove_martech_list) - Remove a list
-* [update_martech_list](docs/sdks/list/README.md#update_martech_list) - Update a list
-
-### [.login](docs/sdks/login/README.md)
-
-* [get_unified_integration_login](docs/sdks/login/README.md#get_unified_integration_login) - Sign in a user
+* [create_hris_group](docs/sdks/group/README.md#create_hris_group) - Create a group
+* [get_hris_group](docs/sdks/group/README.md#get_hris_group) - Retrieve a group
+* [list_hris_groups](docs/sdks/group/README.md#list_hris_groups) - List all groups
+* [patch_hris_group](docs/sdks/group/README.md#patch_hris_group) - Update a group
+* [remove_hris_group](docs/sdks/group/README.md#remove_hris_group) - Remove a group
+* [update_hris_group](docs/sdks/group/README.md#update_hris_group) - Update a group
 
 ### [.martech](docs/sdks/martech/README.md)
 
@@ -389,6 +377,15 @@ if res.accounting_customer is not None:
 * [update_martech_list](docs/sdks/martech/README.md#update_martech_list) - Update a list
 * [update_martech_member](docs/sdks/martech/README.md#update_martech_member) - Update a member
 
+### [.list](docs/sdks/list/README.md)
+
+* [create_martech_list](docs/sdks/list/README.md#create_martech_list) - Create a list
+* [get_martech_list](docs/sdks/list/README.md#get_martech_list) - Retrieve a list
+* [list_martech_lists](docs/sdks/list/README.md#list_martech_lists) - List all lists
+* [patch_martech_list](docs/sdks/list/README.md#patch_martech_list) - Update a list
+* [remove_martech_list](docs/sdks/list/README.md#remove_martech_list) - Remove a list
+* [update_martech_list](docs/sdks/list/README.md#update_martech_list) - Update a list
+
 ### [.member](docs/sdks/member/README.md)
 
 * [create_martech_member](docs/sdks/member/README.md#create_martech_member) - Create a member
@@ -398,15 +395,6 @@ if res.accounting_customer is not None:
 * [remove_martech_member](docs/sdks/member/README.md#remove_martech_member) - Remove member
 * [update_martech_member](docs/sdks/member/README.md#update_martech_member) - Update a member
 
-### [.note](docs/sdks/note/README.md)
-
-* [create_ticketing_note](docs/sdks/note/README.md#create_ticketing_note) - Create a note
-* [get_ticketing_note](docs/sdks/note/README.md#get_ticketing_note) - Retrieve a note
-* [list_ticketing_notes](docs/sdks/note/README.md#list_ticketing_notes) - List all notes
-* [patch_ticketing_note](docs/sdks/note/README.md#patch_ticketing_note) - Update a note
-* [remove_ticketing_note](docs/sdks/note/README.md#remove_ticketing_note) - Remove a note
-* [update_ticketing_note](docs/sdks/note/README.md#update_ticketing_note) - Update a note
-
 ### [.passthrough](docs/sdks/passthrough/README.md)
 
 * [create_passthrough](docs/sdks/passthrough/README.md#create_passthrough) - Passthrough POST
@@ -414,46 +402,6 @@ if res.accounting_customer is not None:
 * [patch_passthrough](docs/sdks/passthrough/README.md#patch_passthrough) - Passthrough PUT
 * [remove_passthrough](docs/sdks/passthrough/README.md#remove_passthrough) - Passthrough DELETE
 * [update_passthrough](docs/sdks/passthrough/README.md#update_passthrough) - Passthrough PUT
-
-### [.payment](docs/sdks/payment/README.md)
-
-* [create_accounting_payment](docs/sdks/payment/README.md#create_accounting_payment) - Create a payment
-* [get_accounting_payment](docs/sdks/payment/README.md#get_accounting_payment) - Retrieve a payment
-* [list_accounting_payments](docs/sdks/payment/README.md#list_accounting_payments) - List all payments
-* [patch_accounting_payment](docs/sdks/payment/README.md#patch_accounting_payment) - Update a payment
-* [remove_accounting_payment](docs/sdks/payment/README.md#remove_accounting_payment) - Remove a payment
-* [update_accounting_payment](docs/sdks/payment/README.md#update_accounting_payment) - Update a payment
-
-### [.person](docs/sdks/person/README.md)
-
-* [list_enrich_people](docs/sdks/person/README.md#list_enrich_people) - Retrieve enrichment information for a person
-
-### [.pipeline](docs/sdks/pipeline/README.md)
-
-* [create_crm_pipeline](docs/sdks/pipeline/README.md#create_crm_pipeline) - Create a pipeline
-* [get_crm_pipeline](docs/sdks/pipeline/README.md#get_crm_pipeline) - Retrieve a pipeline
-* [list_crm_pipelines](docs/sdks/pipeline/README.md#list_crm_pipelines) - List all pipelines
-* [patch_crm_pipeline](docs/sdks/pipeline/README.md#patch_crm_pipeline) - Update a pipeline
-* [remove_crm_pipeline](docs/sdks/pipeline/README.md#remove_crm_pipeline) - Remove a pipeline
-* [update_crm_pipeline](docs/sdks/pipeline/README.md#update_crm_pipeline) - Update a pipeline
-
-### [.scorecard](docs/sdks/scorecard/README.md)
-
-* [create_ats_scorecard](docs/sdks/scorecard/README.md#create_ats_scorecard) - Create a scorecard
-* [get_ats_scorecard](docs/sdks/scorecard/README.md#get_ats_scorecard) - Retrieve a scorecard
-* [list_ats_scorecards](docs/sdks/scorecard/README.md#list_ats_scorecards) - List all scorecards
-* [patch_ats_scorecard](docs/sdks/scorecard/README.md#patch_ats_scorecard) - Update a scorecard
-* [remove_ats_scorecard](docs/sdks/scorecard/README.md#remove_ats_scorecard) - Remove a scorecard
-* [update_ats_scorecard](docs/sdks/scorecard/README.md#update_ats_scorecard) - Update a scorecard
-
-### [.ticket](docs/sdks/ticket/README.md)
-
-* [create_ticketing_ticket](docs/sdks/ticket/README.md#create_ticketing_ticket) - Create a ticket
-* [get_ticketing_ticket](docs/sdks/ticket/README.md#get_ticketing_ticket) - Retrieve a ticket
-* [list_ticketing_tickets](docs/sdks/ticket/README.md#list_ticketing_tickets) - List all tickets
-* [patch_ticketing_ticket](docs/sdks/ticket/README.md#patch_ticketing_ticket) - Update a ticket
-* [remove_ticketing_ticket](docs/sdks/ticket/README.md#remove_ticketing_ticket) - Remove a ticket
-* [update_ticketing_ticket](docs/sdks/ticket/README.md#update_ticketing_ticket) - Update a ticket
 
 ### [.ticketing](docs/sdks/ticketing/README.md)
 
@@ -476,6 +424,24 @@ if res.accounting_customer is not None:
 * [update_ticketing_note](docs/sdks/ticketing/README.md#update_ticketing_note) - Update a note
 * [update_ticketing_ticket](docs/sdks/ticketing/README.md#update_ticketing_ticket) - Update a ticket
 
+### [.note](docs/sdks/note/README.md)
+
+* [create_ticketing_note](docs/sdks/note/README.md#create_ticketing_note) - Create a note
+* [get_ticketing_note](docs/sdks/note/README.md#get_ticketing_note) - Retrieve a note
+* [list_ticketing_notes](docs/sdks/note/README.md#list_ticketing_notes) - List all notes
+* [patch_ticketing_note](docs/sdks/note/README.md#patch_ticketing_note) - Update a note
+* [remove_ticketing_note](docs/sdks/note/README.md#remove_ticketing_note) - Remove a note
+* [update_ticketing_note](docs/sdks/note/README.md#update_ticketing_note) - Update a note
+
+### [.ticket](docs/sdks/ticket/README.md)
+
+* [create_ticketing_ticket](docs/sdks/ticket/README.md#create_ticketing_ticket) - Create a ticket
+* [get_ticketing_ticket](docs/sdks/ticket/README.md#get_ticketing_ticket) - Retrieve a ticket
+* [list_ticketing_tickets](docs/sdks/ticket/README.md#list_ticketing_tickets) - List all tickets
+* [patch_ticketing_ticket](docs/sdks/ticket/README.md#patch_ticketing_ticket) - Update a ticket
+* [remove_ticketing_ticket](docs/sdks/ticket/README.md#remove_ticketing_ticket) - Remove a ticket
+* [update_ticketing_ticket](docs/sdks/ticket/README.md#update_ticketing_ticket) - Update a ticket
+
 ### [.uc](docs/sdks/uc/README.md)
 
 * [create_uc_contact](docs/sdks/uc/README.md#create_uc_contact) - Create a contact
@@ -485,6 +451,10 @@ if res.accounting_customer is not None:
 * [patch_uc_contact](docs/sdks/uc/README.md#patch_uc_contact) - Update a contact
 * [remove_uc_contact](docs/sdks/uc/README.md#remove_uc_contact) - Remove a contact
 * [update_uc_contact](docs/sdks/uc/README.md#update_uc_contact) - Update a contact
+
+### [.call](docs/sdks/call/README.md)
+
+* [list_uc_calls](docs/sdks/call/README.md#list_uc_calls) - List all calls
 
 ### [.unified](docs/sdks/unified/README.md)
 
@@ -504,6 +474,36 @@ if res.accounting_customer is not None:
 * [remove_unified_connection](docs/sdks/unified/README.md#remove_unified_connection) - Remove connection
 * [remove_unified_webhook](docs/sdks/unified/README.md#remove_unified_webhook) - Remove webhook subscription
 * [update_unified_connection](docs/sdks/unified/README.md#update_unified_connection) - Update connection
+
+### [.apicall](docs/sdks/apicall/README.md)
+
+* [get_unified_apicall](docs/sdks/apicall/README.md#get_unified_apicall) - Retrieve specific API Call by its ID
+* [list_unified_apicalls](docs/sdks/apicall/README.md#list_unified_apicalls) - Returns API Calls
+
+### [.connection](docs/sdks/connection/README.md)
+
+* [create_unified_connection](docs/sdks/connection/README.md#create_unified_connection) - Create connection
+* [get_unified_connection](docs/sdks/connection/README.md#get_unified_connection) - Retrieve connection
+* [list_unified_connections](docs/sdks/connection/README.md#list_unified_connections) - List all connections
+* [patch_unified_connection](docs/sdks/connection/README.md#patch_unified_connection) - Update connection
+* [remove_unified_connection](docs/sdks/connection/README.md#remove_unified_connection) - Remove connection
+* [update_unified_connection](docs/sdks/connection/README.md#update_unified_connection) - Update connection
+
+### [.integration](docs/sdks/integration/README.md)
+
+* [get_unified_integration](docs/sdks/integration/README.md#get_unified_integration) - Retrieve an integration
+* [get_unified_integration_auth](docs/sdks/integration/README.md#get_unified_integration_auth) - Create connection indirectly
+* [list_unified_integration_workspaces](docs/sdks/integration/README.md#list_unified_integration_workspaces) - Returns all activated integrations in a workspace
+* [list_unified_integrations](docs/sdks/integration/README.md#list_unified_integrations) - Returns all integrations
+
+### [.auth](docs/sdks/auth/README.md)
+
+* [get_unified_integration_auth](docs/sdks/auth/README.md#get_unified_integration_auth) - Create connection indirectly
+* [get_unified_integration_login](docs/sdks/auth/README.md#get_unified_integration_login) - Sign in a user
+
+### [.login](docs/sdks/login/README.md)
+
+* [get_unified_integration_login](docs/sdks/login/README.md#get_unified_integration_login) - Sign in a user
 
 ### [.webhook](docs/sdks/webhook/README.md)
 
@@ -555,17 +555,16 @@ You can override the default server globally by passing a server index to the `s
 
 For example:
 
-
 ```python
-import unified_to
 import dateutil.parser
+import unified_to
 from unified_to.models import operations, shared
 
 s = unified_to.UnifiedTo(
+    server_idx=1,
     security=shared.Security(
         jwt="",
     ),
-    server_idx=1
 )
 
 req = operations.CreateAccountingCustomerRequest(
@@ -599,17 +598,16 @@ if res.accounting_customer is not None:
 
 The default server can also be overridden globally by passing a URL to the `server_url: str` optional parameter when initializing the SDK client instance. For example:
 
-
 ```python
-import unified_to
 import dateutil.parser
+import unified_to
 from unified_to.models import operations, shared
 
 s = unified_to.UnifiedTo(
+    server_url="https://api.unified.to",
     security=shared.Security(
         jwt="",
     ),
-    server_url="https://api.unified.to"
 )
 
 req = operations.CreateAccountingCustomerRequest(
@@ -658,6 +656,60 @@ http_client.headers.update({'x-custom-header': 'someValue'})
 s = unified_to.UnifiedTo(client: http_client)
 ```
 <!-- End Custom HTTP Client -->
+
+
+
+<!-- Start Authentication -->
+
+# Authentication
+
+## Per-Client Security Schemes
+
+Your SDK supports the following security scheme globally:
+
+| Name    | Type    | Scheme  |
+| ------- | ------- | ------- |
+| `jwt`   | apiKey  | API key |
+
+You can set the security parameters through the `security` optional parameter when initializing the SDK client instance. For example:
+
+```python
+import dateutil.parser
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
+
+req = operations.CreateAccountingCustomerRequest(
+    accounting_customer=shared.AccountingCustomer(
+        billing_address=shared.PropertyAccountingCustomerBillingAddress(),
+        emails=[
+            shared.AccountingEmail(
+                email='Kevon_Schultz42@gmail.com',
+            ),
+        ],
+        raw=shared.PropertyAccountingCustomerRaw(),
+        shipping_address=shared.PropertyAccountingCustomerShippingAddress(),
+        telephones=[
+            shared.AccountingTelephone(
+                telephone='string',
+            ),
+        ],
+    ),
+    connection_id='string',
+)
+
+res = s.accounting.create_accounting_customer(req)
+
+if res.accounting_customer is not None:
+    # handle response
+    pass
+```
+<!-- End Authentication -->
 
 <!-- Placeholder for Future Speakeasy SDK Sections -->
 

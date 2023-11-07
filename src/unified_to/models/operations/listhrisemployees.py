@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import hrisemployee as shared_hrisemployee
+from ...models.shared import hrisemployee as shared_hrisemployee
 from datetime import datetime
 from typing import List, Optional
 

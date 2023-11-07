@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import ticketingticket as shared_ticketingticket
+from ...models.shared import ticketingticket as shared_ticketingticket
 from typing import Optional
 
 

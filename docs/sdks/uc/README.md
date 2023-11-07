@@ -18,8 +18,8 @@ Create a contact
 ### Example Usage
 
 ```python
-import unified_to
 import dateutil.parser
+import unified_to
 from unified_to.models import operations, shared
 
 s = unified_to.UnifiedTo(
@@ -114,8 +114,8 @@ List all calls
 ### Example Usage
 
 ```python
-import unified_to
 import dateutil.parser
+import unified_to
 from unified_to.models import operations, shared
 
 s = unified_to.UnifiedTo(
@@ -157,8 +157,8 @@ List all contacts
 ### Example Usage
 
 ```python
-import unified_to
 import dateutil.parser
+import unified_to
 from unified_to.models import operations, shared
 
 s = unified_to.UnifiedTo(
@@ -200,8 +200,8 @@ Update a contact
 ### Example Usage
 
 ```python
-import unified_to
 import dateutil.parser
+import unified_to
 from unified_to.models import operations, shared
 
 s = unified_to.UnifiedTo(
@@ -294,8 +294,8 @@ Update a contact
 ### Example Usage
 
 ```python
-import unified_to
 import dateutil.parser
+import unified_to
 from unified_to.models import operations, shared
 
 s = unified_to.UnifiedTo(

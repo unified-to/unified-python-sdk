@@ -23,8 +23,8 @@ Create an employee
 ### Example Usage
 
 ```python
-import unified_to
 import dateutil.parser
+import unified_to
 from unified_to.models import operations, shared
 
 s = unified_to.UnifiedTo(
@@ -77,8 +77,8 @@ Create a group
 ### Example Usage
 
 ```python
-import unified_to
 import dateutil.parser
+import unified_to
 from unified_to.models import operations, shared
 
 s = unified_to.UnifiedTo(
@@ -212,8 +212,8 @@ List all employees
 ### Example Usage
 
 ```python
-import unified_to
 import dateutil.parser
+import unified_to
 from unified_to.models import operations, shared
 
 s = unified_to.UnifiedTo(
@@ -255,8 +255,8 @@ List all groups
 ### Example Usage
 
 ```python
-import unified_to
 import dateutil.parser
+import unified_to
 from unified_to.models import operations, shared
 
 s = unified_to.UnifiedTo(
@@ -298,8 +298,8 @@ Update an employee
 ### Example Usage
 
 ```python
-import unified_to
 import dateutil.parser
+import unified_to
 from unified_to.models import operations, shared
 
 s = unified_to.UnifiedTo(
@@ -353,8 +353,8 @@ Update a group
 ### Example Usage
 
 ```python
-import unified_to
 import dateutil.parser
+import unified_to
 from unified_to.models import operations, shared
 
 s = unified_to.UnifiedTo(
@@ -483,8 +483,8 @@ Update an employee
 ### Example Usage
 
 ```python
-import unified_to
 import dateutil.parser
+import unified_to
 from unified_to.models import operations, shared
 
 s = unified_to.UnifiedTo(
@@ -538,8 +538,8 @@ Update a group
 ### Example Usage
 
 ```python
-import unified_to
 import dateutil.parser
+import unified_to
 from unified_to.models import operations, shared
 
 s = unified_to.UnifiedTo(

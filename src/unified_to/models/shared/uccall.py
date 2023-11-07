@@ -3,8 +3,8 @@
 from __future__ import annotations
 import dataclasses
 import dateutil.parser
-from ..shared import property_uccall_raw as shared_property_uccall_raw
-from ..shared import property_uccall_telephone as shared_property_uccall_telephone
+from .property_uccall_raw import PropertyUcCallRaw
+from .property_uccall_telephone import PropertyUcCallTelephone
 from dataclasses_json import Undefined, dataclass_json
 from datetime import datetime
 from typing import Optional
@@ -15,14 +15,14 @@ from unified_to import utils
 @dataclasses.dataclass
 class UcCall:
     agency_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('agency_id') }})
-    raw: shared_property_uccall_raw.PropertyUcCallRaw = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('raw') }})
+    raw: PropertyUcCallRaw = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('raw') }})
     r"""The raw data returned by the integration for this call"""
     contact_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('contact_id'), 'exclude': lambda f: f is None }})
     created_at: Optional[datetime] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created_at'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'exclude': lambda f: f is None }})
     end_at: Optional[datetime] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('end_at'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'exclude': lambda f: f is None }})
     id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id'), 'exclude': lambda f: f is None }})
     start_at: Optional[datetime] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('start_at'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'exclude': lambda f: f is None }})
-    telephone: Optional[shared_property_uccall_telephone.PropertyUcCallTelephone] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('telephone'), 'exclude': lambda f: f is None }})
+    telephone: Optional[PropertyUcCallTelephone] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('telephone'), 'exclude': lambda f: f is None }})
     r"""The telephone number called"""
     updated_at: Optional[datetime] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('updated_at'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'exclude': lambda f: f is None }})
     

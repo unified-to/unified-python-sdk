@@ -29,8 +29,8 @@ Create a customer
 ### Example Usage
 
 ```python
-import unified_to
 import dateutil.parser
+import unified_to
 from unified_to.models import operations, shared
 
 s = unified_to.UnifiedTo(
@@ -84,8 +84,8 @@ Create a invoice
 ### Example Usage
 
 ```python
-import unified_to
 import dateutil.parser
+import unified_to
 from unified_to.models import operations, shared
 
 s = unified_to.UnifiedTo(
@@ -132,8 +132,8 @@ Create a payment
 ### Example Usage
 
 ```python
-import unified_to
 import dateutil.parser
+import unified_to
 from unified_to.models import operations, shared
 
 s = unified_to.UnifiedTo(
@@ -307,8 +307,8 @@ List all customers
 ### Example Usage
 
 ```python
-import unified_to
 import dateutil.parser
+import unified_to
 from unified_to.models import operations, shared
 
 s = unified_to.UnifiedTo(
@@ -350,8 +350,8 @@ List all invoices
 ### Example Usage
 
 ```python
-import unified_to
 import dateutil.parser
+import unified_to
 from unified_to.models import operations, shared
 
 s = unified_to.UnifiedTo(
@@ -393,8 +393,8 @@ List all payments
 ### Example Usage
 
 ```python
-import unified_to
 import dateutil.parser
+import unified_to
 from unified_to.models import operations, shared
 
 s = unified_to.UnifiedTo(
@@ -436,8 +436,8 @@ Update a customer
 ### Example Usage
 
 ```python
-import unified_to
 import dateutil.parser
+import unified_to
 from unified_to.models import operations, shared
 
 s = unified_to.UnifiedTo(
@@ -492,8 +492,8 @@ Update a invoice
 ### Example Usage
 
 ```python
-import unified_to
 import dateutil.parser
+import unified_to
 from unified_to.models import operations, shared
 
 s = unified_to.UnifiedTo(
@@ -541,8 +541,8 @@ Update a payment
 ### Example Usage
 
 ```python
-import unified_to
 import dateutil.parser
+import unified_to
 from unified_to.models import operations, shared
 
 s = unified_to.UnifiedTo(
@@ -708,8 +708,8 @@ Update a customer
 ### Example Usage
 
 ```python
-import unified_to
 import dateutil.parser
+import unified_to
 from unified_to.models import operations, shared
 
 s = unified_to.UnifiedTo(
@@ -764,8 +764,8 @@ Update a invoice
 ### Example Usage
 
 ```python
-import unified_to
 import dateutil.parser
+import unified_to
 from unified_to.models import operations, shared
 
 s = unified_to.UnifiedTo(
@@ -813,8 +813,8 @@ Update a payment
 ### Example Usage
 
 ```python
-import unified_to
 import dateutil.parser
+import unified_to
 from unified_to.models import operations, shared
 
 s = unified_to.UnifiedTo(

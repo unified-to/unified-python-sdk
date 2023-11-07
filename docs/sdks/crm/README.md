@@ -53,8 +53,8 @@ Create a company
 ### Example Usage
 
 ```python
-import unified_to
 import dateutil.parser
+import unified_to
 from unified_to.models import operations, shared
 
 s = unified_to.UnifiedTo(
@@ -114,8 +114,8 @@ Create a contact
 ### Example Usage
 
 ```python
-import unified_to
 import dateutil.parser
+import unified_to
 from unified_to.models import operations, shared
 
 s = unified_to.UnifiedTo(
@@ -172,8 +172,8 @@ Create a deal
 ### Example Usage
 
 ```python
-import unified_to
 import dateutil.parser
+import unified_to
 from unified_to.models import operations, shared
 
 s = unified_to.UnifiedTo(
@@ -218,8 +218,8 @@ Create a event
 ### Example Usage
 
 ```python
-import unified_to
 import dateutil.parser
+import unified_to
 from unified_to.models import operations, shared
 
 s = unified_to.UnifiedTo(
@@ -282,8 +282,8 @@ Create a file
 ### Example Usage
 
 ```python
-import unified_to
 import dateutil.parser
+import unified_to
 from unified_to.models import operations, shared
 
 s = unified_to.UnifiedTo(
@@ -325,8 +325,8 @@ Create a lead
 ### Example Usage
 
 ```python
-import unified_to
 import dateutil.parser
+import unified_to
 from unified_to.models import operations, shared
 
 s = unified_to.UnifiedTo(
@@ -377,8 +377,8 @@ Create a pipeline
 ### Example Usage
 
 ```python
-import unified_to
 import dateutil.parser
+import unified_to
 from unified_to.models import operations, shared
 
 s = unified_to.UnifiedTo(
@@ -721,8 +721,8 @@ List all companies
 ### Example Usage
 
 ```python
-import unified_to
 import dateutil.parser
+import unified_to
 from unified_to.models import operations, shared
 
 s = unified_to.UnifiedTo(
@@ -764,8 +764,8 @@ List all contacts
 ### Example Usage
 
 ```python
-import unified_to
 import dateutil.parser
+import unified_to
 from unified_to.models import operations, shared
 
 s = unified_to.UnifiedTo(
@@ -807,8 +807,8 @@ List all deals
 ### Example Usage
 
 ```python
-import unified_to
 import dateutil.parser
+import unified_to
 from unified_to.models import operations, shared
 
 s = unified_to.UnifiedTo(
@@ -850,8 +850,8 @@ List all events
 ### Example Usage
 
 ```python
-import unified_to
 import dateutil.parser
+import unified_to
 from unified_to.models import operations, shared
 
 s = unified_to.UnifiedTo(
@@ -893,8 +893,8 @@ List all files
 ### Example Usage
 
 ```python
-import unified_to
 import dateutil.parser
+import unified_to
 from unified_to.models import operations, shared
 
 s = unified_to.UnifiedTo(
@@ -936,8 +936,8 @@ List all leads
 ### Example Usage
 
 ```python
-import unified_to
 import dateutil.parser
+import unified_to
 from unified_to.models import operations, shared
 
 s = unified_to.UnifiedTo(
@@ -979,8 +979,8 @@ List all pipelines
 ### Example Usage
 
 ```python
-import unified_to
 import dateutil.parser
+import unified_to
 from unified_to.models import operations, shared
 
 s = unified_to.UnifiedTo(
@@ -1022,8 +1022,8 @@ Update a company
 ### Example Usage
 
 ```python
-import unified_to
 import dateutil.parser
+import unified_to
 from unified_to.models import operations, shared
 
 s = unified_to.UnifiedTo(
@@ -1084,8 +1084,8 @@ Update a contact
 ### Example Usage
 
 ```python
-import unified_to
 import dateutil.parser
+import unified_to
 from unified_to.models import operations, shared
 
 s = unified_to.UnifiedTo(
@@ -1143,8 +1143,8 @@ Update a deal
 ### Example Usage
 
 ```python
-import unified_to
 import dateutil.parser
+import unified_to
 from unified_to.models import operations, shared
 
 s = unified_to.UnifiedTo(
@@ -1190,8 +1190,8 @@ Update a event
 ### Example Usage
 
 ```python
-import unified_to
 import dateutil.parser
+import unified_to
 from unified_to.models import operations, shared
 
 s = unified_to.UnifiedTo(
@@ -1255,8 +1255,8 @@ Update a file
 ### Example Usage
 
 ```python
-import unified_to
 import dateutil.parser
+import unified_to
 from unified_to.models import operations, shared
 
 s = unified_to.UnifiedTo(
@@ -1299,8 +1299,8 @@ Update a lead
 ### Example Usage
 
 ```python
-import unified_to
 import dateutil.parser
+import unified_to
 from unified_to.models import operations, shared
 
 s = unified_to.UnifiedTo(
@@ -1352,8 +1352,8 @@ Update a pipeline
 ### Example Usage
 
 ```python
-import unified_to
 import dateutil.parser
+import unified_to
 from unified_to.models import operations, shared
 
 s = unified_to.UnifiedTo(
@@ -1676,8 +1676,8 @@ Update a company
 ### Example Usage
 
 ```python
-import unified_to
 import dateutil.parser
+import unified_to
 from unified_to.models import operations, shared
 
 s = unified_to.UnifiedTo(
@@ -1738,8 +1738,8 @@ Update a contact
 ### Example Usage
 
 ```python
-import unified_to
 import dateutil.parser
+import unified_to
 from unified_to.models import operations, shared
 
 s = unified_to.UnifiedTo(
@@ -1797,8 +1797,8 @@ Update a deal
 ### Example Usage
 
 ```python
-import unified_to
 import dateutil.parser
+import unified_to
 from unified_to.models import operations, shared
 
 s = unified_to.UnifiedTo(
@@ -1844,8 +1844,8 @@ Update a event
 ### Example Usage
 
 ```python
-import unified_to
 import dateutil.parser
+import unified_to
 from unified_to.models import operations, shared
 
 s = unified_to.UnifiedTo(
@@ -1909,8 +1909,8 @@ Update a file
 ### Example Usage
 
 ```python
-import unified_to
 import dateutil.parser
+import unified_to
 from unified_to.models import operations, shared
 
 s = unified_to.UnifiedTo(
@@ -1953,8 +1953,8 @@ Update a lead
 ### Example Usage
 
 ```python
-import unified_to
 import dateutil.parser
+import unified_to
 from unified_to.models import operations, shared
 
 s = unified_to.UnifiedTo(
@@ -2006,8 +2006,8 @@ Update a pipeline
 ### Example Usage
 
 ```python
-import unified_to
 import dateutil.parser
+import unified_to
 from unified_to.models import operations, shared
 
 s = unified_to.UnifiedTo(

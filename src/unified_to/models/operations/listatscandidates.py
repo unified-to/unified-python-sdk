@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import atscandidate as shared_atscandidate
+from ...models.shared import atscandidate as shared_atscandidate
 from datetime import datetime
 from typing import List, Optional
 

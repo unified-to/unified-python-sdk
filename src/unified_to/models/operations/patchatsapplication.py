@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import atsapplication as shared_atsapplication
+from ...models.shared import atsapplication as shared_atsapplication
 from typing import Optional
 
 

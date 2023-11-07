@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import uccontact as shared_uccontact
+from ...models.shared import uccontact as shared_uccontact
 from datetime import datetime
 from typing import List, Optional
 

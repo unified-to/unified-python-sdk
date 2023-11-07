@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import atsinterview as shared_atsinterview
+from ...models.shared import atsinterview as shared_atsinterview
 from typing import List, Optional
 
 

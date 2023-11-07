@@ -3,8 +3,8 @@
 from __future__ import annotations
 import dataclasses
 import dateutil.parser
-from ..shared import integrationsupport as shared_integrationsupport
-from ..shared import property_integration_categories as shared_property_integration_categories
+from .integrationsupport import IntegrationSupport
+from .property_integration_categories import PropertyIntegrationCategories
 from dataclasses_json import Undefined, dataclass_json
 from datetime import datetime
 from typing import Dict, List, Optional
@@ -15,11 +15,11 @@ from unified_to import utils
 @dataclasses.dataclass
 class Integration:
     r"""Informational object for supported integrations."""
-    categories: List[shared_property_integration_categories.PropertyIntegrationCategories] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('categories') }})
+    categories: List[PropertyIntegrationCategories] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('categories') }})
     r"""The categories of support solutions that this integration has"""
     in_progress: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('in_progress') }})
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
-    support: Dict[str, shared_integrationsupport.IntegrationSupport] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('support') }})
+    support: Dict[str, IntegrationSupport] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('support') }})
     type: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type') }})
     api_docs_url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('api_docs_url'), 'exclude': lambda f: f is None }})
     beta: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('beta'), 'exclude': lambda f: f is None }})

@@ -2,28 +2,31 @@ configVersion: 1.0.0
 management:
   docChecksum: 7b1cb43287adc82723644e87b73cba93
   docVersion: "1.0"
-  speakeasyVersion: 1.110.1
-  generationVersion: 2.175.1
+  speakeasyVersion: 1.114.1
+  generationVersion: 2.181.1
 generation:
-  comments:
-    disableComments: false
-    omitDescriptionIfSummaryPresent: false
-  baseServerURL: ""
-  repoURL: https://github.com/unified-to/unified-python-sdk.git
+  comments: {}
   sdkClassName: Unified-to
-  singleTagPerOp: false
-  tagNamespacingDisabled: false
+  repoURL: https://github.com/unified-to/unified-python-sdk.git
 features:
   python:
-    core: 4.0.1
+    core: 4.1.0
     globalSecurity: 2.82.0
     globalServerURLs: 2.82.0
 python:
-  version: 0.10.0
+  version: 0.11.0
   author: Unified API Inc
   clientServerStatusCodesAsErrors: true
   description: Python Client SDK for Unified.to
   flattenGlobalSecurity: false
+  imports:
+    option: openapi
+    paths:
+      callbacks: models/callbacks
+      errors: models/errors
+      operations: models/operations
+      shared: models/shared
+      webhooks: models/webhooks
   installationURL: https://github.com/unified-to/unified-python-sdk.git
   maxMethodParams: 0
   packageName: Unified-php-sdk

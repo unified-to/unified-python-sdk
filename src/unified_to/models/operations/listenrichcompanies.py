@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import enrichcompany as shared_enrichcompany
+from ...models.shared import enrichcompany as shared_enrichcompany
 from typing import Optional
 
 

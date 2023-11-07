@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import apicall as shared_apicall
+from ...models.shared import apicall as shared_apicall
 from datetime import datetime
 from typing import List, Optional
 

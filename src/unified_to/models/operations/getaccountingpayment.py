@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import accountingpayment as shared_accountingpayment
+from ...models.shared import accountingpayment as shared_accountingpayment
 from typing import List, Optional
 
 

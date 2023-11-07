@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import accountingcustomer as shared_accountingcustomer
+from ...models.shared import accountingcustomer as shared_accountingcustomer
 from datetime import datetime
 from typing import List, Optional
 

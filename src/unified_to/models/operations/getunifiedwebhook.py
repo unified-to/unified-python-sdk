@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import webhook as shared_webhook
+from ...models.shared import webhook as shared_webhook
 from typing import Optional
 
 
