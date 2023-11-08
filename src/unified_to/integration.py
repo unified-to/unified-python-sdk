@@ -12,6 +12,7 @@ class Integration:
         self.sdk_configuration = sdk_config
         
     
+    
     def get_unified_integration(self, request: operations.GetUnifiedIntegrationRequest) -> operations.GetUnifiedIntegrationResponse:
         r"""Retrieve an integration"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -21,7 +22,10 @@ class Integration:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -40,6 +44,7 @@ class Integration:
         return res
 
     
+    
     def get_unified_integration_auth(self, request: operations.GetUnifiedIntegrationAuthRequest) -> operations.GetUnifiedIntegrationAuthResponse:
         r"""Create connection indirectly
         Returns an authorization URL for the specified integration.  Once a successful authorization occurs, a new connection is created.
@@ -52,7 +57,10 @@ class Integration:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -70,6 +78,7 @@ class Integration:
         return res
 
     
+    
     def list_unified_integration_workspaces(self, request: operations.ListUnifiedIntegrationWorkspacesRequest) -> operations.ListUnifiedIntegrationWorkspacesResponse:
         r"""Returns all activated integrations in a workspace
         No authentication required as this is to be used by front-end interface
@@ -82,7 +91,10 @@ class Integration:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -101,6 +113,7 @@ class Integration:
         return res
 
     
+    
     def list_unified_integrations(self, request: operations.ListUnifiedIntegrationsRequest) -> operations.ListUnifiedIntegrationsResponse:
         r"""Returns all integrations"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -111,7 +124,10 @@ class Integration:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')

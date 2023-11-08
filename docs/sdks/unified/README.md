@@ -1,5 +1,5 @@
 # Unified
-(*.unified*)
+(*unified*)
 
 ### Available Operations
 
@@ -73,7 +73,11 @@ if res.connection is not None:
 ### Response
 
 **[operations.CreateUnifiedConnectionResponse](../../models/operations/createunifiedconnectionresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## create_unified_webhook
 
@@ -131,7 +135,11 @@ if res.webhook is not None:
 ### Response
 
 **[operations.CreateUnifiedWebhookResponse](../../models/operations/createunifiedwebhookresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_unified_apicall
 
@@ -170,7 +178,11 @@ if res.api_call is not None:
 ### Response
 
 **[operations.GetUnifiedApicallResponse](../../models/operations/getunifiedapicallresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_unified_connection
 
@@ -209,7 +221,11 @@ if res.connection is not None:
 ### Response
 
 **[operations.GetUnifiedConnectionResponse](../../models/operations/getunifiedconnectionresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_unified_integration
 
@@ -248,7 +264,11 @@ if res.integration is not None:
 ### Response
 
 **[operations.GetUnifiedIntegrationResponse](../../models/operations/getunifiedintegrationresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_unified_integration_auth
 
@@ -291,7 +311,11 @@ if res.res is not None:
 ### Response
 
 **[operations.GetUnifiedIntegrationAuthResponse](../../models/operations/getunifiedintegrationauthresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_unified_webhook
 
@@ -330,7 +354,11 @@ if res.webhook is not None:
 ### Response
 
 **[operations.GetUnifiedWebhookResponse](../../models/operations/getunifiedwebhookresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## list_unified_apicalls
 
@@ -368,7 +396,11 @@ if res.api_calls is not None:
 ### Response
 
 **[operations.ListUnifiedApicallsResponse](../../models/operations/listunifiedapicallsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## list_unified_connections
 
@@ -410,7 +442,11 @@ if res.connections is not None:
 ### Response
 
 **[operations.ListUnifiedConnectionsResponse](../../models/operations/listunifiedconnectionsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## list_unified_integration_workspaces
 
@@ -452,7 +488,11 @@ if res.integrations is not None:
 ### Response
 
 **[operations.ListUnifiedIntegrationWorkspacesResponse](../../models/operations/listunifiedintegrationworkspacesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## list_unified_integrations
 
@@ -493,7 +533,11 @@ if res.integrations is not None:
 ### Response
 
 **[operations.ListUnifiedIntegrationsResponse](../../models/operations/listunifiedintegrationsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## list_unified_webhooks
 
@@ -531,7 +575,11 @@ if res.webhooks is not None:
 ### Response
 
 **[operations.ListUnifiedWebhooksResponse](../../models/operations/listunifiedwebhooksresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## patch_unified_connection
 
@@ -589,7 +637,11 @@ if res.connection is not None:
 ### Response
 
 **[operations.PatchUnifiedConnectionResponse](../../models/operations/patchunifiedconnectionresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## remove_unified_connection
 
@@ -628,7 +680,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.RemoveUnifiedConnectionResponse](../../models/operations/removeunifiedconnectionresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## remove_unified_webhook
 
@@ -667,7 +723,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.RemoveUnifiedWebhookResponse](../../models/operations/removeunifiedwebhookresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## update_unified_connection
 
@@ -725,4 +785,8 @@ if res.connection is not None:
 ### Response
 
 **[operations.UpdateUnifiedConnectionResponse](../../models/operations/updateunifiedconnectionresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

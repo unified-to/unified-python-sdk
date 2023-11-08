@@ -1,5 +1,5 @@
 # ListT
-(*.list*)
+(*list*)
 
 ### Available Operations
 
@@ -51,7 +51,11 @@ if res.marketing_list is not None:
 ### Response
 
 **[operations.CreateMartechListResponse](../../models/operations/createmartechlistresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_martech_list
 
@@ -94,7 +98,11 @@ if res.marketing_list is not None:
 ### Response
 
 **[operations.GetMartechListResponse](../../models/operations/getmartechlistresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## list_martech_lists
 
@@ -137,7 +145,11 @@ if res.marketing_lists is not None:
 ### Response
 
 **[operations.ListMartechListsResponse](../../models/operations/listmartechlistsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## patch_martech_list
 
@@ -181,7 +193,11 @@ if res.marketing_list is not None:
 ### Response
 
 **[operations.PatchMartechListResponse](../../models/operations/patchmartechlistresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## remove_martech_list
 
@@ -221,7 +237,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.RemoveMartechListResponse](../../models/operations/removemartechlistresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## update_martech_list
 
@@ -265,4 +285,8 @@ if res.marketing_list is not None:
 ### Response
 
 **[operations.UpdateMartechListResponse](../../models/operations/updatemartechlistresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

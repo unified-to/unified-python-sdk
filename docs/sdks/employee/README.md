@@ -1,5 +1,5 @@
 # Employee
-(*.employee*)
+(*employee*)
 
 ### Available Operations
 
@@ -62,7 +62,11 @@ if res.hris_employee is not None:
 ### Response
 
 **[operations.CreateHrisEmployeeResponse](../../models/operations/createhrisemployeeresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_hris_employee
 
@@ -105,7 +109,11 @@ if res.hris_employee is not None:
 ### Response
 
 **[operations.GetHrisEmployeeResponse](../../models/operations/gethrisemployeeresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## list_hris_employees
 
@@ -148,7 +156,11 @@ if res.hris_employees is not None:
 ### Response
 
 **[operations.ListHrisEmployeesResponse](../../models/operations/listhrisemployeesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## patch_hris_employee
 
@@ -203,7 +215,11 @@ if res.hris_employee is not None:
 ### Response
 
 **[operations.PatchHrisEmployeeResponse](../../models/operations/patchhrisemployeeresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## remove_hris_employee
 
@@ -243,7 +259,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.RemoveHrisEmployeeResponse](../../models/operations/removehrisemployeeresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## update_hris_employee
 
@@ -298,4 +318,8 @@ if res.hris_employee is not None:
 ### Response
 
 **[operations.UpdateHrisEmployeeResponse](../../models/operations/updatehrisemployeeresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

@@ -12,6 +12,7 @@ class Unified:
         self.sdk_configuration = sdk_config
         
     
+    
     def create_unified_connection(self, request: shared.Connection) -> operations.CreateUnifiedConnectionResponse:
         r"""Create connection"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -24,7 +25,10 @@ class Unified:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -43,6 +47,7 @@ class Unified:
         return res
 
     
+    
     def create_unified_webhook(self, request: operations.CreateUnifiedWebhookRequest) -> operations.CreateUnifiedWebhookResponse:
         r"""Create webhook subscription
         To maintain compatibility with the webhooks specification and Zapier webhooks, only the hook_url field is required in the payload when creating a Webhook.  When updated/new objects are found, the array of objects will be POSTed to the hook_url with the paramater hookId=<hookId>.
@@ -58,7 +63,10 @@ class Unified:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, params=query_params, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -77,6 +85,7 @@ class Unified:
         return res
 
     
+    
     def get_unified_apicall(self, request: operations.GetUnifiedApicallRequest) -> operations.GetUnifiedApicallResponse:
         r"""Retrieve specific API Call by its ID"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -86,7 +95,10 @@ class Unified:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -105,6 +117,7 @@ class Unified:
         return res
 
     
+    
     def get_unified_connection(self, request: operations.GetUnifiedConnectionRequest) -> operations.GetUnifiedConnectionResponse:
         r"""Retrieve connection"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -114,7 +127,10 @@ class Unified:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -133,6 +149,7 @@ class Unified:
         return res
 
     
+    
     def get_unified_integration(self, request: operations.GetUnifiedIntegrationRequest) -> operations.GetUnifiedIntegrationResponse:
         r"""Retrieve an integration"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -142,7 +159,10 @@ class Unified:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -161,6 +181,7 @@ class Unified:
         return res
 
     
+    
     def get_unified_integration_auth(self, request: operations.GetUnifiedIntegrationAuthRequest) -> operations.GetUnifiedIntegrationAuthResponse:
         r"""Create connection indirectly
         Returns an authorization URL for the specified integration.  Once a successful authorization occurs, a new connection is created.
@@ -173,7 +194,10 @@ class Unified:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -191,6 +215,7 @@ class Unified:
         return res
 
     
+    
     def get_unified_webhook(self, request: operations.GetUnifiedWebhookRequest) -> operations.GetUnifiedWebhookResponse:
         r"""Retrieve webhook by its ID"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -200,7 +225,10 @@ class Unified:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -219,6 +247,7 @@ class Unified:
         return res
 
     
+    
     def list_unified_apicalls(self, request: operations.ListUnifiedApicallsRequest) -> operations.ListUnifiedApicallsResponse:
         r"""Returns API Calls"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -229,7 +258,10 @@ class Unified:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -248,6 +280,7 @@ class Unified:
         return res
 
     
+    
     def list_unified_connections(self, request: operations.ListUnifiedConnectionsRequest) -> operations.ListUnifiedConnectionsResponse:
         r"""List all connections"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -258,7 +291,10 @@ class Unified:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -277,6 +313,7 @@ class Unified:
         return res
 
     
+    
     def list_unified_integration_workspaces(self, request: operations.ListUnifiedIntegrationWorkspacesRequest) -> operations.ListUnifiedIntegrationWorkspacesResponse:
         r"""Returns all activated integrations in a workspace
         No authentication required as this is to be used by front-end interface
@@ -289,7 +326,10 @@ class Unified:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -308,6 +348,7 @@ class Unified:
         return res
 
     
+    
     def list_unified_integrations(self, request: operations.ListUnifiedIntegrationsRequest) -> operations.ListUnifiedIntegrationsResponse:
         r"""Returns all integrations"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -318,7 +359,10 @@ class Unified:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -337,6 +381,7 @@ class Unified:
         return res
 
     
+    
     def list_unified_webhooks(self, request: operations.ListUnifiedWebhooksRequest) -> operations.ListUnifiedWebhooksResponse:
         r"""Returns all registered webhooks"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -347,7 +392,10 @@ class Unified:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -366,6 +414,7 @@ class Unified:
         return res
 
     
+    
     def patch_unified_connection(self, request: operations.PatchUnifiedConnectionRequest) -> operations.PatchUnifiedConnectionResponse:
         r"""Update connection"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -378,7 +427,10 @@ class Unified:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -397,6 +449,7 @@ class Unified:
         return res
 
     
+    
     def remove_unified_connection(self, request: operations.RemoveUnifiedConnectionRequest) -> operations.RemoveUnifiedConnectionResponse:
         r"""Remove connection"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -406,7 +459,10 @@ class Unified:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -424,6 +480,7 @@ class Unified:
         return res
 
     
+    
     def remove_unified_webhook(self, request: operations.RemoveUnifiedWebhookRequest) -> operations.RemoveUnifiedWebhookResponse:
         r"""Remove webhook subscription"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -433,7 +490,10 @@ class Unified:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -451,6 +511,7 @@ class Unified:
         return res
 
     
+    
     def update_unified_connection(self, request: operations.UpdateUnifiedConnectionRequest) -> operations.UpdateUnifiedConnectionResponse:
         r"""Update connection"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -463,7 +524,10 @@ class Unified:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')

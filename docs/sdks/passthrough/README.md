@@ -1,5 +1,5 @@
 # Passthrough
-(*.passthrough*)
+(*passthrough*)
 
 ### Available Operations
 
@@ -48,7 +48,11 @@ if res.undefined is not None:
 ### Response
 
 **[operations.CreatePassthroughResponse](../../models/operations/createpassthroughresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## list_passthroughs
 
@@ -88,7 +92,11 @@ if res.undefined is not None:
 ### Response
 
 **[operations.ListPassthroughsResponse](../../models/operations/listpassthroughsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## patch_passthrough
 
@@ -129,7 +137,11 @@ if res.undefined is not None:
 ### Response
 
 **[operations.PatchPassthroughResponse](../../models/operations/patchpassthroughresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## remove_passthrough
 
@@ -169,7 +181,11 @@ if res.undefined is not None:
 ### Response
 
 **[operations.RemovePassthroughResponse](../../models/operations/removepassthroughresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## update_passthrough
 
@@ -210,4 +226,8 @@ if res.undefined is not None:
 ### Response
 
 **[operations.UpdatePassthroughResponse](../../models/operations/updatepassthroughresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

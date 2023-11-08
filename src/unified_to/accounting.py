@@ -12,6 +12,7 @@ class Accounting:
         self.sdk_configuration = sdk_config
         
     
+    
     def create_accounting_customer(self, request: operations.CreateAccountingCustomerRequest) -> operations.CreateAccountingCustomerResponse:
         r"""Create a customer"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -24,7 +25,10 @@ class Accounting:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -43,6 +47,7 @@ class Accounting:
         return res
 
     
+    
     def create_accounting_invoice(self, request: operations.CreateAccountingInvoiceRequest) -> operations.CreateAccountingInvoiceResponse:
         r"""Create a invoice"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -55,7 +60,10 @@ class Accounting:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -74,6 +82,7 @@ class Accounting:
         return res
 
     
+    
     def create_accounting_payment(self, request: operations.CreateAccountingPaymentRequest) -> operations.CreateAccountingPaymentResponse:
         r"""Create a payment"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -86,7 +95,10 @@ class Accounting:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -105,6 +117,7 @@ class Accounting:
         return res
 
     
+    
     def get_accounting_customer(self, request: operations.GetAccountingCustomerRequest) -> operations.GetAccountingCustomerResponse:
         r"""Retrieve a customer"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -115,7 +128,10 @@ class Accounting:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -134,6 +150,7 @@ class Accounting:
         return res
 
     
+    
     def get_accounting_invoice(self, request: operations.GetAccountingInvoiceRequest) -> operations.GetAccountingInvoiceResponse:
         r"""Retrieve a invoice"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -144,7 +161,10 @@ class Accounting:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -163,6 +183,7 @@ class Accounting:
         return res
 
     
+    
     def get_accounting_payment(self, request: operations.GetAccountingPaymentRequest) -> operations.GetAccountingPaymentResponse:
         r"""Retrieve a payment"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -173,7 +194,10 @@ class Accounting:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -192,6 +216,7 @@ class Accounting:
         return res
 
     
+    
     def list_accounting_customers(self, request: operations.ListAccountingCustomersRequest) -> operations.ListAccountingCustomersResponse:
         r"""List all customers"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -202,7 +227,10 @@ class Accounting:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -221,6 +249,7 @@ class Accounting:
         return res
 
     
+    
     def list_accounting_invoices(self, request: operations.ListAccountingInvoicesRequest) -> operations.ListAccountingInvoicesResponse:
         r"""List all invoices"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -231,7 +260,10 @@ class Accounting:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -250,6 +282,7 @@ class Accounting:
         return res
 
     
+    
     def list_accounting_payments(self, request: operations.ListAccountingPaymentsRequest) -> operations.ListAccountingPaymentsResponse:
         r"""List all payments"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -260,7 +293,10 @@ class Accounting:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -279,6 +315,7 @@ class Accounting:
         return res
 
     
+    
     def patch_accounting_customer(self, request: operations.PatchAccountingCustomerRequest) -> operations.PatchAccountingCustomerResponse:
         r"""Update a customer"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -291,7 +328,10 @@ class Accounting:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -310,6 +350,7 @@ class Accounting:
         return res
 
     
+    
     def patch_accounting_invoice(self, request: operations.PatchAccountingInvoiceRequest) -> operations.PatchAccountingInvoiceResponse:
         r"""Update a invoice"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -322,7 +363,10 @@ class Accounting:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -341,6 +385,7 @@ class Accounting:
         return res
 
     
+    
     def patch_accounting_payment(self, request: operations.PatchAccountingPaymentRequest) -> operations.PatchAccountingPaymentResponse:
         r"""Update a payment"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -353,7 +398,10 @@ class Accounting:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -372,6 +420,7 @@ class Accounting:
         return res
 
     
+    
     def remove_accounting_customer(self, request: operations.RemoveAccountingCustomerRequest) -> operations.RemoveAccountingCustomerResponse:
         r"""Remove a customer"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -381,7 +430,10 @@ class Accounting:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -399,6 +451,7 @@ class Accounting:
         return res
 
     
+    
     def remove_accounting_invoice(self, request: operations.RemoveAccountingInvoiceRequest) -> operations.RemoveAccountingInvoiceResponse:
         r"""Remove a invoice"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -408,7 +461,10 @@ class Accounting:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -426,6 +482,7 @@ class Accounting:
         return res
 
     
+    
     def remove_accounting_payment(self, request: operations.RemoveAccountingPaymentRequest) -> operations.RemoveAccountingPaymentResponse:
         r"""Remove a payment"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -435,7 +492,10 @@ class Accounting:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -453,6 +513,7 @@ class Accounting:
         return res
 
     
+    
     def update_accounting_customer(self, request: operations.UpdateAccountingCustomerRequest) -> operations.UpdateAccountingCustomerResponse:
         r"""Update a customer"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -465,7 +526,10 @@ class Accounting:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -484,6 +548,7 @@ class Accounting:
         return res
 
     
+    
     def update_accounting_invoice(self, request: operations.UpdateAccountingInvoiceRequest) -> operations.UpdateAccountingInvoiceResponse:
         r"""Update a invoice"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -496,7 +561,10 @@ class Accounting:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -515,6 +583,7 @@ class Accounting:
         return res
 
     
+    
     def update_accounting_payment(self, request: operations.UpdateAccountingPaymentRequest) -> operations.UpdateAccountingPaymentResponse:
         r"""Update a payment"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -527,7 +596,10 @@ class Accounting:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')

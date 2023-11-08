@@ -1,5 +1,5 @@
 # Ats
-(*.ats*)
+(*ats*)
 
 ### Available Operations
 
@@ -81,7 +81,11 @@ if res.ats_application is not None:
 ### Response
 
 **[operations.CreateAtsApplicationResponse](../../models/operations/createatsapplicationresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## create_ats_candidate
 
@@ -138,7 +142,11 @@ if res.ats_candidate is not None:
 ### Response
 
 **[operations.CreateAtsCandidateResponse](../../models/operations/createatscandidateresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## create_ats_document
 
@@ -181,7 +189,11 @@ if res.ats_document is not None:
 ### Response
 
 **[operations.CreateAtsDocumentResponse](../../models/operations/createatsdocumentresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## create_ats_interview
 
@@ -227,7 +239,11 @@ if res.ats_interview is not None:
 ### Response
 
 **[operations.CreateAtsInterviewResponse](../../models/operations/createatsinterviewresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## create_ats_job
 
@@ -290,7 +306,11 @@ if res.ats_job is not None:
 ### Response
 
 **[operations.CreateAtsJobResponse](../../models/operations/createatsjobresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## create_ats_scorecard
 
@@ -333,7 +353,11 @@ if res.ats_scorecard is not None:
 ### Response
 
 **[operations.CreateAtsScorecardResponse](../../models/operations/createatsscorecardresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_ats_application
 
@@ -376,7 +400,11 @@ if res.ats_application is not None:
 ### Response
 
 **[operations.GetAtsApplicationResponse](../../models/operations/getatsapplicationresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_ats_candidate
 
@@ -419,7 +447,11 @@ if res.ats_candidate is not None:
 ### Response
 
 **[operations.GetAtsCandidateResponse](../../models/operations/getatscandidateresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_ats_document
 
@@ -462,7 +494,11 @@ if res.ats_document is not None:
 ### Response
 
 **[operations.GetAtsDocumentResponse](../../models/operations/getatsdocumentresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_ats_interview
 
@@ -505,7 +541,11 @@ if res.ats_interview is not None:
 ### Response
 
 **[operations.GetAtsInterviewResponse](../../models/operations/getatsinterviewresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_ats_job
 
@@ -548,7 +588,11 @@ if res.ats_job is not None:
 ### Response
 
 **[operations.GetAtsJobResponse](../../models/operations/getatsjobresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_ats_scorecard
 
@@ -591,7 +635,11 @@ if res.ats_scorecard is not None:
 ### Response
 
 **[operations.GetAtsScorecardResponse](../../models/operations/getatsscorecardresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## list_ats_applications
 
@@ -634,7 +682,11 @@ if res.ats_applications is not None:
 ### Response
 
 **[operations.ListAtsApplicationsResponse](../../models/operations/listatsapplicationsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## list_ats_candidates
 
@@ -677,7 +729,11 @@ if res.ats_candidates is not None:
 ### Response
 
 **[operations.ListAtsCandidatesResponse](../../models/operations/listatscandidatesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## list_ats_documents
 
@@ -720,7 +776,11 @@ if res.ats_documents is not None:
 ### Response
 
 **[operations.ListAtsDocumentsResponse](../../models/operations/listatsdocumentsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## list_ats_interviews
 
@@ -763,7 +823,11 @@ if res.ats_interviews is not None:
 ### Response
 
 **[operations.ListAtsInterviewsResponse](../../models/operations/listatsinterviewsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## list_ats_jobs
 
@@ -806,7 +870,11 @@ if res.ats_jobs is not None:
 ### Response
 
 **[operations.ListAtsJobsResponse](../../models/operations/listatsjobsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## list_ats_scorecards
 
@@ -849,7 +917,11 @@ if res.ats_scorecards is not None:
 ### Response
 
 **[operations.ListAtsScorecardsResponse](../../models/operations/listatsscorecardsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## patch_ats_application
 
@@ -893,7 +965,11 @@ if res.ats_application is not None:
 ### Response
 
 **[operations.PatchAtsApplicationResponse](../../models/operations/patchatsapplicationresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## patch_ats_candidate
 
@@ -951,7 +1027,11 @@ if res.ats_candidate is not None:
 ### Response
 
 **[operations.PatchAtsCandidateResponse](../../models/operations/patchatscandidateresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## patch_ats_document
 
@@ -995,7 +1075,11 @@ if res.ats_document is not None:
 ### Response
 
 **[operations.PatchAtsDocumentResponse](../../models/operations/patchatsdocumentresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## patch_ats_interview
 
@@ -1042,7 +1126,11 @@ if res.ats_interview is not None:
 ### Response
 
 **[operations.PatchAtsInterviewResponse](../../models/operations/patchatsinterviewresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## patch_ats_job
 
@@ -1106,7 +1194,11 @@ if res.ats_job is not None:
 ### Response
 
 **[operations.PatchAtsJobResponse](../../models/operations/patchatsjobresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## patch_ats_scorecard
 
@@ -1150,7 +1242,11 @@ if res.ats_scorecard is not None:
 ### Response
 
 **[operations.PatchAtsScorecardResponse](../../models/operations/patchatsscorecardresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## remove_ats_application
 
@@ -1190,7 +1286,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.RemoveAtsApplicationResponse](../../models/operations/removeatsapplicationresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## remove_ats_candidate
 
@@ -1230,7 +1330,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.RemoveAtsCandidateResponse](../../models/operations/removeatscandidateresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## remove_ats_document
 
@@ -1270,7 +1374,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.RemoveAtsDocumentResponse](../../models/operations/removeatsdocumentresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## remove_ats_interview
 
@@ -1310,7 +1418,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.RemoveAtsInterviewResponse](../../models/operations/removeatsinterviewresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## remove_ats_job
 
@@ -1350,7 +1462,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.RemoveAtsJobResponse](../../models/operations/removeatsjobresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## remove_ats_scorecard
 
@@ -1390,7 +1506,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.RemoveAtsScorecardResponse](../../models/operations/removeatsscorecardresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## update_ats_application
 
@@ -1434,7 +1554,11 @@ if res.ats_application is not None:
 ### Response
 
 **[operations.UpdateAtsApplicationResponse](../../models/operations/updateatsapplicationresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## update_ats_candidate
 
@@ -1492,7 +1616,11 @@ if res.ats_candidate is not None:
 ### Response
 
 **[operations.UpdateAtsCandidateResponse](../../models/operations/updateatscandidateresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## update_ats_document
 
@@ -1536,7 +1664,11 @@ if res.ats_document is not None:
 ### Response
 
 **[operations.UpdateAtsDocumentResponse](../../models/operations/updateatsdocumentresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## update_ats_interview
 
@@ -1583,7 +1715,11 @@ if res.ats_interview is not None:
 ### Response
 
 **[operations.UpdateAtsInterviewResponse](../../models/operations/updateatsinterviewresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## update_ats_job
 
@@ -1647,7 +1783,11 @@ if res.ats_job is not None:
 ### Response
 
 **[operations.UpdateAtsJobResponse](../../models/operations/updateatsjobresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## update_ats_scorecard
 
@@ -1691,4 +1831,8 @@ if res.ats_scorecard is not None:
 ### Response
 
 **[operations.UpdateAtsScorecardResponse](../../models/operations/updateatsscorecardresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

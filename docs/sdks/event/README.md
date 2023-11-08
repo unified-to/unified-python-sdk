@@ -1,5 +1,5 @@
 # Event
-(*.event*)
+(*event*)
 
 ### Available Operations
 
@@ -72,7 +72,11 @@ if res.crm_event is not None:
 ### Response
 
 **[operations.CreateCrmEventResponse](../../models/operations/createcrmeventresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_crm_event
 
@@ -115,7 +119,11 @@ if res.crm_event is not None:
 ### Response
 
 **[operations.GetCrmEventResponse](../../models/operations/getcrmeventresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## list_crm_events
 
@@ -158,7 +166,11 @@ if res.crm_events is not None:
 ### Response
 
 **[operations.ListCrmEventsResponse](../../models/operations/listcrmeventsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## patch_crm_event
 
@@ -223,7 +235,11 @@ if res.crm_event is not None:
 ### Response
 
 **[operations.PatchCrmEventResponse](../../models/operations/patchcrmeventresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## remove_crm_event
 
@@ -263,7 +279,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.RemoveCrmEventResponse](../../models/operations/removecrmeventresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## update_crm_event
 
@@ -328,4 +348,8 @@ if res.crm_event is not None:
 ### Response
 
 **[operations.UpdateCrmEventResponse](../../models/operations/updatecrmeventresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

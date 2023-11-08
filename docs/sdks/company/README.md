@@ -1,5 +1,5 @@
 # Company
-(*.company*)
+(*company*)
 
 ### Available Operations
 
@@ -70,7 +70,11 @@ if res.crm_company is not None:
 ### Response
 
 **[operations.CreateCrmCompanyResponse](../../models/operations/createcrmcompanyresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_crm_company
 
@@ -113,7 +117,11 @@ if res.crm_company is not None:
 ### Response
 
 **[operations.GetCrmCompanyResponse](../../models/operations/getcrmcompanyresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## list_crm_companies
 
@@ -156,7 +164,11 @@ if res.crm_companies is not None:
 ### Response
 
 **[operations.ListCrmCompaniesResponse](../../models/operations/listcrmcompaniesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## list_enrich_companies
 
@@ -195,7 +207,11 @@ if res.enrich_company is not None:
 ### Response
 
 **[operations.ListEnrichCompaniesResponse](../../models/operations/listenrichcompaniesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## patch_crm_company
 
@@ -257,7 +273,11 @@ if res.crm_company is not None:
 ### Response
 
 **[operations.PatchCrmCompanyResponse](../../models/operations/patchcrmcompanyresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## remove_crm_company
 
@@ -297,7 +317,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.RemoveCrmCompanyResponse](../../models/operations/removecrmcompanyresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## update_crm_company
 
@@ -359,4 +383,8 @@ if res.crm_company is not None:
 ### Response
 
 **[operations.UpdateCrmCompanyResponse](../../models/operations/updatecrmcompanyresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

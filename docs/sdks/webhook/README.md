@@ -1,5 +1,5 @@
 # Webhook
-(*.webhook*)
+(*webhook*)
 
 ### Available Operations
 
@@ -64,7 +64,11 @@ if res.webhook is not None:
 ### Response
 
 **[operations.CreateUnifiedWebhookResponse](../../models/operations/createunifiedwebhookresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_unified_webhook
 
@@ -103,7 +107,11 @@ if res.webhook is not None:
 ### Response
 
 **[operations.GetUnifiedWebhookResponse](../../models/operations/getunifiedwebhookresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## list_unified_webhooks
 
@@ -141,7 +149,11 @@ if res.webhooks is not None:
 ### Response
 
 **[operations.ListUnifiedWebhooksResponse](../../models/operations/listunifiedwebhooksresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## remove_unified_webhook
 
@@ -180,4 +192,8 @@ if res.status_code == 200:
 ### Response
 
 **[operations.RemoveUnifiedWebhookResponse](../../models/operations/removeunifiedwebhookresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

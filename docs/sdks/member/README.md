@@ -1,5 +1,5 @@
 # Member
-(*.member*)
+(*member*)
 
 ### Available Operations
 
@@ -62,7 +62,11 @@ if res.marketing_member is not None:
 ### Response
 
 **[operations.CreateMartechMemberResponse](../../models/operations/createmartechmemberresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_martech_member
 
@@ -105,7 +109,11 @@ if res.marketing_member is not None:
 ### Response
 
 **[operations.GetMartechMemberResponse](../../models/operations/getmartechmemberresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## list_martech_members
 
@@ -148,7 +156,11 @@ if res.marketing_members is not None:
 ### Response
 
 **[operations.ListMartechMembersResponse](../../models/operations/listmartechmembersresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## patch_martech_member
 
@@ -203,7 +215,11 @@ if res.marketing_member is not None:
 ### Response
 
 **[operations.PatchMartechMemberResponse](../../models/operations/patchmartechmemberresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## remove_martech_member
 
@@ -243,7 +259,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.RemoveMartechMemberResponse](../../models/operations/removemartechmemberresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## update_martech_member
 
@@ -298,4 +318,8 @@ if res.marketing_member is not None:
 ### Response
 
 **[operations.UpdateMartechMemberResponse](../../models/operations/updatemartechmemberresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

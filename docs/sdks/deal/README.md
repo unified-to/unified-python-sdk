@@ -1,5 +1,5 @@
 # Deal
-(*.deal*)
+(*deal*)
 
 ### Available Operations
 
@@ -54,7 +54,11 @@ if res.crm_deal is not None:
 ### Response
 
 **[operations.CreateCrmDealResponse](../../models/operations/createcrmdealresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_crm_deal
 
@@ -97,7 +101,11 @@ if res.crm_deal is not None:
 ### Response
 
 **[operations.GetCrmDealResponse](../../models/operations/getcrmdealresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## list_crm_deals
 
@@ -140,7 +148,11 @@ if res.crm_deals is not None:
 ### Response
 
 **[operations.ListCrmDealsResponse](../../models/operations/listcrmdealsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## patch_crm_deal
 
@@ -187,7 +199,11 @@ if res.crm_deal is not None:
 ### Response
 
 **[operations.PatchCrmDealResponse](../../models/operations/patchcrmdealresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## remove_crm_deal
 
@@ -227,7 +243,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.RemoveCrmDealResponse](../../models/operations/removecrmdealresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## update_crm_deal
 
@@ -274,4 +294,8 @@ if res.crm_deal is not None:
 ### Response
 
 **[operations.UpdateCrmDealResponse](../../models/operations/updatecrmdealresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

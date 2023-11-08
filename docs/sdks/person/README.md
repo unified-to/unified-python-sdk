@@ -1,5 +1,5 @@
 # Person
-(*.person*)
+(*person*)
 
 ### Available Operations
 
@@ -42,4 +42,8 @@ if res.enrich_person is not None:
 ### Response
 
 **[operations.ListEnrichPeopleResponse](../../models/operations/listenrichpeopleresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

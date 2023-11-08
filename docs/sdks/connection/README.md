@@ -1,5 +1,5 @@
 # Connection
-(*.connection*)
+(*connection*)
 
 ### Available Operations
 
@@ -63,7 +63,11 @@ if res.connection is not None:
 ### Response
 
 **[operations.CreateUnifiedConnectionResponse](../../models/operations/createunifiedconnectionresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_unified_connection
 
@@ -102,7 +106,11 @@ if res.connection is not None:
 ### Response
 
 **[operations.GetUnifiedConnectionResponse](../../models/operations/getunifiedconnectionresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## list_unified_connections
 
@@ -144,7 +152,11 @@ if res.connections is not None:
 ### Response
 
 **[operations.ListUnifiedConnectionsResponse](../../models/operations/listunifiedconnectionsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## patch_unified_connection
 
@@ -202,7 +214,11 @@ if res.connection is not None:
 ### Response
 
 **[operations.PatchUnifiedConnectionResponse](../../models/operations/patchunifiedconnectionresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## remove_unified_connection
 
@@ -241,7 +257,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.RemoveUnifiedConnectionResponse](../../models/operations/removeunifiedconnectionresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## update_unified_connection
 
@@ -299,4 +319,8 @@ if res.connection is not None:
 ### Response
 
 **[operations.UpdateUnifiedConnectionResponse](../../models/operations/updateunifiedconnectionresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

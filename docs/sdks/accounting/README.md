@@ -1,5 +1,5 @@
 # Accounting
-(*.accounting*)
+(*accounting*)
 
 ### Available Operations
 
@@ -75,7 +75,11 @@ if res.accounting_customer is not None:
 ### Response
 
 **[operations.CreateAccountingCustomerResponse](../../models/operations/createaccountingcustomerresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## create_accounting_invoice
 
@@ -123,7 +127,11 @@ if res.accounting_invoice is not None:
 ### Response
 
 **[operations.CreateAccountingInvoiceResponse](../../models/operations/createaccountinginvoiceresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## create_accounting_payment
 
@@ -169,7 +177,11 @@ if res.accounting_payment is not None:
 ### Response
 
 **[operations.CreateAccountingPaymentResponse](../../models/operations/createaccountingpaymentresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_accounting_customer
 
@@ -212,7 +224,11 @@ if res.accounting_customer is not None:
 ### Response
 
 **[operations.GetAccountingCustomerResponse](../../models/operations/getaccountingcustomerresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_accounting_invoice
 
@@ -255,7 +271,11 @@ if res.accounting_invoice is not None:
 ### Response
 
 **[operations.GetAccountingInvoiceResponse](../../models/operations/getaccountinginvoiceresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_accounting_payment
 
@@ -298,7 +318,11 @@ if res.accounting_payment is not None:
 ### Response
 
 **[operations.GetAccountingPaymentResponse](../../models/operations/getaccountingpaymentresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## list_accounting_customers
 
@@ -341,7 +365,11 @@ if res.accounting_customers is not None:
 ### Response
 
 **[operations.ListAccountingCustomersResponse](../../models/operations/listaccountingcustomersresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## list_accounting_invoices
 
@@ -384,7 +412,11 @@ if res.accounting_invoices is not None:
 ### Response
 
 **[operations.ListAccountingInvoicesResponse](../../models/operations/listaccountinginvoicesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## list_accounting_payments
 
@@ -427,7 +459,11 @@ if res.accounting_payments is not None:
 ### Response
 
 **[operations.ListAccountingPaymentsResponse](../../models/operations/listaccountingpaymentsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## patch_accounting_customer
 
@@ -483,7 +519,11 @@ if res.accounting_customer is not None:
 ### Response
 
 **[operations.PatchAccountingCustomerResponse](../../models/operations/patchaccountingcustomerresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## patch_accounting_invoice
 
@@ -532,7 +572,11 @@ if res.accounting_invoice is not None:
 ### Response
 
 **[operations.PatchAccountingInvoiceResponse](../../models/operations/patchaccountinginvoiceresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## patch_accounting_payment
 
@@ -579,7 +623,11 @@ if res.accounting_payment is not None:
 ### Response
 
 **[operations.PatchAccountingPaymentResponse](../../models/operations/patchaccountingpaymentresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## remove_accounting_customer
 
@@ -619,7 +667,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.RemoveAccountingCustomerResponse](../../models/operations/removeaccountingcustomerresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## remove_accounting_invoice
 
@@ -659,7 +711,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.RemoveAccountingInvoiceResponse](../../models/operations/removeaccountinginvoiceresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## remove_accounting_payment
 
@@ -699,7 +755,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.RemoveAccountingPaymentResponse](../../models/operations/removeaccountingpaymentresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## update_accounting_customer
 
@@ -755,7 +815,11 @@ if res.accounting_customer is not None:
 ### Response
 
 **[operations.UpdateAccountingCustomerResponse](../../models/operations/updateaccountingcustomerresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## update_accounting_invoice
 
@@ -804,7 +868,11 @@ if res.accounting_invoice is not None:
 ### Response
 
 **[operations.UpdateAccountingInvoiceResponse](../../models/operations/updateaccountinginvoiceresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## update_accounting_payment
 
@@ -851,4 +919,8 @@ if res.accounting_payment is not None:
 ### Response
 
 **[operations.UpdateAccountingPaymentResponse](../../models/operations/updateaccountingpaymentresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

@@ -1,5 +1,5 @@
 # Call
-(*.call*)
+(*call*)
 
 ### Available Operations
 
@@ -46,4 +46,8 @@ if res.uc_calls is not None:
 ### Response
 
 **[operations.ListUcCallsResponse](../../models/operations/listuccallsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

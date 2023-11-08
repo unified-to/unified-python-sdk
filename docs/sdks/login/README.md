@@ -1,5 +1,5 @@
 # Login
-(*.login*)
+(*login*)
 
 ### Available Operations
 
@@ -43,4 +43,8 @@ if res.res is not None:
 ### Response
 
 **[operations.GetUnifiedIntegrationLoginResponse](../../models/operations/getunifiedintegrationloginresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

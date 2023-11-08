@@ -1,5 +1,5 @@
 # Enrich
-(*.enrich*)
+(*enrich*)
 
 ### Available Operations
 
@@ -43,7 +43,11 @@ if res.enrich_company is not None:
 ### Response
 
 **[operations.ListEnrichCompaniesResponse](../../models/operations/listenrichcompaniesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## list_enrich_people
 
@@ -82,4 +86,8 @@ if res.enrich_person is not None:
 ### Response
 
 **[operations.ListEnrichPeopleResponse](../../models/operations/listenrichpeopleresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

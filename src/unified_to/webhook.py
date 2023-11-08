@@ -12,6 +12,7 @@ class Webhook:
         self.sdk_configuration = sdk_config
         
     
+    
     def create_unified_webhook(self, request: operations.CreateUnifiedWebhookRequest) -> operations.CreateUnifiedWebhookResponse:
         r"""Create webhook subscription
         To maintain compatibility with the webhooks specification and Zapier webhooks, only the hook_url field is required in the payload when creating a Webhook.  When updated/new objects are found, the array of objects will be POSTed to the hook_url with the paramater hookId=<hookId>.
@@ -27,7 +28,10 @@ class Webhook:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, params=query_params, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -46,6 +50,7 @@ class Webhook:
         return res
 
     
+    
     def get_unified_webhook(self, request: operations.GetUnifiedWebhookRequest) -> operations.GetUnifiedWebhookResponse:
         r"""Retrieve webhook by its ID"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -55,7 +60,10 @@ class Webhook:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -74,6 +82,7 @@ class Webhook:
         return res
 
     
+    
     def list_unified_webhooks(self, request: operations.ListUnifiedWebhooksRequest) -> operations.ListUnifiedWebhooksResponse:
         r"""Returns all registered webhooks"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -84,7 +93,10 @@ class Webhook:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -103,6 +115,7 @@ class Webhook:
         return res
 
     
+    
     def remove_unified_webhook(self, request: operations.RemoveUnifiedWebhookRequest) -> operations.RemoveUnifiedWebhookResponse:
         r"""Remove webhook subscription"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -112,7 +125,10 @@ class Webhook:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')

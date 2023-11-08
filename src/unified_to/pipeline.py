@@ -12,6 +12,7 @@ class Pipeline:
         self.sdk_configuration = sdk_config
         
     
+    
     def create_crm_pipeline(self, request: operations.CreateCrmPipelineRequest) -> operations.CreateCrmPipelineResponse:
         r"""Create a pipeline"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -24,7 +25,10 @@ class Pipeline:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -43,6 +47,7 @@ class Pipeline:
         return res
 
     
+    
     def get_crm_pipeline(self, request: operations.GetCrmPipelineRequest) -> operations.GetCrmPipelineResponse:
         r"""Retrieve a pipeline"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -53,7 +58,10 @@ class Pipeline:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -72,6 +80,7 @@ class Pipeline:
         return res
 
     
+    
     def list_crm_pipelines(self, request: operations.ListCrmPipelinesRequest) -> operations.ListCrmPipelinesResponse:
         r"""List all pipelines"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -82,7 +91,10 @@ class Pipeline:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -101,6 +113,7 @@ class Pipeline:
         return res
 
     
+    
     def patch_crm_pipeline(self, request: operations.PatchCrmPipelineRequest) -> operations.PatchCrmPipelineResponse:
         r"""Update a pipeline"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -113,7 +126,10 @@ class Pipeline:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -132,6 +148,7 @@ class Pipeline:
         return res
 
     
+    
     def remove_crm_pipeline(self, request: operations.RemoveCrmPipelineRequest) -> operations.RemoveCrmPipelineResponse:
         r"""Remove a pipeline"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -141,7 +158,10 @@ class Pipeline:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -159,6 +179,7 @@ class Pipeline:
         return res
 
     
+    
     def update_crm_pipeline(self, request: operations.UpdateCrmPipelineRequest) -> operations.UpdateCrmPipelineResponse:
         r"""Update a pipeline"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -171,7 +192,10 @@ class Pipeline:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')

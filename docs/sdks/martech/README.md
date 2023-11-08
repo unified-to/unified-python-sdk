@@ -1,5 +1,5 @@
 # Martech
-(*.martech*)
+(*martech*)
 
 ### Available Operations
 
@@ -57,7 +57,11 @@ if res.marketing_list is not None:
 ### Response
 
 **[operations.CreateMartechListResponse](../../models/operations/createmartechlistresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## create_martech_member
 
@@ -111,7 +115,11 @@ if res.marketing_member is not None:
 ### Response
 
 **[operations.CreateMartechMemberResponse](../../models/operations/createmartechmemberresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_martech_list
 
@@ -154,7 +162,11 @@ if res.marketing_list is not None:
 ### Response
 
 **[operations.GetMartechListResponse](../../models/operations/getmartechlistresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_martech_member
 
@@ -197,7 +209,11 @@ if res.marketing_member is not None:
 ### Response
 
 **[operations.GetMartechMemberResponse](../../models/operations/getmartechmemberresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## list_martech_lists
 
@@ -240,7 +256,11 @@ if res.marketing_lists is not None:
 ### Response
 
 **[operations.ListMartechListsResponse](../../models/operations/listmartechlistsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## list_martech_members
 
@@ -283,7 +303,11 @@ if res.marketing_members is not None:
 ### Response
 
 **[operations.ListMartechMembersResponse](../../models/operations/listmartechmembersresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## patch_martech_list
 
@@ -327,7 +351,11 @@ if res.marketing_list is not None:
 ### Response
 
 **[operations.PatchMartechListResponse](../../models/operations/patchmartechlistresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## patch_martech_member
 
@@ -382,7 +410,11 @@ if res.marketing_member is not None:
 ### Response
 
 **[operations.PatchMartechMemberResponse](../../models/operations/patchmartechmemberresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## remove_martech_list
 
@@ -422,7 +454,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.RemoveMartechListResponse](../../models/operations/removemartechlistresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## remove_martech_member
 
@@ -462,7 +498,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.RemoveMartechMemberResponse](../../models/operations/removemartechmemberresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## update_martech_list
 
@@ -506,7 +546,11 @@ if res.marketing_list is not None:
 ### Response
 
 **[operations.UpdateMartechListResponse](../../models/operations/updatemartechlistresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## update_martech_member
 
@@ -561,4 +605,8 @@ if res.marketing_member is not None:
 ### Response
 
 **[operations.UpdateMartechMemberResponse](../../models/operations/updatemartechmemberresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

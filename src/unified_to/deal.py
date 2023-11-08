@@ -12,6 +12,7 @@ class Deal:
         self.sdk_configuration = sdk_config
         
     
+    
     def create_crm_deal(self, request: operations.CreateCrmDealRequest) -> operations.CreateCrmDealResponse:
         r"""Create a deal"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -24,7 +25,10 @@ class Deal:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -43,6 +47,7 @@ class Deal:
         return res
 
     
+    
     def get_crm_deal(self, request: operations.GetCrmDealRequest) -> operations.GetCrmDealResponse:
         r"""Retrieve a deal"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -53,7 +58,10 @@ class Deal:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -72,6 +80,7 @@ class Deal:
         return res
 
     
+    
     def list_crm_deals(self, request: operations.ListCrmDealsRequest) -> operations.ListCrmDealsResponse:
         r"""List all deals"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -82,7 +91,10 @@ class Deal:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -101,6 +113,7 @@ class Deal:
         return res
 
     
+    
     def patch_crm_deal(self, request: operations.PatchCrmDealRequest) -> operations.PatchCrmDealResponse:
         r"""Update a deal"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -113,7 +126,10 @@ class Deal:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -132,6 +148,7 @@ class Deal:
         return res
 
     
+    
     def remove_crm_deal(self, request: operations.RemoveCrmDealRequest) -> operations.RemoveCrmDealResponse:
         r"""Remove a deal"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -141,7 +158,10 @@ class Deal:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -159,6 +179,7 @@ class Deal:
         return res
 
     
+    
     def update_crm_deal(self, request: operations.UpdateCrmDealRequest) -> operations.UpdateCrmDealResponse:
         r"""Update a deal"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -171,7 +192,10 @@ class Deal:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')

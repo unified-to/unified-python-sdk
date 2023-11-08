@@ -1,5 +1,5 @@
 # Candidate
-(*.candidate*)
+(*candidate*)
 
 ### Available Operations
 
@@ -65,7 +65,11 @@ if res.ats_candidate is not None:
 ### Response
 
 **[operations.CreateAtsCandidateResponse](../../models/operations/createatscandidateresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_ats_candidate
 
@@ -108,7 +112,11 @@ if res.ats_candidate is not None:
 ### Response
 
 **[operations.GetAtsCandidateResponse](../../models/operations/getatscandidateresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## list_ats_candidates
 
@@ -151,7 +159,11 @@ if res.ats_candidates is not None:
 ### Response
 
 **[operations.ListAtsCandidatesResponse](../../models/operations/listatscandidatesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## patch_ats_candidate
 
@@ -209,7 +221,11 @@ if res.ats_candidate is not None:
 ### Response
 
 **[operations.PatchAtsCandidateResponse](../../models/operations/patchatscandidateresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## remove_ats_candidate
 
@@ -249,7 +265,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.RemoveAtsCandidateResponse](../../models/operations/removeatscandidateresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## update_ats_candidate
 
@@ -307,4 +327,8 @@ if res.ats_candidate is not None:
 ### Response
 
 **[operations.UpdateAtsCandidateResponse](../../models/operations/updateatscandidateresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

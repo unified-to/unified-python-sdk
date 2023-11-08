@@ -1,5 +1,5 @@
 # Lead
-(*.lead*)
+(*lead*)
 
 ### Available Operations
 
@@ -60,7 +60,11 @@ if res.crm_lead is not None:
 ### Response
 
 **[operations.CreateCrmLeadResponse](../../models/operations/createcrmleadresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_crm_lead
 
@@ -103,7 +107,11 @@ if res.crm_lead is not None:
 ### Response
 
 **[operations.GetCrmLeadResponse](../../models/operations/getcrmleadresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## list_crm_leads
 
@@ -146,7 +154,11 @@ if res.crm_leads is not None:
 ### Response
 
 **[operations.ListCrmLeadsResponse](../../models/operations/listcrmleadsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## patch_crm_lead
 
@@ -199,7 +211,11 @@ if res.crm_lead is not None:
 ### Response
 
 **[operations.PatchCrmLeadResponse](../../models/operations/patchcrmleadresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## remove_crm_lead
 
@@ -239,7 +255,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.RemoveCrmLeadResponse](../../models/operations/removecrmleadresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## update_crm_lead
 
@@ -292,4 +312,8 @@ if res.crm_lead is not None:
 ### Response
 
 **[operations.UpdateCrmLeadResponse](../../models/operations/updatecrmleadresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

@@ -1,5 +1,5 @@
 # Payment
-(*.payment*)
+(*payment*)
 
 ### Available Operations
 
@@ -54,7 +54,11 @@ if res.accounting_payment is not None:
 ### Response
 
 **[operations.CreateAccountingPaymentResponse](../../models/operations/createaccountingpaymentresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_accounting_payment
 
@@ -97,7 +101,11 @@ if res.accounting_payment is not None:
 ### Response
 
 **[operations.GetAccountingPaymentResponse](../../models/operations/getaccountingpaymentresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## list_accounting_payments
 
@@ -140,7 +148,11 @@ if res.accounting_payments is not None:
 ### Response
 
 **[operations.ListAccountingPaymentsResponse](../../models/operations/listaccountingpaymentsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## patch_accounting_payment
 
@@ -187,7 +199,11 @@ if res.accounting_payment is not None:
 ### Response
 
 **[operations.PatchAccountingPaymentResponse](../../models/operations/patchaccountingpaymentresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## remove_accounting_payment
 
@@ -227,7 +243,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.RemoveAccountingPaymentResponse](../../models/operations/removeaccountingpaymentresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## update_accounting_payment
 
@@ -274,4 +294,8 @@ if res.accounting_payment is not None:
 ### Response
 
 **[operations.UpdateAccountingPaymentResponse](../../models/operations/updateaccountingpaymentresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

@@ -1,5 +1,5 @@
 # Job
-(*.job*)
+(*job*)
 
 ### Available Operations
 
@@ -71,7 +71,11 @@ if res.ats_job is not None:
 ### Response
 
 **[operations.CreateAtsJobResponse](../../models/operations/createatsjobresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_ats_job
 
@@ -114,7 +118,11 @@ if res.ats_job is not None:
 ### Response
 
 **[operations.GetAtsJobResponse](../../models/operations/getatsjobresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## list_ats_jobs
 
@@ -157,7 +165,11 @@ if res.ats_jobs is not None:
 ### Response
 
 **[operations.ListAtsJobsResponse](../../models/operations/listatsjobsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## patch_ats_job
 
@@ -221,7 +233,11 @@ if res.ats_job is not None:
 ### Response
 
 **[operations.PatchAtsJobResponse](../../models/operations/patchatsjobresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## remove_ats_job
 
@@ -261,7 +277,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.RemoveAtsJobResponse](../../models/operations/removeatsjobresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## update_ats_job
 
@@ -325,4 +345,8 @@ if res.ats_job is not None:
 ### Response
 
 **[operations.UpdateAtsJobResponse](../../models/operations/updateatsjobresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

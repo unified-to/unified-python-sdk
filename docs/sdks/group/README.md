@@ -1,5 +1,5 @@
 # Group
-(*.group*)
+(*group*)
 
 ### Available Operations
 
@@ -57,7 +57,11 @@ if res.hris_group is not None:
 ### Response
 
 **[operations.CreateHrisGroupResponse](../../models/operations/createhrisgroupresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_hris_group
 
@@ -100,7 +104,11 @@ if res.hris_group is not None:
 ### Response
 
 **[operations.GetHrisGroupResponse](../../models/operations/gethrisgroupresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## list_hris_groups
 
@@ -143,7 +151,11 @@ if res.hris_groups is not None:
 ### Response
 
 **[operations.ListHrisGroupsResponse](../../models/operations/listhrisgroupsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## patch_hris_group
 
@@ -193,7 +205,11 @@ if res.hris_group is not None:
 ### Response
 
 **[operations.PatchHrisGroupResponse](../../models/operations/patchhrisgroupresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## remove_hris_group
 
@@ -233,7 +249,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.RemoveHrisGroupResponse](../../models/operations/removehrisgroupresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## update_hris_group
 
@@ -283,4 +303,8 @@ if res.hris_group is not None:
 ### Response
 
 **[operations.UpdateHrisGroupResponse](../../models/operations/updatehrisgroupresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

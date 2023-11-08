@@ -1,5 +1,5 @@
 # Ticket
-(*.ticket*)
+(*ticket*)
 
 ### Available Operations
 
@@ -54,7 +54,11 @@ if res.ticketing_ticket is not None:
 ### Response
 
 **[operations.CreateTicketingTicketResponse](../../models/operations/createticketingticketresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_ticketing_ticket
 
@@ -97,7 +101,11 @@ if res.ticketing_ticket is not None:
 ### Response
 
 **[operations.GetTicketingTicketResponse](../../models/operations/getticketingticketresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## list_ticketing_tickets
 
@@ -140,7 +148,11 @@ if res.ticketing_tickets is not None:
 ### Response
 
 **[operations.ListTicketingTicketsResponse](../../models/operations/listticketingticketsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## patch_ticketing_ticket
 
@@ -187,7 +199,11 @@ if res.ticketing_ticket is not None:
 ### Response
 
 **[operations.PatchTicketingTicketResponse](../../models/operations/patchticketingticketresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## remove_ticketing_ticket
 
@@ -227,7 +243,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.RemoveTicketingTicketResponse](../../models/operations/removeticketingticketresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## update_ticketing_ticket
 
@@ -274,4 +294,8 @@ if res.ticketing_ticket is not None:
 ### Response
 
 **[operations.UpdateTicketingTicketResponse](../../models/operations/updateticketingticketresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

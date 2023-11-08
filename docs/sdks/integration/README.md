@@ -1,5 +1,5 @@
 # Integration
-(*.integration*)
+(*integration*)
 
 ### Available Operations
 
@@ -45,7 +45,11 @@ if res.integration is not None:
 ### Response
 
 **[operations.GetUnifiedIntegrationResponse](../../models/operations/getunifiedintegrationresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_unified_integration_auth
 
@@ -88,7 +92,11 @@ if res.res is not None:
 ### Response
 
 **[operations.GetUnifiedIntegrationAuthResponse](../../models/operations/getunifiedintegrationauthresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## list_unified_integration_workspaces
 
@@ -130,7 +138,11 @@ if res.integrations is not None:
 ### Response
 
 **[operations.ListUnifiedIntegrationWorkspacesResponse](../../models/operations/listunifiedintegrationworkspacesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## list_unified_integrations
 
@@ -171,4 +183,8 @@ if res.integrations is not None:
 ### Response
 
 **[operations.ListUnifiedIntegrationsResponse](../../models/operations/listunifiedintegrationsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

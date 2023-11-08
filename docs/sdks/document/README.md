@@ -1,5 +1,5 @@
 # Document
-(*.document*)
+(*document*)
 
 ### Available Operations
 
@@ -51,7 +51,11 @@ if res.ats_document is not None:
 ### Response
 
 **[operations.CreateAtsDocumentResponse](../../models/operations/createatsdocumentresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_ats_document
 
@@ -94,7 +98,11 @@ if res.ats_document is not None:
 ### Response
 
 **[operations.GetAtsDocumentResponse](../../models/operations/getatsdocumentresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## list_ats_documents
 
@@ -137,7 +145,11 @@ if res.ats_documents is not None:
 ### Response
 
 **[operations.ListAtsDocumentsResponse](../../models/operations/listatsdocumentsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## patch_ats_document
 
@@ -181,7 +193,11 @@ if res.ats_document is not None:
 ### Response
 
 **[operations.PatchAtsDocumentResponse](../../models/operations/patchatsdocumentresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## remove_ats_document
 
@@ -221,7 +237,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.RemoveAtsDocumentResponse](../../models/operations/removeatsdocumentresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## update_ats_document
 
@@ -265,4 +285,8 @@ if res.ats_document is not None:
 ### Response
 
 **[operations.UpdateAtsDocumentResponse](../../models/operations/updateatsdocumentresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

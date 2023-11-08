@@ -1,5 +1,5 @@
 # Scorecard
-(*.scorecard*)
+(*scorecard*)
 
 ### Available Operations
 
@@ -51,7 +51,11 @@ if res.ats_scorecard is not None:
 ### Response
 
 **[operations.CreateAtsScorecardResponse](../../models/operations/createatsscorecardresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_ats_scorecard
 
@@ -94,7 +98,11 @@ if res.ats_scorecard is not None:
 ### Response
 
 **[operations.GetAtsScorecardResponse](../../models/operations/getatsscorecardresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## list_ats_scorecards
 
@@ -137,7 +145,11 @@ if res.ats_scorecards is not None:
 ### Response
 
 **[operations.ListAtsScorecardsResponse](../../models/operations/listatsscorecardsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## patch_ats_scorecard
 
@@ -181,7 +193,11 @@ if res.ats_scorecard is not None:
 ### Response
 
 **[operations.PatchAtsScorecardResponse](../../models/operations/patchatsscorecardresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## remove_ats_scorecard
 
@@ -221,7 +237,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.RemoveAtsScorecardResponse](../../models/operations/removeatsscorecardresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## update_ats_scorecard
 
@@ -265,4 +285,8 @@ if res.ats_scorecard is not None:
 ### Response
 
 **[operations.UpdateAtsScorecardResponse](../../models/operations/updateatsscorecardresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

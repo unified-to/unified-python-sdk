@@ -12,6 +12,7 @@ class File:
         self.sdk_configuration = sdk_config
         
     
+    
     def create_crm_file(self, request: operations.CreateCrmFileRequest) -> operations.CreateCrmFileResponse:
         r"""Create a file"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -24,7 +25,10 @@ class File:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -43,6 +47,7 @@ class File:
         return res
 
     
+    
     def get_crm_file(self, request: operations.GetCrmFileRequest) -> operations.GetCrmFileResponse:
         r"""Retrieve a file"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -53,7 +58,10 @@ class File:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -72,6 +80,7 @@ class File:
         return res
 
     
+    
     def list_crm_files(self, request: operations.ListCrmFilesRequest) -> operations.ListCrmFilesResponse:
         r"""List all files"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -82,7 +91,10 @@ class File:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -101,6 +113,7 @@ class File:
         return res
 
     
+    
     def patch_crm_file(self, request: operations.PatchCrmFileRequest) -> operations.PatchCrmFileResponse:
         r"""Update a file"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -113,7 +126,10 @@ class File:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -132,6 +148,7 @@ class File:
         return res
 
     
+    
     def remove_crm_file(self, request: operations.RemoveCrmFileRequest) -> operations.RemoveCrmFileResponse:
         r"""Remove a file"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -141,7 +158,10 @@ class File:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -159,6 +179,7 @@ class File:
         return res
 
     
+    
     def update_crm_file(self, request: operations.UpdateCrmFileRequest) -> operations.UpdateCrmFileResponse:
         r"""Update a file"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -171,7 +192,10 @@ class File:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')

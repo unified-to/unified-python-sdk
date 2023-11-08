@@ -1,5 +1,5 @@
 # Contact
-(*.contact*)
+(*contact*)
 
 ### Available Operations
 
@@ -72,7 +72,11 @@ if res.crm_contact is not None:
 ### Response
 
 **[operations.CreateCrmContactResponse](../../models/operations/createcrmcontactresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## create_uc_contact
 
@@ -125,7 +129,11 @@ if res.uc_contact is not None:
 ### Response
 
 **[operations.CreateUcContactResponse](../../models/operations/createuccontactresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_crm_contact
 
@@ -168,7 +176,11 @@ if res.crm_contact is not None:
 ### Response
 
 **[operations.GetCrmContactResponse](../../models/operations/getcrmcontactresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_uc_contact
 
@@ -211,7 +223,11 @@ if res.uc_contact is not None:
 ### Response
 
 **[operations.GetUcContactResponse](../../models/operations/getuccontactresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## list_crm_contacts
 
@@ -254,7 +270,11 @@ if res.crm_contacts is not None:
 ### Response
 
 **[operations.ListCrmContactsResponse](../../models/operations/listcrmcontactsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## list_uc_contacts
 
@@ -297,7 +317,11 @@ if res.uc_contacts is not None:
 ### Response
 
 **[operations.ListUcContactsResponse](../../models/operations/listuccontactsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## patch_crm_contact
 
@@ -356,7 +380,11 @@ if res.crm_contact is not None:
 ### Response
 
 **[operations.PatchCrmContactResponse](../../models/operations/patchcrmcontactresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## patch_uc_contact
 
@@ -410,7 +438,11 @@ if res.uc_contact is not None:
 ### Response
 
 **[operations.PatchUcContactResponse](../../models/operations/patchuccontactresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## remove_crm_contact
 
@@ -450,7 +482,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.RemoveCrmContactResponse](../../models/operations/removecrmcontactresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## remove_uc_contact
 
@@ -490,7 +526,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.RemoveUcContactResponse](../../models/operations/removeuccontactresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## update_crm_contact
 
@@ -549,7 +589,11 @@ if res.crm_contact is not None:
 ### Response
 
 **[operations.UpdateCrmContactResponse](../../models/operations/updatecrmcontactresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## update_uc_contact
 
@@ -603,4 +647,8 @@ if res.uc_contact is not None:
 ### Response
 
 **[operations.UpdateUcContactResponse](../../models/operations/updateuccontactresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

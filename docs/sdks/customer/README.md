@@ -1,5 +1,5 @@
 # Customer
-(*.customer*)
+(*customer*)
 
 ### Available Operations
 
@@ -69,7 +69,11 @@ if res.accounting_customer is not None:
 ### Response
 
 **[operations.CreateAccountingCustomerResponse](../../models/operations/createaccountingcustomerresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## create_ticketing_customer
 
@@ -125,7 +129,11 @@ if res.ticketing_customer is not None:
 ### Response
 
 **[operations.CreateTicketingCustomerResponse](../../models/operations/createticketingcustomerresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_accounting_customer
 
@@ -168,7 +176,11 @@ if res.accounting_customer is not None:
 ### Response
 
 **[operations.GetAccountingCustomerResponse](../../models/operations/getaccountingcustomerresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_ticketing_customer
 
@@ -211,7 +223,11 @@ if res.ticketing_customer is not None:
 ### Response
 
 **[operations.GetTicketingCustomerResponse](../../models/operations/getticketingcustomerresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## list_accounting_customers
 
@@ -254,7 +270,11 @@ if res.accounting_customers is not None:
 ### Response
 
 **[operations.ListAccountingCustomersResponse](../../models/operations/listaccountingcustomersresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## list_ticketing_customers
 
@@ -297,7 +317,11 @@ if res.ticketing_customers is not None:
 ### Response
 
 **[operations.ListTicketingCustomersResponse](../../models/operations/listticketingcustomersresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## patch_accounting_customer
 
@@ -353,7 +377,11 @@ if res.accounting_customer is not None:
 ### Response
 
 **[operations.PatchAccountingCustomerResponse](../../models/operations/patchaccountingcustomerresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## patch_ticketing_customer
 
@@ -410,7 +438,11 @@ if res.ticketing_customer is not None:
 ### Response
 
 **[operations.PatchTicketingCustomerResponse](../../models/operations/patchticketingcustomerresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## remove_accounting_customer
 
@@ -450,7 +482,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.RemoveAccountingCustomerResponse](../../models/operations/removeaccountingcustomerresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## remove_ticketing_customer
 
@@ -490,7 +526,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.RemoveTicketingCustomerResponse](../../models/operations/removeticketingcustomerresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## update_accounting_customer
 
@@ -546,7 +586,11 @@ if res.accounting_customer is not None:
 ### Response
 
 **[operations.UpdateAccountingCustomerResponse](../../models/operations/updateaccountingcustomerresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## update_ticketing_customer
 
@@ -603,4 +647,8 @@ if res.ticketing_customer is not None:
 ### Response
 
 **[operations.UpdateTicketingCustomerResponse](../../models/operations/updateticketingcustomerresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

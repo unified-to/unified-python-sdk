@@ -1,5 +1,5 @@
 # Invoice
-(*.invoice*)
+(*invoice*)
 
 ### Available Operations
 
@@ -56,7 +56,11 @@ if res.accounting_invoice is not None:
 ### Response
 
 **[operations.CreateAccountingInvoiceResponse](../../models/operations/createaccountinginvoiceresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_accounting_invoice
 
@@ -99,7 +103,11 @@ if res.accounting_invoice is not None:
 ### Response
 
 **[operations.GetAccountingInvoiceResponse](../../models/operations/getaccountinginvoiceresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## list_accounting_invoices
 
@@ -142,7 +150,11 @@ if res.accounting_invoices is not None:
 ### Response
 
 **[operations.ListAccountingInvoicesResponse](../../models/operations/listaccountinginvoicesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## patch_accounting_invoice
 
@@ -191,7 +203,11 @@ if res.accounting_invoice is not None:
 ### Response
 
 **[operations.PatchAccountingInvoiceResponse](../../models/operations/patchaccountinginvoiceresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## remove_accounting_invoice
 
@@ -231,7 +247,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.RemoveAccountingInvoiceResponse](../../models/operations/removeaccountinginvoiceresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## update_accounting_invoice
 
@@ -280,4 +300,8 @@ if res.accounting_invoice is not None:
 ### Response
 
 **[operations.UpdateAccountingInvoiceResponse](../../models/operations/updateaccountinginvoiceresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

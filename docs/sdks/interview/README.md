@@ -1,5 +1,5 @@
 # Interview
-(*.interview*)
+(*interview*)
 
 ### Available Operations
 
@@ -54,7 +54,11 @@ if res.ats_interview is not None:
 ### Response
 
 **[operations.CreateAtsInterviewResponse](../../models/operations/createatsinterviewresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_ats_interview
 
@@ -97,7 +101,11 @@ if res.ats_interview is not None:
 ### Response
 
 **[operations.GetAtsInterviewResponse](../../models/operations/getatsinterviewresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## list_ats_interviews
 
@@ -140,7 +148,11 @@ if res.ats_interviews is not None:
 ### Response
 
 **[operations.ListAtsInterviewsResponse](../../models/operations/listatsinterviewsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## patch_ats_interview
 
@@ -187,7 +199,11 @@ if res.ats_interview is not None:
 ### Response
 
 **[operations.PatchAtsInterviewResponse](../../models/operations/patchatsinterviewresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## remove_ats_interview
 
@@ -227,7 +243,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.RemoveAtsInterviewResponse](../../models/operations/removeatsinterviewresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## update_ats_interview
 
@@ -274,4 +294,8 @@ if res.ats_interview is not None:
 ### Response
 
 **[operations.UpdateAtsInterviewResponse](../../models/operations/updateatsinterviewresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

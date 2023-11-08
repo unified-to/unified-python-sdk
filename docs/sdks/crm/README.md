@@ -1,5 +1,5 @@
 # Crm
-(*.crm*)
+(*crm*)
 
 ### Available Operations
 
@@ -105,7 +105,11 @@ if res.crm_company is not None:
 ### Response
 
 **[operations.CreateCrmCompanyResponse](../../models/operations/createcrmcompanyresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## create_crm_contact
 
@@ -163,7 +167,11 @@ if res.crm_contact is not None:
 ### Response
 
 **[operations.CreateCrmContactResponse](../../models/operations/createcrmcontactresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## create_crm_deal
 
@@ -209,7 +217,11 @@ if res.crm_deal is not None:
 ### Response
 
 **[operations.CreateCrmDealResponse](../../models/operations/createcrmdealresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## create_crm_event
 
@@ -273,7 +285,11 @@ if res.crm_event is not None:
 ### Response
 
 **[operations.CreateCrmEventResponse](../../models/operations/createcrmeventresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## create_crm_file
 
@@ -316,7 +332,11 @@ if res.crm_file is not None:
 ### Response
 
 **[operations.CreateCrmFileResponse](../../models/operations/createcrmfileresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## create_crm_lead
 
@@ -368,7 +388,11 @@ if res.crm_lead is not None:
 ### Response
 
 **[operations.CreateCrmLeadResponse](../../models/operations/createcrmleadresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## create_crm_pipeline
 
@@ -411,7 +435,11 @@ if res.crm_pipeline is not None:
 ### Response
 
 **[operations.CreateCrmPipelineResponse](../../models/operations/createcrmpipelineresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_crm_company
 
@@ -454,7 +482,11 @@ if res.crm_company is not None:
 ### Response
 
 **[operations.GetCrmCompanyResponse](../../models/operations/getcrmcompanyresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_crm_contact
 
@@ -497,7 +529,11 @@ if res.crm_contact is not None:
 ### Response
 
 **[operations.GetCrmContactResponse](../../models/operations/getcrmcontactresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_crm_deal
 
@@ -540,7 +576,11 @@ if res.crm_deal is not None:
 ### Response
 
 **[operations.GetCrmDealResponse](../../models/operations/getcrmdealresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_crm_event
 
@@ -583,7 +623,11 @@ if res.crm_event is not None:
 ### Response
 
 **[operations.GetCrmEventResponse](../../models/operations/getcrmeventresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_crm_file
 
@@ -626,7 +670,11 @@ if res.crm_file is not None:
 ### Response
 
 **[operations.GetCrmFileResponse](../../models/operations/getcrmfileresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_crm_lead
 
@@ -669,7 +717,11 @@ if res.crm_lead is not None:
 ### Response
 
 **[operations.GetCrmLeadResponse](../../models/operations/getcrmleadresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_crm_pipeline
 
@@ -712,7 +764,11 @@ if res.crm_pipeline is not None:
 ### Response
 
 **[operations.GetCrmPipelineResponse](../../models/operations/getcrmpipelineresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## list_crm_companies
 
@@ -755,7 +811,11 @@ if res.crm_companies is not None:
 ### Response
 
 **[operations.ListCrmCompaniesResponse](../../models/operations/listcrmcompaniesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## list_crm_contacts
 
@@ -798,7 +858,11 @@ if res.crm_contacts is not None:
 ### Response
 
 **[operations.ListCrmContactsResponse](../../models/operations/listcrmcontactsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## list_crm_deals
 
@@ -841,7 +905,11 @@ if res.crm_deals is not None:
 ### Response
 
 **[operations.ListCrmDealsResponse](../../models/operations/listcrmdealsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## list_crm_events
 
@@ -884,7 +952,11 @@ if res.crm_events is not None:
 ### Response
 
 **[operations.ListCrmEventsResponse](../../models/operations/listcrmeventsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## list_crm_files
 
@@ -927,7 +999,11 @@ if res.crm_files is not None:
 ### Response
 
 **[operations.ListCrmFilesResponse](../../models/operations/listcrmfilesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## list_crm_leads
 
@@ -970,7 +1046,11 @@ if res.crm_leads is not None:
 ### Response
 
 **[operations.ListCrmLeadsResponse](../../models/operations/listcrmleadsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## list_crm_pipelines
 
@@ -1013,7 +1093,11 @@ if res.crm_pipelines is not None:
 ### Response
 
 **[operations.ListCrmPipelinesResponse](../../models/operations/listcrmpipelinesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## patch_crm_company
 
@@ -1075,7 +1159,11 @@ if res.crm_company is not None:
 ### Response
 
 **[operations.PatchCrmCompanyResponse](../../models/operations/patchcrmcompanyresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## patch_crm_contact
 
@@ -1134,7 +1222,11 @@ if res.crm_contact is not None:
 ### Response
 
 **[operations.PatchCrmContactResponse](../../models/operations/patchcrmcontactresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## patch_crm_deal
 
@@ -1181,7 +1273,11 @@ if res.crm_deal is not None:
 ### Response
 
 **[operations.PatchCrmDealResponse](../../models/operations/patchcrmdealresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## patch_crm_event
 
@@ -1246,7 +1342,11 @@ if res.crm_event is not None:
 ### Response
 
 **[operations.PatchCrmEventResponse](../../models/operations/patchcrmeventresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## patch_crm_file
 
@@ -1290,7 +1390,11 @@ if res.crm_file is not None:
 ### Response
 
 **[operations.PatchCrmFileResponse](../../models/operations/patchcrmfileresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## patch_crm_lead
 
@@ -1343,7 +1447,11 @@ if res.crm_lead is not None:
 ### Response
 
 **[operations.PatchCrmLeadResponse](../../models/operations/patchcrmleadresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## patch_crm_pipeline
 
@@ -1387,7 +1495,11 @@ if res.crm_pipeline is not None:
 ### Response
 
 **[operations.PatchCrmPipelineResponse](../../models/operations/patchcrmpipelineresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## remove_crm_company
 
@@ -1427,7 +1539,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.RemoveCrmCompanyResponse](../../models/operations/removecrmcompanyresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## remove_crm_contact
 
@@ -1467,7 +1583,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.RemoveCrmContactResponse](../../models/operations/removecrmcontactresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## remove_crm_deal
 
@@ -1507,7 +1627,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.RemoveCrmDealResponse](../../models/operations/removecrmdealresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## remove_crm_event
 
@@ -1547,7 +1671,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.RemoveCrmEventResponse](../../models/operations/removecrmeventresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## remove_crm_file
 
@@ -1587,7 +1715,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.RemoveCrmFileResponse](../../models/operations/removecrmfileresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## remove_crm_lead
 
@@ -1627,7 +1759,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.RemoveCrmLeadResponse](../../models/operations/removecrmleadresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## remove_crm_pipeline
 
@@ -1667,7 +1803,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.RemoveCrmPipelineResponse](../../models/operations/removecrmpipelineresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## update_crm_company
 
@@ -1729,7 +1869,11 @@ if res.crm_company is not None:
 ### Response
 
 **[operations.UpdateCrmCompanyResponse](../../models/operations/updatecrmcompanyresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## update_crm_contact
 
@@ -1788,7 +1932,11 @@ if res.crm_contact is not None:
 ### Response
 
 **[operations.UpdateCrmContactResponse](../../models/operations/updatecrmcontactresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## update_crm_deal
 
@@ -1835,7 +1983,11 @@ if res.crm_deal is not None:
 ### Response
 
 **[operations.UpdateCrmDealResponse](../../models/operations/updatecrmdealresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## update_crm_event
 
@@ -1900,7 +2052,11 @@ if res.crm_event is not None:
 ### Response
 
 **[operations.UpdateCrmEventResponse](../../models/operations/updatecrmeventresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## update_crm_file
 
@@ -1944,7 +2100,11 @@ if res.crm_file is not None:
 ### Response
 
 **[operations.UpdateCrmFileResponse](../../models/operations/updatecrmfileresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## update_crm_lead
 
@@ -1997,7 +2157,11 @@ if res.crm_lead is not None:
 ### Response
 
 **[operations.UpdateCrmLeadResponse](../../models/operations/updatecrmleadresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## update_crm_pipeline
 
@@ -2041,4 +2205,8 @@ if res.crm_pipeline is not None:
 ### Response
 
 **[operations.UpdateCrmPipelineResponse](../../models/operations/updatecrmpipelineresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

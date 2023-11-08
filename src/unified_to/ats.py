@@ -12,6 +12,7 @@ class Ats:
         self.sdk_configuration = sdk_config
         
     
+    
     def create_ats_application(self, request: operations.CreateAtsApplicationRequest) -> operations.CreateAtsApplicationResponse:
         r"""Create an application"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -24,7 +25,10 @@ class Ats:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -43,6 +47,7 @@ class Ats:
         return res
 
     
+    
     def create_ats_candidate(self, request: operations.CreateAtsCandidateRequest) -> operations.CreateAtsCandidateResponse:
         r"""Create a candidate"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -55,7 +60,10 @@ class Ats:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -74,6 +82,7 @@ class Ats:
         return res
 
     
+    
     def create_ats_document(self, request: operations.CreateAtsDocumentRequest) -> operations.CreateAtsDocumentResponse:
         r"""Create a document"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -86,7 +95,10 @@ class Ats:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -105,6 +117,7 @@ class Ats:
         return res
 
     
+    
     def create_ats_interview(self, request: operations.CreateAtsInterviewRequest) -> operations.CreateAtsInterviewResponse:
         r"""Create a interview"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -117,7 +130,10 @@ class Ats:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -136,6 +152,7 @@ class Ats:
         return res
 
     
+    
     def create_ats_job(self, request: operations.CreateAtsJobRequest) -> operations.CreateAtsJobResponse:
         r"""Create a job"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -148,7 +165,10 @@ class Ats:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -167,6 +187,7 @@ class Ats:
         return res
 
     
+    
     def create_ats_scorecard(self, request: operations.CreateAtsScorecardRequest) -> operations.CreateAtsScorecardResponse:
         r"""Create a scorecard"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -179,7 +200,10 @@ class Ats:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -198,6 +222,7 @@ class Ats:
         return res
 
     
+    
     def get_ats_application(self, request: operations.GetAtsApplicationRequest) -> operations.GetAtsApplicationResponse:
         r"""Retrieve an application"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -208,7 +233,10 @@ class Ats:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -227,6 +255,7 @@ class Ats:
         return res
 
     
+    
     def get_ats_candidate(self, request: operations.GetAtsCandidateRequest) -> operations.GetAtsCandidateResponse:
         r"""Retrieve a candidate"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -237,7 +266,10 @@ class Ats:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -256,6 +288,7 @@ class Ats:
         return res
 
     
+    
     def get_ats_document(self, request: operations.GetAtsDocumentRequest) -> operations.GetAtsDocumentResponse:
         r"""Retrieve a document"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -266,7 +299,10 @@ class Ats:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -285,6 +321,7 @@ class Ats:
         return res
 
     
+    
     def get_ats_interview(self, request: operations.GetAtsInterviewRequest) -> operations.GetAtsInterviewResponse:
         r"""Retrieve a interview"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -295,7 +332,10 @@ class Ats:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -314,6 +354,7 @@ class Ats:
         return res
 
     
+    
     def get_ats_job(self, request: operations.GetAtsJobRequest) -> operations.GetAtsJobResponse:
         r"""Retrieve a job"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -324,7 +365,10 @@ class Ats:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -343,6 +387,7 @@ class Ats:
         return res
 
     
+    
     def get_ats_scorecard(self, request: operations.GetAtsScorecardRequest) -> operations.GetAtsScorecardResponse:
         r"""Retrieve a scorecard"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -353,7 +398,10 @@ class Ats:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -372,6 +420,7 @@ class Ats:
         return res
 
     
+    
     def list_ats_applications(self, request: operations.ListAtsApplicationsRequest) -> operations.ListAtsApplicationsResponse:
         r"""List all applications"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -382,7 +431,10 @@ class Ats:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -401,6 +453,7 @@ class Ats:
         return res
 
     
+    
     def list_ats_candidates(self, request: operations.ListAtsCandidatesRequest) -> operations.ListAtsCandidatesResponse:
         r"""List all candidates"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -411,7 +464,10 @@ class Ats:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -430,6 +486,7 @@ class Ats:
         return res
 
     
+    
     def list_ats_documents(self, request: operations.ListAtsDocumentsRequest) -> operations.ListAtsDocumentsResponse:
         r"""List all documents"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -440,7 +497,10 @@ class Ats:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -459,6 +519,7 @@ class Ats:
         return res
 
     
+    
     def list_ats_interviews(self, request: operations.ListAtsInterviewsRequest) -> operations.ListAtsInterviewsResponse:
         r"""List all interviews"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -469,7 +530,10 @@ class Ats:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -488,6 +552,7 @@ class Ats:
         return res
 
     
+    
     def list_ats_jobs(self, request: operations.ListAtsJobsRequest) -> operations.ListAtsJobsResponse:
         r"""List all jobs"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -498,7 +563,10 @@ class Ats:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -517,6 +585,7 @@ class Ats:
         return res
 
     
+    
     def list_ats_scorecards(self, request: operations.ListAtsScorecardsRequest) -> operations.ListAtsScorecardsResponse:
         r"""List all scorecards"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -527,7 +596,10 @@ class Ats:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -546,6 +618,7 @@ class Ats:
         return res
 
     
+    
     def patch_ats_application(self, request: operations.PatchAtsApplicationRequest) -> operations.PatchAtsApplicationResponse:
         r"""Update an application"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -558,7 +631,10 @@ class Ats:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -577,6 +653,7 @@ class Ats:
         return res
 
     
+    
     def patch_ats_candidate(self, request: operations.PatchAtsCandidateRequest) -> operations.PatchAtsCandidateResponse:
         r"""Update a candidate"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -589,7 +666,10 @@ class Ats:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -608,6 +688,7 @@ class Ats:
         return res
 
     
+    
     def patch_ats_document(self, request: operations.PatchAtsDocumentRequest) -> operations.PatchAtsDocumentResponse:
         r"""Update a document"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -620,7 +701,10 @@ class Ats:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -639,6 +723,7 @@ class Ats:
         return res
 
     
+    
     def patch_ats_interview(self, request: operations.PatchAtsInterviewRequest) -> operations.PatchAtsInterviewResponse:
         r"""Update a interview"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -651,7 +736,10 @@ class Ats:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -670,6 +758,7 @@ class Ats:
         return res
 
     
+    
     def patch_ats_job(self, request: operations.PatchAtsJobRequest) -> operations.PatchAtsJobResponse:
         r"""Update a job"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -682,7 +771,10 @@ class Ats:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -701,6 +793,7 @@ class Ats:
         return res
 
     
+    
     def patch_ats_scorecard(self, request: operations.PatchAtsScorecardRequest) -> operations.PatchAtsScorecardResponse:
         r"""Update a scorecard"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -713,7 +806,10 @@ class Ats:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -732,6 +828,7 @@ class Ats:
         return res
 
     
+    
     def remove_ats_application(self, request: operations.RemoveAtsApplicationRequest) -> operations.RemoveAtsApplicationResponse:
         r"""Remove an application"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -741,7 +838,10 @@ class Ats:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -759,6 +859,7 @@ class Ats:
         return res
 
     
+    
     def remove_ats_candidate(self, request: operations.RemoveAtsCandidateRequest) -> operations.RemoveAtsCandidateResponse:
         r"""Remove a candidate"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -768,7 +869,10 @@ class Ats:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -786,6 +890,7 @@ class Ats:
         return res
 
     
+    
     def remove_ats_document(self, request: operations.RemoveAtsDocumentRequest) -> operations.RemoveAtsDocumentResponse:
         r"""Remove a document"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -795,7 +900,10 @@ class Ats:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -813,6 +921,7 @@ class Ats:
         return res
 
     
+    
     def remove_ats_interview(self, request: operations.RemoveAtsInterviewRequest) -> operations.RemoveAtsInterviewResponse:
         r"""Remove a interview"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -822,7 +931,10 @@ class Ats:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -840,6 +952,7 @@ class Ats:
         return res
 
     
+    
     def remove_ats_job(self, request: operations.RemoveAtsJobRequest) -> operations.RemoveAtsJobResponse:
         r"""Remove a job"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -849,7 +962,10 @@ class Ats:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -867,6 +983,7 @@ class Ats:
         return res
 
     
+    
     def remove_ats_scorecard(self, request: operations.RemoveAtsScorecardRequest) -> operations.RemoveAtsScorecardResponse:
         r"""Remove a scorecard"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -876,7 +993,10 @@ class Ats:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -894,6 +1014,7 @@ class Ats:
         return res
 
     
+    
     def update_ats_application(self, request: operations.UpdateAtsApplicationRequest) -> operations.UpdateAtsApplicationResponse:
         r"""Update an application"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -906,7 +1027,10 @@ class Ats:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -925,6 +1049,7 @@ class Ats:
         return res
 
     
+    
     def update_ats_candidate(self, request: operations.UpdateAtsCandidateRequest) -> operations.UpdateAtsCandidateResponse:
         r"""Update a candidate"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -937,7 +1062,10 @@ class Ats:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -956,6 +1084,7 @@ class Ats:
         return res
 
     
+    
     def update_ats_document(self, request: operations.UpdateAtsDocumentRequest) -> operations.UpdateAtsDocumentResponse:
         r"""Update a document"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -968,7 +1097,10 @@ class Ats:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -987,6 +1119,7 @@ class Ats:
         return res
 
     
+    
     def update_ats_interview(self, request: operations.UpdateAtsInterviewRequest) -> operations.UpdateAtsInterviewResponse:
         r"""Update a interview"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -999,7 +1132,10 @@ class Ats:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -1018,6 +1154,7 @@ class Ats:
         return res
 
     
+    
     def update_ats_job(self, request: operations.UpdateAtsJobRequest) -> operations.UpdateAtsJobResponse:
         r"""Update a job"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -1030,7 +1167,10 @@ class Ats:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -1049,6 +1189,7 @@ class Ats:
         return res
 
     
+    
     def update_ats_scorecard(self, request: operations.UpdateAtsScorecardRequest) -> operations.UpdateAtsScorecardResponse:
         r"""Update a scorecard"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -1061,7 +1202,10 @@ class Ats:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')

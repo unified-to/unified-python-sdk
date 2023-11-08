@@ -1,5 +1,5 @@
 # Pipeline
-(*.pipeline*)
+(*pipeline*)
 
 ### Available Operations
 
@@ -51,7 +51,11 @@ if res.crm_pipeline is not None:
 ### Response
 
 **[operations.CreateCrmPipelineResponse](../../models/operations/createcrmpipelineresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_crm_pipeline
 
@@ -94,7 +98,11 @@ if res.crm_pipeline is not None:
 ### Response
 
 **[operations.GetCrmPipelineResponse](../../models/operations/getcrmpipelineresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## list_crm_pipelines
 
@@ -137,7 +145,11 @@ if res.crm_pipelines is not None:
 ### Response
 
 **[operations.ListCrmPipelinesResponse](../../models/operations/listcrmpipelinesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## patch_crm_pipeline
 
@@ -181,7 +193,11 @@ if res.crm_pipeline is not None:
 ### Response
 
 **[operations.PatchCrmPipelineResponse](../../models/operations/patchcrmpipelineresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## remove_crm_pipeline
 
@@ -221,7 +237,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.RemoveCrmPipelineResponse](../../models/operations/removecrmpipelineresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## update_crm_pipeline
 
@@ -265,4 +285,8 @@ if res.crm_pipeline is not None:
 ### Response
 
 **[operations.UpdateCrmPipelineResponse](../../models/operations/updatecrmpipelineresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

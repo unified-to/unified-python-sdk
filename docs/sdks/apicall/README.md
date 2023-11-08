@@ -1,5 +1,5 @@
 # Apicall
-(*.apicall*)
+(*apicall*)
 
 ### Available Operations
 
@@ -43,7 +43,11 @@ if res.api_call is not None:
 ### Response
 
 **[operations.GetUnifiedApicallResponse](../../models/operations/getunifiedapicallresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## list_unified_apicalls
 
@@ -81,4 +85,8 @@ if res.api_calls is not None:
 ### Response
 
 **[operations.ListUnifiedApicallsResponse](../../models/operations/listunifiedapicallsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

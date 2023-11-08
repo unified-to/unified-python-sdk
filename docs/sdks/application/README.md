@@ -1,5 +1,5 @@
 # Application
-(*.application*)
+(*application*)
 
 ### Available Operations
 
@@ -51,7 +51,11 @@ if res.ats_application is not None:
 ### Response
 
 **[operations.CreateAtsApplicationResponse](../../models/operations/createatsapplicationresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_ats_application
 
@@ -94,7 +98,11 @@ if res.ats_application is not None:
 ### Response
 
 **[operations.GetAtsApplicationResponse](../../models/operations/getatsapplicationresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## list_ats_applications
 
@@ -137,7 +145,11 @@ if res.ats_applications is not None:
 ### Response
 
 **[operations.ListAtsApplicationsResponse](../../models/operations/listatsapplicationsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## patch_ats_application
 
@@ -181,7 +193,11 @@ if res.ats_application is not None:
 ### Response
 
 **[operations.PatchAtsApplicationResponse](../../models/operations/patchatsapplicationresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## remove_ats_application
 
@@ -221,7 +237,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.RemoveAtsApplicationResponse](../../models/operations/removeatsapplicationresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## update_ats_application
 
@@ -265,4 +285,8 @@ if res.ats_application is not None:
 ### Response
 
 **[operations.UpdateAtsApplicationResponse](../../models/operations/updateatsapplicationresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

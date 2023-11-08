@@ -1,5 +1,5 @@
 # Note
-(*.note*)
+(*note*)
 
 ### Available Operations
 
@@ -51,7 +51,11 @@ if res.ticketing_note is not None:
 ### Response
 
 **[operations.CreateTicketingNoteResponse](../../models/operations/createticketingnoteresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_ticketing_note
 
@@ -94,7 +98,11 @@ if res.ticketing_note is not None:
 ### Response
 
 **[operations.GetTicketingNoteResponse](../../models/operations/getticketingnoteresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## list_ticketing_notes
 
@@ -137,7 +145,11 @@ if res.ticketing_notes is not None:
 ### Response
 
 **[operations.ListTicketingNotesResponse](../../models/operations/listticketingnotesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## patch_ticketing_note
 
@@ -181,7 +193,11 @@ if res.ticketing_note is not None:
 ### Response
 
 **[operations.PatchTicketingNoteResponse](../../models/operations/patchticketingnoteresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## remove_ticketing_note
 
@@ -221,7 +237,11 @@ if res.status_code == 200:
 ### Response
 
 **[operations.RemoveTicketingNoteResponse](../../models/operations/removeticketingnoteresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## update_ticketing_note
 
@@ -265,4 +285,8 @@ if res.ticketing_note is not None:
 ### Response
 
 **[operations.UpdateTicketingNoteResponse](../../models/operations/updateticketingnoteresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
