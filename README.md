@@ -1,4 +1,4 @@
-# Unified-php-sdk
+# Unified-python-sdk
 
 <div align="left">
     <a href="https://speakeasyapi.dev/"><img src="https://custom-icon-badges.demolab.com/badge/-Built%20By%20Speakeasy-212015?style=for-the-badge&logoColor=FBE331&logo=speakeasy&labelColor=545454" /></a>
