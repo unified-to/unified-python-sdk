@@ -2,27 +2,23 @@ configVersion: 1.0.0
 management:
   docChecksum: 971f963bb8131d7583f1525d9455db1e
   docVersion: "1.0"
-  speakeasyVersion: 1.118.3
-  generationVersion: 2.187.7
+  speakeasyVersion: 1.119.0
+  generationVersion: 2.188.1
 generation:
-  comments:
-    disableComments: false
-    omitDescriptionIfSummaryPresent: false
-  baseServerURL: ""
-  flattenGlobalSecurity: true
-  repoURL: https://github.com/unified-to/unified-python-sdk.git
+  comments: {}
   sdkClassName: Unified-to
-  singleTagPerOp: false
-  tagNamespacingDisabled: false
+  repoURL: https://github.com/unified-to/unified-python-sdk.git
   usageSnippets:
     optionalPropertyRendering: withExample
+  baseServerURL: ""
+  flattenGlobalSecurity: true
 features:
   python:
     core: 4.1.2
     globalSecurity: 2.83.0
     globalServerURLs: 2.82.0
 python:
-  version: 0.12.1
+  version: 0.13.0
   author: Unified API Inc
   clientServerStatusCodesAsErrors: true
   description: Python Client SDK for Unified.to
@@ -40,4 +36,5 @@ python:
   maxMethodParams: 0
   outputModelSuffix: output
   packageName: Unified-python-sdk
+  published: true
   repoSubDirectory: .

@@ -10,7 +10,7 @@
 ## SDK Installation
 
 ```bash
-pip install git+https://github.com/unified-to/unified-python-sdk.git
+pip install Unified-python-sdk
 ```
 <!-- End SDK Installation -->
 

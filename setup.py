@@ -9,8 +9,8 @@ except FileNotFoundError:
     long_description = ""
 
 setuptools.setup(
-    name="Unified-php-sdk",
-    version="0.12.1",
+    name="Unified-python-sdk",
+    version="0.13.0",
     author="Unified API Inc",
     description="Python Client SDK for Unified.to",
     long_description=long_description,
