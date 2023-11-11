@@ -5,9 +5,15 @@ management:
   speakeasyVersion: 1.118.3
   generationVersion: 2.187.7
 generation:
-  comments: {}
-  sdkClassName: Unified-to
+  comments:
+    disableComments: false
+    omitDescriptionIfSummaryPresent: false
+  baseServerURL: ""
+  flattenGlobalSecurity: true
   repoURL: https://github.com/unified-to/unified-python-sdk.git
+  sdkClassName: Unified-to
+  singleTagPerOp: false
+  tagNamespacingDisabled: false
   usageSnippets:
     optionalPropertyRendering: withExample
 features:
@@ -33,5 +39,5 @@ python:
   installationURL: https://github.com/unified-to/unified-python-sdk.git
   maxMethodParams: 0
   outputModelSuffix: output
-  packageName: Unified-php-sdk
+  packageName: Unified-python-sdk
   repoSubDirectory: .
