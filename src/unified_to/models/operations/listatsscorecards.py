@@ -21,7 +21,7 @@ class ListAtsScorecardsRequest:
     interview_id: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'interview_id', 'style': 'form', 'explode': True }})
     r"""The interview ID to filter results"""
     job_id: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'job_id', 'style': 'form', 'explode': True }})
-    r"""The job ID to filter results"""
+    r"""The job ID"""
     limit: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
     offset: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
     order: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'order', 'style': 'form', 'explode': True }})
