@@ -21,11 +21,7 @@ import dateutil.parser
 import unified_to
 from unified_to.models import shared
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 req = shared.Connection(
     auth=shared.PropertyConnectionAuth(
@@ -79,11 +75,7 @@ Retrieve connection
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 req = operations.GetUnifiedConnectionRequest(
     id='<ID>',
@@ -123,11 +115,7 @@ import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 req = operations.ListUnifiedConnectionsRequest(
     categories=[
@@ -169,11 +157,7 @@ import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 req = operations.PatchUnifiedConnectionRequest(
     connection=shared.Connection(
@@ -230,11 +214,7 @@ Remove connection
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 req = operations.RemoveUnifiedConnectionRequest(
     id='<ID>',
@@ -274,11 +254,7 @@ import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 req = operations.UpdateUnifiedConnectionRequest(
     connection=shared.Connection(

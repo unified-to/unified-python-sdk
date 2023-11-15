@@ -21,11 +21,7 @@ import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 req = operations.CreateAccountingPaymentRequest(
     accounting_payment=shared.AccountingPayment(
@@ -70,11 +66,7 @@ Retrieve a payment
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 req = operations.GetAccountingPaymentRequest(
     connection_id='string',
@@ -118,11 +110,7 @@ import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 req = operations.ListAccountingPaymentsRequest(
     connection_id='string',
@@ -165,11 +153,7 @@ import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 req = operations.PatchAccountingPaymentRequest(
     accounting_payment=shared.AccountingPayment(
@@ -215,11 +199,7 @@ Remove a payment
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 req = operations.RemoveAccountingPaymentRequest(
     connection_id='string',
@@ -260,11 +240,7 @@ import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 req = operations.UpdateAccountingPaymentRequest(
     accounting_payment=shared.AccountingPayment(

@@ -19,11 +19,7 @@ import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 req = operations.CreateUnifiedWebhookRequest(
     webhook=shared.Webhook(
@@ -80,11 +76,7 @@ Retrieve webhook by its ID
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 req = operations.GetUnifiedWebhookRequest(
     id='<ID>',
@@ -124,11 +116,7 @@ import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 req = operations.ListUnifiedWebhooksRequest()
 
@@ -165,11 +153,7 @@ Remove webhook subscription
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 req = operations.RemoveUnifiedWebhookRequest(
     id='<ID>',

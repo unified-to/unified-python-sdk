@@ -21,11 +21,7 @@ import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 req = operations.CreateCrmPipelineRequest(
     crm_pipeline=shared.CrmPipeline(
@@ -67,11 +63,7 @@ Retrieve a pipeline
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 req = operations.GetCrmPipelineRequest(
     connection_id='string',
@@ -115,11 +107,7 @@ import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 req = operations.ListCrmPipelinesRequest(
     connection_id='string',
@@ -162,11 +150,7 @@ import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 req = operations.PatchCrmPipelineRequest(
     crm_pipeline=shared.CrmPipeline(
@@ -209,11 +193,7 @@ Remove a pipeline
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 req = operations.RemoveCrmPipelineRequest(
     connection_id='string',
@@ -254,11 +234,7 @@ import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 req = operations.UpdateCrmPipelineRequest(
     crm_pipeline=shared.CrmPipeline(

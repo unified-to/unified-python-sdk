@@ -15,11 +15,7 @@ Retrieve enrichment information for a person
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 req = operations.ListEnrichPeopleRequest(
     connection_id='string',

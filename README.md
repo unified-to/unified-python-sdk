@@ -23,11 +23,7 @@ import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 req = operations.CreateAccountingCustomerRequest(
     accounting_customer=shared.AccountingCustomer(
@@ -551,11 +547,7 @@ import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 req = operations.CreateAccountingCustomerRequest(
     accounting_customer=shared.AccountingCustomer(
@@ -613,9 +605,6 @@ from unified_to.models import operations, shared
 
 s = unified_to.UnifiedTo(
     server_idx=1,
-    security=shared.Security(
-        jwt="",
-    ),
 )
 
 req = operations.CreateAccountingCustomerRequest(
@@ -655,9 +644,6 @@ from unified_to.models import operations, shared
 
 s = unified_to.UnifiedTo(
     server_url="https://api.unified.to",
-    security=shared.Security(
-        jwt="",
-    ),
 )
 
 req = operations.CreateAccountingCustomerRequest(
