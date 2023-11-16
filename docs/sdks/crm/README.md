@@ -244,6 +244,9 @@ req = operations.CreateCrmEventRequest(
                 'string',
             ],
         ),
+        lead_ids=[
+            'string',
+        ],
         meeting=shared.PropertyCrmEventMeeting(),
         note=shared.PropertyCrmEventNote(),
         raw=shared.PropertyCrmEventRaw(),
@@ -1216,6 +1219,9 @@ req = operations.PatchCrmEventRequest(
                 'string',
             ],
         ),
+        lead_ids=[
+            'string',
+        ],
         meeting=shared.PropertyCrmEventMeeting(),
         note=shared.PropertyCrmEventNote(),
         raw=shared.PropertyCrmEventRaw(),
@@ -1870,6 +1876,9 @@ req = operations.UpdateCrmEventRequest(
                 'string',
             ],
         ),
+        lead_ids=[
+            'string',
+        ],
         meeting=shared.PropertyCrmEventMeeting(),
         note=shared.PropertyCrmEventNote(),
         raw=shared.PropertyCrmEventRaw(),

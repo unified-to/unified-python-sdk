@@ -39,6 +39,7 @@ class CrmEvent:
     email: Optional[PropertyCrmEventEmail] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('email'), 'exclude': lambda f: f is None }})
     r"""The email object, when type = email"""
     id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id'), 'exclude': lambda f: f is None }})
+    lead_ids: Optional[List[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('lead_ids'), 'exclude': lambda f: f is None }})
     meeting: Optional[PropertyCrmEventMeeting] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('meeting'), 'exclude': lambda f: f is None }})
     r"""The meeting object, when type = meeting"""
     note: Optional[PropertyCrmEventNote] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('note'), 'exclude': lambda f: f is None }})
