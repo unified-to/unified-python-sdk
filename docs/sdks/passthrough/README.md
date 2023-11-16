@@ -19,7 +19,11 @@ Passthrough POST
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.CreatePassthroughRequest(
     connection_id='string',
@@ -60,7 +64,11 @@ Passthrough GET
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.ListPassthroughsRequest(
     connection_id='string',
@@ -100,7 +108,11 @@ Passthrough PUT
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.PatchPassthroughRequest(
     connection_id='string',
@@ -141,7 +153,11 @@ Passthrough DELETE
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.RemovePassthroughRequest(
     connection_id='string',
@@ -181,7 +197,11 @@ Passthrough PUT
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.UpdatePassthroughRequest(
     connection_id='string',

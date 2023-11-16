@@ -4,7 +4,11 @@ import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.CreateAccountingCustomerRequest(
     accounting_customer=shared.AccountingCustomer(

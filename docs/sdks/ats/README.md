@@ -51,7 +51,11 @@ import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.CreateAtsApplicationRequest(
     ats_application=shared.AtsApplication(
@@ -94,7 +98,11 @@ import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.CreateAtsCandidateRequest(
     ats_candidate=shared.AtsCandidate(
@@ -151,7 +159,11 @@ import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.CreateAtsDocumentRequest(
     ats_document=shared.AtsDocument(
@@ -194,7 +206,11 @@ import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.CreateAtsInterviewRequest(
     ats_interview=shared.AtsInterview(
@@ -240,7 +256,11 @@ import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.CreateAtsJobRequest(
     ats_job=shared.AtsJob(
@@ -303,7 +323,11 @@ import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.CreateAtsScorecardRequest(
     ats_scorecard=shared.AtsScorecard(
@@ -345,7 +369,11 @@ Retrieve an application
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.GetAtsApplicationRequest(
     connection_id='string',
@@ -388,7 +416,11 @@ Retrieve a candidate
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.GetAtsCandidateRequest(
     connection_id='string',
@@ -431,7 +463,11 @@ Retrieve a document
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.GetAtsDocumentRequest(
     connection_id='string',
@@ -474,7 +510,11 @@ Retrieve a interview
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.GetAtsInterviewRequest(
     connection_id='string',
@@ -517,7 +557,11 @@ Retrieve a job
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.GetAtsJobRequest(
     connection_id='string',
@@ -560,7 +604,11 @@ Retrieve a scorecard
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.GetAtsScorecardRequest(
     connection_id='string',
@@ -604,7 +652,11 @@ import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.ListAtsApplicationsRequest(
     connection_id='string',
@@ -647,7 +699,11 @@ import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.ListAtsCandidatesRequest(
     connection_id='string',
@@ -690,7 +746,11 @@ import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.ListAtsDocumentsRequest(
     connection_id='string',
@@ -733,7 +793,11 @@ import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.ListAtsInterviewsRequest(
     connection_id='string',
@@ -776,7 +840,11 @@ import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.ListAtsJobsRequest(
     connection_id='string',
@@ -819,7 +887,11 @@ import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.ListAtsScorecardsRequest(
     connection_id='string',
@@ -862,7 +934,11 @@ import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.PatchAtsApplicationRequest(
     ats_application=shared.AtsApplication(
@@ -906,7 +982,11 @@ import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.PatchAtsCandidateRequest(
     ats_candidate=shared.AtsCandidate(
@@ -964,7 +1044,11 @@ import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.PatchAtsDocumentRequest(
     ats_document=shared.AtsDocument(
@@ -1008,7 +1092,11 @@ import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.PatchAtsInterviewRequest(
     ats_interview=shared.AtsInterview(
@@ -1055,7 +1143,11 @@ import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.PatchAtsJobRequest(
     ats_job=shared.AtsJob(
@@ -1119,7 +1211,11 @@ import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.PatchAtsScorecardRequest(
     ats_scorecard=shared.AtsScorecard(
@@ -1162,7 +1258,11 @@ Remove an application
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.RemoveAtsApplicationRequest(
     connection_id='string',
@@ -1202,7 +1302,11 @@ Remove a candidate
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.RemoveAtsCandidateRequest(
     connection_id='string',
@@ -1242,7 +1346,11 @@ Remove a document
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.RemoveAtsDocumentRequest(
     connection_id='string',
@@ -1282,7 +1390,11 @@ Remove a interview
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.RemoveAtsInterviewRequest(
     connection_id='string',
@@ -1322,7 +1434,11 @@ Remove a job
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.RemoveAtsJobRequest(
     connection_id='string',
@@ -1362,7 +1478,11 @@ Remove a scorecard
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.RemoveAtsScorecardRequest(
     connection_id='string',
@@ -1403,7 +1523,11 @@ import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.UpdateAtsApplicationRequest(
     ats_application=shared.AtsApplication(
@@ -1447,7 +1571,11 @@ import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.UpdateAtsCandidateRequest(
     ats_candidate=shared.AtsCandidate(
@@ -1505,7 +1633,11 @@ import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.UpdateAtsDocumentRequest(
     ats_document=shared.AtsDocument(
@@ -1549,7 +1681,11 @@ import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.UpdateAtsInterviewRequest(
     ats_interview=shared.AtsInterview(
@@ -1596,7 +1732,11 @@ import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.UpdateAtsJobRequest(
     ats_job=shared.AtsJob(
@@ -1660,7 +1800,11 @@ import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.UpdateAtsScorecardRequest(
     ats_scorecard=shared.AtsScorecard(

@@ -27,7 +27,11 @@ import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.CreateHrisEmployeeRequest(
     hris_employee=shared.HrisEmployee(
@@ -81,7 +85,11 @@ import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.CreateHrisGroupRequest(
     hris_group=shared.HrisGroup(
@@ -129,7 +137,11 @@ Retrieve an employee
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.GetHrisEmployeeRequest(
     connection_id='string',
@@ -172,7 +184,11 @@ Retrieve a group
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.GetHrisGroupRequest(
     connection_id='string',
@@ -216,7 +232,11 @@ import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.ListHrisEmployeesRequest(
     connection_id='string',
@@ -259,7 +279,11 @@ import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.ListHrisGroupsRequest(
     connection_id='string',
@@ -302,7 +326,11 @@ import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.PatchHrisEmployeeRequest(
     hris_employee=shared.HrisEmployee(
@@ -357,7 +385,11 @@ import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.PatchHrisGroupRequest(
     hris_group=shared.HrisGroup(
@@ -406,7 +438,11 @@ Remove an employee
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.RemoveHrisEmployeeRequest(
     connection_id='string',
@@ -446,7 +482,11 @@ Remove a group
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.RemoveHrisGroupRequest(
     connection_id='string',
@@ -487,7 +527,11 @@ import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.UpdateHrisEmployeeRequest(
     hris_employee=shared.HrisEmployee(
@@ -542,7 +586,11 @@ import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.UpdateHrisGroupRequest(
     hris_group=shared.HrisGroup(

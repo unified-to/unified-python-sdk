@@ -21,7 +21,11 @@ import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.CreateAtsJobRequest(
     ats_job=shared.AtsJob(
@@ -83,7 +87,11 @@ Retrieve a job
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.GetAtsJobRequest(
     connection_id='string',
@@ -127,7 +135,11 @@ import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.ListAtsJobsRequest(
     connection_id='string',
@@ -170,7 +182,11 @@ import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.PatchAtsJobRequest(
     ats_job=shared.AtsJob(
@@ -233,7 +249,11 @@ Remove a job
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.RemoveAtsJobRequest(
     connection_id='string',
@@ -274,7 +294,11 @@ import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.UpdateAtsJobRequest(
     ats_job=shared.AtsJob(

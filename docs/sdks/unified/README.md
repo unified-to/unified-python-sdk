@@ -31,7 +31,11 @@ import dateutil.parser
 import unified_to
 from unified_to.models import shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = shared.Connection(
     auth=shared.PropertyConnectionAuth(
@@ -86,7 +90,11 @@ import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.CreateUnifiedWebhookRequest(
     webhook=shared.Webhook(
@@ -143,7 +151,11 @@ Retrieve specific API Call by its ID
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.GetUnifiedApicallRequest(
     id='<ID>',
@@ -182,7 +194,11 @@ Retrieve connection
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.GetUnifiedConnectionRequest(
     id='<ID>',
@@ -221,7 +237,11 @@ Retrieve an integration
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.GetUnifiedIntegrationRequest(
     integration_type='string',
@@ -307,7 +327,11 @@ Retrieve webhook by its ID
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.GetUnifiedWebhookRequest(
     id='<ID>',
@@ -347,7 +371,11 @@ import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.ListUnifiedApicallsRequest()
 
@@ -385,7 +413,11 @@ import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.ListUnifiedConnectionsRequest(
     categories=[
@@ -472,7 +504,11 @@ Returns all integrations
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.ListUnifiedIntegrationsRequest(
     categories=[
@@ -514,7 +550,11 @@ import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.ListUnifiedWebhooksRequest()
 
@@ -552,7 +592,11 @@ import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.PatchUnifiedConnectionRequest(
     connection=shared.Connection(
@@ -609,7 +653,11 @@ Remove connection
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.RemoveUnifiedConnectionRequest(
     id='<ID>',
@@ -648,7 +696,11 @@ Remove webhook subscription
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.RemoveUnifiedWebhookRequest(
     id='<ID>',
@@ -688,7 +740,11 @@ import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.UpdateUnifiedConnectionRequest(
     connection=shared.Connection(

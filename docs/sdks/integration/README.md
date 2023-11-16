@@ -18,7 +18,11 @@ Retrieve an integration
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.GetUnifiedIntegrationRequest(
     integration_type='string',
@@ -150,7 +154,11 @@ Returns all integrations
 import unified_to
 from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
 
 req = operations.ListUnifiedIntegrationsRequest(
     categories=[
