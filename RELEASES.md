@@ -349,3 +349,13 @@ Based on:
 - [python v0.13.6] .
 ### Releases
 - [PyPI v0.13.6] https://pypi.org/project/Unified-python-sdk/0.13.6 - .
+
+## 2023-11-17 13:01:38
+### Changes
+Based on:
+- OpenAPI Doc 1.0 
+- Speakeasy CLI 1.120.5 (2.192.6) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [python v0.13.7] .
+### Releases
+- [PyPI v0.13.7] https://pypi.org/project/Unified-python-sdk/0.13.7 - .
