@@ -47,6 +47,7 @@ src/unified_to/utils/__init__.py
 src/unified_to/utils/retries.py
 src/unified_to/utils/utils.py
 src/unified_to/models/errors/sdkerror.py
+tests/helpers.py
 src/unified_to/models/operations/createaccountingcustomer.py
 src/unified_to/models/operations/createaccountinginvoice.py
 src/unified_to/models/operations/createaccountingpayment.py
