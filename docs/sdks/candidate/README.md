@@ -35,6 +35,9 @@ req = operations.CreateAtsCandidateRequest(
                 email='Robin_Feeney@hotmail.com',
             ),
         ],
+        link_urls=[
+            'string',
+        ],
         raw=shared.PropertyAtsCandidateRaw(),
         tags=[
             'string',
@@ -190,6 +193,9 @@ req = operations.PatchAtsCandidateRequest(
                 email='Tracy.Collins13@gmail.com',
             ),
         ],
+        link_urls=[
+            'string',
+        ],
         raw=shared.PropertyAtsCandidateRaw(),
         tags=[
             'string',
@@ -295,6 +301,9 @@ req = operations.UpdateAtsCandidateRequest(
             shared.AtsEmail(
                 email='Gaetano86@hotmail.com',
             ),
+        ],
+        link_urls=[
+            'string',
         ],
         raw=shared.PropertyAtsCandidateRaw(),
         tags=[

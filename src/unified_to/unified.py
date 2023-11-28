@@ -191,7 +191,7 @@ class Unified:
         url = utils.generate_url(operations.GetUnifiedIntegrationAuthRequest, base_url, '/unified/integration/auth/{workspace_id}/{integration_type}', request)
         headers = {}
         query_params = utils.get_query_params(operations.GetUnifiedIntegrationAuthRequest, request)
-        headers['Accept'] = 'application/json'
+        headers['Accept'] = 'text/plain'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
         if callable(self.sdk_configuration.security):
@@ -205,7 +205,7 @@ class Unified:
         res = operations.GetUnifiedIntegrationAuthResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
-            if utils.match_content_type(content_type, 'application/json'):
+            if utils.match_content_type(content_type, 'text/plain'):
                 res.res = http_res.content
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)

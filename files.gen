@@ -325,7 +325,6 @@ src/unified_to/models/__init__.py
 src/unified_to/models/errors/__init__.py
 src/unified_to/models/operations/__init__.py
 src/unified_to/models/shared/__init__.py
-USAGE.md
 docs/models/operations/createaccountingcustomerrequest.md
 docs/models/operations/createaccountingcustomerresponse.md
 docs/models/operations/createaccountinginvoicerequest.md
@@ -849,4 +848,5 @@ docs/sdks/integration/README.md
 docs/sdks/auth/README.md
 docs/sdks/login/README.md
 docs/sdks/webhook/README.md
+USAGE.md
 .gitattributes
