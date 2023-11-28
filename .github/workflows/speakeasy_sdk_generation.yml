@@ -22,7 +22,7 @@ jobs:
         - python
       mode: direct
       openapi_docs: |
-        - https://api-eu.unified.to/openapi.json
+        - https://api.unified.to/openapi.json
       publish_python: true
       speakeasy_version: latest
     secrets:
