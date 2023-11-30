@@ -7,6 +7,8 @@
 | ------------------------------ | ------------------------------ |
 | `AUTH_LOGIN`                   | auth_login                     |
 | `ACCOUNTING_ACCOUNT_READ`      | accounting_account_read        |
+| `ACCOUNTING_ACCOUNT_WRITE`     | accounting_account_write       |
+| `ACCOUNTING_TRANSACTION_READ`  | accounting_transaction_read    |
 | `ACCOUNTING_TRANSACTION_WRITE` | accounting_transaction_write   |
 | `ACCOUNTING_INVOICE_READ`      | accounting_invoice_read        |
 | `ACCOUNTING_INVOICE_WRITE`     | accounting_invoice_write       |
