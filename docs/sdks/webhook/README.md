@@ -34,7 +34,7 @@ req = operations.CreateUnifiedWebhookRequest(
         hook_url='string',
         integration_type='string',
         interval=188.12,
-        object_type=shared.ObjectType.CRM_EVENT,
+        object_type=shared.ObjectType.CRM_DEAL,
         subscriptions=[
             'string',
         ],

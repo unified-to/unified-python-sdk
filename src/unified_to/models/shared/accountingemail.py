@@ -7,7 +7,7 @@ from enum import Enum
 from typing import Optional
 from unified_to import utils
 
-class Type(str, Enum):
+class AccountingEmailType(str, Enum):
     WORK = 'WORK'
     HOME = 'HOME'
     OTHER = 'OTHER'
@@ -17,6 +17,6 @@ class Type(str, Enum):
 @dataclasses.dataclass
 class AccountingEmail:
     email: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('email') }})
-    type: Optional[Type] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type'), 'exclude': lambda f: f is None }})
+    type: Optional[AccountingEmailType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type'), 'exclude': lambda f: f is None }})
     
 

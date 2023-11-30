@@ -3,24 +3,84 @@
 
 ### Available Operations
 
+* [create_accounting_account](#create_accounting_account) - Create an account
 * [create_accounting_customer](#create_accounting_customer) - Create a customer
 * [create_accounting_invoice](#create_accounting_invoice) - Create a invoice
 * [create_accounting_payment](#create_accounting_payment) - Create a payment
+* [create_accounting_transaction](#create_accounting_transaction) - Create a transaction
+* [get_accounting_account](#get_accounting_account) - Retrieve an account
 * [get_accounting_customer](#get_accounting_customer) - Retrieve a customer
 * [get_accounting_invoice](#get_accounting_invoice) - Retrieve a invoice
 * [get_accounting_payment](#get_accounting_payment) - Retrieve a payment
+* [get_accounting_transaction](#get_accounting_transaction) - Retrieve a transaction
+* [list_accounting_accounts](#list_accounting_accounts) - List all accounts
 * [list_accounting_customers](#list_accounting_customers) - List all customers
 * [list_accounting_invoices](#list_accounting_invoices) - List all invoices
 * [list_accounting_payments](#list_accounting_payments) - List all payments
+* [list_accounting_transactions](#list_accounting_transactions) - List all transactions
+* [patch_accounting_account](#patch_accounting_account) - Update an account
 * [patch_accounting_customer](#patch_accounting_customer) - Update a customer
 * [patch_accounting_invoice](#patch_accounting_invoice) - Update a invoice
 * [patch_accounting_payment](#patch_accounting_payment) - Update a payment
+* [patch_accounting_transaction](#patch_accounting_transaction) - Update a transaction
+* [remove_accounting_account](#remove_accounting_account) - Remove an account
 * [remove_accounting_customer](#remove_accounting_customer) - Remove a customer
 * [remove_accounting_invoice](#remove_accounting_invoice) - Remove a invoice
 * [remove_accounting_payment](#remove_accounting_payment) - Remove a payment
+* [remove_accounting_transaction](#remove_accounting_transaction) - Remove a transaction
+* [update_accounting_account](#update_accounting_account) - Update an account
 * [update_accounting_customer](#update_accounting_customer) - Update a customer
 * [update_accounting_invoice](#update_accounting_invoice) - Update a invoice
 * [update_accounting_payment](#update_accounting_payment) - Update a payment
+* [update_accounting_transaction](#update_accounting_transaction) - Update a transaction
+
+## create_accounting_account
+
+Create an account
+
+### Example Usage
+
+```python
+import dateutil.parser
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
+
+req = operations.CreateAccountingAccountRequest(
+    accounting_account=shared.AccountingAccount(
+        name='string',
+        raw=shared.PropertyAccountingAccountRaw(),
+    ),
+    connection_id='string',
+)
+
+res = s.accounting.create_accounting_account(req)
+
+if res.accounting_account is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                              | [operations.CreateAccountingAccountRequest](../../models/operations/createaccountingaccountrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+
+
+### Response
+
+**[operations.CreateAccountingAccountResponse](../../models/operations/createaccountingaccountresponse.md)**
+### Errors
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## create_accounting_customer
 
@@ -183,6 +243,109 @@ if res.accounting_payment is not None:
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 400-600         | */*             |
 
+## create_accounting_transaction
+
+Create a transaction
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
+
+req = operations.CreateAccountingTransactionRequest(
+    accounting_transaction=shared.AccountingTransaction(
+        account_id='string',
+        id='<ID>',
+        line_items=[
+            shared.AccountingTransactionLineitem(
+                id='<ID>',
+                total_amount=4969.62,
+            ),
+        ],
+        raw=shared.PropertyAccountingTransactionRaw(),
+        total_amount=6267.93,
+        type=shared.AccountingTransactionType.SPEND,
+    ),
+    connection_id='string',
+)
+
+res = s.accounting.create_accounting_transaction(req)
+
+if res.accounting_transaction is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                      | [operations.CreateAccountingTransactionRequest](../../models/operations/createaccountingtransactionrequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
+
+
+### Response
+
+**[operations.CreateAccountingTransactionResponse](../../models/operations/createaccountingtransactionresponse.md)**
+### Errors
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
+
+## get_accounting_account
+
+Retrieve an account
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
+
+req = operations.GetAccountingAccountRequest(
+    connection_id='string',
+    fields=[
+        'string',
+    ],
+    id='<ID>',
+)
+
+res = s.accounting.get_accounting_account(req)
+
+if res.accounting_account is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `request`                                                                                        | [operations.GetAccountingAccountRequest](../../models/operations/getaccountingaccountrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+
+
+### Response
+
+**[operations.GetAccountingAccountResponse](../../models/operations/getaccountingaccountresponse.md)**
+### Errors
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
+
 ## get_accounting_customer
 
 Retrieve a customer
@@ -324,6 +487,100 @@ if res.accounting_payment is not None:
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 400-600         | */*             |
 
+## get_accounting_transaction
+
+Retrieve a transaction
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
+
+req = operations.GetAccountingTransactionRequest(
+    connection_id='string',
+    fields=[
+        'string',
+    ],
+    id='<ID>',
+)
+
+res = s.accounting.get_accounting_transaction(req)
+
+if res.accounting_transaction is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                | [operations.GetAccountingTransactionRequest](../../models/operations/getaccountingtransactionrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+
+
+### Response
+
+**[operations.GetAccountingTransactionResponse](../../models/operations/getaccountingtransactionresponse.md)**
+### Errors
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
+
+## list_accounting_accounts
+
+List all accounts
+
+### Example Usage
+
+```python
+import dateutil.parser
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
+
+req = operations.ListAccountingAccountsRequest(
+    connection_id='string',
+    fields=[
+        'string',
+    ],
+)
+
+res = s.accounting.list_accounting_accounts(req)
+
+if res.accounting_accounts is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `request`                                                                                            | [operations.ListAccountingAccountsRequest](../../models/operations/listaccountingaccountsrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+
+
+### Response
+
+**[operations.ListAccountingAccountsResponse](../../models/operations/listaccountingaccountsresponse.md)**
+### Errors
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
+
 ## list_accounting_customers
 
 List all customers
@@ -459,6 +716,102 @@ if res.accounting_payments is not None:
 ### Response
 
 **[operations.ListAccountingPaymentsResponse](../../models/operations/listaccountingpaymentsresponse.md)**
+### Errors
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
+
+## list_accounting_transactions
+
+List all transactions
+
+### Example Usage
+
+```python
+import dateutil.parser
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
+
+req = operations.ListAccountingTransactionsRequest(
+    connection_id='string',
+    fields=[
+        'string',
+    ],
+)
+
+res = s.accounting.list_accounting_transactions(req)
+
+if res.accounting_transactions is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                    | [operations.ListAccountingTransactionsRequest](../../models/operations/listaccountingtransactionsrequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+
+
+### Response
+
+**[operations.ListAccountingTransactionsResponse](../../models/operations/listaccountingtransactionsresponse.md)**
+### Errors
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
+
+## patch_accounting_account
+
+Update an account
+
+### Example Usage
+
+```python
+import dateutil.parser
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
+
+req = operations.PatchAccountingAccountRequest(
+    accounting_account=shared.AccountingAccount(
+        name='string',
+        raw=shared.PropertyAccountingAccountRaw(),
+    ),
+    connection_id='string',
+    id='<ID>',
+)
+
+res = s.accounting.patch_accounting_account(req)
+
+if res.accounting_account is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `request`                                                                                            | [operations.PatchAccountingAccountRequest](../../models/operations/patchaccountingaccountrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+
+
+### Response
+
+**[operations.PatchAccountingAccountResponse](../../models/operations/patchaccountingaccountresponse.md)**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
@@ -629,6 +982,107 @@ if res.accounting_payment is not None:
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 400-600         | */*             |
 
+## patch_accounting_transaction
+
+Update a transaction
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
+
+req = operations.PatchAccountingTransactionRequest(
+    accounting_transaction=shared.AccountingTransaction(
+        account_id='string',
+        id='<ID>',
+        line_items=[
+            shared.AccountingTransactionLineitem(
+                id='<ID>',
+                total_amount=5633.69,
+            ),
+        ],
+        raw=shared.PropertyAccountingTransactionRaw(),
+        total_amount=4558.63,
+        type=shared.AccountingTransactionType.SPEND,
+    ),
+    connection_id='string',
+    id='<ID>',
+)
+
+res = s.accounting.patch_accounting_transaction(req)
+
+if res.accounting_transaction is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                    | [operations.PatchAccountingTransactionRequest](../../models/operations/patchaccountingtransactionrequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+
+
+### Response
+
+**[operations.PatchAccountingTransactionResponse](../../models/operations/patchaccountingtransactionresponse.md)**
+### Errors
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
+
+## remove_accounting_account
+
+Remove an account
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
+
+req = operations.RemoveAccountingAccountRequest(
+    connection_id='string',
+    id='<ID>',
+)
+
+res = s.accounting.remove_accounting_account(req)
+
+if res.status_code == 200:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                              | [operations.RemoveAccountingAccountRequest](../../models/operations/removeaccountingaccountrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+
+
+### Response
+
+**[operations.RemoveAccountingAccountResponse](../../models/operations/removeaccountingaccountresponse.md)**
+### Errors
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
+
 ## remove_accounting_customer
 
 Remove a customer
@@ -755,6 +1209,99 @@ if res.status_code == 200:
 ### Response
 
 **[operations.RemoveAccountingPaymentResponse](../../models/operations/removeaccountingpaymentresponse.md)**
+### Errors
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
+
+## remove_accounting_transaction
+
+Remove a transaction
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
+
+req = operations.RemoveAccountingTransactionRequest(
+    connection_id='string',
+    id='<ID>',
+)
+
+res = s.accounting.remove_accounting_transaction(req)
+
+if res.status_code == 200:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                      | [operations.RemoveAccountingTransactionRequest](../../models/operations/removeaccountingtransactionrequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
+
+
+### Response
+
+**[operations.RemoveAccountingTransactionResponse](../../models/operations/removeaccountingtransactionresponse.md)**
+### Errors
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
+
+## update_accounting_account
+
+Update an account
+
+### Example Usage
+
+```python
+import dateutil.parser
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
+
+req = operations.UpdateAccountingAccountRequest(
+    accounting_account=shared.AccountingAccount(
+        name='string',
+        raw=shared.PropertyAccountingAccountRaw(),
+    ),
+    connection_id='string',
+    id='<ID>',
+)
+
+res = s.accounting.update_accounting_account(req)
+
+if res.accounting_account is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                              | [operations.UpdateAccountingAccountRequest](../../models/operations/updateaccountingaccountrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+
+
+### Response
+
+**[operations.UpdateAccountingAccountResponse](../../models/operations/updateaccountingaccountresponse.md)**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
@@ -919,6 +1466,63 @@ if res.accounting_payment is not None:
 ### Response
 
 **[operations.UpdateAccountingPaymentResponse](../../models/operations/updateaccountingpaymentresponse.md)**
+### Errors
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
+
+## update_accounting_transaction
+
+Update a transaction
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="",
+    ),
+)
+
+req = operations.UpdateAccountingTransactionRequest(
+    accounting_transaction=shared.AccountingTransaction(
+        account_id='string',
+        id='<ID>',
+        line_items=[
+            shared.AccountingTransactionLineitem(
+                id='<ID>',
+                total_amount=6498.37,
+            ),
+        ],
+        raw=shared.PropertyAccountingTransactionRaw(),
+        total_amount=5659.17,
+        type=shared.AccountingTransactionType.SPEND,
+    ),
+    connection_id='string',
+    id='<ID>',
+)
+
+res = s.accounting.update_accounting_transaction(req)
+
+if res.accounting_transaction is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                      | [operations.UpdateAccountingTransactionRequest](../../models/operations/updateaccountingtransactionrequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
+
+
+### Response
+
+**[operations.UpdateAccountingTransactionResponse](../../models/operations/updateaccountingtransactionresponse.md)**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |

@@ -30,28 +30,17 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.CreateAccountingCustomerRequest(
-    accounting_customer=shared.AccountingCustomer(
-        billing_address=shared.PropertyAccountingCustomerBillingAddress(),
-        emails=[
-            shared.AccountingEmail(
-                email='Kevon_Schultz42@gmail.com',
-            ),
-        ],
-        raw=shared.PropertyAccountingCustomerRaw(),
-        shipping_address=shared.PropertyAccountingCustomerShippingAddress(),
-        telephones=[
-            shared.AccountingTelephone(
-                telephone='string',
-            ),
-        ],
+req = operations.CreateAccountingAccountRequest(
+    accounting_account=shared.AccountingAccount(
+        name='string',
+        raw=shared.PropertyAccountingAccountRaw(),
     ),
     connection_id='string',
 )
 
-res = s.accounting.create_accounting_customer(req)
+res = s.accounting.create_accounting_account(req)
 
-if res.accounting_customer is not None:
+if res.accounting_account is not None:
     # handle response
     pass
 ```
@@ -62,24 +51,45 @@ if res.accounting_customer is not None:
 
 ### [accounting](docs/sdks/accounting/README.md)
 
+* [create_accounting_account](docs/sdks/accounting/README.md#create_accounting_account) - Create an account
 * [create_accounting_customer](docs/sdks/accounting/README.md#create_accounting_customer) - Create a customer
 * [create_accounting_invoice](docs/sdks/accounting/README.md#create_accounting_invoice) - Create a invoice
 * [create_accounting_payment](docs/sdks/accounting/README.md#create_accounting_payment) - Create a payment
+* [create_accounting_transaction](docs/sdks/accounting/README.md#create_accounting_transaction) - Create a transaction
+* [get_accounting_account](docs/sdks/accounting/README.md#get_accounting_account) - Retrieve an account
 * [get_accounting_customer](docs/sdks/accounting/README.md#get_accounting_customer) - Retrieve a customer
 * [get_accounting_invoice](docs/sdks/accounting/README.md#get_accounting_invoice) - Retrieve a invoice
 * [get_accounting_payment](docs/sdks/accounting/README.md#get_accounting_payment) - Retrieve a payment
+* [get_accounting_transaction](docs/sdks/accounting/README.md#get_accounting_transaction) - Retrieve a transaction
+* [list_accounting_accounts](docs/sdks/accounting/README.md#list_accounting_accounts) - List all accounts
 * [list_accounting_customers](docs/sdks/accounting/README.md#list_accounting_customers) - List all customers
 * [list_accounting_invoices](docs/sdks/accounting/README.md#list_accounting_invoices) - List all invoices
 * [list_accounting_payments](docs/sdks/accounting/README.md#list_accounting_payments) - List all payments
+* [list_accounting_transactions](docs/sdks/accounting/README.md#list_accounting_transactions) - List all transactions
+* [patch_accounting_account](docs/sdks/accounting/README.md#patch_accounting_account) - Update an account
 * [patch_accounting_customer](docs/sdks/accounting/README.md#patch_accounting_customer) - Update a customer
 * [patch_accounting_invoice](docs/sdks/accounting/README.md#patch_accounting_invoice) - Update a invoice
 * [patch_accounting_payment](docs/sdks/accounting/README.md#patch_accounting_payment) - Update a payment
+* [patch_accounting_transaction](docs/sdks/accounting/README.md#patch_accounting_transaction) - Update a transaction
+* [remove_accounting_account](docs/sdks/accounting/README.md#remove_accounting_account) - Remove an account
 * [remove_accounting_customer](docs/sdks/accounting/README.md#remove_accounting_customer) - Remove a customer
 * [remove_accounting_invoice](docs/sdks/accounting/README.md#remove_accounting_invoice) - Remove a invoice
 * [remove_accounting_payment](docs/sdks/accounting/README.md#remove_accounting_payment) - Remove a payment
+* [remove_accounting_transaction](docs/sdks/accounting/README.md#remove_accounting_transaction) - Remove a transaction
+* [update_accounting_account](docs/sdks/accounting/README.md#update_accounting_account) - Update an account
 * [update_accounting_customer](docs/sdks/accounting/README.md#update_accounting_customer) - Update a customer
 * [update_accounting_invoice](docs/sdks/accounting/README.md#update_accounting_invoice) - Update a invoice
 * [update_accounting_payment](docs/sdks/accounting/README.md#update_accounting_payment) - Update a payment
+* [update_accounting_transaction](docs/sdks/accounting/README.md#update_accounting_transaction) - Update a transaction
+
+### [account](docs/sdks/account/README.md)
+
+* [create_accounting_account](docs/sdks/account/README.md#create_accounting_account) - Create an account
+* [get_accounting_account](docs/sdks/account/README.md#get_accounting_account) - Retrieve an account
+* [list_accounting_accounts](docs/sdks/account/README.md#list_accounting_accounts) - List all accounts
+* [patch_accounting_account](docs/sdks/account/README.md#patch_accounting_account) - Update an account
+* [remove_accounting_account](docs/sdks/account/README.md#remove_accounting_account) - Remove an account
+* [update_accounting_account](docs/sdks/account/README.md#update_accounting_account) - Update an account
 
 ### [customer](docs/sdks/customer/README.md)
 
@@ -113,6 +123,15 @@ if res.accounting_customer is not None:
 * [patch_accounting_payment](docs/sdks/payment/README.md#patch_accounting_payment) - Update a payment
 * [remove_accounting_payment](docs/sdks/payment/README.md#remove_accounting_payment) - Remove a payment
 * [update_accounting_payment](docs/sdks/payment/README.md#update_accounting_payment) - Update a payment
+
+### [transaction](docs/sdks/transaction/README.md)
+
+* [create_accounting_transaction](docs/sdks/transaction/README.md#create_accounting_transaction) - Create a transaction
+* [get_accounting_transaction](docs/sdks/transaction/README.md#get_accounting_transaction) - Retrieve a transaction
+* [list_accounting_transactions](docs/sdks/transaction/README.md#list_accounting_transactions) - List all transactions
+* [patch_accounting_transaction](docs/sdks/transaction/README.md#patch_accounting_transaction) - Update a transaction
+* [remove_accounting_transaction](docs/sdks/transaction/README.md#remove_accounting_transaction) - Remove a transaction
+* [update_accounting_transaction](docs/sdks/transaction/README.md#update_accounting_transaction) - Update a transaction
 
 ### [ats](docs/sdks/ats/README.md)
 
@@ -543,34 +562,23 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.CreateAccountingCustomerRequest(
-    accounting_customer=shared.AccountingCustomer(
-        billing_address=shared.PropertyAccountingCustomerBillingAddress(),
-        emails=[
-            shared.AccountingEmail(
-                email='Kevon_Schultz42@gmail.com',
-            ),
-        ],
-        raw=shared.PropertyAccountingCustomerRaw(),
-        shipping_address=shared.PropertyAccountingCustomerShippingAddress(),
-        telephones=[
-            shared.AccountingTelephone(
-                telephone='string',
-            ),
-        ],
+req = operations.CreateAccountingAccountRequest(
+    accounting_account=shared.AccountingAccount(
+        name='string',
+        raw=shared.PropertyAccountingAccountRaw(),
     ),
     connection_id='string',
 )
 
 res = None
 try:
-    res = s.accounting.create_accounting_customer(req)
+    res = s.accounting.create_accounting_account(req)
 
 except (errors.SDKError) as e:
     print(e) # handle exception
 
 
-if res.accounting_customer is not None:
+if res.accounting_account is not None:
     # handle response
     pass
 ```
@@ -604,28 +612,17 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.CreateAccountingCustomerRequest(
-    accounting_customer=shared.AccountingCustomer(
-        billing_address=shared.PropertyAccountingCustomerBillingAddress(),
-        emails=[
-            shared.AccountingEmail(
-                email='Kevon_Schultz42@gmail.com',
-            ),
-        ],
-        raw=shared.PropertyAccountingCustomerRaw(),
-        shipping_address=shared.PropertyAccountingCustomerShippingAddress(),
-        telephones=[
-            shared.AccountingTelephone(
-                telephone='string',
-            ),
-        ],
+req = operations.CreateAccountingAccountRequest(
+    accounting_account=shared.AccountingAccount(
+        name='string',
+        raw=shared.PropertyAccountingAccountRaw(),
     ),
     connection_id='string',
 )
 
-res = s.accounting.create_accounting_customer(req)
+res = s.accounting.create_accounting_account(req)
 
-if res.accounting_customer is not None:
+if res.accounting_account is not None:
     # handle response
     pass
 ```
@@ -646,28 +643,17 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.CreateAccountingCustomerRequest(
-    accounting_customer=shared.AccountingCustomer(
-        billing_address=shared.PropertyAccountingCustomerBillingAddress(),
-        emails=[
-            shared.AccountingEmail(
-                email='Kevon_Schultz42@gmail.com',
-            ),
-        ],
-        raw=shared.PropertyAccountingCustomerRaw(),
-        shipping_address=shared.PropertyAccountingCustomerShippingAddress(),
-        telephones=[
-            shared.AccountingTelephone(
-                telephone='string',
-            ),
-        ],
+req = operations.CreateAccountingAccountRequest(
+    accounting_account=shared.AccountingAccount(
+        name='string',
+        raw=shared.PropertyAccountingAccountRaw(),
     ),
     connection_id='string',
 )
 
-res = s.accounting.create_accounting_customer(req)
+res = s.accounting.create_accounting_account(req)
 
-if res.accounting_customer is not None:
+if res.accounting_account is not None:
     # handle response
     pass
 ```
@@ -716,28 +702,17 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.CreateAccountingCustomerRequest(
-    accounting_customer=shared.AccountingCustomer(
-        billing_address=shared.PropertyAccountingCustomerBillingAddress(),
-        emails=[
-            shared.AccountingEmail(
-                email='Kevon_Schultz42@gmail.com',
-            ),
-        ],
-        raw=shared.PropertyAccountingCustomerRaw(),
-        shipping_address=shared.PropertyAccountingCustomerShippingAddress(),
-        telephones=[
-            shared.AccountingTelephone(
-                telephone='string',
-            ),
-        ],
+req = operations.CreateAccountingAccountRequest(
+    accounting_account=shared.AccountingAccount(
+        name='string',
+        raw=shared.PropertyAccountingAccountRaw(),
     ),
     connection_id='string',
 )
 
-res = s.accounting.create_accounting_customer(req)
+res = s.accounting.create_accounting_account(req)
 
-if res.accounting_customer is not None:
+if res.accounting_account is not None:
     # handle response
     pass
 ```

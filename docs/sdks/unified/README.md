@@ -52,7 +52,7 @@ req = shared.Connection(
     ],
     integration_type='string',
     permissions=[
-        shared.PropertyConnectionPermissions.CRM_COMPANY_WRITE,
+        shared.PropertyConnectionPermissions.ATS_DOCUMENT_WRITE,
     ],
 )
 
@@ -105,7 +105,7 @@ req = operations.CreateUnifiedWebhookRequest(
         hook_url='string',
         integration_type='string',
         interval=188.12,
-        object_type=shared.ObjectType.CRM_EVENT,
+        object_type=shared.ObjectType.CRM_DEAL,
         subscriptions=[
             'string',
         ],
@@ -614,7 +614,7 @@ req = operations.PatchUnifiedConnectionRequest(
         ],
         integration_type='string',
         permissions=[
-            shared.PropertyConnectionPermissions.MARTECH_LIST_WRITE,
+            shared.PropertyConnectionPermissions.MARTECH_LIST_READ,
         ],
     ),
     id='<ID>',
@@ -762,7 +762,7 @@ req = operations.UpdateUnifiedConnectionRequest(
         ],
         integration_type='string',
         permissions=[
-            shared.PropertyConnectionPermissions.CRM_DEAL_WRITE,
+            shared.PropertyConnectionPermissions.CRM_DEAL_READ,
         ],
     ),
     id='<ID>',

@@ -42,7 +42,7 @@ req = shared.Connection(
     ],
     integration_type='string',
     permissions=[
-        shared.PropertyConnectionPermissions.CRM_COMPANY_WRITE,
+        shared.PropertyConnectionPermissions.ATS_DOCUMENT_WRITE,
     ],
 )
 
@@ -191,7 +191,7 @@ req = operations.PatchUnifiedConnectionRequest(
         ],
         integration_type='string',
         permissions=[
-            shared.PropertyConnectionPermissions.MARTECH_LIST_WRITE,
+            shared.PropertyConnectionPermissions.MARTECH_LIST_READ,
         ],
     ),
     id='<ID>',
@@ -296,7 +296,7 @@ req = operations.UpdateUnifiedConnectionRequest(
         ],
         integration_type='string',
         permissions=[
-            shared.PropertyConnectionPermissions.CRM_DEAL_WRITE,
+            shared.PropertyConnectionPermissions.CRM_DEAL_READ,
         ],
     ),
     id='<ID>',

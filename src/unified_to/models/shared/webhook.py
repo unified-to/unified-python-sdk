@@ -11,6 +11,8 @@ from typing import List, Optional
 from unified_to import utils
 
 class ObjectType(str, Enum):
+    ACCOUNTING_ACCOUNT = 'accounting_account'
+    ACCOUNTING_TRANSACTION = 'accounting_transaction'
     ACCOUNTING_CUSTOMER = 'accounting_customer'
     ACCOUNTING_INVOICE = 'accounting_invoice'
     ACCOUNTING_PAYMENT = 'accounting_payment'

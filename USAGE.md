@@ -10,28 +10,17 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.CreateAccountingCustomerRequest(
-    accounting_customer=shared.AccountingCustomer(
-        billing_address=shared.PropertyAccountingCustomerBillingAddress(),
-        emails=[
-            shared.AccountingEmail(
-                email='Kevon_Schultz42@gmail.com',
-            ),
-        ],
-        raw=shared.PropertyAccountingCustomerRaw(),
-        shipping_address=shared.PropertyAccountingCustomerShippingAddress(),
-        telephones=[
-            shared.AccountingTelephone(
-                telephone='string',
-            ),
-        ],
+req = operations.CreateAccountingAccountRequest(
+    accounting_account=shared.AccountingAccount(
+        name='string',
+        raw=shared.PropertyAccountingAccountRaw(),
     ),
     connection_id='string',
 )
 
-res = s.accounting.create_accounting_customer(req)
+res = s.accounting.create_accounting_account(req)
 
-if res.accounting_customer is not None:
+if res.accounting_account is not None:
     # handle response
     pass
 ```
