@@ -573,10 +573,9 @@ req = operations.CreateAccountingAccountRequest(
 res = None
 try:
     res = s.accounting.create_accounting_account(req)
-
-except (errors.SDKError) as e:
-    print(e) # handle exception
-
+except errors.SDKError as e:
+    print(e)  # handle exception
+    raise(e)
 
 if res.accounting_account is not None:
     # handle response
