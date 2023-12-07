@@ -50,6 +50,9 @@ req = shared.Connection(
     categories=[
         shared.PropertyConnectionCategories.ACCOUNTING,
     ],
+    cursors_cache=[
+        shared.Undefined(),
+    ],
     integration_type='string',
     permissions=[
         shared.PropertyConnectionPermissions.ATS_DOCUMENT_WRITE,
@@ -612,6 +615,9 @@ req = operations.PatchUnifiedConnectionRequest(
         categories=[
             shared.PropertyConnectionCategories.MARTECH,
         ],
+        cursors_cache=[
+            shared.Undefined(),
+        ],
         integration_type='string',
         permissions=[
             shared.PropertyConnectionPermissions.MARTECH_LIST_READ,
@@ -759,6 +765,9 @@ req = operations.UpdateUnifiedConnectionRequest(
         ),
         categories=[
             shared.PropertyConnectionCategories.TICKETING,
+        ],
+        cursors_cache=[
+            shared.Undefined(),
         ],
         integration_type='string',
         permissions=[
