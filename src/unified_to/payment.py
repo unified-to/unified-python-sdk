@@ -19,7 +19,7 @@ class Payment:
         
         url = utils.generate_url(operations.CreateAccountingPaymentRequest, base_url, '/accounting/{connection_id}/payment', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "accounting_payment", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.CreateAccountingPaymentRequest, "accounting_payment", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
@@ -120,7 +120,7 @@ class Payment:
         
         url = utils.generate_url(operations.PatchAccountingPaymentRequest, base_url, '/accounting/{connection_id}/payment/{id}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "accounting_payment", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.PatchAccountingPaymentRequest, "accounting_payment", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
@@ -186,7 +186,7 @@ class Payment:
         
         url = utils.generate_url(operations.UpdateAccountingPaymentRequest, base_url, '/accounting/{connection_id}/payment/{id}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "accounting_payment", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.UpdateAccountingPaymentRequest, "accounting_payment", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'

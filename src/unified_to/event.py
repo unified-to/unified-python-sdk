@@ -19,7 +19,7 @@ class Event:
         
         url = utils.generate_url(operations.CreateCrmEventRequest, base_url, '/crm/{connection_id}/event', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "crm_event", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.CreateCrmEventRequest, "crm_event", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
@@ -120,7 +120,7 @@ class Event:
         
         url = utils.generate_url(operations.PatchCrmEventRequest, base_url, '/crm/{connection_id}/event/{id}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "crm_event", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.PatchCrmEventRequest, "crm_event", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
@@ -186,7 +186,7 @@ class Event:
         
         url = utils.generate_url(operations.UpdateCrmEventRequest, base_url, '/crm/{connection_id}/event/{id}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "crm_event", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.UpdateCrmEventRequest, "crm_event", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'

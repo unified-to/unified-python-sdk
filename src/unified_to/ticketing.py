@@ -19,7 +19,7 @@ class Ticketing:
         
         url = utils.generate_url(operations.CreateTicketingCustomerRequest, base_url, '/ticketing/{connection_id}/customer', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "ticketing_customer", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.CreateTicketingCustomerRequest, "ticketing_customer", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
@@ -54,7 +54,7 @@ class Ticketing:
         
         url = utils.generate_url(operations.CreateTicketingNoteRequest, base_url, '/ticketing/{connection_id}/note', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "ticketing_note", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.CreateTicketingNoteRequest, "ticketing_note", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
@@ -89,7 +89,7 @@ class Ticketing:
         
         url = utils.generate_url(operations.CreateTicketingTicketRequest, base_url, '/ticketing/{connection_id}/ticket', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "ticketing_ticket", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.CreateTicketingTicketRequest, "ticketing_ticket", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
@@ -322,7 +322,7 @@ class Ticketing:
         
         url = utils.generate_url(operations.PatchTicketingCustomerRequest, base_url, '/ticketing/{connection_id}/customer/{id}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "ticketing_customer", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.PatchTicketingCustomerRequest, "ticketing_customer", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
@@ -357,7 +357,7 @@ class Ticketing:
         
         url = utils.generate_url(operations.PatchTicketingNoteRequest, base_url, '/ticketing/{connection_id}/note/{id}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "ticketing_note", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.PatchTicketingNoteRequest, "ticketing_note", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
@@ -392,7 +392,7 @@ class Ticketing:
         
         url = utils.generate_url(operations.PatchTicketingTicketRequest, base_url, '/ticketing/{connection_id}/ticket/{id}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "ticketing_ticket", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.PatchTicketingTicketRequest, "ticketing_ticket", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
@@ -520,7 +520,7 @@ class Ticketing:
         
         url = utils.generate_url(operations.UpdateTicketingCustomerRequest, base_url, '/ticketing/{connection_id}/customer/{id}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "ticketing_customer", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.UpdateTicketingCustomerRequest, "ticketing_customer", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
@@ -555,7 +555,7 @@ class Ticketing:
         
         url = utils.generate_url(operations.UpdateTicketingNoteRequest, base_url, '/ticketing/{connection_id}/note/{id}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "ticketing_note", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.UpdateTicketingNoteRequest, "ticketing_note", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
@@ -590,7 +590,7 @@ class Ticketing:
         
         url = utils.generate_url(operations.UpdateTicketingTicketRequest, base_url, '/ticketing/{connection_id}/ticket/{id}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "ticketing_ticket", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.UpdateTicketingTicketRequest, "ticketing_ticket", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'

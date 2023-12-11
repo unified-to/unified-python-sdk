@@ -19,7 +19,7 @@ class Transaction:
         
         url = utils.generate_url(operations.CreateAccountingTransactionRequest, base_url, '/accounting/{connection_id}/transaction', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "accounting_transaction", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.CreateAccountingTransactionRequest, "accounting_transaction", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
@@ -120,7 +120,7 @@ class Transaction:
         
         url = utils.generate_url(operations.PatchAccountingTransactionRequest, base_url, '/accounting/{connection_id}/transaction/{id}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "accounting_transaction", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.PatchAccountingTransactionRequest, "accounting_transaction", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
@@ -186,7 +186,7 @@ class Transaction:
         
         url = utils.generate_url(operations.UpdateAccountingTransactionRequest, base_url, '/accounting/{connection_id}/transaction/{id}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "accounting_transaction", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.UpdateAccountingTransactionRequest, "accounting_transaction", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'

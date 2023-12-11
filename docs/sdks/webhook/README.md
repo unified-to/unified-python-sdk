@@ -21,7 +21,7 @@ from unified_to.models import operations, shared
 
 s = unified_to.UnifiedTo(
     security=shared.Security(
-        jwt="",
+        jwt="<YOUR_API_KEY_HERE>",
     ),
 )
 
@@ -82,7 +82,7 @@ from unified_to.models import operations, shared
 
 s = unified_to.UnifiedTo(
     security=shared.Security(
-        jwt="",
+        jwt="<YOUR_API_KEY_HERE>",
     ),
 )
 
@@ -126,7 +126,7 @@ from unified_to.models import operations, shared
 
 s = unified_to.UnifiedTo(
     security=shared.Security(
-        jwt="",
+        jwt="<YOUR_API_KEY_HERE>",
     ),
 )
 
@@ -167,7 +167,7 @@ from unified_to.models import operations, shared
 
 s = unified_to.UnifiedTo(
     security=shared.Security(
-        jwt="",
+        jwt="<YOUR_API_KEY_HERE>",
     ),
 )
 

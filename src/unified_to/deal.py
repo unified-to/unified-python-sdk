@@ -19,7 +19,7 @@ class Deal:
         
         url = utils.generate_url(operations.CreateCrmDealRequest, base_url, '/crm/{connection_id}/deal', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "crm_deal", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.CreateCrmDealRequest, "crm_deal", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
@@ -120,7 +120,7 @@ class Deal:
         
         url = utils.generate_url(operations.PatchCrmDealRequest, base_url, '/crm/{connection_id}/deal/{id}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "crm_deal", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.PatchCrmDealRequest, "crm_deal", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
@@ -186,7 +186,7 @@ class Deal:
         
         url = utils.generate_url(operations.UpdateCrmDealRequest, base_url, '/crm/{connection_id}/deal/{id}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "crm_deal", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.UpdateCrmDealRequest, "crm_deal", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'

@@ -13,13 +13,13 @@ class Unified:
         
     
     
-    def create_unified_connection(self, request: shared.Connection) -> operations.CreateUnifiedConnectionResponse:
+    def create_unified_connection(self, request: Optional[shared.Connection]) -> operations.CreateUnifiedConnectionResponse:
         r"""Create connection"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = base_url + '/unified/connection'
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "request", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, Optional[shared.Connection], "request", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
@@ -56,7 +56,7 @@ class Unified:
         
         url = utils.generate_url(operations.CreateUnifiedWebhookRequest, base_url, '/unified/webhook/{connection_id}/{object}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "webhook", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.CreateUnifiedWebhookRequest, "webhook", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         query_params = utils.get_query_params(operations.CreateUnifiedWebhookRequest, request)
@@ -421,7 +421,7 @@ class Unified:
         
         url = utils.generate_url(operations.PatchUnifiedConnectionRequest, base_url, '/unified/connection/{id}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "connection", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.PatchUnifiedConnectionRequest, "connection", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
@@ -518,7 +518,7 @@ class Unified:
         
         url = utils.generate_url(operations.UpdateUnifiedConnectionRequest, base_url, '/unified/connection/{id}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "connection", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.UpdateUnifiedConnectionRequest, "connection", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'

@@ -19,7 +19,7 @@ class Uc:
         
         url = utils.generate_url(operations.CreateUcContactRequest, base_url, '/uc/{connection_id}/contact', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "uc_contact", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.CreateUcContactRequest, "uc_contact", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
@@ -153,7 +153,7 @@ class Uc:
         
         url = utils.generate_url(operations.PatchUcContactRequest, base_url, '/uc/{connection_id}/contact/{id}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "uc_contact", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.PatchUcContactRequest, "uc_contact", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
@@ -219,7 +219,7 @@ class Uc:
         
         url = utils.generate_url(operations.UpdateUcContactRequest, base_url, '/uc/{connection_id}/contact/{id}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "uc_contact", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.UpdateUcContactRequest, "uc_contact", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'

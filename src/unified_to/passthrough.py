@@ -19,7 +19,7 @@ class Passthrough:
         
         url = utils.generate_url(operations.CreatePassthroughRequest, base_url, '/passthrough/{connection_id}/{path}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "undefined", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.CreatePassthroughRequest, "undefined", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
@@ -86,7 +86,7 @@ class Passthrough:
         
         url = utils.generate_url(operations.PatchPassthroughRequest, base_url, '/passthrough/{connection_id}/{path}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "undefined", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.PatchPassthroughRequest, "undefined", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
@@ -153,7 +153,7 @@ class Passthrough:
         
         url = utils.generate_url(operations.UpdatePassthroughRequest, base_url, '/passthrough/{connection_id}/{path}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "undefined", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.UpdatePassthroughRequest, "undefined", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'

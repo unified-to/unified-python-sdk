@@ -19,7 +19,7 @@ class Hris:
         
         url = utils.generate_url(operations.CreateHrisEmployeeRequest, base_url, '/hris/{connection_id}/employee', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "hris_employee", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.CreateHrisEmployeeRequest, "hris_employee", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
@@ -54,7 +54,7 @@ class Hris:
         
         url = utils.generate_url(operations.CreateHrisGroupRequest, base_url, '/hris/{connection_id}/group', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "hris_group", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.CreateHrisGroupRequest, "hris_group", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
@@ -221,7 +221,7 @@ class Hris:
         
         url = utils.generate_url(operations.PatchHrisEmployeeRequest, base_url, '/hris/{connection_id}/employee/{id}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "hris_employee", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.PatchHrisEmployeeRequest, "hris_employee", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
@@ -256,7 +256,7 @@ class Hris:
         
         url = utils.generate_url(operations.PatchHrisGroupRequest, base_url, '/hris/{connection_id}/group/{id}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "hris_group", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.PatchHrisGroupRequest, "hris_group", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
@@ -353,7 +353,7 @@ class Hris:
         
         url = utils.generate_url(operations.UpdateHrisEmployeeRequest, base_url, '/hris/{connection_id}/employee/{id}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "hris_employee", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.UpdateHrisEmployeeRequest, "hris_employee", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
@@ -388,7 +388,7 @@ class Hris:
         
         url = utils.generate_url(operations.UpdateHrisGroupRequest, base_url, '/hris/{connection_id}/group/{id}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "hris_group", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.UpdateHrisGroupRequest, "hris_group", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'

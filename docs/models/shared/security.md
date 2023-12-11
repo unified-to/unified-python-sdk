@@ -3,6 +3,6 @@
 
 ## Fields
 
-| Field              | Type               | Required           | Description        | Example            |
-| ------------------ | ------------------ | ------------------ | ------------------ | ------------------ |
-| `jwt`              | *str*              | :heavy_check_mark: | N/A                |                    |
+| Field              | Type               | Required           | Description        |
+| ------------------ | ------------------ | ------------------ | ------------------ |
+| `jwt`              | *Optional[str]*    | :heavy_minus_sign: | N/A                |

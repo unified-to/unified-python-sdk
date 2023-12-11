@@ -19,7 +19,7 @@ class Scorecard:
         
         url = utils.generate_url(operations.CreateAtsScorecardRequest, base_url, '/ats/{connection_id}/scorecard', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "ats_scorecard", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.CreateAtsScorecardRequest, "ats_scorecard", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
@@ -120,7 +120,7 @@ class Scorecard:
         
         url = utils.generate_url(operations.PatchAtsScorecardRequest, base_url, '/ats/{connection_id}/scorecard/{id}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "ats_scorecard", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.PatchAtsScorecardRequest, "ats_scorecard", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
@@ -186,7 +186,7 @@ class Scorecard:
         
         url = utils.generate_url(operations.UpdateAtsScorecardRequest, base_url, '/ats/{connection_id}/scorecard/{id}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "ats_scorecard", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.UpdateAtsScorecardRequest, "ats_scorecard", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'

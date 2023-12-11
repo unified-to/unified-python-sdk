@@ -19,7 +19,7 @@ class Note:
         
         url = utils.generate_url(operations.CreateTicketingNoteRequest, base_url, '/ticketing/{connection_id}/note', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "ticketing_note", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.CreateTicketingNoteRequest, "ticketing_note", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
@@ -120,7 +120,7 @@ class Note:
         
         url = utils.generate_url(operations.PatchTicketingNoteRequest, base_url, '/ticketing/{connection_id}/note/{id}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "ticketing_note", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.PatchTicketingNoteRequest, "ticketing_note", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
@@ -186,7 +186,7 @@ class Note:
         
         url = utils.generate_url(operations.UpdateTicketingNoteRequest, base_url, '/ticketing/{connection_id}/note/{id}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "ticketing_note", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.UpdateTicketingNoteRequest, "ticketing_note", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'

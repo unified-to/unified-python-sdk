@@ -19,7 +19,7 @@ class Candidate:
         
         url = utils.generate_url(operations.CreateAtsCandidateRequest, base_url, '/ats/{connection_id}/candidate', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "ats_candidate", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.CreateAtsCandidateRequest, "ats_candidate", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
@@ -120,7 +120,7 @@ class Candidate:
         
         url = utils.generate_url(operations.PatchAtsCandidateRequest, base_url, '/ats/{connection_id}/candidate/{id}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "ats_candidate", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.PatchAtsCandidateRequest, "ats_candidate", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
@@ -186,7 +186,7 @@ class Candidate:
         
         url = utils.generate_url(operations.UpdateAtsCandidateRequest, base_url, '/ats/{connection_id}/candidate/{id}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "ats_candidate", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.UpdateAtsCandidateRequest, "ats_candidate", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'

@@ -19,7 +19,7 @@ class Application:
         
         url = utils.generate_url(operations.CreateAtsApplicationRequest, base_url, '/ats/{connection_id}/application', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "ats_application", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.CreateAtsApplicationRequest, "ats_application", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
@@ -120,7 +120,7 @@ class Application:
         
         url = utils.generate_url(operations.PatchAtsApplicationRequest, base_url, '/ats/{connection_id}/application/{id}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "ats_application", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.PatchAtsApplicationRequest, "ats_application", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
@@ -186,7 +186,7 @@ class Application:
         
         url = utils.generate_url(operations.UpdateAtsApplicationRequest, base_url, '/ats/{connection_id}/application/{id}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "ats_application", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.UpdateAtsApplicationRequest, "ats_application", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'

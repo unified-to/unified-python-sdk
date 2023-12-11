@@ -19,7 +19,7 @@ class Customer:
         
         url = utils.generate_url(operations.CreateAccountingCustomerRequest, base_url, '/accounting/{connection_id}/customer', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "accounting_customer", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.CreateAccountingCustomerRequest, "accounting_customer", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
@@ -54,7 +54,7 @@ class Customer:
         
         url = utils.generate_url(operations.CreateTicketingCustomerRequest, base_url, '/ticketing/{connection_id}/customer', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "ticketing_customer", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.CreateTicketingCustomerRequest, "ticketing_customer", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
@@ -221,7 +221,7 @@ class Customer:
         
         url = utils.generate_url(operations.PatchAccountingCustomerRequest, base_url, '/accounting/{connection_id}/customer/{id}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "accounting_customer", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.PatchAccountingCustomerRequest, "accounting_customer", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
@@ -256,7 +256,7 @@ class Customer:
         
         url = utils.generate_url(operations.PatchTicketingCustomerRequest, base_url, '/ticketing/{connection_id}/customer/{id}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "ticketing_customer", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.PatchTicketingCustomerRequest, "ticketing_customer", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
@@ -353,7 +353,7 @@ class Customer:
         
         url = utils.generate_url(operations.UpdateAccountingCustomerRequest, base_url, '/accounting/{connection_id}/customer/{id}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "accounting_customer", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.UpdateAccountingCustomerRequest, "accounting_customer", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
@@ -388,7 +388,7 @@ class Customer:
         
         url = utils.generate_url(operations.UpdateTicketingCustomerRequest, base_url, '/ticketing/{connection_id}/customer/{id}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "ticketing_customer", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.UpdateTicketingCustomerRequest, "ticketing_customer", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'

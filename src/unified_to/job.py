@@ -19,7 +19,7 @@ class Job:
         
         url = utils.generate_url(operations.CreateAtsJobRequest, base_url, '/ats/{connection_id}/job', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "ats_job", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.CreateAtsJobRequest, "ats_job", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
@@ -120,7 +120,7 @@ class Job:
         
         url = utils.generate_url(operations.PatchAtsJobRequest, base_url, '/ats/{connection_id}/job/{id}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "ats_job", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.PatchAtsJobRequest, "ats_job", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
@@ -186,7 +186,7 @@ class Job:
         
         url = utils.generate_url(operations.UpdateAtsJobRequest, base_url, '/ats/{connection_id}/job/{id}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "ats_job", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.UpdateAtsJobRequest, "ats_job", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'

@@ -19,7 +19,7 @@ class Pipeline:
         
         url = utils.generate_url(operations.CreateCrmPipelineRequest, base_url, '/crm/{connection_id}/pipeline', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "crm_pipeline", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.CreateCrmPipelineRequest, "crm_pipeline", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
@@ -120,7 +120,7 @@ class Pipeline:
         
         url = utils.generate_url(operations.PatchCrmPipelineRequest, base_url, '/crm/{connection_id}/pipeline/{id}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "crm_pipeline", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.PatchCrmPipelineRequest, "crm_pipeline", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
@@ -186,7 +186,7 @@ class Pipeline:
         
         url = utils.generate_url(operations.UpdateCrmPipelineRequest, base_url, '/crm/{connection_id}/pipeline/{id}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "crm_pipeline", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.UpdateCrmPipelineRequest, "crm_pipeline", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'

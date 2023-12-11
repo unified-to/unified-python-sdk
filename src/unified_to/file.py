@@ -19,7 +19,7 @@ class File:
         
         url = utils.generate_url(operations.CreateCrmFileRequest, base_url, '/crm/{connection_id}/file', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "crm_file", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.CreateCrmFileRequest, "crm_file", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
@@ -120,7 +120,7 @@ class File:
         
         url = utils.generate_url(operations.PatchCrmFileRequest, base_url, '/crm/{connection_id}/file/{id}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "crm_file", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.PatchCrmFileRequest, "crm_file", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
@@ -186,7 +186,7 @@ class File:
         
         url = utils.generate_url(operations.UpdateCrmFileRequest, base_url, '/crm/{connection_id}/file/{id}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "crm_file", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.UpdateCrmFileRequest, "crm_file", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'

@@ -19,7 +19,7 @@ class Lead:
         
         url = utils.generate_url(operations.CreateCrmLeadRequest, base_url, '/crm/{connection_id}/lead', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "crm_lead", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.CreateCrmLeadRequest, "crm_lead", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
@@ -120,7 +120,7 @@ class Lead:
         
         url = utils.generate_url(operations.PatchCrmLeadRequest, base_url, '/crm/{connection_id}/lead/{id}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "crm_lead", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.PatchCrmLeadRequest, "crm_lead", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
@@ -186,7 +186,7 @@ class Lead:
         
         url = utils.generate_url(operations.UpdateCrmLeadRequest, base_url, '/crm/{connection_id}/lead/{id}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "crm_lead", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.UpdateCrmLeadRequest, "crm_lead", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'

@@ -19,7 +19,7 @@ class Interview:
         
         url = utils.generate_url(operations.CreateAtsInterviewRequest, base_url, '/ats/{connection_id}/interview', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "ats_interview", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.CreateAtsInterviewRequest, "ats_interview", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
@@ -120,7 +120,7 @@ class Interview:
         
         url = utils.generate_url(operations.PatchAtsInterviewRequest, base_url, '/ats/{connection_id}/interview/{id}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "ats_interview", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.PatchAtsInterviewRequest, "ats_interview", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
@@ -186,7 +186,7 @@ class Interview:
         
         url = utils.generate_url(operations.UpdateAtsInterviewRequest, base_url, '/ats/{connection_id}/interview/{id}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "ats_interview", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.UpdateAtsInterviewRequest, "ats_interview", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
