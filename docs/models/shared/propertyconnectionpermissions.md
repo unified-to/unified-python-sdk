@@ -20,6 +20,7 @@
 | `ATS_SCORECARD_WRITE`          | ats_scorecard_write            |
 | `ATS_APPLICATION_READ`         | ats_application_read           |
 | `ATS_APPLICATION_WRITE`        | ats_application_write          |
+| `ATS_APPLICATIONSTATUS_READ`   | ats_applicationstatus_read     |
 | `ATS_CANDIDATE_READ`           | ats_candidate_read             |
 | `ATS_CANDIDATE_WRITE`          | ats_candidate_write            |
 | `ATS_INTERVIEW_READ`           | ats_interview_read             |

@@ -5,6 +5,7 @@ from .account import Account
 from .accounting import Accounting
 from .apicall import Apicall
 from .application import Application
+from .applicationstatus import Applicationstatus
 from .ats import Ats
 from .auth import Auth
 from .call import Call
@@ -58,6 +59,7 @@ class UnifiedTo:
     transaction: Transaction
     ats: Ats
     application: Application
+    applicationstatus: Applicationstatus
     candidate: Candidate
     document: Document
     interview: Interview
@@ -138,6 +140,7 @@ class UnifiedTo:
         self.transaction = Transaction(self.sdk_configuration)
         self.ats = Ats(self.sdk_configuration)
         self.application = Application(self.sdk_configuration)
+        self.applicationstatus = Applicationstatus(self.sdk_configuration)
         self.candidate = Candidate(self.sdk_configuration)
         self.document = Document(self.sdk_configuration)
         self.interview = Interview(self.sdk_configuration)

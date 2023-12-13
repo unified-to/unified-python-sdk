@@ -1,0 +1,12 @@
+# AtsStatus
+
+
+## Fields
+
+| Field                                                                                | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `description`                                                                        | *Optional[str]*                                                                      | :heavy_minus_sign:                                                                   | N/A                                                                                  |
+| `id`                                                                                 | *Optional[str]*                                                                      | :heavy_minus_sign:                                                                   | N/A                                                                                  |
+| `original_status`                                                                    | *str*                                                                                | :heavy_check_mark:                                                                   | N/A                                                                                  |
+| `raw`                                                                                | [Optional[shared.PropertyAtsStatusRaw]](../../models/shared/propertyatsstatusraw.md) | :heavy_minus_sign:                                                                   | N/A                                                                                  |
+| `status`                                                                             | [Optional[shared.AtsStatusStatus]](../../models/shared/atsstatusstatus.md)           | :heavy_minus_sign:                                                                   | N/A                                                                                  |

@@ -11,6 +11,7 @@
 | `ACCOUNTING_INVOICE`     | accounting_invoice       |
 | `ACCOUNTING_PAYMENT`     | accounting_payment       |
 | `ATS_APPLICATION`        | ats_application          |
+| `ATS_APPLICATIONSTATUS`  | ats_applicationstatus    |
 | `ATS_CANDIDATE`          | ats_candidate            |
 | `ATS_DOCUMENT`           | ats_document             |
 | `ATS_INTERVIEW`          | ats_interview            |

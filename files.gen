@@ -7,6 +7,7 @@ src/unified_to/payment.py
 src/unified_to/transaction.py
 src/unified_to/ats.py
 src/unified_to/application.py
+src/unified_to/applicationstatus.py
 src/unified_to/candidate.py
 src/unified_to/document.py
 src/unified_to/interview.py
@@ -99,6 +100,7 @@ src/unified_to/models/operations/getatsinterview.py
 src/unified_to/models/operations/getatsjob.py
 src/unified_to/models/operations/getatsscorecard.py
 src/unified_to/models/operations/listatsapplications.py
+src/unified_to/models/operations/listatsapplicationstatuses.py
 src/unified_to/models/operations/listatscandidates.py
 src/unified_to/models/operations/listatsdocuments.py
 src/unified_to/models/operations/listatsinterviews.py
@@ -268,6 +270,8 @@ src/unified_to/models/shared/atscompensation.py
 src/unified_to/models/shared/atsaddress.py
 src/unified_to/models/shared/atsscorecard.py
 src/unified_to/models/shared/property_atsscorecard_raw.py
+src/unified_to/models/shared/atsstatus.py
+src/unified_to/models/shared/property_atsstatus_raw.py
 src/unified_to/models/shared/crmcompany.py
 src/unified_to/models/shared/crmtelephone.py
 src/unified_to/models/shared/property_crmcompany_raw.py
@@ -442,6 +446,8 @@ docs/models/operations/getatsscorecardrequest.md
 docs/models/operations/getatsscorecardresponse.md
 docs/models/operations/listatsapplicationsrequest.md
 docs/models/operations/listatsapplicationsresponse.md
+docs/models/operations/listatsapplicationstatusesrequest.md
+docs/models/operations/listatsapplicationstatusesresponse.md
 docs/models/operations/listatscandidatesrequest.md
 docs/models/operations/listatscandidatesresponse.md
 docs/models/operations/listatsdocumentsrequest.md
@@ -765,6 +771,9 @@ docs/models/shared/atsaddress.md
 docs/models/shared/recommendation.md
 docs/models/shared/atsscorecard.md
 docs/models/shared/propertyatsscorecardraw.md
+docs/models/shared/atsstatusstatus.md
+docs/models/shared/atsstatus.md
+docs/models/shared/propertyatsstatusraw.md
 docs/models/shared/crmcompany.md
 docs/models/shared/crmtelephonetype.md
 docs/models/shared/crmtelephone.md
@@ -867,6 +876,7 @@ docs/sdks/payment/README.md
 docs/sdks/transaction/README.md
 docs/sdks/ats/README.md
 docs/sdks/application/README.md
+docs/sdks/applicationstatus/README.md
 docs/sdks/candidate/README.md
 docs/sdks/document/README.md
 docs/sdks/interview/README.md
