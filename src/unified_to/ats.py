@@ -455,7 +455,7 @@ class Ats:
     
     
     def list_ats_applicationstatuses(self, request: operations.ListAtsApplicationstatusesRequest) -> operations.ListAtsApplicationstatusesResponse:
-        r"""List all application statuss"""
+        r"""List all application statuses"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.ListAtsApplicationstatusesRequest, base_url, '/ats/{connection_id}/applicationstatus', request)

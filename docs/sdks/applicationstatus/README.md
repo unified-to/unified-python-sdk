@@ -3,11 +3,11 @@
 
 ### Available Operations
 
-* [list_ats_applicationstatuses](#list_ats_applicationstatuses) - List all application statuss
+* [list_ats_applicationstatuses](#list_ats_applicationstatuses) - List all application statuses
 
 ## list_ats_applicationstatuses
 
-List all application statuss
+List all application statuses
 
 ### Example Usage
 
