@@ -12,6 +12,7 @@ class CreateAccountingAccountRequest:
     connection_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': False }})
     r"""ID of the connection"""
     accounting_account: Optional[shared_accountingaccount.AccountingAccount] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    r"""A user's bank account"""
     
 
 

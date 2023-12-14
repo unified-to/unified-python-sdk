@@ -265,7 +265,6 @@ req = operations.CreateAccountingTransactionRequest(
         id='<ID>',
         line_items=[
             shared.AccountingTransactionLineitem(
-                id='<ID>',
                 total_amount=4969.62,
             ),
         ],
@@ -1004,7 +1003,6 @@ req = operations.PatchAccountingTransactionRequest(
         id='<ID>',
         line_items=[
             shared.AccountingTransactionLineitem(
-                id='<ID>',
                 total_amount=5633.69,
             ),
         ],
@@ -1494,7 +1492,6 @@ req = operations.UpdateAccountingTransactionRequest(
         id='<ID>',
         line_items=[
             shared.AccountingTransactionLineitem(
-                id='<ID>',
                 total_amount=6498.37,
             ),
         ],
