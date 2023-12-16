@@ -27,22 +27,24 @@ s = unified_to.UnifiedTo(
 
 req = operations.CreateUnifiedWebhookRequest(
     webhook=shared.Webhook(
-        connection_id='string',
+        event=shared.Event.CREATED,
         events=[
-            shared.PropertyWebhookEvents.CREATED,
+            shared.PropertyWebhookEvents.UPDATED,
         ],
         hook_url='string',
-        integration_type='string',
-        interval=188.12,
-        object_type=shared.ObjectType.CRM_DEAL,
+        interval=4583.16,
+        meta=shared.PropertyWebhookMeta(),
+        object_type=shared.ObjectType.HRIS_EMPLOYEE,
+        runs=[
+            'string',
+        ],
         subscriptions=[
             'string',
         ],
-        workspace_id='string',
     ),
     connection_id='string',
     events=[
-        operations.Events.CREATED,
+        operations.Events.UPDATED,
     ],
     object='string',
 )
