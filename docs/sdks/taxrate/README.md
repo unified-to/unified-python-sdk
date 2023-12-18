@@ -1,25 +1,25 @@
-# Connection
-(*connection*)
+# Taxrate
+(*taxrate*)
 
 ### Available Operations
 
-* [create_unified_connection](#create_unified_connection) - Create connection
-* [get_unified_connection](#get_unified_connection) - Retrieve connection
-* [list_unified_connections](#list_unified_connections) - List all connections
-* [patch_unified_connection](#patch_unified_connection) - Update connection
-* [remove_unified_connection](#remove_unified_connection) - Remove connection
-* [update_unified_connection](#update_unified_connection) - Update connection
+* [create_accounting_taxrate](#create_accounting_taxrate) - Create a taxrate
+* [get_accounting_taxrate](#get_accounting_taxrate) - Retrieve a taxrate
+* [list_accounting_taxrates](#list_accounting_taxrates) - List all taxrates
+* [patch_accounting_taxrate](#patch_accounting_taxrate) - Update a taxrate
+* [remove_accounting_taxrate](#remove_accounting_taxrate) - Remove a taxrate
+* [update_accounting_taxrate](#update_accounting_taxrate) - Update a taxrate
 
-## create_unified_connection
+## create_accounting_taxrate
 
-Create connection
+Create a taxrate
 
 ### Example Usage
 
 ```python
 import dateutil.parser
 import unified_to
-from unified_to.models import shared
+from unified_to.models import operations, shared
 
 s = unified_to.UnifiedTo(
     security=shared.Security(
@@ -27,54 +27,41 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = shared.Connection(
-    auth=shared.PropertyConnectionAuth(
-        emails=[
-            'string',
-        ],
-        meta=shared.PropertyPropertyConnectionAuthMeta(),
-        other_auth_info=[
-            'string',
-        ],
+req = operations.CreateAccountingTaxrateRequest(
+    accounting_taxrate=shared.AccountingTaxrate(
+        name='string',
+        rate=1719.1,
+        raw=shared.PropertyAccountingTaxrateRaw(),
     ),
-    categories=[
-        shared.PropertyConnectionCategories.ACCOUNTING,
-    ],
-    cursors_cache=[
-        shared.Undefined(),
-    ],
-    integration_type='string',
-    permissions=[
-        shared.PropertyConnectionPermissions.ATS_JOB_WRITE,
-    ],
+    connection_id='string',
 )
 
-res = s.connection.create_unified_connection(req)
+res = s.taxrate.create_accounting_taxrate(req)
 
-if res.connection is not None:
+if res.accounting_taxrate is not None:
     # handle response
     pass
 ```
 
 ### Parameters
 
-| Parameter                                              | Type                                                   | Required                                               | Description                                            |
-| ------------------------------------------------------ | ------------------------------------------------------ | ------------------------------------------------------ | ------------------------------------------------------ |
-| `request`                                              | [shared.Connection](../../models/shared/connection.md) | :heavy_check_mark:                                     | The request object to use for the request.             |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                              | [operations.CreateAccountingTaxrateRequest](../../models/operations/createaccountingtaxraterequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 
 ### Response
 
-**[operations.CreateUnifiedConnectionResponse](../../models/operations/createunifiedconnectionresponse.md)**
+**[operations.CreateAccountingTaxrateResponse](../../models/operations/createaccountingtaxrateresponse.md)**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 400-600         | */*             |
 
-## get_unified_connection
+## get_accounting_taxrate
 
-Retrieve connection
+Retrieve a taxrate
 
 ### Example Usage
 
@@ -88,13 +75,17 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetUnifiedConnectionRequest(
+req = operations.GetAccountingTaxrateRequest(
+    connection_id='string',
+    fields=[
+        'string',
+    ],
     id='<ID>',
 )
 
-res = s.connection.get_unified_connection(req)
+res = s.taxrate.get_accounting_taxrate(req)
 
-if res.connection is not None:
+if res.accounting_taxrate is not None:
     # handle response
     pass
 ```
@@ -103,21 +94,21 @@ if res.connection is not None:
 
 | Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
 | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `request`                                                                                        | [operations.GetUnifiedConnectionRequest](../../models/operations/getunifiedconnectionrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `request`                                                                                        | [operations.GetAccountingTaxrateRequest](../../models/operations/getaccountingtaxraterequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
 
 
 ### Response
 
-**[operations.GetUnifiedConnectionResponse](../../models/operations/getunifiedconnectionresponse.md)**
+**[operations.GetAccountingTaxrateResponse](../../models/operations/getaccountingtaxrateresponse.md)**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 400-600         | */*             |
 
-## list_unified_connections
+## list_accounting_taxrates
 
-List all connections
+List all taxrates
 
 ### Example Usage
 
@@ -132,15 +123,16 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListUnifiedConnectionsRequest(
-    categories=[
-        operations.Categories.ENRICH,
+req = operations.ListAccountingTaxratesRequest(
+    connection_id='string',
+    fields=[
+        'string',
     ],
 )
 
-res = s.connection.list_unified_connections(req)
+res = s.taxrate.list_accounting_taxrates(req)
 
-if res.connections is not None:
+if res.accounting_taxrates is not None:
     # handle response
     pass
 ```
@@ -149,21 +141,21 @@ if res.connections is not None:
 
 | Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
 | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `request`                                                                                            | [operations.ListUnifiedConnectionsRequest](../../models/operations/listunifiedconnectionsrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `request`                                                                                            | [operations.ListAccountingTaxratesRequest](../../models/operations/listaccountingtaxratesrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 
 ### Response
 
-**[operations.ListUnifiedConnectionsResponse](../../models/operations/listunifiedconnectionsresponse.md)**
+**[operations.ListAccountingTaxratesResponse](../../models/operations/listaccountingtaxratesresponse.md)**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 400-600         | */*             |
 
-## patch_unified_connection
+## patch_accounting_taxrate
 
-Update connection
+Update a taxrate
 
 ### Example Usage
 
@@ -178,34 +170,19 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PatchUnifiedConnectionRequest(
-    connection=shared.Connection(
-        auth=shared.PropertyConnectionAuth(
-            emails=[
-                'string',
-            ],
-            meta=shared.PropertyPropertyConnectionAuthMeta(),
-            other_auth_info=[
-                'string',
-            ],
-        ),
-        categories=[
-            shared.PropertyConnectionCategories.MARTECH,
-        ],
-        cursors_cache=[
-            shared.Undefined(),
-        ],
-        integration_type='string',
-        permissions=[
-            shared.PropertyConnectionPermissions.CRM_PIPELINE_WRITE,
-        ],
+req = operations.PatchAccountingTaxrateRequest(
+    accounting_taxrate=shared.AccountingTaxrate(
+        name='string',
+        rate=5991.47,
+        raw=shared.PropertyAccountingTaxrateRaw(),
     ),
+    connection_id='string',
     id='<ID>',
 )
 
-res = s.connection.patch_unified_connection(req)
+res = s.taxrate.patch_accounting_taxrate(req)
 
-if res.connection is not None:
+if res.accounting_taxrate is not None:
     # handle response
     pass
 ```
@@ -214,21 +191,21 @@ if res.connection is not None:
 
 | Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
 | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `request`                                                                                            | [operations.PatchUnifiedConnectionRequest](../../models/operations/patchunifiedconnectionrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `request`                                                                                            | [operations.PatchAccountingTaxrateRequest](../../models/operations/patchaccountingtaxraterequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 
 ### Response
 
-**[operations.PatchUnifiedConnectionResponse](../../models/operations/patchunifiedconnectionresponse.md)**
+**[operations.PatchAccountingTaxrateResponse](../../models/operations/patchaccountingtaxrateresponse.md)**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 400-600         | */*             |
 
-## remove_unified_connection
+## remove_accounting_taxrate
 
-Remove connection
+Remove a taxrate
 
 ### Example Usage
 
@@ -242,11 +219,12 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.RemoveUnifiedConnectionRequest(
+req = operations.RemoveAccountingTaxrateRequest(
+    connection_id='string',
     id='<ID>',
 )
 
-res = s.connection.remove_unified_connection(req)
+res = s.taxrate.remove_accounting_taxrate(req)
 
 if res.status_code == 200:
     # handle response
@@ -257,21 +235,21 @@ if res.status_code == 200:
 
 | Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
 | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                              | [operations.RemoveUnifiedConnectionRequest](../../models/operations/removeunifiedconnectionrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `request`                                                                                              | [operations.RemoveAccountingTaxrateRequest](../../models/operations/removeaccountingtaxraterequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 
 ### Response
 
-**[operations.RemoveUnifiedConnectionResponse](../../models/operations/removeunifiedconnectionresponse.md)**
+**[operations.RemoveAccountingTaxrateResponse](../../models/operations/removeaccountingtaxrateresponse.md)**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 400-600         | */*             |
 
-## update_unified_connection
+## update_accounting_taxrate
 
-Update connection
+Update a taxrate
 
 ### Example Usage
 
@@ -286,34 +264,19 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.UpdateUnifiedConnectionRequest(
-    connection=shared.Connection(
-        auth=shared.PropertyConnectionAuth(
-            emails=[
-                'string',
-            ],
-            meta=shared.PropertyPropertyConnectionAuthMeta(),
-            other_auth_info=[
-                'string',
-            ],
-        ),
-        categories=[
-            shared.PropertyConnectionCategories.TICKETING,
-        ],
-        cursors_cache=[
-            shared.Undefined(),
-        ],
-        integration_type='string',
-        permissions=[
-            shared.PropertyConnectionPermissions.CRM_CONTACT_READ,
-        ],
+req = operations.UpdateAccountingTaxrateRequest(
+    accounting_taxrate=shared.AccountingTaxrate(
+        name='string',
+        rate=3382.78,
+        raw=shared.PropertyAccountingTaxrateRaw(),
     ),
+    connection_id='string',
     id='<ID>',
 )
 
-res = s.connection.update_unified_connection(req)
+res = s.taxrate.update_accounting_taxrate(req)
 
-if res.connection is not None:
+if res.accounting_taxrate is not None:
     # handle response
     pass
 ```
@@ -322,12 +285,12 @@ if res.connection is not None:
 
 | Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
 | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                              | [operations.UpdateUnifiedConnectionRequest](../../models/operations/updateunifiedconnectionrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `request`                                                                                              | [operations.UpdateAccountingTaxrateRequest](../../models/operations/updateaccountingtaxraterequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 
 ### Response
 
-**[operations.UpdateUnifiedConnectionResponse](../../models/operations/updateunifiedconnectionresponse.md)**
+**[operations.UpdateAccountingTaxrateResponse](../../models/operations/updateaccountingtaxrateresponse.md)**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |

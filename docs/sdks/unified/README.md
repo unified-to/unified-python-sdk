@@ -55,7 +55,7 @@ req = shared.Connection(
     ],
     integration_type='string',
     permissions=[
-        shared.PropertyConnectionPermissions.ATS_DOCUMENT_READ,
+        shared.PropertyConnectionPermissions.ATS_JOB_WRITE,
     ],
 )
 
@@ -108,7 +108,7 @@ req = operations.CreateUnifiedWebhookRequest(
         hook_url='string',
         interval=4583.16,
         meta=shared.PropertyWebhookMeta(),
-        object_type=shared.ObjectType.HRIS_EMPLOYEE,
+        object_type=shared.ObjectType.CRM_PIPELINE,
         runs=[
             'string',
         ],
@@ -294,7 +294,7 @@ s = unified_to.UnifiedTo(
 req = operations.GetUnifiedIntegrationAuthRequest(
     integration_type='string',
     scopes=[
-        operations.Scopes.HRIS_EMPLOYEE_WRITE,
+        operations.Scopes.HRIS_EMPLOYEE_READ,
     ],
     workspace_id='string',
 )
@@ -773,7 +773,7 @@ req = operations.UpdateUnifiedConnectionRequest(
         ],
         integration_type='string',
         permissions=[
-            shared.PropertyConnectionPermissions.CRM_CONTACT_WRITE,
+            shared.PropertyConnectionPermissions.CRM_CONTACT_READ,
         ],
     ),
     id='<ID>',

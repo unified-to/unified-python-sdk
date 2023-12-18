@@ -33,12 +33,14 @@ from .login import Login
 from .martech import Martech
 from .member import Member
 from .note import Note
+from .organization import Organization
 from .passthrough import Passthrough
 from .payment import Payment
 from .person import Person
 from .pipeline import Pipeline
 from .scorecard import Scorecard
 from .sdkconfiguration import SDKConfiguration
+from .taxrate import Taxrate
 from .ticket import Ticket
 from .ticketing import Ticketing
 from .transaction import Transaction
@@ -55,7 +57,9 @@ class UnifiedTo:
     account: Account
     customer: Customer
     invoice: Invoice
+    organization: Organization
     payment: Payment
+    taxrate: Taxrate
     transaction: Transaction
     ats: Ats
     application: Application
@@ -136,7 +140,9 @@ class UnifiedTo:
         self.account = Account(self.sdk_configuration)
         self.customer = Customer(self.sdk_configuration)
         self.invoice = Invoice(self.sdk_configuration)
+        self.organization = Organization(self.sdk_configuration)
         self.payment = Payment(self.sdk_configuration)
+        self.taxrate = Taxrate(self.sdk_configuration)
         self.transaction = Transaction(self.sdk_configuration)
         self.ats = Ats(self.sdk_configuration)
         self.application = Application(self.sdk_configuration)

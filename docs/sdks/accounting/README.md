@@ -7,31 +7,39 @@
 * [create_accounting_customer](#create_accounting_customer) - Create a customer
 * [create_accounting_invoice](#create_accounting_invoice) - Create a invoice
 * [create_accounting_payment](#create_accounting_payment) - Create a payment
+* [create_accounting_taxrate](#create_accounting_taxrate) - Create a taxrate
 * [create_accounting_transaction](#create_accounting_transaction) - Create a transaction
 * [get_accounting_account](#get_accounting_account) - Retrieve an account
 * [get_accounting_customer](#get_accounting_customer) - Retrieve a customer
 * [get_accounting_invoice](#get_accounting_invoice) - Retrieve a invoice
+* [get_accounting_organization](#get_accounting_organization) - Retrieve an organization
 * [get_accounting_payment](#get_accounting_payment) - Retrieve a payment
+* [get_accounting_taxrate](#get_accounting_taxrate) - Retrieve a taxrate
 * [get_accounting_transaction](#get_accounting_transaction) - Retrieve a transaction
 * [list_accounting_accounts](#list_accounting_accounts) - List all accounts
 * [list_accounting_customers](#list_accounting_customers) - List all customers
 * [list_accounting_invoices](#list_accounting_invoices) - List all invoices
+* [list_accounting_organizations](#list_accounting_organizations) - List all organizations
 * [list_accounting_payments](#list_accounting_payments) - List all payments
+* [list_accounting_taxrates](#list_accounting_taxrates) - List all taxrates
 * [list_accounting_transactions](#list_accounting_transactions) - List all transactions
 * [patch_accounting_account](#patch_accounting_account) - Update an account
 * [patch_accounting_customer](#patch_accounting_customer) - Update a customer
 * [patch_accounting_invoice](#patch_accounting_invoice) - Update a invoice
 * [patch_accounting_payment](#patch_accounting_payment) - Update a payment
+* [patch_accounting_taxrate](#patch_accounting_taxrate) - Update a taxrate
 * [patch_accounting_transaction](#patch_accounting_transaction) - Update a transaction
 * [remove_accounting_account](#remove_accounting_account) - Remove an account
 * [remove_accounting_customer](#remove_accounting_customer) - Remove a customer
 * [remove_accounting_invoice](#remove_accounting_invoice) - Remove a invoice
 * [remove_accounting_payment](#remove_accounting_payment) - Remove a payment
+* [remove_accounting_taxrate](#remove_accounting_taxrate) - Remove a taxrate
 * [remove_accounting_transaction](#remove_accounting_transaction) - Remove a transaction
 * [update_accounting_account](#update_accounting_account) - Update an account
 * [update_accounting_customer](#update_accounting_customer) - Update a customer
 * [update_accounting_invoice](#update_accounting_invoice) - Update a invoice
 * [update_accounting_payment](#update_accounting_payment) - Update a payment
+* [update_accounting_taxrate](#update_accounting_taxrate) - Update a taxrate
 * [update_accounting_transaction](#update_accounting_transaction) - Update a transaction
 
 ## create_accounting_account
@@ -243,6 +251,55 @@ if res.accounting_payment is not None:
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 400-600         | */*             |
 
+## create_accounting_taxrate
+
+Create a taxrate
+
+### Example Usage
+
+```python
+import dateutil.parser
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
+
+req = operations.CreateAccountingTaxrateRequest(
+    accounting_taxrate=shared.AccountingTaxrate(
+        name='string',
+        rate=1719.1,
+        raw=shared.PropertyAccountingTaxrateRaw(),
+    ),
+    connection_id='string',
+)
+
+res = s.accounting.create_accounting_taxrate(req)
+
+if res.accounting_taxrate is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                              | [operations.CreateAccountingTaxrateRequest](../../models/operations/createaccountingtaxraterequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+
+
+### Response
+
+**[operations.CreateAccountingTaxrateResponse](../../models/operations/createaccountingtaxrateresponse.md)**
+### Errors
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
+
 ## create_accounting_transaction
 
 Create a transaction
@@ -439,6 +496,53 @@ if res.accounting_invoice is not None:
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 400-600         | */*             |
 
+## get_accounting_organization
+
+Retrieve an organization
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
+
+req = operations.GetAccountingOrganizationRequest(
+    connection_id='string',
+    fields=[
+        'string',
+    ],
+    id='<ID>',
+)
+
+res = s.accounting.get_accounting_organization(req)
+
+if res.accounting_organization is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                  | [operations.GetAccountingOrganizationRequest](../../models/operations/getaccountingorganizationrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+
+
+### Response
+
+**[operations.GetAccountingOrganizationResponse](../../models/operations/getaccountingorganizationresponse.md)**
+### Errors
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
+
 ## get_accounting_payment
 
 Retrieve a payment
@@ -480,6 +584,53 @@ if res.accounting_payment is not None:
 ### Response
 
 **[operations.GetAccountingPaymentResponse](../../models/operations/getaccountingpaymentresponse.md)**
+### Errors
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
+
+## get_accounting_taxrate
+
+Retrieve a taxrate
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
+
+req = operations.GetAccountingTaxrateRequest(
+    connection_id='string',
+    fields=[
+        'string',
+    ],
+    id='<ID>',
+)
+
+res = s.accounting.get_accounting_taxrate(req)
+
+if res.accounting_taxrate is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `request`                                                                                        | [operations.GetAccountingTaxrateRequest](../../models/operations/getaccountingtaxraterequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+
+
+### Response
+
+**[operations.GetAccountingTaxrateResponse](../../models/operations/getaccountingtaxrateresponse.md)**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
@@ -674,6 +825,53 @@ if res.accounting_invoices is not None:
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 400-600         | */*             |
 
+## list_accounting_organizations
+
+List all organizations
+
+### Example Usage
+
+```python
+import dateutil.parser
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
+
+req = operations.ListAccountingOrganizationsRequest(
+    connection_id='string',
+    fields=[
+        'string',
+    ],
+)
+
+res = s.accounting.list_accounting_organizations(req)
+
+if res.accounting_organizations is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                      | [operations.ListAccountingOrganizationsRequest](../../models/operations/listaccountingorganizationsrequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
+
+
+### Response
+
+**[operations.ListAccountingOrganizationsResponse](../../models/operations/listaccountingorganizationsresponse.md)**
+### Errors
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
+
 ## list_accounting_payments
 
 List all payments
@@ -715,6 +913,53 @@ if res.accounting_payments is not None:
 ### Response
 
 **[operations.ListAccountingPaymentsResponse](../../models/operations/listaccountingpaymentsresponse.md)**
+### Errors
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
+
+## list_accounting_taxrates
+
+List all taxrates
+
+### Example Usage
+
+```python
+import dateutil.parser
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
+
+req = operations.ListAccountingTaxratesRequest(
+    connection_id='string',
+    fields=[
+        'string',
+    ],
+)
+
+res = s.accounting.list_accounting_taxrates(req)
+
+if res.accounting_taxrates is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `request`                                                                                            | [operations.ListAccountingTaxratesRequest](../../models/operations/listaccountingtaxratesrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+
+
+### Response
+
+**[operations.ListAccountingTaxratesResponse](../../models/operations/listaccountingtaxratesresponse.md)**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
@@ -981,6 +1226,56 @@ if res.accounting_payment is not None:
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 400-600         | */*             |
 
+## patch_accounting_taxrate
+
+Update a taxrate
+
+### Example Usage
+
+```python
+import dateutil.parser
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
+
+req = operations.PatchAccountingTaxrateRequest(
+    accounting_taxrate=shared.AccountingTaxrate(
+        name='string',
+        rate=5991.47,
+        raw=shared.PropertyAccountingTaxrateRaw(),
+    ),
+    connection_id='string',
+    id='<ID>',
+)
+
+res = s.accounting.patch_accounting_taxrate(req)
+
+if res.accounting_taxrate is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `request`                                                                                            | [operations.PatchAccountingTaxrateRequest](../../models/operations/patchaccountingtaxraterequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+
+
+### Response
+
+**[operations.PatchAccountingTaxrateResponse](../../models/operations/patchaccountingtaxrateresponse.md)**
+### Errors
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
+
 ## patch_accounting_transaction
 
 Update a transaction
@@ -1207,6 +1502,50 @@ if res.status_code == 200:
 ### Response
 
 **[operations.RemoveAccountingPaymentResponse](../../models/operations/removeaccountingpaymentresponse.md)**
+### Errors
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
+
+## remove_accounting_taxrate
+
+Remove a taxrate
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
+
+req = operations.RemoveAccountingTaxrateRequest(
+    connection_id='string',
+    id='<ID>',
+)
+
+res = s.accounting.remove_accounting_taxrate(req)
+
+if res.status_code == 200:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                              | [operations.RemoveAccountingTaxrateRequest](../../models/operations/removeaccountingtaxraterequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+
+
+### Response
+
+**[operations.RemoveAccountingTaxrateResponse](../../models/operations/removeaccountingtaxrateresponse.md)**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
@@ -1464,6 +1803,56 @@ if res.accounting_payment is not None:
 ### Response
 
 **[operations.UpdateAccountingPaymentResponse](../../models/operations/updateaccountingpaymentresponse.md)**
+### Errors
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
+
+## update_accounting_taxrate
+
+Update a taxrate
+
+### Example Usage
+
+```python
+import dateutil.parser
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
+
+req = operations.UpdateAccountingTaxrateRequest(
+    accounting_taxrate=shared.AccountingTaxrate(
+        name='string',
+        rate=3382.78,
+        raw=shared.PropertyAccountingTaxrateRaw(),
+    ),
+    connection_id='string',
+    id='<ID>',
+)
+
+res = s.accounting.update_accounting_taxrate(req)
+
+if res.accounting_taxrate is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                              | [operations.UpdateAccountingTaxrateRequest](../../models/operations/updateaccountingtaxraterequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+
+
+### Response
+
+**[operations.UpdateAccountingTaxrateResponse](../../models/operations/updateaccountingtaxrateresponse.md)**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |

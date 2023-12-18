@@ -25,7 +25,7 @@ s = unified_to.UnifiedTo(
 req = operations.GetUnifiedIntegrationAuthRequest(
     integration_type='string',
     scopes=[
-        operations.Scopes.HRIS_EMPLOYEE_WRITE,
+        operations.Scopes.HRIS_EMPLOYEE_READ,
     ],
     workspace_id='string',
 )
