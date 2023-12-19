@@ -19,6 +19,7 @@
 | `ACCOUNTING_TAXRATE_READ`      | accounting_taxrate_read        |
 | `ACCOUNTING_TAXRATE_WRITE`     | accounting_taxrate_write       |
 | `ACCOUNTING_ORGANIZATION_READ` | accounting_organization_read   |
+| `ACCOUNTING_ITEM_READ`         | accounting_item_read           |
 | `ATS_SCORECARD_READ`           | ats_scorecard_read             |
 | `ATS_SCORECARD_WRITE`          | ats_scorecard_write            |
 | `ATS_APPLICATION_READ`         | ats_application_read           |

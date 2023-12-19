@@ -12,6 +12,7 @@
 | `ACCOUNTING_PAYMENT`      | accounting_payment        |
 | `ACCOUNTING_TAXRATE`      | accounting_taxrate        |
 | `ACCOUNTING_ORGANIZATION` | accounting_organization   |
+| `ACCOUNTING_ITEM`         | accounting_item           |
 | `ATS_APPLICATION`         | ats_application           |
 | `ATS_APPLICATIONSTATUS`   | ats_applicationstatus     |
 | `ATS_CANDIDATE`           | ats_candidate             |

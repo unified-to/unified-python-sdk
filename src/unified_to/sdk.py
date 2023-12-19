@@ -26,6 +26,7 @@ from .hris import Hris
 from .integration import Integration
 from .interview import Interview
 from .invoice import Invoice
+from .item import Item
 from .job import Job
 from .lead import Lead
 from .list import ListT
@@ -57,6 +58,7 @@ class UnifiedTo:
     account: Account
     customer: Customer
     invoice: Invoice
+    item: Item
     organization: Organization
     payment: Payment
     taxrate: Taxrate
@@ -140,6 +142,7 @@ class UnifiedTo:
         self.account = Account(self.sdk_configuration)
         self.customer = Customer(self.sdk_configuration)
         self.invoice = Invoice(self.sdk_configuration)
+        self.item = Item(self.sdk_configuration)
         self.organization = Organization(self.sdk_configuration)
         self.payment = Payment(self.sdk_configuration)
         self.taxrate = Taxrate(self.sdk_configuration)

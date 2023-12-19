@@ -54,12 +54,14 @@ if res.accounting_account is not None:
 * [create_accounting_account](docs/sdks/accounting/README.md#create_accounting_account) - Create an account
 * [create_accounting_customer](docs/sdks/accounting/README.md#create_accounting_customer) - Create a customer
 * [create_accounting_invoice](docs/sdks/accounting/README.md#create_accounting_invoice) - Create a invoice
+* [create_accounting_item](docs/sdks/accounting/README.md#create_accounting_item) - Create an item
 * [create_accounting_payment](docs/sdks/accounting/README.md#create_accounting_payment) - Create a payment
 * [create_accounting_taxrate](docs/sdks/accounting/README.md#create_accounting_taxrate) - Create a taxrate
 * [create_accounting_transaction](docs/sdks/accounting/README.md#create_accounting_transaction) - Create a transaction
 * [get_accounting_account](docs/sdks/accounting/README.md#get_accounting_account) - Retrieve an account
 * [get_accounting_customer](docs/sdks/accounting/README.md#get_accounting_customer) - Retrieve a customer
 * [get_accounting_invoice](docs/sdks/accounting/README.md#get_accounting_invoice) - Retrieve a invoice
+* [get_accounting_item](docs/sdks/accounting/README.md#get_accounting_item) - Retrieve an item
 * [get_accounting_organization](docs/sdks/accounting/README.md#get_accounting_organization) - Retrieve an organization
 * [get_accounting_payment](docs/sdks/accounting/README.md#get_accounting_payment) - Retrieve a payment
 * [get_accounting_taxrate](docs/sdks/accounting/README.md#get_accounting_taxrate) - Retrieve a taxrate
@@ -67,6 +69,7 @@ if res.accounting_account is not None:
 * [list_accounting_accounts](docs/sdks/accounting/README.md#list_accounting_accounts) - List all accounts
 * [list_accounting_customers](docs/sdks/accounting/README.md#list_accounting_customers) - List all customers
 * [list_accounting_invoices](docs/sdks/accounting/README.md#list_accounting_invoices) - List all invoices
+* [list_accounting_items](docs/sdks/accounting/README.md#list_accounting_items) - List all items
 * [list_accounting_organizations](docs/sdks/accounting/README.md#list_accounting_organizations) - List all organizations
 * [list_accounting_payments](docs/sdks/accounting/README.md#list_accounting_payments) - List all payments
 * [list_accounting_taxrates](docs/sdks/accounting/README.md#list_accounting_taxrates) - List all taxrates
@@ -74,18 +77,21 @@ if res.accounting_account is not None:
 * [patch_accounting_account](docs/sdks/accounting/README.md#patch_accounting_account) - Update an account
 * [patch_accounting_customer](docs/sdks/accounting/README.md#patch_accounting_customer) - Update a customer
 * [patch_accounting_invoice](docs/sdks/accounting/README.md#patch_accounting_invoice) - Update a invoice
+* [patch_accounting_item](docs/sdks/accounting/README.md#patch_accounting_item) - Update an item
 * [patch_accounting_payment](docs/sdks/accounting/README.md#patch_accounting_payment) - Update a payment
 * [patch_accounting_taxrate](docs/sdks/accounting/README.md#patch_accounting_taxrate) - Update a taxrate
 * [patch_accounting_transaction](docs/sdks/accounting/README.md#patch_accounting_transaction) - Update a transaction
 * [remove_accounting_account](docs/sdks/accounting/README.md#remove_accounting_account) - Remove an account
 * [remove_accounting_customer](docs/sdks/accounting/README.md#remove_accounting_customer) - Remove a customer
 * [remove_accounting_invoice](docs/sdks/accounting/README.md#remove_accounting_invoice) - Remove a invoice
+* [remove_accounting_item](docs/sdks/accounting/README.md#remove_accounting_item) - Remove an item
 * [remove_accounting_payment](docs/sdks/accounting/README.md#remove_accounting_payment) - Remove a payment
 * [remove_accounting_taxrate](docs/sdks/accounting/README.md#remove_accounting_taxrate) - Remove a taxrate
 * [remove_accounting_transaction](docs/sdks/accounting/README.md#remove_accounting_transaction) - Remove a transaction
 * [update_accounting_account](docs/sdks/accounting/README.md#update_accounting_account) - Update an account
 * [update_accounting_customer](docs/sdks/accounting/README.md#update_accounting_customer) - Update a customer
 * [update_accounting_invoice](docs/sdks/accounting/README.md#update_accounting_invoice) - Update a invoice
+* [update_accounting_item](docs/sdks/accounting/README.md#update_accounting_item) - Update an item
 * [update_accounting_payment](docs/sdks/accounting/README.md#update_accounting_payment) - Update a payment
 * [update_accounting_taxrate](docs/sdks/accounting/README.md#update_accounting_taxrate) - Update a taxrate
 * [update_accounting_transaction](docs/sdks/accounting/README.md#update_accounting_transaction) - Update a transaction
@@ -122,6 +128,15 @@ if res.accounting_account is not None:
 * [patch_accounting_invoice](docs/sdks/invoice/README.md#patch_accounting_invoice) - Update a invoice
 * [remove_accounting_invoice](docs/sdks/invoice/README.md#remove_accounting_invoice) - Remove a invoice
 * [update_accounting_invoice](docs/sdks/invoice/README.md#update_accounting_invoice) - Update a invoice
+
+### [item](docs/sdks/item/README.md)
+
+* [create_accounting_item](docs/sdks/item/README.md#create_accounting_item) - Create an item
+* [get_accounting_item](docs/sdks/item/README.md#get_accounting_item) - Retrieve an item
+* [list_accounting_items](docs/sdks/item/README.md#list_accounting_items) - List all items
+* [patch_accounting_item](docs/sdks/item/README.md#patch_accounting_item) - Update an item
+* [remove_accounting_item](docs/sdks/item/README.md#remove_accounting_item) - Remove an item
+* [update_accounting_item](docs/sdks/item/README.md#update_accounting_item) - Update an item
 
 ### [organization](docs/sdks/organization/README.md)
 
