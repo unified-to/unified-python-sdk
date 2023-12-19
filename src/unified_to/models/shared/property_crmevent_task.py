@@ -2,7 +2,9 @@
 
 from __future__ import annotations
 import dataclasses
+import dateutil.parser
 from dataclasses_json import Undefined, dataclass_json
+from datetime import datetime
 from typing import Optional
 from unified_to import utils
 
@@ -12,6 +14,7 @@ from unified_to import utils
 class PropertyCrmEventTask:
     r"""The task object, when type = task"""
     description: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('description'), 'exclude': lambda f: f is None }})
+    due_at: Optional[datetime] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('due_at'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'exclude': lambda f: f is None }})
     name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name'), 'exclude': lambda f: f is None }})
     status: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
     

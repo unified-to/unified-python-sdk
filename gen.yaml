@@ -1,9 +1,9 @@
 configVersion: 1.0.0
 management:
-  docChecksum: f9960f0b3fb38061154499fb0e5d8fc6
+  docChecksum: 5c36bf46e8093280b5352a5a25f4369d
   docVersion: "1.0"
-  speakeasyVersion: 1.126.4
-  generationVersion: 2.214.10
+  speakeasyVersion: 1.127.0
+  generationVersion: 2.220.0
 generation:
   comments: {}
   sdkClassName: Unified-to
@@ -20,7 +20,7 @@ features:
     globalSecurity: 2.83.1
     globalServerURLs: 2.82.1
 python:
-  version: 0.14.7
+  version: 0.14.8
   author: Unified API Inc
   clientServerStatusCodesAsErrors: true
   description: Python Client SDK for Unified.to
