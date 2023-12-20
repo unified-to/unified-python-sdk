@@ -361,7 +361,6 @@ src/unified_to/models/shared/property_connection_auth.py
 src/unified_to/models/shared/property_property_connection_auth_meta.py
 src/unified_to/models/shared/webhook.py
 src/unified_to/models/shared/property_webhook_meta.py
-src/unified_to/models/shared/property_webhook_events.py
 src/unified_to/models/shared/apicall.py
 src/unified_to/models/shared/integration.py
 src/unified_to/models/shared/integrationsupport.py
@@ -920,7 +919,6 @@ docs/models/shared/objecttype.md
 docs/models/shared/webhookwebhooktype.md
 docs/models/shared/webhook.md
 docs/models/shared/propertywebhookmeta.md
-docs/models/shared/propertywebhookevents.md
 docs/models/shared/apicalltype.md
 docs/models/shared/apicall.md
 docs/models/shared/integration.md
