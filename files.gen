@@ -234,7 +234,6 @@ src/unified_to/models/operations/updateticketingnote.py
 src/unified_to/models/operations/updateticketingticket.py
 src/unified_to/models/operations/listuccalls.py
 src/unified_to/models/operations/createunifiedconnection.py
-src/unified_to/models/operations/createunifiedwebhook.py
 src/unified_to/models/operations/getunifiedapicall.py
 src/unified_to/models/operations/getunifiedconnection.py
 src/unified_to/models/operations/getunifiedintegration.py
@@ -261,6 +260,7 @@ src/unified_to/models/shared/property_accountingcustomer_billing_address.py
 src/unified_to/models/shared/accountinginvoice.py
 src/unified_to/models/shared/property_accountinginvoice_raw.py
 src/unified_to/models/shared/accountinglineitem.py
+src/unified_to/models/shared/property_accountinglineitem_raw.py
 src/unified_to/models/shared/accountingitem.py
 src/unified_to/models/shared/property_accountingitem_raw.py
 src/unified_to/models/shared/accountingpayment.py
@@ -358,9 +358,6 @@ src/unified_to/models/shared/property_connection_permissions.py
 src/unified_to/models/shared/property_connection_categories.py
 src/unified_to/models/shared/property_connection_auth.py
 src/unified_to/models/shared/property_property_connection_auth_meta.py
-src/unified_to/models/shared/webhook.py
-src/unified_to/models/shared/property_webhook_meta.py
-src/unified_to/models/shared/property_webhook_events.py
 src/unified_to/models/shared/apicall.py
 src/unified_to/models/shared/integration.py
 src/unified_to/models/shared/integrationsupport.py
@@ -368,6 +365,9 @@ src/unified_to/models/shared/property_integrationsupport_webhook_events.py
 src/unified_to/models/shared/property_integrationsupport_outbound_fields.py
 src/unified_to/models/shared/property_integrationsupport_inbound_fields.py
 src/unified_to/models/shared/property_integration_categories.py
+src/unified_to/models/shared/webhook.py
+src/unified_to/models/shared/property_webhook_meta.py
+src/unified_to/models/shared/property_webhook_events.py
 src/unified_to/models/shared/security.py
 src/unified_to/models/__init__.py
 src/unified_to/models/errors/__init__.py
@@ -732,9 +732,6 @@ docs/models/operations/updateticketingticketresponse.md
 docs/models/operations/listuccallsrequest.md
 docs/models/operations/listuccallsresponse.md
 docs/models/operations/createunifiedconnectionresponse.md
-docs/models/operations/events.md
-docs/models/operations/createunifiedwebhookrequest.md
-docs/models/operations/createunifiedwebhookresponse.md
 docs/models/operations/getunifiedapicallrequest.md
 docs/models/operations/getunifiedapicallresponse.md
 docs/models/operations/getunifiedconnectionrequest.md
@@ -785,6 +782,7 @@ docs/models/shared/propertyaccountingcustomerbillingaddress.md
 docs/models/shared/accountinginvoice.md
 docs/models/shared/propertyaccountinginvoiceraw.md
 docs/models/shared/accountinglineitem.md
+docs/models/shared/propertyaccountinglineitemraw.md
 docs/models/shared/accountingitem.md
 docs/models/shared/propertyaccountingitemraw.md
 docs/models/shared/accountingpayment.md
@@ -914,12 +912,6 @@ docs/models/shared/propertyconnectionpermissions.md
 docs/models/shared/propertyconnectioncategories.md
 docs/models/shared/propertyconnectionauth.md
 docs/models/shared/propertypropertyconnectionauthmeta.md
-docs/models/shared/event.md
-docs/models/shared/objecttype.md
-docs/models/shared/webhookwebhooktype.md
-docs/models/shared/webhook.md
-docs/models/shared/propertywebhookmeta.md
-docs/models/shared/propertywebhookevents.md
 docs/models/shared/apicalltype.md
 docs/models/shared/apicall.md
 docs/models/shared/integration.md
@@ -929,6 +921,12 @@ docs/models/shared/propertyintegrationsupportwebhookevents.md
 docs/models/shared/propertyintegrationsupportoutboundfields.md
 docs/models/shared/propertyintegrationsupportinboundfields.md
 docs/models/shared/propertyintegrationcategories.md
+docs/models/shared/event.md
+docs/models/shared/objecttype.md
+docs/models/shared/webhookwebhooktype.md
+docs/models/shared/webhook.md
+docs/models/shared/propertywebhookmeta.md
+docs/models/shared/propertywebhookevents.md
 docs/models/shared/security.md
 docs/sdks/unifiedto/README.md
 docs/sdks/accounting/README.md

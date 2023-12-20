@@ -4,7 +4,6 @@
 ### Available Operations
 
 * [create_unified_connection](#create_unified_connection) - Create connection
-* [create_unified_webhook](#create_unified_webhook) - Create webhook subscription
 * [get_unified_apicall](#get_unified_apicall) - Retrieve specific API Call by its ID
 * [get_unified_connection](#get_unified_connection) - Retrieve connection
 * [get_unified_integration](#get_unified_integration) - Retrieve an integration
@@ -76,70 +75,6 @@ if res.connection is not None:
 ### Response
 
 **[operations.CreateUnifiedConnectionResponse](../../models/operations/createunifiedconnectionresponse.md)**
-### Errors
-
-| Error Object    | Status Code     | Content Type    |
-| --------------- | --------------- | --------------- |
-| errors.SDKError | 4x-5xx          | */*             |
-
-## create_unified_webhook
-
-To maintain compatibility with the webhooks specification and Zapier webhooks, only the hook_url field is required in the payload when creating a Webhook.  When updated/new objects are found, the array of objects will be POSTed to the hook_url with the paramater hookId=<hookId>. The data payload received by your server is described at https://docs.unified.to/unified/overview.  The `interval` field can be set as low as 15 minutes for paid accounts, and 60 minutes for free accounts.
-
-### Example Usage
-
-```python
-import dateutil.parser
-import unified_to
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
-
-req = operations.CreateUnifiedWebhookRequest(
-    webhook=shared.Webhook(
-        event=shared.Event.CREATED,
-        events=[
-            shared.PropertyWebhookEvents.UPDATED,
-        ],
-        hook_url='string',
-        interval=4583.16,
-        meta=shared.PropertyWebhookMeta(),
-        object_type=shared.ObjectType.CRM_LEAD,
-        runs=[
-            'string',
-        ],
-        subscriptions=[
-            'string',
-        ],
-    ),
-    connection_id='string',
-    events=[
-        operations.Events.UPDATED,
-    ],
-    object='string',
-)
-
-res = s.unified.create_unified_webhook(req)
-
-if res.webhook is not None:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `request`                                                                                        | [operations.CreateUnifiedWebhookRequest](../../models/operations/createunifiedwebhookrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-
-
-### Response
-
-**[operations.CreateUnifiedWebhookResponse](../../models/operations/createunifiedwebhookresponse.md)**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |

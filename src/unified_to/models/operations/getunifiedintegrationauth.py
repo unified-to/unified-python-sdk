@@ -86,7 +86,7 @@ class GetUnifiedIntegrationAuthRequest:
     r"""Extra state to send back to your success URL"""
     subdomain: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'subdomain', 'style': 'form', 'explode': True }})
     success_redirect: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'success_redirect', 'style': 'form', 'explode': True }})
-    r"""The URL where you want the user to be redirect to after a successful authentication.  The connection ID will be appended with (id=<connectionId>) to this URL, as will the state that was provided."""
+    r"""The URL where you want the user to be redirect to after a successful authorization.  The connection ID will be appended with (id=<connectionId>) to this URL, as will the state that was provided."""
     
 
 

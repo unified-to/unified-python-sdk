@@ -14,7 +14,7 @@ class Login:
     
     def get_unified_integration_login(self, request: operations.GetUnifiedIntegrationLoginRequest) -> operations.GetUnifiedIntegrationLoginResponse:
         r"""Sign in a user
-        Returns an authentication URL for the specified integration.  Once a successful authentication occurs, the name and emails are returned.
+        Returns an authentication URL for the specified integration.  Once a successful authentication occurs, the name and email are returned inside a jwt parameter, which is a JSON web token that is base-64 encoded.
         """
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
