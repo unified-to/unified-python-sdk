@@ -522,6 +522,7 @@ if res.accounting_account is not None:
 ### [unified](docs/sdks/unified/README.md)
 
 * [create_unified_connection](docs/sdks/unified/README.md#create_unified_connection) - Create connection
+* [create_unified_webhook](docs/sdks/unified/README.md#create_unified_webhook) - Create webhook subscription
 * [get_unified_apicall](docs/sdks/unified/README.md#get_unified_apicall) - Retrieve specific API Call by its ID
 * [get_unified_connection](docs/sdks/unified/README.md#get_unified_connection) - Retrieve connection
 * [get_unified_integration](docs/sdks/unified/README.md#get_unified_integration) - Retrieve an integration
@@ -569,6 +570,7 @@ if res.accounting_account is not None:
 
 ### [webhook](docs/sdks/webhook/README.md)
 
+* [create_unified_webhook](docs/sdks/webhook/README.md#create_unified_webhook) - Create webhook subscription
 * [get_unified_webhook](docs/sdks/webhook/README.md#get_unified_webhook) - Retrieve webhook by its ID
 * [list_unified_webhooks](docs/sdks/webhook/README.md#list_unified_webhooks) - Returns all registered webhooks
 * [remove_unified_webhook](docs/sdks/webhook/README.md#remove_unified_webhook) - Remove webhook subscription
