@@ -62,4 +62,6 @@
 | `HRIS_GROUP_READ`              | hris_group_read                |
 | `HRIS_GROUP_WRITE`             | hris_group_write               |
 | `UC_CALL_READ`                 | uc_call_read                   |
+| `STORAGE_FILE_READ`            | storage_file_read              |
+| `STORAGE_FILE_WRITE`           | storage_file_write             |
 | `WEBHOOK`                      | webhook                        |

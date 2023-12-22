@@ -19,6 +19,7 @@ class Categories(str, Enum):
     TICKETING = 'ticketing'
     UC = 'uc'
     ACCOUNTING = 'accounting'
+    STORAGE = 'storage'
 
 
 @dataclasses.dataclass

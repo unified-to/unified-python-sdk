@@ -359,11 +359,17 @@ if res.accounting_account is not None:
 ### [file](docs/sdks/file/README.md)
 
 * [create_crm_file](docs/sdks/file/README.md#create_crm_file) - Create a file
+* [create_storage_file](docs/sdks/file/README.md#create_storage_file) - Create a file
 * [get_crm_file](docs/sdks/file/README.md#get_crm_file) - Retrieve a file
+* [get_storage_file](docs/sdks/file/README.md#get_storage_file) - Retrieve a file
 * [list_crm_files](docs/sdks/file/README.md#list_crm_files) - List all files
+* [list_storage_files](docs/sdks/file/README.md#list_storage_files) - List all files
 * [patch_crm_file](docs/sdks/file/README.md#patch_crm_file) - Update a file
+* [patch_storage_file](docs/sdks/file/README.md#patch_storage_file) - Update a file
 * [remove_crm_file](docs/sdks/file/README.md#remove_crm_file) - Remove a file
+* [remove_storage_file](docs/sdks/file/README.md#remove_storage_file) - Remove a file
 * [update_crm_file](docs/sdks/file/README.md#update_crm_file) - Update a file
+* [update_storage_file](docs/sdks/file/README.md#update_storage_file) - Update a file
 
 ### [lead](docs/sdks/lead/README.md)
 
@@ -465,6 +471,15 @@ if res.accounting_account is not None:
 * [patch_passthrough](docs/sdks/passthrough/README.md#patch_passthrough) - Passthrough PUT
 * [remove_passthrough](docs/sdks/passthrough/README.md#remove_passthrough) - Passthrough DELETE
 * [update_passthrough](docs/sdks/passthrough/README.md#update_passthrough) - Passthrough PUT
+
+### [storage](docs/sdks/storage/README.md)
+
+* [create_storage_file](docs/sdks/storage/README.md#create_storage_file) - Create a file
+* [get_storage_file](docs/sdks/storage/README.md#get_storage_file) - Retrieve a file
+* [list_storage_files](docs/sdks/storage/README.md#list_storage_files) - List all files
+* [patch_storage_file](docs/sdks/storage/README.md#patch_storage_file) - Update a file
+* [remove_storage_file](docs/sdks/storage/README.md#remove_storage_file) - Remove a file
+* [update_storage_file](docs/sdks/storage/README.md#update_storage_file) - Update a file
 
 ### [ticketing](docs/sdks/ticketing/README.md)
 

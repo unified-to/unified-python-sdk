@@ -41,6 +41,7 @@ from .person import Person
 from .pipeline import Pipeline
 from .scorecard import Scorecard
 from .sdkconfiguration import SDKConfiguration
+from .storage import Storage
 from .taxrate import Taxrate
 from .ticket import Ticket
 from .ticketing import Ticketing
@@ -88,6 +89,7 @@ class UnifiedTo:
     list: ListT
     member: Member
     passthrough: Passthrough
+    storage: Storage
     ticketing: Ticketing
     note: Note
     ticket: Ticket
@@ -172,6 +174,7 @@ class UnifiedTo:
         self.list = ListT(self.sdk_configuration)
         self.member = Member(self.sdk_configuration)
         self.passthrough = Passthrough(self.sdk_configuration)
+        self.storage = Storage(self.sdk_configuration)
         self.ticketing = Ticketing(self.sdk_configuration)
         self.note = Note(self.sdk_configuration)
         self.ticket = Ticket(self.sdk_configuration)

@@ -15,3 +15,4 @@
 | `TICKETING`   | ticketing     |
 | `UC`          | uc            |
 | `ACCOUNTING`  | accounting    |
+| `STORAGE`     | storage       |

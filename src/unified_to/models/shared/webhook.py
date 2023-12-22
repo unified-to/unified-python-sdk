@@ -49,6 +49,7 @@ class ObjectType(str, Enum):
     UC_CALL = 'uc_call'
     ENRICH_PERSON = 'enrich_person'
     ENRICH_COMPANY = 'enrich_company'
+    STORAGE_FILE = 'storage_file'
 
 class WebhookWebhookType(str, Enum):
     VIRTUAL = 'virtual'

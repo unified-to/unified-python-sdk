@@ -32,7 +32,7 @@ req = operations.CreateUnifiedWebhookRequest(
         hook_url='string',
         interval=188.12,
         meta=shared.PropertyWebhookMeta(),
-        object_type=shared.ObjectType.CRM_COMPANY,
+        object_type=shared.ObjectType.CRM_CONTACT,
         runs=[
             'string',
         ],

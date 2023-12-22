@@ -38,14 +38,14 @@ req = shared.Connection(
         ],
     ),
     categories=[
-        shared.PropertyConnectionCategories.ACCOUNTING,
+        shared.PropertyConnectionCategories.STORAGE,
     ],
     cursors_cache=[
         shared.Undefined(),
     ],
     integration_type='string',
     permissions=[
-        shared.PropertyConnectionPermissions.ATS_JOB_READ,
+        shared.PropertyConnectionPermissions.ATS_JOB_WRITE,
     ],
 )
 
@@ -190,14 +190,14 @@ req = operations.PatchUnifiedConnectionRequest(
             ],
         ),
         categories=[
-            shared.PropertyConnectionCategories.MARTECH,
+            shared.PropertyConnectionCategories.TICKETING,
         ],
         cursors_cache=[
             shared.Undefined(),
         ],
         integration_type='string',
         permissions=[
-            shared.PropertyConnectionPermissions.CRM_PIPELINE_READ,
+            shared.PropertyConnectionPermissions.MARTECH_LIST_READ,
         ],
     ),
     id='<ID>',
@@ -298,14 +298,14 @@ req = operations.UpdateUnifiedConnectionRequest(
             ],
         ),
         categories=[
-            shared.PropertyConnectionCategories.TICKETING,
+            shared.PropertyConnectionCategories.UC,
         ],
         cursors_cache=[
             shared.Undefined(),
         ],
         integration_type='string',
         permissions=[
-            shared.PropertyConnectionPermissions.CRM_COMPANY_WRITE,
+            shared.PropertyConnectionPermissions.CRM_CONTACT_READ,
         ],
     ),
     id='<ID>',

@@ -48,14 +48,14 @@ req = shared.Connection(
         ],
     ),
     categories=[
-        shared.PropertyConnectionCategories.ACCOUNTING,
+        shared.PropertyConnectionCategories.STORAGE,
     ],
     cursors_cache=[
         shared.Undefined(),
     ],
     integration_type='string',
     permissions=[
-        shared.PropertyConnectionPermissions.ATS_JOB_READ,
+        shared.PropertyConnectionPermissions.ATS_JOB_WRITE,
     ],
 )
 
@@ -106,7 +106,7 @@ req = operations.CreateUnifiedWebhookRequest(
         hook_url='string',
         interval=188.12,
         meta=shared.PropertyWebhookMeta(),
-        object_type=shared.ObjectType.CRM_COMPANY,
+        object_type=shared.ObjectType.CRM_CONTACT,
         runs=[
             'string',
         ],
@@ -284,7 +284,7 @@ s = unified_to.UnifiedTo(
 req = operations.GetUnifiedIntegrationAuthRequest(
     integration_type='string',
     scopes=[
-        operations.Scopes.HRIS_EMPLOYEE_READ,
+        operations.Scopes.HRIS_GROUP_READ,
     ],
     workspace_id='string',
 )
@@ -461,7 +461,7 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListUnifiedIntegrationWorkspacesRequest(
     categories=[
-        operations.QueryParamCategories.TICKETING,
+        operations.QueryParamCategories.UC,
     ],
     workspace_id='string',
 )
@@ -605,14 +605,14 @@ req = operations.PatchUnifiedConnectionRequest(
             ],
         ),
         categories=[
-            shared.PropertyConnectionCategories.MARTECH,
+            shared.PropertyConnectionCategories.TICKETING,
         ],
         cursors_cache=[
             shared.Undefined(),
         ],
         integration_type='string',
         permissions=[
-            shared.PropertyConnectionPermissions.CRM_PIPELINE_READ,
+            shared.PropertyConnectionPermissions.MARTECH_LIST_READ,
         ],
     ),
     id='<ID>',
@@ -756,14 +756,14 @@ req = operations.UpdateUnifiedConnectionRequest(
             ],
         ),
         categories=[
-            shared.PropertyConnectionCategories.TICKETING,
+            shared.PropertyConnectionCategories.UC,
         ],
         cursors_cache=[
             shared.Undefined(),
         ],
         integration_type='string',
         permissions=[
-            shared.PropertyConnectionPermissions.CRM_COMPANY_WRITE,
+            shared.PropertyConnectionPermissions.CRM_CONTACT_READ,
         ],
     ),
     id='<ID>',
