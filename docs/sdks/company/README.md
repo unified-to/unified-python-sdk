@@ -37,6 +37,9 @@ req = operations.CreateCrmCompanyRequest(
         emails=[
             shared.CrmEmail(),
         ],
+        link_urls=[
+            'string',
+        ],
         raw=shared.PropertyCrmCompanyRaw(),
         tags=[
             'string',
@@ -239,6 +242,9 @@ req = operations.PatchCrmCompanyRequest(
         emails=[
             shared.CrmEmail(),
         ],
+        link_urls=[
+            'string',
+        ],
         raw=shared.PropertyCrmCompanyRaw(),
         tags=[
             'string',
@@ -348,6 +354,9 @@ req = operations.UpdateCrmCompanyRequest(
         ],
         emails=[
             shared.CrmEmail(),
+        ],
+        link_urls=[
+            'string',
         ],
         raw=shared.PropertyCrmCompanyRaw(),
         tags=[
