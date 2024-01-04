@@ -3,53 +3,9 @@
 
 ### Available Operations
 
-* [get_unified_integration](#get_unified_integration) - Retrieve an integration
 * [get_unified_integration_auth](#get_unified_integration_auth) - Create connection indirectly
 * [list_unified_integration_workspaces](#list_unified_integration_workspaces) - Returns all activated integrations in a workspace
 * [list_unified_integrations](#list_unified_integrations) - Returns all integrations
-
-## get_unified_integration
-
-Retrieve an integration
-
-### Example Usage
-
-```python
-import unified_to
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
-
-req = operations.GetUnifiedIntegrationRequest(
-    integration_type='string',
-)
-
-res = s.integration.get_unified_integration(req)
-
-if res.integration is not None:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `request`                                                                                          | [operations.GetUnifiedIntegrationRequest](../../models/operations/getunifiedintegrationrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
-
-
-### Response
-
-**[operations.GetUnifiedIntegrationResponse](../../models/operations/getunifiedintegrationresponse.md)**
-### Errors
-
-| Error Object    | Status Code     | Content Type    |
-| --------------- | --------------- | --------------- |
-| errors.SDKError | 4x-5xx          | */*             |
 
 ## get_unified_integration_auth
 

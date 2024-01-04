@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: e3411ce3831f158718f8cc0477e33856
+  docChecksum: 56cbb60774d35fb7bb0337c12bcc7948
   docVersion: "1.0"
   speakeasyVersion: internal
   generationVersion: 2.225.2
-  releaseVersion: 0.14.18
-  configChecksum: 5df8ac7a6058b4b6347a2bc03a1c3ac1
+  releaseVersion: 0.14.19
+  configChecksum: 679cfccbeb499268d6dca43cfa01adca
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -264,7 +264,6 @@ generatedFiles:
   - src/unified_to/models/operations/createunifiedwebhook.py
   - src/unified_to/models/operations/getunifiedapicall.py
   - src/unified_to/models/operations/getunifiedconnection.py
-  - src/unified_to/models/operations/getunifiedintegration.py
   - src/unified_to/models/operations/getunifiedintegrationauth.py
   - src/unified_to/models/operations/getunifiedwebhook.py
   - src/unified_to/models/operations/listunifiedapicalls.py
@@ -781,8 +780,6 @@ generatedFiles:
   - docs/models/operations/getunifiedapicallresponse.md
   - docs/models/operations/getunifiedconnectionrequest.md
   - docs/models/operations/getunifiedconnectionresponse.md
-  - docs/models/operations/getunifiedintegrationrequest.md
-  - docs/models/operations/getunifiedintegrationresponse.md
   - docs/models/operations/scopes.md
   - docs/models/operations/getunifiedintegrationauthrequest.md
   - docs/models/operations/getunifiedintegrationauthresponse.md
