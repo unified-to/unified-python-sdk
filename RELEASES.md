@@ -639,3 +639,13 @@ Based on:
 - [python v0.14.18] .
 ### Releases
 - [PyPI v0.14.18] https://pypi.org/project/Unified-python-sdk/0.14.18 - .
+
+## 2024-01-04 17:20:16
+### Changes
+Based on:
+- OpenAPI Doc 1.0 
+- Speakeasy CLI 1.130.0 (2.225.0) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [python v0.14.18] .
+### Releases
+- [PyPI v0.14.18] https://pypi.org/project/Unified-python-sdk/0.14.18 - .
