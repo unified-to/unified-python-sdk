@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: 01195f78bbf8ee1be66b14db611dedcf
+  docChecksum: 950b786dbc2a674691ac70d56758142c
   docVersion: "1.0"
   speakeasyVersion: internal
-  generationVersion: 2.230.1
-  releaseVersion: 0.14.21
-  configChecksum: aa20a0024064ea729b5a08eacaa27bb8
+  generationVersion: 2.230.3
+  releaseVersion: 0.14.22
+  configChecksum: 9eddcefcbc7475c5ab46701f2a3bcd7b
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -272,9 +272,11 @@ generatedFiles:
   - src/unified_to/models/operations/listunifiedintegrations.py
   - src/unified_to/models/operations/listunifiedwebhooks.py
   - src/unified_to/models/operations/patchunifiedconnection.py
+  - src/unified_to/models/operations/patchunifiedwebhooktrigger.py
   - src/unified_to/models/operations/removeunifiedconnection.py
   - src/unified_to/models/operations/removeunifiedwebhook.py
   - src/unified_to/models/operations/updateunifiedconnection.py
+  - src/unified_to/models/operations/updateunifiedwebhooktrigger.py
   - src/unified_to/models/operations/getunifiedintegrationlogin.py
   - src/unified_to/models/shared/accountingaccount.py
   - src/unified_to/models/shared/property_accountingaccount_raw.py
@@ -800,12 +802,16 @@ generatedFiles:
   - docs/models/operations/listunifiedwebhooksresponse.md
   - docs/models/operations/patchunifiedconnectionrequest.md
   - docs/models/operations/patchunifiedconnectionresponse.md
+  - docs/models/operations/patchunifiedwebhooktriggerrequest.md
+  - docs/models/operations/patchunifiedwebhooktriggerresponse.md
   - docs/models/operations/removeunifiedconnectionrequest.md
   - docs/models/operations/removeunifiedconnectionresponse.md
   - docs/models/operations/removeunifiedwebhookrequest.md
   - docs/models/operations/removeunifiedwebhookresponse.md
   - docs/models/operations/updateunifiedconnectionrequest.md
   - docs/models/operations/updateunifiedconnectionresponse.md
+  - docs/models/operations/updateunifiedwebhooktriggerrequest.md
+  - docs/models/operations/updateunifiedwebhooktriggerresponse.md
   - docs/models/operations/getunifiedintegrationloginrequest.md
   - docs/models/operations/getunifiedintegrationloginresponse.md
   - docs/models/shared/status.md

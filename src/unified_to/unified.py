@@ -418,6 +418,37 @@ class Unified:
 
     
     
+    def patch_unified_webhook_trigger(self, request: operations.PatchUnifiedWebhookTriggerRequest) -> operations.PatchUnifiedWebhookTriggerResponse:
+        r"""Trigger webhook"""
+        base_url = utils.template_url(*self.sdk_configuration.get_server_details())
+        
+        url = utils.generate_url(operations.PatchUnifiedWebhookTriggerRequest, base_url, '/unified/webhook/{id}/trigger', request)
+        headers = {}
+        headers['Accept'] = 'application/json'
+        headers['user-agent'] = self.sdk_configuration.user_agent
+        
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        
+        http_res = client.request('PATCH', url, headers=headers)
+        content_type = http_res.headers.get('Content-Type')
+        
+        res = operations.PatchUnifiedWebhookTriggerResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        
+        if http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
+            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
+        else:
+            if utils.match_content_type(content_type, 'application/json'):
+                res.res = http_res.content
+            else:
+                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
+
+        return res
+
+    
+    
     def remove_unified_connection(self, request: operations.RemoveUnifiedConnectionRequest) -> operations.RemoveUnifiedConnectionResponse:
         r"""Remove connection"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -510,6 +541,37 @@ class Unified:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
         elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
             raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
+
+        return res
+
+    
+    
+    def update_unified_webhook_trigger(self, request: operations.UpdateUnifiedWebhookTriggerRequest) -> operations.UpdateUnifiedWebhookTriggerResponse:
+        r"""Trigger webhook"""
+        base_url = utils.template_url(*self.sdk_configuration.get_server_details())
+        
+        url = utils.generate_url(operations.UpdateUnifiedWebhookTriggerRequest, base_url, '/unified/webhook/{id}/trigger', request)
+        headers = {}
+        headers['Accept'] = 'application/json'
+        headers['user-agent'] = self.sdk_configuration.user_agent
+        
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        
+        http_res = client.request('PUT', url, headers=headers)
+        content_type = http_res.headers.get('Content-Type')
+        
+        res = operations.UpdateUnifiedWebhookTriggerResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        
+        if http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
+            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
+        else:
+            if utils.match_content_type(content_type, 'application/json'):
+                res.res = http_res.content
+            else:
+                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
 
         return res
 
