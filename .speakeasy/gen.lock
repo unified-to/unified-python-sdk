@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: 950b786dbc2a674691ac70d56758142c
+  docChecksum: 354896ac4fb0afd646aa3e018c90dfd9
   docVersion: "1.0"
   speakeasyVersion: internal
   generationVersion: 2.230.3
-  releaseVersion: 0.14.22
-  configChecksum: 9eddcefcbc7475c5ab46701f2a3bcd7b
+  releaseVersion: 0.14.23
+  configChecksum: 3935c5a8e419f1cdd161518ebadf575f
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -827,6 +827,7 @@ generatedFiles:
   - docs/models/shared/accountingemailtype.md
   - docs/models/shared/accountingemail.md
   - docs/models/shared/propertyaccountingcustomerbillingaddress.md
+  - docs/models/shared/accountinginvoicestatus.md
   - docs/models/shared/accountinginvoice.md
   - docs/models/shared/propertyaccountinginvoiceraw.md
   - docs/models/shared/accountinglineitem.md
