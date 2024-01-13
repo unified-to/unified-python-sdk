@@ -256,6 +256,9 @@ req = operations.CreateCrmEventRequest(
             'string',
         ],
         email=shared.PropertyCrmEventEmail(
+            attachment_file_ids=[
+                'string',
+            ],
             cc=[
                 'string',
             ],
@@ -1318,6 +1321,9 @@ req = operations.PatchCrmEventRequest(
             'string',
         ],
         email=shared.PropertyCrmEventEmail(
+            attachment_file_ids=[
+                'string',
+            ],
             cc=[
                 'string',
             ],
@@ -2034,6 +2040,9 @@ req = operations.UpdateCrmEventRequest(
             'string',
         ],
         email=shared.PropertyCrmEventEmail(
+            attachment_file_ids=[
+                'string',
+            ],
             cc=[
                 'string',
             ],

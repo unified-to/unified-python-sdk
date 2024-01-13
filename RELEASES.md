@@ -709,3 +709,13 @@ Based on:
 - [python v0.14.23] .
 ### Releases
 - [PyPI v0.14.23] https://pypi.org/project/Unified-python-sdk/0.14.23 - .
+
+## 2024-01-13 00:24:09
+### Changes
+Based on:
+- OpenAPI Doc 1.0 
+- Speakeasy CLI 1.140.0 (2.231.0) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [python v0.14.24] .
+### Releases
+- [PyPI v0.14.24] https://pypi.org/project/Unified-python-sdk/0.14.24 - .

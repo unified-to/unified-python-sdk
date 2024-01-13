@@ -13,6 +13,7 @@ from unified_to import utils
 @dataclasses.dataclass
 class PropertyCrmEventEmail:
     r"""The email object, when type = email"""
+    attachment_file_ids: Optional[List[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('attachment_file_ids'), 'exclude': lambda f: f is None }})
     body: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('body'), 'exclude': lambda f: f is None }})
     cc: Optional[List[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('cc'), 'exclude': lambda f: f is None }})
     r"""The event email's cc name & email (name <test@test.com>)"""
