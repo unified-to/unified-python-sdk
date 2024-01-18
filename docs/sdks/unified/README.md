@@ -56,7 +56,7 @@ req = shared.Connection(
     ],
     integration_type='string',
     permissions=[
-        shared.PropertyConnectionPermissions.ATS_JOB_WRITE,
+        shared.PropertyConnectionPermissions.ATS_JOB_READ,
     ],
 )
 
@@ -107,7 +107,7 @@ req = operations.CreateUnifiedWebhookRequest(
         hook_url='string',
         interval=188.12,
         meta=shared.PropertyWebhookMeta(),
-        object_type=shared.ObjectType.CRM_CONTACT,
+        object_type=shared.ObjectType.CRM_COMPANY,
         runs=[
             'string',
         ],
@@ -764,7 +764,7 @@ req = operations.UpdateUnifiedConnectionRequest(
         ],
         integration_type='string',
         permissions=[
-            shared.PropertyConnectionPermissions.CRM_CONTACT_READ,
+            shared.PropertyConnectionPermissions.CRM_COMPANY_WRITE,
         ],
     ),
     id='<ID>',

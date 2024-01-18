@@ -274,42 +274,36 @@ if res.accounting_account is not None:
 * [create_crm_contact](docs/sdks/crm/README.md#create_crm_contact) - Create a contact
 * [create_crm_deal](docs/sdks/crm/README.md#create_crm_deal) - Create a deal
 * [create_crm_event](docs/sdks/crm/README.md#create_crm_event) - Create a event
-* [create_crm_file](docs/sdks/crm/README.md#create_crm_file) - Create a file
 * [create_crm_lead](docs/sdks/crm/README.md#create_crm_lead) - Create a lead
 * [create_crm_pipeline](docs/sdks/crm/README.md#create_crm_pipeline) - Create a pipeline
 * [get_crm_company](docs/sdks/crm/README.md#get_crm_company) - Retrieve a company
 * [get_crm_contact](docs/sdks/crm/README.md#get_crm_contact) - Retrieve a contact
 * [get_crm_deal](docs/sdks/crm/README.md#get_crm_deal) - Retrieve a deal
 * [get_crm_event](docs/sdks/crm/README.md#get_crm_event) - Retrieve a event
-* [get_crm_file](docs/sdks/crm/README.md#get_crm_file) - Retrieve a file
 * [get_crm_lead](docs/sdks/crm/README.md#get_crm_lead) - Retrieve a lead
 * [get_crm_pipeline](docs/sdks/crm/README.md#get_crm_pipeline) - Retrieve a pipeline
 * [list_crm_companies](docs/sdks/crm/README.md#list_crm_companies) - List all companies
 * [list_crm_contacts](docs/sdks/crm/README.md#list_crm_contacts) - List all contacts
 * [list_crm_deals](docs/sdks/crm/README.md#list_crm_deals) - List all deals
 * [list_crm_events](docs/sdks/crm/README.md#list_crm_events) - List all events
-* [list_crm_files](docs/sdks/crm/README.md#list_crm_files) - List all files
 * [list_crm_leads](docs/sdks/crm/README.md#list_crm_leads) - List all leads
 * [list_crm_pipelines](docs/sdks/crm/README.md#list_crm_pipelines) - List all pipelines
 * [patch_crm_company](docs/sdks/crm/README.md#patch_crm_company) - Update a company
 * [patch_crm_contact](docs/sdks/crm/README.md#patch_crm_contact) - Update a contact
 * [patch_crm_deal](docs/sdks/crm/README.md#patch_crm_deal) - Update a deal
 * [patch_crm_event](docs/sdks/crm/README.md#patch_crm_event) - Update a event
-* [patch_crm_file](docs/sdks/crm/README.md#patch_crm_file) - Update a file
 * [patch_crm_lead](docs/sdks/crm/README.md#patch_crm_lead) - Update a lead
 * [patch_crm_pipeline](docs/sdks/crm/README.md#patch_crm_pipeline) - Update a pipeline
 * [remove_crm_company](docs/sdks/crm/README.md#remove_crm_company) - Remove a company
 * [remove_crm_contact](docs/sdks/crm/README.md#remove_crm_contact) - Remove a contact
 * [remove_crm_deal](docs/sdks/crm/README.md#remove_crm_deal) - Remove a deal
 * [remove_crm_event](docs/sdks/crm/README.md#remove_crm_event) - Remove a event
-* [remove_crm_file](docs/sdks/crm/README.md#remove_crm_file) - Remove a file
 * [remove_crm_lead](docs/sdks/crm/README.md#remove_crm_lead) - Remove a lead
 * [remove_crm_pipeline](docs/sdks/crm/README.md#remove_crm_pipeline) - Remove a pipeline
 * [update_crm_company](docs/sdks/crm/README.md#update_crm_company) - Update a company
 * [update_crm_contact](docs/sdks/crm/README.md#update_crm_contact) - Update a contact
 * [update_crm_deal](docs/sdks/crm/README.md#update_crm_deal) - Update a deal
 * [update_crm_event](docs/sdks/crm/README.md#update_crm_event) - Update a event
-* [update_crm_file](docs/sdks/crm/README.md#update_crm_file) - Update a file
 * [update_crm_lead](docs/sdks/crm/README.md#update_crm_lead) - Update a lead
 * [update_crm_pipeline](docs/sdks/crm/README.md#update_crm_pipeline) - Update a pipeline
 
@@ -355,21 +349,6 @@ if res.accounting_account is not None:
 * [patch_crm_event](docs/sdks/event/README.md#patch_crm_event) - Update a event
 * [remove_crm_event](docs/sdks/event/README.md#remove_crm_event) - Remove a event
 * [update_crm_event](docs/sdks/event/README.md#update_crm_event) - Update a event
-
-### [file](docs/sdks/file/README.md)
-
-* [create_crm_file](docs/sdks/file/README.md#create_crm_file) - Create a file
-* [create_storage_file](docs/sdks/file/README.md#create_storage_file) - Create a file
-* [get_crm_file](docs/sdks/file/README.md#get_crm_file) - Retrieve a file
-* [get_storage_file](docs/sdks/file/README.md#get_storage_file) - Retrieve a file
-* [list_crm_files](docs/sdks/file/README.md#list_crm_files) - List all files
-* [list_storage_files](docs/sdks/file/README.md#list_storage_files) - List all files
-* [patch_crm_file](docs/sdks/file/README.md#patch_crm_file) - Update a file
-* [patch_storage_file](docs/sdks/file/README.md#patch_storage_file) - Update a file
-* [remove_crm_file](docs/sdks/file/README.md#remove_crm_file) - Remove a file
-* [remove_storage_file](docs/sdks/file/README.md#remove_storage_file) - Remove a file
-* [update_crm_file](docs/sdks/file/README.md#update_crm_file) - Update a file
-* [update_storage_file](docs/sdks/file/README.md#update_storage_file) - Update a file
 
 ### [lead](docs/sdks/lead/README.md)
 
@@ -480,6 +459,15 @@ if res.accounting_account is not None:
 * [patch_storage_file](docs/sdks/storage/README.md#patch_storage_file) - Update a file
 * [remove_storage_file](docs/sdks/storage/README.md#remove_storage_file) - Remove a file
 * [update_storage_file](docs/sdks/storage/README.md#update_storage_file) - Update a file
+
+### [file](docs/sdks/file/README.md)
+
+* [create_storage_file](docs/sdks/file/README.md#create_storage_file) - Create a file
+* [get_storage_file](docs/sdks/file/README.md#get_storage_file) - Retrieve a file
+* [list_storage_files](docs/sdks/file/README.md#list_storage_files) - List all files
+* [patch_storage_file](docs/sdks/file/README.md#patch_storage_file) - Update a file
+* [remove_storage_file](docs/sdks/file/README.md#remove_storage_file) - Remove a file
+* [update_storage_file](docs/sdks/file/README.md#update_storage_file) - Update a file
 
 ### [ticketing](docs/sdks/ticketing/README.md)
 

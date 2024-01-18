@@ -45,7 +45,7 @@ req = shared.Connection(
     ],
     integration_type='string',
     permissions=[
-        shared.PropertyConnectionPermissions.ATS_JOB_WRITE,
+        shared.PropertyConnectionPermissions.ATS_JOB_READ,
     ],
 )
 
@@ -305,7 +305,7 @@ req = operations.UpdateUnifiedConnectionRequest(
         ],
         integration_type='string',
         permissions=[
-            shared.PropertyConnectionPermissions.CRM_CONTACT_READ,
+            shared.PropertyConnectionPermissions.CRM_COMPANY_WRITE,
         ],
     ),
     id='<ID>',

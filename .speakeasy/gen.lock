@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: fcf38ba1245f7399c1338dc1ef8df2e7
+  docChecksum: ede9055e4403162b0dc1469530be3da9
   docVersion: "1.0"
   speakeasyVersion: internal
-  generationVersion: 2.234.3
-  releaseVersion: 0.14.25
-  configChecksum: 41ed95b169eea098b2580b0450ccd24a
+  generationVersion: 2.235.3
+  releaseVersion: 0.14.26
+  configChecksum: 3e0e4c9664c5430b9ea16da38e2c654a
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -41,7 +41,6 @@ generatedFiles:
   - src/unified_to/contact.py
   - src/unified_to/deal.py
   - src/unified_to/event.py
-  - src/unified_to/file.py
   - src/unified_to/lead.py
   - src/unified_to/pipeline.py
   - src/unified_to/enrich.py
@@ -54,6 +53,7 @@ generatedFiles:
   - src/unified_to/member.py
   - src/unified_to/passthrough.py
   - src/unified_to/storage.py
+  - src/unified_to/file.py
   - src/unified_to/ticketing.py
   - src/unified_to/note.py
   - src/unified_to/ticket.py
@@ -166,42 +166,36 @@ generatedFiles:
   - src/unified_to/models/operations/createcrmcontact.py
   - src/unified_to/models/operations/createcrmdeal.py
   - src/unified_to/models/operations/createcrmevent.py
-  - src/unified_to/models/operations/createcrmfile.py
   - src/unified_to/models/operations/createcrmlead.py
   - src/unified_to/models/operations/createcrmpipeline.py
   - src/unified_to/models/operations/getcrmcompany.py
   - src/unified_to/models/operations/getcrmcontact.py
   - src/unified_to/models/operations/getcrmdeal.py
   - src/unified_to/models/operations/getcrmevent.py
-  - src/unified_to/models/operations/getcrmfile.py
   - src/unified_to/models/operations/getcrmlead.py
   - src/unified_to/models/operations/getcrmpipeline.py
   - src/unified_to/models/operations/listcrmcompanies.py
   - src/unified_to/models/operations/listcrmcontacts.py
   - src/unified_to/models/operations/listcrmdeals.py
   - src/unified_to/models/operations/listcrmevents.py
-  - src/unified_to/models/operations/listcrmfiles.py
   - src/unified_to/models/operations/listcrmleads.py
   - src/unified_to/models/operations/listcrmpipelines.py
   - src/unified_to/models/operations/patchcrmcompany.py
   - src/unified_to/models/operations/patchcrmcontact.py
   - src/unified_to/models/operations/patchcrmdeal.py
   - src/unified_to/models/operations/patchcrmevent.py
-  - src/unified_to/models/operations/patchcrmfile.py
   - src/unified_to/models/operations/patchcrmlead.py
   - src/unified_to/models/operations/patchcrmpipeline.py
   - src/unified_to/models/operations/removecrmcompany.py
   - src/unified_to/models/operations/removecrmcontact.py
   - src/unified_to/models/operations/removecrmdeal.py
   - src/unified_to/models/operations/removecrmevent.py
-  - src/unified_to/models/operations/removecrmfile.py
   - src/unified_to/models/operations/removecrmlead.py
   - src/unified_to/models/operations/removecrmpipeline.py
   - src/unified_to/models/operations/updatecrmcompany.py
   - src/unified_to/models/operations/updatecrmcontact.py
   - src/unified_to/models/operations/updatecrmdeal.py
   - src/unified_to/models/operations/updatecrmevent.py
-  - src/unified_to/models/operations/updatecrmfile.py
   - src/unified_to/models/operations/updatecrmlead.py
   - src/unified_to/models/operations/updatecrmpipeline.py
   - src/unified_to/models/operations/listenrichcompanies.py
@@ -211,12 +205,6 @@ generatedFiles:
   - src/unified_to/models/operations/patchuccontact.py
   - src/unified_to/models/operations/removeuccontact.py
   - src/unified_to/models/operations/updateuccontact.py
-  - src/unified_to/models/operations/createstoragefile.py
-  - src/unified_to/models/operations/getstoragefile.py
-  - src/unified_to/models/operations/liststoragefiles.py
-  - src/unified_to/models/operations/patchstoragefile.py
-  - src/unified_to/models/operations/removestoragefile.py
-  - src/unified_to/models/operations/updatestoragefile.py
   - src/unified_to/models/operations/listenrichpeople.py
   - src/unified_to/models/operations/createhrisemployee.py
   - src/unified_to/models/operations/createhrisgroup.py
@@ -247,6 +235,12 @@ generatedFiles:
   - src/unified_to/models/operations/patchpassthrough.py
   - src/unified_to/models/operations/removepassthrough.py
   - src/unified_to/models/operations/updatepassthrough.py
+  - src/unified_to/models/operations/createstoragefile.py
+  - src/unified_to/models/operations/getstoragefile.py
+  - src/unified_to/models/operations/liststoragefiles.py
+  - src/unified_to/models/operations/patchstoragefile.py
+  - src/unified_to/models/operations/removestoragefile.py
+  - src/unified_to/models/operations/updatestoragefile.py
   - src/unified_to/models/operations/createticketingnote.py
   - src/unified_to/models/operations/createticketingticket.py
   - src/unified_to/models/operations/getticketingnote.py
@@ -342,8 +336,6 @@ generatedFiles:
   - src/unified_to/models/shared/property_crmevent_meeting.py
   - src/unified_to/models/shared/property_crmevent_email.py
   - src/unified_to/models/shared/property_crmevent_call.py
-  - src/unified_to/models/shared/crmfile.py
-  - src/unified_to/models/shared/property_crmfile_raw.py
   - src/unified_to/models/shared/crmlead.py
   - src/unified_to/models/shared/property_crmlead_raw.py
   - src/unified_to/models/shared/property_crmlead_address.py
@@ -357,10 +349,6 @@ generatedFiles:
   - src/unified_to/models/shared/uctelephone.py
   - src/unified_to/models/shared/property_uccontact_raw.py
   - src/unified_to/models/shared/ucemail.py
-  - src/unified_to/models/shared/storagefile.py
-  - src/unified_to/models/shared/property_storagefile_raw.py
-  - src/unified_to/models/shared/storagepermission.py
-  - src/unified_to/models/shared/property_storagepermission_roles.py
   - src/unified_to/models/shared/enrichperson.py
   - src/unified_to/models/shared/enrichpersonworkhistory.py
   - src/unified_to/models/shared/property_enrichperson_raw.py
@@ -379,6 +367,10 @@ generatedFiles:
   - src/unified_to/models/shared/property_marketingmember_raw.py
   - src/unified_to/models/shared/marketingemail.py
   - src/unified_to/models/shared/undefined.py
+  - src/unified_to/models/shared/storagefile.py
+  - src/unified_to/models/shared/property_storagefile_raw.py
+  - src/unified_to/models/shared/storagepermission.py
+  - src/unified_to/models/shared/property_storagepermission_roles.py
   - src/unified_to/models/shared/ticketingnote.py
   - src/unified_to/models/shared/property_ticketingnote_raw.py
   - src/unified_to/models/shared/ticketingticket.py
@@ -587,8 +579,6 @@ generatedFiles:
   - docs/models/operations/createcrmdealresponse.md
   - docs/models/operations/createcrmeventrequest.md
   - docs/models/operations/createcrmeventresponse.md
-  - docs/models/operations/createcrmfilerequest.md
-  - docs/models/operations/createcrmfileresponse.md
   - docs/models/operations/createcrmleadrequest.md
   - docs/models/operations/createcrmleadresponse.md
   - docs/models/operations/createcrmpipelinerequest.md
@@ -601,8 +591,6 @@ generatedFiles:
   - docs/models/operations/getcrmdealresponse.md
   - docs/models/operations/getcrmeventrequest.md
   - docs/models/operations/getcrmeventresponse.md
-  - docs/models/operations/getcrmfilerequest.md
-  - docs/models/operations/getcrmfileresponse.md
   - docs/models/operations/getcrmleadrequest.md
   - docs/models/operations/getcrmleadresponse.md
   - docs/models/operations/getcrmpipelinerequest.md
@@ -615,8 +603,6 @@ generatedFiles:
   - docs/models/operations/listcrmdealsresponse.md
   - docs/models/operations/listcrmeventsrequest.md
   - docs/models/operations/listcrmeventsresponse.md
-  - docs/models/operations/listcrmfilesrequest.md
-  - docs/models/operations/listcrmfilesresponse.md
   - docs/models/operations/listcrmleadsrequest.md
   - docs/models/operations/listcrmleadsresponse.md
   - docs/models/operations/listcrmpipelinesrequest.md
@@ -629,8 +615,6 @@ generatedFiles:
   - docs/models/operations/patchcrmdealresponse.md
   - docs/models/operations/patchcrmeventrequest.md
   - docs/models/operations/patchcrmeventresponse.md
-  - docs/models/operations/patchcrmfilerequest.md
-  - docs/models/operations/patchcrmfileresponse.md
   - docs/models/operations/patchcrmleadrequest.md
   - docs/models/operations/patchcrmleadresponse.md
   - docs/models/operations/patchcrmpipelinerequest.md
@@ -643,8 +627,6 @@ generatedFiles:
   - docs/models/operations/removecrmdealresponse.md
   - docs/models/operations/removecrmeventrequest.md
   - docs/models/operations/removecrmeventresponse.md
-  - docs/models/operations/removecrmfilerequest.md
-  - docs/models/operations/removecrmfileresponse.md
   - docs/models/operations/removecrmleadrequest.md
   - docs/models/operations/removecrmleadresponse.md
   - docs/models/operations/removecrmpipelinerequest.md
@@ -657,8 +639,6 @@ generatedFiles:
   - docs/models/operations/updatecrmdealresponse.md
   - docs/models/operations/updatecrmeventrequest.md
   - docs/models/operations/updatecrmeventresponse.md
-  - docs/models/operations/updatecrmfilerequest.md
-  - docs/models/operations/updatecrmfileresponse.md
   - docs/models/operations/updatecrmleadrequest.md
   - docs/models/operations/updatecrmleadresponse.md
   - docs/models/operations/updatecrmpipelinerequest.md
@@ -677,18 +657,6 @@ generatedFiles:
   - docs/models/operations/removeuccontactresponse.md
   - docs/models/operations/updateuccontactrequest.md
   - docs/models/operations/updateuccontactresponse.md
-  - docs/models/operations/createstoragefilerequest.md
-  - docs/models/operations/createstoragefileresponse.md
-  - docs/models/operations/getstoragefilerequest.md
-  - docs/models/operations/getstoragefileresponse.md
-  - docs/models/operations/liststoragefilesrequest.md
-  - docs/models/operations/liststoragefilesresponse.md
-  - docs/models/operations/patchstoragefilerequest.md
-  - docs/models/operations/patchstoragefileresponse.md
-  - docs/models/operations/removestoragefilerequest.md
-  - docs/models/operations/removestoragefileresponse.md
-  - docs/models/operations/updatestoragefilerequest.md
-  - docs/models/operations/updatestoragefileresponse.md
   - docs/models/operations/listenrichpeoplerequest.md
   - docs/models/operations/listenrichpeopleresponse.md
   - docs/models/operations/createhrisemployeerequest.md
@@ -749,6 +717,18 @@ generatedFiles:
   - docs/models/operations/removepassthroughresponse.md
   - docs/models/operations/updatepassthroughrequest.md
   - docs/models/operations/updatepassthroughresponse.md
+  - docs/models/operations/createstoragefilerequest.md
+  - docs/models/operations/createstoragefileresponse.md
+  - docs/models/operations/getstoragefilerequest.md
+  - docs/models/operations/getstoragefileresponse.md
+  - docs/models/operations/liststoragefilesrequest.md
+  - docs/models/operations/liststoragefilesresponse.md
+  - docs/models/operations/patchstoragefilerequest.md
+  - docs/models/operations/patchstoragefileresponse.md
+  - docs/models/operations/removestoragefilerequest.md
+  - docs/models/operations/removestoragefileresponse.md
+  - docs/models/operations/updatestoragefilerequest.md
+  - docs/models/operations/updatestoragefileresponse.md
   - docs/models/operations/createticketingnoterequest.md
   - docs/models/operations/createticketingnoteresponse.md
   - docs/models/operations/createticketingticketrequest.md
@@ -902,8 +882,6 @@ generatedFiles:
   - docs/models/shared/propertycrmeventmeeting.md
   - docs/models/shared/propertycrmeventemail.md
   - docs/models/shared/propertycrmeventcall.md
-  - docs/models/shared/crmfile.md
-  - docs/models/shared/propertycrmfileraw.md
   - docs/models/shared/crmlead.md
   - docs/models/shared/propertycrmleadraw.md
   - docs/models/shared/propertycrmleadaddress.md
@@ -920,11 +898,6 @@ generatedFiles:
   - docs/models/shared/propertyuccontactraw.md
   - docs/models/shared/ucemailtype.md
   - docs/models/shared/ucemail.md
-  - docs/models/shared/storagefiletype.md
-  - docs/models/shared/storagefile.md
-  - docs/models/shared/propertystoragefileraw.md
-  - docs/models/shared/storagepermission.md
-  - docs/models/shared/propertystoragepermissionroles.md
   - docs/models/shared/gender.md
   - docs/models/shared/enrichperson.md
   - docs/models/shared/enrichpersonworkhistory.md
@@ -953,6 +926,11 @@ generatedFiles:
   - docs/models/shared/marketingemailtype.md
   - docs/models/shared/marketingemail.md
   - docs/models/shared/undefined.md
+  - docs/models/shared/storagefiletype.md
+  - docs/models/shared/storagefile.md
+  - docs/models/shared/propertystoragefileraw.md
+  - docs/models/shared/storagepermission.md
+  - docs/models/shared/propertystoragepermissionroles.md
   - docs/models/shared/ticketingnote.md
   - docs/models/shared/propertyticketingnoteraw.md
   - docs/models/shared/ticketingticketstatus.md
@@ -1005,7 +983,6 @@ generatedFiles:
   - docs/sdks/contact/README.md
   - docs/sdks/deal/README.md
   - docs/sdks/event/README.md
-  - docs/sdks/file/README.md
   - docs/sdks/lead/README.md
   - docs/sdks/pipeline/README.md
   - docs/sdks/enrich/README.md
@@ -1018,6 +995,7 @@ generatedFiles:
   - docs/sdks/member/README.md
   - docs/sdks/passthrough/README.md
   - docs/sdks/storage/README.md
+  - docs/sdks/file/README.md
   - docs/sdks/ticketing/README.md
   - docs/sdks/note/README.md
   - docs/sdks/ticket/README.md

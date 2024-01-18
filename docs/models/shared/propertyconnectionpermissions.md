@@ -43,8 +43,6 @@
 | `CRM_EVENT_WRITE`              | crm_event_write                |
 | `CRM_LEAD_READ`                | crm_lead_read                  |
 | `CRM_LEAD_WRITE`               | crm_lead_write                 |
-| `CRM_FILE_READ`                | crm_file_read                  |
-| `CRM_FILE_WRITE`               | crm_file_write                 |
 | `CRM_PIPELINE_READ`            | crm_pipeline_read              |
 | `CRM_PIPELINE_WRITE`           | crm_pipeline_write             |
 | `MARTECH_LIST_READ`            | martech_list_read              |

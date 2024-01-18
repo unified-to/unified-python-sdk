@@ -7,42 +7,36 @@
 * [create_crm_contact](#create_crm_contact) - Create a contact
 * [create_crm_deal](#create_crm_deal) - Create a deal
 * [create_crm_event](#create_crm_event) - Create a event
-* [create_crm_file](#create_crm_file) - Create a file
 * [create_crm_lead](#create_crm_lead) - Create a lead
 * [create_crm_pipeline](#create_crm_pipeline) - Create a pipeline
 * [get_crm_company](#get_crm_company) - Retrieve a company
 * [get_crm_contact](#get_crm_contact) - Retrieve a contact
 * [get_crm_deal](#get_crm_deal) - Retrieve a deal
 * [get_crm_event](#get_crm_event) - Retrieve a event
-* [get_crm_file](#get_crm_file) - Retrieve a file
 * [get_crm_lead](#get_crm_lead) - Retrieve a lead
 * [get_crm_pipeline](#get_crm_pipeline) - Retrieve a pipeline
 * [list_crm_companies](#list_crm_companies) - List all companies
 * [list_crm_contacts](#list_crm_contacts) - List all contacts
 * [list_crm_deals](#list_crm_deals) - List all deals
 * [list_crm_events](#list_crm_events) - List all events
-* [list_crm_files](#list_crm_files) - List all files
 * [list_crm_leads](#list_crm_leads) - List all leads
 * [list_crm_pipelines](#list_crm_pipelines) - List all pipelines
 * [patch_crm_company](#patch_crm_company) - Update a company
 * [patch_crm_contact](#patch_crm_contact) - Update a contact
 * [patch_crm_deal](#patch_crm_deal) - Update a deal
 * [patch_crm_event](#patch_crm_event) - Update a event
-* [patch_crm_file](#patch_crm_file) - Update a file
 * [patch_crm_lead](#patch_crm_lead) - Update a lead
 * [patch_crm_pipeline](#patch_crm_pipeline) - Update a pipeline
 * [remove_crm_company](#remove_crm_company) - Remove a company
 * [remove_crm_contact](#remove_crm_contact) - Remove a contact
 * [remove_crm_deal](#remove_crm_deal) - Remove a deal
 * [remove_crm_event](#remove_crm_event) - Remove a event
-* [remove_crm_file](#remove_crm_file) - Remove a file
 * [remove_crm_lead](#remove_crm_lead) - Remove a lead
 * [remove_crm_pipeline](#remove_crm_pipeline) - Remove a pipeline
 * [update_crm_company](#update_crm_company) - Update a company
 * [update_crm_contact](#update_crm_contact) - Update a contact
 * [update_crm_deal](#update_crm_deal) - Update a deal
 * [update_crm_event](#update_crm_event) - Update a event
-* [update_crm_file](#update_crm_file) - Update a file
 * [update_crm_lead](#update_crm_lead) - Update a lead
 * [update_crm_pipeline](#update_crm_pipeline) - Update a pipeline
 
@@ -294,53 +288,6 @@ if res.crm_event is not None:
 ### Response
 
 **[operations.CreateCrmEventResponse](../../models/operations/createcrmeventresponse.md)**
-### Errors
-
-| Error Object    | Status Code     | Content Type    |
-| --------------- | --------------- | --------------- |
-| errors.SDKError | 4x-5xx          | */*             |
-
-## create_crm_file
-
-Create a file
-
-### Example Usage
-
-```python
-import dateutil.parser
-import unified_to
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
-
-req = operations.CreateCrmFileRequest(
-    crm_file=shared.CrmFile(
-        raw=shared.PropertyCrmFileRaw(),
-    ),
-    connection_id='string',
-)
-
-res = s.crm.create_crm_file(req)
-
-if res.crm_file is not None:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `request`                                                                          | [operations.CreateCrmFileRequest](../../models/operations/createcrmfilerequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
-
-
-### Response
-
-**[operations.CreateCrmFileResponse](../../models/operations/createcrmfileresponse.md)**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
@@ -638,53 +585,6 @@ if res.crm_event is not None:
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4x-5xx          | */*             |
 
-## get_crm_file
-
-Retrieve a file
-
-### Example Usage
-
-```python
-import unified_to
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
-
-req = operations.GetCrmFileRequest(
-    connection_id='string',
-    fields=[
-        'string',
-    ],
-    id='<ID>',
-)
-
-res = s.crm.get_crm_file(req)
-
-if res.crm_file is not None:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                    | Type                                                                         | Required                                                                     | Description                                                                  |
-| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| `request`                                                                    | [operations.GetCrmFileRequest](../../models/operations/getcrmfilerequest.md) | :heavy_check_mark:                                                           | The request object to use for the request.                                   |
-
-
-### Response
-
-**[operations.GetCrmFileResponse](../../models/operations/getcrmfileresponse.md)**
-### Errors
-
-| Error Object    | Status Code     | Content Type    |
-| --------------- | --------------- | --------------- |
-| errors.SDKError | 4x-5xx          | */*             |
-
 ## get_crm_lead
 
 Retrieve a lead
@@ -961,53 +861,6 @@ if res.crm_events is not None:
 ### Response
 
 **[operations.ListCrmEventsResponse](../../models/operations/listcrmeventsresponse.md)**
-### Errors
-
-| Error Object    | Status Code     | Content Type    |
-| --------------- | --------------- | --------------- |
-| errors.SDKError | 4x-5xx          | */*             |
-
-## list_crm_files
-
-List all files
-
-### Example Usage
-
-```python
-import dateutil.parser
-import unified_to
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
-
-req = operations.ListCrmFilesRequest(
-    connection_id='string',
-    fields=[
-        'string',
-    ],
-)
-
-res = s.crm.list_crm_files(req)
-
-if res.crm_files is not None:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `request`                                                                        | [operations.ListCrmFilesRequest](../../models/operations/listcrmfilesrequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
-
-
-### Response
-
-**[operations.ListCrmFilesResponse](../../models/operations/listcrmfilesresponse.md)**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
@@ -1366,54 +1219,6 @@ if res.crm_event is not None:
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4x-5xx          | */*             |
 
-## patch_crm_file
-
-Update a file
-
-### Example Usage
-
-```python
-import dateutil.parser
-import unified_to
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
-
-req = operations.PatchCrmFileRequest(
-    crm_file=shared.CrmFile(
-        raw=shared.PropertyCrmFileRaw(),
-    ),
-    connection_id='string',
-    id='<ID>',
-)
-
-res = s.crm.patch_crm_file(req)
-
-if res.crm_file is not None:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `request`                                                                        | [operations.PatchCrmFileRequest](../../models/operations/patchcrmfilerequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
-
-
-### Response
-
-**[operations.PatchCrmFileResponse](../../models/operations/patchcrmfileresponse.md)**
-### Errors
-
-| Error Object    | Status Code     | Content Type    |
-| --------------- | --------------- | --------------- |
-| errors.SDKError | 4x-5xx          | */*             |
-
 ## patch_crm_lead
 
 Update a lead
@@ -1689,50 +1494,6 @@ if res.status_code == 200:
 ### Response
 
 **[operations.RemoveCrmEventResponse](../../models/operations/removecrmeventresponse.md)**
-### Errors
-
-| Error Object    | Status Code     | Content Type    |
-| --------------- | --------------- | --------------- |
-| errors.SDKError | 4x-5xx          | */*             |
-
-## remove_crm_file
-
-Remove a file
-
-### Example Usage
-
-```python
-import unified_to
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
-
-req = operations.RemoveCrmFileRequest(
-    connection_id='string',
-    id='<ID>',
-)
-
-res = s.crm.remove_crm_file(req)
-
-if res.status_code == 200:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `request`                                                                          | [operations.RemoveCrmFileRequest](../../models/operations/removecrmfilerequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
-
-
-### Response
-
-**[operations.RemoveCrmFileResponse](../../models/operations/removecrmfileresponse.md)**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
@@ -2079,54 +1840,6 @@ if res.crm_event is not None:
 ### Response
 
 **[operations.UpdateCrmEventResponse](../../models/operations/updatecrmeventresponse.md)**
-### Errors
-
-| Error Object    | Status Code     | Content Type    |
-| --------------- | --------------- | --------------- |
-| errors.SDKError | 4x-5xx          | */*             |
-
-## update_crm_file
-
-Update a file
-
-### Example Usage
-
-```python
-import dateutil.parser
-import unified_to
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
-
-req = operations.UpdateCrmFileRequest(
-    crm_file=shared.CrmFile(
-        raw=shared.PropertyCrmFileRaw(),
-    ),
-    connection_id='string',
-    id='<ID>',
-)
-
-res = s.crm.update_crm_file(req)
-
-if res.crm_file is not None:
-    # handle response
-    pass
-```
-
-### Parameters
-
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `request`                                                                          | [operations.UpdateCrmFileRequest](../../models/operations/updatecrmfilerequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
-
-
-### Response
-
-**[operations.UpdateCrmFileResponse](../../models/operations/updatecrmfileresponse.md)**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |

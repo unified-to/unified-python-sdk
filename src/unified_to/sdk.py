@@ -77,7 +77,6 @@ class UnifiedTo:
     contact: Contact
     deal: Deal
     event: Event
-    file: File
     lead: Lead
     pipeline: Pipeline
     enrich: Enrich
@@ -90,6 +89,7 @@ class UnifiedTo:
     member: Member
     passthrough: Passthrough
     storage: Storage
+    file: File
     ticketing: Ticketing
     note: Note
     ticket: Ticket
@@ -162,7 +162,6 @@ class UnifiedTo:
         self.contact = Contact(self.sdk_configuration)
         self.deal = Deal(self.sdk_configuration)
         self.event = Event(self.sdk_configuration)
-        self.file = File(self.sdk_configuration)
         self.lead = Lead(self.sdk_configuration)
         self.pipeline = Pipeline(self.sdk_configuration)
         self.enrich = Enrich(self.sdk_configuration)
@@ -175,6 +174,7 @@ class UnifiedTo:
         self.member = Member(self.sdk_configuration)
         self.passthrough = Passthrough(self.sdk_configuration)
         self.storage = Storage(self.sdk_configuration)
+        self.file = File(self.sdk_configuration)
         self.ticketing = Ticketing(self.sdk_configuration)
         self.note = Note(self.sdk_configuration)
         self.ticket = Ticket(self.sdk_configuration)
