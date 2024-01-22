@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: 87ac93817bed9842e1b2eb20030d9710
+  docChecksum: 7d5b03724fae01f8b6071020b3d073d9
   docVersion: "1.0"
   speakeasyVersion: internal
-  generationVersion: 2.237.2
-  releaseVersion: 0.14.28
-  configChecksum: 68c3f4747114900f20aac8a9b991f8e7
+  generationVersion: 2.237.3
+  releaseVersion: 0.14.29
+  configChecksum: a30ff8ad352e60d67c17c18131359a84
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -818,7 +818,6 @@ generatedFiles:
   - docs/models/shared/propertyaccountingpaymentraw.md
   - docs/models/shared/accountingtaxrate.md
   - docs/models/shared/propertyaccountingtaxrateraw.md
-  - docs/models/shared/accountingtransactiontype.md
   - docs/models/shared/accountingtransaction.md
   - docs/models/shared/propertyaccountingtransactionraw.md
   - docs/models/shared/accountingtransactionlineitem.md

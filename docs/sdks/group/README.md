@@ -29,13 +29,13 @@ s = unified_to.UnifiedTo(
 
 req = operations.CreateHrisGroupRequest(
     hris_group=shared.HrisGroup(
-        employee_ids=[
-            'string',
-        ],
         manager_ids=[
             'string',
         ],
         raw=shared.PropertyHrisGroupRaw(),
+        user_ids=[
+            'string',
+        ],
     ),
     connection_id='string',
 )
@@ -176,13 +176,13 @@ s = unified_to.UnifiedTo(
 
 req = operations.PatchHrisGroupRequest(
     hris_group=shared.HrisGroup(
-        employee_ids=[
-            'string',
-        ],
         manager_ids=[
             'string',
         ],
         raw=shared.PropertyHrisGroupRaw(),
+        user_ids=[
+            'string',
+        ],
     ),
     connection_id='string',
     id='<ID>',
@@ -274,13 +274,13 @@ s = unified_to.UnifiedTo(
 
 req = operations.UpdateHrisGroupRequest(
     hris_group=shared.HrisGroup(
-        employee_ids=[
-            'string',
-        ],
         manager_ids=[
             'string',
         ],
         raw=shared.PropertyHrisGroupRaw(),
+        user_ids=[
+            'string',
+        ],
     ),
     connection_id='string',
     id='<ID>',

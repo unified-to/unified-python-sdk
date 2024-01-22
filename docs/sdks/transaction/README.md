@@ -28,16 +28,14 @@ s = unified_to.UnifiedTo(
 
 req = operations.CreateAccountingTransactionRequest(
     accounting_transaction=shared.AccountingTransaction(
-        account_id='string',
         id='<ID>',
         line_items=[
             shared.AccountingTransactionLineitem(
+                account_id='string',
                 total_amount=4969.62,
             ),
         ],
         raw=shared.PropertyAccountingTransactionRaw(),
-        total_amount=6267.93,
-        type=shared.AccountingTransactionType.SPEND,
     ),
     connection_id='string',
 )
@@ -177,16 +175,14 @@ s = unified_to.UnifiedTo(
 
 req = operations.PatchAccountingTransactionRequest(
     accounting_transaction=shared.AccountingTransaction(
-        account_id='string',
         id='<ID>',
         line_items=[
             shared.AccountingTransactionLineitem(
+                account_id='string',
                 total_amount=5633.69,
             ),
         ],
         raw=shared.PropertyAccountingTransactionRaw(),
-        total_amount=4558.63,
-        type=shared.AccountingTransactionType.SPEND,
     ),
     connection_id='string',
     id='<ID>',
@@ -277,16 +273,14 @@ s = unified_to.UnifiedTo(
 
 req = operations.UpdateAccountingTransactionRequest(
     accounting_transaction=shared.AccountingTransaction(
-        account_id='string',
         id='<ID>',
         line_items=[
             shared.AccountingTransactionLineitem(
+                account_id='string',
                 total_amount=6498.37,
             ),
         ],
         raw=shared.PropertyAccountingTransactionRaw(),
-        total_amount=5659.17,
-        type=shared.AccountingTransactionType.SPEND,
     ),
     connection_id='string',
     id='<ID>',
