@@ -12,8 +12,8 @@
 | `ACCOUNTING_TRANSACTION_WRITE` | accounting_transaction_write   |
 | `ACCOUNTING_INVOICE_READ`      | accounting_invoice_read        |
 | `ACCOUNTING_INVOICE_WRITE`     | accounting_invoice_write       |
-| `ACCOUNTING_CUSTOMER_READ`     | accounting_customer_read       |
-| `ACCOUNTING_CUSTOMER_WRITE`    | accounting_customer_write      |
+| `ACCOUNTING_CONTACT_READ`      | accounting_contact_read        |
+| `ACCOUNTING_CONTACT_WRITE`     | accounting_contact_write       |
 | `ACCOUNTING_PAYMENT_READ`      | accounting_payment_read        |
 | `ACCOUNTING_PAYMENT_WRITE`     | accounting_payment_write       |
 | `ACCOUNTING_TAXRATE_READ`      | accounting_taxrate_read        |

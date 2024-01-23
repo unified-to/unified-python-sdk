@@ -48,13 +48,13 @@ class Accounting:
 
     
     
-    def create_accounting_customer(self, request: operations.CreateAccountingCustomerRequest) -> operations.CreateAccountingCustomerResponse:
-        r"""Create a customer"""
+    def create_accounting_contact(self, request: operations.CreateAccountingContactRequest) -> operations.CreateAccountingContactResponse:
+        r"""Create a contact"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.CreateAccountingCustomerRequest, base_url, '/accounting/{connection_id}/customer', request)
+        url = utils.generate_url(operations.CreateAccountingContactRequest, base_url, '/accounting/{connection_id}/contact', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, operations.CreateAccountingCustomerRequest, "accounting_customer", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.CreateAccountingContactRequest, "accounting_contact", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
@@ -68,12 +68,12 @@ class Accounting:
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
         
-        res = operations.CreateAccountingCustomerResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        res = operations.CreateAccountingContactResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[shared.AccountingCustomer])
-                res.accounting_customer = out
+                out = utils.unmarshal_json(http_res.text, Optional[shared.AccountingContact])
+                res.accounting_contact = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
         elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
@@ -291,13 +291,13 @@ class Accounting:
 
     
     
-    def get_accounting_customer(self, request: operations.GetAccountingCustomerRequest) -> operations.GetAccountingCustomerResponse:
-        r"""Retrieve a customer"""
+    def get_accounting_contact(self, request: operations.GetAccountingContactRequest) -> operations.GetAccountingContactResponse:
+        r"""Retrieve a contact"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.GetAccountingCustomerRequest, base_url, '/accounting/{connection_id}/customer/{id}', request)
+        url = utils.generate_url(operations.GetAccountingContactRequest, base_url, '/accounting/{connection_id}/contact/{id}', request)
         headers = {}
-        query_params = utils.get_query_params(operations.GetAccountingCustomerRequest, request)
+        query_params = utils.get_query_params(operations.GetAccountingContactRequest, request)
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
@@ -309,12 +309,12 @@ class Accounting:
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
         
-        res = operations.GetAccountingCustomerResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        res = operations.GetAccountingContactResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[shared.AccountingCustomer])
-                res.accounting_customer = out
+                out = utils.unmarshal_json(http_res.text, Optional[shared.AccountingContact])
+                res.accounting_contact = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
         elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
@@ -555,13 +555,13 @@ class Accounting:
 
     
     
-    def list_accounting_customers(self, request: operations.ListAccountingCustomersRequest) -> operations.ListAccountingCustomersResponse:
-        r"""List all customers"""
+    def list_accounting_contacts(self, request: operations.ListAccountingContactsRequest) -> operations.ListAccountingContactsResponse:
+        r"""List all contacts"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.ListAccountingCustomersRequest, base_url, '/accounting/{connection_id}/customer', request)
+        url = utils.generate_url(operations.ListAccountingContactsRequest, base_url, '/accounting/{connection_id}/contact', request)
         headers = {}
-        query_params = utils.get_query_params(operations.ListAccountingCustomersRequest, request)
+        query_params = utils.get_query_params(operations.ListAccountingContactsRequest, request)
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
@@ -573,12 +573,12 @@ class Accounting:
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
         
-        res = operations.ListAccountingCustomersResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        res = operations.ListAccountingContactsResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[List[shared.AccountingCustomer]])
-                res.accounting_customers = out
+                out = utils.unmarshal_json(http_res.text, Optional[List[shared.AccountingContact]])
+                res.accounting_contacts = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
         elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
@@ -821,13 +821,13 @@ class Accounting:
 
     
     
-    def patch_accounting_customer(self, request: operations.PatchAccountingCustomerRequest) -> operations.PatchAccountingCustomerResponse:
-        r"""Update a customer"""
+    def patch_accounting_contact(self, request: operations.PatchAccountingContactRequest) -> operations.PatchAccountingContactResponse:
+        r"""Update a contact"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.PatchAccountingCustomerRequest, base_url, '/accounting/{connection_id}/customer/{id}', request)
+        url = utils.generate_url(operations.PatchAccountingContactRequest, base_url, '/accounting/{connection_id}/contact/{id}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, operations.PatchAccountingCustomerRequest, "accounting_customer", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.PatchAccountingContactRequest, "accounting_contact", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
@@ -841,12 +841,12 @@ class Accounting:
         http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
         
-        res = operations.PatchAccountingCustomerResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        res = operations.PatchAccountingContactResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[shared.AccountingCustomer])
-                res.accounting_customer = out
+                out = utils.unmarshal_json(http_res.text, Optional[shared.AccountingContact])
+                res.accounting_contact = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
         elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
@@ -1062,11 +1062,11 @@ class Accounting:
 
     
     
-    def remove_accounting_customer(self, request: operations.RemoveAccountingCustomerRequest) -> operations.RemoveAccountingCustomerResponse:
-        r"""Remove a customer"""
+    def remove_accounting_contact(self, request: operations.RemoveAccountingContactRequest) -> operations.RemoveAccountingContactResponse:
+        r"""Remove a contact"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.RemoveAccountingCustomerRequest, base_url, '/accounting/{connection_id}/customer/{id}', request)
+        url = utils.generate_url(operations.RemoveAccountingContactRequest, base_url, '/accounting/{connection_id}/contact/{id}', request)
         headers = {}
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
@@ -1079,7 +1079,7 @@ class Accounting:
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
         
-        res = operations.RemoveAccountingCustomerResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        res = operations.RemoveAccountingContactResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
             raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
@@ -1283,13 +1283,13 @@ class Accounting:
 
     
     
-    def update_accounting_customer(self, request: operations.UpdateAccountingCustomerRequest) -> operations.UpdateAccountingCustomerResponse:
-        r"""Update a customer"""
+    def update_accounting_contact(self, request: operations.UpdateAccountingContactRequest) -> operations.UpdateAccountingContactResponse:
+        r"""Update a contact"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.UpdateAccountingCustomerRequest, base_url, '/accounting/{connection_id}/customer/{id}', request)
+        url = utils.generate_url(operations.UpdateAccountingContactRequest, base_url, '/accounting/{connection_id}/contact/{id}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, operations.UpdateAccountingCustomerRequest, "accounting_customer", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.UpdateAccountingContactRequest, "accounting_contact", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
@@ -1303,12 +1303,12 @@ class Accounting:
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
         
-        res = operations.UpdateAccountingCustomerResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        res = operations.UpdateAccountingContactResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[shared.AccountingCustomer])
-                res.accounting_customer = out
+                out = utils.unmarshal_json(http_res.text, Optional[shared.AccountingContact])
+                res.accounting_contact = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
         elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:

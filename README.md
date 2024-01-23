@@ -52,14 +52,14 @@ if res.accounting_account is not None:
 ### [accounting](docs/sdks/accounting/README.md)
 
 * [create_accounting_account](docs/sdks/accounting/README.md#create_accounting_account) - Create an account
-* [create_accounting_customer](docs/sdks/accounting/README.md#create_accounting_customer) - Create a customer
+* [create_accounting_contact](docs/sdks/accounting/README.md#create_accounting_contact) - Create a contact
 * [create_accounting_invoice](docs/sdks/accounting/README.md#create_accounting_invoice) - Create a invoice
 * [create_accounting_item](docs/sdks/accounting/README.md#create_accounting_item) - Create an item
 * [create_accounting_payment](docs/sdks/accounting/README.md#create_accounting_payment) - Create a payment
 * [create_accounting_taxrate](docs/sdks/accounting/README.md#create_accounting_taxrate) - Create a taxrate
 * [create_accounting_transaction](docs/sdks/accounting/README.md#create_accounting_transaction) - Create a transaction
 * [get_accounting_account](docs/sdks/accounting/README.md#get_accounting_account) - Retrieve an account
-* [get_accounting_customer](docs/sdks/accounting/README.md#get_accounting_customer) - Retrieve a customer
+* [get_accounting_contact](docs/sdks/accounting/README.md#get_accounting_contact) - Retrieve a contact
 * [get_accounting_invoice](docs/sdks/accounting/README.md#get_accounting_invoice) - Retrieve a invoice
 * [get_accounting_item](docs/sdks/accounting/README.md#get_accounting_item) - Retrieve an item
 * [get_accounting_organization](docs/sdks/accounting/README.md#get_accounting_organization) - Retrieve an organization
@@ -67,7 +67,7 @@ if res.accounting_account is not None:
 * [get_accounting_taxrate](docs/sdks/accounting/README.md#get_accounting_taxrate) - Retrieve a taxrate
 * [get_accounting_transaction](docs/sdks/accounting/README.md#get_accounting_transaction) - Retrieve a transaction
 * [list_accounting_accounts](docs/sdks/accounting/README.md#list_accounting_accounts) - List all accounts
-* [list_accounting_customers](docs/sdks/accounting/README.md#list_accounting_customers) - List all customers
+* [list_accounting_contacts](docs/sdks/accounting/README.md#list_accounting_contacts) - List all contacts
 * [list_accounting_invoices](docs/sdks/accounting/README.md#list_accounting_invoices) - List all invoices
 * [list_accounting_items](docs/sdks/accounting/README.md#list_accounting_items) - List all items
 * [list_accounting_organizations](docs/sdks/accounting/README.md#list_accounting_organizations) - List all organizations
@@ -75,21 +75,21 @@ if res.accounting_account is not None:
 * [list_accounting_taxrates](docs/sdks/accounting/README.md#list_accounting_taxrates) - List all taxrates
 * [list_accounting_transactions](docs/sdks/accounting/README.md#list_accounting_transactions) - List all transactions
 * [patch_accounting_account](docs/sdks/accounting/README.md#patch_accounting_account) - Update an account
-* [patch_accounting_customer](docs/sdks/accounting/README.md#patch_accounting_customer) - Update a customer
+* [patch_accounting_contact](docs/sdks/accounting/README.md#patch_accounting_contact) - Update a contact
 * [patch_accounting_invoice](docs/sdks/accounting/README.md#patch_accounting_invoice) - Update a invoice
 * [patch_accounting_item](docs/sdks/accounting/README.md#patch_accounting_item) - Update an item
 * [patch_accounting_payment](docs/sdks/accounting/README.md#patch_accounting_payment) - Update a payment
 * [patch_accounting_taxrate](docs/sdks/accounting/README.md#patch_accounting_taxrate) - Update a taxrate
 * [patch_accounting_transaction](docs/sdks/accounting/README.md#patch_accounting_transaction) - Update a transaction
 * [remove_accounting_account](docs/sdks/accounting/README.md#remove_accounting_account) - Remove an account
-* [remove_accounting_customer](docs/sdks/accounting/README.md#remove_accounting_customer) - Remove a customer
+* [remove_accounting_contact](docs/sdks/accounting/README.md#remove_accounting_contact) - Remove a contact
 * [remove_accounting_invoice](docs/sdks/accounting/README.md#remove_accounting_invoice) - Remove a invoice
 * [remove_accounting_item](docs/sdks/accounting/README.md#remove_accounting_item) - Remove an item
 * [remove_accounting_payment](docs/sdks/accounting/README.md#remove_accounting_payment) - Remove a payment
 * [remove_accounting_taxrate](docs/sdks/accounting/README.md#remove_accounting_taxrate) - Remove a taxrate
 * [remove_accounting_transaction](docs/sdks/accounting/README.md#remove_accounting_transaction) - Remove a transaction
 * [update_accounting_account](docs/sdks/accounting/README.md#update_accounting_account) - Update an account
-* [update_accounting_customer](docs/sdks/accounting/README.md#update_accounting_customer) - Update a customer
+* [update_accounting_contact](docs/sdks/accounting/README.md#update_accounting_contact) - Update a contact
 * [update_accounting_invoice](docs/sdks/accounting/README.md#update_accounting_invoice) - Update a invoice
 * [update_accounting_item](docs/sdks/accounting/README.md#update_accounting_item) - Update an item
 * [update_accounting_payment](docs/sdks/accounting/README.md#update_accounting_payment) - Update a payment
@@ -105,20 +105,26 @@ if res.accounting_account is not None:
 * [remove_accounting_account](docs/sdks/account/README.md#remove_accounting_account) - Remove an account
 * [update_accounting_account](docs/sdks/account/README.md#update_accounting_account) - Update an account
 
-### [customer](docs/sdks/customer/README.md)
+### [contact](docs/sdks/contact/README.md)
 
-* [create_accounting_customer](docs/sdks/customer/README.md#create_accounting_customer) - Create a customer
-* [create_ticketing_customer](docs/sdks/customer/README.md#create_ticketing_customer) - Create a customer
-* [get_accounting_customer](docs/sdks/customer/README.md#get_accounting_customer) - Retrieve a customer
-* [get_ticketing_customer](docs/sdks/customer/README.md#get_ticketing_customer) - Retrieve a customer
-* [list_accounting_customers](docs/sdks/customer/README.md#list_accounting_customers) - List all customers
-* [list_ticketing_customers](docs/sdks/customer/README.md#list_ticketing_customers) - List all customers
-* [patch_accounting_customer](docs/sdks/customer/README.md#patch_accounting_customer) - Update a customer
-* [patch_ticketing_customer](docs/sdks/customer/README.md#patch_ticketing_customer) - Update a customer
-* [remove_accounting_customer](docs/sdks/customer/README.md#remove_accounting_customer) - Remove a customer
-* [remove_ticketing_customer](docs/sdks/customer/README.md#remove_ticketing_customer) - Remove a customer
-* [update_accounting_customer](docs/sdks/customer/README.md#update_accounting_customer) - Update a customer
-* [update_ticketing_customer](docs/sdks/customer/README.md#update_ticketing_customer) - Update a customer
+* [create_accounting_contact](docs/sdks/contact/README.md#create_accounting_contact) - Create a contact
+* [create_crm_contact](docs/sdks/contact/README.md#create_crm_contact) - Create a contact
+* [create_uc_contact](docs/sdks/contact/README.md#create_uc_contact) - Create a contact
+* [get_accounting_contact](docs/sdks/contact/README.md#get_accounting_contact) - Retrieve a contact
+* [get_crm_contact](docs/sdks/contact/README.md#get_crm_contact) - Retrieve a contact
+* [get_uc_contact](docs/sdks/contact/README.md#get_uc_contact) - Retrieve a contact
+* [list_accounting_contacts](docs/sdks/contact/README.md#list_accounting_contacts) - List all contacts
+* [list_crm_contacts](docs/sdks/contact/README.md#list_crm_contacts) - List all contacts
+* [list_uc_contacts](docs/sdks/contact/README.md#list_uc_contacts) - List all contacts
+* [patch_accounting_contact](docs/sdks/contact/README.md#patch_accounting_contact) - Update a contact
+* [patch_crm_contact](docs/sdks/contact/README.md#patch_crm_contact) - Update a contact
+* [patch_uc_contact](docs/sdks/contact/README.md#patch_uc_contact) - Update a contact
+* [remove_accounting_contact](docs/sdks/contact/README.md#remove_accounting_contact) - Remove a contact
+* [remove_crm_contact](docs/sdks/contact/README.md#remove_crm_contact) - Remove a contact
+* [remove_uc_contact](docs/sdks/contact/README.md#remove_uc_contact) - Remove a contact
+* [update_accounting_contact](docs/sdks/contact/README.md#update_accounting_contact) - Update a contact
+* [update_crm_contact](docs/sdks/contact/README.md#update_crm_contact) - Update a contact
+* [update_uc_contact](docs/sdks/contact/README.md#update_uc_contact) - Update a contact
 
 ### [invoice](docs/sdks/invoice/README.md)
 
@@ -317,21 +323,6 @@ if res.accounting_account is not None:
 * [remove_crm_company](docs/sdks/company/README.md#remove_crm_company) - Remove a company
 * [update_crm_company](docs/sdks/company/README.md#update_crm_company) - Update a company
 
-### [contact](docs/sdks/contact/README.md)
-
-* [create_crm_contact](docs/sdks/contact/README.md#create_crm_contact) - Create a contact
-* [create_uc_contact](docs/sdks/contact/README.md#create_uc_contact) - Create a contact
-* [get_crm_contact](docs/sdks/contact/README.md#get_crm_contact) - Retrieve a contact
-* [get_uc_contact](docs/sdks/contact/README.md#get_uc_contact) - Retrieve a contact
-* [list_crm_contacts](docs/sdks/contact/README.md#list_crm_contacts) - List all contacts
-* [list_uc_contacts](docs/sdks/contact/README.md#list_uc_contacts) - List all contacts
-* [patch_crm_contact](docs/sdks/contact/README.md#patch_crm_contact) - Update a contact
-* [patch_uc_contact](docs/sdks/contact/README.md#patch_uc_contact) - Update a contact
-* [remove_crm_contact](docs/sdks/contact/README.md#remove_crm_contact) - Remove a contact
-* [remove_uc_contact](docs/sdks/contact/README.md#remove_uc_contact) - Remove a contact
-* [update_crm_contact](docs/sdks/contact/README.md#update_crm_contact) - Update a contact
-* [update_uc_contact](docs/sdks/contact/README.md#update_uc_contact) - Update a contact
-
 ### [deal](docs/sdks/deal/README.md)
 
 * [create_crm_deal](docs/sdks/deal/README.md#create_crm_deal) - Create a deal
@@ -489,6 +480,15 @@ if res.accounting_account is not None:
 * [update_ticketing_customer](docs/sdks/ticketing/README.md#update_ticketing_customer) - Update a customer
 * [update_ticketing_note](docs/sdks/ticketing/README.md#update_ticketing_note) - Update a note
 * [update_ticketing_ticket](docs/sdks/ticketing/README.md#update_ticketing_ticket) - Update a ticket
+
+### [customer](docs/sdks/customer/README.md)
+
+* [create_ticketing_customer](docs/sdks/customer/README.md#create_ticketing_customer) - Create a customer
+* [get_ticketing_customer](docs/sdks/customer/README.md#get_ticketing_customer) - Retrieve a customer
+* [list_ticketing_customers](docs/sdks/customer/README.md#list_ticketing_customers) - List all customers
+* [patch_ticketing_customer](docs/sdks/customer/README.md#patch_ticketing_customer) - Update a customer
+* [remove_ticketing_customer](docs/sdks/customer/README.md#remove_ticketing_customer) - Remove a customer
+* [update_ticketing_customer](docs/sdks/customer/README.md#update_ticketing_customer) - Update a customer
 
 ### [note](docs/sdks/note/README.md)
 

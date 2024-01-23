@@ -3,18 +3,83 @@
 
 ### Available Operations
 
+* [create_accounting_contact](#create_accounting_contact) - Create a contact
 * [create_crm_contact](#create_crm_contact) - Create a contact
 * [create_uc_contact](#create_uc_contact) - Create a contact
+* [get_accounting_contact](#get_accounting_contact) - Retrieve a contact
 * [get_crm_contact](#get_crm_contact) - Retrieve a contact
 * [get_uc_contact](#get_uc_contact) - Retrieve a contact
+* [list_accounting_contacts](#list_accounting_contacts) - List all contacts
 * [list_crm_contacts](#list_crm_contacts) - List all contacts
 * [list_uc_contacts](#list_uc_contacts) - List all contacts
+* [patch_accounting_contact](#patch_accounting_contact) - Update a contact
 * [patch_crm_contact](#patch_crm_contact) - Update a contact
 * [patch_uc_contact](#patch_uc_contact) - Update a contact
+* [remove_accounting_contact](#remove_accounting_contact) - Remove a contact
 * [remove_crm_contact](#remove_crm_contact) - Remove a contact
 * [remove_uc_contact](#remove_uc_contact) - Remove a contact
+* [update_accounting_contact](#update_accounting_contact) - Update a contact
 * [update_crm_contact](#update_crm_contact) - Update a contact
 * [update_uc_contact](#update_uc_contact) - Update a contact
+
+## create_accounting_contact
+
+Create a contact
+
+### Example Usage
+
+```python
+import dateutil.parser
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
+
+req = operations.CreateAccountingContactRequest(
+    accounting_contact=shared.AccountingContact(
+        billing_address=shared.PropertyAccountingContactBillingAddress(),
+        emails=[
+            shared.AccountingEmail(
+                email='Mac36@gmail.com',
+            ),
+        ],
+        raw=shared.PropertyAccountingContactRaw(),
+        shipping_address=shared.PropertyAccountingContactShippingAddress(),
+        telephones=[
+            shared.AccountingTelephone(
+                telephone='string',
+            ),
+        ],
+    ),
+    connection_id='string',
+)
+
+res = s.contact.create_accounting_contact(req)
+
+if res.accounting_contact is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                              | [operations.CreateAccountingContactRequest](../../models/operations/createaccountingcontactrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+
+
+### Response
+
+**[operations.CreateAccountingContactResponse](../../models/operations/createaccountingcontactresponse.md)**
+### Errors
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## create_crm_contact
 
@@ -135,6 +200,53 @@ if res.uc_contact is not None:
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4x-5xx          | */*             |
 
+## get_accounting_contact
+
+Retrieve a contact
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
+
+req = operations.GetAccountingContactRequest(
+    connection_id='string',
+    fields=[
+        'string',
+    ],
+    id='<ID>',
+)
+
+res = s.contact.get_accounting_contact(req)
+
+if res.accounting_contact is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `request`                                                                                        | [operations.GetAccountingContactRequest](../../models/operations/getaccountingcontactrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+
+
+### Response
+
+**[operations.GetAccountingContactResponse](../../models/operations/getaccountingcontactresponse.md)**
+### Errors
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
+
 ## get_crm_contact
 
 Retrieve a contact
@@ -229,6 +341,53 @@ if res.uc_contact is not None:
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4x-5xx          | */*             |
 
+## list_accounting_contacts
+
+List all contacts
+
+### Example Usage
+
+```python
+import dateutil.parser
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
+
+req = operations.ListAccountingContactsRequest(
+    connection_id='string',
+    fields=[
+        'string',
+    ],
+)
+
+res = s.contact.list_accounting_contacts(req)
+
+if res.accounting_contacts is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `request`                                                                                            | [operations.ListAccountingContactsRequest](../../models/operations/listaccountingcontactsrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+
+
+### Response
+
+**[operations.ListAccountingContactsResponse](../../models/operations/listaccountingcontactsresponse.md)**
+### Errors
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
+
 ## list_crm_contacts
 
 List all contacts
@@ -317,6 +476,66 @@ if res.uc_contacts is not None:
 ### Response
 
 **[operations.ListUcContactsResponse](../../models/operations/listuccontactsresponse.md)**
+### Errors
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
+
+## patch_accounting_contact
+
+Update a contact
+
+### Example Usage
+
+```python
+import dateutil.parser
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
+
+req = operations.PatchAccountingContactRequest(
+    accounting_contact=shared.AccountingContact(
+        billing_address=shared.PropertyAccountingContactBillingAddress(),
+        emails=[
+            shared.AccountingEmail(
+                email='Sylvester.Kuhic@yahoo.com',
+            ),
+        ],
+        raw=shared.PropertyAccountingContactRaw(),
+        shipping_address=shared.PropertyAccountingContactShippingAddress(),
+        telephones=[
+            shared.AccountingTelephone(
+                telephone='string',
+            ),
+        ],
+    ),
+    connection_id='string',
+    id='<ID>',
+)
+
+res = s.contact.patch_accounting_contact(req)
+
+if res.accounting_contact is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `request`                                                                                            | [operations.PatchAccountingContactRequest](../../models/operations/patchaccountingcontactrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+
+
+### Response
+
+**[operations.PatchAccountingContactResponse](../../models/operations/patchaccountingcontactresponse.md)**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
@@ -444,6 +663,50 @@ if res.uc_contact is not None:
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4x-5xx          | */*             |
 
+## remove_accounting_contact
+
+Remove a contact
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
+
+req = operations.RemoveAccountingContactRequest(
+    connection_id='string',
+    id='<ID>',
+)
+
+res = s.contact.remove_accounting_contact(req)
+
+if res.status_code == 200:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                              | [operations.RemoveAccountingContactRequest](../../models/operations/removeaccountingcontactrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+
+
+### Response
+
+**[operations.RemoveAccountingContactResponse](../../models/operations/removeaccountingcontactresponse.md)**
+### Errors
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
+
 ## remove_crm_contact
 
 Remove a contact
@@ -526,6 +789,66 @@ if res.status_code == 200:
 ### Response
 
 **[operations.RemoveUcContactResponse](../../models/operations/removeuccontactresponse.md)**
+### Errors
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
+
+## update_accounting_contact
+
+Update a contact
+
+### Example Usage
+
+```python
+import dateutil.parser
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
+
+req = operations.UpdateAccountingContactRequest(
+    accounting_contact=shared.AccountingContact(
+        billing_address=shared.PropertyAccountingContactBillingAddress(),
+        emails=[
+            shared.AccountingEmail(
+                email='Kaci_Hane@hotmail.com',
+            ),
+        ],
+        raw=shared.PropertyAccountingContactRaw(),
+        shipping_address=shared.PropertyAccountingContactShippingAddress(),
+        telephones=[
+            shared.AccountingTelephone(
+                telephone='string',
+            ),
+        ],
+    ),
+    connection_id='string',
+    id='<ID>',
+)
+
+res = s.contact.update_accounting_contact(req)
+
+if res.accounting_contact is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                              | [operations.UpdateAccountingContactRequest](../../models/operations/updateaccountingcontactrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+
+
+### Response
+
+**[operations.UpdateAccountingContactResponse](../../models/operations/updateaccountingcontactresponse.md)**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |

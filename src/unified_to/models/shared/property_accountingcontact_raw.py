@@ -5,5 +5,5 @@ import dataclasses
 
 
 @dataclasses.dataclass
-class PropertyAccountingCustomerRaw:
+class PropertyAccountingContactRaw:
     pass

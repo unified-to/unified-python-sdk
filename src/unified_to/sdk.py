@@ -57,7 +57,7 @@ class UnifiedTo:
     r"""Unified.to API: One API to Rule Them All"""
     accounting: Accounting
     account: Account
-    customer: Customer
+    contact: Contact
     invoice: Invoice
     item: Item
     organization: Organization
@@ -74,7 +74,6 @@ class UnifiedTo:
     scorecard: Scorecard
     crm: Crm
     company: Company
-    contact: Contact
     deal: Deal
     event: Event
     lead: Lead
@@ -91,6 +90,7 @@ class UnifiedTo:
     storage: Storage
     file: File
     ticketing: Ticketing
+    customer: Customer
     note: Note
     ticket: Ticket
     uc: Uc
@@ -142,7 +142,7 @@ class UnifiedTo:
     def _init_sdks(self):
         self.accounting = Accounting(self.sdk_configuration)
         self.account = Account(self.sdk_configuration)
-        self.customer = Customer(self.sdk_configuration)
+        self.contact = Contact(self.sdk_configuration)
         self.invoice = Invoice(self.sdk_configuration)
         self.item = Item(self.sdk_configuration)
         self.organization = Organization(self.sdk_configuration)
@@ -159,7 +159,6 @@ class UnifiedTo:
         self.scorecard = Scorecard(self.sdk_configuration)
         self.crm = Crm(self.sdk_configuration)
         self.company = Company(self.sdk_configuration)
-        self.contact = Contact(self.sdk_configuration)
         self.deal = Deal(self.sdk_configuration)
         self.event = Event(self.sdk_configuration)
         self.lead = Lead(self.sdk_configuration)
@@ -176,6 +175,7 @@ class UnifiedTo:
         self.storage = Storage(self.sdk_configuration)
         self.file = File(self.sdk_configuration)
         self.ticketing = Ticketing(self.sdk_configuration)
+        self.customer = Customer(self.sdk_configuration)
         self.note = Note(self.sdk_configuration)
         self.ticket = Ticket(self.sdk_configuration)
         self.uc = Uc(self.sdk_configuration)

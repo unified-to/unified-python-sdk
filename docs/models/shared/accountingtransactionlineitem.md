@@ -6,7 +6,7 @@
 | Field              | Type               | Required           | Description        |
 | ------------------ | ------------------ | ------------------ | ------------------ |
 | `account_id`       | *str*              | :heavy_check_mark: | N/A                |
-| `customer_id`      | *Optional[str]*    | :heavy_minus_sign: | N/A                |
+| `contact_id`       | *Optional[str]*    | :heavy_minus_sign: | N/A                |
 | `description`      | *Optional[str]*    | :heavy_minus_sign: | N/A                |
 | `id`               | *Optional[str]*    | :heavy_minus_sign: | N/A                |
 | `invoice_id`       | *Optional[str]*    | :heavy_minus_sign: | N/A                |

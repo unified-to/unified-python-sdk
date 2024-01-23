@@ -4,14 +4,14 @@
 ### Available Operations
 
 * [create_accounting_account](#create_accounting_account) - Create an account
-* [create_accounting_customer](#create_accounting_customer) - Create a customer
+* [create_accounting_contact](#create_accounting_contact) - Create a contact
 * [create_accounting_invoice](#create_accounting_invoice) - Create a invoice
 * [create_accounting_item](#create_accounting_item) - Create an item
 * [create_accounting_payment](#create_accounting_payment) - Create a payment
 * [create_accounting_taxrate](#create_accounting_taxrate) - Create a taxrate
 * [create_accounting_transaction](#create_accounting_transaction) - Create a transaction
 * [get_accounting_account](#get_accounting_account) - Retrieve an account
-* [get_accounting_customer](#get_accounting_customer) - Retrieve a customer
+* [get_accounting_contact](#get_accounting_contact) - Retrieve a contact
 * [get_accounting_invoice](#get_accounting_invoice) - Retrieve a invoice
 * [get_accounting_item](#get_accounting_item) - Retrieve an item
 * [get_accounting_organization](#get_accounting_organization) - Retrieve an organization
@@ -19,7 +19,7 @@
 * [get_accounting_taxrate](#get_accounting_taxrate) - Retrieve a taxrate
 * [get_accounting_transaction](#get_accounting_transaction) - Retrieve a transaction
 * [list_accounting_accounts](#list_accounting_accounts) - List all accounts
-* [list_accounting_customers](#list_accounting_customers) - List all customers
+* [list_accounting_contacts](#list_accounting_contacts) - List all contacts
 * [list_accounting_invoices](#list_accounting_invoices) - List all invoices
 * [list_accounting_items](#list_accounting_items) - List all items
 * [list_accounting_organizations](#list_accounting_organizations) - List all organizations
@@ -27,21 +27,21 @@
 * [list_accounting_taxrates](#list_accounting_taxrates) - List all taxrates
 * [list_accounting_transactions](#list_accounting_transactions) - List all transactions
 * [patch_accounting_account](#patch_accounting_account) - Update an account
-* [patch_accounting_customer](#patch_accounting_customer) - Update a customer
+* [patch_accounting_contact](#patch_accounting_contact) - Update a contact
 * [patch_accounting_invoice](#patch_accounting_invoice) - Update a invoice
 * [patch_accounting_item](#patch_accounting_item) - Update an item
 * [patch_accounting_payment](#patch_accounting_payment) - Update a payment
 * [patch_accounting_taxrate](#patch_accounting_taxrate) - Update a taxrate
 * [patch_accounting_transaction](#patch_accounting_transaction) - Update a transaction
 * [remove_accounting_account](#remove_accounting_account) - Remove an account
-* [remove_accounting_customer](#remove_accounting_customer) - Remove a customer
+* [remove_accounting_contact](#remove_accounting_contact) - Remove a contact
 * [remove_accounting_invoice](#remove_accounting_invoice) - Remove a invoice
 * [remove_accounting_item](#remove_accounting_item) - Remove an item
 * [remove_accounting_payment](#remove_accounting_payment) - Remove a payment
 * [remove_accounting_taxrate](#remove_accounting_taxrate) - Remove a taxrate
 * [remove_accounting_transaction](#remove_accounting_transaction) - Remove a transaction
 * [update_accounting_account](#update_accounting_account) - Update an account
-* [update_accounting_customer](#update_accounting_customer) - Update a customer
+* [update_accounting_contact](#update_accounting_contact) - Update a contact
 * [update_accounting_invoice](#update_accounting_invoice) - Update a invoice
 * [update_accounting_item](#update_accounting_item) - Update an item
 * [update_accounting_payment](#update_accounting_payment) - Update a payment
@@ -96,9 +96,9 @@ if res.accounting_account is not None:
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4x-5xx          | */*             |
 
-## create_accounting_customer
+## create_accounting_contact
 
-Create a customer
+Create a contact
 
 ### Example Usage
 
@@ -113,16 +113,16 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.CreateAccountingCustomerRequest(
-    accounting_customer=shared.AccountingCustomer(
-        billing_address=shared.PropertyAccountingCustomerBillingAddress(),
+req = operations.CreateAccountingContactRequest(
+    accounting_contact=shared.AccountingContact(
+        billing_address=shared.PropertyAccountingContactBillingAddress(),
         emails=[
             shared.AccountingEmail(
-                email='Kevon_Schultz42@gmail.com',
+                email='Mac36@gmail.com',
             ),
         ],
-        raw=shared.PropertyAccountingCustomerRaw(),
-        shipping_address=shared.PropertyAccountingCustomerShippingAddress(),
+        raw=shared.PropertyAccountingContactRaw(),
+        shipping_address=shared.PropertyAccountingContactShippingAddress(),
         telephones=[
             shared.AccountingTelephone(
                 telephone='string',
@@ -132,23 +132,23 @@ req = operations.CreateAccountingCustomerRequest(
     connection_id='string',
 )
 
-res = s.accounting.create_accounting_customer(req)
+res = s.accounting.create_accounting_contact(req)
 
-if res.accounting_customer is not None:
+if res.accounting_contact is not None:
     # handle response
     pass
 ```
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                | [operations.CreateAccountingCustomerRequest](../../models/operations/createaccountingcustomerrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                              | [operations.CreateAccountingContactRequest](../../models/operations/createaccountingcontactrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 
 ### Response
 
-**[operations.CreateAccountingCustomerResponse](../../models/operations/createaccountingcustomerresponse.md)**
+**[operations.CreateAccountingContactResponse](../../models/operations/createaccountingcontactresponse.md)**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
@@ -452,9 +452,9 @@ if res.accounting_account is not None:
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4x-5xx          | */*             |
 
-## get_accounting_customer
+## get_accounting_contact
 
-Retrieve a customer
+Retrieve a contact
 
 ### Example Usage
 
@@ -468,7 +468,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetAccountingCustomerRequest(
+req = operations.GetAccountingContactRequest(
     connection_id='string',
     fields=[
         'string',
@@ -476,23 +476,23 @@ req = operations.GetAccountingCustomerRequest(
     id='<ID>',
 )
 
-res = s.accounting.get_accounting_customer(req)
+res = s.accounting.get_accounting_contact(req)
 
-if res.accounting_customer is not None:
+if res.accounting_contact is not None:
     # handle response
     pass
 ```
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `request`                                                                                          | [operations.GetAccountingCustomerRequest](../../models/operations/getaccountingcustomerrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `request`                                                                                        | [operations.GetAccountingContactRequest](../../models/operations/getaccountingcontactrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
 
 
 ### Response
 
-**[operations.GetAccountingCustomerResponse](../../models/operations/getaccountingcustomerresponse.md)**
+**[operations.GetAccountingContactResponse](../../models/operations/getaccountingcontactresponse.md)**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
@@ -828,9 +828,9 @@ if res.accounting_accounts is not None:
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4x-5xx          | */*             |
 
-## list_accounting_customers
+## list_accounting_contacts
 
-List all customers
+List all contacts
 
 ### Example Usage
 
@@ -845,30 +845,30 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListAccountingCustomersRequest(
+req = operations.ListAccountingContactsRequest(
     connection_id='string',
     fields=[
         'string',
     ],
 )
 
-res = s.accounting.list_accounting_customers(req)
+res = s.accounting.list_accounting_contacts(req)
 
-if res.accounting_customers is not None:
+if res.accounting_contacts is not None:
     # handle response
     pass
 ```
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                              | [operations.ListAccountingCustomersRequest](../../models/operations/listaccountingcustomersrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `request`                                                                                            | [operations.ListAccountingContactsRequest](../../models/operations/listaccountingcontactsrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 
 ### Response
 
-**[operations.ListAccountingCustomersResponse](../../models/operations/listaccountingcustomersresponse.md)**
+**[operations.ListAccountingContactsResponse](../../models/operations/listaccountingcontactsresponse.md)**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
@@ -1206,9 +1206,9 @@ if res.accounting_account is not None:
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4x-5xx          | */*             |
 
-## patch_accounting_customer
+## patch_accounting_contact
 
-Update a customer
+Update a contact
 
 ### Example Usage
 
@@ -1223,16 +1223,16 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PatchAccountingCustomerRequest(
-    accounting_customer=shared.AccountingCustomer(
-        billing_address=shared.PropertyAccountingCustomerBillingAddress(),
+req = operations.PatchAccountingContactRequest(
+    accounting_contact=shared.AccountingContact(
+        billing_address=shared.PropertyAccountingContactBillingAddress(),
         emails=[
             shared.AccountingEmail(
-                email='Trever_Orn@hotmail.com',
+                email='Sylvester.Kuhic@yahoo.com',
             ),
         ],
-        raw=shared.PropertyAccountingCustomerRaw(),
-        shipping_address=shared.PropertyAccountingCustomerShippingAddress(),
+        raw=shared.PropertyAccountingContactRaw(),
+        shipping_address=shared.PropertyAccountingContactShippingAddress(),
         telephones=[
             shared.AccountingTelephone(
                 telephone='string',
@@ -1243,23 +1243,23 @@ req = operations.PatchAccountingCustomerRequest(
     id='<ID>',
 )
 
-res = s.accounting.patch_accounting_customer(req)
+res = s.accounting.patch_accounting_contact(req)
 
-if res.accounting_customer is not None:
+if res.accounting_contact is not None:
     # handle response
     pass
 ```
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                              | [operations.PatchAccountingCustomerRequest](../../models/operations/patchaccountingcustomerrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `request`                                                                                            | [operations.PatchAccountingContactRequest](../../models/operations/patchaccountingcontactrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 
 ### Response
 
-**[operations.PatchAccountingCustomerResponse](../../models/operations/patchaccountingcustomerresponse.md)**
+**[operations.PatchAccountingContactResponse](../../models/operations/patchaccountingcontactresponse.md)**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
@@ -1565,9 +1565,9 @@ if res.status_code == 200:
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4x-5xx          | */*             |
 
-## remove_accounting_customer
+## remove_accounting_contact
 
-Remove a customer
+Remove a contact
 
 ### Example Usage
 
@@ -1581,12 +1581,12 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.RemoveAccountingCustomerRequest(
+req = operations.RemoveAccountingContactRequest(
     connection_id='string',
     id='<ID>',
 )
 
-res = s.accounting.remove_accounting_customer(req)
+res = s.accounting.remove_accounting_contact(req)
 
 if res.status_code == 200:
     # handle response
@@ -1595,14 +1595,14 @@ if res.status_code == 200:
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                | [operations.RemoveAccountingCustomerRequest](../../models/operations/removeaccountingcustomerrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                              | [operations.RemoveAccountingContactRequest](../../models/operations/removeaccountingcontactrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 
 ### Response
 
-**[operations.RemoveAccountingCustomerResponse](../../models/operations/removeaccountingcustomerresponse.md)**
+**[operations.RemoveAccountingContactResponse](../../models/operations/removeaccountingcontactresponse.md)**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
@@ -1878,9 +1878,9 @@ if res.accounting_account is not None:
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4x-5xx          | */*             |
 
-## update_accounting_customer
+## update_accounting_contact
 
-Update a customer
+Update a contact
 
 ### Example Usage
 
@@ -1895,16 +1895,16 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.UpdateAccountingCustomerRequest(
-    accounting_customer=shared.AccountingCustomer(
-        billing_address=shared.PropertyAccountingCustomerBillingAddress(),
+req = operations.UpdateAccountingContactRequest(
+    accounting_contact=shared.AccountingContact(
+        billing_address=shared.PropertyAccountingContactBillingAddress(),
         emails=[
             shared.AccountingEmail(
-                email='Myrtice_Jacobi77@hotmail.com',
+                email='Kaci_Hane@hotmail.com',
             ),
         ],
-        raw=shared.PropertyAccountingCustomerRaw(),
-        shipping_address=shared.PropertyAccountingCustomerShippingAddress(),
+        raw=shared.PropertyAccountingContactRaw(),
+        shipping_address=shared.PropertyAccountingContactShippingAddress(),
         telephones=[
             shared.AccountingTelephone(
                 telephone='string',
@@ -1915,23 +1915,23 @@ req = operations.UpdateAccountingCustomerRequest(
     id='<ID>',
 )
 
-res = s.accounting.update_accounting_customer(req)
+res = s.accounting.update_accounting_contact(req)
 
-if res.accounting_customer is not None:
+if res.accounting_contact is not None:
     # handle response
     pass
 ```
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                | [operations.UpdateAccountingCustomerRequest](../../models/operations/updateaccountingcustomerrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                              | [operations.UpdateAccountingContactRequest](../../models/operations/updateaccountingcontactrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 
 ### Response
 
-**[operations.UpdateAccountingCustomerResponse](../../models/operations/updateaccountingcustomerresponse.md)**
+**[operations.UpdateAccountingContactResponse](../../models/operations/updateaccountingcontactresponse.md)**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
