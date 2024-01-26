@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: 5160b83a94b66b2e0ad89d7f5d90cf8c
+  docChecksum: e6d7bb30e178bd0903f2f07c8ad4601f
   docVersion: "1.0"
   speakeasyVersion: internal
   generationVersion: 2.239.4
-  releaseVersion: 0.14.33
-  configChecksum: dd659b98af5f152699928fd30cf8936e
+  releaseVersion: 0.14.34
+  configChecksum: da77d16d2cd12d857d60479863b0beea
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -283,7 +283,6 @@ generatedFiles:
   - src/unified_to/models/shared/accountinginvoice.py
   - src/unified_to/models/shared/property_accountinginvoice_raw.py
   - src/unified_to/models/shared/accountinglineitem.py
-  - src/unified_to/models/shared/property_accountinglineitem_raw.py
   - src/unified_to/models/shared/accountingitem.py
   - src/unified_to/models/shared/property_accountingitem_raw.py
   - src/unified_to/models/shared/accountingpayment.py
@@ -811,7 +810,6 @@ generatedFiles:
   - docs/models/shared/accountinginvoice.md
   - docs/models/shared/propertyaccountinginvoiceraw.md
   - docs/models/shared/accountinglineitem.md
-  - docs/models/shared/propertyaccountinglineitemraw.md
   - docs/models/shared/accountingitem.md
   - docs/models/shared/propertyaccountingitemraw.md
   - docs/models/shared/accountingpayment.md

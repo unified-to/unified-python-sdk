@@ -176,7 +176,6 @@ req = operations.CreateAccountingInvoiceRequest(
     accounting_invoice=shared.AccountingInvoice(
         lineitems=[
             shared.AccountingLineitem(
-                raw=shared.PropertyAccountingLineitemRaw(),
                 total_amount=6736.06,
             ),
         ],
@@ -1287,7 +1286,6 @@ req = operations.PatchAccountingInvoiceRequest(
     accounting_invoice=shared.AccountingInvoice(
         lineitems=[
             shared.AccountingLineitem(
-                raw=shared.PropertyAccountingLineitemRaw(),
                 total_amount=7374.1,
             ),
         ],
@@ -1959,7 +1957,6 @@ req = operations.UpdateAccountingInvoiceRequest(
     accounting_invoice=shared.AccountingInvoice(
         lineitems=[
             shared.AccountingLineitem(
-                raw=shared.PropertyAccountingLineitemRaw(),
                 total_amount=6974.28,
             ),
         ],
