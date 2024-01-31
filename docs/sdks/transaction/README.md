@@ -35,7 +35,9 @@ req = operations.CreateAccountingTransactionRequest(
                 total_amount=4969.62,
             ),
         ],
-        raw=shared.PropertyAccountingTransactionRaw(),
+        raw={
+            'key': 'string',
+        },
     ),
     connection_id='string',
 )
@@ -182,7 +184,9 @@ req = operations.PatchAccountingTransactionRequest(
                 total_amount=5633.69,
             ),
         ],
-        raw=shared.PropertyAccountingTransactionRaw(),
+        raw={
+            'key': 'string',
+        },
     ),
     connection_id='string',
     id='<ID>',
@@ -280,7 +284,9 @@ req = operations.UpdateAccountingTransactionRequest(
                 total_amount=6498.37,
             ),
         ],
-        raw=shared.PropertyAccountingTransactionRaw(),
+        raw={
+            'key': 'string',
+        },
     ),
     connection_id='string',
     id='<ID>',

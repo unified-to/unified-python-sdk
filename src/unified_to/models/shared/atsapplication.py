@@ -3,11 +3,10 @@
 from __future__ import annotations
 import dataclasses
 import dateutil.parser
-from .property_atsapplication_raw import PropertyAtsApplicationRaw
 from dataclasses_json import Undefined, dataclass_json
 from datetime import datetime
 from enum import Enum
-from typing import Optional
+from typing import Any, Dict, Optional
 from unified_to import utils
 
 class AtsApplicationStatus(str, Enum):
@@ -36,7 +35,7 @@ class AtsApplication:
     id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id'), 'exclude': lambda f: f is None }})
     job_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('job_id'), 'exclude': lambda f: f is None }})
     original_status: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('original_status'), 'exclude': lambda f: f is None }})
-    raw: Optional[PropertyAtsApplicationRaw] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('raw'), 'exclude': lambda f: f is None }})
+    raw: Optional[Dict[str, Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('raw'), 'exclude': lambda f: f is None }})
     rejected_at: Optional[datetime] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('rejected_at'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'exclude': lambda f: f is None }})
     rejected_reason: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('rejected_reason'), 'exclude': lambda f: f is None }})
     source: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('source'), 'exclude': lambda f: f is None }})

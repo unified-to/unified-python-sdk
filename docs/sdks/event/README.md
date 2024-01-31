@@ -55,7 +55,9 @@ req = operations.CreateCrmEventRequest(
         ],
         meeting=shared.PropertyCrmEventMeeting(),
         note=shared.PropertyCrmEventNote(),
-        raw=shared.PropertyCrmEventRaw(),
+        raw={
+            'key': 'string',
+        },
         task=shared.PropertyCrmEventTask(),
     ),
     connection_id='string',
@@ -223,7 +225,9 @@ req = operations.PatchCrmEventRequest(
         ],
         meeting=shared.PropertyCrmEventMeeting(),
         note=shared.PropertyCrmEventNote(),
-        raw=shared.PropertyCrmEventRaw(),
+        raw={
+            'key': 'string',
+        },
         task=shared.PropertyCrmEventTask(),
     ),
     connection_id='string',
@@ -342,7 +346,9 @@ req = operations.UpdateCrmEventRequest(
         ],
         meeting=shared.PropertyCrmEventMeeting(),
         note=shared.PropertyCrmEventNote(),
-        raw=shared.PropertyCrmEventRaw(),
+        raw={
+            'key': 'string',
+        },
         task=shared.PropertyCrmEventTask(),
     ),
     connection_id='string',

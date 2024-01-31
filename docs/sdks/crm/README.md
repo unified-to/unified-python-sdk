@@ -69,7 +69,9 @@ req = operations.CreateCrmCompanyRequest(
         link_urls=[
             'string',
         ],
-        raw=shared.PropertyCrmCompanyRaw(),
+        raw={
+            'key': 'string',
+        },
         tags=[
             'string',
         ],
@@ -137,7 +139,9 @@ req = operations.CreateCrmContactRequest(
         emails=[
             shared.CrmEmail(),
         ],
-        raw=shared.PropertyCrmContactRaw(),
+        raw={
+            'key': 'string',
+        },
         telephones=[
             shared.CrmTelephone(
                 telephone='string',
@@ -189,7 +193,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.CreateCrmDealRequest(
     crm_deal=shared.CrmDeal(
-        raw=shared.PropertyCrmDealRaw(),
+        raw={
+            'key': 'string',
+        },
         tags=[
             'string',
         ],
@@ -265,7 +271,9 @@ req = operations.CreateCrmEventRequest(
         ],
         meeting=shared.PropertyCrmEventMeeting(),
         note=shared.PropertyCrmEventNote(),
-        raw=shared.PropertyCrmEventRaw(),
+        raw={
+            'key': 'string',
+        },
         task=shared.PropertyCrmEventTask(),
     ),
     connection_id='string',
@@ -317,7 +325,9 @@ req = operations.CreateCrmLeadRequest(
         emails=[
             shared.CrmEmail(),
         ],
-        raw=shared.PropertyCrmLeadRaw(),
+        raw={
+            'key': 'string',
+        },
         telephones=[
             shared.CrmTelephone(
                 telephone='string',
@@ -369,7 +379,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.CreateCrmPipelineRequest(
     crm_pipeline=shared.CrmPipeline(
-        raw=shared.PropertyCrmPipelineRaw(),
+        raw={
+            'key': 'string',
+        },
     ),
     connection_id='string',
 )
@@ -990,7 +1002,9 @@ req = operations.PatchCrmCompanyRequest(
         link_urls=[
             'string',
         ],
-        raw=shared.PropertyCrmCompanyRaw(),
+        raw={
+            'key': 'string',
+        },
         tags=[
             'string',
         ],
@@ -1059,7 +1073,9 @@ req = operations.PatchCrmContactRequest(
         emails=[
             shared.CrmEmail(),
         ],
-        raw=shared.PropertyCrmContactRaw(),
+        raw={
+            'key': 'string',
+        },
         telephones=[
             shared.CrmTelephone(
                 telephone='string',
@@ -1112,7 +1128,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.PatchCrmDealRequest(
     crm_deal=shared.CrmDeal(
-        raw=shared.PropertyCrmDealRaw(),
+        raw={
+            'key': 'string',
+        },
         tags=[
             'string',
         ],
@@ -1189,7 +1207,9 @@ req = operations.PatchCrmEventRequest(
         ],
         meeting=shared.PropertyCrmEventMeeting(),
         note=shared.PropertyCrmEventNote(),
-        raw=shared.PropertyCrmEventRaw(),
+        raw={
+            'key': 'string',
+        },
         task=shared.PropertyCrmEventTask(),
     ),
     connection_id='string',
@@ -1242,7 +1262,9 @@ req = operations.PatchCrmLeadRequest(
         emails=[
             shared.CrmEmail(),
         ],
-        raw=shared.PropertyCrmLeadRaw(),
+        raw={
+            'key': 'string',
+        },
         telephones=[
             shared.CrmTelephone(
                 telephone='string',
@@ -1295,7 +1317,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.PatchCrmPipelineRequest(
     crm_pipeline=shared.CrmPipeline(
-        raw=shared.PropertyCrmPipelineRaw(),
+        raw={
+            'key': 'string',
+        },
     ),
     connection_id='string',
     id='<ID>',
@@ -1617,7 +1641,9 @@ req = operations.UpdateCrmCompanyRequest(
         link_urls=[
             'string',
         ],
-        raw=shared.PropertyCrmCompanyRaw(),
+        raw={
+            'key': 'string',
+        },
         tags=[
             'string',
         ],
@@ -1686,7 +1712,9 @@ req = operations.UpdateCrmContactRequest(
         emails=[
             shared.CrmEmail(),
         ],
-        raw=shared.PropertyCrmContactRaw(),
+        raw={
+            'key': 'string',
+        },
         telephones=[
             shared.CrmTelephone(
                 telephone='string',
@@ -1739,7 +1767,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.UpdateCrmDealRequest(
     crm_deal=shared.CrmDeal(
-        raw=shared.PropertyCrmDealRaw(),
+        raw={
+            'key': 'string',
+        },
         tags=[
             'string',
         ],
@@ -1816,7 +1846,9 @@ req = operations.UpdateCrmEventRequest(
         ],
         meeting=shared.PropertyCrmEventMeeting(),
         note=shared.PropertyCrmEventNote(),
-        raw=shared.PropertyCrmEventRaw(),
+        raw={
+            'key': 'string',
+        },
         task=shared.PropertyCrmEventTask(),
     ),
     connection_id='string',
@@ -1869,7 +1901,9 @@ req = operations.UpdateCrmLeadRequest(
         emails=[
             shared.CrmEmail(),
         ],
-        raw=shared.PropertyCrmLeadRaw(),
+        raw={
+            'key': 'string',
+        },
         telephones=[
             shared.CrmTelephone(
                 telephone='string',
@@ -1922,7 +1956,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.UpdateCrmPipelineRequest(
     crm_pipeline=shared.CrmPipeline(
-        raw=shared.PropertyCrmPipelineRaw(),
+        raw={
+            'key': 'string',
+        },
     ),
     connection_id='string',
     id='<ID>',

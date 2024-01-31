@@ -5,10 +5,9 @@ import dataclasses
 import dateutil.parser
 from .enrichtelephone import EnrichTelephone
 from .property_enrichcompany_address import PropertyEnrichCompanyAddress
-from .property_enrichcompany_raw import PropertyEnrichCompanyRaw
 from dataclasses_json import Undefined, dataclass_json
 from datetime import datetime
-from typing import List, Optional
+from typing import Any, Dict, List, Optional
 from unified_to import utils
 
 
@@ -33,7 +32,7 @@ class EnrichCompany:
     logo_url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('logo_url'), 'exclude': lambda f: f is None }})
     naics_code: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('naics_code'), 'exclude': lambda f: f is None }})
     name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name'), 'exclude': lambda f: f is None }})
-    raw: Optional[PropertyEnrichCompanyRaw] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('raw'), 'exclude': lambda f: f is None }})
+    raw: Optional[Dict[str, Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('raw'), 'exclude': lambda f: f is None }})
     r"""The raw data returned by the integration for this company"""
     revenue: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('revenue'), 'exclude': lambda f: f is None }})
     sic_code: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('sic_code'), 'exclude': lambda f: f is None }})

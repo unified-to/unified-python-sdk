@@ -41,7 +41,9 @@ req = operations.CreateHrisEmployeeRequest(
                 email='Adriel_Hansen@hotmail.com',
             ),
         ],
-        raw=shared.PropertyHrisEmployeeRaw(),
+        raw={
+            'key': 'string',
+        },
         telephones=[
             shared.HrisTelephone(
                 telephone='string',
@@ -96,7 +98,9 @@ req = operations.CreateHrisGroupRequest(
         manager_ids=[
             'string',
         ],
-        raw=shared.PropertyHrisGroupRaw(),
+        raw={
+            'key': 'string',
+        },
         user_ids=[
             'string',
         ],
@@ -340,7 +344,9 @@ req = operations.PatchHrisEmployeeRequest(
                 email='Zetta.Cassin@yahoo.com',
             ),
         ],
-        raw=shared.PropertyHrisEmployeeRaw(),
+        raw={
+            'key': 'string',
+        },
         telephones=[
             shared.HrisTelephone(
                 telephone='string',
@@ -396,7 +402,9 @@ req = operations.PatchHrisGroupRequest(
         manager_ids=[
             'string',
         ],
-        raw=shared.PropertyHrisGroupRaw(),
+        raw={
+            'key': 'string',
+        },
         user_ids=[
             'string',
         ],
@@ -541,7 +549,9 @@ req = operations.UpdateHrisEmployeeRequest(
                 email='Abbie_Aufderhar@gmail.com',
             ),
         ],
-        raw=shared.PropertyHrisEmployeeRaw(),
+        raw={
+            'key': 'string',
+        },
         telephones=[
             shared.HrisTelephone(
                 telephone='string',
@@ -597,7 +607,9 @@ req = operations.UpdateHrisGroupRequest(
         manager_ids=[
             'string',
         ],
-        raw=shared.PropertyHrisGroupRaw(),
+        raw={
+            'key': 'string',
+        },
         user_ids=[
             'string',
         ],

@@ -5,11 +5,10 @@ import dataclasses
 import dateutil.parser
 from .atsaddress import AtsAddress
 from .atscompensation import AtsCompensation
-from .property_atsjob_raw import PropertyAtsJobRaw
 from dataclasses_json import Undefined, dataclass_json
 from datetime import datetime
 from enum import Enum
-from typing import List, Optional
+from typing import Any, Dict, List, Optional
 from unified_to import utils
 
 class EmploymentType(str, Enum):
@@ -47,7 +46,7 @@ class AtsJob:
     language_locale: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('language_locale'), 'exclude': lambda f: f is None }})
     name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name'), 'exclude': lambda f: f is None }})
     public_job_urls: Optional[List[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('public_job_urls'), 'exclude': lambda f: f is None }})
-    raw: Optional[PropertyAtsJobRaw] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('raw'), 'exclude': lambda f: f is None }})
+    raw: Optional[Dict[str, Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('raw'), 'exclude': lambda f: f is None }})
     recruiter_ids: Optional[List[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('recruiter_ids'), 'exclude': lambda f: f is None }})
     remote: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('remote'), 'exclude': lambda f: f is None }})
     status: Optional[AtsJobStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})

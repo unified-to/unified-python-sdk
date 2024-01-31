@@ -36,7 +36,9 @@ req = operations.CreateStorageFileRequest(
                 ],
             ),
         ],
-        raw=shared.PropertyStorageFileRaw(),
+        raw={
+            'key': 'string',
+        },
     ),
     connection_id='string',
 )
@@ -184,7 +186,9 @@ req = operations.PatchStorageFileRequest(
                 ],
             ),
         ],
-        raw=shared.PropertyStorageFileRaw(),
+        raw={
+            'key': 'string',
+        },
     ),
     connection_id='string',
     id='<ID>',
@@ -283,7 +287,9 @@ req = operations.UpdateStorageFileRequest(
                 ],
             ),
         ],
-        raw=shared.PropertyStorageFileRaw(),
+        raw={
+            'key': 'string',
+        },
     ),
     connection_id='string',
     id='<ID>',

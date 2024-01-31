@@ -60,7 +60,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.CreateAtsApplicationRequest(
     ats_application=shared.AtsApplication(
-        raw=shared.PropertyAtsApplicationRaw(),
+        raw={
+            'key': 'string',
+        },
     ),
     connection_id='string',
 )
@@ -116,7 +118,9 @@ req = operations.CreateAtsCandidateRequest(
         link_urls=[
             'string',
         ],
-        raw=shared.PropertyAtsCandidateRaw(),
+        raw={
+            'key': 'string',
+        },
         tags=[
             'string',
         ],
@@ -171,7 +175,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.CreateAtsDocumentRequest(
     ats_document=shared.AtsDocument(
-        raw=shared.PropertyAtsDocumentRaw(),
+        raw={
+            'key': 'string',
+        },
     ),
     connection_id='string',
 )
@@ -218,7 +224,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.CreateAtsInterviewRequest(
     ats_interview=shared.AtsInterview(
-        raw=shared.PropertyAtsInterviewRaw(),
+        raw={
+            'key': 'string',
+        },
         user_ids=[
             'string',
         ],
@@ -285,7 +293,9 @@ req = operations.CreateAtsJobRequest(
         public_job_urls=[
             'string',
         ],
-        raw=shared.PropertyAtsJobRaw(),
+        raw={
+            'key': 'string',
+        },
         recruiter_ids=[
             'string',
         ],
@@ -335,7 +345,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.CreateAtsScorecardRequest(
     ats_scorecard=shared.AtsScorecard(
-        raw=shared.PropertyAtsScorecardRaw(),
+        raw={
+            'key': 'string',
+        },
     ),
     connection_id='string',
 )
@@ -993,7 +1005,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.PatchAtsApplicationRequest(
     ats_application=shared.AtsApplication(
-        raw=shared.PropertyAtsApplicationRaw(),
+        raw={
+            'key': 'string',
+        },
     ),
     connection_id='string',
     id='<ID>',
@@ -1050,7 +1064,9 @@ req = operations.PatchAtsCandidateRequest(
         link_urls=[
             'string',
         ],
-        raw=shared.PropertyAtsCandidateRaw(),
+        raw={
+            'key': 'string',
+        },
         tags=[
             'string',
         ],
@@ -1106,7 +1122,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.PatchAtsDocumentRequest(
     ats_document=shared.AtsDocument(
-        raw=shared.PropertyAtsDocumentRaw(),
+        raw={
+            'key': 'string',
+        },
     ),
     connection_id='string',
     id='<ID>',
@@ -1154,7 +1172,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.PatchAtsInterviewRequest(
     ats_interview=shared.AtsInterview(
-        raw=shared.PropertyAtsInterviewRaw(),
+        raw={
+            'key': 'string',
+        },
         user_ids=[
             'string',
         ],
@@ -1222,7 +1242,9 @@ req = operations.PatchAtsJobRequest(
         public_job_urls=[
             'string',
         ],
-        raw=shared.PropertyAtsJobRaw(),
+        raw={
+            'key': 'string',
+        },
         recruiter_ids=[
             'string',
         ],
@@ -1273,7 +1295,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.PatchAtsScorecardRequest(
     ats_scorecard=shared.AtsScorecard(
-        raw=shared.PropertyAtsScorecardRaw(),
+        raw={
+            'key': 'string',
+        },
     ),
     connection_id='string',
     id='<ID>',
@@ -1585,7 +1609,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.UpdateAtsApplicationRequest(
     ats_application=shared.AtsApplication(
-        raw=shared.PropertyAtsApplicationRaw(),
+        raw={
+            'key': 'string',
+        },
     ),
     connection_id='string',
     id='<ID>',
@@ -1642,7 +1668,9 @@ req = operations.UpdateAtsCandidateRequest(
         link_urls=[
             'string',
         ],
-        raw=shared.PropertyAtsCandidateRaw(),
+        raw={
+            'key': 'string',
+        },
         tags=[
             'string',
         ],
@@ -1698,7 +1726,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.UpdateAtsDocumentRequest(
     ats_document=shared.AtsDocument(
-        raw=shared.PropertyAtsDocumentRaw(),
+        raw={
+            'key': 'string',
+        },
     ),
     connection_id='string',
     id='<ID>',
@@ -1746,7 +1776,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.UpdateAtsInterviewRequest(
     ats_interview=shared.AtsInterview(
-        raw=shared.PropertyAtsInterviewRaw(),
+        raw={
+            'key': 'string',
+        },
         user_ids=[
             'string',
         ],
@@ -1814,7 +1846,9 @@ req = operations.UpdateAtsJobRequest(
         public_job_urls=[
             'string',
         ],
-        raw=shared.PropertyAtsJobRaw(),
+        raw={
+            'key': 'string',
+        },
         recruiter_ids=[
             'string',
         ],
@@ -1865,7 +1899,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.UpdateAtsScorecardRequest(
     ats_scorecard=shared.AtsScorecard(
-        raw=shared.PropertyAtsScorecardRaw(),
+        raw={
+            'key': 'string',
+        },
     ),
     connection_id='string',
     id='<ID>',

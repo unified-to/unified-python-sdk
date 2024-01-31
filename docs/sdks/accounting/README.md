@@ -68,7 +68,9 @@ s = unified_to.UnifiedTo(
 req = operations.CreateAccountingAccountRequest(
     accounting_account=shared.AccountingAccount(
         name='string',
-        raw=shared.PropertyAccountingAccountRaw(),
+        raw={
+            'key': 'string',
+        },
     ),
     connection_id='string',
 )
@@ -121,7 +123,9 @@ req = operations.CreateAccountingContactRequest(
                 email='Mac36@gmail.com',
             ),
         ],
-        raw=shared.PropertyAccountingContactRaw(),
+        raw={
+            'key': 'string',
+        },
         shipping_address=shared.PropertyAccountingContactShippingAddress(),
         telephones=[
             shared.AccountingTelephone(
@@ -179,7 +183,9 @@ req = operations.CreateAccountingInvoiceRequest(
                 total_amount=6736.06,
             ),
         ],
-        raw=shared.PropertyAccountingInvoiceRaw(),
+        raw={
+            'key': 'string',
+        },
     ),
     connection_id='string',
 )
@@ -227,7 +233,9 @@ s = unified_to.UnifiedTo(
 req = operations.CreateAccountingItemRequest(
     accounting_item=shared.AccountingItem(
         name='string',
-        raw=shared.PropertyAccountingItemRaw(),
+        raw={
+            'key': 'string',
+        },
     ),
     connection_id='string',
 )
@@ -274,7 +282,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.CreateAccountingPaymentRequest(
     accounting_payment=shared.AccountingPayment(
-        raw=shared.PropertyAccountingPaymentRaw(),
+        raw={
+            'key': 'string',
+        },
     ),
     connection_id='string',
 )
@@ -323,7 +333,9 @@ req = operations.CreateAccountingTaxrateRequest(
     accounting_taxrate=shared.AccountingTaxrate(
         name='string',
         rate=1719.1,
-        raw=shared.PropertyAccountingTaxrateRaw(),
+        raw={
+            'key': 'string',
+        },
     ),
     connection_id='string',
 )
@@ -376,7 +388,9 @@ req = operations.CreateAccountingTransactionRequest(
                 total_amount=4969.62,
             ),
         ],
-        raw=shared.PropertyAccountingTransactionRaw(),
+        raw={
+            'key': 'string',
+        },
     ),
     connection_id='string',
 )
@@ -1176,7 +1190,9 @@ s = unified_to.UnifiedTo(
 req = operations.PatchAccountingAccountRequest(
     accounting_account=shared.AccountingAccount(
         name='string',
-        raw=shared.PropertyAccountingAccountRaw(),
+        raw={
+            'key': 'string',
+        },
     ),
     connection_id='string',
     id='<ID>',
@@ -1230,7 +1246,9 @@ req = operations.PatchAccountingContactRequest(
                 email='Sylvester.Kuhic@yahoo.com',
             ),
         ],
-        raw=shared.PropertyAccountingContactRaw(),
+        raw={
+            'key': 'string',
+        },
         shipping_address=shared.PropertyAccountingContactShippingAddress(),
         telephones=[
             shared.AccountingTelephone(
@@ -1289,7 +1307,9 @@ req = operations.PatchAccountingInvoiceRequest(
                 total_amount=7374.1,
             ),
         ],
-        raw=shared.PropertyAccountingInvoiceRaw(),
+        raw={
+            'key': 'string',
+        },
     ),
     connection_id='string',
     id='<ID>',
@@ -1338,7 +1358,9 @@ s = unified_to.UnifiedTo(
 req = operations.PatchAccountingItemRequest(
     accounting_item=shared.AccountingItem(
         name='string',
-        raw=shared.PropertyAccountingItemRaw(),
+        raw={
+            'key': 'string',
+        },
     ),
     connection_id='string',
     id='<ID>',
@@ -1386,7 +1408,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.PatchAccountingPaymentRequest(
     accounting_payment=shared.AccountingPayment(
-        raw=shared.PropertyAccountingPaymentRaw(),
+        raw={
+            'key': 'string',
+        },
     ),
     connection_id='string',
     id='<ID>',
@@ -1436,7 +1460,9 @@ req = operations.PatchAccountingTaxrateRequest(
     accounting_taxrate=shared.AccountingTaxrate(
         name='string',
         rate=5991.47,
-        raw=shared.PropertyAccountingTaxrateRaw(),
+        raw={
+            'key': 'string',
+        },
     ),
     connection_id='string',
     id='<ID>',
@@ -1490,7 +1516,9 @@ req = operations.PatchAccountingTransactionRequest(
                 total_amount=5633.69,
             ),
         ],
-        raw=shared.PropertyAccountingTransactionRaw(),
+        raw={
+            'key': 'string',
+        },
     ),
     connection_id='string',
     id='<ID>',
@@ -1847,7 +1875,9 @@ s = unified_to.UnifiedTo(
 req = operations.UpdateAccountingAccountRequest(
     accounting_account=shared.AccountingAccount(
         name='string',
-        raw=shared.PropertyAccountingAccountRaw(),
+        raw={
+            'key': 'string',
+        },
     ),
     connection_id='string',
     id='<ID>',
@@ -1901,7 +1931,9 @@ req = operations.UpdateAccountingContactRequest(
                 email='Kaci_Hane@hotmail.com',
             ),
         ],
-        raw=shared.PropertyAccountingContactRaw(),
+        raw={
+            'key': 'string',
+        },
         shipping_address=shared.PropertyAccountingContactShippingAddress(),
         telephones=[
             shared.AccountingTelephone(
@@ -1960,7 +1992,9 @@ req = operations.UpdateAccountingInvoiceRequest(
                 total_amount=6974.28,
             ),
         ],
-        raw=shared.PropertyAccountingInvoiceRaw(),
+        raw={
+            'key': 'string',
+        },
     ),
     connection_id='string',
     id='<ID>',
@@ -2009,7 +2043,9 @@ s = unified_to.UnifiedTo(
 req = operations.UpdateAccountingItemRequest(
     accounting_item=shared.AccountingItem(
         name='string',
-        raw=shared.PropertyAccountingItemRaw(),
+        raw={
+            'key': 'string',
+        },
     ),
     connection_id='string',
     id='<ID>',
@@ -2057,7 +2093,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.UpdateAccountingPaymentRequest(
     accounting_payment=shared.AccountingPayment(
-        raw=shared.PropertyAccountingPaymentRaw(),
+        raw={
+            'key': 'string',
+        },
     ),
     connection_id='string',
     id='<ID>',
@@ -2107,7 +2145,9 @@ req = operations.UpdateAccountingTaxrateRequest(
     accounting_taxrate=shared.AccountingTaxrate(
         name='string',
         rate=3382.78,
-        raw=shared.PropertyAccountingTaxrateRaw(),
+        raw={
+            'key': 'string',
+        },
     ),
     connection_id='string',
     id='<ID>',
@@ -2161,7 +2201,9 @@ req = operations.UpdateAccountingTransactionRequest(
                 total_amount=6498.37,
             ),
         ],
-        raw=shared.PropertyAccountingTransactionRaw(),
+        raw={
+            'key': 'string',
+        },
     ),
     connection_id='string',
     id='<ID>',

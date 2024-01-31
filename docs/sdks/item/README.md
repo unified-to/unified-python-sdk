@@ -30,7 +30,9 @@ s = unified_to.UnifiedTo(
 req = operations.CreateAccountingItemRequest(
     accounting_item=shared.AccountingItem(
         name='string',
-        raw=shared.PropertyAccountingItemRaw(),
+        raw={
+            'key': 'string',
+        },
     ),
     connection_id='string',
 )
@@ -172,7 +174,9 @@ s = unified_to.UnifiedTo(
 req = operations.PatchAccountingItemRequest(
     accounting_item=shared.AccountingItem(
         name='string',
-        raw=shared.PropertyAccountingItemRaw(),
+        raw={
+            'key': 'string',
+        },
     ),
     connection_id='string',
     id='<ID>',
@@ -265,7 +269,9 @@ s = unified_to.UnifiedTo(
 req = operations.UpdateAccountingItemRequest(
     accounting_item=shared.AccountingItem(
         name='string',
-        raw=shared.PropertyAccountingItemRaw(),
+        raw={
+            'key': 'string',
+        },
     ),
     connection_id='string',
     id='<ID>',

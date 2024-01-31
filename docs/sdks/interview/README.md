@@ -29,7 +29,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.CreateAtsInterviewRequest(
     ats_interview=shared.AtsInterview(
-        raw=shared.PropertyAtsInterviewRaw(),
+        raw={
+            'key': 'string',
+        },
         user_ids=[
             'string',
         ],
@@ -173,7 +175,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.PatchAtsInterviewRequest(
     ats_interview=shared.AtsInterview(
-        raw=shared.PropertyAtsInterviewRaw(),
+        raw={
+            'key': 'string',
+        },
         user_ids=[
             'string',
         ],
@@ -268,7 +272,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.UpdateAtsInterviewRequest(
     ats_interview=shared.AtsInterview(
-        raw=shared.PropertyAtsInterviewRaw(),
+        raw={
+            'key': 'string',
+        },
         user_ids=[
             'string',
         ],

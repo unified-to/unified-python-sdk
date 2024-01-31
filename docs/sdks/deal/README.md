@@ -29,7 +29,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.CreateCrmDealRequest(
     crm_deal=shared.CrmDeal(
-        raw=shared.PropertyCrmDealRaw(),
+        raw={
+            'key': 'string',
+        },
         tags=[
             'string',
         ],
@@ -173,7 +175,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.PatchCrmDealRequest(
     crm_deal=shared.CrmDeal(
-        raw=shared.PropertyCrmDealRaw(),
+        raw={
+            'key': 'string',
+        },
         tags=[
             'string',
         ],
@@ -268,7 +272,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.UpdateCrmDealRequest(
     crm_deal=shared.CrmDeal(
-        raw=shared.PropertyCrmDealRaw(),
+        raw={
+            'key': 'string',
+        },
         tags=[
             'string',
         ],

@@ -2,12 +2,10 @@
 
 from __future__ import annotations
 import dataclasses
-from .property_integrationsupport_inbound_fields import PropertyIntegrationSupportInboundFields
-from .property_integrationsupport_outbound_fields import PropertyIntegrationSupportOutboundFields
 from .property_integrationsupport_webhook_events import PropertyIntegrationSupportWebhookEvents
 from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
-from typing import Dict, List, Optional
+from typing import Any, Dict, List, Optional
 from unified_to import utils
 
 class WebhookType(str, Enum):
@@ -19,7 +17,7 @@ class WebhookType(str, Enum):
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class IntegrationSupport:
-    inbound_fields: Optional[PropertyIntegrationSupportInboundFields] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('inbound_fields'), 'exclude': lambda f: f is None }})
+    inbound_fields: Optional[Dict[str, Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('inbound_fields'), 'exclude': lambda f: f is None }})
     list_account_id: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('list_account_id'), 'exclude': lambda f: f is None }})
     list_application_id: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('list_application_id'), 'exclude': lambda f: f is None }})
     list_candidate_id: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('list_candidate_id'), 'exclude': lambda f: f is None }})
@@ -43,7 +41,7 @@ class IntegrationSupport:
     list_updated_gte: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('list_updated_gte'), 'exclude': lambda f: f is None }})
     list_user_id: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('list_user_id'), 'exclude': lambda f: f is None }})
     methods: Optional[Dict[str, bool]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('methods'), 'exclude': lambda f: f is None }})
-    outbound_fields: Optional[PropertyIntegrationSupportOutboundFields] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('outbound_fields'), 'exclude': lambda f: f is None }})
+    outbound_fields: Optional[Dict[str, Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('outbound_fields'), 'exclude': lambda f: f is None }})
     search_domain: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('search_domain'), 'exclude': lambda f: f is None }})
     search_email: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('search_email'), 'exclude': lambda f: f is None }})
     search_linkedin_url: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('search_linkedin_url'), 'exclude': lambda f: f is None }})

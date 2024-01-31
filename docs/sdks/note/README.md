@@ -29,7 +29,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.CreateTicketingNoteRequest(
     ticketing_note=shared.TicketingNote(
-        raw=shared.PropertyTicketingNoteRaw(),
+        raw={
+            'key': 'string',
+        },
     ),
     connection_id='string',
 )
@@ -170,7 +172,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.PatchTicketingNoteRequest(
     ticketing_note=shared.TicketingNote(
-        raw=shared.PropertyTicketingNoteRaw(),
+        raw={
+            'key': 'string',
+        },
     ),
     connection_id='string',
     id='<ID>',
@@ -262,7 +266,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.UpdateTicketingNoteRequest(
     ticketing_note=shared.TicketingNote(
-        raw=shared.PropertyTicketingNoteRaw(),
+        raw={
+            'key': 'string',
+        },
     ),
     connection_id='string',
     id='<ID>',

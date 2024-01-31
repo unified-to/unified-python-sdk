@@ -6,12 +6,11 @@ import dateutil.parser
 from .accountingemail import AccountingEmail
 from .accountingtelephone import AccountingTelephone
 from .property_accountingcontact_billing_address import PropertyAccountingContactBillingAddress
-from .property_accountingcontact_raw import PropertyAccountingContactRaw
 from .property_accountingcontact_shipping_address import PropertyAccountingContactShippingAddress
 from dataclasses_json import Undefined, dataclass_json
 from datetime import datetime
 from enum import Enum
-from typing import List, Optional
+from typing import Any, Dict, List, Optional
 from unified_to import utils
 
 class TaxExemption(str, Enum):
@@ -40,7 +39,7 @@ class AccountingContact:
     is_customer: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('is_customer'), 'exclude': lambda f: f is None }})
     is_supplier: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('is_supplier'), 'exclude': lambda f: f is None }})
     name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name'), 'exclude': lambda f: f is None }})
-    raw: Optional[PropertyAccountingContactRaw] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('raw'), 'exclude': lambda f: f is None }})
+    raw: Optional[Dict[str, Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('raw'), 'exclude': lambda f: f is None }})
     shipping_address: Optional[PropertyAccountingContactShippingAddress] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('shipping_address'), 'exclude': lambda f: f is None }})
     tax_exemption: Optional[TaxExemption] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('tax_exemption'), 'exclude': lambda f: f is None }})
     tax_number: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('tax_number'), 'exclude': lambda f: f is None }})

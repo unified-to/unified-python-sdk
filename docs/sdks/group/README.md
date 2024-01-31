@@ -32,7 +32,9 @@ req = operations.CreateHrisGroupRequest(
         manager_ids=[
             'string',
         ],
-        raw=shared.PropertyHrisGroupRaw(),
+        raw={
+            'key': 'string',
+        },
         user_ids=[
             'string',
         ],
@@ -179,7 +181,9 @@ req = operations.PatchHrisGroupRequest(
         manager_ids=[
             'string',
         ],
-        raw=shared.PropertyHrisGroupRaw(),
+        raw={
+            'key': 'string',
+        },
         user_ids=[
             'string',
         ],
@@ -277,7 +281,9 @@ req = operations.UpdateHrisGroupRequest(
         manager_ids=[
             'string',
         ],
-        raw=shared.PropertyHrisGroupRaw(),
+        raw={
+            'key': 'string',
+        },
         user_ids=[
             'string',
         ],

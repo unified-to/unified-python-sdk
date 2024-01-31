@@ -7,12 +7,11 @@ from .property_crmevent_call import PropertyCrmEventCall
 from .property_crmevent_email import PropertyCrmEventEmail
 from .property_crmevent_meeting import PropertyCrmEventMeeting
 from .property_crmevent_note import PropertyCrmEventNote
-from .property_crmevent_raw import PropertyCrmEventRaw
 from .property_crmevent_task import PropertyCrmEventTask
 from dataclasses_json import Undefined, dataclass_json
 from datetime import datetime
 from enum import Enum
-from typing import List, Optional
+from typing import Any, Dict, List, Optional
 from unified_to import utils
 
 class CrmEventType(str, Enum):
@@ -44,7 +43,7 @@ class CrmEvent:
     r"""The meeting object, when type = meeting"""
     note: Optional[PropertyCrmEventNote] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('note'), 'exclude': lambda f: f is None }})
     r"""The note object, when type = note"""
-    raw: Optional[PropertyCrmEventRaw] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('raw'), 'exclude': lambda f: f is None }})
+    raw: Optional[Dict[str, Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('raw'), 'exclude': lambda f: f is None }})
     r"""The raw data returned by the integration for this event."""
     task: Optional[PropertyCrmEventTask] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('task'), 'exclude': lambda f: f is None }})
     r"""The task object, when type = task"""

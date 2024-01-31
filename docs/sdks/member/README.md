@@ -37,7 +37,9 @@ req = operations.CreateMartechMemberRequest(
         list_ids=[
             'string',
         ],
-        raw=shared.PropertyMarketingMemberRaw(),
+        raw={
+            'key': 'string',
+        },
         tags=[
             'string',
         ],
@@ -189,7 +191,9 @@ req = operations.PatchMartechMemberRequest(
         list_ids=[
             'string',
         ],
-        raw=shared.PropertyMarketingMemberRaw(),
+        raw={
+            'key': 'string',
+        },
         tags=[
             'string',
         ],
@@ -292,7 +296,9 @@ req = operations.UpdateMartechMemberRequest(
         list_ids=[
             'string',
         ],
-        raw=shared.PropertyMarketingMemberRaw(),
+        raw={
+            'key': 'string',
+        },
         tags=[
             'string',
         ],

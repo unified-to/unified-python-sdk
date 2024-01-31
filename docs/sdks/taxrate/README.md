@@ -31,7 +31,9 @@ req = operations.CreateAccountingTaxrateRequest(
     accounting_taxrate=shared.AccountingTaxrate(
         name='string',
         rate=1719.1,
-        raw=shared.PropertyAccountingTaxrateRaw(),
+        raw={
+            'key': 'string',
+        },
     ),
     connection_id='string',
 )
@@ -174,7 +176,9 @@ req = operations.PatchAccountingTaxrateRequest(
     accounting_taxrate=shared.AccountingTaxrate(
         name='string',
         rate=5991.47,
-        raw=shared.PropertyAccountingTaxrateRaw(),
+        raw={
+            'key': 'string',
+        },
     ),
     connection_id='string',
     id='<ID>',
@@ -268,7 +272,9 @@ req = operations.UpdateAccountingTaxrateRequest(
     accounting_taxrate=shared.AccountingTaxrate(
         name='string',
         rate=3382.78,
-        raw=shared.PropertyAccountingTaxrateRaw(),
+        raw={
+            'key': 'string',
+        },
     ),
     connection_id='string',
     id='<ID>',

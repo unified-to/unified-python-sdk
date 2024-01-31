@@ -29,7 +29,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.CreateCrmPipelineRequest(
     crm_pipeline=shared.CrmPipeline(
-        raw=shared.PropertyCrmPipelineRaw(),
+        raw={
+            'key': 'string',
+        },
     ),
     connection_id='string',
 )
@@ -170,7 +172,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.PatchCrmPipelineRequest(
     crm_pipeline=shared.CrmPipeline(
-        raw=shared.PropertyCrmPipelineRaw(),
+        raw={
+            'key': 'string',
+        },
     ),
     connection_id='string',
     id='<ID>',
@@ -262,7 +266,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.UpdateCrmPipelineRequest(
     crm_pipeline=shared.CrmPipeline(
-        raw=shared.PropertyCrmPipelineRaw(),
+        raw={
+            'key': 'string',
+        },
     ),
     connection_id='string',
     id='<ID>',

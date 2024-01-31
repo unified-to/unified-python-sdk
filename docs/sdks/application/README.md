@@ -29,7 +29,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.CreateAtsApplicationRequest(
     ats_application=shared.AtsApplication(
-        raw=shared.PropertyAtsApplicationRaw(),
+        raw={
+            'key': 'string',
+        },
     ),
     connection_id='string',
 )
@@ -170,7 +172,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.PatchAtsApplicationRequest(
     ats_application=shared.AtsApplication(
-        raw=shared.PropertyAtsApplicationRaw(),
+        raw={
+            'key': 'string',
+        },
     ),
     connection_id='string',
     id='<ID>',
@@ -262,7 +266,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.UpdateAtsApplicationRequest(
     ats_application=shared.AtsApplication(
-        raw=shared.PropertyAtsApplicationRaw(),
+        raw={
+            'key': 'string',
+        },
     ),
     connection_id='string',
     id='<ID>',

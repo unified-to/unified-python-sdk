@@ -38,7 +38,9 @@ req = operations.CreateAtsCandidateRequest(
         link_urls=[
             'string',
         ],
-        raw=shared.PropertyAtsCandidateRaw(),
+        raw={
+            'key': 'string',
+        },
         tags=[
             'string',
         ],
@@ -196,7 +198,9 @@ req = operations.PatchAtsCandidateRequest(
         link_urls=[
             'string',
         ],
-        raw=shared.PropertyAtsCandidateRaw(),
+        raw={
+            'key': 'string',
+        },
         tags=[
             'string',
         ],
@@ -305,7 +309,9 @@ req = operations.UpdateAtsCandidateRequest(
         link_urls=[
             'string',
         ],
-        raw=shared.PropertyAtsCandidateRaw(),
+        raw={
+            'key': 'string',
+        },
         tags=[
             'string',
         ],

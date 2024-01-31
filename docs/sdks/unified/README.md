@@ -43,7 +43,9 @@ req = shared.Connection(
         emails=[
             'string',
         ],
-        meta=shared.PropertyPropertyConnectionAuthMeta(),
+        meta={
+            'key': 'string',
+        },
         other_auth_info=[
             'string',
         ],
@@ -52,7 +54,9 @@ req = shared.Connection(
         shared.PropertyConnectionCategories.STORAGE,
     ],
     cursors_cache=[
-        shared.Undefined(),
+        {
+            'key': 'string',
+        },
     ],
     integration_type='string',
     permissions=[
@@ -106,7 +110,9 @@ req = operations.CreateUnifiedWebhookRequest(
         event=shared.Event.CREATED,
         hook_url='string',
         interval=188.12,
-        meta=shared.PropertyWebhookMeta(),
+        meta={
+            'key': 'string',
+        },
         object_type=shared.ObjectType.CRM_COMPANY,
         runs=[
             'string',
@@ -557,7 +563,9 @@ req = operations.PatchUnifiedConnectionRequest(
             emails=[
                 'string',
             ],
-            meta=shared.PropertyPropertyConnectionAuthMeta(),
+            meta={
+                'key': 'string',
+            },
             other_auth_info=[
                 'string',
             ],
@@ -566,7 +574,9 @@ req = operations.PatchUnifiedConnectionRequest(
             shared.PropertyConnectionCategories.TICKETING,
         ],
         cursors_cache=[
-            shared.Undefined(),
+            {
+                'key': 'string',
+            },
         ],
         integration_type='string',
         permissions=[
@@ -751,7 +761,9 @@ req = operations.UpdateUnifiedConnectionRequest(
             emails=[
                 'string',
             ],
-            meta=shared.PropertyPropertyConnectionAuthMeta(),
+            meta={
+                'key': 'string',
+            },
             other_auth_info=[
                 'string',
             ],
@@ -760,7 +772,9 @@ req = operations.UpdateUnifiedConnectionRequest(
             shared.PropertyConnectionCategories.UC,
         ],
         cursors_cache=[
-            shared.Undefined(),
+            {
+                'key': 'string',
+            },
         ],
         integration_type='string',
         permissions=[

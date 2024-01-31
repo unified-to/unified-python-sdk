@@ -29,7 +29,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.CreateMartechListRequest(
     marketing_list=shared.MarketingList(
-        raw=shared.PropertyMarketingListRaw(),
+        raw={
+            'key': 'string',
+        },
     ),
     connection_id='string',
 )
@@ -170,7 +172,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.PatchMartechListRequest(
     marketing_list=shared.MarketingList(
-        raw=shared.PropertyMarketingListRaw(),
+        raw={
+            'key': 'string',
+        },
     ),
     connection_id='string',
     id='<ID>',
@@ -262,7 +266,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.UpdateMartechListRequest(
     marketing_list=shared.MarketingList(
-        raw=shared.PropertyMarketingListRaw(),
+        raw={
+            'key': 'string',
+        },
     ),
     connection_id='string',
     id='<ID>',

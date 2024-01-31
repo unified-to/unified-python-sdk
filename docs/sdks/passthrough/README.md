@@ -26,9 +26,11 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreatePassthroughRequest(
+    request_body={
+        'key': 'string',
+    },
     connection_id='string',
     path='/etc/periodic',
-    undefined=shared.Undefined(),
 )
 
 res = s.passthrough.create_passthrough(req)
@@ -115,9 +117,11 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchPassthroughRequest(
+    request_body={
+        'key': 'string',
+    },
     connection_id='string',
     path='/mnt',
-    undefined=shared.Undefined(),
 )
 
 res = s.passthrough.patch_passthrough(req)
@@ -204,9 +208,11 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdatePassthroughRequest(
+    request_body={
+        'key': 'string',
+    },
     connection_id='string',
     path='/dev',
-    undefined=shared.Undefined(),
 )
 
 res = s.passthrough.update_passthrough(req)

@@ -46,7 +46,9 @@ req = operations.CreateAtsJobRequest(
         public_job_urls=[
             'string',
         ],
-        raw=shared.PropertyAtsJobRaw(),
+        raw={
+            'key': 'string',
+        },
         recruiter_ids=[
             'string',
         ],
@@ -207,7 +209,9 @@ req = operations.PatchAtsJobRequest(
         public_job_urls=[
             'string',
         ],
-        raw=shared.PropertyAtsJobRaw(),
+        raw={
+            'key': 'string',
+        },
         recruiter_ids=[
             'string',
         ],
@@ -319,7 +323,9 @@ req = operations.UpdateAtsJobRequest(
         public_job_urls=[
             'string',
         ],
-        raw=shared.PropertyAtsJobRaw(),
+        raw={
+            'key': 'string',
+        },
         recruiter_ids=[
             'string',
         ],

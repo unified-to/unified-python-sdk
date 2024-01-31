@@ -3,12 +3,11 @@
 from __future__ import annotations
 import dataclasses
 import dateutil.parser
-from .property_uccontact_raw import PropertyUcContactRaw
 from .ucemail import UcEmail
 from .uctelephone import UcTelephone
 from dataclasses_json import Undefined, dataclass_json
 from datetime import datetime
-from typing import List, Optional
+from typing import Any, Dict, List, Optional
 from unified_to import utils
 
 
@@ -22,7 +21,7 @@ class UcContact:
     r"""An array of email addresses for this contact"""
     id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id'), 'exclude': lambda f: f is None }})
     name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name'), 'exclude': lambda f: f is None }})
-    raw: Optional[PropertyUcContactRaw] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('raw'), 'exclude': lambda f: f is None }})
+    raw: Optional[Dict[str, Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('raw'), 'exclude': lambda f: f is None }})
     r"""The raw data returned by the integration for this contact"""
     telephones: Optional[List[UcTelephone]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('telephones'), 'exclude': lambda f: f is None }})
     r"""An array of telephones for this contact"""

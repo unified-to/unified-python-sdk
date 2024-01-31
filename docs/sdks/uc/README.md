@@ -35,7 +35,9 @@ req = operations.CreateUcContactRequest(
                 email='Dulce_Becker30@yahoo.com',
             ),
         ],
-        raw=shared.PropertyUcContactRaw(),
+        raw={
+            'key': 'string',
+        },
         telephones=[
             shared.UcTelephone(
                 telephone='string',
@@ -233,7 +235,9 @@ req = operations.PatchUcContactRequest(
                 email='Norene_Boehm97@hotmail.com',
             ),
         ],
-        raw=shared.PropertyUcContactRaw(),
+        raw={
+            'key': 'string',
+        },
         telephones=[
             shared.UcTelephone(
                 telephone='string',
@@ -335,7 +339,9 @@ req = operations.UpdateUcContactRequest(
                 email='Kianna.Witting90@gmail.com',
             ),
         ],
-        raw=shared.PropertyUcContactRaw(),
+        raw={
+            'key': 'string',
+        },
         telephones=[
             shared.UcTelephone(
                 telephone='string',

@@ -47,7 +47,9 @@ req = operations.CreateAccountingContactRequest(
                 email='Mac36@gmail.com',
             ),
         ],
-        raw=shared.PropertyAccountingContactRaw(),
+        raw={
+            'key': 'string',
+        },
         shipping_address=shared.PropertyAccountingContactShippingAddress(),
         telephones=[
             shared.AccountingTelephone(
@@ -110,7 +112,9 @@ req = operations.CreateCrmContactRequest(
         emails=[
             shared.CrmEmail(),
         ],
-        raw=shared.PropertyCrmContactRaw(),
+        raw={
+            'key': 'string',
+        },
         telephones=[
             shared.CrmTelephone(
                 telephone='string',
@@ -167,7 +171,9 @@ req = operations.CreateUcContactRequest(
                 email='Dulce_Becker30@yahoo.com',
             ),
         ],
-        raw=shared.PropertyUcContactRaw(),
+        raw={
+            'key': 'string',
+        },
         telephones=[
             shared.UcTelephone(
                 telephone='string',
@@ -507,7 +513,9 @@ req = operations.PatchAccountingContactRequest(
                 email='Sylvester.Kuhic@yahoo.com',
             ),
         ],
-        raw=shared.PropertyAccountingContactRaw(),
+        raw={
+            'key': 'string',
+        },
         shipping_address=shared.PropertyAccountingContactShippingAddress(),
         telephones=[
             shared.AccountingTelephone(
@@ -571,7 +579,9 @@ req = operations.PatchCrmContactRequest(
         emails=[
             shared.CrmEmail(),
         ],
-        raw=shared.PropertyCrmContactRaw(),
+        raw={
+            'key': 'string',
+        },
         telephones=[
             shared.CrmTelephone(
                 telephone='string',
@@ -629,7 +639,9 @@ req = operations.PatchUcContactRequest(
                 email='Norene_Boehm97@hotmail.com',
             ),
         ],
-        raw=shared.PropertyUcContactRaw(),
+        raw={
+            'key': 'string',
+        },
         telephones=[
             shared.UcTelephone(
                 telephone='string',
@@ -820,7 +832,9 @@ req = operations.UpdateAccountingContactRequest(
                 email='Kaci_Hane@hotmail.com',
             ),
         ],
-        raw=shared.PropertyAccountingContactRaw(),
+        raw={
+            'key': 'string',
+        },
         shipping_address=shared.PropertyAccountingContactShippingAddress(),
         telephones=[
             shared.AccountingTelephone(
@@ -884,7 +898,9 @@ req = operations.UpdateCrmContactRequest(
         emails=[
             shared.CrmEmail(),
         ],
-        raw=shared.PropertyCrmContactRaw(),
+        raw={
+            'key': 'string',
+        },
         telephones=[
             shared.CrmTelephone(
                 telephone='string',
@@ -942,7 +958,9 @@ req = operations.UpdateUcContactRequest(
                 email='Kianna.Witting90@gmail.com',
             ),
         ],
-        raw=shared.PropertyUcContactRaw(),
+        raw={
+            'key': 'string',
+        },
         telephones=[
             shared.UcTelephone(
                 telephone='string',

@@ -29,7 +29,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.CreateAccountingPaymentRequest(
     accounting_payment=shared.AccountingPayment(
-        raw=shared.PropertyAccountingPaymentRaw(),
+        raw={
+            'key': 'string',
+        },
     ),
     connection_id='string',
 )
@@ -170,7 +172,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.PatchAccountingPaymentRequest(
     accounting_payment=shared.AccountingPayment(
-        raw=shared.PropertyAccountingPaymentRaw(),
+        raw={
+            'key': 'string',
+        },
     ),
     connection_id='string',
     id='<ID>',
@@ -262,7 +266,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.UpdateAccountingPaymentRequest(
     accounting_payment=shared.AccountingPayment(
-        raw=shared.PropertyAccountingPaymentRaw(),
+        raw={
+            'key': 'string',
+        },
     ),
     connection_id='string',
     id='<ID>',

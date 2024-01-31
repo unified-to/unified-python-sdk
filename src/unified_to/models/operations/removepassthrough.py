@@ -3,8 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ...models.shared import undefined as shared_undefined
-from typing import Optional
+from typing import Any, Dict, Optional
 
 
 @dataclasses.dataclass
@@ -24,7 +23,7 @@ class RemovePassthroughResponse:
     r"""Raw HTTP response; suitable for custom response parsing"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    undefined: Optional[shared_undefined.Undefined] = dataclasses.field(default=None)
+    undefined: Optional[Dict[str, Any]] = dataclasses.field(default=None)
     r"""Successful"""
     
 

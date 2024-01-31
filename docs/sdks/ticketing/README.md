@@ -46,7 +46,9 @@ req = operations.CreateTicketingCustomerRequest(
                 email='Guadalupe78@yahoo.com',
             ),
         ],
-        raw=shared.PropertyTicketingCustomerRaw(),
+        raw={
+            'key': 'string',
+        },
         tags=[
             'string',
         ],
@@ -101,7 +103,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.CreateTicketingNoteRequest(
     ticketing_note=shared.TicketingNote(
-        raw=shared.PropertyTicketingNoteRaw(),
+        raw={
+            'key': 'string',
+        },
     ),
     connection_id='string',
 )
@@ -148,7 +152,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.CreateTicketingTicketRequest(
     ticketing_ticket=shared.TicketingTicket(
-        raw=shared.PropertyTicketingTicketRaw(),
+        raw={
+            'key': 'string',
+        },
         tags=[
             'string',
         ],
@@ -485,7 +491,9 @@ req = operations.PatchTicketingCustomerRequest(
                 email='Raymundo93@hotmail.com',
             ),
         ],
-        raw=shared.PropertyTicketingCustomerRaw(),
+        raw={
+            'key': 'string',
+        },
         tags=[
             'string',
         ],
@@ -541,7 +549,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.PatchTicketingNoteRequest(
     ticketing_note=shared.TicketingNote(
-        raw=shared.PropertyTicketingNoteRaw(),
+        raw={
+            'key': 'string',
+        },
     ),
     connection_id='string',
     id='<ID>',
@@ -589,7 +599,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.PatchTicketingTicketRequest(
     ticketing_ticket=shared.TicketingTicket(
-        raw=shared.PropertyTicketingTicketRaw(),
+        raw={
+            'key': 'string',
+        },
         tags=[
             'string',
         ],
@@ -777,7 +789,9 @@ req = operations.UpdateTicketingCustomerRequest(
                 email='Mohamed.Friesen@hotmail.com',
             ),
         ],
-        raw=shared.PropertyTicketingCustomerRaw(),
+        raw={
+            'key': 'string',
+        },
         tags=[
             'string',
         ],
@@ -833,7 +847,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.UpdateTicketingNoteRequest(
     ticketing_note=shared.TicketingNote(
-        raw=shared.PropertyTicketingNoteRaw(),
+        raw={
+            'key': 'string',
+        },
     ),
     connection_id='string',
     id='<ID>',
@@ -881,7 +897,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.UpdateTicketingTicketRequest(
     ticketing_ticket=shared.TicketingTicket(
-        raw=shared.PropertyTicketingTicketRaw(),
+        raw={
+            'key': 'string',
+        },
         tags=[
             'string',
         ],

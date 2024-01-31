@@ -40,7 +40,9 @@ req = operations.CreateCrmCompanyRequest(
         link_urls=[
             'string',
         ],
-        raw=shared.PropertyCrmCompanyRaw(),
+        raw={
+            'key': 'string',
+        },
         tags=[
             'string',
         ],
@@ -245,7 +247,9 @@ req = operations.PatchCrmCompanyRequest(
         link_urls=[
             'string',
         ],
-        raw=shared.PropertyCrmCompanyRaw(),
+        raw={
+            'key': 'string',
+        },
         tags=[
             'string',
         ],
@@ -358,7 +362,9 @@ req = operations.UpdateCrmCompanyRequest(
         link_urls=[
             'string',
         ],
-        raw=shared.PropertyCrmCompanyRaw(),
+        raw={
+            'key': 'string',
+        },
         tags=[
             'string',
         ],

@@ -13,7 +13,9 @@ s = unified_to.UnifiedTo(
 req = operations.CreateAccountingAccountRequest(
     accounting_account=shared.AccountingAccount(
         name='string',
-        raw=shared.PropertyAccountingAccountRaw(),
+        raw={
+            'key': 'string',
+        },
     ),
     connection_id='string',
 )

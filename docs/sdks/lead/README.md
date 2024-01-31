@@ -33,7 +33,9 @@ req = operations.CreateCrmLeadRequest(
         emails=[
             shared.CrmEmail(),
         ],
-        raw=shared.PropertyCrmLeadRaw(),
+        raw={
+            'key': 'string',
+        },
         telephones=[
             shared.CrmTelephone(
                 telephone='string',
@@ -183,7 +185,9 @@ req = operations.PatchCrmLeadRequest(
         emails=[
             shared.CrmEmail(),
         ],
-        raw=shared.PropertyCrmLeadRaw(),
+        raw={
+            'key': 'string',
+        },
         telephones=[
             shared.CrmTelephone(
                 telephone='string',
@@ -284,7 +288,9 @@ req = operations.UpdateCrmLeadRequest(
         emails=[
             shared.CrmEmail(),
         ],
-        raw=shared.PropertyCrmLeadRaw(),
+        raw={
+            'key': 'string',
+        },
         telephones=[
             shared.CrmTelephone(
                 telephone='string',

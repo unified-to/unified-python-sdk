@@ -3,8 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ...models.shared import undefined as shared_undefined
-from typing import Optional
+from typing import Any, Dict, Optional
 
 
 @dataclasses.dataclass
@@ -12,7 +11,7 @@ class CreatePassthroughRequest:
     connection_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': False }})
     r"""ID of the connection"""
     path: str = dataclasses.field(metadata={'path_param': { 'field_name': 'path', 'style': 'simple', 'explode': False }})
-    undefined: Optional[shared_undefined.Undefined] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    request_body: Optional[Dict[str, Any]] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     r"""integration-specific payload"""
     
 
@@ -26,7 +25,7 @@ class CreatePassthroughResponse:
     r"""Raw HTTP response; suitable for custom response parsing"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    undefined: Optional[shared_undefined.Undefined] = dataclasses.field(default=None)
+    undefined: Optional[Dict[str, Any]] = dataclasses.field(default=None)
     r"""Successful"""
     
 

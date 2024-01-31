@@ -29,7 +29,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.CreateAtsDocumentRequest(
     ats_document=shared.AtsDocument(
-        raw=shared.PropertyAtsDocumentRaw(),
+        raw={
+            'key': 'string',
+        },
     ),
     connection_id='string',
 )
@@ -170,7 +172,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.PatchAtsDocumentRequest(
     ats_document=shared.AtsDocument(
-        raw=shared.PropertyAtsDocumentRaw(),
+        raw={
+            'key': 'string',
+        },
     ),
     connection_id='string',
     id='<ID>',
@@ -262,7 +266,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.UpdateAtsDocumentRequest(
     ats_document=shared.AtsDocument(
-        raw=shared.PropertyAtsDocumentRaw(),
+        raw={
+            'key': 'string',
+        },
     ),
     connection_id='string',
     id='<ID>',

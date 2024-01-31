@@ -34,7 +34,9 @@ req = operations.CreateTicketingCustomerRequest(
                 email='Guadalupe78@yahoo.com',
             ),
         ],
-        raw=shared.PropertyTicketingCustomerRaw(),
+        raw={
+            'key': 'string',
+        },
         tags=[
             'string',
         ],
@@ -188,7 +190,9 @@ req = operations.PatchTicketingCustomerRequest(
                 email='Raymundo93@hotmail.com',
             ),
         ],
-        raw=shared.PropertyTicketingCustomerRaw(),
+        raw={
+            'key': 'string',
+        },
         tags=[
             'string',
         ],
@@ -293,7 +297,9 @@ req = operations.UpdateTicketingCustomerRequest(
                 email='Mohamed.Friesen@hotmail.com',
             ),
         ],
-        raw=shared.PropertyTicketingCustomerRaw(),
+        raw={
+            'key': 'string',
+        },
         tags=[
             'string',
         ],

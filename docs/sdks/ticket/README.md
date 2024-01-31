@@ -29,7 +29,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.CreateTicketingTicketRequest(
     ticketing_ticket=shared.TicketingTicket(
-        raw=shared.PropertyTicketingTicketRaw(),
+        raw={
+            'key': 'string',
+        },
         tags=[
             'string',
         ],
@@ -173,7 +175,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.PatchTicketingTicketRequest(
     ticketing_ticket=shared.TicketingTicket(
-        raw=shared.PropertyTicketingTicketRaw(),
+        raw={
+            'key': 'string',
+        },
         tags=[
             'string',
         ],
@@ -268,7 +272,9 @@ s = unified_to.UnifiedTo(
 
 req = operations.UpdateTicketingTicketRequest(
     ticketing_ticket=shared.TicketingTicket(
-        raw=shared.PropertyTicketingTicketRaw(),
+        raw={
+            'key': 'string',
+        },
         tags=[
             'string',
         ],
