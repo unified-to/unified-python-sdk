@@ -35,6 +35,12 @@ req = operations.CreateAccountingTransactionRequest(
                 total_amount=4969.62,
             ),
         ],
+        lineitems=[
+            shared.AccountingTransactionLineitem(
+                account_id='string',
+                total_amount=6267.93,
+            ),
+        ],
         raw={
             'key': 'string',
         },
@@ -184,6 +190,12 @@ req = operations.PatchAccountingTransactionRequest(
                 total_amount=5633.69,
             ),
         ],
+        lineitems=[
+            shared.AccountingTransactionLineitem(
+                account_id='string',
+                total_amount=4558.63,
+            ),
+        ],
         raw={
             'key': 'string',
         },
@@ -282,6 +294,12 @@ req = operations.UpdateAccountingTransactionRequest(
             shared.AccountingTransactionLineitem(
                 account_id='string',
                 total_amount=6498.37,
+            ),
+        ],
+        lineitems=[
+            shared.AccountingTransactionLineitem(
+                account_id='string',
+                total_amount=5659.17,
             ),
         ],
         raw={
