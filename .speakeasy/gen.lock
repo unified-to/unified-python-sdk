@@ -4,9 +4,9 @@ management:
   docChecksum: dd7e435592a9ea6528f806cf1e9e4701
   docVersion: "1.0"
   speakeasyVersion: internal
-  generationVersion: 2.239.4
-  releaseVersion: 0.14.36
-  configChecksum: 5f0b87d50cea32fb12ebb7871bb7fd15
+  generationVersion: 2.245.1
+  releaseVersion: 0.14.37
+  configChecksum: 8bc563bebacd35dcbb8b78d2732a6149
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -14,7 +14,7 @@ management:
 features:
   python:
     constsAndDefaults: 0.1.2
-    core: 4.4.2
+    core: 4.4.3
     globalSecurity: 2.83.2
     globalServerURLs: 2.82.1
 generatedFiles:
