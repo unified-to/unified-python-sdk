@@ -16,3 +16,4 @@
 | `UC`          | uc            |
 | `ACCOUNTING`  | accounting    |
 | `STORAGE`     | storage       |
+| `COMMERCE`    | commerce      |

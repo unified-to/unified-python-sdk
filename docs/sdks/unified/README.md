@@ -51,7 +51,7 @@ req = shared.Connection(
         ],
     ),
     categories=[
-        shared.PropertyConnectionCategories.STORAGE,
+        shared.PropertyConnectionCategories.COMMERCE,
     ],
     cursors_cache=[
         {
@@ -60,7 +60,7 @@ req = shared.Connection(
     ],
     integration_type='string',
     permissions=[
-        shared.PropertyConnectionPermissions.ATS_JOB_READ,
+        shared.PropertyConnectionPermissions.ATS_CANDIDATE_READ,
     ],
 )
 
@@ -113,7 +113,7 @@ req = operations.CreateUnifiedWebhookRequest(
         meta={
             'key': 'string',
         },
-        object_type=shared.ObjectType.CRM_COMPANY,
+        object_type=shared.ObjectType.ATS_JOB,
         runs=[
             'string',
         ],
@@ -380,7 +380,7 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListUnifiedConnectionsRequest(
     categories=[
-        operations.Categories.ENRICH,
+        operations.Categories.MARTECH,
     ],
 )
 
@@ -425,7 +425,7 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListUnifiedIntegrationWorkspacesRequest(
     categories=[
-        operations.QueryParamCategories.UC,
+        operations.QueryParamCategories.ACCOUNTING,
     ],
     workspace_id='string',
 )
@@ -471,7 +471,7 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListUnifiedIntegrationsRequest(
     categories=[
-        operations.ListUnifiedIntegrationsQueryParamCategories.AUTH,
+        operations.ListUnifiedIntegrationsQueryParamCategories.CRM,
     ],
 )
 
@@ -580,7 +580,7 @@ req = operations.PatchUnifiedConnectionRequest(
         ],
         integration_type='string',
         permissions=[
-            shared.PropertyConnectionPermissions.MARTECH_LIST_READ,
+            shared.PropertyConnectionPermissions.CRM_PIPELINE_READ,
         ],
     ),
     id='<ID>',
@@ -769,7 +769,7 @@ req = operations.UpdateUnifiedConnectionRequest(
             ],
         ),
         categories=[
-            shared.PropertyConnectionCategories.UC,
+            shared.PropertyConnectionCategories.ACCOUNTING,
         ],
         cursors_cache=[
             {
@@ -778,7 +778,7 @@ req = operations.UpdateUnifiedConnectionRequest(
         ],
         integration_type='string',
         permissions=[
-            shared.PropertyConnectionPermissions.CRM_COMPANY_WRITE,
+            shared.PropertyConnectionPermissions.ATS_DOCUMENT_READ,
         ],
     ),
     id='<ID>',

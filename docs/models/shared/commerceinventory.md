@@ -1,0 +1,15 @@
+# CommerceInventory
+
+
+## Fields
+
+| Field                                                                | Type                                                                 | Required                                                             | Description                                                          |
+| -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| `available`                                                          | *float*                                                              | :heavy_check_mark:                                                   | N/A                                                                  |
+| `id`                                                                 | *Optional[str]*                                                      | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `item_id`                                                            | *Optional[str]*                                                      | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `item_option_id`                                                     | *Optional[str]*                                                      | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `item_variant_id`                                                    | *Optional[str]*                                                      | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `location_id`                                                        | *Optional[str]*                                                      | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `raw`                                                                | Dict[str, *Any*]                                                     | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `updated_at`                                                         | [date](https://docs.python.org/3/library/datetime.html#date-objects) | :heavy_minus_sign:                                                   | N/A                                                                  |

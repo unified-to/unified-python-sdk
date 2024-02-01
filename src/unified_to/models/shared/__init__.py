@@ -4,7 +4,6 @@ from .accountingaccount import *
 from .accountingcontact import *
 from .accountingemail import *
 from .accountinginvoice import *
-from .accountingitem import *
 from .accountinglineitem import *
 from .accountingorganization import *
 from .accountingpayment import *
@@ -24,6 +23,14 @@ from .atsjob import *
 from .atsscorecard import *
 from .atsstatus import *
 from .atstelephone import *
+from .commercecollection import *
+from .commerceinventory import *
+from .commerceitem import *
+from .commerceitemmedia import *
+from .commerceitemoption import *
+from .commerceitemprice import *
+from .commerceitemvariant import *
+from .commercelocation import *
 from .connection import *
 from .crmcompany import *
 from .crmcontact import *
@@ -51,6 +58,7 @@ from .property_accountingcontact_billing_address import *
 from .property_accountingcontact_shipping_address import *
 from .property_accountingorganization_address import *
 from .property_atscandidate_address import *
+from .property_commercelocation_address import *
 from .property_connection_auth import *
 from .property_connection_categories import *
 from .property_connection_permissions import *
@@ -83,4 +91,4 @@ from .ucemail import *
 from .uctelephone import *
 from .webhook import *
 
-__all__ = ["APICall","APICallType","AccountingAccount","AccountingContact","AccountingEmail","AccountingEmailType","AccountingInvoice","AccountingInvoiceStatus","AccountingItem","AccountingLineitem","AccountingOrganization","AccountingPayment","AccountingTaxrate","AccountingTelephone","AccountingTelephoneType","AccountingTransaction","AccountingTransactionLineitem","AtsAddress","AtsApplication","AtsApplicationStatus","AtsCandidate","AtsCompensation","AtsCompensationType","AtsDocument","AtsDocumentType","AtsEmail","AtsEmailType","AtsInterview","AtsInterviewStatus","AtsJob","AtsJobStatus","AtsScorecard","AtsStatus","AtsStatusStatus","AtsTelephone","AtsTelephoneType","Connection","CrmCompany","CrmContact","CrmDeal","CrmEmail","CrmEmailType","CrmEvent","CrmEventType","CrmLead","CrmPipeline","CrmTelephone","CrmTelephoneType","EmploymentStatus","EmploymentType","EnrichCompany","EnrichEmail","EnrichEmailType","EnrichPerson","EnrichPersonWorkHistory","EnrichTelephone","EnrichTelephoneType","Event","Frequency","Gender","HrisEmail","HrisEmailType","HrisEmployee","HrisEmployeeEmploymentType","HrisEmployeeGender","HrisGroup","HrisGroupType","HrisTelephone","HrisTelephoneType","Integration","IntegrationSupport","MaritalStatus","MarketingEmail","MarketingEmailType","MarketingList","MarketingMember","ObjectType","Origin","PropertyAccountingContactBillingAddress","PropertyAccountingContactShippingAddress","PropertyAccountingOrganizationAddress","PropertyAtsCandidateAddress","PropertyConnectionAuth","PropertyConnectionCategories","PropertyConnectionPermissions","PropertyCrmCompanyAddress","PropertyCrmContactAddress","PropertyCrmEventCall","PropertyCrmEventEmail","PropertyCrmEventMeeting","PropertyCrmEventNote","PropertyCrmEventTask","PropertyCrmEventTaskStatus","PropertyCrmLeadAddress","PropertyEnrichCompanyAddress","PropertyEnrichPersonAddress","PropertyHrisEmployeeAddress","PropertyIntegrationCategories","PropertyIntegrationSupportWebhookEvents","PropertyStoragePermissionRoles","PropertyUcCallTelephone","PropertyUcCallTelephoneType","Recommendation","Security","Status","StorageFile","StorageFileType","StoragePermission","TaxExemption","TicketingCustomer","TicketingEmail","TicketingEmailType","TicketingNote","TicketingTelephone","TicketingTelephoneType","TicketingTicket","TicketingTicketStatus","Type","UcCall","UcContact","UcEmail","UcEmailType","UcTelephone","UcTelephoneType","Webhook","WebhookType","WebhookWebhookType"]
+__all__ = ["APICall","APICallType","AccountingAccount","AccountingContact","AccountingEmail","AccountingEmailType","AccountingInvoice","AccountingInvoiceStatus","AccountingLineitem","AccountingOrganization","AccountingPayment","AccountingTaxrate","AccountingTelephone","AccountingTelephoneType","AccountingTransaction","AccountingTransactionLineitem","AtsAddress","AtsApplication","AtsApplicationStatus","AtsCandidate","AtsCompensation","AtsCompensationType","AtsDocument","AtsDocumentType","AtsEmail","AtsEmailType","AtsInterview","AtsInterviewStatus","AtsJob","AtsJobStatus","AtsScorecard","AtsStatus","AtsStatusStatus","AtsTelephone","AtsTelephoneType","CommerceCollection","CommerceInventory","CommerceItem","CommerceItemMedia","CommerceItemMediaType","CommerceItemOption","CommerceItemPrice","CommerceItemVariant","CommerceLocation","Connection","CrmCompany","CrmContact","CrmDeal","CrmEmail","CrmEmailType","CrmEvent","CrmEventType","CrmLead","CrmPipeline","CrmTelephone","CrmTelephoneType","EmploymentStatus","EmploymentType","EnrichCompany","EnrichEmail","EnrichEmailType","EnrichPerson","EnrichPersonWorkHistory","EnrichTelephone","EnrichTelephoneType","Event","Frequency","Gender","HrisEmail","HrisEmailType","HrisEmployee","HrisEmployeeEmploymentType","HrisEmployeeGender","HrisGroup","HrisGroupType","HrisTelephone","HrisTelephoneType","Integration","IntegrationSupport","MaritalStatus","MarketingEmail","MarketingEmailType","MarketingList","MarketingMember","ObjectType","Origin","PropertyAccountingContactBillingAddress","PropertyAccountingContactShippingAddress","PropertyAccountingOrganizationAddress","PropertyAtsCandidateAddress","PropertyCommerceLocationAddress","PropertyConnectionAuth","PropertyConnectionCategories","PropertyConnectionPermissions","PropertyCrmCompanyAddress","PropertyCrmContactAddress","PropertyCrmEventCall","PropertyCrmEventEmail","PropertyCrmEventMeeting","PropertyCrmEventNote","PropertyCrmEventTask","PropertyCrmEventTaskStatus","PropertyCrmLeadAddress","PropertyEnrichCompanyAddress","PropertyEnrichPersonAddress","PropertyHrisEmployeeAddress","PropertyIntegrationCategories","PropertyIntegrationSupportWebhookEvents","PropertyStoragePermissionRoles","PropertyUcCallTelephone","PropertyUcCallTelephoneType","Recommendation","Security","SizeUnit","Status","StorageFile","StorageFileType","StoragePermission","TaxExemption","TicketingCustomer","TicketingEmail","TicketingEmailType","TicketingNote","TicketingTelephone","TicketingTelephoneType","TicketingTicket","TicketingTicketStatus","Type","UcCall","UcContact","UcEmail","UcEmailType","UcTelephone","UcTelephoneType","Webhook","WebhookType","WebhookWebhookType","WeightUnit"]

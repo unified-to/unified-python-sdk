@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: dd7e435592a9ea6528f806cf1e9e4701
+  docChecksum: a19ba4935c486a523296da7841502792
   docVersion: "1.0"
   speakeasyVersion: internal
-  generationVersion: 2.245.1
-  releaseVersion: 0.14.37
-  configChecksum: 8bc563bebacd35dcbb8b78d2732a6149
+  generationVersion: 2.246.3
+  releaseVersion: 0.14.38
+  configChecksum: 2b79c84024afcbaa0a71c398484af889
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -14,7 +14,7 @@ management:
 features:
   python:
     constsAndDefaults: 0.1.2
-    core: 4.4.3
+    core: 4.4.4
     globalSecurity: 2.83.2
     globalServerURLs: 2.82.1
 generatedFiles:
@@ -23,7 +23,6 @@ generatedFiles:
   - src/unified_to/account.py
   - src/unified_to/contact.py
   - src/unified_to/invoice.py
-  - src/unified_to/item.py
   - src/unified_to/organization.py
   - src/unified_to/payment.py
   - src/unified_to/taxrate.py
@@ -36,6 +35,11 @@ generatedFiles:
   - src/unified_to/interview.py
   - src/unified_to/job.py
   - src/unified_to/scorecard.py
+  - src/unified_to/commerce.py
+  - src/unified_to/collection.py
+  - src/unified_to/inventory.py
+  - src/unified_to/item.py
+  - src/unified_to/location.py
   - src/unified_to/crm.py
   - src/unified_to/company.py
   - src/unified_to/deal.py
@@ -78,14 +82,12 @@ generatedFiles:
   - src/unified_to/models/operations/createaccountingaccount.py
   - src/unified_to/models/operations/createaccountingcontact.py
   - src/unified_to/models/operations/createaccountinginvoice.py
-  - src/unified_to/models/operations/createaccountingitem.py
   - src/unified_to/models/operations/createaccountingpayment.py
   - src/unified_to/models/operations/createaccountingtaxrate.py
   - src/unified_to/models/operations/createaccountingtransaction.py
   - src/unified_to/models/operations/getaccountingaccount.py
   - src/unified_to/models/operations/getaccountingcontact.py
   - src/unified_to/models/operations/getaccountinginvoice.py
-  - src/unified_to/models/operations/getaccountingitem.py
   - src/unified_to/models/operations/getaccountingorganization.py
   - src/unified_to/models/operations/getaccountingpayment.py
   - src/unified_to/models/operations/getaccountingtaxrate.py
@@ -93,7 +95,6 @@ generatedFiles:
   - src/unified_to/models/operations/listaccountingaccounts.py
   - src/unified_to/models/operations/listaccountingcontacts.py
   - src/unified_to/models/operations/listaccountinginvoices.py
-  - src/unified_to/models/operations/listaccountingitems.py
   - src/unified_to/models/operations/listaccountingorganizations.py
   - src/unified_to/models/operations/listaccountingpayments.py
   - src/unified_to/models/operations/listaccountingtaxrates.py
@@ -101,21 +102,18 @@ generatedFiles:
   - src/unified_to/models/operations/patchaccountingaccount.py
   - src/unified_to/models/operations/patchaccountingcontact.py
   - src/unified_to/models/operations/patchaccountinginvoice.py
-  - src/unified_to/models/operations/patchaccountingitem.py
   - src/unified_to/models/operations/patchaccountingpayment.py
   - src/unified_to/models/operations/patchaccountingtaxrate.py
   - src/unified_to/models/operations/patchaccountingtransaction.py
   - src/unified_to/models/operations/removeaccountingaccount.py
   - src/unified_to/models/operations/removeaccountingcontact.py
   - src/unified_to/models/operations/removeaccountinginvoice.py
-  - src/unified_to/models/operations/removeaccountingitem.py
   - src/unified_to/models/operations/removeaccountingpayment.py
   - src/unified_to/models/operations/removeaccountingtaxrate.py
   - src/unified_to/models/operations/removeaccountingtransaction.py
   - src/unified_to/models/operations/updateaccountingaccount.py
   - src/unified_to/models/operations/updateaccountingcontact.py
   - src/unified_to/models/operations/updateaccountinginvoice.py
-  - src/unified_to/models/operations/updateaccountingitem.py
   - src/unified_to/models/operations/updateaccountingpayment.py
   - src/unified_to/models/operations/updateaccountingtaxrate.py
   - src/unified_to/models/operations/updateaccountingtransaction.py
@@ -168,6 +166,30 @@ generatedFiles:
   - src/unified_to/models/operations/updateatsinterview.py
   - src/unified_to/models/operations/updateatsjob.py
   - src/unified_to/models/operations/updateatsscorecard.py
+  - src/unified_to/models/operations/createcommercecollection.py
+  - src/unified_to/models/operations/createcommerceinventory.py
+  - src/unified_to/models/operations/createcommerceitem.py
+  - src/unified_to/models/operations/createcommercelocation.py
+  - src/unified_to/models/operations/getcommercecollection.py
+  - src/unified_to/models/operations/getcommerceinventory.py
+  - src/unified_to/models/operations/getcommerceitem.py
+  - src/unified_to/models/operations/getcommercelocation.py
+  - src/unified_to/models/operations/listcommercecollections.py
+  - src/unified_to/models/operations/listcommerceinventories.py
+  - src/unified_to/models/operations/listcommerceitems.py
+  - src/unified_to/models/operations/listcommercelocations.py
+  - src/unified_to/models/operations/patchcommercecollection.py
+  - src/unified_to/models/operations/patchcommerceinventory.py
+  - src/unified_to/models/operations/patchcommerceitem.py
+  - src/unified_to/models/operations/patchcommercelocation.py
+  - src/unified_to/models/operations/removecommercecollection.py
+  - src/unified_to/models/operations/removecommerceinventory.py
+  - src/unified_to/models/operations/removecommerceitem.py
+  - src/unified_to/models/operations/removecommercelocation.py
+  - src/unified_to/models/operations/updatecommercecollection.py
+  - src/unified_to/models/operations/updatecommerceinventory.py
+  - src/unified_to/models/operations/updatecommerceitem.py
+  - src/unified_to/models/operations/updatecommercelocation.py
   - src/unified_to/models/operations/createcrmcompany.py
   - src/unified_to/models/operations/createcrmdeal.py
   - src/unified_to/models/operations/createcrmevent.py
@@ -280,7 +302,6 @@ generatedFiles:
   - src/unified_to/models/shared/property_accountingcontact_billing_address.py
   - src/unified_to/models/shared/accountinginvoice.py
   - src/unified_to/models/shared/accountinglineitem.py
-  - src/unified_to/models/shared/accountingitem.py
   - src/unified_to/models/shared/accountingpayment.py
   - src/unified_to/models/shared/accountingtaxrate.py
   - src/unified_to/models/shared/accountingtransaction.py
@@ -306,6 +327,15 @@ generatedFiles:
   - src/unified_to/models/shared/atsaddress.py
   - src/unified_to/models/shared/atsscorecard.py
   - src/unified_to/models/shared/atsstatus.py
+  - src/unified_to/models/shared/commercecollection.py
+  - src/unified_to/models/shared/commerceitemmedia.py
+  - src/unified_to/models/shared/commerceinventory.py
+  - src/unified_to/models/shared/commerceitem.py
+  - src/unified_to/models/shared/commerceitemvariant.py
+  - src/unified_to/models/shared/commerceitemprice.py
+  - src/unified_to/models/shared/commerceitemoption.py
+  - src/unified_to/models/shared/commercelocation.py
+  - src/unified_to/models/shared/property_commercelocation_address.py
   - src/unified_to/models/shared/crmcompany.py
   - src/unified_to/models/shared/property_crmcompany_address.py
   - src/unified_to/models/shared/crmdeal.py
@@ -364,8 +394,6 @@ generatedFiles:
   - docs/models/operations/createaccountingcontactresponse.md
   - docs/models/operations/createaccountinginvoicerequest.md
   - docs/models/operations/createaccountinginvoiceresponse.md
-  - docs/models/operations/createaccountingitemrequest.md
-  - docs/models/operations/createaccountingitemresponse.md
   - docs/models/operations/createaccountingpaymentrequest.md
   - docs/models/operations/createaccountingpaymentresponse.md
   - docs/models/operations/createaccountingtaxraterequest.md
@@ -378,8 +406,6 @@ generatedFiles:
   - docs/models/operations/getaccountingcontactresponse.md
   - docs/models/operations/getaccountinginvoicerequest.md
   - docs/models/operations/getaccountinginvoiceresponse.md
-  - docs/models/operations/getaccountingitemrequest.md
-  - docs/models/operations/getaccountingitemresponse.md
   - docs/models/operations/getaccountingorganizationrequest.md
   - docs/models/operations/getaccountingorganizationresponse.md
   - docs/models/operations/getaccountingpaymentrequest.md
@@ -394,8 +420,6 @@ generatedFiles:
   - docs/models/operations/listaccountingcontactsresponse.md
   - docs/models/operations/listaccountinginvoicesrequest.md
   - docs/models/operations/listaccountinginvoicesresponse.md
-  - docs/models/operations/listaccountingitemsrequest.md
-  - docs/models/operations/listaccountingitemsresponse.md
   - docs/models/operations/listaccountingorganizationsrequest.md
   - docs/models/operations/listaccountingorganizationsresponse.md
   - docs/models/operations/listaccountingpaymentsrequest.md
@@ -410,8 +434,6 @@ generatedFiles:
   - docs/models/operations/patchaccountingcontactresponse.md
   - docs/models/operations/patchaccountinginvoicerequest.md
   - docs/models/operations/patchaccountinginvoiceresponse.md
-  - docs/models/operations/patchaccountingitemrequest.md
-  - docs/models/operations/patchaccountingitemresponse.md
   - docs/models/operations/patchaccountingpaymentrequest.md
   - docs/models/operations/patchaccountingpaymentresponse.md
   - docs/models/operations/patchaccountingtaxraterequest.md
@@ -424,8 +446,6 @@ generatedFiles:
   - docs/models/operations/removeaccountingcontactresponse.md
   - docs/models/operations/removeaccountinginvoicerequest.md
   - docs/models/operations/removeaccountinginvoiceresponse.md
-  - docs/models/operations/removeaccountingitemrequest.md
-  - docs/models/operations/removeaccountingitemresponse.md
   - docs/models/operations/removeaccountingpaymentrequest.md
   - docs/models/operations/removeaccountingpaymentresponse.md
   - docs/models/operations/removeaccountingtaxraterequest.md
@@ -438,8 +458,6 @@ generatedFiles:
   - docs/models/operations/updateaccountingcontactresponse.md
   - docs/models/operations/updateaccountinginvoicerequest.md
   - docs/models/operations/updateaccountinginvoiceresponse.md
-  - docs/models/operations/updateaccountingitemrequest.md
-  - docs/models/operations/updateaccountingitemresponse.md
   - docs/models/operations/updateaccountingpaymentrequest.md
   - docs/models/operations/updateaccountingpaymentresponse.md
   - docs/models/operations/updateaccountingtaxraterequest.md
@@ -544,6 +562,54 @@ generatedFiles:
   - docs/models/operations/updateatsjobresponse.md
   - docs/models/operations/updateatsscorecardrequest.md
   - docs/models/operations/updateatsscorecardresponse.md
+  - docs/models/operations/createcommercecollectionrequest.md
+  - docs/models/operations/createcommercecollectionresponse.md
+  - docs/models/operations/createcommerceinventoryrequest.md
+  - docs/models/operations/createcommerceinventoryresponse.md
+  - docs/models/operations/createcommerceitemrequest.md
+  - docs/models/operations/createcommerceitemresponse.md
+  - docs/models/operations/createcommercelocationrequest.md
+  - docs/models/operations/createcommercelocationresponse.md
+  - docs/models/operations/getcommercecollectionrequest.md
+  - docs/models/operations/getcommercecollectionresponse.md
+  - docs/models/operations/getcommerceinventoryrequest.md
+  - docs/models/operations/getcommerceinventoryresponse.md
+  - docs/models/operations/getcommerceitemrequest.md
+  - docs/models/operations/getcommerceitemresponse.md
+  - docs/models/operations/getcommercelocationrequest.md
+  - docs/models/operations/getcommercelocationresponse.md
+  - docs/models/operations/listcommercecollectionsrequest.md
+  - docs/models/operations/listcommercecollectionsresponse.md
+  - docs/models/operations/listcommerceinventoriesrequest.md
+  - docs/models/operations/listcommerceinventoriesresponse.md
+  - docs/models/operations/listcommerceitemsrequest.md
+  - docs/models/operations/listcommerceitemsresponse.md
+  - docs/models/operations/listcommercelocationsrequest.md
+  - docs/models/operations/listcommercelocationsresponse.md
+  - docs/models/operations/patchcommercecollectionrequest.md
+  - docs/models/operations/patchcommercecollectionresponse.md
+  - docs/models/operations/patchcommerceinventoryrequest.md
+  - docs/models/operations/patchcommerceinventoryresponse.md
+  - docs/models/operations/patchcommerceitemrequest.md
+  - docs/models/operations/patchcommerceitemresponse.md
+  - docs/models/operations/patchcommercelocationrequest.md
+  - docs/models/operations/patchcommercelocationresponse.md
+  - docs/models/operations/removecommercecollectionrequest.md
+  - docs/models/operations/removecommercecollectionresponse.md
+  - docs/models/operations/removecommerceinventoryrequest.md
+  - docs/models/operations/removecommerceinventoryresponse.md
+  - docs/models/operations/removecommerceitemrequest.md
+  - docs/models/operations/removecommerceitemresponse.md
+  - docs/models/operations/removecommercelocationrequest.md
+  - docs/models/operations/removecommercelocationresponse.md
+  - docs/models/operations/updatecommercecollectionrequest.md
+  - docs/models/operations/updatecommercecollectionresponse.md
+  - docs/models/operations/updatecommerceinventoryrequest.md
+  - docs/models/operations/updatecommerceinventoryresponse.md
+  - docs/models/operations/updatecommerceitemrequest.md
+  - docs/models/operations/updatecommerceitemresponse.md
+  - docs/models/operations/updatecommercelocationrequest.md
+  - docs/models/operations/updatecommercelocationresponse.md
   - docs/models/operations/createcrmcompanyrequest.md
   - docs/models/operations/createcrmcompanyresponse.md
   - docs/models/operations/createcrmdealrequest.md
@@ -769,7 +835,6 @@ generatedFiles:
   - docs/models/shared/accountinginvoicestatus.md
   - docs/models/shared/accountinginvoice.md
   - docs/models/shared/accountinglineitem.md
-  - docs/models/shared/accountingitem.md
   - docs/models/shared/accountingpayment.md
   - docs/models/shared/accountingtaxrate.md
   - docs/models/shared/accountingtransaction.md
@@ -811,6 +876,18 @@ generatedFiles:
   - docs/models/shared/atsscorecard.md
   - docs/models/shared/atsstatusstatus.md
   - docs/models/shared/atsstatus.md
+  - docs/models/shared/commercecollection.md
+  - docs/models/shared/commerceitemmediatype.md
+  - docs/models/shared/commerceitemmedia.md
+  - docs/models/shared/commerceinventory.md
+  - docs/models/shared/commerceitem.md
+  - docs/models/shared/sizeunit.md
+  - docs/models/shared/weightunit.md
+  - docs/models/shared/commerceitemvariant.md
+  - docs/models/shared/commerceitemprice.md
+  - docs/models/shared/commerceitemoption.md
+  - docs/models/shared/commercelocation.md
+  - docs/models/shared/propertycommercelocationaddress.md
   - docs/models/shared/crmcompany.md
   - docs/models/shared/propertycrmcompanyaddress.md
   - docs/models/shared/crmdeal.md
@@ -887,7 +964,6 @@ generatedFiles:
   - docs/sdks/account/README.md
   - docs/sdks/contact/README.md
   - docs/sdks/invoice/README.md
-  - docs/sdks/item/README.md
   - docs/sdks/organization/README.md
   - docs/sdks/payment/README.md
   - docs/sdks/taxrate/README.md
@@ -900,6 +976,11 @@ generatedFiles:
   - docs/sdks/interview/README.md
   - docs/sdks/job/README.md
   - docs/sdks/scorecard/README.md
+  - docs/sdks/commerce/README.md
+  - docs/sdks/collection/README.md
+  - docs/sdks/inventory/README.md
+  - docs/sdks/item/README.md
+  - docs/sdks/location/README.md
   - docs/sdks/crm/README.md
   - docs/sdks/company/README.md
   - docs/sdks/deal/README.md

@@ -19,7 +19,14 @@
 | `ACCOUNTING_TAXRATE_READ`      | accounting_taxrate_read        |
 | `ACCOUNTING_TAXRATE_WRITE`     | accounting_taxrate_write       |
 | `ACCOUNTING_ORGANIZATION_READ` | accounting_organization_read   |
-| `ACCOUNTING_ITEM_READ`         | accounting_item_read           |
+| `COMMERCE_ITEM_READ`           | commerce_item_read             |
+| `COMMERCE_ITEM_WRITE`          | commerce_item_write            |
+| `COMMERCE_COLLECTION_READ`     | commerce_collection_read       |
+| `COMMERCE_COLLECTION_WRITE`    | commerce_collection_write      |
+| `COMMERCE_INVENTORY_READ`      | commerce_inventory_read        |
+| `COMMERCE_INVENTORY_WRITE`     | commerce_inventory_write       |
+| `COMMERCE_LOCATION_READ`       | commerce_location_read         |
+| `COMMERCE_LOCATION_WRITE`      | commerce_location_write        |
 | `ATS_SCORECARD_READ`           | ats_scorecard_read             |
 | `ATS_SCORECARD_WRITE`          | ats_scorecard_write            |
 | `ATS_APPLICATION_READ`         | ats_application_read           |

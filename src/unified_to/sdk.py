@@ -10,6 +10,8 @@ from .ats import Ats
 from .auth import Auth
 from .call import Call
 from .candidate import Candidate
+from .collection import Collection
+from .commerce import Commerce
 from .company import Company
 from .connection import Connection
 from .contact import Contact
@@ -25,11 +27,13 @@ from .group import Group
 from .hris import Hris
 from .integration import Integration
 from .interview import Interview
+from .inventory import Inventory
 from .invoice import Invoice
 from .item import Item
 from .job import Job
 from .lead import Lead
 from .list import ListT
+from .location import Location
 from .login import Login
 from .martech import Martech
 from .member import Member
@@ -59,7 +63,6 @@ class UnifiedTo:
     account: Account
     contact: Contact
     invoice: Invoice
-    item: Item
     organization: Organization
     payment: Payment
     taxrate: Taxrate
@@ -72,6 +75,11 @@ class UnifiedTo:
     interview: Interview
     job: Job
     scorecard: Scorecard
+    commerce: Commerce
+    collection: Collection
+    inventory: Inventory
+    item: Item
+    location: Location
     crm: Crm
     company: Company
     deal: Deal
@@ -144,7 +152,6 @@ class UnifiedTo:
         self.account = Account(self.sdk_configuration)
         self.contact = Contact(self.sdk_configuration)
         self.invoice = Invoice(self.sdk_configuration)
-        self.item = Item(self.sdk_configuration)
         self.organization = Organization(self.sdk_configuration)
         self.payment = Payment(self.sdk_configuration)
         self.taxrate = Taxrate(self.sdk_configuration)
@@ -157,6 +164,11 @@ class UnifiedTo:
         self.interview = Interview(self.sdk_configuration)
         self.job = Job(self.sdk_configuration)
         self.scorecard = Scorecard(self.sdk_configuration)
+        self.commerce = Commerce(self.sdk_configuration)
+        self.collection = Collection(self.sdk_configuration)
+        self.inventory = Inventory(self.sdk_configuration)
+        self.item = Item(self.sdk_configuration)
+        self.location = Location(self.sdk_configuration)
         self.crm = Crm(self.sdk_configuration)
         self.company = Company(self.sdk_configuration)
         self.deal = Deal(self.sdk_configuration)

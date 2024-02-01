@@ -118,41 +118,6 @@ class Accounting:
 
     
     
-    def create_accounting_item(self, request: operations.CreateAccountingItemRequest) -> operations.CreateAccountingItemResponse:
-        r"""Create an item"""
-        base_url = utils.template_url(*self.sdk_configuration.get_server_details())
-        
-        url = utils.generate_url(operations.CreateAccountingItemRequest, base_url, '/accounting/{connection_id}/item', request)
-        headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, operations.CreateAccountingItemRequest, "accounting_item", False, True, 'json')
-        if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
-            headers['content-type'] = req_content_type
-        headers['Accept'] = 'application/json'
-        headers['user-agent'] = self.sdk_configuration.user_agent
-        
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
-        
-        http_res = client.request('POST', url, data=data, files=form, headers=headers)
-        content_type = http_res.headers.get('Content-Type')
-        
-        res = operations.CreateAccountingItemResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
-        
-        if http_res.status_code == 200:
-            if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[shared.AccountingItem])
-                res.accounting_item = out
-            else:
-                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
-        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
-            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
-
-        return res
-
-    
-    
     def create_accounting_payment(self, request: operations.CreateAccountingPaymentRequest) -> operations.CreateAccountingPaymentResponse:
         r"""Create a payment"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -348,39 +313,6 @@ class Accounting:
             if utils.match_content_type(content_type, 'application/json'):
                 out = utils.unmarshal_json(http_res.text, Optional[shared.AccountingInvoice])
                 res.accounting_invoice = out
-            else:
-                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
-        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
-            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
-
-        return res
-
-    
-    
-    def get_accounting_item(self, request: operations.GetAccountingItemRequest) -> operations.GetAccountingItemResponse:
-        r"""Retrieve an item"""
-        base_url = utils.template_url(*self.sdk_configuration.get_server_details())
-        
-        url = utils.generate_url(operations.GetAccountingItemRequest, base_url, '/accounting/{connection_id}/item/{id}', request)
-        headers = {}
-        query_params = utils.get_query_params(operations.GetAccountingItemRequest, request)
-        headers['Accept'] = 'application/json'
-        headers['user-agent'] = self.sdk_configuration.user_agent
-        
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
-        
-        http_res = client.request('GET', url, params=query_params, headers=headers)
-        content_type = http_res.headers.get('Content-Type')
-        
-        res = operations.GetAccountingItemResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
-        
-        if http_res.status_code == 200:
-            if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[shared.AccountingItem])
-                res.accounting_item = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
         elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
@@ -612,39 +544,6 @@ class Accounting:
             if utils.match_content_type(content_type, 'application/json'):
                 out = utils.unmarshal_json(http_res.text, Optional[List[shared.AccountingInvoice]])
                 res.accounting_invoices = out
-            else:
-                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
-        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
-            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
-
-        return res
-
-    
-    
-    def list_accounting_items(self, request: operations.ListAccountingItemsRequest) -> operations.ListAccountingItemsResponse:
-        r"""List all items"""
-        base_url = utils.template_url(*self.sdk_configuration.get_server_details())
-        
-        url = utils.generate_url(operations.ListAccountingItemsRequest, base_url, '/accounting/{connection_id}/item', request)
-        headers = {}
-        query_params = utils.get_query_params(operations.ListAccountingItemsRequest, request)
-        headers['Accept'] = 'application/json'
-        headers['user-agent'] = self.sdk_configuration.user_agent
-        
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
-        
-        http_res = client.request('GET', url, params=query_params, headers=headers)
-        content_type = http_res.headers.get('Content-Type')
-        
-        res = operations.ListAccountingItemsResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
-        
-        if http_res.status_code == 200:
-            if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[List[shared.AccountingItem]])
-                res.accounting_items = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
         elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
@@ -891,41 +790,6 @@ class Accounting:
 
     
     
-    def patch_accounting_item(self, request: operations.PatchAccountingItemRequest) -> operations.PatchAccountingItemResponse:
-        r"""Update an item"""
-        base_url = utils.template_url(*self.sdk_configuration.get_server_details())
-        
-        url = utils.generate_url(operations.PatchAccountingItemRequest, base_url, '/accounting/{connection_id}/item/{id}', request)
-        headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, operations.PatchAccountingItemRequest, "accounting_item", False, True, 'json')
-        if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
-            headers['content-type'] = req_content_type
-        headers['Accept'] = 'application/json'
-        headers['user-agent'] = self.sdk_configuration.user_agent
-        
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
-        
-        http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
-        content_type = http_res.headers.get('Content-Type')
-        
-        res = operations.PatchAccountingItemResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
-        
-        if http_res.status_code == 200:
-            if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[shared.AccountingItem])
-                res.accounting_item = out
-            else:
-                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
-        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
-            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
-
-        return res
-
-    
-    
     def patch_accounting_payment(self, request: operations.PatchAccountingPaymentRequest) -> operations.PatchAccountingPaymentResponse:
         r"""Update a payment"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -1111,37 +975,6 @@ class Accounting:
         content_type = http_res.headers.get('Content-Type')
         
         res = operations.RemoveAccountingInvoiceResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
-        
-        if http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
-            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
-        else:
-            if utils.match_content_type(content_type, 'application/json'):
-                res.res = http_res.content
-            else:
-                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
-
-        return res
-
-    
-    
-    def remove_accounting_item(self, request: operations.RemoveAccountingItemRequest) -> operations.RemoveAccountingItemResponse:
-        r"""Remove an item"""
-        base_url = utils.template_url(*self.sdk_configuration.get_server_details())
-        
-        url = utils.generate_url(operations.RemoveAccountingItemRequest, base_url, '/accounting/{connection_id}/item/{id}', request)
-        headers = {}
-        headers['Accept'] = 'application/json'
-        headers['user-agent'] = self.sdk_configuration.user_agent
-        
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
-        
-        http_res = client.request('DELETE', url, headers=headers)
-        content_type = http_res.headers.get('Content-Type')
-        
-        res = operations.RemoveAccountingItemResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
             raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
@@ -1344,41 +1177,6 @@ class Accounting:
             if utils.match_content_type(content_type, 'application/json'):
                 out = utils.unmarshal_json(http_res.text, Optional[shared.AccountingInvoice])
                 res.accounting_invoice = out
-            else:
-                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
-        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
-            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
-
-        return res
-
-    
-    
-    def update_accounting_item(self, request: operations.UpdateAccountingItemRequest) -> operations.UpdateAccountingItemResponse:
-        r"""Update an item"""
-        base_url = utils.template_url(*self.sdk_configuration.get_server_details())
-        
-        url = utils.generate_url(operations.UpdateAccountingItemRequest, base_url, '/accounting/{connection_id}/item/{id}', request)
-        headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, operations.UpdateAccountingItemRequest, "accounting_item", False, True, 'json')
-        if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
-            headers['content-type'] = req_content_type
-        headers['Accept'] = 'application/json'
-        headers['user-agent'] = self.sdk_configuration.user_agent
-        
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
-        
-        http_res = client.request('PUT', url, data=data, files=form, headers=headers)
-        content_type = http_res.headers.get('Content-Type')
-        
-        res = operations.UpdateAccountingItemResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
-        
-        if http_res.status_code == 200:
-            if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[shared.AccountingItem])
-                res.accounting_item = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
         elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:

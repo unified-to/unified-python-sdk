@@ -19,6 +19,7 @@ class ListUnifiedIntegrationsQueryParamCategories(str, Enum):
     UC = 'uc'
     ACCOUNTING = 'accounting'
     STORAGE = 'storage'
+    COMMERCE = 'commerce'
 
 
 @dataclasses.dataclass

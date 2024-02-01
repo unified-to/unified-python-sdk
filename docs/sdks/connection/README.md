@@ -40,7 +40,7 @@ req = shared.Connection(
         ],
     ),
     categories=[
-        shared.PropertyConnectionCategories.STORAGE,
+        shared.PropertyConnectionCategories.COMMERCE,
     ],
     cursors_cache=[
         {
@@ -49,7 +49,7 @@ req = shared.Connection(
     ],
     integration_type='string',
     permissions=[
-        shared.PropertyConnectionPermissions.ATS_JOB_READ,
+        shared.PropertyConnectionPermissions.ATS_CANDIDATE_READ,
     ],
 )
 
@@ -138,7 +138,7 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListUnifiedConnectionsRequest(
     categories=[
-        operations.Categories.ENRICH,
+        operations.Categories.MARTECH,
     ],
 )
 
@@ -205,7 +205,7 @@ req = operations.PatchUnifiedConnectionRequest(
         ],
         integration_type='string',
         permissions=[
-            shared.PropertyConnectionPermissions.MARTECH_LIST_READ,
+            shared.PropertyConnectionPermissions.CRM_PIPELINE_READ,
         ],
     ),
     id='<ID>',
@@ -308,7 +308,7 @@ req = operations.UpdateUnifiedConnectionRequest(
             ],
         ),
         categories=[
-            shared.PropertyConnectionCategories.UC,
+            shared.PropertyConnectionCategories.ACCOUNTING,
         ],
         cursors_cache=[
             {
@@ -317,7 +317,7 @@ req = operations.UpdateUnifiedConnectionRequest(
         ],
         integration_type='string',
         permissions=[
-            shared.PropertyConnectionPermissions.CRM_COMPANY_WRITE,
+            shared.PropertyConnectionPermissions.ATS_DOCUMENT_READ,
         ],
     ),
     id='<ID>',

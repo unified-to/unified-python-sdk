@@ -36,7 +36,7 @@ req = operations.CreateUnifiedWebhookRequest(
         meta={
             'key': 'string',
         },
-        object_type=shared.ObjectType.CRM_COMPANY,
+        object_type=shared.ObjectType.ATS_JOB,
         runs=[
             'string',
         ],

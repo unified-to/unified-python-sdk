@@ -72,7 +72,7 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListUnifiedIntegrationWorkspacesRequest(
     categories=[
-        operations.QueryParamCategories.UC,
+        operations.QueryParamCategories.ACCOUNTING,
     ],
     workspace_id='string',
 )
@@ -118,7 +118,7 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListUnifiedIntegrationsRequest(
     categories=[
-        operations.ListUnifiedIntegrationsQueryParamCategories.AUTH,
+        operations.ListUnifiedIntegrationsQueryParamCategories.CRM,
     ],
 )
 
