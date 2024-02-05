@@ -6,10 +6,11 @@ generation:
   useClassNamesForArrayFields: true
   fixes:
     nameResolutionDec2023: false
+    parameterOrderingFeb2024: false
   baseServerURL: ""
   flattenGlobalSecurity: true
 python:
-  version: 0.14.38
+  version: 0.15.0
   author: Unified API Inc
   clientServerStatusCodesAsErrors: true
   description: Python Client SDK for Unified.to

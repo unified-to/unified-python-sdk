@@ -23,6 +23,7 @@
 | `ATS_INTERVIEW`           | ats_interview             |
 | `ATS_JOB`                 | ats_job                   |
 | `ATS_SCORECARD`           | ats_scorecard             |
+| `ATS_COMPANY`             | ats_company               |
 | `CRM_COMPANY`             | crm_company               |
 | `CRM_CONTACT`             | crm_contact               |
 | `CRM_DEAL`                | crm_deal                  |

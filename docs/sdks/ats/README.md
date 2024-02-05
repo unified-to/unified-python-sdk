@@ -11,6 +11,7 @@
 * [create_ats_scorecard](#create_ats_scorecard) - Create a scorecard
 * [get_ats_application](#get_ats_application) - Retrieve an application
 * [get_ats_candidate](#get_ats_candidate) - Retrieve a candidate
+* [get_ats_company](#get_ats_company) - Retrieve a company
 * [get_ats_document](#get_ats_document) - Retrieve a document
 * [get_ats_interview](#get_ats_interview) - Retrieve a interview
 * [get_ats_job](#get_ats_job) - Retrieve a job
@@ -18,6 +19,7 @@
 * [list_ats_applications](#list_ats_applications) - List all applications
 * [list_ats_applicationstatuses](#list_ats_applicationstatuses) - List all application statuses
 * [list_ats_candidates](#list_ats_candidates) - List all candidates
+* [list_ats_companies](#list_ats_companies) - List all companies
 * [list_ats_documents](#list_ats_documents) - List all documents
 * [list_ats_interviews](#list_ats_interviews) - List all interviews
 * [list_ats_jobs](#list_ats_jobs) - List all jobs
@@ -469,6 +471,53 @@ if res.ats_candidate is not None:
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4x-5xx          | */*             |
 
+## get_ats_company
+
+Retrieve a company
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
+
+req = operations.GetAtsCompanyRequest(
+    connection_id='string',
+    fields=[
+        'string',
+    ],
+    id='<ID>',
+)
+
+res = s.ats.get_ats_company(req)
+
+if res.ats_company is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `request`                                                                          | [operations.GetAtsCompanyRequest](../../models/operations/getatscompanyrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+
+
+### Response
+
+**[operations.GetAtsCompanyResponse](../../models/operations/getatscompanyresponse.md)**
+### Errors
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
+
 ## get_ats_document
 
 Retrieve a document
@@ -792,6 +841,53 @@ if res.ats_candidates is not None:
 ### Response
 
 **[operations.ListAtsCandidatesResponse](../../models/operations/listatscandidatesresponse.md)**
+### Errors
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
+
+## list_ats_companies
+
+List all companies
+
+### Example Usage
+
+```python
+import dateutil.parser
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
+
+req = operations.ListAtsCompaniesRequest(
+    connection_id='string',
+    fields=[
+        'string',
+    ],
+)
+
+res = s.ats.list_ats_companies(req)
+
+if res.ats_companies is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.ListAtsCompaniesRequest](../../models/operations/listatscompaniesrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+
+
+### Response
+
+**[operations.ListAtsCompaniesResponse](../../models/operations/listatscompaniesresponse.md)**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |

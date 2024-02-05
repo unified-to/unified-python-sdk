@@ -38,6 +38,7 @@
 | `ATS_INTERVIEW_WRITE`          | ats_interview_write            |
 | `ATS_JOB_READ`                 | ats_job_read                   |
 | `ATS_JOB_WRITE`                | ats_job_write                  |
+| `ATS_COMPANY_READ`             | ats_company_read               |
 | `ATS_DOCUMENT_READ`            | ats_document_read              |
 | `ATS_DOCUMENT_WRITE`           | ats_document_write             |
 | `CRM_COMPANY_READ`             | crm_company_read               |

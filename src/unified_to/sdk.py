@@ -71,6 +71,7 @@ class UnifiedTo:
     application: Application
     applicationstatus: Applicationstatus
     candidate: Candidate
+    company: Company
     document: Document
     interview: Interview
     job: Job
@@ -81,7 +82,6 @@ class UnifiedTo:
     item: Item
     location: Location
     crm: Crm
-    company: Company
     deal: Deal
     event: Event
     lead: Lead
@@ -160,6 +160,7 @@ class UnifiedTo:
         self.application = Application(self.sdk_configuration)
         self.applicationstatus = Applicationstatus(self.sdk_configuration)
         self.candidate = Candidate(self.sdk_configuration)
+        self.company = Company(self.sdk_configuration)
         self.document = Document(self.sdk_configuration)
         self.interview = Interview(self.sdk_configuration)
         self.job = Job(self.sdk_configuration)
@@ -170,7 +171,6 @@ class UnifiedTo:
         self.item = Item(self.sdk_configuration)
         self.location = Location(self.sdk_configuration)
         self.crm = Crm(self.sdk_configuration)
-        self.company = Company(self.sdk_configuration)
         self.deal = Deal(self.sdk_configuration)
         self.event = Event(self.sdk_configuration)
         self.lead = Lead(self.sdk_configuration)

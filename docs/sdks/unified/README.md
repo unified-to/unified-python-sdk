@@ -60,7 +60,7 @@ req = shared.Connection(
     ],
     integration_type='string',
     permissions=[
-        shared.PropertyConnectionPermissions.ATS_CANDIDATE_READ,
+        shared.PropertyConnectionPermissions.ATS_CANDIDATE_WRITE,
     ],
 )
 
@@ -113,7 +113,7 @@ req = operations.CreateUnifiedWebhookRequest(
         meta={
             'key': 'string',
         },
-        object_type=shared.ObjectType.ATS_JOB,
+        object_type=shared.ObjectType.ATS_SCORECARD,
         runs=[
             'string',
         ],
@@ -248,7 +248,7 @@ s = unified_to.UnifiedTo(
 req = operations.GetUnifiedIntegrationAuthRequest(
     integration_type='string',
     scopes=[
-        operations.Scopes.HRIS_GROUP_READ,
+        operations.Scopes.HRIS_EMPLOYEE_WRITE,
     ],
     workspace_id='string',
 )
@@ -778,7 +778,7 @@ req = operations.UpdateUnifiedConnectionRequest(
         ],
         integration_type='string',
         permissions=[
-            shared.PropertyConnectionPermissions.ATS_DOCUMENT_READ,
+            shared.PropertyConnectionPermissions.ATS_COMPANY_READ,
         ],
     ),
     id='<ID>',

@@ -171,6 +171,7 @@ if res.accounting_account is not None:
 * [create_ats_scorecard](docs/sdks/ats/README.md#create_ats_scorecard) - Create a scorecard
 * [get_ats_application](docs/sdks/ats/README.md#get_ats_application) - Retrieve an application
 * [get_ats_candidate](docs/sdks/ats/README.md#get_ats_candidate) - Retrieve a candidate
+* [get_ats_company](docs/sdks/ats/README.md#get_ats_company) - Retrieve a company
 * [get_ats_document](docs/sdks/ats/README.md#get_ats_document) - Retrieve a document
 * [get_ats_interview](docs/sdks/ats/README.md#get_ats_interview) - Retrieve a interview
 * [get_ats_job](docs/sdks/ats/README.md#get_ats_job) - Retrieve a job
@@ -178,6 +179,7 @@ if res.accounting_account is not None:
 * [list_ats_applications](docs/sdks/ats/README.md#list_ats_applications) - List all applications
 * [list_ats_applicationstatuses](docs/sdks/ats/README.md#list_ats_applicationstatuses) - List all application statuses
 * [list_ats_candidates](docs/sdks/ats/README.md#list_ats_candidates) - List all candidates
+* [list_ats_companies](docs/sdks/ats/README.md#list_ats_companies) - List all companies
 * [list_ats_documents](docs/sdks/ats/README.md#list_ats_documents) - List all documents
 * [list_ats_interviews](docs/sdks/ats/README.md#list_ats_interviews) - List all interviews
 * [list_ats_jobs](docs/sdks/ats/README.md#list_ats_jobs) - List all jobs
@@ -222,6 +224,18 @@ if res.accounting_account is not None:
 * [patch_ats_candidate](docs/sdks/candidate/README.md#patch_ats_candidate) - Update a candidate
 * [remove_ats_candidate](docs/sdks/candidate/README.md#remove_ats_candidate) - Remove a candidate
 * [update_ats_candidate](docs/sdks/candidate/README.md#update_ats_candidate) - Update a candidate
+
+### [company](docs/sdks/company/README.md)
+
+* [create_crm_company](docs/sdks/company/README.md#create_crm_company) - Create a company
+* [get_ats_company](docs/sdks/company/README.md#get_ats_company) - Retrieve a company
+* [get_crm_company](docs/sdks/company/README.md#get_crm_company) - Retrieve a company
+* [list_ats_companies](docs/sdks/company/README.md#list_ats_companies) - List all companies
+* [list_crm_companies](docs/sdks/company/README.md#list_crm_companies) - List all companies
+* [list_enrich_companies](docs/sdks/company/README.md#list_enrich_companies) - Retrieve enrichment information for a company
+* [patch_crm_company](docs/sdks/company/README.md#patch_crm_company) - Update a company
+* [remove_crm_company](docs/sdks/company/README.md#remove_crm_company) - Remove a company
+* [update_crm_company](docs/sdks/company/README.md#update_crm_company) - Update a company
 
 ### [document](docs/sdks/document/README.md)
 
@@ -360,16 +374,6 @@ if res.accounting_account is not None:
 * [update_crm_event](docs/sdks/crm/README.md#update_crm_event) - Update a event
 * [update_crm_lead](docs/sdks/crm/README.md#update_crm_lead) - Update a lead
 * [update_crm_pipeline](docs/sdks/crm/README.md#update_crm_pipeline) - Update a pipeline
-
-### [company](docs/sdks/company/README.md)
-
-* [create_crm_company](docs/sdks/company/README.md#create_crm_company) - Create a company
-* [get_crm_company](docs/sdks/company/README.md#get_crm_company) - Retrieve a company
-* [list_crm_companies](docs/sdks/company/README.md#list_crm_companies) - List all companies
-* [list_enrich_companies](docs/sdks/company/README.md#list_enrich_companies) - Retrieve enrichment information for a company
-* [patch_crm_company](docs/sdks/company/README.md#patch_crm_company) - Update a company
-* [remove_crm_company](docs/sdks/company/README.md#remove_crm_company) - Remove a company
-* [update_crm_company](docs/sdks/company/README.md#update_crm_company) - Update a company
 
 ### [deal](docs/sdks/deal/README.md)
 

@@ -49,7 +49,7 @@ req = shared.Connection(
     ],
     integration_type='string',
     permissions=[
-        shared.PropertyConnectionPermissions.ATS_CANDIDATE_READ,
+        shared.PropertyConnectionPermissions.ATS_CANDIDATE_WRITE,
     ],
 )
 
@@ -317,7 +317,7 @@ req = operations.UpdateUnifiedConnectionRequest(
         ],
         integration_type='string',
         permissions=[
-            shared.PropertyConnectionPermissions.ATS_DOCUMENT_READ,
+            shared.PropertyConnectionPermissions.ATS_COMPANY_READ,
         ],
     ),
     id='<ID>',
