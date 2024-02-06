@@ -40,6 +40,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateAccountingContactRequest(
+    connection_id='string',
     accounting_contact=shared.AccountingContact(
         billing_address=shared.PropertyAccountingContactBillingAddress(),
         emails=[
@@ -57,7 +58,6 @@ req = operations.CreateAccountingContactRequest(
             ),
         ],
     ),
-    connection_id='string',
 )
 
 res = s.contact.create_accounting_contact(req)
@@ -101,6 +101,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateCrmContactRequest(
+    connection_id='string',
     crm_contact=shared.CrmContact(
         address=shared.PropertyCrmContactAddress(),
         company_ids=[
@@ -121,7 +122,6 @@ req = operations.CreateCrmContactRequest(
             ),
         ],
     ),
-    connection_id='string',
 )
 
 res = s.contact.create_crm_contact(req)
@@ -165,6 +165,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateUcContactRequest(
+    connection_id='string',
     uc_contact=shared.UcContact(
         emails=[
             shared.UcEmail(
@@ -180,7 +181,6 @@ req = operations.CreateUcContactRequest(
             ),
         ],
     ),
-    connection_id='string',
 )
 
 res = s.contact.create_uc_contact(req)
@@ -224,10 +224,10 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetAccountingContactRequest(
     connection_id='string',
+    id='<ID>',
     fields=[
         'string',
     ],
-    id='<ID>',
 )
 
 res = s.contact.get_accounting_contact(req)
@@ -271,10 +271,10 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetCrmContactRequest(
     connection_id='string',
+    id='<ID>',
     fields=[
         'string',
     ],
-    id='<ID>',
 )
 
 res = s.contact.get_crm_contact(req)
@@ -318,10 +318,10 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetUcContactRequest(
     connection_id='string',
+    id='<ID>',
     fields=[
         'string',
     ],
-    id='<ID>',
 )
 
 res = s.contact.get_uc_contact(req)
@@ -506,6 +506,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchAccountingContactRequest(
+    connection_id='string',
+    id='<ID>',
     accounting_contact=shared.AccountingContact(
         billing_address=shared.PropertyAccountingContactBillingAddress(),
         emails=[
@@ -523,8 +525,6 @@ req = operations.PatchAccountingContactRequest(
             ),
         ],
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.contact.patch_accounting_contact(req)
@@ -568,6 +568,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchCrmContactRequest(
+    connection_id='string',
+    id='<ID>',
     crm_contact=shared.CrmContact(
         address=shared.PropertyCrmContactAddress(),
         company_ids=[
@@ -588,8 +590,6 @@ req = operations.PatchCrmContactRequest(
             ),
         ],
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.contact.patch_crm_contact(req)
@@ -633,6 +633,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchUcContactRequest(
+    connection_id='string',
+    id='<ID>',
     uc_contact=shared.UcContact(
         emails=[
             shared.UcEmail(
@@ -648,8 +650,6 @@ req = operations.PatchUcContactRequest(
             ),
         ],
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.contact.patch_uc_contact(req)
@@ -825,6 +825,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateAccountingContactRequest(
+    connection_id='string',
+    id='<ID>',
     accounting_contact=shared.AccountingContact(
         billing_address=shared.PropertyAccountingContactBillingAddress(),
         emails=[
@@ -842,8 +844,6 @@ req = operations.UpdateAccountingContactRequest(
             ),
         ],
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.contact.update_accounting_contact(req)
@@ -887,6 +887,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateCrmContactRequest(
+    connection_id='string',
+    id='<ID>',
     crm_contact=shared.CrmContact(
         address=shared.PropertyCrmContactAddress(),
         company_ids=[
@@ -907,8 +909,6 @@ req = operations.UpdateCrmContactRequest(
             ),
         ],
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.contact.update_crm_contact(req)
@@ -952,6 +952,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateUcContactRequest(
+    connection_id='string',
+    id='<ID>',
     uc_contact=shared.UcContact(
         emails=[
             shared.UcEmail(
@@ -967,8 +969,6 @@ req = operations.UpdateUcContactRequest(
             ),
         ],
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.contact.update_uc_contact(req)

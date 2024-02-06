@@ -39,6 +39,13 @@ s = unified_to.UnifiedTo(
 )
 
 req = shared.Connection(
+    categories=[
+        shared.PropertyConnectionCategories.COMMERCE,
+    ],
+    integration_type='string',
+    permissions=[
+        shared.PropertyConnectionPermissions.ATS_CANDIDATE_WRITE,
+    ],
     auth=shared.PropertyConnectionAuth(
         emails=[
             'string',
@@ -50,17 +57,10 @@ req = shared.Connection(
             'string',
         ],
     ),
-    categories=[
-        shared.PropertyConnectionCategories.COMMERCE,
-    ],
     cursors_cache=[
         {
             'key': 'string',
         },
-    ],
-    integration_type='string',
-    permissions=[
-        shared.PropertyConnectionPermissions.ATS_CANDIDATE_WRITE,
     ],
 )
 
@@ -110,10 +110,10 @@ req = operations.CreateUnifiedWebhookRequest(
         event=shared.Event.CREATED,
         hook_url='string',
         interval=188.12,
+        object_type=shared.ObjectType.ATS_SCORECARD,
         meta={
             'key': 'string',
         },
-        object_type=shared.ObjectType.ATS_SCORECARD,
         runs=[
             'string',
         ],
@@ -247,10 +247,10 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetUnifiedIntegrationAuthRequest(
     integration_type='string',
+    workspace_id='string',
     scopes=[
         operations.Scopes.HRIS_EMPLOYEE_WRITE,
     ],
-    workspace_id='string',
 )
 
 res = s.unified.get_unified_integration_auth(req)
@@ -424,10 +424,10 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListUnifiedIntegrationWorkspacesRequest(
+    workspace_id='string',
     categories=[
         operations.QueryParamCategories.ACCOUNTING,
     ],
-    workspace_id='string',
 )
 
 res = s.unified.list_unified_integration_workspaces(req)
@@ -558,7 +558,15 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchUnifiedConnectionRequest(
+    id='<ID>',
     connection=shared.Connection(
+        categories=[
+            shared.PropertyConnectionCategories.TICKETING,
+        ],
+        integration_type='string',
+        permissions=[
+            shared.PropertyConnectionPermissions.CRM_PIPELINE_READ,
+        ],
         auth=shared.PropertyConnectionAuth(
             emails=[
                 'string',
@@ -570,20 +578,12 @@ req = operations.PatchUnifiedConnectionRequest(
                 'string',
             ],
         ),
-        categories=[
-            shared.PropertyConnectionCategories.TICKETING,
-        ],
         cursors_cache=[
             {
                 'key': 'string',
             },
         ],
-        integration_type='string',
-        permissions=[
-            shared.PropertyConnectionPermissions.CRM_PIPELINE_READ,
-        ],
     ),
-    id='<ID>',
 )
 
 res = s.unified.patch_unified_connection(req)
@@ -756,7 +756,15 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateUnifiedConnectionRequest(
+    id='<ID>',
     connection=shared.Connection(
+        categories=[
+            shared.PropertyConnectionCategories.ACCOUNTING,
+        ],
+        integration_type='string',
+        permissions=[
+            shared.PropertyConnectionPermissions.ATS_COMPANY_READ,
+        ],
         auth=shared.PropertyConnectionAuth(
             emails=[
                 'string',
@@ -768,20 +776,12 @@ req = operations.UpdateUnifiedConnectionRequest(
                 'string',
             ],
         ),
-        categories=[
-            shared.PropertyConnectionCategories.ACCOUNTING,
-        ],
         cursors_cache=[
             {
                 'key': 'string',
             },
         ],
-        integration_type='string',
-        permissions=[
-            shared.PropertyConnectionPermissions.ATS_COMPANY_READ,
-        ],
     ),
-    id='<ID>',
 )
 
 res = s.unified.update_unified_connection(req)

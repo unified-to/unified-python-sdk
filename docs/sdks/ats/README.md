@@ -61,12 +61,12 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateAtsApplicationRequest(
+    connection_id='string',
     ats_application=shared.AtsApplication(
         raw={
             'key': 'string',
         },
     ),
-    connection_id='string',
 )
 
 res = s.ats.create_ats_application(req)
@@ -110,6 +110,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateAtsCandidateRequest(
+    connection_id='string',
     ats_candidate=shared.AtsCandidate(
         address=shared.PropertyAtsCandidateAddress(),
         emails=[
@@ -132,7 +133,6 @@ req = operations.CreateAtsCandidateRequest(
             ),
         ],
     ),
-    connection_id='string',
 )
 
 res = s.ats.create_ats_candidate(req)
@@ -176,12 +176,12 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateAtsDocumentRequest(
+    connection_id='string',
     ats_document=shared.AtsDocument(
         raw={
             'key': 'string',
         },
     ),
-    connection_id='string',
 )
 
 res = s.ats.create_ats_document(req)
@@ -225,6 +225,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateAtsInterviewRequest(
+    connection_id='string',
     ats_interview=shared.AtsInterview(
         raw={
             'key': 'string',
@@ -233,7 +234,6 @@ req = operations.CreateAtsInterviewRequest(
             'string',
         ],
     ),
-    connection_id='string',
 )
 
 res = s.ats.create_ats_interview(req)
@@ -277,6 +277,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateAtsJobRequest(
+    connection_id='string',
     ats_job=shared.AtsJob(
         addresses=[
             shared.AtsAddress(),
@@ -302,7 +303,6 @@ req = operations.CreateAtsJobRequest(
             'string',
         ],
     ),
-    connection_id='string',
 )
 
 res = s.ats.create_ats_job(req)
@@ -346,12 +346,12 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateAtsScorecardRequest(
+    connection_id='string',
     ats_scorecard=shared.AtsScorecard(
         raw={
             'key': 'string',
         },
     ),
-    connection_id='string',
 )
 
 res = s.ats.create_ats_scorecard(req)
@@ -395,10 +395,10 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetAtsApplicationRequest(
     connection_id='string',
+    id='<ID>',
     fields=[
         'string',
     ],
-    id='<ID>',
 )
 
 res = s.ats.get_ats_application(req)
@@ -442,10 +442,10 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetAtsCandidateRequest(
     connection_id='string',
+    id='<ID>',
     fields=[
         'string',
     ],
-    id='<ID>',
 )
 
 res = s.ats.get_ats_candidate(req)
@@ -489,10 +489,10 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetAtsCompanyRequest(
     connection_id='string',
+    id='<ID>',
     fields=[
         'string',
     ],
-    id='<ID>',
 )
 
 res = s.ats.get_ats_company(req)
@@ -536,10 +536,10 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetAtsDocumentRequest(
     connection_id='string',
+    id='<ID>',
     fields=[
         'string',
     ],
-    id='<ID>',
 )
 
 res = s.ats.get_ats_document(req)
@@ -583,10 +583,10 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetAtsInterviewRequest(
     connection_id='string',
+    id='<ID>',
     fields=[
         'string',
     ],
-    id='<ID>',
 )
 
 res = s.ats.get_ats_interview(req)
@@ -630,10 +630,10 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetAtsJobRequest(
     connection_id='string',
+    id='<ID>',
     fields=[
         'string',
     ],
-    id='<ID>',
 )
 
 res = s.ats.get_ats_job(req)
@@ -677,10 +677,10 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetAtsScorecardRequest(
     connection_id='string',
+    id='<ID>',
     fields=[
         'string',
     ],
-    id='<ID>',
 )
 
 res = s.ats.get_ats_scorecard(req)
@@ -1100,13 +1100,13 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchAtsApplicationRequest(
+    connection_id='string',
+    id='<ID>',
     ats_application=shared.AtsApplication(
         raw={
             'key': 'string',
         },
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.ats.patch_ats_application(req)
@@ -1150,6 +1150,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchAtsCandidateRequest(
+    connection_id='string',
+    id='<ID>',
     ats_candidate=shared.AtsCandidate(
         address=shared.PropertyAtsCandidateAddress(),
         emails=[
@@ -1172,8 +1174,6 @@ req = operations.PatchAtsCandidateRequest(
             ),
         ],
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.ats.patch_ats_candidate(req)
@@ -1217,13 +1217,13 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchAtsDocumentRequest(
+    connection_id='string',
+    id='<ID>',
     ats_document=shared.AtsDocument(
         raw={
             'key': 'string',
         },
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.ats.patch_ats_document(req)
@@ -1267,6 +1267,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchAtsInterviewRequest(
+    connection_id='string',
+    id='<ID>',
     ats_interview=shared.AtsInterview(
         raw={
             'key': 'string',
@@ -1275,8 +1277,6 @@ req = operations.PatchAtsInterviewRequest(
             'string',
         ],
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.ats.patch_ats_interview(req)
@@ -1320,6 +1320,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchAtsJobRequest(
+    connection_id='string',
+    id='<ID>',
     ats_job=shared.AtsJob(
         addresses=[
             shared.AtsAddress(),
@@ -1345,8 +1347,6 @@ req = operations.PatchAtsJobRequest(
             'string',
         ],
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.ats.patch_ats_job(req)
@@ -1390,13 +1390,13 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchAtsScorecardRequest(
+    connection_id='string',
+    id='<ID>',
     ats_scorecard=shared.AtsScorecard(
         raw={
             'key': 'string',
         },
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.ats.patch_ats_scorecard(req)
@@ -1704,13 +1704,13 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateAtsApplicationRequest(
+    connection_id='string',
+    id='<ID>',
     ats_application=shared.AtsApplication(
         raw={
             'key': 'string',
         },
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.ats.update_ats_application(req)
@@ -1754,6 +1754,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateAtsCandidateRequest(
+    connection_id='string',
+    id='<ID>',
     ats_candidate=shared.AtsCandidate(
         address=shared.PropertyAtsCandidateAddress(),
         emails=[
@@ -1776,8 +1778,6 @@ req = operations.UpdateAtsCandidateRequest(
             ),
         ],
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.ats.update_ats_candidate(req)
@@ -1821,13 +1821,13 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateAtsDocumentRequest(
+    connection_id='string',
+    id='<ID>',
     ats_document=shared.AtsDocument(
         raw={
             'key': 'string',
         },
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.ats.update_ats_document(req)
@@ -1871,6 +1871,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateAtsInterviewRequest(
+    connection_id='string',
+    id='<ID>',
     ats_interview=shared.AtsInterview(
         raw={
             'key': 'string',
@@ -1879,8 +1881,6 @@ req = operations.UpdateAtsInterviewRequest(
             'string',
         ],
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.ats.update_ats_interview(req)
@@ -1924,6 +1924,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateAtsJobRequest(
+    connection_id='string',
+    id='<ID>',
     ats_job=shared.AtsJob(
         addresses=[
             shared.AtsAddress(),
@@ -1949,8 +1951,6 @@ req = operations.UpdateAtsJobRequest(
             'string',
         ],
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.ats.update_ats_job(req)
@@ -1994,13 +1994,13 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateAtsScorecardRequest(
+    connection_id='string',
+    id='<ID>',
     ats_scorecard=shared.AtsScorecard(
         raw={
             'key': 'string',
         },
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.ats.update_ats_scorecard(req)

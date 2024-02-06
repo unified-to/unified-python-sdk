@@ -28,12 +28,12 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateMartechListRequest(
+    connection_id='string',
     marketing_list=shared.MarketingList(
         raw={
             'key': 'string',
         },
     ),
-    connection_id='string',
 )
 
 res = s.list.create_martech_list(req)
@@ -77,10 +77,10 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetMartechListRequest(
     connection_id='string',
+    id='<ID>',
     fields=[
         'string',
     ],
-    id='<ID>',
 )
 
 res = s.list.get_martech_list(req)
@@ -171,13 +171,13 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchMartechListRequest(
+    connection_id='string',
+    id='<ID>',
     marketing_list=shared.MarketingList(
         raw={
             'key': 'string',
         },
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.list.patch_martech_list(req)
@@ -265,13 +265,13 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateMartechListRequest(
+    connection_id='string',
+    id='<ID>',
     marketing_list=shared.MarketingList(
         raw={
             'key': 'string',
         },
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.list.update_martech_list(req)

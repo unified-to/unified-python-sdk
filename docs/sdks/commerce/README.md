@@ -46,8 +46,10 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateCommerceCollectionRequest(
+    connection_id='string',
     commerce_collection=shared.CommerceCollection(
         id='<ID>',
+        name='string',
         item_ids=[
             'string',
         ],
@@ -56,7 +58,6 @@ req = operations.CreateCommerceCollectionRequest(
                 url='http://uneven-mattress.name',
             ),
         ],
-        name='string',
         raw={
             'key': 'string',
         },
@@ -64,7 +65,6 @@ req = operations.CreateCommerceCollectionRequest(
             'string',
         ],
     ),
-    connection_id='string',
 )
 
 res = s.commerce.create_commerce_collection(req)
@@ -108,13 +108,13 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateCommerceInventoryRequest(
+    connection_id='string',
     commerce_inventory=shared.CommerceInventory(
         available=5165.08,
         raw={
             'key': 'string',
         },
     ),
-    connection_id='string',
 )
 
 res = s.commerce.create_commerce_inventory(req)
@@ -158,13 +158,14 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateCommerceItemRequest(
+    connection_id='string',
     commerce_item=shared.CommerceItem(
+        name='string',
         media=[
             shared.CommerceItemMedia(
                 url='http://loud-minister.name',
             ),
         ],
-        name='string',
         raw={
             'key': 'string',
         },
@@ -173,12 +174,12 @@ req = operations.CreateCommerceItemRequest(
         ],
         variants=[
             shared.CommerceItemVariant(
+                name='string',
                 media=[
                     shared.CommerceItemMedia(
                         url='http://other-external.info',
                     ),
                 ],
-                name='string',
                 options=[
                     shared.CommerceItemOption(
                         id='<ID>',
@@ -199,7 +200,6 @@ req = operations.CreateCommerceItemRequest(
             ),
         ],
     ),
-    connection_id='string',
 )
 
 res = s.commerce.create_commerce_item(req)
@@ -243,14 +243,14 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateCommerceLocationRequest(
+    connection_id='string',
     commerce_location=shared.CommerceLocation(
-        address=shared.PropertyCommerceLocationAddress(),
         name='string',
+        address=shared.PropertyCommerceLocationAddress(),
         raw={
             'key': 'string',
         },
     ),
-    connection_id='string',
 )
 
 res = s.commerce.create_commerce_location(req)
@@ -294,10 +294,10 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetCommerceCollectionRequest(
     connection_id='string',
+    id='<ID>',
     fields=[
         'string',
     ],
-    id='<ID>',
 )
 
 res = s.commerce.get_commerce_collection(req)
@@ -341,10 +341,10 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetCommerceInventoryRequest(
     connection_id='string',
+    id='<ID>',
     fields=[
         'string',
     ],
-    id='<ID>',
 )
 
 res = s.commerce.get_commerce_inventory(req)
@@ -388,10 +388,10 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetCommerceItemRequest(
     connection_id='string',
+    id='<ID>',
     fields=[
         'string',
     ],
-    id='<ID>',
 )
 
 res = s.commerce.get_commerce_item(req)
@@ -435,10 +435,10 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetCommerceLocationRequest(
     connection_id='string',
+    id='<ID>',
     fields=[
         'string',
     ],
-    id='<ID>',
 )
 
 res = s.commerce.get_commerce_location(req)
@@ -670,8 +670,11 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchCommerceCollectionRequest(
+    connection_id='string',
+    id='<ID>',
     commerce_collection=shared.CommerceCollection(
         id='<ID>',
+        name='string',
         item_ids=[
             'string',
         ],
@@ -680,7 +683,6 @@ req = operations.PatchCommerceCollectionRequest(
                 url='http://personal-sorrow.com',
             ),
         ],
-        name='string',
         raw={
             'key': 'string',
         },
@@ -688,8 +690,6 @@ req = operations.PatchCommerceCollectionRequest(
             'string',
         ],
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.commerce.patch_commerce_collection(req)
@@ -733,14 +733,14 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchCommerceInventoryRequest(
+    connection_id='string',
+    id='<ID>',
     commerce_inventory=shared.CommerceInventory(
         available=615.23,
         raw={
             'key': 'string',
         },
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.commerce.patch_commerce_inventory(req)
@@ -784,13 +784,15 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchCommerceItemRequest(
+    connection_id='string',
+    id='<ID>',
     commerce_item=shared.CommerceItem(
+        name='string',
         media=[
             shared.CommerceItemMedia(
                 url='http://frank-galley.biz',
             ),
         ],
-        name='string',
         raw={
             'key': 'string',
         },
@@ -799,12 +801,12 @@ req = operations.PatchCommerceItemRequest(
         ],
         variants=[
             shared.CommerceItemVariant(
+                name='string',
                 media=[
                     shared.CommerceItemMedia(
                         url='http://irresponsible-reason.biz',
                     ),
                 ],
-                name='string',
                 options=[
                     shared.CommerceItemOption(
                         id='<ID>',
@@ -825,8 +827,6 @@ req = operations.PatchCommerceItemRequest(
             ),
         ],
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.commerce.patch_commerce_item(req)
@@ -870,15 +870,15 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchCommerceLocationRequest(
+    connection_id='string',
+    id='<ID>',
     commerce_location=shared.CommerceLocation(
-        address=shared.PropertyCommerceLocationAddress(),
         name='string',
+        address=shared.PropertyCommerceLocationAddress(),
         raw={
             'key': 'string',
         },
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.commerce.patch_commerce_location(req)
@@ -1098,8 +1098,11 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateCommerceCollectionRequest(
+    connection_id='string',
+    id='<ID>',
     commerce_collection=shared.CommerceCollection(
         id='<ID>',
+        name='string',
         item_ids=[
             'string',
         ],
@@ -1108,7 +1111,6 @@ req = operations.UpdateCommerceCollectionRequest(
                 url='https://stupid-entity.org',
             ),
         ],
-        name='string',
         raw={
             'key': 'string',
         },
@@ -1116,8 +1118,6 @@ req = operations.UpdateCommerceCollectionRequest(
             'string',
         ],
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.commerce.update_commerce_collection(req)
@@ -1161,14 +1161,14 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateCommerceInventoryRequest(
+    connection_id='string',
+    id='<ID>',
     commerce_inventory=shared.CommerceInventory(
         available=9360.02,
         raw={
             'key': 'string',
         },
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.commerce.update_commerce_inventory(req)
@@ -1212,13 +1212,15 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateCommerceItemRequest(
+    connection_id='string',
+    id='<ID>',
     commerce_item=shared.CommerceItem(
+        name='string',
         media=[
             shared.CommerceItemMedia(
                 url='https://aggressive-major-league.org',
             ),
         ],
-        name='string',
         raw={
             'key': 'string',
         },
@@ -1227,12 +1229,12 @@ req = operations.UpdateCommerceItemRequest(
         ],
         variants=[
             shared.CommerceItemVariant(
+                name='string',
                 media=[
                     shared.CommerceItemMedia(
                         url='https://reasonable-cast.biz',
                     ),
                 ],
-                name='string',
                 options=[
                     shared.CommerceItemOption(
                         id='<ID>',
@@ -1253,8 +1255,6 @@ req = operations.UpdateCommerceItemRequest(
             ),
         ],
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.commerce.update_commerce_item(req)
@@ -1298,15 +1298,15 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateCommerceLocationRequest(
+    connection_id='string',
+    id='<ID>',
     commerce_location=shared.CommerceLocation(
-        address=shared.PropertyCommerceLocationAddress(),
         name='string',
+        address=shared.PropertyCommerceLocationAddress(),
         raw={
             'key': 'string',
         },
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.commerce.update_commerce_location(req)

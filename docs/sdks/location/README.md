@@ -28,14 +28,14 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateCommerceLocationRequest(
+    connection_id='string',
     commerce_location=shared.CommerceLocation(
-        address=shared.PropertyCommerceLocationAddress(),
         name='string',
+        address=shared.PropertyCommerceLocationAddress(),
         raw={
             'key': 'string',
         },
     ),
-    connection_id='string',
 )
 
 res = s.location.create_commerce_location(req)
@@ -79,10 +79,10 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetCommerceLocationRequest(
     connection_id='string',
+    id='<ID>',
     fields=[
         'string',
     ],
-    id='<ID>',
 )
 
 res = s.location.get_commerce_location(req)
@@ -173,15 +173,15 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchCommerceLocationRequest(
+    connection_id='string',
+    id='<ID>',
     commerce_location=shared.CommerceLocation(
-        address=shared.PropertyCommerceLocationAddress(),
         name='string',
+        address=shared.PropertyCommerceLocationAddress(),
         raw={
             'key': 'string',
         },
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.location.patch_commerce_location(req)
@@ -269,15 +269,15 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateCommerceLocationRequest(
+    connection_id='string',
+    id='<ID>',
     commerce_location=shared.CommerceLocation(
-        address=shared.PropertyCommerceLocationAddress(),
         name='string',
+        address=shared.PropertyCommerceLocationAddress(),
         raw={
             'key': 'string',
         },
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.location.update_commerce_location(req)

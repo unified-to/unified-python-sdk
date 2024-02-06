@@ -28,13 +28,14 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateCommerceItemRequest(
+    connection_id='string',
     commerce_item=shared.CommerceItem(
+        name='string',
         media=[
             shared.CommerceItemMedia(
                 url='http://loud-minister.name',
             ),
         ],
-        name='string',
         raw={
             'key': 'string',
         },
@@ -43,12 +44,12 @@ req = operations.CreateCommerceItemRequest(
         ],
         variants=[
             shared.CommerceItemVariant(
+                name='string',
                 media=[
                     shared.CommerceItemMedia(
                         url='http://other-external.info',
                     ),
                 ],
-                name='string',
                 options=[
                     shared.CommerceItemOption(
                         id='<ID>',
@@ -69,7 +70,6 @@ req = operations.CreateCommerceItemRequest(
             ),
         ],
     ),
-    connection_id='string',
 )
 
 res = s.item.create_commerce_item(req)
@@ -113,10 +113,10 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetCommerceItemRequest(
     connection_id='string',
+    id='<ID>',
     fields=[
         'string',
     ],
-    id='<ID>',
 )
 
 res = s.item.get_commerce_item(req)
@@ -207,13 +207,15 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchCommerceItemRequest(
+    connection_id='string',
+    id='<ID>',
     commerce_item=shared.CommerceItem(
+        name='string',
         media=[
             shared.CommerceItemMedia(
                 url='http://frank-galley.biz',
             ),
         ],
-        name='string',
         raw={
             'key': 'string',
         },
@@ -222,12 +224,12 @@ req = operations.PatchCommerceItemRequest(
         ],
         variants=[
             shared.CommerceItemVariant(
+                name='string',
                 media=[
                     shared.CommerceItemMedia(
                         url='http://irresponsible-reason.biz',
                     ),
                 ],
-                name='string',
                 options=[
                     shared.CommerceItemOption(
                         id='<ID>',
@@ -248,8 +250,6 @@ req = operations.PatchCommerceItemRequest(
             ),
         ],
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.item.patch_commerce_item(req)
@@ -337,13 +337,15 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateCommerceItemRequest(
+    connection_id='string',
+    id='<ID>',
     commerce_item=shared.CommerceItem(
+        name='string',
         media=[
             shared.CommerceItemMedia(
                 url='https://aggressive-major-league.org',
             ),
         ],
-        name='string',
         raw={
             'key': 'string',
         },
@@ -352,12 +354,12 @@ req = operations.UpdateCommerceItemRequest(
         ],
         variants=[
             shared.CommerceItemVariant(
+                name='string',
                 media=[
                     shared.CommerceItemMedia(
                         url='https://reasonable-cast.biz',
                     ),
                 ],
-                name='string',
                 options=[
                     shared.CommerceItemOption(
                         id='<ID>',
@@ -378,8 +380,6 @@ req = operations.UpdateCommerceItemRequest(
             ),
         ],
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.item.update_commerce_item(req)

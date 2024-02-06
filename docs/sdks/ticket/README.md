@@ -28,6 +28,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateTicketingTicketRequest(
+    connection_id='string',
     ticketing_ticket=shared.TicketingTicket(
         raw={
             'key': 'string',
@@ -36,7 +37,6 @@ req = operations.CreateTicketingTicketRequest(
             'string',
         ],
     ),
-    connection_id='string',
 )
 
 res = s.ticket.create_ticketing_ticket(req)
@@ -80,10 +80,10 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetTicketingTicketRequest(
     connection_id='string',
+    id='<ID>',
     fields=[
         'string',
     ],
-    id='<ID>',
 )
 
 res = s.ticket.get_ticketing_ticket(req)
@@ -174,6 +174,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchTicketingTicketRequest(
+    connection_id='string',
+    id='<ID>',
     ticketing_ticket=shared.TicketingTicket(
         raw={
             'key': 'string',
@@ -182,8 +184,6 @@ req = operations.PatchTicketingTicketRequest(
             'string',
         ],
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.ticket.patch_ticketing_ticket(req)
@@ -271,6 +271,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateTicketingTicketRequest(
+    connection_id='string',
+    id='<ID>',
     ticketing_ticket=shared.TicketingTicket(
         raw={
             'key': 'string',
@@ -279,8 +281,6 @@ req = operations.UpdateTicketingTicketRequest(
             'string',
         ],
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.ticket.update_ticketing_ticket(req)

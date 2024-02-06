@@ -28,12 +28,12 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateAtsScorecardRequest(
+    connection_id='string',
     ats_scorecard=shared.AtsScorecard(
         raw={
             'key': 'string',
         },
     ),
-    connection_id='string',
 )
 
 res = s.scorecard.create_ats_scorecard(req)
@@ -77,10 +77,10 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetAtsScorecardRequest(
     connection_id='string',
+    id='<ID>',
     fields=[
         'string',
     ],
-    id='<ID>',
 )
 
 res = s.scorecard.get_ats_scorecard(req)
@@ -171,13 +171,13 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchAtsScorecardRequest(
+    connection_id='string',
+    id='<ID>',
     ats_scorecard=shared.AtsScorecard(
         raw={
             'key': 'string',
         },
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.scorecard.patch_ats_scorecard(req)
@@ -265,13 +265,13 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateAtsScorecardRequest(
+    connection_id='string',
+    id='<ID>',
     ats_scorecard=shared.AtsScorecard(
         raw={
             'key': 'string',
         },
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.scorecard.update_ats_scorecard(req)

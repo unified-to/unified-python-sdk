@@ -29,6 +29,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateUcContactRequest(
+    connection_id='string',
     uc_contact=shared.UcContact(
         emails=[
             shared.UcEmail(
@@ -44,7 +45,6 @@ req = operations.CreateUcContactRequest(
             ),
         ],
     ),
-    connection_id='string',
 )
 
 res = s.uc.create_uc_contact(req)
@@ -88,10 +88,10 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetUcContactRequest(
     connection_id='string',
+    id='<ID>',
     fields=[
         'string',
     ],
-    id='<ID>',
 )
 
 res = s.uc.get_uc_contact(req)
@@ -229,6 +229,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchUcContactRequest(
+    connection_id='string',
+    id='<ID>',
     uc_contact=shared.UcContact(
         emails=[
             shared.UcEmail(
@@ -244,8 +246,6 @@ req = operations.PatchUcContactRequest(
             ),
         ],
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.uc.patch_uc_contact(req)
@@ -333,6 +333,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateUcContactRequest(
+    connection_id='string',
+    id='<ID>',
     uc_contact=shared.UcContact(
         emails=[
             shared.UcEmail(
@@ -348,8 +350,6 @@ req = operations.UpdateUcContactRequest(
             ),
         ],
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.uc.update_uc_contact(req)

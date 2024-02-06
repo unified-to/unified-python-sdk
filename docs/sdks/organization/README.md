@@ -24,10 +24,10 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetAccountingOrganizationRequest(
     connection_id='string',
+    id='<ID>',
     fields=[
         'string',
     ],
-    id='<ID>',
 )
 
 res = s.organization.get_accounting_organization(req)

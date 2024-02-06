@@ -24,10 +24,10 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetUnifiedIntegrationAuthRequest(
     integration_type='string',
+    workspace_id='string',
     scopes=[
         operations.Scopes.HRIS_EMPLOYEE_WRITE,
     ],
-    workspace_id='string',
 )
 
 res = s.auth.get_unified_integration_auth(req)

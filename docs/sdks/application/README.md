@@ -28,12 +28,12 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateAtsApplicationRequest(
+    connection_id='string',
     ats_application=shared.AtsApplication(
         raw={
             'key': 'string',
         },
     ),
-    connection_id='string',
 )
 
 res = s.application.create_ats_application(req)
@@ -77,10 +77,10 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetAtsApplicationRequest(
     connection_id='string',
+    id='<ID>',
     fields=[
         'string',
     ],
-    id='<ID>',
 )
 
 res = s.application.get_ats_application(req)
@@ -171,13 +171,13 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchAtsApplicationRequest(
+    connection_id='string',
+    id='<ID>',
     ats_application=shared.AtsApplication(
         raw={
             'key': 'string',
         },
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.application.patch_ats_application(req)
@@ -265,13 +265,13 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateAtsApplicationRequest(
+    connection_id='string',
+    id='<ID>',
     ats_application=shared.AtsApplication(
         raw={
             'key': 'string',
         },
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.application.update_ats_application(req)

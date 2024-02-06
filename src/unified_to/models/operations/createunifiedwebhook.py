@@ -9,9 +9,9 @@ from typing import Optional
 
 @dataclasses.dataclass
 class CreateUnifiedWebhookRequest:
+    webhook: Optional[shared_webhook.Webhook] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     include_all: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'include_all', 'style': 'form', 'explode': True }})
     r"""When set, all of the existing data will sent back to your server."""
-    webhook: Optional[shared_webhook.Webhook] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
 
@@ -20,10 +20,10 @@ class CreateUnifiedWebhookRequest:
 class CreateUnifiedWebhookResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
-    raw_response: requests_http.Response = dataclasses.field()
-    r"""Raw HTTP response; suitable for custom response parsing"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
+    raw_response: requests_http.Response = dataclasses.field()
+    r"""Raw HTTP response; suitable for custom response parsing"""
     webhook: Optional[shared_webhook.Webhook] = dataclasses.field(default=None)
     r"""Successful"""
     

@@ -28,6 +28,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateStorageFileRequest(
+    connection_id='string',
     storage_file=shared.StorageFile(
         permissions=[
             shared.StoragePermission(
@@ -40,7 +41,6 @@ req = operations.CreateStorageFileRequest(
             'key': 'string',
         },
     ),
-    connection_id='string',
 )
 
 res = s.storage.create_storage_file(req)
@@ -84,10 +84,10 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetStorageFileRequest(
     connection_id='string',
+    id='<ID>',
     fields=[
         'string',
     ],
-    id='<ID>',
 )
 
 res = s.storage.get_storage_file(req)
@@ -178,6 +178,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchStorageFileRequest(
+    connection_id='string',
+    id='<ID>',
     storage_file=shared.StorageFile(
         permissions=[
             shared.StoragePermission(
@@ -190,8 +192,6 @@ req = operations.PatchStorageFileRequest(
             'key': 'string',
         },
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.storage.patch_storage_file(req)
@@ -279,6 +279,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateStorageFileRequest(
+    connection_id='string',
+    id='<ID>',
     storage_file=shared.StorageFile(
         permissions=[
             shared.StoragePermission(
@@ -291,8 +293,6 @@ req = operations.UpdateStorageFileRequest(
             'key': 'string',
         },
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.storage.update_storage_file(req)

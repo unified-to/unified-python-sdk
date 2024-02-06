@@ -28,6 +28,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateCrmLeadRequest(
+    connection_id='string',
     crm_lead=shared.CrmLead(
         address=shared.PropertyCrmLeadAddress(),
         emails=[
@@ -42,7 +43,6 @@ req = operations.CreateCrmLeadRequest(
             ),
         ],
     ),
-    connection_id='string',
 )
 
 res = s.lead.create_crm_lead(req)
@@ -86,10 +86,10 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetCrmLeadRequest(
     connection_id='string',
+    id='<ID>',
     fields=[
         'string',
     ],
-    id='<ID>',
 )
 
 res = s.lead.get_crm_lead(req)
@@ -180,6 +180,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchCrmLeadRequest(
+    connection_id='string',
+    id='<ID>',
     crm_lead=shared.CrmLead(
         address=shared.PropertyCrmLeadAddress(),
         emails=[
@@ -194,8 +196,6 @@ req = operations.PatchCrmLeadRequest(
             ),
         ],
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.lead.patch_crm_lead(req)
@@ -283,6 +283,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateCrmLeadRequest(
+    connection_id='string',
+    id='<ID>',
     crm_lead=shared.CrmLead(
         address=shared.PropertyCrmLeadAddress(),
         emails=[
@@ -297,8 +299,6 @@ req = operations.UpdateCrmLeadRequest(
             ),
         ],
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.lead.update_crm_lead(req)

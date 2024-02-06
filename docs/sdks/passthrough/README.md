@@ -26,16 +26,16 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreatePassthroughRequest(
+    connection_id='string',
+    path='/etc/periodic',
     request_body={
         'key': 'string',
     },
-    connection_id='string',
-    path='/etc/periodic',
 )
 
 res = s.passthrough.create_passthrough(req)
 
-if res.undefined is not None:
+if res.result is not None:
     # handle response
     pass
 ```
@@ -79,7 +79,7 @@ req = operations.ListPassthroughsRequest(
 
 res = s.passthrough.list_passthroughs(req)
 
-if res.undefined is not None:
+if res.result is not None:
     # handle response
     pass
 ```
@@ -117,16 +117,16 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchPassthroughRequest(
+    connection_id='string',
+    path='/mnt',
     request_body={
         'key': 'string',
     },
-    connection_id='string',
-    path='/mnt',
 )
 
 res = s.passthrough.patch_passthrough(req)
 
-if res.undefined is not None:
+if res.result is not None:
     # handle response
     pass
 ```
@@ -170,7 +170,7 @@ req = operations.RemovePassthroughRequest(
 
 res = s.passthrough.remove_passthrough(req)
 
-if res.undefined is not None:
+if res.result is not None:
     # handle response
     pass
 ```
@@ -208,16 +208,16 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdatePassthroughRequest(
+    connection_id='string',
+    path='/dev',
     request_body={
         'key': 'string',
     },
-    connection_id='string',
-    path='/dev',
 )
 
 res = s.passthrough.update_passthrough(req)
 
-if res.undefined is not None:
+if res.result is not None:
     # handle response
     pass
 ```

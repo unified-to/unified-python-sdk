@@ -31,6 +31,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateCrmCompanyRequest(
+    connection_id='string',
     crm_company=shared.CrmCompany(
         address=shared.PropertyCrmCompanyAddress(),
         deal_ids=[
@@ -57,7 +58,6 @@ req = operations.CreateCrmCompanyRequest(
             'string',
         ],
     ),
-    connection_id='string',
 )
 
 res = s.company.create_crm_company(req)
@@ -101,10 +101,10 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetAtsCompanyRequest(
     connection_id='string',
+    id='<ID>',
     fields=[
         'string',
     ],
-    id='<ID>',
 )
 
 res = s.company.get_ats_company(req)
@@ -148,10 +148,10 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetCrmCompanyRequest(
     connection_id='string',
+    id='<ID>',
     fields=[
         'string',
     ],
-    id='<ID>',
 )
 
 res = s.company.get_crm_company(req)
@@ -332,6 +332,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchCrmCompanyRequest(
+    connection_id='string',
+    id='<ID>',
     crm_company=shared.CrmCompany(
         address=shared.PropertyCrmCompanyAddress(),
         deal_ids=[
@@ -358,8 +360,6 @@ req = operations.PatchCrmCompanyRequest(
             'string',
         ],
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.company.patch_crm_company(req)
@@ -447,6 +447,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateCrmCompanyRequest(
+    connection_id='string',
+    id='<ID>',
     crm_company=shared.CrmCompany(
         address=shared.PropertyCrmCompanyAddress(),
         deal_ids=[
@@ -473,8 +475,6 @@ req = operations.UpdateCrmCompanyRequest(
             'string',
         ],
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.company.update_crm_company(req)

@@ -27,6 +27,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateAccountingTransactionRequest(
+    connection_id='string',
     accounting_transaction=shared.AccountingTransaction(
         id='<ID>',
         lineitems=[
@@ -39,7 +40,6 @@ req = operations.CreateAccountingTransactionRequest(
             'key': 'string',
         },
     ),
-    connection_id='string',
 )
 
 res = s.transaction.create_accounting_transaction(req)
@@ -83,10 +83,10 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetAccountingTransactionRequest(
     connection_id='string',
+    id='<ID>',
     fields=[
         'string',
     ],
-    id='<ID>',
 )
 
 res = s.transaction.get_accounting_transaction(req)
@@ -176,6 +176,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchAccountingTransactionRequest(
+    connection_id='string',
+    id='<ID>',
     accounting_transaction=shared.AccountingTransaction(
         id='<ID>',
         lineitems=[
@@ -188,8 +190,6 @@ req = operations.PatchAccountingTransactionRequest(
             'key': 'string',
         },
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.transaction.patch_accounting_transaction(req)
@@ -276,6 +276,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateAccountingTransactionRequest(
+    connection_id='string',
+    id='<ID>',
     accounting_transaction=shared.AccountingTransaction(
         id='<ID>',
         lineitems=[
@@ -288,8 +290,6 @@ req = operations.UpdateAccountingTransactionRequest(
             'key': 'string',
         },
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.transaction.update_accounting_transaction(req)

@@ -28,6 +28,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateHrisEmployeeRequest(
+    connection_id='string',
     hris_employee=shared.HrisEmployee(
         address=shared.PropertyHrisEmployeeAddress(),
         emails=[
@@ -44,7 +45,6 @@ req = operations.CreateHrisEmployeeRequest(
             ),
         ],
     ),
-    connection_id='string',
 )
 
 res = s.employee.create_hris_employee(req)
@@ -88,10 +88,10 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetHrisEmployeeRequest(
     connection_id='string',
+    id='<ID>',
     fields=[
         'string',
     ],
-    id='<ID>',
 )
 
 res = s.employee.get_hris_employee(req)
@@ -182,6 +182,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchHrisEmployeeRequest(
+    connection_id='string',
+    id='<ID>',
     hris_employee=shared.HrisEmployee(
         address=shared.PropertyHrisEmployeeAddress(),
         emails=[
@@ -198,8 +200,6 @@ req = operations.PatchHrisEmployeeRequest(
             ),
         ],
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.employee.patch_hris_employee(req)
@@ -287,6 +287,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateHrisEmployeeRequest(
+    connection_id='string',
+    id='<ID>',
     hris_employee=shared.HrisEmployee(
         address=shared.PropertyHrisEmployeeAddress(),
         emails=[
@@ -303,8 +305,6 @@ req = operations.UpdateHrisEmployeeRequest(
             ),
         ],
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.employee.update_hris_employee(req)

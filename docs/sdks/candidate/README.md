@@ -28,6 +28,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateAtsCandidateRequest(
+    connection_id='string',
     ats_candidate=shared.AtsCandidate(
         address=shared.PropertyAtsCandidateAddress(),
         emails=[
@@ -50,7 +51,6 @@ req = operations.CreateAtsCandidateRequest(
             ),
         ],
     ),
-    connection_id='string',
 )
 
 res = s.candidate.create_ats_candidate(req)
@@ -94,10 +94,10 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetAtsCandidateRequest(
     connection_id='string',
+    id='<ID>',
     fields=[
         'string',
     ],
-    id='<ID>',
 )
 
 res = s.candidate.get_ats_candidate(req)
@@ -188,6 +188,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchAtsCandidateRequest(
+    connection_id='string',
+    id='<ID>',
     ats_candidate=shared.AtsCandidate(
         address=shared.PropertyAtsCandidateAddress(),
         emails=[
@@ -210,8 +212,6 @@ req = operations.PatchAtsCandidateRequest(
             ),
         ],
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.candidate.patch_ats_candidate(req)
@@ -299,6 +299,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateAtsCandidateRequest(
+    connection_id='string',
+    id='<ID>',
     ats_candidate=shared.AtsCandidate(
         address=shared.PropertyAtsCandidateAddress(),
         emails=[
@@ -321,8 +323,6 @@ req = operations.UpdateAtsCandidateRequest(
             ),
         ],
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.candidate.update_ats_candidate(req)

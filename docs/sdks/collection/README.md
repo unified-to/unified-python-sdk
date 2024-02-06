@@ -28,8 +28,10 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateCommerceCollectionRequest(
+    connection_id='string',
     commerce_collection=shared.CommerceCollection(
         id='<ID>',
+        name='string',
         item_ids=[
             'string',
         ],
@@ -38,7 +40,6 @@ req = operations.CreateCommerceCollectionRequest(
                 url='http://uneven-mattress.name',
             ),
         ],
-        name='string',
         raw={
             'key': 'string',
         },
@@ -46,7 +47,6 @@ req = operations.CreateCommerceCollectionRequest(
             'string',
         ],
     ),
-    connection_id='string',
 )
 
 res = s.collection.create_commerce_collection(req)
@@ -90,10 +90,10 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetCommerceCollectionRequest(
     connection_id='string',
+    id='<ID>',
     fields=[
         'string',
     ],
-    id='<ID>',
 )
 
 res = s.collection.get_commerce_collection(req)
@@ -184,8 +184,11 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchCommerceCollectionRequest(
+    connection_id='string',
+    id='<ID>',
     commerce_collection=shared.CommerceCollection(
         id='<ID>',
+        name='string',
         item_ids=[
             'string',
         ],
@@ -194,7 +197,6 @@ req = operations.PatchCommerceCollectionRequest(
                 url='http://personal-sorrow.com',
             ),
         ],
-        name='string',
         raw={
             'key': 'string',
         },
@@ -202,8 +204,6 @@ req = operations.PatchCommerceCollectionRequest(
             'string',
         ],
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.collection.patch_commerce_collection(req)
@@ -291,8 +291,11 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateCommerceCollectionRequest(
+    connection_id='string',
+    id='<ID>',
     commerce_collection=shared.CommerceCollection(
         id='<ID>',
+        name='string',
         item_ids=[
             'string',
         ],
@@ -301,7 +304,6 @@ req = operations.UpdateCommerceCollectionRequest(
                 url='https://stupid-entity.org',
             ),
         ],
-        name='string',
         raw={
             'key': 'string',
         },
@@ -309,8 +311,6 @@ req = operations.UpdateCommerceCollectionRequest(
             'string',
         ],
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.collection.update_commerce_collection(req)

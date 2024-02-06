@@ -28,6 +28,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateCrmEventRequest(
+    connection_id='string',
     crm_event=shared.CrmEvent(
         call=shared.PropertyCrmEventCall(),
         company_ids=[
@@ -60,7 +61,6 @@ req = operations.CreateCrmEventRequest(
         },
         task=shared.PropertyCrmEventTask(),
     ),
-    connection_id='string',
 )
 
 res = s.event.create_crm_event(req)
@@ -104,10 +104,10 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetCrmEventRequest(
     connection_id='string',
+    id='<ID>',
     fields=[
         'string',
     ],
-    id='<ID>',
 )
 
 res = s.event.get_crm_event(req)
@@ -198,6 +198,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchCrmEventRequest(
+    connection_id='string',
+    id='<ID>',
     crm_event=shared.CrmEvent(
         call=shared.PropertyCrmEventCall(),
         company_ids=[
@@ -230,8 +232,6 @@ req = operations.PatchCrmEventRequest(
         },
         task=shared.PropertyCrmEventTask(),
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.event.patch_crm_event(req)
@@ -319,6 +319,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateCrmEventRequest(
+    connection_id='string',
+    id='<ID>',
     crm_event=shared.CrmEvent(
         call=shared.PropertyCrmEventCall(),
         company_ids=[
@@ -351,8 +353,6 @@ req = operations.UpdateCrmEventRequest(
         },
         task=shared.PropertyCrmEventTask(),
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.event.update_crm_event(req)

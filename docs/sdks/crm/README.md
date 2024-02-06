@@ -58,6 +58,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateCrmCompanyRequest(
+    connection_id='string',
     crm_company=shared.CrmCompany(
         address=shared.PropertyCrmCompanyAddress(),
         deal_ids=[
@@ -84,7 +85,6 @@ req = operations.CreateCrmCompanyRequest(
             'string',
         ],
     ),
-    connection_id='string',
 )
 
 res = s.crm.create_crm_company(req)
@@ -128,6 +128,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateCrmContactRequest(
+    connection_id='string',
     crm_contact=shared.CrmContact(
         address=shared.PropertyCrmContactAddress(),
         company_ids=[
@@ -148,7 +149,6 @@ req = operations.CreateCrmContactRequest(
             ),
         ],
     ),
-    connection_id='string',
 )
 
 res = s.crm.create_crm_contact(req)
@@ -192,6 +192,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateCrmDealRequest(
+    connection_id='string',
     crm_deal=shared.CrmDeal(
         raw={
             'key': 'string',
@@ -200,7 +201,6 @@ req = operations.CreateCrmDealRequest(
             'string',
         ],
     ),
-    connection_id='string',
 )
 
 res = s.crm.create_crm_deal(req)
@@ -244,6 +244,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateCrmEventRequest(
+    connection_id='string',
     crm_event=shared.CrmEvent(
         call=shared.PropertyCrmEventCall(),
         company_ids=[
@@ -276,7 +277,6 @@ req = operations.CreateCrmEventRequest(
         },
         task=shared.PropertyCrmEventTask(),
     ),
-    connection_id='string',
 )
 
 res = s.crm.create_crm_event(req)
@@ -320,6 +320,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateCrmLeadRequest(
+    connection_id='string',
     crm_lead=shared.CrmLead(
         address=shared.PropertyCrmLeadAddress(),
         emails=[
@@ -334,7 +335,6 @@ req = operations.CreateCrmLeadRequest(
             ),
         ],
     ),
-    connection_id='string',
 )
 
 res = s.crm.create_crm_lead(req)
@@ -378,12 +378,12 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateCrmPipelineRequest(
+    connection_id='string',
     crm_pipeline=shared.CrmPipeline(
         raw={
             'key': 'string',
         },
     ),
-    connection_id='string',
 )
 
 res = s.crm.create_crm_pipeline(req)
@@ -427,10 +427,10 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetCrmCompanyRequest(
     connection_id='string',
+    id='<ID>',
     fields=[
         'string',
     ],
-    id='<ID>',
 )
 
 res = s.crm.get_crm_company(req)
@@ -474,10 +474,10 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetCrmContactRequest(
     connection_id='string',
+    id='<ID>',
     fields=[
         'string',
     ],
-    id='<ID>',
 )
 
 res = s.crm.get_crm_contact(req)
@@ -521,10 +521,10 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetCrmDealRequest(
     connection_id='string',
+    id='<ID>',
     fields=[
         'string',
     ],
-    id='<ID>',
 )
 
 res = s.crm.get_crm_deal(req)
@@ -568,10 +568,10 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetCrmEventRequest(
     connection_id='string',
+    id='<ID>',
     fields=[
         'string',
     ],
-    id='<ID>',
 )
 
 res = s.crm.get_crm_event(req)
@@ -615,10 +615,10 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetCrmLeadRequest(
     connection_id='string',
+    id='<ID>',
     fields=[
         'string',
     ],
-    id='<ID>',
 )
 
 res = s.crm.get_crm_lead(req)
@@ -662,10 +662,10 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetCrmPipelineRequest(
     connection_id='string',
+    id='<ID>',
     fields=[
         'string',
     ],
-    id='<ID>',
 )
 
 res = s.crm.get_crm_pipeline(req)
@@ -991,6 +991,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchCrmCompanyRequest(
+    connection_id='string',
+    id='<ID>',
     crm_company=shared.CrmCompany(
         address=shared.PropertyCrmCompanyAddress(),
         deal_ids=[
@@ -1017,8 +1019,6 @@ req = operations.PatchCrmCompanyRequest(
             'string',
         ],
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.crm.patch_crm_company(req)
@@ -1062,6 +1062,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchCrmContactRequest(
+    connection_id='string',
+    id='<ID>',
     crm_contact=shared.CrmContact(
         address=shared.PropertyCrmContactAddress(),
         company_ids=[
@@ -1082,8 +1084,6 @@ req = operations.PatchCrmContactRequest(
             ),
         ],
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.crm.patch_crm_contact(req)
@@ -1127,6 +1127,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchCrmDealRequest(
+    connection_id='string',
+    id='<ID>',
     crm_deal=shared.CrmDeal(
         raw={
             'key': 'string',
@@ -1135,8 +1137,6 @@ req = operations.PatchCrmDealRequest(
             'string',
         ],
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.crm.patch_crm_deal(req)
@@ -1180,6 +1180,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchCrmEventRequest(
+    connection_id='string',
+    id='<ID>',
     crm_event=shared.CrmEvent(
         call=shared.PropertyCrmEventCall(),
         company_ids=[
@@ -1212,8 +1214,6 @@ req = operations.PatchCrmEventRequest(
         },
         task=shared.PropertyCrmEventTask(),
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.crm.patch_crm_event(req)
@@ -1257,6 +1257,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchCrmLeadRequest(
+    connection_id='string',
+    id='<ID>',
     crm_lead=shared.CrmLead(
         address=shared.PropertyCrmLeadAddress(),
         emails=[
@@ -1271,8 +1273,6 @@ req = operations.PatchCrmLeadRequest(
             ),
         ],
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.crm.patch_crm_lead(req)
@@ -1316,13 +1316,13 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchCrmPipelineRequest(
+    connection_id='string',
+    id='<ID>',
     crm_pipeline=shared.CrmPipeline(
         raw={
             'key': 'string',
         },
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.crm.patch_crm_pipeline(req)
@@ -1630,6 +1630,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateCrmCompanyRequest(
+    connection_id='string',
+    id='<ID>',
     crm_company=shared.CrmCompany(
         address=shared.PropertyCrmCompanyAddress(),
         deal_ids=[
@@ -1656,8 +1658,6 @@ req = operations.UpdateCrmCompanyRequest(
             'string',
         ],
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.crm.update_crm_company(req)
@@ -1701,6 +1701,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateCrmContactRequest(
+    connection_id='string',
+    id='<ID>',
     crm_contact=shared.CrmContact(
         address=shared.PropertyCrmContactAddress(),
         company_ids=[
@@ -1721,8 +1723,6 @@ req = operations.UpdateCrmContactRequest(
             ),
         ],
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.crm.update_crm_contact(req)
@@ -1766,6 +1766,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateCrmDealRequest(
+    connection_id='string',
+    id='<ID>',
     crm_deal=shared.CrmDeal(
         raw={
             'key': 'string',
@@ -1774,8 +1776,6 @@ req = operations.UpdateCrmDealRequest(
             'string',
         ],
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.crm.update_crm_deal(req)
@@ -1819,6 +1819,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateCrmEventRequest(
+    connection_id='string',
+    id='<ID>',
     crm_event=shared.CrmEvent(
         call=shared.PropertyCrmEventCall(),
         company_ids=[
@@ -1851,8 +1853,6 @@ req = operations.UpdateCrmEventRequest(
         },
         task=shared.PropertyCrmEventTask(),
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.crm.update_crm_event(req)
@@ -1896,6 +1896,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateCrmLeadRequest(
+    connection_id='string',
+    id='<ID>',
     crm_lead=shared.CrmLead(
         address=shared.PropertyCrmLeadAddress(),
         emails=[
@@ -1910,8 +1912,6 @@ req = operations.UpdateCrmLeadRequest(
             ),
         ],
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.crm.update_crm_lead(req)
@@ -1955,13 +1955,13 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateCrmPipelineRequest(
+    connection_id='string',
+    id='<ID>',
     crm_pipeline=shared.CrmPipeline(
         raw={
             'key': 'string',
         },
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.crm.update_crm_pipeline(req)

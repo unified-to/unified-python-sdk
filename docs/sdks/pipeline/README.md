@@ -28,12 +28,12 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateCrmPipelineRequest(
+    connection_id='string',
     crm_pipeline=shared.CrmPipeline(
         raw={
             'key': 'string',
         },
     ),
-    connection_id='string',
 )
 
 res = s.pipeline.create_crm_pipeline(req)
@@ -77,10 +77,10 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetCrmPipelineRequest(
     connection_id='string',
+    id='<ID>',
     fields=[
         'string',
     ],
-    id='<ID>',
 )
 
 res = s.pipeline.get_crm_pipeline(req)
@@ -171,13 +171,13 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchCrmPipelineRequest(
+    connection_id='string',
+    id='<ID>',
     crm_pipeline=shared.CrmPipeline(
         raw={
             'key': 'string',
         },
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.pipeline.patch_crm_pipeline(req)
@@ -265,13 +265,13 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateCrmPipelineRequest(
+    connection_id='string',
+    id='<ID>',
     crm_pipeline=shared.CrmPipeline(
         raw={
             'key': 'string',
         },
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.pipeline.update_crm_pipeline(req)

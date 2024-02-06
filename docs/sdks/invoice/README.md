@@ -28,6 +28,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateAccountingInvoiceRequest(
+    connection_id='string',
     accounting_invoice=shared.AccountingInvoice(
         lineitems=[
             shared.AccountingLineitem(
@@ -38,7 +39,6 @@ req = operations.CreateAccountingInvoiceRequest(
             'key': 'string',
         },
     ),
-    connection_id='string',
 )
 
 res = s.invoice.create_accounting_invoice(req)
@@ -82,10 +82,10 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetAccountingInvoiceRequest(
     connection_id='string',
+    id='<ID>',
     fields=[
         'string',
     ],
-    id='<ID>',
 )
 
 res = s.invoice.get_accounting_invoice(req)
@@ -176,6 +176,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchAccountingInvoiceRequest(
+    connection_id='string',
+    id='<ID>',
     accounting_invoice=shared.AccountingInvoice(
         lineitems=[
             shared.AccountingLineitem(
@@ -186,8 +188,6 @@ req = operations.PatchAccountingInvoiceRequest(
             'key': 'string',
         },
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.invoice.patch_accounting_invoice(req)
@@ -275,6 +275,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateAccountingInvoiceRequest(
+    connection_id='string',
+    id='<ID>',
     accounting_invoice=shared.AccountingInvoice(
         lineitems=[
             shared.AccountingLineitem(
@@ -285,8 +287,6 @@ req = operations.UpdateAccountingInvoiceRequest(
             'key': 'string',
         },
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.invoice.update_accounting_invoice(req)

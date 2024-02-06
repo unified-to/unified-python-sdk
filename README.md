@@ -29,13 +29,13 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateAccountingAccountRequest(
+    connection_id='string',
     accounting_account=shared.AccountingAccount(
         name='string',
         raw={
             'key': 'string',
         },
     ),
-    connection_id='string',
 )
 
 res = s.accounting.create_accounting_account(req)
@@ -662,13 +662,13 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateAccountingAccountRequest(
+    connection_id='string',
     accounting_account=shared.AccountingAccount(
         name='string',
         raw={
             'key': 'string',
         },
     ),
-    connection_id='string',
 )
 
 res = None
@@ -713,13 +713,13 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateAccountingAccountRequest(
+    connection_id='string',
     accounting_account=shared.AccountingAccount(
         name='string',
         raw={
             'key': 'string',
         },
     ),
-    connection_id='string',
 )
 
 res = s.accounting.create_accounting_account(req)
@@ -746,13 +746,13 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateAccountingAccountRequest(
+    connection_id='string',
     accounting_account=shared.AccountingAccount(
         name='string',
         raw={
             'key': 'string',
         },
     ),
-    connection_id='string',
 )
 
 res = s.accounting.create_accounting_account(req)
@@ -807,13 +807,13 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateAccountingAccountRequest(
+    connection_id='string',
     accounting_account=shared.AccountingAccount(
         name='string',
         raw={
             'key': 'string',
         },
     ),
-    connection_id='string',
 )
 
 res = s.accounting.create_accounting_account(req)

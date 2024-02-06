@@ -33,10 +33,10 @@ req = operations.CreateUnifiedWebhookRequest(
         event=shared.Event.CREATED,
         hook_url='string',
         interval=188.12,
+        object_type=shared.ObjectType.ATS_SCORECARD,
         meta={
             'key': 'string',
         },
-        object_type=shared.ObjectType.ATS_SCORECARD,
         runs=[
             'string',
         ],

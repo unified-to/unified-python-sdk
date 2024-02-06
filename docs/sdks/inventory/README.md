@@ -28,13 +28,13 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateCommerceInventoryRequest(
+    connection_id='string',
     commerce_inventory=shared.CommerceInventory(
         available=5165.08,
         raw={
             'key': 'string',
         },
     ),
-    connection_id='string',
 )
 
 res = s.inventory.create_commerce_inventory(req)
@@ -78,10 +78,10 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetCommerceInventoryRequest(
     connection_id='string',
+    id='<ID>',
     fields=[
         'string',
     ],
-    id='<ID>',
 )
 
 res = s.inventory.get_commerce_inventory(req)
@@ -172,14 +172,14 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchCommerceInventoryRequest(
+    connection_id='string',
+    id='<ID>',
     commerce_inventory=shared.CommerceInventory(
         available=615.23,
         raw={
             'key': 'string',
         },
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.inventory.patch_commerce_inventory(req)
@@ -267,14 +267,14 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateCommerceInventoryRequest(
+    connection_id='string',
+    id='<ID>',
     commerce_inventory=shared.CommerceInventory(
         available=9360.02,
         raw={
             'key': 'string',
         },
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.inventory.update_commerce_inventory(req)

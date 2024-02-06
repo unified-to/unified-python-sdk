@@ -28,6 +28,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateTicketingCustomerRequest(
+    connection_id='string',
     ticketing_customer=shared.TicketingCustomer(
         emails=[
             shared.TicketingEmail(
@@ -46,7 +47,6 @@ req = operations.CreateTicketingCustomerRequest(
             ),
         ],
     ),
-    connection_id='string',
 )
 
 res = s.customer.create_ticketing_customer(req)
@@ -90,10 +90,10 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetTicketingCustomerRequest(
     connection_id='string',
+    id='<ID>',
     fields=[
         'string',
     ],
-    id='<ID>',
 )
 
 res = s.customer.get_ticketing_customer(req)
@@ -184,6 +184,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchTicketingCustomerRequest(
+    connection_id='string',
+    id='<ID>',
     ticketing_customer=shared.TicketingCustomer(
         emails=[
             shared.TicketingEmail(
@@ -202,8 +204,6 @@ req = operations.PatchTicketingCustomerRequest(
             ),
         ],
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.customer.patch_ticketing_customer(req)
@@ -291,6 +291,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateTicketingCustomerRequest(
+    connection_id='string',
+    id='<ID>',
     ticketing_customer=shared.TicketingCustomer(
         emails=[
             shared.TicketingEmail(
@@ -309,8 +311,6 @@ req = operations.UpdateTicketingCustomerRequest(
             ),
         ],
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.customer.update_ticketing_customer(req)

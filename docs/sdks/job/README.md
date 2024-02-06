@@ -28,6 +28,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateAtsJobRequest(
+    connection_id='string',
     ats_job=shared.AtsJob(
         addresses=[
             shared.AtsAddress(),
@@ -53,7 +54,6 @@ req = operations.CreateAtsJobRequest(
             'string',
         ],
     ),
-    connection_id='string',
 )
 
 res = s.job.create_ats_job(req)
@@ -97,10 +97,10 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetAtsJobRequest(
     connection_id='string',
+    id='<ID>',
     fields=[
         'string',
     ],
-    id='<ID>',
 )
 
 res = s.job.get_ats_job(req)
@@ -191,6 +191,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchAtsJobRequest(
+    connection_id='string',
+    id='<ID>',
     ats_job=shared.AtsJob(
         addresses=[
             shared.AtsAddress(),
@@ -216,8 +218,6 @@ req = operations.PatchAtsJobRequest(
             'string',
         ],
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.job.patch_ats_job(req)
@@ -305,6 +305,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateAtsJobRequest(
+    connection_id='string',
+    id='<ID>',
     ats_job=shared.AtsJob(
         addresses=[
             shared.AtsAddress(),
@@ -330,8 +332,6 @@ req = operations.UpdateAtsJobRequest(
             'string',
         ],
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.job.update_ats_job(req)

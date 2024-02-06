@@ -28,6 +28,13 @@ s = unified_to.UnifiedTo(
 )
 
 req = shared.Connection(
+    categories=[
+        shared.PropertyConnectionCategories.COMMERCE,
+    ],
+    integration_type='string',
+    permissions=[
+        shared.PropertyConnectionPermissions.ATS_CANDIDATE_WRITE,
+    ],
     auth=shared.PropertyConnectionAuth(
         emails=[
             'string',
@@ -39,17 +46,10 @@ req = shared.Connection(
             'string',
         ],
     ),
-    categories=[
-        shared.PropertyConnectionCategories.COMMERCE,
-    ],
     cursors_cache=[
         {
             'key': 'string',
         },
-    ],
-    integration_type='string',
-    permissions=[
-        shared.PropertyConnectionPermissions.ATS_CANDIDATE_WRITE,
     ],
 )
 
@@ -183,7 +183,15 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchUnifiedConnectionRequest(
+    id='<ID>',
     connection=shared.Connection(
+        categories=[
+            shared.PropertyConnectionCategories.TICKETING,
+        ],
+        integration_type='string',
+        permissions=[
+            shared.PropertyConnectionPermissions.CRM_PIPELINE_READ,
+        ],
         auth=shared.PropertyConnectionAuth(
             emails=[
                 'string',
@@ -195,20 +203,12 @@ req = operations.PatchUnifiedConnectionRequest(
                 'string',
             ],
         ),
-        categories=[
-            shared.PropertyConnectionCategories.TICKETING,
-        ],
         cursors_cache=[
             {
                 'key': 'string',
             },
         ],
-        integration_type='string',
-        permissions=[
-            shared.PropertyConnectionPermissions.CRM_PIPELINE_READ,
-        ],
     ),
-    id='<ID>',
 )
 
 res = s.connection.patch_unified_connection(req)
@@ -295,7 +295,15 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateUnifiedConnectionRequest(
+    id='<ID>',
     connection=shared.Connection(
+        categories=[
+            shared.PropertyConnectionCategories.ACCOUNTING,
+        ],
+        integration_type='string',
+        permissions=[
+            shared.PropertyConnectionPermissions.ATS_COMPANY_READ,
+        ],
         auth=shared.PropertyConnectionAuth(
             emails=[
                 'string',
@@ -307,20 +315,12 @@ req = operations.UpdateUnifiedConnectionRequest(
                 'string',
             ],
         ),
-        categories=[
-            shared.PropertyConnectionCategories.ACCOUNTING,
-        ],
         cursors_cache=[
             {
                 'key': 'string',
             },
         ],
-        integration_type='string',
-        permissions=[
-            shared.PropertyConnectionPermissions.ATS_COMPANY_READ,
-        ],
     ),
-    id='<ID>',
 )
 
 res = s.connection.update_unified_connection(req)

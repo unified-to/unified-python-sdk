@@ -28,6 +28,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateAtsInterviewRequest(
+    connection_id='string',
     ats_interview=shared.AtsInterview(
         raw={
             'key': 'string',
@@ -36,7 +37,6 @@ req = operations.CreateAtsInterviewRequest(
             'string',
         ],
     ),
-    connection_id='string',
 )
 
 res = s.interview.create_ats_interview(req)
@@ -80,10 +80,10 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetAtsInterviewRequest(
     connection_id='string',
+    id='<ID>',
     fields=[
         'string',
     ],
-    id='<ID>',
 )
 
 res = s.interview.get_ats_interview(req)
@@ -174,6 +174,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchAtsInterviewRequest(
+    connection_id='string',
+    id='<ID>',
     ats_interview=shared.AtsInterview(
         raw={
             'key': 'string',
@@ -182,8 +184,6 @@ req = operations.PatchAtsInterviewRequest(
             'string',
         ],
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.interview.patch_ats_interview(req)
@@ -271,6 +271,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateAtsInterviewRequest(
+    connection_id='string',
+    id='<ID>',
     ats_interview=shared.AtsInterview(
         raw={
             'key': 'string',
@@ -279,8 +281,6 @@ req = operations.UpdateAtsInterviewRequest(
             'string',
         ],
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.interview.update_ats_interview(req)

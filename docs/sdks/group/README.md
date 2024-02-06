@@ -28,6 +28,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateHrisGroupRequest(
+    connection_id='string',
     hris_group=shared.HrisGroup(
         manager_ids=[
             'string',
@@ -39,7 +40,6 @@ req = operations.CreateHrisGroupRequest(
             'string',
         ],
     ),
-    connection_id='string',
 )
 
 res = s.group.create_hris_group(req)
@@ -83,10 +83,10 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetHrisGroupRequest(
     connection_id='string',
+    id='<ID>',
     fields=[
         'string',
     ],
-    id='<ID>',
 )
 
 res = s.group.get_hris_group(req)
@@ -177,6 +177,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchHrisGroupRequest(
+    connection_id='string',
+    id='<ID>',
     hris_group=shared.HrisGroup(
         manager_ids=[
             'string',
@@ -188,8 +190,6 @@ req = operations.PatchHrisGroupRequest(
             'string',
         ],
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.group.patch_hris_group(req)
@@ -277,6 +277,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateHrisGroupRequest(
+    connection_id='string',
+    id='<ID>',
     hris_group=shared.HrisGroup(
         manager_ids=[
             'string',
@@ -288,8 +290,6 @@ req = operations.UpdateHrisGroupRequest(
             'string',
         ],
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.group.update_hris_group(req)

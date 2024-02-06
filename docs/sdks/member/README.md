@@ -28,6 +28,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateMartechMemberRequest(
+    connection_id='string',
     marketing_member=shared.MarketingMember(
         emails=[
             shared.MarketingEmail(
@@ -44,7 +45,6 @@ req = operations.CreateMartechMemberRequest(
             'string',
         ],
     ),
-    connection_id='string',
 )
 
 res = s.member.create_martech_member(req)
@@ -88,10 +88,10 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetMartechMemberRequest(
     connection_id='string',
+    id='<ID>',
     fields=[
         'string',
     ],
-    id='<ID>',
 )
 
 res = s.member.get_martech_member(req)
@@ -182,6 +182,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchMartechMemberRequest(
+    connection_id='string',
+    id='<ID>',
     marketing_member=shared.MarketingMember(
         emails=[
             shared.MarketingEmail(
@@ -198,8 +200,6 @@ req = operations.PatchMartechMemberRequest(
             'string',
         ],
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.member.patch_martech_member(req)
@@ -287,6 +287,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateMartechMemberRequest(
+    connection_id='string',
+    id='<ID>',
     marketing_member=shared.MarketingMember(
         emails=[
             shared.MarketingEmail(
@@ -303,8 +305,6 @@ req = operations.UpdateMartechMemberRequest(
             'string',
         ],
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.member.update_martech_member(req)

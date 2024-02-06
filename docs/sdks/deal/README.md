@@ -28,6 +28,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateCrmDealRequest(
+    connection_id='string',
     crm_deal=shared.CrmDeal(
         raw={
             'key': 'string',
@@ -36,7 +37,6 @@ req = operations.CreateCrmDealRequest(
             'string',
         ],
     ),
-    connection_id='string',
 )
 
 res = s.deal.create_crm_deal(req)
@@ -80,10 +80,10 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetCrmDealRequest(
     connection_id='string',
+    id='<ID>',
     fields=[
         'string',
     ],
-    id='<ID>',
 )
 
 res = s.deal.get_crm_deal(req)
@@ -174,6 +174,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchCrmDealRequest(
+    connection_id='string',
+    id='<ID>',
     crm_deal=shared.CrmDeal(
         raw={
             'key': 'string',
@@ -182,8 +184,6 @@ req = operations.PatchCrmDealRequest(
             'string',
         ],
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.deal.patch_crm_deal(req)
@@ -271,6 +271,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateCrmDealRequest(
+    connection_id='string',
+    id='<ID>',
     crm_deal=shared.CrmDeal(
         raw={
             'key': 'string',
@@ -279,8 +281,6 @@ req = operations.UpdateCrmDealRequest(
             'string',
         ],
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.deal.update_crm_deal(req)

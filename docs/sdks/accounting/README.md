@@ -60,13 +60,13 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateAccountingAccountRequest(
+    connection_id='string',
     accounting_account=shared.AccountingAccount(
         name='string',
         raw={
             'key': 'string',
         },
     ),
-    connection_id='string',
 )
 
 res = s.accounting.create_accounting_account(req)
@@ -110,6 +110,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateAccountingContactRequest(
+    connection_id='string',
     accounting_contact=shared.AccountingContact(
         billing_address=shared.PropertyAccountingContactBillingAddress(),
         emails=[
@@ -127,7 +128,6 @@ req = operations.CreateAccountingContactRequest(
             ),
         ],
     ),
-    connection_id='string',
 )
 
 res = s.accounting.create_accounting_contact(req)
@@ -171,6 +171,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateAccountingInvoiceRequest(
+    connection_id='string',
     accounting_invoice=shared.AccountingInvoice(
         lineitems=[
             shared.AccountingLineitem(
@@ -181,7 +182,6 @@ req = operations.CreateAccountingInvoiceRequest(
             'key': 'string',
         },
     ),
-    connection_id='string',
 )
 
 res = s.accounting.create_accounting_invoice(req)
@@ -225,12 +225,12 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateAccountingPaymentRequest(
+    connection_id='string',
     accounting_payment=shared.AccountingPayment(
         raw={
             'key': 'string',
         },
     ),
-    connection_id='string',
 )
 
 res = s.accounting.create_accounting_payment(req)
@@ -274,6 +274,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateAccountingTaxrateRequest(
+    connection_id='string',
     accounting_taxrate=shared.AccountingTaxrate(
         name='string',
         rate=1719.1,
@@ -281,7 +282,6 @@ req = operations.CreateAccountingTaxrateRequest(
             'key': 'string',
         },
     ),
-    connection_id='string',
 )
 
 res = s.accounting.create_accounting_taxrate(req)
@@ -324,6 +324,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateAccountingTransactionRequest(
+    connection_id='string',
     accounting_transaction=shared.AccountingTransaction(
         id='<ID>',
         lineitems=[
@@ -336,7 +337,6 @@ req = operations.CreateAccountingTransactionRequest(
             'key': 'string',
         },
     ),
-    connection_id='string',
 )
 
 res = s.accounting.create_accounting_transaction(req)
@@ -380,10 +380,10 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetAccountingAccountRequest(
     connection_id='string',
+    id='<ID>',
     fields=[
         'string',
     ],
-    id='<ID>',
 )
 
 res = s.accounting.get_accounting_account(req)
@@ -427,10 +427,10 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetAccountingContactRequest(
     connection_id='string',
+    id='<ID>',
     fields=[
         'string',
     ],
-    id='<ID>',
 )
 
 res = s.accounting.get_accounting_contact(req)
@@ -474,10 +474,10 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetAccountingInvoiceRequest(
     connection_id='string',
+    id='<ID>',
     fields=[
         'string',
     ],
-    id='<ID>',
 )
 
 res = s.accounting.get_accounting_invoice(req)
@@ -521,10 +521,10 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetAccountingOrganizationRequest(
     connection_id='string',
+    id='<ID>',
     fields=[
         'string',
     ],
-    id='<ID>',
 )
 
 res = s.accounting.get_accounting_organization(req)
@@ -568,10 +568,10 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetAccountingPaymentRequest(
     connection_id='string',
+    id='<ID>',
     fields=[
         'string',
     ],
-    id='<ID>',
 )
 
 res = s.accounting.get_accounting_payment(req)
@@ -615,10 +615,10 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetAccountingTaxrateRequest(
     connection_id='string',
+    id='<ID>',
     fields=[
         'string',
     ],
-    id='<ID>',
 )
 
 res = s.accounting.get_accounting_taxrate(req)
@@ -662,10 +662,10 @@ s = unified_to.UnifiedTo(
 
 req = operations.GetAccountingTransactionRequest(
     connection_id='string',
+    id='<ID>',
     fields=[
         'string',
     ],
-    id='<ID>',
 )
 
 res = s.accounting.get_accounting_transaction(req)
@@ -1038,14 +1038,14 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchAccountingAccountRequest(
+    connection_id='string',
+    id='<ID>',
     accounting_account=shared.AccountingAccount(
         name='string',
         raw={
             'key': 'string',
         },
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.accounting.patch_accounting_account(req)
@@ -1089,6 +1089,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchAccountingContactRequest(
+    connection_id='string',
+    id='<ID>',
     accounting_contact=shared.AccountingContact(
         billing_address=shared.PropertyAccountingContactBillingAddress(),
         emails=[
@@ -1106,8 +1108,6 @@ req = operations.PatchAccountingContactRequest(
             ),
         ],
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.accounting.patch_accounting_contact(req)
@@ -1151,6 +1151,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchAccountingInvoiceRequest(
+    connection_id='string',
+    id='<ID>',
     accounting_invoice=shared.AccountingInvoice(
         lineitems=[
             shared.AccountingLineitem(
@@ -1161,8 +1163,6 @@ req = operations.PatchAccountingInvoiceRequest(
             'key': 'string',
         },
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.accounting.patch_accounting_invoice(req)
@@ -1206,13 +1206,13 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchAccountingPaymentRequest(
+    connection_id='string',
+    id='<ID>',
     accounting_payment=shared.AccountingPayment(
         raw={
             'key': 'string',
         },
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.accounting.patch_accounting_payment(req)
@@ -1256,6 +1256,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchAccountingTaxrateRequest(
+    connection_id='string',
+    id='<ID>',
     accounting_taxrate=shared.AccountingTaxrate(
         name='string',
         rate=5991.47,
@@ -1263,8 +1265,6 @@ req = operations.PatchAccountingTaxrateRequest(
             'key': 'string',
         },
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.accounting.patch_accounting_taxrate(req)
@@ -1307,6 +1307,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchAccountingTransactionRequest(
+    connection_id='string',
+    id='<ID>',
     accounting_transaction=shared.AccountingTransaction(
         id='<ID>',
         lineitems=[
@@ -1319,8 +1321,6 @@ req = operations.PatchAccountingTransactionRequest(
             'key': 'string',
         },
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.accounting.patch_accounting_transaction(req)
@@ -1628,14 +1628,14 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateAccountingAccountRequest(
+    connection_id='string',
+    id='<ID>',
     accounting_account=shared.AccountingAccount(
         name='string',
         raw={
             'key': 'string',
         },
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.accounting.update_accounting_account(req)
@@ -1679,6 +1679,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateAccountingContactRequest(
+    connection_id='string',
+    id='<ID>',
     accounting_contact=shared.AccountingContact(
         billing_address=shared.PropertyAccountingContactBillingAddress(),
         emails=[
@@ -1696,8 +1698,6 @@ req = operations.UpdateAccountingContactRequest(
             ),
         ],
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.accounting.update_accounting_contact(req)
@@ -1741,6 +1741,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateAccountingInvoiceRequest(
+    connection_id='string',
+    id='<ID>',
     accounting_invoice=shared.AccountingInvoice(
         lineitems=[
             shared.AccountingLineitem(
@@ -1751,8 +1753,6 @@ req = operations.UpdateAccountingInvoiceRequest(
             'key': 'string',
         },
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.accounting.update_accounting_invoice(req)
@@ -1796,13 +1796,13 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateAccountingPaymentRequest(
+    connection_id='string',
+    id='<ID>',
     accounting_payment=shared.AccountingPayment(
         raw={
             'key': 'string',
         },
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.accounting.update_accounting_payment(req)
@@ -1846,6 +1846,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateAccountingTaxrateRequest(
+    connection_id='string',
+    id='<ID>',
     accounting_taxrate=shared.AccountingTaxrate(
         name='string',
         rate=3382.78,
@@ -1853,8 +1855,6 @@ req = operations.UpdateAccountingTaxrateRequest(
             'key': 'string',
         },
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.accounting.update_accounting_taxrate(req)
@@ -1897,6 +1897,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateAccountingTransactionRequest(
+    connection_id='string',
+    id='<ID>',
     accounting_transaction=shared.AccountingTransaction(
         id='<ID>',
         lineitems=[
@@ -1909,8 +1911,6 @@ req = operations.UpdateAccountingTransactionRequest(
             'key': 'string',
         },
     ),
-    connection_id='string',
-    id='<ID>',
 )
 
 res = s.accounting.update_accounting_transaction(req)

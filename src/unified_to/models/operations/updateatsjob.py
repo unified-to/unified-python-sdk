@@ -22,10 +22,10 @@ class UpdateAtsJobRequest:
 class UpdateAtsJobResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
-    raw_response: requests_http.Response = dataclasses.field()
-    r"""Raw HTTP response; suitable for custom response parsing"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
+    raw_response: requests_http.Response = dataclasses.field()
+    r"""Raw HTTP response; suitable for custom response parsing"""
     ats_job: Optional[shared_atsjob.AtsJob] = dataclasses.field(default=None)
     r"""Successful"""
     
