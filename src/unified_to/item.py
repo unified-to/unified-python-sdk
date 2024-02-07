@@ -14,7 +14,7 @@ class Item:
     
     
     def create_commerce_item(self, request: operations.CreateCommerceItemRequest) -> operations.CreateCommerceItemResponse:
-        r"""Create an item/product"""
+        r"""Create an item"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.CreateCommerceItemRequest, base_url, '/commerce/{connection_id}/item', request)
@@ -49,7 +49,7 @@ class Item:
     
     
     def get_commerce_item(self, request: operations.GetCommerceItemRequest) -> operations.GetCommerceItemResponse:
-        r"""Retrieve an item/product"""
+        r"""Retrieve an item"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.GetCommerceItemRequest, base_url, '/commerce/{connection_id}/item/{id}', request)
@@ -82,7 +82,7 @@ class Item:
     
     
     def list_commerce_items(self, request: operations.ListCommerceItemsRequest) -> operations.ListCommerceItemsResponse:
-        r"""List all items/products"""
+        r"""List all items"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.ListCommerceItemsRequest, base_url, '/commerce/{connection_id}/item', request)
@@ -115,7 +115,7 @@ class Item:
     
     
     def patch_commerce_item(self, request: operations.PatchCommerceItemRequest) -> operations.PatchCommerceItemResponse:
-        r"""Update an item/product"""
+        r"""Update an item"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.PatchCommerceItemRequest, base_url, '/commerce/{connection_id}/item/{id}', request)
@@ -150,7 +150,7 @@ class Item:
     
     
     def remove_commerce_item(self, request: operations.RemoveCommerceItemRequest) -> operations.RemoveCommerceItemResponse:
-        r"""Remove an item/product"""
+        r"""Remove an item"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.RemoveCommerceItemRequest, base_url, '/commerce/{connection_id}/item/{id}', request)
@@ -181,7 +181,7 @@ class Item:
     
     
     def update_commerce_item(self, request: operations.UpdateCommerceItemRequest) -> operations.UpdateCommerceItemResponse:
-        r"""Update an item/product"""
+        r"""Update an item"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.UpdateCommerceItemRequest, base_url, '/commerce/{connection_id}/item/{id}', request)

@@ -5,27 +5,27 @@
 
 * [create_commerce_collection](#create_commerce_collection) - Create a collection
 * [create_commerce_inventory](#create_commerce_inventory) - Create an inventory
-* [create_commerce_item](#create_commerce_item) - Create an item/product
+* [create_commerce_item](#create_commerce_item) - Create an item
 * [create_commerce_location](#create_commerce_location) - Create a location
 * [get_commerce_collection](#get_commerce_collection) - Retrieve a collection
 * [get_commerce_inventory](#get_commerce_inventory) - Retrieve an inventory
-* [get_commerce_item](#get_commerce_item) - Retrieve an item/product
+* [get_commerce_item](#get_commerce_item) - Retrieve an item
 * [get_commerce_location](#get_commerce_location) - Retrieve a location
 * [list_commerce_collections](#list_commerce_collections) - List all collections
 * [list_commerce_inventories](#list_commerce_inventories) - List all inventories
-* [list_commerce_items](#list_commerce_items) - List all items/products
+* [list_commerce_items](#list_commerce_items) - List all items
 * [list_commerce_locations](#list_commerce_locations) - List all locations
 * [patch_commerce_collection](#patch_commerce_collection) - Update a collection
 * [patch_commerce_inventory](#patch_commerce_inventory) - Update an inventory
-* [patch_commerce_item](#patch_commerce_item) - Update an item/product
+* [patch_commerce_item](#patch_commerce_item) - Update an item
 * [patch_commerce_location](#patch_commerce_location) - Update a location
 * [remove_commerce_collection](#remove_commerce_collection) - Remove a collection
 * [remove_commerce_inventory](#remove_commerce_inventory) - Remove an inventory
-* [remove_commerce_item](#remove_commerce_item) - Remove an item/product
+* [remove_commerce_item](#remove_commerce_item) - Remove an item
 * [remove_commerce_location](#remove_commerce_location) - Remove a location
 * [update_commerce_collection](#update_commerce_collection) - Update a collection
 * [update_commerce_inventory](#update_commerce_inventory) - Update an inventory
-* [update_commerce_item](#update_commerce_item) - Update an item/product
+* [update_commerce_item](#update_commerce_item) - Update an item
 * [update_commerce_location](#update_commerce_location) - Update a location
 
 ## create_commerce_collection
@@ -142,7 +142,7 @@ if res.commerce_inventory is not None:
 
 ## create_commerce_item
 
-Create an item/product
+Create an item
 
 ### Example Usage
 
@@ -372,7 +372,7 @@ if res.commerce_inventory is not None:
 
 ## get_commerce_item
 
-Retrieve an item/product
+Retrieve an item
 
 ### Example Usage
 
@@ -560,7 +560,7 @@ if res.commerce_inventories is not None:
 
 ## list_commerce_items
 
-List all items/products
+List all items
 
 ### Example Usage
 
@@ -768,7 +768,7 @@ if res.commerce_inventory is not None:
 
 ## patch_commerce_item
 
-Update an item/product
+Update an item
 
 ### Example Usage
 
@@ -994,7 +994,7 @@ if res.status_code == 200:
 
 ## remove_commerce_item
 
-Remove an item/product
+Remove an item
 
 ### Example Usage
 
@@ -1196,7 +1196,7 @@ if res.commerce_inventory is not None:
 
 ## update_commerce_item
 
-Update an item/product
+Update an item
 
 ### Example Usage
 

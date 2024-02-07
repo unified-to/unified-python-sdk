@@ -30,6 +30,11 @@ s = unified_to.UnifiedTo(
 req = operations.CreateAtsScorecardRequest(
     connection_id='string',
     ats_scorecard=shared.AtsScorecard(
+        questions=[
+            shared.AtsScorecardQuestion(
+                text='string',
+            ),
+        ],
         raw={
             'key': 'string',
         },
@@ -174,6 +179,11 @@ req = operations.PatchAtsScorecardRequest(
     connection_id='string',
     id='<ID>',
     ats_scorecard=shared.AtsScorecard(
+        questions=[
+            shared.AtsScorecardQuestion(
+                text='string',
+            ),
+        ],
         raw={
             'key': 'string',
         },
@@ -268,6 +278,11 @@ req = operations.UpdateAtsScorecardRequest(
     connection_id='string',
     id='<ID>',
     ats_scorecard=shared.AtsScorecard(
+        questions=[
+            shared.AtsScorecardQuestion(
+                text='string',
+            ),
+        ],
         raw={
             'key': 'string',
         },

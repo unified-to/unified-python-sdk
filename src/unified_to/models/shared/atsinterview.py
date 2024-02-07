@@ -13,6 +13,8 @@ class AtsInterviewStatus(str, Enum):
     SCHEDULED = 'SCHEDULED'
     AWAITING_FEEDBACK = 'AWAITING_FEEDBACK'
     COMPLETE = 'COMPLETE'
+    CANCELED = 'CANCELED'
+    NEEDS_SCHEDULING = 'NEEDS_SCHEDULING'
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)

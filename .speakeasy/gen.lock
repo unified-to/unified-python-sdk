@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: e16aa34043cd80d620a23e298a14e5c0
+  docChecksum: 6de3144fa3dee858558168257bc841a5
   docVersion: "1.0"
   speakeasyVersion: internal
-  generationVersion: 2.250.12
-  releaseVersion: 0.16.1
-  configChecksum: 3ea006b9e9bcb150d91b06b472690127
+  generationVersion: 2.250.16
+  releaseVersion: 0.16.2
+  configChecksum: 2a833e8090dbd8fc7a292082d6a6affd
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -328,6 +328,7 @@ generatedFiles:
   - src/unified_to/models/shared/atscompensation.py
   - src/unified_to/models/shared/atsaddress.py
   - src/unified_to/models/shared/atsscorecard.py
+  - src/unified_to/models/shared/atsscorecardquestion.py
   - src/unified_to/models/shared/atscompany.py
   - src/unified_to/models/shared/property_atscompany_address.py
   - src/unified_to/models/shared/atsstatus.py
@@ -882,6 +883,7 @@ generatedFiles:
   - docs/models/shared/atsaddress.md
   - docs/models/shared/recommendation.md
   - docs/models/shared/atsscorecard.md
+  - docs/models/shared/atsscorecardquestion.md
   - docs/models/shared/atscompany.md
   - docs/models/shared/propertyatscompanyaddress.md
   - docs/models/shared/atsstatusstatus.md

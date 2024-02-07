@@ -3,16 +3,16 @@
 
 ### Available Operations
 
-* [create_commerce_item](#create_commerce_item) - Create an item/product
-* [get_commerce_item](#get_commerce_item) - Retrieve an item/product
-* [list_commerce_items](#list_commerce_items) - List all items/products
-* [patch_commerce_item](#patch_commerce_item) - Update an item/product
-* [remove_commerce_item](#remove_commerce_item) - Remove an item/product
-* [update_commerce_item](#update_commerce_item) - Update an item/product
+* [create_commerce_item](#create_commerce_item) - Create an item
+* [get_commerce_item](#get_commerce_item) - Retrieve an item
+* [list_commerce_items](#list_commerce_items) - List all items
+* [patch_commerce_item](#patch_commerce_item) - Update an item
+* [remove_commerce_item](#remove_commerce_item) - Remove an item
+* [update_commerce_item](#update_commerce_item) - Update an item
 
 ## create_commerce_item
 
-Create an item/product
+Create an item
 
 ### Example Usage
 
@@ -97,7 +97,7 @@ if res.commerce_item is not None:
 
 ## get_commerce_item
 
-Retrieve an item/product
+Retrieve an item
 
 ### Example Usage
 
@@ -144,7 +144,7 @@ if res.commerce_item is not None:
 
 ## list_commerce_items
 
-List all items/products
+List all items
 
 ### Example Usage
 
@@ -191,7 +191,7 @@ if res.commerce_items is not None:
 
 ## patch_commerce_item
 
-Update an item/product
+Update an item
 
 ### Example Usage
 
@@ -277,7 +277,7 @@ if res.commerce_item is not None:
 
 ## remove_commerce_item
 
-Remove an item/product
+Remove an item
 
 ### Example Usage
 
@@ -321,7 +321,7 @@ if res.status_code == 200:
 
 ## update_commerce_item
 
-Update an item/product
+Update an item
 
 ### Example Usage
 
