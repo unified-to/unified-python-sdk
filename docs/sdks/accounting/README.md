@@ -14,6 +14,8 @@
 * [get_accounting_invoice](#get_accounting_invoice) - Retrieve a invoice
 * [get_accounting_organization](#get_accounting_organization) - Retrieve an organization
 * [get_accounting_payment](#get_accounting_payment) - Retrieve a payment
+* [get_accounting_payout](#get_accounting_payout) - Retrieve a payout
+* [get_accounting_refund](#get_accounting_refund) - Retrieve a refund
 * [get_accounting_taxrate](#get_accounting_taxrate) - Retrieve a taxrate
 * [get_accounting_transaction](#get_accounting_transaction) - Retrieve a transaction
 * [list_accounting_accounts](#list_accounting_accounts) - List all accounts
@@ -21,6 +23,8 @@
 * [list_accounting_invoices](#list_accounting_invoices) - List all invoices
 * [list_accounting_organizations](#list_accounting_organizations) - List all organizations
 * [list_accounting_payments](#list_accounting_payments) - List all payments
+* [list_accounting_payouts](#list_accounting_payouts) - List all payouts
+* [list_accounting_refunds](#list_accounting_refunds) - List all refunds
 * [list_accounting_taxrates](#list_accounting_taxrates) - List all taxrates
 * [list_accounting_transactions](#list_accounting_transactions) - List all transactions
 * [patch_accounting_account](#patch_accounting_account) - Update an account
@@ -597,6 +601,100 @@ if res.accounting_payment is not None:
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4x-5xx          | */*             |
 
+## get_accounting_payout
+
+Retrieve a payout
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
+
+req = operations.GetAccountingPayoutRequest(
+    connection_id='string',
+    id='<ID>',
+    fields=[
+        'string',
+    ],
+)
+
+res = s.accounting.get_accounting_payout(req)
+
+if res.accounting_payout is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `request`                                                                                      | [operations.GetAccountingPayoutRequest](../../models/operations/getaccountingpayoutrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+
+
+### Response
+
+**[operations.GetAccountingPayoutResponse](../../models/operations/getaccountingpayoutresponse.md)**
+### Errors
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
+
+## get_accounting_refund
+
+Retrieve a refund
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
+
+req = operations.GetAccountingRefundRequest(
+    connection_id='string',
+    id='<ID>',
+    fields=[
+        'string',
+    ],
+)
+
+res = s.accounting.get_accounting_refund(req)
+
+if res.accounting_refund is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `request`                                                                                      | [operations.GetAccountingRefundRequest](../../models/operations/getaccountingrefundrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+
+
+### Response
+
+**[operations.GetAccountingRefundResponse](../../models/operations/getaccountingrefundresponse.md)**
+### Errors
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
+
 ## get_accounting_taxrate
 
 Retrieve a taxrate
@@ -920,6 +1018,100 @@ if res.accounting_payments is not None:
 ### Response
 
 **[operations.ListAccountingPaymentsResponse](../../models/operations/listaccountingpaymentsresponse.md)**
+### Errors
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
+
+## list_accounting_payouts
+
+List all payouts
+
+### Example Usage
+
+```python
+import dateutil.parser
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
+
+req = operations.ListAccountingPayoutsRequest(
+    connection_id='string',
+    fields=[
+        'string',
+    ],
+)
+
+res = s.accounting.list_accounting_payouts(req)
+
+if res.accounting_payouts is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `request`                                                                                          | [operations.ListAccountingPayoutsRequest](../../models/operations/listaccountingpayoutsrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+
+
+### Response
+
+**[operations.ListAccountingPayoutsResponse](../../models/operations/listaccountingpayoutsresponse.md)**
+### Errors
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
+
+## list_accounting_refunds
+
+List all refunds
+
+### Example Usage
+
+```python
+import dateutil.parser
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
+
+req = operations.ListAccountingRefundsRequest(
+    connection_id='string',
+    fields=[
+        'string',
+    ],
+)
+
+res = s.accounting.list_accounting_refunds(req)
+
+if res.accounting_refunds is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `request`                                                                                          | [operations.ListAccountingRefundsRequest](../../models/operations/listaccountingrefundsrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+
+
+### Response
+
+**[operations.ListAccountingRefundsResponse](../../models/operations/listaccountingrefundsresponse.md)**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |

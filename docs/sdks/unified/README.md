@@ -13,6 +13,7 @@
 * [list_unified_connections](#list_unified_connections) - List all connections
 * [list_unified_integration_workspaces](#list_unified_integration_workspaces) - Returns all activated integrations in a workspace
 * [list_unified_integrations](#list_unified_integrations) - Returns all integrations
+* [list_unified_issues](#list_unified_issues) - List support issues
 * [list_unified_webhooks](#list_unified_webhooks) - Returns all registered webhooks
 * [patch_unified_connection](#patch_unified_connection) - Update connection
 * [patch_unified_webhook_trigger](#patch_unified_webhook_trigger) - Trigger webhook
@@ -492,6 +493,48 @@ if res.integrations is not None:
 ### Response
 
 **[operations.ListUnifiedIntegrationsResponse](../../models/operations/listunifiedintegrationsresponse.md)**
+### Errors
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
+
+## list_unified_issues
+
+List support issues
+
+### Example Usage
+
+```python
+import dateutil.parser
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
+
+req = operations.ListUnifiedIssuesRequest()
+
+res = s.unified.list_unified_issues(req)
+
+if res.issues is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.ListUnifiedIssuesRequest](../../models/operations/listunifiedissuesrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+
+
+### Response
+
+**[operations.ListUnifiedIssuesResponse](../../models/operations/listunifiedissuesresponse.md)**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |

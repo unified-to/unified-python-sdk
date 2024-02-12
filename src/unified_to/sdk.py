@@ -29,6 +29,7 @@ from .integration import Integration
 from .interview import Interview
 from .inventory import Inventory
 from .invoice import Invoice
+from .issue import Issue
 from .item import Item
 from .job import Job
 from .lead import Lead
@@ -41,8 +42,10 @@ from .note import Note
 from .organization import Organization
 from .passthrough import Passthrough
 from .payment import Payment
+from .payout import Payout
 from .person import Person
 from .pipeline import Pipeline
+from .refund import Refund
 from .scorecard import Scorecard
 from .sdkconfiguration import SDKConfiguration
 from .storage import Storage
@@ -65,6 +68,8 @@ class UnifiedTo:
     invoice: Invoice
     organization: Organization
     payment: Payment
+    payout: Payout
+    refund: Refund
     taxrate: Taxrate
     transaction: Transaction
     ats: Ats
@@ -109,6 +114,7 @@ class UnifiedTo:
     integration: Integration
     auth: Auth
     login: Login
+    issue: Issue
     webhook: Webhook
 
     sdk_configuration: SDKConfiguration
@@ -154,6 +160,8 @@ class UnifiedTo:
         self.invoice = Invoice(self.sdk_configuration)
         self.organization = Organization(self.sdk_configuration)
         self.payment = Payment(self.sdk_configuration)
+        self.payout = Payout(self.sdk_configuration)
+        self.refund = Refund(self.sdk_configuration)
         self.taxrate = Taxrate(self.sdk_configuration)
         self.transaction = Transaction(self.sdk_configuration)
         self.ats = Ats(self.sdk_configuration)
@@ -198,5 +206,6 @@ class UnifiedTo:
         self.integration = Integration(self.sdk_configuration)
         self.auth = Auth(self.sdk_configuration)
         self.login = Login(self.sdk_configuration)
+        self.issue = Issue(self.sdk_configuration)
         self.webhook = Webhook(self.sdk_configuration)
     
