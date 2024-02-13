@@ -17,7 +17,6 @@ Create a taxrate
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -29,13 +28,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.CreateAccountingTaxrateRequest(
     connection_id='string',
-    accounting_taxrate=shared.AccountingTaxrate(
-        name='string',
-        rate=1719.1,
-        raw={
-            'key': 'string',
-        },
-    ),
 )
 
 res = s.taxrate.create_accounting_taxrate(req)
@@ -80,9 +72,6 @@ s = unified_to.UnifiedTo(
 req = operations.GetAccountingTaxrateRequest(
     connection_id='string',
     id='<ID>',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.taxrate.get_accounting_taxrate(req)
@@ -115,7 +104,6 @@ List all taxrates
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -127,9 +115,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListAccountingTaxratesRequest(
     connection_id='string',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.taxrate.list_accounting_taxrates(req)
@@ -162,7 +147,6 @@ Update a taxrate
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -175,13 +159,6 @@ s = unified_to.UnifiedTo(
 req = operations.PatchAccountingTaxrateRequest(
     connection_id='string',
     id='<ID>',
-    accounting_taxrate=shared.AccountingTaxrate(
-        name='string',
-        rate=5991.47,
-        raw={
-            'key': 'string',
-        },
-    ),
 )
 
 res = s.taxrate.patch_accounting_taxrate(req)
@@ -258,7 +235,6 @@ Update a taxrate
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -271,13 +247,6 @@ s = unified_to.UnifiedTo(
 req = operations.UpdateAccountingTaxrateRequest(
     connection_id='string',
     id='<ID>',
-    accounting_taxrate=shared.AccountingTaxrate(
-        name='string',
-        rate=3382.78,
-        raw={
-            'key': 'string',
-        },
-    ),
 )
 
 res = s.taxrate.update_accounting_taxrate(req)

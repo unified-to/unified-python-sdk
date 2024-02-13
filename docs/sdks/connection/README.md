@@ -17,7 +17,6 @@ Create connection
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import shared
 
@@ -33,23 +32,7 @@ req = shared.Connection(
     ],
     integration_type='string',
     permissions=[
-        shared.PropertyConnectionPermissions.ATS_CANDIDATE_WRITE,
-    ],
-    auth=shared.PropertyConnectionAuth(
-        emails=[
-            'string',
-        ],
-        meta={
-            'key': 'string',
-        },
-        other_auth_info=[
-            'string',
-        ],
-    ),
-    cursors_cache=[
-        {
-            'key': 'string',
-        },
+        shared.PropertyConnectionPermissions.ATS_APPLICATIONSTATUS_READ,
     ],
 )
 
@@ -126,7 +109,6 @@ List all connections
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -136,11 +118,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListUnifiedConnectionsRequest(
-    categories=[
-        operations.Categories.MARTECH,
-    ],
-)
+req = operations.ListUnifiedConnectionsRequest()
 
 res = s.connection.list_unified_connections(req)
 
@@ -172,7 +150,6 @@ Update connection
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -184,31 +161,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.PatchUnifiedConnectionRequest(
     id='<ID>',
-    connection=shared.Connection(
-        categories=[
-            shared.PropertyConnectionCategories.TICKETING,
-        ],
-        integration_type='string',
-        permissions=[
-            shared.PropertyConnectionPermissions.CRM_PIPELINE_READ,
-        ],
-        auth=shared.PropertyConnectionAuth(
-            emails=[
-                'string',
-            ],
-            meta={
-                'key': 'string',
-            },
-            other_auth_info=[
-                'string',
-            ],
-        ),
-        cursors_cache=[
-            {
-                'key': 'string',
-            },
-        ],
-    ),
 )
 
 res = s.connection.patch_unified_connection(req)
@@ -284,7 +236,6 @@ Update connection
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -296,31 +247,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.UpdateUnifiedConnectionRequest(
     id='<ID>',
-    connection=shared.Connection(
-        categories=[
-            shared.PropertyConnectionCategories.ACCOUNTING,
-        ],
-        integration_type='string',
-        permissions=[
-            shared.PropertyConnectionPermissions.ATS_COMPANY_READ,
-        ],
-        auth=shared.PropertyConnectionAuth(
-            emails=[
-                'string',
-            ],
-            meta={
-                'key': 'string',
-            },
-            other_auth_info=[
-                'string',
-            ],
-        ),
-        cursors_cache=[
-            {
-                'key': 'string',
-            },
-        ],
-    ),
 )
 
 res = s.connection.update_unified_connection(req)

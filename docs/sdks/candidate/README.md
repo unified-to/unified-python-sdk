@@ -17,7 +17,6 @@ Create a candidate
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -29,28 +28,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.CreateAtsCandidateRequest(
     connection_id='string',
-    ats_candidate=shared.AtsCandidate(
-        address=shared.PropertyAtsCandidateAddress(),
-        emails=[
-            shared.AtsEmail(
-                email='Robin_Feeney@hotmail.com',
-            ),
-        ],
-        link_urls=[
-            'string',
-        ],
-        raw={
-            'key': 'string',
-        },
-        tags=[
-            'string',
-        ],
-        telephones=[
-            shared.AtsTelephone(
-                telephone='string',
-            ),
-        ],
-    ),
 )
 
 res = s.candidate.create_ats_candidate(req)
@@ -95,9 +72,6 @@ s = unified_to.UnifiedTo(
 req = operations.GetAtsCandidateRequest(
     connection_id='string',
     id='<ID>',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.candidate.get_ats_candidate(req)
@@ -130,7 +104,6 @@ List all candidates
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -142,9 +115,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListAtsCandidatesRequest(
     connection_id='string',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.candidate.list_ats_candidates(req)
@@ -177,7 +147,6 @@ Update a candidate
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -190,28 +159,6 @@ s = unified_to.UnifiedTo(
 req = operations.PatchAtsCandidateRequest(
     connection_id='string',
     id='<ID>',
-    ats_candidate=shared.AtsCandidate(
-        address=shared.PropertyAtsCandidateAddress(),
-        emails=[
-            shared.AtsEmail(
-                email='Tracy.Collins13@gmail.com',
-            ),
-        ],
-        link_urls=[
-            'string',
-        ],
-        raw={
-            'key': 'string',
-        },
-        tags=[
-            'string',
-        ],
-        telephones=[
-            shared.AtsTelephone(
-                telephone='string',
-            ),
-        ],
-    ),
 )
 
 res = s.candidate.patch_ats_candidate(req)
@@ -288,7 +235,6 @@ Update a candidate
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -301,28 +247,6 @@ s = unified_to.UnifiedTo(
 req = operations.UpdateAtsCandidateRequest(
     connection_id='string',
     id='<ID>',
-    ats_candidate=shared.AtsCandidate(
-        address=shared.PropertyAtsCandidateAddress(),
-        emails=[
-            shared.AtsEmail(
-                email='Gaetano86@hotmail.com',
-            ),
-        ],
-        link_urls=[
-            'string',
-        ],
-        raw={
-            'key': 'string',
-        },
-        tags=[
-            'string',
-        ],
-        telephones=[
-            shared.AtsTelephone(
-                telephone='string',
-            ),
-        ],
-    ),
 )
 
 res = s.candidate.update_ats_candidate(req)

@@ -17,7 +17,6 @@ Create an account
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -29,12 +28,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.CreateAccountingAccountRequest(
     connection_id='string',
-    accounting_account=shared.AccountingAccount(
-        name='string',
-        raw={
-            'key': 'string',
-        },
-    ),
 )
 
 res = s.account.create_accounting_account(req)
@@ -79,9 +72,6 @@ s = unified_to.UnifiedTo(
 req = operations.GetAccountingAccountRequest(
     connection_id='string',
     id='<ID>',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.account.get_accounting_account(req)
@@ -114,7 +104,6 @@ List all accounts
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -126,9 +115,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListAccountingAccountsRequest(
     connection_id='string',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.account.list_accounting_accounts(req)
@@ -161,7 +147,6 @@ Update an account
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -174,12 +159,6 @@ s = unified_to.UnifiedTo(
 req = operations.PatchAccountingAccountRequest(
     connection_id='string',
     id='<ID>',
-    accounting_account=shared.AccountingAccount(
-        name='string',
-        raw={
-            'key': 'string',
-        },
-    ),
 )
 
 res = s.account.patch_accounting_account(req)
@@ -256,7 +235,6 @@ Update an account
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -269,12 +247,6 @@ s = unified_to.UnifiedTo(
 req = operations.UpdateAccountingAccountRequest(
     connection_id='string',
     id='<ID>',
-    accounting_account=shared.AccountingAccount(
-        name='string',
-        raw={
-            'key': 'string',
-        },
-    ),
 )
 
 res = s.account.update_accounting_account(req)

@@ -17,7 +17,6 @@ Create a list
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -29,11 +28,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.CreateMartechListRequest(
     connection_id='string',
-    marketing_list=shared.MarketingList(
-        raw={
-            'key': 'string',
-        },
-    ),
 )
 
 res = s.list.create_martech_list(req)
@@ -78,9 +72,6 @@ s = unified_to.UnifiedTo(
 req = operations.GetMartechListRequest(
     connection_id='string',
     id='<ID>',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.list.get_martech_list(req)
@@ -113,7 +104,6 @@ List all lists
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -125,9 +115,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListMartechListsRequest(
     connection_id='string',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.list.list_martech_lists(req)
@@ -160,7 +147,6 @@ Update a list
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -173,11 +159,6 @@ s = unified_to.UnifiedTo(
 req = operations.PatchMartechListRequest(
     connection_id='string',
     id='<ID>',
-    marketing_list=shared.MarketingList(
-        raw={
-            'key': 'string',
-        },
-    ),
 )
 
 res = s.list.patch_martech_list(req)
@@ -254,7 +235,6 @@ Update a list
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -267,11 +247,6 @@ s = unified_to.UnifiedTo(
 req = operations.UpdateMartechListRequest(
     connection_id='string',
     id='<ID>',
-    marketing_list=shared.MarketingList(
-        raw={
-            'key': 'string',
-        },
-    ),
 )
 
 res = s.list.update_martech_list(req)

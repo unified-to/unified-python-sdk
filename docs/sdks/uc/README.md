@@ -18,7 +18,6 @@ Create a contact
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -30,21 +29,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.CreateUcContactRequest(
     connection_id='string',
-    uc_contact=shared.UcContact(
-        emails=[
-            shared.UcEmail(
-                email='Dulce_Becker30@yahoo.com',
-            ),
-        ],
-        raw={
-            'key': 'string',
-        },
-        telephones=[
-            shared.UcTelephone(
-                telephone='string',
-            ),
-        ],
-    ),
 )
 
 res = s.uc.create_uc_contact(req)
@@ -89,9 +73,6 @@ s = unified_to.UnifiedTo(
 req = operations.GetUcContactRequest(
     connection_id='string',
     id='<ID>',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.uc.get_uc_contact(req)
@@ -124,7 +105,6 @@ List all calls
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -136,9 +116,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListUcCallsRequest(
     connection_id='string',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.uc.list_uc_calls(req)
@@ -171,7 +148,6 @@ List all contacts
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -183,9 +159,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListUcContactsRequest(
     connection_id='string',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.uc.list_uc_contacts(req)
@@ -218,7 +191,6 @@ Update a contact
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -231,21 +203,6 @@ s = unified_to.UnifiedTo(
 req = operations.PatchUcContactRequest(
     connection_id='string',
     id='<ID>',
-    uc_contact=shared.UcContact(
-        emails=[
-            shared.UcEmail(
-                email='Norene_Boehm97@hotmail.com',
-            ),
-        ],
-        raw={
-            'key': 'string',
-        },
-        telephones=[
-            shared.UcTelephone(
-                telephone='string',
-            ),
-        ],
-    ),
 )
 
 res = s.uc.patch_uc_contact(req)
@@ -322,7 +279,6 @@ Update a contact
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -335,21 +291,6 @@ s = unified_to.UnifiedTo(
 req = operations.UpdateUcContactRequest(
     connection_id='string',
     id='<ID>',
-    uc_contact=shared.UcContact(
-        emails=[
-            shared.UcEmail(
-                email='Kianna.Witting90@gmail.com',
-            ),
-        ],
-        raw={
-            'key': 'string',
-        },
-        telephones=[
-            shared.UcTelephone(
-                telephone='string',
-            ),
-        ],
-    ),
 )
 
 res = s.uc.update_uc_contact(req)

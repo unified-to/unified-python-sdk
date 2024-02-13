@@ -56,7 +56,6 @@ Returns API Calls
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 

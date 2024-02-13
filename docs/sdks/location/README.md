@@ -17,7 +17,6 @@ Create a location
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -29,13 +28,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.CreateCommerceLocationRequest(
     connection_id='string',
-    commerce_location=shared.CommerceLocation(
-        name='string',
-        address=shared.PropertyCommerceLocationAddress(),
-        raw={
-            'key': 'string',
-        },
-    ),
 )
 
 res = s.location.create_commerce_location(req)
@@ -80,9 +72,6 @@ s = unified_to.UnifiedTo(
 req = operations.GetCommerceLocationRequest(
     connection_id='string',
     id='<ID>',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.location.get_commerce_location(req)
@@ -115,7 +104,6 @@ List all locations
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -127,9 +115,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListCommerceLocationsRequest(
     connection_id='string',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.location.list_commerce_locations(req)
@@ -162,7 +147,6 @@ Update a location
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -175,13 +159,6 @@ s = unified_to.UnifiedTo(
 req = operations.PatchCommerceLocationRequest(
     connection_id='string',
     id='<ID>',
-    commerce_location=shared.CommerceLocation(
-        name='string',
-        address=shared.PropertyCommerceLocationAddress(),
-        raw={
-            'key': 'string',
-        },
-    ),
 )
 
 res = s.location.patch_commerce_location(req)
@@ -258,7 +235,6 @@ Update a location
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -271,13 +247,6 @@ s = unified_to.UnifiedTo(
 req = operations.UpdateCommerceLocationRequest(
     connection_id='string',
     id='<ID>',
-    commerce_location=shared.CommerceLocation(
-        name='string',
-        address=shared.PropertyCommerceLocationAddress(),
-        raw={
-            'key': 'string',
-        },
-    ),
 )
 
 res = s.location.update_commerce_location(req)

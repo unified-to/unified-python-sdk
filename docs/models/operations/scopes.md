@@ -19,10 +19,8 @@
 | `ACCOUNTING_TAXRATE_READ`      | accounting_taxrate_read        |
 | `ACCOUNTING_TAXRATE_WRITE`     | accounting_taxrate_write       |
 | `ACCOUNTING_ORGANIZATION_READ` | accounting_organization_read   |
-| `ACCOUNTING_REFUND_READ`       | accounting_refund_read         |
-| `ACCOUNTING_REFUND_WRITE`      | accounting_refund_write        |
 | `ACCOUNTING_PAYOUT_READ`       | accounting_payout_read         |
-| `ACCOUNTING_PAYOUT_WRITE`      | accounting_payout_write        |
+| `ACCOUNTING_REFUND_READ`       | accounting_refund_read         |
 | `COMMERCE_ITEM_READ`           | commerce_item_read             |
 | `COMMERCE_ITEM_WRITE`          | commerce_item_write            |
 | `COMMERCE_COLLECTION_READ`     | commerce_collection_read       |

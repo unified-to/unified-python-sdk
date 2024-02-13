@@ -17,7 +17,6 @@ Create a scorecard
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -29,16 +28,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.CreateAtsScorecardRequest(
     connection_id='string',
-    ats_scorecard=shared.AtsScorecard(
-        questions=[
-            shared.AtsScorecardQuestion(
-                text='string',
-            ),
-        ],
-        raw={
-            'key': 'string',
-        },
-    ),
 )
 
 res = s.scorecard.create_ats_scorecard(req)
@@ -83,9 +72,6 @@ s = unified_to.UnifiedTo(
 req = operations.GetAtsScorecardRequest(
     connection_id='string',
     id='<ID>',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.scorecard.get_ats_scorecard(req)
@@ -118,7 +104,6 @@ List all scorecards
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -130,9 +115,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListAtsScorecardsRequest(
     connection_id='string',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.scorecard.list_ats_scorecards(req)
@@ -165,7 +147,6 @@ Update a scorecard
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -178,16 +159,6 @@ s = unified_to.UnifiedTo(
 req = operations.PatchAtsScorecardRequest(
     connection_id='string',
     id='<ID>',
-    ats_scorecard=shared.AtsScorecard(
-        questions=[
-            shared.AtsScorecardQuestion(
-                text='string',
-            ),
-        ],
-        raw={
-            'key': 'string',
-        },
-    ),
 )
 
 res = s.scorecard.patch_ats_scorecard(req)
@@ -264,7 +235,6 @@ Update a scorecard
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -277,16 +247,6 @@ s = unified_to.UnifiedTo(
 req = operations.UpdateAtsScorecardRequest(
     connection_id='string',
     id='<ID>',
-    ats_scorecard=shared.AtsScorecard(
-        questions=[
-            shared.AtsScorecardQuestion(
-                text='string',
-            ),
-        ],
-        raw={
-            'key': 'string',
-        },
-    ),
 )
 
 res = s.scorecard.update_ats_scorecard(req)

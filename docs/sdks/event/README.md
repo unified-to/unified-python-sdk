@@ -17,7 +17,6 @@ Create a event
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -29,38 +28,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.CreateCrmEventRequest(
     connection_id='string',
-    crm_event=shared.CrmEvent(
-        call=shared.PropertyCrmEventCall(),
-        company_ids=[
-            'string',
-        ],
-        contact_ids=[
-            'string',
-        ],
-        deal_ids=[
-            'string',
-        ],
-        email=shared.PropertyCrmEventEmail(
-            attachment_file_ids=[
-                'string',
-            ],
-            cc=[
-                'string',
-            ],
-            to=[
-                'string',
-            ],
-        ),
-        lead_ids=[
-            'string',
-        ],
-        meeting=shared.PropertyCrmEventMeeting(),
-        note=shared.PropertyCrmEventNote(),
-        raw={
-            'key': 'string',
-        },
-        task=shared.PropertyCrmEventTask(),
-    ),
 )
 
 res = s.event.create_crm_event(req)
@@ -105,9 +72,6 @@ s = unified_to.UnifiedTo(
 req = operations.GetCrmEventRequest(
     connection_id='string',
     id='<ID>',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.event.get_crm_event(req)
@@ -140,7 +104,6 @@ List all events
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -152,9 +115,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListCrmEventsRequest(
     connection_id='string',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.event.list_crm_events(req)
@@ -187,7 +147,6 @@ Update a event
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -200,38 +159,6 @@ s = unified_to.UnifiedTo(
 req = operations.PatchCrmEventRequest(
     connection_id='string',
     id='<ID>',
-    crm_event=shared.CrmEvent(
-        call=shared.PropertyCrmEventCall(),
-        company_ids=[
-            'string',
-        ],
-        contact_ids=[
-            'string',
-        ],
-        deal_ids=[
-            'string',
-        ],
-        email=shared.PropertyCrmEventEmail(
-            attachment_file_ids=[
-                'string',
-            ],
-            cc=[
-                'string',
-            ],
-            to=[
-                'string',
-            ],
-        ),
-        lead_ids=[
-            'string',
-        ],
-        meeting=shared.PropertyCrmEventMeeting(),
-        note=shared.PropertyCrmEventNote(),
-        raw={
-            'key': 'string',
-        },
-        task=shared.PropertyCrmEventTask(),
-    ),
 )
 
 res = s.event.patch_crm_event(req)
@@ -308,7 +235,6 @@ Update a event
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -321,38 +247,6 @@ s = unified_to.UnifiedTo(
 req = operations.UpdateCrmEventRequest(
     connection_id='string',
     id='<ID>',
-    crm_event=shared.CrmEvent(
-        call=shared.PropertyCrmEventCall(),
-        company_ids=[
-            'string',
-        ],
-        contact_ids=[
-            'string',
-        ],
-        deal_ids=[
-            'string',
-        ],
-        email=shared.PropertyCrmEventEmail(
-            attachment_file_ids=[
-                'string',
-            ],
-            cc=[
-                'string',
-            ],
-            to=[
-                'string',
-            ],
-        ),
-        lead_ids=[
-            'string',
-        ],
-        meeting=shared.PropertyCrmEventMeeting(),
-        note=shared.PropertyCrmEventNote(),
-        raw={
-            'key': 'string',
-        },
-        task=shared.PropertyCrmEventTask(),
-    ),
 )
 
 res = s.event.update_crm_event(req)

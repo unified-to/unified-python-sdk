@@ -17,7 +17,6 @@ Create a job
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -29,31 +28,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.CreateAtsJobRequest(
     connection_id='string',
-    ats_job=shared.AtsJob(
-        addresses=[
-            shared.AtsAddress(),
-        ],
-        compensation=[
-            shared.AtsCompensation(
-                type=shared.AtsCompensationType.SALARY,
-            ),
-        ],
-        departments=[
-            'string',
-        ],
-        hiring_manager_ids=[
-            'string',
-        ],
-        public_job_urls=[
-            'string',
-        ],
-        raw={
-            'key': 'string',
-        },
-        recruiter_ids=[
-            'string',
-        ],
-    ),
 )
 
 res = s.job.create_ats_job(req)
@@ -98,9 +72,6 @@ s = unified_to.UnifiedTo(
 req = operations.GetAtsJobRequest(
     connection_id='string',
     id='<ID>',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.job.get_ats_job(req)
@@ -133,7 +104,6 @@ List all jobs
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -145,9 +115,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListAtsJobsRequest(
     connection_id='string',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.job.list_ats_jobs(req)
@@ -180,7 +147,6 @@ Update a job
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -193,31 +159,6 @@ s = unified_to.UnifiedTo(
 req = operations.PatchAtsJobRequest(
     connection_id='string',
     id='<ID>',
-    ats_job=shared.AtsJob(
-        addresses=[
-            shared.AtsAddress(),
-        ],
-        compensation=[
-            shared.AtsCompensation(
-                type=shared.AtsCompensationType.BONUS,
-            ),
-        ],
-        departments=[
-            'string',
-        ],
-        hiring_manager_ids=[
-            'string',
-        ],
-        public_job_urls=[
-            'string',
-        ],
-        raw={
-            'key': 'string',
-        },
-        recruiter_ids=[
-            'string',
-        ],
-    ),
 )
 
 res = s.job.patch_ats_job(req)
@@ -294,7 +235,6 @@ Update a job
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -307,31 +247,6 @@ s = unified_to.UnifiedTo(
 req = operations.UpdateAtsJobRequest(
     connection_id='string',
     id='<ID>',
-    ats_job=shared.AtsJob(
-        addresses=[
-            shared.AtsAddress(),
-        ],
-        compensation=[
-            shared.AtsCompensation(
-                type=shared.AtsCompensationType.EQUITY,
-            ),
-        ],
-        departments=[
-            'string',
-        ],
-        hiring_manager_ids=[
-            'string',
-        ],
-        public_job_urls=[
-            'string',
-        ],
-        raw={
-            'key': 'string',
-        },
-        recruiter_ids=[
-            'string',
-        ],
-    ),
 )
 
 res = s.job.update_ats_job(req)

@@ -17,7 +17,6 @@ Create an application
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -29,11 +28,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.CreateAtsApplicationRequest(
     connection_id='string',
-    ats_application=shared.AtsApplication(
-        raw={
-            'key': 'string',
-        },
-    ),
 )
 
 res = s.application.create_ats_application(req)
@@ -78,9 +72,6 @@ s = unified_to.UnifiedTo(
 req = operations.GetAtsApplicationRequest(
     connection_id='string',
     id='<ID>',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.application.get_ats_application(req)
@@ -113,7 +104,6 @@ List all applications
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -125,9 +115,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListAtsApplicationsRequest(
     connection_id='string',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.application.list_ats_applications(req)
@@ -160,7 +147,6 @@ Update an application
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -173,11 +159,6 @@ s = unified_to.UnifiedTo(
 req = operations.PatchAtsApplicationRequest(
     connection_id='string',
     id='<ID>',
-    ats_application=shared.AtsApplication(
-        raw={
-            'key': 'string',
-        },
-    ),
 )
 
 res = s.application.patch_ats_application(req)
@@ -254,7 +235,6 @@ Update an application
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -267,11 +247,6 @@ s = unified_to.UnifiedTo(
 req = operations.UpdateAtsApplicationRequest(
     connection_id='string',
     id='<ID>',
-    ats_application=shared.AtsApplication(
-        raw={
-            'key': 'string',
-        },
-    ),
 )
 
 res = s.application.update_ats_application(req)

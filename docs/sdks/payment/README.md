@@ -17,7 +17,6 @@ Create a payment
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -29,11 +28,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.CreateAccountingPaymentRequest(
     connection_id='string',
-    accounting_payment=shared.AccountingPayment(
-        raw={
-            'key': 'string',
-        },
-    ),
 )
 
 res = s.payment.create_accounting_payment(req)
@@ -78,9 +72,6 @@ s = unified_to.UnifiedTo(
 req = operations.GetAccountingPaymentRequest(
     connection_id='string',
     id='<ID>',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.payment.get_accounting_payment(req)
@@ -113,7 +104,6 @@ List all payments
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -125,9 +115,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListAccountingPaymentsRequest(
     connection_id='string',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.payment.list_accounting_payments(req)
@@ -160,7 +147,6 @@ Update a payment
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -173,11 +159,6 @@ s = unified_to.UnifiedTo(
 req = operations.PatchAccountingPaymentRequest(
     connection_id='string',
     id='<ID>',
-    accounting_payment=shared.AccountingPayment(
-        raw={
-            'key': 'string',
-        },
-    ),
 )
 
 res = s.payment.patch_accounting_payment(req)
@@ -254,7 +235,6 @@ Update a payment
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -267,11 +247,6 @@ s = unified_to.UnifiedTo(
 req = operations.UpdateAccountingPaymentRequest(
     connection_id='string',
     id='<ID>',
-    accounting_payment=shared.AccountingPayment(
-        raw={
-            'key': 'string',
-        },
-    ),
 )
 
 res = s.payment.update_accounting_payment(req)

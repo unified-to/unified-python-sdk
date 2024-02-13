@@ -25,9 +25,6 @@ s = unified_to.UnifiedTo(
 req = operations.GetAccountingOrganizationRequest(
     connection_id='string',
     id='<ID>',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.organization.get_accounting_organization(req)
@@ -60,7 +57,6 @@ List all organizations
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -72,9 +68,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListAccountingOrganizationsRequest(
     connection_id='string',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.organization.list_accounting_organizations(req)

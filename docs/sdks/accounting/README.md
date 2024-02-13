@@ -53,7 +53,6 @@ Create an account
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -65,12 +64,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.CreateAccountingAccountRequest(
     connection_id='string',
-    accounting_account=shared.AccountingAccount(
-        name='string',
-        raw={
-            'key': 'string',
-        },
-    ),
 )
 
 res = s.accounting.create_accounting_account(req)
@@ -103,7 +96,6 @@ Create a contact
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -115,23 +107,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.CreateAccountingContactRequest(
     connection_id='string',
-    accounting_contact=shared.AccountingContact(
-        billing_address=shared.PropertyAccountingContactBillingAddress(),
-        emails=[
-            shared.AccountingEmail(
-                email='Mac36@gmail.com',
-            ),
-        ],
-        raw={
-            'key': 'string',
-        },
-        shipping_address=shared.PropertyAccountingContactShippingAddress(),
-        telephones=[
-            shared.AccountingTelephone(
-                telephone='string',
-            ),
-        ],
-    ),
 )
 
 res = s.accounting.create_accounting_contact(req)
@@ -164,7 +139,6 @@ Create a invoice
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -176,16 +150,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.CreateAccountingInvoiceRequest(
     connection_id='string',
-    accounting_invoice=shared.AccountingInvoice(
-        lineitems=[
-            shared.AccountingLineitem(
-                total_amount=6736.06,
-            ),
-        ],
-        raw={
-            'key': 'string',
-        },
-    ),
 )
 
 res = s.accounting.create_accounting_invoice(req)
@@ -218,7 +182,6 @@ Create a payment
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -230,11 +193,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.CreateAccountingPaymentRequest(
     connection_id='string',
-    accounting_payment=shared.AccountingPayment(
-        raw={
-            'key': 'string',
-        },
-    ),
 )
 
 res = s.accounting.create_accounting_payment(req)
@@ -267,7 +225,6 @@ Create a taxrate
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -279,13 +236,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.CreateAccountingTaxrateRequest(
     connection_id='string',
-    accounting_taxrate=shared.AccountingTaxrate(
-        name='string',
-        rate=1719.1,
-        raw={
-            'key': 'string',
-        },
-    ),
 )
 
 res = s.accounting.create_accounting_taxrate(req)
@@ -329,18 +279,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.CreateAccountingTransactionRequest(
     connection_id='string',
-    accounting_transaction=shared.AccountingTransaction(
-        id='<ID>',
-        lineitems=[
-            shared.AccountingTransactionLineitem(
-                account_id='string',
-                total_amount=4969.62,
-            ),
-        ],
-        raw={
-            'key': 'string',
-        },
-    ),
 )
 
 res = s.accounting.create_accounting_transaction(req)
@@ -385,9 +323,6 @@ s = unified_to.UnifiedTo(
 req = operations.GetAccountingAccountRequest(
     connection_id='string',
     id='<ID>',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.accounting.get_accounting_account(req)
@@ -432,9 +367,6 @@ s = unified_to.UnifiedTo(
 req = operations.GetAccountingContactRequest(
     connection_id='string',
     id='<ID>',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.accounting.get_accounting_contact(req)
@@ -479,9 +411,6 @@ s = unified_to.UnifiedTo(
 req = operations.GetAccountingInvoiceRequest(
     connection_id='string',
     id='<ID>',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.accounting.get_accounting_invoice(req)
@@ -526,9 +455,6 @@ s = unified_to.UnifiedTo(
 req = operations.GetAccountingOrganizationRequest(
     connection_id='string',
     id='<ID>',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.accounting.get_accounting_organization(req)
@@ -573,9 +499,6 @@ s = unified_to.UnifiedTo(
 req = operations.GetAccountingPaymentRequest(
     connection_id='string',
     id='<ID>',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.accounting.get_accounting_payment(req)
@@ -620,9 +543,6 @@ s = unified_to.UnifiedTo(
 req = operations.GetAccountingPayoutRequest(
     connection_id='string',
     id='<ID>',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.accounting.get_accounting_payout(req)
@@ -667,9 +587,6 @@ s = unified_to.UnifiedTo(
 req = operations.GetAccountingRefundRequest(
     connection_id='string',
     id='<ID>',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.accounting.get_accounting_refund(req)
@@ -714,9 +631,6 @@ s = unified_to.UnifiedTo(
 req = operations.GetAccountingTaxrateRequest(
     connection_id='string',
     id='<ID>',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.accounting.get_accounting_taxrate(req)
@@ -761,9 +675,6 @@ s = unified_to.UnifiedTo(
 req = operations.GetAccountingTransactionRequest(
     connection_id='string',
     id='<ID>',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.accounting.get_accounting_transaction(req)
@@ -796,7 +707,6 @@ List all accounts
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -808,9 +718,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListAccountingAccountsRequest(
     connection_id='string',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.accounting.list_accounting_accounts(req)
@@ -843,7 +750,6 @@ List all contacts
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -855,9 +761,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListAccountingContactsRequest(
     connection_id='string',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.accounting.list_accounting_contacts(req)
@@ -890,7 +793,6 @@ List all invoices
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -902,9 +804,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListAccountingInvoicesRequest(
     connection_id='string',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.accounting.list_accounting_invoices(req)
@@ -937,7 +836,6 @@ List all organizations
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -949,9 +847,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListAccountingOrganizationsRequest(
     connection_id='string',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.accounting.list_accounting_organizations(req)
@@ -984,7 +879,6 @@ List all payments
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -996,9 +890,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListAccountingPaymentsRequest(
     connection_id='string',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.accounting.list_accounting_payments(req)
@@ -1031,7 +922,6 @@ List all payouts
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -1043,9 +933,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListAccountingPayoutsRequest(
     connection_id='string',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.accounting.list_accounting_payouts(req)
@@ -1078,7 +965,6 @@ List all refunds
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -1090,9 +976,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListAccountingRefundsRequest(
     connection_id='string',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.accounting.list_accounting_refunds(req)
@@ -1125,7 +1008,6 @@ List all taxrates
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -1137,9 +1019,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListAccountingTaxratesRequest(
     connection_id='string',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.accounting.list_accounting_taxrates(req)
@@ -1172,7 +1051,6 @@ List all transactions
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -1184,9 +1062,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListAccountingTransactionsRequest(
     connection_id='string',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.accounting.list_accounting_transactions(req)
@@ -1219,7 +1094,6 @@ Update an account
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -1232,12 +1106,6 @@ s = unified_to.UnifiedTo(
 req = operations.PatchAccountingAccountRequest(
     connection_id='string',
     id='<ID>',
-    accounting_account=shared.AccountingAccount(
-        name='string',
-        raw={
-            'key': 'string',
-        },
-    ),
 )
 
 res = s.accounting.patch_accounting_account(req)
@@ -1270,7 +1138,6 @@ Update a contact
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -1283,23 +1150,6 @@ s = unified_to.UnifiedTo(
 req = operations.PatchAccountingContactRequest(
     connection_id='string',
     id='<ID>',
-    accounting_contact=shared.AccountingContact(
-        billing_address=shared.PropertyAccountingContactBillingAddress(),
-        emails=[
-            shared.AccountingEmail(
-                email='Sylvester.Kuhic@yahoo.com',
-            ),
-        ],
-        raw={
-            'key': 'string',
-        },
-        shipping_address=shared.PropertyAccountingContactShippingAddress(),
-        telephones=[
-            shared.AccountingTelephone(
-                telephone='string',
-            ),
-        ],
-    ),
 )
 
 res = s.accounting.patch_accounting_contact(req)
@@ -1332,7 +1182,6 @@ Update a invoice
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -1345,16 +1194,6 @@ s = unified_to.UnifiedTo(
 req = operations.PatchAccountingInvoiceRequest(
     connection_id='string',
     id='<ID>',
-    accounting_invoice=shared.AccountingInvoice(
-        lineitems=[
-            shared.AccountingLineitem(
-                total_amount=7374.1,
-            ),
-        ],
-        raw={
-            'key': 'string',
-        },
-    ),
 )
 
 res = s.accounting.patch_accounting_invoice(req)
@@ -1387,7 +1226,6 @@ Update a payment
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -1400,11 +1238,6 @@ s = unified_to.UnifiedTo(
 req = operations.PatchAccountingPaymentRequest(
     connection_id='string',
     id='<ID>',
-    accounting_payment=shared.AccountingPayment(
-        raw={
-            'key': 'string',
-        },
-    ),
 )
 
 res = s.accounting.patch_accounting_payment(req)
@@ -1437,7 +1270,6 @@ Update a taxrate
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -1450,13 +1282,6 @@ s = unified_to.UnifiedTo(
 req = operations.PatchAccountingTaxrateRequest(
     connection_id='string',
     id='<ID>',
-    accounting_taxrate=shared.AccountingTaxrate(
-        name='string',
-        rate=5991.47,
-        raw={
-            'key': 'string',
-        },
-    ),
 )
 
 res = s.accounting.patch_accounting_taxrate(req)
@@ -1501,18 +1326,6 @@ s = unified_to.UnifiedTo(
 req = operations.PatchAccountingTransactionRequest(
     connection_id='string',
     id='<ID>',
-    accounting_transaction=shared.AccountingTransaction(
-        id='<ID>',
-        lineitems=[
-            shared.AccountingTransactionLineitem(
-                account_id='string',
-                total_amount=5633.69,
-            ),
-        ],
-        raw={
-            'key': 'string',
-        },
-    ),
 )
 
 res = s.accounting.patch_accounting_transaction(req)
@@ -1809,7 +1622,6 @@ Update an account
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -1822,12 +1634,6 @@ s = unified_to.UnifiedTo(
 req = operations.UpdateAccountingAccountRequest(
     connection_id='string',
     id='<ID>',
-    accounting_account=shared.AccountingAccount(
-        name='string',
-        raw={
-            'key': 'string',
-        },
-    ),
 )
 
 res = s.accounting.update_accounting_account(req)
@@ -1860,7 +1666,6 @@ Update a contact
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -1873,23 +1678,6 @@ s = unified_to.UnifiedTo(
 req = operations.UpdateAccountingContactRequest(
     connection_id='string',
     id='<ID>',
-    accounting_contact=shared.AccountingContact(
-        billing_address=shared.PropertyAccountingContactBillingAddress(),
-        emails=[
-            shared.AccountingEmail(
-                email='Kaci_Hane@hotmail.com',
-            ),
-        ],
-        raw={
-            'key': 'string',
-        },
-        shipping_address=shared.PropertyAccountingContactShippingAddress(),
-        telephones=[
-            shared.AccountingTelephone(
-                telephone='string',
-            ),
-        ],
-    ),
 )
 
 res = s.accounting.update_accounting_contact(req)
@@ -1922,7 +1710,6 @@ Update a invoice
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -1935,16 +1722,6 @@ s = unified_to.UnifiedTo(
 req = operations.UpdateAccountingInvoiceRequest(
     connection_id='string',
     id='<ID>',
-    accounting_invoice=shared.AccountingInvoice(
-        lineitems=[
-            shared.AccountingLineitem(
-                total_amount=6974.28,
-            ),
-        ],
-        raw={
-            'key': 'string',
-        },
-    ),
 )
 
 res = s.accounting.update_accounting_invoice(req)
@@ -1977,7 +1754,6 @@ Update a payment
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -1990,11 +1766,6 @@ s = unified_to.UnifiedTo(
 req = operations.UpdateAccountingPaymentRequest(
     connection_id='string',
     id='<ID>',
-    accounting_payment=shared.AccountingPayment(
-        raw={
-            'key': 'string',
-        },
-    ),
 )
 
 res = s.accounting.update_accounting_payment(req)
@@ -2027,7 +1798,6 @@ Update a taxrate
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -2040,13 +1810,6 @@ s = unified_to.UnifiedTo(
 req = operations.UpdateAccountingTaxrateRequest(
     connection_id='string',
     id='<ID>',
-    accounting_taxrate=shared.AccountingTaxrate(
-        name='string',
-        rate=3382.78,
-        raw={
-            'key': 'string',
-        },
-    ),
 )
 
 res = s.accounting.update_accounting_taxrate(req)
@@ -2091,18 +1854,6 @@ s = unified_to.UnifiedTo(
 req = operations.UpdateAccountingTransactionRequest(
     connection_id='string',
     id='<ID>',
-    accounting_transaction=shared.AccountingTransaction(
-        id='<ID>',
-        lineitems=[
-            shared.AccountingTransactionLineitem(
-                account_id='string',
-                total_amount=6498.37,
-            ),
-        ],
-        raw={
-            'key': 'string',
-        },
-    ),
 )
 
 res = s.accounting.update_accounting_transaction(req)

@@ -17,7 +17,6 @@ The data payload received by your server is described at https://docs.unified.to
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -27,21 +26,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.CreateUnifiedWebhookRequest(
-    webhook=shared.Webhook(
-        connection_id='string',
-        event=shared.Event.CREATED,
-        hook_url='string',
-        interval=188.12,
-        object_type=shared.ObjectType.ATS_SCORECARD,
-        meta={
-            'key': 'string',
-        },
-        runs=[
-            'string',
-        ],
-    ),
-)
+req = operations.CreateUnifiedWebhookRequest()
 
 res = s.webhook.create_unified_webhook(req)
 
@@ -116,7 +101,6 @@ Returns all registered webhooks
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 

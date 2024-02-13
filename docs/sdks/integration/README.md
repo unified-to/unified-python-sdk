@@ -26,9 +26,6 @@ s = unified_to.UnifiedTo(
 req = operations.GetUnifiedIntegrationAuthRequest(
     integration_type='string',
     workspace_id='string',
-    scopes=[
-        operations.Scopes.HRIS_EMPLOYEE_WRITE,
-    ],
 )
 
 res = s.integration.get_unified_integration_auth(req)
@@ -72,9 +69,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListUnifiedIntegrationWorkspacesRequest(
     workspace_id='string',
-    categories=[
-        operations.QueryParamCategories.ACCOUNTING,
-    ],
 )
 
 res = s.integration.list_unified_integration_workspaces(req)
@@ -116,11 +110,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListUnifiedIntegrationsRequest(
-    categories=[
-        operations.ListUnifiedIntegrationsQueryParamCategories.CRM,
-    ],
-)
+req = operations.ListUnifiedIntegrationsRequest()
 
 res = s.integration.list_unified_integrations(req)
 

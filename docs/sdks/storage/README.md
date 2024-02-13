@@ -17,7 +17,6 @@ Create a file
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -29,18 +28,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.CreateStorageFileRequest(
     connection_id='string',
-    storage_file=shared.StorageFile(
-        permissions=[
-            shared.StoragePermission(
-                roles=[
-                    shared.PropertyStoragePermissionRoles.WRITE,
-                ],
-            ),
-        ],
-        raw={
-            'key': 'string',
-        },
-    ),
 )
 
 res = s.storage.create_storage_file(req)
@@ -85,9 +72,6 @@ s = unified_to.UnifiedTo(
 req = operations.GetStorageFileRequest(
     connection_id='string',
     id='<ID>',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.storage.get_storage_file(req)
@@ -120,7 +104,6 @@ List all files
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -132,9 +115,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListStorageFilesRequest(
     connection_id='string',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.storage.list_storage_files(req)
@@ -167,7 +147,6 @@ Update a file
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -180,18 +159,6 @@ s = unified_to.UnifiedTo(
 req = operations.PatchStorageFileRequest(
     connection_id='string',
     id='<ID>',
-    storage_file=shared.StorageFile(
-        permissions=[
-            shared.StoragePermission(
-                roles=[
-                    shared.PropertyStoragePermissionRoles.OWNER,
-                ],
-            ),
-        ],
-        raw={
-            'key': 'string',
-        },
-    ),
 )
 
 res = s.storage.patch_storage_file(req)
@@ -268,7 +235,6 @@ Update a file
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -281,18 +247,6 @@ s = unified_to.UnifiedTo(
 req = operations.UpdateStorageFileRequest(
     connection_id='string',
     id='<ID>',
-    storage_file=shared.StorageFile(
-        permissions=[
-            shared.StoragePermission(
-                roles=[
-                    shared.PropertyStoragePermissionRoles.WRITE,
-                ],
-            ),
-        ],
-        raw={
-            'key': 'string',
-        },
-    ),
 )
 
 res = s.storage.update_storage_file(req)

@@ -17,7 +17,6 @@ Create an item
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -29,47 +28,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.CreateCommerceItemRequest(
     connection_id='string',
-    commerce_item=shared.CommerceItem(
-        name='string',
-        media=[
-            shared.CommerceItemMedia(
-                url='http://loud-minister.name',
-            ),
-        ],
-        raw={
-            'key': 'string',
-        },
-        tags=[
-            'string',
-        ],
-        variants=[
-            shared.CommerceItemVariant(
-                name='string',
-                media=[
-                    shared.CommerceItemMedia(
-                        url='http://other-external.info',
-                    ),
-                ],
-                options=[
-                    shared.CommerceItemOption(
-                        id='<ID>',
-                        name='string',
-                        values=[
-                            'string',
-                        ],
-                    ),
-                ],
-                prices=[
-                    shared.CommerceItemPrice(
-                        price=3330.74,
-                    ),
-                ],
-                tags=[
-                    'string',
-                ],
-            ),
-        ],
-    ),
 )
 
 res = s.item.create_commerce_item(req)
@@ -114,9 +72,6 @@ s = unified_to.UnifiedTo(
 req = operations.GetCommerceItemRequest(
     connection_id='string',
     id='<ID>',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.item.get_commerce_item(req)
@@ -149,7 +104,6 @@ List all items
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -161,9 +115,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListCommerceItemsRequest(
     connection_id='string',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.item.list_commerce_items(req)
@@ -196,7 +147,6 @@ Update an item
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -209,47 +159,6 @@ s = unified_to.UnifiedTo(
 req = operations.PatchCommerceItemRequest(
     connection_id='string',
     id='<ID>',
-    commerce_item=shared.CommerceItem(
-        name='string',
-        media=[
-            shared.CommerceItemMedia(
-                url='http://frank-galley.biz',
-            ),
-        ],
-        raw={
-            'key': 'string',
-        },
-        tags=[
-            'string',
-        ],
-        variants=[
-            shared.CommerceItemVariant(
-                name='string',
-                media=[
-                    shared.CommerceItemMedia(
-                        url='http://irresponsible-reason.biz',
-                    ),
-                ],
-                options=[
-                    shared.CommerceItemOption(
-                        id='<ID>',
-                        name='string',
-                        values=[
-                            'string',
-                        ],
-                    ),
-                ],
-                prices=[
-                    shared.CommerceItemPrice(
-                        price=4506.62,
-                    ),
-                ],
-                tags=[
-                    'string',
-                ],
-            ),
-        ],
-    ),
 )
 
 res = s.item.patch_commerce_item(req)
@@ -326,7 +235,6 @@ Update an item
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -339,47 +247,6 @@ s = unified_to.UnifiedTo(
 req = operations.UpdateCommerceItemRequest(
     connection_id='string',
     id='<ID>',
-    commerce_item=shared.CommerceItem(
-        name='string',
-        media=[
-            shared.CommerceItemMedia(
-                url='https://aggressive-major-league.org',
-            ),
-        ],
-        raw={
-            'key': 'string',
-        },
-        tags=[
-            'string',
-        ],
-        variants=[
-            shared.CommerceItemVariant(
-                name='string',
-                media=[
-                    shared.CommerceItemMedia(
-                        url='https://reasonable-cast.biz',
-                    ),
-                ],
-                options=[
-                    shared.CommerceItemOption(
-                        id='<ID>',
-                        name='string',
-                        values=[
-                            'string',
-                        ],
-                    ),
-                ],
-                prices=[
-                    shared.CommerceItemPrice(
-                        price=8467.25,
-                    ),
-                ],
-                tags=[
-                    'string',
-                ],
-            ),
-        ],
-    ),
 )
 
 res = s.item.update_commerce_item(req)

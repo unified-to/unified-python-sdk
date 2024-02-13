@@ -29,7 +29,6 @@ Create connection
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import shared
 
@@ -45,23 +44,7 @@ req = shared.Connection(
     ],
     integration_type='string',
     permissions=[
-        shared.PropertyConnectionPermissions.ATS_CANDIDATE_WRITE,
-    ],
-    auth=shared.PropertyConnectionAuth(
-        emails=[
-            'string',
-        ],
-        meta={
-            'key': 'string',
-        },
-        other_auth_info=[
-            'string',
-        ],
-    ),
-    cursors_cache=[
-        {
-            'key': 'string',
-        },
+        shared.PropertyConnectionPermissions.ATS_APPLICATIONSTATUS_READ,
     ],
 )
 
@@ -95,7 +78,6 @@ The data payload received by your server is described at https://docs.unified.to
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -105,21 +87,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.CreateUnifiedWebhookRequest(
-    webhook=shared.Webhook(
-        connection_id='string',
-        event=shared.Event.CREATED,
-        hook_url='string',
-        interval=188.12,
-        object_type=shared.ObjectType.ATS_SCORECARD,
-        meta={
-            'key': 'string',
-        },
-        runs=[
-            'string',
-        ],
-    ),
-)
+req = operations.CreateUnifiedWebhookRequest()
 
 res = s.unified.create_unified_webhook(req)
 
@@ -249,9 +217,6 @@ s = unified_to.UnifiedTo(
 req = operations.GetUnifiedIntegrationAuthRequest(
     integration_type='string',
     workspace_id='string',
-    scopes=[
-        operations.Scopes.HRIS_EMPLOYEE_WRITE,
-    ],
 )
 
 res = s.unified.get_unified_integration_auth(req)
@@ -327,7 +292,6 @@ Returns API Calls
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -369,7 +333,6 @@ List all connections
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -379,11 +342,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListUnifiedConnectionsRequest(
-    categories=[
-        operations.Categories.MARTECH,
-    ],
-)
+req = operations.ListUnifiedConnectionsRequest()
 
 res = s.unified.list_unified_connections(req)
 
@@ -426,9 +385,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListUnifiedIntegrationWorkspacesRequest(
     workspace_id='string',
-    categories=[
-        operations.QueryParamCategories.ACCOUNTING,
-    ],
 )
 
 res = s.unified.list_unified_integration_workspaces(req)
@@ -470,11 +426,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListUnifiedIntegrationsRequest(
-    categories=[
-        operations.ListUnifiedIntegrationsQueryParamCategories.CRM,
-    ],
-)
+req = operations.ListUnifiedIntegrationsRequest()
 
 res = s.unified.list_unified_integrations(req)
 
@@ -506,7 +458,6 @@ List support issues
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -548,7 +499,6 @@ Returns all registered webhooks
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -590,7 +540,6 @@ Update connection
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -602,31 +551,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.PatchUnifiedConnectionRequest(
     id='<ID>',
-    connection=shared.Connection(
-        categories=[
-            shared.PropertyConnectionCategories.TICKETING,
-        ],
-        integration_type='string',
-        permissions=[
-            shared.PropertyConnectionPermissions.CRM_PIPELINE_READ,
-        ],
-        auth=shared.PropertyConnectionAuth(
-            emails=[
-                'string',
-            ],
-            meta={
-                'key': 'string',
-            },
-            other_auth_info=[
-                'string',
-            ],
-        ),
-        cursors_cache=[
-            {
-                'key': 'string',
-            },
-        ],
-    ),
 )
 
 res = s.unified.patch_unified_connection(req)
@@ -788,7 +712,6 @@ Update connection
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -800,31 +723,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.UpdateUnifiedConnectionRequest(
     id='<ID>',
-    connection=shared.Connection(
-        categories=[
-            shared.PropertyConnectionCategories.ACCOUNTING,
-        ],
-        integration_type='string',
-        permissions=[
-            shared.PropertyConnectionPermissions.ATS_COMPANY_READ,
-        ],
-        auth=shared.PropertyConnectionAuth(
-            emails=[
-                'string',
-            ],
-            meta={
-                'key': 'string',
-            },
-            other_auth_info=[
-                'string',
-            ],
-        ),
-        cursors_cache=[
-            {
-                'key': 'string',
-            },
-        ],
-    ),
 )
 
 res = s.unified.update_unified_connection(req)

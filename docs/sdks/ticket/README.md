@@ -17,7 +17,6 @@ Create a ticket
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -29,14 +28,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.CreateTicketingTicketRequest(
     connection_id='string',
-    ticketing_ticket=shared.TicketingTicket(
-        raw={
-            'key': 'string',
-        },
-        tags=[
-            'string',
-        ],
-    ),
 )
 
 res = s.ticket.create_ticketing_ticket(req)
@@ -81,9 +72,6 @@ s = unified_to.UnifiedTo(
 req = operations.GetTicketingTicketRequest(
     connection_id='string',
     id='<ID>',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.ticket.get_ticketing_ticket(req)
@@ -116,7 +104,6 @@ List all tickets
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -128,9 +115,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListTicketingTicketsRequest(
     connection_id='string',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.ticket.list_ticketing_tickets(req)
@@ -163,7 +147,6 @@ Update a ticket
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -176,14 +159,6 @@ s = unified_to.UnifiedTo(
 req = operations.PatchTicketingTicketRequest(
     connection_id='string',
     id='<ID>',
-    ticketing_ticket=shared.TicketingTicket(
-        raw={
-            'key': 'string',
-        },
-        tags=[
-            'string',
-        ],
-    ),
 )
 
 res = s.ticket.patch_ticketing_ticket(req)
@@ -260,7 +235,6 @@ Update a ticket
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -273,14 +247,6 @@ s = unified_to.UnifiedTo(
 req = operations.UpdateTicketingTicketRequest(
     connection_id='string',
     id='<ID>',
-    ticketing_ticket=shared.TicketingTicket(
-        raw={
-            'key': 'string',
-        },
-        tags=[
-            'string',
-        ],
-    ),
 )
 
 res = s.ticket.update_ticketing_ticket(req)

@@ -17,7 +17,6 @@ Create a interview
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -29,14 +28,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.CreateAtsInterviewRequest(
     connection_id='string',
-    ats_interview=shared.AtsInterview(
-        raw={
-            'key': 'string',
-        },
-        user_ids=[
-            'string',
-        ],
-    ),
 )
 
 res = s.interview.create_ats_interview(req)
@@ -81,9 +72,6 @@ s = unified_to.UnifiedTo(
 req = operations.GetAtsInterviewRequest(
     connection_id='string',
     id='<ID>',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.interview.get_ats_interview(req)
@@ -116,7 +104,6 @@ List all interviews
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -128,9 +115,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListAtsInterviewsRequest(
     connection_id='string',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.interview.list_ats_interviews(req)
@@ -163,7 +147,6 @@ Update a interview
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -176,14 +159,6 @@ s = unified_to.UnifiedTo(
 req = operations.PatchAtsInterviewRequest(
     connection_id='string',
     id='<ID>',
-    ats_interview=shared.AtsInterview(
-        raw={
-            'key': 'string',
-        },
-        user_ids=[
-            'string',
-        ],
-    ),
 )
 
 res = s.interview.patch_ats_interview(req)
@@ -260,7 +235,6 @@ Update a interview
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -273,14 +247,6 @@ s = unified_to.UnifiedTo(
 req = operations.UpdateAtsInterviewRequest(
     connection_id='string',
     id='<ID>',
-    ats_interview=shared.AtsInterview(
-        raw={
-            'key': 'string',
-        },
-        user_ids=[
-            'string',
-        ],
-    ),
 )
 
 res = s.interview.update_ats_interview(req)

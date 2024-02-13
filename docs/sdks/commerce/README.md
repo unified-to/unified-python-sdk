@@ -35,7 +35,6 @@ Create a collection
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -47,24 +46,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.CreateCommerceCollectionRequest(
     connection_id='string',
-    commerce_collection=shared.CommerceCollection(
-        id='<ID>',
-        name='string',
-        item_ids=[
-            'string',
-        ],
-        media=[
-            shared.CommerceItemMedia(
-                url='http://uneven-mattress.name',
-            ),
-        ],
-        raw={
-            'key': 'string',
-        },
-        tags=[
-            'string',
-        ],
-    ),
 )
 
 res = s.commerce.create_commerce_collection(req)
@@ -97,7 +78,6 @@ Create an inventory
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -109,12 +89,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.CreateCommerceInventoryRequest(
     connection_id='string',
-    commerce_inventory=shared.CommerceInventory(
-        available=5165.08,
-        raw={
-            'key': 'string',
-        },
-    ),
 )
 
 res = s.commerce.create_commerce_inventory(req)
@@ -147,7 +121,6 @@ Create an item
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -159,47 +132,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.CreateCommerceItemRequest(
     connection_id='string',
-    commerce_item=shared.CommerceItem(
-        name='string',
-        media=[
-            shared.CommerceItemMedia(
-                url='http://loud-minister.name',
-            ),
-        ],
-        raw={
-            'key': 'string',
-        },
-        tags=[
-            'string',
-        ],
-        variants=[
-            shared.CommerceItemVariant(
-                name='string',
-                media=[
-                    shared.CommerceItemMedia(
-                        url='http://other-external.info',
-                    ),
-                ],
-                options=[
-                    shared.CommerceItemOption(
-                        id='<ID>',
-                        name='string',
-                        values=[
-                            'string',
-                        ],
-                    ),
-                ],
-                prices=[
-                    shared.CommerceItemPrice(
-                        price=3330.74,
-                    ),
-                ],
-                tags=[
-                    'string',
-                ],
-            ),
-        ],
-    ),
 )
 
 res = s.commerce.create_commerce_item(req)
@@ -232,7 +164,6 @@ Create a location
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -244,13 +175,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.CreateCommerceLocationRequest(
     connection_id='string',
-    commerce_location=shared.CommerceLocation(
-        name='string',
-        address=shared.PropertyCommerceLocationAddress(),
-        raw={
-            'key': 'string',
-        },
-    ),
 )
 
 res = s.commerce.create_commerce_location(req)
@@ -295,9 +219,6 @@ s = unified_to.UnifiedTo(
 req = operations.GetCommerceCollectionRequest(
     connection_id='string',
     id='<ID>',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.commerce.get_commerce_collection(req)
@@ -342,9 +263,6 @@ s = unified_to.UnifiedTo(
 req = operations.GetCommerceInventoryRequest(
     connection_id='string',
     id='<ID>',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.commerce.get_commerce_inventory(req)
@@ -389,9 +307,6 @@ s = unified_to.UnifiedTo(
 req = operations.GetCommerceItemRequest(
     connection_id='string',
     id='<ID>',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.commerce.get_commerce_item(req)
@@ -436,9 +351,6 @@ s = unified_to.UnifiedTo(
 req = operations.GetCommerceLocationRequest(
     connection_id='string',
     id='<ID>',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.commerce.get_commerce_location(req)
@@ -471,7 +383,6 @@ List all collections
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -483,9 +394,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListCommerceCollectionsRequest(
     connection_id='string',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.commerce.list_commerce_collections(req)
@@ -518,7 +426,6 @@ List all inventories
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -530,9 +437,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListCommerceInventoriesRequest(
     connection_id='string',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.commerce.list_commerce_inventories(req)
@@ -565,7 +469,6 @@ List all items
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -577,9 +480,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListCommerceItemsRequest(
     connection_id='string',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.commerce.list_commerce_items(req)
@@ -612,7 +512,6 @@ List all locations
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -624,9 +523,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListCommerceLocationsRequest(
     connection_id='string',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.commerce.list_commerce_locations(req)
@@ -659,7 +555,6 @@ Update a collection
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -672,24 +567,6 @@ s = unified_to.UnifiedTo(
 req = operations.PatchCommerceCollectionRequest(
     connection_id='string',
     id='<ID>',
-    commerce_collection=shared.CommerceCollection(
-        id='<ID>',
-        name='string',
-        item_ids=[
-            'string',
-        ],
-        media=[
-            shared.CommerceItemMedia(
-                url='http://personal-sorrow.com',
-            ),
-        ],
-        raw={
-            'key': 'string',
-        },
-        tags=[
-            'string',
-        ],
-    ),
 )
 
 res = s.commerce.patch_commerce_collection(req)
@@ -722,7 +599,6 @@ Update an inventory
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -735,12 +611,6 @@ s = unified_to.UnifiedTo(
 req = operations.PatchCommerceInventoryRequest(
     connection_id='string',
     id='<ID>',
-    commerce_inventory=shared.CommerceInventory(
-        available=615.23,
-        raw={
-            'key': 'string',
-        },
-    ),
 )
 
 res = s.commerce.patch_commerce_inventory(req)
@@ -773,7 +643,6 @@ Update an item
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -786,47 +655,6 @@ s = unified_to.UnifiedTo(
 req = operations.PatchCommerceItemRequest(
     connection_id='string',
     id='<ID>',
-    commerce_item=shared.CommerceItem(
-        name='string',
-        media=[
-            shared.CommerceItemMedia(
-                url='http://frank-galley.biz',
-            ),
-        ],
-        raw={
-            'key': 'string',
-        },
-        tags=[
-            'string',
-        ],
-        variants=[
-            shared.CommerceItemVariant(
-                name='string',
-                media=[
-                    shared.CommerceItemMedia(
-                        url='http://irresponsible-reason.biz',
-                    ),
-                ],
-                options=[
-                    shared.CommerceItemOption(
-                        id='<ID>',
-                        name='string',
-                        values=[
-                            'string',
-                        ],
-                    ),
-                ],
-                prices=[
-                    shared.CommerceItemPrice(
-                        price=4506.62,
-                    ),
-                ],
-                tags=[
-                    'string',
-                ],
-            ),
-        ],
-    ),
 )
 
 res = s.commerce.patch_commerce_item(req)
@@ -859,7 +687,6 @@ Update a location
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -872,13 +699,6 @@ s = unified_to.UnifiedTo(
 req = operations.PatchCommerceLocationRequest(
     connection_id='string',
     id='<ID>',
-    commerce_location=shared.CommerceLocation(
-        name='string',
-        address=shared.PropertyCommerceLocationAddress(),
-        raw={
-            'key': 'string',
-        },
-    ),
 )
 
 res = s.commerce.patch_commerce_location(req)
@@ -1087,7 +907,6 @@ Update a collection
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -1100,24 +919,6 @@ s = unified_to.UnifiedTo(
 req = operations.UpdateCommerceCollectionRequest(
     connection_id='string',
     id='<ID>',
-    commerce_collection=shared.CommerceCollection(
-        id='<ID>',
-        name='string',
-        item_ids=[
-            'string',
-        ],
-        media=[
-            shared.CommerceItemMedia(
-                url='https://stupid-entity.org',
-            ),
-        ],
-        raw={
-            'key': 'string',
-        },
-        tags=[
-            'string',
-        ],
-    ),
 )
 
 res = s.commerce.update_commerce_collection(req)
@@ -1150,7 +951,6 @@ Update an inventory
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -1163,12 +963,6 @@ s = unified_to.UnifiedTo(
 req = operations.UpdateCommerceInventoryRequest(
     connection_id='string',
     id='<ID>',
-    commerce_inventory=shared.CommerceInventory(
-        available=9360.02,
-        raw={
-            'key': 'string',
-        },
-    ),
 )
 
 res = s.commerce.update_commerce_inventory(req)
@@ -1201,7 +995,6 @@ Update an item
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -1214,47 +1007,6 @@ s = unified_to.UnifiedTo(
 req = operations.UpdateCommerceItemRequest(
     connection_id='string',
     id='<ID>',
-    commerce_item=shared.CommerceItem(
-        name='string',
-        media=[
-            shared.CommerceItemMedia(
-                url='https://aggressive-major-league.org',
-            ),
-        ],
-        raw={
-            'key': 'string',
-        },
-        tags=[
-            'string',
-        ],
-        variants=[
-            shared.CommerceItemVariant(
-                name='string',
-                media=[
-                    shared.CommerceItemMedia(
-                        url='https://reasonable-cast.biz',
-                    ),
-                ],
-                options=[
-                    shared.CommerceItemOption(
-                        id='<ID>',
-                        name='string',
-                        values=[
-                            'string',
-                        ],
-                    ),
-                ],
-                prices=[
-                    shared.CommerceItemPrice(
-                        price=8467.25,
-                    ),
-                ],
-                tags=[
-                    'string',
-                ],
-            ),
-        ],
-    ),
 )
 
 res = s.commerce.update_commerce_item(req)
@@ -1287,7 +1039,6 @@ Update a location
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -1300,13 +1051,6 @@ s = unified_to.UnifiedTo(
 req = operations.UpdateCommerceLocationRequest(
     connection_id='string',
     id='<ID>',
-    commerce_location=shared.CommerceLocation(
-        name='string',
-        address=shared.PropertyCommerceLocationAddress(),
-        raw={
-            'key': 'string',
-        },
-    ),
 )
 
 res = s.commerce.update_commerce_location(req)

@@ -21,6 +21,8 @@ class ObjectType(str, Enum):
     ACCOUNTING_PAYMENT = 'accounting_payment'
     ACCOUNTING_TAXRATE = 'accounting_taxrate'
     ACCOUNTING_ORGANIZATION = 'accounting_organization'
+    ACCOUNTING_PAYOUT = 'accounting_payout'
+    ACCOUNTING_REFUND = 'accounting_refund'
     COMMERCE_ITEM = 'commerce_item'
     COMMERCE_COLLECTION = 'commerce_collection'
     COMMERCE_INVENTORY = 'commerce_inventory'
@@ -66,7 +68,6 @@ class Webhook:
     connection_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('connection_id') }})
     event: Event = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('event') }})
     hook_url: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('hook_url') }})
-    interval: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('interval') }})
     object_type: ObjectType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('object_type') }})
     checked_at: Optional[datetime] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('checked_at'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'exclude': lambda f: f is None }})
     created_at: Optional[datetime] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created_at'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'exclude': lambda f: f is None }})
@@ -74,6 +75,7 @@ class Webhook:
     fields: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('fields'), 'exclude': lambda f: f is None }})
     id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id'), 'exclude': lambda f: f is None }})
     integration_type: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('integration_type'), 'exclude': lambda f: f is None }})
+    interval: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('interval'), 'exclude': lambda f: f is None }})
     is_healthy: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('is_healthy'), 'exclude': lambda f: f is None }})
     meta: Optional[Dict[str, Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('meta'), 'exclude': lambda f: f is None }})
     page_max_limit: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('page_max_limit'), 'exclude': lambda f: f is None }})

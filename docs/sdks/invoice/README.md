@@ -17,7 +17,6 @@ Create a invoice
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -29,16 +28,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.CreateAccountingInvoiceRequest(
     connection_id='string',
-    accounting_invoice=shared.AccountingInvoice(
-        lineitems=[
-            shared.AccountingLineitem(
-                total_amount=6736.06,
-            ),
-        ],
-        raw={
-            'key': 'string',
-        },
-    ),
 )
 
 res = s.invoice.create_accounting_invoice(req)
@@ -83,9 +72,6 @@ s = unified_to.UnifiedTo(
 req = operations.GetAccountingInvoiceRequest(
     connection_id='string',
     id='<ID>',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.invoice.get_accounting_invoice(req)
@@ -118,7 +104,6 @@ List all invoices
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -130,9 +115,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListAccountingInvoicesRequest(
     connection_id='string',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.invoice.list_accounting_invoices(req)
@@ -165,7 +147,6 @@ Update a invoice
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -178,16 +159,6 @@ s = unified_to.UnifiedTo(
 req = operations.PatchAccountingInvoiceRequest(
     connection_id='string',
     id='<ID>',
-    accounting_invoice=shared.AccountingInvoice(
-        lineitems=[
-            shared.AccountingLineitem(
-                total_amount=7374.1,
-            ),
-        ],
-        raw={
-            'key': 'string',
-        },
-    ),
 )
 
 res = s.invoice.patch_accounting_invoice(req)
@@ -264,7 +235,6 @@ Update a invoice
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -277,16 +247,6 @@ s = unified_to.UnifiedTo(
 req = operations.UpdateAccountingInvoiceRequest(
     connection_id='string',
     id='<ID>',
-    accounting_invoice=shared.AccountingInvoice(
-        lineitems=[
-            shared.AccountingLineitem(
-                total_amount=6974.28,
-            ),
-        ],
-        raw={
-            'key': 'string',
-        },
-    ),
 )
 
 res = s.invoice.update_accounting_invoice(req)

@@ -17,7 +17,6 @@ Create a customer
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -29,24 +28,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.CreateTicketingCustomerRequest(
     connection_id='string',
-    ticketing_customer=shared.TicketingCustomer(
-        emails=[
-            shared.TicketingEmail(
-                email='Guadalupe78@yahoo.com',
-            ),
-        ],
-        raw={
-            'key': 'string',
-        },
-        tags=[
-            'string',
-        ],
-        telephones=[
-            shared.TicketingTelephone(
-                telephone='string',
-            ),
-        ],
-    ),
 )
 
 res = s.customer.create_ticketing_customer(req)
@@ -91,9 +72,6 @@ s = unified_to.UnifiedTo(
 req = operations.GetTicketingCustomerRequest(
     connection_id='string',
     id='<ID>',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.customer.get_ticketing_customer(req)
@@ -126,7 +104,6 @@ List all customers
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -138,9 +115,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListTicketingCustomersRequest(
     connection_id='string',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.customer.list_ticketing_customers(req)
@@ -173,7 +147,6 @@ Update a customer
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -186,24 +159,6 @@ s = unified_to.UnifiedTo(
 req = operations.PatchTicketingCustomerRequest(
     connection_id='string',
     id='<ID>',
-    ticketing_customer=shared.TicketingCustomer(
-        emails=[
-            shared.TicketingEmail(
-                email='Raymundo93@hotmail.com',
-            ),
-        ],
-        raw={
-            'key': 'string',
-        },
-        tags=[
-            'string',
-        ],
-        telephones=[
-            shared.TicketingTelephone(
-                telephone='string',
-            ),
-        ],
-    ),
 )
 
 res = s.customer.patch_ticketing_customer(req)
@@ -280,7 +235,6 @@ Update a customer
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -293,24 +247,6 @@ s = unified_to.UnifiedTo(
 req = operations.UpdateTicketingCustomerRequest(
     connection_id='string',
     id='<ID>',
-    ticketing_customer=shared.TicketingCustomer(
-        emails=[
-            shared.TicketingEmail(
-                email='Mohamed.Friesen@hotmail.com',
-            ),
-        ],
-        raw={
-            'key': 'string',
-        },
-        tags=[
-            'string',
-        ],
-        telephones=[
-            shared.TicketingTelephone(
-                telephone='string',
-            ),
-        ],
-    ),
 )
 
 res = s.customer.update_ticketing_customer(req)

@@ -23,7 +23,6 @@ Create an employee
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -35,22 +34,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.CreateHrisEmployeeRequest(
     connection_id='string',
-    hris_employee=shared.HrisEmployee(
-        address=shared.PropertyHrisEmployeeAddress(),
-        emails=[
-            shared.HrisEmail(
-                email='Adriel_Hansen@hotmail.com',
-            ),
-        ],
-        raw={
-            'key': 'string',
-        },
-        telephones=[
-            shared.HrisTelephone(
-                telephone='string',
-            ),
-        ],
-    ),
 )
 
 res = s.hris.create_hris_employee(req)
@@ -83,7 +66,6 @@ Create a group
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -95,17 +77,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.CreateHrisGroupRequest(
     connection_id='string',
-    hris_group=shared.HrisGroup(
-        manager_ids=[
-            'string',
-        ],
-        raw={
-            'key': 'string',
-        },
-        user_ids=[
-            'string',
-        ],
-    ),
 )
 
 res = s.hris.create_hris_group(req)
@@ -150,9 +121,6 @@ s = unified_to.UnifiedTo(
 req = operations.GetHrisEmployeeRequest(
     connection_id='string',
     id='<ID>',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.hris.get_hris_employee(req)
@@ -197,9 +165,6 @@ s = unified_to.UnifiedTo(
 req = operations.GetHrisGroupRequest(
     connection_id='string',
     id='<ID>',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.hris.get_hris_group(req)
@@ -232,7 +197,6 @@ List all employees
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -244,9 +208,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListHrisEmployeesRequest(
     connection_id='string',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.hris.list_hris_employees(req)
@@ -279,7 +240,6 @@ List all groups
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -291,9 +251,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListHrisGroupsRequest(
     connection_id='string',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.hris.list_hris_groups(req)
@@ -326,7 +283,6 @@ Update an employee
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -339,22 +295,6 @@ s = unified_to.UnifiedTo(
 req = operations.PatchHrisEmployeeRequest(
     connection_id='string',
     id='<ID>',
-    hris_employee=shared.HrisEmployee(
-        address=shared.PropertyHrisEmployeeAddress(),
-        emails=[
-            shared.HrisEmail(
-                email='Zetta.Cassin@yahoo.com',
-            ),
-        ],
-        raw={
-            'key': 'string',
-        },
-        telephones=[
-            shared.HrisTelephone(
-                telephone='string',
-            ),
-        ],
-    ),
 )
 
 res = s.hris.patch_hris_employee(req)
@@ -387,7 +327,6 @@ Update a group
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -400,17 +339,6 @@ s = unified_to.UnifiedTo(
 req = operations.PatchHrisGroupRequest(
     connection_id='string',
     id='<ID>',
-    hris_group=shared.HrisGroup(
-        manager_ids=[
-            'string',
-        ],
-        raw={
-            'key': 'string',
-        },
-        user_ids=[
-            'string',
-        ],
-    ),
 )
 
 res = s.hris.patch_hris_group(req)
@@ -531,7 +459,6 @@ Update an employee
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -544,22 +471,6 @@ s = unified_to.UnifiedTo(
 req = operations.UpdateHrisEmployeeRequest(
     connection_id='string',
     id='<ID>',
-    hris_employee=shared.HrisEmployee(
-        address=shared.PropertyHrisEmployeeAddress(),
-        emails=[
-            shared.HrisEmail(
-                email='Abbie_Aufderhar@gmail.com',
-            ),
-        ],
-        raw={
-            'key': 'string',
-        },
-        telephones=[
-            shared.HrisTelephone(
-                telephone='string',
-            ),
-        ],
-    ),
 )
 
 res = s.hris.update_hris_employee(req)
@@ -592,7 +503,6 @@ Update a group
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -605,17 +515,6 @@ s = unified_to.UnifiedTo(
 req = operations.UpdateHrisGroupRequest(
     connection_id='string',
     id='<ID>',
-    hris_group=shared.HrisGroup(
-        manager_ids=[
-            'string',
-        ],
-        raw={
-            'key': 'string',
-        },
-        user_ids=[
-            'string',
-        ],
-    ),
 )
 
 res = s.hris.update_hris_group(req)

@@ -18,7 +18,6 @@ pip install Unified-python-sdk
 ### Example
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -30,12 +29,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.CreateAccountingAccountRequest(
     connection_id='string',
-    accounting_account=shared.AccountingAccount(
-        name='string',
-        raw={
-            'key': 'string',
-        },
-    ),
 )
 
 res = s.accounting.create_accounting_account(req)
@@ -670,9 +663,8 @@ Handling errors in this SDK should largely match your expectations.  All operati
 ### Example
 
 ```python
-import dateutil.parser
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import errors, operations, shared
 
 s = unified_to.UnifiedTo(
     security=shared.Security(
@@ -682,19 +674,13 @@ s = unified_to.UnifiedTo(
 
 req = operations.CreateAccountingAccountRequest(
     connection_id='string',
-    accounting_account=shared.AccountingAccount(
-        name='string',
-        raw={
-            'key': 'string',
-        },
-    ),
 )
 
 res = None
 try:
     res = s.accounting.create_accounting_account(req)
 except errors.SDKError as e:
-    print(e)  # handle exception
+    # handle exception
     raise(e)
 
 if res.accounting_account is not None:
@@ -720,7 +706,6 @@ You can override the default server globally by passing a server index to the `s
 #### Example
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -733,12 +718,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.CreateAccountingAccountRequest(
     connection_id='string',
-    accounting_account=shared.AccountingAccount(
-        name='string',
-        raw={
-            'key': 'string',
-        },
-    ),
 )
 
 res = s.accounting.create_accounting_account(req)
@@ -753,7 +732,6 @@ if res.accounting_account is not None:
 
 The default server can also be overridden globally by passing a URL to the `server_url: str` optional parameter when initializing the SDK client instance. For example:
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -766,12 +744,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.CreateAccountingAccountRequest(
     connection_id='string',
-    accounting_account=shared.AccountingAccount(
-        name='string',
-        raw={
-            'key': 'string',
-        },
-    ),
 )
 
 res = s.accounting.create_accounting_account(req)
@@ -815,7 +787,6 @@ This SDK supports the following security scheme globally:
 
 You can set the security parameters through the `security` optional parameter when initializing the SDK client instance. For example:
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -827,12 +798,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.CreateAccountingAccountRequest(
     connection_id='string',
-    accounting_account=shared.AccountingAccount(
-        name='string',
-        raw={
-            'key': 'string',
-        },
-    ),
 )
 
 res = s.accounting.create_accounting_account(req)

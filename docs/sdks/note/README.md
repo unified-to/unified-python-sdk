@@ -17,7 +17,6 @@ Create a note
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -29,11 +28,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.CreateTicketingNoteRequest(
     connection_id='string',
-    ticketing_note=shared.TicketingNote(
-        raw={
-            'key': 'string',
-        },
-    ),
 )
 
 res = s.note.create_ticketing_note(req)
@@ -78,9 +72,6 @@ s = unified_to.UnifiedTo(
 req = operations.GetTicketingNoteRequest(
     connection_id='string',
     id='<ID>',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.note.get_ticketing_note(req)
@@ -113,7 +104,6 @@ List all notes
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -125,9 +115,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListTicketingNotesRequest(
     connection_id='string',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.note.list_ticketing_notes(req)
@@ -160,7 +147,6 @@ Update a note
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -173,11 +159,6 @@ s = unified_to.UnifiedTo(
 req = operations.PatchTicketingNoteRequest(
     connection_id='string',
     id='<ID>',
-    ticketing_note=shared.TicketingNote(
-        raw={
-            'key': 'string',
-        },
-    ),
 )
 
 res = s.note.patch_ticketing_note(req)
@@ -254,7 +235,6 @@ Update a note
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -267,11 +247,6 @@ s = unified_to.UnifiedTo(
 req = operations.UpdateTicketingNoteRequest(
     connection_id='string',
     id='<ID>',
-    ticketing_note=shared.TicketingNote(
-        raw={
-            'key': 'string',
-        },
-    ),
 )
 
 res = s.note.update_ticketing_note(req)

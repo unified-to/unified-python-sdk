@@ -17,7 +17,6 @@ Create a member
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -29,22 +28,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.CreateMartechMemberRequest(
     connection_id='string',
-    marketing_member=shared.MarketingMember(
-        emails=[
-            shared.MarketingEmail(
-                email='Eldridge.Marvin@gmail.com',
-            ),
-        ],
-        list_ids=[
-            'string',
-        ],
-        raw={
-            'key': 'string',
-        },
-        tags=[
-            'string',
-        ],
-    ),
 )
 
 res = s.member.create_martech_member(req)
@@ -89,9 +72,6 @@ s = unified_to.UnifiedTo(
 req = operations.GetMartechMemberRequest(
     connection_id='string',
     id='<ID>',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.member.get_martech_member(req)
@@ -124,7 +104,6 @@ List all members
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -136,9 +115,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListMartechMembersRequest(
     connection_id='string',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.member.list_martech_members(req)
@@ -171,7 +147,6 @@ Update a member
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -184,22 +159,6 @@ s = unified_to.UnifiedTo(
 req = operations.PatchMartechMemberRequest(
     connection_id='string',
     id='<ID>',
-    marketing_member=shared.MarketingMember(
-        emails=[
-            shared.MarketingEmail(
-                email='Shana_Boyle@yahoo.com',
-            ),
-        ],
-        list_ids=[
-            'string',
-        ],
-        raw={
-            'key': 'string',
-        },
-        tags=[
-            'string',
-        ],
-    ),
 )
 
 res = s.member.patch_martech_member(req)
@@ -276,7 +235,6 @@ Update a member
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -289,22 +247,6 @@ s = unified_to.UnifiedTo(
 req = operations.UpdateMartechMemberRequest(
     connection_id='string',
     id='<ID>',
-    marketing_member=shared.MarketingMember(
-        emails=[
-            shared.MarketingEmail(
-                email='Antonette.Kerluke@hotmail.com',
-            ),
-        ],
-        list_ids=[
-            'string',
-        ],
-        raw={
-            'key': 'string',
-        },
-        tags=[
-            'string',
-        ],
-    ),
 )
 
 res = s.member.update_martech_member(req)

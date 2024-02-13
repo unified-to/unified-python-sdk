@@ -17,7 +17,6 @@ Create a deal
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -29,14 +28,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.CreateCrmDealRequest(
     connection_id='string',
-    crm_deal=shared.CrmDeal(
-        raw={
-            'key': 'string',
-        },
-        tags=[
-            'string',
-        ],
-    ),
 )
 
 res = s.deal.create_crm_deal(req)
@@ -81,9 +72,6 @@ s = unified_to.UnifiedTo(
 req = operations.GetCrmDealRequest(
     connection_id='string',
     id='<ID>',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.deal.get_crm_deal(req)
@@ -116,7 +104,6 @@ List all deals
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -128,9 +115,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListCrmDealsRequest(
     connection_id='string',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.deal.list_crm_deals(req)
@@ -163,7 +147,6 @@ Update a deal
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -176,14 +159,6 @@ s = unified_to.UnifiedTo(
 req = operations.PatchCrmDealRequest(
     connection_id='string',
     id='<ID>',
-    crm_deal=shared.CrmDeal(
-        raw={
-            'key': 'string',
-        },
-        tags=[
-            'string',
-        ],
-    ),
 )
 
 res = s.deal.patch_crm_deal(req)
@@ -260,7 +235,6 @@ Update a deal
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -273,14 +247,6 @@ s = unified_to.UnifiedTo(
 req = operations.UpdateCrmDealRequest(
     connection_id='string',
     id='<ID>',
-    crm_deal=shared.CrmDeal(
-        raw={
-            'key': 'string',
-        },
-        tags=[
-            'string',
-        ],
-    ),
 )
 
 res = s.deal.update_crm_deal(req)

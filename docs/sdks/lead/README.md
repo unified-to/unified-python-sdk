@@ -17,7 +17,6 @@ Create a lead
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -29,20 +28,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.CreateCrmLeadRequest(
     connection_id='string',
-    crm_lead=shared.CrmLead(
-        address=shared.PropertyCrmLeadAddress(),
-        emails=[
-            shared.CrmEmail(),
-        ],
-        raw={
-            'key': 'string',
-        },
-        telephones=[
-            shared.CrmTelephone(
-                telephone='string',
-            ),
-        ],
-    ),
 )
 
 res = s.lead.create_crm_lead(req)
@@ -87,9 +72,6 @@ s = unified_to.UnifiedTo(
 req = operations.GetCrmLeadRequest(
     connection_id='string',
     id='<ID>',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.lead.get_crm_lead(req)
@@ -122,7 +104,6 @@ List all leads
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -134,9 +115,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListCrmLeadsRequest(
     connection_id='string',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.lead.list_crm_leads(req)
@@ -169,7 +147,6 @@ Update a lead
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -182,20 +159,6 @@ s = unified_to.UnifiedTo(
 req = operations.PatchCrmLeadRequest(
     connection_id='string',
     id='<ID>',
-    crm_lead=shared.CrmLead(
-        address=shared.PropertyCrmLeadAddress(),
-        emails=[
-            shared.CrmEmail(),
-        ],
-        raw={
-            'key': 'string',
-        },
-        telephones=[
-            shared.CrmTelephone(
-                telephone='string',
-            ),
-        ],
-    ),
 )
 
 res = s.lead.patch_crm_lead(req)
@@ -272,7 +235,6 @@ Update a lead
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -285,20 +247,6 @@ s = unified_to.UnifiedTo(
 req = operations.UpdateCrmLeadRequest(
     connection_id='string',
     id='<ID>',
-    crm_lead=shared.CrmLead(
-        address=shared.PropertyCrmLeadAddress(),
-        emails=[
-            shared.CrmEmail(),
-        ],
-        raw={
-            'key': 'string',
-        },
-        telephones=[
-            shared.CrmTelephone(
-                telephone='string',
-            ),
-        ],
-    ),
 )
 
 res = s.lead.update_crm_lead(req)

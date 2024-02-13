@@ -17,7 +17,6 @@ Create a group
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -29,17 +28,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.CreateHrisGroupRequest(
     connection_id='string',
-    hris_group=shared.HrisGroup(
-        manager_ids=[
-            'string',
-        ],
-        raw={
-            'key': 'string',
-        },
-        user_ids=[
-            'string',
-        ],
-    ),
 )
 
 res = s.group.create_hris_group(req)
@@ -84,9 +72,6 @@ s = unified_to.UnifiedTo(
 req = operations.GetHrisGroupRequest(
     connection_id='string',
     id='<ID>',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.group.get_hris_group(req)
@@ -119,7 +104,6 @@ List all groups
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -131,9 +115,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListHrisGroupsRequest(
     connection_id='string',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.group.list_hris_groups(req)
@@ -166,7 +147,6 @@ Update a group
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -179,17 +159,6 @@ s = unified_to.UnifiedTo(
 req = operations.PatchHrisGroupRequest(
     connection_id='string',
     id='<ID>',
-    hris_group=shared.HrisGroup(
-        manager_ids=[
-            'string',
-        ],
-        raw={
-            'key': 'string',
-        },
-        user_ids=[
-            'string',
-        ],
-    ),
 )
 
 res = s.group.patch_hris_group(req)
@@ -266,7 +235,6 @@ Update a group
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -279,17 +247,6 @@ s = unified_to.UnifiedTo(
 req = operations.UpdateHrisGroupRequest(
     connection_id='string',
     id='<ID>',
-    hris_group=shared.HrisGroup(
-        manager_ids=[
-            'string',
-        ],
-        raw={
-            'key': 'string',
-        },
-        user_ids=[
-            'string',
-        ],
-    ),
 )
 
 res = s.group.update_hris_group(req)

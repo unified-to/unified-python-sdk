@@ -25,9 +25,6 @@ s = unified_to.UnifiedTo(
 req = operations.GetAccountingRefundRequest(
     connection_id='string',
     id='<ID>',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.refund.get_accounting_refund(req)
@@ -60,7 +57,6 @@ List all refunds
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -72,9 +68,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListAccountingRefundsRequest(
     connection_id='string',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.refund.list_accounting_refunds(req)

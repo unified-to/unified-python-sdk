@@ -25,9 +25,6 @@ s = unified_to.UnifiedTo(
 req = operations.GetAccountingPayoutRequest(
     connection_id='string',
     id='<ID>',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.payout.get_accounting_payout(req)
@@ -60,7 +57,6 @@ List all payouts
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -72,9 +68,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListAccountingPayoutsRequest(
     connection_id='string',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.payout.list_accounting_payouts(req)

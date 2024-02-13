@@ -20,7 +20,6 @@ Create a company
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -32,32 +31,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.CreateCrmCompanyRequest(
     connection_id='string',
-    crm_company=shared.CrmCompany(
-        address=shared.PropertyCrmCompanyAddress(),
-        deal_ids=[
-            'string',
-        ],
-        emails=[
-            shared.CrmEmail(),
-        ],
-        link_urls=[
-            'string',
-        ],
-        raw={
-            'key': 'string',
-        },
-        tags=[
-            'string',
-        ],
-        telephones=[
-            shared.CrmTelephone(
-                telephone='string',
-            ),
-        ],
-        websites=[
-            'string',
-        ],
-    ),
 )
 
 res = s.company.create_crm_company(req)
@@ -102,9 +75,6 @@ s = unified_to.UnifiedTo(
 req = operations.GetAtsCompanyRequest(
     connection_id='string',
     id='<ID>',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.company.get_ats_company(req)
@@ -149,9 +119,6 @@ s = unified_to.UnifiedTo(
 req = operations.GetCrmCompanyRequest(
     connection_id='string',
     id='<ID>',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.company.get_crm_company(req)
@@ -184,7 +151,6 @@ List all companies
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -196,9 +162,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListAtsCompaniesRequest(
     connection_id='string',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.company.list_ats_companies(req)
@@ -231,7 +194,6 @@ List all companies
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -243,9 +205,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListCrmCompaniesRequest(
     connection_id='string',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.company.list_crm_companies(req)
@@ -321,7 +280,6 @@ Update a company
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -334,32 +292,6 @@ s = unified_to.UnifiedTo(
 req = operations.PatchCrmCompanyRequest(
     connection_id='string',
     id='<ID>',
-    crm_company=shared.CrmCompany(
-        address=shared.PropertyCrmCompanyAddress(),
-        deal_ids=[
-            'string',
-        ],
-        emails=[
-            shared.CrmEmail(),
-        ],
-        link_urls=[
-            'string',
-        ],
-        raw={
-            'key': 'string',
-        },
-        tags=[
-            'string',
-        ],
-        telephones=[
-            shared.CrmTelephone(
-                telephone='string',
-            ),
-        ],
-        websites=[
-            'string',
-        ],
-    ),
 )
 
 res = s.company.patch_crm_company(req)
@@ -436,7 +368,6 @@ Update a company
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -449,32 +380,6 @@ s = unified_to.UnifiedTo(
 req = operations.UpdateCrmCompanyRequest(
     connection_id='string',
     id='<ID>',
-    crm_company=shared.CrmCompany(
-        address=shared.PropertyCrmCompanyAddress(),
-        deal_ids=[
-            'string',
-        ],
-        emails=[
-            shared.CrmEmail(),
-        ],
-        link_urls=[
-            'string',
-        ],
-        raw={
-            'key': 'string',
-        },
-        tags=[
-            'string',
-        ],
-        telephones=[
-            shared.CrmTelephone(
-                telephone='string',
-            ),
-        ],
-        websites=[
-            'string',
-        ],
-    ),
 )
 
 res = s.company.update_crm_company(req)

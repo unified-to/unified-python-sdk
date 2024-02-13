@@ -28,18 +28,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.CreateAccountingTransactionRequest(
     connection_id='string',
-    accounting_transaction=shared.AccountingTransaction(
-        id='<ID>',
-        lineitems=[
-            shared.AccountingTransactionLineitem(
-                account_id='string',
-                total_amount=4969.62,
-            ),
-        ],
-        raw={
-            'key': 'string',
-        },
-    ),
 )
 
 res = s.transaction.create_accounting_transaction(req)
@@ -84,9 +72,6 @@ s = unified_to.UnifiedTo(
 req = operations.GetAccountingTransactionRequest(
     connection_id='string',
     id='<ID>',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.transaction.get_accounting_transaction(req)
@@ -119,7 +104,6 @@ List all transactions
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -131,9 +115,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListAccountingTransactionsRequest(
     connection_id='string',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.transaction.list_accounting_transactions(req)
@@ -178,18 +159,6 @@ s = unified_to.UnifiedTo(
 req = operations.PatchAccountingTransactionRequest(
     connection_id='string',
     id='<ID>',
-    accounting_transaction=shared.AccountingTransaction(
-        id='<ID>',
-        lineitems=[
-            shared.AccountingTransactionLineitem(
-                account_id='string',
-                total_amount=5633.69,
-            ),
-        ],
-        raw={
-            'key': 'string',
-        },
-    ),
 )
 
 res = s.transaction.patch_accounting_transaction(req)
@@ -278,18 +247,6 @@ s = unified_to.UnifiedTo(
 req = operations.UpdateAccountingTransactionRequest(
     connection_id='string',
     id='<ID>',
-    accounting_transaction=shared.AccountingTransaction(
-        id='<ID>',
-        lineitems=[
-            shared.AccountingTransactionLineitem(
-                account_id='string',
-                total_amount=6498.37,
-            ),
-        ],
-        raw={
-            'key': 'string',
-        },
-    ),
 )
 
 res = s.transaction.update_accounting_transaction(req)

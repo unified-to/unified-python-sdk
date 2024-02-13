@@ -17,7 +17,6 @@ Create an employee
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -29,22 +28,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.CreateHrisEmployeeRequest(
     connection_id='string',
-    hris_employee=shared.HrisEmployee(
-        address=shared.PropertyHrisEmployeeAddress(),
-        emails=[
-            shared.HrisEmail(
-                email='Adriel_Hansen@hotmail.com',
-            ),
-        ],
-        raw={
-            'key': 'string',
-        },
-        telephones=[
-            shared.HrisTelephone(
-                telephone='string',
-            ),
-        ],
-    ),
 )
 
 res = s.employee.create_hris_employee(req)
@@ -89,9 +72,6 @@ s = unified_to.UnifiedTo(
 req = operations.GetHrisEmployeeRequest(
     connection_id='string',
     id='<ID>',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.employee.get_hris_employee(req)
@@ -124,7 +104,6 @@ List all employees
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -136,9 +115,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListHrisEmployeesRequest(
     connection_id='string',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.employee.list_hris_employees(req)
@@ -171,7 +147,6 @@ Update an employee
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -184,22 +159,6 @@ s = unified_to.UnifiedTo(
 req = operations.PatchHrisEmployeeRequest(
     connection_id='string',
     id='<ID>',
-    hris_employee=shared.HrisEmployee(
-        address=shared.PropertyHrisEmployeeAddress(),
-        emails=[
-            shared.HrisEmail(
-                email='Zetta.Cassin@yahoo.com',
-            ),
-        ],
-        raw={
-            'key': 'string',
-        },
-        telephones=[
-            shared.HrisTelephone(
-                telephone='string',
-            ),
-        ],
-    ),
 )
 
 res = s.employee.patch_hris_employee(req)
@@ -276,7 +235,6 @@ Update an employee
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -289,22 +247,6 @@ s = unified_to.UnifiedTo(
 req = operations.UpdateHrisEmployeeRequest(
     connection_id='string',
     id='<ID>',
-    hris_employee=shared.HrisEmployee(
-        address=shared.PropertyHrisEmployeeAddress(),
-        emails=[
-            shared.HrisEmail(
-                email='Abbie_Aufderhar@gmail.com',
-            ),
-        ],
-        raw={
-            'key': 'string',
-        },
-        telephones=[
-            shared.HrisTelephone(
-                telephone='string',
-            ),
-        ],
-    ),
 )
 
 res = s.employee.update_hris_employee(req)

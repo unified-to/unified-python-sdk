@@ -1,6 +1,5 @@
 <!-- Start SDK Example Usage [usage] -->
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -12,12 +11,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.CreateAccountingAccountRequest(
     connection_id='string',
-    accounting_account=shared.AccountingAccount(
-        name='string',
-        raw={
-            'key': 'string',
-        },
-    ),
 )
 
 res = s.accounting.create_accounting_account(req)

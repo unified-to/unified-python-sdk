@@ -29,7 +29,6 @@ Create a contact
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -41,23 +40,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.CreateAccountingContactRequest(
     connection_id='string',
-    accounting_contact=shared.AccountingContact(
-        billing_address=shared.PropertyAccountingContactBillingAddress(),
-        emails=[
-            shared.AccountingEmail(
-                email='Mac36@gmail.com',
-            ),
-        ],
-        raw={
-            'key': 'string',
-        },
-        shipping_address=shared.PropertyAccountingContactShippingAddress(),
-        telephones=[
-            shared.AccountingTelephone(
-                telephone='string',
-            ),
-        ],
-    ),
 )
 
 res = s.contact.create_accounting_contact(req)
@@ -90,7 +72,6 @@ Create a contact
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -102,26 +83,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.CreateCrmContactRequest(
     connection_id='string',
-    crm_contact=shared.CrmContact(
-        address=shared.PropertyCrmContactAddress(),
-        company_ids=[
-            'string',
-        ],
-        deal_ids=[
-            'string',
-        ],
-        emails=[
-            shared.CrmEmail(),
-        ],
-        raw={
-            'key': 'string',
-        },
-        telephones=[
-            shared.CrmTelephone(
-                telephone='string',
-            ),
-        ],
-    ),
 )
 
 res = s.contact.create_crm_contact(req)
@@ -154,7 +115,6 @@ Create a contact
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -166,21 +126,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.CreateUcContactRequest(
     connection_id='string',
-    uc_contact=shared.UcContact(
-        emails=[
-            shared.UcEmail(
-                email='Dulce_Becker30@yahoo.com',
-            ),
-        ],
-        raw={
-            'key': 'string',
-        },
-        telephones=[
-            shared.UcTelephone(
-                telephone='string',
-            ),
-        ],
-    ),
 )
 
 res = s.contact.create_uc_contact(req)
@@ -225,9 +170,6 @@ s = unified_to.UnifiedTo(
 req = operations.GetAccountingContactRequest(
     connection_id='string',
     id='<ID>',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.contact.get_accounting_contact(req)
@@ -272,9 +214,6 @@ s = unified_to.UnifiedTo(
 req = operations.GetCrmContactRequest(
     connection_id='string',
     id='<ID>',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.contact.get_crm_contact(req)
@@ -319,9 +258,6 @@ s = unified_to.UnifiedTo(
 req = operations.GetUcContactRequest(
     connection_id='string',
     id='<ID>',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.contact.get_uc_contact(req)
@@ -354,7 +290,6 @@ List all contacts
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -366,9 +301,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListAccountingContactsRequest(
     connection_id='string',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.contact.list_accounting_contacts(req)
@@ -401,7 +333,6 @@ List all contacts
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -413,9 +344,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListCrmContactsRequest(
     connection_id='string',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.contact.list_crm_contacts(req)
@@ -448,7 +376,6 @@ List all contacts
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -460,9 +387,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListUcContactsRequest(
     connection_id='string',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.contact.list_uc_contacts(req)
@@ -495,7 +419,6 @@ Update a contact
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -508,23 +431,6 @@ s = unified_to.UnifiedTo(
 req = operations.PatchAccountingContactRequest(
     connection_id='string',
     id='<ID>',
-    accounting_contact=shared.AccountingContact(
-        billing_address=shared.PropertyAccountingContactBillingAddress(),
-        emails=[
-            shared.AccountingEmail(
-                email='Sylvester.Kuhic@yahoo.com',
-            ),
-        ],
-        raw={
-            'key': 'string',
-        },
-        shipping_address=shared.PropertyAccountingContactShippingAddress(),
-        telephones=[
-            shared.AccountingTelephone(
-                telephone='string',
-            ),
-        ],
-    ),
 )
 
 res = s.contact.patch_accounting_contact(req)
@@ -557,7 +463,6 @@ Update a contact
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -570,26 +475,6 @@ s = unified_to.UnifiedTo(
 req = operations.PatchCrmContactRequest(
     connection_id='string',
     id='<ID>',
-    crm_contact=shared.CrmContact(
-        address=shared.PropertyCrmContactAddress(),
-        company_ids=[
-            'string',
-        ],
-        deal_ids=[
-            'string',
-        ],
-        emails=[
-            shared.CrmEmail(),
-        ],
-        raw={
-            'key': 'string',
-        },
-        telephones=[
-            shared.CrmTelephone(
-                telephone='string',
-            ),
-        ],
-    ),
 )
 
 res = s.contact.patch_crm_contact(req)
@@ -622,7 +507,6 @@ Update a contact
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -635,21 +519,6 @@ s = unified_to.UnifiedTo(
 req = operations.PatchUcContactRequest(
     connection_id='string',
     id='<ID>',
-    uc_contact=shared.UcContact(
-        emails=[
-            shared.UcEmail(
-                email='Norene_Boehm97@hotmail.com',
-            ),
-        ],
-        raw={
-            'key': 'string',
-        },
-        telephones=[
-            shared.UcTelephone(
-                telephone='string',
-            ),
-        ],
-    ),
 )
 
 res = s.contact.patch_uc_contact(req)
@@ -814,7 +683,6 @@ Update a contact
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -827,23 +695,6 @@ s = unified_to.UnifiedTo(
 req = operations.UpdateAccountingContactRequest(
     connection_id='string',
     id='<ID>',
-    accounting_contact=shared.AccountingContact(
-        billing_address=shared.PropertyAccountingContactBillingAddress(),
-        emails=[
-            shared.AccountingEmail(
-                email='Kaci_Hane@hotmail.com',
-            ),
-        ],
-        raw={
-            'key': 'string',
-        },
-        shipping_address=shared.PropertyAccountingContactShippingAddress(),
-        telephones=[
-            shared.AccountingTelephone(
-                telephone='string',
-            ),
-        ],
-    ),
 )
 
 res = s.contact.update_accounting_contact(req)
@@ -876,7 +727,6 @@ Update a contact
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -889,26 +739,6 @@ s = unified_to.UnifiedTo(
 req = operations.UpdateCrmContactRequest(
     connection_id='string',
     id='<ID>',
-    crm_contact=shared.CrmContact(
-        address=shared.PropertyCrmContactAddress(),
-        company_ids=[
-            'string',
-        ],
-        deal_ids=[
-            'string',
-        ],
-        emails=[
-            shared.CrmEmail(),
-        ],
-        raw={
-            'key': 'string',
-        },
-        telephones=[
-            shared.CrmTelephone(
-                telephone='string',
-            ),
-        ],
-    ),
 )
 
 res = s.contact.update_crm_contact(req)
@@ -941,7 +771,6 @@ Update a contact
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -954,21 +783,6 @@ s = unified_to.UnifiedTo(
 req = operations.UpdateUcContactRequest(
     connection_id='string',
     id='<ID>',
-    uc_contact=shared.UcContact(
-        emails=[
-            shared.UcEmail(
-                email='Kianna.Witting90@gmail.com',
-            ),
-        ],
-        raw={
-            'key': 'string',
-        },
-        telephones=[
-            shared.UcTelephone(
-                telephone='string',
-            ),
-        ],
-    ),
 )
 
 res = s.contact.update_uc_contact(req)

@@ -17,7 +17,6 @@ Create a collection
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -29,24 +28,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.CreateCommerceCollectionRequest(
     connection_id='string',
-    commerce_collection=shared.CommerceCollection(
-        id='<ID>',
-        name='string',
-        item_ids=[
-            'string',
-        ],
-        media=[
-            shared.CommerceItemMedia(
-                url='http://uneven-mattress.name',
-            ),
-        ],
-        raw={
-            'key': 'string',
-        },
-        tags=[
-            'string',
-        ],
-    ),
 )
 
 res = s.collection.create_commerce_collection(req)
@@ -91,9 +72,6 @@ s = unified_to.UnifiedTo(
 req = operations.GetCommerceCollectionRequest(
     connection_id='string',
     id='<ID>',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.collection.get_commerce_collection(req)
@@ -126,7 +104,6 @@ List all collections
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -138,9 +115,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListCommerceCollectionsRequest(
     connection_id='string',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.collection.list_commerce_collections(req)
@@ -173,7 +147,6 @@ Update a collection
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -186,24 +159,6 @@ s = unified_to.UnifiedTo(
 req = operations.PatchCommerceCollectionRequest(
     connection_id='string',
     id='<ID>',
-    commerce_collection=shared.CommerceCollection(
-        id='<ID>',
-        name='string',
-        item_ids=[
-            'string',
-        ],
-        media=[
-            shared.CommerceItemMedia(
-                url='http://personal-sorrow.com',
-            ),
-        ],
-        raw={
-            'key': 'string',
-        },
-        tags=[
-            'string',
-        ],
-    ),
 )
 
 res = s.collection.patch_commerce_collection(req)
@@ -280,7 +235,6 @@ Update a collection
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -293,24 +247,6 @@ s = unified_to.UnifiedTo(
 req = operations.UpdateCommerceCollectionRequest(
     connection_id='string',
     id='<ID>',
-    commerce_collection=shared.CommerceCollection(
-        id='<ID>',
-        name='string',
-        item_ids=[
-            'string',
-        ],
-        media=[
-            shared.CommerceItemMedia(
-                url='https://stupid-entity.org',
-            ),
-        ],
-        raw={
-            'key': 'string',
-        },
-        tags=[
-            'string',
-        ],
-    ),
 )
 
 res = s.collection.update_commerce_collection(req)

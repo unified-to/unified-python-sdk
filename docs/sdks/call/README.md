@@ -12,7 +12,6 @@ List all calls
 ### Example Usage
 
 ```python
-import dateutil.parser
 import unified_to
 from unified_to.models import operations, shared
 
@@ -24,9 +23,6 @@ s = unified_to.UnifiedTo(
 
 req = operations.ListUcCallsRequest(
     connection_id='string',
-    fields=[
-        'string',
-    ],
 )
 
 res = s.call.list_uc_calls(req)
