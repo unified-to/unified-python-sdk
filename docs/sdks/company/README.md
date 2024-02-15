@@ -30,7 +30,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateCrmCompanyRequest(
-    connection_id='string',
+    connection_id='<value>',
 )
 
 res = s.company.create_crm_company(req)
@@ -73,8 +73,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetAtsCompanyRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.company.get_ats_company(req)
@@ -117,8 +117,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetCrmCompanyRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.company.get_crm_company(req)
@@ -161,7 +161,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListAtsCompaniesRequest(
-    connection_id='string',
+    connection_id='<value>',
 )
 
 res = s.company.list_ats_companies(req)
@@ -204,7 +204,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListCrmCompaniesRequest(
-    connection_id='string',
+    connection_id='<value>',
 )
 
 res = s.company.list_crm_companies(req)
@@ -247,7 +247,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListEnrichCompaniesRequest(
-    connection_id='string',
+    connection_id='<value>',
 )
 
 res = s.company.list_enrich_companies(req)
@@ -290,8 +290,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchCrmCompanyRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.company.patch_crm_company(req)
@@ -334,8 +334,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveCrmCompanyRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.company.remove_crm_company(req)
@@ -378,8 +378,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateCrmCompanyRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.company.update_crm_company(req)

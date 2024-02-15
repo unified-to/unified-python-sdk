@@ -28,7 +28,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateUcContactRequest(
-    connection_id='string',
+    connection_id='<value>',
 )
 
 res = s.uc.create_uc_contact(req)
@@ -71,8 +71,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetUcContactRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.uc.get_uc_contact(req)
@@ -115,7 +115,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListUcCallsRequest(
-    connection_id='string',
+    connection_id='<value>',
 )
 
 res = s.uc.list_uc_calls(req)
@@ -158,7 +158,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListUcContactsRequest(
-    connection_id='string',
+    connection_id='<value>',
 )
 
 res = s.uc.list_uc_contacts(req)
@@ -201,8 +201,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchUcContactRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.uc.patch_uc_contact(req)
@@ -245,8 +245,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveUcContactRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.uc.remove_uc_contact(req)
@@ -289,8 +289,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateUcContactRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.uc.update_uc_contact(req)

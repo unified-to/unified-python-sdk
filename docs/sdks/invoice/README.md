@@ -27,7 +27,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateAccountingInvoiceRequest(
-    connection_id='string',
+    connection_id='<value>',
 )
 
 res = s.invoice.create_accounting_invoice(req)
@@ -70,8 +70,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetAccountingInvoiceRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.invoice.get_accounting_invoice(req)
@@ -114,7 +114,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListAccountingInvoicesRequest(
-    connection_id='string',
+    connection_id='<value>',
 )
 
 res = s.invoice.list_accounting_invoices(req)
@@ -157,8 +157,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchAccountingInvoiceRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.invoice.patch_accounting_invoice(req)
@@ -201,8 +201,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveAccountingInvoiceRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.invoice.remove_accounting_invoice(req)
@@ -245,8 +245,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateAccountingInvoiceRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.invoice.update_accounting_invoice(req)

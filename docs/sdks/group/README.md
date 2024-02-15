@@ -27,7 +27,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateHrisGroupRequest(
-    connection_id='string',
+    connection_id='<value>',
 )
 
 res = s.group.create_hris_group(req)
@@ -70,8 +70,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetHrisGroupRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.group.get_hris_group(req)
@@ -114,7 +114,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListHrisGroupsRequest(
-    connection_id='string',
+    connection_id='<value>',
 )
 
 res = s.group.list_hris_groups(req)
@@ -157,8 +157,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchHrisGroupRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.group.patch_hris_group(req)
@@ -201,8 +201,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveHrisGroupRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.group.remove_hris_group(req)
@@ -245,8 +245,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateHrisGroupRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.group.update_hris_group(req)

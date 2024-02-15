@@ -27,7 +27,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateAccountingTransactionRequest(
-    connection_id='string',
+    connection_id='<value>',
 )
 
 res = s.transaction.create_accounting_transaction(req)
@@ -70,8 +70,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetAccountingTransactionRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.transaction.get_accounting_transaction(req)
@@ -114,7 +114,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListAccountingTransactionsRequest(
-    connection_id='string',
+    connection_id='<value>',
 )
 
 res = s.transaction.list_accounting_transactions(req)
@@ -157,8 +157,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchAccountingTransactionRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.transaction.patch_accounting_transaction(req)
@@ -201,8 +201,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveAccountingTransactionRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.transaction.remove_accounting_transaction(req)
@@ -245,8 +245,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateAccountingTransactionRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.transaction.update_accounting_transaction(req)

@@ -33,7 +33,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateHrisEmployeeRequest(
-    connection_id='string',
+    connection_id='<value>',
 )
 
 res = s.hris.create_hris_employee(req)
@@ -76,7 +76,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateHrisGroupRequest(
-    connection_id='string',
+    connection_id='<value>',
 )
 
 res = s.hris.create_hris_group(req)
@@ -119,8 +119,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetHrisEmployeeRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.hris.get_hris_employee(req)
@@ -163,8 +163,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetHrisGroupRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.hris.get_hris_group(req)
@@ -207,7 +207,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListHrisEmployeesRequest(
-    connection_id='string',
+    connection_id='<value>',
 )
 
 res = s.hris.list_hris_employees(req)
@@ -250,7 +250,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListHrisGroupsRequest(
-    connection_id='string',
+    connection_id='<value>',
 )
 
 res = s.hris.list_hris_groups(req)
@@ -293,8 +293,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchHrisEmployeeRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.hris.patch_hris_employee(req)
@@ -337,8 +337,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchHrisGroupRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.hris.patch_hris_group(req)
@@ -381,8 +381,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveHrisEmployeeRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.hris.remove_hris_employee(req)
@@ -425,8 +425,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveHrisGroupRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.hris.remove_hris_group(req)
@@ -469,8 +469,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateHrisEmployeeRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.hris.update_hris_employee(req)
@@ -513,8 +513,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateHrisGroupRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.hris.update_hris_group(req)

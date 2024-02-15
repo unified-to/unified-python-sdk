@@ -39,7 +39,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateAccountingContactRequest(
-    connection_id='string',
+    connection_id='<value>',
 )
 
 res = s.contact.create_accounting_contact(req)
@@ -82,7 +82,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateCrmContactRequest(
-    connection_id='string',
+    connection_id='<value>',
 )
 
 res = s.contact.create_crm_contact(req)
@@ -125,7 +125,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateUcContactRequest(
-    connection_id='string',
+    connection_id='<value>',
 )
 
 res = s.contact.create_uc_contact(req)
@@ -168,8 +168,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetAccountingContactRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.contact.get_accounting_contact(req)
@@ -212,8 +212,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetCrmContactRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.contact.get_crm_contact(req)
@@ -256,8 +256,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetUcContactRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.contact.get_uc_contact(req)
@@ -300,7 +300,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListAccountingContactsRequest(
-    connection_id='string',
+    connection_id='<value>',
 )
 
 res = s.contact.list_accounting_contacts(req)
@@ -343,7 +343,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListCrmContactsRequest(
-    connection_id='string',
+    connection_id='<value>',
 )
 
 res = s.contact.list_crm_contacts(req)
@@ -386,7 +386,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListUcContactsRequest(
-    connection_id='string',
+    connection_id='<value>',
 )
 
 res = s.contact.list_uc_contacts(req)
@@ -429,8 +429,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchAccountingContactRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.contact.patch_accounting_contact(req)
@@ -473,8 +473,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchCrmContactRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.contact.patch_crm_contact(req)
@@ -517,8 +517,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchUcContactRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.contact.patch_uc_contact(req)
@@ -561,8 +561,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveAccountingContactRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.contact.remove_accounting_contact(req)
@@ -605,8 +605,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveCrmContactRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.contact.remove_crm_contact(req)
@@ -649,8 +649,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveUcContactRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.contact.remove_uc_contact(req)
@@ -693,8 +693,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateAccountingContactRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.contact.update_accounting_contact(req)
@@ -737,8 +737,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateCrmContactRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.contact.update_crm_contact(req)
@@ -781,8 +781,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateUcContactRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.contact.update_uc_contact(req)

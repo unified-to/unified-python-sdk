@@ -22,7 +22,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListUcCallsRequest(
-    connection_id='string',
+    connection_id='<value>',
 )
 
 res = s.call.list_uc_calls(req)

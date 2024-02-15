@@ -23,8 +23,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetAccountingRefundRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.refund.get_accounting_refund(req)
@@ -67,7 +67,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListAccountingRefundsRequest(
-    connection_id='string',
+    connection_id='<value>',
 )
 
 res = s.refund.list_accounting_refunds(req)

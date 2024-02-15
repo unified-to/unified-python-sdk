@@ -68,7 +68,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetUnifiedWebhookRequest(
-    id='<ID>',
+    id='<id>',
 )
 
 res = s.webhook.get_unified_webhook(req)
@@ -152,7 +152,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchUnifiedWebhookTriggerRequest(
-    id='<ID>',
+    id='<id>',
 )
 
 res = s.webhook.patch_unified_webhook_trigger(req)
@@ -195,7 +195,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveUnifiedWebhookRequest(
-    id='<ID>',
+    id='<id>',
 )
 
 res = s.webhook.remove_unified_webhook(req)
@@ -238,7 +238,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateUnifiedWebhookTriggerRequest(
-    id='<ID>',
+    id='<id>',
 )
 
 res = s.webhook.update_unified_webhook_trigger(req)

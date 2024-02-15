@@ -45,7 +45,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateCommerceCollectionRequest(
-    connection_id='string',
+    connection_id='<value>',
 )
 
 res = s.commerce.create_commerce_collection(req)
@@ -88,7 +88,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateCommerceInventoryRequest(
-    connection_id='string',
+    connection_id='<value>',
 )
 
 res = s.commerce.create_commerce_inventory(req)
@@ -131,7 +131,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateCommerceItemRequest(
-    connection_id='string',
+    connection_id='<value>',
 )
 
 res = s.commerce.create_commerce_item(req)
@@ -174,7 +174,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateCommerceLocationRequest(
-    connection_id='string',
+    connection_id='<value>',
 )
 
 res = s.commerce.create_commerce_location(req)
@@ -217,8 +217,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetCommerceCollectionRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.commerce.get_commerce_collection(req)
@@ -261,8 +261,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetCommerceInventoryRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.commerce.get_commerce_inventory(req)
@@ -305,8 +305,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetCommerceItemRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.commerce.get_commerce_item(req)
@@ -349,8 +349,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetCommerceLocationRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.commerce.get_commerce_location(req)
@@ -393,7 +393,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListCommerceCollectionsRequest(
-    connection_id='string',
+    connection_id='<value>',
 )
 
 res = s.commerce.list_commerce_collections(req)
@@ -436,7 +436,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListCommerceInventoriesRequest(
-    connection_id='string',
+    connection_id='<value>',
 )
 
 res = s.commerce.list_commerce_inventories(req)
@@ -479,7 +479,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListCommerceItemsRequest(
-    connection_id='string',
+    connection_id='<value>',
 )
 
 res = s.commerce.list_commerce_items(req)
@@ -522,7 +522,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListCommerceLocationsRequest(
-    connection_id='string',
+    connection_id='<value>',
 )
 
 res = s.commerce.list_commerce_locations(req)
@@ -565,8 +565,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchCommerceCollectionRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.commerce.patch_commerce_collection(req)
@@ -609,8 +609,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchCommerceInventoryRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.commerce.patch_commerce_inventory(req)
@@ -653,8 +653,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchCommerceItemRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.commerce.patch_commerce_item(req)
@@ -697,8 +697,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchCommerceLocationRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.commerce.patch_commerce_location(req)
@@ -741,8 +741,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveCommerceCollectionRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.commerce.remove_commerce_collection(req)
@@ -785,8 +785,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveCommerceInventoryRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.commerce.remove_commerce_inventory(req)
@@ -829,8 +829,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveCommerceItemRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.commerce.remove_commerce_item(req)
@@ -873,8 +873,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveCommerceLocationRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.commerce.remove_commerce_location(req)
@@ -917,8 +917,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateCommerceCollectionRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.commerce.update_commerce_collection(req)
@@ -961,8 +961,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateCommerceInventoryRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.commerce.update_commerce_inventory(req)
@@ -1005,8 +1005,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateCommerceItemRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.commerce.update_commerce_item(req)
@@ -1049,8 +1049,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateCommerceLocationRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.commerce.update_commerce_location(req)

@@ -23,7 +23,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetUnifiedApicallRequest(
-    id='<ID>',
+    id='<id>',
 )
 
 res = s.apicall.get_unified_apicall(req)

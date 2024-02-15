@@ -23,8 +23,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetUnifiedIntegrationAuthRequest(
-    integration_type='string',
-    workspace_id='string',
+    integration_type='<value>',
+    workspace_id='<value>',
 )
 
 res = s.auth.get_unified_integration_auth(req)
@@ -67,8 +67,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetUnifiedIntegrationLoginRequest(
-    integration_type='string',
-    workspace_id='string',
+    integration_type='<value>',
+    workspace_id='<value>',
 )
 
 res = s.auth.get_unified_integration_login(req)

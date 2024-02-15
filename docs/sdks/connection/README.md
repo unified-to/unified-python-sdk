@@ -30,7 +30,7 @@ req = shared.Connection(
     categories=[
         shared.PropertyConnectionCategories.COMMERCE,
     ],
-    integration_type='string',
+    integration_type='<value>',
     permissions=[
         shared.PropertyConnectionPermissions.ATS_APPLICATIONSTATUS_READ,
     ],
@@ -76,7 +76,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetUnifiedConnectionRequest(
-    id='<ID>',
+    id='<id>',
 )
 
 res = s.connection.get_unified_connection(req)
@@ -160,7 +160,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchUnifiedConnectionRequest(
-    id='<ID>',
+    id='<id>',
 )
 
 res = s.connection.patch_unified_connection(req)
@@ -203,7 +203,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveUnifiedConnectionRequest(
-    id='<ID>',
+    id='<id>',
 )
 
 res = s.connection.remove_unified_connection(req)
@@ -246,7 +246,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateUnifiedConnectionRequest(
-    id='<ID>',
+    id='<id>',
 )
 
 res = s.connection.update_unified_connection(req)

@@ -23,8 +23,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetAccountingPayoutRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.payout.get_accounting_payout(req)
@@ -67,7 +67,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListAccountingPayoutsRequest(
-    connection_id='string',
+    connection_id='<value>',
 )
 
 res = s.payout.list_accounting_payouts(req)

@@ -42,7 +42,7 @@ req = shared.Connection(
     categories=[
         shared.PropertyConnectionCategories.COMMERCE,
     ],
-    integration_type='string',
+    integration_type='<value>',
     permissions=[
         shared.PropertyConnectionPermissions.ATS_APPLICATIONSTATUS_READ,
     ],
@@ -129,7 +129,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetUnifiedApicallRequest(
-    id='<ID>',
+    id='<id>',
 )
 
 res = s.unified.get_unified_apicall(req)
@@ -172,7 +172,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetUnifiedConnectionRequest(
-    id='<ID>',
+    id='<id>',
 )
 
 res = s.unified.get_unified_connection(req)
@@ -215,8 +215,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetUnifiedIntegrationAuthRequest(
-    integration_type='string',
-    workspace_id='string',
+    integration_type='<value>',
+    workspace_id='<value>',
 )
 
 res = s.unified.get_unified_integration_auth(req)
@@ -259,7 +259,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetUnifiedWebhookRequest(
-    id='<ID>',
+    id='<id>',
 )
 
 res = s.unified.get_unified_webhook(req)
@@ -384,7 +384,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListUnifiedIntegrationWorkspacesRequest(
-    workspace_id='string',
+    workspace_id='<value>',
 )
 
 res = s.unified.list_unified_integration_workspaces(req)
@@ -550,7 +550,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchUnifiedConnectionRequest(
-    id='<ID>',
+    id='<id>',
 )
 
 res = s.unified.patch_unified_connection(req)
@@ -593,7 +593,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchUnifiedWebhookTriggerRequest(
-    id='<ID>',
+    id='<id>',
 )
 
 res = s.unified.patch_unified_webhook_trigger(req)
@@ -636,7 +636,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveUnifiedConnectionRequest(
-    id='<ID>',
+    id='<id>',
 )
 
 res = s.unified.remove_unified_connection(req)
@@ -679,7 +679,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveUnifiedWebhookRequest(
-    id='<ID>',
+    id='<id>',
 )
 
 res = s.unified.remove_unified_webhook(req)
@@ -722,7 +722,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateUnifiedConnectionRequest(
-    id='<ID>',
+    id='<id>',
 )
 
 res = s.unified.update_unified_connection(req)
@@ -765,7 +765,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateUnifiedWebhookTriggerRequest(
-    id='<ID>',
+    id='<id>',
 )
 
 res = s.unified.update_unified_webhook_trigger(req)

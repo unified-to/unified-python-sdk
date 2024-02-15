@@ -60,7 +60,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateAtsApplicationRequest(
-    connection_id='string',
+    connection_id='<value>',
 )
 
 res = s.ats.create_ats_application(req)
@@ -103,7 +103,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateAtsCandidateRequest(
-    connection_id='string',
+    connection_id='<value>',
 )
 
 res = s.ats.create_ats_candidate(req)
@@ -146,7 +146,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateAtsDocumentRequest(
-    connection_id='string',
+    connection_id='<value>',
 )
 
 res = s.ats.create_ats_document(req)
@@ -189,7 +189,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateAtsInterviewRequest(
-    connection_id='string',
+    connection_id='<value>',
 )
 
 res = s.ats.create_ats_interview(req)
@@ -232,7 +232,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateAtsJobRequest(
-    connection_id='string',
+    connection_id='<value>',
 )
 
 res = s.ats.create_ats_job(req)
@@ -275,7 +275,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateAtsScorecardRequest(
-    connection_id='string',
+    connection_id='<value>',
 )
 
 res = s.ats.create_ats_scorecard(req)
@@ -318,8 +318,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetAtsApplicationRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.ats.get_ats_application(req)
@@ -362,8 +362,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetAtsCandidateRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.ats.get_ats_candidate(req)
@@ -406,8 +406,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetAtsCompanyRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.ats.get_ats_company(req)
@@ -450,8 +450,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetAtsDocumentRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.ats.get_ats_document(req)
@@ -494,8 +494,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetAtsInterviewRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.ats.get_ats_interview(req)
@@ -538,8 +538,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetAtsJobRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.ats.get_ats_job(req)
@@ -582,8 +582,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetAtsScorecardRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.ats.get_ats_scorecard(req)
@@ -626,7 +626,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListAtsApplicationsRequest(
-    connection_id='string',
+    connection_id='<value>',
 )
 
 res = s.ats.list_ats_applications(req)
@@ -669,7 +669,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListAtsApplicationstatusesRequest(
-    connection_id='string',
+    connection_id='<value>',
 )
 
 res = s.ats.list_ats_applicationstatuses(req)
@@ -712,7 +712,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListAtsCandidatesRequest(
-    connection_id='string',
+    connection_id='<value>',
 )
 
 res = s.ats.list_ats_candidates(req)
@@ -755,7 +755,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListAtsCompaniesRequest(
-    connection_id='string',
+    connection_id='<value>',
 )
 
 res = s.ats.list_ats_companies(req)
@@ -798,7 +798,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListAtsDocumentsRequest(
-    connection_id='string',
+    connection_id='<value>',
 )
 
 res = s.ats.list_ats_documents(req)
@@ -841,7 +841,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListAtsInterviewsRequest(
-    connection_id='string',
+    connection_id='<value>',
 )
 
 res = s.ats.list_ats_interviews(req)
@@ -884,7 +884,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListAtsJobsRequest(
-    connection_id='string',
+    connection_id='<value>',
 )
 
 res = s.ats.list_ats_jobs(req)
@@ -927,7 +927,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListAtsScorecardsRequest(
-    connection_id='string',
+    connection_id='<value>',
 )
 
 res = s.ats.list_ats_scorecards(req)
@@ -970,8 +970,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchAtsApplicationRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.ats.patch_ats_application(req)
@@ -1014,8 +1014,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchAtsCandidateRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.ats.patch_ats_candidate(req)
@@ -1058,8 +1058,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchAtsDocumentRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.ats.patch_ats_document(req)
@@ -1102,8 +1102,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchAtsInterviewRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.ats.patch_ats_interview(req)
@@ -1146,8 +1146,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchAtsJobRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.ats.patch_ats_job(req)
@@ -1190,8 +1190,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchAtsScorecardRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.ats.patch_ats_scorecard(req)
@@ -1234,8 +1234,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveAtsApplicationRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.ats.remove_ats_application(req)
@@ -1278,8 +1278,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveAtsCandidateRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.ats.remove_ats_candidate(req)
@@ -1322,8 +1322,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveAtsDocumentRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.ats.remove_ats_document(req)
@@ -1366,8 +1366,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveAtsInterviewRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.ats.remove_ats_interview(req)
@@ -1410,8 +1410,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveAtsJobRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.ats.remove_ats_job(req)
@@ -1454,8 +1454,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveAtsScorecardRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.ats.remove_ats_scorecard(req)
@@ -1498,8 +1498,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateAtsApplicationRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.ats.update_ats_application(req)
@@ -1542,8 +1542,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateAtsCandidateRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.ats.update_ats_candidate(req)
@@ -1586,8 +1586,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateAtsDocumentRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.ats.update_ats_document(req)
@@ -1630,8 +1630,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateAtsInterviewRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.ats.update_ats_interview(req)
@@ -1674,8 +1674,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateAtsJobRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.ats.update_ats_job(req)
@@ -1718,8 +1718,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateAtsScorecardRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.ats.update_ats_scorecard(req)

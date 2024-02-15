@@ -63,7 +63,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateAccountingAccountRequest(
-    connection_id='string',
+    connection_id='<value>',
 )
 
 res = s.accounting.create_accounting_account(req)
@@ -106,7 +106,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateAccountingContactRequest(
-    connection_id='string',
+    connection_id='<value>',
 )
 
 res = s.accounting.create_accounting_contact(req)
@@ -149,7 +149,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateAccountingInvoiceRequest(
-    connection_id='string',
+    connection_id='<value>',
 )
 
 res = s.accounting.create_accounting_invoice(req)
@@ -192,7 +192,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateAccountingPaymentRequest(
-    connection_id='string',
+    connection_id='<value>',
 )
 
 res = s.accounting.create_accounting_payment(req)
@@ -235,7 +235,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateAccountingTaxrateRequest(
-    connection_id='string',
+    connection_id='<value>',
 )
 
 res = s.accounting.create_accounting_taxrate(req)
@@ -278,7 +278,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateAccountingTransactionRequest(
-    connection_id='string',
+    connection_id='<value>',
 )
 
 res = s.accounting.create_accounting_transaction(req)
@@ -321,8 +321,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetAccountingAccountRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.accounting.get_accounting_account(req)
@@ -365,8 +365,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetAccountingContactRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.accounting.get_accounting_contact(req)
@@ -409,8 +409,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetAccountingInvoiceRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.accounting.get_accounting_invoice(req)
@@ -453,8 +453,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetAccountingOrganizationRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.accounting.get_accounting_organization(req)
@@ -497,8 +497,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetAccountingPaymentRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.accounting.get_accounting_payment(req)
@@ -541,8 +541,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetAccountingPayoutRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.accounting.get_accounting_payout(req)
@@ -585,8 +585,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetAccountingRefundRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.accounting.get_accounting_refund(req)
@@ -629,8 +629,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetAccountingTaxrateRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.accounting.get_accounting_taxrate(req)
@@ -673,8 +673,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetAccountingTransactionRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.accounting.get_accounting_transaction(req)
@@ -717,7 +717,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListAccountingAccountsRequest(
-    connection_id='string',
+    connection_id='<value>',
 )
 
 res = s.accounting.list_accounting_accounts(req)
@@ -760,7 +760,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListAccountingContactsRequest(
-    connection_id='string',
+    connection_id='<value>',
 )
 
 res = s.accounting.list_accounting_contacts(req)
@@ -803,7 +803,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListAccountingInvoicesRequest(
-    connection_id='string',
+    connection_id='<value>',
 )
 
 res = s.accounting.list_accounting_invoices(req)
@@ -846,7 +846,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListAccountingOrganizationsRequest(
-    connection_id='string',
+    connection_id='<value>',
 )
 
 res = s.accounting.list_accounting_organizations(req)
@@ -889,7 +889,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListAccountingPaymentsRequest(
-    connection_id='string',
+    connection_id='<value>',
 )
 
 res = s.accounting.list_accounting_payments(req)
@@ -932,7 +932,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListAccountingPayoutsRequest(
-    connection_id='string',
+    connection_id='<value>',
 )
 
 res = s.accounting.list_accounting_payouts(req)
@@ -975,7 +975,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListAccountingRefundsRequest(
-    connection_id='string',
+    connection_id='<value>',
 )
 
 res = s.accounting.list_accounting_refunds(req)
@@ -1018,7 +1018,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListAccountingTaxratesRequest(
-    connection_id='string',
+    connection_id='<value>',
 )
 
 res = s.accounting.list_accounting_taxrates(req)
@@ -1061,7 +1061,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListAccountingTransactionsRequest(
-    connection_id='string',
+    connection_id='<value>',
 )
 
 res = s.accounting.list_accounting_transactions(req)
@@ -1104,8 +1104,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchAccountingAccountRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.accounting.patch_accounting_account(req)
@@ -1148,8 +1148,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchAccountingContactRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.accounting.patch_accounting_contact(req)
@@ -1192,8 +1192,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchAccountingInvoiceRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.accounting.patch_accounting_invoice(req)
@@ -1236,8 +1236,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchAccountingPaymentRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.accounting.patch_accounting_payment(req)
@@ -1280,8 +1280,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchAccountingTaxrateRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.accounting.patch_accounting_taxrate(req)
@@ -1324,8 +1324,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchAccountingTransactionRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.accounting.patch_accounting_transaction(req)
@@ -1368,8 +1368,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveAccountingAccountRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.accounting.remove_accounting_account(req)
@@ -1412,8 +1412,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveAccountingContactRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.accounting.remove_accounting_contact(req)
@@ -1456,8 +1456,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveAccountingInvoiceRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.accounting.remove_accounting_invoice(req)
@@ -1500,8 +1500,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveAccountingPaymentRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.accounting.remove_accounting_payment(req)
@@ -1544,8 +1544,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveAccountingTaxrateRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.accounting.remove_accounting_taxrate(req)
@@ -1588,8 +1588,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveAccountingTransactionRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.accounting.remove_accounting_transaction(req)
@@ -1632,8 +1632,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateAccountingAccountRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.accounting.update_accounting_account(req)
@@ -1676,8 +1676,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateAccountingContactRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.accounting.update_accounting_contact(req)
@@ -1720,8 +1720,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateAccountingInvoiceRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.accounting.update_accounting_invoice(req)
@@ -1764,8 +1764,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateAccountingPaymentRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.accounting.update_accounting_payment(req)
@@ -1808,8 +1808,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateAccountingTaxrateRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.accounting.update_accounting_taxrate(req)
@@ -1852,8 +1852,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateAccountingTransactionRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.accounting.update_accounting_transaction(req)

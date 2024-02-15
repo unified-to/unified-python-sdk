@@ -26,7 +26,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreatePassthroughRequest(
-    connection_id='string',
+    connection_id='<value>',
     path='/etc/periodic',
 )
 
@@ -70,7 +70,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListPassthroughsRequest(
-    connection_id='string',
+    connection_id='<value>',
     path='/selinux',
 )
 
@@ -114,7 +114,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchPassthroughRequest(
-    connection_id='string',
+    connection_id='<value>',
     path='/mnt',
 )
 
@@ -158,7 +158,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemovePassthroughRequest(
-    connection_id='string',
+    connection_id='<value>',
     path='/Applications',
 )
 
@@ -202,7 +202,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdatePassthroughRequest(
-    connection_id='string',
+    connection_id='<value>',
     path='/dev',
 )
 

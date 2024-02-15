@@ -22,7 +22,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListAtsApplicationstatusesRequest(
-    connection_id='string',
+    connection_id='<value>',
 )
 
 res = s.applicationstatus.list_ats_applicationstatuses(req)

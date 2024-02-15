@@ -33,7 +33,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateMartechListRequest(
-    connection_id='string',
+    connection_id='<value>',
 )
 
 res = s.martech.create_martech_list(req)
@@ -76,7 +76,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateMartechMemberRequest(
-    connection_id='string',
+    connection_id='<value>',
 )
 
 res = s.martech.create_martech_member(req)
@@ -119,8 +119,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetMartechListRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.martech.get_martech_list(req)
@@ -163,8 +163,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetMartechMemberRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.martech.get_martech_member(req)
@@ -207,7 +207,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListMartechListsRequest(
-    connection_id='string',
+    connection_id='<value>',
 )
 
 res = s.martech.list_martech_lists(req)
@@ -250,7 +250,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListMartechMembersRequest(
-    connection_id='string',
+    connection_id='<value>',
 )
 
 res = s.martech.list_martech_members(req)
@@ -293,8 +293,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchMartechListRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.martech.patch_martech_list(req)
@@ -337,8 +337,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchMartechMemberRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.martech.patch_martech_member(req)
@@ -381,8 +381,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveMartechListRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.martech.remove_martech_list(req)
@@ -425,8 +425,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveMartechMemberRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.martech.remove_martech_member(req)
@@ -469,8 +469,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateMartechListRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.martech.update_martech_list(req)
@@ -513,8 +513,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateMartechMemberRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.martech.update_martech_member(req)

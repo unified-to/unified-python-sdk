@@ -39,7 +39,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateTicketingCustomerRequest(
-    connection_id='string',
+    connection_id='<value>',
 )
 
 res = s.ticketing.create_ticketing_customer(req)
@@ -82,7 +82,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateTicketingNoteRequest(
-    connection_id='string',
+    connection_id='<value>',
 )
 
 res = s.ticketing.create_ticketing_note(req)
@@ -125,7 +125,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateTicketingTicketRequest(
-    connection_id='string',
+    connection_id='<value>',
 )
 
 res = s.ticketing.create_ticketing_ticket(req)
@@ -168,8 +168,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetTicketingCustomerRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.ticketing.get_ticketing_customer(req)
@@ -212,8 +212,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetTicketingNoteRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.ticketing.get_ticketing_note(req)
@@ -256,8 +256,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetTicketingTicketRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.ticketing.get_ticketing_ticket(req)
@@ -300,7 +300,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListTicketingCustomersRequest(
-    connection_id='string',
+    connection_id='<value>',
 )
 
 res = s.ticketing.list_ticketing_customers(req)
@@ -343,7 +343,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListTicketingNotesRequest(
-    connection_id='string',
+    connection_id='<value>',
 )
 
 res = s.ticketing.list_ticketing_notes(req)
@@ -386,7 +386,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListTicketingTicketsRequest(
-    connection_id='string',
+    connection_id='<value>',
 )
 
 res = s.ticketing.list_ticketing_tickets(req)
@@ -429,8 +429,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchTicketingCustomerRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.ticketing.patch_ticketing_customer(req)
@@ -473,8 +473,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchTicketingNoteRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.ticketing.patch_ticketing_note(req)
@@ -517,8 +517,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchTicketingTicketRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.ticketing.patch_ticketing_ticket(req)
@@ -561,8 +561,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveTicketingCustomerRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.ticketing.remove_ticketing_customer(req)
@@ -605,8 +605,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveTicketingNoteRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.ticketing.remove_ticketing_note(req)
@@ -649,8 +649,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveTicketingTicketRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.ticketing.remove_ticketing_ticket(req)
@@ -693,8 +693,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateTicketingCustomerRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.ticketing.update_ticketing_customer(req)
@@ -737,8 +737,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateTicketingNoteRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.ticketing.update_ticketing_note(req)
@@ -781,8 +781,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateTicketingTicketRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.ticketing.update_ticketing_ticket(req)

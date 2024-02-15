@@ -23,8 +23,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetAccountingOrganizationRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.organization.get_accounting_organization(req)
@@ -67,7 +67,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListAccountingOrganizationsRequest(
-    connection_id='string',
+    connection_id='<value>',
 )
 
 res = s.organization.list_accounting_organizations(req)

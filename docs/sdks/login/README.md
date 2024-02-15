@@ -22,8 +22,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetUnifiedIntegrationLoginRequest(
-    integration_type='string',
-    workspace_id='string',
+    integration_type='<value>',
+    workspace_id='<value>',
 )
 
 res = s.login.get_unified_integration_login(req)

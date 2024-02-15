@@ -57,7 +57,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateCrmCompanyRequest(
-    connection_id='string',
+    connection_id='<value>',
 )
 
 res = s.crm.create_crm_company(req)
@@ -100,7 +100,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateCrmContactRequest(
-    connection_id='string',
+    connection_id='<value>',
 )
 
 res = s.crm.create_crm_contact(req)
@@ -143,7 +143,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateCrmDealRequest(
-    connection_id='string',
+    connection_id='<value>',
 )
 
 res = s.crm.create_crm_deal(req)
@@ -186,7 +186,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateCrmEventRequest(
-    connection_id='string',
+    connection_id='<value>',
 )
 
 res = s.crm.create_crm_event(req)
@@ -229,7 +229,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateCrmLeadRequest(
-    connection_id='string',
+    connection_id='<value>',
 )
 
 res = s.crm.create_crm_lead(req)
@@ -272,7 +272,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.CreateCrmPipelineRequest(
-    connection_id='string',
+    connection_id='<value>',
 )
 
 res = s.crm.create_crm_pipeline(req)
@@ -315,8 +315,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetCrmCompanyRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.crm.get_crm_company(req)
@@ -359,8 +359,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetCrmContactRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.crm.get_crm_contact(req)
@@ -403,8 +403,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetCrmDealRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.crm.get_crm_deal(req)
@@ -447,8 +447,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetCrmEventRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.crm.get_crm_event(req)
@@ -491,8 +491,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetCrmLeadRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.crm.get_crm_lead(req)
@@ -535,8 +535,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.GetCrmPipelineRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.crm.get_crm_pipeline(req)
@@ -579,7 +579,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListCrmCompaniesRequest(
-    connection_id='string',
+    connection_id='<value>',
 )
 
 res = s.crm.list_crm_companies(req)
@@ -622,7 +622,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListCrmContactsRequest(
-    connection_id='string',
+    connection_id='<value>',
 )
 
 res = s.crm.list_crm_contacts(req)
@@ -665,7 +665,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListCrmDealsRequest(
-    connection_id='string',
+    connection_id='<value>',
 )
 
 res = s.crm.list_crm_deals(req)
@@ -708,7 +708,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListCrmEventsRequest(
-    connection_id='string',
+    connection_id='<value>',
 )
 
 res = s.crm.list_crm_events(req)
@@ -751,7 +751,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListCrmLeadsRequest(
-    connection_id='string',
+    connection_id='<value>',
 )
 
 res = s.crm.list_crm_leads(req)
@@ -794,7 +794,7 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.ListCrmPipelinesRequest(
-    connection_id='string',
+    connection_id='<value>',
 )
 
 res = s.crm.list_crm_pipelines(req)
@@ -837,8 +837,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchCrmCompanyRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.crm.patch_crm_company(req)
@@ -881,8 +881,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchCrmContactRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.crm.patch_crm_contact(req)
@@ -925,8 +925,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchCrmDealRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.crm.patch_crm_deal(req)
@@ -969,8 +969,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchCrmEventRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.crm.patch_crm_event(req)
@@ -1013,8 +1013,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchCrmLeadRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.crm.patch_crm_lead(req)
@@ -1057,8 +1057,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.PatchCrmPipelineRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.crm.patch_crm_pipeline(req)
@@ -1101,8 +1101,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveCrmCompanyRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.crm.remove_crm_company(req)
@@ -1145,8 +1145,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveCrmContactRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.crm.remove_crm_contact(req)
@@ -1189,8 +1189,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveCrmDealRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.crm.remove_crm_deal(req)
@@ -1233,8 +1233,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveCrmEventRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.crm.remove_crm_event(req)
@@ -1277,8 +1277,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveCrmLeadRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.crm.remove_crm_lead(req)
@@ -1321,8 +1321,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.RemoveCrmPipelineRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.crm.remove_crm_pipeline(req)
@@ -1365,8 +1365,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateCrmCompanyRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.crm.update_crm_company(req)
@@ -1409,8 +1409,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateCrmContactRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.crm.update_crm_contact(req)
@@ -1453,8 +1453,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateCrmDealRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.crm.update_crm_deal(req)
@@ -1497,8 +1497,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateCrmEventRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.crm.update_crm_event(req)
@@ -1541,8 +1541,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateCrmLeadRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.crm.update_crm_lead(req)
@@ -1585,8 +1585,8 @@ s = unified_to.UnifiedTo(
 )
 
 req = operations.UpdateCrmPipelineRequest(
-    connection_id='string',
-    id='<ID>',
+    connection_id='<value>',
+    id='<id>',
 )
 
 res = s.crm.update_crm_pipeline(req)
