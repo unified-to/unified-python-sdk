@@ -1,0 +1,14 @@
+# AtsJobQuestion
+
+
+## Fields
+
+| Field                                                                  | Type                                                                   | Required                                                               | Description                                                            |
+| ---------------------------------------------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| `question`                                                             | *str*                                                                  | :heavy_check_mark:                                                     | N/A                                                                    |
+| `type`                                                                 | [shared.AtsJobQuestionType](../../models/shared/atsjobquestiontype.md) | :heavy_check_mark:                                                     | N/A                                                                    |
+| `description`                                                          | *Optional[str]*                                                        | :heavy_minus_sign:                                                     | N/A                                                                    |
+| `id`                                                                   | *Optional[str]*                                                        | :heavy_minus_sign:                                                     | N/A                                                                    |
+| `options`                                                              | List[*str*]                                                            | :heavy_minus_sign:                                                     | N/A                                                                    |
+| `prompt`                                                               | *Optional[str]*                                                        | :heavy_minus_sign:                                                     | N/A                                                                    |
+| `required`                                                             | *Optional[bool]*                                                       | :heavy_minus_sign:                                                     | N/A                                                                    |

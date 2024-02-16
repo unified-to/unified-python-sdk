@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: 5c191fdb16f8d76a3eb09c714f56170d
+  docChecksum: 119b9584a5fe294470614e38361fae09
   docVersion: "1.0"
   speakeasyVersion: internal
-  generationVersion: 2.258.0
-  releaseVersion: 0.16.6
-  configChecksum: 94fcd32d312af8d1beb9e1691dd5b66a
+  generationVersion: 2.259.1
+  releaseVersion: 0.16.7
+  configChecksum: 0b4aeb218c9c66f17b438ca48d056c71
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -328,6 +328,7 @@ generatedFiles:
   - src/unified_to/models/shared/uctelephone.py
   - src/unified_to/models/shared/ucemail.py
   - src/unified_to/models/shared/atsapplication.py
+  - src/unified_to/models/shared/atsapplicationanswer.py
   - src/unified_to/models/shared/atscandidate.py
   - src/unified_to/models/shared/atstelephone.py
   - src/unified_to/models/shared/atsemail.py
@@ -335,6 +336,7 @@ generatedFiles:
   - src/unified_to/models/shared/atsdocument.py
   - src/unified_to/models/shared/atsinterview.py
   - src/unified_to/models/shared/atsjob.py
+  - src/unified_to/models/shared/atsjobquestion.py
   - src/unified_to/models/shared/atscompensation.py
   - src/unified_to/models/shared/atsaddress.py
   - src/unified_to/models/shared/atsscorecard.py
@@ -888,6 +890,7 @@ generatedFiles:
   - docs/models/shared/ucemail.md
   - docs/models/shared/atsapplicationstatus.md
   - docs/models/shared/atsapplication.md
+  - docs/models/shared/atsapplicationanswer.md
   - docs/models/shared/origin.md
   - docs/models/shared/atscandidate.md
   - docs/models/shared/atstelephonetype.md
@@ -902,6 +905,8 @@ generatedFiles:
   - docs/models/shared/employmenttype.md
   - docs/models/shared/atsjobstatus.md
   - docs/models/shared/atsjob.md
+  - docs/models/shared/atsjobquestiontype.md
+  - docs/models/shared/atsjobquestion.md
   - docs/models/shared/frequency.md
   - docs/models/shared/atscompensationtype.md
   - docs/models/shared/atscompensation.md
