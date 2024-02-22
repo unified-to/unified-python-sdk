@@ -12,6 +12,7 @@ from unified_to import utils
 class Event(str, Enum):
     UPDATED = 'updated'
     CREATED = 'created'
+    DELETED = 'deleted'
 
 class ObjectType(str, Enum):
     ACCOUNTING_ACCOUNT = 'accounting_account'

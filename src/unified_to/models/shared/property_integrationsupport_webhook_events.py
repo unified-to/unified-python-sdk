@@ -6,3 +6,4 @@ from enum import Enum
 class PropertyIntegrationSupportWebhookEvents(str, Enum):
     UPDATED = 'updated'
     CREATED = 'created'
+    DELETED = 'deleted'

@@ -7,3 +7,4 @@
 | --------- | --------- |
 | `UPDATED` | updated   |
 | `CREATED` | created   |
+| `DELETED` | deleted   |
