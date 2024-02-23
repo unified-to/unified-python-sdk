@@ -29,8 +29,8 @@
 | `COMMERCE_INVENTORY_WRITE`     | commerce_inventory_write       |
 | `COMMERCE_LOCATION_READ`       | commerce_location_read         |
 | `COMMERCE_LOCATION_WRITE`      | commerce_location_write        |
-| `ATS_SCORECARD_READ`           | ats_scorecard_read             |
-| `ATS_SCORECARD_WRITE`          | ats_scorecard_write            |
+| `ATS_ACTIVITY_READ`            | ats_activity_read              |
+| `ATS_ACTIVITY_WRITE`           | ats_activity_write             |
 | `ATS_APPLICATION_READ`         | ats_application_read           |
 | `ATS_APPLICATION_WRITE`        | ats_application_write          |
 | `ATS_APPLICATIONSTATUS_READ`   | ats_applicationstatus_read     |
@@ -43,6 +43,8 @@
 | `ATS_COMPANY_READ`             | ats_company_read               |
 | `ATS_DOCUMENT_READ`            | ats_document_read              |
 | `ATS_DOCUMENT_WRITE`           | ats_document_write             |
+| `ATS_SCORECARD_READ`           | ats_scorecard_read             |
+| `ATS_SCORECARD_WRITE`          | ats_scorecard_write            |
 | `CRM_COMPANY_READ`             | crm_company_read               |
 | `CRM_COMPANY_WRITE`            | crm_company_write              |
 | `CRM_CONTACT_READ`             | crm_contact_read               |

@@ -3,12 +3,14 @@
 
 ### Available Operations
 
+* [create_ats_activity](#create_ats_activity) - Create an activity
 * [create_ats_application](#create_ats_application) - Create an application
 * [create_ats_candidate](#create_ats_candidate) - Create a candidate
 * [create_ats_document](#create_ats_document) - Create a document
 * [create_ats_interview](#create_ats_interview) - Create a interview
 * [create_ats_job](#create_ats_job) - Create a job
 * [create_ats_scorecard](#create_ats_scorecard) - Create a scorecard
+* [get_ats_activity](#get_ats_activity) - Retrieve an activity
 * [get_ats_application](#get_ats_application) - Retrieve an application
 * [get_ats_candidate](#get_ats_candidate) - Retrieve a candidate
 * [get_ats_company](#get_ats_company) - Retrieve a company
@@ -16,6 +18,7 @@
 * [get_ats_interview](#get_ats_interview) - Retrieve a interview
 * [get_ats_job](#get_ats_job) - Retrieve a job
 * [get_ats_scorecard](#get_ats_scorecard) - Retrieve a scorecard
+* [list_ats_activities](#list_ats_activities) - List all activities
 * [list_ats_applications](#list_ats_applications) - List all applications
 * [list_ats_applicationstatuses](#list_ats_applicationstatuses) - List all application statuses
 * [list_ats_candidates](#list_ats_candidates) - List all candidates
@@ -24,24 +27,70 @@
 * [list_ats_interviews](#list_ats_interviews) - List all interviews
 * [list_ats_jobs](#list_ats_jobs) - List all jobs
 * [list_ats_scorecards](#list_ats_scorecards) - List all scorecards
+* [patch_ats_activity](#patch_ats_activity) - Update an activity
 * [patch_ats_application](#patch_ats_application) - Update an application
 * [patch_ats_candidate](#patch_ats_candidate) - Update a candidate
 * [patch_ats_document](#patch_ats_document) - Update a document
 * [patch_ats_interview](#patch_ats_interview) - Update a interview
 * [patch_ats_job](#patch_ats_job) - Update a job
 * [patch_ats_scorecard](#patch_ats_scorecard) - Update a scorecard
+* [remove_ats_activity](#remove_ats_activity) - Remove an activity
 * [remove_ats_application](#remove_ats_application) - Remove an application
 * [remove_ats_candidate](#remove_ats_candidate) - Remove a candidate
 * [remove_ats_document](#remove_ats_document) - Remove a document
 * [remove_ats_interview](#remove_ats_interview) - Remove a interview
 * [remove_ats_job](#remove_ats_job) - Remove a job
 * [remove_ats_scorecard](#remove_ats_scorecard) - Remove a scorecard
+* [update_ats_activity](#update_ats_activity) - Update an activity
 * [update_ats_application](#update_ats_application) - Update an application
 * [update_ats_candidate](#update_ats_candidate) - Update a candidate
 * [update_ats_document](#update_ats_document) - Update a document
 * [update_ats_interview](#update_ats_interview) - Update a interview
 * [update_ats_job](#update_ats_job) - Update a job
 * [update_ats_scorecard](#update_ats_scorecard) - Update a scorecard
+
+## create_ats_activity
+
+Create an activity
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
+
+req = operations.CreateAtsActivityRequest(
+    connection_id='<value>',
+)
+
+res = s.ats.create_ats_activity(req)
+
+if res.ats_activity is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.CreateAtsActivityRequest](../../models/operations/createatsactivityrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+
+
+### Response
+
+**[operations.CreateAtsActivityResponse](../../models/operations/createatsactivityresponse.md)**
+### Errors
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## create_ats_application
 
@@ -295,6 +344,50 @@ if res.ats_scorecard is not None:
 ### Response
 
 **[operations.CreateAtsScorecardResponse](../../models/operations/createatsscorecardresponse.md)**
+### Errors
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
+
+## get_ats_activity
+
+Retrieve an activity
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
+
+req = operations.GetAtsActivityRequest(
+    connection_id='<value>',
+    id='<id>',
+)
+
+res = s.ats.get_ats_activity(req)
+
+if res.ats_activity is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [operations.GetAtsActivityRequest](../../models/operations/getatsactivityrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+
+
+### Response
+
+**[operations.GetAtsActivityResponse](../../models/operations/getatsactivityresponse.md)**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
@@ -603,6 +696,49 @@ if res.ats_scorecard is not None:
 ### Response
 
 **[operations.GetAtsScorecardResponse](../../models/operations/getatsscorecardresponse.md)**
+### Errors
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
+
+## list_ats_activities
+
+List all activities
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
+
+req = operations.ListAtsActivitiesRequest(
+    connection_id='<value>',
+)
+
+res = s.ats.list_ats_activities(req)
+
+if res.ats_activities is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.ListAtsActivitiesRequest](../../models/operations/listatsactivitiesrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+
+
+### Response
+
+**[operations.ListAtsActivitiesResponse](../../models/operations/listatsactivitiesresponse.md)**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
@@ -953,6 +1089,50 @@ if res.ats_scorecards is not None:
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4x-5xx          | */*             |
 
+## patch_ats_activity
+
+Update an activity
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
+
+req = operations.PatchAtsActivityRequest(
+    connection_id='<value>',
+    id='<id>',
+)
+
+res = s.ats.patch_ats_activity(req)
+
+if res.ats_activity is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.PatchAtsActivityRequest](../../models/operations/patchatsactivityrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+
+
+### Response
+
+**[operations.PatchAtsActivityResponse](../../models/operations/patchatsactivityresponse.md)**
+### Errors
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
+
 ## patch_ats_application
 
 Update an application
@@ -1217,6 +1397,50 @@ if res.ats_scorecard is not None:
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4x-5xx          | */*             |
 
+## remove_ats_activity
+
+Remove an activity
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
+
+req = operations.RemoveAtsActivityRequest(
+    connection_id='<value>',
+    id='<id>',
+)
+
+res = s.ats.remove_ats_activity(req)
+
+if res.status_code == 200:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.RemoveAtsActivityRequest](../../models/operations/removeatsactivityrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+
+
+### Response
+
+**[operations.RemoveAtsActivityResponse](../../models/operations/removeatsactivityresponse.md)**
+### Errors
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
+
 ## remove_ats_application
 
 Remove an application
@@ -1475,6 +1699,50 @@ if res.status_code == 200:
 ### Response
 
 **[operations.RemoveAtsScorecardResponse](../../models/operations/removeatsscorecardresponse.md)**
+### Errors
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
+
+## update_ats_activity
+
+Update an activity
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
+
+req = operations.UpdateAtsActivityRequest(
+    connection_id='<value>',
+    id='<id>',
+)
+
+res = s.ats.update_ats_activity(req)
+
+if res.ats_activity is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.UpdateAtsActivityRequest](../../models/operations/updateatsactivityrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+
+
+### Response
+
+**[operations.UpdateAtsActivityResponse](../../models/operations/updateatsactivityresponse.md)**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |

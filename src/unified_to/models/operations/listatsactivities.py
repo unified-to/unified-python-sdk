@@ -3,19 +3,21 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ...models.shared import atsscorecard as shared_atsscorecard
+from ...models.shared import atsactivity as shared_atsactivity
 from datetime import datetime
 from typing import List, Optional
 
 
 @dataclasses.dataclass
-class ListAtsScorecardsRequest:
+class ListAtsActivitiesRequest:
     connection_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': False }})
     r"""ID of the connection"""
     application_id: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'application_id', 'style': 'form', 'explode': True }})
     r"""The application ID to filter results"""
     candidate_id: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'candidate_id', 'style': 'form', 'explode': True }})
     r"""The candidate ID to filter results"""
+    document_id: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'document_id', 'style': 'form', 'explode': True }})
+    r"""The document ID to filter results"""
     fields: Optional[List[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
     r"""Comma-delimited fields to return"""
     interview_id: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'interview_id', 'style': 'form', 'explode': True }})
@@ -30,19 +32,21 @@ class ListAtsScorecardsRequest:
     sort: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': True }})
     updated_gte: Optional[datetime] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'updated_gte', 'style': 'form', 'explode': True }})
     r"""Return only results whose updated date is equal or greater to this value"""
+    user_id: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'user_id', 'style': 'form', 'explode': True }})
+    r"""The user ID to filter results"""
     
 
 
 
 @dataclasses.dataclass
-class ListAtsScorecardsResponse:
+class ListAtsActivitiesResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
     raw_response: requests_http.Response = dataclasses.field()
     r"""Raw HTTP response; suitable for custom response parsing"""
-    ats_scorecards: Optional[List[shared_atsscorecard.AtsScorecard]] = dataclasses.field(default=None)
+    ats_activities: Optional[List[shared_atsactivity.AtsActivity]] = dataclasses.field(default=None)
     r"""Successful"""
     
 

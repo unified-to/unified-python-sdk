@@ -18,6 +18,7 @@
 | `COMMERCE_COLLECTION`     | commerce_collection       |
 | `COMMERCE_INVENTORY`      | commerce_inventory        |
 | `COMMERCE_LOCATION`       | commerce_location         |
+| `ATS_ACTIVITY`            | ats_activity              |
 | `ATS_APPLICATION`         | ats_application           |
 | `ATS_APPLICATIONSTATUS`   | ats_applicationstatus     |
 | `ATS_CANDIDATE`           | ats_candidate             |

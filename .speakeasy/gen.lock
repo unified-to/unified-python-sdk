@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: 540edc51c35db4343817668bdfafdaa0
+  docChecksum: 7bd6e19ec36f960e56c7d65cda36a422
   docVersion: "1.0"
   speakeasyVersion: internal
   generationVersion: 2.269.0
-  releaseVersion: 0.16.10
-  configChecksum: 17d3ef4fa9885cce1ecd599b0d4f40d1
+  releaseVersion: 0.16.11
+  configChecksum: 2a7d0aea1ca46039ce496c055ca5cdde
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -30,6 +30,7 @@ generatedFiles:
   - src/unified_to/taxrate.py
   - src/unified_to/transaction.py
   - src/unified_to/ats.py
+  - src/unified_to/activity.py
   - src/unified_to/application.py
   - src/unified_to/applicationstatus.py
   - src/unified_to/candidate.py
@@ -136,12 +137,14 @@ generatedFiles:
   - src/unified_to/models/operations/removeuccontact.py
   - src/unified_to/models/operations/updatecrmcontact.py
   - src/unified_to/models/operations/updateuccontact.py
+  - src/unified_to/models/operations/createatsactivity.py
   - src/unified_to/models/operations/createatsapplication.py
   - src/unified_to/models/operations/createatscandidate.py
   - src/unified_to/models/operations/createatsdocument.py
   - src/unified_to/models/operations/createatsinterview.py
   - src/unified_to/models/operations/createatsjob.py
   - src/unified_to/models/operations/createatsscorecard.py
+  - src/unified_to/models/operations/getatsactivity.py
   - src/unified_to/models/operations/getatsapplication.py
   - src/unified_to/models/operations/getatscandidate.py
   - src/unified_to/models/operations/getatscompany.py
@@ -149,6 +152,7 @@ generatedFiles:
   - src/unified_to/models/operations/getatsinterview.py
   - src/unified_to/models/operations/getatsjob.py
   - src/unified_to/models/operations/getatsscorecard.py
+  - src/unified_to/models/operations/listatsactivities.py
   - src/unified_to/models/operations/listatsapplications.py
   - src/unified_to/models/operations/listatsapplicationstatuses.py
   - src/unified_to/models/operations/listatscandidates.py
@@ -157,18 +161,21 @@ generatedFiles:
   - src/unified_to/models/operations/listatsinterviews.py
   - src/unified_to/models/operations/listatsjobs.py
   - src/unified_to/models/operations/listatsscorecards.py
+  - src/unified_to/models/operations/patchatsactivity.py
   - src/unified_to/models/operations/patchatsapplication.py
   - src/unified_to/models/operations/patchatscandidate.py
   - src/unified_to/models/operations/patchatsdocument.py
   - src/unified_to/models/operations/patchatsinterview.py
   - src/unified_to/models/operations/patchatsjob.py
   - src/unified_to/models/operations/patchatsscorecard.py
+  - src/unified_to/models/operations/removeatsactivity.py
   - src/unified_to/models/operations/removeatsapplication.py
   - src/unified_to/models/operations/removeatscandidate.py
   - src/unified_to/models/operations/removeatsdocument.py
   - src/unified_to/models/operations/removeatsinterview.py
   - src/unified_to/models/operations/removeatsjob.py
   - src/unified_to/models/operations/removeatsscorecard.py
+  - src/unified_to/models/operations/updateatsactivity.py
   - src/unified_to/models/operations/updateatsapplication.py
   - src/unified_to/models/operations/updateatscandidate.py
   - src/unified_to/models/operations/updateatsdocument.py
@@ -327,6 +334,7 @@ generatedFiles:
   - src/unified_to/models/shared/uccontact.py
   - src/unified_to/models/shared/uctelephone.py
   - src/unified_to/models/shared/ucemail.py
+  - src/unified_to/models/shared/atsactivity.py
   - src/unified_to/models/shared/atsapplication.py
   - src/unified_to/models/shared/atsapplicationanswer.py
   - src/unified_to/models/shared/atscandidate.py
@@ -514,6 +522,8 @@ generatedFiles:
   - docs/models/operations/updatecrmcontactresponse.md
   - docs/models/operations/updateuccontactrequest.md
   - docs/models/operations/updateuccontactresponse.md
+  - docs/models/operations/createatsactivityrequest.md
+  - docs/models/operations/createatsactivityresponse.md
   - docs/models/operations/createatsapplicationrequest.md
   - docs/models/operations/createatsapplicationresponse.md
   - docs/models/operations/createatscandidaterequest.md
@@ -526,6 +536,8 @@ generatedFiles:
   - docs/models/operations/createatsjobresponse.md
   - docs/models/operations/createatsscorecardrequest.md
   - docs/models/operations/createatsscorecardresponse.md
+  - docs/models/operations/getatsactivityrequest.md
+  - docs/models/operations/getatsactivityresponse.md
   - docs/models/operations/getatsapplicationrequest.md
   - docs/models/operations/getatsapplicationresponse.md
   - docs/models/operations/getatscandidaterequest.md
@@ -540,6 +552,8 @@ generatedFiles:
   - docs/models/operations/getatsjobresponse.md
   - docs/models/operations/getatsscorecardrequest.md
   - docs/models/operations/getatsscorecardresponse.md
+  - docs/models/operations/listatsactivitiesrequest.md
+  - docs/models/operations/listatsactivitiesresponse.md
   - docs/models/operations/listatsapplicationsrequest.md
   - docs/models/operations/listatsapplicationsresponse.md
   - docs/models/operations/listatsapplicationstatusesrequest.md
@@ -556,6 +570,8 @@ generatedFiles:
   - docs/models/operations/listatsjobsresponse.md
   - docs/models/operations/listatsscorecardsrequest.md
   - docs/models/operations/listatsscorecardsresponse.md
+  - docs/models/operations/patchatsactivityrequest.md
+  - docs/models/operations/patchatsactivityresponse.md
   - docs/models/operations/patchatsapplicationrequest.md
   - docs/models/operations/patchatsapplicationresponse.md
   - docs/models/operations/patchatscandidaterequest.md
@@ -568,6 +584,8 @@ generatedFiles:
   - docs/models/operations/patchatsjobresponse.md
   - docs/models/operations/patchatsscorecardrequest.md
   - docs/models/operations/patchatsscorecardresponse.md
+  - docs/models/operations/removeatsactivityrequest.md
+  - docs/models/operations/removeatsactivityresponse.md
   - docs/models/operations/removeatsapplicationrequest.md
   - docs/models/operations/removeatsapplicationresponse.md
   - docs/models/operations/removeatscandidaterequest.md
@@ -580,6 +598,8 @@ generatedFiles:
   - docs/models/operations/removeatsjobresponse.md
   - docs/models/operations/removeatsscorecardrequest.md
   - docs/models/operations/removeatsscorecardresponse.md
+  - docs/models/operations/updateatsactivityrequest.md
+  - docs/models/operations/updateatsactivityresponse.md
   - docs/models/operations/updateatsapplicationrequest.md
   - docs/models/operations/updateatsapplicationresponse.md
   - docs/models/operations/updateatscandidaterequest.md
@@ -888,6 +908,8 @@ generatedFiles:
   - docs/models/shared/uctelephone.md
   - docs/models/shared/ucemailtype.md
   - docs/models/shared/ucemail.md
+  - docs/models/shared/atsactivitytype.md
+  - docs/models/shared/atsactivity.md
   - docs/models/shared/atsapplicationstatus.md
   - docs/models/shared/atsapplication.md
   - docs/models/shared/atsapplicationanswer.md
@@ -1016,6 +1038,7 @@ generatedFiles:
   - docs/sdks/taxrate/README.md
   - docs/sdks/transaction/README.md
   - docs/sdks/ats/README.md
+  - docs/sdks/activity/README.md
   - docs/sdks/application/README.md
   - docs/sdks/applicationstatus/README.md
   - docs/sdks/candidate/README.md

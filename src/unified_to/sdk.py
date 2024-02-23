@@ -3,6 +3,7 @@
 import requests as requests_http
 from .account import Account
 from .accounting import Accounting
+from .activity import Activity
 from .apicall import Apicall
 from .application import Application
 from .applicationstatus import Applicationstatus
@@ -73,6 +74,7 @@ class UnifiedTo:
     taxrate: Taxrate
     transaction: Transaction
     ats: Ats
+    activity: Activity
     application: Application
     applicationstatus: Applicationstatus
     candidate: Candidate
@@ -165,6 +167,7 @@ class UnifiedTo:
         self.taxrate = Taxrate(self.sdk_configuration)
         self.transaction = Transaction(self.sdk_configuration)
         self.ats = Ats(self.sdk_configuration)
+        self.activity = Activity(self.sdk_configuration)
         self.application = Application(self.sdk_configuration)
         self.applicationstatus = Applicationstatus(self.sdk_configuration)
         self.candidate = Candidate(self.sdk_configuration)

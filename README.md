@@ -170,12 +170,14 @@ if res.accounting_account is not None:
 
 ### [ats](docs/sdks/ats/README.md)
 
+* [create_ats_activity](docs/sdks/ats/README.md#create_ats_activity) - Create an activity
 * [create_ats_application](docs/sdks/ats/README.md#create_ats_application) - Create an application
 * [create_ats_candidate](docs/sdks/ats/README.md#create_ats_candidate) - Create a candidate
 * [create_ats_document](docs/sdks/ats/README.md#create_ats_document) - Create a document
 * [create_ats_interview](docs/sdks/ats/README.md#create_ats_interview) - Create a interview
 * [create_ats_job](docs/sdks/ats/README.md#create_ats_job) - Create a job
 * [create_ats_scorecard](docs/sdks/ats/README.md#create_ats_scorecard) - Create a scorecard
+* [get_ats_activity](docs/sdks/ats/README.md#get_ats_activity) - Retrieve an activity
 * [get_ats_application](docs/sdks/ats/README.md#get_ats_application) - Retrieve an application
 * [get_ats_candidate](docs/sdks/ats/README.md#get_ats_candidate) - Retrieve a candidate
 * [get_ats_company](docs/sdks/ats/README.md#get_ats_company) - Retrieve a company
@@ -183,6 +185,7 @@ if res.accounting_account is not None:
 * [get_ats_interview](docs/sdks/ats/README.md#get_ats_interview) - Retrieve a interview
 * [get_ats_job](docs/sdks/ats/README.md#get_ats_job) - Retrieve a job
 * [get_ats_scorecard](docs/sdks/ats/README.md#get_ats_scorecard) - Retrieve a scorecard
+* [list_ats_activities](docs/sdks/ats/README.md#list_ats_activities) - List all activities
 * [list_ats_applications](docs/sdks/ats/README.md#list_ats_applications) - List all applications
 * [list_ats_applicationstatuses](docs/sdks/ats/README.md#list_ats_applicationstatuses) - List all application statuses
 * [list_ats_candidates](docs/sdks/ats/README.md#list_ats_candidates) - List all candidates
@@ -191,24 +194,36 @@ if res.accounting_account is not None:
 * [list_ats_interviews](docs/sdks/ats/README.md#list_ats_interviews) - List all interviews
 * [list_ats_jobs](docs/sdks/ats/README.md#list_ats_jobs) - List all jobs
 * [list_ats_scorecards](docs/sdks/ats/README.md#list_ats_scorecards) - List all scorecards
+* [patch_ats_activity](docs/sdks/ats/README.md#patch_ats_activity) - Update an activity
 * [patch_ats_application](docs/sdks/ats/README.md#patch_ats_application) - Update an application
 * [patch_ats_candidate](docs/sdks/ats/README.md#patch_ats_candidate) - Update a candidate
 * [patch_ats_document](docs/sdks/ats/README.md#patch_ats_document) - Update a document
 * [patch_ats_interview](docs/sdks/ats/README.md#patch_ats_interview) - Update a interview
 * [patch_ats_job](docs/sdks/ats/README.md#patch_ats_job) - Update a job
 * [patch_ats_scorecard](docs/sdks/ats/README.md#patch_ats_scorecard) - Update a scorecard
+* [remove_ats_activity](docs/sdks/ats/README.md#remove_ats_activity) - Remove an activity
 * [remove_ats_application](docs/sdks/ats/README.md#remove_ats_application) - Remove an application
 * [remove_ats_candidate](docs/sdks/ats/README.md#remove_ats_candidate) - Remove a candidate
 * [remove_ats_document](docs/sdks/ats/README.md#remove_ats_document) - Remove a document
 * [remove_ats_interview](docs/sdks/ats/README.md#remove_ats_interview) - Remove a interview
 * [remove_ats_job](docs/sdks/ats/README.md#remove_ats_job) - Remove a job
 * [remove_ats_scorecard](docs/sdks/ats/README.md#remove_ats_scorecard) - Remove a scorecard
+* [update_ats_activity](docs/sdks/ats/README.md#update_ats_activity) - Update an activity
 * [update_ats_application](docs/sdks/ats/README.md#update_ats_application) - Update an application
 * [update_ats_candidate](docs/sdks/ats/README.md#update_ats_candidate) - Update a candidate
 * [update_ats_document](docs/sdks/ats/README.md#update_ats_document) - Update a document
 * [update_ats_interview](docs/sdks/ats/README.md#update_ats_interview) - Update a interview
 * [update_ats_job](docs/sdks/ats/README.md#update_ats_job) - Update a job
 * [update_ats_scorecard](docs/sdks/ats/README.md#update_ats_scorecard) - Update a scorecard
+
+### [activity](docs/sdks/activity/README.md)
+
+* [create_ats_activity](docs/sdks/activity/README.md#create_ats_activity) - Create an activity
+* [get_ats_activity](docs/sdks/activity/README.md#get_ats_activity) - Retrieve an activity
+* [list_ats_activities](docs/sdks/activity/README.md#list_ats_activities) - List all activities
+* [patch_ats_activity](docs/sdks/activity/README.md#patch_ats_activity) - Update an activity
+* [remove_ats_activity](docs/sdks/activity/README.md#remove_ats_activity) - Remove an activity
+* [update_ats_activity](docs/sdks/activity/README.md#update_ats_activity) - Update an activity
 
 ### [application](docs/sdks/application/README.md)
 

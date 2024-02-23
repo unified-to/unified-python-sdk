@@ -1,4 +1,4 @@
-# ListAtsScorecardsRequest
+# ListAtsActivitiesRequest
 
 
 ## Fields
@@ -8,6 +8,7 @@
 | `connection_id`                                                          | *str*                                                                    | :heavy_check_mark:                                                       | ID of the connection                                                     |
 | `application_id`                                                         | *Optional[str]*                                                          | :heavy_minus_sign:                                                       | The application ID to filter results                                     |
 | `candidate_id`                                                           | *Optional[str]*                                                          | :heavy_minus_sign:                                                       | The candidate ID to filter results                                       |
+| `document_id`                                                            | *Optional[str]*                                                          | :heavy_minus_sign:                                                       | The document ID to filter results                                        |
 | `fields`                                                                 | List[*str*]                                                              | :heavy_minus_sign:                                                       | Comma-delimited fields to return                                         |
 | `interview_id`                                                           | *Optional[str]*                                                          | :heavy_minus_sign:                                                       | The interview ID to filter results                                       |
 | `job_id`                                                                 | *Optional[str]*                                                          | :heavy_minus_sign:                                                       | The job ID to filter results                                             |
@@ -17,3 +18,4 @@
 | `query`                                                                  | *Optional[str]*                                                          | :heavy_minus_sign:                                                       | Query string to search. eg. email address or name                        |
 | `sort`                                                                   | *Optional[str]*                                                          | :heavy_minus_sign:                                                       | N/A                                                                      |
 | `updated_gte`                                                            | [date](https://docs.python.org/3/library/datetime.html#date-objects)     | :heavy_minus_sign:                                                       | Return only results whose updated date is equal or greater to this value |
+| `user_id`                                                                | *Optional[str]*                                                          | :heavy_minus_sign:                                                       | The user ID to filter results                                            |
