@@ -13,7 +13,7 @@ class Payment:
         
     
     
-    def create_accounting_payment(self, request: operations.CreateAccountingPaymentRequest) -> operations.CreateAccountingPaymentResponse:
+    def create_accounting_payment(self, request: operations.CreateAccountingPaymentRequest, security: operations.CreateAccountingPaymentSecurity) -> operations.CreateAccountingPaymentResponse:
         r"""Create a payment"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -25,10 +25,7 @@ class Payment:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -48,7 +45,7 @@ class Payment:
 
     
     
-    def get_accounting_payment(self, request: operations.GetAccountingPaymentRequest) -> operations.GetAccountingPaymentResponse:
+    def get_accounting_payment(self, request: operations.GetAccountingPaymentRequest, security: operations.GetAccountingPaymentSecurity) -> operations.GetAccountingPaymentResponse:
         r"""Retrieve a payment"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -58,10 +55,7 @@ class Payment:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -81,7 +75,7 @@ class Payment:
 
     
     
-    def list_accounting_payments(self, request: operations.ListAccountingPaymentsRequest) -> operations.ListAccountingPaymentsResponse:
+    def list_accounting_payments(self, request: operations.ListAccountingPaymentsRequest, security: operations.ListAccountingPaymentsSecurity) -> operations.ListAccountingPaymentsResponse:
         r"""List all payments"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -91,10 +85,7 @@ class Payment:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -114,7 +105,7 @@ class Payment:
 
     
     
-    def patch_accounting_payment(self, request: operations.PatchAccountingPaymentRequest) -> operations.PatchAccountingPaymentResponse:
+    def patch_accounting_payment(self, request: operations.PatchAccountingPaymentRequest, security: operations.PatchAccountingPaymentSecurity) -> operations.PatchAccountingPaymentResponse:
         r"""Update a payment"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -126,10 +117,7 @@ class Payment:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -149,7 +137,7 @@ class Payment:
 
     
     
-    def remove_accounting_payment(self, request: operations.RemoveAccountingPaymentRequest) -> operations.RemoveAccountingPaymentResponse:
+    def remove_accounting_payment(self, request: operations.RemoveAccountingPaymentRequest, security: operations.RemoveAccountingPaymentSecurity) -> operations.RemoveAccountingPaymentResponse:
         r"""Remove a payment"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -158,10 +146,7 @@ class Payment:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -180,7 +165,7 @@ class Payment:
 
     
     
-    def update_accounting_payment(self, request: operations.UpdateAccountingPaymentRequest) -> operations.UpdateAccountingPaymentResponse:
+    def update_accounting_payment(self, request: operations.UpdateAccountingPaymentRequest, security: operations.UpdateAccountingPaymentSecurity) -> operations.UpdateAccountingPaymentResponse:
         r"""Update a payment"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -192,10 +177,7 @@ class Payment:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')

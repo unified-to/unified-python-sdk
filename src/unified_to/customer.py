@@ -13,7 +13,7 @@ class Customer:
         
     
     
-    def create_ticketing_customer(self, request: operations.CreateTicketingCustomerRequest) -> operations.CreateTicketingCustomerResponse:
+    def create_ticketing_customer(self, request: operations.CreateTicketingCustomerRequest, security: operations.CreateTicketingCustomerSecurity) -> operations.CreateTicketingCustomerResponse:
         r"""Create a customer"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -25,10 +25,7 @@ class Customer:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -48,7 +45,7 @@ class Customer:
 
     
     
-    def get_ticketing_customer(self, request: operations.GetTicketingCustomerRequest) -> operations.GetTicketingCustomerResponse:
+    def get_ticketing_customer(self, request: operations.GetTicketingCustomerRequest, security: operations.GetTicketingCustomerSecurity) -> operations.GetTicketingCustomerResponse:
         r"""Retrieve a customer"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -58,10 +55,7 @@ class Customer:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -81,7 +75,7 @@ class Customer:
 
     
     
-    def list_ticketing_customers(self, request: operations.ListTicketingCustomersRequest) -> operations.ListTicketingCustomersResponse:
+    def list_ticketing_customers(self, request: operations.ListTicketingCustomersRequest, security: operations.ListTicketingCustomersSecurity) -> operations.ListTicketingCustomersResponse:
         r"""List all customers"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -91,10 +85,7 @@ class Customer:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -114,7 +105,7 @@ class Customer:
 
     
     
-    def patch_ticketing_customer(self, request: operations.PatchTicketingCustomerRequest) -> operations.PatchTicketingCustomerResponse:
+    def patch_ticketing_customer(self, request: operations.PatchTicketingCustomerRequest, security: operations.PatchTicketingCustomerSecurity) -> operations.PatchTicketingCustomerResponse:
         r"""Update a customer"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -126,10 +117,7 @@ class Customer:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -149,7 +137,7 @@ class Customer:
 
     
     
-    def remove_ticketing_customer(self, request: operations.RemoveTicketingCustomerRequest) -> operations.RemoveTicketingCustomerResponse:
+    def remove_ticketing_customer(self, request: operations.RemoveTicketingCustomerRequest, security: operations.RemoveTicketingCustomerSecurity) -> operations.RemoveTicketingCustomerResponse:
         r"""Remove a customer"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -158,10 +146,7 @@ class Customer:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -180,7 +165,7 @@ class Customer:
 
     
     
-    def update_ticketing_customer(self, request: operations.UpdateTicketingCustomerRequest) -> operations.UpdateTicketingCustomerResponse:
+    def update_ticketing_customer(self, request: operations.UpdateTicketingCustomerRequest, security: operations.UpdateTicketingCustomerSecurity) -> operations.UpdateTicketingCustomerResponse:
         r"""Update a customer"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -192,10 +177,7 @@ class Customer:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')

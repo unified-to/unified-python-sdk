@@ -19,19 +19,17 @@ pip install Unified-python-sdk
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 req = operations.CreateAccountingAccountRequest(
     connection_id='<value>',
 )
 
-res = s.accounting.create_accounting_account(req)
+res = s.accounting.create_accounting_account(req, operations.CreateAccountingAccountSecurity(
+    jwt="<YOUR_API_KEY_HERE>",
+))
 
 if res.accounting_account is not None:
     # handle response
@@ -679,13 +677,9 @@ Handling errors in this SDK should largely match your expectations.  All operati
 
 ```python
 import unified_to
-from unified_to.models import errors, operations, shared
+from unified_to.models import errors, operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 req = operations.CreateAccountingAccountRequest(
     connection_id='<value>',
@@ -693,7 +687,9 @@ req = operations.CreateAccountingAccountRequest(
 
 res = None
 try:
-    res = s.accounting.create_accounting_account(req)
+    res = s.accounting.create_accounting_account(req, operations.CreateAccountingAccountSecurity(
+    jwt="<YOUR_API_KEY_HERE>",
+))
 except errors.SDKError as e:
     # handle exception
     raise(e)
@@ -722,20 +718,19 @@ You can override the default server globally by passing a server index to the `s
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
 s = unified_to.UnifiedTo(
     server_idx=1,
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
 )
 
 req = operations.CreateAccountingAccountRequest(
     connection_id='<value>',
 )
 
-res = s.accounting.create_accounting_account(req)
+res = s.accounting.create_accounting_account(req, operations.CreateAccountingAccountSecurity(
+    jwt="<YOUR_API_KEY_HERE>",
+))
 
 if res.accounting_account is not None:
     # handle response
@@ -748,20 +743,19 @@ if res.accounting_account is not None:
 The default server can also be overridden globally by passing a URL to the `server_url: str` optional parameter when initializing the SDK client instance. For example:
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
 s = unified_to.UnifiedTo(
     server_url="https://api.unified.to",
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
 )
 
 req = operations.CreateAccountingAccountRequest(
     connection_id='<value>',
 )
 
-res = s.accounting.create_accounting_account(req)
+res = s.accounting.create_accounting_account(req, operations.CreateAccountingAccountSecurity(
+    jwt="<YOUR_API_KEY_HERE>",
+))
 
 if res.accounting_account is not None:
     # handle response
@@ -788,40 +782,6 @@ s = unified_to.UnifiedTo(client: http_client)
 <!-- End Custom HTTP Client [http-client] -->
 
 
-
-<!-- Start Authentication [security] -->
-## Authentication
-
-### Per-Client Security Schemes
-
-This SDK supports the following security scheme globally:
-
-| Name    | Type    | Scheme  |
-| ------- | ------- | ------- |
-| `jwt`   | apiKey  | API key |
-
-You can set the security parameters through the `security` optional parameter when initializing the SDK client instance. For example:
-```python
-import unified_to
-from unified_to.models import operations, shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
-
-req = operations.CreateAccountingAccountRequest(
-    connection_id='<value>',
-)
-
-res = s.accounting.create_accounting_account(req)
-
-if res.accounting_account is not None:
-    # handle response
-    pass
-```
-<!-- End Authentication [security] -->
 
 <!-- Placeholder for Future Speakeasy SDK Sections -->
 

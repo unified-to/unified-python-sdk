@@ -13,7 +13,7 @@ class ListT:
         
     
     
-    def create_martech_list(self, request: operations.CreateMartechListRequest) -> operations.CreateMartechListResponse:
+    def create_martech_list(self, request: operations.CreateMartechListRequest, security: operations.CreateMartechListSecurity) -> operations.CreateMartechListResponse:
         r"""Create a list"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -25,10 +25,7 @@ class ListT:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -48,7 +45,7 @@ class ListT:
 
     
     
-    def get_martech_list(self, request: operations.GetMartechListRequest) -> operations.GetMartechListResponse:
+    def get_martech_list(self, request: operations.GetMartechListRequest, security: operations.GetMartechListSecurity) -> operations.GetMartechListResponse:
         r"""Retrieve a list"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -58,10 +55,7 @@ class ListT:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -81,7 +75,7 @@ class ListT:
 
     
     
-    def list_martech_lists(self, request: operations.ListMartechListsRequest) -> operations.ListMartechListsResponse:
+    def list_martech_lists(self, request: operations.ListMartechListsRequest, security: operations.ListMartechListsSecurity) -> operations.ListMartechListsResponse:
         r"""List all lists"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -91,10 +85,7 @@ class ListT:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -114,7 +105,7 @@ class ListT:
 
     
     
-    def patch_martech_list(self, request: operations.PatchMartechListRequest) -> operations.PatchMartechListResponse:
+    def patch_martech_list(self, request: operations.PatchMartechListRequest, security: operations.PatchMartechListSecurity) -> operations.PatchMartechListResponse:
         r"""Update a list"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -126,10 +117,7 @@ class ListT:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -149,7 +137,7 @@ class ListT:
 
     
     
-    def remove_martech_list(self, request: operations.RemoveMartechListRequest) -> operations.RemoveMartechListResponse:
+    def remove_martech_list(self, request: operations.RemoveMartechListRequest, security: operations.RemoveMartechListSecurity) -> operations.RemoveMartechListResponse:
         r"""Remove a list"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -158,10 +146,7 @@ class ListT:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -180,7 +165,7 @@ class ListT:
 
     
     
-    def update_martech_list(self, request: operations.UpdateMartechListRequest) -> operations.UpdateMartechListResponse:
+    def update_martech_list(self, request: operations.UpdateMartechListRequest, security: operations.UpdateMartechListSecurity) -> operations.UpdateMartechListResponse:
         r"""Update a list"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -192,10 +177,7 @@ class ListT:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')

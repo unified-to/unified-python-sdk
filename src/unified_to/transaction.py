@@ -13,7 +13,7 @@ class Transaction:
         
     
     
-    def create_accounting_transaction(self, request: operations.CreateAccountingTransactionRequest) -> operations.CreateAccountingTransactionResponse:
+    def create_accounting_transaction(self, request: operations.CreateAccountingTransactionRequest, security: operations.CreateAccountingTransactionSecurity) -> operations.CreateAccountingTransactionResponse:
         r"""Create a transaction"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -25,10 +25,7 @@ class Transaction:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -48,7 +45,7 @@ class Transaction:
 
     
     
-    def get_accounting_transaction(self, request: operations.GetAccountingTransactionRequest) -> operations.GetAccountingTransactionResponse:
+    def get_accounting_transaction(self, request: operations.GetAccountingTransactionRequest, security: operations.GetAccountingTransactionSecurity) -> operations.GetAccountingTransactionResponse:
         r"""Retrieve a transaction"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -58,10 +55,7 @@ class Transaction:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -81,7 +75,7 @@ class Transaction:
 
     
     
-    def list_accounting_transactions(self, request: operations.ListAccountingTransactionsRequest) -> operations.ListAccountingTransactionsResponse:
+    def list_accounting_transactions(self, request: operations.ListAccountingTransactionsRequest, security: operations.ListAccountingTransactionsSecurity) -> operations.ListAccountingTransactionsResponse:
         r"""List all transactions"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -91,10 +85,7 @@ class Transaction:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -114,7 +105,7 @@ class Transaction:
 
     
     
-    def patch_accounting_transaction(self, request: operations.PatchAccountingTransactionRequest) -> operations.PatchAccountingTransactionResponse:
+    def patch_accounting_transaction(self, request: operations.PatchAccountingTransactionRequest, security: operations.PatchAccountingTransactionSecurity) -> operations.PatchAccountingTransactionResponse:
         r"""Update a transaction"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -126,10 +117,7 @@ class Transaction:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -149,7 +137,7 @@ class Transaction:
 
     
     
-    def remove_accounting_transaction(self, request: operations.RemoveAccountingTransactionRequest) -> operations.RemoveAccountingTransactionResponse:
+    def remove_accounting_transaction(self, request: operations.RemoveAccountingTransactionRequest, security: operations.RemoveAccountingTransactionSecurity) -> operations.RemoveAccountingTransactionResponse:
         r"""Remove a transaction"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -158,10 +146,7 @@ class Transaction:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -180,7 +165,7 @@ class Transaction:
 
     
     
-    def update_accounting_transaction(self, request: operations.UpdateAccountingTransactionRequest) -> operations.UpdateAccountingTransactionResponse:
+    def update_accounting_transaction(self, request: operations.UpdateAccountingTransactionRequest, security: operations.UpdateAccountingTransactionSecurity) -> operations.UpdateAccountingTransactionResponse:
         r"""Update a transaction"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -192,10 +177,7 @@ class Transaction:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')

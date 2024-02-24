@@ -7,6 +7,13 @@ from ...models.shared import integration as shared_integration
 from enum import Enum
 from typing import List, Optional
 
+
+@dataclasses.dataclass
+class ListUnifiedIntegrationsSecurity:
+    jwt: str = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header', 'field_name': 'authorization' }})
+    
+
+
 class ListUnifiedIntegrationsQueryParamCategories(str, Enum):
     PASSTHROUGH = 'passthrough'
     HRIS = 'hris'

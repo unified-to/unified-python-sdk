@@ -13,7 +13,7 @@ class Company:
         
     
     
-    def create_crm_company(self, request: operations.CreateCrmCompanyRequest) -> operations.CreateCrmCompanyResponse:
+    def create_crm_company(self, request: operations.CreateCrmCompanyRequest, security: operations.CreateCrmCompanySecurity) -> operations.CreateCrmCompanyResponse:
         r"""Create a company"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -25,10 +25,7 @@ class Company:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -48,7 +45,7 @@ class Company:
 
     
     
-    def get_ats_company(self, request: operations.GetAtsCompanyRequest) -> operations.GetAtsCompanyResponse:
+    def get_ats_company(self, request: operations.GetAtsCompanyRequest, security: operations.GetAtsCompanySecurity) -> operations.GetAtsCompanyResponse:
         r"""Retrieve a company"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -58,10 +55,7 @@ class Company:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -81,7 +75,7 @@ class Company:
 
     
     
-    def get_crm_company(self, request: operations.GetCrmCompanyRequest) -> operations.GetCrmCompanyResponse:
+    def get_crm_company(self, request: operations.GetCrmCompanyRequest, security: operations.GetCrmCompanySecurity) -> operations.GetCrmCompanyResponse:
         r"""Retrieve a company"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -91,10 +85,7 @@ class Company:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -114,7 +105,7 @@ class Company:
 
     
     
-    def list_ats_companies(self, request: operations.ListAtsCompaniesRequest) -> operations.ListAtsCompaniesResponse:
+    def list_ats_companies(self, request: operations.ListAtsCompaniesRequest, security: operations.ListAtsCompaniesSecurity) -> operations.ListAtsCompaniesResponse:
         r"""List all companies"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -124,10 +115,7 @@ class Company:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -147,7 +135,7 @@ class Company:
 
     
     
-    def list_crm_companies(self, request: operations.ListCrmCompaniesRequest) -> operations.ListCrmCompaniesResponse:
+    def list_crm_companies(self, request: operations.ListCrmCompaniesRequest, security: operations.ListCrmCompaniesSecurity) -> operations.ListCrmCompaniesResponse:
         r"""List all companies"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -157,10 +145,7 @@ class Company:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -180,7 +165,7 @@ class Company:
 
     
     
-    def list_enrich_companies(self, request: operations.ListEnrichCompaniesRequest) -> operations.ListEnrichCompaniesResponse:
+    def list_enrich_companies(self, request: operations.ListEnrichCompaniesRequest, security: operations.ListEnrichCompaniesSecurity) -> operations.ListEnrichCompaniesResponse:
         r"""Retrieve enrichment information for a company"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -190,10 +175,7 @@ class Company:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -213,7 +195,7 @@ class Company:
 
     
     
-    def patch_crm_company(self, request: operations.PatchCrmCompanyRequest) -> operations.PatchCrmCompanyResponse:
+    def patch_crm_company(self, request: operations.PatchCrmCompanyRequest, security: operations.PatchCrmCompanySecurity) -> operations.PatchCrmCompanyResponse:
         r"""Update a company"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -225,10 +207,7 @@ class Company:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -248,7 +227,7 @@ class Company:
 
     
     
-    def remove_crm_company(self, request: operations.RemoveCrmCompanyRequest) -> operations.RemoveCrmCompanyResponse:
+    def remove_crm_company(self, request: operations.RemoveCrmCompanyRequest, security: operations.RemoveCrmCompanySecurity) -> operations.RemoveCrmCompanyResponse:
         r"""Remove a company"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -257,10 +236,7 @@ class Company:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -279,7 +255,7 @@ class Company:
 
     
     
-    def update_crm_company(self, request: operations.UpdateCrmCompanyRequest) -> operations.UpdateCrmCompanyResponse:
+    def update_crm_company(self, request: operations.UpdateCrmCompanyRequest, security: operations.UpdateCrmCompanySecurity) -> operations.UpdateCrmCompanyResponse:
         r"""Update a company"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -291,10 +267,7 @@ class Company:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')

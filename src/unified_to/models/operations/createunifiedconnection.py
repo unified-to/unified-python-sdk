@@ -8,6 +8,13 @@ from typing import Optional
 
 
 @dataclasses.dataclass
+class CreateUnifiedConnectionSecurity:
+    jwt: str = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header', 'field_name': 'authorization' }})
+    
+
+
+
+@dataclasses.dataclass
 class CreateUnifiedConnectionResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""

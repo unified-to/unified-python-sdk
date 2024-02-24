@@ -13,7 +13,7 @@ class Inventory:
         
     
     
-    def create_commerce_inventory(self, request: operations.CreateCommerceInventoryRequest) -> operations.CreateCommerceInventoryResponse:
+    def create_commerce_inventory(self, request: operations.CreateCommerceInventoryRequest, security: operations.CreateCommerceInventorySecurity) -> operations.CreateCommerceInventoryResponse:
         r"""Create an inventory"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -25,10 +25,7 @@ class Inventory:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -48,7 +45,7 @@ class Inventory:
 
     
     
-    def get_commerce_inventory(self, request: operations.GetCommerceInventoryRequest) -> operations.GetCommerceInventoryResponse:
+    def get_commerce_inventory(self, request: operations.GetCommerceInventoryRequest, security: operations.GetCommerceInventorySecurity) -> operations.GetCommerceInventoryResponse:
         r"""Retrieve an inventory"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -58,10 +55,7 @@ class Inventory:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -81,7 +75,7 @@ class Inventory:
 
     
     
-    def list_commerce_inventories(self, request: operations.ListCommerceInventoriesRequest) -> operations.ListCommerceInventoriesResponse:
+    def list_commerce_inventories(self, request: operations.ListCommerceInventoriesRequest, security: operations.ListCommerceInventoriesSecurity) -> operations.ListCommerceInventoriesResponse:
         r"""List all inventories"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -91,10 +85,7 @@ class Inventory:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -114,7 +105,7 @@ class Inventory:
 
     
     
-    def patch_commerce_inventory(self, request: operations.PatchCommerceInventoryRequest) -> operations.PatchCommerceInventoryResponse:
+    def patch_commerce_inventory(self, request: operations.PatchCommerceInventoryRequest, security: operations.PatchCommerceInventorySecurity) -> operations.PatchCommerceInventoryResponse:
         r"""Update an inventory"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -126,10 +117,7 @@ class Inventory:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -149,7 +137,7 @@ class Inventory:
 
     
     
-    def remove_commerce_inventory(self, request: operations.RemoveCommerceInventoryRequest) -> operations.RemoveCommerceInventoryResponse:
+    def remove_commerce_inventory(self, request: operations.RemoveCommerceInventoryRequest, security: operations.RemoveCommerceInventorySecurity) -> operations.RemoveCommerceInventoryResponse:
         r"""Remove an inventory"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -158,10 +146,7 @@ class Inventory:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -180,7 +165,7 @@ class Inventory:
 
     
     
-    def update_commerce_inventory(self, request: operations.UpdateCommerceInventoryRequest) -> operations.UpdateCommerceInventoryResponse:
+    def update_commerce_inventory(self, request: operations.UpdateCommerceInventoryRequest, security: operations.UpdateCommerceInventorySecurity) -> operations.UpdateCommerceInventoryResponse:
         r"""Update an inventory"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -192,10 +177,7 @@ class Inventory:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')

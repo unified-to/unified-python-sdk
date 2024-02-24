@@ -13,7 +13,7 @@ class Organization:
         
     
     
-    def get_accounting_organization(self, request: operations.GetAccountingOrganizationRequest) -> operations.GetAccountingOrganizationResponse:
+    def get_accounting_organization(self, request: operations.GetAccountingOrganizationRequest, security: operations.GetAccountingOrganizationSecurity) -> operations.GetAccountingOrganizationResponse:
         r"""Retrieve an organization"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -23,10 +23,7 @@ class Organization:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -46,7 +43,7 @@ class Organization:
 
     
     
-    def list_accounting_organizations(self, request: operations.ListAccountingOrganizationsRequest) -> operations.ListAccountingOrganizationsResponse:
+    def list_accounting_organizations(self, request: operations.ListAccountingOrganizationsRequest, security: operations.ListAccountingOrganizationsSecurity) -> operations.ListAccountingOrganizationsResponse:
         r"""List all organizations"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -56,10 +53,7 @@ class Organization:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')

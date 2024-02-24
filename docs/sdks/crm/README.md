@@ -48,19 +48,17 @@ Create a company
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 req = operations.CreateCrmCompanyRequest(
     connection_id='<value>',
 )
 
-res = s.crm.create_crm_company(req)
+res = s.crm.create_crm_company(req, operations.CreateCrmCompanySecurity(
+    jwt="<YOUR_API_KEY_HERE>",
+))
 
 if res.crm_company is not None:
     # handle response
@@ -69,9 +67,10 @@ if res.crm_company is not None:
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `request`                                                                                | [operations.CreateCrmCompanyRequest](../../models/operations/createcrmcompanyrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.CreateCrmCompanyRequest](../../models/operations/createcrmcompanyrequest.md)   | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `security`                                                                                 | [operations.CreateCrmCompanySecurity](../../models/operations/createcrmcompanysecurity.md) | :heavy_check_mark:                                                                         | The security requirements to use for the request.                                          |
 
 
 ### Response
@@ -91,19 +90,17 @@ Create a contact
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 req = operations.CreateCrmContactRequest(
     connection_id='<value>',
 )
 
-res = s.crm.create_crm_contact(req)
+res = s.crm.create_crm_contact(req, operations.CreateCrmContactSecurity(
+    jwt="<YOUR_API_KEY_HERE>",
+))
 
 if res.crm_contact is not None:
     # handle response
@@ -112,9 +109,10 @@ if res.crm_contact is not None:
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `request`                                                                                | [operations.CreateCrmContactRequest](../../models/operations/createcrmcontactrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.CreateCrmContactRequest](../../models/operations/createcrmcontactrequest.md)   | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `security`                                                                                 | [operations.CreateCrmContactSecurity](../../models/operations/createcrmcontactsecurity.md) | :heavy_check_mark:                                                                         | The security requirements to use for the request.                                          |
 
 
 ### Response
@@ -134,19 +132,17 @@ Create a deal
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 req = operations.CreateCrmDealRequest(
     connection_id='<value>',
 )
 
-res = s.crm.create_crm_deal(req)
+res = s.crm.create_crm_deal(req, operations.CreateCrmDealSecurity(
+    jwt="<YOUR_API_KEY_HERE>",
+))
 
 if res.crm_deal is not None:
     # handle response
@@ -155,9 +151,10 @@ if res.crm_deal is not None:
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `request`                                                                          | [operations.CreateCrmDealRequest](../../models/operations/createcrmdealrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [operations.CreateCrmDealRequest](../../models/operations/createcrmdealrequest.md)   | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `security`                                                                           | [operations.CreateCrmDealSecurity](../../models/operations/createcrmdealsecurity.md) | :heavy_check_mark:                                                                   | The security requirements to use for the request.                                    |
 
 
 ### Response
@@ -177,19 +174,17 @@ Create a event
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 req = operations.CreateCrmEventRequest(
     connection_id='<value>',
 )
 
-res = s.crm.create_crm_event(req)
+res = s.crm.create_crm_event(req, operations.CreateCrmEventSecurity(
+    jwt="<YOUR_API_KEY_HERE>",
+))
 
 if res.crm_event is not None:
     # handle response
@@ -198,9 +193,10 @@ if res.crm_event is not None:
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `request`                                                                            | [operations.CreateCrmEventRequest](../../models/operations/createcrmeventrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `request`                                                                              | [operations.CreateCrmEventRequest](../../models/operations/createcrmeventrequest.md)   | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `security`                                                                             | [operations.CreateCrmEventSecurity](../../models/operations/createcrmeventsecurity.md) | :heavy_check_mark:                                                                     | The security requirements to use for the request.                                      |
 
 
 ### Response
@@ -220,19 +216,17 @@ Create a lead
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 req = operations.CreateCrmLeadRequest(
     connection_id='<value>',
 )
 
-res = s.crm.create_crm_lead(req)
+res = s.crm.create_crm_lead(req, operations.CreateCrmLeadSecurity(
+    jwt="<YOUR_API_KEY_HERE>",
+))
 
 if res.crm_lead is not None:
     # handle response
@@ -241,9 +235,10 @@ if res.crm_lead is not None:
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `request`                                                                          | [operations.CreateCrmLeadRequest](../../models/operations/createcrmleadrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [operations.CreateCrmLeadRequest](../../models/operations/createcrmleadrequest.md)   | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `security`                                                                           | [operations.CreateCrmLeadSecurity](../../models/operations/createcrmleadsecurity.md) | :heavy_check_mark:                                                                   | The security requirements to use for the request.                                    |
 
 
 ### Response
@@ -263,19 +258,17 @@ Create a pipeline
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 req = operations.CreateCrmPipelineRequest(
     connection_id='<value>',
 )
 
-res = s.crm.create_crm_pipeline(req)
+res = s.crm.create_crm_pipeline(req, operations.CreateCrmPipelineSecurity(
+    jwt="<YOUR_API_KEY_HERE>",
+))
 
 if res.crm_pipeline is not None:
     # handle response
@@ -284,9 +277,10 @@ if res.crm_pipeline is not None:
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `request`                                                                                  | [operations.CreateCrmPipelineRequest](../../models/operations/createcrmpipelinerequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.CreateCrmPipelineRequest](../../models/operations/createcrmpipelinerequest.md)   | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `security`                                                                                   | [operations.CreateCrmPipelineSecurity](../../models/operations/createcrmpipelinesecurity.md) | :heavy_check_mark:                                                                           | The security requirements to use for the request.                                            |
 
 
 ### Response
@@ -306,20 +300,18 @@ Retrieve a company
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 req = operations.GetCrmCompanyRequest(
     connection_id='<value>',
     id='<id>',
 )
 
-res = s.crm.get_crm_company(req)
+res = s.crm.get_crm_company(req, operations.GetCrmCompanySecurity(
+    jwt="<YOUR_API_KEY_HERE>",
+))
 
 if res.crm_company is not None:
     # handle response
@@ -328,9 +320,10 @@ if res.crm_company is not None:
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `request`                                                                          | [operations.GetCrmCompanyRequest](../../models/operations/getcrmcompanyrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [operations.GetCrmCompanyRequest](../../models/operations/getcrmcompanyrequest.md)   | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `security`                                                                           | [operations.GetCrmCompanySecurity](../../models/operations/getcrmcompanysecurity.md) | :heavy_check_mark:                                                                   | The security requirements to use for the request.                                    |
 
 
 ### Response
@@ -350,20 +343,18 @@ Retrieve a contact
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 req = operations.GetCrmContactRequest(
     connection_id='<value>',
     id='<id>',
 )
 
-res = s.crm.get_crm_contact(req)
+res = s.crm.get_crm_contact(req, operations.GetCrmContactSecurity(
+    jwt="<YOUR_API_KEY_HERE>",
+))
 
 if res.crm_contact is not None:
     # handle response
@@ -372,9 +363,10 @@ if res.crm_contact is not None:
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `request`                                                                          | [operations.GetCrmContactRequest](../../models/operations/getcrmcontactrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [operations.GetCrmContactRequest](../../models/operations/getcrmcontactrequest.md)   | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `security`                                                                           | [operations.GetCrmContactSecurity](../../models/operations/getcrmcontactsecurity.md) | :heavy_check_mark:                                                                   | The security requirements to use for the request.                                    |
 
 
 ### Response
@@ -394,20 +386,18 @@ Retrieve a deal
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 req = operations.GetCrmDealRequest(
     connection_id='<value>',
     id='<id>',
 )
 
-res = s.crm.get_crm_deal(req)
+res = s.crm.get_crm_deal(req, operations.GetCrmDealSecurity(
+    jwt="<YOUR_API_KEY_HERE>",
+))
 
 if res.crm_deal is not None:
     # handle response
@@ -416,9 +406,10 @@ if res.crm_deal is not None:
 
 ### Parameters
 
-| Parameter                                                                    | Type                                                                         | Required                                                                     | Description                                                                  |
-| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| `request`                                                                    | [operations.GetCrmDealRequest](../../models/operations/getcrmdealrequest.md) | :heavy_check_mark:                                                           | The request object to use for the request.                                   |
+| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| `request`                                                                      | [operations.GetCrmDealRequest](../../models/operations/getcrmdealrequest.md)   | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
+| `security`                                                                     | [operations.GetCrmDealSecurity](../../models/operations/getcrmdealsecurity.md) | :heavy_check_mark:                                                             | The security requirements to use for the request.                              |
 
 
 ### Response
@@ -438,20 +429,18 @@ Retrieve a event
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 req = operations.GetCrmEventRequest(
     connection_id='<value>',
     id='<id>',
 )
 
-res = s.crm.get_crm_event(req)
+res = s.crm.get_crm_event(req, operations.GetCrmEventSecurity(
+    jwt="<YOUR_API_KEY_HERE>",
+))
 
 if res.crm_event is not None:
     # handle response
@@ -460,9 +449,10 @@ if res.crm_event is not None:
 
 ### Parameters
 
-| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
-| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
-| `request`                                                                      | [operations.GetCrmEventRequest](../../models/operations/getcrmeventrequest.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
+| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `request`                                                                        | [operations.GetCrmEventRequest](../../models/operations/getcrmeventrequest.md)   | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
+| `security`                                                                       | [operations.GetCrmEventSecurity](../../models/operations/getcrmeventsecurity.md) | :heavy_check_mark:                                                               | The security requirements to use for the request.                                |
 
 
 ### Response
@@ -482,20 +472,18 @@ Retrieve a lead
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 req = operations.GetCrmLeadRequest(
     connection_id='<value>',
     id='<id>',
 )
 
-res = s.crm.get_crm_lead(req)
+res = s.crm.get_crm_lead(req, operations.GetCrmLeadSecurity(
+    jwt="<YOUR_API_KEY_HERE>",
+))
 
 if res.crm_lead is not None:
     # handle response
@@ -504,9 +492,10 @@ if res.crm_lead is not None:
 
 ### Parameters
 
-| Parameter                                                                    | Type                                                                         | Required                                                                     | Description                                                                  |
-| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| `request`                                                                    | [operations.GetCrmLeadRequest](../../models/operations/getcrmleadrequest.md) | :heavy_check_mark:                                                           | The request object to use for the request.                                   |
+| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| `request`                                                                      | [operations.GetCrmLeadRequest](../../models/operations/getcrmleadrequest.md)   | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
+| `security`                                                                     | [operations.GetCrmLeadSecurity](../../models/operations/getcrmleadsecurity.md) | :heavy_check_mark:                                                             | The security requirements to use for the request.                              |
 
 
 ### Response
@@ -526,20 +515,18 @@ Retrieve a pipeline
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 req = operations.GetCrmPipelineRequest(
     connection_id='<value>',
     id='<id>',
 )
 
-res = s.crm.get_crm_pipeline(req)
+res = s.crm.get_crm_pipeline(req, operations.GetCrmPipelineSecurity(
+    jwt="<YOUR_API_KEY_HERE>",
+))
 
 if res.crm_pipeline is not None:
     # handle response
@@ -548,9 +535,10 @@ if res.crm_pipeline is not None:
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `request`                                                                            | [operations.GetCrmPipelineRequest](../../models/operations/getcrmpipelinerequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `request`                                                                              | [operations.GetCrmPipelineRequest](../../models/operations/getcrmpipelinerequest.md)   | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `security`                                                                             | [operations.GetCrmPipelineSecurity](../../models/operations/getcrmpipelinesecurity.md) | :heavy_check_mark:                                                                     | The security requirements to use for the request.                                      |
 
 
 ### Response
@@ -570,19 +558,17 @@ List all companies
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 req = operations.ListCrmCompaniesRequest(
     connection_id='<value>',
 )
 
-res = s.crm.list_crm_companies(req)
+res = s.crm.list_crm_companies(req, operations.ListCrmCompaniesSecurity(
+    jwt="<YOUR_API_KEY_HERE>",
+))
 
 if res.crm_companies is not None:
     # handle response
@@ -591,9 +577,10 @@ if res.crm_companies is not None:
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `request`                                                                                | [operations.ListCrmCompaniesRequest](../../models/operations/listcrmcompaniesrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.ListCrmCompaniesRequest](../../models/operations/listcrmcompaniesrequest.md)   | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `security`                                                                                 | [operations.ListCrmCompaniesSecurity](../../models/operations/listcrmcompaniessecurity.md) | :heavy_check_mark:                                                                         | The security requirements to use for the request.                                          |
 
 
 ### Response
@@ -613,19 +600,17 @@ List all contacts
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 req = operations.ListCrmContactsRequest(
     connection_id='<value>',
 )
 
-res = s.crm.list_crm_contacts(req)
+res = s.crm.list_crm_contacts(req, operations.ListCrmContactsSecurity(
+    jwt="<YOUR_API_KEY_HERE>",
+))
 
 if res.crm_contacts is not None:
     # handle response
@@ -634,9 +619,10 @@ if res.crm_contacts is not None:
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `request`                                                                              | [operations.ListCrmContactsRequest](../../models/operations/listcrmcontactsrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.ListCrmContactsRequest](../../models/operations/listcrmcontactsrequest.md)   | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `security`                                                                               | [operations.ListCrmContactsSecurity](../../models/operations/listcrmcontactssecurity.md) | :heavy_check_mark:                                                                       | The security requirements to use for the request.                                        |
 
 
 ### Response
@@ -656,19 +642,17 @@ List all deals
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 req = operations.ListCrmDealsRequest(
     connection_id='<value>',
 )
 
-res = s.crm.list_crm_deals(req)
+res = s.crm.list_crm_deals(req, operations.ListCrmDealsSecurity(
+    jwt="<YOUR_API_KEY_HERE>",
+))
 
 if res.crm_deals is not None:
     # handle response
@@ -677,9 +661,10 @@ if res.crm_deals is not None:
 
 ### Parameters
 
-| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `request`                                                                        | [operations.ListCrmDealsRequest](../../models/operations/listcrmdealsrequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `request`                                                                          | [operations.ListCrmDealsRequest](../../models/operations/listcrmdealsrequest.md)   | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| `security`                                                                         | [operations.ListCrmDealsSecurity](../../models/operations/listcrmdealssecurity.md) | :heavy_check_mark:                                                                 | The security requirements to use for the request.                                  |
 
 
 ### Response
@@ -699,19 +684,17 @@ List all events
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 req = operations.ListCrmEventsRequest(
     connection_id='<value>',
 )
 
-res = s.crm.list_crm_events(req)
+res = s.crm.list_crm_events(req, operations.ListCrmEventsSecurity(
+    jwt="<YOUR_API_KEY_HERE>",
+))
 
 if res.crm_events is not None:
     # handle response
@@ -720,9 +703,10 @@ if res.crm_events is not None:
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `request`                                                                          | [operations.ListCrmEventsRequest](../../models/operations/listcrmeventsrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [operations.ListCrmEventsRequest](../../models/operations/listcrmeventsrequest.md)   | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `security`                                                                           | [operations.ListCrmEventsSecurity](../../models/operations/listcrmeventssecurity.md) | :heavy_check_mark:                                                                   | The security requirements to use for the request.                                    |
 
 
 ### Response
@@ -742,19 +726,17 @@ List all leads
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 req = operations.ListCrmLeadsRequest(
     connection_id='<value>',
 )
 
-res = s.crm.list_crm_leads(req)
+res = s.crm.list_crm_leads(req, operations.ListCrmLeadsSecurity(
+    jwt="<YOUR_API_KEY_HERE>",
+))
 
 if res.crm_leads is not None:
     # handle response
@@ -763,9 +745,10 @@ if res.crm_leads is not None:
 
 ### Parameters
 
-| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `request`                                                                        | [operations.ListCrmLeadsRequest](../../models/operations/listcrmleadsrequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `request`                                                                          | [operations.ListCrmLeadsRequest](../../models/operations/listcrmleadsrequest.md)   | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| `security`                                                                         | [operations.ListCrmLeadsSecurity](../../models/operations/listcrmleadssecurity.md) | :heavy_check_mark:                                                                 | The security requirements to use for the request.                                  |
 
 
 ### Response
@@ -785,19 +768,17 @@ List all pipelines
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 req = operations.ListCrmPipelinesRequest(
     connection_id='<value>',
 )
 
-res = s.crm.list_crm_pipelines(req)
+res = s.crm.list_crm_pipelines(req, operations.ListCrmPipelinesSecurity(
+    jwt="<YOUR_API_KEY_HERE>",
+))
 
 if res.crm_pipelines is not None:
     # handle response
@@ -806,9 +787,10 @@ if res.crm_pipelines is not None:
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `request`                                                                                | [operations.ListCrmPipelinesRequest](../../models/operations/listcrmpipelinesrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.ListCrmPipelinesRequest](../../models/operations/listcrmpipelinesrequest.md)   | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `security`                                                                                 | [operations.ListCrmPipelinesSecurity](../../models/operations/listcrmpipelinessecurity.md) | :heavy_check_mark:                                                                         | The security requirements to use for the request.                                          |
 
 
 ### Response
@@ -828,20 +810,18 @@ Update a company
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 req = operations.PatchCrmCompanyRequest(
     connection_id='<value>',
     id='<id>',
 )
 
-res = s.crm.patch_crm_company(req)
+res = s.crm.patch_crm_company(req, operations.PatchCrmCompanySecurity(
+    jwt="<YOUR_API_KEY_HERE>",
+))
 
 if res.crm_company is not None:
     # handle response
@@ -850,9 +830,10 @@ if res.crm_company is not None:
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `request`                                                                              | [operations.PatchCrmCompanyRequest](../../models/operations/patchcrmcompanyrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.PatchCrmCompanyRequest](../../models/operations/patchcrmcompanyrequest.md)   | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `security`                                                                               | [operations.PatchCrmCompanySecurity](../../models/operations/patchcrmcompanysecurity.md) | :heavy_check_mark:                                                                       | The security requirements to use for the request.                                        |
 
 
 ### Response
@@ -872,20 +853,18 @@ Update a contact
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 req = operations.PatchCrmContactRequest(
     connection_id='<value>',
     id='<id>',
 )
 
-res = s.crm.patch_crm_contact(req)
+res = s.crm.patch_crm_contact(req, operations.PatchCrmContactSecurity(
+    jwt="<YOUR_API_KEY_HERE>",
+))
 
 if res.crm_contact is not None:
     # handle response
@@ -894,9 +873,10 @@ if res.crm_contact is not None:
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `request`                                                                              | [operations.PatchCrmContactRequest](../../models/operations/patchcrmcontactrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.PatchCrmContactRequest](../../models/operations/patchcrmcontactrequest.md)   | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `security`                                                                               | [operations.PatchCrmContactSecurity](../../models/operations/patchcrmcontactsecurity.md) | :heavy_check_mark:                                                                       | The security requirements to use for the request.                                        |
 
 
 ### Response
@@ -916,20 +896,18 @@ Update a deal
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 req = operations.PatchCrmDealRequest(
     connection_id='<value>',
     id='<id>',
 )
 
-res = s.crm.patch_crm_deal(req)
+res = s.crm.patch_crm_deal(req, operations.PatchCrmDealSecurity(
+    jwt="<YOUR_API_KEY_HERE>",
+))
 
 if res.crm_deal is not None:
     # handle response
@@ -938,9 +916,10 @@ if res.crm_deal is not None:
 
 ### Parameters
 
-| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `request`                                                                        | [operations.PatchCrmDealRequest](../../models/operations/patchcrmdealrequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `request`                                                                          | [operations.PatchCrmDealRequest](../../models/operations/patchcrmdealrequest.md)   | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| `security`                                                                         | [operations.PatchCrmDealSecurity](../../models/operations/patchcrmdealsecurity.md) | :heavy_check_mark:                                                                 | The security requirements to use for the request.                                  |
 
 
 ### Response
@@ -960,20 +939,18 @@ Update a event
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 req = operations.PatchCrmEventRequest(
     connection_id='<value>',
     id='<id>',
 )
 
-res = s.crm.patch_crm_event(req)
+res = s.crm.patch_crm_event(req, operations.PatchCrmEventSecurity(
+    jwt="<YOUR_API_KEY_HERE>",
+))
 
 if res.crm_event is not None:
     # handle response
@@ -982,9 +959,10 @@ if res.crm_event is not None:
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `request`                                                                          | [operations.PatchCrmEventRequest](../../models/operations/patchcrmeventrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [operations.PatchCrmEventRequest](../../models/operations/patchcrmeventrequest.md)   | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `security`                                                                           | [operations.PatchCrmEventSecurity](../../models/operations/patchcrmeventsecurity.md) | :heavy_check_mark:                                                                   | The security requirements to use for the request.                                    |
 
 
 ### Response
@@ -1004,20 +982,18 @@ Update a lead
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 req = operations.PatchCrmLeadRequest(
     connection_id='<value>',
     id='<id>',
 )
 
-res = s.crm.patch_crm_lead(req)
+res = s.crm.patch_crm_lead(req, operations.PatchCrmLeadSecurity(
+    jwt="<YOUR_API_KEY_HERE>",
+))
 
 if res.crm_lead is not None:
     # handle response
@@ -1026,9 +1002,10 @@ if res.crm_lead is not None:
 
 ### Parameters
 
-| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `request`                                                                        | [operations.PatchCrmLeadRequest](../../models/operations/patchcrmleadrequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `request`                                                                          | [operations.PatchCrmLeadRequest](../../models/operations/patchcrmleadrequest.md)   | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| `security`                                                                         | [operations.PatchCrmLeadSecurity](../../models/operations/patchcrmleadsecurity.md) | :heavy_check_mark:                                                                 | The security requirements to use for the request.                                  |
 
 
 ### Response
@@ -1048,20 +1025,18 @@ Update a pipeline
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 req = operations.PatchCrmPipelineRequest(
     connection_id='<value>',
     id='<id>',
 )
 
-res = s.crm.patch_crm_pipeline(req)
+res = s.crm.patch_crm_pipeline(req, operations.PatchCrmPipelineSecurity(
+    jwt="<YOUR_API_KEY_HERE>",
+))
 
 if res.crm_pipeline is not None:
     # handle response
@@ -1070,9 +1045,10 @@ if res.crm_pipeline is not None:
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `request`                                                                                | [operations.PatchCrmPipelineRequest](../../models/operations/patchcrmpipelinerequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.PatchCrmPipelineRequest](../../models/operations/patchcrmpipelinerequest.md)   | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `security`                                                                                 | [operations.PatchCrmPipelineSecurity](../../models/operations/patchcrmpipelinesecurity.md) | :heavy_check_mark:                                                                         | The security requirements to use for the request.                                          |
 
 
 ### Response
@@ -1092,20 +1068,18 @@ Remove a company
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 req = operations.RemoveCrmCompanyRequest(
     connection_id='<value>',
     id='<id>',
 )
 
-res = s.crm.remove_crm_company(req)
+res = s.crm.remove_crm_company(req, operations.RemoveCrmCompanySecurity(
+    jwt="<YOUR_API_KEY_HERE>",
+))
 
 if res.status_code == 200:
     # handle response
@@ -1114,9 +1088,10 @@ if res.status_code == 200:
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `request`                                                                                | [operations.RemoveCrmCompanyRequest](../../models/operations/removecrmcompanyrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.RemoveCrmCompanyRequest](../../models/operations/removecrmcompanyrequest.md)   | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `security`                                                                                 | [operations.RemoveCrmCompanySecurity](../../models/operations/removecrmcompanysecurity.md) | :heavy_check_mark:                                                                         | The security requirements to use for the request.                                          |
 
 
 ### Response
@@ -1136,20 +1111,18 @@ Remove a contact
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 req = operations.RemoveCrmContactRequest(
     connection_id='<value>',
     id='<id>',
 )
 
-res = s.crm.remove_crm_contact(req)
+res = s.crm.remove_crm_contact(req, operations.RemoveCrmContactSecurity(
+    jwt="<YOUR_API_KEY_HERE>",
+))
 
 if res.status_code == 200:
     # handle response
@@ -1158,9 +1131,10 @@ if res.status_code == 200:
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `request`                                                                                | [operations.RemoveCrmContactRequest](../../models/operations/removecrmcontactrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.RemoveCrmContactRequest](../../models/operations/removecrmcontactrequest.md)   | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `security`                                                                                 | [operations.RemoveCrmContactSecurity](../../models/operations/removecrmcontactsecurity.md) | :heavy_check_mark:                                                                         | The security requirements to use for the request.                                          |
 
 
 ### Response
@@ -1180,20 +1154,18 @@ Remove a deal
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 req = operations.RemoveCrmDealRequest(
     connection_id='<value>',
     id='<id>',
 )
 
-res = s.crm.remove_crm_deal(req)
+res = s.crm.remove_crm_deal(req, operations.RemoveCrmDealSecurity(
+    jwt="<YOUR_API_KEY_HERE>",
+))
 
 if res.status_code == 200:
     # handle response
@@ -1202,9 +1174,10 @@ if res.status_code == 200:
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `request`                                                                          | [operations.RemoveCrmDealRequest](../../models/operations/removecrmdealrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [operations.RemoveCrmDealRequest](../../models/operations/removecrmdealrequest.md)   | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `security`                                                                           | [operations.RemoveCrmDealSecurity](../../models/operations/removecrmdealsecurity.md) | :heavy_check_mark:                                                                   | The security requirements to use for the request.                                    |
 
 
 ### Response
@@ -1224,20 +1197,18 @@ Remove a event
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 req = operations.RemoveCrmEventRequest(
     connection_id='<value>',
     id='<id>',
 )
 
-res = s.crm.remove_crm_event(req)
+res = s.crm.remove_crm_event(req, operations.RemoveCrmEventSecurity(
+    jwt="<YOUR_API_KEY_HERE>",
+))
 
 if res.status_code == 200:
     # handle response
@@ -1246,9 +1217,10 @@ if res.status_code == 200:
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `request`                                                                            | [operations.RemoveCrmEventRequest](../../models/operations/removecrmeventrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `request`                                                                              | [operations.RemoveCrmEventRequest](../../models/operations/removecrmeventrequest.md)   | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `security`                                                                             | [operations.RemoveCrmEventSecurity](../../models/operations/removecrmeventsecurity.md) | :heavy_check_mark:                                                                     | The security requirements to use for the request.                                      |
 
 
 ### Response
@@ -1268,20 +1240,18 @@ Remove a lead
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 req = operations.RemoveCrmLeadRequest(
     connection_id='<value>',
     id='<id>',
 )
 
-res = s.crm.remove_crm_lead(req)
+res = s.crm.remove_crm_lead(req, operations.RemoveCrmLeadSecurity(
+    jwt="<YOUR_API_KEY_HERE>",
+))
 
 if res.status_code == 200:
     # handle response
@@ -1290,9 +1260,10 @@ if res.status_code == 200:
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `request`                                                                          | [operations.RemoveCrmLeadRequest](../../models/operations/removecrmleadrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [operations.RemoveCrmLeadRequest](../../models/operations/removecrmleadrequest.md)   | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `security`                                                                           | [operations.RemoveCrmLeadSecurity](../../models/operations/removecrmleadsecurity.md) | :heavy_check_mark:                                                                   | The security requirements to use for the request.                                    |
 
 
 ### Response
@@ -1312,20 +1283,18 @@ Remove a pipeline
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 req = operations.RemoveCrmPipelineRequest(
     connection_id='<value>',
     id='<id>',
 )
 
-res = s.crm.remove_crm_pipeline(req)
+res = s.crm.remove_crm_pipeline(req, operations.RemoveCrmPipelineSecurity(
+    jwt="<YOUR_API_KEY_HERE>",
+))
 
 if res.status_code == 200:
     # handle response
@@ -1334,9 +1303,10 @@ if res.status_code == 200:
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `request`                                                                                  | [operations.RemoveCrmPipelineRequest](../../models/operations/removecrmpipelinerequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.RemoveCrmPipelineRequest](../../models/operations/removecrmpipelinerequest.md)   | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `security`                                                                                   | [operations.RemoveCrmPipelineSecurity](../../models/operations/removecrmpipelinesecurity.md) | :heavy_check_mark:                                                                           | The security requirements to use for the request.                                            |
 
 
 ### Response
@@ -1356,20 +1326,18 @@ Update a company
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 req = operations.UpdateCrmCompanyRequest(
     connection_id='<value>',
     id='<id>',
 )
 
-res = s.crm.update_crm_company(req)
+res = s.crm.update_crm_company(req, operations.UpdateCrmCompanySecurity(
+    jwt="<YOUR_API_KEY_HERE>",
+))
 
 if res.crm_company is not None:
     # handle response
@@ -1378,9 +1346,10 @@ if res.crm_company is not None:
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `request`                                                                                | [operations.UpdateCrmCompanyRequest](../../models/operations/updatecrmcompanyrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.UpdateCrmCompanyRequest](../../models/operations/updatecrmcompanyrequest.md)   | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `security`                                                                                 | [operations.UpdateCrmCompanySecurity](../../models/operations/updatecrmcompanysecurity.md) | :heavy_check_mark:                                                                         | The security requirements to use for the request.                                          |
 
 
 ### Response
@@ -1400,20 +1369,18 @@ Update a contact
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 req = operations.UpdateCrmContactRequest(
     connection_id='<value>',
     id='<id>',
 )
 
-res = s.crm.update_crm_contact(req)
+res = s.crm.update_crm_contact(req, operations.UpdateCrmContactSecurity(
+    jwt="<YOUR_API_KEY_HERE>",
+))
 
 if res.crm_contact is not None:
     # handle response
@@ -1422,9 +1389,10 @@ if res.crm_contact is not None:
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `request`                                                                                | [operations.UpdateCrmContactRequest](../../models/operations/updatecrmcontactrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.UpdateCrmContactRequest](../../models/operations/updatecrmcontactrequest.md)   | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `security`                                                                                 | [operations.UpdateCrmContactSecurity](../../models/operations/updatecrmcontactsecurity.md) | :heavy_check_mark:                                                                         | The security requirements to use for the request.                                          |
 
 
 ### Response
@@ -1444,20 +1412,18 @@ Update a deal
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 req = operations.UpdateCrmDealRequest(
     connection_id='<value>',
     id='<id>',
 )
 
-res = s.crm.update_crm_deal(req)
+res = s.crm.update_crm_deal(req, operations.UpdateCrmDealSecurity(
+    jwt="<YOUR_API_KEY_HERE>",
+))
 
 if res.crm_deal is not None:
     # handle response
@@ -1466,9 +1432,10 @@ if res.crm_deal is not None:
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `request`                                                                          | [operations.UpdateCrmDealRequest](../../models/operations/updatecrmdealrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [operations.UpdateCrmDealRequest](../../models/operations/updatecrmdealrequest.md)   | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `security`                                                                           | [operations.UpdateCrmDealSecurity](../../models/operations/updatecrmdealsecurity.md) | :heavy_check_mark:                                                                   | The security requirements to use for the request.                                    |
 
 
 ### Response
@@ -1488,20 +1455,18 @@ Update a event
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 req = operations.UpdateCrmEventRequest(
     connection_id='<value>',
     id='<id>',
 )
 
-res = s.crm.update_crm_event(req)
+res = s.crm.update_crm_event(req, operations.UpdateCrmEventSecurity(
+    jwt="<YOUR_API_KEY_HERE>",
+))
 
 if res.crm_event is not None:
     # handle response
@@ -1510,9 +1475,10 @@ if res.crm_event is not None:
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `request`                                                                            | [operations.UpdateCrmEventRequest](../../models/operations/updatecrmeventrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `request`                                                                              | [operations.UpdateCrmEventRequest](../../models/operations/updatecrmeventrequest.md)   | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `security`                                                                             | [operations.UpdateCrmEventSecurity](../../models/operations/updatecrmeventsecurity.md) | :heavy_check_mark:                                                                     | The security requirements to use for the request.                                      |
 
 
 ### Response
@@ -1532,20 +1498,18 @@ Update a lead
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 req = operations.UpdateCrmLeadRequest(
     connection_id='<value>',
     id='<id>',
 )
 
-res = s.crm.update_crm_lead(req)
+res = s.crm.update_crm_lead(req, operations.UpdateCrmLeadSecurity(
+    jwt="<YOUR_API_KEY_HERE>",
+))
 
 if res.crm_lead is not None:
     # handle response
@@ -1554,9 +1518,10 @@ if res.crm_lead is not None:
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `request`                                                                          | [operations.UpdateCrmLeadRequest](../../models/operations/updatecrmleadrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [operations.UpdateCrmLeadRequest](../../models/operations/updatecrmleadrequest.md)   | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `security`                                                                           | [operations.UpdateCrmLeadSecurity](../../models/operations/updatecrmleadsecurity.md) | :heavy_check_mark:                                                                   | The security requirements to use for the request.                                    |
 
 
 ### Response
@@ -1576,20 +1541,18 @@ Update a pipeline
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 req = operations.UpdateCrmPipelineRequest(
     connection_id='<value>',
     id='<id>',
 )
 
-res = s.crm.update_crm_pipeline(req)
+res = s.crm.update_crm_pipeline(req, operations.UpdateCrmPipelineSecurity(
+    jwt="<YOUR_API_KEY_HERE>",
+))
 
 if res.crm_pipeline is not None:
     # handle response
@@ -1598,9 +1561,10 @@ if res.crm_pipeline is not None:
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `request`                                                                                  | [operations.UpdateCrmPipelineRequest](../../models/operations/updatecrmpipelinerequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.UpdateCrmPipelineRequest](../../models/operations/updatecrmpipelinerequest.md)   | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `security`                                                                                   | [operations.UpdateCrmPipelineSecurity](../../models/operations/updatecrmpipelinesecurity.md) | :heavy_check_mark:                                                                           | The security requirements to use for the request.                                            |
 
 
 ### Response

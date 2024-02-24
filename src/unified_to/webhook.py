@@ -13,7 +13,7 @@ class Webhook:
         
     
     
-    def create_unified_webhook(self, request: operations.CreateUnifiedWebhookRequest) -> operations.CreateUnifiedWebhookResponse:
+    def create_unified_webhook(self, request: operations.CreateUnifiedWebhookRequest, security: operations.CreateUnifiedWebhookSecurity) -> operations.CreateUnifiedWebhookResponse:
         r"""Create webhook subscription
         The data payload received by your server is described at https://docs.unified.to/unified/overview.  The `interval` field can be set as low as 15 minutes for paid accounts, and 60 minutes for free accounts.
         """
@@ -28,10 +28,7 @@ class Webhook:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('POST', url, params=query_params, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -51,7 +48,7 @@ class Webhook:
 
     
     
-    def get_unified_webhook(self, request: operations.GetUnifiedWebhookRequest) -> operations.GetUnifiedWebhookResponse:
+    def get_unified_webhook(self, request: operations.GetUnifiedWebhookRequest, security: operations.GetUnifiedWebhookSecurity) -> operations.GetUnifiedWebhookResponse:
         r"""Retrieve webhook by its ID"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -60,10 +57,7 @@ class Webhook:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -83,7 +77,7 @@ class Webhook:
 
     
     
-    def list_unified_webhooks(self, request: operations.ListUnifiedWebhooksRequest) -> operations.ListUnifiedWebhooksResponse:
+    def list_unified_webhooks(self, request: operations.ListUnifiedWebhooksRequest, security: operations.ListUnifiedWebhooksSecurity) -> operations.ListUnifiedWebhooksResponse:
         r"""Returns all registered webhooks"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -93,10 +87,7 @@ class Webhook:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -116,7 +107,7 @@ class Webhook:
 
     
     
-    def patch_unified_webhook_trigger(self, request: operations.PatchUnifiedWebhookTriggerRequest) -> operations.PatchUnifiedWebhookTriggerResponse:
+    def patch_unified_webhook_trigger(self, request: operations.PatchUnifiedWebhookTriggerRequest, security: operations.PatchUnifiedWebhookTriggerSecurity) -> operations.PatchUnifiedWebhookTriggerResponse:
         r"""Trigger webhook"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -125,10 +116,7 @@ class Webhook:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('PATCH', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -147,7 +135,7 @@ class Webhook:
 
     
     
-    def remove_unified_webhook(self, request: operations.RemoveUnifiedWebhookRequest) -> operations.RemoveUnifiedWebhookResponse:
+    def remove_unified_webhook(self, request: operations.RemoveUnifiedWebhookRequest, security: operations.RemoveUnifiedWebhookSecurity) -> operations.RemoveUnifiedWebhookResponse:
         r"""Remove webhook subscription"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -156,10 +144,7 @@ class Webhook:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -178,7 +163,7 @@ class Webhook:
 
     
     
-    def update_unified_webhook_trigger(self, request: operations.UpdateUnifiedWebhookTriggerRequest) -> operations.UpdateUnifiedWebhookTriggerResponse:
+    def update_unified_webhook_trigger(self, request: operations.UpdateUnifiedWebhookTriggerRequest, security: operations.UpdateUnifiedWebhookTriggerSecurity) -> operations.UpdateUnifiedWebhookTriggerResponse:
         r"""Trigger webhook"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -187,10 +172,7 @@ class Webhook:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('PUT', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')

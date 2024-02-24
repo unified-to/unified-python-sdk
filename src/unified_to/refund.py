@@ -13,7 +13,7 @@ class Refund:
         
     
     
-    def get_accounting_refund(self, request: operations.GetAccountingRefundRequest) -> operations.GetAccountingRefundResponse:
+    def get_accounting_refund(self, request: operations.GetAccountingRefundRequest, security: operations.GetAccountingRefundSecurity) -> operations.GetAccountingRefundResponse:
         r"""Retrieve a refund"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -23,10 +23,7 @@ class Refund:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -46,7 +43,7 @@ class Refund:
 
     
     
-    def list_accounting_refunds(self, request: operations.ListAccountingRefundsRequest) -> operations.ListAccountingRefundsResponse:
+    def list_accounting_refunds(self, request: operations.ListAccountingRefundsRequest, security: operations.ListAccountingRefundsSecurity) -> operations.ListAccountingRefundsResponse:
         r"""List all refunds"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -56,10 +53,7 @@ class Refund:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')

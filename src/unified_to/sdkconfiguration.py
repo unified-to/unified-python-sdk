@@ -5,8 +5,7 @@ import requests as requests_http
 from .utils import utils
 from .utils.retries import RetryConfig
 from dataclasses import dataclass
-from typing import Callable, Dict, Tuple, Union
-from unified_to.models import shared
+from typing import Dict, Tuple
 
 
 SERVERS = [
@@ -20,14 +19,13 @@ SERVERS = [
 @dataclass
 class SDKConfiguration:
     client: requests_http.Session
-    security: Union[shared.Security,Callable[[], shared.Security]] = None
     server_url: str = ''
     server_idx: int = 0
     language: str = 'python'
     openapi_doc_version: str = '1.0'
-    sdk_version: str = '0.16.11'
-    gen_version: str = '2.269.0'
-    user_agent: str = 'speakeasy-sdk/python 0.16.11 2.269.0 1.0 Unified-python-sdk'
+    sdk_version: str = '0.17.0'
+    gen_version: str = '2.272.4'
+    user_agent: str = 'speakeasy-sdk/python 0.17.0 2.272.4 1.0 Unified-python-sdk'
     retry_config: RetryConfig = None
 
     def get_server_details(self) -> Tuple[str, Dict[str, str]]:

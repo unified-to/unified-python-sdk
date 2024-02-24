@@ -13,7 +13,7 @@ class Scorecard:
         
     
     
-    def create_ats_scorecard(self, request: operations.CreateAtsScorecardRequest) -> operations.CreateAtsScorecardResponse:
+    def create_ats_scorecard(self, request: operations.CreateAtsScorecardRequest, security: operations.CreateAtsScorecardSecurity) -> operations.CreateAtsScorecardResponse:
         r"""Create a scorecard"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -25,10 +25,7 @@ class Scorecard:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -48,7 +45,7 @@ class Scorecard:
 
     
     
-    def get_ats_scorecard(self, request: operations.GetAtsScorecardRequest) -> operations.GetAtsScorecardResponse:
+    def get_ats_scorecard(self, request: operations.GetAtsScorecardRequest, security: operations.GetAtsScorecardSecurity) -> operations.GetAtsScorecardResponse:
         r"""Retrieve a scorecard"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -58,10 +55,7 @@ class Scorecard:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -81,7 +75,7 @@ class Scorecard:
 
     
     
-    def list_ats_scorecards(self, request: operations.ListAtsScorecardsRequest) -> operations.ListAtsScorecardsResponse:
+    def list_ats_scorecards(self, request: operations.ListAtsScorecardsRequest, security: operations.ListAtsScorecardsSecurity) -> operations.ListAtsScorecardsResponse:
         r"""List all scorecards"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -91,10 +85,7 @@ class Scorecard:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -114,7 +105,7 @@ class Scorecard:
 
     
     
-    def patch_ats_scorecard(self, request: operations.PatchAtsScorecardRequest) -> operations.PatchAtsScorecardResponse:
+    def patch_ats_scorecard(self, request: operations.PatchAtsScorecardRequest, security: operations.PatchAtsScorecardSecurity) -> operations.PatchAtsScorecardResponse:
         r"""Update a scorecard"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -126,10 +117,7 @@ class Scorecard:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -149,7 +137,7 @@ class Scorecard:
 
     
     
-    def remove_ats_scorecard(self, request: operations.RemoveAtsScorecardRequest) -> operations.RemoveAtsScorecardResponse:
+    def remove_ats_scorecard(self, request: operations.RemoveAtsScorecardRequest, security: operations.RemoveAtsScorecardSecurity) -> operations.RemoveAtsScorecardResponse:
         r"""Remove a scorecard"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -158,10 +146,7 @@ class Scorecard:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -180,7 +165,7 @@ class Scorecard:
 
     
     
-    def update_ats_scorecard(self, request: operations.UpdateAtsScorecardRequest) -> operations.UpdateAtsScorecardResponse:
+    def update_ats_scorecard(self, request: operations.UpdateAtsScorecardRequest, security: operations.UpdateAtsScorecardSecurity) -> operations.UpdateAtsScorecardResponse:
         r"""Update a scorecard"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -192,10 +177,7 @@ class Scorecard:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')

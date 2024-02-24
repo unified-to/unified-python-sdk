@@ -9,6 +9,13 @@ from typing import List, Optional
 
 
 @dataclasses.dataclass
+class ListUnifiedWebhooksSecurity:
+    jwt: str = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header', 'field_name': 'authorization' }})
+    
+
+
+
+@dataclasses.dataclass
 class ListUnifiedWebhooksRequest:
     env: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'env', 'style': 'form', 'explode': True }})
     limit: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})

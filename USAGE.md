@@ -1,19 +1,17 @@
 <!-- Start SDK Example Usage [usage] -->
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 req = operations.CreateAccountingAccountRequest(
     connection_id='<value>',
 )
 
-res = s.accounting.create_accounting_account(req)
+res = s.accounting.create_accounting_account(req, operations.CreateAccountingAccountSecurity(
+    jwt="<YOUR_API_KEY_HERE>",
+))
 
 if res.accounting_account is not None:
     # handle response

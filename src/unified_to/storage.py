@@ -13,7 +13,7 @@ class Storage:
         
     
     
-    def create_storage_file(self, request: operations.CreateStorageFileRequest) -> operations.CreateStorageFileResponse:
+    def create_storage_file(self, request: operations.CreateStorageFileRequest, security: operations.CreateStorageFileSecurity) -> operations.CreateStorageFileResponse:
         r"""Create a file"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -25,10 +25,7 @@ class Storage:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -48,7 +45,7 @@ class Storage:
 
     
     
-    def get_storage_file(self, request: operations.GetStorageFileRequest) -> operations.GetStorageFileResponse:
+    def get_storage_file(self, request: operations.GetStorageFileRequest, security: operations.GetStorageFileSecurity) -> operations.GetStorageFileResponse:
         r"""Retrieve a file"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -58,10 +55,7 @@ class Storage:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -81,7 +75,7 @@ class Storage:
 
     
     
-    def list_storage_files(self, request: operations.ListStorageFilesRequest) -> operations.ListStorageFilesResponse:
+    def list_storage_files(self, request: operations.ListStorageFilesRequest, security: operations.ListStorageFilesSecurity) -> operations.ListStorageFilesResponse:
         r"""List all files"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -91,10 +85,7 @@ class Storage:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -114,7 +105,7 @@ class Storage:
 
     
     
-    def patch_storage_file(self, request: operations.PatchStorageFileRequest) -> operations.PatchStorageFileResponse:
+    def patch_storage_file(self, request: operations.PatchStorageFileRequest, security: operations.PatchStorageFileSecurity) -> operations.PatchStorageFileResponse:
         r"""Update a file"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -126,10 +117,7 @@ class Storage:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -149,7 +137,7 @@ class Storage:
 
     
     
-    def remove_storage_file(self, request: operations.RemoveStorageFileRequest) -> operations.RemoveStorageFileResponse:
+    def remove_storage_file(self, request: operations.RemoveStorageFileRequest, security: operations.RemoveStorageFileSecurity) -> operations.RemoveStorageFileResponse:
         r"""Remove a file"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -158,10 +146,7 @@ class Storage:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -180,7 +165,7 @@ class Storage:
 
     
     
-    def update_storage_file(self, request: operations.UpdateStorageFileRequest) -> operations.UpdateStorageFileResponse:
+    def update_storage_file(self, request: operations.UpdateStorageFileRequest, security: operations.UpdateStorageFileSecurity) -> operations.UpdateStorageFileResponse:
         r"""Update a file"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -192,10 +177,7 @@ class Storage:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')

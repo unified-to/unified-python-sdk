@@ -13,7 +13,7 @@ class Location:
         
     
     
-    def create_commerce_location(self, request: operations.CreateCommerceLocationRequest) -> operations.CreateCommerceLocationResponse:
+    def create_commerce_location(self, request: operations.CreateCommerceLocationRequest, security: operations.CreateCommerceLocationSecurity) -> operations.CreateCommerceLocationResponse:
         r"""Create a location"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -25,10 +25,7 @@ class Location:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -48,7 +45,7 @@ class Location:
 
     
     
-    def get_commerce_location(self, request: operations.GetCommerceLocationRequest) -> operations.GetCommerceLocationResponse:
+    def get_commerce_location(self, request: operations.GetCommerceLocationRequest, security: operations.GetCommerceLocationSecurity) -> operations.GetCommerceLocationResponse:
         r"""Retrieve a location"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -58,10 +55,7 @@ class Location:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -81,7 +75,7 @@ class Location:
 
     
     
-    def list_commerce_locations(self, request: operations.ListCommerceLocationsRequest) -> operations.ListCommerceLocationsResponse:
+    def list_commerce_locations(self, request: operations.ListCommerceLocationsRequest, security: operations.ListCommerceLocationsSecurity) -> operations.ListCommerceLocationsResponse:
         r"""List all locations"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -91,10 +85,7 @@ class Location:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -114,7 +105,7 @@ class Location:
 
     
     
-    def patch_commerce_location(self, request: operations.PatchCommerceLocationRequest) -> operations.PatchCommerceLocationResponse:
+    def patch_commerce_location(self, request: operations.PatchCommerceLocationRequest, security: operations.PatchCommerceLocationSecurity) -> operations.PatchCommerceLocationResponse:
         r"""Update a location"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -126,10 +117,7 @@ class Location:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -149,7 +137,7 @@ class Location:
 
     
     
-    def remove_commerce_location(self, request: operations.RemoveCommerceLocationRequest) -> operations.RemoveCommerceLocationResponse:
+    def remove_commerce_location(self, request: operations.RemoveCommerceLocationRequest, security: operations.RemoveCommerceLocationSecurity) -> operations.RemoveCommerceLocationResponse:
         r"""Remove a location"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -158,10 +146,7 @@ class Location:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -180,7 +165,7 @@ class Location:
 
     
     
-    def update_commerce_location(self, request: operations.UpdateCommerceLocationRequest) -> operations.UpdateCommerceLocationResponse:
+    def update_commerce_location(self, request: operations.UpdateCommerceLocationRequest, security: operations.UpdateCommerceLocationSecurity) -> operations.UpdateCommerceLocationResponse:
         r"""Update a location"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -192,10 +177,7 @@ class Location:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')

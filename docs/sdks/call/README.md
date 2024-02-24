@@ -13,19 +13,17 @@ List all calls
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 req = operations.ListUcCallsRequest(
     connection_id='<value>',
 )
 
-res = s.call.list_uc_calls(req)
+res = s.call.list_uc_calls(req, operations.ListUcCallsSecurity(
+    jwt="<YOUR_API_KEY_HERE>",
+))
 
 if res.uc_calls is not None:
     # handle response
@@ -34,9 +32,10 @@ if res.uc_calls is not None:
 
 ### Parameters
 
-| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
-| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
-| `request`                                                                      | [operations.ListUcCallsRequest](../../models/operations/listuccallsrequest.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
+| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `request`                                                                        | [operations.ListUcCallsRequest](../../models/operations/listuccallsrequest.md)   | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
+| `security`                                                                       | [operations.ListUcCallsSecurity](../../models/operations/listuccallssecurity.md) | :heavy_check_mark:                                                               | The security requirements to use for the request.                                |
 
 
 ### Response

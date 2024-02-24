@@ -13,7 +13,7 @@ class Member:
         
     
     
-    def create_martech_member(self, request: operations.CreateMartechMemberRequest) -> operations.CreateMartechMemberResponse:
+    def create_martech_member(self, request: operations.CreateMartechMemberRequest, security: operations.CreateMartechMemberSecurity) -> operations.CreateMartechMemberResponse:
         r"""Create a member"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -25,10 +25,7 @@ class Member:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -48,7 +45,7 @@ class Member:
 
     
     
-    def get_martech_member(self, request: operations.GetMartechMemberRequest) -> operations.GetMartechMemberResponse:
+    def get_martech_member(self, request: operations.GetMartechMemberRequest, security: operations.GetMartechMemberSecurity) -> operations.GetMartechMemberResponse:
         r"""Retrieve a member"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -58,10 +55,7 @@ class Member:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -81,7 +75,7 @@ class Member:
 
     
     
-    def list_martech_members(self, request: operations.ListMartechMembersRequest) -> operations.ListMartechMembersResponse:
+    def list_martech_members(self, request: operations.ListMartechMembersRequest, security: operations.ListMartechMembersSecurity) -> operations.ListMartechMembersResponse:
         r"""List all members"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -91,10 +85,7 @@ class Member:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -114,7 +105,7 @@ class Member:
 
     
     
-    def patch_martech_member(self, request: operations.PatchMartechMemberRequest) -> operations.PatchMartechMemberResponse:
+    def patch_martech_member(self, request: operations.PatchMartechMemberRequest, security: operations.PatchMartechMemberSecurity) -> operations.PatchMartechMemberResponse:
         r"""Update a member"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -126,10 +117,7 @@ class Member:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -149,7 +137,7 @@ class Member:
 
     
     
-    def remove_martech_member(self, request: operations.RemoveMartechMemberRequest) -> operations.RemoveMartechMemberResponse:
+    def remove_martech_member(self, request: operations.RemoveMartechMemberRequest, security: operations.RemoveMartechMemberSecurity) -> operations.RemoveMartechMemberResponse:
         r"""Remove member"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -158,10 +146,7 @@ class Member:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -180,7 +165,7 @@ class Member:
 
     
     
-    def update_martech_member(self, request: operations.UpdateMartechMemberRequest) -> operations.UpdateMartechMemberResponse:
+    def update_martech_member(self, request: operations.UpdateMartechMemberRequest, security: operations.UpdateMartechMemberSecurity) -> operations.UpdateMartechMemberResponse:
         r"""Update a member"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -192,10 +177,7 @@ class Member:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')

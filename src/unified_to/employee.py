@@ -13,7 +13,7 @@ class Employee:
         
     
     
-    def create_hris_employee(self, request: operations.CreateHrisEmployeeRequest) -> operations.CreateHrisEmployeeResponse:
+    def create_hris_employee(self, request: operations.CreateHrisEmployeeRequest, security: operations.CreateHrisEmployeeSecurity) -> operations.CreateHrisEmployeeResponse:
         r"""Create an employee"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -25,10 +25,7 @@ class Employee:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -48,7 +45,7 @@ class Employee:
 
     
     
-    def get_hris_employee(self, request: operations.GetHrisEmployeeRequest) -> operations.GetHrisEmployeeResponse:
+    def get_hris_employee(self, request: operations.GetHrisEmployeeRequest, security: operations.GetHrisEmployeeSecurity) -> operations.GetHrisEmployeeResponse:
         r"""Retrieve an employee"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -58,10 +55,7 @@ class Employee:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -81,7 +75,7 @@ class Employee:
 
     
     
-    def list_hris_employees(self, request: operations.ListHrisEmployeesRequest) -> operations.ListHrisEmployeesResponse:
+    def list_hris_employees(self, request: operations.ListHrisEmployeesRequest, security: operations.ListHrisEmployeesSecurity) -> operations.ListHrisEmployeesResponse:
         r"""List all employees"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -91,10 +85,7 @@ class Employee:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -114,7 +105,7 @@ class Employee:
 
     
     
-    def patch_hris_employee(self, request: operations.PatchHrisEmployeeRequest) -> operations.PatchHrisEmployeeResponse:
+    def patch_hris_employee(self, request: operations.PatchHrisEmployeeRequest, security: operations.PatchHrisEmployeeSecurity) -> operations.PatchHrisEmployeeResponse:
         r"""Update an employee"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -126,10 +117,7 @@ class Employee:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -149,7 +137,7 @@ class Employee:
 
     
     
-    def remove_hris_employee(self, request: operations.RemoveHrisEmployeeRequest) -> operations.RemoveHrisEmployeeResponse:
+    def remove_hris_employee(self, request: operations.RemoveHrisEmployeeRequest, security: operations.RemoveHrisEmployeeSecurity) -> operations.RemoveHrisEmployeeResponse:
         r"""Remove an employee"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -158,10 +146,7 @@ class Employee:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -180,7 +165,7 @@ class Employee:
 
     
     
-    def update_hris_employee(self, request: operations.UpdateHrisEmployeeRequest) -> operations.UpdateHrisEmployeeResponse:
+    def update_hris_employee(self, request: operations.UpdateHrisEmployeeRequest, security: operations.UpdateHrisEmployeeSecurity) -> operations.UpdateHrisEmployeeResponse:
         r"""Update an employee"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -192,10 +177,7 @@ class Employee:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')

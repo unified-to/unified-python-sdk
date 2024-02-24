@@ -13,7 +13,7 @@ class Invoice:
         
     
     
-    def create_accounting_invoice(self, request: operations.CreateAccountingInvoiceRequest) -> operations.CreateAccountingInvoiceResponse:
+    def create_accounting_invoice(self, request: operations.CreateAccountingInvoiceRequest, security: operations.CreateAccountingInvoiceSecurity) -> operations.CreateAccountingInvoiceResponse:
         r"""Create a invoice"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -25,10 +25,7 @@ class Invoice:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -48,7 +45,7 @@ class Invoice:
 
     
     
-    def get_accounting_invoice(self, request: operations.GetAccountingInvoiceRequest) -> operations.GetAccountingInvoiceResponse:
+    def get_accounting_invoice(self, request: operations.GetAccountingInvoiceRequest, security: operations.GetAccountingInvoiceSecurity) -> operations.GetAccountingInvoiceResponse:
         r"""Retrieve a invoice"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -58,10 +55,7 @@ class Invoice:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -81,7 +75,7 @@ class Invoice:
 
     
     
-    def list_accounting_invoices(self, request: operations.ListAccountingInvoicesRequest) -> operations.ListAccountingInvoicesResponse:
+    def list_accounting_invoices(self, request: operations.ListAccountingInvoicesRequest, security: operations.ListAccountingInvoicesSecurity) -> operations.ListAccountingInvoicesResponse:
         r"""List all invoices"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -91,10 +85,7 @@ class Invoice:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -114,7 +105,7 @@ class Invoice:
 
     
     
-    def patch_accounting_invoice(self, request: operations.PatchAccountingInvoiceRequest) -> operations.PatchAccountingInvoiceResponse:
+    def patch_accounting_invoice(self, request: operations.PatchAccountingInvoiceRequest, security: operations.PatchAccountingInvoiceSecurity) -> operations.PatchAccountingInvoiceResponse:
         r"""Update a invoice"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -126,10 +117,7 @@ class Invoice:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -149,7 +137,7 @@ class Invoice:
 
     
     
-    def remove_accounting_invoice(self, request: operations.RemoveAccountingInvoiceRequest) -> operations.RemoveAccountingInvoiceResponse:
+    def remove_accounting_invoice(self, request: operations.RemoveAccountingInvoiceRequest, security: operations.RemoveAccountingInvoiceSecurity) -> operations.RemoveAccountingInvoiceResponse:
         r"""Remove a invoice"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -158,10 +146,7 @@ class Invoice:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -180,7 +165,7 @@ class Invoice:
 
     
     
-    def update_accounting_invoice(self, request: operations.UpdateAccountingInvoiceRequest) -> operations.UpdateAccountingInvoiceResponse:
+    def update_accounting_invoice(self, request: operations.UpdateAccountingInvoiceRequest, security: operations.UpdateAccountingInvoiceSecurity) -> operations.UpdateAccountingInvoiceResponse:
         r"""Update a invoice"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -192,10 +177,7 @@ class Invoice:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')

@@ -14,20 +14,18 @@ Retrieve a payout
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 req = operations.GetAccountingPayoutRequest(
     connection_id='<value>',
     id='<id>',
 )
 
-res = s.payout.get_accounting_payout(req)
+res = s.payout.get_accounting_payout(req, operations.GetAccountingPayoutSecurity(
+    jwt="<YOUR_API_KEY_HERE>",
+))
 
 if res.accounting_payout is not None:
     # handle response
@@ -36,9 +34,10 @@ if res.accounting_payout is not None:
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `request`                                                                                      | [operations.GetAccountingPayoutRequest](../../models/operations/getaccountingpayoutrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `request`                                                                                        | [operations.GetAccountingPayoutRequest](../../models/operations/getaccountingpayoutrequest.md)   | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `security`                                                                                       | [operations.GetAccountingPayoutSecurity](../../models/operations/getaccountingpayoutsecurity.md) | :heavy_check_mark:                                                                               | The security requirements to use for the request.                                                |
 
 
 ### Response
@@ -58,19 +57,17 @@ List all payouts
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 req = operations.ListAccountingPayoutsRequest(
     connection_id='<value>',
 )
 
-res = s.payout.list_accounting_payouts(req)
+res = s.payout.list_accounting_payouts(req, operations.ListAccountingPayoutsSecurity(
+    jwt="<YOUR_API_KEY_HERE>",
+))
 
 if res.accounting_payouts is not None:
     # handle response
@@ -79,9 +76,10 @@ if res.accounting_payouts is not None:
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `request`                                                                                          | [operations.ListAccountingPayoutsRequest](../../models/operations/listaccountingpayoutsrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `request`                                                                                            | [operations.ListAccountingPayoutsRequest](../../models/operations/listaccountingpayoutsrequest.md)   | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `security`                                                                                           | [operations.ListAccountingPayoutsSecurity](../../models/operations/listaccountingpayoutssecurity.md) | :heavy_check_mark:                                                                                   | The security requirements to use for the request.                                                    |
 
 
 ### Response

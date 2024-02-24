@@ -13,7 +13,7 @@ class Contact:
         
     
     
-    def create_accounting_contact(self, request: operations.CreateAccountingContactRequest) -> operations.CreateAccountingContactResponse:
+    def create_accounting_contact(self, request: operations.CreateAccountingContactRequest, security: operations.CreateAccountingContactSecurity) -> operations.CreateAccountingContactResponse:
         r"""Create a contact"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -25,10 +25,7 @@ class Contact:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -48,7 +45,7 @@ class Contact:
 
     
     
-    def create_crm_contact(self, request: operations.CreateCrmContactRequest) -> operations.CreateCrmContactResponse:
+    def create_crm_contact(self, request: operations.CreateCrmContactRequest, security: operations.CreateCrmContactSecurity) -> operations.CreateCrmContactResponse:
         r"""Create a contact"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -60,10 +57,7 @@ class Contact:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -83,7 +77,7 @@ class Contact:
 
     
     
-    def create_uc_contact(self, request: operations.CreateUcContactRequest) -> operations.CreateUcContactResponse:
+    def create_uc_contact(self, request: operations.CreateUcContactRequest, security: operations.CreateUcContactSecurity) -> operations.CreateUcContactResponse:
         r"""Create a contact"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -95,10 +89,7 @@ class Contact:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -118,7 +109,7 @@ class Contact:
 
     
     
-    def get_accounting_contact(self, request: operations.GetAccountingContactRequest) -> operations.GetAccountingContactResponse:
+    def get_accounting_contact(self, request: operations.GetAccountingContactRequest, security: operations.GetAccountingContactSecurity) -> operations.GetAccountingContactResponse:
         r"""Retrieve a contact"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -128,10 +119,7 @@ class Contact:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -151,7 +139,7 @@ class Contact:
 
     
     
-    def get_crm_contact(self, request: operations.GetCrmContactRequest) -> operations.GetCrmContactResponse:
+    def get_crm_contact(self, request: operations.GetCrmContactRequest, security: operations.GetCrmContactSecurity) -> operations.GetCrmContactResponse:
         r"""Retrieve a contact"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -161,10 +149,7 @@ class Contact:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -184,7 +169,7 @@ class Contact:
 
     
     
-    def get_uc_contact(self, request: operations.GetUcContactRequest) -> operations.GetUcContactResponse:
+    def get_uc_contact(self, request: operations.GetUcContactRequest, security: operations.GetUcContactSecurity) -> operations.GetUcContactResponse:
         r"""Retrieve a contact"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -194,10 +179,7 @@ class Contact:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -217,7 +199,7 @@ class Contact:
 
     
     
-    def list_accounting_contacts(self, request: operations.ListAccountingContactsRequest) -> operations.ListAccountingContactsResponse:
+    def list_accounting_contacts(self, request: operations.ListAccountingContactsRequest, security: operations.ListAccountingContactsSecurity) -> operations.ListAccountingContactsResponse:
         r"""List all contacts"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -227,10 +209,7 @@ class Contact:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -250,7 +229,7 @@ class Contact:
 
     
     
-    def list_crm_contacts(self, request: operations.ListCrmContactsRequest) -> operations.ListCrmContactsResponse:
+    def list_crm_contacts(self, request: operations.ListCrmContactsRequest, security: operations.ListCrmContactsSecurity) -> operations.ListCrmContactsResponse:
         r"""List all contacts"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -260,10 +239,7 @@ class Contact:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -283,7 +259,7 @@ class Contact:
 
     
     
-    def list_uc_contacts(self, request: operations.ListUcContactsRequest) -> operations.ListUcContactsResponse:
+    def list_uc_contacts(self, request: operations.ListUcContactsRequest, security: operations.ListUcContactsSecurity) -> operations.ListUcContactsResponse:
         r"""List all contacts"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -293,10 +269,7 @@ class Contact:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -316,7 +289,7 @@ class Contact:
 
     
     
-    def patch_accounting_contact(self, request: operations.PatchAccountingContactRequest) -> operations.PatchAccountingContactResponse:
+    def patch_accounting_contact(self, request: operations.PatchAccountingContactRequest, security: operations.PatchAccountingContactSecurity) -> operations.PatchAccountingContactResponse:
         r"""Update a contact"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -328,10 +301,7 @@ class Contact:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -351,7 +321,7 @@ class Contact:
 
     
     
-    def patch_crm_contact(self, request: operations.PatchCrmContactRequest) -> operations.PatchCrmContactResponse:
+    def patch_crm_contact(self, request: operations.PatchCrmContactRequest, security: operations.PatchCrmContactSecurity) -> operations.PatchCrmContactResponse:
         r"""Update a contact"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -363,10 +333,7 @@ class Contact:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -386,7 +353,7 @@ class Contact:
 
     
     
-    def patch_uc_contact(self, request: operations.PatchUcContactRequest) -> operations.PatchUcContactResponse:
+    def patch_uc_contact(self, request: operations.PatchUcContactRequest, security: operations.PatchUcContactSecurity) -> operations.PatchUcContactResponse:
         r"""Update a contact"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -398,10 +365,7 @@ class Contact:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -421,7 +385,7 @@ class Contact:
 
     
     
-    def remove_accounting_contact(self, request: operations.RemoveAccountingContactRequest) -> operations.RemoveAccountingContactResponse:
+    def remove_accounting_contact(self, request: operations.RemoveAccountingContactRequest, security: operations.RemoveAccountingContactSecurity) -> operations.RemoveAccountingContactResponse:
         r"""Remove a contact"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -430,10 +394,7 @@ class Contact:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -452,7 +413,7 @@ class Contact:
 
     
     
-    def remove_crm_contact(self, request: operations.RemoveCrmContactRequest) -> operations.RemoveCrmContactResponse:
+    def remove_crm_contact(self, request: operations.RemoveCrmContactRequest, security: operations.RemoveCrmContactSecurity) -> operations.RemoveCrmContactResponse:
         r"""Remove a contact"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -461,10 +422,7 @@ class Contact:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -483,7 +441,7 @@ class Contact:
 
     
     
-    def remove_uc_contact(self, request: operations.RemoveUcContactRequest) -> operations.RemoveUcContactResponse:
+    def remove_uc_contact(self, request: operations.RemoveUcContactRequest, security: operations.RemoveUcContactSecurity) -> operations.RemoveUcContactResponse:
         r"""Remove a contact"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -492,10 +450,7 @@ class Contact:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -514,7 +469,7 @@ class Contact:
 
     
     
-    def update_accounting_contact(self, request: operations.UpdateAccountingContactRequest) -> operations.UpdateAccountingContactResponse:
+    def update_accounting_contact(self, request: operations.UpdateAccountingContactRequest, security: operations.UpdateAccountingContactSecurity) -> operations.UpdateAccountingContactResponse:
         r"""Update a contact"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -526,10 +481,7 @@ class Contact:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -549,7 +501,7 @@ class Contact:
 
     
     
-    def update_crm_contact(self, request: operations.UpdateCrmContactRequest) -> operations.UpdateCrmContactResponse:
+    def update_crm_contact(self, request: operations.UpdateCrmContactRequest, security: operations.UpdateCrmContactSecurity) -> operations.UpdateCrmContactResponse:
         r"""Update a contact"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -561,10 +513,7 @@ class Contact:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -584,7 +533,7 @@ class Contact:
 
     
     
-    def update_uc_contact(self, request: operations.UpdateUcContactRequest) -> operations.UpdateUcContactResponse:
+    def update_uc_contact(self, request: operations.UpdateUcContactRequest, security: operations.UpdateUcContactSecurity) -> operations.UpdateUcContactResponse:
         r"""Update a contact"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -596,10 +545,7 @@ class Contact:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')

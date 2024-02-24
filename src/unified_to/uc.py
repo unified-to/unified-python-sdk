@@ -13,7 +13,7 @@ class Uc:
         
     
     
-    def create_uc_contact(self, request: operations.CreateUcContactRequest) -> operations.CreateUcContactResponse:
+    def create_uc_contact(self, request: operations.CreateUcContactRequest, security: operations.CreateUcContactSecurity) -> operations.CreateUcContactResponse:
         r"""Create a contact"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -25,10 +25,7 @@ class Uc:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -48,7 +45,7 @@ class Uc:
 
     
     
-    def get_uc_contact(self, request: operations.GetUcContactRequest) -> operations.GetUcContactResponse:
+    def get_uc_contact(self, request: operations.GetUcContactRequest, security: operations.GetUcContactSecurity) -> operations.GetUcContactResponse:
         r"""Retrieve a contact"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -58,10 +55,7 @@ class Uc:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -81,7 +75,7 @@ class Uc:
 
     
     
-    def list_uc_calls(self, request: operations.ListUcCallsRequest) -> operations.ListUcCallsResponse:
+    def list_uc_calls(self, request: operations.ListUcCallsRequest, security: operations.ListUcCallsSecurity) -> operations.ListUcCallsResponse:
         r"""List all calls"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -91,10 +85,7 @@ class Uc:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -114,7 +105,7 @@ class Uc:
 
     
     
-    def list_uc_contacts(self, request: operations.ListUcContactsRequest) -> operations.ListUcContactsResponse:
+    def list_uc_contacts(self, request: operations.ListUcContactsRequest, security: operations.ListUcContactsSecurity) -> operations.ListUcContactsResponse:
         r"""List all contacts"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -124,10 +115,7 @@ class Uc:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -147,7 +135,7 @@ class Uc:
 
     
     
-    def patch_uc_contact(self, request: operations.PatchUcContactRequest) -> operations.PatchUcContactResponse:
+    def patch_uc_contact(self, request: operations.PatchUcContactRequest, security: operations.PatchUcContactSecurity) -> operations.PatchUcContactResponse:
         r"""Update a contact"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -159,10 +147,7 @@ class Uc:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -182,7 +167,7 @@ class Uc:
 
     
     
-    def remove_uc_contact(self, request: operations.RemoveUcContactRequest) -> operations.RemoveUcContactResponse:
+    def remove_uc_contact(self, request: operations.RemoveUcContactRequest, security: operations.RemoveUcContactSecurity) -> operations.RemoveUcContactResponse:
         r"""Remove a contact"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -191,10 +176,7 @@ class Uc:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -213,7 +195,7 @@ class Uc:
 
     
     
-    def update_uc_contact(self, request: operations.UpdateUcContactRequest) -> operations.UpdateUcContactResponse:
+    def update_uc_contact(self, request: operations.UpdateUcContactRequest, security: operations.UpdateUcContactSecurity) -> operations.UpdateUcContactResponse:
         r"""Update a contact"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -225,10 +207,7 @@ class Uc:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        if callable(self.sdk_configuration.security):
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
-        else:
-            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        client = utils.configure_security_client(self.sdk_configuration.client, security)
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
