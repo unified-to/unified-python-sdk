@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: 7b981c3199081a2591af224351cdfba2
+  docChecksum: 035d8051316127eb4999660b4f25f88a
   docVersion: "1.0"
   speakeasyVersion: internal
-  generationVersion: 2.272.4
-  releaseVersion: 0.17.1
-  configChecksum: 377d9bf7286f991c5ea81ccd527e21c1
+  generationVersion: 2.272.7
+  releaseVersion: 0.18.0
+  configChecksum: 64a53d5861a07cb8ee6e69b924adaabf
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -15,9 +15,8 @@ features:
   python:
     constsAndDefaults: 0.1.2
     core: 4.4.7
-    globalSecurity: 2.83.3
+    globalSecurity: 2.83.4
     globalServerURLs: 2.82.1
-    methodSecurity: 2.82.1
 generatedFiles:
   - src/unified_to/sdkconfiguration.py
   - src/unified_to/accounting.py
@@ -25,9 +24,6 @@ generatedFiles:
   - src/unified_to/contact.py
   - src/unified_to/invoice.py
   - src/unified_to/organization.py
-  - src/unified_to/payment.py
-  - src/unified_to/payout.py
-  - src/unified_to/refund.py
   - src/unified_to/taxrate.py
   - src/unified_to/transaction.py
   - src/unified_to/ats.py
@@ -59,6 +55,10 @@ generatedFiles:
   - src/unified_to/list.py
   - src/unified_to/member.py
   - src/unified_to/passthrough.py
+  - src/unified_to/payment.py
+  - src/unified_to/link.py
+  - src/unified_to/payout.py
+  - src/unified_to/refund.py
   - src/unified_to/storage.py
   - src/unified_to/file.py
   - src/unified_to/ticketing.py
@@ -87,43 +87,33 @@ generatedFiles:
   - src/unified_to/models/operations/createaccountingaccount.py
   - src/unified_to/models/operations/createaccountingcontact.py
   - src/unified_to/models/operations/createaccountinginvoice.py
-  - src/unified_to/models/operations/createaccountingpayment.py
   - src/unified_to/models/operations/createaccountingtaxrate.py
   - src/unified_to/models/operations/createaccountingtransaction.py
   - src/unified_to/models/operations/getaccountingaccount.py
   - src/unified_to/models/operations/getaccountingcontact.py
   - src/unified_to/models/operations/getaccountinginvoice.py
   - src/unified_to/models/operations/getaccountingorganization.py
-  - src/unified_to/models/operations/getaccountingpayment.py
-  - src/unified_to/models/operations/getaccountingpayout.py
-  - src/unified_to/models/operations/getaccountingrefund.py
   - src/unified_to/models/operations/getaccountingtaxrate.py
   - src/unified_to/models/operations/getaccountingtransaction.py
   - src/unified_to/models/operations/listaccountingaccounts.py
   - src/unified_to/models/operations/listaccountingcontacts.py
   - src/unified_to/models/operations/listaccountinginvoices.py
   - src/unified_to/models/operations/listaccountingorganizations.py
-  - src/unified_to/models/operations/listaccountingpayments.py
-  - src/unified_to/models/operations/listaccountingpayouts.py
-  - src/unified_to/models/operations/listaccountingrefunds.py
   - src/unified_to/models/operations/listaccountingtaxrates.py
   - src/unified_to/models/operations/listaccountingtransactions.py
   - src/unified_to/models/operations/patchaccountingaccount.py
   - src/unified_to/models/operations/patchaccountingcontact.py
   - src/unified_to/models/operations/patchaccountinginvoice.py
-  - src/unified_to/models/operations/patchaccountingpayment.py
   - src/unified_to/models/operations/patchaccountingtaxrate.py
   - src/unified_to/models/operations/patchaccountingtransaction.py
   - src/unified_to/models/operations/removeaccountingaccount.py
   - src/unified_to/models/operations/removeaccountingcontact.py
   - src/unified_to/models/operations/removeaccountinginvoice.py
-  - src/unified_to/models/operations/removeaccountingpayment.py
   - src/unified_to/models/operations/removeaccountingtaxrate.py
   - src/unified_to/models/operations/removeaccountingtransaction.py
   - src/unified_to/models/operations/updateaccountingaccount.py
   - src/unified_to/models/operations/updateaccountingcontact.py
   - src/unified_to/models/operations/updateaccountinginvoice.py
-  - src/unified_to/models/operations/updateaccountingpayment.py
   - src/unified_to/models/operations/updateaccountingtaxrate.py
   - src/unified_to/models/operations/updateaccountingtransaction.py
   - src/unified_to/models/operations/createcrmcontact.py
@@ -268,6 +258,22 @@ generatedFiles:
   - src/unified_to/models/operations/patchpassthrough.py
   - src/unified_to/models/operations/removepassthrough.py
   - src/unified_to/models/operations/updatepassthrough.py
+  - src/unified_to/models/operations/createpaymentlink.py
+  - src/unified_to/models/operations/createpaymentpayment.py
+  - src/unified_to/models/operations/getpaymentlink.py
+  - src/unified_to/models/operations/getpaymentpayment.py
+  - src/unified_to/models/operations/getpaymentpayout.py
+  - src/unified_to/models/operations/getpaymentrefund.py
+  - src/unified_to/models/operations/listpaymentlinks.py
+  - src/unified_to/models/operations/listpaymentpayments.py
+  - src/unified_to/models/operations/listpaymentpayouts.py
+  - src/unified_to/models/operations/listpaymentrefunds.py
+  - src/unified_to/models/operations/patchpaymentlink.py
+  - src/unified_to/models/operations/patchpaymentpayment.py
+  - src/unified_to/models/operations/removepaymentlink.py
+  - src/unified_to/models/operations/removepaymentpayment.py
+  - src/unified_to/models/operations/updatepaymentlink.py
+  - src/unified_to/models/operations/updatepaymentpayment.py
   - src/unified_to/models/operations/createstoragefile.py
   - src/unified_to/models/operations/getstoragefile.py
   - src/unified_to/models/operations/liststoragefiles.py
@@ -320,14 +326,11 @@ generatedFiles:
   - src/unified_to/models/shared/property_accountingcontact_billing_address.py
   - src/unified_to/models/shared/accountinginvoice.py
   - src/unified_to/models/shared/accountinglineitem.py
-  - src/unified_to/models/shared/accountingpayment.py
   - src/unified_to/models/shared/accountingtaxrate.py
   - src/unified_to/models/shared/accountingtransaction.py
   - src/unified_to/models/shared/accountingtransactionlineitem.py
   - src/unified_to/models/shared/accountingorganization.py
   - src/unified_to/models/shared/property_accountingorganization_address.py
-  - src/unified_to/models/shared/accountingpayout.py
-  - src/unified_to/models/shared/accountingrefund.py
   - src/unified_to/models/shared/crmcontact.py
   - src/unified_to/models/shared/crmtelephone.py
   - src/unified_to/models/shared/crmemail.py
@@ -389,6 +392,11 @@ generatedFiles:
   - src/unified_to/models/shared/marketinglist.py
   - src/unified_to/models/shared/marketingmember.py
   - src/unified_to/models/shared/marketingemail.py
+  - src/unified_to/models/shared/paymentlink.py
+  - src/unified_to/models/shared/paymenntlinklineitem.py
+  - src/unified_to/models/shared/paymentpayment.py
+  - src/unified_to/models/shared/paymentpayout.py
+  - src/unified_to/models/shared/paymentrefund.py
   - src/unified_to/models/shared/storagefile.py
   - src/unified_to/models/shared/storagepermission.py
   - src/unified_to/models/shared/property_storagepermission_roles.py
@@ -410,690 +418,478 @@ generatedFiles:
   - src/unified_to/models/shared/property_integrationsupport_webhook_events.py
   - src/unified_to/models/shared/property_integration_categories.py
   - src/unified_to/models/shared/issue.py
+  - src/unified_to/models/shared/security.py
   - src/unified_to/models/__init__.py
   - src/unified_to/models/errors/__init__.py
   - src/unified_to/models/operations/__init__.py
   - src/unified_to/models/shared/__init__.py
-  - docs/models/operations/createaccountingaccountsecurity.md
   - docs/models/operations/createaccountingaccountrequest.md
   - docs/models/operations/createaccountingaccountresponse.md
-  - docs/models/operations/createaccountingcontactsecurity.md
   - docs/models/operations/createaccountingcontactrequest.md
   - docs/models/operations/createaccountingcontactresponse.md
-  - docs/models/operations/createaccountinginvoicesecurity.md
   - docs/models/operations/createaccountinginvoicerequest.md
   - docs/models/operations/createaccountinginvoiceresponse.md
-  - docs/models/operations/createaccountingpaymentsecurity.md
-  - docs/models/operations/createaccountingpaymentrequest.md
-  - docs/models/operations/createaccountingpaymentresponse.md
-  - docs/models/operations/createaccountingtaxratesecurity.md
   - docs/models/operations/createaccountingtaxraterequest.md
   - docs/models/operations/createaccountingtaxrateresponse.md
-  - docs/models/operations/createaccountingtransactionsecurity.md
   - docs/models/operations/createaccountingtransactionrequest.md
   - docs/models/operations/createaccountingtransactionresponse.md
-  - docs/models/operations/getaccountingaccountsecurity.md
   - docs/models/operations/getaccountingaccountrequest.md
   - docs/models/operations/getaccountingaccountresponse.md
-  - docs/models/operations/getaccountingcontactsecurity.md
   - docs/models/operations/getaccountingcontactrequest.md
   - docs/models/operations/getaccountingcontactresponse.md
-  - docs/models/operations/getaccountinginvoicesecurity.md
   - docs/models/operations/getaccountinginvoicerequest.md
   - docs/models/operations/getaccountinginvoiceresponse.md
-  - docs/models/operations/getaccountingorganizationsecurity.md
   - docs/models/operations/getaccountingorganizationrequest.md
   - docs/models/operations/getaccountingorganizationresponse.md
-  - docs/models/operations/getaccountingpaymentsecurity.md
-  - docs/models/operations/getaccountingpaymentrequest.md
-  - docs/models/operations/getaccountingpaymentresponse.md
-  - docs/models/operations/getaccountingpayoutsecurity.md
-  - docs/models/operations/getaccountingpayoutrequest.md
-  - docs/models/operations/getaccountingpayoutresponse.md
-  - docs/models/operations/getaccountingrefundsecurity.md
-  - docs/models/operations/getaccountingrefundrequest.md
-  - docs/models/operations/getaccountingrefundresponse.md
-  - docs/models/operations/getaccountingtaxratesecurity.md
   - docs/models/operations/getaccountingtaxraterequest.md
   - docs/models/operations/getaccountingtaxrateresponse.md
-  - docs/models/operations/getaccountingtransactionsecurity.md
   - docs/models/operations/getaccountingtransactionrequest.md
   - docs/models/operations/getaccountingtransactionresponse.md
-  - docs/models/operations/listaccountingaccountssecurity.md
   - docs/models/operations/listaccountingaccountsrequest.md
   - docs/models/operations/listaccountingaccountsresponse.md
-  - docs/models/operations/listaccountingcontactssecurity.md
   - docs/models/operations/listaccountingcontactsrequest.md
   - docs/models/operations/listaccountingcontactsresponse.md
-  - docs/models/operations/listaccountinginvoicessecurity.md
   - docs/models/operations/listaccountinginvoicesrequest.md
   - docs/models/operations/listaccountinginvoicesresponse.md
-  - docs/models/operations/listaccountingorganizationssecurity.md
   - docs/models/operations/listaccountingorganizationsrequest.md
   - docs/models/operations/listaccountingorganizationsresponse.md
-  - docs/models/operations/listaccountingpaymentssecurity.md
-  - docs/models/operations/listaccountingpaymentsrequest.md
-  - docs/models/operations/listaccountingpaymentsresponse.md
-  - docs/models/operations/listaccountingpayoutssecurity.md
-  - docs/models/operations/listaccountingpayoutsrequest.md
-  - docs/models/operations/listaccountingpayoutsresponse.md
-  - docs/models/operations/listaccountingrefundssecurity.md
-  - docs/models/operations/listaccountingrefundsrequest.md
-  - docs/models/operations/listaccountingrefundsresponse.md
-  - docs/models/operations/listaccountingtaxratessecurity.md
   - docs/models/operations/listaccountingtaxratesrequest.md
   - docs/models/operations/listaccountingtaxratesresponse.md
-  - docs/models/operations/listaccountingtransactionssecurity.md
   - docs/models/operations/listaccountingtransactionsrequest.md
   - docs/models/operations/listaccountingtransactionsresponse.md
-  - docs/models/operations/patchaccountingaccountsecurity.md
   - docs/models/operations/patchaccountingaccountrequest.md
   - docs/models/operations/patchaccountingaccountresponse.md
-  - docs/models/operations/patchaccountingcontactsecurity.md
   - docs/models/operations/patchaccountingcontactrequest.md
   - docs/models/operations/patchaccountingcontactresponse.md
-  - docs/models/operations/patchaccountinginvoicesecurity.md
   - docs/models/operations/patchaccountinginvoicerequest.md
   - docs/models/operations/patchaccountinginvoiceresponse.md
-  - docs/models/operations/patchaccountingpaymentsecurity.md
-  - docs/models/operations/patchaccountingpaymentrequest.md
-  - docs/models/operations/patchaccountingpaymentresponse.md
-  - docs/models/operations/patchaccountingtaxratesecurity.md
   - docs/models/operations/patchaccountingtaxraterequest.md
   - docs/models/operations/patchaccountingtaxrateresponse.md
-  - docs/models/operations/patchaccountingtransactionsecurity.md
   - docs/models/operations/patchaccountingtransactionrequest.md
   - docs/models/operations/patchaccountingtransactionresponse.md
-  - docs/models/operations/removeaccountingaccountsecurity.md
   - docs/models/operations/removeaccountingaccountrequest.md
   - docs/models/operations/removeaccountingaccountresponse.md
-  - docs/models/operations/removeaccountingcontactsecurity.md
   - docs/models/operations/removeaccountingcontactrequest.md
   - docs/models/operations/removeaccountingcontactresponse.md
-  - docs/models/operations/removeaccountinginvoicesecurity.md
   - docs/models/operations/removeaccountinginvoicerequest.md
   - docs/models/operations/removeaccountinginvoiceresponse.md
-  - docs/models/operations/removeaccountingpaymentsecurity.md
-  - docs/models/operations/removeaccountingpaymentrequest.md
-  - docs/models/operations/removeaccountingpaymentresponse.md
-  - docs/models/operations/removeaccountingtaxratesecurity.md
   - docs/models/operations/removeaccountingtaxraterequest.md
   - docs/models/operations/removeaccountingtaxrateresponse.md
-  - docs/models/operations/removeaccountingtransactionsecurity.md
   - docs/models/operations/removeaccountingtransactionrequest.md
   - docs/models/operations/removeaccountingtransactionresponse.md
-  - docs/models/operations/updateaccountingaccountsecurity.md
   - docs/models/operations/updateaccountingaccountrequest.md
   - docs/models/operations/updateaccountingaccountresponse.md
-  - docs/models/operations/updateaccountingcontactsecurity.md
   - docs/models/operations/updateaccountingcontactrequest.md
   - docs/models/operations/updateaccountingcontactresponse.md
-  - docs/models/operations/updateaccountinginvoicesecurity.md
   - docs/models/operations/updateaccountinginvoicerequest.md
   - docs/models/operations/updateaccountinginvoiceresponse.md
-  - docs/models/operations/updateaccountingpaymentsecurity.md
-  - docs/models/operations/updateaccountingpaymentrequest.md
-  - docs/models/operations/updateaccountingpaymentresponse.md
-  - docs/models/operations/updateaccountingtaxratesecurity.md
   - docs/models/operations/updateaccountingtaxraterequest.md
   - docs/models/operations/updateaccountingtaxrateresponse.md
-  - docs/models/operations/updateaccountingtransactionsecurity.md
   - docs/models/operations/updateaccountingtransactionrequest.md
   - docs/models/operations/updateaccountingtransactionresponse.md
-  - docs/models/operations/createcrmcontactsecurity.md
   - docs/models/operations/createcrmcontactrequest.md
   - docs/models/operations/createcrmcontactresponse.md
-  - docs/models/operations/createuccontactsecurity.md
   - docs/models/operations/createuccontactrequest.md
   - docs/models/operations/createuccontactresponse.md
-  - docs/models/operations/getcrmcontactsecurity.md
   - docs/models/operations/getcrmcontactrequest.md
   - docs/models/operations/getcrmcontactresponse.md
-  - docs/models/operations/getuccontactsecurity.md
   - docs/models/operations/getuccontactrequest.md
   - docs/models/operations/getuccontactresponse.md
-  - docs/models/operations/listcrmcontactssecurity.md
   - docs/models/operations/listcrmcontactsrequest.md
   - docs/models/operations/listcrmcontactsresponse.md
-  - docs/models/operations/listuccontactssecurity.md
   - docs/models/operations/listuccontactsrequest.md
   - docs/models/operations/listuccontactsresponse.md
-  - docs/models/operations/patchcrmcontactsecurity.md
   - docs/models/operations/patchcrmcontactrequest.md
   - docs/models/operations/patchcrmcontactresponse.md
-  - docs/models/operations/patchuccontactsecurity.md
   - docs/models/operations/patchuccontactrequest.md
   - docs/models/operations/patchuccontactresponse.md
-  - docs/models/operations/removecrmcontactsecurity.md
   - docs/models/operations/removecrmcontactrequest.md
   - docs/models/operations/removecrmcontactresponse.md
-  - docs/models/operations/removeuccontactsecurity.md
   - docs/models/operations/removeuccontactrequest.md
   - docs/models/operations/removeuccontactresponse.md
-  - docs/models/operations/updatecrmcontactsecurity.md
   - docs/models/operations/updatecrmcontactrequest.md
   - docs/models/operations/updatecrmcontactresponse.md
-  - docs/models/operations/updateuccontactsecurity.md
   - docs/models/operations/updateuccontactrequest.md
   - docs/models/operations/updateuccontactresponse.md
-  - docs/models/operations/createatsactivitysecurity.md
   - docs/models/operations/createatsactivityrequest.md
   - docs/models/operations/createatsactivityresponse.md
-  - docs/models/operations/createatsapplicationsecurity.md
   - docs/models/operations/createatsapplicationrequest.md
   - docs/models/operations/createatsapplicationresponse.md
-  - docs/models/operations/createatscandidatesecurity.md
   - docs/models/operations/createatscandidaterequest.md
   - docs/models/operations/createatscandidateresponse.md
-  - docs/models/operations/createatsdocumentsecurity.md
   - docs/models/operations/createatsdocumentrequest.md
   - docs/models/operations/createatsdocumentresponse.md
-  - docs/models/operations/createatsinterviewsecurity.md
   - docs/models/operations/createatsinterviewrequest.md
   - docs/models/operations/createatsinterviewresponse.md
-  - docs/models/operations/createatsjobsecurity.md
   - docs/models/operations/createatsjobrequest.md
   - docs/models/operations/createatsjobresponse.md
-  - docs/models/operations/createatsscorecardsecurity.md
   - docs/models/operations/createatsscorecardrequest.md
   - docs/models/operations/createatsscorecardresponse.md
-  - docs/models/operations/getatsactivitysecurity.md
   - docs/models/operations/getatsactivityrequest.md
   - docs/models/operations/getatsactivityresponse.md
-  - docs/models/operations/getatsapplicationsecurity.md
   - docs/models/operations/getatsapplicationrequest.md
   - docs/models/operations/getatsapplicationresponse.md
-  - docs/models/operations/getatscandidatesecurity.md
   - docs/models/operations/getatscandidaterequest.md
   - docs/models/operations/getatscandidateresponse.md
-  - docs/models/operations/getatscompanysecurity.md
   - docs/models/operations/getatscompanyrequest.md
   - docs/models/operations/getatscompanyresponse.md
-  - docs/models/operations/getatsdocumentsecurity.md
   - docs/models/operations/getatsdocumentrequest.md
   - docs/models/operations/getatsdocumentresponse.md
-  - docs/models/operations/getatsinterviewsecurity.md
   - docs/models/operations/getatsinterviewrequest.md
   - docs/models/operations/getatsinterviewresponse.md
-  - docs/models/operations/getatsjobsecurity.md
   - docs/models/operations/getatsjobrequest.md
   - docs/models/operations/getatsjobresponse.md
-  - docs/models/operations/getatsscorecardsecurity.md
   - docs/models/operations/getatsscorecardrequest.md
   - docs/models/operations/getatsscorecardresponse.md
-  - docs/models/operations/listatsactivitiessecurity.md
   - docs/models/operations/listatsactivitiesrequest.md
   - docs/models/operations/listatsactivitiesresponse.md
-  - docs/models/operations/listatsapplicationssecurity.md
   - docs/models/operations/listatsapplicationsrequest.md
   - docs/models/operations/listatsapplicationsresponse.md
-  - docs/models/operations/listatsapplicationstatusessecurity.md
   - docs/models/operations/listatsapplicationstatusesrequest.md
   - docs/models/operations/listatsapplicationstatusesresponse.md
-  - docs/models/operations/listatscandidatessecurity.md
   - docs/models/operations/listatscandidatesrequest.md
   - docs/models/operations/listatscandidatesresponse.md
-  - docs/models/operations/listatscompaniessecurity.md
   - docs/models/operations/listatscompaniesrequest.md
   - docs/models/operations/listatscompaniesresponse.md
-  - docs/models/operations/listatsdocumentssecurity.md
   - docs/models/operations/listatsdocumentsrequest.md
   - docs/models/operations/listatsdocumentsresponse.md
-  - docs/models/operations/listatsinterviewssecurity.md
   - docs/models/operations/listatsinterviewsrequest.md
   - docs/models/operations/listatsinterviewsresponse.md
-  - docs/models/operations/listatsjobssecurity.md
   - docs/models/operations/listatsjobsrequest.md
   - docs/models/operations/listatsjobsresponse.md
-  - docs/models/operations/listatsscorecardssecurity.md
   - docs/models/operations/listatsscorecardsrequest.md
   - docs/models/operations/listatsscorecardsresponse.md
-  - docs/models/operations/patchatsactivitysecurity.md
   - docs/models/operations/patchatsactivityrequest.md
   - docs/models/operations/patchatsactivityresponse.md
-  - docs/models/operations/patchatsapplicationsecurity.md
   - docs/models/operations/patchatsapplicationrequest.md
   - docs/models/operations/patchatsapplicationresponse.md
-  - docs/models/operations/patchatscandidatesecurity.md
   - docs/models/operations/patchatscandidaterequest.md
   - docs/models/operations/patchatscandidateresponse.md
-  - docs/models/operations/patchatsdocumentsecurity.md
   - docs/models/operations/patchatsdocumentrequest.md
   - docs/models/operations/patchatsdocumentresponse.md
-  - docs/models/operations/patchatsinterviewsecurity.md
   - docs/models/operations/patchatsinterviewrequest.md
   - docs/models/operations/patchatsinterviewresponse.md
-  - docs/models/operations/patchatsjobsecurity.md
   - docs/models/operations/patchatsjobrequest.md
   - docs/models/operations/patchatsjobresponse.md
-  - docs/models/operations/patchatsscorecardsecurity.md
   - docs/models/operations/patchatsscorecardrequest.md
   - docs/models/operations/patchatsscorecardresponse.md
-  - docs/models/operations/removeatsactivitysecurity.md
   - docs/models/operations/removeatsactivityrequest.md
   - docs/models/operations/removeatsactivityresponse.md
-  - docs/models/operations/removeatsapplicationsecurity.md
   - docs/models/operations/removeatsapplicationrequest.md
   - docs/models/operations/removeatsapplicationresponse.md
-  - docs/models/operations/removeatscandidatesecurity.md
   - docs/models/operations/removeatscandidaterequest.md
   - docs/models/operations/removeatscandidateresponse.md
-  - docs/models/operations/removeatsdocumentsecurity.md
   - docs/models/operations/removeatsdocumentrequest.md
   - docs/models/operations/removeatsdocumentresponse.md
-  - docs/models/operations/removeatsinterviewsecurity.md
   - docs/models/operations/removeatsinterviewrequest.md
   - docs/models/operations/removeatsinterviewresponse.md
-  - docs/models/operations/removeatsjobsecurity.md
   - docs/models/operations/removeatsjobrequest.md
   - docs/models/operations/removeatsjobresponse.md
-  - docs/models/operations/removeatsscorecardsecurity.md
   - docs/models/operations/removeatsscorecardrequest.md
   - docs/models/operations/removeatsscorecardresponse.md
-  - docs/models/operations/updateatsactivitysecurity.md
   - docs/models/operations/updateatsactivityrequest.md
   - docs/models/operations/updateatsactivityresponse.md
-  - docs/models/operations/updateatsapplicationsecurity.md
   - docs/models/operations/updateatsapplicationrequest.md
   - docs/models/operations/updateatsapplicationresponse.md
-  - docs/models/operations/updateatscandidatesecurity.md
   - docs/models/operations/updateatscandidaterequest.md
   - docs/models/operations/updateatscandidateresponse.md
-  - docs/models/operations/updateatsdocumentsecurity.md
   - docs/models/operations/updateatsdocumentrequest.md
   - docs/models/operations/updateatsdocumentresponse.md
-  - docs/models/operations/updateatsinterviewsecurity.md
   - docs/models/operations/updateatsinterviewrequest.md
   - docs/models/operations/updateatsinterviewresponse.md
-  - docs/models/operations/updateatsjobsecurity.md
   - docs/models/operations/updateatsjobrequest.md
   - docs/models/operations/updateatsjobresponse.md
-  - docs/models/operations/updateatsscorecardsecurity.md
   - docs/models/operations/updateatsscorecardrequest.md
   - docs/models/operations/updateatsscorecardresponse.md
-  - docs/models/operations/createcrmcompanysecurity.md
   - docs/models/operations/createcrmcompanyrequest.md
   - docs/models/operations/createcrmcompanyresponse.md
-  - docs/models/operations/getcrmcompanysecurity.md
   - docs/models/operations/getcrmcompanyrequest.md
   - docs/models/operations/getcrmcompanyresponse.md
-  - docs/models/operations/listcrmcompaniessecurity.md
   - docs/models/operations/listcrmcompaniesrequest.md
   - docs/models/operations/listcrmcompaniesresponse.md
-  - docs/models/operations/listenrichcompaniessecurity.md
   - docs/models/operations/listenrichcompaniesrequest.md
   - docs/models/operations/listenrichcompaniesresponse.md
-  - docs/models/operations/patchcrmcompanysecurity.md
   - docs/models/operations/patchcrmcompanyrequest.md
   - docs/models/operations/patchcrmcompanyresponse.md
-  - docs/models/operations/removecrmcompanysecurity.md
   - docs/models/operations/removecrmcompanyrequest.md
   - docs/models/operations/removecrmcompanyresponse.md
-  - docs/models/operations/updatecrmcompanysecurity.md
   - docs/models/operations/updatecrmcompanyrequest.md
   - docs/models/operations/updatecrmcompanyresponse.md
-  - docs/models/operations/createcommercecollectionsecurity.md
   - docs/models/operations/createcommercecollectionrequest.md
   - docs/models/operations/createcommercecollectionresponse.md
-  - docs/models/operations/createcommerceinventorysecurity.md
   - docs/models/operations/createcommerceinventoryrequest.md
   - docs/models/operations/createcommerceinventoryresponse.md
-  - docs/models/operations/createcommerceitemsecurity.md
   - docs/models/operations/createcommerceitemrequest.md
   - docs/models/operations/createcommerceitemresponse.md
-  - docs/models/operations/createcommercelocationsecurity.md
   - docs/models/operations/createcommercelocationrequest.md
   - docs/models/operations/createcommercelocationresponse.md
-  - docs/models/operations/getcommercecollectionsecurity.md
   - docs/models/operations/getcommercecollectionrequest.md
   - docs/models/operations/getcommercecollectionresponse.md
-  - docs/models/operations/getcommerceinventorysecurity.md
   - docs/models/operations/getcommerceinventoryrequest.md
   - docs/models/operations/getcommerceinventoryresponse.md
-  - docs/models/operations/getcommerceitemsecurity.md
   - docs/models/operations/getcommerceitemrequest.md
   - docs/models/operations/getcommerceitemresponse.md
-  - docs/models/operations/getcommercelocationsecurity.md
   - docs/models/operations/getcommercelocationrequest.md
   - docs/models/operations/getcommercelocationresponse.md
-  - docs/models/operations/listcommercecollectionssecurity.md
   - docs/models/operations/listcommercecollectionsrequest.md
   - docs/models/operations/listcommercecollectionsresponse.md
-  - docs/models/operations/listcommerceinventoriessecurity.md
   - docs/models/operations/listcommerceinventoriesrequest.md
   - docs/models/operations/listcommerceinventoriesresponse.md
-  - docs/models/operations/listcommerceitemssecurity.md
   - docs/models/operations/listcommerceitemsrequest.md
   - docs/models/operations/listcommerceitemsresponse.md
-  - docs/models/operations/listcommercelocationssecurity.md
   - docs/models/operations/listcommercelocationsrequest.md
   - docs/models/operations/listcommercelocationsresponse.md
-  - docs/models/operations/patchcommercecollectionsecurity.md
   - docs/models/operations/patchcommercecollectionrequest.md
   - docs/models/operations/patchcommercecollectionresponse.md
-  - docs/models/operations/patchcommerceinventorysecurity.md
   - docs/models/operations/patchcommerceinventoryrequest.md
   - docs/models/operations/patchcommerceinventoryresponse.md
-  - docs/models/operations/patchcommerceitemsecurity.md
   - docs/models/operations/patchcommerceitemrequest.md
   - docs/models/operations/patchcommerceitemresponse.md
-  - docs/models/operations/patchcommercelocationsecurity.md
   - docs/models/operations/patchcommercelocationrequest.md
   - docs/models/operations/patchcommercelocationresponse.md
-  - docs/models/operations/removecommercecollectionsecurity.md
   - docs/models/operations/removecommercecollectionrequest.md
   - docs/models/operations/removecommercecollectionresponse.md
-  - docs/models/operations/removecommerceinventorysecurity.md
   - docs/models/operations/removecommerceinventoryrequest.md
   - docs/models/operations/removecommerceinventoryresponse.md
-  - docs/models/operations/removecommerceitemsecurity.md
   - docs/models/operations/removecommerceitemrequest.md
   - docs/models/operations/removecommerceitemresponse.md
-  - docs/models/operations/removecommercelocationsecurity.md
   - docs/models/operations/removecommercelocationrequest.md
   - docs/models/operations/removecommercelocationresponse.md
-  - docs/models/operations/updatecommercecollectionsecurity.md
   - docs/models/operations/updatecommercecollectionrequest.md
   - docs/models/operations/updatecommercecollectionresponse.md
-  - docs/models/operations/updatecommerceinventorysecurity.md
   - docs/models/operations/updatecommerceinventoryrequest.md
   - docs/models/operations/updatecommerceinventoryresponse.md
-  - docs/models/operations/updatecommerceitemsecurity.md
   - docs/models/operations/updatecommerceitemrequest.md
   - docs/models/operations/updatecommerceitemresponse.md
-  - docs/models/operations/updatecommercelocationsecurity.md
   - docs/models/operations/updatecommercelocationrequest.md
   - docs/models/operations/updatecommercelocationresponse.md
-  - docs/models/operations/createcrmdealsecurity.md
   - docs/models/operations/createcrmdealrequest.md
   - docs/models/operations/createcrmdealresponse.md
-  - docs/models/operations/createcrmeventsecurity.md
   - docs/models/operations/createcrmeventrequest.md
   - docs/models/operations/createcrmeventresponse.md
-  - docs/models/operations/createcrmleadsecurity.md
   - docs/models/operations/createcrmleadrequest.md
   - docs/models/operations/createcrmleadresponse.md
-  - docs/models/operations/createcrmpipelinesecurity.md
   - docs/models/operations/createcrmpipelinerequest.md
   - docs/models/operations/createcrmpipelineresponse.md
-  - docs/models/operations/getcrmdealsecurity.md
   - docs/models/operations/getcrmdealrequest.md
   - docs/models/operations/getcrmdealresponse.md
-  - docs/models/operations/getcrmeventsecurity.md
   - docs/models/operations/getcrmeventrequest.md
   - docs/models/operations/getcrmeventresponse.md
-  - docs/models/operations/getcrmleadsecurity.md
   - docs/models/operations/getcrmleadrequest.md
   - docs/models/operations/getcrmleadresponse.md
-  - docs/models/operations/getcrmpipelinesecurity.md
   - docs/models/operations/getcrmpipelinerequest.md
   - docs/models/operations/getcrmpipelineresponse.md
-  - docs/models/operations/listcrmdealssecurity.md
   - docs/models/operations/listcrmdealsrequest.md
   - docs/models/operations/listcrmdealsresponse.md
-  - docs/models/operations/listcrmeventssecurity.md
   - docs/models/operations/listcrmeventsrequest.md
   - docs/models/operations/listcrmeventsresponse.md
-  - docs/models/operations/listcrmleadssecurity.md
   - docs/models/operations/listcrmleadsrequest.md
   - docs/models/operations/listcrmleadsresponse.md
-  - docs/models/operations/listcrmpipelinessecurity.md
   - docs/models/operations/listcrmpipelinesrequest.md
   - docs/models/operations/listcrmpipelinesresponse.md
-  - docs/models/operations/patchcrmdealsecurity.md
   - docs/models/operations/patchcrmdealrequest.md
   - docs/models/operations/patchcrmdealresponse.md
-  - docs/models/operations/patchcrmeventsecurity.md
   - docs/models/operations/patchcrmeventrequest.md
   - docs/models/operations/patchcrmeventresponse.md
-  - docs/models/operations/patchcrmleadsecurity.md
   - docs/models/operations/patchcrmleadrequest.md
   - docs/models/operations/patchcrmleadresponse.md
-  - docs/models/operations/patchcrmpipelinesecurity.md
   - docs/models/operations/patchcrmpipelinerequest.md
   - docs/models/operations/patchcrmpipelineresponse.md
-  - docs/models/operations/removecrmdealsecurity.md
   - docs/models/operations/removecrmdealrequest.md
   - docs/models/operations/removecrmdealresponse.md
-  - docs/models/operations/removecrmeventsecurity.md
   - docs/models/operations/removecrmeventrequest.md
   - docs/models/operations/removecrmeventresponse.md
-  - docs/models/operations/removecrmleadsecurity.md
   - docs/models/operations/removecrmleadrequest.md
   - docs/models/operations/removecrmleadresponse.md
-  - docs/models/operations/removecrmpipelinesecurity.md
   - docs/models/operations/removecrmpipelinerequest.md
   - docs/models/operations/removecrmpipelineresponse.md
-  - docs/models/operations/updatecrmdealsecurity.md
   - docs/models/operations/updatecrmdealrequest.md
   - docs/models/operations/updatecrmdealresponse.md
-  - docs/models/operations/updatecrmeventsecurity.md
   - docs/models/operations/updatecrmeventrequest.md
   - docs/models/operations/updatecrmeventresponse.md
-  - docs/models/operations/updatecrmleadsecurity.md
   - docs/models/operations/updatecrmleadrequest.md
   - docs/models/operations/updatecrmleadresponse.md
-  - docs/models/operations/updatecrmpipelinesecurity.md
   - docs/models/operations/updatecrmpipelinerequest.md
   - docs/models/operations/updatecrmpipelineresponse.md
-  - docs/models/operations/listenrichpeoplesecurity.md
   - docs/models/operations/listenrichpeoplerequest.md
   - docs/models/operations/listenrichpeopleresponse.md
-  - docs/models/operations/createhrisemployeesecurity.md
   - docs/models/operations/createhrisemployeerequest.md
   - docs/models/operations/createhrisemployeeresponse.md
-  - docs/models/operations/createhrisgroupsecurity.md
   - docs/models/operations/createhrisgrouprequest.md
   - docs/models/operations/createhrisgroupresponse.md
-  - docs/models/operations/gethrisemployeesecurity.md
   - docs/models/operations/gethrisemployeerequest.md
   - docs/models/operations/gethrisemployeeresponse.md
-  - docs/models/operations/gethrisgroupsecurity.md
   - docs/models/operations/gethrisgrouprequest.md
   - docs/models/operations/gethrisgroupresponse.md
-  - docs/models/operations/listhrisemployeessecurity.md
   - docs/models/operations/listhrisemployeesrequest.md
   - docs/models/operations/listhrisemployeesresponse.md
-  - docs/models/operations/listhrisgroupssecurity.md
   - docs/models/operations/listhrisgroupsrequest.md
   - docs/models/operations/listhrisgroupsresponse.md
-  - docs/models/operations/patchhrisemployeesecurity.md
   - docs/models/operations/patchhrisemployeerequest.md
   - docs/models/operations/patchhrisemployeeresponse.md
-  - docs/models/operations/patchhrisgroupsecurity.md
   - docs/models/operations/patchhrisgrouprequest.md
   - docs/models/operations/patchhrisgroupresponse.md
-  - docs/models/operations/removehrisemployeesecurity.md
   - docs/models/operations/removehrisemployeerequest.md
   - docs/models/operations/removehrisemployeeresponse.md
-  - docs/models/operations/removehrisgroupsecurity.md
   - docs/models/operations/removehrisgrouprequest.md
   - docs/models/operations/removehrisgroupresponse.md
-  - docs/models/operations/updatehrisemployeesecurity.md
   - docs/models/operations/updatehrisemployeerequest.md
   - docs/models/operations/updatehrisemployeeresponse.md
-  - docs/models/operations/updatehrisgroupsecurity.md
   - docs/models/operations/updatehrisgrouprequest.md
   - docs/models/operations/updatehrisgroupresponse.md
-  - docs/models/operations/createmartechlistsecurity.md
   - docs/models/operations/createmartechlistrequest.md
   - docs/models/operations/createmartechlistresponse.md
-  - docs/models/operations/createmartechmembersecurity.md
   - docs/models/operations/createmartechmemberrequest.md
   - docs/models/operations/createmartechmemberresponse.md
-  - docs/models/operations/getmartechlistsecurity.md
   - docs/models/operations/getmartechlistrequest.md
   - docs/models/operations/getmartechlistresponse.md
-  - docs/models/operations/getmartechmembersecurity.md
   - docs/models/operations/getmartechmemberrequest.md
   - docs/models/operations/getmartechmemberresponse.md
-  - docs/models/operations/listmartechlistssecurity.md
   - docs/models/operations/listmartechlistsrequest.md
   - docs/models/operations/listmartechlistsresponse.md
-  - docs/models/operations/listmartechmemberssecurity.md
   - docs/models/operations/listmartechmembersrequest.md
   - docs/models/operations/listmartechmembersresponse.md
-  - docs/models/operations/patchmartechlistsecurity.md
   - docs/models/operations/patchmartechlistrequest.md
   - docs/models/operations/patchmartechlistresponse.md
-  - docs/models/operations/patchmartechmembersecurity.md
   - docs/models/operations/patchmartechmemberrequest.md
   - docs/models/operations/patchmartechmemberresponse.md
-  - docs/models/operations/removemartechlistsecurity.md
   - docs/models/operations/removemartechlistrequest.md
   - docs/models/operations/removemartechlistresponse.md
-  - docs/models/operations/removemartechmembersecurity.md
   - docs/models/operations/removemartechmemberrequest.md
   - docs/models/operations/removemartechmemberresponse.md
-  - docs/models/operations/updatemartechlistsecurity.md
   - docs/models/operations/updatemartechlistrequest.md
   - docs/models/operations/updatemartechlistresponse.md
-  - docs/models/operations/updatemartechmembersecurity.md
   - docs/models/operations/updatemartechmemberrequest.md
   - docs/models/operations/updatemartechmemberresponse.md
-  - docs/models/operations/createpassthroughsecurity.md
   - docs/models/operations/createpassthroughrequest.md
   - docs/models/operations/createpassthroughresponse.md
-  - docs/models/operations/listpassthroughssecurity.md
   - docs/models/operations/listpassthroughsrequest.md
   - docs/models/operations/listpassthroughsresponse.md
-  - docs/models/operations/patchpassthroughsecurity.md
   - docs/models/operations/patchpassthroughrequest.md
   - docs/models/operations/patchpassthroughresponse.md
-  - docs/models/operations/removepassthroughsecurity.md
   - docs/models/operations/removepassthroughrequest.md
   - docs/models/operations/removepassthroughresponse.md
-  - docs/models/operations/updatepassthroughsecurity.md
   - docs/models/operations/updatepassthroughrequest.md
   - docs/models/operations/updatepassthroughresponse.md
-  - docs/models/operations/createstoragefilesecurity.md
+  - docs/models/operations/createpaymentlinkrequest.md
+  - docs/models/operations/createpaymentlinkresponse.md
+  - docs/models/operations/createpaymentpaymentrequest.md
+  - docs/models/operations/createpaymentpaymentresponse.md
+  - docs/models/operations/getpaymentlinkrequest.md
+  - docs/models/operations/getpaymentlinkresponse.md
+  - docs/models/operations/getpaymentpaymentrequest.md
+  - docs/models/operations/getpaymentpaymentresponse.md
+  - docs/models/operations/getpaymentpayoutrequest.md
+  - docs/models/operations/getpaymentpayoutresponse.md
+  - docs/models/operations/getpaymentrefundrequest.md
+  - docs/models/operations/getpaymentrefundresponse.md
+  - docs/models/operations/listpaymentlinksrequest.md
+  - docs/models/operations/listpaymentlinksresponse.md
+  - docs/models/operations/listpaymentpaymentsrequest.md
+  - docs/models/operations/listpaymentpaymentsresponse.md
+  - docs/models/operations/listpaymentpayoutsrequest.md
+  - docs/models/operations/listpaymentpayoutsresponse.md
+  - docs/models/operations/listpaymentrefundsrequest.md
+  - docs/models/operations/listpaymentrefundsresponse.md
+  - docs/models/operations/patchpaymentlinkrequest.md
+  - docs/models/operations/patchpaymentlinkresponse.md
+  - docs/models/operations/patchpaymentpaymentrequest.md
+  - docs/models/operations/patchpaymentpaymentresponse.md
+  - docs/models/operations/removepaymentlinkrequest.md
+  - docs/models/operations/removepaymentlinkresponse.md
+  - docs/models/operations/removepaymentpaymentrequest.md
+  - docs/models/operations/removepaymentpaymentresponse.md
+  - docs/models/operations/updatepaymentlinkrequest.md
+  - docs/models/operations/updatepaymentlinkresponse.md
+  - docs/models/operations/updatepaymentpaymentrequest.md
+  - docs/models/operations/updatepaymentpaymentresponse.md
   - docs/models/operations/createstoragefilerequest.md
   - docs/models/operations/createstoragefileresponse.md
-  - docs/models/operations/getstoragefilesecurity.md
   - docs/models/operations/getstoragefilerequest.md
   - docs/models/operations/getstoragefileresponse.md
-  - docs/models/operations/liststoragefilessecurity.md
   - docs/models/operations/liststoragefilesrequest.md
   - docs/models/operations/liststoragefilesresponse.md
-  - docs/models/operations/patchstoragefilesecurity.md
   - docs/models/operations/patchstoragefilerequest.md
   - docs/models/operations/patchstoragefileresponse.md
-  - docs/models/operations/removestoragefilesecurity.md
   - docs/models/operations/removestoragefilerequest.md
   - docs/models/operations/removestoragefileresponse.md
-  - docs/models/operations/updatestoragefilesecurity.md
   - docs/models/operations/updatestoragefilerequest.md
   - docs/models/operations/updatestoragefileresponse.md
-  - docs/models/operations/createticketingcustomersecurity.md
   - docs/models/operations/createticketingcustomerrequest.md
   - docs/models/operations/createticketingcustomerresponse.md
-  - docs/models/operations/createticketingnotesecurity.md
   - docs/models/operations/createticketingnoterequest.md
   - docs/models/operations/createticketingnoteresponse.md
-  - docs/models/operations/createticketingticketsecurity.md
   - docs/models/operations/createticketingticketrequest.md
   - docs/models/operations/createticketingticketresponse.md
-  - docs/models/operations/getticketingcustomersecurity.md
   - docs/models/operations/getticketingcustomerrequest.md
   - docs/models/operations/getticketingcustomerresponse.md
-  - docs/models/operations/getticketingnotesecurity.md
   - docs/models/operations/getticketingnoterequest.md
   - docs/models/operations/getticketingnoteresponse.md
-  - docs/models/operations/getticketingticketsecurity.md
   - docs/models/operations/getticketingticketrequest.md
   - docs/models/operations/getticketingticketresponse.md
-  - docs/models/operations/listticketingcustomerssecurity.md
   - docs/models/operations/listticketingcustomersrequest.md
   - docs/models/operations/listticketingcustomersresponse.md
-  - docs/models/operations/listticketingnotessecurity.md
   - docs/models/operations/listticketingnotesrequest.md
   - docs/models/operations/listticketingnotesresponse.md
-  - docs/models/operations/listticketingticketssecurity.md
   - docs/models/operations/listticketingticketsrequest.md
   - docs/models/operations/listticketingticketsresponse.md
-  - docs/models/operations/patchticketingcustomersecurity.md
   - docs/models/operations/patchticketingcustomerrequest.md
   - docs/models/operations/patchticketingcustomerresponse.md
-  - docs/models/operations/patchticketingnotesecurity.md
   - docs/models/operations/patchticketingnoterequest.md
   - docs/models/operations/patchticketingnoteresponse.md
-  - docs/models/operations/patchticketingticketsecurity.md
   - docs/models/operations/patchticketingticketrequest.md
   - docs/models/operations/patchticketingticketresponse.md
-  - docs/models/operations/removeticketingcustomersecurity.md
   - docs/models/operations/removeticketingcustomerrequest.md
   - docs/models/operations/removeticketingcustomerresponse.md
-  - docs/models/operations/removeticketingnotesecurity.md
   - docs/models/operations/removeticketingnoterequest.md
   - docs/models/operations/removeticketingnoteresponse.md
-  - docs/models/operations/removeticketingticketsecurity.md
   - docs/models/operations/removeticketingticketrequest.md
   - docs/models/operations/removeticketingticketresponse.md
-  - docs/models/operations/updateticketingcustomersecurity.md
   - docs/models/operations/updateticketingcustomerrequest.md
   - docs/models/operations/updateticketingcustomerresponse.md
-  - docs/models/operations/updateticketingnotesecurity.md
   - docs/models/operations/updateticketingnoterequest.md
   - docs/models/operations/updateticketingnoteresponse.md
-  - docs/models/operations/updateticketingticketsecurity.md
   - docs/models/operations/updateticketingticketrequest.md
   - docs/models/operations/updateticketingticketresponse.md
-  - docs/models/operations/listuccallssecurity.md
   - docs/models/operations/listuccallsrequest.md
   - docs/models/operations/listuccallsresponse.md
-  - docs/models/operations/createunifiedconnectionsecurity.md
   - docs/models/operations/createunifiedconnectionresponse.md
-  - docs/models/operations/createunifiedwebhooksecurity.md
   - docs/models/operations/createunifiedwebhookrequest.md
   - docs/models/operations/createunifiedwebhookresponse.md
-  - docs/models/operations/getunifiedapicallsecurity.md
   - docs/models/operations/getunifiedapicallrequest.md
   - docs/models/operations/getunifiedapicallresponse.md
-  - docs/models/operations/getunifiedconnectionsecurity.md
   - docs/models/operations/getunifiedconnectionrequest.md
   - docs/models/operations/getunifiedconnectionresponse.md
   - docs/models/operations/scopes.md
   - docs/models/operations/getunifiedintegrationauthrequest.md
   - docs/models/operations/getunifiedintegrationauthresponse.md
-  - docs/models/operations/getunifiedwebhooksecurity.md
   - docs/models/operations/getunifiedwebhookrequest.md
   - docs/models/operations/getunifiedwebhookresponse.md
-  - docs/models/operations/listunifiedapicallssecurity.md
   - docs/models/operations/listunifiedapicallsrequest.md
   - docs/models/operations/listunifiedapicallsresponse.md
-  - docs/models/operations/listunifiedconnectionssecurity.md
   - docs/models/operations/categories.md
   - docs/models/operations/listunifiedconnectionsrequest.md
   - docs/models/operations/listunifiedconnectionsresponse.md
   - docs/models/operations/queryparamcategories.md
   - docs/models/operations/listunifiedintegrationworkspacesrequest.md
   - docs/models/operations/listunifiedintegrationworkspacesresponse.md
-  - docs/models/operations/listunifiedintegrationssecurity.md
   - docs/models/operations/listunifiedintegrationsqueryparamcategories.md
   - docs/models/operations/listunifiedintegrationsrequest.md
   - docs/models/operations/listunifiedintegrationsresponse.md
-  - docs/models/operations/listunifiedissuessecurity.md
   - docs/models/operations/listunifiedissuesrequest.md
   - docs/models/operations/listunifiedissuesresponse.md
-  - docs/models/operations/listunifiedwebhookssecurity.md
   - docs/models/operations/listunifiedwebhooksrequest.md
   - docs/models/operations/listunifiedwebhooksresponse.md
-  - docs/models/operations/patchunifiedconnectionsecurity.md
   - docs/models/operations/patchunifiedconnectionrequest.md
   - docs/models/operations/patchunifiedconnectionresponse.md
-  - docs/models/operations/patchunifiedwebhooktriggersecurity.md
   - docs/models/operations/patchunifiedwebhooktriggerrequest.md
   - docs/models/operations/patchunifiedwebhooktriggerresponse.md
-  - docs/models/operations/removeunifiedconnectionsecurity.md
   - docs/models/operations/removeunifiedconnectionrequest.md
   - docs/models/operations/removeunifiedconnectionresponse.md
-  - docs/models/operations/removeunifiedwebhooksecurity.md
   - docs/models/operations/removeunifiedwebhookrequest.md
   - docs/models/operations/removeunifiedwebhookresponse.md
-  - docs/models/operations/updateunifiedconnectionsecurity.md
   - docs/models/operations/updateunifiedconnectionrequest.md
   - docs/models/operations/updateunifiedconnectionresponse.md
-  - docs/models/operations/updateunifiedwebhooktriggersecurity.md
   - docs/models/operations/updateunifiedwebhooktriggerrequest.md
   - docs/models/operations/updateunifiedwebhooktriggerresponse.md
   - docs/models/operations/getunifiedintegrationloginrequest.md
@@ -1112,16 +908,11 @@ generatedFiles:
   - docs/models/shared/accountinginvoicestatus.md
   - docs/models/shared/accountinginvoice.md
   - docs/models/shared/accountinglineitem.md
-  - docs/models/shared/accountingpayment.md
   - docs/models/shared/accountingtaxrate.md
   - docs/models/shared/accountingtransaction.md
   - docs/models/shared/accountingtransactionlineitem.md
   - docs/models/shared/accountingorganization.md
   - docs/models/shared/propertyaccountingorganizationaddress.md
-  - docs/models/shared/accountingpayoutstatus.md
-  - docs/models/shared/accountingpayout.md
-  - docs/models/shared/accountingrefundstatus.md
-  - docs/models/shared/accountingrefund.md
   - docs/models/shared/crmcontact.md
   - docs/models/shared/crmtelephonetype.md
   - docs/models/shared/crmtelephone.md
@@ -1217,6 +1008,13 @@ generatedFiles:
   - docs/models/shared/marketingmember.md
   - docs/models/shared/marketingemailtype.md
   - docs/models/shared/marketingemail.md
+  - docs/models/shared/paymentlink.md
+  - docs/models/shared/paymenntlinklineitem.md
+  - docs/models/shared/paymentpayment.md
+  - docs/models/shared/paymentpayoutstatus.md
+  - docs/models/shared/paymentpayout.md
+  - docs/models/shared/paymentrefundstatus.md
+  - docs/models/shared/paymentrefund.md
   - docs/models/shared/storagefiletype.md
   - docs/models/shared/storagefile.md
   - docs/models/shared/storagepermission.md
@@ -1250,15 +1048,13 @@ generatedFiles:
   - docs/models/shared/issuestatus.md
   - docs/models/shared/issuetype.md
   - docs/models/shared/issue.md
+  - docs/models/shared/security.md
   - docs/sdks/unifiedto/README.md
   - docs/sdks/accounting/README.md
   - docs/sdks/account/README.md
   - docs/sdks/contact/README.md
   - docs/sdks/invoice/README.md
   - docs/sdks/organization/README.md
-  - docs/sdks/payment/README.md
-  - docs/sdks/payout/README.md
-  - docs/sdks/refund/README.md
   - docs/sdks/taxrate/README.md
   - docs/sdks/transaction/README.md
   - docs/sdks/ats/README.md
@@ -1290,6 +1086,10 @@ generatedFiles:
   - docs/sdks/list/README.md
   - docs/sdks/member/README.md
   - docs/sdks/passthrough/README.md
+  - docs/sdks/payment/README.md
+  - docs/sdks/link/README.md
+  - docs/sdks/payout/README.md
+  - docs/sdks/refund/README.md
   - docs/sdks/storage/README.md
   - docs/sdks/file/README.md
   - docs/sdks/ticketing/README.md

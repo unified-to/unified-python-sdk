@@ -13,7 +13,7 @@ class Enrich:
         
     
     
-    def list_enrich_companies(self, request: operations.ListEnrichCompaniesRequest, security: operations.ListEnrichCompaniesSecurity) -> operations.ListEnrichCompaniesResponse:
+    def list_enrich_companies(self, request: operations.ListEnrichCompaniesRequest) -> operations.ListEnrichCompaniesResponse:
         r"""Retrieve enrichment information for a company"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -23,7 +23,10 @@ class Enrich:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -43,7 +46,7 @@ class Enrich:
 
     
     
-    def list_enrich_people(self, request: operations.ListEnrichPeopleRequest, security: operations.ListEnrichPeopleSecurity) -> operations.ListEnrichPeopleResponse:
+    def list_enrich_people(self, request: operations.ListEnrichPeopleRequest) -> operations.ListEnrichPeopleResponse:
         r"""Retrieve enrichment information for a person"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -53,7 +56,10 @@ class Enrich:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')

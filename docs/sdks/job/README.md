@@ -18,17 +18,19 @@ Create a job
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 req = operations.CreateAtsJobRequest(
     connection_id='<value>',
 )
 
-res = s.job.create_ats_job(req, operations.CreateAtsJobSecurity(
-    jwt="<YOUR_API_KEY_HERE>",
-))
+res = s.job.create_ats_job(req)
 
 if res.ats_job is not None:
     # handle response
@@ -37,10 +39,9 @@ if res.ats_job is not None:
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `request`                                                                          | [operations.CreateAtsJobRequest](../../models/operations/createatsjobrequest.md)   | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
-| `security`                                                                         | [operations.CreateAtsJobSecurity](../../models/operations/createatsjobsecurity.md) | :heavy_check_mark:                                                                 | The security requirements to use for the request.                                  |
+| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `request`                                                                        | [operations.CreateAtsJobRequest](../../models/operations/createatsjobrequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
 
 
 ### Response
@@ -60,18 +61,20 @@ Retrieve a job
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 req = operations.GetAtsJobRequest(
     connection_id='<value>',
     id='<id>',
 )
 
-res = s.job.get_ats_job(req, operations.GetAtsJobSecurity(
-    jwt="<YOUR_API_KEY_HERE>",
-))
+res = s.job.get_ats_job(req)
 
 if res.ats_job is not None:
     # handle response
@@ -80,10 +83,9 @@ if res.ats_job is not None:
 
 ### Parameters
 
-| Parameter                                                                    | Type                                                                         | Required                                                                     | Description                                                                  |
-| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| `request`                                                                    | [operations.GetAtsJobRequest](../../models/operations/getatsjobrequest.md)   | :heavy_check_mark:                                                           | The request object to use for the request.                                   |
-| `security`                                                                   | [operations.GetAtsJobSecurity](../../models/operations/getatsjobsecurity.md) | :heavy_check_mark:                                                           | The security requirements to use for the request.                            |
+| Parameter                                                                  | Type                                                                       | Required                                                                   | Description                                                                |
+| -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| `request`                                                                  | [operations.GetAtsJobRequest](../../models/operations/getatsjobrequest.md) | :heavy_check_mark:                                                         | The request object to use for the request.                                 |
 
 
 ### Response
@@ -103,17 +105,19 @@ List all jobs
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 req = operations.ListAtsJobsRequest(
     connection_id='<value>',
 )
 
-res = s.job.list_ats_jobs(req, operations.ListAtsJobsSecurity(
-    jwt="<YOUR_API_KEY_HERE>",
-))
+res = s.job.list_ats_jobs(req)
 
 if res.ats_jobs is not None:
     # handle response
@@ -122,10 +126,9 @@ if res.ats_jobs is not None:
 
 ### Parameters
 
-| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `request`                                                                        | [operations.ListAtsJobsRequest](../../models/operations/listatsjobsrequest.md)   | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
-| `security`                                                                       | [operations.ListAtsJobsSecurity](../../models/operations/listatsjobssecurity.md) | :heavy_check_mark:                                                               | The security requirements to use for the request.                                |
+| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| `request`                                                                      | [operations.ListAtsJobsRequest](../../models/operations/listatsjobsrequest.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
 
 
 ### Response
@@ -145,18 +148,20 @@ Update a job
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 req = operations.PatchAtsJobRequest(
     connection_id='<value>',
     id='<id>',
 )
 
-res = s.job.patch_ats_job(req, operations.PatchAtsJobSecurity(
-    jwt="<YOUR_API_KEY_HERE>",
-))
+res = s.job.patch_ats_job(req)
 
 if res.ats_job is not None:
     # handle response
@@ -165,10 +170,9 @@ if res.ats_job is not None:
 
 ### Parameters
 
-| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `request`                                                                        | [operations.PatchAtsJobRequest](../../models/operations/patchatsjobrequest.md)   | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
-| `security`                                                                       | [operations.PatchAtsJobSecurity](../../models/operations/patchatsjobsecurity.md) | :heavy_check_mark:                                                               | The security requirements to use for the request.                                |
+| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| `request`                                                                      | [operations.PatchAtsJobRequest](../../models/operations/patchatsjobrequest.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
 
 
 ### Response
@@ -188,18 +192,20 @@ Remove a job
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 req = operations.RemoveAtsJobRequest(
     connection_id='<value>',
     id='<id>',
 )
 
-res = s.job.remove_ats_job(req, operations.RemoveAtsJobSecurity(
-    jwt="<YOUR_API_KEY_HERE>",
-))
+res = s.job.remove_ats_job(req)
 
 if res.status_code == 200:
     # handle response
@@ -208,10 +214,9 @@ if res.status_code == 200:
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `request`                                                                          | [operations.RemoveAtsJobRequest](../../models/operations/removeatsjobrequest.md)   | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
-| `security`                                                                         | [operations.RemoveAtsJobSecurity](../../models/operations/removeatsjobsecurity.md) | :heavy_check_mark:                                                                 | The security requirements to use for the request.                                  |
+| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `request`                                                                        | [operations.RemoveAtsJobRequest](../../models/operations/removeatsjobrequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
 
 
 ### Response
@@ -231,18 +236,20 @@ Update a job
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 req = operations.UpdateAtsJobRequest(
     connection_id='<value>',
     id='<id>',
 )
 
-res = s.job.update_ats_job(req, operations.UpdateAtsJobSecurity(
-    jwt="<YOUR_API_KEY_HERE>",
-))
+res = s.job.update_ats_job(req)
 
 if res.ats_job is not None:
     # handle response
@@ -251,10 +258,9 @@ if res.ats_job is not None:
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `request`                                                                          | [operations.UpdateAtsJobRequest](../../models/operations/updateatsjobrequest.md)   | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
-| `security`                                                                         | [operations.UpdateAtsJobSecurity](../../models/operations/updateatsjobsecurity.md) | :heavy_check_mark:                                                                 | The security requirements to use for the request.                                  |
+| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `request`                                                                        | [operations.UpdateAtsJobRequest](../../models/operations/updateatsjobrequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
 
 
 ### Response

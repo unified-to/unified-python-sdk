@@ -9,13 +9,6 @@ from typing import List, Optional
 
 
 @dataclasses.dataclass
-class ListUnifiedApicallsSecurity:
-    jwt: str = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header', 'field_name': 'authorization' }})
-    
-
-
-
-@dataclasses.dataclass
 class ListUnifiedApicallsRequest:
     connection_id: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'connection_id', 'style': 'form', 'explode': True }})
     r"""Filter the results to just this integration's API calls"""

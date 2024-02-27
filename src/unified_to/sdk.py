@@ -34,6 +34,7 @@ from .issue import Issue
 from .item import Item
 from .job import Job
 from .lead import Lead
+from .link import Link
 from .list import ListT
 from .location import Location
 from .login import Login
@@ -57,8 +58,9 @@ from .transaction import Transaction
 from .uc import Uc
 from .unified import Unified
 from .webhook import Webhook
-from typing import Dict
+from typing import Callable, Dict, Union
 from unified_to import utils
+from unified_to.models import shared
 
 class UnifiedTo:
     r"""Unified.to API: One API to Rule Them All"""
@@ -67,9 +69,6 @@ class UnifiedTo:
     contact: Contact
     invoice: Invoice
     organization: Organization
-    payment: Payment
-    payout: Payout
-    refund: Refund
     taxrate: Taxrate
     transaction: Transaction
     ats: Ats
@@ -101,6 +100,10 @@ class UnifiedTo:
     list: ListT
     member: Member
     passthrough: Passthrough
+    payment: Payment
+    link: Link
+    payout: Payout
+    refund: Refund
     storage: Storage
     file: File
     ticketing: Ticketing
@@ -121,6 +124,7 @@ class UnifiedTo:
     sdk_configuration: SDKConfiguration
 
     def __init__(self,
+                 security: Union[shared.Security,Callable[[], shared.Security]] = None,
                  server_idx: int = None,
                  server_url: str = None,
                  url_params: Dict[str, str] = None,
@@ -129,6 +133,8 @@ class UnifiedTo:
                  ) -> None:
         """Instantiates the SDK configuring it with the provided parameters.
         
+        :param security: The security details required for authentication
+        :type security: Union[shared.Security,Callable[[], shared.Security]]
         :param server_idx: The index of the server to use for all operations
         :type server_idx: int
         :param server_url: The server URL to use for all operations
@@ -147,7 +153,7 @@ class UnifiedTo:
             if url_params is not None:
                 server_url = utils.template_url(server_url, url_params)
 
-        self.sdk_configuration = SDKConfiguration(client, None, server_url, server_idx, retry_config=retry_config)
+        self.sdk_configuration = SDKConfiguration(client, security, server_url, server_idx, retry_config=retry_config)
        
         self._init_sdks()
     
@@ -157,9 +163,6 @@ class UnifiedTo:
         self.contact = Contact(self.sdk_configuration)
         self.invoice = Invoice(self.sdk_configuration)
         self.organization = Organization(self.sdk_configuration)
-        self.payment = Payment(self.sdk_configuration)
-        self.payout = Payout(self.sdk_configuration)
-        self.refund = Refund(self.sdk_configuration)
         self.taxrate = Taxrate(self.sdk_configuration)
         self.transaction = Transaction(self.sdk_configuration)
         self.ats = Ats(self.sdk_configuration)
@@ -191,6 +194,10 @@ class UnifiedTo:
         self.list = ListT(self.sdk_configuration)
         self.member = Member(self.sdk_configuration)
         self.passthrough = Passthrough(self.sdk_configuration)
+        self.payment = Payment(self.sdk_configuration)
+        self.link = Link(self.sdk_configuration)
+        self.payout = Payout(self.sdk_configuration)
+        self.refund = Refund(self.sdk_configuration)
         self.storage = Storage(self.sdk_configuration)
         self.file = File(self.sdk_configuration)
         self.ticketing = Ticketing(self.sdk_configuration)

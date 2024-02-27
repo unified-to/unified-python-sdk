@@ -3,14 +3,67 @@
 
 ### Available Operations
 
-* [create_accounting_payment](#create_accounting_payment) - Create a payment
-* [get_accounting_payment](#get_accounting_payment) - Retrieve a payment
-* [list_accounting_payments](#list_accounting_payments) - List all payments
-* [patch_accounting_payment](#patch_accounting_payment) - Update a payment
-* [remove_accounting_payment](#remove_accounting_payment) - Remove a payment
-* [update_accounting_payment](#update_accounting_payment) - Update a payment
+* [create_payment_link](#create_payment_link) - Create a payment link
+* [create_payment_payment](#create_payment_payment) - Create a payment
+* [get_payment_link](#get_payment_link) - Retrieve a payment link
+* [get_payment_payment](#get_payment_payment) - Retrieve a payment
+* [get_payment_payout](#get_payment_payout) - Retrieve a payout
+* [get_payment_refund](#get_payment_refund) - Retrieve a refund
+* [list_payment_links](#list_payment_links) - List all payment links
+* [list_payment_payments](#list_payment_payments) - List all payments
+* [list_payment_payouts](#list_payment_payouts) - List all payouts
+* [list_payment_refunds](#list_payment_refunds) - List all refunds
+* [patch_payment_link](#patch_payment_link) - Update a payment link
+* [patch_payment_payment](#patch_payment_payment) - Update a payment
+* [remove_payment_link](#remove_payment_link) - Remove a payment link
+* [remove_payment_payment](#remove_payment_payment) - Remove a payment
+* [update_payment_link](#update_payment_link) - Update a payment link
+* [update_payment_payment](#update_payment_payment) - Update a payment
 
-## create_accounting_payment
+## create_payment_link
+
+Create a payment link
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
+
+req = operations.CreatePaymentLinkRequest(
+    connection_id='<value>',
+)
+
+res = s.payment.create_payment_link(req)
+
+if res.payment_link is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.CreatePaymentLinkRequest](../../models/operations/createpaymentlinkrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+
+
+### Response
+
+**[operations.CreatePaymentLinkResponse](../../models/operations/createpaymentlinkresponse.md)**
+### Errors
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
+
+## create_payment_payment
 
 Create a payment
 
@@ -18,41 +71,86 @@ Create a payment
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
-req = operations.CreateAccountingPaymentRequest(
+req = operations.CreatePaymentPaymentRequest(
     connection_id='<value>',
 )
 
-res = s.payment.create_accounting_payment(req, operations.CreateAccountingPaymentSecurity(
-    jwt="<YOUR_API_KEY_HERE>",
-))
+res = s.payment.create_payment_payment(req)
 
-if res.accounting_payment is not None:
+if res.payment_payment is not None:
     # handle response
     pass
 ```
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                | [operations.CreateAccountingPaymentRequest](../../models/operations/createaccountingpaymentrequest.md)   | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-| `security`                                                                                               | [operations.CreateAccountingPaymentSecurity](../../models/operations/createaccountingpaymentsecurity.md) | :heavy_check_mark:                                                                                       | The security requirements to use for the request.                                                        |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `request`                                                                                        | [operations.CreatePaymentPaymentRequest](../../models/operations/createpaymentpaymentrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
 
 
 ### Response
 
-**[operations.CreateAccountingPaymentResponse](../../models/operations/createaccountingpaymentresponse.md)**
+**[operations.CreatePaymentPaymentResponse](../../models/operations/createpaymentpaymentresponse.md)**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4x-5xx          | */*             |
 
-## get_accounting_payment
+## get_payment_link
+
+Retrieve a payment link
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
+
+req = operations.GetPaymentLinkRequest(
+    connection_id='<value>',
+    id='<id>',
+)
+
+res = s.payment.get_payment_link(req)
+
+if res.payment_link is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [operations.GetPaymentLinkRequest](../../models/operations/getpaymentlinkrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+
+
+### Response
+
+**[operations.GetPaymentLinkResponse](../../models/operations/getpaymentlinkresponse.md)**
+### Errors
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
+
+## get_payment_payment
 
 Retrieve a payment
 
@@ -60,42 +158,174 @@ Retrieve a payment
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
-req = operations.GetAccountingPaymentRequest(
+req = operations.GetPaymentPaymentRequest(
     connection_id='<value>',
     id='<id>',
 )
 
-res = s.payment.get_accounting_payment(req, operations.GetAccountingPaymentSecurity(
-    jwt="<YOUR_API_KEY_HERE>",
-))
+res = s.payment.get_payment_payment(req)
 
-if res.accounting_payment is not None:
+if res.payment_payment is not None:
     # handle response
     pass
 ```
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `request`                                                                                          | [operations.GetAccountingPaymentRequest](../../models/operations/getaccountingpaymentrequest.md)   | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
-| `security`                                                                                         | [operations.GetAccountingPaymentSecurity](../../models/operations/getaccountingpaymentsecurity.md) | :heavy_check_mark:                                                                                 | The security requirements to use for the request.                                                  |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.GetPaymentPaymentRequest](../../models/operations/getpaymentpaymentrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 
 ### Response
 
-**[operations.GetAccountingPaymentResponse](../../models/operations/getaccountingpaymentresponse.md)**
+**[operations.GetPaymentPaymentResponse](../../models/operations/getpaymentpaymentresponse.md)**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4x-5xx          | */*             |
 
-## list_accounting_payments
+## get_payment_payout
+
+Retrieve a payout
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
+
+req = operations.GetPaymentPayoutRequest(
+    connection_id='<value>',
+    id='<id>',
+)
+
+res = s.payment.get_payment_payout(req)
+
+if res.payment_payout is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.GetPaymentPayoutRequest](../../models/operations/getpaymentpayoutrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+
+
+### Response
+
+**[operations.GetPaymentPayoutResponse](../../models/operations/getpaymentpayoutresponse.md)**
+### Errors
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
+
+## get_payment_refund
+
+Retrieve a refund
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
+
+req = operations.GetPaymentRefundRequest(
+    connection_id='<value>',
+    id='<id>',
+)
+
+res = s.payment.get_payment_refund(req)
+
+if res.payment_refund is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.GetPaymentRefundRequest](../../models/operations/getpaymentrefundrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+
+
+### Response
+
+**[operations.GetPaymentRefundResponse](../../models/operations/getpaymentrefundresponse.md)**
+### Errors
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
+
+## list_payment_links
+
+List all payment links
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
+
+req = operations.ListPaymentLinksRequest(
+    connection_id='<value>',
+)
+
+res = s.payment.list_payment_links(req)
+
+if res.payment_links is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.ListPaymentLinksRequest](../../models/operations/listpaymentlinksrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+
+
+### Response
+
+**[operations.ListPaymentLinksResponse](../../models/operations/listpaymentlinksresponse.md)**
+### Errors
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
+
+## list_payment_payments
 
 List all payments
 
@@ -103,41 +333,172 @@ List all payments
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
-req = operations.ListAccountingPaymentsRequest(
+req = operations.ListPaymentPaymentsRequest(
     connection_id='<value>',
 )
 
-res = s.payment.list_accounting_payments(req, operations.ListAccountingPaymentsSecurity(
-    jwt="<YOUR_API_KEY_HERE>",
-))
+res = s.payment.list_payment_payments(req)
 
-if res.accounting_payments is not None:
+if res.payment_payments is not None:
     # handle response
     pass
 ```
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                              | [operations.ListAccountingPaymentsRequest](../../models/operations/listaccountingpaymentsrequest.md)   | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
-| `security`                                                                                             | [operations.ListAccountingPaymentsSecurity](../../models/operations/listaccountingpaymentssecurity.md) | :heavy_check_mark:                                                                                     | The security requirements to use for the request.                                                      |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `request`                                                                                      | [operations.ListPaymentPaymentsRequest](../../models/operations/listpaymentpaymentsrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
 
 
 ### Response
 
-**[operations.ListAccountingPaymentsResponse](../../models/operations/listaccountingpaymentsresponse.md)**
+**[operations.ListPaymentPaymentsResponse](../../models/operations/listpaymentpaymentsresponse.md)**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4x-5xx          | */*             |
 
-## patch_accounting_payment
+## list_payment_payouts
+
+List all payouts
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
+
+req = operations.ListPaymentPayoutsRequest(
+    connection_id='<value>',
+)
+
+res = s.payment.list_payment_payouts(req)
+
+if res.payment_payouts is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.ListPaymentPayoutsRequest](../../models/operations/listpaymentpayoutsrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+
+
+### Response
+
+**[operations.ListPaymentPayoutsResponse](../../models/operations/listpaymentpayoutsresponse.md)**
+### Errors
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
+
+## list_payment_refunds
+
+List all refunds
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
+
+req = operations.ListPaymentRefundsRequest(
+    connection_id='<value>',
+)
+
+res = s.payment.list_payment_refunds(req)
+
+if res.payment_refunds is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.ListPaymentRefundsRequest](../../models/operations/listpaymentrefundsrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+
+
+### Response
+
+**[operations.ListPaymentRefundsResponse](../../models/operations/listpaymentrefundsresponse.md)**
+### Errors
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
+
+## patch_payment_link
+
+Update a payment link
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
+
+req = operations.PatchPaymentLinkRequest(
+    connection_id='<value>',
+    id='<id>',
+)
+
+res = s.payment.patch_payment_link(req)
+
+if res.payment_link is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.PatchPaymentLinkRequest](../../models/operations/patchpaymentlinkrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+
+
+### Response
+
+**[operations.PatchPaymentLinkResponse](../../models/operations/patchpaymentlinkresponse.md)**
+### Errors
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
+
+## patch_payment_payment
 
 Update a payment
 
@@ -145,61 +506,64 @@ Update a payment
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
-req = operations.PatchAccountingPaymentRequest(
+req = operations.PatchPaymentPaymentRequest(
     connection_id='<value>',
     id='<id>',
 )
 
-res = s.payment.patch_accounting_payment(req, operations.PatchAccountingPaymentSecurity(
-    jwt="<YOUR_API_KEY_HERE>",
-))
+res = s.payment.patch_payment_payment(req)
 
-if res.accounting_payment is not None:
+if res.payment_payment is not None:
     # handle response
     pass
 ```
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                              | [operations.PatchAccountingPaymentRequest](../../models/operations/patchaccountingpaymentrequest.md)   | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
-| `security`                                                                                             | [operations.PatchAccountingPaymentSecurity](../../models/operations/patchaccountingpaymentsecurity.md) | :heavy_check_mark:                                                                                     | The security requirements to use for the request.                                                      |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `request`                                                                                      | [operations.PatchPaymentPaymentRequest](../../models/operations/patchpaymentpaymentrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
 
 
 ### Response
 
-**[operations.PatchAccountingPaymentResponse](../../models/operations/patchaccountingpaymentresponse.md)**
+**[operations.PatchPaymentPaymentResponse](../../models/operations/patchpaymentpaymentresponse.md)**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4x-5xx          | */*             |
 
-## remove_accounting_payment
+## remove_payment_link
 
-Remove a payment
+Remove a payment link
 
 ### Example Usage
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
-req = operations.RemoveAccountingPaymentRequest(
+req = operations.RemovePaymentLinkRequest(
     connection_id='<value>',
     id='<id>',
 )
 
-res = s.payment.remove_accounting_payment(req, operations.RemoveAccountingPaymentSecurity(
-    jwt="<YOUR_API_KEY_HERE>",
-))
+res = s.payment.remove_payment_link(req)
 
 if res.status_code == 200:
     # handle response
@@ -208,22 +572,109 @@ if res.status_code == 200:
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                | [operations.RemoveAccountingPaymentRequest](../../models/operations/removeaccountingpaymentrequest.md)   | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-| `security`                                                                                               | [operations.RemoveAccountingPaymentSecurity](../../models/operations/removeaccountingpaymentsecurity.md) | :heavy_check_mark:                                                                                       | The security requirements to use for the request.                                                        |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.RemovePaymentLinkRequest](../../models/operations/removepaymentlinkrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 
 ### Response
 
-**[operations.RemoveAccountingPaymentResponse](../../models/operations/removeaccountingpaymentresponse.md)**
+**[operations.RemovePaymentLinkResponse](../../models/operations/removepaymentlinkresponse.md)**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4x-5xx          | */*             |
 
-## update_accounting_payment
+## remove_payment_payment
+
+Remove a payment
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
+
+req = operations.RemovePaymentPaymentRequest(
+    connection_id='<value>',
+    id='<id>',
+)
+
+res = s.payment.remove_payment_payment(req)
+
+if res.status_code == 200:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `request`                                                                                        | [operations.RemovePaymentPaymentRequest](../../models/operations/removepaymentpaymentrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+
+
+### Response
+
+**[operations.RemovePaymentPaymentResponse](../../models/operations/removepaymentpaymentresponse.md)**
+### Errors
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
+
+## update_payment_link
+
+Update a payment link
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
+
+req = operations.UpdatePaymentLinkRequest(
+    connection_id='<value>',
+    id='<id>',
+)
+
+res = s.payment.update_payment_link(req)
+
+if res.payment_link is not None:
+    # handle response
+    pass
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.UpdatePaymentLinkRequest](../../models/operations/updatepaymentlinkrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+
+
+### Response
+
+**[operations.UpdatePaymentLinkResponse](../../models/operations/updatepaymentlinkresponse.md)**
+### Errors
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4x-5xx          | */*             |
+
+## update_payment_payment
 
 Update a payment
 
@@ -231,35 +682,36 @@ Update a payment
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
-req = operations.UpdateAccountingPaymentRequest(
+req = operations.UpdatePaymentPaymentRequest(
     connection_id='<value>',
     id='<id>',
 )
 
-res = s.payment.update_accounting_payment(req, operations.UpdateAccountingPaymentSecurity(
-    jwt="<YOUR_API_KEY_HERE>",
-))
+res = s.payment.update_payment_payment(req)
 
-if res.accounting_payment is not None:
+if res.payment_payment is not None:
     # handle response
     pass
 ```
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                | [operations.UpdateAccountingPaymentRequest](../../models/operations/updateaccountingpaymentrequest.md)   | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-| `security`                                                                                               | [operations.UpdateAccountingPaymentSecurity](../../models/operations/updateaccountingpaymentsecurity.md) | :heavy_check_mark:                                                                                       | The security requirements to use for the request.                                                        |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `request`                                                                                        | [operations.UpdatePaymentPaymentRequest](../../models/operations/updatepaymentpaymentrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
 
 
 ### Response
 
-**[operations.UpdateAccountingPaymentResponse](../../models/operations/updateaccountingpaymentresponse.md)**
+**[operations.UpdatePaymentPaymentResponse](../../models/operations/updatepaymentpaymentresponse.md)**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |

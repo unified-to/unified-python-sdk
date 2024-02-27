@@ -20,6 +20,7 @@ class QueryParamCategories(str, Enum):
     ACCOUNTING = 'accounting'
     STORAGE = 'storage'
     COMMERCE = 'commerce'
+    PAYMENT = 'payment'
 
 
 @dataclasses.dataclass

@@ -13,7 +13,7 @@ class Interview:
         
     
     
-    def create_ats_interview(self, request: operations.CreateAtsInterviewRequest, security: operations.CreateAtsInterviewSecurity) -> operations.CreateAtsInterviewResponse:
+    def create_ats_interview(self, request: operations.CreateAtsInterviewRequest) -> operations.CreateAtsInterviewResponse:
         r"""Create a interview"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -25,7 +25,10 @@ class Interview:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -45,7 +48,7 @@ class Interview:
 
     
     
-    def get_ats_interview(self, request: operations.GetAtsInterviewRequest, security: operations.GetAtsInterviewSecurity) -> operations.GetAtsInterviewResponse:
+    def get_ats_interview(self, request: operations.GetAtsInterviewRequest) -> operations.GetAtsInterviewResponse:
         r"""Retrieve a interview"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -55,7 +58,10 @@ class Interview:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -75,7 +81,7 @@ class Interview:
 
     
     
-    def list_ats_interviews(self, request: operations.ListAtsInterviewsRequest, security: operations.ListAtsInterviewsSecurity) -> operations.ListAtsInterviewsResponse:
+    def list_ats_interviews(self, request: operations.ListAtsInterviewsRequest) -> operations.ListAtsInterviewsResponse:
         r"""List all interviews"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -85,7 +91,10 @@ class Interview:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -105,7 +114,7 @@ class Interview:
 
     
     
-    def patch_ats_interview(self, request: operations.PatchAtsInterviewRequest, security: operations.PatchAtsInterviewSecurity) -> operations.PatchAtsInterviewResponse:
+    def patch_ats_interview(self, request: operations.PatchAtsInterviewRequest) -> operations.PatchAtsInterviewResponse:
         r"""Update a interview"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -117,7 +126,10 @@ class Interview:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -137,7 +149,7 @@ class Interview:
 
     
     
-    def remove_ats_interview(self, request: operations.RemoveAtsInterviewRequest, security: operations.RemoveAtsInterviewSecurity) -> operations.RemoveAtsInterviewResponse:
+    def remove_ats_interview(self, request: operations.RemoveAtsInterviewRequest) -> operations.RemoveAtsInterviewResponse:
         r"""Remove a interview"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -146,7 +158,10 @@ class Interview:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -165,7 +180,7 @@ class Interview:
 
     
     
-    def update_ats_interview(self, request: operations.UpdateAtsInterviewRequest, security: operations.UpdateAtsInterviewSecurity) -> operations.UpdateAtsInterviewResponse:
+    def update_ats_interview(self, request: operations.UpdateAtsInterviewRequest) -> operations.UpdateAtsInterviewResponse:
         r"""Update a interview"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -177,7 +192,10 @@ class Interview:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')

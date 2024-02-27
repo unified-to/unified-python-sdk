@@ -13,7 +13,7 @@ class Event:
         
     
     
-    def create_crm_event(self, request: operations.CreateCrmEventRequest, security: operations.CreateCrmEventSecurity) -> operations.CreateCrmEventResponse:
+    def create_crm_event(self, request: operations.CreateCrmEventRequest) -> operations.CreateCrmEventResponse:
         r"""Create a event"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -25,7 +25,10 @@ class Event:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -45,7 +48,7 @@ class Event:
 
     
     
-    def get_crm_event(self, request: operations.GetCrmEventRequest, security: operations.GetCrmEventSecurity) -> operations.GetCrmEventResponse:
+    def get_crm_event(self, request: operations.GetCrmEventRequest) -> operations.GetCrmEventResponse:
         r"""Retrieve a event"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -55,7 +58,10 @@ class Event:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -75,7 +81,7 @@ class Event:
 
     
     
-    def list_crm_events(self, request: operations.ListCrmEventsRequest, security: operations.ListCrmEventsSecurity) -> operations.ListCrmEventsResponse:
+    def list_crm_events(self, request: operations.ListCrmEventsRequest) -> operations.ListCrmEventsResponse:
         r"""List all events"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -85,7 +91,10 @@ class Event:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -105,7 +114,7 @@ class Event:
 
     
     
-    def patch_crm_event(self, request: operations.PatchCrmEventRequest, security: operations.PatchCrmEventSecurity) -> operations.PatchCrmEventResponse:
+    def patch_crm_event(self, request: operations.PatchCrmEventRequest) -> operations.PatchCrmEventResponse:
         r"""Update a event"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -117,7 +126,10 @@ class Event:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -137,7 +149,7 @@ class Event:
 
     
     
-    def remove_crm_event(self, request: operations.RemoveCrmEventRequest, security: operations.RemoveCrmEventSecurity) -> operations.RemoveCrmEventResponse:
+    def remove_crm_event(self, request: operations.RemoveCrmEventRequest) -> operations.RemoveCrmEventResponse:
         r"""Remove a event"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -146,7 +158,10 @@ class Event:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -165,7 +180,7 @@ class Event:
 
     
     
-    def update_crm_event(self, request: operations.UpdateCrmEventRequest, security: operations.UpdateCrmEventSecurity) -> operations.UpdateCrmEventResponse:
+    def update_crm_event(self, request: operations.UpdateCrmEventRequest) -> operations.UpdateCrmEventResponse:
         r"""Update a event"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -177,7 +192,10 @@ class Event:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')

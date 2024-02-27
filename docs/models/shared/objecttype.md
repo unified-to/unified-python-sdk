@@ -9,11 +9,12 @@
 | `ACCOUNTING_TRANSACTION`  | accounting_transaction    |
 | `ACCOUNTING_CONTACT`      | accounting_contact        |
 | `ACCOUNTING_INVOICE`      | accounting_invoice        |
-| `ACCOUNTING_PAYMENT`      | accounting_payment        |
 | `ACCOUNTING_TAXRATE`      | accounting_taxrate        |
 | `ACCOUNTING_ORGANIZATION` | accounting_organization   |
-| `ACCOUNTING_PAYOUT`       | accounting_payout         |
-| `ACCOUNTING_REFUND`       | accounting_refund         |
+| `PAYMENT_PAYMENT`         | payment_payment           |
+| `PAYMENT_LINK`            | payment_link              |
+| `PAYMENT_PAYOUT`          | payment_payout            |
+| `PAYMENT_REFUND`          | payment_refund            |
 | `COMMERCE_ITEM`           | commerce_item             |
 | `COMMERCE_COLLECTION`     | commerce_collection       |
 | `COMMERCE_INVENTORY`      | commerce_inventory        |

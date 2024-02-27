@@ -13,7 +13,7 @@ class Passthrough:
         
     
     
-    def create_passthrough(self, request: operations.CreatePassthroughRequest, security: operations.CreatePassthroughSecurity) -> operations.CreatePassthroughResponse:
+    def create_passthrough(self, request: operations.CreatePassthroughRequest) -> operations.CreatePassthroughResponse:
         r"""Passthrough POST"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -25,7 +25,10 @@ class Passthrough:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -45,7 +48,7 @@ class Passthrough:
 
     
     
-    def list_passthroughs(self, request: operations.ListPassthroughsRequest, security: operations.ListPassthroughsSecurity) -> operations.ListPassthroughsResponse:
+    def list_passthroughs(self, request: operations.ListPassthroughsRequest) -> operations.ListPassthroughsResponse:
         r"""Passthrough GET"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -54,7 +57,10 @@ class Passthrough:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -74,7 +80,7 @@ class Passthrough:
 
     
     
-    def patch_passthrough(self, request: operations.PatchPassthroughRequest, security: operations.PatchPassthroughSecurity) -> operations.PatchPassthroughResponse:
+    def patch_passthrough(self, request: operations.PatchPassthroughRequest) -> operations.PatchPassthroughResponse:
         r"""Passthrough PUT"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -86,7 +92,10 @@ class Passthrough:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -106,7 +115,7 @@ class Passthrough:
 
     
     
-    def remove_passthrough(self, request: operations.RemovePassthroughRequest, security: operations.RemovePassthroughSecurity) -> operations.RemovePassthroughResponse:
+    def remove_passthrough(self, request: operations.RemovePassthroughRequest) -> operations.RemovePassthroughResponse:
         r"""Passthrough DELETE"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -115,7 +124,10 @@ class Passthrough:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -135,7 +147,7 @@ class Passthrough:
 
     
     
-    def update_passthrough(self, request: operations.UpdatePassthroughRequest, security: operations.UpdatePassthroughSecurity) -> operations.UpdatePassthroughResponse:
+    def update_passthrough(self, request: operations.UpdatePassthroughRequest) -> operations.UpdatePassthroughResponse:
         r"""Passthrough PUT"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -147,7 +159,10 @@ class Passthrough:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')

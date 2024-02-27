@@ -18,17 +18,19 @@ Create a interview
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 req = operations.CreateAtsInterviewRequest(
     connection_id='<value>',
 )
 
-res = s.interview.create_ats_interview(req, operations.CreateAtsInterviewSecurity(
-    jwt="<YOUR_API_KEY_HERE>",
-))
+res = s.interview.create_ats_interview(req)
 
 if res.ats_interview is not None:
     # handle response
@@ -37,10 +39,9 @@ if res.ats_interview is not None:
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `request`                                                                                      | [operations.CreateAtsInterviewRequest](../../models/operations/createatsinterviewrequest.md)   | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
-| `security`                                                                                     | [operations.CreateAtsInterviewSecurity](../../models/operations/createatsinterviewsecurity.md) | :heavy_check_mark:                                                                             | The security requirements to use for the request.                                              |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.CreateAtsInterviewRequest](../../models/operations/createatsinterviewrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 
 ### Response
@@ -60,18 +61,20 @@ Retrieve a interview
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 req = operations.GetAtsInterviewRequest(
     connection_id='<value>',
     id='<id>',
 )
 
-res = s.interview.get_ats_interview(req, operations.GetAtsInterviewSecurity(
-    jwt="<YOUR_API_KEY_HERE>",
-))
+res = s.interview.get_ats_interview(req)
 
 if res.ats_interview is not None:
     # handle response
@@ -80,10 +83,9 @@ if res.ats_interview is not None:
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `request`                                                                                | [operations.GetAtsInterviewRequest](../../models/operations/getatsinterviewrequest.md)   | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
-| `security`                                                                               | [operations.GetAtsInterviewSecurity](../../models/operations/getatsinterviewsecurity.md) | :heavy_check_mark:                                                                       | The security requirements to use for the request.                                        |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `request`                                                                              | [operations.GetAtsInterviewRequest](../../models/operations/getatsinterviewrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
 
 
 ### Response
@@ -103,17 +105,19 @@ List all interviews
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 req = operations.ListAtsInterviewsRequest(
     connection_id='<value>',
 )
 
-res = s.interview.list_ats_interviews(req, operations.ListAtsInterviewsSecurity(
-    jwt="<YOUR_API_KEY_HERE>",
-))
+res = s.interview.list_ats_interviews(req)
 
 if res.ats_interviews is not None:
     # handle response
@@ -122,10 +126,9 @@ if res.ats_interviews is not None:
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `request`                                                                                    | [operations.ListAtsInterviewsRequest](../../models/operations/listatsinterviewsrequest.md)   | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
-| `security`                                                                                   | [operations.ListAtsInterviewsSecurity](../../models/operations/listatsinterviewssecurity.md) | :heavy_check_mark:                                                                           | The security requirements to use for the request.                                            |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.ListAtsInterviewsRequest](../../models/operations/listatsinterviewsrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 
 ### Response
@@ -145,18 +148,20 @@ Update a interview
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 req = operations.PatchAtsInterviewRequest(
     connection_id='<value>',
     id='<id>',
 )
 
-res = s.interview.patch_ats_interview(req, operations.PatchAtsInterviewSecurity(
-    jwt="<YOUR_API_KEY_HERE>",
-))
+res = s.interview.patch_ats_interview(req)
 
 if res.ats_interview is not None:
     # handle response
@@ -165,10 +170,9 @@ if res.ats_interview is not None:
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `request`                                                                                    | [operations.PatchAtsInterviewRequest](../../models/operations/patchatsinterviewrequest.md)   | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
-| `security`                                                                                   | [operations.PatchAtsInterviewSecurity](../../models/operations/patchatsinterviewsecurity.md) | :heavy_check_mark:                                                                           | The security requirements to use for the request.                                            |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.PatchAtsInterviewRequest](../../models/operations/patchatsinterviewrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 
 ### Response
@@ -188,18 +192,20 @@ Remove a interview
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 req = operations.RemoveAtsInterviewRequest(
     connection_id='<value>',
     id='<id>',
 )
 
-res = s.interview.remove_ats_interview(req, operations.RemoveAtsInterviewSecurity(
-    jwt="<YOUR_API_KEY_HERE>",
-))
+res = s.interview.remove_ats_interview(req)
 
 if res.status_code == 200:
     # handle response
@@ -208,10 +214,9 @@ if res.status_code == 200:
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `request`                                                                                      | [operations.RemoveAtsInterviewRequest](../../models/operations/removeatsinterviewrequest.md)   | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
-| `security`                                                                                     | [operations.RemoveAtsInterviewSecurity](../../models/operations/removeatsinterviewsecurity.md) | :heavy_check_mark:                                                                             | The security requirements to use for the request.                                              |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.RemoveAtsInterviewRequest](../../models/operations/removeatsinterviewrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 
 ### Response
@@ -231,18 +236,20 @@ Update a interview
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 req = operations.UpdateAtsInterviewRequest(
     connection_id='<value>',
     id='<id>',
 )
 
-res = s.interview.update_ats_interview(req, operations.UpdateAtsInterviewSecurity(
-    jwt="<YOUR_API_KEY_HERE>",
-))
+res = s.interview.update_ats_interview(req)
 
 if res.ats_interview is not None:
     # handle response
@@ -251,10 +258,9 @@ if res.ats_interview is not None:
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `request`                                                                                      | [operations.UpdateAtsInterviewRequest](../../models/operations/updateatsinterviewrequest.md)   | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
-| `security`                                                                                     | [operations.UpdateAtsInterviewSecurity](../../models/operations/updateatsinterviewsecurity.md) | :heavy_check_mark:                                                                             | The security requirements to use for the request.                                              |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.UpdateAtsInterviewRequest](../../models/operations/updateatsinterviewrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 
 ### Response

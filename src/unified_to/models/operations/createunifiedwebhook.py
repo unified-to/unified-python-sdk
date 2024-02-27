@@ -8,13 +8,6 @@ from typing import Optional
 
 
 @dataclasses.dataclass
-class CreateUnifiedWebhookSecurity:
-    jwt: str = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header', 'field_name': 'authorization' }})
-    
-
-
-
-@dataclasses.dataclass
 class CreateUnifiedWebhookRequest:
     webhook: Optional[shared_webhook.Webhook] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     include_all: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'include_all', 'style': 'form', 'explode': True }})

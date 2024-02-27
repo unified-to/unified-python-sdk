@@ -13,7 +13,7 @@ class Apicall:
         
     
     
-    def get_unified_apicall(self, request: operations.GetUnifiedApicallRequest, security: operations.GetUnifiedApicallSecurity) -> operations.GetUnifiedApicallResponse:
+    def get_unified_apicall(self, request: operations.GetUnifiedApicallRequest) -> operations.GetUnifiedApicallResponse:
         r"""Retrieve specific API Call by its ID"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -22,7 +22,10 @@ class Apicall:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -42,7 +45,7 @@ class Apicall:
 
     
     
-    def list_unified_apicalls(self, request: operations.ListUnifiedApicallsRequest, security: operations.ListUnifiedApicallsSecurity) -> operations.ListUnifiedApicallsResponse:
+    def list_unified_apicalls(self, request: operations.ListUnifiedApicallsRequest) -> operations.ListUnifiedApicallsResponse:
         r"""Returns API Calls"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -52,7 +55,10 @@ class Apicall:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')

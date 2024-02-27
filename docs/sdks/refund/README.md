@@ -3,10 +3,10 @@
 
 ### Available Operations
 
-* [get_accounting_refund](#get_accounting_refund) - Retrieve a refund
-* [list_accounting_refunds](#list_accounting_refunds) - List all refunds
+* [get_payment_refund](#get_payment_refund) - Retrieve a refund
+* [list_payment_refunds](#list_payment_refunds) - List all refunds
 
-## get_accounting_refund
+## get_payment_refund
 
 Retrieve a refund
 
@@ -14,42 +14,43 @@ Retrieve a refund
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
-req = operations.GetAccountingRefundRequest(
+req = operations.GetPaymentRefundRequest(
     connection_id='<value>',
     id='<id>',
 )
 
-res = s.refund.get_accounting_refund(req, operations.GetAccountingRefundSecurity(
-    jwt="<YOUR_API_KEY_HERE>",
-))
+res = s.refund.get_payment_refund(req)
 
-if res.accounting_refund is not None:
+if res.payment_refund is not None:
     # handle response
     pass
 ```
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `request`                                                                                        | [operations.GetAccountingRefundRequest](../../models/operations/getaccountingrefundrequest.md)   | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-| `security`                                                                                       | [operations.GetAccountingRefundSecurity](../../models/operations/getaccountingrefundsecurity.md) | :heavy_check_mark:                                                                               | The security requirements to use for the request.                                                |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.GetPaymentRefundRequest](../../models/operations/getpaymentrefundrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
 
 
 ### Response
 
-**[operations.GetAccountingRefundResponse](../../models/operations/getaccountingrefundresponse.md)**
+**[operations.GetPaymentRefundResponse](../../models/operations/getpaymentrefundresponse.md)**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4x-5xx          | */*             |
 
-## list_accounting_refunds
+## list_payment_refunds
 
 List all refunds
 
@@ -57,34 +58,35 @@ List all refunds
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
-req = operations.ListAccountingRefundsRequest(
+req = operations.ListPaymentRefundsRequest(
     connection_id='<value>',
 )
 
-res = s.refund.list_accounting_refunds(req, operations.ListAccountingRefundsSecurity(
-    jwt="<YOUR_API_KEY_HERE>",
-))
+res = s.refund.list_payment_refunds(req)
 
-if res.accounting_refunds is not None:
+if res.payment_refunds is not None:
     # handle response
     pass
 ```
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `request`                                                                                            | [operations.ListAccountingRefundsRequest](../../models/operations/listaccountingrefundsrequest.md)   | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
-| `security`                                                                                           | [operations.ListAccountingRefundsSecurity](../../models/operations/listaccountingrefundssecurity.md) | :heavy_check_mark:                                                                                   | The security requirements to use for the request.                                                    |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.ListPaymentRefundsRequest](../../models/operations/listpaymentrefundsrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 
 ### Response
 
-**[operations.ListAccountingRefundsResponse](../../models/operations/listaccountingrefundsresponse.md)**
+**[operations.ListPaymentRefundsResponse](../../models/operations/listpaymentrefundsresponse.md)**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |

@@ -13,7 +13,7 @@ class Job:
         
     
     
-    def create_ats_job(self, request: operations.CreateAtsJobRequest, security: operations.CreateAtsJobSecurity) -> operations.CreateAtsJobResponse:
+    def create_ats_job(self, request: operations.CreateAtsJobRequest) -> operations.CreateAtsJobResponse:
         r"""Create a job"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -25,7 +25,10 @@ class Job:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -45,7 +48,7 @@ class Job:
 
     
     
-    def get_ats_job(self, request: operations.GetAtsJobRequest, security: operations.GetAtsJobSecurity) -> operations.GetAtsJobResponse:
+    def get_ats_job(self, request: operations.GetAtsJobRequest) -> operations.GetAtsJobResponse:
         r"""Retrieve a job"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -55,7 +58,10 @@ class Job:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -75,7 +81,7 @@ class Job:
 
     
     
-    def list_ats_jobs(self, request: operations.ListAtsJobsRequest, security: operations.ListAtsJobsSecurity) -> operations.ListAtsJobsResponse:
+    def list_ats_jobs(self, request: operations.ListAtsJobsRequest) -> operations.ListAtsJobsResponse:
         r"""List all jobs"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -85,7 +91,10 @@ class Job:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -105,7 +114,7 @@ class Job:
 
     
     
-    def patch_ats_job(self, request: operations.PatchAtsJobRequest, security: operations.PatchAtsJobSecurity) -> operations.PatchAtsJobResponse:
+    def patch_ats_job(self, request: operations.PatchAtsJobRequest) -> operations.PatchAtsJobResponse:
         r"""Update a job"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -117,7 +126,10 @@ class Job:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -137,7 +149,7 @@ class Job:
 
     
     
-    def remove_ats_job(self, request: operations.RemoveAtsJobRequest, security: operations.RemoveAtsJobSecurity) -> operations.RemoveAtsJobResponse:
+    def remove_ats_job(self, request: operations.RemoveAtsJobRequest) -> operations.RemoveAtsJobResponse:
         r"""Remove a job"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -146,7 +158,10 @@ class Job:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -165,7 +180,7 @@ class Job:
 
     
     
-    def update_ats_job(self, request: operations.UpdateAtsJobRequest, security: operations.UpdateAtsJobSecurity) -> operations.UpdateAtsJobResponse:
+    def update_ats_job(self, request: operations.UpdateAtsJobRequest) -> operations.UpdateAtsJobResponse:
         r"""Update a job"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -177,7 +192,10 @@ class Job:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')

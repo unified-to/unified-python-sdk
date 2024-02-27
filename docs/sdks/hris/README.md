@@ -24,17 +24,19 @@ Create an employee
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 req = operations.CreateHrisEmployeeRequest(
     connection_id='<value>',
 )
 
-res = s.hris.create_hris_employee(req, operations.CreateHrisEmployeeSecurity(
-    jwt="<YOUR_API_KEY_HERE>",
-))
+res = s.hris.create_hris_employee(req)
 
 if res.hris_employee is not None:
     # handle response
@@ -43,10 +45,9 @@ if res.hris_employee is not None:
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `request`                                                                                      | [operations.CreateHrisEmployeeRequest](../../models/operations/createhrisemployeerequest.md)   | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
-| `security`                                                                                     | [operations.CreateHrisEmployeeSecurity](../../models/operations/createhrisemployeesecurity.md) | :heavy_check_mark:                                                                             | The security requirements to use for the request.                                              |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.CreateHrisEmployeeRequest](../../models/operations/createhrisemployeerequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 
 ### Response
@@ -66,17 +67,19 @@ Create a group
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 req = operations.CreateHrisGroupRequest(
     connection_id='<value>',
 )
 
-res = s.hris.create_hris_group(req, operations.CreateHrisGroupSecurity(
-    jwt="<YOUR_API_KEY_HERE>",
-))
+res = s.hris.create_hris_group(req)
 
 if res.hris_group is not None:
     # handle response
@@ -85,10 +88,9 @@ if res.hris_group is not None:
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `request`                                                                                | [operations.CreateHrisGroupRequest](../../models/operations/createhrisgrouprequest.md)   | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
-| `security`                                                                               | [operations.CreateHrisGroupSecurity](../../models/operations/createhrisgroupsecurity.md) | :heavy_check_mark:                                                                       | The security requirements to use for the request.                                        |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `request`                                                                              | [operations.CreateHrisGroupRequest](../../models/operations/createhrisgrouprequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
 
 
 ### Response
@@ -108,18 +110,20 @@ Retrieve an employee
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 req = operations.GetHrisEmployeeRequest(
     connection_id='<value>',
     id='<id>',
 )
 
-res = s.hris.get_hris_employee(req, operations.GetHrisEmployeeSecurity(
-    jwt="<YOUR_API_KEY_HERE>",
-))
+res = s.hris.get_hris_employee(req)
 
 if res.hris_employee is not None:
     # handle response
@@ -128,10 +132,9 @@ if res.hris_employee is not None:
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `request`                                                                                | [operations.GetHrisEmployeeRequest](../../models/operations/gethrisemployeerequest.md)   | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
-| `security`                                                                               | [operations.GetHrisEmployeeSecurity](../../models/operations/gethrisemployeesecurity.md) | :heavy_check_mark:                                                                       | The security requirements to use for the request.                                        |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `request`                                                                              | [operations.GetHrisEmployeeRequest](../../models/operations/gethrisemployeerequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
 
 
 ### Response
@@ -151,18 +154,20 @@ Retrieve a group
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 req = operations.GetHrisGroupRequest(
     connection_id='<value>',
     id='<id>',
 )
 
-res = s.hris.get_hris_group(req, operations.GetHrisGroupSecurity(
-    jwt="<YOUR_API_KEY_HERE>",
-))
+res = s.hris.get_hris_group(req)
 
 if res.hris_group is not None:
     # handle response
@@ -171,10 +176,9 @@ if res.hris_group is not None:
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `request`                                                                          | [operations.GetHrisGroupRequest](../../models/operations/gethrisgrouprequest.md)   | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
-| `security`                                                                         | [operations.GetHrisGroupSecurity](../../models/operations/gethrisgroupsecurity.md) | :heavy_check_mark:                                                                 | The security requirements to use for the request.                                  |
+| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `request`                                                                        | [operations.GetHrisGroupRequest](../../models/operations/gethrisgrouprequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
 
 
 ### Response
@@ -194,17 +198,19 @@ List all employees
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 req = operations.ListHrisEmployeesRequest(
     connection_id='<value>',
 )
 
-res = s.hris.list_hris_employees(req, operations.ListHrisEmployeesSecurity(
-    jwt="<YOUR_API_KEY_HERE>",
-))
+res = s.hris.list_hris_employees(req)
 
 if res.hris_employees is not None:
     # handle response
@@ -213,10 +219,9 @@ if res.hris_employees is not None:
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `request`                                                                                    | [operations.ListHrisEmployeesRequest](../../models/operations/listhrisemployeesrequest.md)   | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
-| `security`                                                                                   | [operations.ListHrisEmployeesSecurity](../../models/operations/listhrisemployeessecurity.md) | :heavy_check_mark:                                                                           | The security requirements to use for the request.                                            |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.ListHrisEmployeesRequest](../../models/operations/listhrisemployeesrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 
 ### Response
@@ -236,17 +241,19 @@ List all groups
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 req = operations.ListHrisGroupsRequest(
     connection_id='<value>',
 )
 
-res = s.hris.list_hris_groups(req, operations.ListHrisGroupsSecurity(
-    jwt="<YOUR_API_KEY_HERE>",
-))
+res = s.hris.list_hris_groups(req)
 
 if res.hris_groups is not None:
     # handle response
@@ -255,10 +262,9 @@ if res.hris_groups is not None:
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `request`                                                                              | [operations.ListHrisGroupsRequest](../../models/operations/listhrisgroupsrequest.md)   | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
-| `security`                                                                             | [operations.ListHrisGroupsSecurity](../../models/operations/listhrisgroupssecurity.md) | :heavy_check_mark:                                                                     | The security requirements to use for the request.                                      |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [operations.ListHrisGroupsRequest](../../models/operations/listhrisgroupsrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
 
 
 ### Response
@@ -278,18 +284,20 @@ Update an employee
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 req = operations.PatchHrisEmployeeRequest(
     connection_id='<value>',
     id='<id>',
 )
 
-res = s.hris.patch_hris_employee(req, operations.PatchHrisEmployeeSecurity(
-    jwt="<YOUR_API_KEY_HERE>",
-))
+res = s.hris.patch_hris_employee(req)
 
 if res.hris_employee is not None:
     # handle response
@@ -298,10 +306,9 @@ if res.hris_employee is not None:
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `request`                                                                                    | [operations.PatchHrisEmployeeRequest](../../models/operations/patchhrisemployeerequest.md)   | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
-| `security`                                                                                   | [operations.PatchHrisEmployeeSecurity](../../models/operations/patchhrisemployeesecurity.md) | :heavy_check_mark:                                                                           | The security requirements to use for the request.                                            |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.PatchHrisEmployeeRequest](../../models/operations/patchhrisemployeerequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 
 ### Response
@@ -321,18 +328,20 @@ Update a group
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 req = operations.PatchHrisGroupRequest(
     connection_id='<value>',
     id='<id>',
 )
 
-res = s.hris.patch_hris_group(req, operations.PatchHrisGroupSecurity(
-    jwt="<YOUR_API_KEY_HERE>",
-))
+res = s.hris.patch_hris_group(req)
 
 if res.hris_group is not None:
     # handle response
@@ -341,10 +350,9 @@ if res.hris_group is not None:
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `request`                                                                              | [operations.PatchHrisGroupRequest](../../models/operations/patchhrisgrouprequest.md)   | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
-| `security`                                                                             | [operations.PatchHrisGroupSecurity](../../models/operations/patchhrisgroupsecurity.md) | :heavy_check_mark:                                                                     | The security requirements to use for the request.                                      |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [operations.PatchHrisGroupRequest](../../models/operations/patchhrisgrouprequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
 
 
 ### Response
@@ -364,18 +372,20 @@ Remove an employee
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 req = operations.RemoveHrisEmployeeRequest(
     connection_id='<value>',
     id='<id>',
 )
 
-res = s.hris.remove_hris_employee(req, operations.RemoveHrisEmployeeSecurity(
-    jwt="<YOUR_API_KEY_HERE>",
-))
+res = s.hris.remove_hris_employee(req)
 
 if res.status_code == 200:
     # handle response
@@ -384,10 +394,9 @@ if res.status_code == 200:
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `request`                                                                                      | [operations.RemoveHrisEmployeeRequest](../../models/operations/removehrisemployeerequest.md)   | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
-| `security`                                                                                     | [operations.RemoveHrisEmployeeSecurity](../../models/operations/removehrisemployeesecurity.md) | :heavy_check_mark:                                                                             | The security requirements to use for the request.                                              |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.RemoveHrisEmployeeRequest](../../models/operations/removehrisemployeerequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 
 ### Response
@@ -407,18 +416,20 @@ Remove a group
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 req = operations.RemoveHrisGroupRequest(
     connection_id='<value>',
     id='<id>',
 )
 
-res = s.hris.remove_hris_group(req, operations.RemoveHrisGroupSecurity(
-    jwt="<YOUR_API_KEY_HERE>",
-))
+res = s.hris.remove_hris_group(req)
 
 if res.status_code == 200:
     # handle response
@@ -427,10 +438,9 @@ if res.status_code == 200:
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `request`                                                                                | [operations.RemoveHrisGroupRequest](../../models/operations/removehrisgrouprequest.md)   | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
-| `security`                                                                               | [operations.RemoveHrisGroupSecurity](../../models/operations/removehrisgroupsecurity.md) | :heavy_check_mark:                                                                       | The security requirements to use for the request.                                        |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `request`                                                                              | [operations.RemoveHrisGroupRequest](../../models/operations/removehrisgrouprequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
 
 
 ### Response
@@ -450,18 +460,20 @@ Update an employee
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 req = operations.UpdateHrisEmployeeRequest(
     connection_id='<value>',
     id='<id>',
 )
 
-res = s.hris.update_hris_employee(req, operations.UpdateHrisEmployeeSecurity(
-    jwt="<YOUR_API_KEY_HERE>",
-))
+res = s.hris.update_hris_employee(req)
 
 if res.hris_employee is not None:
     # handle response
@@ -470,10 +482,9 @@ if res.hris_employee is not None:
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `request`                                                                                      | [operations.UpdateHrisEmployeeRequest](../../models/operations/updatehrisemployeerequest.md)   | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
-| `security`                                                                                     | [operations.UpdateHrisEmployeeSecurity](../../models/operations/updatehrisemployeesecurity.md) | :heavy_check_mark:                                                                             | The security requirements to use for the request.                                              |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.UpdateHrisEmployeeRequest](../../models/operations/updatehrisemployeerequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
 
 ### Response
@@ -493,18 +504,20 @@ Update a group
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 req = operations.UpdateHrisGroupRequest(
     connection_id='<value>',
     id='<id>',
 )
 
-res = s.hris.update_hris_group(req, operations.UpdateHrisGroupSecurity(
-    jwt="<YOUR_API_KEY_HERE>",
-))
+res = s.hris.update_hris_group(req)
 
 if res.hris_group is not None:
     # handle response
@@ -513,10 +526,9 @@ if res.hris_group is not None:
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `request`                                                                                | [operations.UpdateHrisGroupRequest](../../models/operations/updatehrisgrouprequest.md)   | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
-| `security`                                                                               | [operations.UpdateHrisGroupSecurity](../../models/operations/updatehrisgroupsecurity.md) | :heavy_check_mark:                                                                       | The security requirements to use for the request.                                        |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `request`                                                                              | [operations.UpdateHrisGroupRequest](../../models/operations/updatehrisgrouprequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
 
 
 ### Response

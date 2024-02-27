@@ -15,9 +15,13 @@ Returns an authorization URL for the specified integration.  Once a successful a
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 req = operations.GetUnifiedIntegrationAuthRequest(
     integration_type='<value>',
@@ -55,9 +59,13 @@ No authentication required as this is to be used by front-end interface
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 req = operations.ListUnifiedIntegrationWorkspacesRequest(
     workspace_id='<value>',
@@ -94,15 +102,17 @@ Returns all integrations
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 req = operations.ListUnifiedIntegrationsRequest()
 
-res = s.integration.list_unified_integrations(req, operations.ListUnifiedIntegrationsSecurity(
-    jwt="<YOUR_API_KEY_HERE>",
-))
+res = s.integration.list_unified_integrations(req)
 
 if res.integrations is not None:
     # handle response
@@ -111,10 +121,9 @@ if res.integrations is not None:
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                | [operations.ListUnifiedIntegrationsRequest](../../models/operations/listunifiedintegrationsrequest.md)   | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-| `security`                                                                                               | [operations.ListUnifiedIntegrationsSecurity](../../models/operations/listunifiedintegrationssecurity.md) | :heavy_check_mark:                                                                                       | The security requirements to use for the request.                                                        |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                              | [operations.ListUnifiedIntegrationsRequest](../../models/operations/listunifiedintegrationsrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 
 ### Response

@@ -14,17 +14,19 @@ Retrieve enrichment information for a company
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 req = operations.ListEnrichCompaniesRequest(
     connection_id='<value>',
 )
 
-res = s.enrich.list_enrich_companies(req, operations.ListEnrichCompaniesSecurity(
-    jwt="<YOUR_API_KEY_HERE>",
-))
+res = s.enrich.list_enrich_companies(req)
 
 if res.enrich_company is not None:
     # handle response
@@ -33,10 +35,9 @@ if res.enrich_company is not None:
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `request`                                                                                        | [operations.ListEnrichCompaniesRequest](../../models/operations/listenrichcompaniesrequest.md)   | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-| `security`                                                                                       | [operations.ListEnrichCompaniesSecurity](../../models/operations/listenrichcompaniessecurity.md) | :heavy_check_mark:                                                                               | The security requirements to use for the request.                                                |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `request`                                                                                      | [operations.ListEnrichCompaniesRequest](../../models/operations/listenrichcompaniesrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
 
 
 ### Response
@@ -56,17 +57,19 @@ Retrieve enrichment information for a person
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 req = operations.ListEnrichPeopleRequest(
     connection_id='<value>',
 )
 
-res = s.enrich.list_enrich_people(req, operations.ListEnrichPeopleSecurity(
-    jwt="<YOUR_API_KEY_HERE>",
-))
+res = s.enrich.list_enrich_people(req)
 
 if res.enrich_person is not None:
     # handle response
@@ -75,10 +78,9 @@ if res.enrich_person is not None:
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `request`                                                                                  | [operations.ListEnrichPeopleRequest](../../models/operations/listenrichpeoplerequest.md)   | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-| `security`                                                                                 | [operations.ListEnrichPeopleSecurity](../../models/operations/listenrichpeoplesecurity.md) | :heavy_check_mark:                                                                         | The security requirements to use for the request.                                          |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.ListEnrichPeopleRequest](../../models/operations/listenrichpeoplerequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
 
 
 ### Response

@@ -13,7 +13,7 @@ class Lead:
         
     
     
-    def create_crm_lead(self, request: operations.CreateCrmLeadRequest, security: operations.CreateCrmLeadSecurity) -> operations.CreateCrmLeadResponse:
+    def create_crm_lead(self, request: operations.CreateCrmLeadRequest) -> operations.CreateCrmLeadResponse:
         r"""Create a lead"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -25,7 +25,10 @@ class Lead:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -45,7 +48,7 @@ class Lead:
 
     
     
-    def get_crm_lead(self, request: operations.GetCrmLeadRequest, security: operations.GetCrmLeadSecurity) -> operations.GetCrmLeadResponse:
+    def get_crm_lead(self, request: operations.GetCrmLeadRequest) -> operations.GetCrmLeadResponse:
         r"""Retrieve a lead"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -55,7 +58,10 @@ class Lead:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -75,7 +81,7 @@ class Lead:
 
     
     
-    def list_crm_leads(self, request: operations.ListCrmLeadsRequest, security: operations.ListCrmLeadsSecurity) -> operations.ListCrmLeadsResponse:
+    def list_crm_leads(self, request: operations.ListCrmLeadsRequest) -> operations.ListCrmLeadsResponse:
         r"""List all leads"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -85,7 +91,10 @@ class Lead:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -105,7 +114,7 @@ class Lead:
 
     
     
-    def patch_crm_lead(self, request: operations.PatchCrmLeadRequest, security: operations.PatchCrmLeadSecurity) -> operations.PatchCrmLeadResponse:
+    def patch_crm_lead(self, request: operations.PatchCrmLeadRequest) -> operations.PatchCrmLeadResponse:
         r"""Update a lead"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -117,7 +126,10 @@ class Lead:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -137,7 +149,7 @@ class Lead:
 
     
     
-    def remove_crm_lead(self, request: operations.RemoveCrmLeadRequest, security: operations.RemoveCrmLeadSecurity) -> operations.RemoveCrmLeadResponse:
+    def remove_crm_lead(self, request: operations.RemoveCrmLeadRequest) -> operations.RemoveCrmLeadResponse:
         r"""Remove a lead"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -146,7 +158,10 @@ class Lead:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -165,7 +180,7 @@ class Lead:
 
     
     
-    def update_crm_lead(self, request: operations.UpdateCrmLeadRequest, security: operations.UpdateCrmLeadSecurity) -> operations.UpdateCrmLeadResponse:
+    def update_crm_lead(self, request: operations.UpdateCrmLeadRequest) -> operations.UpdateCrmLeadResponse:
         r"""Update a lead"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -177,7 +192,10 @@ class Lead:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')

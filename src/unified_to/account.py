@@ -13,7 +13,7 @@ class Account:
         
     
     
-    def create_accounting_account(self, request: operations.CreateAccountingAccountRequest, security: operations.CreateAccountingAccountSecurity) -> operations.CreateAccountingAccountResponse:
+    def create_accounting_account(self, request: operations.CreateAccountingAccountRequest) -> operations.CreateAccountingAccountResponse:
         r"""Create an account"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -25,7 +25,10 @@ class Account:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -45,7 +48,7 @@ class Account:
 
     
     
-    def get_accounting_account(self, request: operations.GetAccountingAccountRequest, security: operations.GetAccountingAccountSecurity) -> operations.GetAccountingAccountResponse:
+    def get_accounting_account(self, request: operations.GetAccountingAccountRequest) -> operations.GetAccountingAccountResponse:
         r"""Retrieve an account"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -55,7 +58,10 @@ class Account:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -75,7 +81,7 @@ class Account:
 
     
     
-    def list_accounting_accounts(self, request: operations.ListAccountingAccountsRequest, security: operations.ListAccountingAccountsSecurity) -> operations.ListAccountingAccountsResponse:
+    def list_accounting_accounts(self, request: operations.ListAccountingAccountsRequest) -> operations.ListAccountingAccountsResponse:
         r"""List all accounts"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -85,7 +91,10 @@ class Account:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -105,7 +114,7 @@ class Account:
 
     
     
-    def patch_accounting_account(self, request: operations.PatchAccountingAccountRequest, security: operations.PatchAccountingAccountSecurity) -> operations.PatchAccountingAccountResponse:
+    def patch_accounting_account(self, request: operations.PatchAccountingAccountRequest) -> operations.PatchAccountingAccountResponse:
         r"""Update an account"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -117,7 +126,10 @@ class Account:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -137,7 +149,7 @@ class Account:
 
     
     
-    def remove_accounting_account(self, request: operations.RemoveAccountingAccountRequest, security: operations.RemoveAccountingAccountSecurity) -> operations.RemoveAccountingAccountResponse:
+    def remove_accounting_account(self, request: operations.RemoveAccountingAccountRequest) -> operations.RemoveAccountingAccountResponse:
         r"""Remove an account"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -146,7 +158,10 @@ class Account:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -165,7 +180,7 @@ class Account:
 
     
     
-    def update_accounting_account(self, request: operations.UpdateAccountingAccountRequest, security: operations.UpdateAccountingAccountSecurity) -> operations.UpdateAccountingAccountResponse:
+    def update_accounting_account(self, request: operations.UpdateAccountingAccountRequest) -> operations.UpdateAccountingAccountResponse:
         r"""Update an account"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -177,7 +192,10 @@ class Account:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')

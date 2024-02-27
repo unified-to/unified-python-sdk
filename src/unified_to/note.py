@@ -13,7 +13,7 @@ class Note:
         
     
     
-    def create_ticketing_note(self, request: operations.CreateTicketingNoteRequest, security: operations.CreateTicketingNoteSecurity) -> operations.CreateTicketingNoteResponse:
+    def create_ticketing_note(self, request: operations.CreateTicketingNoteRequest) -> operations.CreateTicketingNoteResponse:
         r"""Create a note"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -25,7 +25,10 @@ class Note:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -45,7 +48,7 @@ class Note:
 
     
     
-    def get_ticketing_note(self, request: operations.GetTicketingNoteRequest, security: operations.GetTicketingNoteSecurity) -> operations.GetTicketingNoteResponse:
+    def get_ticketing_note(self, request: operations.GetTicketingNoteRequest) -> operations.GetTicketingNoteResponse:
         r"""Retrieve a note"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -55,7 +58,10 @@ class Note:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -75,7 +81,7 @@ class Note:
 
     
     
-    def list_ticketing_notes(self, request: operations.ListTicketingNotesRequest, security: operations.ListTicketingNotesSecurity) -> operations.ListTicketingNotesResponse:
+    def list_ticketing_notes(self, request: operations.ListTicketingNotesRequest) -> operations.ListTicketingNotesResponse:
         r"""List all notes"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -85,7 +91,10 @@ class Note:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -105,7 +114,7 @@ class Note:
 
     
     
-    def patch_ticketing_note(self, request: operations.PatchTicketingNoteRequest, security: operations.PatchTicketingNoteSecurity) -> operations.PatchTicketingNoteResponse:
+    def patch_ticketing_note(self, request: operations.PatchTicketingNoteRequest) -> operations.PatchTicketingNoteResponse:
         r"""Update a note"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -117,7 +126,10 @@ class Note:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -137,7 +149,7 @@ class Note:
 
     
     
-    def remove_ticketing_note(self, request: operations.RemoveTicketingNoteRequest, security: operations.RemoveTicketingNoteSecurity) -> operations.RemoveTicketingNoteResponse:
+    def remove_ticketing_note(self, request: operations.RemoveTicketingNoteRequest) -> operations.RemoveTicketingNoteResponse:
         r"""Remove a note"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -146,7 +158,10 @@ class Note:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -165,7 +180,7 @@ class Note:
 
     
     
-    def update_ticketing_note(self, request: operations.UpdateTicketingNoteRequest, security: operations.UpdateTicketingNoteSecurity) -> operations.UpdateTicketingNoteResponse:
+    def update_ticketing_note(self, request: operations.UpdateTicketingNoteRequest) -> operations.UpdateTicketingNoteResponse:
         r"""Update a note"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -177,7 +192,10 @@ class Note:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')

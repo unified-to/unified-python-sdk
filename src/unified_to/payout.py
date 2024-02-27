@@ -13,27 +13,30 @@ class Payout:
         
     
     
-    def get_accounting_payout(self, request: operations.GetAccountingPayoutRequest, security: operations.GetAccountingPayoutSecurity) -> operations.GetAccountingPayoutResponse:
+    def get_payment_payout(self, request: operations.GetPaymentPayoutRequest) -> operations.GetPaymentPayoutResponse:
         r"""Retrieve a payout"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.GetAccountingPayoutRequest, base_url, '/accounting/{connection_id}/payout/{id}', request)
+        url = utils.generate_url(operations.GetPaymentPayoutRequest, base_url, '/payment/{connection_id}/payout/{id}', request)
         headers = {}
-        query_params = utils.get_query_params(operations.GetAccountingPayoutRequest, request)
+        query_params = utils.get_query_params(operations.GetPaymentPayoutRequest, request)
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
         
-        res = operations.GetAccountingPayoutResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        res = operations.GetPaymentPayoutResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[shared.AccountingPayout])
-                res.accounting_payout = out
+                out = utils.unmarshal_json(http_res.text, Optional[shared.PaymentPayout])
+                res.payment_payout = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
         elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
@@ -43,27 +46,30 @@ class Payout:
 
     
     
-    def list_accounting_payouts(self, request: operations.ListAccountingPayoutsRequest, security: operations.ListAccountingPayoutsSecurity) -> operations.ListAccountingPayoutsResponse:
+    def list_payment_payouts(self, request: operations.ListPaymentPayoutsRequest) -> operations.ListPaymentPayoutsResponse:
         r"""List all payouts"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.ListAccountingPayoutsRequest, base_url, '/accounting/{connection_id}/payout', request)
+        url = utils.generate_url(operations.ListPaymentPayoutsRequest, base_url, '/payment/{connection_id}/payout', request)
         headers = {}
-        query_params = utils.get_query_params(operations.ListAccountingPayoutsRequest, request)
+        query_params = utils.get_query_params(operations.ListPaymentPayoutsRequest, request)
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
         
-        res = operations.ListAccountingPayoutsResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        res = operations.ListPaymentPayoutsResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[List[shared.AccountingPayout]])
-                res.accounting_payouts = out
+                out = utils.unmarshal_json(http_res.text, Optional[List[shared.PaymentPayout]])
+                res.payment_payouts = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
         elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:

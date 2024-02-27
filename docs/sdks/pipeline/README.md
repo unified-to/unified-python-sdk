@@ -18,17 +18,19 @@ Create a pipeline
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 req = operations.CreateCrmPipelineRequest(
     connection_id='<value>',
 )
 
-res = s.pipeline.create_crm_pipeline(req, operations.CreateCrmPipelineSecurity(
-    jwt="<YOUR_API_KEY_HERE>",
-))
+res = s.pipeline.create_crm_pipeline(req)
 
 if res.crm_pipeline is not None:
     # handle response
@@ -37,10 +39,9 @@ if res.crm_pipeline is not None:
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `request`                                                                                    | [operations.CreateCrmPipelineRequest](../../models/operations/createcrmpipelinerequest.md)   | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
-| `security`                                                                                   | [operations.CreateCrmPipelineSecurity](../../models/operations/createcrmpipelinesecurity.md) | :heavy_check_mark:                                                                           | The security requirements to use for the request.                                            |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.CreateCrmPipelineRequest](../../models/operations/createcrmpipelinerequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 
 ### Response
@@ -60,18 +61,20 @@ Retrieve a pipeline
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 req = operations.GetCrmPipelineRequest(
     connection_id='<value>',
     id='<id>',
 )
 
-res = s.pipeline.get_crm_pipeline(req, operations.GetCrmPipelineSecurity(
-    jwt="<YOUR_API_KEY_HERE>",
-))
+res = s.pipeline.get_crm_pipeline(req)
 
 if res.crm_pipeline is not None:
     # handle response
@@ -80,10 +83,9 @@ if res.crm_pipeline is not None:
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `request`                                                                              | [operations.GetCrmPipelineRequest](../../models/operations/getcrmpipelinerequest.md)   | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
-| `security`                                                                             | [operations.GetCrmPipelineSecurity](../../models/operations/getcrmpipelinesecurity.md) | :heavy_check_mark:                                                                     | The security requirements to use for the request.                                      |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [operations.GetCrmPipelineRequest](../../models/operations/getcrmpipelinerequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
 
 
 ### Response
@@ -103,17 +105,19 @@ List all pipelines
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 req = operations.ListCrmPipelinesRequest(
     connection_id='<value>',
 )
 
-res = s.pipeline.list_crm_pipelines(req, operations.ListCrmPipelinesSecurity(
-    jwt="<YOUR_API_KEY_HERE>",
-))
+res = s.pipeline.list_crm_pipelines(req)
 
 if res.crm_pipelines is not None:
     # handle response
@@ -122,10 +126,9 @@ if res.crm_pipelines is not None:
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `request`                                                                                  | [operations.ListCrmPipelinesRequest](../../models/operations/listcrmpipelinesrequest.md)   | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-| `security`                                                                                 | [operations.ListCrmPipelinesSecurity](../../models/operations/listcrmpipelinessecurity.md) | :heavy_check_mark:                                                                         | The security requirements to use for the request.                                          |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.ListCrmPipelinesRequest](../../models/operations/listcrmpipelinesrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
 
 
 ### Response
@@ -145,18 +148,20 @@ Update a pipeline
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 req = operations.PatchCrmPipelineRequest(
     connection_id='<value>',
     id='<id>',
 )
 
-res = s.pipeline.patch_crm_pipeline(req, operations.PatchCrmPipelineSecurity(
-    jwt="<YOUR_API_KEY_HERE>",
-))
+res = s.pipeline.patch_crm_pipeline(req)
 
 if res.crm_pipeline is not None:
     # handle response
@@ -165,10 +170,9 @@ if res.crm_pipeline is not None:
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `request`                                                                                  | [operations.PatchCrmPipelineRequest](../../models/operations/patchcrmpipelinerequest.md)   | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-| `security`                                                                                 | [operations.PatchCrmPipelineSecurity](../../models/operations/patchcrmpipelinesecurity.md) | :heavy_check_mark:                                                                         | The security requirements to use for the request.                                          |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.PatchCrmPipelineRequest](../../models/operations/patchcrmpipelinerequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
 
 
 ### Response
@@ -188,18 +192,20 @@ Remove a pipeline
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 req = operations.RemoveCrmPipelineRequest(
     connection_id='<value>',
     id='<id>',
 )
 
-res = s.pipeline.remove_crm_pipeline(req, operations.RemoveCrmPipelineSecurity(
-    jwt="<YOUR_API_KEY_HERE>",
-))
+res = s.pipeline.remove_crm_pipeline(req)
 
 if res.status_code == 200:
     # handle response
@@ -208,10 +214,9 @@ if res.status_code == 200:
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `request`                                                                                    | [operations.RemoveCrmPipelineRequest](../../models/operations/removecrmpipelinerequest.md)   | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
-| `security`                                                                                   | [operations.RemoveCrmPipelineSecurity](../../models/operations/removecrmpipelinesecurity.md) | :heavy_check_mark:                                                                           | The security requirements to use for the request.                                            |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.RemoveCrmPipelineRequest](../../models/operations/removecrmpipelinerequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 
 ### Response
@@ -231,18 +236,20 @@ Update a pipeline
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 req = operations.UpdateCrmPipelineRequest(
     connection_id='<value>',
     id='<id>',
 )
 
-res = s.pipeline.update_crm_pipeline(req, operations.UpdateCrmPipelineSecurity(
-    jwt="<YOUR_API_KEY_HERE>",
-))
+res = s.pipeline.update_crm_pipeline(req)
 
 if res.crm_pipeline is not None:
     # handle response
@@ -251,10 +258,9 @@ if res.crm_pipeline is not None:
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `request`                                                                                    | [operations.UpdateCrmPipelineRequest](../../models/operations/updatecrmpipelinerequest.md)   | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
-| `security`                                                                                   | [operations.UpdateCrmPipelineSecurity](../../models/operations/updatecrmpipelinesecurity.md) | :heavy_check_mark:                                                                           | The security requirements to use for the request.                                            |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.UpdateCrmPipelineRequest](../../models/operations/updatecrmpipelinerequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
 
 ### Response

@@ -13,7 +13,7 @@ class Taxrate:
         
     
     
-    def create_accounting_taxrate(self, request: operations.CreateAccountingTaxrateRequest, security: operations.CreateAccountingTaxrateSecurity) -> operations.CreateAccountingTaxrateResponse:
+    def create_accounting_taxrate(self, request: operations.CreateAccountingTaxrateRequest) -> operations.CreateAccountingTaxrateResponse:
         r"""Create a taxrate"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -25,7 +25,10 @@ class Taxrate:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -45,7 +48,7 @@ class Taxrate:
 
     
     
-    def get_accounting_taxrate(self, request: operations.GetAccountingTaxrateRequest, security: operations.GetAccountingTaxrateSecurity) -> operations.GetAccountingTaxrateResponse:
+    def get_accounting_taxrate(self, request: operations.GetAccountingTaxrateRequest) -> operations.GetAccountingTaxrateResponse:
         r"""Retrieve a taxrate"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -55,7 +58,10 @@ class Taxrate:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -75,7 +81,7 @@ class Taxrate:
 
     
     
-    def list_accounting_taxrates(self, request: operations.ListAccountingTaxratesRequest, security: operations.ListAccountingTaxratesSecurity) -> operations.ListAccountingTaxratesResponse:
+    def list_accounting_taxrates(self, request: operations.ListAccountingTaxratesRequest) -> operations.ListAccountingTaxratesResponse:
         r"""List all taxrates"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -85,7 +91,10 @@ class Taxrate:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -105,7 +114,7 @@ class Taxrate:
 
     
     
-    def patch_accounting_taxrate(self, request: operations.PatchAccountingTaxrateRequest, security: operations.PatchAccountingTaxrateSecurity) -> operations.PatchAccountingTaxrateResponse:
+    def patch_accounting_taxrate(self, request: operations.PatchAccountingTaxrateRequest) -> operations.PatchAccountingTaxrateResponse:
         r"""Update a taxrate"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -117,7 +126,10 @@ class Taxrate:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -137,7 +149,7 @@ class Taxrate:
 
     
     
-    def remove_accounting_taxrate(self, request: operations.RemoveAccountingTaxrateRequest, security: operations.RemoveAccountingTaxrateSecurity) -> operations.RemoveAccountingTaxrateResponse:
+    def remove_accounting_taxrate(self, request: operations.RemoveAccountingTaxrateRequest) -> operations.RemoveAccountingTaxrateResponse:
         r"""Remove a taxrate"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -146,7 +158,10 @@ class Taxrate:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -165,7 +180,7 @@ class Taxrate:
 
     
     
-    def update_accounting_taxrate(self, request: operations.UpdateAccountingTaxrateRequest, security: operations.UpdateAccountingTaxrateSecurity) -> operations.UpdateAccountingTaxrateResponse:
+    def update_accounting_taxrate(self, request: operations.UpdateAccountingTaxrateRequest) -> operations.UpdateAccountingTaxrateResponse:
         r"""Update a taxrate"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -177,7 +192,10 @@ class Taxrate:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')

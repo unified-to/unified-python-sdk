@@ -13,29 +13,32 @@ class Payment:
         
     
     
-    def create_accounting_payment(self, request: operations.CreateAccountingPaymentRequest, security: operations.CreateAccountingPaymentSecurity) -> operations.CreateAccountingPaymentResponse:
-        r"""Create a payment"""
+    def create_payment_link(self, request: operations.CreatePaymentLinkRequest) -> operations.CreatePaymentLinkResponse:
+        r"""Create a payment link"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.CreateAccountingPaymentRequest, base_url, '/accounting/{connection_id}/payment', request)
+        url = utils.generate_url(operations.CreatePaymentLinkRequest, base_url, '/payment/{connection_id}/link', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, operations.CreateAccountingPaymentRequest, "accounting_payment", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.CreatePaymentLinkRequest, "payment_link", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
         
-        res = operations.CreateAccountingPaymentResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        res = operations.CreatePaymentLinkResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[shared.AccountingPayment])
-                res.accounting_payment = out
+                out = utils.unmarshal_json(http_res.text, Optional[shared.PaymentLink])
+                res.payment_link = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
         elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
@@ -45,89 +48,32 @@ class Payment:
 
     
     
-    def get_accounting_payment(self, request: operations.GetAccountingPaymentRequest, security: operations.GetAccountingPaymentSecurity) -> operations.GetAccountingPaymentResponse:
-        r"""Retrieve a payment"""
+    def create_payment_payment(self, request: operations.CreatePaymentPaymentRequest) -> operations.CreatePaymentPaymentResponse:
+        r"""Create a payment"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.GetAccountingPaymentRequest, base_url, '/accounting/{connection_id}/payment/{id}', request)
+        url = utils.generate_url(operations.CreatePaymentPaymentRequest, base_url, '/payment/{connection_id}/payment', request)
         headers = {}
-        query_params = utils.get_query_params(operations.GetAccountingPaymentRequest, request)
-        headers['Accept'] = 'application/json'
-        headers['user-agent'] = self.sdk_configuration.user_agent
-        
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
-        
-        http_res = client.request('GET', url, params=query_params, headers=headers)
-        content_type = http_res.headers.get('Content-Type')
-        
-        res = operations.GetAccountingPaymentResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
-        
-        if http_res.status_code == 200:
-            if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[shared.AccountingPayment])
-                res.accounting_payment = out
-            else:
-                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
-        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
-            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
-
-        return res
-
-    
-    
-    def list_accounting_payments(self, request: operations.ListAccountingPaymentsRequest, security: operations.ListAccountingPaymentsSecurity) -> operations.ListAccountingPaymentsResponse:
-        r"""List all payments"""
-        base_url = utils.template_url(*self.sdk_configuration.get_server_details())
-        
-        url = utils.generate_url(operations.ListAccountingPaymentsRequest, base_url, '/accounting/{connection_id}/payment', request)
-        headers = {}
-        query_params = utils.get_query_params(operations.ListAccountingPaymentsRequest, request)
-        headers['Accept'] = 'application/json'
-        headers['user-agent'] = self.sdk_configuration.user_agent
-        
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
-        
-        http_res = client.request('GET', url, params=query_params, headers=headers)
-        content_type = http_res.headers.get('Content-Type')
-        
-        res = operations.ListAccountingPaymentsResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
-        
-        if http_res.status_code == 200:
-            if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[List[shared.AccountingPayment]])
-                res.accounting_payments = out
-            else:
-                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
-        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
-            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
-
-        return res
-
-    
-    
-    def patch_accounting_payment(self, request: operations.PatchAccountingPaymentRequest, security: operations.PatchAccountingPaymentSecurity) -> operations.PatchAccountingPaymentResponse:
-        r"""Update a payment"""
-        base_url = utils.template_url(*self.sdk_configuration.get_server_details())
-        
-        url = utils.generate_url(operations.PatchAccountingPaymentRequest, base_url, '/accounting/{connection_id}/payment/{id}', request)
-        headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, operations.PatchAccountingPaymentRequest, "accounting_payment", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.CreatePaymentPaymentRequest, "payment_payment", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
-        http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
+        http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
         
-        res = operations.PatchAccountingPaymentResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        res = operations.CreatePaymentPaymentResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[shared.AccountingPayment])
-                res.accounting_payment = out
+                out = utils.unmarshal_json(http_res.text, Optional[shared.PaymentPayment])
+                res.payment_payment = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
         elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
@@ -137,21 +83,358 @@ class Payment:
 
     
     
-    def remove_accounting_payment(self, request: operations.RemoveAccountingPaymentRequest, security: operations.RemoveAccountingPaymentSecurity) -> operations.RemoveAccountingPaymentResponse:
-        r"""Remove a payment"""
+    def get_payment_link(self, request: operations.GetPaymentLinkRequest) -> operations.GetPaymentLinkResponse:
+        r"""Retrieve a payment link"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.RemoveAccountingPaymentRequest, base_url, '/accounting/{connection_id}/payment/{id}', request)
+        url = utils.generate_url(operations.GetPaymentLinkRequest, base_url, '/payment/{connection_id}/link/{id}', request)
+        headers = {}
+        query_params = utils.get_query_params(operations.GetPaymentLinkRequest, request)
+        headers['Accept'] = 'application/json'
+        headers['user-agent'] = self.sdk_configuration.user_agent
+        
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        
+        http_res = client.request('GET', url, params=query_params, headers=headers)
+        content_type = http_res.headers.get('Content-Type')
+        
+        res = operations.GetPaymentLinkResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        
+        if http_res.status_code == 200:
+            if utils.match_content_type(content_type, 'application/json'):
+                out = utils.unmarshal_json(http_res.text, Optional[shared.PaymentLink])
+                res.payment_link = out
+            else:
+                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
+        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
+            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
+
+        return res
+
+    
+    
+    def get_payment_payment(self, request: operations.GetPaymentPaymentRequest) -> operations.GetPaymentPaymentResponse:
+        r"""Retrieve a payment"""
+        base_url = utils.template_url(*self.sdk_configuration.get_server_details())
+        
+        url = utils.generate_url(operations.GetPaymentPaymentRequest, base_url, '/payment/{connection_id}/payment/{id}', request)
+        headers = {}
+        query_params = utils.get_query_params(operations.GetPaymentPaymentRequest, request)
+        headers['Accept'] = 'application/json'
+        headers['user-agent'] = self.sdk_configuration.user_agent
+        
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        
+        http_res = client.request('GET', url, params=query_params, headers=headers)
+        content_type = http_res.headers.get('Content-Type')
+        
+        res = operations.GetPaymentPaymentResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        
+        if http_res.status_code == 200:
+            if utils.match_content_type(content_type, 'application/json'):
+                out = utils.unmarshal_json(http_res.text, Optional[shared.PaymentPayment])
+                res.payment_payment = out
+            else:
+                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
+        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
+            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
+
+        return res
+
+    
+    
+    def get_payment_payout(self, request: operations.GetPaymentPayoutRequest) -> operations.GetPaymentPayoutResponse:
+        r"""Retrieve a payout"""
+        base_url = utils.template_url(*self.sdk_configuration.get_server_details())
+        
+        url = utils.generate_url(operations.GetPaymentPayoutRequest, base_url, '/payment/{connection_id}/payout/{id}', request)
+        headers = {}
+        query_params = utils.get_query_params(operations.GetPaymentPayoutRequest, request)
+        headers['Accept'] = 'application/json'
+        headers['user-agent'] = self.sdk_configuration.user_agent
+        
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        
+        http_res = client.request('GET', url, params=query_params, headers=headers)
+        content_type = http_res.headers.get('Content-Type')
+        
+        res = operations.GetPaymentPayoutResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        
+        if http_res.status_code == 200:
+            if utils.match_content_type(content_type, 'application/json'):
+                out = utils.unmarshal_json(http_res.text, Optional[shared.PaymentPayout])
+                res.payment_payout = out
+            else:
+                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
+        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
+            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
+
+        return res
+
+    
+    
+    def get_payment_refund(self, request: operations.GetPaymentRefundRequest) -> operations.GetPaymentRefundResponse:
+        r"""Retrieve a refund"""
+        base_url = utils.template_url(*self.sdk_configuration.get_server_details())
+        
+        url = utils.generate_url(operations.GetPaymentRefundRequest, base_url, '/payment/{connection_id}/refund/{id}', request)
+        headers = {}
+        query_params = utils.get_query_params(operations.GetPaymentRefundRequest, request)
+        headers['Accept'] = 'application/json'
+        headers['user-agent'] = self.sdk_configuration.user_agent
+        
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        
+        http_res = client.request('GET', url, params=query_params, headers=headers)
+        content_type = http_res.headers.get('Content-Type')
+        
+        res = operations.GetPaymentRefundResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        
+        if http_res.status_code == 200:
+            if utils.match_content_type(content_type, 'application/json'):
+                out = utils.unmarshal_json(http_res.text, Optional[shared.PaymentRefund])
+                res.payment_refund = out
+            else:
+                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
+        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
+            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
+
+        return res
+
+    
+    
+    def list_payment_links(self, request: operations.ListPaymentLinksRequest) -> operations.ListPaymentLinksResponse:
+        r"""List all payment links"""
+        base_url = utils.template_url(*self.sdk_configuration.get_server_details())
+        
+        url = utils.generate_url(operations.ListPaymentLinksRequest, base_url, '/payment/{connection_id}/link', request)
+        headers = {}
+        query_params = utils.get_query_params(operations.ListPaymentLinksRequest, request)
+        headers['Accept'] = 'application/json'
+        headers['user-agent'] = self.sdk_configuration.user_agent
+        
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        
+        http_res = client.request('GET', url, params=query_params, headers=headers)
+        content_type = http_res.headers.get('Content-Type')
+        
+        res = operations.ListPaymentLinksResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        
+        if http_res.status_code == 200:
+            if utils.match_content_type(content_type, 'application/json'):
+                out = utils.unmarshal_json(http_res.text, Optional[List[shared.PaymentLink]])
+                res.payment_links = out
+            else:
+                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
+        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
+            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
+
+        return res
+
+    
+    
+    def list_payment_payments(self, request: operations.ListPaymentPaymentsRequest) -> operations.ListPaymentPaymentsResponse:
+        r"""List all payments"""
+        base_url = utils.template_url(*self.sdk_configuration.get_server_details())
+        
+        url = utils.generate_url(operations.ListPaymentPaymentsRequest, base_url, '/payment/{connection_id}/payment', request)
+        headers = {}
+        query_params = utils.get_query_params(operations.ListPaymentPaymentsRequest, request)
+        headers['Accept'] = 'application/json'
+        headers['user-agent'] = self.sdk_configuration.user_agent
+        
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        
+        http_res = client.request('GET', url, params=query_params, headers=headers)
+        content_type = http_res.headers.get('Content-Type')
+        
+        res = operations.ListPaymentPaymentsResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        
+        if http_res.status_code == 200:
+            if utils.match_content_type(content_type, 'application/json'):
+                out = utils.unmarshal_json(http_res.text, Optional[List[shared.PaymentPayment]])
+                res.payment_payments = out
+            else:
+                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
+        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
+            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
+
+        return res
+
+    
+    
+    def list_payment_payouts(self, request: operations.ListPaymentPayoutsRequest) -> operations.ListPaymentPayoutsResponse:
+        r"""List all payouts"""
+        base_url = utils.template_url(*self.sdk_configuration.get_server_details())
+        
+        url = utils.generate_url(operations.ListPaymentPayoutsRequest, base_url, '/payment/{connection_id}/payout', request)
+        headers = {}
+        query_params = utils.get_query_params(operations.ListPaymentPayoutsRequest, request)
+        headers['Accept'] = 'application/json'
+        headers['user-agent'] = self.sdk_configuration.user_agent
+        
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        
+        http_res = client.request('GET', url, params=query_params, headers=headers)
+        content_type = http_res.headers.get('Content-Type')
+        
+        res = operations.ListPaymentPayoutsResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        
+        if http_res.status_code == 200:
+            if utils.match_content_type(content_type, 'application/json'):
+                out = utils.unmarshal_json(http_res.text, Optional[List[shared.PaymentPayout]])
+                res.payment_payouts = out
+            else:
+                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
+        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
+            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
+
+        return res
+
+    
+    
+    def list_payment_refunds(self, request: operations.ListPaymentRefundsRequest) -> operations.ListPaymentRefundsResponse:
+        r"""List all refunds"""
+        base_url = utils.template_url(*self.sdk_configuration.get_server_details())
+        
+        url = utils.generate_url(operations.ListPaymentRefundsRequest, base_url, '/payment/{connection_id}/refund', request)
+        headers = {}
+        query_params = utils.get_query_params(operations.ListPaymentRefundsRequest, request)
+        headers['Accept'] = 'application/json'
+        headers['user-agent'] = self.sdk_configuration.user_agent
+        
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        
+        http_res = client.request('GET', url, params=query_params, headers=headers)
+        content_type = http_res.headers.get('Content-Type')
+        
+        res = operations.ListPaymentRefundsResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        
+        if http_res.status_code == 200:
+            if utils.match_content_type(content_type, 'application/json'):
+                out = utils.unmarshal_json(http_res.text, Optional[List[shared.PaymentRefund]])
+                res.payment_refunds = out
+            else:
+                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
+        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
+            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
+
+        return res
+
+    
+    
+    def patch_payment_link(self, request: operations.PatchPaymentLinkRequest) -> operations.PatchPaymentLinkResponse:
+        r"""Update a payment link"""
+        base_url = utils.template_url(*self.sdk_configuration.get_server_details())
+        
+        url = utils.generate_url(operations.PatchPaymentLinkRequest, base_url, '/payment/{connection_id}/link/{id}', request)
+        headers = {}
+        req_content_type, data, form = utils.serialize_request_body(request, operations.PatchPaymentLinkRequest, "payment_link", False, True, 'json')
+        if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
+            headers['content-type'] = req_content_type
+        headers['Accept'] = 'application/json'
+        headers['user-agent'] = self.sdk_configuration.user_agent
+        
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        
+        http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
+        content_type = http_res.headers.get('Content-Type')
+        
+        res = operations.PatchPaymentLinkResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        
+        if http_res.status_code == 200:
+            if utils.match_content_type(content_type, 'application/json'):
+                out = utils.unmarshal_json(http_res.text, Optional[shared.PaymentLink])
+                res.payment_link = out
+            else:
+                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
+        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
+            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
+
+        return res
+
+    
+    
+    def patch_payment_payment(self, request: operations.PatchPaymentPaymentRequest) -> operations.PatchPaymentPaymentResponse:
+        r"""Update a payment"""
+        base_url = utils.template_url(*self.sdk_configuration.get_server_details())
+        
+        url = utils.generate_url(operations.PatchPaymentPaymentRequest, base_url, '/payment/{connection_id}/payment/{id}', request)
+        headers = {}
+        req_content_type, data, form = utils.serialize_request_body(request, operations.PatchPaymentPaymentRequest, "payment_payment", False, True, 'json')
+        if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
+            headers['content-type'] = req_content_type
+        headers['Accept'] = 'application/json'
+        headers['user-agent'] = self.sdk_configuration.user_agent
+        
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        
+        http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
+        content_type = http_res.headers.get('Content-Type')
+        
+        res = operations.PatchPaymentPaymentResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        
+        if http_res.status_code == 200:
+            if utils.match_content_type(content_type, 'application/json'):
+                out = utils.unmarshal_json(http_res.text, Optional[shared.PaymentPayment])
+                res.payment_payment = out
+            else:
+                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
+        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
+            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
+
+        return res
+
+    
+    
+    def remove_payment_link(self, request: operations.RemovePaymentLinkRequest) -> operations.RemovePaymentLinkResponse:
+        r"""Remove a payment link"""
+        base_url = utils.template_url(*self.sdk_configuration.get_server_details())
+        
+        url = utils.generate_url(operations.RemovePaymentLinkRequest, base_url, '/payment/{connection_id}/link/{id}', request)
         headers = {}
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
         
-        res = operations.RemoveAccountingPaymentResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        res = operations.RemovePaymentLinkResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
             raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
@@ -165,29 +448,98 @@ class Payment:
 
     
     
-    def update_accounting_payment(self, request: operations.UpdateAccountingPaymentRequest, security: operations.UpdateAccountingPaymentSecurity) -> operations.UpdateAccountingPaymentResponse:
-        r"""Update a payment"""
+    def remove_payment_payment(self, request: operations.RemovePaymentPaymentRequest) -> operations.RemovePaymentPaymentResponse:
+        r"""Remove a payment"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.UpdateAccountingPaymentRequest, base_url, '/accounting/{connection_id}/payment/{id}', request)
+        url = utils.generate_url(operations.RemovePaymentPaymentRequest, base_url, '/payment/{connection_id}/payment/{id}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, operations.UpdateAccountingPaymentRequest, "accounting_payment", False, True, 'json')
+        headers['Accept'] = 'application/json'
+        headers['user-agent'] = self.sdk_configuration.user_agent
+        
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        
+        http_res = client.request('DELETE', url, headers=headers)
+        content_type = http_res.headers.get('Content-Type')
+        
+        res = operations.RemovePaymentPaymentResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        
+        if http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
+            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
+        else:
+            if utils.match_content_type(content_type, 'application/json'):
+                res.res = http_res.content
+            else:
+                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
+
+        return res
+
+    
+    
+    def update_payment_link(self, request: operations.UpdatePaymentLinkRequest) -> operations.UpdatePaymentLinkResponse:
+        r"""Update a payment link"""
+        base_url = utils.template_url(*self.sdk_configuration.get_server_details())
+        
+        url = utils.generate_url(operations.UpdatePaymentLinkRequest, base_url, '/payment/{connection_id}/link/{id}', request)
+        headers = {}
+        req_content_type, data, form = utils.serialize_request_body(request, operations.UpdatePaymentLinkRequest, "payment_link", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
         
-        res = operations.UpdateAccountingPaymentResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        res = operations.UpdatePaymentLinkResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[shared.AccountingPayment])
-                res.accounting_payment = out
+                out = utils.unmarshal_json(http_res.text, Optional[shared.PaymentLink])
+                res.payment_link = out
+            else:
+                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
+        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
+            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
+
+        return res
+
+    
+    
+    def update_payment_payment(self, request: operations.UpdatePaymentPaymentRequest) -> operations.UpdatePaymentPaymentResponse:
+        r"""Update a payment"""
+        base_url = utils.template_url(*self.sdk_configuration.get_server_details())
+        
+        url = utils.generate_url(operations.UpdatePaymentPaymentRequest, base_url, '/payment/{connection_id}/payment/{id}', request)
+        headers = {}
+        req_content_type, data, form = utils.serialize_request_body(request, operations.UpdatePaymentPaymentRequest, "payment_payment", False, True, 'json')
+        if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
+            headers['content-type'] = req_content_type
+        headers['Accept'] = 'application/json'
+        headers['user-agent'] = self.sdk_configuration.user_agent
+        
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
+        
+        http_res = client.request('PUT', url, data=data, files=form, headers=headers)
+        content_type = http_res.headers.get('Content-Type')
+        
+        res = operations.UpdatePaymentPaymentResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        
+        if http_res.status_code == 200:
+            if utils.match_content_type(content_type, 'application/json'):
+                out = utils.unmarshal_json(http_res.text, Optional[shared.PaymentPayment])
+                res.payment_payment = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
         elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:

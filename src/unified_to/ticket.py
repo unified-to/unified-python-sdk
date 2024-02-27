@@ -13,7 +13,7 @@ class Ticket:
         
     
     
-    def create_ticketing_ticket(self, request: operations.CreateTicketingTicketRequest, security: operations.CreateTicketingTicketSecurity) -> operations.CreateTicketingTicketResponse:
+    def create_ticketing_ticket(self, request: operations.CreateTicketingTicketRequest) -> operations.CreateTicketingTicketResponse:
         r"""Create a ticket"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -25,7 +25,10 @@ class Ticket:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -45,7 +48,7 @@ class Ticket:
 
     
     
-    def get_ticketing_ticket(self, request: operations.GetTicketingTicketRequest, security: operations.GetTicketingTicketSecurity) -> operations.GetTicketingTicketResponse:
+    def get_ticketing_ticket(self, request: operations.GetTicketingTicketRequest) -> operations.GetTicketingTicketResponse:
         r"""Retrieve a ticket"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -55,7 +58,10 @@ class Ticket:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -75,7 +81,7 @@ class Ticket:
 
     
     
-    def list_ticketing_tickets(self, request: operations.ListTicketingTicketsRequest, security: operations.ListTicketingTicketsSecurity) -> operations.ListTicketingTicketsResponse:
+    def list_ticketing_tickets(self, request: operations.ListTicketingTicketsRequest) -> operations.ListTicketingTicketsResponse:
         r"""List all tickets"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -85,7 +91,10 @@ class Ticket:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -105,7 +114,7 @@ class Ticket:
 
     
     
-    def patch_ticketing_ticket(self, request: operations.PatchTicketingTicketRequest, security: operations.PatchTicketingTicketSecurity) -> operations.PatchTicketingTicketResponse:
+    def patch_ticketing_ticket(self, request: operations.PatchTicketingTicketRequest) -> operations.PatchTicketingTicketResponse:
         r"""Update a ticket"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -117,7 +126,10 @@ class Ticket:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -137,7 +149,7 @@ class Ticket:
 
     
     
-    def remove_ticketing_ticket(self, request: operations.RemoveTicketingTicketRequest, security: operations.RemoveTicketingTicketSecurity) -> operations.RemoveTicketingTicketResponse:
+    def remove_ticketing_ticket(self, request: operations.RemoveTicketingTicketRequest) -> operations.RemoveTicketingTicketResponse:
         r"""Remove a ticket"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -146,7 +158,10 @@ class Ticket:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -165,7 +180,7 @@ class Ticket:
 
     
     
-    def update_ticketing_ticket(self, request: operations.UpdateTicketingTicketRequest, security: operations.UpdateTicketingTicketSecurity) -> operations.UpdateTicketingTicketResponse:
+    def update_ticketing_ticket(self, request: operations.UpdateTicketingTicketRequest) -> operations.UpdateTicketingTicketResponse:
         r"""Update a ticket"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -177,7 +192,10 @@ class Ticket:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')

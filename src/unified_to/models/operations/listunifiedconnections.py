@@ -8,13 +8,6 @@ from datetime import datetime
 from enum import Enum
 from typing import List, Optional
 
-
-@dataclasses.dataclass
-class ListUnifiedConnectionsSecurity:
-    jwt: str = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header', 'field_name': 'authorization' }})
-    
-
-
 class Categories(str, Enum):
     PASSTHROUGH = 'passthrough'
     HRIS = 'hris'
@@ -28,6 +21,7 @@ class Categories(str, Enum):
     ACCOUNTING = 'accounting'
     STORAGE = 'storage'
     COMMERCE = 'commerce'
+    PAYMENT = 'payment'
 
 
 @dataclasses.dataclass

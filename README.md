@@ -19,17 +19,19 @@ pip install Unified-python-sdk
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 req = operations.CreateAccountingAccountRequest(
     connection_id='<value>',
 )
 
-res = s.accounting.create_accounting_account(req, operations.CreateAccountingAccountSecurity(
-    jwt="<YOUR_API_KEY_HERE>",
-))
+res = s.accounting.create_accounting_account(req)
 
 if res.accounting_account is not None:
     # handle response
@@ -45,43 +47,33 @@ if res.accounting_account is not None:
 * [create_accounting_account](docs/sdks/accounting/README.md#create_accounting_account) - Create an account
 * [create_accounting_contact](docs/sdks/accounting/README.md#create_accounting_contact) - Create a contact
 * [create_accounting_invoice](docs/sdks/accounting/README.md#create_accounting_invoice) - Create a invoice
-* [create_accounting_payment](docs/sdks/accounting/README.md#create_accounting_payment) - Create a payment
 * [create_accounting_taxrate](docs/sdks/accounting/README.md#create_accounting_taxrate) - Create a taxrate
 * [create_accounting_transaction](docs/sdks/accounting/README.md#create_accounting_transaction) - Create a transaction
 * [get_accounting_account](docs/sdks/accounting/README.md#get_accounting_account) - Retrieve an account
 * [get_accounting_contact](docs/sdks/accounting/README.md#get_accounting_contact) - Retrieve a contact
 * [get_accounting_invoice](docs/sdks/accounting/README.md#get_accounting_invoice) - Retrieve a invoice
 * [get_accounting_organization](docs/sdks/accounting/README.md#get_accounting_organization) - Retrieve an organization
-* [get_accounting_payment](docs/sdks/accounting/README.md#get_accounting_payment) - Retrieve a payment
-* [get_accounting_payout](docs/sdks/accounting/README.md#get_accounting_payout) - Retrieve a payout
-* [get_accounting_refund](docs/sdks/accounting/README.md#get_accounting_refund) - Retrieve a refund
 * [get_accounting_taxrate](docs/sdks/accounting/README.md#get_accounting_taxrate) - Retrieve a taxrate
 * [get_accounting_transaction](docs/sdks/accounting/README.md#get_accounting_transaction) - Retrieve a transaction
 * [list_accounting_accounts](docs/sdks/accounting/README.md#list_accounting_accounts) - List all accounts
 * [list_accounting_contacts](docs/sdks/accounting/README.md#list_accounting_contacts) - List all contacts
 * [list_accounting_invoices](docs/sdks/accounting/README.md#list_accounting_invoices) - List all invoices
 * [list_accounting_organizations](docs/sdks/accounting/README.md#list_accounting_organizations) - List all organizations
-* [list_accounting_payments](docs/sdks/accounting/README.md#list_accounting_payments) - List all payments
-* [list_accounting_payouts](docs/sdks/accounting/README.md#list_accounting_payouts) - List all payouts
-* [list_accounting_refunds](docs/sdks/accounting/README.md#list_accounting_refunds) - List all refunds
 * [list_accounting_taxrates](docs/sdks/accounting/README.md#list_accounting_taxrates) - List all taxrates
 * [list_accounting_transactions](docs/sdks/accounting/README.md#list_accounting_transactions) - List all transactions
 * [patch_accounting_account](docs/sdks/accounting/README.md#patch_accounting_account) - Update an account
 * [patch_accounting_contact](docs/sdks/accounting/README.md#patch_accounting_contact) - Update a contact
 * [patch_accounting_invoice](docs/sdks/accounting/README.md#patch_accounting_invoice) - Update a invoice
-* [patch_accounting_payment](docs/sdks/accounting/README.md#patch_accounting_payment) - Update a payment
 * [patch_accounting_taxrate](docs/sdks/accounting/README.md#patch_accounting_taxrate) - Update a taxrate
 * [patch_accounting_transaction](docs/sdks/accounting/README.md#patch_accounting_transaction) - Update a transaction
 * [remove_accounting_account](docs/sdks/accounting/README.md#remove_accounting_account) - Remove an account
 * [remove_accounting_contact](docs/sdks/accounting/README.md#remove_accounting_contact) - Remove a contact
 * [remove_accounting_invoice](docs/sdks/accounting/README.md#remove_accounting_invoice) - Remove a invoice
-* [remove_accounting_payment](docs/sdks/accounting/README.md#remove_accounting_payment) - Remove a payment
 * [remove_accounting_taxrate](docs/sdks/accounting/README.md#remove_accounting_taxrate) - Remove a taxrate
 * [remove_accounting_transaction](docs/sdks/accounting/README.md#remove_accounting_transaction) - Remove a transaction
 * [update_accounting_account](docs/sdks/accounting/README.md#update_accounting_account) - Update an account
 * [update_accounting_contact](docs/sdks/accounting/README.md#update_accounting_contact) - Update a contact
 * [update_accounting_invoice](docs/sdks/accounting/README.md#update_accounting_invoice) - Update a invoice
-* [update_accounting_payment](docs/sdks/accounting/README.md#update_accounting_payment) - Update a payment
 * [update_accounting_taxrate](docs/sdks/accounting/README.md#update_accounting_taxrate) - Update a taxrate
 * [update_accounting_transaction](docs/sdks/accounting/README.md#update_accounting_transaction) - Update a transaction
 
@@ -128,25 +120,6 @@ if res.accounting_account is not None:
 
 * [get_accounting_organization](docs/sdks/organization/README.md#get_accounting_organization) - Retrieve an organization
 * [list_accounting_organizations](docs/sdks/organization/README.md#list_accounting_organizations) - List all organizations
-
-### [payment](docs/sdks/payment/README.md)
-
-* [create_accounting_payment](docs/sdks/payment/README.md#create_accounting_payment) - Create a payment
-* [get_accounting_payment](docs/sdks/payment/README.md#get_accounting_payment) - Retrieve a payment
-* [list_accounting_payments](docs/sdks/payment/README.md#list_accounting_payments) - List all payments
-* [patch_accounting_payment](docs/sdks/payment/README.md#patch_accounting_payment) - Update a payment
-* [remove_accounting_payment](docs/sdks/payment/README.md#remove_accounting_payment) - Remove a payment
-* [update_accounting_payment](docs/sdks/payment/README.md#update_accounting_payment) - Update a payment
-
-### [payout](docs/sdks/payout/README.md)
-
-* [get_accounting_payout](docs/sdks/payout/README.md#get_accounting_payout) - Retrieve a payout
-* [list_accounting_payouts](docs/sdks/payout/README.md#list_accounting_payouts) - List all payouts
-
-### [refund](docs/sdks/refund/README.md)
-
-* [get_accounting_refund](docs/sdks/refund/README.md#get_accounting_refund) - Retrieve a refund
-* [list_accounting_refunds](docs/sdks/refund/README.md#list_accounting_refunds) - List all refunds
 
 ### [taxrate](docs/sdks/taxrate/README.md)
 
@@ -514,6 +487,44 @@ if res.accounting_account is not None:
 * [remove_passthrough](docs/sdks/passthrough/README.md#remove_passthrough) - Passthrough DELETE
 * [update_passthrough](docs/sdks/passthrough/README.md#update_passthrough) - Passthrough PUT
 
+### [payment](docs/sdks/payment/README.md)
+
+* [create_payment_link](docs/sdks/payment/README.md#create_payment_link) - Create a payment link
+* [create_payment_payment](docs/sdks/payment/README.md#create_payment_payment) - Create a payment
+* [get_payment_link](docs/sdks/payment/README.md#get_payment_link) - Retrieve a payment link
+* [get_payment_payment](docs/sdks/payment/README.md#get_payment_payment) - Retrieve a payment
+* [get_payment_payout](docs/sdks/payment/README.md#get_payment_payout) - Retrieve a payout
+* [get_payment_refund](docs/sdks/payment/README.md#get_payment_refund) - Retrieve a refund
+* [list_payment_links](docs/sdks/payment/README.md#list_payment_links) - List all payment links
+* [list_payment_payments](docs/sdks/payment/README.md#list_payment_payments) - List all payments
+* [list_payment_payouts](docs/sdks/payment/README.md#list_payment_payouts) - List all payouts
+* [list_payment_refunds](docs/sdks/payment/README.md#list_payment_refunds) - List all refunds
+* [patch_payment_link](docs/sdks/payment/README.md#patch_payment_link) - Update a payment link
+* [patch_payment_payment](docs/sdks/payment/README.md#patch_payment_payment) - Update a payment
+* [remove_payment_link](docs/sdks/payment/README.md#remove_payment_link) - Remove a payment link
+* [remove_payment_payment](docs/sdks/payment/README.md#remove_payment_payment) - Remove a payment
+* [update_payment_link](docs/sdks/payment/README.md#update_payment_link) - Update a payment link
+* [update_payment_payment](docs/sdks/payment/README.md#update_payment_payment) - Update a payment
+
+### [link](docs/sdks/link/README.md)
+
+* [create_payment_link](docs/sdks/link/README.md#create_payment_link) - Create a payment link
+* [get_payment_link](docs/sdks/link/README.md#get_payment_link) - Retrieve a payment link
+* [list_payment_links](docs/sdks/link/README.md#list_payment_links) - List all payment links
+* [patch_payment_link](docs/sdks/link/README.md#patch_payment_link) - Update a payment link
+* [remove_payment_link](docs/sdks/link/README.md#remove_payment_link) - Remove a payment link
+* [update_payment_link](docs/sdks/link/README.md#update_payment_link) - Update a payment link
+
+### [payout](docs/sdks/payout/README.md)
+
+* [get_payment_payout](docs/sdks/payout/README.md#get_payment_payout) - Retrieve a payout
+* [list_payment_payouts](docs/sdks/payout/README.md#list_payment_payouts) - List all payouts
+
+### [refund](docs/sdks/refund/README.md)
+
+* [get_payment_refund](docs/sdks/refund/README.md#get_payment_refund) - Retrieve a refund
+* [list_payment_refunds](docs/sdks/refund/README.md#list_payment_refunds) - List all refunds
+
 ### [storage](docs/sdks/storage/README.md)
 
 * [create_storage_file](docs/sdks/storage/README.md#create_storage_file) - Create a file
@@ -677,9 +688,13 @@ Handling errors in this SDK should largely match your expectations.  All operati
 
 ```python
 import unified_to
-from unified_to.models import errors, operations
+from unified_to.models import errors, operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 req = operations.CreateAccountingAccountRequest(
     connection_id='<value>',
@@ -687,9 +702,7 @@ req = operations.CreateAccountingAccountRequest(
 
 res = None
 try:
-    res = s.accounting.create_accounting_account(req, operations.CreateAccountingAccountSecurity(
-    jwt="<YOUR_API_KEY_HERE>",
-))
+    res = s.accounting.create_accounting_account(req)
 except errors.SDKError as e:
     # handle exception
     raise(e)
@@ -718,19 +731,20 @@ You can override the default server globally by passing a server index to the `s
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
 s = unified_to.UnifiedTo(
     server_idx=1,
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
 )
 
 req = operations.CreateAccountingAccountRequest(
     connection_id='<value>',
 )
 
-res = s.accounting.create_accounting_account(req, operations.CreateAccountingAccountSecurity(
-    jwt="<YOUR_API_KEY_HERE>",
-))
+res = s.accounting.create_accounting_account(req)
 
 if res.accounting_account is not None:
     # handle response
@@ -743,19 +757,20 @@ if res.accounting_account is not None:
 The default server can also be overridden globally by passing a URL to the `server_url: str` optional parameter when initializing the SDK client instance. For example:
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
 s = unified_to.UnifiedTo(
     server_url="https://api.unified.to",
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
 )
 
 req = operations.CreateAccountingAccountRequest(
     connection_id='<value>',
 )
 
-res = s.accounting.create_accounting_account(req, operations.CreateAccountingAccountSecurity(
-    jwt="<YOUR_API_KEY_HERE>",
-))
+res = s.accounting.create_accounting_account(req)
 
 if res.accounting_account is not None:
     # handle response
@@ -782,6 +797,40 @@ s = unified_to.UnifiedTo(client: http_client)
 <!-- End Custom HTTP Client [http-client] -->
 
 
+
+<!-- Start Authentication [security] -->
+## Authentication
+
+### Per-Client Security Schemes
+
+This SDK supports the following security scheme globally:
+
+| Name    | Type    | Scheme  |
+| ------- | ------- | ------- |
+| `jwt`   | apiKey  | API key |
+
+You can set the security parameters through the `security` optional parameter when initializing the SDK client instance. For example:
+```python
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
+
+req = operations.CreateAccountingAccountRequest(
+    connection_id='<value>',
+)
+
+res = s.accounting.create_accounting_account(req)
+
+if res.accounting_account is not None:
+    # handle response
+    pass
+```
+<!-- End Authentication [security] -->
 
 <!-- Placeholder for Future Speakeasy SDK Sections -->
 

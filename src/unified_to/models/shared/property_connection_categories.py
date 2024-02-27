@@ -16,3 +16,4 @@ class PropertyConnectionCategories(str, Enum):
     ACCOUNTING = 'accounting'
     STORAGE = 'storage'
     COMMERCE = 'commerce'
+    PAYMENT = 'payment'

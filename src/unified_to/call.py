@@ -13,7 +13,7 @@ class Call:
         
     
     
-    def list_uc_calls(self, request: operations.ListUcCallsRequest, security: operations.ListUcCallsSecurity) -> operations.ListUcCallsResponse:
+    def list_uc_calls(self, request: operations.ListUcCallsRequest) -> operations.ListUcCallsResponse:
         r"""List all calls"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -23,7 +23,10 @@ class Call:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')

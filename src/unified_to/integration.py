@@ -25,7 +25,10 @@ class Integration:
         headers['Accept'] = 'text/plain'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -56,7 +59,10 @@ class Integration:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -76,7 +82,7 @@ class Integration:
 
     
     
-    def list_unified_integrations(self, request: operations.ListUnifiedIntegrationsRequest, security: operations.ListUnifiedIntegrationsSecurity) -> operations.ListUnifiedIntegrationsResponse:
+    def list_unified_integrations(self, request: operations.ListUnifiedIntegrationsRequest) -> operations.ListUnifiedIntegrationsResponse:
         r"""Returns all integrations"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -86,7 +92,10 @@ class Integration:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')

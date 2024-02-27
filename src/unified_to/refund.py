@@ -13,27 +13,30 @@ class Refund:
         
     
     
-    def get_accounting_refund(self, request: operations.GetAccountingRefundRequest, security: operations.GetAccountingRefundSecurity) -> operations.GetAccountingRefundResponse:
+    def get_payment_refund(self, request: operations.GetPaymentRefundRequest) -> operations.GetPaymentRefundResponse:
         r"""Retrieve a refund"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.GetAccountingRefundRequest, base_url, '/accounting/{connection_id}/refund/{id}', request)
+        url = utils.generate_url(operations.GetPaymentRefundRequest, base_url, '/payment/{connection_id}/refund/{id}', request)
         headers = {}
-        query_params = utils.get_query_params(operations.GetAccountingRefundRequest, request)
+        query_params = utils.get_query_params(operations.GetPaymentRefundRequest, request)
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
         
-        res = operations.GetAccountingRefundResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        res = operations.GetPaymentRefundResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[shared.AccountingRefund])
-                res.accounting_refund = out
+                out = utils.unmarshal_json(http_res.text, Optional[shared.PaymentRefund])
+                res.payment_refund = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
         elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
@@ -43,27 +46,30 @@ class Refund:
 
     
     
-    def list_accounting_refunds(self, request: operations.ListAccountingRefundsRequest, security: operations.ListAccountingRefundsSecurity) -> operations.ListAccountingRefundsResponse:
+    def list_payment_refunds(self, request: operations.ListPaymentRefundsRequest) -> operations.ListPaymentRefundsResponse:
         r"""List all refunds"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.ListAccountingRefundsRequest, base_url, '/accounting/{connection_id}/refund', request)
+        url = utils.generate_url(operations.ListPaymentRefundsRequest, base_url, '/payment/{connection_id}/refund', request)
         headers = {}
-        query_params = utils.get_query_params(operations.ListAccountingRefundsRequest, request)
+        query_params = utils.get_query_params(operations.ListPaymentRefundsRequest, request)
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
         
-        res = operations.ListAccountingRefundsResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
+        res = operations.ListPaymentRefundsResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[List[shared.AccountingRefund]])
-                res.accounting_refunds = out
+                out = utils.unmarshal_json(http_res.text, Optional[List[shared.PaymentRefund]])
+                res.payment_refunds = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
         elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:

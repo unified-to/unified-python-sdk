@@ -13,7 +13,7 @@ class Connection:
         
     
     
-    def create_unified_connection(self, request: Optional[shared.Connection], security: operations.CreateUnifiedConnectionSecurity) -> operations.CreateUnifiedConnectionResponse:
+    def create_unified_connection(self, request: Optional[shared.Connection]) -> operations.CreateUnifiedConnectionResponse:
         r"""Create connection"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -25,7 +25,10 @@ class Connection:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -45,7 +48,7 @@ class Connection:
 
     
     
-    def get_unified_connection(self, request: operations.GetUnifiedConnectionRequest, security: operations.GetUnifiedConnectionSecurity) -> operations.GetUnifiedConnectionResponse:
+    def get_unified_connection(self, request: operations.GetUnifiedConnectionRequest) -> operations.GetUnifiedConnectionResponse:
         r"""Retrieve connection"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -54,7 +57,10 @@ class Connection:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -74,7 +80,7 @@ class Connection:
 
     
     
-    def list_unified_connections(self, request: operations.ListUnifiedConnectionsRequest, security: operations.ListUnifiedConnectionsSecurity) -> operations.ListUnifiedConnectionsResponse:
+    def list_unified_connections(self, request: operations.ListUnifiedConnectionsRequest) -> operations.ListUnifiedConnectionsResponse:
         r"""List all connections"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -84,7 +90,10 @@ class Connection:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -104,7 +113,7 @@ class Connection:
 
     
     
-    def patch_unified_connection(self, request: operations.PatchUnifiedConnectionRequest, security: operations.PatchUnifiedConnectionSecurity) -> operations.PatchUnifiedConnectionResponse:
+    def patch_unified_connection(self, request: operations.PatchUnifiedConnectionRequest) -> operations.PatchUnifiedConnectionResponse:
         r"""Update connection"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -116,7 +125,10 @@ class Connection:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('PATCH', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -136,7 +148,7 @@ class Connection:
 
     
     
-    def remove_unified_connection(self, request: operations.RemoveUnifiedConnectionRequest, security: operations.RemoveUnifiedConnectionSecurity) -> operations.RemoveUnifiedConnectionResponse:
+    def remove_unified_connection(self, request: operations.RemoveUnifiedConnectionRequest) -> operations.RemoveUnifiedConnectionResponse:
         r"""Remove connection"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -145,7 +157,10 @@ class Connection:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('DELETE', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -164,7 +179,7 @@ class Connection:
 
     
     
-    def update_unified_connection(self, request: operations.UpdateUnifiedConnectionRequest, security: operations.UpdateUnifiedConnectionSecurity) -> operations.UpdateUnifiedConnectionResponse:
+    def update_unified_connection(self, request: operations.UpdateUnifiedConnectionRequest) -> operations.UpdateUnifiedConnectionResponse:
         r"""Update connection"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -176,7 +191,10 @@ class Connection:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = utils.configure_security_client(self.sdk_configuration.client, security)
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
