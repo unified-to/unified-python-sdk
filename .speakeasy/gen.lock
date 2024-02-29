@@ -4,9 +4,9 @@ management:
   docChecksum: 48060151324f197510525fbcfe544edc
   docVersion: "1.0"
   speakeasyVersion: internal
-  generationVersion: 2.272.7
-  releaseVersion: 0.18.1
-  configChecksum: 9f0590cad4247aafb252ce999cfb93d2
+  generationVersion: 2.275.4
+  releaseVersion: 0.19.0
+  configChecksum: e7e314a37a7a4907a09f3c1f771fc3d0
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -14,7 +14,7 @@ management:
 features:
   python:
     constsAndDefaults: 0.1.2
-    core: 4.4.7
+    core: 4.5.0
     globalSecurity: 2.83.4
     globalServerURLs: 2.82.1
 generatedFiles:
@@ -1108,3 +1108,6 @@ generatedFiles:
   - docs/sdks/webhook/README.md
   - USAGE.md
   - .gitattributes
+  - src/unified_to/_hooks/sdkhooks.py
+  - src/unified_to/_hooks/types.py
+  - src/unified_to/_hooks/__init__.py
