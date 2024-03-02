@@ -1,4 +1,4 @@
-# WebhookWebhookType
+# PropertyPropertyIntegrationSupportWebhookEventsDeleted
 
 
 ## Values
@@ -6,5 +6,4 @@
 | Name      | Value     |
 | --------- | --------- |
 | `VIRTUAL` | virtual   |
-| `NONE`    | none      |
 | `NATIVE`  | native    |

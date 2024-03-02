@@ -58,9 +58,8 @@ class ObjectType(str, Enum):
     ENRICH_COMPANY = 'enrich_company'
     STORAGE_FILE = 'storage_file'
 
-class WebhookWebhookType(str, Enum):
+class WebhookType(str, Enum):
     VIRTUAL = 'virtual'
-    NONE = 'none'
     NATIVE = 'native'
 
 
@@ -85,7 +84,7 @@ class Webhook:
     runs: Optional[List[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('runs'), 'exclude': lambda f: f is None }})
     r"""An array of the most revent virtual webhook runs"""
     updated_at: Optional[datetime] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('updated_at'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'exclude': lambda f: f is None }})
-    webhook_type: Optional[WebhookWebhookType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('webhook_type'), 'exclude': lambda f: f is None }})
+    webhook_type: Optional[WebhookType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('webhook_type'), 'exclude': lambda f: f is None }})
     workspace_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('workspace_id'), 'exclude': lambda f: f is None }})
     
 

@@ -4,14 +4,8 @@ from __future__ import annotations
 import dataclasses
 from .property_integrationsupport_webhook_events import PropertyIntegrationSupportWebhookEvents
 from dataclasses_json import Undefined, dataclass_json
-from enum import Enum
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, Optional
 from unified_to import utils
-
-class WebhookType(str, Enum):
-    VIRTUAL = 'virtual'
-    NONE = 'none'
-    NATIVE = 'native'
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
@@ -47,7 +41,6 @@ class IntegrationSupport:
     search_linkedin_url: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('search_linkedin_url'), 'exclude': lambda f: f is None }})
     search_name: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('search_name'), 'exclude': lambda f: f is None }})
     search_twitter: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('search_twitter'), 'exclude': lambda f: f is None }})
-    webhook_events: Optional[List[PropertyIntegrationSupportWebhookEvents]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('webhook_events'), 'exclude': lambda f: f is None }})
-    webhook_type: Optional[WebhookType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('webhook_type'), 'exclude': lambda f: f is None }})
+    webhook_events: Optional[PropertyIntegrationSupportWebhookEvents] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('webhook_events'), 'exclude': lambda f: f is None }})
     
 

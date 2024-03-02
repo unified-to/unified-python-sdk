@@ -1,4 +1,4 @@
-# WebhookType
+# PropertyPropertyIntegrationSupportWebhookEventsCreated
 
 
 ## Values

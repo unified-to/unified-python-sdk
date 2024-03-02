@@ -1,19 +1,19 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: 48060151324f197510525fbcfe544edc
+  docChecksum: 0793d7d9d65b0d606620076f43596338
   docVersion: "1.0"
   speakeasyVersion: internal
-  generationVersion: 2.275.4
-  releaseVersion: 0.19.0
-  configChecksum: e7e314a37a7a4907a09f3c1f771fc3d0
+  generationVersion: 2.277.0
+  releaseVersion: 0.19.1
+  configChecksum: 434eeeae809e13f11b6034bff8056b83
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
   published: true
 features:
   python:
-    constsAndDefaults: 0.1.2
+    constsAndDefaults: 0.1.3
     core: 4.5.0
     globalSecurity: 2.83.4
     globalServerURLs: 2.82.1
@@ -416,6 +416,9 @@ generatedFiles:
   - src/unified_to/models/shared/integration.py
   - src/unified_to/models/shared/integrationsupport.py
   - src/unified_to/models/shared/property_integrationsupport_webhook_events.py
+  - src/unified_to/models/shared/property_property_integrationsupport_webhook_events_updated.py
+  - src/unified_to/models/shared/property_property_integrationsupport_webhook_events_deleted.py
+  - src/unified_to/models/shared/property_property_integrationsupport_webhook_events_created.py
   - src/unified_to/models/shared/property_integration_categories.py
   - src/unified_to/models/shared/issue.py
   - src/unified_to/models/shared/security.py
@@ -905,6 +908,7 @@ generatedFiles:
   - docs/models/shared/accountingemailtype.md
   - docs/models/shared/accountingemail.md
   - docs/models/shared/propertyaccountingcontactbillingaddress.md
+  - docs/models/shared/paymentcollectionmethod.md
   - docs/models/shared/accountinginvoicestatus.md
   - docs/models/shared/accountinginvoice.md
   - docs/models/shared/accountinglineitem.md
@@ -1036,14 +1040,16 @@ generatedFiles:
   - docs/models/shared/propertyconnectionauth.md
   - docs/models/shared/event.md
   - docs/models/shared/objecttype.md
-  - docs/models/shared/webhookwebhooktype.md
+  - docs/models/shared/webhooktype.md
   - docs/models/shared/webhook.md
   - docs/models/shared/apicalltype.md
   - docs/models/shared/apicall.md
   - docs/models/shared/integration.md
-  - docs/models/shared/webhooktype.md
   - docs/models/shared/integrationsupport.md
   - docs/models/shared/propertyintegrationsupportwebhookevents.md
+  - docs/models/shared/propertypropertyintegrationsupportwebhookeventsupdated.md
+  - docs/models/shared/propertypropertyintegrationsupportwebhookeventsdeleted.md
+  - docs/models/shared/propertypropertyintegrationsupportwebhookeventscreated.md
   - docs/models/shared/propertyintegrationcategories.md
   - docs/models/shared/issuestatus.md
   - docs/models/shared/issuetype.md

@@ -1,10 +1,10 @@
 # PropertyIntegrationSupportWebhookEvents
 
 
-## Values
+## Fields
 
-| Name      | Value     |
-| --------- | --------- |
-| `UPDATED` | updated   |
-| `CREATED` | created   |
-| `DELETED` | deleted   |
+| Field                                                                                                                                                | Type                                                                                                                                                 | Required                                                                                                                                             | Description                                                                                                                                          |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `created`                                                                                                                                            | List[[shared.PropertyPropertyIntegrationSupportWebhookEventsCreated](../../models/shared/propertypropertyintegrationsupportwebhookeventscreated.md)] | :heavy_minus_sign:                                                                                                                                   | N/A                                                                                                                                                  |
+| `deleted`                                                                                                                                            | List[[shared.PropertyPropertyIntegrationSupportWebhookEventsDeleted](../../models/shared/propertypropertyintegrationsupportwebhookeventsdeleted.md)] | :heavy_minus_sign:                                                                                                                                   | N/A                                                                                                                                                  |
+| `updated`                                                                                                                                            | List[[shared.PropertyPropertyIntegrationSupportWebhookEventsUpdated](../../models/shared/propertypropertyintegrationsupportwebhookeventsupdated.md)] | :heavy_minus_sign:                                                                                                                                   | N/A                                                                                                                                                  |
