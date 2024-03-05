@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: 0793d7d9d65b0d606620076f43596338
+  docChecksum: 1982f00b1c8ae9709c4c51c2b473ab66
   docVersion: "1.0"
   speakeasyVersion: internal
   generationVersion: 2.277.0
-  releaseVersion: 0.19.1
-  configChecksum: 434eeeae809e13f11b6034bff8056b83
+  releaseVersion: 0.19.2
+  configChecksum: 48544ffe2ba29c1e3bef356754b178a7
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -322,6 +322,7 @@ generatedFiles:
   - src/unified_to/models/shared/accountingcontact.py
   - src/unified_to/models/shared/accountingtelephone.py
   - src/unified_to/models/shared/property_accountingcontact_shipping_address.py
+  - src/unified_to/models/shared/accountingcontactpaymentmethod.py
   - src/unified_to/models/shared/accountingemail.py
   - src/unified_to/models/shared/property_accountingcontact_billing_address.py
   - src/unified_to/models/shared/accountinginvoice.py
@@ -905,6 +906,8 @@ generatedFiles:
   - docs/models/shared/accountingtelephonetype.md
   - docs/models/shared/accountingtelephone.md
   - docs/models/shared/propertyaccountingcontactshippingaddress.md
+  - docs/models/shared/accountingcontactpaymentmethodtype.md
+  - docs/models/shared/accountingcontactpaymentmethod.md
   - docs/models/shared/accountingemailtype.md
   - docs/models/shared/accountingemail.md
   - docs/models/shared/propertyaccountingcontactbillingaddress.md
