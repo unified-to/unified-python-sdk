@@ -35,6 +35,7 @@ res = s.taxrate.create_accounting_taxrate(req)
 if res.accounting_taxrate is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -79,6 +80,7 @@ res = s.taxrate.get_accounting_taxrate(req)
 if res.accounting_taxrate is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -122,6 +124,7 @@ res = s.taxrate.list_accounting_taxrates(req)
 if res.accounting_taxrates is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -166,6 +169,7 @@ res = s.taxrate.patch_accounting_taxrate(req)
 if res.accounting_taxrate is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -207,9 +211,10 @@ req = operations.RemoveAccountingTaxrateRequest(
 
 res = s.taxrate.remove_accounting_taxrate(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -254,6 +259,7 @@ res = s.taxrate.update_accounting_taxrate(req)
 if res.accounting_taxrate is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

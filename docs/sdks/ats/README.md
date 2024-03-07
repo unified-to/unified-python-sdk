@@ -74,6 +74,7 @@ res = s.ats.create_ats_activity(req)
 if res.ats_activity is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -117,6 +118,7 @@ res = s.ats.create_ats_application(req)
 if res.ats_application is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -160,6 +162,7 @@ res = s.ats.create_ats_candidate(req)
 if res.ats_candidate is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -203,6 +206,7 @@ res = s.ats.create_ats_document(req)
 if res.ats_document is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -246,6 +250,7 @@ res = s.ats.create_ats_interview(req)
 if res.ats_interview is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -289,6 +294,7 @@ res = s.ats.create_ats_job(req)
 if res.ats_job is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -332,6 +338,7 @@ res = s.ats.create_ats_scorecard(req)
 if res.ats_scorecard is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -376,6 +383,7 @@ res = s.ats.get_ats_activity(req)
 if res.ats_activity is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -420,6 +428,7 @@ res = s.ats.get_ats_application(req)
 if res.ats_application is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -464,6 +473,7 @@ res = s.ats.get_ats_candidate(req)
 if res.ats_candidate is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -508,6 +518,7 @@ res = s.ats.get_ats_company(req)
 if res.ats_company is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -552,6 +563,7 @@ res = s.ats.get_ats_document(req)
 if res.ats_document is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -596,6 +608,7 @@ res = s.ats.get_ats_interview(req)
 if res.ats_interview is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -640,6 +653,7 @@ res = s.ats.get_ats_job(req)
 if res.ats_job is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -684,6 +698,7 @@ res = s.ats.get_ats_scorecard(req)
 if res.ats_scorecard is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -727,6 +742,7 @@ res = s.ats.list_ats_activities(req)
 if res.ats_activities is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -770,6 +786,7 @@ res = s.ats.list_ats_applications(req)
 if res.ats_applications is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -813,6 +830,7 @@ res = s.ats.list_ats_applicationstatuses(req)
 if res.ats_statuses is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -856,6 +874,7 @@ res = s.ats.list_ats_candidates(req)
 if res.ats_candidates is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -899,6 +918,7 @@ res = s.ats.list_ats_companies(req)
 if res.ats_companies is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -942,6 +962,7 @@ res = s.ats.list_ats_documents(req)
 if res.ats_documents is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -985,6 +1006,7 @@ res = s.ats.list_ats_interviews(req)
 if res.ats_interviews is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -1028,6 +1050,7 @@ res = s.ats.list_ats_jobs(req)
 if res.ats_jobs is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -1071,6 +1094,7 @@ res = s.ats.list_ats_scorecards(req)
 if res.ats_scorecards is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -1115,6 +1139,7 @@ res = s.ats.patch_ats_activity(req)
 if res.ats_activity is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -1159,6 +1184,7 @@ res = s.ats.patch_ats_application(req)
 if res.ats_application is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -1203,6 +1229,7 @@ res = s.ats.patch_ats_candidate(req)
 if res.ats_candidate is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -1247,6 +1274,7 @@ res = s.ats.patch_ats_document(req)
 if res.ats_document is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -1291,6 +1319,7 @@ res = s.ats.patch_ats_interview(req)
 if res.ats_interview is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -1335,6 +1364,7 @@ res = s.ats.patch_ats_job(req)
 if res.ats_job is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -1379,6 +1409,7 @@ res = s.ats.patch_ats_scorecard(req)
 if res.ats_scorecard is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -1420,9 +1451,10 @@ req = operations.RemoveAtsActivityRequest(
 
 res = s.ats.remove_ats_activity(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -1464,9 +1496,10 @@ req = operations.RemoveAtsApplicationRequest(
 
 res = s.ats.remove_ats_application(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -1508,9 +1541,10 @@ req = operations.RemoveAtsCandidateRequest(
 
 res = s.ats.remove_ats_candidate(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -1552,9 +1586,10 @@ req = operations.RemoveAtsDocumentRequest(
 
 res = s.ats.remove_ats_document(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -1596,9 +1631,10 @@ req = operations.RemoveAtsInterviewRequest(
 
 res = s.ats.remove_ats_interview(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -1640,9 +1676,10 @@ req = operations.RemoveAtsJobRequest(
 
 res = s.ats.remove_ats_job(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -1684,9 +1721,10 @@ req = operations.RemoveAtsScorecardRequest(
 
 res = s.ats.remove_ats_scorecard(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -1731,6 +1769,7 @@ res = s.ats.update_ats_activity(req)
 if res.ats_activity is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -1775,6 +1814,7 @@ res = s.ats.update_ats_application(req)
 if res.ats_application is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -1819,6 +1859,7 @@ res = s.ats.update_ats_candidate(req)
 if res.ats_candidate is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -1863,6 +1904,7 @@ res = s.ats.update_ats_document(req)
 if res.ats_document is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -1907,6 +1949,7 @@ res = s.ats.update_ats_interview(req)
 if res.ats_interview is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -1951,6 +1994,7 @@ res = s.ats.update_ats_job(req)
 if res.ats_job is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -1995,6 +2039,7 @@ res = s.ats.update_ats_scorecard(req)
 if res.ats_scorecard is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

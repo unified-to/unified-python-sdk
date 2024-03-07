@@ -35,6 +35,7 @@ res = s.invoice.create_accounting_invoice(req)
 if res.accounting_invoice is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -79,6 +80,7 @@ res = s.invoice.get_accounting_invoice(req)
 if res.accounting_invoice is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -122,6 +124,7 @@ res = s.invoice.list_accounting_invoices(req)
 if res.accounting_invoices is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -166,6 +169,7 @@ res = s.invoice.patch_accounting_invoice(req)
 if res.accounting_invoice is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -207,9 +211,10 @@ req = operations.RemoveAccountingInvoiceRequest(
 
 res = s.invoice.remove_accounting_invoice(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -254,6 +259,7 @@ res = s.invoice.update_accounting_invoice(req)
 if res.accounting_invoice is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

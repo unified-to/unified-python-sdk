@@ -36,6 +36,7 @@ res = s.uc.create_uc_contact(req)
 if res.uc_contact is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -80,6 +81,7 @@ res = s.uc.get_uc_contact(req)
 if res.uc_contact is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -123,6 +125,7 @@ res = s.uc.list_uc_calls(req)
 if res.uc_calls is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -166,6 +169,7 @@ res = s.uc.list_uc_contacts(req)
 if res.uc_contacts is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -210,6 +214,7 @@ res = s.uc.patch_uc_contact(req)
 if res.uc_contact is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -251,9 +256,10 @@ req = operations.RemoveUcContactRequest(
 
 res = s.uc.remove_uc_contact(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -298,6 +304,7 @@ res = s.uc.update_uc_contact(req)
 if res.uc_contact is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

@@ -33,6 +33,7 @@ res = s.integration.get_unified_integration_auth(req)
 if res.res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -76,6 +77,7 @@ res = s.integration.list_unified_integration_workspaces(req)
 if res.integrations is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -117,6 +119,7 @@ res = s.integration.list_unified_integrations(req)
 if res.integrations is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

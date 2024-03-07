@@ -35,6 +35,7 @@ res = s.note.create_ticketing_note(req)
 if res.ticketing_note is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -79,6 +80,7 @@ res = s.note.get_ticketing_note(req)
 if res.ticketing_note is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -122,6 +124,7 @@ res = s.note.list_ticketing_notes(req)
 if res.ticketing_notes is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -166,6 +169,7 @@ res = s.note.patch_ticketing_note(req)
 if res.ticketing_note is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -207,9 +211,10 @@ req = operations.RemoveTicketingNoteRequest(
 
 res = s.note.remove_ticketing_note(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -254,6 +259,7 @@ res = s.note.update_ticketing_note(req)
 if res.ticketing_note is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

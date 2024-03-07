@@ -41,6 +41,7 @@ res = s.connection.create_unified_connection(req)
 if res.connection is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -84,6 +85,7 @@ res = s.connection.get_unified_connection(req)
 if res.connection is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -125,6 +127,7 @@ res = s.connection.list_unified_connections(req)
 if res.connections is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -168,6 +171,7 @@ res = s.connection.patch_unified_connection(req)
 if res.connection is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -208,9 +212,10 @@ req = operations.RemoveUnifiedConnectionRequest(
 
 res = s.connection.remove_unified_connection(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -254,6 +259,7 @@ res = s.connection.update_unified_connection(req)
 if res.connection is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

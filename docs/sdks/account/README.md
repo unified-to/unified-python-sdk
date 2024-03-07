@@ -35,6 +35,7 @@ res = s.account.create_accounting_account(req)
 if res.accounting_account is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -79,6 +80,7 @@ res = s.account.get_accounting_account(req)
 if res.accounting_account is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -122,6 +124,7 @@ res = s.account.list_accounting_accounts(req)
 if res.accounting_accounts is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -166,6 +169,7 @@ res = s.account.patch_accounting_account(req)
 if res.accounting_account is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -207,9 +211,10 @@ req = operations.RemoveAccountingAccountRequest(
 
 res = s.account.remove_accounting_account(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -254,6 +259,7 @@ res = s.account.update_accounting_account(req)
 if res.accounting_account is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

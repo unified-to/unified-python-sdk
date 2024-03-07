@@ -35,6 +35,7 @@ res = s.event.create_crm_event(req)
 if res.crm_event is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -79,6 +80,7 @@ res = s.event.get_crm_event(req)
 if res.crm_event is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -122,6 +124,7 @@ res = s.event.list_crm_events(req)
 if res.crm_events is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -166,6 +169,7 @@ res = s.event.patch_crm_event(req)
 if res.crm_event is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -207,9 +211,10 @@ req = operations.RemoveCrmEventRequest(
 
 res = s.event.remove_crm_event(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -254,6 +259,7 @@ res = s.event.update_crm_event(req)
 if res.crm_event is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

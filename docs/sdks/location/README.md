@@ -35,6 +35,7 @@ res = s.location.create_commerce_location(req)
 if res.commerce_location is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -79,6 +80,7 @@ res = s.location.get_commerce_location(req)
 if res.commerce_location is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -122,6 +124,7 @@ res = s.location.list_commerce_locations(req)
 if res.commerce_locations is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -166,6 +169,7 @@ res = s.location.patch_commerce_location(req)
 if res.commerce_location is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -207,9 +211,10 @@ req = operations.RemoveCommerceLocationRequest(
 
 res = s.location.remove_commerce_location(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -254,6 +259,7 @@ res = s.location.update_commerce_location(req)
 if res.commerce_location is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

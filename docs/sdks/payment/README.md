@@ -45,6 +45,7 @@ res = s.payment.create_payment_link(req)
 if res.payment_link is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -88,6 +89,7 @@ res = s.payment.create_payment_payment(req)
 if res.payment_payment is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -132,6 +134,7 @@ res = s.payment.get_payment_link(req)
 if res.payment_link is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -176,6 +179,7 @@ res = s.payment.get_payment_payment(req)
 if res.payment_payment is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -220,6 +224,7 @@ res = s.payment.get_payment_payout(req)
 if res.payment_payout is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -264,6 +269,7 @@ res = s.payment.get_payment_refund(req)
 if res.payment_refund is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -307,6 +313,7 @@ res = s.payment.list_payment_links(req)
 if res.payment_links is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -350,6 +357,7 @@ res = s.payment.list_payment_payments(req)
 if res.payment_payments is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -393,6 +401,7 @@ res = s.payment.list_payment_payouts(req)
 if res.payment_payouts is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -436,6 +445,7 @@ res = s.payment.list_payment_refunds(req)
 if res.payment_refunds is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -480,6 +490,7 @@ res = s.payment.patch_payment_link(req)
 if res.payment_link is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -524,6 +535,7 @@ res = s.payment.patch_payment_payment(req)
 if res.payment_payment is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -565,9 +577,10 @@ req = operations.RemovePaymentLinkRequest(
 
 res = s.payment.remove_payment_link(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -609,9 +622,10 @@ req = operations.RemovePaymentPaymentRequest(
 
 res = s.payment.remove_payment_payment(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -656,6 +670,7 @@ res = s.payment.update_payment_link(req)
 if res.payment_link is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -700,6 +715,7 @@ res = s.payment.update_payment_payment(req)
 if res.payment_payment is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

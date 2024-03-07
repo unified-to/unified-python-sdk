@@ -32,6 +32,7 @@ res = s.refund.get_payment_refund(req)
 if res.payment_refund is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -75,6 +76,7 @@ res = s.refund.list_payment_refunds(req)
 if res.payment_refunds is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

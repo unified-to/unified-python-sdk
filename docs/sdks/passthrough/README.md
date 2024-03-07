@@ -35,6 +35,7 @@ res = s.passthrough.create_passthrough(req)
 if res.result is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -79,6 +80,7 @@ res = s.passthrough.list_passthroughs(req)
 if res.result is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -123,6 +125,7 @@ res = s.passthrough.patch_passthrough(req)
 if res.result is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -167,6 +170,7 @@ res = s.passthrough.remove_passthrough(req)
 if res.result is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -211,6 +215,7 @@ res = s.passthrough.update_passthrough(req)
 if res.result is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

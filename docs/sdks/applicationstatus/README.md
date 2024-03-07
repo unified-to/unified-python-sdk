@@ -30,6 +30,7 @@ res = s.applicationstatus.list_ats_applicationstatuses(req)
 if res.ats_statuses is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

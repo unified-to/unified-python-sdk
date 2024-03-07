@@ -35,6 +35,7 @@ res = s.file.create_storage_file(req)
 if res.storage_file is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -79,6 +80,7 @@ res = s.file.get_storage_file(req)
 if res.storage_file is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -122,6 +124,7 @@ res = s.file.list_storage_files(req)
 if res.storage_files is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -166,6 +169,7 @@ res = s.file.patch_storage_file(req)
 if res.storage_file is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -207,9 +211,10 @@ req = operations.RemoveStorageFileRequest(
 
 res = s.file.remove_storage_file(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -254,6 +259,7 @@ res = s.file.update_storage_file(req)
 if res.storage_file is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

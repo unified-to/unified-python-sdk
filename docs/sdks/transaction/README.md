@@ -35,6 +35,7 @@ res = s.transaction.create_accounting_transaction(req)
 if res.accounting_transaction is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -79,6 +80,7 @@ res = s.transaction.get_accounting_transaction(req)
 if res.accounting_transaction is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -122,6 +124,7 @@ res = s.transaction.list_accounting_transactions(req)
 if res.accounting_transactions is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -166,6 +169,7 @@ res = s.transaction.patch_accounting_transaction(req)
 if res.accounting_transaction is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -207,9 +211,10 @@ req = operations.RemoveAccountingTransactionRequest(
 
 res = s.transaction.remove_accounting_transaction(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -254,6 +259,7 @@ res = s.transaction.update_accounting_transaction(req)
 if res.accounting_transaction is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

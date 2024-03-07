@@ -28,6 +28,7 @@ res = s.issue.list_unified_issues(req)
 if res.issues is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

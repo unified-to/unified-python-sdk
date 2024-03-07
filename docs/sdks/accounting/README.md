@@ -61,6 +61,7 @@ res = s.accounting.create_accounting_account(req)
 if res.accounting_account is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -104,6 +105,7 @@ res = s.accounting.create_accounting_contact(req)
 if res.accounting_contact is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -147,6 +149,7 @@ res = s.accounting.create_accounting_invoice(req)
 if res.accounting_invoice is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -190,6 +193,7 @@ res = s.accounting.create_accounting_taxrate(req)
 if res.accounting_taxrate is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -233,6 +237,7 @@ res = s.accounting.create_accounting_transaction(req)
 if res.accounting_transaction is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -277,6 +282,7 @@ res = s.accounting.get_accounting_account(req)
 if res.accounting_account is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -321,6 +327,7 @@ res = s.accounting.get_accounting_contact(req)
 if res.accounting_contact is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -365,6 +372,7 @@ res = s.accounting.get_accounting_invoice(req)
 if res.accounting_invoice is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -409,6 +417,7 @@ res = s.accounting.get_accounting_organization(req)
 if res.accounting_organization is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -453,6 +462,7 @@ res = s.accounting.get_accounting_taxrate(req)
 if res.accounting_taxrate is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -497,6 +507,7 @@ res = s.accounting.get_accounting_transaction(req)
 if res.accounting_transaction is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -540,6 +551,7 @@ res = s.accounting.list_accounting_accounts(req)
 if res.accounting_accounts is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -583,6 +595,7 @@ res = s.accounting.list_accounting_contacts(req)
 if res.accounting_contacts is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -626,6 +639,7 @@ res = s.accounting.list_accounting_invoices(req)
 if res.accounting_invoices is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -669,6 +683,7 @@ res = s.accounting.list_accounting_organizations(req)
 if res.accounting_organizations is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -712,6 +727,7 @@ res = s.accounting.list_accounting_taxrates(req)
 if res.accounting_taxrates is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -755,6 +771,7 @@ res = s.accounting.list_accounting_transactions(req)
 if res.accounting_transactions is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -799,6 +816,7 @@ res = s.accounting.patch_accounting_account(req)
 if res.accounting_account is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -843,6 +861,7 @@ res = s.accounting.patch_accounting_contact(req)
 if res.accounting_contact is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -887,6 +906,7 @@ res = s.accounting.patch_accounting_invoice(req)
 if res.accounting_invoice is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -931,6 +951,7 @@ res = s.accounting.patch_accounting_taxrate(req)
 if res.accounting_taxrate is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -975,6 +996,7 @@ res = s.accounting.patch_accounting_transaction(req)
 if res.accounting_transaction is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -1016,9 +1038,10 @@ req = operations.RemoveAccountingAccountRequest(
 
 res = s.accounting.remove_accounting_account(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -1060,9 +1083,10 @@ req = operations.RemoveAccountingContactRequest(
 
 res = s.accounting.remove_accounting_contact(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -1104,9 +1128,10 @@ req = operations.RemoveAccountingInvoiceRequest(
 
 res = s.accounting.remove_accounting_invoice(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -1148,9 +1173,10 @@ req = operations.RemoveAccountingTaxrateRequest(
 
 res = s.accounting.remove_accounting_taxrate(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -1192,9 +1218,10 @@ req = operations.RemoveAccountingTransactionRequest(
 
 res = s.accounting.remove_accounting_transaction(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -1239,6 +1266,7 @@ res = s.accounting.update_accounting_account(req)
 if res.accounting_account is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -1283,6 +1311,7 @@ res = s.accounting.update_accounting_contact(req)
 if res.accounting_contact is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -1327,6 +1356,7 @@ res = s.accounting.update_accounting_invoice(req)
 if res.accounting_invoice is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -1371,6 +1401,7 @@ res = s.accounting.update_accounting_taxrate(req)
 if res.accounting_taxrate is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -1415,6 +1446,7 @@ res = s.accounting.update_accounting_transaction(req)
 if res.accounting_transaction is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

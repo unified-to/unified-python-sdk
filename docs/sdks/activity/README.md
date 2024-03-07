@@ -35,6 +35,7 @@ res = s.activity.create_ats_activity(req)
 if res.ats_activity is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -79,6 +80,7 @@ res = s.activity.get_ats_activity(req)
 if res.ats_activity is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -122,6 +124,7 @@ res = s.activity.list_ats_activities(req)
 if res.ats_activities is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -166,6 +169,7 @@ res = s.activity.patch_ats_activity(req)
 if res.ats_activity is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -207,9 +211,10 @@ req = operations.RemoveAtsActivityRequest(
 
 res = s.activity.remove_ats_activity(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -254,6 +259,7 @@ res = s.activity.update_ats_activity(req)
 if res.ats_activity is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

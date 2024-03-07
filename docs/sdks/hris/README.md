@@ -41,6 +41,7 @@ res = s.hris.create_hris_employee(req)
 if res.hris_employee is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -84,6 +85,7 @@ res = s.hris.create_hris_group(req)
 if res.hris_group is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -128,6 +130,7 @@ res = s.hris.get_hris_employee(req)
 if res.hris_employee is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -172,6 +175,7 @@ res = s.hris.get_hris_group(req)
 if res.hris_group is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -215,6 +219,7 @@ res = s.hris.list_hris_employees(req)
 if res.hris_employees is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -258,6 +263,7 @@ res = s.hris.list_hris_groups(req)
 if res.hris_groups is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -302,6 +308,7 @@ res = s.hris.patch_hris_employee(req)
 if res.hris_employee is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -346,6 +353,7 @@ res = s.hris.patch_hris_group(req)
 if res.hris_group is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -387,9 +395,10 @@ req = operations.RemoveHrisEmployeeRequest(
 
 res = s.hris.remove_hris_employee(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -431,9 +440,10 @@ req = operations.RemoveHrisGroupRequest(
 
 res = s.hris.remove_hris_group(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -478,6 +488,7 @@ res = s.hris.update_hris_employee(req)
 if res.hris_employee is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -522,6 +533,7 @@ res = s.hris.update_hris_group(req)
 if res.hris_group is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

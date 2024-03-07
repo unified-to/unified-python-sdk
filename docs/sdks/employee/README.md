@@ -35,6 +35,7 @@ res = s.employee.create_hris_employee(req)
 if res.hris_employee is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -79,6 +80,7 @@ res = s.employee.get_hris_employee(req)
 if res.hris_employee is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -122,6 +124,7 @@ res = s.employee.list_hris_employees(req)
 if res.hris_employees is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -166,6 +169,7 @@ res = s.employee.patch_hris_employee(req)
 if res.hris_employee is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -207,9 +211,10 @@ req = operations.RemoveHrisEmployeeRequest(
 
 res = s.employee.remove_hris_employee(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -254,6 +259,7 @@ res = s.employee.update_hris_employee(req)
 if res.hris_employee is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

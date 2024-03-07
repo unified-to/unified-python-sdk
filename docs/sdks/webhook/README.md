@@ -33,6 +33,7 @@ res = s.webhook.create_unified_webhook(req)
 if res.webhook is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -76,6 +77,7 @@ res = s.webhook.get_unified_webhook(req)
 if res.webhook is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -117,6 +119,7 @@ res = s.webhook.list_unified_webhooks(req)
 if res.webhooks is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -157,9 +160,10 @@ req = operations.PatchUnifiedWebhookTriggerRequest(
 
 res = s.webhook.patch_unified_webhook_trigger(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -200,9 +204,10 @@ req = operations.RemoveUnifiedWebhookRequest(
 
 res = s.webhook.remove_unified_webhook(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -243,9 +248,10 @@ req = operations.UpdateUnifiedWebhookTriggerRequest(
 
 res = s.webhook.update_unified_webhook_trigger(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

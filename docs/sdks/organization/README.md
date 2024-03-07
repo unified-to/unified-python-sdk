@@ -32,6 +32,7 @@ res = s.organization.get_accounting_organization(req)
 if res.accounting_organization is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -75,6 +76,7 @@ res = s.organization.list_accounting_organizations(req)
 if res.accounting_organizations is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

@@ -32,6 +32,7 @@ res = s.payout.get_payment_payout(req)
 if res.payment_payout is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -75,6 +76,7 @@ res = s.payout.list_payment_payouts(req)
 if res.payment_payouts is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

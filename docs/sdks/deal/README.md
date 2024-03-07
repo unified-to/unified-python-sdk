@@ -35,6 +35,7 @@ res = s.deal.create_crm_deal(req)
 if res.crm_deal is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -79,6 +80,7 @@ res = s.deal.get_crm_deal(req)
 if res.crm_deal is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -122,6 +124,7 @@ res = s.deal.list_crm_deals(req)
 if res.crm_deals is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -166,6 +169,7 @@ res = s.deal.patch_crm_deal(req)
 if res.crm_deal is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -207,9 +211,10 @@ req = operations.RemoveCrmDealRequest(
 
 res = s.deal.remove_crm_deal(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -254,6 +259,7 @@ res = s.deal.update_crm_deal(req)
 if res.crm_deal is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

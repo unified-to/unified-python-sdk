@@ -30,6 +30,7 @@ res = s.person.list_enrich_people(req)
 if res.enrich_person is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

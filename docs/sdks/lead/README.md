@@ -35,6 +35,7 @@ res = s.lead.create_crm_lead(req)
 if res.crm_lead is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -79,6 +80,7 @@ res = s.lead.get_crm_lead(req)
 if res.crm_lead is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -122,6 +124,7 @@ res = s.lead.list_crm_leads(req)
 if res.crm_leads is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -166,6 +169,7 @@ res = s.lead.patch_crm_lead(req)
 if res.crm_lead is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -207,9 +211,10 @@ req = operations.RemoveCrmLeadRequest(
 
 res = s.lead.remove_crm_lead(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -254,6 +259,7 @@ res = s.lead.update_crm_lead(req)
 if res.crm_lead is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

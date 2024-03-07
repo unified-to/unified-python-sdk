@@ -35,6 +35,7 @@ res = s.item.create_commerce_item(req)
 if res.commerce_item is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -79,6 +80,7 @@ res = s.item.get_commerce_item(req)
 if res.commerce_item is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -122,6 +124,7 @@ res = s.item.list_commerce_items(req)
 if res.commerce_items is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -166,6 +169,7 @@ res = s.item.patch_commerce_item(req)
 if res.commerce_item is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -207,9 +211,10 @@ req = operations.RemoveCommerceItemRequest(
 
 res = s.item.remove_commerce_item(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -254,6 +259,7 @@ res = s.item.update_commerce_item(req)
 if res.commerce_item is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

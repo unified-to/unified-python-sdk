@@ -35,6 +35,7 @@ res = s.job.create_ats_job(req)
 if res.ats_job is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -79,6 +80,7 @@ res = s.job.get_ats_job(req)
 if res.ats_job is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -122,6 +124,7 @@ res = s.job.list_ats_jobs(req)
 if res.ats_jobs is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -166,6 +169,7 @@ res = s.job.patch_ats_job(req)
 if res.ats_job is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -207,9 +211,10 @@ req = operations.RemoveAtsJobRequest(
 
 res = s.job.remove_ats_job(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -254,6 +259,7 @@ res = s.job.update_ats_job(req)
 if res.ats_job is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

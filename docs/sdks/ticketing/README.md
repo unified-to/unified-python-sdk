@@ -47,6 +47,7 @@ res = s.ticketing.create_ticketing_customer(req)
 if res.ticketing_customer is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -90,6 +91,7 @@ res = s.ticketing.create_ticketing_note(req)
 if res.ticketing_note is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -133,6 +135,7 @@ res = s.ticketing.create_ticketing_ticket(req)
 if res.ticketing_ticket is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -177,6 +180,7 @@ res = s.ticketing.get_ticketing_customer(req)
 if res.ticketing_customer is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -221,6 +225,7 @@ res = s.ticketing.get_ticketing_note(req)
 if res.ticketing_note is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -265,6 +270,7 @@ res = s.ticketing.get_ticketing_ticket(req)
 if res.ticketing_ticket is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -308,6 +314,7 @@ res = s.ticketing.list_ticketing_customers(req)
 if res.ticketing_customers is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -351,6 +358,7 @@ res = s.ticketing.list_ticketing_notes(req)
 if res.ticketing_notes is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -394,6 +402,7 @@ res = s.ticketing.list_ticketing_tickets(req)
 if res.ticketing_tickets is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -438,6 +447,7 @@ res = s.ticketing.patch_ticketing_customer(req)
 if res.ticketing_customer is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -482,6 +492,7 @@ res = s.ticketing.patch_ticketing_note(req)
 if res.ticketing_note is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -526,6 +537,7 @@ res = s.ticketing.patch_ticketing_ticket(req)
 if res.ticketing_ticket is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -567,9 +579,10 @@ req = operations.RemoveTicketingCustomerRequest(
 
 res = s.ticketing.remove_ticketing_customer(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -611,9 +624,10 @@ req = operations.RemoveTicketingNoteRequest(
 
 res = s.ticketing.remove_ticketing_note(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -655,9 +669,10 @@ req = operations.RemoveTicketingTicketRequest(
 
 res = s.ticketing.remove_ticketing_ticket(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -702,6 +717,7 @@ res = s.ticketing.update_ticketing_customer(req)
 if res.ticketing_customer is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -746,6 +762,7 @@ res = s.ticketing.update_ticketing_note(req)
 if res.ticketing_note is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -790,6 +807,7 @@ res = s.ticketing.update_ticketing_ticket(req)
 if res.ticketing_ticket is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

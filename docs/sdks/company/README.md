@@ -38,6 +38,7 @@ res = s.company.create_crm_company(req)
 if res.crm_company is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -82,6 +83,7 @@ res = s.company.get_ats_company(req)
 if res.ats_company is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -126,6 +128,7 @@ res = s.company.get_crm_company(req)
 if res.crm_company is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -169,6 +172,7 @@ res = s.company.list_ats_companies(req)
 if res.ats_companies is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -212,6 +216,7 @@ res = s.company.list_crm_companies(req)
 if res.crm_companies is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -255,6 +260,7 @@ res = s.company.list_enrich_companies(req)
 if res.enrich_company is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -299,6 +305,7 @@ res = s.company.patch_crm_company(req)
 if res.crm_company is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -340,9 +347,10 @@ req = operations.RemoveCrmCompanyRequest(
 
 res = s.company.remove_crm_company(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -387,6 +395,7 @@ res = s.company.update_crm_company(req)
 if res.crm_company is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

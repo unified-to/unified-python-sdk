@@ -47,6 +47,7 @@ res = s.contact.create_accounting_contact(req)
 if res.accounting_contact is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -90,6 +91,7 @@ res = s.contact.create_crm_contact(req)
 if res.crm_contact is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -133,6 +135,7 @@ res = s.contact.create_uc_contact(req)
 if res.uc_contact is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -177,6 +180,7 @@ res = s.contact.get_accounting_contact(req)
 if res.accounting_contact is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -221,6 +225,7 @@ res = s.contact.get_crm_contact(req)
 if res.crm_contact is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -265,6 +270,7 @@ res = s.contact.get_uc_contact(req)
 if res.uc_contact is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -308,6 +314,7 @@ res = s.contact.list_accounting_contacts(req)
 if res.accounting_contacts is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -351,6 +358,7 @@ res = s.contact.list_crm_contacts(req)
 if res.crm_contacts is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -394,6 +402,7 @@ res = s.contact.list_uc_contacts(req)
 if res.uc_contacts is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -438,6 +447,7 @@ res = s.contact.patch_accounting_contact(req)
 if res.accounting_contact is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -482,6 +492,7 @@ res = s.contact.patch_crm_contact(req)
 if res.crm_contact is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -526,6 +537,7 @@ res = s.contact.patch_uc_contact(req)
 if res.uc_contact is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -567,9 +579,10 @@ req = operations.RemoveAccountingContactRequest(
 
 res = s.contact.remove_accounting_contact(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -611,9 +624,10 @@ req = operations.RemoveCrmContactRequest(
 
 res = s.contact.remove_crm_contact(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -655,9 +669,10 @@ req = operations.RemoveUcContactRequest(
 
 res = s.contact.remove_uc_contact(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -702,6 +717,7 @@ res = s.contact.update_accounting_contact(req)
 if res.accounting_contact is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -746,6 +762,7 @@ res = s.contact.update_crm_contact(req)
 if res.crm_contact is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -790,6 +807,7 @@ res = s.contact.update_uc_contact(req)
 if res.uc_contact is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

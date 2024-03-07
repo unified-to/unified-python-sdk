@@ -35,6 +35,7 @@ res = s.interview.create_ats_interview(req)
 if res.ats_interview is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -79,6 +80,7 @@ res = s.interview.get_ats_interview(req)
 if res.ats_interview is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -122,6 +124,7 @@ res = s.interview.list_ats_interviews(req)
 if res.ats_interviews is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -166,6 +169,7 @@ res = s.interview.patch_ats_interview(req)
 if res.ats_interview is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -207,9 +211,10 @@ req = operations.RemoveAtsInterviewRequest(
 
 res = s.interview.remove_ats_interview(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -254,6 +259,7 @@ res = s.interview.update_ats_interview(req)
 if res.ats_interview is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

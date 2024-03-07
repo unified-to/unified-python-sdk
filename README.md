@@ -36,6 +36,7 @@ res = s.accounting.create_accounting_account(req)
 if res.accounting_account is not None:
     # handle response
     pass
+
 ```
 <!-- End SDK Example Usage [usage] -->
 
@@ -710,6 +711,7 @@ except errors.SDKError as e:
 if res.accounting_account is not None:
     # handle response
     pass
+
 ```
 <!-- End Error Handling [errors] -->
 
@@ -749,6 +751,7 @@ res = s.accounting.create_accounting_account(req)
 if res.accounting_account is not None:
     # handle response
     pass
+
 ```
 
 
@@ -775,6 +778,7 @@ res = s.accounting.create_accounting_account(req)
 if res.accounting_account is not None:
     # handle response
     pass
+
 ```
 <!-- End Server Selection [server] -->
 
@@ -829,6 +833,7 @@ res = s.accounting.create_accounting_account(req)
 if res.accounting_account is not None:
     # handle response
     pass
+
 ```
 <!-- End Authentication [security] -->
 

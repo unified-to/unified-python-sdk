@@ -35,6 +35,7 @@ res = s.candidate.create_ats_candidate(req)
 if res.ats_candidate is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -79,6 +80,7 @@ res = s.candidate.get_ats_candidate(req)
 if res.ats_candidate is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -122,6 +124,7 @@ res = s.candidate.list_ats_candidates(req)
 if res.ats_candidates is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -166,6 +169,7 @@ res = s.candidate.patch_ats_candidate(req)
 if res.ats_candidate is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -207,9 +211,10 @@ req = operations.RemoveAtsCandidateRequest(
 
 res = s.candidate.remove_ats_candidate(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -254,6 +259,7 @@ res = s.candidate.update_ats_candidate(req)
 if res.ats_candidate is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

@@ -35,6 +35,7 @@ res = s.inventory.create_commerce_inventory(req)
 if res.commerce_inventory is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -79,6 +80,7 @@ res = s.inventory.get_commerce_inventory(req)
 if res.commerce_inventory is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -122,6 +124,7 @@ res = s.inventory.list_commerce_inventories(req)
 if res.commerce_inventories is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -166,6 +169,7 @@ res = s.inventory.patch_commerce_inventory(req)
 if res.commerce_inventory is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -207,9 +211,10 @@ req = operations.RemoveCommerceInventoryRequest(
 
 res = s.inventory.remove_commerce_inventory(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -254,6 +259,7 @@ res = s.inventory.update_commerce_inventory(req)
 if res.commerce_inventory is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

@@ -65,6 +65,7 @@ res = s.crm.create_crm_company(req)
 if res.crm_company is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -108,6 +109,7 @@ res = s.crm.create_crm_contact(req)
 if res.crm_contact is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -151,6 +153,7 @@ res = s.crm.create_crm_deal(req)
 if res.crm_deal is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -194,6 +197,7 @@ res = s.crm.create_crm_event(req)
 if res.crm_event is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -237,6 +241,7 @@ res = s.crm.create_crm_lead(req)
 if res.crm_lead is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -280,6 +285,7 @@ res = s.crm.create_crm_pipeline(req)
 if res.crm_pipeline is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -324,6 +330,7 @@ res = s.crm.get_crm_company(req)
 if res.crm_company is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -368,6 +375,7 @@ res = s.crm.get_crm_contact(req)
 if res.crm_contact is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -412,6 +420,7 @@ res = s.crm.get_crm_deal(req)
 if res.crm_deal is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -456,6 +465,7 @@ res = s.crm.get_crm_event(req)
 if res.crm_event is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -500,6 +510,7 @@ res = s.crm.get_crm_lead(req)
 if res.crm_lead is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -544,6 +555,7 @@ res = s.crm.get_crm_pipeline(req)
 if res.crm_pipeline is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -587,6 +599,7 @@ res = s.crm.list_crm_companies(req)
 if res.crm_companies is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -630,6 +643,7 @@ res = s.crm.list_crm_contacts(req)
 if res.crm_contacts is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -673,6 +687,7 @@ res = s.crm.list_crm_deals(req)
 if res.crm_deals is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -716,6 +731,7 @@ res = s.crm.list_crm_events(req)
 if res.crm_events is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -759,6 +775,7 @@ res = s.crm.list_crm_leads(req)
 if res.crm_leads is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -802,6 +819,7 @@ res = s.crm.list_crm_pipelines(req)
 if res.crm_pipelines is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -846,6 +864,7 @@ res = s.crm.patch_crm_company(req)
 if res.crm_company is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -890,6 +909,7 @@ res = s.crm.patch_crm_contact(req)
 if res.crm_contact is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -934,6 +954,7 @@ res = s.crm.patch_crm_deal(req)
 if res.crm_deal is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -978,6 +999,7 @@ res = s.crm.patch_crm_event(req)
 if res.crm_event is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -1022,6 +1044,7 @@ res = s.crm.patch_crm_lead(req)
 if res.crm_lead is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -1066,6 +1089,7 @@ res = s.crm.patch_crm_pipeline(req)
 if res.crm_pipeline is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -1107,9 +1131,10 @@ req = operations.RemoveCrmCompanyRequest(
 
 res = s.crm.remove_crm_company(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -1151,9 +1176,10 @@ req = operations.RemoveCrmContactRequest(
 
 res = s.crm.remove_crm_contact(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -1195,9 +1221,10 @@ req = operations.RemoveCrmDealRequest(
 
 res = s.crm.remove_crm_deal(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -1239,9 +1266,10 @@ req = operations.RemoveCrmEventRequest(
 
 res = s.crm.remove_crm_event(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -1283,9 +1311,10 @@ req = operations.RemoveCrmLeadRequest(
 
 res = s.crm.remove_crm_lead(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -1327,9 +1356,10 @@ req = operations.RemoveCrmPipelineRequest(
 
 res = s.crm.remove_crm_pipeline(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -1374,6 +1404,7 @@ res = s.crm.update_crm_company(req)
 if res.crm_company is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -1418,6 +1449,7 @@ res = s.crm.update_crm_contact(req)
 if res.crm_contact is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -1462,6 +1494,7 @@ res = s.crm.update_crm_deal(req)
 if res.crm_deal is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -1506,6 +1539,7 @@ res = s.crm.update_crm_event(req)
 if res.crm_event is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -1550,6 +1584,7 @@ res = s.crm.update_crm_lead(req)
 if res.crm_lead is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -1594,6 +1629,7 @@ res = s.crm.update_crm_pipeline(req)
 if res.crm_pipeline is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

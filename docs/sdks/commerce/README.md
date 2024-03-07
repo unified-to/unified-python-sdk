@@ -53,6 +53,7 @@ res = s.commerce.create_commerce_collection(req)
 if res.commerce_collection is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -96,6 +97,7 @@ res = s.commerce.create_commerce_inventory(req)
 if res.commerce_inventory is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -139,6 +141,7 @@ res = s.commerce.create_commerce_item(req)
 if res.commerce_item is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -182,6 +185,7 @@ res = s.commerce.create_commerce_location(req)
 if res.commerce_location is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -226,6 +230,7 @@ res = s.commerce.get_commerce_collection(req)
 if res.commerce_collection is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -270,6 +275,7 @@ res = s.commerce.get_commerce_inventory(req)
 if res.commerce_inventory is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -314,6 +320,7 @@ res = s.commerce.get_commerce_item(req)
 if res.commerce_item is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -358,6 +365,7 @@ res = s.commerce.get_commerce_location(req)
 if res.commerce_location is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -401,6 +409,7 @@ res = s.commerce.list_commerce_collections(req)
 if res.commerce_collections is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -444,6 +453,7 @@ res = s.commerce.list_commerce_inventories(req)
 if res.commerce_inventories is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -487,6 +497,7 @@ res = s.commerce.list_commerce_items(req)
 if res.commerce_items is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -530,6 +541,7 @@ res = s.commerce.list_commerce_locations(req)
 if res.commerce_locations is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -574,6 +586,7 @@ res = s.commerce.patch_commerce_collection(req)
 if res.commerce_collection is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -618,6 +631,7 @@ res = s.commerce.patch_commerce_inventory(req)
 if res.commerce_inventory is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -662,6 +676,7 @@ res = s.commerce.patch_commerce_item(req)
 if res.commerce_item is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -706,6 +721,7 @@ res = s.commerce.patch_commerce_location(req)
 if res.commerce_location is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -747,9 +763,10 @@ req = operations.RemoveCommerceCollectionRequest(
 
 res = s.commerce.remove_commerce_collection(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -791,9 +808,10 @@ req = operations.RemoveCommerceInventoryRequest(
 
 res = s.commerce.remove_commerce_inventory(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -835,9 +853,10 @@ req = operations.RemoveCommerceItemRequest(
 
 res = s.commerce.remove_commerce_item(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -879,9 +898,10 @@ req = operations.RemoveCommerceLocationRequest(
 
 res = s.commerce.remove_commerce_location(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -926,6 +946,7 @@ res = s.commerce.update_commerce_collection(req)
 if res.commerce_collection is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -970,6 +991,7 @@ res = s.commerce.update_commerce_inventory(req)
 if res.commerce_inventory is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -1014,6 +1036,7 @@ res = s.commerce.update_commerce_item(req)
 if res.commerce_item is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -1058,6 +1081,7 @@ res = s.commerce.update_commerce_location(req)
 if res.commerce_location is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

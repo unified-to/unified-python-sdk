@@ -32,6 +32,7 @@ res = s.auth.get_unified_integration_auth(req)
 if res.res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -76,6 +77,7 @@ res = s.auth.get_unified_integration_login(req)
 if res.res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

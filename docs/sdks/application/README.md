@@ -35,6 +35,7 @@ res = s.application.create_ats_application(req)
 if res.ats_application is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -79,6 +80,7 @@ res = s.application.get_ats_application(req)
 if res.ats_application is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -122,6 +124,7 @@ res = s.application.list_ats_applications(req)
 if res.ats_applications is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -166,6 +169,7 @@ res = s.application.patch_ats_application(req)
 if res.ats_application is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -207,9 +211,10 @@ req = operations.RemoveAtsApplicationRequest(
 
 res = s.application.remove_ats_application(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -254,6 +259,7 @@ res = s.application.update_ats_application(req)
 if res.ats_application is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

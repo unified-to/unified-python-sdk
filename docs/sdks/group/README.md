@@ -35,6 +35,7 @@ res = s.group.create_hris_group(req)
 if res.hris_group is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -79,6 +80,7 @@ res = s.group.get_hris_group(req)
 if res.hris_group is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -122,6 +124,7 @@ res = s.group.list_hris_groups(req)
 if res.hris_groups is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -166,6 +169,7 @@ res = s.group.patch_hris_group(req)
 if res.hris_group is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -207,9 +211,10 @@ req = operations.RemoveHrisGroupRequest(
 
 res = s.group.remove_hris_group(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -254,6 +259,7 @@ res = s.group.update_hris_group(req)
 if res.hris_group is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

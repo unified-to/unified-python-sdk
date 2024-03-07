@@ -35,6 +35,7 @@ res = s.pipeline.create_crm_pipeline(req)
 if res.crm_pipeline is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -79,6 +80,7 @@ res = s.pipeline.get_crm_pipeline(req)
 if res.crm_pipeline is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -122,6 +124,7 @@ res = s.pipeline.list_crm_pipelines(req)
 if res.crm_pipelines is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -166,6 +169,7 @@ res = s.pipeline.patch_crm_pipeline(req)
 if res.crm_pipeline is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -207,9 +211,10 @@ req = operations.RemoveCrmPipelineRequest(
 
 res = s.pipeline.remove_crm_pipeline(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -254,6 +259,7 @@ res = s.pipeline.update_crm_pipeline(req)
 if res.crm_pipeline is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

@@ -35,6 +35,7 @@ res = s.link.create_payment_link(req)
 if res.payment_link is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -79,6 +80,7 @@ res = s.link.get_payment_link(req)
 if res.payment_link is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -122,6 +124,7 @@ res = s.link.list_payment_links(req)
 if res.payment_links is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -166,6 +169,7 @@ res = s.link.patch_payment_link(req)
 if res.payment_link is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -207,9 +211,10 @@ req = operations.RemovePaymentLinkRequest(
 
 res = s.link.remove_payment_link(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -254,6 +259,7 @@ res = s.link.update_payment_link(req)
 if res.payment_link is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

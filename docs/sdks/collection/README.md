@@ -35,6 +35,7 @@ res = s.collection.create_commerce_collection(req)
 if res.commerce_collection is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -79,6 +80,7 @@ res = s.collection.get_commerce_collection(req)
 if res.commerce_collection is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -122,6 +124,7 @@ res = s.collection.list_commerce_collections(req)
 if res.commerce_collections is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -166,6 +169,7 @@ res = s.collection.patch_commerce_collection(req)
 if res.commerce_collection is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -207,9 +211,10 @@ req = operations.RemoveCommerceCollectionRequest(
 
 res = s.collection.remove_commerce_collection(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -254,6 +259,7 @@ res = s.collection.update_commerce_collection(req)
 if res.commerce_collection is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

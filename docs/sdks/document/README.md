@@ -35,6 +35,7 @@ res = s.document.create_ats_document(req)
 if res.ats_document is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -79,6 +80,7 @@ res = s.document.get_ats_document(req)
 if res.ats_document is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -122,6 +124,7 @@ res = s.document.list_ats_documents(req)
 if res.ats_documents is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -166,6 +169,7 @@ res = s.document.patch_ats_document(req)
 if res.ats_document is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -207,9 +211,10 @@ req = operations.RemoveAtsDocumentRequest(
 
 res = s.document.remove_ats_document(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -254,6 +259,7 @@ res = s.document.update_ats_document(req)
 if res.ats_document is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

@@ -41,6 +41,7 @@ res = s.martech.create_martech_list(req)
 if res.marketing_list is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -84,6 +85,7 @@ res = s.martech.create_martech_member(req)
 if res.marketing_member is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -128,6 +130,7 @@ res = s.martech.get_martech_list(req)
 if res.marketing_list is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -172,6 +175,7 @@ res = s.martech.get_martech_member(req)
 if res.marketing_member is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -215,6 +219,7 @@ res = s.martech.list_martech_lists(req)
 if res.marketing_lists is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -258,6 +263,7 @@ res = s.martech.list_martech_members(req)
 if res.marketing_members is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -302,6 +308,7 @@ res = s.martech.patch_martech_list(req)
 if res.marketing_list is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -346,6 +353,7 @@ res = s.martech.patch_martech_member(req)
 if res.marketing_member is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -387,9 +395,10 @@ req = operations.RemoveMartechListRequest(
 
 res = s.martech.remove_martech_list(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -431,9 +440,10 @@ req = operations.RemoveMartechMemberRequest(
 
 res = s.martech.remove_martech_member(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -478,6 +488,7 @@ res = s.martech.update_martech_list(req)
 if res.marketing_list is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -522,6 +533,7 @@ res = s.martech.update_martech_member(req)
 if res.marketing_member is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

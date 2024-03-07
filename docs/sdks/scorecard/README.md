@@ -35,6 +35,7 @@ res = s.scorecard.create_ats_scorecard(req)
 if res.ats_scorecard is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -79,6 +80,7 @@ res = s.scorecard.get_ats_scorecard(req)
 if res.ats_scorecard is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -122,6 +124,7 @@ res = s.scorecard.list_ats_scorecards(req)
 if res.ats_scorecards is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -166,6 +169,7 @@ res = s.scorecard.patch_ats_scorecard(req)
 if res.ats_scorecard is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -207,9 +211,10 @@ req = operations.RemoveAtsScorecardRequest(
 
 res = s.scorecard.remove_ats_scorecard(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -254,6 +259,7 @@ res = s.scorecard.update_ats_scorecard(req)
 if res.ats_scorecard is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

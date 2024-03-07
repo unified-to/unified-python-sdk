@@ -35,6 +35,7 @@ res = s.ticket.create_ticketing_ticket(req)
 if res.ticketing_ticket is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -79,6 +80,7 @@ res = s.ticket.get_ticketing_ticket(req)
 if res.ticketing_ticket is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -122,6 +124,7 @@ res = s.ticket.list_ticketing_tickets(req)
 if res.ticketing_tickets is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -166,6 +169,7 @@ res = s.ticket.patch_ticketing_ticket(req)
 if res.ticketing_ticket is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -207,9 +211,10 @@ req = operations.RemoveTicketingTicketRequest(
 
 res = s.ticket.remove_ticketing_ticket(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -254,6 +259,7 @@ res = s.ticket.update_ticketing_ticket(req)
 if res.ticketing_ticket is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

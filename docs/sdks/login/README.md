@@ -31,6 +31,7 @@ res = s.login.get_unified_integration_login(req)
 if res.res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

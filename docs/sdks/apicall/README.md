@@ -31,6 +31,7 @@ res = s.apicall.get_unified_apicall(req)
 if res.api_call is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -72,6 +73,7 @@ res = s.apicall.list_unified_apicalls(req)
 if res.api_calls is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

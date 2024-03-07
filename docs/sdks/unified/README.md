@@ -53,6 +53,7 @@ res = s.unified.create_unified_connection(req)
 if res.connection is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -94,6 +95,7 @@ res = s.unified.create_unified_webhook(req)
 if res.webhook is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -137,6 +139,7 @@ res = s.unified.get_unified_apicall(req)
 if res.api_call is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -180,6 +183,7 @@ res = s.unified.get_unified_connection(req)
 if res.connection is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -224,6 +228,7 @@ res = s.unified.get_unified_integration_auth(req)
 if res.res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -267,6 +272,7 @@ res = s.unified.get_unified_webhook(req)
 if res.webhook is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -308,6 +314,7 @@ res = s.unified.list_unified_apicalls(req)
 if res.api_calls is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -349,6 +356,7 @@ res = s.unified.list_unified_connections(req)
 if res.connections is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -392,6 +400,7 @@ res = s.unified.list_unified_integration_workspaces(req)
 if res.integrations is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -433,6 +442,7 @@ res = s.unified.list_unified_integrations(req)
 if res.integrations is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -474,6 +484,7 @@ res = s.unified.list_unified_issues(req)
 if res.issues is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -515,6 +526,7 @@ res = s.unified.list_unified_webhooks(req)
 if res.webhooks is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -558,6 +570,7 @@ res = s.unified.patch_unified_connection(req)
 if res.connection is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -598,9 +611,10 @@ req = operations.PatchUnifiedWebhookTriggerRequest(
 
 res = s.unified.patch_unified_webhook_trigger(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -641,9 +655,10 @@ req = operations.RemoveUnifiedConnectionRequest(
 
 res = s.unified.remove_unified_connection(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -684,9 +699,10 @@ req = operations.RemoveUnifiedWebhookRequest(
 
 res = s.unified.remove_unified_webhook(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -730,6 +746,7 @@ res = s.unified.update_unified_connection(req)
 if res.connection is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -770,9 +787,10 @@ req = operations.UpdateUnifiedWebhookTriggerRequest(
 
 res = s.unified.update_unified_webhook_trigger(req)
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
