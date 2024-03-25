@@ -17,6 +17,7 @@ class EnrichEmailType(str, Enum):
 @dataclasses.dataclass
 class EnrichEmail:
     email: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('email') }})
+    is_verified: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('is_verified'), 'exclude': lambda f: f is None }})
     type: Optional[EnrichEmailType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type'), 'exclude': lambda f: f is None }})
     
 
