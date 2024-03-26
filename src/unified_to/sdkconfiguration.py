@@ -26,9 +26,9 @@ class SDKConfiguration:
     server_idx: int = 0
     language: str = 'python'
     openapi_doc_version: str = '1.0'
-    sdk_version: str = '0.20.3'
-    gen_version: str = '2.287.0'
-    user_agent: str = 'speakeasy-sdk/python 0.20.3 2.287.0 1.0 Unified-python-sdk'
+    sdk_version: str = '0.20.4'
+    gen_version: str = '2.291.0'
+    user_agent: str = 'speakeasy-sdk/python 0.20.4 2.291.0 1.0 Unified-python-sdk'
     retry_config: RetryConfig = None
     _hooks: SDKHooks = None
 
