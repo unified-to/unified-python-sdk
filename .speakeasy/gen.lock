@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: b5ccecd8b5925543c5229bd68d6cacb3
+  docChecksum: 9969df7d3e03cdc2a49e94cb47ce90ff
   docVersion: "1.0"
-  speakeasyVersion: 1.223.1
-  generationVersion: 2.291.0
-  releaseVersion: 0.20.4
-  configChecksum: 3cf9ff50f6a1fea7225cf5c6e9388fd1
+  speakeasyVersion: 1.228.1
+  generationVersion: 2.292.0
+  releaseVersion: 0.20.5
+  configChecksum: bffe855a9b3fc61be9c01abdf69fba20
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -396,7 +396,7 @@ generatedFiles:
   - src/unified_to/models/shared/marketingmember.py
   - src/unified_to/models/shared/marketingemail.py
   - src/unified_to/models/shared/paymentlink.py
-  - src/unified_to/models/shared/paymenntlinklineitem.py
+  - src/unified_to/models/shared/paymentlinklineitem.py
   - src/unified_to/models/shared/paymentpayment.py
   - src/unified_to/models/shared/paymentpayout.py
   - src/unified_to/models/shared/paymentrefund.py
@@ -1018,7 +1018,7 @@ generatedFiles:
   - docs/models/shared/marketingemailtype.md
   - docs/models/shared/marketingemail.md
   - docs/models/shared/paymentlink.md
-  - docs/models/shared/paymenntlinklineitem.md
+  - docs/models/shared/paymentlinklineitem.md
   - docs/models/shared/paymentpayment.md
   - docs/models/shared/paymentpayoutstatus.md
   - docs/models/shared/paymentpayout.md
