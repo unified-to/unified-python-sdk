@@ -11,6 +11,8 @@ from typing import Optional
 class ListEnrichPeopleRequest:
     connection_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': False }})
     r"""ID of the connection"""
+    company_name: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'company_name', 'style': 'form', 'explode': True }})
+    r"""The name of the company the person is associated with.  Not valid by itself."""
     email: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'email', 'style': 'form', 'explode': True }})
     r"""The email of the person to search"""
     linkedin_url: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'linkedin_url', 'style': 'form', 'explode': True }})
