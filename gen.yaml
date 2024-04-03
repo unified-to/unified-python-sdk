@@ -13,7 +13,7 @@ generation:
   baseServerURL: ""
   flattenGlobalSecurity: true
 python:
-  version: 0.20.6
+  version: 0.21.0
   additionalDependencies:
     dependencies: {}
     extraDependencies:
@@ -34,4 +34,5 @@ python:
   maxMethodParams: 0
   outputModelSuffix: output
   packageName: Unified-python-sdk
+  projectUrls: {}
   responseFormat: envelope
