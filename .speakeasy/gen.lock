@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: c0feefab18e1757955e61afa41102a4c
+  docChecksum: 2d9519a9ae45cc997b9772dfea3b96f5
   docVersion: "1.0"
   speakeasyVersion: 1.235.2
   generationVersion: 2.298.2
-  releaseVersion: 0.21.1
-  configChecksum: acc2c9001646d3c94fe5c554c0ec246c
+  releaseVersion: 0.21.2
+  configChecksum: b03a53196063f6d70c07057d3b8f9448
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -52,6 +52,8 @@ generatedFiles:
   - src/unified_to/hris.py
   - src/unified_to/employee.py
   - src/unified_to/group.py
+  - src/unified_to/payslip.py
+  - src/unified_to/timeoff.py
   - src/unified_to/martech.py
   - src/unified_to/list.py
   - src/unified_to/member.py
@@ -235,8 +237,12 @@ generatedFiles:
   - src/unified_to/models/operations/createhrisgroup.py
   - src/unified_to/models/operations/gethrisemployee.py
   - src/unified_to/models/operations/gethrisgroup.py
+  - src/unified_to/models/operations/gethrispayslip.py
+  - src/unified_to/models/operations/gethristimeoff.py
   - src/unified_to/models/operations/listhrisemployees.py
   - src/unified_to/models/operations/listhrisgroups.py
+  - src/unified_to/models/operations/listhrispayslips.py
+  - src/unified_to/models/operations/listhristimeoffs.py
   - src/unified_to/models/operations/patchhrisemployee.py
   - src/unified_to/models/operations/patchhrisgroup.py
   - src/unified_to/models/operations/removehrisemployee.py
@@ -392,6 +398,9 @@ generatedFiles:
   - src/unified_to/models/shared/hrisemail.py
   - src/unified_to/models/shared/property_hrisemployee_address.py
   - src/unified_to/models/shared/hrisgroup.py
+  - src/unified_to/models/shared/hrispayslip.py
+  - src/unified_to/models/shared/hrispayslipdetail.py
+  - src/unified_to/models/shared/hristimeoff.py
   - src/unified_to/models/shared/marketinglist.py
   - src/unified_to/models/shared/marketingmember.py
   - src/unified_to/models/shared/marketingemail.py
@@ -727,10 +736,18 @@ generatedFiles:
   - docs/models/operations/gethrisemployeeresponse.md
   - docs/models/operations/gethrisgrouprequest.md
   - docs/models/operations/gethrisgroupresponse.md
+  - docs/models/operations/gethrispaysliprequest.md
+  - docs/models/operations/gethrispayslipresponse.md
+  - docs/models/operations/gethristimeoffrequest.md
+  - docs/models/operations/gethristimeoffresponse.md
   - docs/models/operations/listhrisemployeesrequest.md
   - docs/models/operations/listhrisemployeesresponse.md
   - docs/models/operations/listhrisgroupsrequest.md
   - docs/models/operations/listhrisgroupsresponse.md
+  - docs/models/operations/listhrispayslipsrequest.md
+  - docs/models/operations/listhrispayslipsresponse.md
+  - docs/models/operations/listhristimeoffsrequest.md
+  - docs/models/operations/listhristimeoffsresponse.md
   - docs/models/operations/patchhrisemployeerequest.md
   - docs/models/operations/patchhrisemployeeresponse.md
   - docs/models/operations/patchhrisgrouprequest.md
@@ -1013,6 +1030,13 @@ generatedFiles:
   - docs/models/shared/propertyhrisemployeeaddress.md
   - docs/models/shared/hrisgrouptype.md
   - docs/models/shared/hrisgroup.md
+  - docs/models/shared/paymenttype.md
+  - docs/models/shared/hrispayslip.md
+  - docs/models/shared/hrispayslipdetailtype.md
+  - docs/models/shared/hrispayslipdetail.md
+  - docs/models/shared/hristimeoffstatus.md
+  - docs/models/shared/hristimeofftype.md
+  - docs/models/shared/hristimeoff.md
   - docs/models/shared/marketinglist.md
   - docs/models/shared/marketingmember.md
   - docs/models/shared/marketingemailtype.md
@@ -1093,6 +1117,8 @@ generatedFiles:
   - docs/sdks/hris/README.md
   - docs/sdks/employee/README.md
   - docs/sdks/group/README.md
+  - docs/sdks/payslip/README.md
+  - docs/sdks/timeoff/README.md
   - docs/sdks/martech/README.md
   - docs/sdks/list/README.md
   - docs/sdks/member/README.md

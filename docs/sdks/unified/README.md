@@ -44,7 +44,7 @@ req = shared.Connection(
     ],
     integration_type='<value>',
     permissions=[
-        shared.PropertyConnectionPermissions.ATS_APPLICATIONSTATUS_READ,
+        shared.PropertyConnectionPermissions.ATS_CANDIDATE_WRITE,
     ],
 )
 

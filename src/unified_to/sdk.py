@@ -45,6 +45,7 @@ from .organization import Organization
 from .passthrough import Passthrough
 from .payment import Payment
 from .payout import Payout
+from .payslip import Payslip
 from .person import Person
 from .pipeline import Pipeline
 from .refund import Refund
@@ -54,6 +55,7 @@ from .storage import Storage
 from .taxrate import Taxrate
 from .ticket import Ticket
 from .ticketing import Ticketing
+from .timeoff import Timeoff
 from .transaction import Transaction
 from .uc import Uc
 from .unified import Unified
@@ -98,6 +100,8 @@ class UnifiedTo:
     hris: Hris
     employee: Employee
     group: Group
+    payslip: Payslip
+    timeoff: Timeoff
     martech: Martech
     list: ListT
     member: Member
@@ -209,6 +213,8 @@ class UnifiedTo:
         self.hris = Hris(self.sdk_configuration)
         self.employee = Employee(self.sdk_configuration)
         self.group = Group(self.sdk_configuration)
+        self.payslip = Payslip(self.sdk_configuration)
+        self.timeoff = Timeoff(self.sdk_configuration)
         self.martech = Martech(self.sdk_configuration)
         self.list = ListT(self.sdk_configuration)
         self.member = Member(self.sdk_configuration)

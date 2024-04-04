@@ -7,8 +7,12 @@
 * [create_hris_group](#create_hris_group) - Create a group
 * [get_hris_employee](#get_hris_employee) - Retrieve an employee
 * [get_hris_group](#get_hris_group) - Retrieve a group
+* [get_hris_payslip](#get_hris_payslip) - Retrieve a payslip
+* [get_hris_timeoff](#get_hris_timeoff) - Retrieve a timeoff
 * [list_hris_employees](#list_hris_employees) - List all employees
 * [list_hris_groups](#list_hris_groups) - List all groups
+* [list_hris_payslips](#list_hris_payslips) - List all payslip
+* [list_hris_timeoffs](#list_hris_timeoffs) - List all timeoffs
 * [patch_hris_employee](#patch_hris_employee) - Update an employee
 * [patch_hris_group](#patch_hris_group) - Update a group
 * [remove_hris_employee](#remove_hris_employee) - Remove an employee
@@ -194,6 +198,96 @@ if res.hris_group is not None:
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4xx-5xx         | */*             |
 
+## get_hris_payslip
+
+Retrieve a payslip
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
+
+req = operations.GetHrisPayslipRequest(
+    connection_id='<value>',
+    id='<id>',
+)
+
+res = s.hris.get_hris_payslip(req)
+
+if res.hris_payslip is not None:
+    # handle response
+    pass
+
+```
+
+### Parameters
+
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [operations.GetHrisPayslipRequest](../../models/operations/gethrispaysliprequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+
+
+### Response
+
+**[operations.GetHrisPayslipResponse](../../models/operations/gethrispayslipresponse.md)**
+### Errors
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4xx-5xx         | */*             |
+
+## get_hris_timeoff
+
+Retrieve a timeoff
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
+
+req = operations.GetHrisTimeoffRequest(
+    connection_id='<value>',
+    id='<id>',
+)
+
+res = s.hris.get_hris_timeoff(req)
+
+if res.hris_timeoff is not None:
+    # handle response
+    pass
+
+```
+
+### Parameters
+
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [operations.GetHrisTimeoffRequest](../../models/operations/gethristimeoffrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+
+
+### Response
+
+**[operations.GetHrisTimeoffResponse](../../models/operations/gethristimeoffresponse.md)**
+### Errors
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4xx-5xx         | */*             |
+
 ## list_hris_employees
 
 List all employees
@@ -276,6 +370,94 @@ if res.hris_groups is not None:
 ### Response
 
 **[operations.ListHrisGroupsResponse](../../models/operations/listhrisgroupsresponse.md)**
+### Errors
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4xx-5xx         | */*             |
+
+## list_hris_payslips
+
+List all payslip
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
+
+req = operations.ListHrisPayslipsRequest(
+    connection_id='<value>',
+)
+
+res = s.hris.list_hris_payslips(req)
+
+if res.hris_payslips is not None:
+    # handle response
+    pass
+
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.ListHrisPayslipsRequest](../../models/operations/listhrispayslipsrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+
+
+### Response
+
+**[operations.ListHrisPayslipsResponse](../../models/operations/listhrispayslipsresponse.md)**
+### Errors
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4xx-5xx         | */*             |
+
+## list_hris_timeoffs
+
+List all timeoffs
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
+
+req = operations.ListHrisTimeoffsRequest(
+    connection_id='<value>',
+)
+
+res = s.hris.list_hris_timeoffs(req)
+
+if res.hris_timeoffs is not None:
+    # handle response
+    pass
+
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.ListHrisTimeoffsRequest](../../models/operations/listhristimeoffsrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+
+
+### Response
+
+**[operations.ListHrisTimeoffsResponse](../../models/operations/listhristimeoffsresponse.md)**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |

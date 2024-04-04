@@ -420,8 +420,12 @@ if res.accounting_account is not None:
 * [create_hris_group](docs/sdks/hris/README.md#create_hris_group) - Create a group
 * [get_hris_employee](docs/sdks/hris/README.md#get_hris_employee) - Retrieve an employee
 * [get_hris_group](docs/sdks/hris/README.md#get_hris_group) - Retrieve a group
+* [get_hris_payslip](docs/sdks/hris/README.md#get_hris_payslip) - Retrieve a payslip
+* [get_hris_timeoff](docs/sdks/hris/README.md#get_hris_timeoff) - Retrieve a timeoff
 * [list_hris_employees](docs/sdks/hris/README.md#list_hris_employees) - List all employees
 * [list_hris_groups](docs/sdks/hris/README.md#list_hris_groups) - List all groups
+* [list_hris_payslips](docs/sdks/hris/README.md#list_hris_payslips) - List all payslip
+* [list_hris_timeoffs](docs/sdks/hris/README.md#list_hris_timeoffs) - List all timeoffs
 * [patch_hris_employee](docs/sdks/hris/README.md#patch_hris_employee) - Update an employee
 * [patch_hris_group](docs/sdks/hris/README.md#patch_hris_group) - Update a group
 * [remove_hris_employee](docs/sdks/hris/README.md#remove_hris_employee) - Remove an employee
@@ -446,6 +450,16 @@ if res.accounting_account is not None:
 * [patch_hris_group](docs/sdks/group/README.md#patch_hris_group) - Update a group
 * [remove_hris_group](docs/sdks/group/README.md#remove_hris_group) - Remove a group
 * [update_hris_group](docs/sdks/group/README.md#update_hris_group) - Update a group
+
+### [payslip](docs/sdks/payslip/README.md)
+
+* [get_hris_payslip](docs/sdks/payslip/README.md#get_hris_payslip) - Retrieve a payslip
+* [list_hris_payslips](docs/sdks/payslip/README.md#list_hris_payslips) - List all payslip
+
+### [timeoff](docs/sdks/timeoff/README.md)
+
+* [get_hris_timeoff](docs/sdks/timeoff/README.md#get_hris_timeoff) - Retrieve a timeoff
+* [list_hris_timeoffs](docs/sdks/timeoff/README.md#list_hris_timeoffs) - List all timeoffs
 
 ### [martech](docs/sdks/martech/README.md)
 

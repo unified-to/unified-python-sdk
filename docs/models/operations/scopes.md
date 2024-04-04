@@ -73,6 +73,10 @@
 | `HRIS_EMPLOYEE_WRITE`          | hris_employee_write            |
 | `HRIS_GROUP_READ`              | hris_group_read                |
 | `HRIS_GROUP_WRITE`             | hris_group_write               |
+| `HRIS_PAYSLIP_READ`            | hris_payslip_read              |
+| `HRIS_PAYSLIP_WRITE`           | hris_payslip_write             |
+| `HRIS_TIMEOFF_READ`            | hris_timeoff_read              |
+| `HRIS_TIMEOFF_WRITE`           | hris_timeoff_write             |
 | `UC_CALL_READ`                 | uc_call_read                   |
 | `STORAGE_FILE_READ`            | storage_file_read              |
 | `STORAGE_FILE_WRITE`           | storage_file_write             |
