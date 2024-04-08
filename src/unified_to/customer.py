@@ -20,7 +20,7 @@ class Customer:
         hook_ctx = HookContext(operation_id='createTicketingCustomer', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.CreateTicketingCustomerRequest, base_url, '/ticketing/{connection_id}/customer', request)
+        url = utils.generate_url(base_url, '/ticketing/{connection_id}/customer', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -77,14 +77,14 @@ class Customer:
         hook_ctx = HookContext(operation_id='getTicketingCustomer', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.GetTicketingCustomerRequest, base_url, '/ticketing/{connection_id}/customer/{id}', request)
+        url = utils.generate_url(base_url, '/ticketing/{connection_id}/customer/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
         else:
             headers, query_params = utils.get_security(self.sdk_configuration.security)
         
-        query_params = { **utils.get_query_params(operations.GetTicketingCustomerRequest, request), **query_params }
+        query_params = { **utils.get_query_params(request), **query_params }
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
@@ -132,14 +132,14 @@ class Customer:
         hook_ctx = HookContext(operation_id='listTicketingCustomers', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.ListTicketingCustomersRequest, base_url, '/ticketing/{connection_id}/customer', request)
+        url = utils.generate_url(base_url, '/ticketing/{connection_id}/customer', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
         else:
             headers, query_params = utils.get_security(self.sdk_configuration.security)
         
-        query_params = { **utils.get_query_params(operations.ListTicketingCustomersRequest, request), **query_params }
+        query_params = { **utils.get_query_params(request), **query_params }
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
@@ -187,7 +187,7 @@ class Customer:
         hook_ctx = HookContext(operation_id='patchTicketingCustomer', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.PatchTicketingCustomerRequest, base_url, '/ticketing/{connection_id}/customer/{id}', request)
+        url = utils.generate_url(base_url, '/ticketing/{connection_id}/customer/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -244,7 +244,7 @@ class Customer:
         hook_ctx = HookContext(operation_id='removeTicketingCustomer', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.RemoveTicketingCustomerRequest, base_url, '/ticketing/{connection_id}/customer/{id}', request)
+        url = utils.generate_url(base_url, '/ticketing/{connection_id}/customer/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -298,7 +298,7 @@ class Customer:
         hook_ctx = HookContext(operation_id='updateTicketingCustomer', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.UpdateTicketingCustomerRequest, base_url, '/ticketing/{connection_id}/customer/{id}', request)
+        url = utils.generate_url(base_url, '/ticketing/{connection_id}/customer/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())

@@ -20,7 +20,7 @@ class Deal:
         hook_ctx = HookContext(operation_id='createCrmDeal', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.CreateCrmDealRequest, base_url, '/crm/{connection_id}/deal', request)
+        url = utils.generate_url(base_url, '/crm/{connection_id}/deal', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -77,14 +77,14 @@ class Deal:
         hook_ctx = HookContext(operation_id='getCrmDeal', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.GetCrmDealRequest, base_url, '/crm/{connection_id}/deal/{id}', request)
+        url = utils.generate_url(base_url, '/crm/{connection_id}/deal/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
         else:
             headers, query_params = utils.get_security(self.sdk_configuration.security)
         
-        query_params = { **utils.get_query_params(operations.GetCrmDealRequest, request), **query_params }
+        query_params = { **utils.get_query_params(request), **query_params }
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
@@ -132,14 +132,14 @@ class Deal:
         hook_ctx = HookContext(operation_id='listCrmDeals', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.ListCrmDealsRequest, base_url, '/crm/{connection_id}/deal', request)
+        url = utils.generate_url(base_url, '/crm/{connection_id}/deal', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
         else:
             headers, query_params = utils.get_security(self.sdk_configuration.security)
         
-        query_params = { **utils.get_query_params(operations.ListCrmDealsRequest, request), **query_params }
+        query_params = { **utils.get_query_params(request), **query_params }
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
@@ -187,7 +187,7 @@ class Deal:
         hook_ctx = HookContext(operation_id='patchCrmDeal', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.PatchCrmDealRequest, base_url, '/crm/{connection_id}/deal/{id}', request)
+        url = utils.generate_url(base_url, '/crm/{connection_id}/deal/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -244,7 +244,7 @@ class Deal:
         hook_ctx = HookContext(operation_id='removeCrmDeal', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.RemoveCrmDealRequest, base_url, '/crm/{connection_id}/deal/{id}', request)
+        url = utils.generate_url(base_url, '/crm/{connection_id}/deal/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -298,7 +298,7 @@ class Deal:
         hook_ctx = HookContext(operation_id='updateCrmDeal', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.UpdateCrmDealRequest, base_url, '/crm/{connection_id}/deal/{id}', request)
+        url = utils.generate_url(base_url, '/crm/{connection_id}/deal/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())

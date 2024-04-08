@@ -20,7 +20,7 @@ class Lead:
         hook_ctx = HookContext(operation_id='createCrmLead', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.CreateCrmLeadRequest, base_url, '/crm/{connection_id}/lead', request)
+        url = utils.generate_url(base_url, '/crm/{connection_id}/lead', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -77,14 +77,14 @@ class Lead:
         hook_ctx = HookContext(operation_id='getCrmLead', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.GetCrmLeadRequest, base_url, '/crm/{connection_id}/lead/{id}', request)
+        url = utils.generate_url(base_url, '/crm/{connection_id}/lead/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
         else:
             headers, query_params = utils.get_security(self.sdk_configuration.security)
         
-        query_params = { **utils.get_query_params(operations.GetCrmLeadRequest, request), **query_params }
+        query_params = { **utils.get_query_params(request), **query_params }
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
@@ -132,14 +132,14 @@ class Lead:
         hook_ctx = HookContext(operation_id='listCrmLeads', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.ListCrmLeadsRequest, base_url, '/crm/{connection_id}/lead', request)
+        url = utils.generate_url(base_url, '/crm/{connection_id}/lead', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
         else:
             headers, query_params = utils.get_security(self.sdk_configuration.security)
         
-        query_params = { **utils.get_query_params(operations.ListCrmLeadsRequest, request), **query_params }
+        query_params = { **utils.get_query_params(request), **query_params }
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
@@ -187,7 +187,7 @@ class Lead:
         hook_ctx = HookContext(operation_id='patchCrmLead', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.PatchCrmLeadRequest, base_url, '/crm/{connection_id}/lead/{id}', request)
+        url = utils.generate_url(base_url, '/crm/{connection_id}/lead/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -244,7 +244,7 @@ class Lead:
         hook_ctx = HookContext(operation_id='removeCrmLead', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.RemoveCrmLeadRequest, base_url, '/crm/{connection_id}/lead/{id}', request)
+        url = utils.generate_url(base_url, '/crm/{connection_id}/lead/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -298,7 +298,7 @@ class Lead:
         hook_ctx = HookContext(operation_id='updateCrmLead', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.UpdateCrmLeadRequest, base_url, '/crm/{connection_id}/lead/{id}', request)
+        url = utils.generate_url(base_url, '/crm/{connection_id}/lead/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())

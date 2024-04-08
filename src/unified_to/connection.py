@@ -77,7 +77,7 @@ class Connection:
         hook_ctx = HookContext(operation_id='getUnifiedConnection', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.GetUnifiedConnectionRequest, base_url, '/unified/connection/{id}', request)
+        url = utils.generate_url(base_url, '/unified/connection/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -138,7 +138,7 @@ class Connection:
         else:
             headers, query_params = utils.get_security(self.sdk_configuration.security)
         
-        query_params = { **utils.get_query_params(operations.ListUnifiedConnectionsRequest, request), **query_params }
+        query_params = { **utils.get_query_params(request), **query_params }
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
@@ -186,7 +186,7 @@ class Connection:
         hook_ctx = HookContext(operation_id='patchUnifiedConnection', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.PatchUnifiedConnectionRequest, base_url, '/unified/connection/{id}', request)
+        url = utils.generate_url(base_url, '/unified/connection/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -243,7 +243,7 @@ class Connection:
         hook_ctx = HookContext(operation_id='removeUnifiedConnection', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.RemoveUnifiedConnectionRequest, base_url, '/unified/connection/{id}', request)
+        url = utils.generate_url(base_url, '/unified/connection/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -297,7 +297,7 @@ class Connection:
         hook_ctx = HookContext(operation_id='updateUnifiedConnection', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.UpdateUnifiedConnectionRequest, base_url, '/unified/connection/{id}', request)
+        url = utils.generate_url(base_url, '/unified/connection/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())

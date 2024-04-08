@@ -20,7 +20,7 @@ class Activity:
         hook_ctx = HookContext(operation_id='createAtsActivity', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.CreateAtsActivityRequest, base_url, '/ats/{connection_id}/activity', request)
+        url = utils.generate_url(base_url, '/ats/{connection_id}/activity', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -77,14 +77,14 @@ class Activity:
         hook_ctx = HookContext(operation_id='getAtsActivity', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.GetAtsActivityRequest, base_url, '/ats/{connection_id}/activity/{id}', request)
+        url = utils.generate_url(base_url, '/ats/{connection_id}/activity/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
         else:
             headers, query_params = utils.get_security(self.sdk_configuration.security)
         
-        query_params = { **utils.get_query_params(operations.GetAtsActivityRequest, request), **query_params }
+        query_params = { **utils.get_query_params(request), **query_params }
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
@@ -132,14 +132,14 @@ class Activity:
         hook_ctx = HookContext(operation_id='listAtsActivities', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.ListAtsActivitiesRequest, base_url, '/ats/{connection_id}/activity', request)
+        url = utils.generate_url(base_url, '/ats/{connection_id}/activity', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
         else:
             headers, query_params = utils.get_security(self.sdk_configuration.security)
         
-        query_params = { **utils.get_query_params(operations.ListAtsActivitiesRequest, request), **query_params }
+        query_params = { **utils.get_query_params(request), **query_params }
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
@@ -187,7 +187,7 @@ class Activity:
         hook_ctx = HookContext(operation_id='patchAtsActivity', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.PatchAtsActivityRequest, base_url, '/ats/{connection_id}/activity/{id}', request)
+        url = utils.generate_url(base_url, '/ats/{connection_id}/activity/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -244,7 +244,7 @@ class Activity:
         hook_ctx = HookContext(operation_id='removeAtsActivity', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.RemoveAtsActivityRequest, base_url, '/ats/{connection_id}/activity/{id}', request)
+        url = utils.generate_url(base_url, '/ats/{connection_id}/activity/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -298,7 +298,7 @@ class Activity:
         hook_ctx = HookContext(operation_id='updateAtsActivity', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.UpdateAtsActivityRequest, base_url, '/ats/{connection_id}/activity/{id}', request)
+        url = utils.generate_url(base_url, '/ats/{connection_id}/activity/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())

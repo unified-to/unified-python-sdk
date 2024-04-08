@@ -20,7 +20,7 @@ class Apicall:
         hook_ctx = HookContext(operation_id='getUnifiedApicall', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.GetUnifiedApicallRequest, base_url, '/unified/apicall/{id}', request)
+        url = utils.generate_url(base_url, '/unified/apicall/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -81,7 +81,7 @@ class Apicall:
         else:
             headers, query_params = utils.get_security(self.sdk_configuration.security)
         
-        query_params = { **utils.get_query_params(operations.ListUnifiedApicallsRequest, request), **query_params }
+        query_params = { **utils.get_query_params(request), **query_params }
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client

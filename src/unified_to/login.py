@@ -21,14 +21,14 @@ class Login:
         hook_ctx = HookContext(operation_id='getUnifiedIntegrationLogin', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.GetUnifiedIntegrationLoginRequest, base_url, '/unified/integration/login/{workspace_id}/{integration_type}', request)
+        url = utils.generate_url(base_url, '/unified/integration/login/{workspace_id}/{integration_type}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
         else:
             headers, query_params = utils.get_security(self.sdk_configuration.security)
         
-        query_params = { **utils.get_query_params(operations.GetUnifiedIntegrationLoginRequest, request), **query_params }
+        query_params = { **utils.get_query_params(request), **query_params }
         headers['Accept'] = 'text/plain'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client

@@ -20,7 +20,7 @@ class Storage:
         hook_ctx = HookContext(operation_id='createStorageFile', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.CreateStorageFileRequest, base_url, '/storage/{connection_id}/file', request)
+        url = utils.generate_url(base_url, '/storage/{connection_id}/file', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -77,14 +77,14 @@ class Storage:
         hook_ctx = HookContext(operation_id='getStorageFile', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.GetStorageFileRequest, base_url, '/storage/{connection_id}/file/{id}', request)
+        url = utils.generate_url(base_url, '/storage/{connection_id}/file/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
         else:
             headers, query_params = utils.get_security(self.sdk_configuration.security)
         
-        query_params = { **utils.get_query_params(operations.GetStorageFileRequest, request), **query_params }
+        query_params = { **utils.get_query_params(request), **query_params }
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
@@ -132,14 +132,14 @@ class Storage:
         hook_ctx = HookContext(operation_id='listStorageFiles', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.ListStorageFilesRequest, base_url, '/storage/{connection_id}/file', request)
+        url = utils.generate_url(base_url, '/storage/{connection_id}/file', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
         else:
             headers, query_params = utils.get_security(self.sdk_configuration.security)
         
-        query_params = { **utils.get_query_params(operations.ListStorageFilesRequest, request), **query_params }
+        query_params = { **utils.get_query_params(request), **query_params }
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
@@ -187,7 +187,7 @@ class Storage:
         hook_ctx = HookContext(operation_id='patchStorageFile', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.PatchStorageFileRequest, base_url, '/storage/{connection_id}/file/{id}', request)
+        url = utils.generate_url(base_url, '/storage/{connection_id}/file/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -244,7 +244,7 @@ class Storage:
         hook_ctx = HookContext(operation_id='removeStorageFile', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.RemoveStorageFileRequest, base_url, '/storage/{connection_id}/file/{id}', request)
+        url = utils.generate_url(base_url, '/storage/{connection_id}/file/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -298,7 +298,7 @@ class Storage:
         hook_ctx = HookContext(operation_id='updateStorageFile', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.UpdateStorageFileRequest, base_url, '/storage/{connection_id}/file/{id}', request)
+        url = utils.generate_url(base_url, '/storage/{connection_id}/file/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())

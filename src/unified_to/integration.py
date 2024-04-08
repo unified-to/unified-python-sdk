@@ -22,14 +22,14 @@ class Integration:
         hook_ctx = HookContext(operation_id='getUnifiedIntegrationAuth', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.GetUnifiedIntegrationAuthRequest, base_url, '/unified/integration/auth/{workspace_id}/{integration_type}', request)
+        url = utils.generate_url(base_url, '/unified/integration/auth/{workspace_id}/{integration_type}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
         else:
             headers, query_params = utils.get_security(self.sdk_configuration.security)
         
-        query_params = { **utils.get_query_params(operations.GetUnifiedIntegrationAuthRequest, request), **query_params }
+        query_params = { **utils.get_query_params(request), **query_params }
         headers['Accept'] = 'text/plain'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
@@ -78,14 +78,14 @@ class Integration:
         hook_ctx = HookContext(operation_id='listUnifiedIntegrationWorkspaces', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.ListUnifiedIntegrationWorkspacesRequest, base_url, '/unified/integration/workspace/{workspace_id}', request)
+        url = utils.generate_url(base_url, '/unified/integration/workspace/{workspace_id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
         else:
             headers, query_params = utils.get_security(self.sdk_configuration.security)
         
-        query_params = { **utils.get_query_params(operations.ListUnifiedIntegrationWorkspacesRequest, request), **query_params }
+        query_params = { **utils.get_query_params(request), **query_params }
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
@@ -140,7 +140,7 @@ class Integration:
         else:
             headers, query_params = utils.get_security(self.sdk_configuration.security)
         
-        query_params = { **utils.get_query_params(operations.ListUnifiedIntegrationsRequest, request), **query_params }
+        query_params = { **utils.get_query_params(request), **query_params }
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client

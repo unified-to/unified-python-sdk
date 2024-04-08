@@ -20,7 +20,7 @@ class Ats:
         hook_ctx = HookContext(operation_id='createAtsActivity', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.CreateAtsActivityRequest, base_url, '/ats/{connection_id}/activity', request)
+        url = utils.generate_url(base_url, '/ats/{connection_id}/activity', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -77,7 +77,7 @@ class Ats:
         hook_ctx = HookContext(operation_id='createAtsApplication', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.CreateAtsApplicationRequest, base_url, '/ats/{connection_id}/application', request)
+        url = utils.generate_url(base_url, '/ats/{connection_id}/application', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -134,7 +134,7 @@ class Ats:
         hook_ctx = HookContext(operation_id='createAtsCandidate', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.CreateAtsCandidateRequest, base_url, '/ats/{connection_id}/candidate', request)
+        url = utils.generate_url(base_url, '/ats/{connection_id}/candidate', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -191,7 +191,7 @@ class Ats:
         hook_ctx = HookContext(operation_id='createAtsDocument', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.CreateAtsDocumentRequest, base_url, '/ats/{connection_id}/document', request)
+        url = utils.generate_url(base_url, '/ats/{connection_id}/document', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -248,7 +248,7 @@ class Ats:
         hook_ctx = HookContext(operation_id='createAtsInterview', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.CreateAtsInterviewRequest, base_url, '/ats/{connection_id}/interview', request)
+        url = utils.generate_url(base_url, '/ats/{connection_id}/interview', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -305,7 +305,7 @@ class Ats:
         hook_ctx = HookContext(operation_id='createAtsJob', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.CreateAtsJobRequest, base_url, '/ats/{connection_id}/job', request)
+        url = utils.generate_url(base_url, '/ats/{connection_id}/job', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -362,7 +362,7 @@ class Ats:
         hook_ctx = HookContext(operation_id='createAtsScorecard', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.CreateAtsScorecardRequest, base_url, '/ats/{connection_id}/scorecard', request)
+        url = utils.generate_url(base_url, '/ats/{connection_id}/scorecard', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -419,14 +419,14 @@ class Ats:
         hook_ctx = HookContext(operation_id='getAtsActivity', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.GetAtsActivityRequest, base_url, '/ats/{connection_id}/activity/{id}', request)
+        url = utils.generate_url(base_url, '/ats/{connection_id}/activity/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
         else:
             headers, query_params = utils.get_security(self.sdk_configuration.security)
         
-        query_params = { **utils.get_query_params(operations.GetAtsActivityRequest, request), **query_params }
+        query_params = { **utils.get_query_params(request), **query_params }
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
@@ -474,14 +474,14 @@ class Ats:
         hook_ctx = HookContext(operation_id='getAtsApplication', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.GetAtsApplicationRequest, base_url, '/ats/{connection_id}/application/{id}', request)
+        url = utils.generate_url(base_url, '/ats/{connection_id}/application/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
         else:
             headers, query_params = utils.get_security(self.sdk_configuration.security)
         
-        query_params = { **utils.get_query_params(operations.GetAtsApplicationRequest, request), **query_params }
+        query_params = { **utils.get_query_params(request), **query_params }
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
@@ -529,14 +529,14 @@ class Ats:
         hook_ctx = HookContext(operation_id='getAtsCandidate', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.GetAtsCandidateRequest, base_url, '/ats/{connection_id}/candidate/{id}', request)
+        url = utils.generate_url(base_url, '/ats/{connection_id}/candidate/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
         else:
             headers, query_params = utils.get_security(self.sdk_configuration.security)
         
-        query_params = { **utils.get_query_params(operations.GetAtsCandidateRequest, request), **query_params }
+        query_params = { **utils.get_query_params(request), **query_params }
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
@@ -584,14 +584,14 @@ class Ats:
         hook_ctx = HookContext(operation_id='getAtsCompany', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.GetAtsCompanyRequest, base_url, '/ats/{connection_id}/company/{id}', request)
+        url = utils.generate_url(base_url, '/ats/{connection_id}/company/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
         else:
             headers, query_params = utils.get_security(self.sdk_configuration.security)
         
-        query_params = { **utils.get_query_params(operations.GetAtsCompanyRequest, request), **query_params }
+        query_params = { **utils.get_query_params(request), **query_params }
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
@@ -639,14 +639,14 @@ class Ats:
         hook_ctx = HookContext(operation_id='getAtsDocument', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.GetAtsDocumentRequest, base_url, '/ats/{connection_id}/document/{id}', request)
+        url = utils.generate_url(base_url, '/ats/{connection_id}/document/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
         else:
             headers, query_params = utils.get_security(self.sdk_configuration.security)
         
-        query_params = { **utils.get_query_params(operations.GetAtsDocumentRequest, request), **query_params }
+        query_params = { **utils.get_query_params(request), **query_params }
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
@@ -694,14 +694,14 @@ class Ats:
         hook_ctx = HookContext(operation_id='getAtsInterview', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.GetAtsInterviewRequest, base_url, '/ats/{connection_id}/interview/{id}', request)
+        url = utils.generate_url(base_url, '/ats/{connection_id}/interview/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
         else:
             headers, query_params = utils.get_security(self.sdk_configuration.security)
         
-        query_params = { **utils.get_query_params(operations.GetAtsInterviewRequest, request), **query_params }
+        query_params = { **utils.get_query_params(request), **query_params }
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
@@ -749,14 +749,14 @@ class Ats:
         hook_ctx = HookContext(operation_id='getAtsJob', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.GetAtsJobRequest, base_url, '/ats/{connection_id}/job/{id}', request)
+        url = utils.generate_url(base_url, '/ats/{connection_id}/job/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
         else:
             headers, query_params = utils.get_security(self.sdk_configuration.security)
         
-        query_params = { **utils.get_query_params(operations.GetAtsJobRequest, request), **query_params }
+        query_params = { **utils.get_query_params(request), **query_params }
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
@@ -804,14 +804,14 @@ class Ats:
         hook_ctx = HookContext(operation_id='getAtsScorecard', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.GetAtsScorecardRequest, base_url, '/ats/{connection_id}/scorecard/{id}', request)
+        url = utils.generate_url(base_url, '/ats/{connection_id}/scorecard/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
         else:
             headers, query_params = utils.get_security(self.sdk_configuration.security)
         
-        query_params = { **utils.get_query_params(operations.GetAtsScorecardRequest, request), **query_params }
+        query_params = { **utils.get_query_params(request), **query_params }
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
@@ -859,14 +859,14 @@ class Ats:
         hook_ctx = HookContext(operation_id='listAtsActivities', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.ListAtsActivitiesRequest, base_url, '/ats/{connection_id}/activity', request)
+        url = utils.generate_url(base_url, '/ats/{connection_id}/activity', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
         else:
             headers, query_params = utils.get_security(self.sdk_configuration.security)
         
-        query_params = { **utils.get_query_params(operations.ListAtsActivitiesRequest, request), **query_params }
+        query_params = { **utils.get_query_params(request), **query_params }
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
@@ -914,14 +914,14 @@ class Ats:
         hook_ctx = HookContext(operation_id='listAtsApplications', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.ListAtsApplicationsRequest, base_url, '/ats/{connection_id}/application', request)
+        url = utils.generate_url(base_url, '/ats/{connection_id}/application', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
         else:
             headers, query_params = utils.get_security(self.sdk_configuration.security)
         
-        query_params = { **utils.get_query_params(operations.ListAtsApplicationsRequest, request), **query_params }
+        query_params = { **utils.get_query_params(request), **query_params }
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
@@ -969,14 +969,14 @@ class Ats:
         hook_ctx = HookContext(operation_id='listAtsApplicationstatuses', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.ListAtsApplicationstatusesRequest, base_url, '/ats/{connection_id}/applicationstatus', request)
+        url = utils.generate_url(base_url, '/ats/{connection_id}/applicationstatus', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
         else:
             headers, query_params = utils.get_security(self.sdk_configuration.security)
         
-        query_params = { **utils.get_query_params(operations.ListAtsApplicationstatusesRequest, request), **query_params }
+        query_params = { **utils.get_query_params(request), **query_params }
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
@@ -1024,14 +1024,14 @@ class Ats:
         hook_ctx = HookContext(operation_id='listAtsCandidates', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.ListAtsCandidatesRequest, base_url, '/ats/{connection_id}/candidate', request)
+        url = utils.generate_url(base_url, '/ats/{connection_id}/candidate', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
         else:
             headers, query_params = utils.get_security(self.sdk_configuration.security)
         
-        query_params = { **utils.get_query_params(operations.ListAtsCandidatesRequest, request), **query_params }
+        query_params = { **utils.get_query_params(request), **query_params }
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
@@ -1079,14 +1079,14 @@ class Ats:
         hook_ctx = HookContext(operation_id='listAtsCompanies', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.ListAtsCompaniesRequest, base_url, '/ats/{connection_id}/company', request)
+        url = utils.generate_url(base_url, '/ats/{connection_id}/company', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
         else:
             headers, query_params = utils.get_security(self.sdk_configuration.security)
         
-        query_params = { **utils.get_query_params(operations.ListAtsCompaniesRequest, request), **query_params }
+        query_params = { **utils.get_query_params(request), **query_params }
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
@@ -1134,14 +1134,14 @@ class Ats:
         hook_ctx = HookContext(operation_id='listAtsDocuments', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.ListAtsDocumentsRequest, base_url, '/ats/{connection_id}/document', request)
+        url = utils.generate_url(base_url, '/ats/{connection_id}/document', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
         else:
             headers, query_params = utils.get_security(self.sdk_configuration.security)
         
-        query_params = { **utils.get_query_params(operations.ListAtsDocumentsRequest, request), **query_params }
+        query_params = { **utils.get_query_params(request), **query_params }
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
@@ -1189,14 +1189,14 @@ class Ats:
         hook_ctx = HookContext(operation_id='listAtsInterviews', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.ListAtsInterviewsRequest, base_url, '/ats/{connection_id}/interview', request)
+        url = utils.generate_url(base_url, '/ats/{connection_id}/interview', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
         else:
             headers, query_params = utils.get_security(self.sdk_configuration.security)
         
-        query_params = { **utils.get_query_params(operations.ListAtsInterviewsRequest, request), **query_params }
+        query_params = { **utils.get_query_params(request), **query_params }
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
@@ -1244,14 +1244,14 @@ class Ats:
         hook_ctx = HookContext(operation_id='listAtsJobs', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.ListAtsJobsRequest, base_url, '/ats/{connection_id}/job', request)
+        url = utils.generate_url(base_url, '/ats/{connection_id}/job', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
         else:
             headers, query_params = utils.get_security(self.sdk_configuration.security)
         
-        query_params = { **utils.get_query_params(operations.ListAtsJobsRequest, request), **query_params }
+        query_params = { **utils.get_query_params(request), **query_params }
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
@@ -1299,14 +1299,14 @@ class Ats:
         hook_ctx = HookContext(operation_id='listAtsScorecards', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.ListAtsScorecardsRequest, base_url, '/ats/{connection_id}/scorecard', request)
+        url = utils.generate_url(base_url, '/ats/{connection_id}/scorecard', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
         else:
             headers, query_params = utils.get_security(self.sdk_configuration.security)
         
-        query_params = { **utils.get_query_params(operations.ListAtsScorecardsRequest, request), **query_params }
+        query_params = { **utils.get_query_params(request), **query_params }
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
@@ -1354,7 +1354,7 @@ class Ats:
         hook_ctx = HookContext(operation_id='patchAtsActivity', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.PatchAtsActivityRequest, base_url, '/ats/{connection_id}/activity/{id}', request)
+        url = utils.generate_url(base_url, '/ats/{connection_id}/activity/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -1411,7 +1411,7 @@ class Ats:
         hook_ctx = HookContext(operation_id='patchAtsApplication', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.PatchAtsApplicationRequest, base_url, '/ats/{connection_id}/application/{id}', request)
+        url = utils.generate_url(base_url, '/ats/{connection_id}/application/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -1468,7 +1468,7 @@ class Ats:
         hook_ctx = HookContext(operation_id='patchAtsCandidate', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.PatchAtsCandidateRequest, base_url, '/ats/{connection_id}/candidate/{id}', request)
+        url = utils.generate_url(base_url, '/ats/{connection_id}/candidate/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -1525,7 +1525,7 @@ class Ats:
         hook_ctx = HookContext(operation_id='patchAtsDocument', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.PatchAtsDocumentRequest, base_url, '/ats/{connection_id}/document/{id}', request)
+        url = utils.generate_url(base_url, '/ats/{connection_id}/document/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -1582,7 +1582,7 @@ class Ats:
         hook_ctx = HookContext(operation_id='patchAtsInterview', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.PatchAtsInterviewRequest, base_url, '/ats/{connection_id}/interview/{id}', request)
+        url = utils.generate_url(base_url, '/ats/{connection_id}/interview/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -1639,7 +1639,7 @@ class Ats:
         hook_ctx = HookContext(operation_id='patchAtsJob', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.PatchAtsJobRequest, base_url, '/ats/{connection_id}/job/{id}', request)
+        url = utils.generate_url(base_url, '/ats/{connection_id}/job/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -1696,7 +1696,7 @@ class Ats:
         hook_ctx = HookContext(operation_id='patchAtsScorecard', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.PatchAtsScorecardRequest, base_url, '/ats/{connection_id}/scorecard/{id}', request)
+        url = utils.generate_url(base_url, '/ats/{connection_id}/scorecard/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -1753,7 +1753,7 @@ class Ats:
         hook_ctx = HookContext(operation_id='removeAtsActivity', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.RemoveAtsActivityRequest, base_url, '/ats/{connection_id}/activity/{id}', request)
+        url = utils.generate_url(base_url, '/ats/{connection_id}/activity/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -1807,7 +1807,7 @@ class Ats:
         hook_ctx = HookContext(operation_id='removeAtsApplication', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.RemoveAtsApplicationRequest, base_url, '/ats/{connection_id}/application/{id}', request)
+        url = utils.generate_url(base_url, '/ats/{connection_id}/application/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -1861,7 +1861,7 @@ class Ats:
         hook_ctx = HookContext(operation_id='removeAtsCandidate', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.RemoveAtsCandidateRequest, base_url, '/ats/{connection_id}/candidate/{id}', request)
+        url = utils.generate_url(base_url, '/ats/{connection_id}/candidate/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -1915,7 +1915,7 @@ class Ats:
         hook_ctx = HookContext(operation_id='removeAtsDocument', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.RemoveAtsDocumentRequest, base_url, '/ats/{connection_id}/document/{id}', request)
+        url = utils.generate_url(base_url, '/ats/{connection_id}/document/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -1969,7 +1969,7 @@ class Ats:
         hook_ctx = HookContext(operation_id='removeAtsInterview', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.RemoveAtsInterviewRequest, base_url, '/ats/{connection_id}/interview/{id}', request)
+        url = utils.generate_url(base_url, '/ats/{connection_id}/interview/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -2023,7 +2023,7 @@ class Ats:
         hook_ctx = HookContext(operation_id='removeAtsJob', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.RemoveAtsJobRequest, base_url, '/ats/{connection_id}/job/{id}', request)
+        url = utils.generate_url(base_url, '/ats/{connection_id}/job/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -2077,7 +2077,7 @@ class Ats:
         hook_ctx = HookContext(operation_id='removeAtsScorecard', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.RemoveAtsScorecardRequest, base_url, '/ats/{connection_id}/scorecard/{id}', request)
+        url = utils.generate_url(base_url, '/ats/{connection_id}/scorecard/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -2131,7 +2131,7 @@ class Ats:
         hook_ctx = HookContext(operation_id='updateAtsActivity', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.UpdateAtsActivityRequest, base_url, '/ats/{connection_id}/activity/{id}', request)
+        url = utils.generate_url(base_url, '/ats/{connection_id}/activity/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -2188,7 +2188,7 @@ class Ats:
         hook_ctx = HookContext(operation_id='updateAtsApplication', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.UpdateAtsApplicationRequest, base_url, '/ats/{connection_id}/application/{id}', request)
+        url = utils.generate_url(base_url, '/ats/{connection_id}/application/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -2245,7 +2245,7 @@ class Ats:
         hook_ctx = HookContext(operation_id='updateAtsCandidate', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.UpdateAtsCandidateRequest, base_url, '/ats/{connection_id}/candidate/{id}', request)
+        url = utils.generate_url(base_url, '/ats/{connection_id}/candidate/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -2302,7 +2302,7 @@ class Ats:
         hook_ctx = HookContext(operation_id='updateAtsDocument', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.UpdateAtsDocumentRequest, base_url, '/ats/{connection_id}/document/{id}', request)
+        url = utils.generate_url(base_url, '/ats/{connection_id}/document/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -2359,7 +2359,7 @@ class Ats:
         hook_ctx = HookContext(operation_id='updateAtsInterview', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.UpdateAtsInterviewRequest, base_url, '/ats/{connection_id}/interview/{id}', request)
+        url = utils.generate_url(base_url, '/ats/{connection_id}/interview/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -2416,7 +2416,7 @@ class Ats:
         hook_ctx = HookContext(operation_id='updateAtsJob', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.UpdateAtsJobRequest, base_url, '/ats/{connection_id}/job/{id}', request)
+        url = utils.generate_url(base_url, '/ats/{connection_id}/job/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -2473,7 +2473,7 @@ class Ats:
         hook_ctx = HookContext(operation_id='updateAtsScorecard', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.UpdateAtsScorecardRequest, base_url, '/ats/{connection_id}/scorecard/{id}', request)
+        url = utils.generate_url(base_url, '/ats/{connection_id}/scorecard/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())

@@ -20,7 +20,7 @@ class Taxrate:
         hook_ctx = HookContext(operation_id='createAccountingTaxrate', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.CreateAccountingTaxrateRequest, base_url, '/accounting/{connection_id}/taxrate', request)
+        url = utils.generate_url(base_url, '/accounting/{connection_id}/taxrate', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -77,14 +77,14 @@ class Taxrate:
         hook_ctx = HookContext(operation_id='getAccountingTaxrate', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.GetAccountingTaxrateRequest, base_url, '/accounting/{connection_id}/taxrate/{id}', request)
+        url = utils.generate_url(base_url, '/accounting/{connection_id}/taxrate/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
         else:
             headers, query_params = utils.get_security(self.sdk_configuration.security)
         
-        query_params = { **utils.get_query_params(operations.GetAccountingTaxrateRequest, request), **query_params }
+        query_params = { **utils.get_query_params(request), **query_params }
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
@@ -132,14 +132,14 @@ class Taxrate:
         hook_ctx = HookContext(operation_id='listAccountingTaxrates', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.ListAccountingTaxratesRequest, base_url, '/accounting/{connection_id}/taxrate', request)
+        url = utils.generate_url(base_url, '/accounting/{connection_id}/taxrate', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
         else:
             headers, query_params = utils.get_security(self.sdk_configuration.security)
         
-        query_params = { **utils.get_query_params(operations.ListAccountingTaxratesRequest, request), **query_params }
+        query_params = { **utils.get_query_params(request), **query_params }
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
@@ -187,7 +187,7 @@ class Taxrate:
         hook_ctx = HookContext(operation_id='patchAccountingTaxrate', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.PatchAccountingTaxrateRequest, base_url, '/accounting/{connection_id}/taxrate/{id}', request)
+        url = utils.generate_url(base_url, '/accounting/{connection_id}/taxrate/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -244,7 +244,7 @@ class Taxrate:
         hook_ctx = HookContext(operation_id='removeAccountingTaxrate', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.RemoveAccountingTaxrateRequest, base_url, '/accounting/{connection_id}/taxrate/{id}', request)
+        url = utils.generate_url(base_url, '/accounting/{connection_id}/taxrate/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -298,7 +298,7 @@ class Taxrate:
         hook_ctx = HookContext(operation_id='updateAccountingTaxrate', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.UpdateAccountingTaxrateRequest, base_url, '/accounting/{connection_id}/taxrate/{id}', request)
+        url = utils.generate_url(base_url, '/accounting/{connection_id}/taxrate/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())

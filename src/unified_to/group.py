@@ -20,7 +20,7 @@ class Group:
         hook_ctx = HookContext(operation_id='createHrisGroup', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.CreateHrisGroupRequest, base_url, '/hris/{connection_id}/group', request)
+        url = utils.generate_url(base_url, '/hris/{connection_id}/group', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -77,14 +77,14 @@ class Group:
         hook_ctx = HookContext(operation_id='getHrisGroup', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.GetHrisGroupRequest, base_url, '/hris/{connection_id}/group/{id}', request)
+        url = utils.generate_url(base_url, '/hris/{connection_id}/group/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
         else:
             headers, query_params = utils.get_security(self.sdk_configuration.security)
         
-        query_params = { **utils.get_query_params(operations.GetHrisGroupRequest, request), **query_params }
+        query_params = { **utils.get_query_params(request), **query_params }
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
@@ -132,14 +132,14 @@ class Group:
         hook_ctx = HookContext(operation_id='listHrisGroups', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.ListHrisGroupsRequest, base_url, '/hris/{connection_id}/group', request)
+        url = utils.generate_url(base_url, '/hris/{connection_id}/group', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
         else:
             headers, query_params = utils.get_security(self.sdk_configuration.security)
         
-        query_params = { **utils.get_query_params(operations.ListHrisGroupsRequest, request), **query_params }
+        query_params = { **utils.get_query_params(request), **query_params }
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
@@ -187,7 +187,7 @@ class Group:
         hook_ctx = HookContext(operation_id='patchHrisGroup', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.PatchHrisGroupRequest, base_url, '/hris/{connection_id}/group/{id}', request)
+        url = utils.generate_url(base_url, '/hris/{connection_id}/group/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -244,7 +244,7 @@ class Group:
         hook_ctx = HookContext(operation_id='removeHrisGroup', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.RemoveHrisGroupRequest, base_url, '/hris/{connection_id}/group/{id}', request)
+        url = utils.generate_url(base_url, '/hris/{connection_id}/group/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -298,7 +298,7 @@ class Group:
         hook_ctx = HookContext(operation_id='updateHrisGroup', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.UpdateHrisGroupRequest, base_url, '/hris/{connection_id}/group/{id}', request)
+        url = utils.generate_url(base_url, '/hris/{connection_id}/group/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())

@@ -20,7 +20,7 @@ class Member:
         hook_ctx = HookContext(operation_id='createMartechMember', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.CreateMartechMemberRequest, base_url, '/martech/{connection_id}/member', request)
+        url = utils.generate_url(base_url, '/martech/{connection_id}/member', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -77,14 +77,14 @@ class Member:
         hook_ctx = HookContext(operation_id='getMartechMember', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.GetMartechMemberRequest, base_url, '/martech/{connection_id}/member/{id}', request)
+        url = utils.generate_url(base_url, '/martech/{connection_id}/member/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
         else:
             headers, query_params = utils.get_security(self.sdk_configuration.security)
         
-        query_params = { **utils.get_query_params(operations.GetMartechMemberRequest, request), **query_params }
+        query_params = { **utils.get_query_params(request), **query_params }
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
@@ -132,14 +132,14 @@ class Member:
         hook_ctx = HookContext(operation_id='listMartechMembers', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.ListMartechMembersRequest, base_url, '/martech/{connection_id}/member', request)
+        url = utils.generate_url(base_url, '/martech/{connection_id}/member', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
         else:
             headers, query_params = utils.get_security(self.sdk_configuration.security)
         
-        query_params = { **utils.get_query_params(operations.ListMartechMembersRequest, request), **query_params }
+        query_params = { **utils.get_query_params(request), **query_params }
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
@@ -187,7 +187,7 @@ class Member:
         hook_ctx = HookContext(operation_id='patchMartechMember', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.PatchMartechMemberRequest, base_url, '/martech/{connection_id}/member/{id}', request)
+        url = utils.generate_url(base_url, '/martech/{connection_id}/member/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -244,7 +244,7 @@ class Member:
         hook_ctx = HookContext(operation_id='removeMartechMember', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.RemoveMartechMemberRequest, base_url, '/martech/{connection_id}/member/{id}', request)
+        url = utils.generate_url(base_url, '/martech/{connection_id}/member/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -298,7 +298,7 @@ class Member:
         hook_ctx = HookContext(operation_id='updateMartechMember', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.UpdateMartechMemberRequest, base_url, '/martech/{connection_id}/member/{id}', request)
+        url = utils.generate_url(base_url, '/martech/{connection_id}/member/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())

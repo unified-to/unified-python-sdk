@@ -20,7 +20,7 @@ class Location:
         hook_ctx = HookContext(operation_id='createCommerceLocation', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.CreateCommerceLocationRequest, base_url, '/commerce/{connection_id}/location', request)
+        url = utils.generate_url(base_url, '/commerce/{connection_id}/location', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -77,14 +77,14 @@ class Location:
         hook_ctx = HookContext(operation_id='getCommerceLocation', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.GetCommerceLocationRequest, base_url, '/commerce/{connection_id}/location/{id}', request)
+        url = utils.generate_url(base_url, '/commerce/{connection_id}/location/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
         else:
             headers, query_params = utils.get_security(self.sdk_configuration.security)
         
-        query_params = { **utils.get_query_params(operations.GetCommerceLocationRequest, request), **query_params }
+        query_params = { **utils.get_query_params(request), **query_params }
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
@@ -132,14 +132,14 @@ class Location:
         hook_ctx = HookContext(operation_id='listCommerceLocations', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.ListCommerceLocationsRequest, base_url, '/commerce/{connection_id}/location', request)
+        url = utils.generate_url(base_url, '/commerce/{connection_id}/location', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
         else:
             headers, query_params = utils.get_security(self.sdk_configuration.security)
         
-        query_params = { **utils.get_query_params(operations.ListCommerceLocationsRequest, request), **query_params }
+        query_params = { **utils.get_query_params(request), **query_params }
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
@@ -187,7 +187,7 @@ class Location:
         hook_ctx = HookContext(operation_id='patchCommerceLocation', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.PatchCommerceLocationRequest, base_url, '/commerce/{connection_id}/location/{id}', request)
+        url = utils.generate_url(base_url, '/commerce/{connection_id}/location/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -244,7 +244,7 @@ class Location:
         hook_ctx = HookContext(operation_id='removeCommerceLocation', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.RemoveCommerceLocationRequest, base_url, '/commerce/{connection_id}/location/{id}', request)
+        url = utils.generate_url(base_url, '/commerce/{connection_id}/location/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -298,7 +298,7 @@ class Location:
         hook_ctx = HookContext(operation_id='updateCommerceLocation', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.UpdateCommerceLocationRequest, base_url, '/commerce/{connection_id}/location/{id}', request)
+        url = utils.generate_url(base_url, '/commerce/{connection_id}/location/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())

@@ -20,7 +20,7 @@ class ListT:
         hook_ctx = HookContext(operation_id='createMartechList', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.CreateMartechListRequest, base_url, '/martech/{connection_id}/list', request)
+        url = utils.generate_url(base_url, '/martech/{connection_id}/list', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -77,14 +77,14 @@ class ListT:
         hook_ctx = HookContext(operation_id='getMartechList', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.GetMartechListRequest, base_url, '/martech/{connection_id}/list/{id}', request)
+        url = utils.generate_url(base_url, '/martech/{connection_id}/list/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
         else:
             headers, query_params = utils.get_security(self.sdk_configuration.security)
         
-        query_params = { **utils.get_query_params(operations.GetMartechListRequest, request), **query_params }
+        query_params = { **utils.get_query_params(request), **query_params }
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
@@ -132,14 +132,14 @@ class ListT:
         hook_ctx = HookContext(operation_id='listMartechLists', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.ListMartechListsRequest, base_url, '/martech/{connection_id}/list', request)
+        url = utils.generate_url(base_url, '/martech/{connection_id}/list', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
         else:
             headers, query_params = utils.get_security(self.sdk_configuration.security)
         
-        query_params = { **utils.get_query_params(operations.ListMartechListsRequest, request), **query_params }
+        query_params = { **utils.get_query_params(request), **query_params }
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
@@ -187,7 +187,7 @@ class ListT:
         hook_ctx = HookContext(operation_id='patchMartechList', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.PatchMartechListRequest, base_url, '/martech/{connection_id}/list/{id}', request)
+        url = utils.generate_url(base_url, '/martech/{connection_id}/list/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -244,7 +244,7 @@ class ListT:
         hook_ctx = HookContext(operation_id='removeMartechList', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.RemoveMartechListRequest, base_url, '/martech/{connection_id}/list/{id}', request)
+        url = utils.generate_url(base_url, '/martech/{connection_id}/list/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -298,7 +298,7 @@ class ListT:
         hook_ctx = HookContext(operation_id='updateMartechList', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.UpdateMartechListRequest, base_url, '/martech/{connection_id}/list/{id}', request)
+        url = utils.generate_url(base_url, '/martech/{connection_id}/list/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())

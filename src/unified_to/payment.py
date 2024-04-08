@@ -20,7 +20,7 @@ class Payment:
         hook_ctx = HookContext(operation_id='createPaymentLink', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.CreatePaymentLinkRequest, base_url, '/payment/{connection_id}/link', request)
+        url = utils.generate_url(base_url, '/payment/{connection_id}/link', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -77,7 +77,7 @@ class Payment:
         hook_ctx = HookContext(operation_id='createPaymentPayment', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.CreatePaymentPaymentRequest, base_url, '/payment/{connection_id}/payment', request)
+        url = utils.generate_url(base_url, '/payment/{connection_id}/payment', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -134,14 +134,14 @@ class Payment:
         hook_ctx = HookContext(operation_id='getPaymentLink', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.GetPaymentLinkRequest, base_url, '/payment/{connection_id}/link/{id}', request)
+        url = utils.generate_url(base_url, '/payment/{connection_id}/link/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
         else:
             headers, query_params = utils.get_security(self.sdk_configuration.security)
         
-        query_params = { **utils.get_query_params(operations.GetPaymentLinkRequest, request), **query_params }
+        query_params = { **utils.get_query_params(request), **query_params }
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
@@ -189,14 +189,14 @@ class Payment:
         hook_ctx = HookContext(operation_id='getPaymentPayment', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.GetPaymentPaymentRequest, base_url, '/payment/{connection_id}/payment/{id}', request)
+        url = utils.generate_url(base_url, '/payment/{connection_id}/payment/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
         else:
             headers, query_params = utils.get_security(self.sdk_configuration.security)
         
-        query_params = { **utils.get_query_params(operations.GetPaymentPaymentRequest, request), **query_params }
+        query_params = { **utils.get_query_params(request), **query_params }
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
@@ -244,14 +244,14 @@ class Payment:
         hook_ctx = HookContext(operation_id='getPaymentPayout', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.GetPaymentPayoutRequest, base_url, '/payment/{connection_id}/payout/{id}', request)
+        url = utils.generate_url(base_url, '/payment/{connection_id}/payout/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
         else:
             headers, query_params = utils.get_security(self.sdk_configuration.security)
         
-        query_params = { **utils.get_query_params(operations.GetPaymentPayoutRequest, request), **query_params }
+        query_params = { **utils.get_query_params(request), **query_params }
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
@@ -299,14 +299,14 @@ class Payment:
         hook_ctx = HookContext(operation_id='getPaymentRefund', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.GetPaymentRefundRequest, base_url, '/payment/{connection_id}/refund/{id}', request)
+        url = utils.generate_url(base_url, '/payment/{connection_id}/refund/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
         else:
             headers, query_params = utils.get_security(self.sdk_configuration.security)
         
-        query_params = { **utils.get_query_params(operations.GetPaymentRefundRequest, request), **query_params }
+        query_params = { **utils.get_query_params(request), **query_params }
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
@@ -354,14 +354,14 @@ class Payment:
         hook_ctx = HookContext(operation_id='listPaymentLinks', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.ListPaymentLinksRequest, base_url, '/payment/{connection_id}/link', request)
+        url = utils.generate_url(base_url, '/payment/{connection_id}/link', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
         else:
             headers, query_params = utils.get_security(self.sdk_configuration.security)
         
-        query_params = { **utils.get_query_params(operations.ListPaymentLinksRequest, request), **query_params }
+        query_params = { **utils.get_query_params(request), **query_params }
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
@@ -409,14 +409,14 @@ class Payment:
         hook_ctx = HookContext(operation_id='listPaymentPayments', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.ListPaymentPaymentsRequest, base_url, '/payment/{connection_id}/payment', request)
+        url = utils.generate_url(base_url, '/payment/{connection_id}/payment', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
         else:
             headers, query_params = utils.get_security(self.sdk_configuration.security)
         
-        query_params = { **utils.get_query_params(operations.ListPaymentPaymentsRequest, request), **query_params }
+        query_params = { **utils.get_query_params(request), **query_params }
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
@@ -464,14 +464,14 @@ class Payment:
         hook_ctx = HookContext(operation_id='listPaymentPayouts', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.ListPaymentPayoutsRequest, base_url, '/payment/{connection_id}/payout', request)
+        url = utils.generate_url(base_url, '/payment/{connection_id}/payout', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
         else:
             headers, query_params = utils.get_security(self.sdk_configuration.security)
         
-        query_params = { **utils.get_query_params(operations.ListPaymentPayoutsRequest, request), **query_params }
+        query_params = { **utils.get_query_params(request), **query_params }
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
@@ -519,14 +519,14 @@ class Payment:
         hook_ctx = HookContext(operation_id='listPaymentRefunds', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.ListPaymentRefundsRequest, base_url, '/payment/{connection_id}/refund', request)
+        url = utils.generate_url(base_url, '/payment/{connection_id}/refund', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
         else:
             headers, query_params = utils.get_security(self.sdk_configuration.security)
         
-        query_params = { **utils.get_query_params(operations.ListPaymentRefundsRequest, request), **query_params }
+        query_params = { **utils.get_query_params(request), **query_params }
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
@@ -574,7 +574,7 @@ class Payment:
         hook_ctx = HookContext(operation_id='patchPaymentLink', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.PatchPaymentLinkRequest, base_url, '/payment/{connection_id}/link/{id}', request)
+        url = utils.generate_url(base_url, '/payment/{connection_id}/link/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -631,7 +631,7 @@ class Payment:
         hook_ctx = HookContext(operation_id='patchPaymentPayment', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.PatchPaymentPaymentRequest, base_url, '/payment/{connection_id}/payment/{id}', request)
+        url = utils.generate_url(base_url, '/payment/{connection_id}/payment/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -688,7 +688,7 @@ class Payment:
         hook_ctx = HookContext(operation_id='removePaymentLink', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.RemovePaymentLinkRequest, base_url, '/payment/{connection_id}/link/{id}', request)
+        url = utils.generate_url(base_url, '/payment/{connection_id}/link/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -742,7 +742,7 @@ class Payment:
         hook_ctx = HookContext(operation_id='removePaymentPayment', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.RemovePaymentPaymentRequest, base_url, '/payment/{connection_id}/payment/{id}', request)
+        url = utils.generate_url(base_url, '/payment/{connection_id}/payment/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -796,7 +796,7 @@ class Payment:
         hook_ctx = HookContext(operation_id='updatePaymentLink', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.UpdatePaymentLinkRequest, base_url, '/payment/{connection_id}/link/{id}', request)
+        url = utils.generate_url(base_url, '/payment/{connection_id}/link/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -853,7 +853,7 @@ class Payment:
         hook_ctx = HookContext(operation_id='updatePaymentPayment', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.UpdatePaymentPaymentRequest, base_url, '/payment/{connection_id}/payment/{id}', request)
+        url = utils.generate_url(base_url, '/payment/{connection_id}/payment/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())

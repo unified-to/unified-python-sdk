@@ -20,7 +20,7 @@ class Account:
         hook_ctx = HookContext(operation_id='createAccountingAccount', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.CreateAccountingAccountRequest, base_url, '/accounting/{connection_id}/account', request)
+        url = utils.generate_url(base_url, '/accounting/{connection_id}/account', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -77,14 +77,14 @@ class Account:
         hook_ctx = HookContext(operation_id='getAccountingAccount', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.GetAccountingAccountRequest, base_url, '/accounting/{connection_id}/account/{id}', request)
+        url = utils.generate_url(base_url, '/accounting/{connection_id}/account/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
         else:
             headers, query_params = utils.get_security(self.sdk_configuration.security)
         
-        query_params = { **utils.get_query_params(operations.GetAccountingAccountRequest, request), **query_params }
+        query_params = { **utils.get_query_params(request), **query_params }
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
@@ -132,14 +132,14 @@ class Account:
         hook_ctx = HookContext(operation_id='listAccountingAccounts', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.ListAccountingAccountsRequest, base_url, '/accounting/{connection_id}/account', request)
+        url = utils.generate_url(base_url, '/accounting/{connection_id}/account', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
         else:
             headers, query_params = utils.get_security(self.sdk_configuration.security)
         
-        query_params = { **utils.get_query_params(operations.ListAccountingAccountsRequest, request), **query_params }
+        query_params = { **utils.get_query_params(request), **query_params }
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
@@ -187,7 +187,7 @@ class Account:
         hook_ctx = HookContext(operation_id='patchAccountingAccount', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.PatchAccountingAccountRequest, base_url, '/accounting/{connection_id}/account/{id}', request)
+        url = utils.generate_url(base_url, '/accounting/{connection_id}/account/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -244,7 +244,7 @@ class Account:
         hook_ctx = HookContext(operation_id='removeAccountingAccount', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.RemoveAccountingAccountRequest, base_url, '/accounting/{connection_id}/account/{id}', request)
+        url = utils.generate_url(base_url, '/accounting/{connection_id}/account/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -298,7 +298,7 @@ class Account:
         hook_ctx = HookContext(operation_id='updateAccountingAccount', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.UpdateAccountingAccountRequest, base_url, '/accounting/{connection_id}/account/{id}', request)
+        url = utils.generate_url(base_url, '/accounting/{connection_id}/account/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())

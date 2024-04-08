@@ -20,14 +20,14 @@ class Timeoff:
         hook_ctx = HookContext(operation_id='getHrisTimeoff', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.GetHrisTimeoffRequest, base_url, '/hris/{connection_id}/timeoff/{id}', request)
+        url = utils.generate_url(base_url, '/hris/{connection_id}/timeoff/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
         else:
             headers, query_params = utils.get_security(self.sdk_configuration.security)
         
-        query_params = { **utils.get_query_params(operations.GetHrisTimeoffRequest, request), **query_params }
+        query_params = { **utils.get_query_params(request), **query_params }
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
@@ -75,14 +75,14 @@ class Timeoff:
         hook_ctx = HookContext(operation_id='listHrisTimeoffs', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.ListHrisTimeoffsRequest, base_url, '/hris/{connection_id}/timeoff', request)
+        url = utils.generate_url(base_url, '/hris/{connection_id}/timeoff', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
         else:
             headers, query_params = utils.get_security(self.sdk_configuration.security)
         
-        query_params = { **utils.get_query_params(operations.ListHrisTimeoffsRequest, request), **query_params }
+        query_params = { **utils.get_query_params(request), **query_params }
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client

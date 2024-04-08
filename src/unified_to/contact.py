@@ -20,7 +20,7 @@ class Contact:
         hook_ctx = HookContext(operation_id='createAccountingContact', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.CreateAccountingContactRequest, base_url, '/accounting/{connection_id}/contact', request)
+        url = utils.generate_url(base_url, '/accounting/{connection_id}/contact', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -77,7 +77,7 @@ class Contact:
         hook_ctx = HookContext(operation_id='createCrmContact', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.CreateCrmContactRequest, base_url, '/crm/{connection_id}/contact', request)
+        url = utils.generate_url(base_url, '/crm/{connection_id}/contact', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -134,7 +134,7 @@ class Contact:
         hook_ctx = HookContext(operation_id='createUcContact', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.CreateUcContactRequest, base_url, '/uc/{connection_id}/contact', request)
+        url = utils.generate_url(base_url, '/uc/{connection_id}/contact', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -191,14 +191,14 @@ class Contact:
         hook_ctx = HookContext(operation_id='getAccountingContact', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.GetAccountingContactRequest, base_url, '/accounting/{connection_id}/contact/{id}', request)
+        url = utils.generate_url(base_url, '/accounting/{connection_id}/contact/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
         else:
             headers, query_params = utils.get_security(self.sdk_configuration.security)
         
-        query_params = { **utils.get_query_params(operations.GetAccountingContactRequest, request), **query_params }
+        query_params = { **utils.get_query_params(request), **query_params }
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
@@ -246,14 +246,14 @@ class Contact:
         hook_ctx = HookContext(operation_id='getCrmContact', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.GetCrmContactRequest, base_url, '/crm/{connection_id}/contact/{id}', request)
+        url = utils.generate_url(base_url, '/crm/{connection_id}/contact/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
         else:
             headers, query_params = utils.get_security(self.sdk_configuration.security)
         
-        query_params = { **utils.get_query_params(operations.GetCrmContactRequest, request), **query_params }
+        query_params = { **utils.get_query_params(request), **query_params }
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
@@ -301,14 +301,14 @@ class Contact:
         hook_ctx = HookContext(operation_id='getUcContact', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.GetUcContactRequest, base_url, '/uc/{connection_id}/contact/{id}', request)
+        url = utils.generate_url(base_url, '/uc/{connection_id}/contact/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
         else:
             headers, query_params = utils.get_security(self.sdk_configuration.security)
         
-        query_params = { **utils.get_query_params(operations.GetUcContactRequest, request), **query_params }
+        query_params = { **utils.get_query_params(request), **query_params }
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
@@ -356,14 +356,14 @@ class Contact:
         hook_ctx = HookContext(operation_id='listAccountingContacts', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.ListAccountingContactsRequest, base_url, '/accounting/{connection_id}/contact', request)
+        url = utils.generate_url(base_url, '/accounting/{connection_id}/contact', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
         else:
             headers, query_params = utils.get_security(self.sdk_configuration.security)
         
-        query_params = { **utils.get_query_params(operations.ListAccountingContactsRequest, request), **query_params }
+        query_params = { **utils.get_query_params(request), **query_params }
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
@@ -411,14 +411,14 @@ class Contact:
         hook_ctx = HookContext(operation_id='listCrmContacts', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.ListCrmContactsRequest, base_url, '/crm/{connection_id}/contact', request)
+        url = utils.generate_url(base_url, '/crm/{connection_id}/contact', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
         else:
             headers, query_params = utils.get_security(self.sdk_configuration.security)
         
-        query_params = { **utils.get_query_params(operations.ListCrmContactsRequest, request), **query_params }
+        query_params = { **utils.get_query_params(request), **query_params }
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
@@ -466,14 +466,14 @@ class Contact:
         hook_ctx = HookContext(operation_id='listUcContacts', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.ListUcContactsRequest, base_url, '/uc/{connection_id}/contact', request)
+        url = utils.generate_url(base_url, '/uc/{connection_id}/contact', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
         else:
             headers, query_params = utils.get_security(self.sdk_configuration.security)
         
-        query_params = { **utils.get_query_params(operations.ListUcContactsRequest, request), **query_params }
+        query_params = { **utils.get_query_params(request), **query_params }
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
@@ -521,7 +521,7 @@ class Contact:
         hook_ctx = HookContext(operation_id='patchAccountingContact', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.PatchAccountingContactRequest, base_url, '/accounting/{connection_id}/contact/{id}', request)
+        url = utils.generate_url(base_url, '/accounting/{connection_id}/contact/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -578,7 +578,7 @@ class Contact:
         hook_ctx = HookContext(operation_id='patchCrmContact', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.PatchCrmContactRequest, base_url, '/crm/{connection_id}/contact/{id}', request)
+        url = utils.generate_url(base_url, '/crm/{connection_id}/contact/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -635,7 +635,7 @@ class Contact:
         hook_ctx = HookContext(operation_id='patchUcContact', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.PatchUcContactRequest, base_url, '/uc/{connection_id}/contact/{id}', request)
+        url = utils.generate_url(base_url, '/uc/{connection_id}/contact/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -692,7 +692,7 @@ class Contact:
         hook_ctx = HookContext(operation_id='removeAccountingContact', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.RemoveAccountingContactRequest, base_url, '/accounting/{connection_id}/contact/{id}', request)
+        url = utils.generate_url(base_url, '/accounting/{connection_id}/contact/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -746,7 +746,7 @@ class Contact:
         hook_ctx = HookContext(operation_id='removeCrmContact', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.RemoveCrmContactRequest, base_url, '/crm/{connection_id}/contact/{id}', request)
+        url = utils.generate_url(base_url, '/crm/{connection_id}/contact/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -800,7 +800,7 @@ class Contact:
         hook_ctx = HookContext(operation_id='removeUcContact', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.RemoveUcContactRequest, base_url, '/uc/{connection_id}/contact/{id}', request)
+        url = utils.generate_url(base_url, '/uc/{connection_id}/contact/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -854,7 +854,7 @@ class Contact:
         hook_ctx = HookContext(operation_id='updateAccountingContact', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.UpdateAccountingContactRequest, base_url, '/accounting/{connection_id}/contact/{id}', request)
+        url = utils.generate_url(base_url, '/accounting/{connection_id}/contact/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -911,7 +911,7 @@ class Contact:
         hook_ctx = HookContext(operation_id='updateCrmContact', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.UpdateCrmContactRequest, base_url, '/crm/{connection_id}/contact/{id}', request)
+        url = utils.generate_url(base_url, '/crm/{connection_id}/contact/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -968,7 +968,7 @@ class Contact:
         hook_ctx = HookContext(operation_id='updateUcContact', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.UpdateUcContactRequest, base_url, '/uc/{connection_id}/contact/{id}', request)
+        url = utils.generate_url(base_url, '/uc/{connection_id}/contact/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())

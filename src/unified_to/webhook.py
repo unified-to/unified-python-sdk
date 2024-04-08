@@ -32,7 +32,7 @@ class Webhook:
         req_content_type, data, form = utils.serialize_request_body(request, operations.CreateUnifiedWebhookRequest, "webhook", False, True, 'json')
         if req_content_type is not None and req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
-        query_params = { **utils.get_query_params(operations.CreateUnifiedWebhookRequest, request), **query_params }
+        query_params = { **utils.get_query_params(request), **query_params }
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
@@ -80,7 +80,7 @@ class Webhook:
         hook_ctx = HookContext(operation_id='getUnifiedWebhook', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.GetUnifiedWebhookRequest, base_url, '/unified/webhook/{id}', request)
+        url = utils.generate_url(base_url, '/unified/webhook/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -141,7 +141,7 @@ class Webhook:
         else:
             headers, query_params = utils.get_security(self.sdk_configuration.security)
         
-        query_params = { **utils.get_query_params(operations.ListUnifiedWebhooksRequest, request), **query_params }
+        query_params = { **utils.get_query_params(request), **query_params }
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
@@ -189,7 +189,7 @@ class Webhook:
         hook_ctx = HookContext(operation_id='patchUnifiedWebhookTrigger', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.PatchUnifiedWebhookTriggerRequest, base_url, '/unified/webhook/{id}/trigger', request)
+        url = utils.generate_url(base_url, '/unified/webhook/{id}/trigger', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -243,7 +243,7 @@ class Webhook:
         hook_ctx = HookContext(operation_id='removeUnifiedWebhook', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.RemoveUnifiedWebhookRequest, base_url, '/unified/webhook/{id}', request)
+        url = utils.generate_url(base_url, '/unified/webhook/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -297,7 +297,7 @@ class Webhook:
         hook_ctx = HookContext(operation_id='updateUnifiedWebhookTrigger', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.UpdateUnifiedWebhookTriggerRequest, base_url, '/unified/webhook/{id}/trigger', request)
+        url = utils.generate_url(base_url, '/unified/webhook/{id}/trigger', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())

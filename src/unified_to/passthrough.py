@@ -20,7 +20,7 @@ class Passthrough:
         hook_ctx = HookContext(operation_id='createPassthrough', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.CreatePassthroughRequest, base_url, '/passthrough/{connection_id}/{path}', request)
+        url = utils.generate_url(base_url, '/passthrough/{connection_id}/{path}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -77,7 +77,7 @@ class Passthrough:
         hook_ctx = HookContext(operation_id='listPassthroughs', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.ListPassthroughsRequest, base_url, '/passthrough/{connection_id}/{path}', request)
+        url = utils.generate_url(base_url, '/passthrough/{connection_id}/{path}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -131,7 +131,7 @@ class Passthrough:
         hook_ctx = HookContext(operation_id='patchPassthrough', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.PatchPassthroughRequest, base_url, '/passthrough/{connection_id}/{path}', request)
+        url = utils.generate_url(base_url, '/passthrough/{connection_id}/{path}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -188,7 +188,7 @@ class Passthrough:
         hook_ctx = HookContext(operation_id='removePassthrough', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.RemovePassthroughRequest, base_url, '/passthrough/{connection_id}/{path}', request)
+        url = utils.generate_url(base_url, '/passthrough/{connection_id}/{path}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -242,7 +242,7 @@ class Passthrough:
         hook_ctx = HookContext(operation_id='updatePassthrough', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.UpdatePassthroughRequest, base_url, '/passthrough/{connection_id}/{path}', request)
+        url = utils.generate_url(base_url, '/passthrough/{connection_id}/{path}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())

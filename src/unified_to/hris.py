@@ -20,7 +20,7 @@ class Hris:
         hook_ctx = HookContext(operation_id='createHrisEmployee', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.CreateHrisEmployeeRequest, base_url, '/hris/{connection_id}/employee', request)
+        url = utils.generate_url(base_url, '/hris/{connection_id}/employee', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -77,7 +77,7 @@ class Hris:
         hook_ctx = HookContext(operation_id='createHrisGroup', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.CreateHrisGroupRequest, base_url, '/hris/{connection_id}/group', request)
+        url = utils.generate_url(base_url, '/hris/{connection_id}/group', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -134,14 +134,14 @@ class Hris:
         hook_ctx = HookContext(operation_id='getHrisEmployee', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.GetHrisEmployeeRequest, base_url, '/hris/{connection_id}/employee/{id}', request)
+        url = utils.generate_url(base_url, '/hris/{connection_id}/employee/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
         else:
             headers, query_params = utils.get_security(self.sdk_configuration.security)
         
-        query_params = { **utils.get_query_params(operations.GetHrisEmployeeRequest, request), **query_params }
+        query_params = { **utils.get_query_params(request), **query_params }
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
@@ -189,14 +189,14 @@ class Hris:
         hook_ctx = HookContext(operation_id='getHrisGroup', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.GetHrisGroupRequest, base_url, '/hris/{connection_id}/group/{id}', request)
+        url = utils.generate_url(base_url, '/hris/{connection_id}/group/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
         else:
             headers, query_params = utils.get_security(self.sdk_configuration.security)
         
-        query_params = { **utils.get_query_params(operations.GetHrisGroupRequest, request), **query_params }
+        query_params = { **utils.get_query_params(request), **query_params }
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
@@ -244,14 +244,14 @@ class Hris:
         hook_ctx = HookContext(operation_id='getHrisPayslip', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.GetHrisPayslipRequest, base_url, '/hris/{connection_id}/payslip/{id}', request)
+        url = utils.generate_url(base_url, '/hris/{connection_id}/payslip/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
         else:
             headers, query_params = utils.get_security(self.sdk_configuration.security)
         
-        query_params = { **utils.get_query_params(operations.GetHrisPayslipRequest, request), **query_params }
+        query_params = { **utils.get_query_params(request), **query_params }
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
@@ -299,14 +299,14 @@ class Hris:
         hook_ctx = HookContext(operation_id='getHrisTimeoff', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.GetHrisTimeoffRequest, base_url, '/hris/{connection_id}/timeoff/{id}', request)
+        url = utils.generate_url(base_url, '/hris/{connection_id}/timeoff/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
         else:
             headers, query_params = utils.get_security(self.sdk_configuration.security)
         
-        query_params = { **utils.get_query_params(operations.GetHrisTimeoffRequest, request), **query_params }
+        query_params = { **utils.get_query_params(request), **query_params }
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
@@ -354,14 +354,14 @@ class Hris:
         hook_ctx = HookContext(operation_id='listHrisEmployees', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.ListHrisEmployeesRequest, base_url, '/hris/{connection_id}/employee', request)
+        url = utils.generate_url(base_url, '/hris/{connection_id}/employee', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
         else:
             headers, query_params = utils.get_security(self.sdk_configuration.security)
         
-        query_params = { **utils.get_query_params(operations.ListHrisEmployeesRequest, request), **query_params }
+        query_params = { **utils.get_query_params(request), **query_params }
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
@@ -409,14 +409,14 @@ class Hris:
         hook_ctx = HookContext(operation_id='listHrisGroups', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.ListHrisGroupsRequest, base_url, '/hris/{connection_id}/group', request)
+        url = utils.generate_url(base_url, '/hris/{connection_id}/group', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
         else:
             headers, query_params = utils.get_security(self.sdk_configuration.security)
         
-        query_params = { **utils.get_query_params(operations.ListHrisGroupsRequest, request), **query_params }
+        query_params = { **utils.get_query_params(request), **query_params }
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
@@ -464,14 +464,14 @@ class Hris:
         hook_ctx = HookContext(operation_id='listHrisPayslips', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.ListHrisPayslipsRequest, base_url, '/hris/{connection_id}/payslip', request)
+        url = utils.generate_url(base_url, '/hris/{connection_id}/payslip', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
         else:
             headers, query_params = utils.get_security(self.sdk_configuration.security)
         
-        query_params = { **utils.get_query_params(operations.ListHrisPayslipsRequest, request), **query_params }
+        query_params = { **utils.get_query_params(request), **query_params }
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
@@ -519,14 +519,14 @@ class Hris:
         hook_ctx = HookContext(operation_id='listHrisTimeoffs', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.ListHrisTimeoffsRequest, base_url, '/hris/{connection_id}/timeoff', request)
+        url = utils.generate_url(base_url, '/hris/{connection_id}/timeoff', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
         else:
             headers, query_params = utils.get_security(self.sdk_configuration.security)
         
-        query_params = { **utils.get_query_params(operations.ListHrisTimeoffsRequest, request), **query_params }
+        query_params = { **utils.get_query_params(request), **query_params }
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
@@ -574,7 +574,7 @@ class Hris:
         hook_ctx = HookContext(operation_id='patchHrisEmployee', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.PatchHrisEmployeeRequest, base_url, '/hris/{connection_id}/employee/{id}', request)
+        url = utils.generate_url(base_url, '/hris/{connection_id}/employee/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -631,7 +631,7 @@ class Hris:
         hook_ctx = HookContext(operation_id='patchHrisGroup', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.PatchHrisGroupRequest, base_url, '/hris/{connection_id}/group/{id}', request)
+        url = utils.generate_url(base_url, '/hris/{connection_id}/group/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -688,7 +688,7 @@ class Hris:
         hook_ctx = HookContext(operation_id='removeHrisEmployee', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.RemoveHrisEmployeeRequest, base_url, '/hris/{connection_id}/employee/{id}', request)
+        url = utils.generate_url(base_url, '/hris/{connection_id}/employee/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -742,7 +742,7 @@ class Hris:
         hook_ctx = HookContext(operation_id='removeHrisGroup', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.RemoveHrisGroupRequest, base_url, '/hris/{connection_id}/group/{id}', request)
+        url = utils.generate_url(base_url, '/hris/{connection_id}/group/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -796,7 +796,7 @@ class Hris:
         hook_ctx = HookContext(operation_id='updateHrisEmployee', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.UpdateHrisEmployeeRequest, base_url, '/hris/{connection_id}/employee/{id}', request)
+        url = utils.generate_url(base_url, '/hris/{connection_id}/employee/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
@@ -853,7 +853,7 @@ class Hris:
         hook_ctx = HookContext(operation_id='updateHrisGroup', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
-        url = utils.generate_url(operations.UpdateHrisGroupRequest, base_url, '/hris/{connection_id}/group/{id}', request)
+        url = utils.generate_url(base_url, '/hris/{connection_id}/group/{id}', request)
         
         if callable(self.sdk_configuration.security):
             headers, query_params = utils.get_security(self.sdk_configuration.security())
