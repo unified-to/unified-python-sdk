@@ -16,7 +16,7 @@ class Payment:
     
     
     def create_payment_link(self, request: operations.CreatePaymentLinkRequest) -> operations.CreatePaymentLinkResponse:
-        r"""Create a payment link"""
+        r"""Create a link"""
         hook_ctx = HookContext(operation_id='createPaymentLink', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -130,7 +130,7 @@ class Payment:
     
     
     def get_payment_link(self, request: operations.GetPaymentLinkRequest) -> operations.GetPaymentLinkResponse:
-        r"""Retrieve a payment link"""
+        r"""Retrieve a link"""
         hook_ctx = HookContext(operation_id='getPaymentLink', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -350,7 +350,7 @@ class Payment:
     
     
     def list_payment_links(self, request: operations.ListPaymentLinksRequest) -> operations.ListPaymentLinksResponse:
-        r"""List all payment links"""
+        r"""List all links"""
         hook_ctx = HookContext(operation_id='listPaymentLinks', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -570,7 +570,7 @@ class Payment:
     
     
     def patch_payment_link(self, request: operations.PatchPaymentLinkRequest) -> operations.PatchPaymentLinkResponse:
-        r"""Update a payment link"""
+        r"""Update a link"""
         hook_ctx = HookContext(operation_id='patchPaymentLink', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -684,7 +684,7 @@ class Payment:
     
     
     def remove_payment_link(self, request: operations.RemovePaymentLinkRequest) -> operations.RemovePaymentLinkResponse:
-        r"""Remove a payment link"""
+        r"""Remove a link"""
         hook_ctx = HookContext(operation_id='removePaymentLink', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -792,7 +792,7 @@ class Payment:
     
     
     def update_payment_link(self, request: operations.UpdatePaymentLinkRequest) -> operations.UpdatePaymentLinkResponse:
-        r"""Update a payment link"""
+        r"""Update a link"""
         hook_ctx = HookContext(operation_id='updatePaymentLink', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         

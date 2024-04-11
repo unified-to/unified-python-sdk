@@ -16,7 +16,7 @@ class Event:
     
     
     def create_crm_event(self, request: operations.CreateCrmEventRequest) -> operations.CreateCrmEventResponse:
-        r"""Create a event"""
+        r"""Create an event"""
         hook_ctx = HookContext(operation_id='createCrmEvent', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -73,7 +73,7 @@ class Event:
     
     
     def get_crm_event(self, request: operations.GetCrmEventRequest) -> operations.GetCrmEventResponse:
-        r"""Retrieve a event"""
+        r"""Retrieve an event"""
         hook_ctx = HookContext(operation_id='getCrmEvent', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -183,7 +183,7 @@ class Event:
     
     
     def patch_crm_event(self, request: operations.PatchCrmEventRequest) -> operations.PatchCrmEventResponse:
-        r"""Update a event"""
+        r"""Update an event"""
         hook_ctx = HookContext(operation_id='patchCrmEvent', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -240,7 +240,7 @@ class Event:
     
     
     def remove_crm_event(self, request: operations.RemoveCrmEventRequest) -> operations.RemoveCrmEventResponse:
-        r"""Remove a event"""
+        r"""Remove an event"""
         hook_ctx = HookContext(operation_id='removeCrmEvent', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -294,7 +294,7 @@ class Event:
     
     
     def update_crm_event(self, request: operations.UpdateCrmEventRequest) -> operations.UpdateCrmEventResponse:
-        r"""Update a event"""
+        r"""Update an event"""
         hook_ctx = HookContext(operation_id='updateCrmEvent', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         

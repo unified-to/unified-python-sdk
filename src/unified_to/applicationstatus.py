@@ -16,7 +16,7 @@ class Applicationstatus:
     
     
     def list_ats_applicationstatuses(self, request: operations.ListAtsApplicationstatusesRequest) -> operations.ListAtsApplicationstatusesResponse:
-        r"""List all application statuses"""
+        r"""List all applicationstatuses"""
         hook_ctx = HookContext(operation_id='listAtsApplicationstatuses', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         

@@ -130,7 +130,7 @@ class Accounting:
     
     
     def create_accounting_invoice(self, request: operations.CreateAccountingInvoiceRequest) -> operations.CreateAccountingInvoiceResponse:
-        r"""Create a invoice"""
+        r"""Create an invoice"""
         hook_ctx = HookContext(operation_id='createAccountingInvoice', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -411,7 +411,7 @@ class Accounting:
     
     
     def get_accounting_invoice(self, request: operations.GetAccountingInvoiceRequest) -> operations.GetAccountingInvoiceResponse:
-        r"""Retrieve a invoice"""
+        r"""Retrieve an invoice"""
         hook_ctx = HookContext(operation_id='getAccountingInvoice', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -1075,7 +1075,7 @@ class Accounting:
     
     
     def patch_accounting_invoice(self, request: operations.PatchAccountingInvoiceRequest) -> operations.PatchAccountingInvoiceResponse:
-        r"""Update a invoice"""
+        r"""Update an invoice"""
         hook_ctx = HookContext(operation_id='patchAccountingInvoice', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -1354,7 +1354,7 @@ class Accounting:
     
     
     def remove_accounting_invoice(self, request: operations.RemoveAccountingInvoiceRequest) -> operations.RemoveAccountingInvoiceResponse:
-        r"""Remove a invoice"""
+        r"""Remove an invoice"""
         hook_ctx = HookContext(operation_id='removeAccountingInvoice', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -1630,7 +1630,7 @@ class Accounting:
     
     
     def update_accounting_invoice(self, request: operations.UpdateAccountingInvoiceRequest) -> operations.UpdateAccountingInvoiceResponse:
-        r"""Update a invoice"""
+        r"""Update an invoice"""
         hook_ctx = HookContext(operation_id='updateAccountingInvoice', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         

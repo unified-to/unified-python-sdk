@@ -3,16 +3,16 @@
 
 ### Available Operations
 
-* [create_payment_link](#create_payment_link) - Create a payment link
-* [get_payment_link](#get_payment_link) - Retrieve a payment link
-* [list_payment_links](#list_payment_links) - List all payment links
-* [patch_payment_link](#patch_payment_link) - Update a payment link
-* [remove_payment_link](#remove_payment_link) - Remove a payment link
-* [update_payment_link](#update_payment_link) - Update a payment link
+* [create_payment_link](#create_payment_link) - Create a link
+* [get_payment_link](#get_payment_link) - Retrieve a link
+* [list_payment_links](#list_payment_links) - List all links
+* [patch_payment_link](#patch_payment_link) - Update a link
+* [remove_payment_link](#remove_payment_link) - Remove a link
+* [update_payment_link](#update_payment_link) - Update a link
 
 ## create_payment_link
 
-Create a payment link
+Create a link
 
 ### Example Usage
 
@@ -56,7 +56,7 @@ if res.payment_link is not None:
 
 ## get_payment_link
 
-Retrieve a payment link
+Retrieve a link
 
 ### Example Usage
 
@@ -101,7 +101,7 @@ if res.payment_link is not None:
 
 ## list_payment_links
 
-List all payment links
+List all links
 
 ### Example Usage
 
@@ -145,7 +145,7 @@ if res.payment_links is not None:
 
 ## patch_payment_link
 
-Update a payment link
+Update a link
 
 ### Example Usage
 
@@ -190,7 +190,7 @@ if res.payment_link is not None:
 
 ## remove_payment_link
 
-Remove a payment link
+Remove a link
 
 ### Example Usage
 
@@ -235,7 +235,7 @@ if res is not None:
 
 ## update_payment_link
 
-Update a payment link
+Update a link
 
 ### Example Usage
 

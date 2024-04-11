@@ -47,12 +47,12 @@ if res.accounting_account is not None:
 
 * [create_accounting_account](docs/sdks/accounting/README.md#create_accounting_account) - Create an account
 * [create_accounting_contact](docs/sdks/accounting/README.md#create_accounting_contact) - Create a contact
-* [create_accounting_invoice](docs/sdks/accounting/README.md#create_accounting_invoice) - Create a invoice
+* [create_accounting_invoice](docs/sdks/accounting/README.md#create_accounting_invoice) - Create an invoice
 * [create_accounting_taxrate](docs/sdks/accounting/README.md#create_accounting_taxrate) - Create a taxrate
 * [create_accounting_transaction](docs/sdks/accounting/README.md#create_accounting_transaction) - Create a transaction
 * [get_accounting_account](docs/sdks/accounting/README.md#get_accounting_account) - Retrieve an account
 * [get_accounting_contact](docs/sdks/accounting/README.md#get_accounting_contact) - Retrieve a contact
-* [get_accounting_invoice](docs/sdks/accounting/README.md#get_accounting_invoice) - Retrieve a invoice
+* [get_accounting_invoice](docs/sdks/accounting/README.md#get_accounting_invoice) - Retrieve an invoice
 * [get_accounting_organization](docs/sdks/accounting/README.md#get_accounting_organization) - Retrieve an organization
 * [get_accounting_taxrate](docs/sdks/accounting/README.md#get_accounting_taxrate) - Retrieve a taxrate
 * [get_accounting_transaction](docs/sdks/accounting/README.md#get_accounting_transaction) - Retrieve a transaction
@@ -64,17 +64,17 @@ if res.accounting_account is not None:
 * [list_accounting_transactions](docs/sdks/accounting/README.md#list_accounting_transactions) - List all transactions
 * [patch_accounting_account](docs/sdks/accounting/README.md#patch_accounting_account) - Update an account
 * [patch_accounting_contact](docs/sdks/accounting/README.md#patch_accounting_contact) - Update a contact
-* [patch_accounting_invoice](docs/sdks/accounting/README.md#patch_accounting_invoice) - Update a invoice
+* [patch_accounting_invoice](docs/sdks/accounting/README.md#patch_accounting_invoice) - Update an invoice
 * [patch_accounting_taxrate](docs/sdks/accounting/README.md#patch_accounting_taxrate) - Update a taxrate
 * [patch_accounting_transaction](docs/sdks/accounting/README.md#patch_accounting_transaction) - Update a transaction
 * [remove_accounting_account](docs/sdks/accounting/README.md#remove_accounting_account) - Remove an account
 * [remove_accounting_contact](docs/sdks/accounting/README.md#remove_accounting_contact) - Remove a contact
-* [remove_accounting_invoice](docs/sdks/accounting/README.md#remove_accounting_invoice) - Remove a invoice
+* [remove_accounting_invoice](docs/sdks/accounting/README.md#remove_accounting_invoice) - Remove an invoice
 * [remove_accounting_taxrate](docs/sdks/accounting/README.md#remove_accounting_taxrate) - Remove a taxrate
 * [remove_accounting_transaction](docs/sdks/accounting/README.md#remove_accounting_transaction) - Remove a transaction
 * [update_accounting_account](docs/sdks/accounting/README.md#update_accounting_account) - Update an account
 * [update_accounting_contact](docs/sdks/accounting/README.md#update_accounting_contact) - Update a contact
-* [update_accounting_invoice](docs/sdks/accounting/README.md#update_accounting_invoice) - Update a invoice
+* [update_accounting_invoice](docs/sdks/accounting/README.md#update_accounting_invoice) - Update an invoice
 * [update_accounting_taxrate](docs/sdks/accounting/README.md#update_accounting_taxrate) - Update a taxrate
 * [update_accounting_transaction](docs/sdks/accounting/README.md#update_accounting_transaction) - Update a transaction
 
@@ -110,12 +110,12 @@ if res.accounting_account is not None:
 
 ### [invoice](docs/sdks/invoice/README.md)
 
-* [create_accounting_invoice](docs/sdks/invoice/README.md#create_accounting_invoice) - Create a invoice
-* [get_accounting_invoice](docs/sdks/invoice/README.md#get_accounting_invoice) - Retrieve a invoice
+* [create_accounting_invoice](docs/sdks/invoice/README.md#create_accounting_invoice) - Create an invoice
+* [get_accounting_invoice](docs/sdks/invoice/README.md#get_accounting_invoice) - Retrieve an invoice
 * [list_accounting_invoices](docs/sdks/invoice/README.md#list_accounting_invoices) - List all invoices
-* [patch_accounting_invoice](docs/sdks/invoice/README.md#patch_accounting_invoice) - Update a invoice
-* [remove_accounting_invoice](docs/sdks/invoice/README.md#remove_accounting_invoice) - Remove a invoice
-* [update_accounting_invoice](docs/sdks/invoice/README.md#update_accounting_invoice) - Update a invoice
+* [patch_accounting_invoice](docs/sdks/invoice/README.md#patch_accounting_invoice) - Update an invoice
+* [remove_accounting_invoice](docs/sdks/invoice/README.md#remove_accounting_invoice) - Remove an invoice
+* [update_accounting_invoice](docs/sdks/invoice/README.md#update_accounting_invoice) - Update an invoice
 
 ### [organization](docs/sdks/organization/README.md)
 
@@ -146,7 +146,7 @@ if res.accounting_account is not None:
 * [create_ats_application](docs/sdks/ats/README.md#create_ats_application) - Create an application
 * [create_ats_candidate](docs/sdks/ats/README.md#create_ats_candidate) - Create a candidate
 * [create_ats_document](docs/sdks/ats/README.md#create_ats_document) - Create a document
-* [create_ats_interview](docs/sdks/ats/README.md#create_ats_interview) - Create a interview
+* [create_ats_interview](docs/sdks/ats/README.md#create_ats_interview) - Create an interview
 * [create_ats_job](docs/sdks/ats/README.md#create_ats_job) - Create a job
 * [create_ats_scorecard](docs/sdks/ats/README.md#create_ats_scorecard) - Create a scorecard
 * [get_ats_activity](docs/sdks/ats/README.md#get_ats_activity) - Retrieve an activity
@@ -154,12 +154,12 @@ if res.accounting_account is not None:
 * [get_ats_candidate](docs/sdks/ats/README.md#get_ats_candidate) - Retrieve a candidate
 * [get_ats_company](docs/sdks/ats/README.md#get_ats_company) - Retrieve a company
 * [get_ats_document](docs/sdks/ats/README.md#get_ats_document) - Retrieve a document
-* [get_ats_interview](docs/sdks/ats/README.md#get_ats_interview) - Retrieve a interview
+* [get_ats_interview](docs/sdks/ats/README.md#get_ats_interview) - Retrieve an interview
 * [get_ats_job](docs/sdks/ats/README.md#get_ats_job) - Retrieve a job
 * [get_ats_scorecard](docs/sdks/ats/README.md#get_ats_scorecard) - Retrieve a scorecard
 * [list_ats_activities](docs/sdks/ats/README.md#list_ats_activities) - List all activities
 * [list_ats_applications](docs/sdks/ats/README.md#list_ats_applications) - List all applications
-* [list_ats_applicationstatuses](docs/sdks/ats/README.md#list_ats_applicationstatuses) - List all application statuses
+* [list_ats_applicationstatuses](docs/sdks/ats/README.md#list_ats_applicationstatuses) - List all applicationstatuses
 * [list_ats_candidates](docs/sdks/ats/README.md#list_ats_candidates) - List all candidates
 * [list_ats_companies](docs/sdks/ats/README.md#list_ats_companies) - List all companies
 * [list_ats_documents](docs/sdks/ats/README.md#list_ats_documents) - List all documents
@@ -170,21 +170,21 @@ if res.accounting_account is not None:
 * [patch_ats_application](docs/sdks/ats/README.md#patch_ats_application) - Update an application
 * [patch_ats_candidate](docs/sdks/ats/README.md#patch_ats_candidate) - Update a candidate
 * [patch_ats_document](docs/sdks/ats/README.md#patch_ats_document) - Update a document
-* [patch_ats_interview](docs/sdks/ats/README.md#patch_ats_interview) - Update a interview
+* [patch_ats_interview](docs/sdks/ats/README.md#patch_ats_interview) - Update an interview
 * [patch_ats_job](docs/sdks/ats/README.md#patch_ats_job) - Update a job
 * [patch_ats_scorecard](docs/sdks/ats/README.md#patch_ats_scorecard) - Update a scorecard
 * [remove_ats_activity](docs/sdks/ats/README.md#remove_ats_activity) - Remove an activity
 * [remove_ats_application](docs/sdks/ats/README.md#remove_ats_application) - Remove an application
 * [remove_ats_candidate](docs/sdks/ats/README.md#remove_ats_candidate) - Remove a candidate
 * [remove_ats_document](docs/sdks/ats/README.md#remove_ats_document) - Remove a document
-* [remove_ats_interview](docs/sdks/ats/README.md#remove_ats_interview) - Remove a interview
+* [remove_ats_interview](docs/sdks/ats/README.md#remove_ats_interview) - Remove an interview
 * [remove_ats_job](docs/sdks/ats/README.md#remove_ats_job) - Remove a job
 * [remove_ats_scorecard](docs/sdks/ats/README.md#remove_ats_scorecard) - Remove a scorecard
 * [update_ats_activity](docs/sdks/ats/README.md#update_ats_activity) - Update an activity
 * [update_ats_application](docs/sdks/ats/README.md#update_ats_application) - Update an application
 * [update_ats_candidate](docs/sdks/ats/README.md#update_ats_candidate) - Update a candidate
 * [update_ats_document](docs/sdks/ats/README.md#update_ats_document) - Update a document
-* [update_ats_interview](docs/sdks/ats/README.md#update_ats_interview) - Update a interview
+* [update_ats_interview](docs/sdks/ats/README.md#update_ats_interview) - Update an interview
 * [update_ats_job](docs/sdks/ats/README.md#update_ats_job) - Update a job
 * [update_ats_scorecard](docs/sdks/ats/README.md#update_ats_scorecard) - Update a scorecard
 
@@ -208,7 +208,7 @@ if res.accounting_account is not None:
 
 ### [applicationstatus](docs/sdks/applicationstatus/README.md)
 
-* [list_ats_applicationstatuses](docs/sdks/applicationstatus/README.md#list_ats_applicationstatuses) - List all application statuses
+* [list_ats_applicationstatuses](docs/sdks/applicationstatus/README.md#list_ats_applicationstatuses) - List all applicationstatuses
 
 ### [candidate](docs/sdks/candidate/README.md)
 
@@ -242,12 +242,12 @@ if res.accounting_account is not None:
 
 ### [interview](docs/sdks/interview/README.md)
 
-* [create_ats_interview](docs/sdks/interview/README.md#create_ats_interview) - Create a interview
-* [get_ats_interview](docs/sdks/interview/README.md#get_ats_interview) - Retrieve a interview
+* [create_ats_interview](docs/sdks/interview/README.md#create_ats_interview) - Create an interview
+* [get_ats_interview](docs/sdks/interview/README.md#get_ats_interview) - Retrieve an interview
 * [list_ats_interviews](docs/sdks/interview/README.md#list_ats_interviews) - List all interviews
-* [patch_ats_interview](docs/sdks/interview/README.md#patch_ats_interview) - Update a interview
-* [remove_ats_interview](docs/sdks/interview/README.md#remove_ats_interview) - Remove a interview
-* [update_ats_interview](docs/sdks/interview/README.md#update_ats_interview) - Update a interview
+* [patch_ats_interview](docs/sdks/interview/README.md#patch_ats_interview) - Update an interview
+* [remove_ats_interview](docs/sdks/interview/README.md#remove_ats_interview) - Remove an interview
+* [update_ats_interview](docs/sdks/interview/README.md#update_ats_interview) - Update an interview
 
 ### [job](docs/sdks/job/README.md)
 
@@ -335,13 +335,13 @@ if res.accounting_account is not None:
 * [create_crm_company](docs/sdks/crm/README.md#create_crm_company) - Create a company
 * [create_crm_contact](docs/sdks/crm/README.md#create_crm_contact) - Create a contact
 * [create_crm_deal](docs/sdks/crm/README.md#create_crm_deal) - Create a deal
-* [create_crm_event](docs/sdks/crm/README.md#create_crm_event) - Create a event
+* [create_crm_event](docs/sdks/crm/README.md#create_crm_event) - Create an event
 * [create_crm_lead](docs/sdks/crm/README.md#create_crm_lead) - Create a lead
 * [create_crm_pipeline](docs/sdks/crm/README.md#create_crm_pipeline) - Create a pipeline
 * [get_crm_company](docs/sdks/crm/README.md#get_crm_company) - Retrieve a company
 * [get_crm_contact](docs/sdks/crm/README.md#get_crm_contact) - Retrieve a contact
 * [get_crm_deal](docs/sdks/crm/README.md#get_crm_deal) - Retrieve a deal
-* [get_crm_event](docs/sdks/crm/README.md#get_crm_event) - Retrieve a event
+* [get_crm_event](docs/sdks/crm/README.md#get_crm_event) - Retrieve an event
 * [get_crm_lead](docs/sdks/crm/README.md#get_crm_lead) - Retrieve a lead
 * [get_crm_pipeline](docs/sdks/crm/README.md#get_crm_pipeline) - Retrieve a pipeline
 * [list_crm_companies](docs/sdks/crm/README.md#list_crm_companies) - List all companies
@@ -353,19 +353,19 @@ if res.accounting_account is not None:
 * [patch_crm_company](docs/sdks/crm/README.md#patch_crm_company) - Update a company
 * [patch_crm_contact](docs/sdks/crm/README.md#patch_crm_contact) - Update a contact
 * [patch_crm_deal](docs/sdks/crm/README.md#patch_crm_deal) - Update a deal
-* [patch_crm_event](docs/sdks/crm/README.md#patch_crm_event) - Update a event
+* [patch_crm_event](docs/sdks/crm/README.md#patch_crm_event) - Update an event
 * [patch_crm_lead](docs/sdks/crm/README.md#patch_crm_lead) - Update a lead
 * [patch_crm_pipeline](docs/sdks/crm/README.md#patch_crm_pipeline) - Update a pipeline
 * [remove_crm_company](docs/sdks/crm/README.md#remove_crm_company) - Remove a company
 * [remove_crm_contact](docs/sdks/crm/README.md#remove_crm_contact) - Remove a contact
 * [remove_crm_deal](docs/sdks/crm/README.md#remove_crm_deal) - Remove a deal
-* [remove_crm_event](docs/sdks/crm/README.md#remove_crm_event) - Remove a event
+* [remove_crm_event](docs/sdks/crm/README.md#remove_crm_event) - Remove an event
 * [remove_crm_lead](docs/sdks/crm/README.md#remove_crm_lead) - Remove a lead
 * [remove_crm_pipeline](docs/sdks/crm/README.md#remove_crm_pipeline) - Remove a pipeline
 * [update_crm_company](docs/sdks/crm/README.md#update_crm_company) - Update a company
 * [update_crm_contact](docs/sdks/crm/README.md#update_crm_contact) - Update a contact
 * [update_crm_deal](docs/sdks/crm/README.md#update_crm_deal) - Update a deal
-* [update_crm_event](docs/sdks/crm/README.md#update_crm_event) - Update a event
+* [update_crm_event](docs/sdks/crm/README.md#update_crm_event) - Update an event
 * [update_crm_lead](docs/sdks/crm/README.md#update_crm_lead) - Update a lead
 * [update_crm_pipeline](docs/sdks/crm/README.md#update_crm_pipeline) - Update a pipeline
 
@@ -380,12 +380,12 @@ if res.accounting_account is not None:
 
 ### [event](docs/sdks/event/README.md)
 
-* [create_crm_event](docs/sdks/event/README.md#create_crm_event) - Create a event
-* [get_crm_event](docs/sdks/event/README.md#get_crm_event) - Retrieve a event
+* [create_crm_event](docs/sdks/event/README.md#create_crm_event) - Create an event
+* [get_crm_event](docs/sdks/event/README.md#get_crm_event) - Retrieve an event
 * [list_crm_events](docs/sdks/event/README.md#list_crm_events) - List all events
-* [patch_crm_event](docs/sdks/event/README.md#patch_crm_event) - Update a event
-* [remove_crm_event](docs/sdks/event/README.md#remove_crm_event) - Remove a event
-* [update_crm_event](docs/sdks/event/README.md#update_crm_event) - Update a event
+* [patch_crm_event](docs/sdks/event/README.md#patch_crm_event) - Update an event
+* [remove_crm_event](docs/sdks/event/README.md#remove_crm_event) - Remove an event
+* [update_crm_event](docs/sdks/event/README.md#update_crm_event) - Update an event
 
 ### [lead](docs/sdks/lead/README.md)
 
@@ -424,7 +424,7 @@ if res.accounting_account is not None:
 * [get_hris_timeoff](docs/sdks/hris/README.md#get_hris_timeoff) - Retrieve a timeoff
 * [list_hris_employees](docs/sdks/hris/README.md#list_hris_employees) - List all employees
 * [list_hris_groups](docs/sdks/hris/README.md#list_hris_groups) - List all groups
-* [list_hris_payslips](docs/sdks/hris/README.md#list_hris_payslips) - List all payslip
+* [list_hris_payslips](docs/sdks/hris/README.md#list_hris_payslips) - List all payslips
 * [list_hris_timeoffs](docs/sdks/hris/README.md#list_hris_timeoffs) - List all timeoffs
 * [patch_hris_employee](docs/sdks/hris/README.md#patch_hris_employee) - Update an employee
 * [patch_hris_group](docs/sdks/hris/README.md#patch_hris_group) - Update a group
@@ -454,7 +454,7 @@ if res.accounting_account is not None:
 ### [payslip](docs/sdks/payslip/README.md)
 
 * [get_hris_payslip](docs/sdks/payslip/README.md#get_hris_payslip) - Retrieve a payslip
-* [list_hris_payslips](docs/sdks/payslip/README.md#list_hris_payslips) - List all payslip
+* [list_hris_payslips](docs/sdks/payslip/README.md#list_hris_payslips) - List all payslips
 
 ### [timeoff](docs/sdks/timeoff/README.md)
 
@@ -472,7 +472,7 @@ if res.accounting_account is not None:
 * [patch_martech_list](docs/sdks/martech/README.md#patch_martech_list) - Update a list
 * [patch_martech_member](docs/sdks/martech/README.md#patch_martech_member) - Update a member
 * [remove_martech_list](docs/sdks/martech/README.md#remove_martech_list) - Remove a list
-* [remove_martech_member](docs/sdks/martech/README.md#remove_martech_member) - Remove member
+* [remove_martech_member](docs/sdks/martech/README.md#remove_martech_member) - Remove a member
 * [update_martech_list](docs/sdks/martech/README.md#update_martech_list) - Update a list
 * [update_martech_member](docs/sdks/martech/README.md#update_martech_member) - Update a member
 
@@ -491,7 +491,7 @@ if res.accounting_account is not None:
 * [get_martech_member](docs/sdks/member/README.md#get_martech_member) - Retrieve a member
 * [list_martech_members](docs/sdks/member/README.md#list_martech_members) - List all members
 * [patch_martech_member](docs/sdks/member/README.md#patch_martech_member) - Update a member
-* [remove_martech_member](docs/sdks/member/README.md#remove_martech_member) - Remove member
+* [remove_martech_member](docs/sdks/member/README.md#remove_martech_member) - Remove a member
 * [update_martech_member](docs/sdks/member/README.md#update_martech_member) - Update a member
 
 ### [passthrough](docs/sdks/passthrough/README.md)
@@ -504,31 +504,31 @@ if res.accounting_account is not None:
 
 ### [payment](docs/sdks/payment/README.md)
 
-* [create_payment_link](docs/sdks/payment/README.md#create_payment_link) - Create a payment link
+* [create_payment_link](docs/sdks/payment/README.md#create_payment_link) - Create a link
 * [create_payment_payment](docs/sdks/payment/README.md#create_payment_payment) - Create a payment
-* [get_payment_link](docs/sdks/payment/README.md#get_payment_link) - Retrieve a payment link
+* [get_payment_link](docs/sdks/payment/README.md#get_payment_link) - Retrieve a link
 * [get_payment_payment](docs/sdks/payment/README.md#get_payment_payment) - Retrieve a payment
 * [get_payment_payout](docs/sdks/payment/README.md#get_payment_payout) - Retrieve a payout
 * [get_payment_refund](docs/sdks/payment/README.md#get_payment_refund) - Retrieve a refund
-* [list_payment_links](docs/sdks/payment/README.md#list_payment_links) - List all payment links
+* [list_payment_links](docs/sdks/payment/README.md#list_payment_links) - List all links
 * [list_payment_payments](docs/sdks/payment/README.md#list_payment_payments) - List all payments
 * [list_payment_payouts](docs/sdks/payment/README.md#list_payment_payouts) - List all payouts
 * [list_payment_refunds](docs/sdks/payment/README.md#list_payment_refunds) - List all refunds
-* [patch_payment_link](docs/sdks/payment/README.md#patch_payment_link) - Update a payment link
+* [patch_payment_link](docs/sdks/payment/README.md#patch_payment_link) - Update a link
 * [patch_payment_payment](docs/sdks/payment/README.md#patch_payment_payment) - Update a payment
-* [remove_payment_link](docs/sdks/payment/README.md#remove_payment_link) - Remove a payment link
+* [remove_payment_link](docs/sdks/payment/README.md#remove_payment_link) - Remove a link
 * [remove_payment_payment](docs/sdks/payment/README.md#remove_payment_payment) - Remove a payment
-* [update_payment_link](docs/sdks/payment/README.md#update_payment_link) - Update a payment link
+* [update_payment_link](docs/sdks/payment/README.md#update_payment_link) - Update a link
 * [update_payment_payment](docs/sdks/payment/README.md#update_payment_payment) - Update a payment
 
 ### [link](docs/sdks/link/README.md)
 
-* [create_payment_link](docs/sdks/link/README.md#create_payment_link) - Create a payment link
-* [get_payment_link](docs/sdks/link/README.md#get_payment_link) - Retrieve a payment link
-* [list_payment_links](docs/sdks/link/README.md#list_payment_links) - List all payment links
-* [patch_payment_link](docs/sdks/link/README.md#patch_payment_link) - Update a payment link
-* [remove_payment_link](docs/sdks/link/README.md#remove_payment_link) - Remove a payment link
-* [update_payment_link](docs/sdks/link/README.md#update_payment_link) - Update a payment link
+* [create_payment_link](docs/sdks/link/README.md#create_payment_link) - Create a link
+* [get_payment_link](docs/sdks/link/README.md#get_payment_link) - Retrieve a link
+* [list_payment_links](docs/sdks/link/README.md#list_payment_links) - List all links
+* [patch_payment_link](docs/sdks/link/README.md#patch_payment_link) - Update a link
+* [remove_payment_link](docs/sdks/link/README.md#remove_payment_link) - Remove a link
+* [update_payment_link](docs/sdks/link/README.md#update_payment_link) - Update a link
 
 ### [payout](docs/sdks/payout/README.md)
 

@@ -244,7 +244,7 @@ class Ats:
     
     
     def create_ats_interview(self, request: operations.CreateAtsInterviewRequest) -> operations.CreateAtsInterviewResponse:
-        r"""Create a interview"""
+        r"""Create an interview"""
         hook_ctx = HookContext(operation_id='createAtsInterview', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -690,7 +690,7 @@ class Ats:
     
     
     def get_ats_interview(self, request: operations.GetAtsInterviewRequest) -> operations.GetAtsInterviewResponse:
-        r"""Retrieve a interview"""
+        r"""Retrieve an interview"""
         hook_ctx = HookContext(operation_id='getAtsInterview', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -965,7 +965,7 @@ class Ats:
     
     
     def list_ats_applicationstatuses(self, request: operations.ListAtsApplicationstatusesRequest) -> operations.ListAtsApplicationstatusesResponse:
-        r"""List all application statuses"""
+        r"""List all applicationstatuses"""
         hook_ctx = HookContext(operation_id='listAtsApplicationstatuses', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -1578,7 +1578,7 @@ class Ats:
     
     
     def patch_ats_interview(self, request: operations.PatchAtsInterviewRequest) -> operations.PatchAtsInterviewResponse:
-        r"""Update a interview"""
+        r"""Update an interview"""
         hook_ctx = HookContext(operation_id='patchAtsInterview', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -1965,7 +1965,7 @@ class Ats:
     
     
     def remove_ats_interview(self, request: operations.RemoveAtsInterviewRequest) -> operations.RemoveAtsInterviewResponse:
-        r"""Remove a interview"""
+        r"""Remove an interview"""
         hook_ctx = HookContext(operation_id='removeAtsInterview', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -2355,7 +2355,7 @@ class Ats:
     
     
     def update_ats_interview(self, request: operations.UpdateAtsInterviewRequest) -> operations.UpdateAtsInterviewResponse:
-        r"""Update a interview"""
+        r"""Update an interview"""
         hook_ctx = HookContext(operation_id='updateAtsInterview', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         

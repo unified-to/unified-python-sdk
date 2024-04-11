@@ -518,7 +518,7 @@ class Martech:
     
     
     def remove_martech_member(self, request: operations.RemoveMartechMemberRequest) -> operations.RemoveMartechMemberResponse:
-        r"""Remove member"""
+        r"""Remove a member"""
         hook_ctx = HookContext(operation_id='removeMartechMember', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         

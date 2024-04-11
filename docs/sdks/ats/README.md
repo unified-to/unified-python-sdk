@@ -7,7 +7,7 @@
 * [create_ats_application](#create_ats_application) - Create an application
 * [create_ats_candidate](#create_ats_candidate) - Create a candidate
 * [create_ats_document](#create_ats_document) - Create a document
-* [create_ats_interview](#create_ats_interview) - Create a interview
+* [create_ats_interview](#create_ats_interview) - Create an interview
 * [create_ats_job](#create_ats_job) - Create a job
 * [create_ats_scorecard](#create_ats_scorecard) - Create a scorecard
 * [get_ats_activity](#get_ats_activity) - Retrieve an activity
@@ -15,12 +15,12 @@
 * [get_ats_candidate](#get_ats_candidate) - Retrieve a candidate
 * [get_ats_company](#get_ats_company) - Retrieve a company
 * [get_ats_document](#get_ats_document) - Retrieve a document
-* [get_ats_interview](#get_ats_interview) - Retrieve a interview
+* [get_ats_interview](#get_ats_interview) - Retrieve an interview
 * [get_ats_job](#get_ats_job) - Retrieve a job
 * [get_ats_scorecard](#get_ats_scorecard) - Retrieve a scorecard
 * [list_ats_activities](#list_ats_activities) - List all activities
 * [list_ats_applications](#list_ats_applications) - List all applications
-* [list_ats_applicationstatuses](#list_ats_applicationstatuses) - List all application statuses
+* [list_ats_applicationstatuses](#list_ats_applicationstatuses) - List all applicationstatuses
 * [list_ats_candidates](#list_ats_candidates) - List all candidates
 * [list_ats_companies](#list_ats_companies) - List all companies
 * [list_ats_documents](#list_ats_documents) - List all documents
@@ -31,21 +31,21 @@
 * [patch_ats_application](#patch_ats_application) - Update an application
 * [patch_ats_candidate](#patch_ats_candidate) - Update a candidate
 * [patch_ats_document](#patch_ats_document) - Update a document
-* [patch_ats_interview](#patch_ats_interview) - Update a interview
+* [patch_ats_interview](#patch_ats_interview) - Update an interview
 * [patch_ats_job](#patch_ats_job) - Update a job
 * [patch_ats_scorecard](#patch_ats_scorecard) - Update a scorecard
 * [remove_ats_activity](#remove_ats_activity) - Remove an activity
 * [remove_ats_application](#remove_ats_application) - Remove an application
 * [remove_ats_candidate](#remove_ats_candidate) - Remove a candidate
 * [remove_ats_document](#remove_ats_document) - Remove a document
-* [remove_ats_interview](#remove_ats_interview) - Remove a interview
+* [remove_ats_interview](#remove_ats_interview) - Remove an interview
 * [remove_ats_job](#remove_ats_job) - Remove a job
 * [remove_ats_scorecard](#remove_ats_scorecard) - Remove a scorecard
 * [update_ats_activity](#update_ats_activity) - Update an activity
 * [update_ats_application](#update_ats_application) - Update an application
 * [update_ats_candidate](#update_ats_candidate) - Update a candidate
 * [update_ats_document](#update_ats_document) - Update a document
-* [update_ats_interview](#update_ats_interview) - Update a interview
+* [update_ats_interview](#update_ats_interview) - Update an interview
 * [update_ats_job](#update_ats_job) - Update a job
 * [update_ats_scorecard](#update_ats_scorecard) - Update a scorecard
 
@@ -227,7 +227,7 @@ if res.ats_document is not None:
 
 ## create_ats_interview
 
-Create a interview
+Create an interview
 
 ### Example Usage
 
@@ -584,7 +584,7 @@ if res.ats_document is not None:
 
 ## get_ats_interview
 
-Retrieve a interview
+Retrieve an interview
 
 ### Example Usage
 
@@ -807,7 +807,7 @@ if res.ats_applications is not None:
 
 ## list_ats_applicationstatuses
 
-List all application statuses
+List all applicationstatuses
 
 ### Example Usage
 
@@ -1295,7 +1295,7 @@ if res.ats_document is not None:
 
 ## patch_ats_interview
 
-Update a interview
+Update an interview
 
 ### Example Usage
 
@@ -1610,7 +1610,7 @@ if res is not None:
 
 ## remove_ats_interview
 
-Remove a interview
+Remove an interview
 
 ### Example Usage
 
@@ -1925,7 +1925,7 @@ if res.ats_document is not None:
 
 ## update_ats_interview
 
-Update a interview
+Update an interview
 
 ### Example Usage
 

@@ -11,7 +11,7 @@
 * [get_hris_timeoff](#get_hris_timeoff) - Retrieve a timeoff
 * [list_hris_employees](#list_hris_employees) - List all employees
 * [list_hris_groups](#list_hris_groups) - List all groups
-* [list_hris_payslips](#list_hris_payslips) - List all payslip
+* [list_hris_payslips](#list_hris_payslips) - List all payslips
 * [list_hris_timeoffs](#list_hris_timeoffs) - List all timeoffs
 * [patch_hris_employee](#patch_hris_employee) - Update an employee
 * [patch_hris_group](#patch_hris_group) - Update a group
@@ -378,7 +378,7 @@ if res.hris_groups is not None:
 
 ## list_hris_payslips
 
-List all payslip
+List all payslips
 
 ### Example Usage
 

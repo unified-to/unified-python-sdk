@@ -460,7 +460,7 @@ class Hris:
     
     
     def list_hris_payslips(self, request: operations.ListHrisPayslipsRequest) -> operations.ListHrisPayslipsResponse:
-        r"""List all payslip"""
+        r"""List all payslips"""
         hook_ctx = HookContext(operation_id='listHrisPayslips', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         

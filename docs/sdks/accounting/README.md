@@ -5,12 +5,12 @@
 
 * [create_accounting_account](#create_accounting_account) - Create an account
 * [create_accounting_contact](#create_accounting_contact) - Create a contact
-* [create_accounting_invoice](#create_accounting_invoice) - Create a invoice
+* [create_accounting_invoice](#create_accounting_invoice) - Create an invoice
 * [create_accounting_taxrate](#create_accounting_taxrate) - Create a taxrate
 * [create_accounting_transaction](#create_accounting_transaction) - Create a transaction
 * [get_accounting_account](#get_accounting_account) - Retrieve an account
 * [get_accounting_contact](#get_accounting_contact) - Retrieve a contact
-* [get_accounting_invoice](#get_accounting_invoice) - Retrieve a invoice
+* [get_accounting_invoice](#get_accounting_invoice) - Retrieve an invoice
 * [get_accounting_organization](#get_accounting_organization) - Retrieve an organization
 * [get_accounting_taxrate](#get_accounting_taxrate) - Retrieve a taxrate
 * [get_accounting_transaction](#get_accounting_transaction) - Retrieve a transaction
@@ -22,17 +22,17 @@
 * [list_accounting_transactions](#list_accounting_transactions) - List all transactions
 * [patch_accounting_account](#patch_accounting_account) - Update an account
 * [patch_accounting_contact](#patch_accounting_contact) - Update a contact
-* [patch_accounting_invoice](#patch_accounting_invoice) - Update a invoice
+* [patch_accounting_invoice](#patch_accounting_invoice) - Update an invoice
 * [patch_accounting_taxrate](#patch_accounting_taxrate) - Update a taxrate
 * [patch_accounting_transaction](#patch_accounting_transaction) - Update a transaction
 * [remove_accounting_account](#remove_accounting_account) - Remove an account
 * [remove_accounting_contact](#remove_accounting_contact) - Remove a contact
-* [remove_accounting_invoice](#remove_accounting_invoice) - Remove a invoice
+* [remove_accounting_invoice](#remove_accounting_invoice) - Remove an invoice
 * [remove_accounting_taxrate](#remove_accounting_taxrate) - Remove a taxrate
 * [remove_accounting_transaction](#remove_accounting_transaction) - Remove a transaction
 * [update_accounting_account](#update_accounting_account) - Update an account
 * [update_accounting_contact](#update_accounting_contact) - Update a contact
-* [update_accounting_invoice](#update_accounting_invoice) - Update a invoice
+* [update_accounting_invoice](#update_accounting_invoice) - Update an invoice
 * [update_accounting_taxrate](#update_accounting_taxrate) - Update a taxrate
 * [update_accounting_transaction](#update_accounting_transaction) - Update a transaction
 
@@ -126,7 +126,7 @@ if res.accounting_contact is not None:
 
 ## create_accounting_invoice
 
-Create a invoice
+Create an invoice
 
 ### Example Usage
 
@@ -348,7 +348,7 @@ if res.accounting_contact is not None:
 
 ## get_accounting_invoice
 
-Retrieve a invoice
+Retrieve an invoice
 
 ### Example Usage
 
@@ -882,7 +882,7 @@ if res.accounting_contact is not None:
 
 ## patch_accounting_invoice
 
-Update a invoice
+Update an invoice
 
 ### Example Usage
 
@@ -1107,7 +1107,7 @@ if res is not None:
 
 ## remove_accounting_invoice
 
-Remove a invoice
+Remove an invoice
 
 ### Example Usage
 
@@ -1332,7 +1332,7 @@ if res.accounting_contact is not None:
 
 ## update_accounting_invoice
 
-Update a invoice
+Update an invoice
 
 ### Example Usage
 

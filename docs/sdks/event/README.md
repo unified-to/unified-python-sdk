@@ -3,16 +3,16 @@
 
 ### Available Operations
 
-* [create_crm_event](#create_crm_event) - Create a event
-* [get_crm_event](#get_crm_event) - Retrieve a event
+* [create_crm_event](#create_crm_event) - Create an event
+* [get_crm_event](#get_crm_event) - Retrieve an event
 * [list_crm_events](#list_crm_events) - List all events
-* [patch_crm_event](#patch_crm_event) - Update a event
-* [remove_crm_event](#remove_crm_event) - Remove a event
-* [update_crm_event](#update_crm_event) - Update a event
+* [patch_crm_event](#patch_crm_event) - Update an event
+* [remove_crm_event](#remove_crm_event) - Remove an event
+* [update_crm_event](#update_crm_event) - Update an event
 
 ## create_crm_event
 
-Create a event
+Create an event
 
 ### Example Usage
 
@@ -56,7 +56,7 @@ if res.crm_event is not None:
 
 ## get_crm_event
 
-Retrieve a event
+Retrieve an event
 
 ### Example Usage
 
@@ -145,7 +145,7 @@ if res.crm_events is not None:
 
 ## patch_crm_event
 
-Update a event
+Update an event
 
 ### Example Usage
 
@@ -190,7 +190,7 @@ if res.crm_event is not None:
 
 ## remove_crm_event
 
-Remove a event
+Remove an event
 
 ### Example Usage
 
@@ -235,7 +235,7 @@ if res is not None:
 
 ## update_crm_event
 
-Update a event
+Update an event
 
 ### Example Usage
 

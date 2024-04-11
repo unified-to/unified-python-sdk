@@ -12,7 +12,7 @@
 * [patch_martech_list](#patch_martech_list) - Update a list
 * [patch_martech_member](#patch_martech_member) - Update a member
 * [remove_martech_list](#remove_martech_list) - Remove a list
-* [remove_martech_member](#remove_martech_member) - Remove member
+* [remove_martech_member](#remove_martech_member) - Remove a member
 * [update_martech_list](#update_martech_list) - Update a list
 * [update_martech_member](#update_martech_member) - Update a member
 
@@ -419,7 +419,7 @@ if res is not None:
 
 ## remove_martech_member
 
-Remove member
+Remove a member
 
 ### Example Usage
 

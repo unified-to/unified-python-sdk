@@ -18,7 +18,6 @@ class ListPaymentRefundsRequest:
     offset: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
     order: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'order', 'style': 'form', 'explode': True }})
     payment_id: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'payment_id', 'style': 'form', 'explode': True }})
-    r"""The payment ID to filter results"""
     query: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'query', 'style': 'form', 'explode': True }})
     r"""Query string to search. eg. email address or name"""
     sort: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': True }})

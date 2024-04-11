@@ -3,16 +3,16 @@
 
 ### Available Operations
 
-* [create_accounting_invoice](#create_accounting_invoice) - Create a invoice
-* [get_accounting_invoice](#get_accounting_invoice) - Retrieve a invoice
+* [create_accounting_invoice](#create_accounting_invoice) - Create an invoice
+* [get_accounting_invoice](#get_accounting_invoice) - Retrieve an invoice
 * [list_accounting_invoices](#list_accounting_invoices) - List all invoices
-* [patch_accounting_invoice](#patch_accounting_invoice) - Update a invoice
-* [remove_accounting_invoice](#remove_accounting_invoice) - Remove a invoice
-* [update_accounting_invoice](#update_accounting_invoice) - Update a invoice
+* [patch_accounting_invoice](#patch_accounting_invoice) - Update an invoice
+* [remove_accounting_invoice](#remove_accounting_invoice) - Remove an invoice
+* [update_accounting_invoice](#update_accounting_invoice) - Update an invoice
 
 ## create_accounting_invoice
 
-Create a invoice
+Create an invoice
 
 ### Example Usage
 
@@ -56,7 +56,7 @@ if res.accounting_invoice is not None:
 
 ## get_accounting_invoice
 
-Retrieve a invoice
+Retrieve an invoice
 
 ### Example Usage
 
@@ -145,7 +145,7 @@ if res.accounting_invoices is not None:
 
 ## patch_accounting_invoice
 
-Update a invoice
+Update an invoice
 
 ### Example Usage
 
@@ -190,7 +190,7 @@ if res.accounting_invoice is not None:
 
 ## remove_accounting_invoice
 
-Remove a invoice
+Remove an invoice
 
 ### Example Usage
 
@@ -235,7 +235,7 @@ if res is not None:
 
 ## update_accounting_invoice
 
-Update a invoice
+Update an invoice
 
 ### Example Usage
 
