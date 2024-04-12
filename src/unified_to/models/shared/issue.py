@@ -8,11 +8,12 @@ from typing import Optional
 from unified_to import utils
 
 class IssueStatus(str, Enum):
-    ON_HOLD = 'ON_HOLD'
+    COMPLETED = 'COMPLETED'
     NEW = 'NEW'
+    ROADMAP = 'ROADMAP'
     IN_PROGRESS = 'IN_PROGRESS'
+    ON_HOLD = 'ON_HOLD'
     VALIDATING = 'VALIDATING'
-    COMPLETE = 'COMPLETE'
     REJECTED = 'REJECTED'
 
 class IssueType(str, Enum):

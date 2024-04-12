@@ -35,6 +35,7 @@ class IntegrationSupport:
     list_sort_by_name: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('list_sort_by_name'), 'exclude': lambda f: f is None }})
     list_sort_by_updated_at: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('list_sort_by_updated_at'), 'exclude': lambda f: f is None }})
     list_ticket_id: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('list_ticket_id'), 'exclude': lambda f: f is None }})
+    list_type: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('list_type'), 'exclude': lambda f: f is None }})
     list_updated_gte: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('list_updated_gte'), 'exclude': lambda f: f is None }})
     list_user_id: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('list_user_id'), 'exclude': lambda f: f is None }})
     methods: Optional[Dict[str, bool]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('methods'), 'exclude': lambda f: f is None }})
