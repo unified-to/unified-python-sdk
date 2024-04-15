@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: b49207a22215a71078d123979c29d05c
+  docChecksum: befc5e4546349064e32bd6f1b8d5d55b
   docVersion: "1.0"
   speakeasyVersion: 1.252.0
   generationVersion: 2.306.0
-  releaseVersion: 0.21.7
-  configChecksum: 57d3990d9904449ac36c6d4d2d210e1f
+  releaseVersion: 0.21.8
+  configChecksum: 4274fb9f925e15f427526fd8481aacdd
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -318,6 +318,7 @@ generatedFiles:
   - src/unified_to/models/operations/listunifiedintegrationworkspaces.py
   - src/unified_to/models/operations/listunifiedintegrations.py
   - src/unified_to/models/operations/listunifiedissues.py
+  - src/unified_to/models/operations/listunifiedsupports.py
   - src/unified_to/models/operations/listunifiedwebhooks.py
   - src/unified_to/models/operations/patchunifiedconnection.py
   - src/unified_to/models/operations/patchunifiedwebhooktrigger.py
@@ -421,6 +422,7 @@ generatedFiles:
   - src/unified_to/models/shared/property_uccall_telephone.py
   - src/unified_to/models/shared/connection.py
   - src/unified_to/models/shared/property_connection_permissions.py
+  - src/unified_to/models/shared/undefined.py
   - src/unified_to/models/shared/property_connection_categories.py
   - src/unified_to/models/shared/property_connection_auth.py
   - src/unified_to/models/shared/webhook.py
@@ -901,6 +903,7 @@ generatedFiles:
   - docs/models/operations/listunifiedintegrationsresponse.md
   - docs/models/operations/listunifiedissuesrequest.md
   - docs/models/operations/listunifiedissuesresponse.md
+  - docs/models/operations/listunifiedsupportsresponse.md
   - docs/models/operations/listunifiedwebhooksrequest.md
   - docs/models/operations/listunifiedwebhooksresponse.md
   - docs/models/operations/patchunifiedconnectionrequest.md
@@ -1066,6 +1069,7 @@ generatedFiles:
   - docs/models/shared/propertyuccalltelephone.md
   - docs/models/shared/connection.md
   - docs/models/shared/propertyconnectionpermissions.md
+  - docs/models/shared/undefined.md
   - docs/models/shared/propertyconnectioncategories.md
   - docs/models/shared/propertyconnectionauth.md
   - docs/models/shared/event.md
