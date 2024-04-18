@@ -18,6 +18,10 @@ class AccountingInvoiceStatus(str, Enum):
     DRAFT = 'DRAFT'
     VOIDED = 'VOIDED'
     AUTHORIZED = 'AUTHORIZED'
+    PAID = 'PAID'
+    PARTIALLY_PAID = 'PARTIALLY_PAID'
+    PARTIALLY_REFUNDED = 'PARTIALLY_REFUNDED'
+    REFUNDED = 'REFUNDED'
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
