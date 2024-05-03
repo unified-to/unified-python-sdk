@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: fa589021db4663f2ad26cc32352a343e
+  docChecksum: e7d06a9f72eccefa7c7d5ca65b619e24
   docVersion: "1.0"
   speakeasyVersion: 1.277.8
   generationVersion: 2.319.10
-  releaseVersion: 0.21.10
-  configChecksum: a307de6aa5d501fff459619350ca9ce8
+  releaseVersion: 0.21.11
+  configChecksum: 1b4bf1b0ba675bf3fe3b131598e95c54
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -49,6 +49,9 @@ generatedFiles:
   - src/unified_to/pipeline.py
   - src/unified_to/enrich.py
   - src/unified_to/person.py
+  - src/unified_to/genai.py
+  - src/unified_to/model.py
+  - src/unified_to/prompt.py
   - src/unified_to/hris.py
   - src/unified_to/employee.py
   - src/unified_to/group.py
@@ -232,6 +235,8 @@ generatedFiles:
   - src/unified_to/models/operations/updatecrmlead.py
   - src/unified_to/models/operations/updatecrmpipeline.py
   - src/unified_to/models/operations/listenrichpeople.py
+  - src/unified_to/models/operations/creategenaiprompt.py
+  - src/unified_to/models/operations/listgenaimodels.py
   - src/unified_to/models/operations/createhrisemployee.py
   - src/unified_to/models/operations/createhrisgroup.py
   - src/unified_to/models/operations/gethrisemployee.py
@@ -393,6 +398,9 @@ generatedFiles:
   - src/unified_to/models/shared/enrichpersonworkhistory.py
   - src/unified_to/models/shared/enrichemail.py
   - src/unified_to/models/shared/property_enrichperson_address.py
+  - src/unified_to/models/shared/genaiprompt.py
+  - src/unified_to/models/shared/genaicontent.py
+  - src/unified_to/models/shared/genaimodel.py
   - src/unified_to/models/shared/hrisemployee.py
   - src/unified_to/models/shared/hristelephone.py
   - src/unified_to/models/shared/hrisemail.py
@@ -729,6 +737,10 @@ generatedFiles:
   - docs/models/operations/updatecrmpipelineresponse.md
   - docs/models/operations/listenrichpeoplerequest.md
   - docs/models/operations/listenrichpeopleresponse.md
+  - docs/models/operations/creategenaipromptrequest.md
+  - docs/models/operations/creategenaipromptresponse.md
+  - docs/models/operations/listgenaimodelsrequest.md
+  - docs/models/operations/listgenaimodelsresponse.md
   - docs/models/operations/createhrisemployeerequest.md
   - docs/models/operations/createhrisemployeeresponse.md
   - docs/models/operations/createhrisgrouprequest.md
@@ -1021,6 +1033,10 @@ generatedFiles:
   - docs/models/shared/enrichemailtype.md
   - docs/models/shared/enrichemail.md
   - docs/models/shared/propertyenrichpersonaddress.md
+  - docs/models/shared/genaiprompt.md
+  - docs/models/shared/role.md
+  - docs/models/shared/genaicontent.md
+  - docs/models/shared/genaimodel.md
   - docs/models/shared/employmentstatus.md
   - docs/models/shared/hrisemployeeemploymenttype.md
   - docs/models/shared/hrisemployeegender.md
@@ -1118,6 +1134,9 @@ generatedFiles:
   - docs/sdks/pipeline/README.md
   - docs/sdks/enrich/README.md
   - docs/sdks/person/README.md
+  - docs/sdks/genai/README.md
+  - docs/sdks/model/README.md
+  - docs/sdks/prompt/README.md
   - docs/sdks/hris/README.md
   - docs/sdks/employee/README.md
   - docs/sdks/group/README.md

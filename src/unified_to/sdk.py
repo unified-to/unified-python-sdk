@@ -24,6 +24,7 @@ from .employee import Employee
 from .enrich import Enrich
 from .event import Event
 from .file import File
+from .genai import Genai
 from .group import Group
 from .hris import Hris
 from .integration import Integration
@@ -40,6 +41,7 @@ from .location import Location
 from .login import Login
 from .martech import Martech
 from .member import Member
+from .model import Model
 from .note import Note
 from .organization import Organization
 from .passthrough import Passthrough
@@ -48,6 +50,7 @@ from .payout import Payout
 from .payslip import Payslip
 from .person import Person
 from .pipeline import Pipeline
+from .prompt import Prompt
 from .refund import Refund
 from .scorecard import Scorecard
 from .sdkconfiguration import SDKConfiguration
@@ -97,6 +100,9 @@ class UnifiedTo:
     pipeline: Pipeline
     enrich: Enrich
     person: Person
+    genai: Genai
+    model: Model
+    prompt: Prompt
     hris: Hris
     employee: Employee
     group: Group
@@ -211,6 +217,9 @@ class UnifiedTo:
         self.pipeline = Pipeline(self.sdk_configuration)
         self.enrich = Enrich(self.sdk_configuration)
         self.person = Person(self.sdk_configuration)
+        self.genai = Genai(self.sdk_configuration)
+        self.model = Model(self.sdk_configuration)
+        self.prompt = Prompt(self.sdk_configuration)
         self.hris = Hris(self.sdk_configuration)
         self.employee = Employee(self.sdk_configuration)
         self.group = Group(self.sdk_configuration)

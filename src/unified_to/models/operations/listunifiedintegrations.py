@@ -21,6 +21,7 @@ class ListUnifiedIntegrationsQueryParamCategories(str, Enum):
     STORAGE = 'storage'
     COMMERCE = 'commerce'
     PAYMENT = 'payment'
+    GENAI = 'genai'
 
 
 @dataclasses.dataclass

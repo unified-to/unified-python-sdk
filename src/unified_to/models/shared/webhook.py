@@ -59,6 +59,8 @@ class ObjectType(str, Enum):
     ENRICH_PERSON = 'enrich_person'
     ENRICH_COMPANY = 'enrich_company'
     STORAGE_FILE = 'storage_file'
+    GENAI_MODEL = 'genai_model'
+    GENAI_PROMPT = 'genai_prompt'
 
 class WebhookType(str, Enum):
     VIRTUAL = 'virtual'
