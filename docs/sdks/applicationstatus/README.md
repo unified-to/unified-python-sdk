@@ -21,11 +21,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListAtsApplicationstatusesRequest(
+res = s.applicationstatus.list_ats_applicationstatuses(request=operations.ListAtsApplicationstatusesRequest(
     connection_id='<value>',
-)
-
-res = s.applicationstatus.list_ats_applicationstatuses(req)
+))
 
 if res.ats_statuses is not None:
     # handle response

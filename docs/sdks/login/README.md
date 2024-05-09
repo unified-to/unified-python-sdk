@@ -21,12 +21,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetUnifiedIntegrationLoginRequest(
+res = s.login.get_unified_integration_login(request=operations.GetUnifiedIntegrationLoginRequest(
     integration_type='<value>',
     workspace_id='<value>',
-)
-
-res = s.login.get_unified_integration_login(req)
+))
 
 if res.res is not None:
     # handle response

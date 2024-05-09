@@ -26,11 +26,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.CreateMartechMemberRequest(
+res = s.member.create_martech_member(request=operations.CreateMartechMemberRequest(
     connection_id='<value>',
-)
-
-res = s.member.create_martech_member(req)
+))
 
 if res.marketing_member is not None:
     # handle response
@@ -70,12 +68,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetMartechMemberRequest(
+res = s.member.get_martech_member(request=operations.GetMartechMemberRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.member.get_martech_member(req)
+))
 
 if res.marketing_member is not None:
     # handle response
@@ -115,11 +111,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListMartechMembersRequest(
+res = s.member.list_martech_members(request=operations.ListMartechMembersRequest(
     connection_id='<value>',
-)
-
-res = s.member.list_martech_members(req)
+))
 
 if res.marketing_members is not None:
     # handle response
@@ -159,12 +153,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PatchMartechMemberRequest(
+res = s.member.patch_martech_member(request=operations.PatchMartechMemberRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.member.patch_martech_member(req)
+))
 
 if res.marketing_member is not None:
     # handle response
@@ -204,12 +196,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.RemoveMartechMemberRequest(
+res = s.member.remove_martech_member(request=operations.RemoveMartechMemberRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.member.remove_martech_member(req)
+))
 
 if res is not None:
     # handle response
@@ -249,12 +239,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.UpdateMartechMemberRequest(
+res = s.member.update_martech_member(request=operations.UpdateMartechMemberRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.member.update_martech_member(req)
+))
 
 if res.marketing_member is not None:
     # handle response

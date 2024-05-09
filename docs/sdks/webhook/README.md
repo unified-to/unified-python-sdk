@@ -26,9 +26,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.CreateUnifiedWebhookRequest()
-
-res = s.webhook.create_unified_webhook(req)
+res = s.webhook.create_unified_webhook(request=operations.CreateUnifiedWebhookRequest())
 
 if res.webhook is not None:
     # handle response
@@ -68,11 +66,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetUnifiedWebhookRequest(
+res = s.webhook.get_unified_webhook(request=operations.GetUnifiedWebhookRequest(
     id='<id>',
-)
-
-res = s.webhook.get_unified_webhook(req)
+))
 
 if res.webhook is not None:
     # handle response
@@ -112,9 +108,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListUnifiedWebhooksRequest()
-
-res = s.webhook.list_unified_webhooks(req)
+res = s.webhook.list_unified_webhooks(request=operations.ListUnifiedWebhooksRequest())
 
 if res.webhooks is not None:
     # handle response
@@ -154,11 +148,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PatchUnifiedWebhookTriggerRequest(
+res = s.webhook.patch_unified_webhook_trigger(request=operations.PatchUnifiedWebhookTriggerRequest(
     id='<id>',
-)
-
-res = s.webhook.patch_unified_webhook_trigger(req)
+))
 
 if res is not None:
     # handle response
@@ -198,11 +190,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.RemoveUnifiedWebhookRequest(
+res = s.webhook.remove_unified_webhook(request=operations.RemoveUnifiedWebhookRequest(
     id='<id>',
-)
-
-res = s.webhook.remove_unified_webhook(req)
+))
 
 if res is not None:
     # handle response
@@ -242,11 +232,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.UpdateUnifiedWebhookTriggerRequest(
+res = s.webhook.update_unified_webhook_trigger(request=operations.UpdateUnifiedWebhookTriggerRequest(
     id='<id>',
-)
-
-res = s.webhook.update_unified_webhook_trigger(req)
+))
 
 if res is not None:
     # handle response

@@ -22,11 +22,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.CreateGenaiPromptRequest(
+res = s.genai.create_genai_prompt(request=operations.CreateGenaiPromptRequest(
     connection_id='<value>',
-)
-
-res = s.genai.create_genai_prompt(req)
+))
 
 if res.genai_prompt is not None:
     # handle response
@@ -66,11 +64,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListGenaiModelsRequest(
+res = s.genai.list_genai_models(request=operations.ListGenaiModelsRequest(
     connection_id='<value>',
-)
-
-res = s.genai.list_genai_models(req)
+))
 
 if res.genai_models is not None:
     # handle response

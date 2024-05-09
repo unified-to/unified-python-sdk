@@ -26,11 +26,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.CreateTicketingNoteRequest(
+res = s.note.create_ticketing_note(request=operations.CreateTicketingNoteRequest(
     connection_id='<value>',
-)
-
-res = s.note.create_ticketing_note(req)
+))
 
 if res.ticketing_note is not None:
     # handle response
@@ -70,12 +68,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetTicketingNoteRequest(
+res = s.note.get_ticketing_note(request=operations.GetTicketingNoteRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.note.get_ticketing_note(req)
+))
 
 if res.ticketing_note is not None:
     # handle response
@@ -115,11 +111,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListTicketingNotesRequest(
+res = s.note.list_ticketing_notes(request=operations.ListTicketingNotesRequest(
     connection_id='<value>',
-)
-
-res = s.note.list_ticketing_notes(req)
+))
 
 if res.ticketing_notes is not None:
     # handle response
@@ -159,12 +153,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PatchTicketingNoteRequest(
+res = s.note.patch_ticketing_note(request=operations.PatchTicketingNoteRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.note.patch_ticketing_note(req)
+))
 
 if res.ticketing_note is not None:
     # handle response
@@ -204,12 +196,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.RemoveTicketingNoteRequest(
+res = s.note.remove_ticketing_note(request=operations.RemoveTicketingNoteRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.note.remove_ticketing_note(req)
+))
 
 if res is not None:
     # handle response
@@ -249,12 +239,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.UpdateTicketingNoteRequest(
+res = s.note.update_ticketing_note(request=operations.UpdateTicketingNoteRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.note.update_ticketing_note(req)
+))
 
 if res.ticketing_note is not None:
     # handle response

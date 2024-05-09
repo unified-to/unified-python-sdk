@@ -26,11 +26,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.CreateAtsActivityRequest(
+res = s.activity.create_ats_activity(request=operations.CreateAtsActivityRequest(
     connection_id='<value>',
-)
-
-res = s.activity.create_ats_activity(req)
+))
 
 if res.ats_activity is not None:
     # handle response
@@ -70,12 +68,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetAtsActivityRequest(
+res = s.activity.get_ats_activity(request=operations.GetAtsActivityRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.activity.get_ats_activity(req)
+))
 
 if res.ats_activity is not None:
     # handle response
@@ -115,11 +111,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListAtsActivitiesRequest(
+res = s.activity.list_ats_activities(request=operations.ListAtsActivitiesRequest(
     connection_id='<value>',
-)
-
-res = s.activity.list_ats_activities(req)
+))
 
 if res.ats_activities is not None:
     # handle response
@@ -159,12 +153,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PatchAtsActivityRequest(
+res = s.activity.patch_ats_activity(request=operations.PatchAtsActivityRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.activity.patch_ats_activity(req)
+))
 
 if res.ats_activity is not None:
     # handle response
@@ -204,12 +196,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.RemoveAtsActivityRequest(
+res = s.activity.remove_ats_activity(request=operations.RemoveAtsActivityRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.activity.remove_ats_activity(req)
+))
 
 if res is not None:
     # handle response
@@ -249,12 +239,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.UpdateAtsActivityRequest(
+res = s.activity.update_ats_activity(request=operations.UpdateAtsActivityRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.activity.update_ats_activity(req)
+))
 
 if res.ats_activity is not None:
     # handle response

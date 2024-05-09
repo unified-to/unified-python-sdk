@@ -21,11 +21,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.CreateGenaiPromptRequest(
+res = s.prompt.create_genai_prompt(request=operations.CreateGenaiPromptRequest(
     connection_id='<value>',
-)
-
-res = s.prompt.create_genai_prompt(req)
+))
 
 if res.genai_prompt is not None:
     # handle response

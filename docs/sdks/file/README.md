@@ -26,11 +26,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.CreateStorageFileRequest(
+res = s.file.create_storage_file(request=operations.CreateStorageFileRequest(
     connection_id='<value>',
-)
-
-res = s.file.create_storage_file(req)
+))
 
 if res.storage_file is not None:
     # handle response
@@ -70,12 +68,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetStorageFileRequest(
+res = s.file.get_storage_file(request=operations.GetStorageFileRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.file.get_storage_file(req)
+))
 
 if res.storage_file is not None:
     # handle response
@@ -115,11 +111,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListStorageFilesRequest(
+res = s.file.list_storage_files(request=operations.ListStorageFilesRequest(
     connection_id='<value>',
-)
-
-res = s.file.list_storage_files(req)
+))
 
 if res.storage_files is not None:
     # handle response
@@ -159,12 +153,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PatchStorageFileRequest(
+res = s.file.patch_storage_file(request=operations.PatchStorageFileRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.file.patch_storage_file(req)
+))
 
 if res.storage_file is not None:
     # handle response
@@ -204,12 +196,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.RemoveStorageFileRequest(
+res = s.file.remove_storage_file(request=operations.RemoveStorageFileRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.file.remove_storage_file(req)
+))
 
 if res is not None:
     # handle response
@@ -249,12 +239,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.UpdateStorageFileRequest(
+res = s.file.update_storage_file(request=operations.UpdateStorageFileRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.file.update_storage_file(req)
+))
 
 if res.storage_file is not None:
     # handle response

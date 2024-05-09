@@ -26,11 +26,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.CreateTicketingTicketRequest(
+res = s.ticket.create_ticketing_ticket(request=operations.CreateTicketingTicketRequest(
     connection_id='<value>',
-)
-
-res = s.ticket.create_ticketing_ticket(req)
+))
 
 if res.ticketing_ticket is not None:
     # handle response
@@ -70,12 +68,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetTicketingTicketRequest(
+res = s.ticket.get_ticketing_ticket(request=operations.GetTicketingTicketRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.ticket.get_ticketing_ticket(req)
+))
 
 if res.ticketing_ticket is not None:
     # handle response
@@ -115,11 +111,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListTicketingTicketsRequest(
+res = s.ticket.list_ticketing_tickets(request=operations.ListTicketingTicketsRequest(
     connection_id='<value>',
-)
-
-res = s.ticket.list_ticketing_tickets(req)
+))
 
 if res.ticketing_tickets is not None:
     # handle response
@@ -159,12 +153,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PatchTicketingTicketRequest(
+res = s.ticket.patch_ticketing_ticket(request=operations.PatchTicketingTicketRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.ticket.patch_ticketing_ticket(req)
+))
 
 if res.ticketing_ticket is not None:
     # handle response
@@ -204,12 +196,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.RemoveTicketingTicketRequest(
+res = s.ticket.remove_ticketing_ticket(request=operations.RemoveTicketingTicketRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.ticket.remove_ticketing_ticket(req)
+))
 
 if res is not None:
     # handle response
@@ -249,12 +239,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.UpdateTicketingTicketRequest(
+res = s.ticket.update_ticketing_ticket(request=operations.UpdateTicketingTicketRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.ticket.update_ticketing_ticket(req)
+))
 
 if res.ticketing_ticket is not None:
     # handle response

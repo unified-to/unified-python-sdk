@@ -22,12 +22,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetHrisPayslipRequest(
+res = s.payslip.get_hris_payslip(request=operations.GetHrisPayslipRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.payslip.get_hris_payslip(req)
+))
 
 if res.hris_payslip is not None:
     # handle response
@@ -67,11 +65,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListHrisPayslipsRequest(
+res = s.payslip.list_hris_payslips(request=operations.ListHrisPayslipsRequest(
     connection_id='<value>',
-)
-
-res = s.payslip.list_hris_payslips(req)
+))
 
 if res.hris_payslips is not None:
     # handle response

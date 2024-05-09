@@ -26,11 +26,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.CreateAtsDocumentRequest(
+res = s.document.create_ats_document(request=operations.CreateAtsDocumentRequest(
     connection_id='<value>',
-)
-
-res = s.document.create_ats_document(req)
+))
 
 if res.ats_document is not None:
     # handle response
@@ -70,12 +68,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetAtsDocumentRequest(
+res = s.document.get_ats_document(request=operations.GetAtsDocumentRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.document.get_ats_document(req)
+))
 
 if res.ats_document is not None:
     # handle response
@@ -115,11 +111,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListAtsDocumentsRequest(
+res = s.document.list_ats_documents(request=operations.ListAtsDocumentsRequest(
     connection_id='<value>',
-)
-
-res = s.document.list_ats_documents(req)
+))
 
 if res.ats_documents is not None:
     # handle response
@@ -159,12 +153,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PatchAtsDocumentRequest(
+res = s.document.patch_ats_document(request=operations.PatchAtsDocumentRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.document.patch_ats_document(req)
+))
 
 if res.ats_document is not None:
     # handle response
@@ -204,12 +196,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.RemoveAtsDocumentRequest(
+res = s.document.remove_ats_document(request=operations.RemoveAtsDocumentRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.document.remove_ats_document(req)
+))
 
 if res is not None:
     # handle response
@@ -249,12 +239,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.UpdateAtsDocumentRequest(
+res = s.document.update_ats_document(request=operations.UpdateAtsDocumentRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.document.update_ats_document(req)
+))
 
 if res.ats_document is not None:
     # handle response

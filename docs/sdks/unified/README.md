@@ -39,7 +39,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = shared.Connection(
+res = s.unified.create_unified_connection(request=shared.Connection(
     categories=[
         shared.PropertyConnectionCategories.PAYMENT,
     ],
@@ -47,9 +47,7 @@ req = shared.Connection(
     permissions=[
         shared.PropertyConnectionPermissions.ATS_INTERVIEW_READ,
     ],
-)
-
-res = s.unified.create_unified_connection(req)
+))
 
 if res.connection is not None:
     # handle response
@@ -89,9 +87,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.CreateUnifiedWebhookRequest()
-
-res = s.unified.create_unified_webhook(req)
+res = s.unified.create_unified_webhook(request=operations.CreateUnifiedWebhookRequest())
 
 if res.webhook is not None:
     # handle response
@@ -131,11 +127,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetUnifiedApicallRequest(
+res = s.unified.get_unified_apicall(request=operations.GetUnifiedApicallRequest(
     id='<id>',
-)
-
-res = s.unified.get_unified_apicall(req)
+))
 
 if res.api_call is not None:
     # handle response
@@ -175,11 +169,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetUnifiedConnectionRequest(
+res = s.unified.get_unified_connection(request=operations.GetUnifiedConnectionRequest(
     id='<id>',
-)
-
-res = s.unified.get_unified_connection(req)
+))
 
 if res.connection is not None:
     # handle response
@@ -219,12 +211,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetUnifiedIntegrationAuthRequest(
+res = s.unified.get_unified_integration_auth(request=operations.GetUnifiedIntegrationAuthRequest(
     integration_type='<value>',
     workspace_id='<value>',
-)
-
-res = s.unified.get_unified_integration_auth(req)
+))
 
 if res.res is not None:
     # handle response
@@ -264,11 +254,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetUnifiedWebhookRequest(
+res = s.unified.get_unified_webhook(request=operations.GetUnifiedWebhookRequest(
     id='<id>',
-)
-
-res = s.unified.get_unified_webhook(req)
+))
 
 if res.webhook is not None:
     # handle response
@@ -308,9 +296,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListUnifiedApicallsRequest()
-
-res = s.unified.list_unified_apicalls(req)
+res = s.unified.list_unified_apicalls(request=operations.ListUnifiedApicallsRequest())
 
 if res.api_calls is not None:
     # handle response
@@ -350,9 +336,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListUnifiedConnectionsRequest()
-
-res = s.unified.list_unified_connections(req)
+res = s.unified.list_unified_connections(request=operations.ListUnifiedConnectionsRequest())
 
 if res.connections is not None:
     # handle response
@@ -392,11 +376,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListUnifiedIntegrationWorkspacesRequest(
+res = s.unified.list_unified_integration_workspaces(request=operations.ListUnifiedIntegrationWorkspacesRequest(
     workspace_id='<value>',
-)
-
-res = s.unified.list_unified_integration_workspaces(req)
+))
 
 if res.integrations is not None:
     # handle response
@@ -436,9 +418,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListUnifiedIntegrationsRequest()
-
-res = s.unified.list_unified_integrations(req)
+res = s.unified.list_unified_integrations(request=operations.ListUnifiedIntegrationsRequest())
 
 if res.integrations is not None:
     # handle response
@@ -478,9 +458,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListUnifiedIssuesRequest()
-
-res = s.unified.list_unified_issues(req)
+res = s.unified.list_unified_issues(request=operations.ListUnifiedIssuesRequest())
 
 if res.issues is not None:
     # handle response
@@ -520,7 +498,6 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-
 res = s.unified.list_unified_supports()
 
 if res.undefined is not None:
@@ -555,9 +532,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListUnifiedWebhooksRequest()
-
-res = s.unified.list_unified_webhooks(req)
+res = s.unified.list_unified_webhooks(request=operations.ListUnifiedWebhooksRequest())
 
 if res.webhooks is not None:
     # handle response
@@ -597,11 +572,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PatchUnifiedConnectionRequest(
+res = s.unified.patch_unified_connection(request=operations.PatchUnifiedConnectionRequest(
     id='<id>',
-)
-
-res = s.unified.patch_unified_connection(req)
+))
 
 if res.connection is not None:
     # handle response
@@ -641,11 +614,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PatchUnifiedWebhookTriggerRequest(
+res = s.unified.patch_unified_webhook_trigger(request=operations.PatchUnifiedWebhookTriggerRequest(
     id='<id>',
-)
-
-res = s.unified.patch_unified_webhook_trigger(req)
+))
 
 if res is not None:
     # handle response
@@ -685,11 +656,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.RemoveUnifiedConnectionRequest(
+res = s.unified.remove_unified_connection(request=operations.RemoveUnifiedConnectionRequest(
     id='<id>',
-)
-
-res = s.unified.remove_unified_connection(req)
+))
 
 if res is not None:
     # handle response
@@ -729,11 +698,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.RemoveUnifiedWebhookRequest(
+res = s.unified.remove_unified_webhook(request=operations.RemoveUnifiedWebhookRequest(
     id='<id>',
-)
-
-res = s.unified.remove_unified_webhook(req)
+))
 
 if res is not None:
     # handle response
@@ -773,11 +740,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.UpdateUnifiedConnectionRequest(
+res = s.unified.update_unified_connection(request=operations.UpdateUnifiedConnectionRequest(
     id='<id>',
-)
-
-res = s.unified.update_unified_connection(req)
+))
 
 if res.connection is not None:
     # handle response
@@ -817,11 +782,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.UpdateUnifiedWebhookTriggerRequest(
+res = s.unified.update_unified_webhook_trigger(request=operations.UpdateUnifiedWebhookTriggerRequest(
     id='<id>',
-)
-
-res = s.unified.update_unified_webhook_trigger(req)
+))
 
 if res is not None:
     # handle response

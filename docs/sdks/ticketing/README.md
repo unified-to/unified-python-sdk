@@ -38,11 +38,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.CreateTicketingCustomerRequest(
+res = s.ticketing.create_ticketing_customer(request=operations.CreateTicketingCustomerRequest(
     connection_id='<value>',
-)
-
-res = s.ticketing.create_ticketing_customer(req)
+))
 
 if res.ticketing_customer is not None:
     # handle response
@@ -82,11 +80,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.CreateTicketingNoteRequest(
+res = s.ticketing.create_ticketing_note(request=operations.CreateTicketingNoteRequest(
     connection_id='<value>',
-)
-
-res = s.ticketing.create_ticketing_note(req)
+))
 
 if res.ticketing_note is not None:
     # handle response
@@ -126,11 +122,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.CreateTicketingTicketRequest(
+res = s.ticketing.create_ticketing_ticket(request=operations.CreateTicketingTicketRequest(
     connection_id='<value>',
-)
-
-res = s.ticketing.create_ticketing_ticket(req)
+))
 
 if res.ticketing_ticket is not None:
     # handle response
@@ -170,12 +164,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetTicketingCustomerRequest(
+res = s.ticketing.get_ticketing_customer(request=operations.GetTicketingCustomerRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.ticketing.get_ticketing_customer(req)
+))
 
 if res.ticketing_customer is not None:
     # handle response
@@ -215,12 +207,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetTicketingNoteRequest(
+res = s.ticketing.get_ticketing_note(request=operations.GetTicketingNoteRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.ticketing.get_ticketing_note(req)
+))
 
 if res.ticketing_note is not None:
     # handle response
@@ -260,12 +250,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetTicketingTicketRequest(
+res = s.ticketing.get_ticketing_ticket(request=operations.GetTicketingTicketRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.ticketing.get_ticketing_ticket(req)
+))
 
 if res.ticketing_ticket is not None:
     # handle response
@@ -305,11 +293,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListTicketingCustomersRequest(
+res = s.ticketing.list_ticketing_customers(request=operations.ListTicketingCustomersRequest(
     connection_id='<value>',
-)
-
-res = s.ticketing.list_ticketing_customers(req)
+))
 
 if res.ticketing_customers is not None:
     # handle response
@@ -349,11 +335,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListTicketingNotesRequest(
+res = s.ticketing.list_ticketing_notes(request=operations.ListTicketingNotesRequest(
     connection_id='<value>',
-)
-
-res = s.ticketing.list_ticketing_notes(req)
+))
 
 if res.ticketing_notes is not None:
     # handle response
@@ -393,11 +377,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListTicketingTicketsRequest(
+res = s.ticketing.list_ticketing_tickets(request=operations.ListTicketingTicketsRequest(
     connection_id='<value>',
-)
-
-res = s.ticketing.list_ticketing_tickets(req)
+))
 
 if res.ticketing_tickets is not None:
     # handle response
@@ -437,12 +419,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PatchTicketingCustomerRequest(
+res = s.ticketing.patch_ticketing_customer(request=operations.PatchTicketingCustomerRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.ticketing.patch_ticketing_customer(req)
+))
 
 if res.ticketing_customer is not None:
     # handle response
@@ -482,12 +462,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PatchTicketingNoteRequest(
+res = s.ticketing.patch_ticketing_note(request=operations.PatchTicketingNoteRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.ticketing.patch_ticketing_note(req)
+))
 
 if res.ticketing_note is not None:
     # handle response
@@ -527,12 +505,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PatchTicketingTicketRequest(
+res = s.ticketing.patch_ticketing_ticket(request=operations.PatchTicketingTicketRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.ticketing.patch_ticketing_ticket(req)
+))
 
 if res.ticketing_ticket is not None:
     # handle response
@@ -572,12 +548,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.RemoveTicketingCustomerRequest(
+res = s.ticketing.remove_ticketing_customer(request=operations.RemoveTicketingCustomerRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.ticketing.remove_ticketing_customer(req)
+))
 
 if res is not None:
     # handle response
@@ -617,12 +591,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.RemoveTicketingNoteRequest(
+res = s.ticketing.remove_ticketing_note(request=operations.RemoveTicketingNoteRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.ticketing.remove_ticketing_note(req)
+))
 
 if res is not None:
     # handle response
@@ -662,12 +634,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.RemoveTicketingTicketRequest(
+res = s.ticketing.remove_ticketing_ticket(request=operations.RemoveTicketingTicketRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.ticketing.remove_ticketing_ticket(req)
+))
 
 if res is not None:
     # handle response
@@ -707,12 +677,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.UpdateTicketingCustomerRequest(
+res = s.ticketing.update_ticketing_customer(request=operations.UpdateTicketingCustomerRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.ticketing.update_ticketing_customer(req)
+))
 
 if res.ticketing_customer is not None:
     # handle response
@@ -752,12 +720,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.UpdateTicketingNoteRequest(
+res = s.ticketing.update_ticketing_note(request=operations.UpdateTicketingNoteRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.ticketing.update_ticketing_note(req)
+))
 
 if res.ticketing_note is not None:
     # handle response
@@ -797,12 +763,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.UpdateTicketingTicketRequest(
+res = s.ticketing.update_ticketing_ticket(request=operations.UpdateTicketingTicketRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.ticketing.update_ticketing_ticket(req)
+))
 
 if res.ticketing_ticket is not None:
     # handle response

@@ -65,11 +65,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.CreateAtsActivityRequest(
+res = s.ats.create_ats_activity(request=operations.CreateAtsActivityRequest(
     connection_id='<value>',
-)
-
-res = s.ats.create_ats_activity(req)
+))
 
 if res.ats_activity is not None:
     # handle response
@@ -109,11 +107,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.CreateAtsApplicationRequest(
+res = s.ats.create_ats_application(request=operations.CreateAtsApplicationRequest(
     connection_id='<value>',
-)
-
-res = s.ats.create_ats_application(req)
+))
 
 if res.ats_application is not None:
     # handle response
@@ -153,11 +149,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.CreateAtsCandidateRequest(
+res = s.ats.create_ats_candidate(request=operations.CreateAtsCandidateRequest(
     connection_id='<value>',
-)
-
-res = s.ats.create_ats_candidate(req)
+))
 
 if res.ats_candidate is not None:
     # handle response
@@ -197,11 +191,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.CreateAtsDocumentRequest(
+res = s.ats.create_ats_document(request=operations.CreateAtsDocumentRequest(
     connection_id='<value>',
-)
-
-res = s.ats.create_ats_document(req)
+))
 
 if res.ats_document is not None:
     # handle response
@@ -241,11 +233,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.CreateAtsInterviewRequest(
+res = s.ats.create_ats_interview(request=operations.CreateAtsInterviewRequest(
     connection_id='<value>',
-)
-
-res = s.ats.create_ats_interview(req)
+))
 
 if res.ats_interview is not None:
     # handle response
@@ -285,11 +275,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.CreateAtsJobRequest(
+res = s.ats.create_ats_job(request=operations.CreateAtsJobRequest(
     connection_id='<value>',
-)
-
-res = s.ats.create_ats_job(req)
+))
 
 if res.ats_job is not None:
     # handle response
@@ -329,11 +317,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.CreateAtsScorecardRequest(
+res = s.ats.create_ats_scorecard(request=operations.CreateAtsScorecardRequest(
     connection_id='<value>',
-)
-
-res = s.ats.create_ats_scorecard(req)
+))
 
 if res.ats_scorecard is not None:
     # handle response
@@ -373,12 +359,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetAtsActivityRequest(
+res = s.ats.get_ats_activity(request=operations.GetAtsActivityRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.ats.get_ats_activity(req)
+))
 
 if res.ats_activity is not None:
     # handle response
@@ -418,12 +402,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetAtsApplicationRequest(
+res = s.ats.get_ats_application(request=operations.GetAtsApplicationRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.ats.get_ats_application(req)
+))
 
 if res.ats_application is not None:
     # handle response
@@ -463,12 +445,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetAtsCandidateRequest(
+res = s.ats.get_ats_candidate(request=operations.GetAtsCandidateRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.ats.get_ats_candidate(req)
+))
 
 if res.ats_candidate is not None:
     # handle response
@@ -508,12 +488,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetAtsCompanyRequest(
+res = s.ats.get_ats_company(request=operations.GetAtsCompanyRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.ats.get_ats_company(req)
+))
 
 if res.ats_company is not None:
     # handle response
@@ -553,12 +531,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetAtsDocumentRequest(
+res = s.ats.get_ats_document(request=operations.GetAtsDocumentRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.ats.get_ats_document(req)
+))
 
 if res.ats_document is not None:
     # handle response
@@ -598,12 +574,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetAtsInterviewRequest(
+res = s.ats.get_ats_interview(request=operations.GetAtsInterviewRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.ats.get_ats_interview(req)
+))
 
 if res.ats_interview is not None:
     # handle response
@@ -643,12 +617,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetAtsJobRequest(
+res = s.ats.get_ats_job(request=operations.GetAtsJobRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.ats.get_ats_job(req)
+))
 
 if res.ats_job is not None:
     # handle response
@@ -688,12 +660,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetAtsScorecardRequest(
+res = s.ats.get_ats_scorecard(request=operations.GetAtsScorecardRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.ats.get_ats_scorecard(req)
+))
 
 if res.ats_scorecard is not None:
     # handle response
@@ -733,11 +703,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListAtsActivitiesRequest(
+res = s.ats.list_ats_activities(request=operations.ListAtsActivitiesRequest(
     connection_id='<value>',
-)
-
-res = s.ats.list_ats_activities(req)
+))
 
 if res.ats_activities is not None:
     # handle response
@@ -777,11 +745,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListAtsApplicationsRequest(
+res = s.ats.list_ats_applications(request=operations.ListAtsApplicationsRequest(
     connection_id='<value>',
-)
-
-res = s.ats.list_ats_applications(req)
+))
 
 if res.ats_applications is not None:
     # handle response
@@ -821,11 +787,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListAtsApplicationstatusesRequest(
+res = s.ats.list_ats_applicationstatuses(request=operations.ListAtsApplicationstatusesRequest(
     connection_id='<value>',
-)
-
-res = s.ats.list_ats_applicationstatuses(req)
+))
 
 if res.ats_statuses is not None:
     # handle response
@@ -865,11 +829,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListAtsCandidatesRequest(
+res = s.ats.list_ats_candidates(request=operations.ListAtsCandidatesRequest(
     connection_id='<value>',
-)
-
-res = s.ats.list_ats_candidates(req)
+))
 
 if res.ats_candidates is not None:
     # handle response
@@ -909,11 +871,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListAtsCompaniesRequest(
+res = s.ats.list_ats_companies(request=operations.ListAtsCompaniesRequest(
     connection_id='<value>',
-)
-
-res = s.ats.list_ats_companies(req)
+))
 
 if res.ats_companies is not None:
     # handle response
@@ -953,11 +913,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListAtsDocumentsRequest(
+res = s.ats.list_ats_documents(request=operations.ListAtsDocumentsRequest(
     connection_id='<value>',
-)
-
-res = s.ats.list_ats_documents(req)
+))
 
 if res.ats_documents is not None:
     # handle response
@@ -997,11 +955,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListAtsInterviewsRequest(
+res = s.ats.list_ats_interviews(request=operations.ListAtsInterviewsRequest(
     connection_id='<value>',
-)
-
-res = s.ats.list_ats_interviews(req)
+))
 
 if res.ats_interviews is not None:
     # handle response
@@ -1041,11 +997,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListAtsJobsRequest(
+res = s.ats.list_ats_jobs(request=operations.ListAtsJobsRequest(
     connection_id='<value>',
-)
-
-res = s.ats.list_ats_jobs(req)
+))
 
 if res.ats_jobs is not None:
     # handle response
@@ -1085,11 +1039,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListAtsScorecardsRequest(
+res = s.ats.list_ats_scorecards(request=operations.ListAtsScorecardsRequest(
     connection_id='<value>',
-)
-
-res = s.ats.list_ats_scorecards(req)
+))
 
 if res.ats_scorecards is not None:
     # handle response
@@ -1129,12 +1081,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PatchAtsActivityRequest(
+res = s.ats.patch_ats_activity(request=operations.PatchAtsActivityRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.ats.patch_ats_activity(req)
+))
 
 if res.ats_activity is not None:
     # handle response
@@ -1174,12 +1124,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PatchAtsApplicationRequest(
+res = s.ats.patch_ats_application(request=operations.PatchAtsApplicationRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.ats.patch_ats_application(req)
+))
 
 if res.ats_application is not None:
     # handle response
@@ -1219,12 +1167,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PatchAtsCandidateRequest(
+res = s.ats.patch_ats_candidate(request=operations.PatchAtsCandidateRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.ats.patch_ats_candidate(req)
+))
 
 if res.ats_candidate is not None:
     # handle response
@@ -1264,12 +1210,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PatchAtsDocumentRequest(
+res = s.ats.patch_ats_document(request=operations.PatchAtsDocumentRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.ats.patch_ats_document(req)
+))
 
 if res.ats_document is not None:
     # handle response
@@ -1309,12 +1253,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PatchAtsInterviewRequest(
+res = s.ats.patch_ats_interview(request=operations.PatchAtsInterviewRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.ats.patch_ats_interview(req)
+))
 
 if res.ats_interview is not None:
     # handle response
@@ -1354,12 +1296,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PatchAtsJobRequest(
+res = s.ats.patch_ats_job(request=operations.PatchAtsJobRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.ats.patch_ats_job(req)
+))
 
 if res.ats_job is not None:
     # handle response
@@ -1399,12 +1339,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PatchAtsScorecardRequest(
+res = s.ats.patch_ats_scorecard(request=operations.PatchAtsScorecardRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.ats.patch_ats_scorecard(req)
+))
 
 if res.ats_scorecard is not None:
     # handle response
@@ -1444,12 +1382,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.RemoveAtsActivityRequest(
+res = s.ats.remove_ats_activity(request=operations.RemoveAtsActivityRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.ats.remove_ats_activity(req)
+))
 
 if res is not None:
     # handle response
@@ -1489,12 +1425,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.RemoveAtsApplicationRequest(
+res = s.ats.remove_ats_application(request=operations.RemoveAtsApplicationRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.ats.remove_ats_application(req)
+))
 
 if res is not None:
     # handle response
@@ -1534,12 +1468,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.RemoveAtsCandidateRequest(
+res = s.ats.remove_ats_candidate(request=operations.RemoveAtsCandidateRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.ats.remove_ats_candidate(req)
+))
 
 if res is not None:
     # handle response
@@ -1579,12 +1511,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.RemoveAtsDocumentRequest(
+res = s.ats.remove_ats_document(request=operations.RemoveAtsDocumentRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.ats.remove_ats_document(req)
+))
 
 if res is not None:
     # handle response
@@ -1624,12 +1554,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.RemoveAtsInterviewRequest(
+res = s.ats.remove_ats_interview(request=operations.RemoveAtsInterviewRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.ats.remove_ats_interview(req)
+))
 
 if res is not None:
     # handle response
@@ -1669,12 +1597,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.RemoveAtsJobRequest(
+res = s.ats.remove_ats_job(request=operations.RemoveAtsJobRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.ats.remove_ats_job(req)
+))
 
 if res is not None:
     # handle response
@@ -1714,12 +1640,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.RemoveAtsScorecardRequest(
+res = s.ats.remove_ats_scorecard(request=operations.RemoveAtsScorecardRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.ats.remove_ats_scorecard(req)
+))
 
 if res is not None:
     # handle response
@@ -1759,12 +1683,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.UpdateAtsActivityRequest(
+res = s.ats.update_ats_activity(request=operations.UpdateAtsActivityRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.ats.update_ats_activity(req)
+))
 
 if res.ats_activity is not None:
     # handle response
@@ -1804,12 +1726,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.UpdateAtsApplicationRequest(
+res = s.ats.update_ats_application(request=operations.UpdateAtsApplicationRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.ats.update_ats_application(req)
+))
 
 if res.ats_application is not None:
     # handle response
@@ -1849,12 +1769,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.UpdateAtsCandidateRequest(
+res = s.ats.update_ats_candidate(request=operations.UpdateAtsCandidateRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.ats.update_ats_candidate(req)
+))
 
 if res.ats_candidate is not None:
     # handle response
@@ -1894,12 +1812,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.UpdateAtsDocumentRequest(
+res = s.ats.update_ats_document(request=operations.UpdateAtsDocumentRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.ats.update_ats_document(req)
+))
 
 if res.ats_document is not None:
     # handle response
@@ -1939,12 +1855,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.UpdateAtsInterviewRequest(
+res = s.ats.update_ats_interview(request=operations.UpdateAtsInterviewRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.ats.update_ats_interview(req)
+))
 
 if res.ats_interview is not None:
     # handle response
@@ -1984,12 +1898,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.UpdateAtsJobRequest(
+res = s.ats.update_ats_job(request=operations.UpdateAtsJobRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.ats.update_ats_job(req)
+))
 
 if res.ats_job is not None:
     # handle response
@@ -2029,12 +1941,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.UpdateAtsScorecardRequest(
+res = s.ats.update_ats_scorecard(request=operations.UpdateAtsScorecardRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.ats.update_ats_scorecard(req)
+))
 
 if res.ats_scorecard is not None:
     # handle response

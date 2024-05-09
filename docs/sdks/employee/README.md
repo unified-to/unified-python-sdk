@@ -26,11 +26,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.CreateHrisEmployeeRequest(
+res = s.employee.create_hris_employee(request=operations.CreateHrisEmployeeRequest(
     connection_id='<value>',
-)
-
-res = s.employee.create_hris_employee(req)
+))
 
 if res.hris_employee is not None:
     # handle response
@@ -70,12 +68,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetHrisEmployeeRequest(
+res = s.employee.get_hris_employee(request=operations.GetHrisEmployeeRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.employee.get_hris_employee(req)
+))
 
 if res.hris_employee is not None:
     # handle response
@@ -115,11 +111,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListHrisEmployeesRequest(
+res = s.employee.list_hris_employees(request=operations.ListHrisEmployeesRequest(
     connection_id='<value>',
-)
-
-res = s.employee.list_hris_employees(req)
+))
 
 if res.hris_employees is not None:
     # handle response
@@ -159,12 +153,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PatchHrisEmployeeRequest(
+res = s.employee.patch_hris_employee(request=operations.PatchHrisEmployeeRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.employee.patch_hris_employee(req)
+))
 
 if res.hris_employee is not None:
     # handle response
@@ -204,12 +196,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.RemoveHrisEmployeeRequest(
+res = s.employee.remove_hris_employee(request=operations.RemoveHrisEmployeeRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.employee.remove_hris_employee(req)
+))
 
 if res is not None:
     # handle response
@@ -249,12 +239,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.UpdateHrisEmployeeRequest(
+res = s.employee.update_hris_employee(request=operations.UpdateHrisEmployeeRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.employee.update_hris_employee(req)
+))
 
 if res.hris_employee is not None:
     # handle response

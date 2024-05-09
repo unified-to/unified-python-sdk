@@ -26,11 +26,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.CreateHrisGroupRequest(
+res = s.group.create_hris_group(request=operations.CreateHrisGroupRequest(
     connection_id='<value>',
-)
-
-res = s.group.create_hris_group(req)
+))
 
 if res.hris_group is not None:
     # handle response
@@ -70,12 +68,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetHrisGroupRequest(
+res = s.group.get_hris_group(request=operations.GetHrisGroupRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.group.get_hris_group(req)
+))
 
 if res.hris_group is not None:
     # handle response
@@ -115,11 +111,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListHrisGroupsRequest(
+res = s.group.list_hris_groups(request=operations.ListHrisGroupsRequest(
     connection_id='<value>',
-)
-
-res = s.group.list_hris_groups(req)
+))
 
 if res.hris_groups is not None:
     # handle response
@@ -159,12 +153,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PatchHrisGroupRequest(
+res = s.group.patch_hris_group(request=operations.PatchHrisGroupRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.group.patch_hris_group(req)
+))
 
 if res.hris_group is not None:
     # handle response
@@ -204,12 +196,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.RemoveHrisGroupRequest(
+res = s.group.remove_hris_group(request=operations.RemoveHrisGroupRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.group.remove_hris_group(req)
+))
 
 if res is not None:
     # handle response
@@ -249,12 +239,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.UpdateHrisGroupRequest(
+res = s.group.update_hris_group(request=operations.UpdateHrisGroupRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.group.update_hris_group(req)
+))
 
 if res.hris_group is not None:
     # handle response

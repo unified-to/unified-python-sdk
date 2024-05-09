@@ -38,11 +38,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.CreateAccountingContactRequest(
+res = s.contact.create_accounting_contact(request=operations.CreateAccountingContactRequest(
     connection_id='<value>',
-)
-
-res = s.contact.create_accounting_contact(req)
+))
 
 if res.accounting_contact is not None:
     # handle response
@@ -82,11 +80,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.CreateCrmContactRequest(
+res = s.contact.create_crm_contact(request=operations.CreateCrmContactRequest(
     connection_id='<value>',
-)
-
-res = s.contact.create_crm_contact(req)
+))
 
 if res.crm_contact is not None:
     # handle response
@@ -126,11 +122,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.CreateUcContactRequest(
+res = s.contact.create_uc_contact(request=operations.CreateUcContactRequest(
     connection_id='<value>',
-)
-
-res = s.contact.create_uc_contact(req)
+))
 
 if res.uc_contact is not None:
     # handle response
@@ -170,12 +164,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetAccountingContactRequest(
+res = s.contact.get_accounting_contact(request=operations.GetAccountingContactRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.contact.get_accounting_contact(req)
+))
 
 if res.accounting_contact is not None:
     # handle response
@@ -215,12 +207,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetCrmContactRequest(
+res = s.contact.get_crm_contact(request=operations.GetCrmContactRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.contact.get_crm_contact(req)
+))
 
 if res.crm_contact is not None:
     # handle response
@@ -260,12 +250,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetUcContactRequest(
+res = s.contact.get_uc_contact(request=operations.GetUcContactRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.contact.get_uc_contact(req)
+))
 
 if res.uc_contact is not None:
     # handle response
@@ -305,11 +293,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListAccountingContactsRequest(
+res = s.contact.list_accounting_contacts(request=operations.ListAccountingContactsRequest(
     connection_id='<value>',
-)
-
-res = s.contact.list_accounting_contacts(req)
+))
 
 if res.accounting_contacts is not None:
     # handle response
@@ -349,11 +335,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListCrmContactsRequest(
+res = s.contact.list_crm_contacts(request=operations.ListCrmContactsRequest(
     connection_id='<value>',
-)
-
-res = s.contact.list_crm_contacts(req)
+))
 
 if res.crm_contacts is not None:
     # handle response
@@ -393,11 +377,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListUcContactsRequest(
+res = s.contact.list_uc_contacts(request=operations.ListUcContactsRequest(
     connection_id='<value>',
-)
-
-res = s.contact.list_uc_contacts(req)
+))
 
 if res.uc_contacts is not None:
     # handle response
@@ -437,12 +419,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PatchAccountingContactRequest(
+res = s.contact.patch_accounting_contact(request=operations.PatchAccountingContactRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.contact.patch_accounting_contact(req)
+))
 
 if res.accounting_contact is not None:
     # handle response
@@ -482,12 +462,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PatchCrmContactRequest(
+res = s.contact.patch_crm_contact(request=operations.PatchCrmContactRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.contact.patch_crm_contact(req)
+))
 
 if res.crm_contact is not None:
     # handle response
@@ -527,12 +505,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PatchUcContactRequest(
+res = s.contact.patch_uc_contact(request=operations.PatchUcContactRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.contact.patch_uc_contact(req)
+))
 
 if res.uc_contact is not None:
     # handle response
@@ -572,12 +548,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.RemoveAccountingContactRequest(
+res = s.contact.remove_accounting_contact(request=operations.RemoveAccountingContactRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.contact.remove_accounting_contact(req)
+))
 
 if res is not None:
     # handle response
@@ -617,12 +591,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.RemoveCrmContactRequest(
+res = s.contact.remove_crm_contact(request=operations.RemoveCrmContactRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.contact.remove_crm_contact(req)
+))
 
 if res is not None:
     # handle response
@@ -662,12 +634,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.RemoveUcContactRequest(
+res = s.contact.remove_uc_contact(request=operations.RemoveUcContactRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.contact.remove_uc_contact(req)
+))
 
 if res is not None:
     # handle response
@@ -707,12 +677,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.UpdateAccountingContactRequest(
+res = s.contact.update_accounting_contact(request=operations.UpdateAccountingContactRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.contact.update_accounting_contact(req)
+))
 
 if res.accounting_contact is not None:
     # handle response
@@ -752,12 +720,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.UpdateCrmContactRequest(
+res = s.contact.update_crm_contact(request=operations.UpdateCrmContactRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.contact.update_crm_contact(req)
+))
 
 if res.crm_contact is not None:
     # handle response
@@ -797,12 +763,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.UpdateUcContactRequest(
+res = s.contact.update_uc_contact(request=operations.UpdateUcContactRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.contact.update_uc_contact(req)
+))
 
 if res.uc_contact is not None:
     # handle response

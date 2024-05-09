@@ -15,7 +15,7 @@ class Connection:
         
     
     
-    def create_unified_connection(self, request: Optional[shared.Connection]) -> operations.CreateUnifiedConnectionResponse:
+    def create_unified_connection(self, request: Optional[shared.Connection] = None) -> operations.CreateUnifiedConnectionResponse:
         r"""Create connection"""
         hook_ctx = HookContext(operation_id='createUnifiedConnection', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -57,6 +57,7 @@ class Connection:
         res = operations.CreateUnifiedConnectionResponse(status_code=http_res.status_code, content_type=http_res.headers.get('Content-Type') or '', raw_response=http_res)
         
         if http_res.status_code == 200:
+            # pylint: disable=no-else-return
             if utils.match_content_type(http_res.headers.get('Content-Type') or '', 'application/json'):                
                 out = utils.unmarshal_json(http_res.text, Optional[shared.Connection])
                 res.connection = out
@@ -111,6 +112,7 @@ class Connection:
         res = operations.GetUnifiedConnectionResponse(status_code=http_res.status_code, content_type=http_res.headers.get('Content-Type') or '', raw_response=http_res)
         
         if http_res.status_code == 200:
+            # pylint: disable=no-else-return
             if utils.match_content_type(http_res.headers.get('Content-Type') or '', 'application/json'):                
                 out = utils.unmarshal_json(http_res.text, Optional[shared.Connection])
                 res.connection = out
@@ -166,6 +168,7 @@ class Connection:
         res = operations.ListUnifiedConnectionsResponse(status_code=http_res.status_code, content_type=http_res.headers.get('Content-Type') or '', raw_response=http_res)
         
         if http_res.status_code == 200:
+            # pylint: disable=no-else-return
             if utils.match_content_type(http_res.headers.get('Content-Type') or '', 'application/json'):                
                 out = utils.unmarshal_json(http_res.text, Optional[List[shared.Connection]])
                 res.connections = out
@@ -223,6 +226,7 @@ class Connection:
         res = operations.PatchUnifiedConnectionResponse(status_code=http_res.status_code, content_type=http_res.headers.get('Content-Type') or '', raw_response=http_res)
         
         if http_res.status_code == 200:
+            # pylint: disable=no-else-return
             if utils.match_content_type(http_res.headers.get('Content-Type') or '', 'application/json'):                
                 out = utils.unmarshal_json(http_res.text, Optional[shared.Connection])
                 res.connection = out
@@ -281,6 +285,7 @@ class Connection:
         elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
             raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
         else:
+            # pylint: disable=no-else-return
             if utils.match_content_type(http_res.headers.get('Content-Type') or '', 'application/json'):                
                 out = utils.unmarshal_json(http_res.text, Optional[str])
                 res.string = out
@@ -334,6 +339,7 @@ class Connection:
         res = operations.UpdateUnifiedConnectionResponse(status_code=http_res.status_code, content_type=http_res.headers.get('Content-Type') or '', raw_response=http_res)
         
         if http_res.status_code == 200:
+            # pylint: disable=no-else-return
             if utils.match_content_type(http_res.headers.get('Content-Type') or '', 'application/json'):                
                 out = utils.unmarshal_json(http_res.text, Optional[shared.Connection])
                 res.connection = out

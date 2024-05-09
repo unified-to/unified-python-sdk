@@ -26,11 +26,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.CreateAtsCandidateRequest(
+res = s.candidate.create_ats_candidate(request=operations.CreateAtsCandidateRequest(
     connection_id='<value>',
-)
-
-res = s.candidate.create_ats_candidate(req)
+))
 
 if res.ats_candidate is not None:
     # handle response
@@ -70,12 +68,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetAtsCandidateRequest(
+res = s.candidate.get_ats_candidate(request=operations.GetAtsCandidateRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.candidate.get_ats_candidate(req)
+))
 
 if res.ats_candidate is not None:
     # handle response
@@ -115,11 +111,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListAtsCandidatesRequest(
+res = s.candidate.list_ats_candidates(request=operations.ListAtsCandidatesRequest(
     connection_id='<value>',
-)
-
-res = s.candidate.list_ats_candidates(req)
+))
 
 if res.ats_candidates is not None:
     # handle response
@@ -159,12 +153,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PatchAtsCandidateRequest(
+res = s.candidate.patch_ats_candidate(request=operations.PatchAtsCandidateRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.candidate.patch_ats_candidate(req)
+))
 
 if res.ats_candidate is not None:
     # handle response
@@ -204,12 +196,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.RemoveAtsCandidateRequest(
+res = s.candidate.remove_ats_candidate(request=operations.RemoveAtsCandidateRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.candidate.remove_ats_candidate(req)
+))
 
 if res is not None:
     # handle response
@@ -249,12 +239,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.UpdateAtsCandidateRequest(
+res = s.candidate.update_ats_candidate(request=operations.UpdateAtsCandidateRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.candidate.update_ats_candidate(req)
+))
 
 if res.ats_candidate is not None:
     # handle response

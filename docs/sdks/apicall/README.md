@@ -22,11 +22,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetUnifiedApicallRequest(
+res = s.apicall.get_unified_apicall(request=operations.GetUnifiedApicallRequest(
     id='<id>',
-)
-
-res = s.apicall.get_unified_apicall(req)
+))
 
 if res.api_call is not None:
     # handle response
@@ -66,9 +64,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListUnifiedApicallsRequest()
-
-res = s.apicall.list_unified_apicalls(req)
+res = s.apicall.list_unified_apicalls(request=operations.ListUnifiedApicallsRequest())
 
 if res.api_calls is not None:
     # handle response

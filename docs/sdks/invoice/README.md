@@ -26,11 +26,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.CreateAccountingInvoiceRequest(
+res = s.invoice.create_accounting_invoice(request=operations.CreateAccountingInvoiceRequest(
     connection_id='<value>',
-)
-
-res = s.invoice.create_accounting_invoice(req)
+))
 
 if res.accounting_invoice is not None:
     # handle response
@@ -70,12 +68,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetAccountingInvoiceRequest(
+res = s.invoice.get_accounting_invoice(request=operations.GetAccountingInvoiceRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.invoice.get_accounting_invoice(req)
+))
 
 if res.accounting_invoice is not None:
     # handle response
@@ -115,11 +111,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListAccountingInvoicesRequest(
+res = s.invoice.list_accounting_invoices(request=operations.ListAccountingInvoicesRequest(
     connection_id='<value>',
-)
-
-res = s.invoice.list_accounting_invoices(req)
+))
 
 if res.accounting_invoices is not None:
     # handle response
@@ -159,12 +153,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PatchAccountingInvoiceRequest(
+res = s.invoice.patch_accounting_invoice(request=operations.PatchAccountingInvoiceRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.invoice.patch_accounting_invoice(req)
+))
 
 if res.accounting_invoice is not None:
     # handle response
@@ -204,12 +196,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.RemoveAccountingInvoiceRequest(
+res = s.invoice.remove_accounting_invoice(request=operations.RemoveAccountingInvoiceRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.invoice.remove_accounting_invoice(req)
+))
 
 if res is not None:
     # handle response
@@ -249,12 +239,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.UpdateAccountingInvoiceRequest(
+res = s.invoice.update_accounting_invoice(request=operations.UpdateAccountingInvoiceRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.invoice.update_accounting_invoice(req)
+))
 
 if res.accounting_invoice is not None:
     # handle response

@@ -27,11 +27,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.CreateUcContactRequest(
+res = s.uc.create_uc_contact(request=operations.CreateUcContactRequest(
     connection_id='<value>',
-)
-
-res = s.uc.create_uc_contact(req)
+))
 
 if res.uc_contact is not None:
     # handle response
@@ -71,12 +69,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetUcContactRequest(
+res = s.uc.get_uc_contact(request=operations.GetUcContactRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.uc.get_uc_contact(req)
+))
 
 if res.uc_contact is not None:
     # handle response
@@ -116,11 +112,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListUcCallsRequest(
+res = s.uc.list_uc_calls(request=operations.ListUcCallsRequest(
     connection_id='<value>',
-)
-
-res = s.uc.list_uc_calls(req)
+))
 
 if res.uc_calls is not None:
     # handle response
@@ -160,11 +154,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListUcContactsRequest(
+res = s.uc.list_uc_contacts(request=operations.ListUcContactsRequest(
     connection_id='<value>',
-)
-
-res = s.uc.list_uc_contacts(req)
+))
 
 if res.uc_contacts is not None:
     # handle response
@@ -204,12 +196,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PatchUcContactRequest(
+res = s.uc.patch_uc_contact(request=operations.PatchUcContactRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.uc.patch_uc_contact(req)
+))
 
 if res.uc_contact is not None:
     # handle response
@@ -249,12 +239,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.RemoveUcContactRequest(
+res = s.uc.remove_uc_contact(request=operations.RemoveUcContactRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.uc.remove_uc_contact(req)
+))
 
 if res is not None:
     # handle response
@@ -294,12 +282,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.UpdateUcContactRequest(
+res = s.uc.update_uc_contact(request=operations.UpdateUcContactRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.uc.update_uc_contact(req)
+))
 
 if res.uc_contact is not None:
     # handle response

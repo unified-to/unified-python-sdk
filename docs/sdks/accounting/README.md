@@ -52,11 +52,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.CreateAccountingAccountRequest(
+res = s.accounting.create_accounting_account(request=operations.CreateAccountingAccountRequest(
     connection_id='<value>',
-)
-
-res = s.accounting.create_accounting_account(req)
+))
 
 if res.accounting_account is not None:
     # handle response
@@ -96,11 +94,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.CreateAccountingContactRequest(
+res = s.accounting.create_accounting_contact(request=operations.CreateAccountingContactRequest(
     connection_id='<value>',
-)
-
-res = s.accounting.create_accounting_contact(req)
+))
 
 if res.accounting_contact is not None:
     # handle response
@@ -140,11 +136,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.CreateAccountingInvoiceRequest(
+res = s.accounting.create_accounting_invoice(request=operations.CreateAccountingInvoiceRequest(
     connection_id='<value>',
-)
-
-res = s.accounting.create_accounting_invoice(req)
+))
 
 if res.accounting_invoice is not None:
     # handle response
@@ -184,11 +178,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.CreateAccountingTaxrateRequest(
+res = s.accounting.create_accounting_taxrate(request=operations.CreateAccountingTaxrateRequest(
     connection_id='<value>',
-)
-
-res = s.accounting.create_accounting_taxrate(req)
+))
 
 if res.accounting_taxrate is not None:
     # handle response
@@ -228,11 +220,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.CreateAccountingTransactionRequest(
+res = s.accounting.create_accounting_transaction(request=operations.CreateAccountingTransactionRequest(
     connection_id='<value>',
-)
-
-res = s.accounting.create_accounting_transaction(req)
+))
 
 if res.accounting_transaction is not None:
     # handle response
@@ -272,12 +262,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetAccountingAccountRequest(
+res = s.accounting.get_accounting_account(request=operations.GetAccountingAccountRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.accounting.get_accounting_account(req)
+))
 
 if res.accounting_account is not None:
     # handle response
@@ -317,12 +305,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetAccountingContactRequest(
+res = s.accounting.get_accounting_contact(request=operations.GetAccountingContactRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.accounting.get_accounting_contact(req)
+))
 
 if res.accounting_contact is not None:
     # handle response
@@ -362,12 +348,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetAccountingInvoiceRequest(
+res = s.accounting.get_accounting_invoice(request=operations.GetAccountingInvoiceRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.accounting.get_accounting_invoice(req)
+))
 
 if res.accounting_invoice is not None:
     # handle response
@@ -407,12 +391,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetAccountingOrganizationRequest(
+res = s.accounting.get_accounting_organization(request=operations.GetAccountingOrganizationRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.accounting.get_accounting_organization(req)
+))
 
 if res.accounting_organization is not None:
     # handle response
@@ -452,12 +434,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetAccountingTaxrateRequest(
+res = s.accounting.get_accounting_taxrate(request=operations.GetAccountingTaxrateRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.accounting.get_accounting_taxrate(req)
+))
 
 if res.accounting_taxrate is not None:
     # handle response
@@ -497,12 +477,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetAccountingTransactionRequest(
+res = s.accounting.get_accounting_transaction(request=operations.GetAccountingTransactionRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.accounting.get_accounting_transaction(req)
+))
 
 if res.accounting_transaction is not None:
     # handle response
@@ -542,11 +520,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListAccountingAccountsRequest(
+res = s.accounting.list_accounting_accounts(request=operations.ListAccountingAccountsRequest(
     connection_id='<value>',
-)
-
-res = s.accounting.list_accounting_accounts(req)
+))
 
 if res.accounting_accounts is not None:
     # handle response
@@ -586,11 +562,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListAccountingContactsRequest(
+res = s.accounting.list_accounting_contacts(request=operations.ListAccountingContactsRequest(
     connection_id='<value>',
-)
-
-res = s.accounting.list_accounting_contacts(req)
+))
 
 if res.accounting_contacts is not None:
     # handle response
@@ -630,11 +604,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListAccountingInvoicesRequest(
+res = s.accounting.list_accounting_invoices(request=operations.ListAccountingInvoicesRequest(
     connection_id='<value>',
-)
-
-res = s.accounting.list_accounting_invoices(req)
+))
 
 if res.accounting_invoices is not None:
     # handle response
@@ -674,11 +646,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListAccountingOrganizationsRequest(
+res = s.accounting.list_accounting_organizations(request=operations.ListAccountingOrganizationsRequest(
     connection_id='<value>',
-)
-
-res = s.accounting.list_accounting_organizations(req)
+))
 
 if res.accounting_organizations is not None:
     # handle response
@@ -718,11 +688,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListAccountingTaxratesRequest(
+res = s.accounting.list_accounting_taxrates(request=operations.ListAccountingTaxratesRequest(
     connection_id='<value>',
-)
-
-res = s.accounting.list_accounting_taxrates(req)
+))
 
 if res.accounting_taxrates is not None:
     # handle response
@@ -762,11 +730,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListAccountingTransactionsRequest(
+res = s.accounting.list_accounting_transactions(request=operations.ListAccountingTransactionsRequest(
     connection_id='<value>',
-)
-
-res = s.accounting.list_accounting_transactions(req)
+))
 
 if res.accounting_transactions is not None:
     # handle response
@@ -806,12 +772,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PatchAccountingAccountRequest(
+res = s.accounting.patch_accounting_account(request=operations.PatchAccountingAccountRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.accounting.patch_accounting_account(req)
+))
 
 if res.accounting_account is not None:
     # handle response
@@ -851,12 +815,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PatchAccountingContactRequest(
+res = s.accounting.patch_accounting_contact(request=operations.PatchAccountingContactRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.accounting.patch_accounting_contact(req)
+))
 
 if res.accounting_contact is not None:
     # handle response
@@ -896,12 +858,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PatchAccountingInvoiceRequest(
+res = s.accounting.patch_accounting_invoice(request=operations.PatchAccountingInvoiceRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.accounting.patch_accounting_invoice(req)
+))
 
 if res.accounting_invoice is not None:
     # handle response
@@ -941,12 +901,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PatchAccountingTaxrateRequest(
+res = s.accounting.patch_accounting_taxrate(request=operations.PatchAccountingTaxrateRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.accounting.patch_accounting_taxrate(req)
+))
 
 if res.accounting_taxrate is not None:
     # handle response
@@ -986,12 +944,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PatchAccountingTransactionRequest(
+res = s.accounting.patch_accounting_transaction(request=operations.PatchAccountingTransactionRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.accounting.patch_accounting_transaction(req)
+))
 
 if res.accounting_transaction is not None:
     # handle response
@@ -1031,12 +987,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.RemoveAccountingAccountRequest(
+res = s.accounting.remove_accounting_account(request=operations.RemoveAccountingAccountRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.accounting.remove_accounting_account(req)
+))
 
 if res is not None:
     # handle response
@@ -1076,12 +1030,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.RemoveAccountingContactRequest(
+res = s.accounting.remove_accounting_contact(request=operations.RemoveAccountingContactRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.accounting.remove_accounting_contact(req)
+))
 
 if res is not None:
     # handle response
@@ -1121,12 +1073,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.RemoveAccountingInvoiceRequest(
+res = s.accounting.remove_accounting_invoice(request=operations.RemoveAccountingInvoiceRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.accounting.remove_accounting_invoice(req)
+))
 
 if res is not None:
     # handle response
@@ -1166,12 +1116,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.RemoveAccountingTaxrateRequest(
+res = s.accounting.remove_accounting_taxrate(request=operations.RemoveAccountingTaxrateRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.accounting.remove_accounting_taxrate(req)
+))
 
 if res is not None:
     # handle response
@@ -1211,12 +1159,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.RemoveAccountingTransactionRequest(
+res = s.accounting.remove_accounting_transaction(request=operations.RemoveAccountingTransactionRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.accounting.remove_accounting_transaction(req)
+))
 
 if res is not None:
     # handle response
@@ -1256,12 +1202,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.UpdateAccountingAccountRequest(
+res = s.accounting.update_accounting_account(request=operations.UpdateAccountingAccountRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.accounting.update_accounting_account(req)
+))
 
 if res.accounting_account is not None:
     # handle response
@@ -1301,12 +1245,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.UpdateAccountingContactRequest(
+res = s.accounting.update_accounting_contact(request=operations.UpdateAccountingContactRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.accounting.update_accounting_contact(req)
+))
 
 if res.accounting_contact is not None:
     # handle response
@@ -1346,12 +1288,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.UpdateAccountingInvoiceRequest(
+res = s.accounting.update_accounting_invoice(request=operations.UpdateAccountingInvoiceRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.accounting.update_accounting_invoice(req)
+))
 
 if res.accounting_invoice is not None:
     # handle response
@@ -1391,12 +1331,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.UpdateAccountingTaxrateRequest(
+res = s.accounting.update_accounting_taxrate(request=operations.UpdateAccountingTaxrateRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.accounting.update_accounting_taxrate(req)
+))
 
 if res.accounting_taxrate is not None:
     # handle response
@@ -1436,12 +1374,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.UpdateAccountingTransactionRequest(
+res = s.accounting.update_accounting_transaction(request=operations.UpdateAccountingTransactionRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.accounting.update_accounting_transaction(req)
+))
 
 if res.accounting_transaction is not None:
     # handle response

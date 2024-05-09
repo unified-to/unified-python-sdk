@@ -56,11 +56,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.CreateCrmCompanyRequest(
+res = s.crm.create_crm_company(request=operations.CreateCrmCompanyRequest(
     connection_id='<value>',
-)
-
-res = s.crm.create_crm_company(req)
+))
 
 if res.crm_company is not None:
     # handle response
@@ -100,11 +98,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.CreateCrmContactRequest(
+res = s.crm.create_crm_contact(request=operations.CreateCrmContactRequest(
     connection_id='<value>',
-)
-
-res = s.crm.create_crm_contact(req)
+))
 
 if res.crm_contact is not None:
     # handle response
@@ -144,11 +140,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.CreateCrmDealRequest(
+res = s.crm.create_crm_deal(request=operations.CreateCrmDealRequest(
     connection_id='<value>',
-)
-
-res = s.crm.create_crm_deal(req)
+))
 
 if res.crm_deal is not None:
     # handle response
@@ -188,11 +182,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.CreateCrmEventRequest(
+res = s.crm.create_crm_event(request=operations.CreateCrmEventRequest(
     connection_id='<value>',
-)
-
-res = s.crm.create_crm_event(req)
+))
 
 if res.crm_event is not None:
     # handle response
@@ -232,11 +224,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.CreateCrmLeadRequest(
+res = s.crm.create_crm_lead(request=operations.CreateCrmLeadRequest(
     connection_id='<value>',
-)
-
-res = s.crm.create_crm_lead(req)
+))
 
 if res.crm_lead is not None:
     # handle response
@@ -276,11 +266,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.CreateCrmPipelineRequest(
+res = s.crm.create_crm_pipeline(request=operations.CreateCrmPipelineRequest(
     connection_id='<value>',
-)
-
-res = s.crm.create_crm_pipeline(req)
+))
 
 if res.crm_pipeline is not None:
     # handle response
@@ -320,12 +308,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetCrmCompanyRequest(
+res = s.crm.get_crm_company(request=operations.GetCrmCompanyRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.crm.get_crm_company(req)
+))
 
 if res.crm_company is not None:
     # handle response
@@ -365,12 +351,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetCrmContactRequest(
+res = s.crm.get_crm_contact(request=operations.GetCrmContactRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.crm.get_crm_contact(req)
+))
 
 if res.crm_contact is not None:
     # handle response
@@ -410,12 +394,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetCrmDealRequest(
+res = s.crm.get_crm_deal(request=operations.GetCrmDealRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.crm.get_crm_deal(req)
+))
 
 if res.crm_deal is not None:
     # handle response
@@ -455,12 +437,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetCrmEventRequest(
+res = s.crm.get_crm_event(request=operations.GetCrmEventRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.crm.get_crm_event(req)
+))
 
 if res.crm_event is not None:
     # handle response
@@ -500,12 +480,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetCrmLeadRequest(
+res = s.crm.get_crm_lead(request=operations.GetCrmLeadRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.crm.get_crm_lead(req)
+))
 
 if res.crm_lead is not None:
     # handle response
@@ -545,12 +523,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetCrmPipelineRequest(
+res = s.crm.get_crm_pipeline(request=operations.GetCrmPipelineRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.crm.get_crm_pipeline(req)
+))
 
 if res.crm_pipeline is not None:
     # handle response
@@ -590,11 +566,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListCrmCompaniesRequest(
+res = s.crm.list_crm_companies(request=operations.ListCrmCompaniesRequest(
     connection_id='<value>',
-)
-
-res = s.crm.list_crm_companies(req)
+))
 
 if res.crm_companies is not None:
     # handle response
@@ -634,11 +608,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListCrmContactsRequest(
+res = s.crm.list_crm_contacts(request=operations.ListCrmContactsRequest(
     connection_id='<value>',
-)
-
-res = s.crm.list_crm_contacts(req)
+))
 
 if res.crm_contacts is not None:
     # handle response
@@ -678,11 +650,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListCrmDealsRequest(
+res = s.crm.list_crm_deals(request=operations.ListCrmDealsRequest(
     connection_id='<value>',
-)
-
-res = s.crm.list_crm_deals(req)
+))
 
 if res.crm_deals is not None:
     # handle response
@@ -722,11 +692,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListCrmEventsRequest(
+res = s.crm.list_crm_events(request=operations.ListCrmEventsRequest(
     connection_id='<value>',
-)
-
-res = s.crm.list_crm_events(req)
+))
 
 if res.crm_events is not None:
     # handle response
@@ -766,11 +734,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListCrmLeadsRequest(
+res = s.crm.list_crm_leads(request=operations.ListCrmLeadsRequest(
     connection_id='<value>',
-)
-
-res = s.crm.list_crm_leads(req)
+))
 
 if res.crm_leads is not None:
     # handle response
@@ -810,11 +776,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListCrmPipelinesRequest(
+res = s.crm.list_crm_pipelines(request=operations.ListCrmPipelinesRequest(
     connection_id='<value>',
-)
-
-res = s.crm.list_crm_pipelines(req)
+))
 
 if res.crm_pipelines is not None:
     # handle response
@@ -854,12 +818,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PatchCrmCompanyRequest(
+res = s.crm.patch_crm_company(request=operations.PatchCrmCompanyRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.crm.patch_crm_company(req)
+))
 
 if res.crm_company is not None:
     # handle response
@@ -899,12 +861,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PatchCrmContactRequest(
+res = s.crm.patch_crm_contact(request=operations.PatchCrmContactRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.crm.patch_crm_contact(req)
+))
 
 if res.crm_contact is not None:
     # handle response
@@ -944,12 +904,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PatchCrmDealRequest(
+res = s.crm.patch_crm_deal(request=operations.PatchCrmDealRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.crm.patch_crm_deal(req)
+))
 
 if res.crm_deal is not None:
     # handle response
@@ -989,12 +947,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PatchCrmEventRequest(
+res = s.crm.patch_crm_event(request=operations.PatchCrmEventRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.crm.patch_crm_event(req)
+))
 
 if res.crm_event is not None:
     # handle response
@@ -1034,12 +990,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PatchCrmLeadRequest(
+res = s.crm.patch_crm_lead(request=operations.PatchCrmLeadRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.crm.patch_crm_lead(req)
+))
 
 if res.crm_lead is not None:
     # handle response
@@ -1079,12 +1033,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PatchCrmPipelineRequest(
+res = s.crm.patch_crm_pipeline(request=operations.PatchCrmPipelineRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.crm.patch_crm_pipeline(req)
+))
 
 if res.crm_pipeline is not None:
     # handle response
@@ -1124,12 +1076,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.RemoveCrmCompanyRequest(
+res = s.crm.remove_crm_company(request=operations.RemoveCrmCompanyRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.crm.remove_crm_company(req)
+))
 
 if res is not None:
     # handle response
@@ -1169,12 +1119,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.RemoveCrmContactRequest(
+res = s.crm.remove_crm_contact(request=operations.RemoveCrmContactRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.crm.remove_crm_contact(req)
+))
 
 if res is not None:
     # handle response
@@ -1214,12 +1162,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.RemoveCrmDealRequest(
+res = s.crm.remove_crm_deal(request=operations.RemoveCrmDealRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.crm.remove_crm_deal(req)
+))
 
 if res is not None:
     # handle response
@@ -1259,12 +1205,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.RemoveCrmEventRequest(
+res = s.crm.remove_crm_event(request=operations.RemoveCrmEventRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.crm.remove_crm_event(req)
+))
 
 if res is not None:
     # handle response
@@ -1304,12 +1248,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.RemoveCrmLeadRequest(
+res = s.crm.remove_crm_lead(request=operations.RemoveCrmLeadRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.crm.remove_crm_lead(req)
+))
 
 if res is not None:
     # handle response
@@ -1349,12 +1291,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.RemoveCrmPipelineRequest(
+res = s.crm.remove_crm_pipeline(request=operations.RemoveCrmPipelineRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.crm.remove_crm_pipeline(req)
+))
 
 if res is not None:
     # handle response
@@ -1394,12 +1334,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.UpdateCrmCompanyRequest(
+res = s.crm.update_crm_company(request=operations.UpdateCrmCompanyRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.crm.update_crm_company(req)
+))
 
 if res.crm_company is not None:
     # handle response
@@ -1439,12 +1377,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.UpdateCrmContactRequest(
+res = s.crm.update_crm_contact(request=operations.UpdateCrmContactRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.crm.update_crm_contact(req)
+))
 
 if res.crm_contact is not None:
     # handle response
@@ -1484,12 +1420,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.UpdateCrmDealRequest(
+res = s.crm.update_crm_deal(request=operations.UpdateCrmDealRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.crm.update_crm_deal(req)
+))
 
 if res.crm_deal is not None:
     # handle response
@@ -1529,12 +1463,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.UpdateCrmEventRequest(
+res = s.crm.update_crm_event(request=operations.UpdateCrmEventRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.crm.update_crm_event(req)
+))
 
 if res.crm_event is not None:
     # handle response
@@ -1574,12 +1506,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.UpdateCrmLeadRequest(
+res = s.crm.update_crm_lead(request=operations.UpdateCrmLeadRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.crm.update_crm_lead(req)
+))
 
 if res.crm_lead is not None:
     # handle response
@@ -1619,12 +1549,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.UpdateCrmPipelineRequest(
+res = s.crm.update_crm_pipeline(request=operations.UpdateCrmPipelineRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.crm.update_crm_pipeline(req)
+))
 
 if res.crm_pipeline is not None:
     # handle response

@@ -21,11 +21,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListUcCallsRequest(
+res = s.call.list_uc_calls(request=operations.ListUcCallsRequest(
     connection_id='<value>',
-)
-
-res = s.call.list_uc_calls(req)
+))
 
 if res.uc_calls is not None:
     # handle response

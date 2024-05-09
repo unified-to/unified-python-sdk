@@ -22,12 +22,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetPaymentPayoutRequest(
+res = s.payout.get_payment_payout(request=operations.GetPaymentPayoutRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.payout.get_payment_payout(req)
+))
 
 if res.payment_payout is not None:
     # handle response
@@ -67,11 +65,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListPaymentPayoutsRequest(
+res = s.payout.list_payment_payouts(request=operations.ListPaymentPayoutsRequest(
     connection_id='<value>',
-)
-
-res = s.payout.list_payment_payouts(req)
+))
 
 if res.payment_payouts is not None:
     # handle response

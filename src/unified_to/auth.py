@@ -56,6 +56,7 @@ class Auth:
         res = operations.GetUnifiedIntegrationAuthResponse(status_code=http_res.status_code, content_type=http_res.headers.get('Content-Type') or '', raw_response=http_res)
         
         if http_res.status_code == 200:
+            # pylint: disable=no-else-return
             if utils.match_content_type(http_res.headers.get('Content-Type') or '', 'text/plain'):                
                 res.res = http_res.text
             else:
@@ -112,6 +113,7 @@ class Auth:
         res = operations.GetUnifiedIntegrationLoginResponse(status_code=http_res.status_code, content_type=http_res.headers.get('Content-Type') or '', raw_response=http_res)
         
         if http_res.status_code == 200:
+            # pylint: disable=no-else-return
             if utils.match_content_type(http_res.headers.get('Content-Type') or '', 'text/plain'):                
                 res.res = http_res.text
             else:

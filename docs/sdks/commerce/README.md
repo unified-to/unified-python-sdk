@@ -44,11 +44,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.CreateCommerceCollectionRequest(
+res = s.commerce.create_commerce_collection(request=operations.CreateCommerceCollectionRequest(
     connection_id='<value>',
-)
-
-res = s.commerce.create_commerce_collection(req)
+))
 
 if res.commerce_collection is not None:
     # handle response
@@ -88,11 +86,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.CreateCommerceInventoryRequest(
+res = s.commerce.create_commerce_inventory(request=operations.CreateCommerceInventoryRequest(
     connection_id='<value>',
-)
-
-res = s.commerce.create_commerce_inventory(req)
+))
 
 if res.commerce_inventory is not None:
     # handle response
@@ -132,11 +128,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.CreateCommerceItemRequest(
+res = s.commerce.create_commerce_item(request=operations.CreateCommerceItemRequest(
     connection_id='<value>',
-)
-
-res = s.commerce.create_commerce_item(req)
+))
 
 if res.commerce_item is not None:
     # handle response
@@ -176,11 +170,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.CreateCommerceLocationRequest(
+res = s.commerce.create_commerce_location(request=operations.CreateCommerceLocationRequest(
     connection_id='<value>',
-)
-
-res = s.commerce.create_commerce_location(req)
+))
 
 if res.commerce_location is not None:
     # handle response
@@ -220,12 +212,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetCommerceCollectionRequest(
+res = s.commerce.get_commerce_collection(request=operations.GetCommerceCollectionRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.commerce.get_commerce_collection(req)
+))
 
 if res.commerce_collection is not None:
     # handle response
@@ -265,12 +255,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetCommerceInventoryRequest(
+res = s.commerce.get_commerce_inventory(request=operations.GetCommerceInventoryRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.commerce.get_commerce_inventory(req)
+))
 
 if res.commerce_inventory is not None:
     # handle response
@@ -310,12 +298,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetCommerceItemRequest(
+res = s.commerce.get_commerce_item(request=operations.GetCommerceItemRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.commerce.get_commerce_item(req)
+))
 
 if res.commerce_item is not None:
     # handle response
@@ -355,12 +341,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetCommerceLocationRequest(
+res = s.commerce.get_commerce_location(request=operations.GetCommerceLocationRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.commerce.get_commerce_location(req)
+))
 
 if res.commerce_location is not None:
     # handle response
@@ -400,11 +384,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListCommerceCollectionsRequest(
+res = s.commerce.list_commerce_collections(request=operations.ListCommerceCollectionsRequest(
     connection_id='<value>',
-)
-
-res = s.commerce.list_commerce_collections(req)
+))
 
 if res.commerce_collections is not None:
     # handle response
@@ -444,11 +426,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListCommerceInventoriesRequest(
+res = s.commerce.list_commerce_inventories(request=operations.ListCommerceInventoriesRequest(
     connection_id='<value>',
-)
-
-res = s.commerce.list_commerce_inventories(req)
+))
 
 if res.commerce_inventories is not None:
     # handle response
@@ -488,11 +468,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListCommerceItemsRequest(
+res = s.commerce.list_commerce_items(request=operations.ListCommerceItemsRequest(
     connection_id='<value>',
-)
-
-res = s.commerce.list_commerce_items(req)
+))
 
 if res.commerce_items is not None:
     # handle response
@@ -532,11 +510,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListCommerceLocationsRequest(
+res = s.commerce.list_commerce_locations(request=operations.ListCommerceLocationsRequest(
     connection_id='<value>',
-)
-
-res = s.commerce.list_commerce_locations(req)
+))
 
 if res.commerce_locations is not None:
     # handle response
@@ -576,12 +552,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PatchCommerceCollectionRequest(
+res = s.commerce.patch_commerce_collection(request=operations.PatchCommerceCollectionRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.commerce.patch_commerce_collection(req)
+))
 
 if res.commerce_collection is not None:
     # handle response
@@ -621,12 +595,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PatchCommerceInventoryRequest(
+res = s.commerce.patch_commerce_inventory(request=operations.PatchCommerceInventoryRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.commerce.patch_commerce_inventory(req)
+))
 
 if res.commerce_inventory is not None:
     # handle response
@@ -666,12 +638,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PatchCommerceItemRequest(
+res = s.commerce.patch_commerce_item(request=operations.PatchCommerceItemRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.commerce.patch_commerce_item(req)
+))
 
 if res.commerce_item is not None:
     # handle response
@@ -711,12 +681,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PatchCommerceLocationRequest(
+res = s.commerce.patch_commerce_location(request=operations.PatchCommerceLocationRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.commerce.patch_commerce_location(req)
+))
 
 if res.commerce_location is not None:
     # handle response
@@ -756,12 +724,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.RemoveCommerceCollectionRequest(
+res = s.commerce.remove_commerce_collection(request=operations.RemoveCommerceCollectionRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.commerce.remove_commerce_collection(req)
+))
 
 if res is not None:
     # handle response
@@ -801,12 +767,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.RemoveCommerceInventoryRequest(
+res = s.commerce.remove_commerce_inventory(request=operations.RemoveCommerceInventoryRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.commerce.remove_commerce_inventory(req)
+))
 
 if res is not None:
     # handle response
@@ -846,12 +810,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.RemoveCommerceItemRequest(
+res = s.commerce.remove_commerce_item(request=operations.RemoveCommerceItemRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.commerce.remove_commerce_item(req)
+))
 
 if res is not None:
     # handle response
@@ -891,12 +853,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.RemoveCommerceLocationRequest(
+res = s.commerce.remove_commerce_location(request=operations.RemoveCommerceLocationRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.commerce.remove_commerce_location(req)
+))
 
 if res is not None:
     # handle response
@@ -936,12 +896,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.UpdateCommerceCollectionRequest(
+res = s.commerce.update_commerce_collection(request=operations.UpdateCommerceCollectionRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.commerce.update_commerce_collection(req)
+))
 
 if res.commerce_collection is not None:
     # handle response
@@ -981,12 +939,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.UpdateCommerceInventoryRequest(
+res = s.commerce.update_commerce_inventory(request=operations.UpdateCommerceInventoryRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.commerce.update_commerce_inventory(req)
+))
 
 if res.commerce_inventory is not None:
     # handle response
@@ -1026,12 +982,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.UpdateCommerceItemRequest(
+res = s.commerce.update_commerce_item(request=operations.UpdateCommerceItemRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.commerce.update_commerce_item(req)
+))
 
 if res.commerce_item is not None:
     # handle response
@@ -1071,12 +1025,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.UpdateCommerceLocationRequest(
+res = s.commerce.update_commerce_location(request=operations.UpdateCommerceLocationRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.commerce.update_commerce_location(req)
+))
 
 if res.commerce_location is not None:
     # handle response

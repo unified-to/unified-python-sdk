@@ -26,11 +26,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.CreateTicketingCustomerRequest(
+res = s.customer.create_ticketing_customer(request=operations.CreateTicketingCustomerRequest(
     connection_id='<value>',
-)
-
-res = s.customer.create_ticketing_customer(req)
+))
 
 if res.ticketing_customer is not None:
     # handle response
@@ -70,12 +68,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetTicketingCustomerRequest(
+res = s.customer.get_ticketing_customer(request=operations.GetTicketingCustomerRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.customer.get_ticketing_customer(req)
+))
 
 if res.ticketing_customer is not None:
     # handle response
@@ -115,11 +111,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListTicketingCustomersRequest(
+res = s.customer.list_ticketing_customers(request=operations.ListTicketingCustomersRequest(
     connection_id='<value>',
-)
-
-res = s.customer.list_ticketing_customers(req)
+))
 
 if res.ticketing_customers is not None:
     # handle response
@@ -159,12 +153,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PatchTicketingCustomerRequest(
+res = s.customer.patch_ticketing_customer(request=operations.PatchTicketingCustomerRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.customer.patch_ticketing_customer(req)
+))
 
 if res.ticketing_customer is not None:
     # handle response
@@ -204,12 +196,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.RemoveTicketingCustomerRequest(
+res = s.customer.remove_ticketing_customer(request=operations.RemoveTicketingCustomerRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.customer.remove_ticketing_customer(req)
+))
 
 if res is not None:
     # handle response
@@ -249,12 +239,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.UpdateTicketingCustomerRequest(
+res = s.customer.update_ticketing_customer(request=operations.UpdateTicketingCustomerRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.customer.update_ticketing_customer(req)
+))
 
 if res.ticketing_customer is not None:
     # handle response

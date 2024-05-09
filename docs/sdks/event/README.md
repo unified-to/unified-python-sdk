@@ -26,11 +26,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.CreateCrmEventRequest(
+res = s.event.create_crm_event(request=operations.CreateCrmEventRequest(
     connection_id='<value>',
-)
-
-res = s.event.create_crm_event(req)
+))
 
 if res.crm_event is not None:
     # handle response
@@ -70,12 +68,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetCrmEventRequest(
+res = s.event.get_crm_event(request=operations.GetCrmEventRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.event.get_crm_event(req)
+))
 
 if res.crm_event is not None:
     # handle response
@@ -115,11 +111,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListCrmEventsRequest(
+res = s.event.list_crm_events(request=operations.ListCrmEventsRequest(
     connection_id='<value>',
-)
-
-res = s.event.list_crm_events(req)
+))
 
 if res.crm_events is not None:
     # handle response
@@ -159,12 +153,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PatchCrmEventRequest(
+res = s.event.patch_crm_event(request=operations.PatchCrmEventRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.event.patch_crm_event(req)
+))
 
 if res.crm_event is not None:
     # handle response
@@ -204,12 +196,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.RemoveCrmEventRequest(
+res = s.event.remove_crm_event(request=operations.RemoveCrmEventRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.event.remove_crm_event(req)
+))
 
 if res is not None:
     # handle response
@@ -249,12 +239,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.UpdateCrmEventRequest(
+res = s.event.update_crm_event(request=operations.UpdateCrmEventRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.event.update_crm_event(req)
+))
 
 if res.crm_event is not None:
     # handle response

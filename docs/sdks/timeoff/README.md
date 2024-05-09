@@ -22,12 +22,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetHrisTimeoffRequest(
+res = s.timeoff.get_hris_timeoff(request=operations.GetHrisTimeoffRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.timeoff.get_hris_timeoff(req)
+))
 
 if res.hris_timeoff is not None:
     # handle response
@@ -67,11 +65,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListHrisTimeoffsRequest(
+res = s.timeoff.list_hris_timeoffs(request=operations.ListHrisTimeoffsRequest(
     connection_id='<value>',
-)
-
-res = s.timeoff.list_hris_timeoffs(req)
+))
 
 if res.hris_timeoffs is not None:
     # handle response

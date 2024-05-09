@@ -29,11 +29,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.CreateCrmCompanyRequest(
+res = s.company.create_crm_company(request=operations.CreateCrmCompanyRequest(
     connection_id='<value>',
-)
-
-res = s.company.create_crm_company(req)
+))
 
 if res.crm_company is not None:
     # handle response
@@ -73,12 +71,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetAtsCompanyRequest(
+res = s.company.get_ats_company(request=operations.GetAtsCompanyRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.company.get_ats_company(req)
+))
 
 if res.ats_company is not None:
     # handle response
@@ -118,12 +114,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetCrmCompanyRequest(
+res = s.company.get_crm_company(request=operations.GetCrmCompanyRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.company.get_crm_company(req)
+))
 
 if res.crm_company is not None:
     # handle response
@@ -163,11 +157,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListAtsCompaniesRequest(
+res = s.company.list_ats_companies(request=operations.ListAtsCompaniesRequest(
     connection_id='<value>',
-)
-
-res = s.company.list_ats_companies(req)
+))
 
 if res.ats_companies is not None:
     # handle response
@@ -207,11 +199,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListCrmCompaniesRequest(
+res = s.company.list_crm_companies(request=operations.ListCrmCompaniesRequest(
     connection_id='<value>',
-)
-
-res = s.company.list_crm_companies(req)
+))
 
 if res.crm_companies is not None:
     # handle response
@@ -251,11 +241,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListEnrichCompaniesRequest(
+res = s.company.list_enrich_companies(request=operations.ListEnrichCompaniesRequest(
     connection_id='<value>',
-)
-
-res = s.company.list_enrich_companies(req)
+))
 
 if res.enrich_company is not None:
     # handle response
@@ -295,12 +283,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PatchCrmCompanyRequest(
+res = s.company.patch_crm_company(request=operations.PatchCrmCompanyRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.company.patch_crm_company(req)
+))
 
 if res.crm_company is not None:
     # handle response
@@ -340,12 +326,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.RemoveCrmCompanyRequest(
+res = s.company.remove_crm_company(request=operations.RemoveCrmCompanyRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.company.remove_crm_company(req)
+))
 
 if res is not None:
     # handle response
@@ -385,12 +369,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.UpdateCrmCompanyRequest(
+res = s.company.update_crm_company(request=operations.UpdateCrmCompanyRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.company.update_crm_company(req)
+))
 
 if res.crm_company is not None:
     # handle response

@@ -22,12 +22,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetUnifiedIntegrationAuthRequest(
+res = s.auth.get_unified_integration_auth(request=operations.GetUnifiedIntegrationAuthRequest(
     integration_type='<value>',
     workspace_id='<value>',
-)
-
-res = s.auth.get_unified_integration_auth(req)
+))
 
 if res.res is not None:
     # handle response
@@ -67,12 +65,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetUnifiedIntegrationLoginRequest(
+res = s.auth.get_unified_integration_login(request=operations.GetUnifiedIntegrationLoginRequest(
     integration_type='<value>',
     workspace_id='<value>',
-)
-
-res = s.auth.get_unified_integration_login(req)
+))
 
 if res.res is not None:
     # handle response

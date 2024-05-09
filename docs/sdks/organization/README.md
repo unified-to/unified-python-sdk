@@ -22,12 +22,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetAccountingOrganizationRequest(
+res = s.organization.get_accounting_organization(request=operations.GetAccountingOrganizationRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.organization.get_accounting_organization(req)
+))
 
 if res.accounting_organization is not None:
     # handle response
@@ -67,11 +65,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListAccountingOrganizationsRequest(
+res = s.organization.list_accounting_organizations(request=operations.ListAccountingOrganizationsRequest(
     connection_id='<value>',
-)
-
-res = s.organization.list_accounting_organizations(req)
+))
 
 if res.accounting_organizations is not None:
     # handle response

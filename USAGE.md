@@ -9,11 +9,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.CreateAccountingAccountRequest(
+res = s.accounting.create_accounting_account(request=operations.CreateAccountingAccountRequest(
     connection_id='<value>',
-)
-
-res = s.accounting.create_accounting_account(req)
+))
 
 if res.accounting_account is not None:
     # handle response

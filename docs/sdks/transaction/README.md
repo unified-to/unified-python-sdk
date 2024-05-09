@@ -26,11 +26,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.CreateAccountingTransactionRequest(
+res = s.transaction.create_accounting_transaction(request=operations.CreateAccountingTransactionRequest(
     connection_id='<value>',
-)
-
-res = s.transaction.create_accounting_transaction(req)
+))
 
 if res.accounting_transaction is not None:
     # handle response
@@ -70,12 +68,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetAccountingTransactionRequest(
+res = s.transaction.get_accounting_transaction(request=operations.GetAccountingTransactionRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.transaction.get_accounting_transaction(req)
+))
 
 if res.accounting_transaction is not None:
     # handle response
@@ -115,11 +111,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListAccountingTransactionsRequest(
+res = s.transaction.list_accounting_transactions(request=operations.ListAccountingTransactionsRequest(
     connection_id='<value>',
-)
-
-res = s.transaction.list_accounting_transactions(req)
+))
 
 if res.accounting_transactions is not None:
     # handle response
@@ -159,12 +153,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PatchAccountingTransactionRequest(
+res = s.transaction.patch_accounting_transaction(request=operations.PatchAccountingTransactionRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.transaction.patch_accounting_transaction(req)
+))
 
 if res.accounting_transaction is not None:
     # handle response
@@ -204,12 +196,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.RemoveAccountingTransactionRequest(
+res = s.transaction.remove_accounting_transaction(request=operations.RemoveAccountingTransactionRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.transaction.remove_accounting_transaction(req)
+))
 
 if res is not None:
     # handle response
@@ -249,12 +239,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.UpdateAccountingTransactionRequest(
+res = s.transaction.update_accounting_transaction(request=operations.UpdateAccountingTransactionRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.transaction.update_accounting_transaction(req)
+))
 
 if res.accounting_transaction is not None:
     # handle response

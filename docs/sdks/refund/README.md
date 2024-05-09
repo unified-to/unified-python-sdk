@@ -22,12 +22,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetPaymentRefundRequest(
+res = s.refund.get_payment_refund(request=operations.GetPaymentRefundRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.refund.get_payment_refund(req)
+))
 
 if res.payment_refund is not None:
     # handle response
@@ -67,11 +65,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListPaymentRefundsRequest(
+res = s.refund.list_payment_refunds(request=operations.ListPaymentRefundsRequest(
     connection_id='<value>',
-)
-
-res = s.refund.list_payment_refunds(req)
+))
 
 if res.payment_refunds is not None:
     # handle response

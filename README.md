@@ -27,11 +27,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.CreateAccountingAccountRequest(
+res = s.accounting.create_accounting_account(request=operations.CreateAccountingAccountRequest(
     connection_id='<value>',
-)
-
-res = s.accounting.create_accounting_account(req)
+))
 
 if res.accounting_account is not None:
     # handle response
@@ -726,13 +724,11 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.CreateAccountingAccountRequest(
-    connection_id='<value>',
-)
-
 res = None
 try:
-    res = s.accounting.create_accounting_account(req)
+    res = s.accounting.create_accounting_account(request=operations.CreateAccountingAccountRequest(
+    connection_id='<value>',
+))
 except errors.SDKError as e:
     # handle exception
     raise(e)
@@ -771,11 +767,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.CreateAccountingAccountRequest(
+res = s.accounting.create_accounting_account(request=operations.CreateAccountingAccountRequest(
     connection_id='<value>',
-)
-
-res = s.accounting.create_accounting_account(req)
+))
 
 if res.accounting_account is not None:
     # handle response
@@ -798,11 +792,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.CreateAccountingAccountRequest(
+res = s.accounting.create_accounting_account(request=operations.CreateAccountingAccountRequest(
     connection_id='<value>',
-)
-
-res = s.accounting.create_accounting_account(req)
+))
 
 if res.accounting_account is not None:
     # handle response
@@ -853,11 +845,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.CreateAccountingAccountRequest(
+res = s.accounting.create_accounting_account(request=operations.CreateAccountingAccountRequest(
     connection_id='<value>',
-)
-
-res = s.accounting.create_accounting_account(req)
+))
 
 if res.accounting_account is not None:
     # handle response

@@ -21,11 +21,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListGenaiModelsRequest(
+res = s.model.list_genai_models(request=operations.ListGenaiModelsRequest(
     connection_id='<value>',
-)
-
-res = s.model.list_genai_models(req)
+))
 
 if res.genai_models is not None:
     # handle response

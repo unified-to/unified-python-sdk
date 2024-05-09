@@ -26,7 +26,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = shared.Connection(
+res = s.connection.create_unified_connection(request=shared.Connection(
     categories=[
         shared.PropertyConnectionCategories.PAYMENT,
     ],
@@ -34,9 +34,7 @@ req = shared.Connection(
     permissions=[
         shared.PropertyConnectionPermissions.ATS_INTERVIEW_READ,
     ],
-)
-
-res = s.connection.create_unified_connection(req)
+))
 
 if res.connection is not None:
     # handle response
@@ -76,11 +74,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetUnifiedConnectionRequest(
+res = s.connection.get_unified_connection(request=operations.GetUnifiedConnectionRequest(
     id='<id>',
-)
-
-res = s.connection.get_unified_connection(req)
+))
 
 if res.connection is not None:
     # handle response
@@ -120,9 +116,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListUnifiedConnectionsRequest()
-
-res = s.connection.list_unified_connections(req)
+res = s.connection.list_unified_connections(request=operations.ListUnifiedConnectionsRequest())
 
 if res.connections is not None:
     # handle response
@@ -162,11 +156,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PatchUnifiedConnectionRequest(
+res = s.connection.patch_unified_connection(request=operations.PatchUnifiedConnectionRequest(
     id='<id>',
-)
-
-res = s.connection.patch_unified_connection(req)
+))
 
 if res.connection is not None:
     # handle response
@@ -206,11 +198,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.RemoveUnifiedConnectionRequest(
+res = s.connection.remove_unified_connection(request=operations.RemoveUnifiedConnectionRequest(
     id='<id>',
-)
-
-res = s.connection.remove_unified_connection(req)
+))
 
 if res is not None:
     # handle response
@@ -250,11 +240,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.UpdateUnifiedConnectionRequest(
+res = s.connection.update_unified_connection(request=operations.UpdateUnifiedConnectionRequest(
     id='<id>',
-)
-
-res = s.connection.update_unified_connection(req)
+))
 
 if res.connection is not None:
     # handle response

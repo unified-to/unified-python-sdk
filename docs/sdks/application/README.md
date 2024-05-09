@@ -26,11 +26,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.CreateAtsApplicationRequest(
+res = s.application.create_ats_application(request=operations.CreateAtsApplicationRequest(
     connection_id='<value>',
-)
-
-res = s.application.create_ats_application(req)
+))
 
 if res.ats_application is not None:
     # handle response
@@ -70,12 +68,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetAtsApplicationRequest(
+res = s.application.get_ats_application(request=operations.GetAtsApplicationRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.application.get_ats_application(req)
+))
 
 if res.ats_application is not None:
     # handle response
@@ -115,11 +111,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListAtsApplicationsRequest(
+res = s.application.list_ats_applications(request=operations.ListAtsApplicationsRequest(
     connection_id='<value>',
-)
-
-res = s.application.list_ats_applications(req)
+))
 
 if res.ats_applications is not None:
     # handle response
@@ -159,12 +153,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PatchAtsApplicationRequest(
+res = s.application.patch_ats_application(request=operations.PatchAtsApplicationRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.application.patch_ats_application(req)
+))
 
 if res.ats_application is not None:
     # handle response
@@ -204,12 +196,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.RemoveAtsApplicationRequest(
+res = s.application.remove_ats_application(request=operations.RemoveAtsApplicationRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.application.remove_ats_application(req)
+))
 
 if res is not None:
     # handle response
@@ -249,12 +239,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.UpdateAtsApplicationRequest(
+res = s.application.update_ats_application(request=operations.UpdateAtsApplicationRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.application.update_ats_application(req)
+))
 
 if res.ats_application is not None:
     # handle response

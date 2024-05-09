@@ -26,11 +26,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.CreateCrmPipelineRequest(
+res = s.pipeline.create_crm_pipeline(request=operations.CreateCrmPipelineRequest(
     connection_id='<value>',
-)
-
-res = s.pipeline.create_crm_pipeline(req)
+))
 
 if res.crm_pipeline is not None:
     # handle response
@@ -70,12 +68,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetCrmPipelineRequest(
+res = s.pipeline.get_crm_pipeline(request=operations.GetCrmPipelineRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.pipeline.get_crm_pipeline(req)
+))
 
 if res.crm_pipeline is not None:
     # handle response
@@ -115,11 +111,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListCrmPipelinesRequest(
+res = s.pipeline.list_crm_pipelines(request=operations.ListCrmPipelinesRequest(
     connection_id='<value>',
-)
-
-res = s.pipeline.list_crm_pipelines(req)
+))
 
 if res.crm_pipelines is not None:
     # handle response
@@ -159,12 +153,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PatchCrmPipelineRequest(
+res = s.pipeline.patch_crm_pipeline(request=operations.PatchCrmPipelineRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.pipeline.patch_crm_pipeline(req)
+))
 
 if res.crm_pipeline is not None:
     # handle response
@@ -204,12 +196,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.RemoveCrmPipelineRequest(
+res = s.pipeline.remove_crm_pipeline(request=operations.RemoveCrmPipelineRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.pipeline.remove_crm_pipeline(req)
+))
 
 if res is not None:
     # handle response
@@ -249,12 +239,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.UpdateCrmPipelineRequest(
+res = s.pipeline.update_crm_pipeline(request=operations.UpdateCrmPipelineRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.pipeline.update_crm_pipeline(req)
+))
 
 if res.crm_pipeline is not None:
     # handle response

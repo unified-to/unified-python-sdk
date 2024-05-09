@@ -26,11 +26,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.CreateCrmDealRequest(
+res = s.deal.create_crm_deal(request=operations.CreateCrmDealRequest(
     connection_id='<value>',
-)
-
-res = s.deal.create_crm_deal(req)
+))
 
 if res.crm_deal is not None:
     # handle response
@@ -70,12 +68,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetCrmDealRequest(
+res = s.deal.get_crm_deal(request=operations.GetCrmDealRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.deal.get_crm_deal(req)
+))
 
 if res.crm_deal is not None:
     # handle response
@@ -115,11 +111,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListCrmDealsRequest(
+res = s.deal.list_crm_deals(request=operations.ListCrmDealsRequest(
     connection_id='<value>',
-)
-
-res = s.deal.list_crm_deals(req)
+))
 
 if res.crm_deals is not None:
     # handle response
@@ -159,12 +153,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PatchCrmDealRequest(
+res = s.deal.patch_crm_deal(request=operations.PatchCrmDealRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.deal.patch_crm_deal(req)
+))
 
 if res.crm_deal is not None:
     # handle response
@@ -204,12 +196,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.RemoveCrmDealRequest(
+res = s.deal.remove_crm_deal(request=operations.RemoveCrmDealRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.deal.remove_crm_deal(req)
+))
 
 if res is not None:
     # handle response
@@ -249,12 +239,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.UpdateCrmDealRequest(
+res = s.deal.update_crm_deal(request=operations.UpdateCrmDealRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.deal.update_crm_deal(req)
+))
 
 if res.crm_deal is not None:
     # handle response

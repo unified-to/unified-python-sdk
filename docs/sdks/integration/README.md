@@ -23,12 +23,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetUnifiedIntegrationAuthRequest(
+res = s.integration.get_unified_integration_auth(request=operations.GetUnifiedIntegrationAuthRequest(
     integration_type='<value>',
     workspace_id='<value>',
-)
-
-res = s.integration.get_unified_integration_auth(req)
+))
 
 if res.res is not None:
     # handle response
@@ -68,11 +66,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListUnifiedIntegrationWorkspacesRequest(
+res = s.integration.list_unified_integration_workspaces(request=operations.ListUnifiedIntegrationWorkspacesRequest(
     workspace_id='<value>',
-)
-
-res = s.integration.list_unified_integration_workspaces(req)
+))
 
 if res.integrations is not None:
     # handle response
@@ -112,9 +108,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListUnifiedIntegrationsRequest()
-
-res = s.integration.list_unified_integrations(req)
+res = s.integration.list_unified_integrations(request=operations.ListUnifiedIntegrationsRequest())
 
 if res.integrations is not None:
     # handle response

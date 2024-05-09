@@ -26,11 +26,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.CreateAtsInterviewRequest(
+res = s.interview.create_ats_interview(request=operations.CreateAtsInterviewRequest(
     connection_id='<value>',
-)
-
-res = s.interview.create_ats_interview(req)
+))
 
 if res.ats_interview is not None:
     # handle response
@@ -70,12 +68,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetAtsInterviewRequest(
+res = s.interview.get_ats_interview(request=operations.GetAtsInterviewRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.interview.get_ats_interview(req)
+))
 
 if res.ats_interview is not None:
     # handle response
@@ -115,11 +111,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListAtsInterviewsRequest(
+res = s.interview.list_ats_interviews(request=operations.ListAtsInterviewsRequest(
     connection_id='<value>',
-)
-
-res = s.interview.list_ats_interviews(req)
+))
 
 if res.ats_interviews is not None:
     # handle response
@@ -159,12 +153,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PatchAtsInterviewRequest(
+res = s.interview.patch_ats_interview(request=operations.PatchAtsInterviewRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.interview.patch_ats_interview(req)
+))
 
 if res.ats_interview is not None:
     # handle response
@@ -204,12 +196,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.RemoveAtsInterviewRequest(
+res = s.interview.remove_ats_interview(request=operations.RemoveAtsInterviewRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.interview.remove_ats_interview(req)
+))
 
 if res is not None:
     # handle response
@@ -249,12 +239,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.UpdateAtsInterviewRequest(
+res = s.interview.update_ats_interview(request=operations.UpdateAtsInterviewRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.interview.update_ats_interview(req)
+))
 
 if res.ats_interview is not None:
     # handle response

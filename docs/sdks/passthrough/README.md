@@ -25,12 +25,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.CreatePassthroughRequest(
+res = s.passthrough.create_passthrough(request=operations.CreatePassthroughRequest(
     connection_id='<value>',
     path='/etc/periodic',
-)
-
-res = s.passthrough.create_passthrough(req)
+))
 
 if res.result is not None:
     # handle response
@@ -70,12 +68,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListPassthroughsRequest(
+res = s.passthrough.list_passthroughs(request=operations.ListPassthroughsRequest(
     connection_id='<value>',
     path='/selinux',
-)
-
-res = s.passthrough.list_passthroughs(req)
+))
 
 if res.result is not None:
     # handle response
@@ -115,12 +111,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PatchPassthroughRequest(
+res = s.passthrough.patch_passthrough(request=operations.PatchPassthroughRequest(
     connection_id='<value>',
     path='/mnt',
-)
-
-res = s.passthrough.patch_passthrough(req)
+))
 
 if res.result is not None:
     # handle response
@@ -160,12 +154,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.RemovePassthroughRequest(
+res = s.passthrough.remove_passthrough(request=operations.RemovePassthroughRequest(
     connection_id='<value>',
     path='/Applications',
-)
-
-res = s.passthrough.remove_passthrough(req)
+))
 
 if res.result is not None:
     # handle response
@@ -205,12 +197,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.UpdatePassthroughRequest(
+res = s.passthrough.update_passthrough(request=operations.UpdatePassthroughRequest(
     connection_id='<value>',
     path='/dev',
-)
-
-res = s.passthrough.update_passthrough(req)
+))
 
 if res.result is not None:
     # handle response

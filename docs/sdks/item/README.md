@@ -26,11 +26,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.CreateCommerceItemRequest(
+res = s.item.create_commerce_item(request=operations.CreateCommerceItemRequest(
     connection_id='<value>',
-)
-
-res = s.item.create_commerce_item(req)
+))
 
 if res.commerce_item is not None:
     # handle response
@@ -70,12 +68,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetCommerceItemRequest(
+res = s.item.get_commerce_item(request=operations.GetCommerceItemRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.item.get_commerce_item(req)
+))
 
 if res.commerce_item is not None:
     # handle response
@@ -115,11 +111,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListCommerceItemsRequest(
+res = s.item.list_commerce_items(request=operations.ListCommerceItemsRequest(
     connection_id='<value>',
-)
-
-res = s.item.list_commerce_items(req)
+))
 
 if res.commerce_items is not None:
     # handle response
@@ -159,12 +153,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PatchCommerceItemRequest(
+res = s.item.patch_commerce_item(request=operations.PatchCommerceItemRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.item.patch_commerce_item(req)
+))
 
 if res.commerce_item is not None:
     # handle response
@@ -204,12 +196,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.RemoveCommerceItemRequest(
+res = s.item.remove_commerce_item(request=operations.RemoveCommerceItemRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.item.remove_commerce_item(req)
+))
 
 if res is not None:
     # handle response
@@ -249,12 +239,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.UpdateCommerceItemRequest(
+res = s.item.update_commerce_item(request=operations.UpdateCommerceItemRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.item.update_commerce_item(req)
+))
 
 if res.commerce_item is not None:
     # handle response

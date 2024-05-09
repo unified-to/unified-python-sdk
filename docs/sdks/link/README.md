@@ -26,11 +26,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.CreatePaymentLinkRequest(
+res = s.link.create_payment_link(request=operations.CreatePaymentLinkRequest(
     connection_id='<value>',
-)
-
-res = s.link.create_payment_link(req)
+))
 
 if res.payment_link is not None:
     # handle response
@@ -70,12 +68,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetPaymentLinkRequest(
+res = s.link.get_payment_link(request=operations.GetPaymentLinkRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.link.get_payment_link(req)
+))
 
 if res.payment_link is not None:
     # handle response
@@ -115,11 +111,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListPaymentLinksRequest(
+res = s.link.list_payment_links(request=operations.ListPaymentLinksRequest(
     connection_id='<value>',
-)
-
-res = s.link.list_payment_links(req)
+))
 
 if res.payment_links is not None:
     # handle response
@@ -159,12 +153,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PatchPaymentLinkRequest(
+res = s.link.patch_payment_link(request=operations.PatchPaymentLinkRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.link.patch_payment_link(req)
+))
 
 if res.payment_link is not None:
     # handle response
@@ -204,12 +196,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.RemovePaymentLinkRequest(
+res = s.link.remove_payment_link(request=operations.RemovePaymentLinkRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.link.remove_payment_link(req)
+))
 
 if res is not None:
     # handle response
@@ -249,12 +239,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.UpdatePaymentLinkRequest(
+res = s.link.update_payment_link(request=operations.UpdatePaymentLinkRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.link.update_payment_link(req)
+))
 
 if res.payment_link is not None:
     # handle response

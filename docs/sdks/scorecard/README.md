@@ -26,11 +26,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.CreateAtsScorecardRequest(
+res = s.scorecard.create_ats_scorecard(request=operations.CreateAtsScorecardRequest(
     connection_id='<value>',
-)
-
-res = s.scorecard.create_ats_scorecard(req)
+))
 
 if res.ats_scorecard is not None:
     # handle response
@@ -70,12 +68,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetAtsScorecardRequest(
+res = s.scorecard.get_ats_scorecard(request=operations.GetAtsScorecardRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.scorecard.get_ats_scorecard(req)
+))
 
 if res.ats_scorecard is not None:
     # handle response
@@ -115,11 +111,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListAtsScorecardsRequest(
+res = s.scorecard.list_ats_scorecards(request=operations.ListAtsScorecardsRequest(
     connection_id='<value>',
-)
-
-res = s.scorecard.list_ats_scorecards(req)
+))
 
 if res.ats_scorecards is not None:
     # handle response
@@ -159,12 +153,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PatchAtsScorecardRequest(
+res = s.scorecard.patch_ats_scorecard(request=operations.PatchAtsScorecardRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.scorecard.patch_ats_scorecard(req)
+))
 
 if res.ats_scorecard is not None:
     # handle response
@@ -204,12 +196,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.RemoveAtsScorecardRequest(
+res = s.scorecard.remove_ats_scorecard(request=operations.RemoveAtsScorecardRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.scorecard.remove_ats_scorecard(req)
+))
 
 if res is not None:
     # handle response
@@ -249,12 +239,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.UpdateAtsScorecardRequest(
+res = s.scorecard.update_ats_scorecard(request=operations.UpdateAtsScorecardRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.scorecard.update_ats_scorecard(req)
+))
 
 if res.ats_scorecard is not None:
     # handle response

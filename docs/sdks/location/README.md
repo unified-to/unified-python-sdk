@@ -26,11 +26,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.CreateCommerceLocationRequest(
+res = s.location.create_commerce_location(request=operations.CreateCommerceLocationRequest(
     connection_id='<value>',
-)
-
-res = s.location.create_commerce_location(req)
+))
 
 if res.commerce_location is not None:
     # handle response
@@ -70,12 +68,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetCommerceLocationRequest(
+res = s.location.get_commerce_location(request=operations.GetCommerceLocationRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.location.get_commerce_location(req)
+))
 
 if res.commerce_location is not None:
     # handle response
@@ -115,11 +111,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListCommerceLocationsRequest(
+res = s.location.list_commerce_locations(request=operations.ListCommerceLocationsRequest(
     connection_id='<value>',
-)
-
-res = s.location.list_commerce_locations(req)
+))
 
 if res.commerce_locations is not None:
     # handle response
@@ -159,12 +153,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PatchCommerceLocationRequest(
+res = s.location.patch_commerce_location(request=operations.PatchCommerceLocationRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.location.patch_commerce_location(req)
+))
 
 if res.commerce_location is not None:
     # handle response
@@ -204,12 +196,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.RemoveCommerceLocationRequest(
+res = s.location.remove_commerce_location(request=operations.RemoveCommerceLocationRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.location.remove_commerce_location(req)
+))
 
 if res is not None:
     # handle response
@@ -249,12 +239,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.UpdateCommerceLocationRequest(
+res = s.location.update_commerce_location(request=operations.UpdateCommerceLocationRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.location.update_commerce_location(req)
+))
 
 if res.commerce_location is not None:
     # handle response

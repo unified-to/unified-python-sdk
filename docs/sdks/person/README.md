@@ -21,11 +21,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListEnrichPeopleRequest(
+res = s.person.list_enrich_people(request=operations.ListEnrichPeopleRequest(
     connection_id='<value>',
-)
-
-res = s.person.list_enrich_people(req)
+))
 
 if res.enrich_person is not None:
     # handle response

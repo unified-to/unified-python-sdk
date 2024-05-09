@@ -26,11 +26,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.CreateAtsJobRequest(
+res = s.job.create_ats_job(request=operations.CreateAtsJobRequest(
     connection_id='<value>',
-)
-
-res = s.job.create_ats_job(req)
+))
 
 if res.ats_job is not None:
     # handle response
@@ -70,12 +68,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetAtsJobRequest(
+res = s.job.get_ats_job(request=operations.GetAtsJobRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.job.get_ats_job(req)
+))
 
 if res.ats_job is not None:
     # handle response
@@ -115,11 +111,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListAtsJobsRequest(
+res = s.job.list_ats_jobs(request=operations.ListAtsJobsRequest(
     connection_id='<value>',
-)
-
-res = s.job.list_ats_jobs(req)
+))
 
 if res.ats_jobs is not None:
     # handle response
@@ -159,12 +153,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PatchAtsJobRequest(
+res = s.job.patch_ats_job(request=operations.PatchAtsJobRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.job.patch_ats_job(req)
+))
 
 if res.ats_job is not None:
     # handle response
@@ -204,12 +196,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.RemoveAtsJobRequest(
+res = s.job.remove_ats_job(request=operations.RemoveAtsJobRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.job.remove_ats_job(req)
+))
 
 if res is not None:
     # handle response
@@ -249,12 +239,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.UpdateAtsJobRequest(
+res = s.job.update_ats_job(request=operations.UpdateAtsJobRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.job.update_ats_job(req)
+))
 
 if res.ats_job is not None:
     # handle response

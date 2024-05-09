@@ -22,11 +22,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListEnrichCompaniesRequest(
+res = s.enrich.list_enrich_companies(request=operations.ListEnrichCompaniesRequest(
     connection_id='<value>',
-)
-
-res = s.enrich.list_enrich_companies(req)
+))
 
 if res.enrich_company is not None:
     # handle response
@@ -66,11 +64,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListEnrichPeopleRequest(
+res = s.enrich.list_enrich_people(request=operations.ListEnrichPeopleRequest(
     connection_id='<value>',
-)
-
-res = s.enrich.list_enrich_people(req)
+))
 
 if res.enrich_person is not None:
     # handle response

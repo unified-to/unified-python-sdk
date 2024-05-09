@@ -22,9 +22,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListUnifiedIssuesRequest()
-
-res = s.issue.list_unified_issues(req)
+res = s.issue.list_unified_issues(request=operations.ListUnifiedIssuesRequest())
 
 if res.issues is not None:
     # handle response
@@ -63,7 +61,6 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
-
 
 res = s.issue.list_unified_supports()
 

@@ -26,11 +26,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.CreateCommerceCollectionRequest(
+res = s.collection.create_commerce_collection(request=operations.CreateCommerceCollectionRequest(
     connection_id='<value>',
-)
-
-res = s.collection.create_commerce_collection(req)
+))
 
 if res.commerce_collection is not None:
     # handle response
@@ -70,12 +68,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetCommerceCollectionRequest(
+res = s.collection.get_commerce_collection(request=operations.GetCommerceCollectionRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.collection.get_commerce_collection(req)
+))
 
 if res.commerce_collection is not None:
     # handle response
@@ -115,11 +111,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListCommerceCollectionsRequest(
+res = s.collection.list_commerce_collections(request=operations.ListCommerceCollectionsRequest(
     connection_id='<value>',
-)
-
-res = s.collection.list_commerce_collections(req)
+))
 
 if res.commerce_collections is not None:
     # handle response
@@ -159,12 +153,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PatchCommerceCollectionRequest(
+res = s.collection.patch_commerce_collection(request=operations.PatchCommerceCollectionRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.collection.patch_commerce_collection(req)
+))
 
 if res.commerce_collection is not None:
     # handle response
@@ -204,12 +196,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.RemoveCommerceCollectionRequest(
+res = s.collection.remove_commerce_collection(request=operations.RemoveCommerceCollectionRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.collection.remove_commerce_collection(req)
+))
 
 if res is not None:
     # handle response
@@ -249,12 +239,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.UpdateCommerceCollectionRequest(
+res = s.collection.update_commerce_collection(request=operations.UpdateCommerceCollectionRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.collection.update_commerce_collection(req)
+))
 
 if res.commerce_collection is not None:
     # handle response

@@ -26,11 +26,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.CreateCommerceInventoryRequest(
+res = s.inventory.create_commerce_inventory(request=operations.CreateCommerceInventoryRequest(
     connection_id='<value>',
-)
-
-res = s.inventory.create_commerce_inventory(req)
+))
 
 if res.commerce_inventory is not None:
     # handle response
@@ -70,12 +68,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetCommerceInventoryRequest(
+res = s.inventory.get_commerce_inventory(request=operations.GetCommerceInventoryRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.inventory.get_commerce_inventory(req)
+))
 
 if res.commerce_inventory is not None:
     # handle response
@@ -115,11 +111,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListCommerceInventoriesRequest(
+res = s.inventory.list_commerce_inventories(request=operations.ListCommerceInventoriesRequest(
     connection_id='<value>',
-)
-
-res = s.inventory.list_commerce_inventories(req)
+))
 
 if res.commerce_inventories is not None:
     # handle response
@@ -159,12 +153,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PatchCommerceInventoryRequest(
+res = s.inventory.patch_commerce_inventory(request=operations.PatchCommerceInventoryRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.inventory.patch_commerce_inventory(req)
+))
 
 if res.commerce_inventory is not None:
     # handle response
@@ -204,12 +196,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.RemoveCommerceInventoryRequest(
+res = s.inventory.remove_commerce_inventory(request=operations.RemoveCommerceInventoryRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.inventory.remove_commerce_inventory(req)
+))
 
 if res is not None:
     # handle response
@@ -249,12 +239,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.UpdateCommerceInventoryRequest(
+res = s.inventory.update_commerce_inventory(request=operations.UpdateCommerceInventoryRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.inventory.update_commerce_inventory(req)
+))
 
 if res.commerce_inventory is not None:
     # handle response

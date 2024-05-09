@@ -26,11 +26,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.CreateAccountingAccountRequest(
+res = s.account.create_accounting_account(request=operations.CreateAccountingAccountRequest(
     connection_id='<value>',
-)
-
-res = s.account.create_accounting_account(req)
+))
 
 if res.accounting_account is not None:
     # handle response
@@ -70,12 +68,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetAccountingAccountRequest(
+res = s.account.get_accounting_account(request=operations.GetAccountingAccountRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.account.get_accounting_account(req)
+))
 
 if res.accounting_account is not None:
     # handle response
@@ -115,11 +111,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListAccountingAccountsRequest(
+res = s.account.list_accounting_accounts(request=operations.ListAccountingAccountsRequest(
     connection_id='<value>',
-)
-
-res = s.account.list_accounting_accounts(req)
+))
 
 if res.accounting_accounts is not None:
     # handle response
@@ -159,12 +153,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PatchAccountingAccountRequest(
+res = s.account.patch_accounting_account(request=operations.PatchAccountingAccountRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.account.patch_accounting_account(req)
+))
 
 if res.accounting_account is not None:
     # handle response
@@ -204,12 +196,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.RemoveAccountingAccountRequest(
+res = s.account.remove_accounting_account(request=operations.RemoveAccountingAccountRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.account.remove_accounting_account(req)
+))
 
 if res is not None:
     # handle response
@@ -249,12 +239,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.UpdateAccountingAccountRequest(
+res = s.account.update_accounting_account(request=operations.UpdateAccountingAccountRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.account.update_accounting_account(req)
+))
 
 if res.accounting_account is not None:
     # handle response

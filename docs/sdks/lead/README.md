@@ -26,11 +26,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.CreateCrmLeadRequest(
+res = s.lead.create_crm_lead(request=operations.CreateCrmLeadRequest(
     connection_id='<value>',
-)
-
-res = s.lead.create_crm_lead(req)
+))
 
 if res.crm_lead is not None:
     # handle response
@@ -70,12 +68,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.GetCrmLeadRequest(
+res = s.lead.get_crm_lead(request=operations.GetCrmLeadRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.lead.get_crm_lead(req)
+))
 
 if res.crm_lead is not None:
     # handle response
@@ -115,11 +111,9 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.ListCrmLeadsRequest(
+res = s.lead.list_crm_leads(request=operations.ListCrmLeadsRequest(
     connection_id='<value>',
-)
-
-res = s.lead.list_crm_leads(req)
+))
 
 if res.crm_leads is not None:
     # handle response
@@ -159,12 +153,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.PatchCrmLeadRequest(
+res = s.lead.patch_crm_lead(request=operations.PatchCrmLeadRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.lead.patch_crm_lead(req)
+))
 
 if res.crm_lead is not None:
     # handle response
@@ -204,12 +196,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.RemoveCrmLeadRequest(
+res = s.lead.remove_crm_lead(request=operations.RemoveCrmLeadRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.lead.remove_crm_lead(req)
+))
 
 if res is not None:
     # handle response
@@ -249,12 +239,10 @@ s = unified_to.UnifiedTo(
     ),
 )
 
-req = operations.UpdateCrmLeadRequest(
+res = s.lead.update_crm_lead(request=operations.UpdateCrmLeadRequest(
     connection_id='<value>',
     id='<id>',
-)
-
-res = s.lead.update_crm_lead(req)
+))
 
 if res.crm_lead is not None:
     # handle response
