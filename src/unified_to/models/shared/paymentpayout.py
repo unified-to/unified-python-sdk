@@ -7,6 +7,7 @@ from enum import Enum
 from typing import Any, Dict, Optional
 from unified_to import utils
 
+
 class PaymentPayoutStatus(str, Enum):
     SUCCEEDED = 'SUCCEEDED'
     PENDING = 'PENDING'

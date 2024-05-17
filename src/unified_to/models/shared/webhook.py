@@ -9,10 +9,12 @@ from enum import Enum
 from typing import Any, Dict, List, Optional
 from unified_to import utils
 
+
 class Event(str, Enum):
     UPDATED = 'updated'
     CREATED = 'created'
     DELETED = 'deleted'
+
 
 class ObjectType(str, Enum):
     ACCOUNTING_ACCOUNT = 'accounting_account'
@@ -61,6 +63,7 @@ class ObjectType(str, Enum):
     STORAGE_FILE = 'storage_file'
     GENAI_MODEL = 'genai_model'
     GENAI_PROMPT = 'genai_prompt'
+
 
 class WebhookType(str, Enum):
     VIRTUAL = 'virtual'

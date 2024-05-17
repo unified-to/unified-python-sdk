@@ -9,6 +9,7 @@ from enum import Enum
 from typing import Any, Dict, List, Optional
 from unified_to import utils
 
+
 class HrisGroupType(str, Enum):
     TEAM = 'TEAM'
     GROUP = 'GROUP'

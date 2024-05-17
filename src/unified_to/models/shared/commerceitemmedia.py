@@ -7,6 +7,7 @@ from enum import Enum
 from typing import Optional
 from unified_to import utils
 
+
 class CommerceItemMediaType(str, Enum):
     IMAGE = 'image'
     VIDEO = 'video'

@@ -6,6 +6,7 @@ import requests as requests_http
 from enum import Enum
 from typing import List, Optional
 
+
 class Scopes(str, Enum):
     AUTH_LOGIN = 'auth_login'
     ACCOUNTING_ACCOUNT_READ = 'accounting_account_read'

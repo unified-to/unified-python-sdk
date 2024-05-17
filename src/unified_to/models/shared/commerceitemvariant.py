@@ -12,9 +12,11 @@ from enum import Enum
 from typing import List, Optional
 from unified_to import utils
 
+
 class SizeUnit(str, Enum):
     CM = 'cm'
     INCH = 'inch'
+
 
 class WeightUnit(str, Enum):
     G = 'g'

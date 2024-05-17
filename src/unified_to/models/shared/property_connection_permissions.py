@@ -3,6 +3,7 @@
 from __future__ import annotations
 from enum import Enum
 
+
 class PropertyConnectionPermissions(str, Enum):
     AUTH_LOGIN = 'auth_login'
     ACCOUNTING_ACCOUNT_READ = 'accounting_account_read'

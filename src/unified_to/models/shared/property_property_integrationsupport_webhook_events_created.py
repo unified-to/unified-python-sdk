@@ -3,6 +3,7 @@
 from __future__ import annotations
 from enum import Enum
 
+
 class PropertyPropertyIntegrationSupportWebhookEventsCreated(str, Enum):
     VIRTUAL = 'virtual'
     NATIVE = 'native'

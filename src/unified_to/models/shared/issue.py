@@ -7,6 +7,7 @@ from enum import Enum
 from typing import Optional
 from unified_to import utils
 
+
 class IssueStatus(str, Enum):
     COMPLETED = 'COMPLETED'
     NEW = 'NEW'
@@ -15,6 +16,7 @@ class IssueStatus(str, Enum):
     ON_HOLD = 'ON_HOLD'
     VALIDATING = 'VALIDATING'
     REJECTED = 'REJECTED'
+
 
 class IssueType(str, Enum):
     BUG = 'BUG'

@@ -9,6 +9,7 @@ from enum import Enum
 from typing import Optional
 from unified_to import utils
 
+
 class PropertyCrmEventTaskStatus(str, Enum):
     COMPLETED = 'COMPLETED'
     NOT_STARTED = 'NOT_STARTED'

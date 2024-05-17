@@ -9,10 +9,12 @@ from enum import Enum
 from typing import Any, Dict, Optional
 from unified_to import utils
 
+
 class HrisTimeoffStatus(str, Enum):
     APPROVED = 'APPROVED'
     PENDING = 'PENDING'
     DENIED = 'DENIED'
+
 
 class HrisTimeoffType(str, Enum):
     PAID = 'PAID'

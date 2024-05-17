@@ -9,9 +9,11 @@ from enum import Enum
 from typing import Any, Dict, Optional
 from unified_to import utils
 
+
 class Status(str, Enum):
     ACTIVE = 'ACTIVE'
     ARCHIVED = 'ARCHIVED'
+
 
 class Type(str, Enum):
     ACCOUNTS_PAYABLE = 'ACCOUNTS_PAYABLE'

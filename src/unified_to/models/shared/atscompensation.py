@@ -7,6 +7,7 @@ from enum import Enum
 from typing import Optional
 from unified_to import utils
 
+
 class Frequency(str, Enum):
     ONE_TIME = 'ONE_TIME'
     DAY = 'DAY'
@@ -15,6 +16,7 @@ class Frequency(str, Enum):
     HOUR = 'HOUR'
     MONTH = 'MONTH'
     WEEK = 'WEEK'
+
 
 class AtsCompensationType(str, Enum):
     SALARY = 'SALARY'

@@ -12,9 +12,11 @@ from enum import Enum
 from typing import Any, Dict, List, Optional
 from unified_to import utils
 
+
 class EmploymentStatus(str, Enum):
     ACTIVE = 'ACTIVE'
     INACTIVE = 'INACTIVE'
+
 
 class HrisEmployeeEmploymentType(str, Enum):
     FULL_TIME = 'FULL_TIME'
@@ -28,12 +30,14 @@ class HrisEmployeeEmploymentType(str, Enum):
     FREELANCE = 'FREELANCE'
     OTHER = 'OTHER'
 
+
 class HrisEmployeeGender(str, Enum):
     MALE = 'MALE'
     FEMALE = 'FEMALE'
     INTERSEX = 'INTERSEX'
     TRANS = 'TRANS'
     NON_BINARY = 'NON_BINARY'
+
 
 class MaritalStatus(str, Enum):
     MARRIED = 'MARRIED'

@@ -9,6 +9,7 @@ from enum import Enum
 from typing import Optional
 from unified_to import utils
 
+
 class APICallType(str, Enum):
     LOGIN = 'login'
     WEBHOOK = 'webhook'

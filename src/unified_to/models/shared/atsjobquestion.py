@@ -7,6 +7,7 @@ from enum import Enum
 from typing import List, Optional
 from unified_to import utils
 
+
 class AtsJobQuestionType(str, Enum):
     TEXT = 'TEXT'
     NUMBER = 'NUMBER'

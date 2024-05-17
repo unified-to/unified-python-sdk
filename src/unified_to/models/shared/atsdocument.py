@@ -9,6 +9,7 @@ from enum import Enum
 from typing import Any, Dict, Optional
 from unified_to import utils
 
+
 class AtsDocumentType(str, Enum):
     RESUME = 'RESUME'
     COVER_LETTER = 'COVER_LETTER'

@@ -7,6 +7,7 @@ from enum import Enum
 from typing import Optional
 from unified_to import utils
 
+
 class EnrichTelephoneType(str, Enum):
     WORK = 'WORK'
     HOME = 'HOME'

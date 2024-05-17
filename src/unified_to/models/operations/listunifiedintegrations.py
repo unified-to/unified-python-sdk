@@ -7,6 +7,7 @@ from ...models.shared import integration as shared_integration
 from enum import Enum
 from typing import List, Optional
 
+
 class ListUnifiedIntegrationsQueryParamCategories(str, Enum):
     PASSTHROUGH = 'passthrough'
     HRIS = 'hris'

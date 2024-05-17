@@ -10,9 +10,11 @@ from enum import Enum
 from typing import Any, Dict, List, Optional
 from unified_to import utils
 
+
 class PaymentCollectionMethod(str, Enum):
     SEND_INVOICE = 'send_invoice'
     CHARGE_AUTOMATICALLY = 'charge_automatically'
+
 
 class AccountingInvoiceStatus(str, Enum):
     DRAFT = 'DRAFT'

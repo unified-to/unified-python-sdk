@@ -3,6 +3,7 @@
 from __future__ import annotations
 from enum import Enum
 
+
 class PropertyIntegrationCategories(str, Enum):
     PASSTHROUGH = 'passthrough'
     HRIS = 'hris'

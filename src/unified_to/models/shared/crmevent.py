@@ -14,6 +14,7 @@ from enum import Enum
 from typing import Any, Dict, List, Optional
 from unified_to import utils
 
+
 class CrmEventType(str, Enum):
     NOTE = 'NOTE'
     EMAIL = 'EMAIL'

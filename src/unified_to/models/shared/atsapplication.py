@@ -10,6 +10,7 @@ from enum import Enum
 from typing import Any, Dict, List, Optional
 from unified_to import utils
 
+
 class AtsApplicationStatus(str, Enum):
     NEW = 'NEW'
     REVIEWING = 'REVIEWING'

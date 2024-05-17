@@ -10,6 +10,7 @@ from enum import Enum
 from typing import Any, Dict, List, Optional
 from unified_to import utils
 
+
 class StorageFileType(str, Enum):
     FILE = 'FILE'
     FOLDER = 'FOLDER'

@@ -12,6 +12,7 @@ from enum import Enum
 from typing import Any, Dict, List, Optional
 from unified_to import utils
 
+
 class EmploymentType(str, Enum):
     FULL_TIME = 'FULL_TIME'
     PART_TIME = 'PART_TIME'
@@ -23,6 +24,7 @@ class EmploymentType(str, Enum):
     SEASONAL = 'SEASONAL'
     FREELANCE = 'FREELANCE'
     OTHER = 'OTHER'
+
 
 class AtsJobStatus(str, Enum):
     ARCHIVED = 'ARCHIVED'

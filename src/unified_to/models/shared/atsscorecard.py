@@ -10,6 +10,7 @@ from enum import Enum
 from typing import Any, Dict, List, Optional
 from unified_to import utils
 
+
 class Recommendation(str, Enum):
     DEFINITELY_NO = 'DEFINITELY_NO'
     NO = 'NO'

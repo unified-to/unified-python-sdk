@@ -7,6 +7,7 @@ from enum import Enum
 from typing import Optional
 from unified_to import utils
 
+
 class HrisPayslipDetailType(str, Enum):
     EARNING_SALARY = 'EARNING_SALARY'
     EARNING_OVERTIME = 'EARNING_OVERTIME'

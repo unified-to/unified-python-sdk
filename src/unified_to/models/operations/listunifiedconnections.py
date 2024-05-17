@@ -8,6 +8,7 @@ from datetime import datetime
 from enum import Enum
 from typing import List, Optional
 
+
 class Categories(str, Enum):
     PASSTHROUGH = 'passthrough'
     HRIS = 'hris'
