@@ -1299,3 +1299,13 @@ Based on:
 - [python v0.22.3] .
 ### Releases
 - [PyPI v0.22.3] https://pypi.org/project/Unified-python-sdk/0.22.3 - .
+
+## 2024-05-18 11:58:28
+### Changes
+Based on:
+- OpenAPI Doc 1.0 
+- Speakeasy CLI 1.293.1 (2.333.3) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [python v0.22.4] .
+### Releases
+- [PyPI v0.22.4] https://pypi.org/project/Unified-python-sdk/0.22.4 - .
