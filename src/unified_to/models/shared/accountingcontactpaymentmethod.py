@@ -16,13 +16,12 @@ class AccountingContactPaymentMethodType(str, Enum):
     IDEAL = 'IDEAL'
     OTHER = 'OTHER'
     PAYPAL = 'PAYPAL'
-    UNKNOWN = ''
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class AccountingContactPaymentMethod:
+    type: AccountingContactPaymentMethodType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type') }})
     name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name'), 'exclude': lambda f: f is None }})
-    type: Optional[AccountingContactPaymentMethodType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type'), 'exclude': lambda f: f is None }})
     
 
