@@ -26,6 +26,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.deal.create_crm_deal(request=operations.CreateCrmDealRequest(
     connection_id='<value>',
 ))
@@ -67,6 +68,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.deal.get_crm_deal(request=operations.GetCrmDealRequest(
     connection_id='<value>',
@@ -111,6 +113,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.deal.list_crm_deals(request=operations.ListCrmDealsRequest(
     connection_id='<value>',
 ))
@@ -152,6 +155,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.deal.patch_crm_deal(request=operations.PatchCrmDealRequest(
     connection_id='<value>',
@@ -196,6 +200,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.deal.remove_crm_deal(request=operations.RemoveCrmDealRequest(
     connection_id='<value>',
     id='<id>',
@@ -238,6 +243,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.deal.update_crm_deal(request=operations.UpdateCrmDealRequest(
     connection_id='<value>',

@@ -26,6 +26,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.lead.create_crm_lead(request=operations.CreateCrmLeadRequest(
     connection_id='<value>',
 ))
@@ -67,6 +68,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.lead.get_crm_lead(request=operations.GetCrmLeadRequest(
     connection_id='<value>',
@@ -111,6 +113,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.lead.list_crm_leads(request=operations.ListCrmLeadsRequest(
     connection_id='<value>',
 ))
@@ -152,6 +155,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.lead.patch_crm_lead(request=operations.PatchCrmLeadRequest(
     connection_id='<value>',
@@ -196,6 +200,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.lead.remove_crm_lead(request=operations.RemoveCrmLeadRequest(
     connection_id='<value>',
     id='<id>',
@@ -238,6 +243,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.lead.update_crm_lead(request=operations.UpdateCrmLeadRequest(
     connection_id='<value>',

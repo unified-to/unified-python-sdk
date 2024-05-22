@@ -29,6 +29,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.company.create_crm_company(request=operations.CreateCrmCompanyRequest(
     connection_id='<value>',
 ))
@@ -70,6 +71,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.company.get_ats_company(request=operations.GetAtsCompanyRequest(
     connection_id='<value>',
@@ -114,6 +116,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.company.get_crm_company(request=operations.GetCrmCompanyRequest(
     connection_id='<value>',
     id='<id>',
@@ -157,6 +160,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.company.list_ats_companies(request=operations.ListAtsCompaniesRequest(
     connection_id='<value>',
 ))
@@ -198,6 +202,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.company.list_crm_companies(request=operations.ListCrmCompaniesRequest(
     connection_id='<value>',
@@ -241,6 +246,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.company.list_enrich_companies(request=operations.ListEnrichCompaniesRequest(
     connection_id='<value>',
 ))
@@ -282,6 +288,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.company.patch_crm_company(request=operations.PatchCrmCompanyRequest(
     connection_id='<value>',
@@ -326,6 +333,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.company.remove_crm_company(request=operations.RemoveCrmCompanyRequest(
     connection_id='<value>',
     id='<id>',
@@ -368,6 +376,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.company.update_crm_company(request=operations.UpdateCrmCompanyRequest(
     connection_id='<value>',

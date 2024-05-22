@@ -26,6 +26,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.application.create_ats_application(request=operations.CreateAtsApplicationRequest(
     connection_id='<value>',
 ))
@@ -67,6 +68,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.application.get_ats_application(request=operations.GetAtsApplicationRequest(
     connection_id='<value>',
@@ -111,6 +113,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.application.list_ats_applications(request=operations.ListAtsApplicationsRequest(
     connection_id='<value>',
 ))
@@ -152,6 +155,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.application.patch_ats_application(request=operations.PatchAtsApplicationRequest(
     connection_id='<value>',
@@ -196,6 +200,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.application.remove_ats_application(request=operations.RemoveAtsApplicationRequest(
     connection_id='<value>',
     id='<id>',
@@ -238,6 +243,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.application.update_ats_application(request=operations.UpdateAtsApplicationRequest(
     connection_id='<value>',

@@ -26,6 +26,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.interview.create_ats_interview(request=operations.CreateAtsInterviewRequest(
     connection_id='<value>',
 ))
@@ -67,6 +68,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.interview.get_ats_interview(request=operations.GetAtsInterviewRequest(
     connection_id='<value>',
@@ -111,6 +113,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.interview.list_ats_interviews(request=operations.ListAtsInterviewsRequest(
     connection_id='<value>',
 ))
@@ -152,6 +155,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.interview.patch_ats_interview(request=operations.PatchAtsInterviewRequest(
     connection_id='<value>',
@@ -196,6 +200,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.interview.remove_ats_interview(request=operations.RemoveAtsInterviewRequest(
     connection_id='<value>',
     id='<id>',
@@ -238,6 +243,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.interview.update_ats_interview(request=operations.UpdateAtsInterviewRequest(
     connection_id='<value>',

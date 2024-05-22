@@ -26,6 +26,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.list.create_martech_list(request=operations.CreateMartechListRequest(
     connection_id='<value>',
 ))
@@ -67,6 +68,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.list.get_martech_list(request=operations.GetMartechListRequest(
     connection_id='<value>',
@@ -111,6 +113,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.list.list_martech_lists(request=operations.ListMartechListsRequest(
     connection_id='<value>',
 ))
@@ -152,6 +155,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.list.patch_martech_list(request=operations.PatchMartechListRequest(
     connection_id='<value>',
@@ -196,6 +200,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.list.remove_martech_list(request=operations.RemoveMartechListRequest(
     connection_id='<value>',
     id='<id>',
@@ -238,6 +243,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.list.update_martech_list(request=operations.UpdateMartechListRequest(
     connection_id='<value>',

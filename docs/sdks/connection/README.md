@@ -26,6 +26,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.connection.create_unified_connection(request=shared.Connection(
     categories=[
         shared.PropertyConnectionCategories.MESSAGING,
@@ -74,6 +75,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.connection.get_unified_connection(request=operations.GetUnifiedConnectionRequest(
     id='<id>',
 ))
@@ -116,6 +118,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.connection.list_unified_connections(request=operations.ListUnifiedConnectionsRequest())
 
 if res.connections is not None:
@@ -155,6 +158,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.connection.patch_unified_connection(request=operations.PatchUnifiedConnectionRequest(
     id='<id>',
@@ -198,6 +202,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.connection.remove_unified_connection(request=operations.RemoveUnifiedConnectionRequest(
     id='<id>',
 ))
@@ -239,6 +244,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.connection.update_unified_connection(request=operations.UpdateUnifiedConnectionRequest(
     id='<id>',

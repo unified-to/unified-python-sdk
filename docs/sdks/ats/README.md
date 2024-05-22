@@ -65,6 +65,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.ats.create_ats_activity(request=operations.CreateAtsActivityRequest(
     connection_id='<value>',
 ))
@@ -106,6 +107,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.ats.create_ats_application(request=operations.CreateAtsApplicationRequest(
     connection_id='<value>',
@@ -149,6 +151,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.ats.create_ats_candidate(request=operations.CreateAtsCandidateRequest(
     connection_id='<value>',
 ))
@@ -190,6 +193,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.ats.create_ats_document(request=operations.CreateAtsDocumentRequest(
     connection_id='<value>',
@@ -233,6 +237,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.ats.create_ats_interview(request=operations.CreateAtsInterviewRequest(
     connection_id='<value>',
 ))
@@ -274,6 +279,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.ats.create_ats_job(request=operations.CreateAtsJobRequest(
     connection_id='<value>',
@@ -317,6 +323,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.ats.create_ats_scorecard(request=operations.CreateAtsScorecardRequest(
     connection_id='<value>',
 ))
@@ -358,6 +365,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.ats.get_ats_activity(request=operations.GetAtsActivityRequest(
     connection_id='<value>',
@@ -402,6 +410,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.ats.get_ats_application(request=operations.GetAtsApplicationRequest(
     connection_id='<value>',
     id='<id>',
@@ -444,6 +453,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.ats.get_ats_candidate(request=operations.GetAtsCandidateRequest(
     connection_id='<value>',
@@ -488,6 +498,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.ats.get_ats_company(request=operations.GetAtsCompanyRequest(
     connection_id='<value>',
     id='<id>',
@@ -530,6 +541,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.ats.get_ats_document(request=operations.GetAtsDocumentRequest(
     connection_id='<value>',
@@ -574,6 +586,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.ats.get_ats_interview(request=operations.GetAtsInterviewRequest(
     connection_id='<value>',
     id='<id>',
@@ -616,6 +629,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.ats.get_ats_job(request=operations.GetAtsJobRequest(
     connection_id='<value>',
@@ -660,6 +674,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.ats.get_ats_scorecard(request=operations.GetAtsScorecardRequest(
     connection_id='<value>',
     id='<id>',
@@ -703,6 +718,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.ats.list_ats_activities(request=operations.ListAtsActivitiesRequest(
     connection_id='<value>',
 ))
@@ -744,6 +760,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.ats.list_ats_applications(request=operations.ListAtsApplicationsRequest(
     connection_id='<value>',
@@ -787,6 +804,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.ats.list_ats_applicationstatuses(request=operations.ListAtsApplicationstatusesRequest(
     connection_id='<value>',
 ))
@@ -828,6 +846,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.ats.list_ats_candidates(request=operations.ListAtsCandidatesRequest(
     connection_id='<value>',
@@ -871,6 +890,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.ats.list_ats_companies(request=operations.ListAtsCompaniesRequest(
     connection_id='<value>',
 ))
@@ -912,6 +932,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.ats.list_ats_documents(request=operations.ListAtsDocumentsRequest(
     connection_id='<value>',
@@ -955,6 +976,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.ats.list_ats_interviews(request=operations.ListAtsInterviewsRequest(
     connection_id='<value>',
 ))
@@ -996,6 +1018,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.ats.list_ats_jobs(request=operations.ListAtsJobsRequest(
     connection_id='<value>',
@@ -1039,6 +1062,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.ats.list_ats_scorecards(request=operations.ListAtsScorecardsRequest(
     connection_id='<value>',
 ))
@@ -1080,6 +1104,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.ats.patch_ats_activity(request=operations.PatchAtsActivityRequest(
     connection_id='<value>',
@@ -1124,6 +1149,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.ats.patch_ats_application(request=operations.PatchAtsApplicationRequest(
     connection_id='<value>',
     id='<id>',
@@ -1166,6 +1192,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.ats.patch_ats_candidate(request=operations.PatchAtsCandidateRequest(
     connection_id='<value>',
@@ -1210,6 +1237,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.ats.patch_ats_document(request=operations.PatchAtsDocumentRequest(
     connection_id='<value>',
     id='<id>',
@@ -1252,6 +1280,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.ats.patch_ats_interview(request=operations.PatchAtsInterviewRequest(
     connection_id='<value>',
@@ -1296,6 +1325,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.ats.patch_ats_job(request=operations.PatchAtsJobRequest(
     connection_id='<value>',
     id='<id>',
@@ -1338,6 +1368,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.ats.patch_ats_scorecard(request=operations.PatchAtsScorecardRequest(
     connection_id='<value>',
@@ -1382,6 +1413,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.ats.remove_ats_activity(request=operations.RemoveAtsActivityRequest(
     connection_id='<value>',
     id='<id>',
@@ -1424,6 +1456,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.ats.remove_ats_application(request=operations.RemoveAtsApplicationRequest(
     connection_id='<value>',
@@ -1468,6 +1501,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.ats.remove_ats_candidate(request=operations.RemoveAtsCandidateRequest(
     connection_id='<value>',
     id='<id>',
@@ -1510,6 +1544,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.ats.remove_ats_document(request=operations.RemoveAtsDocumentRequest(
     connection_id='<value>',
@@ -1554,6 +1589,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.ats.remove_ats_interview(request=operations.RemoveAtsInterviewRequest(
     connection_id='<value>',
     id='<id>',
@@ -1596,6 +1632,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.ats.remove_ats_job(request=operations.RemoveAtsJobRequest(
     connection_id='<value>',
@@ -1640,6 +1677,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.ats.remove_ats_scorecard(request=operations.RemoveAtsScorecardRequest(
     connection_id='<value>',
     id='<id>',
@@ -1682,6 +1720,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.ats.update_ats_activity(request=operations.UpdateAtsActivityRequest(
     connection_id='<value>',
@@ -1726,6 +1765,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.ats.update_ats_application(request=operations.UpdateAtsApplicationRequest(
     connection_id='<value>',
     id='<id>',
@@ -1768,6 +1808,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.ats.update_ats_candidate(request=operations.UpdateAtsCandidateRequest(
     connection_id='<value>',
@@ -1812,6 +1853,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.ats.update_ats_document(request=operations.UpdateAtsDocumentRequest(
     connection_id='<value>',
     id='<id>',
@@ -1854,6 +1896,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.ats.update_ats_interview(request=operations.UpdateAtsInterviewRequest(
     connection_id='<value>',
@@ -1898,6 +1941,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.ats.update_ats_job(request=operations.UpdateAtsJobRequest(
     connection_id='<value>',
     id='<id>',
@@ -1940,6 +1984,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.ats.update_ats_scorecard(request=operations.UpdateAtsScorecardRequest(
     connection_id='<value>',

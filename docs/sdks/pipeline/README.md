@@ -26,6 +26,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.pipeline.create_crm_pipeline(request=operations.CreateCrmPipelineRequest(
     connection_id='<value>',
 ))
@@ -67,6 +68,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.pipeline.get_crm_pipeline(request=operations.GetCrmPipelineRequest(
     connection_id='<value>',
@@ -111,6 +113,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.pipeline.list_crm_pipelines(request=operations.ListCrmPipelinesRequest(
     connection_id='<value>',
 ))
@@ -152,6 +155,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.pipeline.patch_crm_pipeline(request=operations.PatchCrmPipelineRequest(
     connection_id='<value>',
@@ -196,6 +200,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.pipeline.remove_crm_pipeline(request=operations.RemoveCrmPipelineRequest(
     connection_id='<value>',
     id='<id>',
@@ -238,6 +243,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.pipeline.update_crm_pipeline(request=operations.UpdateCrmPipelineRequest(
     connection_id='<value>',

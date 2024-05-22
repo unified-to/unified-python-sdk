@@ -22,6 +22,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.genai.create_genai_prompt(request=operations.CreateGenaiPromptRequest(
     connection_id='<value>',
 ))
@@ -63,6 +64,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.genai.list_genai_models(request=operations.ListGenaiModelsRequest(
     connection_id='<value>',

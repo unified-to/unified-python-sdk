@@ -21,6 +21,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.login.get_unified_integration_login(request=operations.GetUnifiedIntegrationLoginRequest(
     integration_type='<value>',
     workspace_id='<value>',

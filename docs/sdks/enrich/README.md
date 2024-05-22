@@ -22,6 +22,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.enrich.list_enrich_companies(request=operations.ListEnrichCompaniesRequest(
     connection_id='<value>',
 ))
@@ -63,6 +64,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.enrich.list_enrich_people(request=operations.ListEnrichPeopleRequest(
     connection_id='<value>',

@@ -52,6 +52,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.accounting.create_accounting_account(request=operations.CreateAccountingAccountRequest(
     connection_id='<value>',
 ))
@@ -93,6 +94,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.accounting.create_accounting_contact(request=operations.CreateAccountingContactRequest(
     connection_id='<value>',
@@ -136,6 +138,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.accounting.create_accounting_invoice(request=operations.CreateAccountingInvoiceRequest(
     connection_id='<value>',
 ))
@@ -177,6 +180,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.accounting.create_accounting_taxrate(request=operations.CreateAccountingTaxrateRequest(
     connection_id='<value>',
@@ -220,6 +224,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.accounting.create_accounting_transaction(request=operations.CreateAccountingTransactionRequest(
     connection_id='<value>',
 ))
@@ -261,6 +266,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.accounting.get_accounting_account(request=operations.GetAccountingAccountRequest(
     connection_id='<value>',
@@ -305,6 +311,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.accounting.get_accounting_contact(request=operations.GetAccountingContactRequest(
     connection_id='<value>',
     id='<id>',
@@ -347,6 +354,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.accounting.get_accounting_invoice(request=operations.GetAccountingInvoiceRequest(
     connection_id='<value>',
@@ -391,6 +399,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.accounting.get_accounting_organization(request=operations.GetAccountingOrganizationRequest(
     connection_id='<value>',
     id='<id>',
@@ -433,6 +442,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.accounting.get_accounting_taxrate(request=operations.GetAccountingTaxrateRequest(
     connection_id='<value>',
@@ -477,6 +487,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.accounting.get_accounting_transaction(request=operations.GetAccountingTransactionRequest(
     connection_id='<value>',
     id='<id>',
@@ -520,6 +531,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.accounting.list_accounting_accounts(request=operations.ListAccountingAccountsRequest(
     connection_id='<value>',
 ))
@@ -561,6 +573,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.accounting.list_accounting_contacts(request=operations.ListAccountingContactsRequest(
     connection_id='<value>',
@@ -604,6 +617,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.accounting.list_accounting_invoices(request=operations.ListAccountingInvoicesRequest(
     connection_id='<value>',
 ))
@@ -645,6 +659,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.accounting.list_accounting_organizations(request=operations.ListAccountingOrganizationsRequest(
     connection_id='<value>',
@@ -688,6 +703,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.accounting.list_accounting_taxrates(request=operations.ListAccountingTaxratesRequest(
     connection_id='<value>',
 ))
@@ -730,6 +746,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.accounting.list_accounting_transactions(request=operations.ListAccountingTransactionsRequest(
     connection_id='<value>',
 ))
@@ -771,6 +788,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.accounting.patch_accounting_account(request=operations.PatchAccountingAccountRequest(
     connection_id='<value>',
@@ -815,6 +833,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.accounting.patch_accounting_contact(request=operations.PatchAccountingContactRequest(
     connection_id='<value>',
     id='<id>',
@@ -857,6 +876,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.accounting.patch_accounting_invoice(request=operations.PatchAccountingInvoiceRequest(
     connection_id='<value>',
@@ -901,6 +921,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.accounting.patch_accounting_taxrate(request=operations.PatchAccountingTaxrateRequest(
     connection_id='<value>',
     id='<id>',
@@ -943,6 +964,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.accounting.patch_accounting_transaction(request=operations.PatchAccountingTransactionRequest(
     connection_id='<value>',
@@ -987,6 +1009,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.accounting.remove_accounting_account(request=operations.RemoveAccountingAccountRequest(
     connection_id='<value>',
     id='<id>',
@@ -1029,6 +1052,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.accounting.remove_accounting_contact(request=operations.RemoveAccountingContactRequest(
     connection_id='<value>',
@@ -1073,6 +1097,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.accounting.remove_accounting_invoice(request=operations.RemoveAccountingInvoiceRequest(
     connection_id='<value>',
     id='<id>',
@@ -1115,6 +1140,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.accounting.remove_accounting_taxrate(request=operations.RemoveAccountingTaxrateRequest(
     connection_id='<value>',
@@ -1159,6 +1185,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.accounting.remove_accounting_transaction(request=operations.RemoveAccountingTransactionRequest(
     connection_id='<value>',
     id='<id>',
@@ -1201,6 +1228,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.accounting.update_accounting_account(request=operations.UpdateAccountingAccountRequest(
     connection_id='<value>',
@@ -1245,6 +1273,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.accounting.update_accounting_contact(request=operations.UpdateAccountingContactRequest(
     connection_id='<value>',
     id='<id>',
@@ -1287,6 +1316,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.accounting.update_accounting_invoice(request=operations.UpdateAccountingInvoiceRequest(
     connection_id='<value>',
@@ -1331,6 +1361,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.accounting.update_accounting_taxrate(request=operations.UpdateAccountingTaxrateRequest(
     connection_id='<value>',
     id='<id>',
@@ -1373,6 +1404,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.accounting.update_accounting_transaction(request=operations.UpdateAccountingTransactionRequest(
     connection_id='<value>',

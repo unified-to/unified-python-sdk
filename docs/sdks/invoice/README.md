@@ -26,6 +26,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.invoice.create_accounting_invoice(request=operations.CreateAccountingInvoiceRequest(
     connection_id='<value>',
 ))
@@ -67,6 +68,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.invoice.get_accounting_invoice(request=operations.GetAccountingInvoiceRequest(
     connection_id='<value>',
@@ -111,6 +113,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.invoice.list_accounting_invoices(request=operations.ListAccountingInvoicesRequest(
     connection_id='<value>',
 ))
@@ -152,6 +155,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.invoice.patch_accounting_invoice(request=operations.PatchAccountingInvoiceRequest(
     connection_id='<value>',
@@ -196,6 +200,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.invoice.remove_accounting_invoice(request=operations.RemoveAccountingInvoiceRequest(
     connection_id='<value>',
     id='<id>',
@@ -238,6 +243,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.invoice.update_accounting_invoice(request=operations.UpdateAccountingInvoiceRequest(
     connection_id='<value>',

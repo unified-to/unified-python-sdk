@@ -38,6 +38,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.ticketing.create_ticketing_customer(request=operations.CreateTicketingCustomerRequest(
     connection_id='<value>',
 ))
@@ -79,6 +80,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.ticketing.create_ticketing_note(request=operations.CreateTicketingNoteRequest(
     connection_id='<value>',
@@ -122,6 +124,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.ticketing.create_ticketing_ticket(request=operations.CreateTicketingTicketRequest(
     connection_id='<value>',
 ))
@@ -163,6 +166,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.ticketing.get_ticketing_customer(request=operations.GetTicketingCustomerRequest(
     connection_id='<value>',
@@ -207,6 +211,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.ticketing.get_ticketing_note(request=operations.GetTicketingNoteRequest(
     connection_id='<value>',
     id='<id>',
@@ -249,6 +254,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.ticketing.get_ticketing_ticket(request=operations.GetTicketingTicketRequest(
     connection_id='<value>',
@@ -293,6 +299,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.ticketing.list_ticketing_customers(request=operations.ListTicketingCustomersRequest(
     connection_id='<value>',
 ))
@@ -334,6 +341,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.ticketing.list_ticketing_notes(request=operations.ListTicketingNotesRequest(
     connection_id='<value>',
@@ -377,6 +385,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.ticketing.list_ticketing_tickets(request=operations.ListTicketingTicketsRequest(
     connection_id='<value>',
 ))
@@ -418,6 +427,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.ticketing.patch_ticketing_customer(request=operations.PatchTicketingCustomerRequest(
     connection_id='<value>',
@@ -462,6 +472,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.ticketing.patch_ticketing_note(request=operations.PatchTicketingNoteRequest(
     connection_id='<value>',
     id='<id>',
@@ -504,6 +515,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.ticketing.patch_ticketing_ticket(request=operations.PatchTicketingTicketRequest(
     connection_id='<value>',
@@ -548,6 +560,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.ticketing.remove_ticketing_customer(request=operations.RemoveTicketingCustomerRequest(
     connection_id='<value>',
     id='<id>',
@@ -590,6 +603,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.ticketing.remove_ticketing_note(request=operations.RemoveTicketingNoteRequest(
     connection_id='<value>',
@@ -634,6 +648,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.ticketing.remove_ticketing_ticket(request=operations.RemoveTicketingTicketRequest(
     connection_id='<value>',
     id='<id>',
@@ -676,6 +691,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.ticketing.update_ticketing_customer(request=operations.UpdateTicketingCustomerRequest(
     connection_id='<value>',
@@ -720,6 +736,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.ticketing.update_ticketing_note(request=operations.UpdateTicketingNoteRequest(
     connection_id='<value>',
     id='<id>',
@@ -762,6 +779,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.ticketing.update_ticketing_ticket(request=operations.UpdateTicketingTicketRequest(
     connection_id='<value>',

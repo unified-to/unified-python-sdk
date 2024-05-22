@@ -22,6 +22,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.channel.get_messaging_channel(request=operations.GetMessagingChannelRequest(
     connection_id='<value>',
     id='<id>',
@@ -64,6 +65,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.channel.list_messaging_channels(request=operations.ListMessagingChannelsRequest(
     connection_id='<value>',

@@ -26,6 +26,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.ticket.create_ticketing_ticket(request=operations.CreateTicketingTicketRequest(
     connection_id='<value>',
 ))
@@ -67,6 +68,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.ticket.get_ticketing_ticket(request=operations.GetTicketingTicketRequest(
     connection_id='<value>',
@@ -111,6 +113,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.ticket.list_ticketing_tickets(request=operations.ListTicketingTicketsRequest(
     connection_id='<value>',
 ))
@@ -152,6 +155,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.ticket.patch_ticketing_ticket(request=operations.PatchTicketingTicketRequest(
     connection_id='<value>',
@@ -196,6 +200,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.ticket.remove_ticketing_ticket(request=operations.RemoveTicketingTicketRequest(
     connection_id='<value>',
     id='<id>',
@@ -238,6 +243,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.ticket.update_ticketing_ticket(request=operations.UpdateTicketingTicketRequest(
     connection_id='<value>',

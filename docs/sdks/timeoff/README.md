@@ -22,6 +22,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.timeoff.get_hris_timeoff(request=operations.GetHrisTimeoffRequest(
     connection_id='<value>',
     id='<id>',
@@ -64,6 +65,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.timeoff.list_hris_timeoffs(request=operations.ListHrisTimeoffsRequest(
     connection_id='<value>',

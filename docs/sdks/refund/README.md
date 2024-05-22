@@ -22,6 +22,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.refund.get_payment_refund(request=operations.GetPaymentRefundRequest(
     connection_id='<value>',
     id='<id>',
@@ -64,6 +65,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.refund.list_payment_refunds(request=operations.ListPaymentRefundsRequest(
     connection_id='<value>',

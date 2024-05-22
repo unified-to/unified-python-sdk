@@ -27,6 +27,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.uc.create_uc_contact(request=operations.CreateUcContactRequest(
     connection_id='<value>',
 ))
@@ -68,6 +69,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.uc.get_uc_contact(request=operations.GetUcContactRequest(
     connection_id='<value>',
@@ -112,6 +114,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.uc.list_uc_calls(request=operations.ListUcCallsRequest(
     connection_id='<value>',
 ))
@@ -154,6 +157,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.uc.list_uc_contacts(request=operations.ListUcContactsRequest(
     connection_id='<value>',
 ))
@@ -195,6 +199,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.uc.patch_uc_contact(request=operations.PatchUcContactRequest(
     connection_id='<value>',
@@ -239,6 +244,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.uc.remove_uc_contact(request=operations.RemoveUcContactRequest(
     connection_id='<value>',
     id='<id>',
@@ -281,6 +287,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.uc.update_uc_contact(request=operations.UpdateUcContactRequest(
     connection_id='<value>',

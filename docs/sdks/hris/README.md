@@ -36,6 +36,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.hris.create_hris_employee(request=operations.CreateHrisEmployeeRequest(
     connection_id='<value>',
 ))
@@ -78,6 +79,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.hris.create_hris_group(request=operations.CreateHrisGroupRequest(
     connection_id='<value>',
 ))
@@ -119,6 +121,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.hris.get_hris_employee(request=operations.GetHrisEmployeeRequest(
     connection_id='<value>',
@@ -163,6 +166,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.hris.get_hris_group(request=operations.GetHrisGroupRequest(
     connection_id='<value>',
     id='<id>',
@@ -205,6 +209,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.hris.get_hris_payslip(request=operations.GetHrisPayslipRequest(
     connection_id='<value>',
@@ -249,6 +254,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.hris.get_hris_timeoff(request=operations.GetHrisTimeoffRequest(
     connection_id='<value>',
     id='<id>',
@@ -292,6 +298,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.hris.list_hris_employees(request=operations.ListHrisEmployeesRequest(
     connection_id='<value>',
 ))
@@ -333,6 +340,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.hris.list_hris_groups(request=operations.ListHrisGroupsRequest(
     connection_id='<value>',
@@ -376,6 +384,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.hris.list_hris_payslips(request=operations.ListHrisPayslipsRequest(
     connection_id='<value>',
 ))
@@ -418,6 +427,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.hris.list_hris_timeoffs(request=operations.ListHrisTimeoffsRequest(
     connection_id='<value>',
 ))
@@ -459,6 +469,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.hris.patch_hris_employee(request=operations.PatchHrisEmployeeRequest(
     connection_id='<value>',
@@ -503,6 +514,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.hris.patch_hris_group(request=operations.PatchHrisGroupRequest(
     connection_id='<value>',
     id='<id>',
@@ -545,6 +557,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.hris.remove_hris_employee(request=operations.RemoveHrisEmployeeRequest(
     connection_id='<value>',
@@ -589,6 +602,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.hris.remove_hris_group(request=operations.RemoveHrisGroupRequest(
     connection_id='<value>',
     id='<id>',
@@ -632,6 +646,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.hris.update_hris_employee(request=operations.UpdateHrisEmployeeRequest(
     connection_id='<value>',
     id='<id>',
@@ -674,6 +689,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.hris.update_hris_group(request=operations.UpdateHrisGroupRequest(
     connection_id='<value>',

@@ -38,6 +38,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.contact.create_accounting_contact(request=operations.CreateAccountingContactRequest(
     connection_id='<value>',
 ))
@@ -79,6 +80,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.contact.create_crm_contact(request=operations.CreateCrmContactRequest(
     connection_id='<value>',
@@ -122,6 +124,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.contact.create_uc_contact(request=operations.CreateUcContactRequest(
     connection_id='<value>',
 ))
@@ -163,6 +166,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.contact.get_accounting_contact(request=operations.GetAccountingContactRequest(
     connection_id='<value>',
@@ -207,6 +211,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.contact.get_crm_contact(request=operations.GetCrmContactRequest(
     connection_id='<value>',
     id='<id>',
@@ -249,6 +254,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.contact.get_uc_contact(request=operations.GetUcContactRequest(
     connection_id='<value>',
@@ -293,6 +299,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.contact.list_accounting_contacts(request=operations.ListAccountingContactsRequest(
     connection_id='<value>',
 ))
@@ -334,6 +341,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.contact.list_crm_contacts(request=operations.ListCrmContactsRequest(
     connection_id='<value>',
@@ -377,6 +385,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.contact.list_uc_contacts(request=operations.ListUcContactsRequest(
     connection_id='<value>',
 ))
@@ -418,6 +427,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.contact.patch_accounting_contact(request=operations.PatchAccountingContactRequest(
     connection_id='<value>',
@@ -462,6 +472,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.contact.patch_crm_contact(request=operations.PatchCrmContactRequest(
     connection_id='<value>',
     id='<id>',
@@ -504,6 +515,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.contact.patch_uc_contact(request=operations.PatchUcContactRequest(
     connection_id='<value>',
@@ -548,6 +560,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.contact.remove_accounting_contact(request=operations.RemoveAccountingContactRequest(
     connection_id='<value>',
     id='<id>',
@@ -590,6 +603,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.contact.remove_crm_contact(request=operations.RemoveCrmContactRequest(
     connection_id='<value>',
@@ -634,6 +648,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.contact.remove_uc_contact(request=operations.RemoveUcContactRequest(
     connection_id='<value>',
     id='<id>',
@@ -676,6 +691,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.contact.update_accounting_contact(request=operations.UpdateAccountingContactRequest(
     connection_id='<value>',
@@ -720,6 +736,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.contact.update_crm_contact(request=operations.UpdateCrmContactRequest(
     connection_id='<value>',
     id='<id>',
@@ -762,6 +779,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.contact.update_uc_contact(request=operations.UpdateUcContactRequest(
     connection_id='<value>',

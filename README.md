@@ -27,6 +27,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.accounting.create_accounting_account(request=operations.CreateAccountingAccountRequest(
     connection_id='<value>',
 ))
@@ -787,6 +788,7 @@ try:
     res = s.accounting.create_accounting_account(request=operations.CreateAccountingAccountRequest(
     connection_id='<value>',
 ))
+
 except errors.SDKError as e:
     # handle exception
     raise(e)
@@ -825,6 +827,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.accounting.create_accounting_account(request=operations.CreateAccountingAccountRequest(
     connection_id='<value>',
 ))
@@ -849,6 +852,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.accounting.create_accounting_account(request=operations.CreateAccountingAccountRequest(
     connection_id='<value>',
@@ -902,6 +906,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.accounting.create_accounting_account(request=operations.CreateAccountingAccountRequest(
     connection_id='<value>',

@@ -26,6 +26,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.inventory.create_commerce_inventory(request=operations.CreateCommerceInventoryRequest(
     connection_id='<value>',
 ))
@@ -67,6 +68,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.inventory.get_commerce_inventory(request=operations.GetCommerceInventoryRequest(
     connection_id='<value>',
@@ -111,6 +113,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.inventory.list_commerce_inventories(request=operations.ListCommerceInventoriesRequest(
     connection_id='<value>',
 ))
@@ -152,6 +155,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.inventory.patch_commerce_inventory(request=operations.PatchCommerceInventoryRequest(
     connection_id='<value>',
@@ -196,6 +200,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.inventory.remove_commerce_inventory(request=operations.RemoveCommerceInventoryRequest(
     connection_id='<value>',
     id='<id>',
@@ -238,6 +243,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.inventory.update_commerce_inventory(request=operations.UpdateCommerceInventoryRequest(
     connection_id='<value>',

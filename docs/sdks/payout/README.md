@@ -22,6 +22,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.payout.get_payment_payout(request=operations.GetPaymentPayoutRequest(
     connection_id='<value>',
     id='<id>',
@@ -64,6 +65,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.payout.list_payment_payouts(request=operations.ListPaymentPayoutsRequest(
     connection_id='<value>',

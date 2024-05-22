@@ -9,6 +9,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.accounting.create_accounting_account(request=operations.CreateAccountingAccountRequest(
     connection_id='<value>',
 ))

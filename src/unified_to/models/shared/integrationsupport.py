@@ -26,6 +26,7 @@ class IntegrationSupport:
     list_item_id: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('list_item_id'), 'exclude': lambda f: f is None }})
     list_job_id: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('list_job_id'), 'exclude': lambda f: f is None }})
     list_limit: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('list_limit'), 'exclude': lambda f: f is None }})
+    list_link_id: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('list_link_id'), 'exclude': lambda f: f is None }})
     list_list_id: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('list_list_id'), 'exclude': lambda f: f is None }})
     list_location_id: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('list_location_id'), 'exclude': lambda f: f is None }})
     list_offset: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('list_offset'), 'exclude': lambda f: f is None }})

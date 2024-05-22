@@ -26,6 +26,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.scorecard.create_ats_scorecard(request=operations.CreateAtsScorecardRequest(
     connection_id='<value>',
 ))
@@ -67,6 +68,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.scorecard.get_ats_scorecard(request=operations.GetAtsScorecardRequest(
     connection_id='<value>',
@@ -111,6 +113,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.scorecard.list_ats_scorecards(request=operations.ListAtsScorecardsRequest(
     connection_id='<value>',
 ))
@@ -152,6 +155,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.scorecard.patch_ats_scorecard(request=operations.PatchAtsScorecardRequest(
     connection_id='<value>',
@@ -196,6 +200,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.scorecard.remove_ats_scorecard(request=operations.RemoveAtsScorecardRequest(
     connection_id='<value>',
     id='<id>',
@@ -238,6 +243,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.scorecard.update_ats_scorecard(request=operations.UpdateAtsScorecardRequest(
     connection_id='<value>',

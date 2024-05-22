@@ -21,6 +21,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.person.list_enrich_people(request=operations.ListEnrichPeopleRequest(
     connection_id='<value>',
 ))

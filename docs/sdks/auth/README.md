@@ -22,6 +22,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.auth.get_unified_integration_auth(request=operations.GetUnifiedIntegrationAuthRequest(
     integration_type='<value>',
     workspace_id='<value>',
@@ -64,6 +65,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.auth.get_unified_integration_login(request=operations.GetUnifiedIntegrationLoginRequest(
     integration_type='<value>',

@@ -56,6 +56,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.crm.create_crm_company(request=operations.CreateCrmCompanyRequest(
     connection_id='<value>',
 ))
@@ -97,6 +98,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.crm.create_crm_contact(request=operations.CreateCrmContactRequest(
     connection_id='<value>',
@@ -140,6 +142,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.crm.create_crm_deal(request=operations.CreateCrmDealRequest(
     connection_id='<value>',
 ))
@@ -181,6 +184,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.crm.create_crm_event(request=operations.CreateCrmEventRequest(
     connection_id='<value>',
@@ -224,6 +228,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.crm.create_crm_lead(request=operations.CreateCrmLeadRequest(
     connection_id='<value>',
 ))
@@ -266,6 +271,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.crm.create_crm_pipeline(request=operations.CreateCrmPipelineRequest(
     connection_id='<value>',
 ))
@@ -307,6 +313,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.crm.get_crm_company(request=operations.GetCrmCompanyRequest(
     connection_id='<value>',
@@ -351,6 +358,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.crm.get_crm_contact(request=operations.GetCrmContactRequest(
     connection_id='<value>',
     id='<id>',
@@ -393,6 +401,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.crm.get_crm_deal(request=operations.GetCrmDealRequest(
     connection_id='<value>',
@@ -437,6 +446,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.crm.get_crm_event(request=operations.GetCrmEventRequest(
     connection_id='<value>',
     id='<id>',
@@ -479,6 +489,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.crm.get_crm_lead(request=operations.GetCrmLeadRequest(
     connection_id='<value>',
@@ -523,6 +534,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.crm.get_crm_pipeline(request=operations.GetCrmPipelineRequest(
     connection_id='<value>',
     id='<id>',
@@ -566,6 +578,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.crm.list_crm_companies(request=operations.ListCrmCompaniesRequest(
     connection_id='<value>',
 ))
@@ -607,6 +620,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.crm.list_crm_contacts(request=operations.ListCrmContactsRequest(
     connection_id='<value>',
@@ -650,6 +664,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.crm.list_crm_deals(request=operations.ListCrmDealsRequest(
     connection_id='<value>',
 ))
@@ -691,6 +706,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.crm.list_crm_events(request=operations.ListCrmEventsRequest(
     connection_id='<value>',
@@ -734,6 +750,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.crm.list_crm_leads(request=operations.ListCrmLeadsRequest(
     connection_id='<value>',
 ))
@@ -776,6 +793,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.crm.list_crm_pipelines(request=operations.ListCrmPipelinesRequest(
     connection_id='<value>',
 ))
@@ -817,6 +835,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.crm.patch_crm_company(request=operations.PatchCrmCompanyRequest(
     connection_id='<value>',
@@ -861,6 +880,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.crm.patch_crm_contact(request=operations.PatchCrmContactRequest(
     connection_id='<value>',
     id='<id>',
@@ -903,6 +923,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.crm.patch_crm_deal(request=operations.PatchCrmDealRequest(
     connection_id='<value>',
@@ -947,6 +968,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.crm.patch_crm_event(request=operations.PatchCrmEventRequest(
     connection_id='<value>',
     id='<id>',
@@ -989,6 +1011,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.crm.patch_crm_lead(request=operations.PatchCrmLeadRequest(
     connection_id='<value>',
@@ -1033,6 +1056,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.crm.patch_crm_pipeline(request=operations.PatchCrmPipelineRequest(
     connection_id='<value>',
     id='<id>',
@@ -1075,6 +1099,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.crm.remove_crm_company(request=operations.RemoveCrmCompanyRequest(
     connection_id='<value>',
@@ -1119,6 +1144,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.crm.remove_crm_contact(request=operations.RemoveCrmContactRequest(
     connection_id='<value>',
     id='<id>',
@@ -1161,6 +1187,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.crm.remove_crm_deal(request=operations.RemoveCrmDealRequest(
     connection_id='<value>',
@@ -1205,6 +1232,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.crm.remove_crm_event(request=operations.RemoveCrmEventRequest(
     connection_id='<value>',
     id='<id>',
@@ -1247,6 +1275,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.crm.remove_crm_lead(request=operations.RemoveCrmLeadRequest(
     connection_id='<value>',
@@ -1291,6 +1320,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.crm.remove_crm_pipeline(request=operations.RemoveCrmPipelineRequest(
     connection_id='<value>',
     id='<id>',
@@ -1333,6 +1363,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.crm.update_crm_company(request=operations.UpdateCrmCompanyRequest(
     connection_id='<value>',
@@ -1377,6 +1408,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.crm.update_crm_contact(request=operations.UpdateCrmContactRequest(
     connection_id='<value>',
     id='<id>',
@@ -1419,6 +1451,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.crm.update_crm_deal(request=operations.UpdateCrmDealRequest(
     connection_id='<value>',
@@ -1463,6 +1496,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.crm.update_crm_event(request=operations.UpdateCrmEventRequest(
     connection_id='<value>',
     id='<id>',
@@ -1506,6 +1540,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.crm.update_crm_lead(request=operations.UpdateCrmLeadRequest(
     connection_id='<value>',
     id='<id>',
@@ -1548,6 +1583,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.crm.update_crm_pipeline(request=operations.UpdateCrmPipelineRequest(
     connection_id='<value>',

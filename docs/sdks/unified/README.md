@@ -39,6 +39,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.unified.create_unified_connection(request=shared.Connection(
     categories=[
         shared.PropertyConnectionCategories.MESSAGING,
@@ -87,6 +88,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.unified.create_unified_webhook(request=operations.CreateUnifiedWebhookRequest())
 
 if res.webhook is not None:
@@ -126,6 +128,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.unified.get_unified_apicall(request=operations.GetUnifiedApicallRequest(
     id='<id>',
@@ -169,6 +172,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.unified.get_unified_connection(request=operations.GetUnifiedConnectionRequest(
     id='<id>',
 ))
@@ -210,6 +214,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.unified.get_unified_integration_auth(request=operations.GetUnifiedIntegrationAuthRequest(
     integration_type='<value>',
@@ -254,6 +259,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.unified.get_unified_webhook(request=operations.GetUnifiedWebhookRequest(
     id='<id>',
 ))
@@ -296,6 +302,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.unified.list_unified_apicalls(request=operations.ListUnifiedApicallsRequest())
 
 if res.api_calls is not None:
@@ -336,6 +343,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.unified.list_unified_connections(request=operations.ListUnifiedConnectionsRequest())
 
 if res.connections is not None:
@@ -375,6 +383,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.unified.list_unified_integration_workspaces(request=operations.ListUnifiedIntegrationWorkspacesRequest(
     workspace_id='<value>',
@@ -418,6 +427,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.unified.list_unified_integrations(request=operations.ListUnifiedIntegrationsRequest())
 
 if res.integrations is not None:
@@ -457,6 +467,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.unified.list_unified_issues(request=operations.ListUnifiedIssuesRequest())
 
@@ -498,6 +509,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.unified.list_unified_supports()
 
 if res.undefined is not None:
@@ -531,6 +543,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.unified.list_unified_webhooks(request=operations.ListUnifiedWebhooksRequest())
 
@@ -571,6 +584,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.unified.patch_unified_connection(request=operations.PatchUnifiedConnectionRequest(
     id='<id>',
@@ -614,6 +628,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.unified.patch_unified_webhook_trigger(request=operations.PatchUnifiedWebhookTriggerRequest(
     id='<id>',
 ))
@@ -655,6 +670,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.unified.remove_unified_connection(request=operations.RemoveUnifiedConnectionRequest(
     id='<id>',
@@ -698,6 +714,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.unified.remove_unified_webhook(request=operations.RemoveUnifiedWebhookRequest(
     id='<id>',
 ))
@@ -740,6 +757,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.unified.update_unified_connection(request=operations.UpdateUnifiedConnectionRequest(
     id='<id>',
 ))
@@ -781,6 +799,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.unified.update_unified_webhook_trigger(request=operations.UpdateUnifiedWebhookTriggerRequest(
     id='<id>',

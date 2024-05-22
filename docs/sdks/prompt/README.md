@@ -21,6 +21,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.prompt.create_genai_prompt(request=operations.CreateGenaiPromptRequest(
     connection_id='<value>',
 ))

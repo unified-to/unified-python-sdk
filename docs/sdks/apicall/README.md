@@ -22,6 +22,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.apicall.get_unified_apicall(request=operations.GetUnifiedApicallRequest(
     id='<id>',
 ))
@@ -63,6 +64,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.apicall.list_unified_apicalls(request=operations.ListUnifiedApicallsRequest())
 

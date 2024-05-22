@@ -26,6 +26,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.taxrate.create_accounting_taxrate(request=operations.CreateAccountingTaxrateRequest(
     connection_id='<value>',
 ))
@@ -67,6 +68,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.taxrate.get_accounting_taxrate(request=operations.GetAccountingTaxrateRequest(
     connection_id='<value>',
@@ -111,6 +113,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.taxrate.list_accounting_taxrates(request=operations.ListAccountingTaxratesRequest(
     connection_id='<value>',
 ))
@@ -152,6 +155,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.taxrate.patch_accounting_taxrate(request=operations.PatchAccountingTaxrateRequest(
     connection_id='<value>',
@@ -196,6 +200,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.taxrate.remove_accounting_taxrate(request=operations.RemoveAccountingTaxrateRequest(
     connection_id='<value>',
     id='<id>',
@@ -238,6 +243,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.taxrate.update_accounting_taxrate(request=operations.UpdateAccountingTaxrateRequest(
     connection_id='<value>',

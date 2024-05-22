@@ -22,6 +22,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.payslip.get_hris_payslip(request=operations.GetHrisPayslipRequest(
     connection_id='<value>',
     id='<id>',
@@ -64,6 +65,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.payslip.list_hris_payslips(request=operations.ListHrisPayslipsRequest(
     connection_id='<value>',

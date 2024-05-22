@@ -36,6 +36,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.payment.create_payment_link(request=operations.CreatePaymentLinkRequest(
     connection_id='<value>',
 ))
@@ -78,6 +79,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.payment.create_payment_payment(request=operations.CreatePaymentPaymentRequest(
     connection_id='<value>',
 ))
@@ -119,6 +121,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.payment.get_payment_link(request=operations.GetPaymentLinkRequest(
     connection_id='<value>',
@@ -163,6 +166,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.payment.get_payment_payment(request=operations.GetPaymentPaymentRequest(
     connection_id='<value>',
     id='<id>',
@@ -205,6 +209,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.payment.get_payment_payout(request=operations.GetPaymentPayoutRequest(
     connection_id='<value>',
@@ -249,6 +254,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.payment.get_payment_refund(request=operations.GetPaymentRefundRequest(
     connection_id='<value>',
     id='<id>',
@@ -292,6 +298,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.payment.list_payment_links(request=operations.ListPaymentLinksRequest(
     connection_id='<value>',
 ))
@@ -333,6 +340,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.payment.list_payment_payments(request=operations.ListPaymentPaymentsRequest(
     connection_id='<value>',
@@ -376,6 +384,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.payment.list_payment_payouts(request=operations.ListPaymentPayoutsRequest(
     connection_id='<value>',
 ))
@@ -418,6 +427,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.payment.list_payment_refunds(request=operations.ListPaymentRefundsRequest(
     connection_id='<value>',
 ))
@@ -459,6 +469,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.payment.patch_payment_link(request=operations.PatchPaymentLinkRequest(
     connection_id='<value>',
@@ -503,6 +514,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.payment.patch_payment_payment(request=operations.PatchPaymentPaymentRequest(
     connection_id='<value>',
     id='<id>',
@@ -545,6 +557,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.payment.remove_payment_link(request=operations.RemovePaymentLinkRequest(
     connection_id='<value>',
@@ -589,6 +602,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.payment.remove_payment_payment(request=operations.RemovePaymentPaymentRequest(
     connection_id='<value>',
     id='<id>',
@@ -632,6 +646,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.payment.update_payment_link(request=operations.UpdatePaymentLinkRequest(
     connection_id='<value>',
     id='<id>',
@@ -674,6 +689,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.payment.update_payment_payment(request=operations.UpdatePaymentPaymentRequest(
     connection_id='<value>',

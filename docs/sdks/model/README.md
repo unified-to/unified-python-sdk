@@ -21,6 +21,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.model.list_genai_models(request=operations.ListGenaiModelsRequest(
     connection_id='<value>',
 ))

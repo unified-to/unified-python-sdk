@@ -22,6 +22,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.organization.get_accounting_organization(request=operations.GetAccountingOrganizationRequest(
     connection_id='<value>',
     id='<id>',
@@ -64,6 +65,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.organization.list_accounting_organizations(request=operations.ListAccountingOrganizationsRequest(
     connection_id='<value>',

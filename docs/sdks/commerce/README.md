@@ -44,6 +44,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.commerce.create_commerce_collection(request=operations.CreateCommerceCollectionRequest(
     connection_id='<value>',
 ))
@@ -85,6 +86,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.commerce.create_commerce_inventory(request=operations.CreateCommerceInventoryRequest(
     connection_id='<value>',
@@ -128,6 +130,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.commerce.create_commerce_item(request=operations.CreateCommerceItemRequest(
     connection_id='<value>',
 ))
@@ -170,6 +173,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.commerce.create_commerce_location(request=operations.CreateCommerceLocationRequest(
     connection_id='<value>',
 ))
@@ -211,6 +215,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.commerce.get_commerce_collection(request=operations.GetCommerceCollectionRequest(
     connection_id='<value>',
@@ -255,6 +260,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.commerce.get_commerce_inventory(request=operations.GetCommerceInventoryRequest(
     connection_id='<value>',
     id='<id>',
@@ -297,6 +303,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.commerce.get_commerce_item(request=operations.GetCommerceItemRequest(
     connection_id='<value>',
@@ -341,6 +348,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.commerce.get_commerce_location(request=operations.GetCommerceLocationRequest(
     connection_id='<value>',
     id='<id>',
@@ -384,6 +392,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.commerce.list_commerce_collections(request=operations.ListCommerceCollectionsRequest(
     connection_id='<value>',
 ))
@@ -425,6 +434,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.commerce.list_commerce_inventories(request=operations.ListCommerceInventoriesRequest(
     connection_id='<value>',
@@ -468,6 +478,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.commerce.list_commerce_items(request=operations.ListCommerceItemsRequest(
     connection_id='<value>',
 ))
@@ -510,6 +521,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.commerce.list_commerce_locations(request=operations.ListCommerceLocationsRequest(
     connection_id='<value>',
 ))
@@ -551,6 +563,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.commerce.patch_commerce_collection(request=operations.PatchCommerceCollectionRequest(
     connection_id='<value>',
@@ -595,6 +608,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.commerce.patch_commerce_inventory(request=operations.PatchCommerceInventoryRequest(
     connection_id='<value>',
     id='<id>',
@@ -637,6 +651,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.commerce.patch_commerce_item(request=operations.PatchCommerceItemRequest(
     connection_id='<value>',
@@ -681,6 +696,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.commerce.patch_commerce_location(request=operations.PatchCommerceLocationRequest(
     connection_id='<value>',
     id='<id>',
@@ -723,6 +739,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.commerce.remove_commerce_collection(request=operations.RemoveCommerceCollectionRequest(
     connection_id='<value>',
@@ -767,6 +784,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.commerce.remove_commerce_inventory(request=operations.RemoveCommerceInventoryRequest(
     connection_id='<value>',
     id='<id>',
@@ -809,6 +827,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.commerce.remove_commerce_item(request=operations.RemoveCommerceItemRequest(
     connection_id='<value>',
@@ -853,6 +872,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.commerce.remove_commerce_location(request=operations.RemoveCommerceLocationRequest(
     connection_id='<value>',
     id='<id>',
@@ -895,6 +915,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.commerce.update_commerce_collection(request=operations.UpdateCommerceCollectionRequest(
     connection_id='<value>',
@@ -939,6 +960,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.commerce.update_commerce_inventory(request=operations.UpdateCommerceInventoryRequest(
     connection_id='<value>',
     id='<id>',
@@ -982,6 +1004,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.commerce.update_commerce_item(request=operations.UpdateCommerceItemRequest(
     connection_id='<value>',
     id='<id>',
@@ -1024,6 +1047,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.commerce.update_commerce_location(request=operations.UpdateCommerceLocationRequest(
     connection_id='<value>',

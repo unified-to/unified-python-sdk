@@ -25,6 +25,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.passthrough.create_passthrough(request=operations.CreatePassthroughRequest(
     connection_id='<value>',
     path='/etc/periodic',
@@ -67,6 +68,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.passthrough.list_passthroughs(request=operations.ListPassthroughsRequest(
     connection_id='<value>',
@@ -111,6 +113,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.passthrough.patch_passthrough(request=operations.PatchPassthroughRequest(
     connection_id='<value>',
     path='/mnt',
@@ -154,6 +157,7 @@ s = unified_to.UnifiedTo(
     ),
 )
 
+
 res = s.passthrough.remove_passthrough(request=operations.RemovePassthroughRequest(
     connection_id='<value>',
     path='/Applications',
@@ -196,6 +200,7 @@ s = unified_to.UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
+
 
 res = s.passthrough.update_passthrough(request=operations.UpdatePassthroughRequest(
     connection_id='<value>',
