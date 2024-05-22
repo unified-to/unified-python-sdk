@@ -24,6 +24,8 @@ class Categories(str, Enum):
     COMMERCE = 'commerce'
     PAYMENT = 'payment'
     GENAI = 'genai'
+    MESSAGING = 'messaging'
+    KMS = 'kms'
 
 
 @dataclasses.dataclass

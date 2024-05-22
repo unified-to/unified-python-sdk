@@ -41,11 +41,11 @@ s = unified_to.UnifiedTo(
 
 res = s.unified.create_unified_connection(request=shared.Connection(
     categories=[
-        shared.PropertyConnectionCategories.PAYMENT,
+        shared.PropertyConnectionCategories.MESSAGING,
     ],
     integration_type='<value>',
     permissions=[
-        shared.PropertyConnectionPermissions.ATS_INTERVIEW_READ,
+        shared.PropertyConnectionPermissions.ATS_COMPANY_READ,
     ],
 ))
 

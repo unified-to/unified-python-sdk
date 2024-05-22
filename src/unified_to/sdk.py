@@ -11,6 +11,7 @@ from .ats import Ats
 from .auth import Auth
 from .call import Call
 from .candidate import Candidate
+from .channel import Channel
 from .collection import Collection
 from .commerce import Commerce
 from .company import Company
@@ -34,6 +35,7 @@ from .invoice import Invoice
 from .issue import Issue
 from .item import Item
 from .job import Job
+from .kms import Kms
 from .lead import Lead
 from .link import Link
 from .list import ListT
@@ -41,9 +43,12 @@ from .location import Location
 from .login import Login
 from .martech import Martech
 from .member import Member
+from .message import Message
+from .messaging import Messaging
 from .model import Model
 from .note import Note
 from .organization import Organization
+from .page import Page
 from .passthrough import Passthrough
 from .payment import Payment
 from .payout import Payout
@@ -54,6 +59,7 @@ from .prompt import Prompt
 from .refund import Refund
 from .scorecard import Scorecard
 from .sdkconfiguration import SDKConfiguration
+from .space import Space
 from .storage import Storage
 from .taxrate import Taxrate
 from .ticket import Ticket
@@ -108,9 +114,15 @@ class UnifiedTo:
     group: Group
     payslip: Payslip
     timeoff: Timeoff
+    kms: Kms
+    page: Page
+    space: Space
     martech: Martech
     list: ListT
     member: Member
+    messaging: Messaging
+    channel: Channel
+    message: Message
     passthrough: Passthrough
     payment: Payment
     link: Link
@@ -225,9 +237,15 @@ class UnifiedTo:
         self.group = Group(self.sdk_configuration)
         self.payslip = Payslip(self.sdk_configuration)
         self.timeoff = Timeoff(self.sdk_configuration)
+        self.kms = Kms(self.sdk_configuration)
+        self.page = Page(self.sdk_configuration)
+        self.space = Space(self.sdk_configuration)
         self.martech = Martech(self.sdk_configuration)
         self.list = ListT(self.sdk_configuration)
         self.member = Member(self.sdk_configuration)
+        self.messaging = Messaging(self.sdk_configuration)
+        self.channel = Channel(self.sdk_configuration)
+        self.message = Message(self.sdk_configuration)
         self.passthrough = Passthrough(self.sdk_configuration)
         self.payment = Payment(self.sdk_configuration)
         self.link = Link(self.sdk_configuration)

@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: e504248c88a06ddf4269b16d158025db
+  docChecksum: 06471d8199180f3f0c4d0f6efbb9b3a0
   docVersion: "1.0"
-  speakeasyVersion: 1.293.1
+  speakeasyVersion: 1.295.0
   generationVersion: 2.333.3
-  releaseVersion: 0.22.5
-  configChecksum: c0891410083640654525e4c3112a2dc8
+  releaseVersion: 0.22.6
+  configChecksum: 03e805cecc5a6012e92e6121bdc7a7eb
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -60,9 +60,15 @@ generatedFiles:
   - src/unified_to/group.py
   - src/unified_to/payslip.py
   - src/unified_to/timeoff.py
+  - src/unified_to/kms.py
+  - src/unified_to/page.py
+  - src/unified_to/space.py
   - src/unified_to/martech.py
   - src/unified_to/list.py
   - src/unified_to/member.py
+  - src/unified_to/messaging.py
+  - src/unified_to/channel.py
+  - src/unified_to/message.py
   - src/unified_to/passthrough.py
   - src/unified_to/payment.py
   - src/unified_to/link.py
@@ -256,6 +262,18 @@ generatedFiles:
   - src/unified_to/models/operations/removehrisgroup.py
   - src/unified_to/models/operations/updatehrisemployee.py
   - src/unified_to/models/operations/updatehrisgroup.py
+  - src/unified_to/models/operations/createkmspage.py
+  - src/unified_to/models/operations/createkmsspace.py
+  - src/unified_to/models/operations/getkmspage.py
+  - src/unified_to/models/operations/getkmsspace.py
+  - src/unified_to/models/operations/listkmspages.py
+  - src/unified_to/models/operations/listkmsspaces.py
+  - src/unified_to/models/operations/patchkmspage.py
+  - src/unified_to/models/operations/patchkmsspace.py
+  - src/unified_to/models/operations/removekmspage.py
+  - src/unified_to/models/operations/removekmsspace.py
+  - src/unified_to/models/operations/updatekmspage.py
+  - src/unified_to/models/operations/updatekmsspace.py
   - src/unified_to/models/operations/createmartechlist.py
   - src/unified_to/models/operations/createmartechmember.py
   - src/unified_to/models/operations/getmartechlist.py
@@ -268,6 +286,14 @@ generatedFiles:
   - src/unified_to/models/operations/removemartechmember.py
   - src/unified_to/models/operations/updatemartechlist.py
   - src/unified_to/models/operations/updatemartechmember.py
+  - src/unified_to/models/operations/createmessagingmessage.py
+  - src/unified_to/models/operations/getmessagingchannel.py
+  - src/unified_to/models/operations/getmessagingmessage.py
+  - src/unified_to/models/operations/listmessagingchannels.py
+  - src/unified_to/models/operations/listmessagingmessages.py
+  - src/unified_to/models/operations/patchmessagingmessage.py
+  - src/unified_to/models/operations/removemessagingmessage.py
+  - src/unified_to/models/operations/updatemessagingmessage.py
   - src/unified_to/models/operations/createpassthrough.py
   - src/unified_to/models/operations/listpassthroughs.py
   - src/unified_to/models/operations/patchpassthrough.py
@@ -412,9 +438,15 @@ generatedFiles:
   - src/unified_to/models/shared/hrispayslip.py
   - src/unified_to/models/shared/hrispayslipdetail.py
   - src/unified_to/models/shared/hristimeoff.py
+  - src/unified_to/models/shared/kmspage.py
+  - src/unified_to/models/shared/kmsspace.py
   - src/unified_to/models/shared/marketinglist.py
   - src/unified_to/models/shared/marketingmember.py
   - src/unified_to/models/shared/marketingemail.py
+  - src/unified_to/models/shared/messagingmessage.py
+  - src/unified_to/models/shared/messagingmember.py
+  - src/unified_to/models/shared/property_messagingmessage_author_member.py
+  - src/unified_to/models/shared/messagingchannel.py
   - src/unified_to/models/shared/paymentlink.py
   - src/unified_to/models/shared/paymentlinklineitem.py
   - src/unified_to/models/shared/paymentpayment.py
@@ -776,6 +808,30 @@ generatedFiles:
   - docs/models/operations/updatehrisemployeeresponse.md
   - docs/models/operations/updatehrisgrouprequest.md
   - docs/models/operations/updatehrisgroupresponse.md
+  - docs/models/operations/createkmspagerequest.md
+  - docs/models/operations/createkmspageresponse.md
+  - docs/models/operations/createkmsspacerequest.md
+  - docs/models/operations/createkmsspaceresponse.md
+  - docs/models/operations/getkmspagerequest.md
+  - docs/models/operations/getkmspageresponse.md
+  - docs/models/operations/getkmsspacerequest.md
+  - docs/models/operations/getkmsspaceresponse.md
+  - docs/models/operations/listkmspagesrequest.md
+  - docs/models/operations/listkmspagesresponse.md
+  - docs/models/operations/listkmsspacesrequest.md
+  - docs/models/operations/listkmsspacesresponse.md
+  - docs/models/operations/patchkmspagerequest.md
+  - docs/models/operations/patchkmspageresponse.md
+  - docs/models/operations/patchkmsspacerequest.md
+  - docs/models/operations/patchkmsspaceresponse.md
+  - docs/models/operations/removekmspagerequest.md
+  - docs/models/operations/removekmspageresponse.md
+  - docs/models/operations/removekmsspacerequest.md
+  - docs/models/operations/removekmsspaceresponse.md
+  - docs/models/operations/updatekmspagerequest.md
+  - docs/models/operations/updatekmspageresponse.md
+  - docs/models/operations/updatekmsspacerequest.md
+  - docs/models/operations/updatekmsspaceresponse.md
   - docs/models/operations/createmartechlistrequest.md
   - docs/models/operations/createmartechlistresponse.md
   - docs/models/operations/createmartechmemberrequest.md
@@ -800,6 +856,22 @@ generatedFiles:
   - docs/models/operations/updatemartechlistresponse.md
   - docs/models/operations/updatemartechmemberrequest.md
   - docs/models/operations/updatemartechmemberresponse.md
+  - docs/models/operations/createmessagingmessagerequest.md
+  - docs/models/operations/createmessagingmessageresponse.md
+  - docs/models/operations/getmessagingchannelrequest.md
+  - docs/models/operations/getmessagingchannelresponse.md
+  - docs/models/operations/getmessagingmessagerequest.md
+  - docs/models/operations/getmessagingmessageresponse.md
+  - docs/models/operations/listmessagingchannelsrequest.md
+  - docs/models/operations/listmessagingchannelsresponse.md
+  - docs/models/operations/listmessagingmessagesrequest.md
+  - docs/models/operations/listmessagingmessagesresponse.md
+  - docs/models/operations/patchmessagingmessagerequest.md
+  - docs/models/operations/patchmessagingmessageresponse.md
+  - docs/models/operations/removemessagingmessagerequest.md
+  - docs/models/operations/removemessagingmessageresponse.md
+  - docs/models/operations/updatemessagingmessagerequest.md
+  - docs/models/operations/updatemessagingmessageresponse.md
   - docs/models/operations/createpassthroughrequest.md
   - docs/models/operations/createpassthroughresponse.md
   - docs/models/operations/listpassthroughsrequest.md
@@ -1059,10 +1131,17 @@ generatedFiles:
   - docs/models/shared/hristimeoffstatus.md
   - docs/models/shared/hristimeofftype.md
   - docs/models/shared/hristimeoff.md
+  - docs/models/shared/kmspagetype.md
+  - docs/models/shared/kmspage.md
+  - docs/models/shared/kmsspace.md
   - docs/models/shared/marketinglist.md
   - docs/models/shared/marketingmember.md
   - docs/models/shared/marketingemailtype.md
   - docs/models/shared/marketingemail.md
+  - docs/models/shared/messagingmessage.md
+  - docs/models/shared/messagingmember.md
+  - docs/models/shared/propertymessagingmessageauthormember.md
+  - docs/models/shared/messagingchannel.md
   - docs/models/shared/paymentlink.md
   - docs/models/shared/paymentlinklineitem.md
   - docs/models/shared/paymentpayment.md
@@ -1145,9 +1224,15 @@ generatedFiles:
   - docs/sdks/group/README.md
   - docs/sdks/payslip/README.md
   - docs/sdks/timeoff/README.md
+  - docs/sdks/kms/README.md
+  - docs/sdks/page/README.md
+  - docs/sdks/space/README.md
   - docs/sdks/martech/README.md
   - docs/sdks/list/README.md
   - docs/sdks/member/README.md
+  - docs/sdks/messaging/README.md
+  - docs/sdks/channel/README.md
+  - docs/sdks/message/README.md
   - docs/sdks/passthrough/README.md
   - docs/sdks/payment/README.md
   - docs/sdks/link/README.md

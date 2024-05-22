@@ -51,3 +51,7 @@
 | `STORAGE_FILE`            | storage_file              |
 | `GENAI_MODEL`             | genai_model               |
 | `GENAI_PROMPT`            | genai_prompt              |
+| `MESSAGING_MESSAGE`       | messaging_message         |
+| `MESSAGING_CHANNEL`       | messaging_channel         |
+| `KMS_SPACE`               | kms_space                 |
+| `KMS_PAGE`                | kms_page                  |

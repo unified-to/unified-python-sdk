@@ -472,6 +472,39 @@ if res.accounting_account is not None:
 * [get_hris_timeoff](docs/sdks/timeoff/README.md#get_hris_timeoff) - Retrieve a timeoff
 * [list_hris_timeoffs](docs/sdks/timeoff/README.md#list_hris_timeoffs) - List all timeoffs
 
+### [kms](docs/sdks/kms/README.md)
+
+* [create_kms_page](docs/sdks/kms/README.md#create_kms_page) - Create a page
+* [create_kms_space](docs/sdks/kms/README.md#create_kms_space) - Create a space
+* [get_kms_page](docs/sdks/kms/README.md#get_kms_page) - Retrieve a page
+* [get_kms_space](docs/sdks/kms/README.md#get_kms_space) - Retrieve a space
+* [list_kms_pages](docs/sdks/kms/README.md#list_kms_pages) - List all pages
+* [list_kms_spaces](docs/sdks/kms/README.md#list_kms_spaces) - List all spaces
+* [patch_kms_page](docs/sdks/kms/README.md#patch_kms_page) - Update a page
+* [patch_kms_space](docs/sdks/kms/README.md#patch_kms_space) - Update a space
+* [remove_kms_page](docs/sdks/kms/README.md#remove_kms_page) - Remove a page
+* [remove_kms_space](docs/sdks/kms/README.md#remove_kms_space) - Remove a space
+* [update_kms_page](docs/sdks/kms/README.md#update_kms_page) - Update a page
+* [update_kms_space](docs/sdks/kms/README.md#update_kms_space) - Update a space
+
+### [page](docs/sdks/page/README.md)
+
+* [create_kms_page](docs/sdks/page/README.md#create_kms_page) - Create a page
+* [get_kms_page](docs/sdks/page/README.md#get_kms_page) - Retrieve a page
+* [list_kms_pages](docs/sdks/page/README.md#list_kms_pages) - List all pages
+* [patch_kms_page](docs/sdks/page/README.md#patch_kms_page) - Update a page
+* [remove_kms_page](docs/sdks/page/README.md#remove_kms_page) - Remove a page
+* [update_kms_page](docs/sdks/page/README.md#update_kms_page) - Update a page
+
+### [space](docs/sdks/space/README.md)
+
+* [create_kms_space](docs/sdks/space/README.md#create_kms_space) - Create a space
+* [get_kms_space](docs/sdks/space/README.md#get_kms_space) - Retrieve a space
+* [list_kms_spaces](docs/sdks/space/README.md#list_kms_spaces) - List all spaces
+* [patch_kms_space](docs/sdks/space/README.md#patch_kms_space) - Update a space
+* [remove_kms_space](docs/sdks/space/README.md#remove_kms_space) - Remove a space
+* [update_kms_space](docs/sdks/space/README.md#update_kms_space) - Update a space
+
 ### [martech](docs/sdks/martech/README.md)
 
 * [create_martech_list](docs/sdks/martech/README.md#create_martech_list) - Create a list
@@ -504,6 +537,31 @@ if res.accounting_account is not None:
 * [patch_martech_member](docs/sdks/member/README.md#patch_martech_member) - Update a member
 * [remove_martech_member](docs/sdks/member/README.md#remove_martech_member) - Remove a member
 * [update_martech_member](docs/sdks/member/README.md#update_martech_member) - Update a member
+
+### [messaging](docs/sdks/messaging/README.md)
+
+* [create_messaging_message](docs/sdks/messaging/README.md#create_messaging_message) - Create a message
+* [get_messaging_channel](docs/sdks/messaging/README.md#get_messaging_channel) - Retrieve a channel
+* [get_messaging_message](docs/sdks/messaging/README.md#get_messaging_message) - Retrieve a message
+* [list_messaging_channels](docs/sdks/messaging/README.md#list_messaging_channels) - List all channels
+* [list_messaging_messages](docs/sdks/messaging/README.md#list_messaging_messages) - List all messages
+* [patch_messaging_message](docs/sdks/messaging/README.md#patch_messaging_message) - Update a message
+* [remove_messaging_message](docs/sdks/messaging/README.md#remove_messaging_message) - Remove a message
+* [update_messaging_message](docs/sdks/messaging/README.md#update_messaging_message) - Update a message
+
+### [channel](docs/sdks/channel/README.md)
+
+* [get_messaging_channel](docs/sdks/channel/README.md#get_messaging_channel) - Retrieve a channel
+* [list_messaging_channels](docs/sdks/channel/README.md#list_messaging_channels) - List all channels
+
+### [message](docs/sdks/message/README.md)
+
+* [create_messaging_message](docs/sdks/message/README.md#create_messaging_message) - Create a message
+* [get_messaging_message](docs/sdks/message/README.md#get_messaging_message) - Retrieve a message
+* [list_messaging_messages](docs/sdks/message/README.md#list_messaging_messages) - List all messages
+* [patch_messaging_message](docs/sdks/message/README.md#patch_messaging_message) - Update a message
+* [remove_messaging_message](docs/sdks/message/README.md#remove_messaging_message) - Remove a message
+* [update_messaging_message](docs/sdks/message/README.md#update_messaging_message) - Update a message
 
 ### [passthrough](docs/sdks/passthrough/README.md)
 
