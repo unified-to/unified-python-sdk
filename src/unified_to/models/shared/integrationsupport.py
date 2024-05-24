@@ -4,7 +4,7 @@ from __future__ import annotations
 import dataclasses
 from .property_integrationsupport_webhook_events import PropertyIntegrationSupportWebhookEvents
 from dataclasses_json import Undefined, dataclass_json
-from typing import Any, Dict, Optional
+from typing import Any, Dict, List, Optional
 from unified_to import utils
 
 
@@ -43,6 +43,8 @@ class IntegrationSupport:
     list_user_id: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('list_user_id'), 'exclude': lambda f: f is None }})
     methods: Optional[Dict[str, bool]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('methods'), 'exclude': lambda f: f is None }})
     outbound_fields: Optional[Dict[str, Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('outbound_fields'), 'exclude': lambda f: f is None }})
+    raw_objects: Optional[List[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('raw_objects'), 'exclude': lambda f: f is None }})
+    r"""objects that we map from in the integration"""
     search_domain: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('search_domain'), 'exclude': lambda f: f is None }})
     search_email: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('search_email'), 'exclude': lambda f: f is None }})
     search_linkedinurl: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('search_linkedinurl'), 'exclude': lambda f: f is None }})
