@@ -29,11 +29,11 @@ s = unified_to.UnifiedTo(
 
 res = s.connection.create_unified_connection(request=shared.Connection(
     categories=[
-        shared.PropertyConnectionCategories.MESSAGING,
+        shared.PropertyConnectionCategories.KMS,
     ],
     integration_type='<value>',
     permissions=[
-        shared.PropertyConnectionPermissions.ATS_COMPANY_READ,
+        shared.PropertyConnectionPermissions.ATS_DOCUMENT_WRITE,
     ],
 ))
 

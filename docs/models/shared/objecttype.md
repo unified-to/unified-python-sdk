@@ -55,3 +55,5 @@
 | `MESSAGING_CHANNEL`       | messaging_channel         |
 | `KMS_SPACE`               | kms_space                 |
 | `KMS_PAGE`                | kms_page                  |
+| `TASK_PROJECT`            | task_project              |
+| `TASK_TASK`               | task_task                 |

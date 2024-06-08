@@ -628,6 +628,30 @@ if res.accounting_account is not None:
 * [remove_storage_file](docs/sdks/file/README.md#remove_storage_file) - Remove a file
 * [update_storage_file](docs/sdks/file/README.md#update_storage_file) - Update a file
 
+### [task](docs/sdks/task/README.md)
+
+* [create_task_project](docs/sdks/task/README.md#create_task_project) - Create a project
+* [create_task_task](docs/sdks/task/README.md#create_task_task) - Create a task
+* [get_task_project](docs/sdks/task/README.md#get_task_project) - Retrieve a project
+* [get_task_task](docs/sdks/task/README.md#get_task_task) - Retrieve a task
+* [list_task_projects](docs/sdks/task/README.md#list_task_projects) - List all projects
+* [list_task_tasks](docs/sdks/task/README.md#list_task_tasks) - List all tasks
+* [patch_task_project](docs/sdks/task/README.md#patch_task_project) - Update a project
+* [patch_task_task](docs/sdks/task/README.md#patch_task_task) - Update a task
+* [remove_task_project](docs/sdks/task/README.md#remove_task_project) - Remove a project
+* [remove_task_task](docs/sdks/task/README.md#remove_task_task) - Remove a task
+* [update_task_project](docs/sdks/task/README.md#update_task_project) - Update a project
+* [update_task_task](docs/sdks/task/README.md#update_task_task) - Update a task
+
+### [project](docs/sdks/project/README.md)
+
+* [create_task_project](docs/sdks/project/README.md#create_task_project) - Create a project
+* [get_task_project](docs/sdks/project/README.md#get_task_project) - Retrieve a project
+* [list_task_projects](docs/sdks/project/README.md#list_task_projects) - List all projects
+* [patch_task_project](docs/sdks/project/README.md#patch_task_project) - Update a project
+* [remove_task_project](docs/sdks/project/README.md#remove_task_project) - Remove a project
+* [update_task_project](docs/sdks/project/README.md#update_task_project) - Update a project
+
 ### [ticketing](docs/sdks/ticketing/README.md)
 
 * [create_ticketing_customer](docs/sdks/ticketing/README.md#create_ticketing_customer) - Create a customer

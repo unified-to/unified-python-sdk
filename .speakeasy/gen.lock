@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: 9a5990618c970a819b6235d1b48f2259
+  docChecksum: 34d8e45448aaadab7271416cea77fcaf
   docVersion: "1.0"
-  speakeasyVersion: 1.299.7
-  generationVersion: 2.338.12
-  releaseVersion: 0.22.14
-  configChecksum: 34fe0a5eb87c24d20d1f1947ed81c246
+  speakeasyVersion: 1.300.1
+  generationVersion: 2.339.1
+  releaseVersion: 0.22.15
+  configChecksum: 3fb50f24710c139007b4e7b0d60bcfa0
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -76,6 +76,8 @@ generatedFiles:
   - src/unified_to/refund.py
   - src/unified_to/storage.py
   - src/unified_to/file.py
+  - src/unified_to/task.py
+  - src/unified_to/project.py
   - src/unified_to/ticketing.py
   - src/unified_to/customer.py
   - src/unified_to/note.py
@@ -321,6 +323,18 @@ generatedFiles:
   - src/unified_to/models/operations/patchstoragefile.py
   - src/unified_to/models/operations/removestoragefile.py
   - src/unified_to/models/operations/updatestoragefile.py
+  - src/unified_to/models/operations/createtaskproject.py
+  - src/unified_to/models/operations/createtasktask.py
+  - src/unified_to/models/operations/gettaskproject.py
+  - src/unified_to/models/operations/gettasktask.py
+  - src/unified_to/models/operations/listtaskprojects.py
+  - src/unified_to/models/operations/listtasktasks.py
+  - src/unified_to/models/operations/patchtaskproject.py
+  - src/unified_to/models/operations/patchtasktask.py
+  - src/unified_to/models/operations/removetaskproject.py
+  - src/unified_to/models/operations/removetasktask.py
+  - src/unified_to/models/operations/updatetaskproject.py
+  - src/unified_to/models/operations/updatetasktask.py
   - src/unified_to/models/operations/createticketingcustomer.py
   - src/unified_to/models/operations/createticketingnote.py
   - src/unified_to/models/operations/createticketingticket.py
@@ -423,6 +437,7 @@ generatedFiles:
   - src/unified_to/models/shared/crmlead.py
   - src/unified_to/models/shared/property_crmlead_address.py
   - src/unified_to/models/shared/crmpipeline.py
+  - src/unified_to/models/shared/crmstage.py
   - src/unified_to/models/shared/enrichperson.py
   - src/unified_to/models/shared/enrichpersonworkhistory.py
   - src/unified_to/models/shared/enrichemail.py
@@ -455,6 +470,8 @@ generatedFiles:
   - src/unified_to/models/shared/storagefile.py
   - src/unified_to/models/shared/storagepermission.py
   - src/unified_to/models/shared/property_storagepermission_roles.py
+  - src/unified_to/models/shared/taskproject.py
+  - src/unified_to/models/shared/tasktask.py
   - src/unified_to/models/shared/ticketingcustomer.py
   - src/unified_to/models/shared/ticketingtelephone.py
   - src/unified_to/models/shared/ticketingemail.py
@@ -926,6 +943,30 @@ generatedFiles:
   - docs/models/operations/removestoragefileresponse.md
   - docs/models/operations/updatestoragefilerequest.md
   - docs/models/operations/updatestoragefileresponse.md
+  - docs/models/operations/createtaskprojectrequest.md
+  - docs/models/operations/createtaskprojectresponse.md
+  - docs/models/operations/createtasktaskrequest.md
+  - docs/models/operations/createtasktaskresponse.md
+  - docs/models/operations/gettaskprojectrequest.md
+  - docs/models/operations/gettaskprojectresponse.md
+  - docs/models/operations/gettasktaskrequest.md
+  - docs/models/operations/gettasktaskresponse.md
+  - docs/models/operations/listtaskprojectsrequest.md
+  - docs/models/operations/listtaskprojectsresponse.md
+  - docs/models/operations/listtasktasksrequest.md
+  - docs/models/operations/listtasktasksresponse.md
+  - docs/models/operations/patchtaskprojectrequest.md
+  - docs/models/operations/patchtaskprojectresponse.md
+  - docs/models/operations/patchtasktaskrequest.md
+  - docs/models/operations/patchtasktaskresponse.md
+  - docs/models/operations/removetaskprojectrequest.md
+  - docs/models/operations/removetaskprojectresponse.md
+  - docs/models/operations/removetasktaskrequest.md
+  - docs/models/operations/removetasktaskresponse.md
+  - docs/models/operations/updatetaskprojectrequest.md
+  - docs/models/operations/updatetaskprojectresponse.md
+  - docs/models/operations/updatetasktaskrequest.md
+  - docs/models/operations/updatetasktaskresponse.md
   - docs/models/operations/createticketingcustomerrequest.md
   - docs/models/operations/createticketingcustomerresponse.md
   - docs/models/operations/createticketingnoterequest.md
@@ -1102,6 +1143,7 @@ generatedFiles:
   - docs/models/shared/crmlead.md
   - docs/models/shared/propertycrmleadaddress.md
   - docs/models/shared/crmpipeline.md
+  - docs/models/shared/crmstage.md
   - docs/models/shared/gender.md
   - docs/models/shared/enrichperson.md
   - docs/models/shared/enrichpersonworkhistory.md
@@ -1153,6 +1195,9 @@ generatedFiles:
   - docs/models/shared/storagefile.md
   - docs/models/shared/storagepermission.md
   - docs/models/shared/propertystoragepermissionroles.md
+  - docs/models/shared/taskproject.md
+  - docs/models/shared/tasktaskstatus.md
+  - docs/models/shared/tasktask.md
   - docs/models/shared/ticketingcustomer.md
   - docs/models/shared/ticketingtelephonetype.md
   - docs/models/shared/ticketingtelephone.md
@@ -1197,6 +1242,7 @@ generatedFiles:
   - docs/models/shared/listoffset.md
   - docs/models/shared/listorder.md
   - docs/models/shared/listparentid.md
+  - docs/models/shared/listprojectid.md
   - docs/models/shared/listquery.md
   - docs/models/shared/listsortbycreatedat.md
   - docs/models/shared/listsortbyname.md
@@ -1275,6 +1321,8 @@ generatedFiles:
   - docs/sdks/refund/README.md
   - docs/sdks/storage/README.md
   - docs/sdks/file/README.md
+  - docs/sdks/task/README.md
+  - docs/sdks/project/README.md
   - docs/sdks/ticketing/README.md
   - docs/sdks/customer/README.md
   - docs/sdks/note/README.md

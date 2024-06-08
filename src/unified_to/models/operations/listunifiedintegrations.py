@@ -25,6 +25,7 @@ class ListUnifiedIntegrationsQueryParamCategories(str, Enum):
     GENAI = 'genai'
     MESSAGING = 'messaging'
     KMS = 'kms'
+    TASK = 'task'
 
 
 @dataclasses.dataclass

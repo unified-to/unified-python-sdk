@@ -5,5 +5,5 @@
 
 | Name     | Value    |
 | -------- | -------- |
-| `SYSTEM` | system   |
-| `USER`   | user     |
+| `SYSTEM` | SYSTEM   |
+| `USER`   | USER     |

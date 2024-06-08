@@ -93,3 +93,7 @@
 | `KMS_PAGE_WRITE`               | kms_page_write                 |
 | `KMS_COMMENT_READ`             | kms_comment_read               |
 | `KMS_COMMENT_WRITE`            | kms_comment_write              |
+| `TASK_PROJECT_READ`            | task_project_read              |
+| `TASK_PROJECT_WRITE`           | task_project_write             |
+| `TASK_TASK_READ`               | task_task_read                 |
+| `TASK_TASK_WRITE`              | task_task_write                |

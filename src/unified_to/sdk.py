@@ -55,12 +55,14 @@ from .payout import Payout
 from .payslip import Payslip
 from .person import Person
 from .pipeline import Pipeline
+from .project import Project
 from .prompt import Prompt
 from .refund import Refund
 from .scorecard import Scorecard
 from .sdkconfiguration import SDKConfiguration
 from .space import Space
 from .storage import Storage
+from .task import Task
 from .taxrate import Taxrate
 from .ticket import Ticket
 from .ticketing import Ticketing
@@ -130,6 +132,8 @@ class UnifiedTo:
     refund: Refund
     storage: Storage
     file: File
+    task: Task
+    project: Project
     ticketing: Ticketing
     customer: Customer
     note: Note
@@ -253,6 +257,8 @@ class UnifiedTo:
         self.refund = Refund(self.sdk_configuration)
         self.storage = Storage(self.sdk_configuration)
         self.file = File(self.sdk_configuration)
+        self.task = Task(self.sdk_configuration)
+        self.project = Project(self.sdk_configuration)
         self.ticketing = Ticketing(self.sdk_configuration)
         self.customer = Customer(self.sdk_configuration)
         self.note = Note(self.sdk_configuration)

@@ -10,4 +10,5 @@
 | `id`               | *Optional[str]*    | :heavy_minus_sign: | N/A                |
 | `max_tokens`       | *Optional[float]*  | :heavy_minus_sign: | N/A                |
 | `name`             | *Optional[str]*    | :heavy_minus_sign: | N/A                |
+| `raw`              | Dict[str, *Any*]   | :heavy_minus_sign: | N/A                |
 | `web_url`          | *Optional[str]*    | :heavy_minus_sign: | N/A                |

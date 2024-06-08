@@ -135,6 +135,12 @@ class ListParentID(str, Enum):
     NOT_SUPPORTED = 'not-supported'
 
 
+class ListProjectID(str, Enum):
+    SUPPORTED_REQUIRED = 'supported-required'
+    SUPPORTED = 'supported'
+    NOT_SUPPORTED = 'not-supported'
+
+
 class ListQuery(str, Enum):
     SUPPORTED_REQUIRED = 'supported-required'
     SUPPORTED = 'supported'
@@ -244,6 +250,7 @@ class IntegrationSupport:
     list_offset: Optional[ListOffset] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('list_offset'), 'exclude': lambda f: f is None }})
     list_order: Optional[ListOrder] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('list_order'), 'exclude': lambda f: f is None }})
     list_parent_id: Optional[ListParentID] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('list_parent_id'), 'exclude': lambda f: f is None }})
+    list_project_id: Optional[ListProjectID] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('list_project_id'), 'exclude': lambda f: f is None }})
     list_query: Optional[ListQuery] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('list_query'), 'exclude': lambda f: f is None }})
     list_sort_by_created_at: Optional[ListSortByCreatedAt] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('list_sort_by_created_at'), 'exclude': lambda f: f is None }})
     list_sort_by_name: Optional[ListSortByName] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('list_sort_by_name'), 'exclude': lambda f: f is None }})

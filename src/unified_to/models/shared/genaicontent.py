@@ -9,8 +9,8 @@ from unified_to import utils
 
 
 class Role(str, Enum):
-    SYSTEM = 'system'
-    USER = 'user'
+    SYSTEM = 'SYSTEM'
+    USER = 'USER'
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)

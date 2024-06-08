@@ -21,3 +21,4 @@ class PropertyConnectionCategories(str, Enum):
     GENAI = 'genai'
     MESSAGING = 'messaging'
     KMS = 'kms'
+    TASK = 'task'
