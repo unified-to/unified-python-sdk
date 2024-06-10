@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: 34d8e45448aaadab7271416cea77fcaf
+  docChecksum: b5e06f8290f506984cde8a37b4ebd06e
   docVersion: "1.0"
   speakeasyVersion: 1.300.1
   generationVersion: 2.339.1
-  releaseVersion: 0.22.15
-  configChecksum: 3fb50f24710c139007b4e7b0d60bcfa0
+  releaseVersion: 0.22.16
+  configChecksum: 5938e78900f2c3b4f8790130b3871db1
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -191,12 +191,18 @@ generatedFiles:
   - src/unified_to/models/operations/updateatsjob.py
   - src/unified_to/models/operations/updateatsscorecard.py
   - src/unified_to/models/operations/createcrmcompany.py
+  - src/unified_to/models/operations/createhriscompany.py
   - src/unified_to/models/operations/getcrmcompany.py
+  - src/unified_to/models/operations/gethriscompany.py
   - src/unified_to/models/operations/listcrmcompanies.py
   - src/unified_to/models/operations/listenrichcompanies.py
+  - src/unified_to/models/operations/listhriscompanies.py
   - src/unified_to/models/operations/patchcrmcompany.py
+  - src/unified_to/models/operations/patchhriscompany.py
   - src/unified_to/models/operations/removecrmcompany.py
+  - src/unified_to/models/operations/removehriscompany.py
   - src/unified_to/models/operations/updatecrmcompany.py
+  - src/unified_to/models/operations/updatehriscompany.py
   - src/unified_to/models/operations/createcommercecollection.py
   - src/unified_to/models/operations/createcommerceinventory.py
   - src/unified_to/models/operations/createcommerceitem.py
@@ -415,6 +421,8 @@ generatedFiles:
   - src/unified_to/models/shared/atsstatus.py
   - src/unified_to/models/shared/crmcompany.py
   - src/unified_to/models/shared/property_crmcompany_address.py
+  - src/unified_to/models/shared/hriscompany.py
+  - src/unified_to/models/shared/property_hriscompany_address.py
   - src/unified_to/models/shared/enrichcompany.py
   - src/unified_to/models/shared/enrichtelephone.py
   - src/unified_to/models/shared/property_enrichcompany_address.py
@@ -679,18 +687,30 @@ generatedFiles:
   - docs/models/operations/updateatsscorecardresponse.md
   - docs/models/operations/createcrmcompanyrequest.md
   - docs/models/operations/createcrmcompanyresponse.md
+  - docs/models/operations/createhriscompanyrequest.md
+  - docs/models/operations/createhriscompanyresponse.md
   - docs/models/operations/getcrmcompanyrequest.md
   - docs/models/operations/getcrmcompanyresponse.md
+  - docs/models/operations/gethriscompanyrequest.md
+  - docs/models/operations/gethriscompanyresponse.md
   - docs/models/operations/listcrmcompaniesrequest.md
   - docs/models/operations/listcrmcompaniesresponse.md
   - docs/models/operations/listenrichcompaniesrequest.md
   - docs/models/operations/listenrichcompaniesresponse.md
+  - docs/models/operations/listhriscompaniesrequest.md
+  - docs/models/operations/listhriscompaniesresponse.md
   - docs/models/operations/patchcrmcompanyrequest.md
   - docs/models/operations/patchcrmcompanyresponse.md
+  - docs/models/operations/patchhriscompanyrequest.md
+  - docs/models/operations/patchhriscompanyresponse.md
   - docs/models/operations/removecrmcompanyrequest.md
   - docs/models/operations/removecrmcompanyresponse.md
+  - docs/models/operations/removehriscompanyrequest.md
+  - docs/models/operations/removehriscompanyresponse.md
   - docs/models/operations/updatecrmcompanyrequest.md
   - docs/models/operations/updatecrmcompanyresponse.md
+  - docs/models/operations/updatehriscompanyrequest.md
+  - docs/models/operations/updatehriscompanyresponse.md
   - docs/models/operations/createcommercecollectionrequest.md
   - docs/models/operations/createcommercecollectionresponse.md
   - docs/models/operations/createcommerceinventoryrequest.md
@@ -1114,6 +1134,8 @@ generatedFiles:
   - docs/models/shared/atsstatus.md
   - docs/models/shared/crmcompany.md
   - docs/models/shared/propertycrmcompanyaddress.md
+  - docs/models/shared/hriscompany.md
+  - docs/models/shared/propertyhriscompanyaddress.md
   - docs/models/shared/enrichcompany.md
   - docs/models/shared/enrichtelephonetype.md
   - docs/models/shared/enrichtelephone.md

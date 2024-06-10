@@ -3,16 +3,15 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ...models.shared import hrisgroup as shared_hrisgroup
+from ...models.shared import hriscompany as shared_hriscompany
 from datetime import datetime
 from typing import List, Optional
 
 
 @dataclasses.dataclass
-class ListHrisGroupsRequest:
+class ListHrisCompaniesRequest:
     connection_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': False }})
     r"""ID of the connection"""
-    company_id: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'company_id', 'style': 'form', 'explode': True }})
     fields: Optional[List[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
     r"""Comma-delimited fields to return"""
     limit: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
@@ -28,14 +27,14 @@ class ListHrisGroupsRequest:
 
 
 @dataclasses.dataclass
-class ListHrisGroupsResponse:
+class ListHrisCompaniesResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
     raw_response: requests_http.Response = dataclasses.field()
     r"""Raw HTTP response; suitable for custom response parsing"""
-    hris_groups: Optional[List[shared_hrisgroup.HrisGroup]] = dataclasses.field(default=None)
+    hris_companies: Optional[List[shared_hriscompany.HrisCompany]] = dataclasses.field(default=None)
     r"""Successful"""
     
 

@@ -221,14 +221,20 @@ if res.accounting_account is not None:
 ### [company](docs/sdks/company/README.md)
 
 * [create_crm_company](docs/sdks/company/README.md#create_crm_company) - Create a company
+* [create_hris_company](docs/sdks/company/README.md#create_hris_company) - Create a company
 * [get_ats_company](docs/sdks/company/README.md#get_ats_company) - Retrieve a company
 * [get_crm_company](docs/sdks/company/README.md#get_crm_company) - Retrieve a company
+* [get_hris_company](docs/sdks/company/README.md#get_hris_company) - Retrieve a company
 * [list_ats_companies](docs/sdks/company/README.md#list_ats_companies) - List all companies
 * [list_crm_companies](docs/sdks/company/README.md#list_crm_companies) - List all companies
 * [list_enrich_companies](docs/sdks/company/README.md#list_enrich_companies) - Retrieve enrichment information for a company
+* [list_hris_companies](docs/sdks/company/README.md#list_hris_companies) - List all companies
 * [patch_crm_company](docs/sdks/company/README.md#patch_crm_company) - Update a company
+* [patch_hris_company](docs/sdks/company/README.md#patch_hris_company) - Update a company
 * [remove_crm_company](docs/sdks/company/README.md#remove_crm_company) - Remove a company
+* [remove_hris_company](docs/sdks/company/README.md#remove_hris_company) - Remove a company
 * [update_crm_company](docs/sdks/company/README.md#update_crm_company) - Update a company
+* [update_hris_company](docs/sdks/company/README.md#update_hris_company) - Update a company
 
 ### [document](docs/sdks/document/README.md)
 
@@ -428,20 +434,26 @@ if res.accounting_account is not None:
 
 ### [hris](docs/sdks/hris/README.md)
 
+* [create_hris_company](docs/sdks/hris/README.md#create_hris_company) - Create a company
 * [create_hris_employee](docs/sdks/hris/README.md#create_hris_employee) - Create an employee
 * [create_hris_group](docs/sdks/hris/README.md#create_hris_group) - Create a group
+* [get_hris_company](docs/sdks/hris/README.md#get_hris_company) - Retrieve a company
 * [get_hris_employee](docs/sdks/hris/README.md#get_hris_employee) - Retrieve an employee
 * [get_hris_group](docs/sdks/hris/README.md#get_hris_group) - Retrieve a group
 * [get_hris_payslip](docs/sdks/hris/README.md#get_hris_payslip) - Retrieve a payslip
 * [get_hris_timeoff](docs/sdks/hris/README.md#get_hris_timeoff) - Retrieve a timeoff
+* [list_hris_companies](docs/sdks/hris/README.md#list_hris_companies) - List all companies
 * [list_hris_employees](docs/sdks/hris/README.md#list_hris_employees) - List all employees
 * [list_hris_groups](docs/sdks/hris/README.md#list_hris_groups) - List all groups
 * [list_hris_payslips](docs/sdks/hris/README.md#list_hris_payslips) - List all payslips
 * [list_hris_timeoffs](docs/sdks/hris/README.md#list_hris_timeoffs) - List all timeoffs
+* [patch_hris_company](docs/sdks/hris/README.md#patch_hris_company) - Update a company
 * [patch_hris_employee](docs/sdks/hris/README.md#patch_hris_employee) - Update an employee
 * [patch_hris_group](docs/sdks/hris/README.md#patch_hris_group) - Update a group
+* [remove_hris_company](docs/sdks/hris/README.md#remove_hris_company) - Remove a company
 * [remove_hris_employee](docs/sdks/hris/README.md#remove_hris_employee) - Remove an employee
 * [remove_hris_group](docs/sdks/hris/README.md#remove_hris_group) - Remove a group
+* [update_hris_company](docs/sdks/hris/README.md#update_hris_company) - Update a company
 * [update_hris_employee](docs/sdks/hris/README.md#update_hris_employee) - Update an employee
 * [update_hris_group](docs/sdks/hris/README.md#update_hris_group) - Update a group
 

@@ -3,22 +3,71 @@
 
 ### Available Operations
 
+* [create_hris_company](#create_hris_company) - Create a company
 * [create_hris_employee](#create_hris_employee) - Create an employee
 * [create_hris_group](#create_hris_group) - Create a group
+* [get_hris_company](#get_hris_company) - Retrieve a company
 * [get_hris_employee](#get_hris_employee) - Retrieve an employee
 * [get_hris_group](#get_hris_group) - Retrieve a group
 * [get_hris_payslip](#get_hris_payslip) - Retrieve a payslip
 * [get_hris_timeoff](#get_hris_timeoff) - Retrieve a timeoff
+* [list_hris_companies](#list_hris_companies) - List all companies
 * [list_hris_employees](#list_hris_employees) - List all employees
 * [list_hris_groups](#list_hris_groups) - List all groups
 * [list_hris_payslips](#list_hris_payslips) - List all payslips
 * [list_hris_timeoffs](#list_hris_timeoffs) - List all timeoffs
+* [patch_hris_company](#patch_hris_company) - Update a company
 * [patch_hris_employee](#patch_hris_employee) - Update an employee
 * [patch_hris_group](#patch_hris_group) - Update a group
+* [remove_hris_company](#remove_hris_company) - Remove a company
 * [remove_hris_employee](#remove_hris_employee) - Remove an employee
 * [remove_hris_group](#remove_hris_group) - Remove a group
+* [update_hris_company](#update_hris_company) - Update a company
 * [update_hris_employee](#update_hris_employee) - Update an employee
 * [update_hris_group](#update_hris_group) - Update a group
+
+## create_hris_company
+
+Create a company
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
+
+
+res = s.hris.create_hris_company(request=operations.CreateHrisCompanyRequest(
+    connection_id='<value>',
+))
+
+if res.hris_company is not None:
+    # handle response
+    pass
+
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.CreateHrisCompanyRequest](../../models/operations/createhriscompanyrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+
+
+### Response
+
+**[operations.CreateHrisCompanyResponse](../../models/operations/createhriscompanyresponse.md)**
+### Errors
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4xx-5xx         | */*             |
 
 ## create_hris_employee
 
@@ -100,6 +149,50 @@ if res.hris_group is not None:
 ### Response
 
 **[operations.CreateHrisGroupResponse](../../models/operations/createhrisgroupresponse.md)**
+### Errors
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4xx-5xx         | */*             |
+
+## get_hris_company
+
+Retrieve a company
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
+
+
+res = s.hris.get_hris_company(request=operations.GetHrisCompanyRequest(
+    connection_id='<value>',
+    id='<id>',
+))
+
+if res.hris_company is not None:
+    # handle response
+    pass
+
+```
+
+### Parameters
+
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [operations.GetHrisCompanyRequest](../../models/operations/gethriscompanyrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+
+
+### Response
+
+**[operations.GetHrisCompanyResponse](../../models/operations/gethriscompanyresponse.md)**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
@@ -282,6 +375,49 @@ if res.hris_timeoff is not None:
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4xx-5xx         | */*             |
 
+## list_hris_companies
+
+List all companies
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
+
+
+res = s.hris.list_hris_companies(request=operations.ListHrisCompaniesRequest(
+    connection_id='<value>',
+))
+
+if res.hris_companies is not None:
+    # handle response
+    pass
+
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.ListHrisCompaniesRequest](../../models/operations/listhriscompaniesrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+
+
+### Response
+
+**[operations.ListHrisCompaniesResponse](../../models/operations/listhriscompaniesresponse.md)**
+### Errors
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4xx-5xx         | */*             |
+
 ## list_hris_employees
 
 List all employees
@@ -454,6 +590,50 @@ if res.hris_timeoffs is not None:
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4xx-5xx         | */*             |
 
+## patch_hris_company
+
+Update a company
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
+
+
+res = s.hris.patch_hris_company(request=operations.PatchHrisCompanyRequest(
+    connection_id='<value>',
+    id='<id>',
+))
+
+if res.hris_company is not None:
+    # handle response
+    pass
+
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.PatchHrisCompanyRequest](../../models/operations/patchhriscompanyrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+
+
+### Response
+
+**[operations.PatchHrisCompanyResponse](../../models/operations/patchhriscompanyresponse.md)**
+### Errors
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4xx-5xx         | */*             |
+
 ## patch_hris_employee
 
 Update an employee
@@ -542,6 +722,50 @@ if res.hris_group is not None:
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4xx-5xx         | */*             |
 
+## remove_hris_company
+
+Remove a company
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
+
+
+res = s.hris.remove_hris_company(request=operations.RemoveHrisCompanyRequest(
+    connection_id='<value>',
+    id='<id>',
+))
+
+if res is not None:
+    # handle response
+    pass
+
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.RemoveHrisCompanyRequest](../../models/operations/removehriscompanyrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+
+
+### Response
+
+**[operations.RemoveHrisCompanyResponse](../../models/operations/removehriscompanyresponse.md)**
+### Errors
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4xx-5xx         | */*             |
+
 ## remove_hris_employee
 
 Remove an employee
@@ -624,6 +848,50 @@ if res is not None:
 ### Response
 
 **[operations.RemoveHrisGroupResponse](../../models/operations/removehrisgroupresponse.md)**
+### Errors
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4xx-5xx         | */*             |
+
+## update_hris_company
+
+Update a company
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
+
+
+res = s.hris.update_hris_company(request=operations.UpdateHrisCompanyRequest(
+    connection_id='<value>',
+    id='<id>',
+))
+
+if res.hris_company is not None:
+    # handle response
+    pass
+
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.UpdateHrisCompanyRequest](../../models/operations/updatehriscompanyrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+
+
+### Response
+
+**[operations.UpdateHrisCompanyResponse](../../models/operations/updatehriscompanyresponse.md)**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |

@@ -50,6 +50,7 @@ class ObjectType(str, Enum):
     HRIS_GROUP = 'hris_group'
     HRIS_PAYSLIP = 'hris_payslip'
     HRIS_TIMEOFF = 'hris_timeoff'
+    HRIS_COMPANY = 'hris_company'
     MARTECH_LIST = 'martech_list'
     MARTECH_MEMBER = 'martech_member'
     PASSTHROUGH = 'passthrough'
