@@ -1429,3 +1429,13 @@ Based on:
 - [python v0.22.16] .
 ### Releases
 - [PyPI v0.22.16] https://pypi.org/project/Unified-python-sdk/0.22.16 - .
+
+## 2024-06-12 00:25:11
+### Changes
+Based on:
+- OpenAPI Doc 1.0 
+- Speakeasy CLI 1.305.0 (2.340.3) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [python v0.22.17] .
+### Releases
+- [PyPI v0.22.17] https://pypi.org/project/Unified-python-sdk/0.22.17 - .

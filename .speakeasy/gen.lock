@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: b5e06f8290f506984cde8a37b4ebd06e
+  docChecksum: f0fea8601a16d51b9c2316f7dec21d35
   docVersion: "1.0"
-  speakeasyVersion: 1.300.1
-  generationVersion: 2.339.1
-  releaseVersion: 0.22.16
-  configChecksum: 5938e78900f2c3b4f8790130b3871db1
+  speakeasyVersion: 1.305.0
+  generationVersion: 2.340.3
+  releaseVersion: 0.22.17
+  configChecksum: 739df4b556a2462aa16f8b211c08598c
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -1156,6 +1156,7 @@ generatedFiles:
   - docs/models/shared/crmdeal.md
   - docs/models/shared/crmeventtype.md
   - docs/models/shared/crmevent.md
+  - docs/models/shared/priority.md
   - docs/models/shared/propertycrmeventtaskstatus.md
   - docs/models/shared/propertycrmeventtask.md
   - docs/models/shared/propertycrmeventnote.md
