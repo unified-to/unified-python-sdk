@@ -46,7 +46,7 @@ res = s.unified.create_unified_connection(request=shared.Connection(
     ],
     integration_type='<value>',
     permissions=[
-        shared.PropertyConnectionPermissions.ATS_DOCUMENT_WRITE,
+        shared.PropertyConnectionPermissions.ATS_DOCUMENT_READ,
     ],
 ))
 

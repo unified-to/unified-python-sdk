@@ -3,13 +3,13 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ...models.shared import accountingtransaction as shared_accountingtransaction
+from ...models.shared import accountingjournal as shared_accountingjournal
 from datetime import datetime
 from typing import List, Optional
 
 
 @dataclasses.dataclass
-class ListAccountingTransactionsRequest:
+class ListAccountingJournalsRequest:
     connection_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': False }})
     r"""ID of the connection"""
     fields: Optional[List[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
@@ -27,14 +27,14 @@ class ListAccountingTransactionsRequest:
 
 
 @dataclasses.dataclass
-class ListAccountingTransactionsResponse:
+class ListAccountingJournalsResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
     raw_response: requests_http.Response = dataclasses.field()
     r"""Raw HTTP response; suitable for custom response parsing"""
-    accounting_transactions: Optional[List[shared_accountingtransaction.AccountingTransaction]] = dataclasses.field(default=None)
+    accounting_journals: Optional[List[shared_accountingjournal.AccountingJournal]] = dataclasses.field(default=None)
     r"""Successful"""
     
 

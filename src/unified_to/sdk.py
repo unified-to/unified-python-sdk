@@ -35,6 +35,7 @@ from .invoice import Invoice
 from .issue import Issue
 from .item import Item
 from .job import Job
+from .journal import Journal
 from .kms import Kms
 from .lead import Lead
 from .link import Link
@@ -67,7 +68,6 @@ from .taxrate import Taxrate
 from .ticket import Ticket
 from .ticketing import Ticketing
 from .timeoff import Timeoff
-from .transaction import Transaction
 from .uc import Uc
 from .unified import Unified
 from .utils.retries import RetryConfig
@@ -83,9 +83,9 @@ class UnifiedTo:
     account: Account
     contact: Contact
     invoice: Invoice
+    journal: Journal
     organization: Organization
     taxrate: Taxrate
-    transaction: Transaction
     ats: Ats
     activity: Activity
     application: Application
@@ -208,9 +208,9 @@ class UnifiedTo:
         self.account = Account(self.sdk_configuration)
         self.contact = Contact(self.sdk_configuration)
         self.invoice = Invoice(self.sdk_configuration)
+        self.journal = Journal(self.sdk_configuration)
         self.organization = Organization(self.sdk_configuration)
         self.taxrate = Taxrate(self.sdk_configuration)
-        self.transaction = Transaction(self.sdk_configuration)
         self.ats = Ats(self.sdk_configuration)
         self.activity = Activity(self.sdk_configuration)
         self.application = Application(self.sdk_configuration)

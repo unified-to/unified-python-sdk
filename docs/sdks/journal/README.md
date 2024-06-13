@@ -1,67 +1,18 @@
-# Connection
-(*connection*)
+# Journal
+(*journal*)
 
 ### Available Operations
 
-* [create_unified_connection](#create_unified_connection) - Create connection
-* [get_unified_connection](#get_unified_connection) - Retrieve connection
-* [list_unified_connections](#list_unified_connections) - List all connections
-* [patch_unified_connection](#patch_unified_connection) - Update connection
-* [remove_unified_connection](#remove_unified_connection) - Remove connection
-* [update_unified_connection](#update_unified_connection) - Update connection
+* [create_accounting_journal](#create_accounting_journal) - Create a journal
+* [get_accounting_journal](#get_accounting_journal) - Retrieve a journal
+* [list_accounting_journals](#list_accounting_journals) - List all journals
+* [patch_accounting_journal](#patch_accounting_journal) - Update a journal
+* [remove_accounting_journal](#remove_accounting_journal) - Remove a journal
+* [update_accounting_journal](#update_accounting_journal) - Update a journal
 
-## create_unified_connection
+## create_accounting_journal
 
-Create connection
-
-### Example Usage
-
-```python
-import unified_to
-from unified_to.models import shared
-
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
-
-
-res = s.connection.create_unified_connection(request=shared.Connection(
-    categories=[
-        shared.PropertyConnectionCategories.KMS,
-    ],
-    integration_type='<value>',
-    permissions=[
-        shared.PropertyConnectionPermissions.ATS_DOCUMENT_READ,
-    ],
-))
-
-if res.connection is not None:
-    # handle response
-    pass
-
-```
-
-### Parameters
-
-| Parameter                                              | Type                                                   | Required                                               | Description                                            |
-| ------------------------------------------------------ | ------------------------------------------------------ | ------------------------------------------------------ | ------------------------------------------------------ |
-| `request`                                              | [shared.Connection](../../models/shared/connection.md) | :heavy_check_mark:                                     | The request object to use for the request.             |
-
-
-### Response
-
-**[operations.CreateUnifiedConnectionResponse](../../models/operations/createunifiedconnectionresponse.md)**
-### Errors
-
-| Error Object    | Status Code     | Content Type    |
-| --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
-
-## get_unified_connection
-
-Retrieve connection
+Create a journal
 
 ### Example Usage
 
@@ -76,11 +27,55 @@ s = unified_to.UnifiedTo(
 )
 
 
-res = s.connection.get_unified_connection(request=operations.GetUnifiedConnectionRequest(
+res = s.journal.create_accounting_journal(request=operations.CreateAccountingJournalRequest(
+    connection_id='<value>',
+))
+
+if res.accounting_journal is not None:
+    # handle response
+    pass
+
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                              | [operations.CreateAccountingJournalRequest](../../models/operations/createaccountingjournalrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+
+
+### Response
+
+**[operations.CreateAccountingJournalResponse](../../models/operations/createaccountingjournalresponse.md)**
+### Errors
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4xx-5xx         | */*             |
+
+## get_accounting_journal
+
+Retrieve a journal
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
+
+
+res = s.journal.get_accounting_journal(request=operations.GetAccountingJournalRequest(
+    connection_id='<value>',
     id='<id>',
 ))
 
-if res.connection is not None:
+if res.accounting_journal is not None:
     # handle response
     pass
 
@@ -90,21 +85,21 @@ if res.connection is not None:
 
 | Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
 | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `request`                                                                                        | [operations.GetUnifiedConnectionRequest](../../models/operations/getunifiedconnectionrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `request`                                                                                        | [operations.GetAccountingJournalRequest](../../models/operations/getaccountingjournalrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
 
 
 ### Response
 
-**[operations.GetUnifiedConnectionResponse](../../models/operations/getunifiedconnectionresponse.md)**
+**[operations.GetAccountingJournalResponse](../../models/operations/getaccountingjournalresponse.md)**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4xx-5xx         | */*             |
 
-## list_unified_connections
+## list_accounting_journals
 
-List all connections
+List all journals
 
 ### Example Usage
 
@@ -119,9 +114,11 @@ s = unified_to.UnifiedTo(
 )
 
 
-res = s.connection.list_unified_connections(request=operations.ListUnifiedConnectionsRequest())
+res = s.journal.list_accounting_journals(request=operations.ListAccountingJournalsRequest(
+    connection_id='<value>',
+))
 
-if res.connections is not None:
+if res.accounting_journals is not None:
     # handle response
     pass
 
@@ -131,21 +128,21 @@ if res.connections is not None:
 
 | Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
 | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `request`                                                                                            | [operations.ListUnifiedConnectionsRequest](../../models/operations/listunifiedconnectionsrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `request`                                                                                            | [operations.ListAccountingJournalsRequest](../../models/operations/listaccountingjournalsrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 
 ### Response
 
-**[operations.ListUnifiedConnectionsResponse](../../models/operations/listunifiedconnectionsresponse.md)**
+**[operations.ListAccountingJournalsResponse](../../models/operations/listaccountingjournalsresponse.md)**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4xx-5xx         | */*             |
 
-## patch_unified_connection
+## patch_accounting_journal
 
-Update connection
+Update a journal
 
 ### Example Usage
 
@@ -160,11 +157,12 @@ s = unified_to.UnifiedTo(
 )
 
 
-res = s.connection.patch_unified_connection(request=operations.PatchUnifiedConnectionRequest(
+res = s.journal.patch_accounting_journal(request=operations.PatchAccountingJournalRequest(
+    connection_id='<value>',
     id='<id>',
 ))
 
-if res.connection is not None:
+if res.accounting_journal is not None:
     # handle response
     pass
 
@@ -174,21 +172,21 @@ if res.connection is not None:
 
 | Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
 | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `request`                                                                                            | [operations.PatchUnifiedConnectionRequest](../../models/operations/patchunifiedconnectionrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `request`                                                                                            | [operations.PatchAccountingJournalRequest](../../models/operations/patchaccountingjournalrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 
 
 ### Response
 
-**[operations.PatchUnifiedConnectionResponse](../../models/operations/patchunifiedconnectionresponse.md)**
+**[operations.PatchAccountingJournalResponse](../../models/operations/patchaccountingjournalresponse.md)**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4xx-5xx         | */*             |
 
-## remove_unified_connection
+## remove_accounting_journal
 
-Remove connection
+Remove a journal
 
 ### Example Usage
 
@@ -203,7 +201,8 @@ s = unified_to.UnifiedTo(
 )
 
 
-res = s.connection.remove_unified_connection(request=operations.RemoveUnifiedConnectionRequest(
+res = s.journal.remove_accounting_journal(request=operations.RemoveAccountingJournalRequest(
+    connection_id='<value>',
     id='<id>',
 ))
 
@@ -217,21 +216,21 @@ if res is not None:
 
 | Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
 | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                              | [operations.RemoveUnifiedConnectionRequest](../../models/operations/removeunifiedconnectionrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `request`                                                                                              | [operations.RemoveAccountingJournalRequest](../../models/operations/removeaccountingjournalrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 
 ### Response
 
-**[operations.RemoveUnifiedConnectionResponse](../../models/operations/removeunifiedconnectionresponse.md)**
+**[operations.RemoveAccountingJournalResponse](../../models/operations/removeaccountingjournalresponse.md)**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4xx-5xx         | */*             |
 
-## update_unified_connection
+## update_accounting_journal
 
-Update connection
+Update a journal
 
 ### Example Usage
 
@@ -246,11 +245,12 @@ s = unified_to.UnifiedTo(
 )
 
 
-res = s.connection.update_unified_connection(request=operations.UpdateUnifiedConnectionRequest(
+res = s.journal.update_accounting_journal(request=operations.UpdateAccountingJournalRequest(
+    connection_id='<value>',
     id='<id>',
 ))
 
-if res.connection is not None:
+if res.accounting_journal is not None:
     # handle response
     pass
 
@@ -260,12 +260,12 @@ if res.connection is not None:
 
 | Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
 | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                              | [operations.UpdateUnifiedConnectionRequest](../../models/operations/updateunifiedconnectionrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `request`                                                                                              | [operations.UpdateAccountingJournalRequest](../../models/operations/updateaccountingjournalrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 
 
 ### Response
 
-**[operations.UpdateUnifiedConnectionResponse](../../models/operations/updateunifiedconnectionresponse.md)**
+**[operations.UpdateAccountingJournalResponse](../../models/operations/updateaccountingjournalresponse.md)**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |

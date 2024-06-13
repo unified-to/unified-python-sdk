@@ -10,6 +10,8 @@
 | `ACCOUNTING_ACCOUNT_WRITE`     | accounting_account_write       |
 | `ACCOUNTING_TRANSACTION_READ`  | accounting_transaction_read    |
 | `ACCOUNTING_TRANSACTION_WRITE` | accounting_transaction_write   |
+| `ACCOUNTING_JOURNAL_READ`      | accounting_journal_read        |
+| `ACCOUNTING_JOURNAL_WRITE`     | accounting_journal_write       |
 | `ACCOUNTING_INVOICE_READ`      | accounting_invoice_read        |
 | `ACCOUNTING_INVOICE_WRITE`     | accounting_invoice_write       |
 | `ACCOUNTING_CONTACT_READ`      | accounting_contact_read        |

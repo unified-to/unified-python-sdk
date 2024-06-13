@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from .accountingtransactionlineitem import AccountingTransactionLineitem
+from .accountingjournallineitem import AccountingJournalLineitem
 from dataclasses_json import Undefined, dataclass_json
 from typing import Any, Dict, List, Optional
 from unified_to import utils
@@ -10,12 +10,12 @@ from unified_to import utils
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
-class AccountingTransaction:
+class AccountingJournal:
     created_at: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created_at'), 'exclude': lambda f: f is None }})
     currency: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('currency'), 'exclude': lambda f: f is None }})
     description: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('description'), 'exclude': lambda f: f is None }})
     id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id'), 'exclude': lambda f: f is None }})
-    lineitems: Optional[List[AccountingTransactionLineitem]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('lineitems'), 'exclude': lambda f: f is None }})
+    lineitems: Optional[List[AccountingJournalLineitem]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('lineitems'), 'exclude': lambda f: f is None }})
     r"""new field name"""
     raw: Optional[Dict[str, Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('raw'), 'exclude': lambda f: f is None }})
     reference: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('reference'), 'exclude': lambda f: f is None }})

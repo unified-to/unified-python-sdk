@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: f0fea8601a16d51b9c2316f7dec21d35
+  docChecksum: 5644d053fad87c74eb97f4e8f727fa1d
   docVersion: "1.0"
-  speakeasyVersion: 1.305.0
+  speakeasyVersion: 1.306.0
   generationVersion: 2.340.3
-  releaseVersion: 0.22.17
-  configChecksum: 739df4b556a2462aa16f8b211c08598c
+  releaseVersion: 0.22.18
+  configChecksum: 5ecfd621463177920db08769c10ae24a
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -27,9 +27,9 @@ generatedFiles:
   - src/unified_to/account.py
   - src/unified_to/contact.py
   - src/unified_to/invoice.py
+  - src/unified_to/journal.py
   - src/unified_to/organization.py
   - src/unified_to/taxrate.py
-  - src/unified_to/transaction.py
   - src/unified_to/ats.py
   - src/unified_to/activity.py
   - src/unified_to/application.py
@@ -104,35 +104,35 @@ generatedFiles:
   - src/unified_to/models/operations/createaccountingaccount.py
   - src/unified_to/models/operations/createaccountingcontact.py
   - src/unified_to/models/operations/createaccountinginvoice.py
+  - src/unified_to/models/operations/createaccountingjournal.py
   - src/unified_to/models/operations/createaccountingtaxrate.py
-  - src/unified_to/models/operations/createaccountingtransaction.py
   - src/unified_to/models/operations/getaccountingaccount.py
   - src/unified_to/models/operations/getaccountingcontact.py
   - src/unified_to/models/operations/getaccountinginvoice.py
+  - src/unified_to/models/operations/getaccountingjournal.py
   - src/unified_to/models/operations/getaccountingorganization.py
   - src/unified_to/models/operations/getaccountingtaxrate.py
-  - src/unified_to/models/operations/getaccountingtransaction.py
   - src/unified_to/models/operations/listaccountingaccounts.py
   - src/unified_to/models/operations/listaccountingcontacts.py
   - src/unified_to/models/operations/listaccountinginvoices.py
+  - src/unified_to/models/operations/listaccountingjournals.py
   - src/unified_to/models/operations/listaccountingorganizations.py
   - src/unified_to/models/operations/listaccountingtaxrates.py
-  - src/unified_to/models/operations/listaccountingtransactions.py
   - src/unified_to/models/operations/patchaccountingaccount.py
   - src/unified_to/models/operations/patchaccountingcontact.py
   - src/unified_to/models/operations/patchaccountinginvoice.py
+  - src/unified_to/models/operations/patchaccountingjournal.py
   - src/unified_to/models/operations/patchaccountingtaxrate.py
-  - src/unified_to/models/operations/patchaccountingtransaction.py
   - src/unified_to/models/operations/removeaccountingaccount.py
   - src/unified_to/models/operations/removeaccountingcontact.py
   - src/unified_to/models/operations/removeaccountinginvoice.py
+  - src/unified_to/models/operations/removeaccountingjournal.py
   - src/unified_to/models/operations/removeaccountingtaxrate.py
-  - src/unified_to/models/operations/removeaccountingtransaction.py
   - src/unified_to/models/operations/updateaccountingaccount.py
   - src/unified_to/models/operations/updateaccountingcontact.py
   - src/unified_to/models/operations/updateaccountinginvoice.py
+  - src/unified_to/models/operations/updateaccountingjournal.py
   - src/unified_to/models/operations/updateaccountingtaxrate.py
-  - src/unified_to/models/operations/updateaccountingtransaction.py
   - src/unified_to/models/operations/createcrmcontact.py
   - src/unified_to/models/operations/createuccontact.py
   - src/unified_to/models/operations/getcrmcontact.py
@@ -389,9 +389,9 @@ generatedFiles:
   - src/unified_to/models/shared/property_accountingcontact_billing_address.py
   - src/unified_to/models/shared/accountinginvoice.py
   - src/unified_to/models/shared/accountinglineitem.py
+  - src/unified_to/models/shared/accountingjournal.py
+  - src/unified_to/models/shared/accountingjournallineitem.py
   - src/unified_to/models/shared/accountingtaxrate.py
-  - src/unified_to/models/shared/accountingtransaction.py
-  - src/unified_to/models/shared/accountingtransactionlineitem.py
   - src/unified_to/models/shared/accountingorganization.py
   - src/unified_to/models/shared/property_accountingorganization_address.py
   - src/unified_to/models/shared/crmcontact.py
@@ -513,64 +513,64 @@ generatedFiles:
   - docs/models/operations/createaccountingcontactresponse.md
   - docs/models/operations/createaccountinginvoicerequest.md
   - docs/models/operations/createaccountinginvoiceresponse.md
+  - docs/models/operations/createaccountingjournalrequest.md
+  - docs/models/operations/createaccountingjournalresponse.md
   - docs/models/operations/createaccountingtaxraterequest.md
   - docs/models/operations/createaccountingtaxrateresponse.md
-  - docs/models/operations/createaccountingtransactionrequest.md
-  - docs/models/operations/createaccountingtransactionresponse.md
   - docs/models/operations/getaccountingaccountrequest.md
   - docs/models/operations/getaccountingaccountresponse.md
   - docs/models/operations/getaccountingcontactrequest.md
   - docs/models/operations/getaccountingcontactresponse.md
   - docs/models/operations/getaccountinginvoicerequest.md
   - docs/models/operations/getaccountinginvoiceresponse.md
+  - docs/models/operations/getaccountingjournalrequest.md
+  - docs/models/operations/getaccountingjournalresponse.md
   - docs/models/operations/getaccountingorganizationrequest.md
   - docs/models/operations/getaccountingorganizationresponse.md
   - docs/models/operations/getaccountingtaxraterequest.md
   - docs/models/operations/getaccountingtaxrateresponse.md
-  - docs/models/operations/getaccountingtransactionrequest.md
-  - docs/models/operations/getaccountingtransactionresponse.md
   - docs/models/operations/listaccountingaccountsrequest.md
   - docs/models/operations/listaccountingaccountsresponse.md
   - docs/models/operations/listaccountingcontactsrequest.md
   - docs/models/operations/listaccountingcontactsresponse.md
   - docs/models/operations/listaccountinginvoicesrequest.md
   - docs/models/operations/listaccountinginvoicesresponse.md
+  - docs/models/operations/listaccountingjournalsrequest.md
+  - docs/models/operations/listaccountingjournalsresponse.md
   - docs/models/operations/listaccountingorganizationsrequest.md
   - docs/models/operations/listaccountingorganizationsresponse.md
   - docs/models/operations/listaccountingtaxratesrequest.md
   - docs/models/operations/listaccountingtaxratesresponse.md
-  - docs/models/operations/listaccountingtransactionsrequest.md
-  - docs/models/operations/listaccountingtransactionsresponse.md
   - docs/models/operations/patchaccountingaccountrequest.md
   - docs/models/operations/patchaccountingaccountresponse.md
   - docs/models/operations/patchaccountingcontactrequest.md
   - docs/models/operations/patchaccountingcontactresponse.md
   - docs/models/operations/patchaccountinginvoicerequest.md
   - docs/models/operations/patchaccountinginvoiceresponse.md
+  - docs/models/operations/patchaccountingjournalrequest.md
+  - docs/models/operations/patchaccountingjournalresponse.md
   - docs/models/operations/patchaccountingtaxraterequest.md
   - docs/models/operations/patchaccountingtaxrateresponse.md
-  - docs/models/operations/patchaccountingtransactionrequest.md
-  - docs/models/operations/patchaccountingtransactionresponse.md
   - docs/models/operations/removeaccountingaccountrequest.md
   - docs/models/operations/removeaccountingaccountresponse.md
   - docs/models/operations/removeaccountingcontactrequest.md
   - docs/models/operations/removeaccountingcontactresponse.md
   - docs/models/operations/removeaccountinginvoicerequest.md
   - docs/models/operations/removeaccountinginvoiceresponse.md
+  - docs/models/operations/removeaccountingjournalrequest.md
+  - docs/models/operations/removeaccountingjournalresponse.md
   - docs/models/operations/removeaccountingtaxraterequest.md
   - docs/models/operations/removeaccountingtaxrateresponse.md
-  - docs/models/operations/removeaccountingtransactionrequest.md
-  - docs/models/operations/removeaccountingtransactionresponse.md
   - docs/models/operations/updateaccountingaccountrequest.md
   - docs/models/operations/updateaccountingaccountresponse.md
   - docs/models/operations/updateaccountingcontactrequest.md
   - docs/models/operations/updateaccountingcontactresponse.md
   - docs/models/operations/updateaccountinginvoicerequest.md
   - docs/models/operations/updateaccountinginvoiceresponse.md
+  - docs/models/operations/updateaccountingjournalrequest.md
+  - docs/models/operations/updateaccountingjournalresponse.md
   - docs/models/operations/updateaccountingtaxraterequest.md
   - docs/models/operations/updateaccountingtaxrateresponse.md
-  - docs/models/operations/updateaccountingtransactionrequest.md
-  - docs/models/operations/updateaccountingtransactionresponse.md
   - docs/models/operations/createcrmcontactrequest.md
   - docs/models/operations/createcrmcontactresponse.md
   - docs/models/operations/createuccontactrequest.md
@@ -1084,9 +1084,9 @@ generatedFiles:
   - docs/models/shared/accountinginvoicestatus.md
   - docs/models/shared/accountinginvoice.md
   - docs/models/shared/accountinglineitem.md
+  - docs/models/shared/accountingjournal.md
+  - docs/models/shared/accountingjournallineitem.md
   - docs/models/shared/accountingtaxrate.md
-  - docs/models/shared/accountingtransaction.md
-  - docs/models/shared/accountingtransactionlineitem.md
   - docs/models/shared/accountingorganization.md
   - docs/models/shared/propertyaccountingorganizationaddress.md
   - docs/models/shared/crmcontact.md
@@ -1295,9 +1295,9 @@ generatedFiles:
   - docs/sdks/account/README.md
   - docs/sdks/contact/README.md
   - docs/sdks/invoice/README.md
+  - docs/sdks/journal/README.md
   - docs/sdks/organization/README.md
   - docs/sdks/taxrate/README.md
-  - docs/sdks/transaction/README.md
   - docs/sdks/ats/README.md
   - docs/sdks/activity/README.md
   - docs/sdks/application/README.md
