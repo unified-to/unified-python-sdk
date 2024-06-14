@@ -49,33 +49,39 @@ if res.accounting_account is not None:
 * [create_accounting_invoice](docs/sdks/accounting/README.md#create_accounting_invoice) - Create an invoice
 * [create_accounting_journal](docs/sdks/accounting/README.md#create_accounting_journal) - Create a journal
 * [create_accounting_taxrate](docs/sdks/accounting/README.md#create_accounting_taxrate) - Create a taxrate
+* [create_accounting_transaction](docs/sdks/accounting/README.md#create_accounting_transaction) - Create a transaction
 * [get_accounting_account](docs/sdks/accounting/README.md#get_accounting_account) - Retrieve an account
 * [get_accounting_contact](docs/sdks/accounting/README.md#get_accounting_contact) - Retrieve a contact
 * [get_accounting_invoice](docs/sdks/accounting/README.md#get_accounting_invoice) - Retrieve an invoice
 * [get_accounting_journal](docs/sdks/accounting/README.md#get_accounting_journal) - Retrieve a journal
 * [get_accounting_organization](docs/sdks/accounting/README.md#get_accounting_organization) - Retrieve an organization
 * [get_accounting_taxrate](docs/sdks/accounting/README.md#get_accounting_taxrate) - Retrieve a taxrate
+* [get_accounting_transaction](docs/sdks/accounting/README.md#get_accounting_transaction) - Retrieve a transaction
 * [list_accounting_accounts](docs/sdks/accounting/README.md#list_accounting_accounts) - List all accounts
 * [list_accounting_contacts](docs/sdks/accounting/README.md#list_accounting_contacts) - List all contacts
 * [list_accounting_invoices](docs/sdks/accounting/README.md#list_accounting_invoices) - List all invoices
 * [list_accounting_journals](docs/sdks/accounting/README.md#list_accounting_journals) - List all journals
 * [list_accounting_organizations](docs/sdks/accounting/README.md#list_accounting_organizations) - List all organizations
 * [list_accounting_taxrates](docs/sdks/accounting/README.md#list_accounting_taxrates) - List all taxrates
+* [list_accounting_transactions](docs/sdks/accounting/README.md#list_accounting_transactions) - List all transactions
 * [patch_accounting_account](docs/sdks/accounting/README.md#patch_accounting_account) - Update an account
 * [patch_accounting_contact](docs/sdks/accounting/README.md#patch_accounting_contact) - Update a contact
 * [patch_accounting_invoice](docs/sdks/accounting/README.md#patch_accounting_invoice) - Update an invoice
 * [patch_accounting_journal](docs/sdks/accounting/README.md#patch_accounting_journal) - Update a journal
 * [patch_accounting_taxrate](docs/sdks/accounting/README.md#patch_accounting_taxrate) - Update a taxrate
+* [patch_accounting_transaction](docs/sdks/accounting/README.md#patch_accounting_transaction) - Update a transaction
 * [remove_accounting_account](docs/sdks/accounting/README.md#remove_accounting_account) - Remove an account
 * [remove_accounting_contact](docs/sdks/accounting/README.md#remove_accounting_contact) - Remove a contact
 * [remove_accounting_invoice](docs/sdks/accounting/README.md#remove_accounting_invoice) - Remove an invoice
 * [remove_accounting_journal](docs/sdks/accounting/README.md#remove_accounting_journal) - Remove a journal
 * [remove_accounting_taxrate](docs/sdks/accounting/README.md#remove_accounting_taxrate) - Remove a taxrate
+* [remove_accounting_transaction](docs/sdks/accounting/README.md#remove_accounting_transaction) - Remove a transaction
 * [update_accounting_account](docs/sdks/accounting/README.md#update_accounting_account) - Update an account
 * [update_accounting_contact](docs/sdks/accounting/README.md#update_accounting_contact) - Update a contact
 * [update_accounting_invoice](docs/sdks/accounting/README.md#update_accounting_invoice) - Update an invoice
 * [update_accounting_journal](docs/sdks/accounting/README.md#update_accounting_journal) - Update a journal
 * [update_accounting_taxrate](docs/sdks/accounting/README.md#update_accounting_taxrate) - Update a taxrate
+* [update_accounting_transaction](docs/sdks/accounting/README.md#update_accounting_transaction) - Update a transaction
 
 ### [account](docs/sdks/account/README.md)
 
@@ -138,6 +144,15 @@ if res.accounting_account is not None:
 * [patch_accounting_taxrate](docs/sdks/taxrate/README.md#patch_accounting_taxrate) - Update a taxrate
 * [remove_accounting_taxrate](docs/sdks/taxrate/README.md#remove_accounting_taxrate) - Remove a taxrate
 * [update_accounting_taxrate](docs/sdks/taxrate/README.md#update_accounting_taxrate) - Update a taxrate
+
+### [transaction](docs/sdks/transaction/README.md)
+
+* [create_accounting_transaction](docs/sdks/transaction/README.md#create_accounting_transaction) - Create a transaction
+* [get_accounting_transaction](docs/sdks/transaction/README.md#get_accounting_transaction) - Retrieve a transaction
+* [list_accounting_transactions](docs/sdks/transaction/README.md#list_accounting_transactions) - List all transactions
+* [patch_accounting_transaction](docs/sdks/transaction/README.md#patch_accounting_transaction) - Update a transaction
+* [remove_accounting_transaction](docs/sdks/transaction/README.md#remove_accounting_transaction) - Remove a transaction
+* [update_accounting_transaction](docs/sdks/transaction/README.md#update_accounting_transaction) - Update a transaction
 
 ### [ats](docs/sdks/ats/README.md)
 

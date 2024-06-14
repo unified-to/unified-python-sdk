@@ -68,6 +68,7 @@ from .taxrate import Taxrate
 from .ticket import Ticket
 from .ticketing import Ticketing
 from .timeoff import Timeoff
+from .transaction import Transaction
 from .uc import Uc
 from .unified import Unified
 from .utils.retries import RetryConfig
@@ -86,6 +87,7 @@ class UnifiedTo:
     journal: Journal
     organization: Organization
     taxrate: Taxrate
+    transaction: Transaction
     ats: Ats
     activity: Activity
     application: Application
@@ -211,6 +213,7 @@ class UnifiedTo:
         self.journal = Journal(self.sdk_configuration)
         self.organization = Organization(self.sdk_configuration)
         self.taxrate = Taxrate(self.sdk_configuration)
+        self.transaction = Transaction(self.sdk_configuration)
         self.ats = Ats(self.sdk_configuration)
         self.activity = Activity(self.sdk_configuration)
         self.application = Application(self.sdk_configuration)
