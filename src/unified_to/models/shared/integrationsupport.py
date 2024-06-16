@@ -87,6 +87,11 @@ class ListItemID(str, Enum):
     NOT_SUPPORTED = 'not-supported'
 
 
+class ListItemVariantID(str, Enum):
+    SUPPORTED = 'supported'
+    NOT_SUPPORTED = 'not-supported'
+
+
 class ListJobID(str, Enum):
     SUPPORTED_REQUIRED = 'supported-required'
     SUPPORTED = 'supported'
@@ -242,6 +247,7 @@ class IntegrationSupport:
     list_interview_id: Optional[ListInterviewID] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('list_interview_id'), 'exclude': lambda f: f is None }})
     list_invoice_id: Optional[ListInvoiceID] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('list_invoice_id'), 'exclude': lambda f: f is None }})
     list_item_id: Optional[ListItemID] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('list_item_id'), 'exclude': lambda f: f is None }})
+    list_item_variant_id: Optional[ListItemVariantID] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('list_item_variant_id'), 'exclude': lambda f: f is None }})
     list_job_id: Optional[ListJobID] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('list_job_id'), 'exclude': lambda f: f is None }})
     list_limit: Optional[ListLimit] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('list_limit'), 'exclude': lambda f: f is None }})
     list_link_id: Optional[ListLinkID] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('list_link_id'), 'exclude': lambda f: f is None }})

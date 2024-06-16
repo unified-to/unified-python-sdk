@@ -14,7 +14,6 @@ class ListCommerceInventoriesRequest:
     r"""ID of the connection"""
     fields: Optional[List[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
     r"""Comma-delimited fields to return"""
-    item_id: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'item_id', 'style': 'form', 'explode': True }})
     item_variant_id: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'item_variant_id', 'style': 'form', 'explode': True }})
     limit: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
     location_id: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'location_id', 'style': 'form', 'explode': True }})
