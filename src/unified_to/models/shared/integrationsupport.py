@@ -88,6 +88,7 @@ class ListItemID(str, Enum):
 
 
 class ListItemVariantID(str, Enum):
+    SUPPORTED_REQUIRED = 'supported-required'
     SUPPORTED = 'supported'
     NOT_SUPPORTED = 'not-supported'
 
