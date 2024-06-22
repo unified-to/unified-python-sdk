@@ -754,7 +754,6 @@ if res.accounting_account is not None:
 * [list_unified_integration_workspaces](docs/sdks/unified/README.md#list_unified_integration_workspaces) - Returns all activated integrations in a workspace
 * [list_unified_integrations](docs/sdks/unified/README.md#list_unified_integrations) - Returns all integrations
 * [list_unified_issues](docs/sdks/unified/README.md#list_unified_issues) - List support issues
-* [list_unified_supports](docs/sdks/unified/README.md#list_unified_supports) - Get support info
 * [list_unified_webhooks](docs/sdks/unified/README.md#list_unified_webhooks) - Returns all registered webhooks
 * [patch_unified_connection](docs/sdks/unified/README.md#patch_unified_connection) - Update connection
 * [patch_unified_webhook_trigger](docs/sdks/unified/README.md#patch_unified_webhook_trigger) - Trigger webhook
@@ -795,7 +794,6 @@ if res.accounting_account is not None:
 ### [issue](docs/sdks/issue/README.md)
 
 * [list_unified_issues](docs/sdks/issue/README.md#list_unified_issues) - List support issues
-* [list_unified_supports](docs/sdks/issue/README.md#list_unified_supports) - Get support info
 
 ### [webhook](docs/sdks/webhook/README.md)
 
