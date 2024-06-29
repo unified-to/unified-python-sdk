@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: bdc716c1ec699c0df9357438a35e33f6
+  docChecksum: 47c3e061b14a46be0740453c7c5f67d6
   docVersion: "1.0"
-  speakeasyVersion: 1.322.1
+  speakeasyVersion: 1.322.3
   generationVersion: 2.354.2
-  releaseVersion: 0.22.28
-  configChecksum: abe890101e7947b0db83c5e0df1d580e
+  releaseVersion: 0.22.29
+  configChecksum: 151fe199935ade7b9edfbade827e3f52
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -477,6 +477,7 @@ generatedFiles:
   - src/unified_to/models/shared/messagingmessage.py
   - src/unified_to/models/shared/messagingmember.py
   - src/unified_to/models/shared/property_messagingmessage_author_member.py
+  - src/unified_to/models/shared/messagingattachment.py
   - src/unified_to/models/shared/messagingchannel.py
   - src/unified_to/models/shared/paymentlink.py
   - src/unified_to/models/shared/paymentlinklineitem.py
@@ -1225,6 +1226,7 @@ generatedFiles:
   - docs/models/shared/messagingmessage.md
   - docs/models/shared/messagingmember.md
   - docs/models/shared/propertymessagingmessageauthormember.md
+  - docs/models/shared/messagingattachment.md
   - docs/models/shared/messagingchannel.md
   - docs/models/shared/paymentlink.md
   - docs/models/shared/paymentlinklineitem.md
