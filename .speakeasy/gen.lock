@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: 47c3e061b14a46be0740453c7c5f67d6
+  docChecksum: ae2ed3981ced9c41a08d5e707d7c8c86
   docVersion: "1.0"
   speakeasyVersion: 1.322.3
   generationVersion: 2.354.2
-  releaseVersion: 0.22.29
-  configChecksum: 151fe199935ade7b9edfbade827e3f52
+  releaseVersion: 0.22.30
+  configChecksum: 8e7e3bd102ff1e4bfb0efbfe1b0bba90
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -463,7 +463,9 @@ generatedFiles:
   - src/unified_to/models/shared/genaimodel.py
   - src/unified_to/models/shared/hrisemployee.py
   - src/unified_to/models/shared/hristelephone.py
+  - src/unified_to/models/shared/property_hrisemployee_employee_roles.py
   - src/unified_to/models/shared/hrisemail.py
+  - src/unified_to/models/shared/hriscompensation.py
   - src/unified_to/models/shared/property_hrisemployee_address.py
   - src/unified_to/models/shared/hrisgroup.py
   - src/unified_to/models/shared/hrispayslip.py
@@ -1204,8 +1206,10 @@ generatedFiles:
   - docs/models/shared/hrisemployee.md
   - docs/models/shared/hristelephonetype.md
   - docs/models/shared/hristelephone.md
+  - docs/models/shared/propertyhrisemployeeemployeeroles.md
   - docs/models/shared/hrisemailtype.md
   - docs/models/shared/hrisemail.md
+  - docs/models/shared/hriscompensation.md
   - docs/models/shared/propertyhrisemployeeaddress.md
   - docs/models/shared/hrisgrouptype.md
   - docs/models/shared/hrisgroup.md
