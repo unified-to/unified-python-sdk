@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: 1c9d25d2726d323697b110e342adfad9
+  docChecksum: 9e3d4190c54f7a4d24ccbf1101f05382
   docVersion: "1.0"
-  speakeasyVersion: 1.326.0
-  generationVersion: 2.359.0
-  releaseVersion: 0.22.31
-  configChecksum: df0eba3dab2754eb6797fa0ed2de7b50
+  speakeasyVersion: 1.326.3
+  generationVersion: 2.359.6
+  releaseVersion: 0.22.32
+  configChecksum: c232c5ae7188437ba36a46d33ea19e7d
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -1209,6 +1209,8 @@ generatedFiles:
   - docs/models/shared/propertyhrisemployeeemployeeroles.md
   - docs/models/shared/hrisemailtype.md
   - docs/models/shared/hrisemail.md
+  - docs/models/shared/hriscompensationfrequency.md
+  - docs/models/shared/hriscompensationtype.md
   - docs/models/shared/hriscompensation.md
   - docs/models/shared/propertyhrisemployeeaddress.md
   - docs/models/shared/hrisgrouptype.md
