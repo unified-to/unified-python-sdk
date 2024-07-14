@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: baed20d00770c3529ab25ff351c386de
+  docChecksum: 447f3fb120945ec501fc264fcc573697
   docVersion: "1.0"
   speakeasyVersion: 1.335.0
   generationVersion: 2.370.2
-  releaseVersion: 0.23.2
-  configChecksum: 5e48c76d2625c74c2ae5e258da35d664
+  releaseVersion: 0.23.3
+  configChecksum: b7d028a3bda006dc6256ae96dbd687a2
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -400,6 +400,7 @@ generatedFiles:
   - src/unified_to/models/shared/accountingjournallineitem.py
   - src/unified_to/models/shared/accountingtaxrate.py
   - src/unified_to/models/shared/accountingtransaction.py
+  - src/unified_to/models/shared/accountingtransactionlineitem.py
   - src/unified_to/models/shared/accountingorganization.py
   - src/unified_to/models/shared/property_accountingorganization_address.py
   - src/unified_to/models/shared/crmcontact.py
@@ -1109,6 +1110,7 @@ generatedFiles:
   - docs/models/shared/accountingjournallineitem.md
   - docs/models/shared/accountingtaxrate.md
   - docs/models/shared/accountingtransaction.md
+  - docs/models/shared/accountingtransactionlineitem.md
   - docs/models/shared/accountingorganization.md
   - docs/models/shared/propertyaccountingorganizationaddress.md
   - docs/models/shared/crmcontact.md
