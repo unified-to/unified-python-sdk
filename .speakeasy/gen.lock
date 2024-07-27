@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: b51483e0ba5da702b0a6782d1c3502c1
+  docChecksum: 398329e502d5c762a74ed9d5f4600441
   docVersion: "1.0"
-  speakeasyVersion: 1.346.0
-  generationVersion: 2.379.3
-  releaseVersion: 0.23.8
-  configChecksum: 05bd2a0b5d29d3f28107b2f20221546f
+  speakeasyVersion: 1.346.3
+  generationVersion: 2.379.6
+  releaseVersion: 0.23.9
+  configChecksum: 94622281e1f69e1ae3d986af163f5354
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -1073,6 +1073,8 @@ generatedFiles:
   - docs/models/operations/listunifiedintegrationsresponse.md
   - docs/models/operations/listunifiedissuesrequest.md
   - docs/models/operations/listunifiedissuesresponse.md
+  - docs/models/operations/connectionid.md
+  - docs/models/operations/integrationtype.md
   - docs/models/operations/listunifiedwebhooksrequest.md
   - docs/models/operations/listunifiedwebhooksresponse.md
   - docs/models/operations/patchunifiedconnectionrequest.md
