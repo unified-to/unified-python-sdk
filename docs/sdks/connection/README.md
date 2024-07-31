@@ -18,24 +18,11 @@ Create connection
 
 ```python
 import unified_to
-from unified_to.models import shared
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
-res = s.connection.create_unified_connection(request=shared.Connection(
-    categories=[
-        shared.PropertyConnectionCategories.KMS,
-    ],
-    integration_type='<value>',
-    permissions=[
-        shared.PropertyConnectionPermissions.ATS_DOCUMENT_READ,
-    ],
-))
+res = s.connection.create_unified_connection()
 
 if res.connection is not None:
     # handle response
@@ -67,13 +54,9 @@ Retrieve connection
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.connection.get_unified_connection(request=operations.GetUnifiedConnectionRequest(
@@ -110,16 +93,11 @@ List all connections
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
-res = s.connection.list_unified_connections(request=operations.ListUnifiedConnectionsRequest())
+res = s.connection.list_unified_connections()
 
 if res.connections is not None:
     # handle response
@@ -151,13 +129,9 @@ Update connection
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.connection.patch_unified_connection(request=operations.PatchUnifiedConnectionRequest(
@@ -194,13 +168,9 @@ Remove connection
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.connection.remove_unified_connection(request=operations.RemoveUnifiedConnectionRequest(
@@ -237,13 +207,9 @@ Update connection
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.connection.update_unified_connection(request=operations.UpdateUnifiedConnectionRequest(

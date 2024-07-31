@@ -50,13 +50,9 @@ Create an account
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.accounting.create_accounting_account(request=operations.CreateAccountingAccountRequest(
@@ -93,13 +89,9 @@ Create a contact
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.accounting.create_accounting_contact(request=operations.CreateAccountingContactRequest(
@@ -136,13 +128,9 @@ Create an invoice
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.accounting.create_accounting_invoice(request=operations.CreateAccountingInvoiceRequest(
@@ -179,13 +167,9 @@ Create a journal
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.accounting.create_accounting_journal(request=operations.CreateAccountingJournalRequest(
@@ -222,13 +206,9 @@ Create a taxrate
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.accounting.create_accounting_taxrate(request=operations.CreateAccountingTaxrateRequest(
@@ -265,13 +245,9 @@ Create a transaction
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.accounting.create_accounting_transaction(request=operations.CreateAccountingTransactionRequest(
@@ -308,13 +284,9 @@ Retrieve an account
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.accounting.get_accounting_account(request=operations.GetAccountingAccountRequest(
@@ -352,13 +324,9 @@ Retrieve a contact
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.accounting.get_accounting_contact(request=operations.GetAccountingContactRequest(
@@ -396,13 +364,9 @@ Retrieve an invoice
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.accounting.get_accounting_invoice(request=operations.GetAccountingInvoiceRequest(
@@ -440,13 +404,9 @@ Retrieve a journal
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.accounting.get_accounting_journal(request=operations.GetAccountingJournalRequest(
@@ -484,13 +444,9 @@ Retrieve an organization
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.accounting.get_accounting_organization(request=operations.GetAccountingOrganizationRequest(
@@ -528,13 +484,9 @@ Retrieve a taxrate
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.accounting.get_accounting_taxrate(request=operations.GetAccountingTaxrateRequest(
@@ -572,13 +524,9 @@ Retrieve a transaction
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.accounting.get_accounting_transaction(request=operations.GetAccountingTransactionRequest(
@@ -616,13 +564,9 @@ List all accounts
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.accounting.list_accounting_accounts(request=operations.ListAccountingAccountsRequest(
@@ -659,13 +603,9 @@ List all contacts
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.accounting.list_accounting_contacts(request=operations.ListAccountingContactsRequest(
@@ -702,13 +642,9 @@ List all invoices
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.accounting.list_accounting_invoices(request=operations.ListAccountingInvoicesRequest(
@@ -745,13 +681,9 @@ List all journals
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.accounting.list_accounting_journals(request=operations.ListAccountingJournalsRequest(
@@ -788,13 +720,9 @@ List all organizations
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.accounting.list_accounting_organizations(request=operations.ListAccountingOrganizationsRequest(
@@ -831,13 +759,9 @@ List all taxrates
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.accounting.list_accounting_taxrates(request=operations.ListAccountingTaxratesRequest(
@@ -874,13 +798,9 @@ List all transactions
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.accounting.list_accounting_transactions(request=operations.ListAccountingTransactionsRequest(
@@ -917,13 +837,9 @@ Update an account
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.accounting.patch_accounting_account(request=operations.PatchAccountingAccountRequest(
@@ -961,13 +877,9 @@ Update a contact
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.accounting.patch_accounting_contact(request=operations.PatchAccountingContactRequest(
@@ -1005,13 +917,9 @@ Update an invoice
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.accounting.patch_accounting_invoice(request=operations.PatchAccountingInvoiceRequest(
@@ -1049,13 +957,9 @@ Update a journal
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.accounting.patch_accounting_journal(request=operations.PatchAccountingJournalRequest(
@@ -1093,13 +997,9 @@ Update a taxrate
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.accounting.patch_accounting_taxrate(request=operations.PatchAccountingTaxrateRequest(
@@ -1137,13 +1037,9 @@ Update a transaction
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.accounting.patch_accounting_transaction(request=operations.PatchAccountingTransactionRequest(
@@ -1181,13 +1077,9 @@ Remove an account
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.accounting.remove_accounting_account(request=operations.RemoveAccountingAccountRequest(
@@ -1225,13 +1117,9 @@ Remove a contact
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.accounting.remove_accounting_contact(request=operations.RemoveAccountingContactRequest(
@@ -1269,13 +1157,9 @@ Remove an invoice
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.accounting.remove_accounting_invoice(request=operations.RemoveAccountingInvoiceRequest(
@@ -1313,13 +1197,9 @@ Remove a journal
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.accounting.remove_accounting_journal(request=operations.RemoveAccountingJournalRequest(
@@ -1357,13 +1237,9 @@ Remove a taxrate
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.accounting.remove_accounting_taxrate(request=operations.RemoveAccountingTaxrateRequest(
@@ -1401,13 +1277,9 @@ Remove a transaction
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.accounting.remove_accounting_transaction(request=operations.RemoveAccountingTransactionRequest(
@@ -1445,13 +1317,9 @@ Update an account
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.accounting.update_accounting_account(request=operations.UpdateAccountingAccountRequest(
@@ -1489,13 +1357,9 @@ Update a contact
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.accounting.update_accounting_contact(request=operations.UpdateAccountingContactRequest(
@@ -1533,13 +1397,9 @@ Update an invoice
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.accounting.update_accounting_invoice(request=operations.UpdateAccountingInvoiceRequest(
@@ -1577,13 +1437,9 @@ Update a journal
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.accounting.update_accounting_journal(request=operations.UpdateAccountingJournalRequest(
@@ -1621,13 +1477,9 @@ Update a taxrate
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.accounting.update_accounting_taxrate(request=operations.UpdateAccountingTaxrateRequest(
@@ -1665,13 +1517,9 @@ Update a transaction
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.accounting.update_accounting_transaction(request=operations.UpdateAccountingTransactionRequest(

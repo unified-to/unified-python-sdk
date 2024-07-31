@@ -14,13 +14,9 @@ Retrieve a payslip
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.payslip.get_hris_payslip(request=operations.GetHrisPayslipRequest(
@@ -58,13 +54,9 @@ List all payslips
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.payslip.list_hris_payslips(request=operations.ListHrisPayslipsRequest(

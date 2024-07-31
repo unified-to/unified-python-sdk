@@ -30,13 +30,9 @@ Create a customer
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.ticketing.create_ticketing_customer(request=operations.CreateTicketingCustomerRequest(
@@ -73,13 +69,9 @@ Create a note
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.ticketing.create_ticketing_note(request=operations.CreateTicketingNoteRequest(
@@ -116,13 +108,9 @@ Create a ticket
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.ticketing.create_ticketing_ticket(request=operations.CreateTicketingTicketRequest(
@@ -159,13 +147,9 @@ Retrieve a customer
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.ticketing.get_ticketing_customer(request=operations.GetTicketingCustomerRequest(
@@ -203,13 +187,9 @@ Retrieve a note
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.ticketing.get_ticketing_note(request=operations.GetTicketingNoteRequest(
@@ -247,13 +227,9 @@ Retrieve a ticket
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.ticketing.get_ticketing_ticket(request=operations.GetTicketingTicketRequest(
@@ -291,13 +267,9 @@ List all customers
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.ticketing.list_ticketing_customers(request=operations.ListTicketingCustomersRequest(
@@ -334,13 +306,9 @@ List all notes
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.ticketing.list_ticketing_notes(request=operations.ListTicketingNotesRequest(
@@ -377,13 +345,9 @@ List all tickets
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.ticketing.list_ticketing_tickets(request=operations.ListTicketingTicketsRequest(
@@ -420,13 +384,9 @@ Update a customer
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.ticketing.patch_ticketing_customer(request=operations.PatchTicketingCustomerRequest(
@@ -464,13 +424,9 @@ Update a note
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.ticketing.patch_ticketing_note(request=operations.PatchTicketingNoteRequest(
@@ -508,13 +464,9 @@ Update a ticket
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.ticketing.patch_ticketing_ticket(request=operations.PatchTicketingTicketRequest(
@@ -552,13 +504,9 @@ Remove a customer
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.ticketing.remove_ticketing_customer(request=operations.RemoveTicketingCustomerRequest(
@@ -596,13 +544,9 @@ Remove a note
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.ticketing.remove_ticketing_note(request=operations.RemoveTicketingNoteRequest(
@@ -640,13 +584,9 @@ Remove a ticket
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.ticketing.remove_ticketing_ticket(request=operations.RemoveTicketingTicketRequest(
@@ -684,13 +624,9 @@ Update a customer
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.ticketing.update_ticketing_customer(request=operations.UpdateTicketingCustomerRequest(
@@ -728,13 +664,9 @@ Update a note
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.ticketing.update_ticketing_note(request=operations.UpdateTicketingNoteRequest(
@@ -772,13 +704,9 @@ Update a ticket
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.ticketing.update_ticketing_ticket(request=operations.UpdateTicketingTicketRequest(
