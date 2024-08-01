@@ -20,9 +20,13 @@ Create a message
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.messaging.create_messaging_message(request=operations.CreateMessagingMessageRequest(
@@ -59,9 +63,13 @@ Retrieve a channel
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.messaging.get_messaging_channel(request=operations.GetMessagingChannelRequest(
@@ -99,9 +107,13 @@ Retrieve a message
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.messaging.get_messaging_message(request=operations.GetMessagingMessageRequest(
@@ -139,9 +151,13 @@ List all channels
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.messaging.list_messaging_channels(request=operations.ListMessagingChannelsRequest(
@@ -178,9 +194,13 @@ List all messages
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.messaging.list_messaging_messages(request=operations.ListMessagingMessagesRequest(
@@ -217,9 +237,13 @@ Update a message
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.messaging.patch_messaging_message(request=operations.PatchMessagingMessageRequest(
@@ -257,9 +281,13 @@ Remove a message
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.messaging.remove_messaging_message(request=operations.RemoveMessagingMessageRequest(
@@ -297,9 +325,13 @@ Update a message
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.messaging.update_messaging_message(request=operations.UpdateMessagingMessageRequest(

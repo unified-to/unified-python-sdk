@@ -13,11 +13,16 @@ List support issues
 
 ```python
 import unified_to
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
-res = s.issue.list_unified_issues()
+res = s.issue.list_unified_issues(request=operations.ListUnifiedIssuesRequest())
 
 if res.issues is not None:
     # handle response

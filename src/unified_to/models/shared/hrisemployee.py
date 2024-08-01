@@ -5,6 +5,8 @@ import dataclasses
 import dateutil.parser
 from .hriscompensation import HrisCompensation
 from .hrisemail import HrisEmail
+from .hrisgroup import HrisGroup
+from .hrislocation import HrisLocation
 from .hristelephone import HrisTelephone
 from .property_hrisemployee_address import PropertyHrisEmployeeAddress
 from .property_hrisemployee_employee_roles import PropertyHrisEmployeeEmployeeRoles
@@ -64,11 +66,14 @@ class HrisEmployee:
     employment_status: Optional[EmploymentStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('employment_status'), 'exclude': lambda f: f is None }})
     employment_type: Optional[HrisEmployeeEmploymentType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('employment_type'), 'exclude': lambda f: f is None }})
     gender: Optional[HrisEmployeeGender] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('gender'), 'exclude': lambda f: f is None }})
+    groups: Optional[List[HrisGroup]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('groups'), 'exclude': lambda f: f is None }})
+    r"""Which groups/teams/units that this employee/user belongs to.  May not have all of the Group fields present, but should have id, name, or email."""
     hired_at: Optional[datetime] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('hired_at'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'exclude': lambda f: f is None }})
     id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id'), 'exclude': lambda f: f is None }})
     image_url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('image_url'), 'exclude': lambda f: f is None }})
     language_locale: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('language_locale'), 'exclude': lambda f: f is None }})
     location: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('location'), 'exclude': lambda f: f is None }})
+    locations: Optional[List[HrisLocation]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('locations'), 'exclude': lambda f: f is None }})
     manager_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('manager_id'), 'exclude': lambda f: f is None }})
     marital_status: Optional[MaritalStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('marital_status'), 'exclude': lambda f: f is None }})
     name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name'), 'exclude': lambda f: f is None }})

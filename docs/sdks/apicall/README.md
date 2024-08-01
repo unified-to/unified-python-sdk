@@ -14,9 +14,13 @@ Retrieve specific API Call by its ID
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.apicall.get_unified_apicall(request=operations.GetUnifiedApicallRequest(
@@ -53,11 +57,16 @@ Returns API Calls
 
 ```python
 import unified_to
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
-res = s.apicall.list_unified_apicalls()
+res = s.apicall.list_unified_apicalls(request=operations.ListUnifiedApicallsRequest())
 
 if res.api_calls is not None:
     # handle response

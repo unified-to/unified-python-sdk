@@ -18,9 +18,13 @@ Create a candidate
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.candidate.create_ats_candidate(request=operations.CreateAtsCandidateRequest(
@@ -57,9 +61,13 @@ Retrieve a candidate
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.candidate.get_ats_candidate(request=operations.GetAtsCandidateRequest(
@@ -97,9 +105,13 @@ List all candidates
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.candidate.list_ats_candidates(request=operations.ListAtsCandidatesRequest(
@@ -136,9 +148,13 @@ Update a candidate
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.candidate.patch_ats_candidate(request=operations.PatchAtsCandidateRequest(
@@ -176,9 +192,13 @@ Remove a candidate
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.candidate.remove_ats_candidate(request=operations.RemoveAtsCandidateRequest(
@@ -216,9 +236,13 @@ Update a candidate
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.candidate.update_ats_candidate(request=operations.UpdateAtsCandidateRequest(

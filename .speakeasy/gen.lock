@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: 939256dd6599a9b1968cce234d1549cc
+  docChecksum: e746fd806f5907d68d5ba126113c72ae
   docVersion: "1.0"
-  speakeasyVersion: 1.349.0
-  generationVersion: 2.382.0
-  releaseVersion: 0.23.10
-  configChecksum: 789c6e11eedc1518890e03b36762534b
+  speakeasyVersion: 1.349.2
+  generationVersion: 2.382.2
+  releaseVersion: 0.23.11
+  configChecksum: d1975130776b0484bcabe739b33d8eb6
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -235,6 +235,12 @@ generatedFiles:
   - src/unified_to/models/operations/updatecommerceinventory.py
   - src/unified_to/models/operations/updatecommerceitem.py
   - src/unified_to/models/operations/updatecommercelocation.py
+  - src/unified_to/models/operations/createhrislocation.py
+  - src/unified_to/models/operations/gethrislocation.py
+  - src/unified_to/models/operations/listhrislocations.py
+  - src/unified_to/models/operations/patchhrislocation.py
+  - src/unified_to/models/operations/removehrislocation.py
+  - src/unified_to/models/operations/updatehrislocation.py
   - src/unified_to/models/operations/createcrmdeal.py
   - src/unified_to/models/operations/createcrmevent.py
   - src/unified_to/models/operations/createcrmlead.py
@@ -444,6 +450,9 @@ generatedFiles:
   - src/unified_to/models/shared/commerceitemoption.py
   - src/unified_to/models/shared/commercelocation.py
   - src/unified_to/models/shared/property_commercelocation_address.py
+  - src/unified_to/models/shared/hrislocation.py
+  - src/unified_to/models/shared/hristelephone.py
+  - src/unified_to/models/shared/property_hrislocation_address.py
   - src/unified_to/models/shared/crmdeal.py
   - src/unified_to/models/shared/crmevent.py
   - src/unified_to/models/shared/property_crmevent_task.py
@@ -463,12 +472,11 @@ generatedFiles:
   - src/unified_to/models/shared/genaicontent.py
   - src/unified_to/models/shared/genaimodel.py
   - src/unified_to/models/shared/hrisemployee.py
-  - src/unified_to/models/shared/hristelephone.py
+  - src/unified_to/models/shared/hrisgroup.py
   - src/unified_to/models/shared/property_hrisemployee_employee_roles.py
   - src/unified_to/models/shared/hrisemail.py
   - src/unified_to/models/shared/hriscompensation.py
   - src/unified_to/models/shared/property_hrisemployee_address.py
-  - src/unified_to/models/shared/hrisgroup.py
   - src/unified_to/models/shared/hrispayslip.py
   - src/unified_to/models/shared/hrispayslipdetail.py
   - src/unified_to/models/shared/hristimeoff.py
@@ -782,6 +790,18 @@ generatedFiles:
   - docs/models/operations/updatecommerceitemresponse.md
   - docs/models/operations/updatecommercelocationrequest.md
   - docs/models/operations/updatecommercelocationresponse.md
+  - docs/models/operations/createhrislocationrequest.md
+  - docs/models/operations/createhrislocationresponse.md
+  - docs/models/operations/gethrislocationrequest.md
+  - docs/models/operations/gethrislocationresponse.md
+  - docs/models/operations/listhrislocationsrequest.md
+  - docs/models/operations/listhrislocationsresponse.md
+  - docs/models/operations/patchhrislocationrequest.md
+  - docs/models/operations/patchhrislocationresponse.md
+  - docs/models/operations/removehrislocationrequest.md
+  - docs/models/operations/removehrislocationresponse.md
+  - docs/models/operations/updatehrislocationrequest.md
+  - docs/models/operations/updatehrislocationresponse.md
   - docs/models/operations/createcrmdealrequest.md
   - docs/models/operations/createcrmdealresponse.md
   - docs/models/operations/createcrmeventrequest.md
@@ -1179,6 +1199,10 @@ generatedFiles:
   - docs/models/shared/commerceitemoption.md
   - docs/models/shared/commercelocation.md
   - docs/models/shared/propertycommercelocationaddress.md
+  - docs/models/shared/hrislocation.md
+  - docs/models/shared/hristelephonetype.md
+  - docs/models/shared/hristelephone.md
+  - docs/models/shared/propertyhrislocationaddress.md
   - docs/models/shared/crmdeal.md
   - docs/models/shared/crmeventtype.md
   - docs/models/shared/crmevent.md
@@ -1208,8 +1232,8 @@ generatedFiles:
   - docs/models/shared/hrisemployeegender.md
   - docs/models/shared/maritalstatus.md
   - docs/models/shared/hrisemployee.md
-  - docs/models/shared/hristelephonetype.md
-  - docs/models/shared/hristelephone.md
+  - docs/models/shared/hrisgrouptype.md
+  - docs/models/shared/hrisgroup.md
   - docs/models/shared/propertyhrisemployeeemployeeroles.md
   - docs/models/shared/hrisemailtype.md
   - docs/models/shared/hrisemail.md
@@ -1217,8 +1241,6 @@ generatedFiles:
   - docs/models/shared/hriscompensationtype.md
   - docs/models/shared/hriscompensation.md
   - docs/models/shared/propertyhrisemployeeaddress.md
-  - docs/models/shared/hrisgrouptype.md
-  - docs/models/shared/hrisgroup.md
   - docs/models/shared/paymenttype.md
   - docs/models/shared/hrispayslip.md
   - docs/models/shared/hrispayslipdetailtype.md

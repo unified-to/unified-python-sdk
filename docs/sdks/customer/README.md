@@ -18,9 +18,13 @@ Create a customer
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.customer.create_ticketing_customer(request=operations.CreateTicketingCustomerRequest(
@@ -57,9 +61,13 @@ Retrieve a customer
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.customer.get_ticketing_customer(request=operations.GetTicketingCustomerRequest(
@@ -97,9 +105,13 @@ List all customers
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.customer.list_ticketing_customers(request=operations.ListTicketingCustomersRequest(
@@ -136,9 +148,13 @@ Update a customer
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.customer.patch_ticketing_customer(request=operations.PatchTicketingCustomerRequest(
@@ -176,9 +192,13 @@ Remove a customer
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.customer.remove_ticketing_customer(request=operations.RemoveTicketingCustomerRequest(
@@ -216,9 +236,13 @@ Update a customer
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.customer.update_ticketing_customer(request=operations.UpdateTicketingCustomerRequest(

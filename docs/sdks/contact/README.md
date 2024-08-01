@@ -30,9 +30,13 @@ Create a contact
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.contact.create_accounting_contact(request=operations.CreateAccountingContactRequest(
@@ -69,9 +73,13 @@ Create a contact
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.contact.create_crm_contact(request=operations.CreateCrmContactRequest(
@@ -108,9 +116,13 @@ Create a contact
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.contact.create_uc_contact(request=operations.CreateUcContactRequest(
@@ -147,9 +159,13 @@ Retrieve a contact
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.contact.get_accounting_contact(request=operations.GetAccountingContactRequest(
@@ -187,9 +203,13 @@ Retrieve a contact
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.contact.get_crm_contact(request=operations.GetCrmContactRequest(
@@ -227,9 +247,13 @@ Retrieve a contact
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.contact.get_uc_contact(request=operations.GetUcContactRequest(
@@ -267,9 +291,13 @@ List all contacts
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.contact.list_accounting_contacts(request=operations.ListAccountingContactsRequest(
@@ -306,9 +334,13 @@ List all contacts
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.contact.list_crm_contacts(request=operations.ListCrmContactsRequest(
@@ -345,9 +377,13 @@ List all contacts
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.contact.list_uc_contacts(request=operations.ListUcContactsRequest(
@@ -384,9 +420,13 @@ Update a contact
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.contact.patch_accounting_contact(request=operations.PatchAccountingContactRequest(
@@ -424,9 +464,13 @@ Update a contact
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.contact.patch_crm_contact(request=operations.PatchCrmContactRequest(
@@ -464,9 +508,13 @@ Update a contact
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.contact.patch_uc_contact(request=operations.PatchUcContactRequest(
@@ -504,9 +552,13 @@ Remove a contact
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.contact.remove_accounting_contact(request=operations.RemoveAccountingContactRequest(
@@ -544,9 +596,13 @@ Remove a contact
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.contact.remove_crm_contact(request=operations.RemoveCrmContactRequest(
@@ -584,9 +640,13 @@ Remove a contact
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.contact.remove_uc_contact(request=operations.RemoveUcContactRequest(
@@ -624,9 +684,13 @@ Update a contact
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.contact.update_accounting_contact(request=operations.UpdateAccountingContactRequest(
@@ -664,9 +728,13 @@ Update a contact
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.contact.update_crm_contact(request=operations.UpdateCrmContactRequest(
@@ -704,9 +772,13 @@ Update a contact
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.contact.update_uc_contact(request=operations.UpdateUcContactRequest(

@@ -18,9 +18,13 @@ Create a pipeline
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.pipeline.create_crm_pipeline(request=operations.CreateCrmPipelineRequest(
@@ -57,9 +61,13 @@ Retrieve a pipeline
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.pipeline.get_crm_pipeline(request=operations.GetCrmPipelineRequest(
@@ -97,9 +105,13 @@ List all pipelines
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.pipeline.list_crm_pipelines(request=operations.ListCrmPipelinesRequest(
@@ -136,9 +148,13 @@ Update a pipeline
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.pipeline.patch_crm_pipeline(request=operations.PatchCrmPipelineRequest(
@@ -176,9 +192,13 @@ Remove a pipeline
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.pipeline.remove_crm_pipeline(request=operations.RemoveCrmPipelineRequest(
@@ -216,9 +236,13 @@ Update a pipeline
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.pipeline.update_crm_pipeline(request=operations.UpdateCrmPipelineRequest(

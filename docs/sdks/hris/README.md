@@ -6,25 +6,31 @@
 * [create_hris_company](#create_hris_company) - Create a company
 * [create_hris_employee](#create_hris_employee) - Create an employee
 * [create_hris_group](#create_hris_group) - Create a group
+* [create_hris_location](#create_hris_location) - Create a location
 * [get_hris_company](#get_hris_company) - Retrieve a company
 * [get_hris_employee](#get_hris_employee) - Retrieve an employee
 * [get_hris_group](#get_hris_group) - Retrieve a group
+* [get_hris_location](#get_hris_location) - Retrieve a location
 * [get_hris_payslip](#get_hris_payslip) - Retrieve a payslip
 * [get_hris_timeoff](#get_hris_timeoff) - Retrieve a timeoff
 * [list_hris_companies](#list_hris_companies) - List all companies
 * [list_hris_employees](#list_hris_employees) - List all employees
 * [list_hris_groups](#list_hris_groups) - List all groups
+* [list_hris_locations](#list_hris_locations) - List all locations
 * [list_hris_payslips](#list_hris_payslips) - List all payslips
 * [list_hris_timeoffs](#list_hris_timeoffs) - List all timeoffs
 * [patch_hris_company](#patch_hris_company) - Update a company
 * [patch_hris_employee](#patch_hris_employee) - Update an employee
 * [patch_hris_group](#patch_hris_group) - Update a group
+* [patch_hris_location](#patch_hris_location) - Update a location
 * [remove_hris_company](#remove_hris_company) - Remove a company
 * [remove_hris_employee](#remove_hris_employee) - Remove an employee
 * [remove_hris_group](#remove_hris_group) - Remove a group
+* [remove_hris_location](#remove_hris_location) - Remove a location
 * [update_hris_company](#update_hris_company) - Update a company
 * [update_hris_employee](#update_hris_employee) - Update an employee
 * [update_hris_group](#update_hris_group) - Update a group
+* [update_hris_location](#update_hris_location) - Update a location
 
 ## create_hris_company
 
@@ -34,9 +40,13 @@ Create a company
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.hris.create_hris_company(request=operations.CreateHrisCompanyRequest(
@@ -73,9 +83,13 @@ Create an employee
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.hris.create_hris_employee(request=operations.CreateHrisEmployeeRequest(
@@ -112,9 +126,13 @@ Create a group
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.hris.create_hris_group(request=operations.CreateHrisGroupRequest(
@@ -143,6 +161,49 @@ if res.hris_group is not None:
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4xx-5xx         | */*             |
 
+## create_hris_location
+
+Create a location
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
+
+
+res = s.hris.create_hris_location(request=operations.CreateHrisLocationRequest(
+    connection_id='<value>',
+))
+
+if res.hris_location is not None:
+    # handle response
+    pass
+
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.CreateHrisLocationRequest](../../models/operations/createhrislocationrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+
+
+### Response
+
+**[operations.CreateHrisLocationResponse](../../models/operations/createhrislocationresponse.md)**
+### Errors
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4xx-5xx         | */*             |
+
 ## get_hris_company
 
 Retrieve a company
@@ -151,9 +212,13 @@ Retrieve a company
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.hris.get_hris_company(request=operations.GetHrisCompanyRequest(
@@ -191,9 +256,13 @@ Retrieve an employee
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.hris.get_hris_employee(request=operations.GetHrisEmployeeRequest(
@@ -231,9 +300,13 @@ Retrieve a group
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.hris.get_hris_group(request=operations.GetHrisGroupRequest(
@@ -263,6 +336,50 @@ if res.hris_group is not None:
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4xx-5xx         | */*             |
 
+## get_hris_location
+
+Retrieve a location
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
+
+
+res = s.hris.get_hris_location(request=operations.GetHrisLocationRequest(
+    connection_id='<value>',
+    id='<id>',
+))
+
+if res.hris_location is not None:
+    # handle response
+    pass
+
+```
+
+### Parameters
+
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `request`                                                                              | [operations.GetHrisLocationRequest](../../models/operations/gethrislocationrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+
+
+### Response
+
+**[operations.GetHrisLocationResponse](../../models/operations/gethrislocationresponse.md)**
+### Errors
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4xx-5xx         | */*             |
+
 ## get_hris_payslip
 
 Retrieve a payslip
@@ -271,9 +388,13 @@ Retrieve a payslip
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.hris.get_hris_payslip(request=operations.GetHrisPayslipRequest(
@@ -311,9 +432,13 @@ Retrieve a timeoff
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.hris.get_hris_timeoff(request=operations.GetHrisTimeoffRequest(
@@ -351,9 +476,13 @@ List all companies
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.hris.list_hris_companies(request=operations.ListHrisCompaniesRequest(
@@ -390,9 +519,13 @@ List all employees
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.hris.list_hris_employees(request=operations.ListHrisEmployeesRequest(
@@ -429,9 +562,13 @@ List all groups
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.hris.list_hris_groups(request=operations.ListHrisGroupsRequest(
@@ -460,6 +597,49 @@ if res.hris_groups is not None:
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4xx-5xx         | */*             |
 
+## list_hris_locations
+
+List all locations
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
+
+
+res = s.hris.list_hris_locations(request=operations.ListHrisLocationsRequest(
+    connection_id='<value>',
+))
+
+if res.hris_locations is not None:
+    # handle response
+    pass
+
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.ListHrisLocationsRequest](../../models/operations/listhrislocationsrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+
+
+### Response
+
+**[operations.ListHrisLocationsResponse](../../models/operations/listhrislocationsresponse.md)**
+### Errors
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4xx-5xx         | */*             |
+
 ## list_hris_payslips
 
 List all payslips
@@ -468,9 +648,13 @@ List all payslips
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.hris.list_hris_payslips(request=operations.ListHrisPayslipsRequest(
@@ -507,9 +691,13 @@ List all timeoffs
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.hris.list_hris_timeoffs(request=operations.ListHrisTimeoffsRequest(
@@ -546,9 +734,13 @@ Update a company
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.hris.patch_hris_company(request=operations.PatchHrisCompanyRequest(
@@ -586,9 +778,13 @@ Update an employee
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.hris.patch_hris_employee(request=operations.PatchHrisEmployeeRequest(
@@ -626,9 +822,13 @@ Update a group
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.hris.patch_hris_group(request=operations.PatchHrisGroupRequest(
@@ -658,6 +858,50 @@ if res.hris_group is not None:
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4xx-5xx         | */*             |
 
+## patch_hris_location
+
+Update a location
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
+
+
+res = s.hris.patch_hris_location(request=operations.PatchHrisLocationRequest(
+    connection_id='<value>',
+    id='<id>',
+))
+
+if res.hris_location is not None:
+    # handle response
+    pass
+
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.PatchHrisLocationRequest](../../models/operations/patchhrislocationrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+
+
+### Response
+
+**[operations.PatchHrisLocationResponse](../../models/operations/patchhrislocationresponse.md)**
+### Errors
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4xx-5xx         | */*             |
+
 ## remove_hris_company
 
 Remove a company
@@ -666,9 +910,13 @@ Remove a company
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.hris.remove_hris_company(request=operations.RemoveHrisCompanyRequest(
@@ -706,9 +954,13 @@ Remove an employee
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.hris.remove_hris_employee(request=operations.RemoveHrisEmployeeRequest(
@@ -746,9 +998,13 @@ Remove a group
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.hris.remove_hris_group(request=operations.RemoveHrisGroupRequest(
@@ -778,6 +1034,50 @@ if res is not None:
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4xx-5xx         | */*             |
 
+## remove_hris_location
+
+Remove a location
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
+
+
+res = s.hris.remove_hris_location(request=operations.RemoveHrisLocationRequest(
+    connection_id='<value>',
+    id='<id>',
+))
+
+if res is not None:
+    # handle response
+    pass
+
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.RemoveHrisLocationRequest](../../models/operations/removehrislocationrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+
+
+### Response
+
+**[operations.RemoveHrisLocationResponse](../../models/operations/removehrislocationresponse.md)**
+### Errors
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4xx-5xx         | */*             |
+
 ## update_hris_company
 
 Update a company
@@ -786,9 +1086,13 @@ Update a company
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.hris.update_hris_company(request=operations.UpdateHrisCompanyRequest(
@@ -826,9 +1130,13 @@ Update an employee
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.hris.update_hris_employee(request=operations.UpdateHrisEmployeeRequest(
@@ -866,9 +1174,13 @@ Update a group
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.hris.update_hris_group(request=operations.UpdateHrisGroupRequest(
@@ -892,6 +1204,50 @@ if res.hris_group is not None:
 ### Response
 
 **[operations.UpdateHrisGroupResponse](../../models/operations/updatehrisgroupresponse.md)**
+### Errors
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4xx-5xx         | */*             |
+
+## update_hris_location
+
+Update a location
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations, shared
+
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
+
+
+res = s.hris.update_hris_location(request=operations.UpdateHrisLocationRequest(
+    connection_id='<value>',
+    id='<id>',
+))
+
+if res.hris_location is not None:
+    # handle response
+    pass
+
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.UpdateHrisLocationRequest](../../models/operations/updatehrislocationrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+
+
+### Response
+
+**[operations.UpdateHrisLocationResponse](../../models/operations/updatehrislocationresponse.md)**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |

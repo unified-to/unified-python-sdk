@@ -18,9 +18,13 @@ Create a taxrate
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.taxrate.create_accounting_taxrate(request=operations.CreateAccountingTaxrateRequest(
@@ -57,9 +61,13 @@ Retrieve a taxrate
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.taxrate.get_accounting_taxrate(request=operations.GetAccountingTaxrateRequest(
@@ -97,9 +105,13 @@ List all taxrates
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.taxrate.list_accounting_taxrates(request=operations.ListAccountingTaxratesRequest(
@@ -136,9 +148,13 @@ Update a taxrate
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.taxrate.patch_accounting_taxrate(request=operations.PatchAccountingTaxrateRequest(
@@ -176,9 +192,13 @@ Remove a taxrate
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.taxrate.remove_accounting_taxrate(request=operations.RemoveAccountingTaxrateRequest(
@@ -216,9 +236,13 @@ Update a taxrate
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.taxrate.update_accounting_taxrate(request=operations.UpdateAccountingTaxrateRequest(

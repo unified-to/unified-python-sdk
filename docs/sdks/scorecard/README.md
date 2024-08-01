@@ -18,9 +18,13 @@ Create a scorecard
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.scorecard.create_ats_scorecard(request=operations.CreateAtsScorecardRequest(
@@ -57,9 +61,13 @@ Retrieve a scorecard
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.scorecard.get_ats_scorecard(request=operations.GetAtsScorecardRequest(
@@ -97,9 +105,13 @@ List all scorecards
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.scorecard.list_ats_scorecards(request=operations.ListAtsScorecardsRequest(
@@ -136,9 +148,13 @@ Update a scorecard
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.scorecard.patch_ats_scorecard(request=operations.PatchAtsScorecardRequest(
@@ -176,9 +192,13 @@ Remove a scorecard
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.scorecard.remove_ats_scorecard(request=operations.RemoveAtsScorecardRequest(
@@ -216,9 +236,13 @@ Update a scorecard
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.scorecard.update_ats_scorecard(request=operations.UpdateAtsScorecardRequest(

@@ -13,9 +13,13 @@ Retrieve enrichment information for a person
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.person.list_enrich_people(request=operations.ListEnrichPeopleRequest(

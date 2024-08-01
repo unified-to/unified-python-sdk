@@ -18,11 +18,16 @@ The data payload received by your server is described at https://docs.unified.to
 
 ```python
 import unified_to
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
-res = s.webhook.create_unified_webhook()
+res = s.webhook.create_unified_webhook(request=operations.CreateUnifiedWebhookRequest())
 
 if res.webhook is not None:
     # handle response
@@ -54,9 +59,13 @@ Retrieve webhook by its ID
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.webhook.get_unified_webhook(request=operations.GetUnifiedWebhookRequest(
@@ -93,11 +102,16 @@ Returns all registered webhooks
 
 ```python
 import unified_to
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
-res = s.webhook.list_unified_webhooks()
+res = s.webhook.list_unified_webhooks(request=operations.ListUnifiedWebhooksRequest())
 
 if res.webhooks is not None:
     # handle response
@@ -129,9 +143,13 @@ Trigger webhook
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.webhook.patch_unified_webhook_trigger(request=operations.PatchUnifiedWebhookTriggerRequest(
@@ -168,9 +186,13 @@ Remove webhook subscription
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.webhook.remove_unified_webhook(request=operations.RemoveUnifiedWebhookRequest(
@@ -207,9 +229,13 @@ Trigger webhook
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.webhook.update_unified_webhook_trigger(request=operations.UpdateUnifiedWebhookTriggerRequest(

@@ -18,9 +18,13 @@ Create a transaction
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.transaction.create_accounting_transaction(request=operations.CreateAccountingTransactionRequest(
@@ -57,9 +61,13 @@ Retrieve a transaction
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.transaction.get_accounting_transaction(request=operations.GetAccountingTransactionRequest(
@@ -97,9 +105,13 @@ List all transactions
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.transaction.list_accounting_transactions(request=operations.ListAccountingTransactionsRequest(
@@ -136,9 +148,13 @@ Update a transaction
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.transaction.patch_accounting_transaction(request=operations.PatchAccountingTransactionRequest(
@@ -176,9 +192,13 @@ Remove a transaction
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.transaction.remove_accounting_transaction(request=operations.RemoveAccountingTransactionRequest(
@@ -216,9 +236,13 @@ Update a transaction
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.transaction.update_accounting_transaction(request=operations.UpdateAccountingTransactionRequest(

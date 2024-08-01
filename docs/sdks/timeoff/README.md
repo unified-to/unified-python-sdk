@@ -14,9 +14,13 @@ Retrieve a timeoff
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.timeoff.get_hris_timeoff(request=operations.GetHrisTimeoffRequest(
@@ -54,9 +58,13 @@ List all timeoffs
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.timeoff.list_hris_timeoffs(request=operations.ListHrisTimeoffsRequest(

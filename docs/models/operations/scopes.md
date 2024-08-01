@@ -81,6 +81,8 @@
 | `HRIS_TIMEOFF_WRITE`           | hris_timeoff_write             |
 | `HRIS_COMPANY_READ`            | hris_company_read              |
 | `HRIS_COMPANY_WRITE`           | hris_company_write             |
+| `HRIS_LOCATION_READ`           | hris_location_read             |
+| `HRIS_LOCATION_WRITE`          | hris_location_write            |
 | `UC_CALL_READ`                 | uc_call_read                   |
 | `STORAGE_FILE_READ`            | storage_file_read              |
 | `STORAGE_FILE_WRITE`           | storage_file_write             |

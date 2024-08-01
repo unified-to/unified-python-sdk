@@ -19,9 +19,13 @@ pip install Unified-python-sdk
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.accounting.create_accounting_account(request=operations.CreateAccountingAccountRequest(
@@ -340,11 +344,17 @@ if res.accounting_account is not None:
 ### [location](docs/sdks/location/README.md)
 
 * [create_commerce_location](docs/sdks/location/README.md#create_commerce_location) - Create a location
+* [create_hris_location](docs/sdks/location/README.md#create_hris_location) - Create a location
 * [get_commerce_location](docs/sdks/location/README.md#get_commerce_location) - Retrieve a location
+* [get_hris_location](docs/sdks/location/README.md#get_hris_location) - Retrieve a location
 * [list_commerce_locations](docs/sdks/location/README.md#list_commerce_locations) - List all locations
+* [list_hris_locations](docs/sdks/location/README.md#list_hris_locations) - List all locations
 * [patch_commerce_location](docs/sdks/location/README.md#patch_commerce_location) - Update a location
+* [patch_hris_location](docs/sdks/location/README.md#patch_hris_location) - Update a location
 * [remove_commerce_location](docs/sdks/location/README.md#remove_commerce_location) - Remove a location
+* [remove_hris_location](docs/sdks/location/README.md#remove_hris_location) - Remove a location
 * [update_commerce_location](docs/sdks/location/README.md#update_commerce_location) - Update a location
+* [update_hris_location](docs/sdks/location/README.md#update_hris_location) - Update a location
 
 ### [crm](docs/sdks/crm/README.md)
 
@@ -448,25 +458,31 @@ if res.accounting_account is not None:
 * [create_hris_company](docs/sdks/hris/README.md#create_hris_company) - Create a company
 * [create_hris_employee](docs/sdks/hris/README.md#create_hris_employee) - Create an employee
 * [create_hris_group](docs/sdks/hris/README.md#create_hris_group) - Create a group
+* [create_hris_location](docs/sdks/hris/README.md#create_hris_location) - Create a location
 * [get_hris_company](docs/sdks/hris/README.md#get_hris_company) - Retrieve a company
 * [get_hris_employee](docs/sdks/hris/README.md#get_hris_employee) - Retrieve an employee
 * [get_hris_group](docs/sdks/hris/README.md#get_hris_group) - Retrieve a group
+* [get_hris_location](docs/sdks/hris/README.md#get_hris_location) - Retrieve a location
 * [get_hris_payslip](docs/sdks/hris/README.md#get_hris_payslip) - Retrieve a payslip
 * [get_hris_timeoff](docs/sdks/hris/README.md#get_hris_timeoff) - Retrieve a timeoff
 * [list_hris_companies](docs/sdks/hris/README.md#list_hris_companies) - List all companies
 * [list_hris_employees](docs/sdks/hris/README.md#list_hris_employees) - List all employees
 * [list_hris_groups](docs/sdks/hris/README.md#list_hris_groups) - List all groups
+* [list_hris_locations](docs/sdks/hris/README.md#list_hris_locations) - List all locations
 * [list_hris_payslips](docs/sdks/hris/README.md#list_hris_payslips) - List all payslips
 * [list_hris_timeoffs](docs/sdks/hris/README.md#list_hris_timeoffs) - List all timeoffs
 * [patch_hris_company](docs/sdks/hris/README.md#patch_hris_company) - Update a company
 * [patch_hris_employee](docs/sdks/hris/README.md#patch_hris_employee) - Update an employee
 * [patch_hris_group](docs/sdks/hris/README.md#patch_hris_group) - Update a group
+* [patch_hris_location](docs/sdks/hris/README.md#patch_hris_location) - Update a location
 * [remove_hris_company](docs/sdks/hris/README.md#remove_hris_company) - Remove a company
 * [remove_hris_employee](docs/sdks/hris/README.md#remove_hris_employee) - Remove an employee
 * [remove_hris_group](docs/sdks/hris/README.md#remove_hris_group) - Remove a group
+* [remove_hris_location](docs/sdks/hris/README.md#remove_hris_location) - Remove a location
 * [update_hris_company](docs/sdks/hris/README.md#update_hris_company) - Update a company
 * [update_hris_employee](docs/sdks/hris/README.md#update_hris_employee) - Update an employee
 * [update_hris_group](docs/sdks/hris/README.md#update_hris_group) - Update a group
+* [update_hris_location](docs/sdks/hris/README.md#update_hris_location) - Update a location
 
 ### [employee](docs/sdks/employee/README.md)
 
@@ -820,9 +836,13 @@ Handling errors in this SDK should largely match your expectations.  All operati
 
 ```python
 import unified_to
-from unified_to.models import errors, operations
+from unified_to.models import errors, operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 res = None
 try:
@@ -859,10 +879,13 @@ You can override the default server globally by passing a server index to the `s
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
 s = unified_to.UnifiedTo(
     server_idx=1,
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
 )
 
 
@@ -882,10 +905,13 @@ if res.accounting_account is not None:
 The default server can also be overridden globally by passing a URL to the `server_url: str` optional parameter when initializing the SDK client instance. For example:
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
 s = unified_to.UnifiedTo(
     server_url="https://api.unified.to",
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
 )
 
 
@@ -934,9 +960,13 @@ This SDK supports the following security scheme globally:
 You can set the security parameters through the `security` optional parameter when initializing the SDK client instance. For example:
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.accounting.create_accounting_account(request=operations.CreateAccountingAccountRequest(

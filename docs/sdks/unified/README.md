@@ -30,11 +30,24 @@ Create connection
 
 ```python
 import unified_to
+from unified_to.models import shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
-res = s.unified.create_unified_connection()
+res = s.unified.create_unified_connection(request=shared.Connection(
+    categories=[
+        shared.PropertyConnectionCategories.KMS,
+    ],
+    integration_type='<value>',
+    permissions=[
+        shared.PropertyConnectionPermissions.ATS_DOCUMENT_WRITE,
+    ],
+))
 
 if res.connection is not None:
     # handle response
@@ -66,11 +79,16 @@ The data payload received by your server is described at https://docs.unified.to
 
 ```python
 import unified_to
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
-res = s.unified.create_unified_webhook()
+res = s.unified.create_unified_webhook(request=operations.CreateUnifiedWebhookRequest())
 
 if res.webhook is not None:
     # handle response
@@ -102,9 +120,13 @@ Retrieve specific API Call by its ID
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.unified.get_unified_apicall(request=operations.GetUnifiedApicallRequest(
@@ -141,9 +163,13 @@ Retrieve connection
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.unified.get_unified_connection(request=operations.GetUnifiedConnectionRequest(
@@ -180,9 +206,13 @@ Returns an authorization URL for the specified integration.  Once a successful a
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.unified.get_unified_integration_auth(request=operations.GetUnifiedIntegrationAuthRequest(
@@ -220,9 +250,13 @@ Retrieve webhook by its ID
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.unified.get_unified_webhook(request=operations.GetUnifiedWebhookRequest(
@@ -259,11 +293,16 @@ Returns API Calls
 
 ```python
 import unified_to
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
-res = s.unified.list_unified_apicalls()
+res = s.unified.list_unified_apicalls(request=operations.ListUnifiedApicallsRequest())
 
 if res.api_calls is not None:
     # handle response
@@ -295,11 +334,16 @@ List all connections
 
 ```python
 import unified_to
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
-res = s.unified.list_unified_connections()
+res = s.unified.list_unified_connections(request=operations.ListUnifiedConnectionsRequest())
 
 if res.connections is not None:
     # handle response
@@ -331,9 +375,13 @@ No authentication required as this is to be used by front-end interface
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.unified.list_unified_integration_workspaces(request=operations.ListUnifiedIntegrationWorkspacesRequest(
@@ -370,11 +418,16 @@ Returns all integrations
 
 ```python
 import unified_to
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
-res = s.unified.list_unified_integrations()
+res = s.unified.list_unified_integrations(request=operations.ListUnifiedIntegrationsRequest())
 
 if res.integrations is not None:
     # handle response
@@ -406,11 +459,16 @@ List support issues
 
 ```python
 import unified_to
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
-res = s.unified.list_unified_issues()
+res = s.unified.list_unified_issues(request=operations.ListUnifiedIssuesRequest())
 
 if res.issues is not None:
     # handle response
@@ -442,11 +500,16 @@ Returns all registered webhooks
 
 ```python
 import unified_to
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
-res = s.unified.list_unified_webhooks()
+res = s.unified.list_unified_webhooks(request=operations.ListUnifiedWebhooksRequest())
 
 if res.webhooks is not None:
     # handle response
@@ -478,9 +541,13 @@ Update connection
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.unified.patch_unified_connection(request=operations.PatchUnifiedConnectionRequest(
@@ -517,9 +584,13 @@ Trigger webhook
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.unified.patch_unified_webhook_trigger(request=operations.PatchUnifiedWebhookTriggerRequest(
@@ -556,9 +627,13 @@ Remove connection
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.unified.remove_unified_connection(request=operations.RemoveUnifiedConnectionRequest(
@@ -595,9 +670,13 @@ Remove webhook subscription
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.unified.remove_unified_webhook(request=operations.RemoveUnifiedWebhookRequest(
@@ -634,9 +713,13 @@ Update connection
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.unified.update_unified_connection(request=operations.UpdateUnifiedConnectionRequest(
@@ -673,9 +756,13 @@ Trigger webhook
 
 ```python
 import unified_to
-from unified_to.models import operations
+from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo()
+s = unified_to.UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+)
 
 
 res = s.unified.update_unified_webhook_trigger(request=operations.UpdateUnifiedWebhookTriggerRequest(
