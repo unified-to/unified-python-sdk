@@ -18,13 +18,9 @@ Create an invoice
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.invoice.create_accounting_invoice(request=operations.CreateAccountingInvoiceRequest(
@@ -61,13 +57,9 @@ Retrieve an invoice
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.invoice.get_accounting_invoice(request=operations.GetAccountingInvoiceRequest(
@@ -105,13 +97,9 @@ List all invoices
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.invoice.list_accounting_invoices(request=operations.ListAccountingInvoicesRequest(
@@ -148,13 +136,9 @@ Update an invoice
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.invoice.patch_accounting_invoice(request=operations.PatchAccountingInvoiceRequest(
@@ -192,13 +176,9 @@ Remove an invoice
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.invoice.remove_accounting_invoice(request=operations.RemoveAccountingInvoiceRequest(
@@ -236,13 +216,9 @@ Update an invoice
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.invoice.update_accounting_invoice(request=operations.UpdateAccountingInvoiceRequest(

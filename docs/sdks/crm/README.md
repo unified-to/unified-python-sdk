@@ -48,13 +48,9 @@ Create a company
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.crm.create_crm_company(request=operations.CreateCrmCompanyRequest(
@@ -91,13 +87,9 @@ Create a contact
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.crm.create_crm_contact(request=operations.CreateCrmContactRequest(
@@ -134,13 +126,9 @@ Create a deal
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.crm.create_crm_deal(request=operations.CreateCrmDealRequest(
@@ -177,13 +165,9 @@ Create an event
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.crm.create_crm_event(request=operations.CreateCrmEventRequest(
@@ -220,13 +204,9 @@ Create a lead
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.crm.create_crm_lead(request=operations.CreateCrmLeadRequest(
@@ -263,13 +243,9 @@ Create a pipeline
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.crm.create_crm_pipeline(request=operations.CreateCrmPipelineRequest(
@@ -306,13 +282,9 @@ Retrieve a company
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.crm.get_crm_company(request=operations.GetCrmCompanyRequest(
@@ -350,13 +322,9 @@ Retrieve a contact
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.crm.get_crm_contact(request=operations.GetCrmContactRequest(
@@ -394,13 +362,9 @@ Retrieve a deal
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.crm.get_crm_deal(request=operations.GetCrmDealRequest(
@@ -438,13 +402,9 @@ Retrieve an event
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.crm.get_crm_event(request=operations.GetCrmEventRequest(
@@ -482,13 +442,9 @@ Retrieve a lead
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.crm.get_crm_lead(request=operations.GetCrmLeadRequest(
@@ -526,13 +482,9 @@ Retrieve a pipeline
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.crm.get_crm_pipeline(request=operations.GetCrmPipelineRequest(
@@ -570,13 +522,9 @@ List all companies
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.crm.list_crm_companies(request=operations.ListCrmCompaniesRequest(
@@ -613,13 +561,9 @@ List all contacts
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.crm.list_crm_contacts(request=operations.ListCrmContactsRequest(
@@ -656,13 +600,9 @@ List all deals
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.crm.list_crm_deals(request=operations.ListCrmDealsRequest(
@@ -699,13 +639,9 @@ List all events
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.crm.list_crm_events(request=operations.ListCrmEventsRequest(
@@ -742,13 +678,9 @@ List all leads
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.crm.list_crm_leads(request=operations.ListCrmLeadsRequest(
@@ -785,13 +717,9 @@ List all pipelines
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.crm.list_crm_pipelines(request=operations.ListCrmPipelinesRequest(
@@ -828,13 +756,9 @@ Update a company
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.crm.patch_crm_company(request=operations.PatchCrmCompanyRequest(
@@ -872,13 +796,9 @@ Update a contact
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.crm.patch_crm_contact(request=operations.PatchCrmContactRequest(
@@ -916,13 +836,9 @@ Update a deal
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.crm.patch_crm_deal(request=operations.PatchCrmDealRequest(
@@ -960,13 +876,9 @@ Update an event
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.crm.patch_crm_event(request=operations.PatchCrmEventRequest(
@@ -1004,13 +916,9 @@ Update a lead
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.crm.patch_crm_lead(request=operations.PatchCrmLeadRequest(
@@ -1048,13 +956,9 @@ Update a pipeline
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.crm.patch_crm_pipeline(request=operations.PatchCrmPipelineRequest(
@@ -1092,13 +996,9 @@ Remove a company
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.crm.remove_crm_company(request=operations.RemoveCrmCompanyRequest(
@@ -1136,13 +1036,9 @@ Remove a contact
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.crm.remove_crm_contact(request=operations.RemoveCrmContactRequest(
@@ -1180,13 +1076,9 @@ Remove a deal
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.crm.remove_crm_deal(request=operations.RemoveCrmDealRequest(
@@ -1224,13 +1116,9 @@ Remove an event
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.crm.remove_crm_event(request=operations.RemoveCrmEventRequest(
@@ -1268,13 +1156,9 @@ Remove a lead
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.crm.remove_crm_lead(request=operations.RemoveCrmLeadRequest(
@@ -1312,13 +1196,9 @@ Remove a pipeline
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.crm.remove_crm_pipeline(request=operations.RemoveCrmPipelineRequest(
@@ -1356,13 +1236,9 @@ Update a company
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.crm.update_crm_company(request=operations.UpdateCrmCompanyRequest(
@@ -1400,13 +1276,9 @@ Update a contact
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.crm.update_crm_contact(request=operations.UpdateCrmContactRequest(
@@ -1444,13 +1316,9 @@ Update a deal
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.crm.update_crm_deal(request=operations.UpdateCrmDealRequest(
@@ -1488,13 +1356,9 @@ Update an event
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.crm.update_crm_event(request=operations.UpdateCrmEventRequest(
@@ -1532,13 +1396,9 @@ Update a lead
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.crm.update_crm_lead(request=operations.UpdateCrmLeadRequest(
@@ -1576,13 +1436,9 @@ Update a pipeline
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.crm.update_crm_pipeline(request=operations.UpdateCrmPipelineRequest(

@@ -18,13 +18,9 @@ Create an activity
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.activity.create_ats_activity(request=operations.CreateAtsActivityRequest(
@@ -61,13 +57,9 @@ Retrieve an activity
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.activity.get_ats_activity(request=operations.GetAtsActivityRequest(
@@ -105,13 +97,9 @@ List all activities
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.activity.list_ats_activities(request=operations.ListAtsActivitiesRequest(
@@ -148,13 +136,9 @@ Update an activity
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.activity.patch_ats_activity(request=operations.PatchAtsActivityRequest(
@@ -192,13 +176,9 @@ Remove an activity
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.activity.remove_ats_activity(request=operations.RemoveAtsActivityRequest(
@@ -236,13 +216,9 @@ Update an activity
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.activity.update_ats_activity(request=operations.UpdateAtsActivityRequest(

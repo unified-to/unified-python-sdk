@@ -18,13 +18,9 @@ Create a space
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.space.create_kms_space(request=operations.CreateKmsSpaceRequest(
@@ -61,13 +57,9 @@ Retrieve a space
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.space.get_kms_space(request=operations.GetKmsSpaceRequest(
@@ -105,13 +97,9 @@ List all spaces
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.space.list_kms_spaces(request=operations.ListKmsSpacesRequest(
@@ -148,13 +136,9 @@ Update a space
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.space.patch_kms_space(request=operations.PatchKmsSpaceRequest(
@@ -192,13 +176,9 @@ Remove a space
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.space.remove_kms_space(request=operations.RemoveKmsSpaceRequest(
@@ -236,13 +216,9 @@ Update a space
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.space.update_kms_space(request=operations.UpdateKmsSpaceRequest(

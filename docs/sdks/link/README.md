@@ -18,13 +18,9 @@ Create a link
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.link.create_payment_link(request=operations.CreatePaymentLinkRequest(
@@ -61,13 +57,9 @@ Retrieve a link
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.link.get_payment_link(request=operations.GetPaymentLinkRequest(
@@ -105,13 +97,9 @@ List all links
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.link.list_payment_links(request=operations.ListPaymentLinksRequest(
@@ -148,13 +136,9 @@ Update a link
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.link.patch_payment_link(request=operations.PatchPaymentLinkRequest(
@@ -192,13 +176,9 @@ Remove a link
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.link.remove_payment_link(request=operations.RemovePaymentLinkRequest(
@@ -236,13 +216,9 @@ Update a link
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.link.update_payment_link(request=operations.UpdatePaymentLinkRequest(

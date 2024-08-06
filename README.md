@@ -19,13 +19,9 @@ pip install Unified-python-sdk
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.accounting.create_accounting_account(request=operations.CreateAccountingAccountRequest(
@@ -836,13 +832,9 @@ Handling errors in this SDK should largely match your expectations.  All operati
 
 ```python
 import unified_to
-from unified_to.models import errors, operations, shared
+from unified_to.models import errors, operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 res = None
 try:
@@ -879,13 +871,10 @@ You can override the default server globally by passing a server index to the `s
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
 s = unified_to.UnifiedTo(
     server_idx=1,
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
 )
 
 
@@ -905,13 +894,10 @@ if res.accounting_account is not None:
 The default server can also be overridden globally by passing a URL to the `server_url: str` optional parameter when initializing the SDK client instance. For example:
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
 s = unified_to.UnifiedTo(
     server_url="https://api.unified.to",
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
 )
 
 

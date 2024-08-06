@@ -15,13 +15,9 @@ Returns an authorization URL for the specified integration.  Once a successful a
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.integration.get_unified_integration_auth(request=operations.GetUnifiedIntegrationAuthRequest(
@@ -59,13 +55,9 @@ No authentication required as this is to be used by front-end interface
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.integration.list_unified_integration_workspaces(request=operations.ListUnifiedIntegrationWorkspacesRequest(
@@ -102,16 +94,11 @@ Returns all integrations
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
-res = s.integration.list_unified_integrations(request=operations.ListUnifiedIntegrationsRequest())
+res = s.integration.list_unified_integrations()
 
 if res.integrations is not None:
     # handle response

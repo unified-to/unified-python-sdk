@@ -18,13 +18,9 @@ Create an inventory
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.inventory.create_commerce_inventory(request=operations.CreateCommerceInventoryRequest(
@@ -61,13 +57,9 @@ Retrieve an inventory
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.inventory.get_commerce_inventory(request=operations.GetCommerceInventoryRequest(
@@ -105,13 +97,9 @@ List all inventories
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.inventory.list_commerce_inventories(request=operations.ListCommerceInventoriesRequest(
@@ -148,13 +136,9 @@ Update an inventory
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.inventory.patch_commerce_inventory(request=operations.PatchCommerceInventoryRequest(
@@ -192,13 +176,9 @@ Remove an inventory
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.inventory.remove_commerce_inventory(request=operations.RemoveCommerceInventoryRequest(
@@ -236,13 +216,9 @@ Update an inventory
 
 ```python
 import unified_to
-from unified_to.models import operations, shared
+from unified_to.models import operations
 
-s = unified_to.UnifiedTo(
-    security=shared.Security(
-        jwt="<YOUR_API_KEY_HERE>",
-    ),
-)
+s = unified_to.UnifiedTo()
 
 
 res = s.inventory.update_commerce_inventory(request=operations.UpdateCommerceInventoryRequest(
