@@ -28,6 +28,8 @@ if res.enrich_person is not None:
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |

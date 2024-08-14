@@ -39,6 +39,8 @@ if res.commerce_location is not None:
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
@@ -77,6 +79,8 @@ if res.hris_location is not None:
     pass
 
 ```
+
+
 
 ### Parameters
 
@@ -118,6 +122,8 @@ if res.commerce_location is not None:
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
@@ -158,6 +164,8 @@ if res.hris_location is not None:
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
@@ -197,6 +205,8 @@ if res.commerce_locations is not None:
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
@@ -235,6 +245,8 @@ if res.hris_locations is not None:
     pass
 
 ```
+
+
 
 ### Parameters
 
@@ -276,6 +288,8 @@ if res.commerce_location is not None:
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
@@ -315,6 +329,8 @@ if res.hris_location is not None:
     pass
 
 ```
+
+
 
 ### Parameters
 
@@ -356,6 +372,8 @@ if res is not None:
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
@@ -395,6 +413,8 @@ if res is not None:
     pass
 
 ```
+
+
 
 ### Parameters
 
@@ -436,6 +456,8 @@ if res.commerce_location is not None:
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
@@ -475,6 +497,8 @@ if res.hris_location is not None:
     pass
 
 ```
+
+
 
 ### Parameters
 

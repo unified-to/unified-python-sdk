@@ -33,6 +33,8 @@ if res.ats_candidate is not None:
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
@@ -73,6 +75,8 @@ if res.ats_candidate is not None:
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
@@ -111,6 +115,8 @@ if res.ats_candidates is not None:
     pass
 
 ```
+
+
 
 ### Parameters
 
@@ -152,6 +158,8 @@ if res.ats_candidate is not None:
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
@@ -192,6 +200,8 @@ if res is not None:
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
@@ -231,6 +241,8 @@ if res.ats_candidate is not None:
     pass
 
 ```
+
+
 
 ### Parameters
 

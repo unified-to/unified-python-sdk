@@ -55,6 +55,8 @@ if res.hris_company is not None:
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
@@ -93,6 +95,8 @@ if res.hris_employee is not None:
     pass
 
 ```
+
+
 
 ### Parameters
 
@@ -133,6 +137,8 @@ if res.hris_group is not None:
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
@@ -171,6 +177,8 @@ if res.hris_location is not None:
     pass
 
 ```
+
+
 
 ### Parameters
 
@@ -212,6 +220,8 @@ if res.hris_company is not None:
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
@@ -251,6 +261,8 @@ if res.hris_employee is not None:
     pass
 
 ```
+
+
 
 ### Parameters
 
@@ -292,6 +304,8 @@ if res.hris_group is not None:
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
@@ -331,6 +345,8 @@ if res.hris_location is not None:
     pass
 
 ```
+
+
 
 ### Parameters
 
@@ -372,6 +388,8 @@ if res.hris_payslip is not None:
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
@@ -412,6 +430,8 @@ if res.hris_timeoff is not None:
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
@@ -450,6 +470,8 @@ if res.hris_companies is not None:
     pass
 
 ```
+
+
 
 ### Parameters
 
@@ -490,6 +512,8 @@ if res.hris_employees is not None:
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
@@ -528,6 +552,8 @@ if res.hris_groups is not None:
     pass
 
 ```
+
+
 
 ### Parameters
 
@@ -568,6 +594,8 @@ if res.hris_locations is not None:
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
@@ -607,6 +635,8 @@ if res.hris_payslips is not None:
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
@@ -645,6 +675,8 @@ if res.hris_timeoffs is not None:
     pass
 
 ```
+
+
 
 ### Parameters
 
@@ -686,6 +718,8 @@ if res.hris_company is not None:
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
@@ -725,6 +759,8 @@ if res.hris_employee is not None:
     pass
 
 ```
+
+
 
 ### Parameters
 
@@ -766,6 +802,8 @@ if res.hris_group is not None:
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
@@ -805,6 +843,8 @@ if res.hris_location is not None:
     pass
 
 ```
+
+
 
 ### Parameters
 
@@ -846,6 +886,8 @@ if res is not None:
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
@@ -885,6 +927,8 @@ if res is not None:
     pass
 
 ```
+
+
 
 ### Parameters
 
@@ -926,6 +970,8 @@ if res is not None:
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
@@ -965,6 +1011,8 @@ if res is not None:
     pass
 
 ```
+
+
 
 ### Parameters
 
@@ -1006,6 +1054,8 @@ if res.hris_company is not None:
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
@@ -1045,6 +1095,8 @@ if res.hris_employee is not None:
     pass
 
 ```
+
+
 
 ### Parameters
 
@@ -1086,6 +1138,8 @@ if res.hris_group is not None:
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
@@ -1125,6 +1179,8 @@ if res.hris_location is not None:
     pass
 
 ```
+
+
 
 ### Parameters
 

@@ -42,6 +42,8 @@ if res.connection is not None:
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                              | Type                                                   | Required                                               | Description                                            |
@@ -77,6 +79,8 @@ if res.webhook is not None:
     pass
 
 ```
+
+
 
 ### Parameters
 
@@ -117,6 +121,8 @@ if res.api_call is not None:
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
@@ -155,6 +161,8 @@ if res.connection is not None:
     pass
 
 ```
+
+
 
 ### Parameters
 
@@ -196,6 +204,8 @@ if res.res is not None:
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
@@ -235,6 +245,8 @@ if res.webhook is not None:
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
@@ -271,6 +283,8 @@ if res.api_calls is not None:
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
@@ -306,6 +320,8 @@ if res.connections is not None:
     pass
 
 ```
+
+
 
 ### Parameters
 
@@ -346,6 +362,8 @@ if res.integrations is not None:
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
@@ -381,6 +399,8 @@ if res.integrations is not None:
     pass
 
 ```
+
+
 
 ### Parameters
 
@@ -418,6 +438,8 @@ if res.issues is not None:
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
@@ -453,6 +475,8 @@ if res.webhooks is not None:
     pass
 
 ```
+
+
 
 ### Parameters
 
@@ -493,6 +517,8 @@ if res.connection is not None:
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
@@ -531,6 +557,8 @@ if res is not None:
     pass
 
 ```
+
+
 
 ### Parameters
 
@@ -571,6 +599,8 @@ if res is not None:
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
@@ -609,6 +639,8 @@ if res is not None:
     pass
 
 ```
+
+
 
 ### Parameters
 
@@ -649,6 +681,8 @@ if res.connection is not None:
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
@@ -687,6 +721,8 @@ if res is not None:
     pass
 
 ```
+
+
 
 ### Parameters
 

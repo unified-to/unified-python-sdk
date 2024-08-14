@@ -51,6 +51,8 @@ if res.commerce_collection is not None:
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
@@ -89,6 +91,8 @@ if res.commerce_inventory is not None:
     pass
 
 ```
+
+
 
 ### Parameters
 
@@ -129,6 +133,8 @@ if res.commerce_item is not None:
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
@@ -167,6 +173,8 @@ if res.commerce_location is not None:
     pass
 
 ```
+
+
 
 ### Parameters
 
@@ -208,6 +216,8 @@ if res.commerce_collection is not None:
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
@@ -247,6 +257,8 @@ if res.commerce_inventory is not None:
     pass
 
 ```
+
+
 
 ### Parameters
 
@@ -288,6 +300,8 @@ if res.commerce_item is not None:
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
@@ -328,6 +342,8 @@ if res.commerce_location is not None:
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
@@ -366,6 +382,8 @@ if res.commerce_collections is not None:
     pass
 
 ```
+
+
 
 ### Parameters
 
@@ -406,6 +424,8 @@ if res.commerce_inventories is not None:
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
@@ -445,6 +465,8 @@ if res.commerce_items is not None:
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
@@ -483,6 +505,8 @@ if res.commerce_locations is not None:
     pass
 
 ```
+
+
 
 ### Parameters
 
@@ -524,6 +548,8 @@ if res.commerce_collection is not None:
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
@@ -563,6 +589,8 @@ if res.commerce_inventory is not None:
     pass
 
 ```
+
+
 
 ### Parameters
 
@@ -604,6 +632,8 @@ if res.commerce_item is not None:
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
@@ -643,6 +673,8 @@ if res.commerce_location is not None:
     pass
 
 ```
+
+
 
 ### Parameters
 
@@ -684,6 +716,8 @@ if res is not None:
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
@@ -723,6 +757,8 @@ if res is not None:
     pass
 
 ```
+
+
 
 ### Parameters
 
@@ -764,6 +800,8 @@ if res is not None:
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
@@ -803,6 +841,8 @@ if res is not None:
     pass
 
 ```
+
+
 
 ### Parameters
 
@@ -844,6 +884,8 @@ if res.commerce_collection is not None:
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
@@ -883,6 +925,8 @@ if res.commerce_inventory is not None:
     pass
 
 ```
+
+
 
 ### Parameters
 
@@ -924,6 +968,8 @@ if res.commerce_item is not None:
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
@@ -963,6 +1009,8 @@ if res.commerce_location is not None:
     pass
 
 ```
+
+
 
 ### Parameters
 

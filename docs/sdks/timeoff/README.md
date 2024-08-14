@@ -30,6 +30,8 @@ if res.hris_timeoff is not None:
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
@@ -68,6 +70,8 @@ if res.hris_timeoffs is not None:
     pass
 
 ```
+
+
 
 ### Parameters
 

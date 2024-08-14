@@ -65,6 +65,8 @@ if res.accounting_account is not None:
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
@@ -103,6 +105,8 @@ if res.accounting_contact is not None:
     pass
 
 ```
+
+
 
 ### Parameters
 
@@ -143,6 +147,8 @@ if res.accounting_invoice is not None:
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
@@ -181,6 +187,8 @@ if res.accounting_journal is not None:
     pass
 
 ```
+
+
 
 ### Parameters
 
@@ -221,6 +229,8 @@ if res.accounting_taxrate is not None:
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
@@ -259,6 +269,8 @@ if res.accounting_transaction is not None:
     pass
 
 ```
+
+
 
 ### Parameters
 
@@ -300,6 +312,8 @@ if res.accounting_account is not None:
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
@@ -339,6 +353,8 @@ if res.accounting_contact is not None:
     pass
 
 ```
+
+
 
 ### Parameters
 
@@ -380,6 +396,8 @@ if res.accounting_invoice is not None:
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
@@ -419,6 +437,8 @@ if res.accounting_journal is not None:
     pass
 
 ```
+
+
 
 ### Parameters
 
@@ -460,6 +480,8 @@ if res.accounting_organization is not None:
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
@@ -499,6 +521,8 @@ if res.accounting_taxrate is not None:
     pass
 
 ```
+
+
 
 ### Parameters
 
@@ -540,6 +564,8 @@ if res.accounting_transaction is not None:
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
@@ -578,6 +604,8 @@ if res.accounting_accounts is not None:
     pass
 
 ```
+
+
 
 ### Parameters
 
@@ -618,6 +646,8 @@ if res.accounting_contacts is not None:
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
@@ -656,6 +686,8 @@ if res.accounting_invoices is not None:
     pass
 
 ```
+
+
 
 ### Parameters
 
@@ -696,6 +728,8 @@ if res.accounting_journals is not None:
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
@@ -734,6 +768,8 @@ if res.accounting_organizations is not None:
     pass
 
 ```
+
+
 
 ### Parameters
 
@@ -774,6 +810,8 @@ if res.accounting_taxrates is not None:
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
@@ -812,6 +850,8 @@ if res.accounting_transactions is not None:
     pass
 
 ```
+
+
 
 ### Parameters
 
@@ -853,6 +893,8 @@ if res.accounting_account is not None:
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
@@ -892,6 +934,8 @@ if res.accounting_contact is not None:
     pass
 
 ```
+
+
 
 ### Parameters
 
@@ -933,6 +977,8 @@ if res.accounting_invoice is not None:
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
@@ -972,6 +1018,8 @@ if res.accounting_journal is not None:
     pass
 
 ```
+
+
 
 ### Parameters
 
@@ -1013,6 +1061,8 @@ if res.accounting_taxrate is not None:
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
@@ -1052,6 +1102,8 @@ if res.accounting_transaction is not None:
     pass
 
 ```
+
+
 
 ### Parameters
 
@@ -1093,6 +1145,8 @@ if res is not None:
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
@@ -1132,6 +1186,8 @@ if res is not None:
     pass
 
 ```
+
+
 
 ### Parameters
 
@@ -1173,6 +1229,8 @@ if res is not None:
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
@@ -1212,6 +1270,8 @@ if res is not None:
     pass
 
 ```
+
+
 
 ### Parameters
 
@@ -1253,6 +1313,8 @@ if res is not None:
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
@@ -1292,6 +1354,8 @@ if res is not None:
     pass
 
 ```
+
+
 
 ### Parameters
 
@@ -1333,6 +1397,8 @@ if res.accounting_account is not None:
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
@@ -1372,6 +1438,8 @@ if res.accounting_contact is not None:
     pass
 
 ```
+
+
 
 ### Parameters
 
@@ -1413,6 +1481,8 @@ if res.accounting_invoice is not None:
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
@@ -1452,6 +1522,8 @@ if res.accounting_journal is not None:
     pass
 
 ```
+
+
 
 ### Parameters
 
@@ -1493,6 +1565,8 @@ if res.accounting_taxrate is not None:
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
@@ -1532,6 +1606,8 @@ if res.accounting_transaction is not None:
     pass
 
 ```
+
+
 
 ### Parameters
 

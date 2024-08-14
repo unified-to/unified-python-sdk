@@ -30,6 +30,8 @@ if res.accounting_organization is not None:
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
@@ -68,6 +70,8 @@ if res.accounting_organizations is not None:
     pass
 
 ```
+
+
 
 ### Parameters
 

@@ -29,6 +29,8 @@ if res.genai_prompt is not None:
 
 ```
 
+
+
 ### Parameters
 
 | Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
@@ -67,6 +69,8 @@ if res.genai_models is not None:
     pass
 
 ```
+
+
 
 ### Parameters
 
