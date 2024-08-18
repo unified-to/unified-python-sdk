@@ -764,10 +764,12 @@ if res.accounting_account is not None:
 * [list_unified_issues](docs/sdks/unified/README.md#list_unified_issues) - List support issues
 * [list_unified_webhooks](docs/sdks/unified/README.md#list_unified_webhooks) - Returns all registered webhooks
 * [patch_unified_connection](docs/sdks/unified/README.md#patch_unified_connection) - Update connection
+* [patch_unified_webhook](docs/sdks/unified/README.md#patch_unified_webhook) - Update webhook subscription
 * [patch_unified_webhook_trigger](docs/sdks/unified/README.md#patch_unified_webhook_trigger) - Trigger webhook
 * [remove_unified_connection](docs/sdks/unified/README.md#remove_unified_connection) - Remove connection
 * [remove_unified_webhook](docs/sdks/unified/README.md#remove_unified_webhook) - Remove webhook subscription
 * [update_unified_connection](docs/sdks/unified/README.md#update_unified_connection) - Update connection
+* [update_unified_webhook](docs/sdks/unified/README.md#update_unified_webhook) - Update webhook subscription
 * [update_unified_webhook_trigger](docs/sdks/unified/README.md#update_unified_webhook_trigger) - Trigger webhook
 
 ### [apicall](docs/sdks/apicall/README.md)
@@ -808,8 +810,10 @@ if res.accounting_account is not None:
 * [create_unified_webhook](docs/sdks/webhook/README.md#create_unified_webhook) - Create webhook subscription
 * [get_unified_webhook](docs/sdks/webhook/README.md#get_unified_webhook) - Retrieve webhook by its ID
 * [list_unified_webhooks](docs/sdks/webhook/README.md#list_unified_webhooks) - Returns all registered webhooks
+* [patch_unified_webhook](docs/sdks/webhook/README.md#patch_unified_webhook) - Update webhook subscription
 * [patch_unified_webhook_trigger](docs/sdks/webhook/README.md#patch_unified_webhook_trigger) - Trigger webhook
 * [remove_unified_webhook](docs/sdks/webhook/README.md#remove_unified_webhook) - Remove webhook subscription
+* [update_unified_webhook](docs/sdks/webhook/README.md#update_unified_webhook) - Update webhook subscription
 * [update_unified_webhook_trigger](docs/sdks/webhook/README.md#update_unified_webhook_trigger) - Trigger webhook
 <!-- End Available Resources and Operations [operations] -->
 

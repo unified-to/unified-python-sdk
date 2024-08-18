@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: afff9b10658068a6dd8be329a73e9f3e
+  docChecksum: 3b148f39dc467e6e4a130bd90db813be
   docVersion: "1.0"
-  speakeasyVersion: 1.366.0
-  generationVersion: 2.396.0
-  releaseVersion: 0.23.15
-  configChecksum: 6bbedc6d96dac021a5f920fb5ec61ebb
+  speakeasyVersion: 1.374.2
+  generationVersion: 2.401.2
+  releaseVersion: 0.23.16
+  configChecksum: 79b3260b107358b52be5d6c0e5b3a024
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -15,7 +15,7 @@ features:
   python:
     additionalDependencies: 0.1.0
     constsAndDefaults: 0.1.4
-    core: 4.8.4
+    core: 4.8.5
     globalSecurity: 2.83.7
     globalSecurityCallbacks: 0.1.0
     globalServerURLs: 2.82.2
@@ -387,10 +387,12 @@ generatedFiles:
   - src/unified_to/models/operations/listunifiedissues.py
   - src/unified_to/models/operations/listunifiedwebhooks.py
   - src/unified_to/models/operations/patchunifiedconnection.py
+  - src/unified_to/models/operations/patchunifiedwebhook.py
   - src/unified_to/models/operations/patchunifiedwebhooktrigger.py
   - src/unified_to/models/operations/removeunifiedconnection.py
   - src/unified_to/models/operations/removeunifiedwebhook.py
   - src/unified_to/models/operations/updateunifiedconnection.py
+  - src/unified_to/models/operations/updateunifiedwebhook.py
   - src/unified_to/models/operations/updateunifiedwebhooktrigger.py
   - src/unified_to/models/operations/getunifiedintegrationlogin.py
   - src/unified_to/models/shared/accountingaccount.py
@@ -1099,6 +1101,8 @@ generatedFiles:
   - docs/models/operations/listunifiedwebhooksresponse.md
   - docs/models/operations/patchunifiedconnectionrequest.md
   - docs/models/operations/patchunifiedconnectionresponse.md
+  - docs/models/operations/patchunifiedwebhookrequest.md
+  - docs/models/operations/patchunifiedwebhookresponse.md
   - docs/models/operations/patchunifiedwebhooktriggerrequest.md
   - docs/models/operations/patchunifiedwebhooktriggerresponse.md
   - docs/models/operations/removeunifiedconnectionrequest.md
@@ -1107,6 +1111,8 @@ generatedFiles:
   - docs/models/operations/removeunifiedwebhookresponse.md
   - docs/models/operations/updateunifiedconnectionrequest.md
   - docs/models/operations/updateunifiedconnectionresponse.md
+  - docs/models/operations/updateunifiedwebhookrequest.md
+  - docs/models/operations/updateunifiedwebhookresponse.md
   - docs/models/operations/updateunifiedwebhooktriggerrequest.md
   - docs/models/operations/updateunifiedwebhooktriggerresponse.md
   - docs/models/operations/getunifiedintegrationloginrequest.md

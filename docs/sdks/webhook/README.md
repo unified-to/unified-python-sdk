@@ -6,8 +6,10 @@
 * [create_unified_webhook](#create_unified_webhook) - Create webhook subscription
 * [get_unified_webhook](#get_unified_webhook) - Retrieve webhook by its ID
 * [list_unified_webhooks](#list_unified_webhooks) - Returns all registered webhooks
+* [patch_unified_webhook](#patch_unified_webhook) - Update webhook subscription
 * [patch_unified_webhook_trigger](#patch_unified_webhook_trigger) - Trigger webhook
 * [remove_unified_webhook](#remove_unified_webhook) - Remove webhook subscription
+* [update_unified_webhook](#update_unified_webhook) - Update webhook subscription
 * [update_unified_webhook_trigger](#update_unified_webhook_trigger) - Trigger webhook
 
 ## create_unified_webhook
@@ -127,6 +129,47 @@ if res.webhooks is not None:
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4xx-5xx         | */*             |
 
+## patch_unified_webhook
+
+Update webhook subscription
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations
+
+s = unified_to.UnifiedTo()
+
+
+res = s.webhook.patch_unified_webhook(request=operations.PatchUnifiedWebhookRequest(
+    id='<id>',
+))
+
+if res.webhook is not None:
+    # handle response
+    pass
+
+```
+
+
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `request`                                                                                      | [operations.PatchUnifiedWebhookRequest](../../models/operations/patchunifiedwebhookrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+
+
+### Response
+
+**[operations.PatchUnifiedWebhookResponse](../../models/operations/patchunifiedwebhookresponse.md)**
+### Errors
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4xx-5xx         | */*             |
+
 ## patch_unified_webhook_trigger
 
 Trigger webhook
@@ -203,6 +246,47 @@ if res is not None:
 ### Response
 
 **[operations.RemoveUnifiedWebhookResponse](../../models/operations/removeunifiedwebhookresponse.md)**
+### Errors
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4xx-5xx         | */*             |
+
+## update_unified_webhook
+
+Update webhook subscription
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations
+
+s = unified_to.UnifiedTo()
+
+
+res = s.webhook.update_unified_webhook(request=operations.UpdateUnifiedWebhookRequest(
+    id='<id>',
+))
+
+if res.webhook is not None:
+    # handle response
+    pass
+
+```
+
+
+
+### Parameters
+
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `request`                                                                                        | [operations.UpdateUnifiedWebhookRequest](../../models/operations/updateunifiedwebhookrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+
+
+### Response
+
+**[operations.UpdateUnifiedWebhookResponse](../../models/operations/updateunifiedwebhookresponse.md)**
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
