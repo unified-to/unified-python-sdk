@@ -1,6 +1,8 @@
 # Prompt
 (*prompt*)
 
+## Overview
+
 ### Available Operations
 
 * [create_genai_prompt](#create_genai_prompt) - Create a prompt
@@ -28,18 +30,16 @@ if res.genai_prompt is not None:
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
 | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
 | `request`                                                                                  | [operations.CreateGenaiPromptRequest](../../models/operations/creategenaipromptrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
-
 ### Response
 
 **[operations.CreateGenaiPromptResponse](../../models/operations/creategenaipromptresponse.md)**
+
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |

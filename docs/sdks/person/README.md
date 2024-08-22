@@ -1,6 +1,8 @@
 # Person
 (*person*)
 
+## Overview
+
 ### Available Operations
 
 * [list_enrich_people](#list_enrich_people) - Retrieve enrichment information for a person
@@ -28,18 +30,16 @@ if res.enrich_person is not None:
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
 | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
 | `request`                                                                                | [operations.ListEnrichPeopleRequest](../../models/operations/listenrichpeoplerequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
 
-
 ### Response
 
 **[operations.ListEnrichPeopleResponse](../../models/operations/listenrichpeopleresponse.md)**
+
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |

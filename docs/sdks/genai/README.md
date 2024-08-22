@@ -1,6 +1,8 @@
 # Genai
 (*genai*)
 
+## Overview
+
 ### Available Operations
 
 * [create_genai_prompt](#create_genai_prompt) - Create a prompt
@@ -29,23 +31,22 @@ if res.genai_prompt is not None:
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
 | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
 | `request`                                                                                  | [operations.CreateGenaiPromptRequest](../../models/operations/creategenaipromptrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
-
 ### Response
 
 **[operations.CreateGenaiPromptResponse](../../models/operations/creategenaipromptresponse.md)**
+
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4xx-5xx         | */*             |
+
 
 ## list_genai_models
 
@@ -70,18 +71,16 @@ if res.genai_models is not None:
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
 | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
 | `request`                                                                              | [operations.ListGenaiModelsRequest](../../models/operations/listgenaimodelsrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
 
-
 ### Response
 
 **[operations.ListGenaiModelsResponse](../../models/operations/listgenaimodelsresponse.md)**
+
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |

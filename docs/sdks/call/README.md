@@ -1,6 +1,8 @@
 # Call
 (*call*)
 
+## Overview
+
 ### Available Operations
 
 * [list_uc_calls](#list_uc_calls) - List all calls
@@ -28,18 +30,16 @@ if res.uc_calls is not None:
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
 | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
 | `request`                                                                      | [operations.ListUcCallsRequest](../../models/operations/listuccallsrequest.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
 
-
 ### Response
 
 **[operations.ListUcCallsResponse](../../models/operations/listuccallsresponse.md)**
+
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |

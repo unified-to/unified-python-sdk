@@ -1,6 +1,8 @@
 # Applicationstatus
 (*applicationstatus*)
 
+## Overview
+
 ### Available Operations
 
 * [list_ats_applicationstatuses](#list_ats_applicationstatuses) - List all applicationstatuses
@@ -28,18 +30,16 @@ if res.ats_statuses is not None:
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
 | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
 | `request`                                                                                                    | [operations.ListAtsApplicationstatusesRequest](../../models/operations/listatsapplicationstatusesrequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
 
-
 ### Response
 
 **[operations.ListAtsApplicationstatusesResponse](../../models/operations/listatsapplicationstatusesresponse.md)**
+
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |

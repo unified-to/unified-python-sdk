@@ -8,7 +8,7 @@ from typing import Optional
 from unified_to import utils
 
 
-class AtsEmailType(str, Enum):
+class PropertyAtsActivityFromType(str, Enum):
     WORK = 'WORK'
     HOME = 'HOME'
     OTHER = 'OTHER'
@@ -16,9 +16,9 @@ class AtsEmailType(str, Enum):
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
-class AtsEmail:
+class PropertyAtsActivityFrom:
     email: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('email') }})
     name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name'), 'exclude': lambda f: f is None }})
-    type: Optional[AtsEmailType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type'), 'exclude': lambda f: f is None }})
+    type: Optional[PropertyAtsActivityFromType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type'), 'exclude': lambda f: f is None }})
     
 

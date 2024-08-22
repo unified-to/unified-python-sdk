@@ -1,6 +1,8 @@
 # Refund
 (*refund*)
 
+## Overview
+
 ### Available Operations
 
 * [get_payment_refund](#get_payment_refund) - Retrieve a refund
@@ -30,23 +32,22 @@ if res.payment_refund is not None:
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
 | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
 | `request`                                                                                | [operations.GetPaymentRefundRequest](../../models/operations/getpaymentrefundrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
 
-
 ### Response
 
 **[operations.GetPaymentRefundResponse](../../models/operations/getpaymentrefundresponse.md)**
+
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4xx-5xx         | */*             |
+
 
 ## list_payment_refunds
 
@@ -71,18 +72,16 @@ if res.payment_refunds is not None:
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
 | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
 | `request`                                                                                    | [operations.ListPaymentRefundsRequest](../../models/operations/listpaymentrefundsrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 
-
 ### Response
 
 **[operations.ListPaymentRefundsResponse](../../models/operations/listpaymentrefundsresponse.md)**
+
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |

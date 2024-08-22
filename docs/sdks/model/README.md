@@ -1,6 +1,8 @@
 # Model
 (*model*)
 
+## Overview
+
 ### Available Operations
 
 * [list_genai_models](#list_genai_models) - List all models
@@ -28,18 +30,16 @@ if res.genai_models is not None:
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
 | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
 | `request`                                                                              | [operations.ListGenaiModelsRequest](../../models/operations/listgenaimodelsrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
 
-
 ### Response
 
 **[operations.ListGenaiModelsResponse](../../models/operations/listgenaimodelsresponse.md)**
+
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |

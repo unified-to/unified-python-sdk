@@ -1,6 +1,8 @@
 # Payslip
 (*payslip*)
 
+## Overview
+
 ### Available Operations
 
 * [get_hris_payslip](#get_hris_payslip) - Retrieve a payslip
@@ -30,23 +32,22 @@ if res.hris_payslip is not None:
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
 | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
 | `request`                                                                            | [operations.GetHrisPayslipRequest](../../models/operations/gethrispaysliprequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
 
-
 ### Response
 
 **[operations.GetHrisPayslipResponse](../../models/operations/gethrispayslipresponse.md)**
+
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4xx-5xx         | */*             |
+
 
 ## list_hris_payslips
 
@@ -71,18 +72,16 @@ if res.hris_payslips is not None:
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
 | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
 | `request`                                                                                | [operations.ListHrisPayslipsRequest](../../models/operations/listhrispayslipsrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
 
-
 ### Response
 
 **[operations.ListHrisPayslipsResponse](../../models/operations/listhrispayslipsresponse.md)**
+
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |

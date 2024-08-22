@@ -1,6 +1,8 @@
 # Apicall
 (*apicall*)
 
+## Overview
+
 ### Available Operations
 
 * [get_unified_apicall](#get_unified_apicall) - Retrieve specific API Call by its ID
@@ -29,23 +31,22 @@ if res.api_call is not None:
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
 | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
 | `request`                                                                                  | [operations.GetUnifiedApicallRequest](../../models/operations/getunifiedapicallrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
-
 ### Response
 
 **[operations.GetUnifiedApicallResponse](../../models/operations/getunifiedapicallresponse.md)**
+
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4xx-5xx         | */*             |
+
 
 ## list_unified_apicalls
 
@@ -67,18 +68,16 @@ if res.api_calls is not None:
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
 | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
 | `request`                                                                                      | [operations.ListUnifiedApicallsRequest](../../models/operations/listunifiedapicallsrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
 
-
 ### Response
 
 **[operations.ListUnifiedApicallsResponse](../../models/operations/listunifiedapicallsresponse.md)**
+
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |

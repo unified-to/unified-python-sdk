@@ -1,6 +1,8 @@
 # Enrich
 (*enrich*)
 
+## Overview
+
 ### Available Operations
 
 * [list_enrich_companies](#list_enrich_companies) - Retrieve enrichment information for a company
@@ -29,23 +31,22 @@ if res.enrich_company is not None:
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
 | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
 | `request`                                                                                      | [operations.ListEnrichCompaniesRequest](../../models/operations/listenrichcompaniesrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
 
-
 ### Response
 
 **[operations.ListEnrichCompaniesResponse](../../models/operations/listenrichcompaniesresponse.md)**
+
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4xx-5xx         | */*             |
+
 
 ## list_enrich_people
 
@@ -70,18 +71,16 @@ if res.enrich_person is not None:
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
 | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
 | `request`                                                                                | [operations.ListEnrichPeopleRequest](../../models/operations/listenrichpeoplerequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
 
-
 ### Response
 
 **[operations.ListEnrichPeopleResponse](../../models/operations/listenrichpeopleresponse.md)**
+
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |

@@ -19,7 +19,7 @@ except FileNotFoundError:
 
 setuptools.setup(
     name='Unified-python-sdk',
-    version='0.23.17',
+    version='0.23.18',
     author='Unified API Inc',
     description='Python Client SDK for Unified.to',
     url='https://github.com/unified-to/unified-python-sdk.git',

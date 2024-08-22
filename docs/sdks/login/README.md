@@ -1,6 +1,8 @@
 # Login
 (*login*)
 
+## Overview
+
 ### Available Operations
 
 * [get_unified_integration_login](#get_unified_integration_login) - Sign in a user
@@ -29,18 +31,16 @@ if res.res is not None:
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
 | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
 | `request`                                                                                                    | [operations.GetUnifiedIntegrationLoginRequest](../../models/operations/getunifiedintegrationloginrequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
 
-
 ### Response
 
 **[operations.GetUnifiedIntegrationLoginResponse](../../models/operations/getunifiedintegrationloginresponse.md)**
+
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |

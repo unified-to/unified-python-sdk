@@ -1,6 +1,8 @@
 # Issue
 (*issue*)
 
+## Overview
+
 ### Available Operations
 
 * [list_unified_issues](#list_unified_issues) - List support issues
@@ -25,18 +27,16 @@ if res.issues is not None:
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
 | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
 | `request`                                                                                  | [operations.ListUnifiedIssuesRequest](../../models/operations/listunifiedissuesrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 
-
 ### Response
 
 **[operations.ListUnifiedIssuesResponse](../../models/operations/listunifiedissuesresponse.md)**
+
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |

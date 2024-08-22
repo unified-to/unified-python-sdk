@@ -1,0 +1,10 @@
+# PropertyAtsActivityFrom
+
+
+## Fields
+
+| Field                                                                                              | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `email`                                                                                            | *str*                                                                                              | :heavy_check_mark:                                                                                 | N/A                                                                                                |
+| `name`                                                                                             | *Optional[str]*                                                                                    | :heavy_minus_sign:                                                                                 | N/A                                                                                                |
+| `type`                                                                                             | [Optional[shared.PropertyAtsActivityFromType]](../../models/shared/propertyatsactivityfromtype.md) | :heavy_minus_sign:                                                                                 | N/A                                                                                                |

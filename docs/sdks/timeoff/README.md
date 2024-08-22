@@ -1,6 +1,8 @@
 # Timeoff
 (*timeoff*)
 
+## Overview
+
 ### Available Operations
 
 * [get_hris_timeoff](#get_hris_timeoff) - Retrieve a timeoff
@@ -30,23 +32,22 @@ if res.hris_timeoff is not None:
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
 | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
 | `request`                                                                            | [operations.GetHrisTimeoffRequest](../../models/operations/gethristimeoffrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
 
-
 ### Response
 
 **[operations.GetHrisTimeoffResponse](../../models/operations/gethristimeoffresponse.md)**
+
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4xx-5xx         | */*             |
+
 
 ## list_hris_timeoffs
 
@@ -71,18 +72,16 @@ if res.hris_timeoffs is not None:
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
 | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
 | `request`                                                                                | [operations.ListHrisTimeoffsRequest](../../models/operations/listhristimeoffsrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
 
-
 ### Response
 
 **[operations.ListHrisTimeoffsResponse](../../models/operations/listhristimeoffsresponse.md)**
+
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |

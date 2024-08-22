@@ -1,6 +1,8 @@
 # Channel
 (*channel*)
 
+## Overview
+
 ### Available Operations
 
 * [get_messaging_channel](#get_messaging_channel) - Retrieve a channel
@@ -30,23 +32,22 @@ if res.messaging_channel is not None:
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
 | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
 | `request`                                                                                      | [operations.GetMessagingChannelRequest](../../models/operations/getmessagingchannelrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
 
-
 ### Response
 
 **[operations.GetMessagingChannelResponse](../../models/operations/getmessagingchannelresponse.md)**
+
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4xx-5xx         | */*             |
+
 
 ## list_messaging_channels
 
@@ -71,18 +72,16 @@ if res.messaging_channels is not None:
 
 ```
 
-
-
 ### Parameters
 
 | Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
 | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
 | `request`                                                                                          | [operations.ListMessagingChannelsRequest](../../models/operations/listmessagingchannelsrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
 
-
 ### Response
 
 **[operations.ListMessagingChannelsResponse](../../models/operations/listmessagingchannelsresponse.md)**
+
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
