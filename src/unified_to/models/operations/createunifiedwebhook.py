@@ -10,6 +10,7 @@ from typing import Optional
 @dataclasses.dataclass
 class CreateUnifiedWebhookRequest:
     webhook: Optional[shared_webhook.Webhook] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    r"""A webhook is used to POST new/updated information to your server."""
     include_all: Optional[bool] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'include_all', 'style': 'form', 'explode': True }})
     r"""When set, all of the existing data will sent back to your server."""
     
