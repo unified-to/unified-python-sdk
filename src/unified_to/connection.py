@@ -16,7 +16,9 @@ class Connection:
     
     
     def create_unified_connection(self, request: Optional[shared.Connection] = None) -> operations.CreateUnifiedConnectionResponse:
-        r"""Create connection"""
+        r"""Create connection
+        Used only to import existing customer credentials; use \"Create connection indirectly\" instead
+        """
         hook_ctx = HookContext(operation_id='createUnifiedConnection', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
