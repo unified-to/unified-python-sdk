@@ -4,7 +4,7 @@ from __future__ import annotations
 import dataclasses
 import requests as requests_http
 from ...models.shared import crmevent as shared_crmevent
-from typing import Optional
+from typing import List, Optional
 
 
 @dataclasses.dataclass
@@ -15,6 +15,8 @@ class PatchCrmEventRequest:
     r"""ID of the Event"""
     crm_event: Optional[shared_crmevent.CrmEvent] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     r"""An event represents an event, activity, or engagement and is always associated with a deal, contact, or company"""
+    fields: Optional[List[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
+    r"""Comma-delimited fields to return"""
     
 
 

@@ -4,7 +4,7 @@ from __future__ import annotations
 import dataclasses
 import requests as requests_http
 from ...models.shared import marketinglist as shared_marketinglist
-from typing import Optional
+from typing import List, Optional
 
 
 @dataclasses.dataclass
@@ -15,6 +15,8 @@ class UpdateMartechListRequest:
     r"""ID of the List"""
     marketing_list: Optional[shared_marketinglist.MarketingList] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     r"""Mailing List"""
+    fields: Optional[List[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
+    r"""Comma-delimited fields to return"""
     
 
 

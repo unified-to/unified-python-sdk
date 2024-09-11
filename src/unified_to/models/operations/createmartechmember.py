@@ -4,7 +4,7 @@ from __future__ import annotations
 import dataclasses
 import requests as requests_http
 from ...models.shared import marketingmember as shared_marketingmember
-from typing import Optional
+from typing import List, Optional
 
 
 @dataclasses.dataclass
@@ -13,6 +13,8 @@ class CreateMartechMemberRequest:
     r"""ID of the connection"""
     marketing_member: Optional[shared_marketingmember.MarketingMember] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     r"""A member represents a person"""
+    fields: Optional[List[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
+    r"""Comma-delimited fields to return"""
     
 
 

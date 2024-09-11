@@ -4,7 +4,7 @@ from __future__ import annotations
 import dataclasses
 import requests as requests_http
 from ...models.shared import commercecollection as shared_commercecollection
-from typing import Optional
+from typing import List, Optional
 
 
 @dataclasses.dataclass
@@ -15,6 +15,8 @@ class PatchCommerceCollectionRequest:
     r"""ID of the Collection"""
     commerce_collection: Optional[shared_commercecollection.CommerceCollection] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     r"""A collection of items/products/services"""
+    fields: Optional[List[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
+    r"""Comma-delimited fields to return"""
     
 
 

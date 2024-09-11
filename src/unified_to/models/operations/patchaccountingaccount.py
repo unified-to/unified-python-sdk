@@ -4,7 +4,7 @@ from __future__ import annotations
 import dataclasses
 import requests as requests_http
 from ...models.shared import accountingaccount as shared_accountingaccount
-from typing import Optional
+from typing import List, Optional
 
 
 @dataclasses.dataclass
@@ -15,6 +15,8 @@ class PatchAccountingAccountRequest:
     r"""ID of the Account"""
     accounting_account: Optional[shared_accountingaccount.AccountingAccount] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     r"""Chart of accounts"""
+    fields: Optional[List[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
+    r"""Comma-delimited fields to return"""
     
 
 

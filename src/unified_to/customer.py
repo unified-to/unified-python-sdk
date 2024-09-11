@@ -30,6 +30,7 @@ class Customer:
         req_content_type, data, form = utils.serialize_request_body(request, operations.CreateTicketingCustomerRequest, "ticketing_customer", False, True, 'json')
         if req_content_type is not None and req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
+        query_params = { **utils.get_query_params(request), **query_params }
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
@@ -200,6 +201,7 @@ class Customer:
         req_content_type, data, form = utils.serialize_request_body(request, operations.PatchTicketingCustomerRequest, "ticketing_customer", False, True, 'json')
         if req_content_type is not None and req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
+        query_params = { **utils.get_query_params(request), **query_params }
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
@@ -305,6 +307,7 @@ class Customer:
         req_content_type, data, form = utils.serialize_request_body(request, operations.UpdateTicketingCustomerRequest, "ticketing_customer", False, True, 'json')
         if req_content_type is not None and req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
+        query_params = { **utils.get_query_params(request), **query_params }
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client

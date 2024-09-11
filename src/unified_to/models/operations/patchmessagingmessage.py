@@ -4,7 +4,7 @@ from __future__ import annotations
 import dataclasses
 import requests as requests_http
 from ...models.shared import messagingmessage as shared_messagingmessage
-from typing import Optional
+from typing import List, Optional
 
 
 @dataclasses.dataclass
@@ -14,6 +14,8 @@ class PatchMessagingMessageRequest:
     id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     r"""ID of the Message"""
     messaging_message: Optional[shared_messagingmessage.MessagingMessage] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    fields: Optional[List[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
+    r"""Comma-delimited fields to return"""
     
 
 

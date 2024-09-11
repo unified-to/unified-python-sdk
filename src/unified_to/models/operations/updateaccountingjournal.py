@@ -4,7 +4,7 @@ from __future__ import annotations
 import dataclasses
 import requests as requests_http
 from ...models.shared import accountingjournal as shared_accountingjournal
-from typing import Optional
+from typing import List, Optional
 
 
 @dataclasses.dataclass
@@ -14,6 +14,8 @@ class UpdateAccountingJournalRequest:
     id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     r"""ID of the Journal"""
     accounting_journal: Optional[shared_accountingjournal.AccountingJournal] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    fields: Optional[List[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
+    r"""Comma-delimited fields to return"""
     
 
 

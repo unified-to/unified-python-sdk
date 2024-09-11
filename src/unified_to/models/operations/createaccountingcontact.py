@@ -4,7 +4,7 @@ from __future__ import annotations
 import dataclasses
 import requests as requests_http
 from ...models.shared import accountingcontact as shared_accountingcontact
-from typing import Optional
+from typing import List, Optional
 
 
 @dataclasses.dataclass
@@ -12,6 +12,8 @@ class CreateAccountingContactRequest:
     connection_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': False }})
     r"""ID of the connection"""
     accounting_contact: Optional[shared_accountingcontact.AccountingContact] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    fields: Optional[List[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
+    r"""Comma-delimited fields to return"""
     
 
 

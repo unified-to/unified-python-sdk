@@ -4,7 +4,7 @@ from __future__ import annotations
 import dataclasses
 import requests as requests_http
 from ...models.shared import atsdocument as shared_atsdocument
-from typing import Optional
+from typing import List, Optional
 
 
 @dataclasses.dataclass
@@ -14,6 +14,8 @@ class UpdateAtsDocumentRequest:
     id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     r"""ID of the Document"""
     ats_document: Optional[shared_atsdocument.AtsDocument] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    fields: Optional[List[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': True }})
+    r"""Comma-delimited fields to return"""
     
 
 

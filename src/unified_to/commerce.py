@@ -30,6 +30,7 @@ class Commerce:
         req_content_type, data, form = utils.serialize_request_body(request, operations.CreateCommerceCollectionRequest, "commerce_collection", False, True, 'json')
         if req_content_type is not None and req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
+        query_params = { **utils.get_query_params(request), **query_params }
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
@@ -88,6 +89,7 @@ class Commerce:
         req_content_type, data, form = utils.serialize_request_body(request, operations.CreateCommerceInventoryRequest, "commerce_inventory", False, True, 'json')
         if req_content_type is not None and req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
+        query_params = { **utils.get_query_params(request), **query_params }
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
@@ -146,6 +148,7 @@ class Commerce:
         req_content_type, data, form = utils.serialize_request_body(request, operations.CreateCommerceItemRequest, "commerce_item", False, True, 'json')
         if req_content_type is not None and req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
+        query_params = { **utils.get_query_params(request), **query_params }
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
@@ -204,6 +207,7 @@ class Commerce:
         req_content_type, data, form = utils.serialize_request_body(request, operations.CreateCommerceLocationRequest, "commerce_location", False, True, 'json')
         if req_content_type is not None and req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
+        query_params = { **utils.get_query_params(request), **query_params }
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
@@ -710,6 +714,7 @@ class Commerce:
         req_content_type, data, form = utils.serialize_request_body(request, operations.PatchCommerceCollectionRequest, "commerce_collection", False, True, 'json')
         if req_content_type is not None and req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
+        query_params = { **utils.get_query_params(request), **query_params }
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
@@ -768,6 +773,7 @@ class Commerce:
         req_content_type, data, form = utils.serialize_request_body(request, operations.PatchCommerceInventoryRequest, "commerce_inventory", False, True, 'json')
         if req_content_type is not None and req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
+        query_params = { **utils.get_query_params(request), **query_params }
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
@@ -826,6 +832,7 @@ class Commerce:
         req_content_type, data, form = utils.serialize_request_body(request, operations.PatchCommerceItemRequest, "commerce_item", False, True, 'json')
         if req_content_type is not None and req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
+        query_params = { **utils.get_query_params(request), **query_params }
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
@@ -884,6 +891,7 @@ class Commerce:
         req_content_type, data, form = utils.serialize_request_body(request, operations.PatchCommerceLocationRequest, "commerce_location", False, True, 'json')
         if req_content_type is not None and req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
+        query_params = { **utils.get_query_params(request), **query_params }
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
@@ -1130,6 +1138,7 @@ class Commerce:
         req_content_type, data, form = utils.serialize_request_body(request, operations.UpdateCommerceCollectionRequest, "commerce_collection", False, True, 'json')
         if req_content_type is not None and req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
+        query_params = { **utils.get_query_params(request), **query_params }
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
@@ -1188,6 +1197,7 @@ class Commerce:
         req_content_type, data, form = utils.serialize_request_body(request, operations.UpdateCommerceInventoryRequest, "commerce_inventory", False, True, 'json')
         if req_content_type is not None and req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
+        query_params = { **utils.get_query_params(request), **query_params }
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
@@ -1246,6 +1256,7 @@ class Commerce:
         req_content_type, data, form = utils.serialize_request_body(request, operations.UpdateCommerceItemRequest, "commerce_item", False, True, 'json')
         if req_content_type is not None and req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
+        query_params = { **utils.get_query_params(request), **query_params }
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
@@ -1304,6 +1315,7 @@ class Commerce:
         req_content_type, data, form = utils.serialize_request_body(request, operations.UpdateCommerceLocationRequest, "commerce_location", False, True, 'json')
         if req_content_type is not None and req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
+        query_params = { **utils.get_query_params(request), **query_params }
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
