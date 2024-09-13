@@ -15,11 +15,12 @@ List support issues
 
 ```python
 import unified_to
+from unified_to.models import operations
 
 s = unified_to.UnifiedTo()
 
 
-res = s.issue.list_unified_issues()
+res = s.issue.list_unified_issues(request=operations.ListUnifiedIssuesRequest())
 
 if res.issues is not None:
     # handle response

@@ -1,21 +1,22 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: cf72c39f8e74a269aab0cb250423c99a
+  docChecksum: 0d6e24164cc3d7a1033d4f9883eb8f98
   docVersion: "1.0"
-  speakeasyVersion: 1.395.1
-  generationVersion: 2.415.0
-  releaseVersion: 0.23.24
-  configChecksum: d098b60b575af14c7f0182f07d100a99
+  speakeasyVersion: 1.396.6
+  generationVersion: 2.415.6
+  releaseVersion: 0.24.0
+  configChecksum: 5c8c59c4fbc7064ddc9d26bd88e4cf4e
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
   published: true
 features:
   python:
+    acceptHeaders: 2.81.2
     additionalDependencies: 0.1.0
     constsAndDefaults: 0.1.4
-    core: 4.8.7
+    core: 4.8.9
     globalSecurity: 2.83.7
     globalSecurityCallbacks: 0.1.0
     globalServerURLs: 2.82.2
@@ -93,8 +94,10 @@ generatedFiles:
   - docs/models/operations/createmartechmemberresponse.md
   - docs/models/operations/createmessagingmessagerequest.md
   - docs/models/operations/createmessagingmessageresponse.md
-  - docs/models/operations/createpassthroughrequest.md
-  - docs/models/operations/createpassthroughresponse.md
+  - docs/models/operations/createpassthroughjsonrequest.md
+  - docs/models/operations/createpassthroughjsonresponse.md
+  - docs/models/operations/createpassthroughrawrequest.md
+  - docs/models/operations/createpassthroughrawresponse.md
   - docs/models/operations/createpaymentlinkrequest.md
   - docs/models/operations/createpaymentlinkresponse.md
   - docs/models/operations/createpaymentpaymentrequest.md
@@ -408,8 +411,10 @@ generatedFiles:
   - docs/models/operations/patchmartechmemberresponse.md
   - docs/models/operations/patchmessagingmessagerequest.md
   - docs/models/operations/patchmessagingmessageresponse.md
-  - docs/models/operations/patchpassthroughrequest.md
-  - docs/models/operations/patchpassthroughresponse.md
+  - docs/models/operations/patchpassthroughjsonrequest.md
+  - docs/models/operations/patchpassthroughjsonresponse.md
+  - docs/models/operations/patchpassthroughrawrequest.md
+  - docs/models/operations/patchpassthroughrawresponse.md
   - docs/models/operations/patchpaymentlinkrequest.md
   - docs/models/operations/patchpaymentlinkresponse.md
   - docs/models/operations/patchpaymentpaymentrequest.md
@@ -588,8 +593,10 @@ generatedFiles:
   - docs/models/operations/updatemartechmemberresponse.md
   - docs/models/operations/updatemessagingmessagerequest.md
   - docs/models/operations/updatemessagingmessageresponse.md
-  - docs/models/operations/updatepassthroughrequest.md
-  - docs/models/operations/updatepassthroughresponse.md
+  - docs/models/operations/updatepassthroughjsonrequest.md
+  - docs/models/operations/updatepassthroughjsonresponse.md
+  - docs/models/operations/updatepassthroughrawrequest.md
+  - docs/models/operations/updatepassthroughrawresponse.md
   - docs/models/operations/updatepaymentlinkrequest.md
   - docs/models/operations/updatepaymentlinkresponse.md
   - docs/models/operations/updatepaymentpaymentrequest.md
@@ -1011,7 +1018,8 @@ generatedFiles:
   - src/unified_to/models/operations/createmartechlist.py
   - src/unified_to/models/operations/createmartechmember.py
   - src/unified_to/models/operations/createmessagingmessage.py
-  - src/unified_to/models/operations/createpassthrough.py
+  - src/unified_to/models/operations/createpassthrough_json.py
+  - src/unified_to/models/operations/createpassthrough_raw.py
   - src/unified_to/models/operations/createpaymentlink.py
   - src/unified_to/models/operations/createpaymentpayment.py
   - src/unified_to/models/operations/createstoragefile.py
@@ -1168,7 +1176,8 @@ generatedFiles:
   - src/unified_to/models/operations/patchmartechlist.py
   - src/unified_to/models/operations/patchmartechmember.py
   - src/unified_to/models/operations/patchmessagingmessage.py
-  - src/unified_to/models/operations/patchpassthrough.py
+  - src/unified_to/models/operations/patchpassthrough_json.py
+  - src/unified_to/models/operations/patchpassthrough_raw.py
   - src/unified_to/models/operations/patchpaymentlink.py
   - src/unified_to/models/operations/patchpaymentpayment.py
   - src/unified_to/models/operations/patchstoragefile.py
@@ -1257,7 +1266,8 @@ generatedFiles:
   - src/unified_to/models/operations/updatemartechlist.py
   - src/unified_to/models/operations/updatemartechmember.py
   - src/unified_to/models/operations/updatemessagingmessage.py
-  - src/unified_to/models/operations/updatepassthrough.py
+  - src/unified_to/models/operations/updatepassthrough_json.py
+  - src/unified_to/models/operations/updatepassthrough_raw.py
   - src/unified_to/models/operations/updatepaymentlink.py
   - src/unified_to/models/operations/updatepaymentpayment.py
   - src/unified_to/models/operations/updatestoragefile.py
@@ -3030,6 +3040,26 @@ examples:
       responses:
         2XX:
           application/json: {"key": "<value>"}
+    speakeasy-default-create-passthrough-json:
+      parameters:
+        path:
+          connection_id: "<value>"
+          path: "/opt/lib"
+      responses:
+        2XX:
+          '*/*': "0x3CbcA7c7be"
+          application/json: "<value>"
+          text/plain: "<value>"
+    speakeasy-default-create-passthrough-raw:
+      parameters:
+        path:
+          connection_id: "<value>"
+          path: "/etc/namedb"
+      responses:
+        2XX:
+          '*/*': "0x34ABa9b31D"
+          application/json: "<value>"
+          text/plain: "<value>"
   listPassthroughs:
     speakeasy-default-list-passthroughs:
       parameters:
@@ -3039,6 +3069,8 @@ examples:
       responses:
         2XX:
           application/json: {"key": "<value>"}
+          '*/*': "0xc838beeAd7"
+          text/plain: "<value>"
   patchPassthrough:
     speakeasy-default-patch-passthrough:
       parameters:
@@ -3048,6 +3080,26 @@ examples:
       responses:
         2XX:
           application/json: {"key": "<value>"}
+    speakeasy-default-patch-passthrough-json:
+      parameters:
+        path:
+          connection_id: "<value>"
+          path: "/home/user"
+      responses:
+        2XX:
+          '*/*': "0x4fb8209099"
+          application/json: "<value>"
+          text/plain: "<value>"
+    speakeasy-default-patch-passthrough-raw:
+      parameters:
+        path:
+          connection_id: "<value>"
+          path: "/etc/mail"
+      responses:
+        2XX:
+          '*/*': "0x7CEb8f75C6"
+          application/json: "<value>"
+          text/plain: "<value>"
   removePassthrough:
     speakeasy-default-remove-passthrough:
       parameters:
@@ -3057,6 +3109,8 @@ examples:
       responses:
         2XX:
           application/json: {}
+          '*/*': "0x0280cc8bc1"
+          text/plain: "<value>"
   updatePassthrough:
     speakeasy-default-update-passthrough:
       parameters:
@@ -3066,6 +3120,26 @@ examples:
       responses:
         2XX:
           application/json: {"key": "<value>", "key1": "<value>"}
+    speakeasy-default-update-passthrough-json:
+      parameters:
+        path:
+          connection_id: "<value>"
+          path: "/etc/namedb"
+      responses:
+        2XX:
+          '*/*': "0xDa7dcaB8ab"
+          application/json: "<value>"
+          text/plain: "<value>"
+    speakeasy-default-update-passthrough-raw:
+      parameters:
+        path:
+          connection_id: "<value>"
+          path: "/System"
+      responses:
+        2XX:
+          '*/*': "0x5587B3b9f8"
+          application/json: "<value>"
+          text/plain: "<value>"
   createPaymentLink:
     speakeasy-default-create-payment-link:
       parameters:

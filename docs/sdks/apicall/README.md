@@ -56,11 +56,12 @@ Returns API Calls
 
 ```python
 import unified_to
+from unified_to.models import operations
 
 s = unified_to.UnifiedTo()
 
 
-res = s.apicall.list_unified_apicalls()
+res = s.apicall.list_unified_apicalls(request=operations.ListUnifiedApicallsRequest())
 
 if res.api_calls is not None:
     # handle response

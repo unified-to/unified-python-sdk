@@ -1,4 +1,4 @@
-# RemovePassthroughResponse
+# CreatePassthroughJSONResponse
 
 
 ## Fields

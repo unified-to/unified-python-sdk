@@ -98,11 +98,12 @@ Returns all integrations
 
 ```python
 import unified_to
+from unified_to.models import operations
 
 s = unified_to.UnifiedTo()
 
 
-res = s.integration.list_unified_integrations()
+res = s.integration.list_unified_integrations(request=operations.ListUnifiedIntegrationsRequest())
 
 if res.integrations is not None:
     # handle response

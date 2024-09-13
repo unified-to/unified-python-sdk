@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from typing import Any, Dict, Optional
+from typing import Any, Dict, List, Optional
 
 
 @dataclasses.dataclass
@@ -19,11 +19,15 @@ class RemovePassthroughRequest:
 class RemovePassthroughResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
+    headers: Dict[str, List[str]] = dataclasses.field()
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
     raw_response: requests_http.Response = dataclasses.field()
     r"""Raw HTTP response; suitable for custom response parsing"""
-    result: Optional[Dict[str, Any]] = dataclasses.field(default=None)
+    two_xx_application_json_any: Optional[Any] = dataclasses.field(default=None)
     r"""Successful"""
+    two_xx_text_plain_res: Optional[str] = dataclasses.field(default=None)
+    r"""Successful"""
+    body: Optional[bytes] = dataclasses.field(default=None)
     
 

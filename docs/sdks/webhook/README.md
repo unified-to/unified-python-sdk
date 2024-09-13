@@ -22,11 +22,12 @@ The data payload received by your server is described at https://docs.unified.to
 
 ```python
 import unified_to
+from unified_to.models import operations
 
 s = unified_to.UnifiedTo()
 
 
-res = s.webhook.create_unified_webhook()
+res = s.webhook.create_unified_webhook(request=operations.CreateUnifiedWebhookRequest())
 
 if res.webhook is not None:
     # handle response
@@ -99,11 +100,12 @@ Returns all registered webhooks
 
 ```python
 import unified_to
+from unified_to.models import operations
 
 s = unified_to.UnifiedTo()
 
 
-res = s.webhook.list_unified_webhooks()
+res = s.webhook.list_unified_webhooks(request=operations.ListUnifiedWebhooksRequest())
 
 if res.webhooks is not None:
     # handle response

@@ -71,11 +71,12 @@ The data payload received by your server is described at https://docs.unified.to
 
 ```python
 import unified_to
+from unified_to.models import operations
 
 s = unified_to.UnifiedTo()
 
 
-res = s.unified.create_unified_webhook()
+res = s.unified.create_unified_webhook(request=operations.CreateUnifiedWebhookRequest())
 
 if res.webhook is not None:
     # handle response
@@ -269,11 +270,12 @@ Returns API Calls
 
 ```python
 import unified_to
+from unified_to.models import operations
 
 s = unified_to.UnifiedTo()
 
 
-res = s.unified.list_unified_apicalls()
+res = s.unified.list_unified_apicalls(request=operations.ListUnifiedApicallsRequest())
 
 if res.api_calls is not None:
     # handle response
@@ -306,11 +308,12 @@ List all connections
 
 ```python
 import unified_to
+from unified_to.models import operations
 
 s = unified_to.UnifiedTo()
 
 
-res = s.unified.list_unified_connections()
+res = s.unified.list_unified_connections(request=operations.ListUnifiedConnectionsRequest())
 
 if res.connections is not None:
     # handle response
@@ -383,11 +386,12 @@ Returns all integrations
 
 ```python
 import unified_to
+from unified_to.models import operations
 
 s = unified_to.UnifiedTo()
 
 
-res = s.unified.list_unified_integrations()
+res = s.unified.list_unified_integrations(request=operations.ListUnifiedIntegrationsRequest())
 
 if res.integrations is not None:
     # handle response
@@ -420,11 +424,12 @@ List support issues
 
 ```python
 import unified_to
+from unified_to.models import operations
 
 s = unified_to.UnifiedTo()
 
 
-res = s.unified.list_unified_issues()
+res = s.unified.list_unified_issues(request=operations.ListUnifiedIssuesRequest())
 
 if res.issues is not None:
     # handle response
@@ -457,11 +462,12 @@ Returns all registered webhooks
 
 ```python
 import unified_to
+from unified_to.models import operations
 
 s = unified_to.UnifiedTo()
 
 
-res = s.unified.list_unified_webhooks()
+res = s.unified.list_unified_webhooks(request=operations.ListUnifiedWebhooksRequest())
 
 if res.webhooks is not None:
     # handle response

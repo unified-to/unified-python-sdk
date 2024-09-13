@@ -97,11 +97,12 @@ List all connections
 
 ```python
 import unified_to
+from unified_to.models import operations
 
 s = unified_to.UnifiedTo()
 
 
-res = s.connection.list_unified_connections()
+res = s.connection.list_unified_connections(request=operations.ListUnifiedConnectionsRequest())
 
 if res.connections is not None:
     # handle response

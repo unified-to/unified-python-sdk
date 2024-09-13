@@ -7,16 +7,18 @@ from typing import Any, Dict, List, Optional
 
 
 @dataclasses.dataclass
-class ListPassthroughsRequest:
+class PatchPassthroughJSONRequest:
     connection_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': False }})
     r"""ID of the connection"""
     path: str = dataclasses.field(metadata={'path_param': { 'field_name': 'path', 'style': 'simple', 'explode': False }})
+    request_body: Optional[Any] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    r"""integration-specific payload"""
     
 
 
 
 @dataclasses.dataclass
-class ListPassthroughsResponse:
+class PatchPassthroughJSONResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
     headers: Dict[str, List[str]] = dataclasses.field()

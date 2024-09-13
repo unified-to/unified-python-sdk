@@ -1,4 +1,4 @@
-# RemovePassthroughResponse
+# UpdatePassthroughRawResponse
 
 
 ## Fields

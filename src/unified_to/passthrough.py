@@ -2,10 +2,51 @@
 
 import requests as requests_http
 from .sdkconfiguration import SDKConfiguration
-from typing import Any, Dict, Optional
+from enum import Enum
+from typing import Any, Optional
 from unified_to import utils
 from unified_to._hooks import AfterErrorContext, AfterSuccessContext, BeforeRequestContext, HookContext
 from unified_to.models import errors, operations
+
+class CreatePassthroughJsonAcceptEnum(str, Enum):
+    APPLICATION_JSON = "application/json"
+    TEXT_PLAIN = "text/plain"
+    WILDCARD_WILDCARD_ = "*/*"
+
+class CreatePassthroughRawAcceptEnum(str, Enum):
+    APPLICATION_JSON = "application/json"
+    TEXT_PLAIN = "text/plain"
+    WILDCARD_WILDCARD_ = "*/*"
+
+class ListPassthroughsAcceptEnum(str, Enum):
+    APPLICATION_JSON = "application/json"
+    TEXT_PLAIN = "text/plain"
+    WILDCARD_WILDCARD_ = "*/*"
+
+class PatchPassthroughJsonAcceptEnum(str, Enum):
+    APPLICATION_JSON = "application/json"
+    TEXT_PLAIN = "text/plain"
+    WILDCARD_WILDCARD_ = "*/*"
+
+class PatchPassthroughRawAcceptEnum(str, Enum):
+    APPLICATION_JSON = "application/json"
+    TEXT_PLAIN = "text/plain"
+    WILDCARD_WILDCARD_ = "*/*"
+
+class RemovePassthroughAcceptEnum(str, Enum):
+    APPLICATION_JSON = "application/json"
+    TEXT_PLAIN = "text/plain"
+    WILDCARD_WILDCARD_ = "*/*"
+
+class UpdatePassthroughJsonAcceptEnum(str, Enum):
+    APPLICATION_JSON = "application/json"
+    TEXT_PLAIN = "text/plain"
+    WILDCARD_WILDCARD_ = "*/*"
+
+class UpdatePassthroughRawAcceptEnum(str, Enum):
+    APPLICATION_JSON = "application/json"
+    TEXT_PLAIN = "text/plain"
+    WILDCARD_WILDCARD_ = "*/*"
 
 class Passthrough:
     sdk_configuration: SDKConfiguration
@@ -15,9 +56,9 @@ class Passthrough:
         
     
     
-    def create_passthrough(self, request: operations.CreatePassthroughRequest) -> operations.CreatePassthroughResponse:
+    def create_passthrough_json(self, request: operations.CreatePassthroughJSONRequest, accept_header_override: Optional[CreatePassthroughJsonAcceptEnum] = None) -> operations.CreatePassthroughJSONResponse:
         r"""Passthrough POST"""
-        hook_ctx = HookContext(operation_id='createPassthrough', oauth2_scopes=[], security_source=self.sdk_configuration.security)
+        hook_ctx = HookContext(operation_id='createPassthrough_json', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(base_url, '/passthrough/{connection_id}/{path}', request)
@@ -27,10 +68,13 @@ class Passthrough:
         else:
             headers, query_params = utils.get_security(self.sdk_configuration.security)
         
-        req_content_type, data, form = utils.serialize_request_body(request, operations.CreatePassthroughRequest, "request_body", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.CreatePassthroughJSONRequest, "request_body", False, True, 'json')
         if req_content_type is not None and req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
-        headers['Accept'] = 'application/json'
+        if accept_header_override is not None:
+            headers['Accept'] = accept_header_override.value
+        else:
+            headers['Accept'] = 'application/json;q=1, text/plain;q=0.7, */*;q=0'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
         
@@ -54,13 +98,22 @@ class Passthrough:
             
         
         
-        res = operations.CreatePassthroughResponse(status_code=http_res.status_code, content_type=http_res.headers.get('Content-Type') or '', raw_response=http_res)
+        res = operations.CreatePassthroughJSONResponse(status_code=http_res.status_code, content_type=http_res.headers.get('Content-Type') or '', raw_response=http_res, headers=None)
         
-        if http_res.status_code >= 200 and http_res.status_code < 300:
+        if http_res.status_code in [204, 205, 304]:
+            res.headers = http_res.headers
+            
+        elif http_res.status_code >= 200 and http_res.status_code < 300:
             # pylint: disable=no-else-return
-            if utils.match_content_type(http_res.headers.get('Content-Type') or '', 'application/json'):                
-                out = utils.unmarshal_json(http_res.text, Optional[Dict[str, Any]])
-                res.result = out
+            if utils.match_content_type(http_res.headers.get('Content-Type') or '', '*/*'):                
+                res.body = http_res.content
+            # pylint: disable=no-else-return
+            elif utils.match_content_type(http_res.headers.get('Content-Type') or '', 'application/json'):                
+                out = utils.unmarshal_json(http_res.text, Optional[Any])
+                res.two_xx_application_json_any = out
+            # pylint: disable=no-else-return
+            elif utils.match_content_type(http_res.headers.get('Content-Type') or '', 'text/plain'):                
+                res.two_xx_text_plain_res = http_res.text
             else:
                 content_type = http_res.headers.get('Content-Type')
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
@@ -73,7 +126,77 @@ class Passthrough:
 
     
     
-    def list_passthroughs(self, request: operations.ListPassthroughsRequest) -> operations.ListPassthroughsResponse:
+    def create_passthrough_raw(self, request: operations.CreatePassthroughRawRequest, accept_header_override: Optional[CreatePassthroughRawAcceptEnum] = None) -> operations.CreatePassthroughRawResponse:
+        r"""Passthrough POST"""
+        hook_ctx = HookContext(operation_id='createPassthrough_raw', oauth2_scopes=[], security_source=self.sdk_configuration.security)
+        base_url = utils.template_url(*self.sdk_configuration.get_server_details())
+        
+        url = utils.generate_url(base_url, '/passthrough/{connection_id}/{path}', request)
+        
+        if callable(self.sdk_configuration.security):
+            headers, query_params = utils.get_security(self.sdk_configuration.security())
+        else:
+            headers, query_params = utils.get_security(self.sdk_configuration.security)
+        
+        req_content_type, data, form = utils.serialize_request_body(request, operations.CreatePassthroughRawRequest, "request_body", False, True, 'raw')
+        if req_content_type is not None and req_content_type not in ('multipart/form-data', 'multipart/mixed'):
+            headers['content-type'] = req_content_type
+        if accept_header_override is not None:
+            headers['Accept'] = accept_header_override.value
+        else:
+            headers['Accept'] = 'application/json;q=1, text/plain;q=0.7, */*;q=0'
+        headers['user-agent'] = self.sdk_configuration.user_agent
+        client = self.sdk_configuration.client
+        
+        try:
+            req = client.prepare_request(requests_http.Request('POST', url, params=query_params, data=data, files=form, headers=headers))
+            req = self.sdk_configuration.get_hooks().before_request(BeforeRequestContext(hook_ctx), req)
+            http_res = client.send(req)
+        except Exception as e:
+            _, e = self.sdk_configuration.get_hooks().after_error(AfterErrorContext(hook_ctx), None, e)
+            if e is not None:
+                raise e
+
+        if utils.match_status_codes(['4XX','5XX'], http_res.status_code):
+            result, e = self.sdk_configuration.get_hooks().after_error(AfterErrorContext(hook_ctx), http_res, None)
+            if e is not None:
+                raise e
+            if result is not None:
+                http_res = result
+        else:
+            http_res = self.sdk_configuration.get_hooks().after_success(AfterSuccessContext(hook_ctx), http_res)
+            
+        
+        
+        res = operations.CreatePassthroughRawResponse(status_code=http_res.status_code, content_type=http_res.headers.get('Content-Type') or '', raw_response=http_res, headers=None)
+        
+        if http_res.status_code in [204, 205, 304]:
+            res.headers = http_res.headers
+            
+        elif http_res.status_code >= 200 and http_res.status_code < 300:
+            # pylint: disable=no-else-return
+            if utils.match_content_type(http_res.headers.get('Content-Type') or '', '*/*'):                
+                res.body = http_res.content
+            # pylint: disable=no-else-return
+            elif utils.match_content_type(http_res.headers.get('Content-Type') or '', 'application/json'):                
+                out = utils.unmarshal_json(http_res.text, Optional[Any])
+                res.two_xx_application_json_any = out
+            # pylint: disable=no-else-return
+            elif utils.match_content_type(http_res.headers.get('Content-Type') or '', 'text/plain'):                
+                res.two_xx_text_plain_res = http_res.text
+            else:
+                content_type = http_res.headers.get('Content-Type')
+                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
+        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
+            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
+        else:
+            raise errors.SDKError('unknown status code received', http_res.status_code, http_res.text, http_res)
+
+        return res
+
+    
+    
+    def list_passthroughs(self, request: operations.ListPassthroughsRequest, accept_header_override: Optional[ListPassthroughsAcceptEnum] = None) -> operations.ListPassthroughsResponse:
         r"""Passthrough GET"""
         hook_ctx = HookContext(operation_id='listPassthroughs', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -85,7 +208,10 @@ class Passthrough:
         else:
             headers, query_params = utils.get_security(self.sdk_configuration.security)
         
-        headers['Accept'] = 'application/json'
+        if accept_header_override is not None:
+            headers['Accept'] = accept_header_override.value
+        else:
+            headers['Accept'] = 'application/json;q=1, text/plain;q=0.7, */*;q=0'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
         
@@ -109,13 +235,22 @@ class Passthrough:
             
         
         
-        res = operations.ListPassthroughsResponse(status_code=http_res.status_code, content_type=http_res.headers.get('Content-Type') or '', raw_response=http_res)
+        res = operations.ListPassthroughsResponse(status_code=http_res.status_code, content_type=http_res.headers.get('Content-Type') or '', raw_response=http_res, headers=None)
         
-        if http_res.status_code >= 200 and http_res.status_code < 300:
+        if http_res.status_code in [204, 205, 304]:
+            res.headers = http_res.headers
+            
+        elif http_res.status_code >= 200 and http_res.status_code < 300:
             # pylint: disable=no-else-return
-            if utils.match_content_type(http_res.headers.get('Content-Type') or '', 'application/json'):                
-                out = utils.unmarshal_json(http_res.text, Optional[Dict[str, Any]])
-                res.result = out
+            if utils.match_content_type(http_res.headers.get('Content-Type') or '', '*/*'):                
+                res.body = http_res.content
+            # pylint: disable=no-else-return
+            elif utils.match_content_type(http_res.headers.get('Content-Type') or '', 'application/json'):                
+                out = utils.unmarshal_json(http_res.text, Optional[Any])
+                res.two_xx_application_json_any = out
+            # pylint: disable=no-else-return
+            elif utils.match_content_type(http_res.headers.get('Content-Type') or '', 'text/plain'):                
+                res.two_xx_text_plain_res = http_res.text
             else:
                 content_type = http_res.headers.get('Content-Type')
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
@@ -128,9 +263,9 @@ class Passthrough:
 
     
     
-    def patch_passthrough(self, request: operations.PatchPassthroughRequest) -> operations.PatchPassthroughResponse:
+    def patch_passthrough_json(self, request: operations.PatchPassthroughJSONRequest, accept_header_override: Optional[PatchPassthroughJsonAcceptEnum] = None) -> operations.PatchPassthroughJSONResponse:
         r"""Passthrough PUT"""
-        hook_ctx = HookContext(operation_id='patchPassthrough', oauth2_scopes=[], security_source=self.sdk_configuration.security)
+        hook_ctx = HookContext(operation_id='patchPassthrough_json', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(base_url, '/passthrough/{connection_id}/{path}', request)
@@ -140,10 +275,13 @@ class Passthrough:
         else:
             headers, query_params = utils.get_security(self.sdk_configuration.security)
         
-        req_content_type, data, form = utils.serialize_request_body(request, operations.PatchPassthroughRequest, "request_body", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.PatchPassthroughJSONRequest, "request_body", False, True, 'json')
         if req_content_type is not None and req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
-        headers['Accept'] = 'application/json'
+        if accept_header_override is not None:
+            headers['Accept'] = accept_header_override.value
+        else:
+            headers['Accept'] = 'application/json;q=1, text/plain;q=0.7, */*;q=0'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
         
@@ -167,13 +305,22 @@ class Passthrough:
             
         
         
-        res = operations.PatchPassthroughResponse(status_code=http_res.status_code, content_type=http_res.headers.get('Content-Type') or '', raw_response=http_res)
+        res = operations.PatchPassthroughJSONResponse(status_code=http_res.status_code, content_type=http_res.headers.get('Content-Type') or '', raw_response=http_res, headers=None)
         
-        if http_res.status_code >= 200 and http_res.status_code < 300:
+        if http_res.status_code in [204, 205, 304]:
+            res.headers = http_res.headers
+            
+        elif http_res.status_code >= 200 and http_res.status_code < 300:
             # pylint: disable=no-else-return
-            if utils.match_content_type(http_res.headers.get('Content-Type') or '', 'application/json'):                
-                out = utils.unmarshal_json(http_res.text, Optional[Dict[str, Any]])
-                res.result = out
+            if utils.match_content_type(http_res.headers.get('Content-Type') or '', '*/*'):                
+                res.body = http_res.content
+            # pylint: disable=no-else-return
+            elif utils.match_content_type(http_res.headers.get('Content-Type') or '', 'application/json'):                
+                out = utils.unmarshal_json(http_res.text, Optional[Any])
+                res.two_xx_application_json_any = out
+            # pylint: disable=no-else-return
+            elif utils.match_content_type(http_res.headers.get('Content-Type') or '', 'text/plain'):                
+                res.two_xx_text_plain_res = http_res.text
             else:
                 content_type = http_res.headers.get('Content-Type')
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
@@ -186,7 +333,77 @@ class Passthrough:
 
     
     
-    def remove_passthrough(self, request: operations.RemovePassthroughRequest) -> operations.RemovePassthroughResponse:
+    def patch_passthrough_raw(self, request: operations.PatchPassthroughRawRequest, accept_header_override: Optional[PatchPassthroughRawAcceptEnum] = None) -> operations.PatchPassthroughRawResponse:
+        r"""Passthrough PUT"""
+        hook_ctx = HookContext(operation_id='patchPassthrough_raw', oauth2_scopes=[], security_source=self.sdk_configuration.security)
+        base_url = utils.template_url(*self.sdk_configuration.get_server_details())
+        
+        url = utils.generate_url(base_url, '/passthrough/{connection_id}/{path}', request)
+        
+        if callable(self.sdk_configuration.security):
+            headers, query_params = utils.get_security(self.sdk_configuration.security())
+        else:
+            headers, query_params = utils.get_security(self.sdk_configuration.security)
+        
+        req_content_type, data, form = utils.serialize_request_body(request, operations.PatchPassthroughRawRequest, "request_body", False, True, 'raw')
+        if req_content_type is not None and req_content_type not in ('multipart/form-data', 'multipart/mixed'):
+            headers['content-type'] = req_content_type
+        if accept_header_override is not None:
+            headers['Accept'] = accept_header_override.value
+        else:
+            headers['Accept'] = 'application/json;q=1, text/plain;q=0.7, */*;q=0'
+        headers['user-agent'] = self.sdk_configuration.user_agent
+        client = self.sdk_configuration.client
+        
+        try:
+            req = client.prepare_request(requests_http.Request('PATCH', url, params=query_params, data=data, files=form, headers=headers))
+            req = self.sdk_configuration.get_hooks().before_request(BeforeRequestContext(hook_ctx), req)
+            http_res = client.send(req)
+        except Exception as e:
+            _, e = self.sdk_configuration.get_hooks().after_error(AfterErrorContext(hook_ctx), None, e)
+            if e is not None:
+                raise e
+
+        if utils.match_status_codes(['4XX','5XX'], http_res.status_code):
+            result, e = self.sdk_configuration.get_hooks().after_error(AfterErrorContext(hook_ctx), http_res, None)
+            if e is not None:
+                raise e
+            if result is not None:
+                http_res = result
+        else:
+            http_res = self.sdk_configuration.get_hooks().after_success(AfterSuccessContext(hook_ctx), http_res)
+            
+        
+        
+        res = operations.PatchPassthroughRawResponse(status_code=http_res.status_code, content_type=http_res.headers.get('Content-Type') or '', raw_response=http_res, headers=None)
+        
+        if http_res.status_code in [204, 205, 304]:
+            res.headers = http_res.headers
+            
+        elif http_res.status_code >= 200 and http_res.status_code < 300:
+            # pylint: disable=no-else-return
+            if utils.match_content_type(http_res.headers.get('Content-Type') or '', '*/*'):                
+                res.body = http_res.content
+            # pylint: disable=no-else-return
+            elif utils.match_content_type(http_res.headers.get('Content-Type') or '', 'application/json'):                
+                out = utils.unmarshal_json(http_res.text, Optional[Any])
+                res.two_xx_application_json_any = out
+            # pylint: disable=no-else-return
+            elif utils.match_content_type(http_res.headers.get('Content-Type') or '', 'text/plain'):                
+                res.two_xx_text_plain_res = http_res.text
+            else:
+                content_type = http_res.headers.get('Content-Type')
+                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
+        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
+            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
+        else:
+            raise errors.SDKError('unknown status code received', http_res.status_code, http_res.text, http_res)
+
+        return res
+
+    
+    
+    def remove_passthrough(self, request: operations.RemovePassthroughRequest, accept_header_override: Optional[RemovePassthroughAcceptEnum] = None) -> operations.RemovePassthroughResponse:
         r"""Passthrough DELETE"""
         hook_ctx = HookContext(operation_id='removePassthrough', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -198,7 +415,10 @@ class Passthrough:
         else:
             headers, query_params = utils.get_security(self.sdk_configuration.security)
         
-        headers['Accept'] = 'application/json'
+        if accept_header_override is not None:
+            headers['Accept'] = accept_header_override.value
+        else:
+            headers['Accept'] = 'application/json;q=1, text/plain;q=0.7, */*;q=0'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
         
@@ -222,13 +442,22 @@ class Passthrough:
             
         
         
-        res = operations.RemovePassthroughResponse(status_code=http_res.status_code, content_type=http_res.headers.get('Content-Type') or '', raw_response=http_res)
+        res = operations.RemovePassthroughResponse(status_code=http_res.status_code, content_type=http_res.headers.get('Content-Type') or '', raw_response=http_res, headers=None)
         
-        if http_res.status_code >= 200 and http_res.status_code < 300:
+        if http_res.status_code in [204, 205, 304]:
+            res.headers = http_res.headers
+            
+        elif http_res.status_code >= 200 and http_res.status_code < 300:
             # pylint: disable=no-else-return
-            if utils.match_content_type(http_res.headers.get('Content-Type') or '', 'application/json'):                
-                out = utils.unmarshal_json(http_res.text, Optional[Dict[str, Any]])
-                res.result = out
+            if utils.match_content_type(http_res.headers.get('Content-Type') or '', '*/*'):                
+                res.body = http_res.content
+            # pylint: disable=no-else-return
+            elif utils.match_content_type(http_res.headers.get('Content-Type') or '', 'application/json'):                
+                out = utils.unmarshal_json(http_res.text, Optional[Any])
+                res.two_xx_application_json_any = out
+            # pylint: disable=no-else-return
+            elif utils.match_content_type(http_res.headers.get('Content-Type') or '', 'text/plain'):                
+                res.two_xx_text_plain_res = http_res.text
             else:
                 content_type = http_res.headers.get('Content-Type')
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
@@ -241,9 +470,9 @@ class Passthrough:
 
     
     
-    def update_passthrough(self, request: operations.UpdatePassthroughRequest) -> operations.UpdatePassthroughResponse:
+    def update_passthrough_json(self, request: operations.UpdatePassthroughJSONRequest, accept_header_override: Optional[UpdatePassthroughJsonAcceptEnum] = None) -> operations.UpdatePassthroughJSONResponse:
         r"""Passthrough PUT"""
-        hook_ctx = HookContext(operation_id='updatePassthrough', oauth2_scopes=[], security_source=self.sdk_configuration.security)
+        hook_ctx = HookContext(operation_id='updatePassthrough_json', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(base_url, '/passthrough/{connection_id}/{path}', request)
@@ -253,10 +482,13 @@ class Passthrough:
         else:
             headers, query_params = utils.get_security(self.sdk_configuration.security)
         
-        req_content_type, data, form = utils.serialize_request_body(request, operations.UpdatePassthroughRequest, "request_body", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.UpdatePassthroughJSONRequest, "request_body", False, True, 'json')
         if req_content_type is not None and req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
-        headers['Accept'] = 'application/json'
+        if accept_header_override is not None:
+            headers['Accept'] = accept_header_override.value
+        else:
+            headers['Accept'] = 'application/json;q=1, text/plain;q=0.7, */*;q=0'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
         
@@ -280,13 +512,92 @@ class Passthrough:
             
         
         
-        res = operations.UpdatePassthroughResponse(status_code=http_res.status_code, content_type=http_res.headers.get('Content-Type') or '', raw_response=http_res)
+        res = operations.UpdatePassthroughJSONResponse(status_code=http_res.status_code, content_type=http_res.headers.get('Content-Type') or '', raw_response=http_res, headers=None)
         
-        if http_res.status_code >= 200 and http_res.status_code < 300:
+        if http_res.status_code in [204, 205, 304]:
+            res.headers = http_res.headers
+            
+        elif http_res.status_code >= 200 and http_res.status_code < 300:
             # pylint: disable=no-else-return
-            if utils.match_content_type(http_res.headers.get('Content-Type') or '', 'application/json'):                
-                out = utils.unmarshal_json(http_res.text, Optional[Dict[str, Any]])
-                res.result = out
+            if utils.match_content_type(http_res.headers.get('Content-Type') or '', '*/*'):                
+                res.body = http_res.content
+            # pylint: disable=no-else-return
+            elif utils.match_content_type(http_res.headers.get('Content-Type') or '', 'application/json'):                
+                out = utils.unmarshal_json(http_res.text, Optional[Any])
+                res.two_xx_application_json_any = out
+            # pylint: disable=no-else-return
+            elif utils.match_content_type(http_res.headers.get('Content-Type') or '', 'text/plain'):                
+                res.two_xx_text_plain_res = http_res.text
+            else:
+                content_type = http_res.headers.get('Content-Type')
+                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
+        elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
+            raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
+        else:
+            raise errors.SDKError('unknown status code received', http_res.status_code, http_res.text, http_res)
+
+        return res
+
+    
+    
+    def update_passthrough_raw(self, request: operations.UpdatePassthroughRawRequest, accept_header_override: Optional[UpdatePassthroughRawAcceptEnum] = None) -> operations.UpdatePassthroughRawResponse:
+        r"""Passthrough PUT"""
+        hook_ctx = HookContext(operation_id='updatePassthrough_raw', oauth2_scopes=[], security_source=self.sdk_configuration.security)
+        base_url = utils.template_url(*self.sdk_configuration.get_server_details())
+        
+        url = utils.generate_url(base_url, '/passthrough/{connection_id}/{path}', request)
+        
+        if callable(self.sdk_configuration.security):
+            headers, query_params = utils.get_security(self.sdk_configuration.security())
+        else:
+            headers, query_params = utils.get_security(self.sdk_configuration.security)
+        
+        req_content_type, data, form = utils.serialize_request_body(request, operations.UpdatePassthroughRawRequest, "request_body", False, True, 'raw')
+        if req_content_type is not None and req_content_type not in ('multipart/form-data', 'multipart/mixed'):
+            headers['content-type'] = req_content_type
+        if accept_header_override is not None:
+            headers['Accept'] = accept_header_override.value
+        else:
+            headers['Accept'] = 'application/json;q=1, text/plain;q=0.7, */*;q=0'
+        headers['user-agent'] = self.sdk_configuration.user_agent
+        client = self.sdk_configuration.client
+        
+        try:
+            req = client.prepare_request(requests_http.Request('PUT', url, params=query_params, data=data, files=form, headers=headers))
+            req = self.sdk_configuration.get_hooks().before_request(BeforeRequestContext(hook_ctx), req)
+            http_res = client.send(req)
+        except Exception as e:
+            _, e = self.sdk_configuration.get_hooks().after_error(AfterErrorContext(hook_ctx), None, e)
+            if e is not None:
+                raise e
+
+        if utils.match_status_codes(['4XX','5XX'], http_res.status_code):
+            result, e = self.sdk_configuration.get_hooks().after_error(AfterErrorContext(hook_ctx), http_res, None)
+            if e is not None:
+                raise e
+            if result is not None:
+                http_res = result
+        else:
+            http_res = self.sdk_configuration.get_hooks().after_success(AfterSuccessContext(hook_ctx), http_res)
+            
+        
+        
+        res = operations.UpdatePassthroughRawResponse(status_code=http_res.status_code, content_type=http_res.headers.get('Content-Type') or '', raw_response=http_res, headers=None)
+        
+        if http_res.status_code in [204, 205, 304]:
+            res.headers = http_res.headers
+            
+        elif http_res.status_code >= 200 and http_res.status_code < 300:
+            # pylint: disable=no-else-return
+            if utils.match_content_type(http_res.headers.get('Content-Type') or '', '*/*'):                
+                res.body = http_res.content
+            # pylint: disable=no-else-return
+            elif utils.match_content_type(http_res.headers.get('Content-Type') or '', 'application/json'):                
+                out = utils.unmarshal_json(http_res.text, Optional[Any])
+                res.two_xx_application_json_any = out
+            # pylint: disable=no-else-return
+            elif utils.match_content_type(http_res.headers.get('Content-Type') or '', 'text/plain'):                
+                res.two_xx_text_plain_res = http_res.text
             else:
                 content_type = http_res.headers.get('Content-Type')
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
