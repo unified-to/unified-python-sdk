@@ -58,10 +58,9 @@ if res.connection is not None:
 
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
-
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## create_unified_webhook
 
@@ -96,10 +95,9 @@ if res.webhook is not None:
 
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
-
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## get_unified_apicall
 
@@ -136,10 +134,9 @@ if res.api_call is not None:
 
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
-
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## get_unified_connection
 
@@ -176,10 +173,9 @@ if res.connection is not None:
 
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
-
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## get_unified_integration_auth
 
@@ -217,10 +213,9 @@ if res.res is not None:
 
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
-
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## get_unified_webhook
 
@@ -257,10 +252,9 @@ if res.webhook is not None:
 
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
-
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## list_unified_apicalls
 
@@ -295,10 +289,9 @@ if res.api_calls is not None:
 
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
-
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## list_unified_connections
 
@@ -333,10 +326,9 @@ if res.connections is not None:
 
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
-
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## list_unified_integration_workspaces
 
@@ -373,10 +365,9 @@ if res.integrations is not None:
 
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
-
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## list_unified_integrations
 
@@ -411,10 +402,9 @@ if res.integrations is not None:
 
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
-
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## list_unified_issues
 
@@ -449,10 +439,9 @@ if res.issues is not None:
 
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
-
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## list_unified_webhooks
 
@@ -487,10 +476,9 @@ if res.webhooks is not None:
 
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
-
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## patch_unified_connection
 
@@ -527,10 +515,9 @@ if res.connection is not None:
 
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
-
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## patch_unified_webhook
 
@@ -567,10 +554,9 @@ if res.webhook is not None:
 
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
-
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## patch_unified_webhook_trigger
 
@@ -607,10 +593,9 @@ if res is not None:
 
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
-
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## remove_unified_connection
 
@@ -647,10 +632,9 @@ if res is not None:
 
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
-
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## remove_unified_webhook
 
@@ -687,10 +671,9 @@ if res is not None:
 
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
-
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## update_unified_connection
 
@@ -727,10 +710,9 @@ if res.connection is not None:
 
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
-
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## update_unified_webhook
 
@@ -767,10 +749,9 @@ if res.webhook is not None:
 
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
-
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## update_unified_webhook_trigger
 
@@ -807,6 +788,6 @@ if res is not None:
 
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |

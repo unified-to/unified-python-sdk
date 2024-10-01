@@ -47,10 +47,9 @@ if res.ats_interview is not None:
 
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
-
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## get_ats_interview
 
@@ -88,10 +87,9 @@ if res.ats_interview is not None:
 
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
-
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## list_ats_interviews
 
@@ -128,10 +126,9 @@ if res.ats_interviews is not None:
 
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
-
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## patch_ats_interview
 
@@ -169,10 +166,9 @@ if res.ats_interview is not None:
 
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
-
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## remove_ats_interview
 
@@ -210,10 +206,9 @@ if res is not None:
 
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
-
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## update_ats_interview
 
@@ -251,6 +246,6 @@ if res.ats_interview is not None:
 
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |

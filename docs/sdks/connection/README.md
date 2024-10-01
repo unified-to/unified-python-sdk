@@ -44,10 +44,9 @@ if res.connection is not None:
 
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
-
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## get_unified_connection
 
@@ -84,10 +83,9 @@ if res.connection is not None:
 
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
-
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## list_unified_connections
 
@@ -122,10 +120,9 @@ if res.connections is not None:
 
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
-
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## patch_unified_connection
 
@@ -162,10 +159,9 @@ if res.connection is not None:
 
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
-
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## remove_unified_connection
 
@@ -202,10 +198,9 @@ if res is not None:
 
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
-
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## update_unified_connection
 
@@ -242,6 +237,6 @@ if res.connection is not None:
 
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |

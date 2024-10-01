@@ -29,7 +29,7 @@ s = unified_to.UnifiedTo()
 
 res = s.passthrough.create_passthrough_json(request=operations.CreatePassthroughJSONRequest(
     connection_id='<value>',
-    path='/opt/lib',
+    path='/etc/periodic',
 ))
 
 if res.body is not None:
@@ -50,10 +50,9 @@ if res.body is not None:
 
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
-
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## create_passthrough_raw
 
@@ -70,7 +69,7 @@ s = unified_to.UnifiedTo()
 
 res = s.passthrough.create_passthrough_raw(request=operations.CreatePassthroughRawRequest(
     connection_id='<value>',
-    path='/etc/namedb',
+    path='/etc/periodic',
 ))
 
 if res.body is not None:
@@ -91,10 +90,9 @@ if res.body is not None:
 
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
-
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## list_passthroughs
 
@@ -132,10 +130,9 @@ if res.body is not None:
 
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
-
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## patch_passthrough_json
 
@@ -152,7 +149,7 @@ s = unified_to.UnifiedTo()
 
 res = s.passthrough.patch_passthrough_json(request=operations.PatchPassthroughJSONRequest(
     connection_id='<value>',
-    path='/home/user',
+    path='/mnt',
 ))
 
 if res.body is not None:
@@ -173,10 +170,9 @@ if res.body is not None:
 
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
-
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## patch_passthrough_raw
 
@@ -193,7 +189,7 @@ s = unified_to.UnifiedTo()
 
 res = s.passthrough.patch_passthrough_raw(request=operations.PatchPassthroughRawRequest(
     connection_id='<value>',
-    path='/etc/mail',
+    path='/mnt',
 ))
 
 if res.body is not None:
@@ -214,10 +210,9 @@ if res.body is not None:
 
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
-
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## remove_passthrough
 
@@ -255,10 +250,9 @@ if res.body is not None:
 
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
-
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## update_passthrough_json
 
@@ -275,7 +269,7 @@ s = unified_to.UnifiedTo()
 
 res = s.passthrough.update_passthrough_json(request=operations.UpdatePassthroughJSONRequest(
     connection_id='<value>',
-    path='/etc/namedb',
+    path='/dev',
 ))
 
 if res.body is not None:
@@ -296,10 +290,9 @@ if res.body is not None:
 
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
-
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## update_passthrough_raw
 
@@ -316,7 +309,7 @@ s = unified_to.UnifiedTo()
 
 res = s.passthrough.update_passthrough_raw(request=operations.UpdatePassthroughRawRequest(
     connection_id='<value>',
-    path='/System',
+    path='/dev',
 ))
 
 if res.body is not None:
@@ -337,6 +330,6 @@ if res.body is not None:
 
 ### Errors
 
-| Error Object    | Status Code     | Content Type    |
+| Error Type      | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 4xx-5xx         | */*             |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |

@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: 0d6e24164cc3d7a1033d4f9883eb8f98
+  docChecksum: 3c4e8a5e234e6444307aef536fd547bd
   docVersion: "1.0"
-  speakeasyVersion: 1.396.6
-  generationVersion: 2.415.6
-  releaseVersion: 0.24.0
-  configChecksum: 5c8c59c4fbc7064ddc9d26bd88e4cf4e
+  speakeasyVersion: 1.405.6
+  generationVersion: 2.428.1
+  releaseVersion: 0.24.1
+  configChecksum: 8b79115201971ba6a7d040ce9131751e
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -16,7 +16,7 @@ features:
     acceptHeaders: 2.81.2
     additionalDependencies: 0.1.0
     constsAndDefaults: 0.1.4
-    core: 4.8.9
+    core: 4.8.13
     globalSecurity: 2.83.7
     globalSecurityCallbacks: 0.1.0
     globalServerURLs: 2.82.2
@@ -677,6 +677,7 @@ generatedFiles:
   - docs/models/shared/commerceitemprice.md
   - docs/models/shared/commerceitemvariant.md
   - docs/models/shared/commercelocation.md
+  - docs/models/shared/commercemetadata.md
   - docs/models/shared/connection.md
   - docs/models/shared/crmcompany.md
   - docs/models/shared/crmcontact.md
@@ -1320,6 +1321,7 @@ generatedFiles:
   - src/unified_to/models/shared/commerceitemprice.py
   - src/unified_to/models/shared/commerceitemvariant.py
   - src/unified_to/models/shared/commercelocation.py
+  - src/unified_to/models/shared/commercemetadata.py
   - src/unified_to/models/shared/connection.py
   - src/unified_to/models/shared/crmcompany.py
   - src/unified_to/models/shared/crmcontact.py

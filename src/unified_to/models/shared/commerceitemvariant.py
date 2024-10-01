@@ -6,6 +6,7 @@ import dateutil.parser
 from .commerceitemmedia import CommerceItemMedia
 from .commerceitemoption import CommerceItemOption
 from .commerceitemprice import CommerceItemPrice
+from .commercemetadata import CommerceMetadata
 from dataclasses_json import Undefined, dataclass_json
 from datetime import datetime
 from enum import Enum
@@ -38,6 +39,7 @@ class CommerceItemVariant:
     is_visible: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('is_visible'), 'exclude': lambda f: f is None }})
     length: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('length'), 'exclude': lambda f: f is None }})
     media: Optional[List[CommerceItemMedia]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('media'), 'exclude': lambda f: f is None }})
+    metadata: Optional[List[CommerceMetadata]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('metadata'), 'exclude': lambda f: f is None }})
     name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name'), 'exclude': lambda f: f is None }})
     options: Optional[List[CommerceItemOption]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('options'), 'exclude': lambda f: f is None }})
     prices: Optional[List[CommerceItemPrice]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('prices'), 'exclude': lambda f: f is None }})

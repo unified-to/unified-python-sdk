@@ -5,6 +5,7 @@ import dataclasses
 import dateutil.parser
 from .commerceitemmedia import CommerceItemMedia
 from .commerceitemvariant import CommerceItemVariant
+from .commercemetadata import CommerceMetadata
 from dataclasses_json import Undefined, dataclass_json
 from datetime import datetime
 from typing import Any, Dict, List, Optional
@@ -21,6 +22,7 @@ class CommerceItem:
     is_active: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('is_active'), 'exclude': lambda f: f is None }})
     is_taxable: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('is_taxable'), 'exclude': lambda f: f is None }})
     media: Optional[List[CommerceItemMedia]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('media'), 'exclude': lambda f: f is None }})
+    metadata: Optional[List[CommerceMetadata]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('metadata'), 'exclude': lambda f: f is None }})
     name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name'), 'exclude': lambda f: f is None }})
     public_description: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('public_description'), 'exclude': lambda f: f is None }})
     public_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('public_name'), 'exclude': lambda f: f is None }})
