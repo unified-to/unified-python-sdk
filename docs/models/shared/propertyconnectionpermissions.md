@@ -103,3 +103,7 @@
 | `TASK_PROJECT_WRITE`           | task_project_write             |
 | `TASK_TASK_READ`               | task_task_read                 |
 | `TASK_TASK_WRITE`              | task_task_write                |
+| `SCIM_USERS_READ`              | scim_users_read                |
+| `SCIM_USERS_WRITE`             | scim_users_write               |
+| `SCIM_GROUPS_READ`             | scim_groups_read               |
+| `SCIM_GROUPS_WRITE`            | scim_groups_write              |

@@ -72,6 +72,8 @@ class ObjectType(str, Enum):
     KMS_PAGE = 'kms_page'
     TASK_PROJECT = 'task_project'
     TASK_TASK = 'task_task'
+    SCIM_USERS = 'scim_users'
+    SCIM_GROUPS = 'scim_groups'
 
 
 class WebhookType(str, Enum):

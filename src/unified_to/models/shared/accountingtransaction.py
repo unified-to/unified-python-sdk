@@ -3,6 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import dateutil.parser
+from .accountingtransactioncontact import AccountingTransactionContact
 from .accountingtransactionlineitem import AccountingTransactionLineItem
 from dataclasses_json import Undefined, dataclass_json
 from datetime import datetime
@@ -15,6 +16,7 @@ from unified_to import utils
 class AccountingTransaction:
     account_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('account_id'), 'exclude': lambda f: f is None }})
     contact_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('contact_id'), 'exclude': lambda f: f is None }})
+    contacts: Optional[List[AccountingTransactionContact]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('contacts'), 'exclude': lambda f: f is None }})
     created_at: Optional[datetime] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created_at'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'exclude': lambda f: f is None }})
     currency: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('currency'), 'exclude': lambda f: f is None }})
     customer_message: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('customer_message'), 'exclude': lambda f: f is None }})

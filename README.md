@@ -399,11 +399,16 @@ if res.accounting_account is not None:
 ### [group](docs/sdks/group/README.md)
 
 * [create_hris_group](docs/sdks/group/README.md#create_hris_group) - Create a group
+* [create_scim_groups](docs/sdks/group/README.md#create_scim_groups) - Create group
 * [get_hris_group](docs/sdks/group/README.md#get_hris_group) - Retrieve a group
 * [list_hris_groups](docs/sdks/group/README.md#list_hris_groups) - List all groups
+* [list_scim_groups](docs/sdks/group/README.md#list_scim_groups) - List groups
 * [patch_hris_group](docs/sdks/group/README.md#patch_hris_group) - Update a group
+* [patch_scim_groups](docs/sdks/group/README.md#patch_scim_groups) - Update group
 * [remove_hris_group](docs/sdks/group/README.md#remove_hris_group) - Remove a group
+* [remove_scim_groups](docs/sdks/group/README.md#remove_scim_groups) - Delete group
 * [update_hris_group](docs/sdks/group/README.md#update_hris_group) - Update a group
+* [update_scim_groups](docs/sdks/group/README.md#update_scim_groups) - Update group
 
 ### [hris](docs/sdks/hris/README.md)
 
@@ -703,6 +708,20 @@ if res.accounting_account is not None:
 * [get_payment_refund](docs/sdks/refund/README.md#get_payment_refund) - Retrieve a refund
 * [list_payment_refunds](docs/sdks/refund/README.md#list_payment_refunds) - List all refunds
 
+### [scim](docs/sdks/scim/README.md)
+
+* [create_scim_groups](docs/sdks/scim/README.md#create_scim_groups) - Create group
+* [create_scim_users](docs/sdks/scim/README.md#create_scim_users) - Create user
+* [get_scim_users](docs/sdks/scim/README.md#get_scim_users) - Get user
+* [list_scim_groups](docs/sdks/scim/README.md#list_scim_groups) - List groups
+* [list_scim_users](docs/sdks/scim/README.md#list_scim_users) - List users
+* [patch_scim_groups](docs/sdks/scim/README.md#patch_scim_groups) - Update group
+* [patch_scim_users](docs/sdks/scim/README.md#patch_scim_users) - Update user
+* [remove_scim_groups](docs/sdks/scim/README.md#remove_scim_groups) - Delete group
+* [remove_scim_users](docs/sdks/scim/README.md#remove_scim_users) - Delete user
+* [update_scim_groups](docs/sdks/scim/README.md#update_scim_groups) - Update group
+* [update_scim_users](docs/sdks/scim/README.md#update_scim_users) - Update user
+
 ### [scorecard](docs/sdks/scorecard/README.md)
 
 * [create_ats_scorecard](docs/sdks/scorecard/README.md#create_ats_scorecard) - Create a scorecard
@@ -831,6 +850,15 @@ if res.accounting_account is not None:
 * [update_unified_webhook](docs/sdks/unified/README.md#update_unified_webhook) - Update webhook subscription
 * [update_unified_webhook_trigger](docs/sdks/unified/README.md#update_unified_webhook_trigger) - Trigger webhook
 
+
+### [user](docs/sdks/user/README.md)
+
+* [create_scim_users](docs/sdks/user/README.md#create_scim_users) - Create user
+* [get_scim_users](docs/sdks/user/README.md#get_scim_users) - Get user
+* [list_scim_users](docs/sdks/user/README.md#list_scim_users) - List users
+* [patch_scim_users](docs/sdks/user/README.md#patch_scim_users) - Update user
+* [remove_scim_users](docs/sdks/user/README.md#remove_scim_users) - Delete user
+* [update_scim_users](docs/sdks/user/README.md#update_scim_users) - Update user
 
 ### [webhook](docs/sdks/webhook/README.md)
 

@@ -26,6 +26,7 @@ class ListUnifiedIntegrationsQueryParamCategories(str, Enum):
     MESSAGING = 'messaging'
     KMS = 'kms'
     TASK = 'task'
+    SCIM = 'scim'
 
 
 @dataclasses.dataclass

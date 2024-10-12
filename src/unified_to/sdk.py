@@ -59,6 +59,7 @@ from .pipeline import Pipeline
 from .project import Project
 from .prompt import Prompt
 from .refund import Refund
+from .scim import Scim
 from .scorecard import Scorecard
 from .sdkconfiguration import SDKConfiguration
 from .space import Space
@@ -71,6 +72,7 @@ from .timeoff import Timeoff
 from .transaction import Transaction
 from .uc import Uc
 from .unified import Unified
+from .user import User
 from .utils.retries import RetryConfig
 from .webhook import Webhook
 from typing import Callable, Dict, Optional, Union
@@ -132,6 +134,8 @@ class UnifiedTo:
     link: Link
     payout: Payout
     refund: Refund
+    scim: Scim
+    user: User
     storage: Storage
     file: File
     task: Task
@@ -258,6 +262,8 @@ class UnifiedTo:
         self.link = Link(self.sdk_configuration)
         self.payout = Payout(self.sdk_configuration)
         self.refund = Refund(self.sdk_configuration)
+        self.scim = Scim(self.sdk_configuration)
+        self.user = User(self.sdk_configuration)
         self.storage = Storage(self.sdk_configuration)
         self.file = File(self.sdk_configuration)
         self.task = Task(self.sdk_configuration)
