@@ -24,6 +24,7 @@ class ObjectType(str, Enum):
     ACCOUNTING_INVOICE = 'accounting_invoice'
     ACCOUNTING_TAXRATE = 'accounting_taxrate'
     ACCOUNTING_ORGANIZATION = 'accounting_organization'
+    ACCOUNTING_ORDER = 'accounting_order'
     PAYMENT_PAYMENT = 'payment_payment'
     PAYMENT_LINK = 'payment_link'
     PAYMENT_PAYOUT = 'payment_payout'

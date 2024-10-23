@@ -48,6 +48,7 @@ from .message import Message
 from .messaging import Messaging
 from .model import Model
 from .note import Note
+from .order import Order
 from .organization import Organization
 from .page import Page
 from .passthrough import Passthrough
@@ -87,6 +88,7 @@ class UnifiedTo:
     contact: Contact
     invoice: Invoice
     journal: Journal
+    order: Order
     organization: Organization
     taxrate: Taxrate
     transaction: Transaction
@@ -215,6 +217,7 @@ class UnifiedTo:
         self.contact = Contact(self.sdk_configuration)
         self.invoice = Invoice(self.sdk_configuration)
         self.journal = Journal(self.sdk_configuration)
+        self.order = Order(self.sdk_configuration)
         self.organization = Organization(self.sdk_configuration)
         self.taxrate = Taxrate(self.sdk_configuration)
         self.transaction = Transaction(self.sdk_configuration)
