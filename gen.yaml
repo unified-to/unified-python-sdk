@@ -10,10 +10,11 @@ generation:
     requestResponseComponentNamesFeb2024: false
   auth:
     oAuth2ClientCredentialsEnabled: false
+    oAuth2PasswordEnabled: false
   baseServerURL: ""
   flattenGlobalSecurity: true
 python:
-  version: 0.24.7
+  version: 0.24.8
   additionalDependencies:
     dependencies: {}
     extraDependencies:
