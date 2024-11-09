@@ -27,7 +27,7 @@ class User:
         else:
             headers, query_params = utils.get_security(self.sdk_configuration.security)
         
-        req_content_type, data, form = utils.serialize_request_body(request, operations.CreateScimUsersRequest, "user", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.CreateScimUsersRequest, "scim_user", False, True, 'json')
         if req_content_type is not None and req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         query_params = { **utils.get_query_params(request), **query_params }
@@ -60,8 +60,8 @@ class User:
         if http_res.status_code == 200:
             # pylint: disable=no-else-return
             if utils.match_content_type(http_res.headers.get('Content-Type') or '', 'application/json'):                
-                out = utils.unmarshal_json(http_res.text, Optional[shared.User])
-                res.user = out
+                out = utils.unmarshal_json(http_res.text, Optional[shared.ScimUser])
+                res.scim_user = out
             else:
                 content_type = http_res.headers.get('Content-Type')
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
@@ -115,8 +115,8 @@ class User:
         if http_res.status_code == 200:
             # pylint: disable=no-else-return
             if utils.match_content_type(http_res.headers.get('Content-Type') or '', 'application/json'):                
-                out = utils.unmarshal_json(http_res.text, Optional[shared.User])
-                res.user = out
+                out = utils.unmarshal_json(http_res.text, Optional[shared.ScimUser])
+                res.scim_user = out
             else:
                 content_type = http_res.headers.get('Content-Type')
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
@@ -171,8 +171,8 @@ class User:
         if http_res.status_code == 200:
             # pylint: disable=no-else-return
             if utils.match_content_type(http_res.headers.get('Content-Type') or '', 'application/json'):                
-                out = utils.unmarshal_json(http_res.text, Optional[List[shared.User]])
-                res.users = out
+                out = utils.unmarshal_json(http_res.text, Optional[List[shared.ScimUser]])
+                res.scim_users = out
             else:
                 content_type = http_res.headers.get('Content-Type')
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
@@ -197,7 +197,7 @@ class User:
         else:
             headers, query_params = utils.get_security(self.sdk_configuration.security)
         
-        req_content_type, data, form = utils.serialize_request_body(request, operations.PatchScimUsersRequest, "user", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.PatchScimUsersRequest, "scim_user", False, True, 'json')
         if req_content_type is not None and req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
@@ -229,8 +229,8 @@ class User:
         if http_res.status_code == 200:
             # pylint: disable=no-else-return
             if utils.match_content_type(http_res.headers.get('Content-Type') or '', 'application/json'):                
-                out = utils.unmarshal_json(http_res.text, Optional[shared.User])
-                res.user = out
+                out = utils.unmarshal_json(http_res.text, Optional[shared.ScimUser])
+                res.scim_user = out
             else:
                 content_type = http_res.headers.get('Content-Type')
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
@@ -302,7 +302,7 @@ class User:
         else:
             headers, query_params = utils.get_security(self.sdk_configuration.security)
         
-        req_content_type, data, form = utils.serialize_request_body(request, operations.UpdateScimUsersRequest, "user", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.UpdateScimUsersRequest, "scim_user", False, True, 'json')
         if req_content_type is not None and req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
@@ -334,8 +334,8 @@ class User:
         if http_res.status_code == 200:
             # pylint: disable=no-else-return
             if utils.match_content_type(http_res.headers.get('Content-Type') or '', 'application/json'):                
-                out = utils.unmarshal_json(http_res.text, Optional[shared.User])
-                res.user = out
+                out = utils.unmarshal_json(http_res.text, Optional[shared.ScimUser])
+                res.scim_user = out
             else:
                 content_type = http_res.headers.get('Content-Type')
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)

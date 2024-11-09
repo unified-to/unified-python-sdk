@@ -197,6 +197,15 @@ if res.accounting_account is not None:
 * [get_unified_integration_auth](docs/sdks/auth/README.md#get_unified_integration_auth) - Create connection indirectly
 * [get_unified_integration_login](docs/sdks/auth/README.md#get_unified_integration_login) - Sign in a user
 
+### [branch](docs/sdks/branch/README.md)
+
+* [create_repo_branch](docs/sdks/branch/README.md#create_repo_branch) - Create a branch
+* [get_repo_branch](docs/sdks/branch/README.md#get_repo_branch) - Retrieve a branch
+* [list_repo_branches](docs/sdks/branch/README.md#list_repo_branches) - List all branches
+* [patch_repo_branch](docs/sdks/branch/README.md#patch_repo_branch) - Update a branch
+* [remove_repo_branch](docs/sdks/branch/README.md#remove_repo_branch) - Remove a branch
+* [update_repo_branch](docs/sdks/branch/README.md#update_repo_branch) - Update a branch
+
 ### [call](docs/sdks/call/README.md)
 
 * [list_uc_calls](docs/sdks/call/README.md#list_uc_calls) - List all calls
@@ -214,6 +223,15 @@ if res.accounting_account is not None:
 
 * [get_messaging_channel](docs/sdks/channel/README.md#get_messaging_channel) - Retrieve a channel
 * [list_messaging_channels](docs/sdks/channel/README.md#list_messaging_channels) - List all channels
+
+### [class_](docs/sdks/class/README.md)
+
+* [create_lms_class](docs/sdks/class/README.md#create_lms_class) - Create a class
+* [get_lms_class](docs/sdks/class/README.md#get_lms_class) - Retrieve a class
+* [list_lms_classes](docs/sdks/class/README.md#list_lms_classes) - List all classes
+* [patch_lms_class](docs/sdks/class/README.md#patch_lms_class) - Update a class
+* [remove_lms_class](docs/sdks/class/README.md#remove_lms_class) - Remove a class
+* [update_lms_class](docs/sdks/class/README.md#update_lms_class) - Update a class
 
 ### [collection](docs/sdks/collection/README.md)
 
@@ -250,6 +268,15 @@ if res.accounting_account is not None:
 * [update_commerce_inventory](docs/sdks/commerce/README.md#update_commerce_inventory) - Update an inventory
 * [update_commerce_item](docs/sdks/commerce/README.md#update_commerce_item) - Update an item
 * [update_commerce_location](docs/sdks/commerce/README.md#update_commerce_location) - Update a location
+
+### [commit](docs/sdks/commit/README.md)
+
+* [create_repo_commit](docs/sdks/commit/README.md#create_repo_commit) - Create a commit
+* [get_repo_commit](docs/sdks/commit/README.md#get_repo_commit) - Retrieve a commit
+* [list_repo_commits](docs/sdks/commit/README.md#list_repo_commits) - List all commits
+* [patch_repo_commit](docs/sdks/commit/README.md#patch_repo_commit) - Update a commit
+* [remove_repo_commit](docs/sdks/commit/README.md#remove_repo_commit) - Remove a commit
+* [update_repo_commit](docs/sdks/commit/README.md#update_repo_commit) - Update a commit
 
 ### [company](docs/sdks/company/README.md)
 
@@ -298,6 +325,15 @@ if res.accounting_account is not None:
 * [update_accounting_contact](docs/sdks/contact/README.md#update_accounting_contact) - Update a contact
 * [update_crm_contact](docs/sdks/contact/README.md#update_crm_contact) - Update a contact
 * [update_uc_contact](docs/sdks/contact/README.md#update_uc_contact) - Update a contact
+
+### [course](docs/sdks/course/README.md)
+
+* [create_lms_course](docs/sdks/course/README.md#create_lms_course) - Create a course
+* [get_lms_course](docs/sdks/course/README.md#get_lms_course) - Retrieve a course
+* [list_lms_courses](docs/sdks/course/README.md#list_lms_courses) - List all courses
+* [patch_lms_course](docs/sdks/course/README.md#patch_lms_course) - Update a course
+* [remove_lms_course](docs/sdks/course/README.md#remove_lms_course) - Remove a course
+* [update_lms_course](docs/sdks/course/README.md#update_lms_course) - Update a course
 
 ### [crm](docs/sdks/crm/README.md)
 
@@ -407,6 +443,7 @@ if res.accounting_account is not None:
 * [create_hris_group](docs/sdks/group/README.md#create_hris_group) - Create a group
 * [create_scim_groups](docs/sdks/group/README.md#create_scim_groups) - Create group
 * [get_hris_group](docs/sdks/group/README.md#get_hris_group) - Retrieve a group
+* [get_scim_groups](docs/sdks/group/README.md#get_scim_groups) - Get group
 * [list_hris_groups](docs/sdks/group/README.md#list_hris_groups) - List all groups
 * [list_scim_groups](docs/sdks/group/README.md#list_scim_groups) - List groups
 * [patch_hris_group](docs/sdks/group/README.md#patch_hris_group) - Update a group
@@ -446,6 +483,15 @@ if res.accounting_account is not None:
 * [update_hris_employee](docs/sdks/hris/README.md#update_hris_employee) - Update an employee
 * [update_hris_group](docs/sdks/hris/README.md#update_hris_group) - Update a group
 * [update_hris_location](docs/sdks/hris/README.md#update_hris_location) - Update a location
+
+### [instructor](docs/sdks/instructor/README.md)
+
+* [create_lms_instructor](docs/sdks/instructor/README.md#create_lms_instructor) - Create an instructor
+* [get_lms_instructor](docs/sdks/instructor/README.md#get_lms_instructor) - Retrieve an instructor
+* [list_lms_instructors](docs/sdks/instructor/README.md#list_lms_instructors) - List all instructors
+* [patch_lms_instructor](docs/sdks/instructor/README.md#patch_lms_instructor) - Update an instructor
+* [remove_lms_instructor](docs/sdks/instructor/README.md#remove_lms_instructor) - Remove an instructor
+* [update_lms_instructor](docs/sdks/instructor/README.md#update_lms_instructor) - Update an instructor
 
 ### [integration](docs/sdks/integration/README.md)
 
@@ -553,6 +599,33 @@ if res.accounting_account is not None:
 * [remove_martech_list](docs/sdks/list/README.md#remove_martech_list) - Remove a list
 * [update_martech_list](docs/sdks/list/README.md#update_martech_list) - Update a list
 
+### [lms](docs/sdks/lms/README.md)
+
+* [create_lms_class](docs/sdks/lms/README.md#create_lms_class) - Create a class
+* [create_lms_course](docs/sdks/lms/README.md#create_lms_course) - Create a course
+* [create_lms_instructor](docs/sdks/lms/README.md#create_lms_instructor) - Create an instructor
+* [create_lms_student](docs/sdks/lms/README.md#create_lms_student) - Create a student
+* [get_lms_class](docs/sdks/lms/README.md#get_lms_class) - Retrieve a class
+* [get_lms_course](docs/sdks/lms/README.md#get_lms_course) - Retrieve a course
+* [get_lms_instructor](docs/sdks/lms/README.md#get_lms_instructor) - Retrieve an instructor
+* [get_lms_student](docs/sdks/lms/README.md#get_lms_student) - Retrieve a student
+* [list_lms_classes](docs/sdks/lms/README.md#list_lms_classes) - List all classes
+* [list_lms_courses](docs/sdks/lms/README.md#list_lms_courses) - List all courses
+* [list_lms_instructors](docs/sdks/lms/README.md#list_lms_instructors) - List all instructors
+* [list_lms_students](docs/sdks/lms/README.md#list_lms_students) - List all students
+* [patch_lms_class](docs/sdks/lms/README.md#patch_lms_class) - Update a class
+* [patch_lms_course](docs/sdks/lms/README.md#patch_lms_course) - Update a course
+* [patch_lms_instructor](docs/sdks/lms/README.md#patch_lms_instructor) - Update an instructor
+* [patch_lms_student](docs/sdks/lms/README.md#patch_lms_student) - Update a student
+* [remove_lms_class](docs/sdks/lms/README.md#remove_lms_class) - Remove a class
+* [remove_lms_course](docs/sdks/lms/README.md#remove_lms_course) - Remove a course
+* [remove_lms_instructor](docs/sdks/lms/README.md#remove_lms_instructor) - Remove an instructor
+* [remove_lms_student](docs/sdks/lms/README.md#remove_lms_student) - Remove a student
+* [update_lms_class](docs/sdks/lms/README.md#update_lms_class) - Update a class
+* [update_lms_course](docs/sdks/lms/README.md#update_lms_course) - Update a course
+* [update_lms_instructor](docs/sdks/lms/README.md#update_lms_instructor) - Update an instructor
+* [update_lms_student](docs/sdks/lms/README.md#update_lms_student) - Update a student
+
 ### [location](docs/sdks/location/README.md)
 
 * [create_commerce_location](docs/sdks/location/README.md#create_commerce_location) - Create a location
@@ -640,8 +713,14 @@ if res.accounting_account is not None:
 
 ### [organization](docs/sdks/organization/README.md)
 
+* [create_repo_organization](docs/sdks/organization/README.md#create_repo_organization) - Create an organization
 * [get_accounting_organization](docs/sdks/organization/README.md#get_accounting_organization) - Retrieve an organization
+* [get_repo_organization](docs/sdks/organization/README.md#get_repo_organization) - Retrieve an organization
 * [list_accounting_organizations](docs/sdks/organization/README.md#list_accounting_organizations) - List all organizations
+* [list_repo_organizations](docs/sdks/organization/README.md#list_repo_organizations) - List all organizations
+* [patch_repo_organization](docs/sdks/organization/README.md#patch_repo_organization) - Update an organization
+* [remove_repo_organization](docs/sdks/organization/README.md#remove_repo_organization) - Remove an organization
+* [update_repo_organization](docs/sdks/organization/README.md#update_repo_organization) - Update an organization
 
 ### [page](docs/sdks/page/README.md)
 
@@ -718,15 +797,67 @@ if res.accounting_account is not None:
 
 * [create_genai_prompt](docs/sdks/prompt/README.md#create_genai_prompt) - Create a prompt
 
+### [pullrequest](docs/sdks/pullrequest/README.md)
+
+* [create_repo_pullrequest](docs/sdks/pullrequest/README.md#create_repo_pullrequest) - Create a pullrequest
+* [get_repo_pullrequest](docs/sdks/pullrequest/README.md#get_repo_pullrequest) - Retrieve a pullrequest
+* [list_repo_pullrequests](docs/sdks/pullrequest/README.md#list_repo_pullrequests) - List all pullrequests
+* [patch_repo_pullrequest](docs/sdks/pullrequest/README.md#patch_repo_pullrequest) - Update a pullrequest
+* [remove_repo_pullrequest](docs/sdks/pullrequest/README.md#remove_repo_pullrequest) - Remove a pullrequest
+* [update_repo_pullrequest](docs/sdks/pullrequest/README.md#update_repo_pullrequest) - Update a pullrequest
+
 ### [refund](docs/sdks/refund/README.md)
 
 * [get_payment_refund](docs/sdks/refund/README.md#get_payment_refund) - Retrieve a refund
 * [list_payment_refunds](docs/sdks/refund/README.md#list_payment_refunds) - List all refunds
 
+### [repo](docs/sdks/repo/README.md)
+
+* [create_repo_branch](docs/sdks/repo/README.md#create_repo_branch) - Create a branch
+* [create_repo_commit](docs/sdks/repo/README.md#create_repo_commit) - Create a commit
+* [create_repo_organization](docs/sdks/repo/README.md#create_repo_organization) - Create an organization
+* [create_repo_pullrequest](docs/sdks/repo/README.md#create_repo_pullrequest) - Create a pullrequest
+* [create_repo_repository](docs/sdks/repo/README.md#create_repo_repository) - Create a repository
+* [get_repo_branch](docs/sdks/repo/README.md#get_repo_branch) - Retrieve a branch
+* [get_repo_commit](docs/sdks/repo/README.md#get_repo_commit) - Retrieve a commit
+* [get_repo_organization](docs/sdks/repo/README.md#get_repo_organization) - Retrieve an organization
+* [get_repo_pullrequest](docs/sdks/repo/README.md#get_repo_pullrequest) - Retrieve a pullrequest
+* [get_repo_repository](docs/sdks/repo/README.md#get_repo_repository) - Retrieve a repository
+* [list_repo_branches](docs/sdks/repo/README.md#list_repo_branches) - List all branches
+* [list_repo_commits](docs/sdks/repo/README.md#list_repo_commits) - List all commits
+* [list_repo_organizations](docs/sdks/repo/README.md#list_repo_organizations) - List all organizations
+* [list_repo_pullrequests](docs/sdks/repo/README.md#list_repo_pullrequests) - List all pullrequests
+* [list_repo_repositories](docs/sdks/repo/README.md#list_repo_repositories) - List all repositories
+* [patch_repo_branch](docs/sdks/repo/README.md#patch_repo_branch) - Update a branch
+* [patch_repo_commit](docs/sdks/repo/README.md#patch_repo_commit) - Update a commit
+* [patch_repo_organization](docs/sdks/repo/README.md#patch_repo_organization) - Update an organization
+* [patch_repo_pullrequest](docs/sdks/repo/README.md#patch_repo_pullrequest) - Update a pullrequest
+* [patch_repo_repository](docs/sdks/repo/README.md#patch_repo_repository) - Update a repository
+* [remove_repo_branch](docs/sdks/repo/README.md#remove_repo_branch) - Remove a branch
+* [remove_repo_commit](docs/sdks/repo/README.md#remove_repo_commit) - Remove a commit
+* [remove_repo_organization](docs/sdks/repo/README.md#remove_repo_organization) - Remove an organization
+* [remove_repo_pullrequest](docs/sdks/repo/README.md#remove_repo_pullrequest) - Remove a pullrequest
+* [remove_repo_repository](docs/sdks/repo/README.md#remove_repo_repository) - Remove a repository
+* [update_repo_branch](docs/sdks/repo/README.md#update_repo_branch) - Update a branch
+* [update_repo_commit](docs/sdks/repo/README.md#update_repo_commit) - Update a commit
+* [update_repo_organization](docs/sdks/repo/README.md#update_repo_organization) - Update an organization
+* [update_repo_pullrequest](docs/sdks/repo/README.md#update_repo_pullrequest) - Update a pullrequest
+* [update_repo_repository](docs/sdks/repo/README.md#update_repo_repository) - Update a repository
+
+### [repository](docs/sdks/repository/README.md)
+
+* [create_repo_repository](docs/sdks/repository/README.md#create_repo_repository) - Create a repository
+* [get_repo_repository](docs/sdks/repository/README.md#get_repo_repository) - Retrieve a repository
+* [list_repo_repositories](docs/sdks/repository/README.md#list_repo_repositories) - List all repositories
+* [patch_repo_repository](docs/sdks/repository/README.md#patch_repo_repository) - Update a repository
+* [remove_repo_repository](docs/sdks/repository/README.md#remove_repo_repository) - Remove a repository
+* [update_repo_repository](docs/sdks/repository/README.md#update_repo_repository) - Update a repository
+
 ### [scim](docs/sdks/scim/README.md)
 
 * [create_scim_groups](docs/sdks/scim/README.md#create_scim_groups) - Create group
 * [create_scim_users](docs/sdks/scim/README.md#create_scim_users) - Create user
+* [get_scim_groups](docs/sdks/scim/README.md#get_scim_groups) - Get group
 * [get_scim_users](docs/sdks/scim/README.md#get_scim_users) - Get user
 * [list_scim_groups](docs/sdks/scim/README.md#list_scim_groups) - List groups
 * [list_scim_users](docs/sdks/scim/README.md#list_scim_users) - List users
@@ -763,6 +894,15 @@ if res.accounting_account is not None:
 * [patch_storage_file](docs/sdks/storage/README.md#patch_storage_file) - Update a file
 * [remove_storage_file](docs/sdks/storage/README.md#remove_storage_file) - Remove a file
 * [update_storage_file](docs/sdks/storage/README.md#update_storage_file) - Update a file
+
+### [student](docs/sdks/student/README.md)
+
+* [create_lms_student](docs/sdks/student/README.md#create_lms_student) - Create a student
+* [get_lms_student](docs/sdks/student/README.md#get_lms_student) - Retrieve a student
+* [list_lms_students](docs/sdks/student/README.md#list_lms_students) - List all students
+* [patch_lms_student](docs/sdks/student/README.md#patch_lms_student) - Update a student
+* [remove_lms_student](docs/sdks/student/README.md#remove_lms_student) - Remove a student
+* [update_lms_student](docs/sdks/student/README.md#update_lms_student) - Update a student
 
 ### [task](docs/sdks/task/README.md)
 
@@ -911,9 +1051,9 @@ By default, an API error will raise a errors.SDKError exception, which has the f
 
 When custom error responses are specified for an operation, the SDK may also raise their associated exception. You can refer to respective *Errors* tables in SDK docs for more details on possible exception types for each operation. For example, the `create_accounting_account` method may raise the following exceptions:
 
-| Error Type      | Status Code     | Content Type    |
-| --------------- | --------------- | --------------- |
-| errors.SDKError | 4XX, 5XX        | \*/\*           |
+| Error Type      | Status Code | Content Type |
+| --------------- | ----------- | ------------ |
+| errors.SDKError | 4XX, 5XX    | \*/\*        |
 
 ### Example
 
@@ -949,10 +1089,10 @@ if res.accounting_account is not None:
 
 You can override the default server globally by passing a server index to the `server_idx: int` optional parameter when initializing the SDK client instance. The selected server will then be used as the default on the operations that use it. This table lists the indexes associated with the available servers:
 
-| # | Server | Variables |
-| - | ------ | --------- |
-| 0 | `https://api.unified.to` | None |
-| 1 | `https://api-eu.unified.to` | None |
+| #   | Server                      |
+| --- | --------------------------- |
+| 0   | `https://api.unified.to`    |
+| 1   | `https://api-eu.unified.to` |
 
 #### Example
 
@@ -974,7 +1114,6 @@ if res.accounting_account is not None:
     pass
 
 ```
-
 
 ### Override Server URL Per-Client
 
@@ -1026,9 +1165,9 @@ s = unified_to.UnifiedTo(client=http_client)
 
 This SDK supports the following security scheme globally:
 
-| Name    | Type    | Scheme  |
-| ------- | ------- | ------- |
-| `jwt`   | apiKey  | API key |
+| Name  | Type   | Scheme  |
+| ----- | ------ | ------- |
+| `jwt` | apiKey | API key |
 
 You can set the security parameters through the `security` optional parameter when initializing the SDK client instance. For example:
 ```python

@@ -23,3 +23,5 @@
 | `KMS`         | kms           |
 | `TASK`        | task          |
 | `SCIM`        | scim          |
+| `LMS`         | lms           |
+| `REPO`        | repo          |

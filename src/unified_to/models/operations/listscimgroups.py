@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ...models.shared import group as shared_group
+from ...models.shared import scimgroup as shared_scimgroup
 from typing import List, Optional
 
 
@@ -28,7 +28,7 @@ class ListScimGroupsResponse:
     r"""HTTP response status code for this operation"""
     raw_response: requests_http.Response = dataclasses.field()
     r"""Raw HTTP response; suitable for custom response parsing"""
-    groups: Optional[List[shared_group.Group]] = dataclasses.field(default=None)
+    scim_groups: Optional[List[shared_scimgroup.ScimGroup]] = dataclasses.field(default=None)
     r"""Successful"""
     
 

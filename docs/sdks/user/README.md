@@ -29,7 +29,7 @@ res = s.user.create_scim_users(request=operations.CreateScimUsersRequest(
     connection_id='<id>',
 ))
 
-if res.user is not None:
+if res.scim_user is not None:
     # handle response
     pass
 
@@ -69,7 +69,7 @@ res = s.user.get_scim_users(request=operations.GetScimUsersRequest(
     id='<id>',
 ))
 
-if res.user is not None:
+if res.scim_user is not None:
     # handle response
     pass
 
@@ -108,7 +108,7 @@ res = s.user.list_scim_users(request=operations.ListScimUsersRequest(
     connection_id='<id>',
 ))
 
-if res.users is not None:
+if res.scim_users is not None:
     # handle response
     pass
 
@@ -148,7 +148,7 @@ res = s.user.patch_scim_users(request=operations.PatchScimUsersRequest(
     id='<id>',
 ))
 
-if res.user is not None:
+if res.scim_user is not None:
     # handle response
     pass
 
@@ -228,7 +228,7 @@ res = s.user.update_scim_users(request=operations.UpdateScimUsersRequest(
     id='<id>',
 ))
 
-if res.user is not None:
+if res.scim_user is not None:
     # handle response
     pass
 

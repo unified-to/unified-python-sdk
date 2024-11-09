@@ -1,0 +1,14 @@
+# ScimAddress
+
+
+## Fields
+
+| Field                                                                      | Type                                                                       | Required                                                                   | Description                                                                |
+| -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| `country`                                                                  | *Optional[str]*                                                            | :heavy_minus_sign:                                                         | N/A                                                                        |
+| `formatted`                                                                | *Optional[str]*                                                            | :heavy_minus_sign:                                                         | N/A                                                                        |
+| `locality`                                                                 | *Optional[str]*                                                            | :heavy_minus_sign:                                                         | N/A                                                                        |
+| `postal_code`                                                              | *Optional[str]*                                                            | :heavy_minus_sign:                                                         | N/A                                                                        |
+| `region`                                                                   | *Optional[str]*                                                            | :heavy_minus_sign:                                                         | N/A                                                                        |
+| `street_address`                                                           | *Optional[str]*                                                            | :heavy_minus_sign:                                                         | N/A                                                                        |
+| `type`                                                                     | [Optional[shared.ScimAddressType]](../../models/shared/scimaddresstype.md) | :heavy_minus_sign:                                                         | N/A                                                                        |

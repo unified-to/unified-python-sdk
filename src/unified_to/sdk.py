@@ -9,14 +9,18 @@ from .application import Application
 from .applicationstatus import Applicationstatus
 from .ats import Ats
 from .auth import Auth
+from .branch import Branch
 from .call import Call
 from .candidate import Candidate
 from .channel import Channel
+from .class_ import Class
 from .collection import Collection
 from .commerce import Commerce
+from .commit import Commit
 from .company import Company
 from .connection import Connection
 from .contact import Contact
+from .course import Course
 from .crm import Crm
 from .customer import Customer
 from .deal import Deal
@@ -28,6 +32,7 @@ from .file import File
 from .genai import Genai
 from .group import Group
 from .hris import Hris
+from .instructor import Instructor
 from .integration import Integration
 from .interview import Interview
 from .inventory import Inventory
@@ -40,6 +45,7 @@ from .kms import Kms
 from .lead import Lead
 from .link import Link
 from .list import ListT
+from .lms import Lms
 from .location import Location
 from .login import Login
 from .martech import Martech
@@ -59,12 +65,16 @@ from .person import Person
 from .pipeline import Pipeline
 from .project import Project
 from .prompt import Prompt
+from .pullrequest import Pullrequest
 from .refund import Refund
+from .repo import Repo
+from .repository import Repository
 from .scim import Scim
 from .scorecard import Scorecard
 from .sdkconfiguration import SDKConfiguration
 from .space import Space
 from .storage import Storage
+from .student import Student
 from .task import Task
 from .taxrate import Taxrate
 from .ticket import Ticket
@@ -125,6 +135,11 @@ class UnifiedTo:
     kms: Kms
     page: Page
     space: Space
+    lms: Lms
+    class_: Class
+    course: Course
+    instructor: Instructor
+    student: Student
     martech: Martech
     list: ListT
     member: Member
@@ -136,6 +151,11 @@ class UnifiedTo:
     link: Link
     payout: Payout
     refund: Refund
+    repo: Repo
+    branch: Branch
+    commit: Commit
+    pullrequest: Pullrequest
+    repository: Repository
     scim: Scim
     user: User
     storage: Storage
@@ -254,6 +274,11 @@ class UnifiedTo:
         self.kms = Kms(self.sdk_configuration)
         self.page = Page(self.sdk_configuration)
         self.space = Space(self.sdk_configuration)
+        self.lms = Lms(self.sdk_configuration)
+        self.class_ = Class(self.sdk_configuration)
+        self.course = Course(self.sdk_configuration)
+        self.instructor = Instructor(self.sdk_configuration)
+        self.student = Student(self.sdk_configuration)
         self.martech = Martech(self.sdk_configuration)
         self.list = ListT(self.sdk_configuration)
         self.member = Member(self.sdk_configuration)
@@ -265,6 +290,11 @@ class UnifiedTo:
         self.link = Link(self.sdk_configuration)
         self.payout = Payout(self.sdk_configuration)
         self.refund = Refund(self.sdk_configuration)
+        self.repo = Repo(self.sdk_configuration)
+        self.branch = Branch(self.sdk_configuration)
+        self.commit = Commit(self.sdk_configuration)
+        self.pullrequest = Pullrequest(self.sdk_configuration)
+        self.repository = Repository(self.sdk_configuration)
         self.scim = Scim(self.sdk_configuration)
         self.user = User(self.sdk_configuration)
         self.storage = Storage(self.sdk_configuration)

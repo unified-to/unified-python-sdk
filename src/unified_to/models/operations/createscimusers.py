@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ...models.shared import user as shared_user
+from ...models.shared import scimuser as shared_scimuser
 from typing import Optional
 
 
@@ -11,7 +11,7 @@ from typing import Optional
 class CreateScimUsersRequest:
     connection_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': False }})
     r"""ID of the connection"""
-    user: Optional[shared_user.User] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    scim_user: Optional[shared_scimuser.ScimUser] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     count: Optional[float] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'count', 'style': 'form', 'explode': True }})
     filter_: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'filter', 'style': 'form', 'explode': True }})
     sort_by: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sortBy', 'style': 'form', 'explode': True }})
@@ -29,7 +29,7 @@ class CreateScimUsersResponse:
     r"""HTTP response status code for this operation"""
     raw_response: requests_http.Response = dataclasses.field()
     r"""Raw HTTP response; suitable for custom response parsing"""
-    user: Optional[shared_user.User] = dataclasses.field(default=None)
+    scim_user: Optional[shared_scimuser.ScimUser] = dataclasses.field(default=None)
     r"""Successful"""
     
 

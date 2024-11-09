@@ -14,13 +14,14 @@ generation:
   baseServerURL: ""
   flattenGlobalSecurity: true
 python:
-  version: 0.24.8
+  version: 0.24.9
   additionalDependencies:
     dependencies: {}
     extraDependencies:
       dev: {}
   author: Unified API Inc
   clientServerStatusCodesAsErrors: true
+  defaultErrorName: SDKError
   description: Python Client SDK for Unified.to
   flattenGlobalSecurity: false
   imports:

@@ -1,0 +1,12 @@
+# ScimGroupMember
+
+
+## Fields
+
+| Field                                                                              | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `value`                                                                            | *str*                                                                              | :heavy_check_mark:                                                                 | N/A                                                                                |
+| `dollar_ref`                                                                       | *Optional[str]*                                                                    | :heavy_minus_sign:                                                                 | N/A                                                                                |
+| `display`                                                                          | *Optional[str]*                                                                    | :heavy_minus_sign:                                                                 | N/A                                                                                |
+| `operation`                                                                        | [Optional[shared.Operation]](../../models/shared/operation.md)                     | :heavy_minus_sign:                                                                 | N/A                                                                                |
+| `type`                                                                             | [Optional[shared.ScimGroupMemberType]](../../models/shared/scimgroupmembertype.md) | :heavy_minus_sign:                                                                 | N/A                                                                                |

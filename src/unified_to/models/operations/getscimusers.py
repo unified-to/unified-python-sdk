@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ...models.shared import user as shared_user
+from ...models.shared import scimuser as shared_scimuser
 from typing import Optional
 
 
@@ -25,7 +25,7 @@ class GetScimUsersResponse:
     r"""HTTP response status code for this operation"""
     raw_response: requests_http.Response = dataclasses.field()
     r"""Raw HTTP response; suitable for custom response parsing"""
-    user: Optional[shared_user.User] = dataclasses.field(default=None)
+    scim_user: Optional[shared_scimuser.ScimUser] = dataclasses.field(default=None)
     r"""Successful"""
     
 

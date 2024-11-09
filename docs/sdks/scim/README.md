@@ -7,6 +7,7 @@
 
 * [create_scim_groups](#create_scim_groups) - Create group
 * [create_scim_users](#create_scim_users) - Create user
+* [get_scim_groups](#get_scim_groups) - Get group
 * [get_scim_users](#get_scim_users) - Get user
 * [list_scim_groups](#list_scim_groups) - List groups
 * [list_scim_users](#list_scim_users) - List users
@@ -34,7 +35,7 @@ res = s.scim.create_scim_groups(request=operations.CreateScimGroupsRequest(
     connection_id='<id>',
 ))
 
-if res.group is not None:
+if res.scim_group is not None:
     # handle response
     pass
 
@@ -73,7 +74,7 @@ res = s.scim.create_scim_users(request=operations.CreateScimUsersRequest(
     connection_id='<id>',
 ))
 
-if res.user is not None:
+if res.scim_user is not None:
     # handle response
     pass
 
@@ -88,6 +89,46 @@ if res.user is not None:
 ### Response
 
 **[operations.CreateScimUsersResponse](../../models/operations/createscimusersresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## get_scim_groups
+
+Get group
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations
+
+s = unified_to.UnifiedTo()
+
+
+res = s.scim.get_scim_groups(request=operations.GetScimGroupsRequest(
+    connection_id='<id>',
+    id='<id>',
+))
+
+if res.scim_group is not None:
+    # handle response
+    pass
+
+```
+
+### Parameters
+
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `request`                                                                          | [operations.GetScimGroupsRequest](../../models/operations/getscimgroupsrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+
+### Response
+
+**[operations.GetScimGroupsResponse](../../models/operations/getscimgroupsresponse.md)**
 
 ### Errors
 
@@ -113,7 +154,7 @@ res = s.scim.get_scim_users(request=operations.GetScimUsersRequest(
     id='<id>',
 ))
 
-if res.user is not None:
+if res.scim_user is not None:
     # handle response
     pass
 
@@ -152,7 +193,7 @@ res = s.scim.list_scim_groups(request=operations.ListScimGroupsRequest(
     connection_id='<id>',
 ))
 
-if res.groups is not None:
+if res.scim_groups is not None:
     # handle response
     pass
 
@@ -191,7 +232,7 @@ res = s.scim.list_scim_users(request=operations.ListScimUsersRequest(
     connection_id='<id>',
 ))
 
-if res.users is not None:
+if res.scim_users is not None:
     # handle response
     pass
 
@@ -231,7 +272,7 @@ res = s.scim.patch_scim_groups(request=operations.PatchScimGroupsRequest(
     id='<id>',
 ))
 
-if res.group is not None:
+if res.scim_group is not None:
     # handle response
     pass
 
@@ -271,7 +312,7 @@ res = s.scim.patch_scim_users(request=operations.PatchScimUsersRequest(
     id='<id>',
 ))
 
-if res.user is not None:
+if res.scim_user is not None:
     # handle response
     pass
 
@@ -391,7 +432,7 @@ res = s.scim.update_scim_groups(request=operations.UpdateScimGroupsRequest(
     id='<id>',
 ))
 
-if res.group is not None:
+if res.scim_group is not None:
     # handle response
     pass
 
@@ -431,7 +472,7 @@ res = s.scim.update_scim_users(request=operations.UpdateScimUsersRequest(
     id='<id>',
 ))
 
-if res.user is not None:
+if res.scim_user is not None:
     # handle response
     pass
 

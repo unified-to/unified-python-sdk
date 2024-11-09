@@ -8,6 +8,7 @@
 * [create_hris_group](#create_hris_group) - Create a group
 * [create_scim_groups](#create_scim_groups) - Create group
 * [get_hris_group](#get_hris_group) - Retrieve a group
+* [get_scim_groups](#get_scim_groups) - Get group
 * [list_hris_groups](#list_hris_groups) - List all groups
 * [list_scim_groups](#list_scim_groups) - List groups
 * [patch_hris_group](#patch_hris_group) - Update a group
@@ -73,7 +74,7 @@ res = s.group.create_scim_groups(request=operations.CreateScimGroupsRequest(
     connection_id='<id>',
 ))
 
-if res.group is not None:
+if res.scim_group is not None:
     # handle response
     pass
 
@@ -128,6 +129,46 @@ if res.hris_group is not None:
 ### Response
 
 **[operations.GetHrisGroupResponse](../../models/operations/gethrisgroupresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## get_scim_groups
+
+Get group
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations
+
+s = unified_to.UnifiedTo()
+
+
+res = s.group.get_scim_groups(request=operations.GetScimGroupsRequest(
+    connection_id='<id>',
+    id='<id>',
+))
+
+if res.scim_group is not None:
+    # handle response
+    pass
+
+```
+
+### Parameters
+
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `request`                                                                          | [operations.GetScimGroupsRequest](../../models/operations/getscimgroupsrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+
+### Response
+
+**[operations.GetScimGroupsResponse](../../models/operations/getscimgroupsresponse.md)**
 
 ### Errors
 
@@ -191,7 +232,7 @@ res = s.group.list_scim_groups(request=operations.ListScimGroupsRequest(
     connection_id='<id>',
 ))
 
-if res.groups is not None:
+if res.scim_groups is not None:
     # handle response
     pass
 
@@ -271,7 +312,7 @@ res = s.group.patch_scim_groups(request=operations.PatchScimGroupsRequest(
     id='<id>',
 ))
 
-if res.group is not None:
+if res.scim_group is not None:
     # handle response
     pass
 
@@ -431,7 +472,7 @@ res = s.group.update_scim_groups(request=operations.UpdateScimGroupsRequest(
     id='<id>',
 ))
 
-if res.group is not None:
+if res.scim_group is not None:
     # handle response
     pass
 

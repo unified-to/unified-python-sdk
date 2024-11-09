@@ -39,6 +39,12 @@ class ListChannelID(str, Enum):
     NOT_SUPPORTED = 'not-supported'
 
 
+class ListClassID(str, Enum):
+    SUPPORTED_REQUIRED = 'supported-required'
+    SUPPORTED = 'supported'
+    NOT_SUPPORTED = 'not-supported'
+
+
 class ListCollectionID(str, Enum):
     SUPPORTED_REQUIRED = 'supported-required'
     SUPPORTED = 'supported'
@@ -57,6 +63,12 @@ class ListContactID(str, Enum):
     NOT_SUPPORTED = 'not-supported'
 
 
+class ListCourseID(str, Enum):
+    SUPPORTED_REQUIRED = 'supported-required'
+    SUPPORTED = 'supported'
+    NOT_SUPPORTED = 'not-supported'
+
+
 class ListCustomerID(str, Enum):
     SUPPORTED_REQUIRED = 'supported-required'
     SUPPORTED = 'supported'
@@ -64,6 +76,12 @@ class ListCustomerID(str, Enum):
 
 
 class ListDealID(str, Enum):
+    SUPPORTED_REQUIRED = 'supported-required'
+    SUPPORTED = 'supported'
+    NOT_SUPPORTED = 'not-supported'
+
+
+class ListInstructorID(str, Enum):
     SUPPORTED_REQUIRED = 'supported-required'
     SUPPORTED = 'supported'
     NOT_SUPPORTED = 'not-supported'
@@ -183,6 +201,12 @@ class ListSpaceID(str, Enum):
     NOT_SUPPORTED = 'not-supported'
 
 
+class ListStudentID(str, Enum):
+    SUPPORTED_REQUIRED = 'supported-required'
+    SUPPORTED = 'supported'
+    NOT_SUPPORTED = 'not-supported'
+
+
 class ListTicketID(str, Enum):
     SUPPORTED_REQUIRED = 'supported-required'
     SUPPORTED = 'supported'
@@ -246,11 +270,14 @@ class IntegrationSupport:
     list_application_id: Optional[ListApplicationID] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('list_application_id'), 'exclude': lambda f: f is None }})
     list_candidate_id: Optional[ListCandidateID] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('list_candidate_id'), 'exclude': lambda f: f is None }})
     list_channel_id: Optional[ListChannelID] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('list_channel_id'), 'exclude': lambda f: f is None }})
+    list_class_id: Optional[ListClassID] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('list_class_id'), 'exclude': lambda f: f is None }})
     list_collection_id: Optional[ListCollectionID] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('list_collection_id'), 'exclude': lambda f: f is None }})
     list_company_id: Optional[ListCompanyID] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('list_company_id'), 'exclude': lambda f: f is None }})
     list_contact_id: Optional[ListContactID] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('list_contact_id'), 'exclude': lambda f: f is None }})
+    list_course_id: Optional[ListCourseID] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('list_course_id'), 'exclude': lambda f: f is None }})
     list_customer_id: Optional[ListCustomerID] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('list_customer_id'), 'exclude': lambda f: f is None }})
     list_deal_id: Optional[ListDealID] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('list_deal_id'), 'exclude': lambda f: f is None }})
+    list_instructor_id: Optional[ListInstructorID] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('list_instructor_id'), 'exclude': lambda f: f is None }})
     list_interview_id: Optional[ListInterviewID] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('list_interview_id'), 'exclude': lambda f: f is None }})
     list_invoice_id: Optional[ListInvoiceID] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('list_invoice_id'), 'exclude': lambda f: f is None }})
     list_item_id: Optional[ListItemID] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('list_item_id'), 'exclude': lambda f: f is None }})
@@ -270,6 +297,7 @@ class IntegrationSupport:
     list_sort_by_name: Optional[ListSortByName] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('list_sort_by_name'), 'exclude': lambda f: f is None }})
     list_sort_by_updated_at: Optional[ListSortByUpdatedAt] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('list_sort_by_updated_at'), 'exclude': lambda f: f is None }})
     list_space_id: Optional[ListSpaceID] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('list_space_id'), 'exclude': lambda f: f is None }})
+    list_student_id: Optional[ListStudentID] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('list_student_id'), 'exclude': lambda f: f is None }})
     list_ticket_id: Optional[ListTicketID] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('list_ticket_id'), 'exclude': lambda f: f is None }})
     list_type: Optional[ListType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('list_type'), 'exclude': lambda f: f is None }})
     list_updated_gte: Optional[ListUpdatedGte] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('list_updated_gte'), 'exclude': lambda f: f is None }})

@@ -63,3 +63,12 @@
 | `TASK_TASK`               | task_task                 |
 | `SCIM_USERS`              | scim_users                |
 | `SCIM_GROUPS`             | scim_groups               |
+| `LMS_COURSE`              | lms_course                |
+| `LMS_CLASS`               | lms_class                 |
+| `LMS_STUDENT`             | lms_student               |
+| `LMS_INSTRUCTOR`          | lms_instructor            |
+| `REPO_ORGANIZATION`       | repo_organization         |
+| `REPO_REPOSITORY`         | repo_repository           |
+| `REPO_BRANCH`             | repo_branch               |
+| `REPO_COMMIT`             | repo_commit               |
+| `REPO_PULLREQUEST`        | repo_pullrequest          |
