@@ -32,7 +32,7 @@ res = s.passthrough.create_passthrough_json(request=operations.CreatePassthrough
     path='/etc/periodic',
 ))
 
-if res.body is not None:
+if res is not None:
     # handle response
     pass
 
@@ -72,7 +72,7 @@ res = s.passthrough.create_passthrough_raw(request=operations.CreatePassthroughR
     path='/etc/periodic',
 ))
 
-if res.body is not None:
+if res is not None:
     # handle response
     pass
 
@@ -112,7 +112,7 @@ res = s.passthrough.list_passthroughs(request=operations.ListPassthroughsRequest
     path='/selinux',
 ))
 
-if res.body is not None:
+if res is not None:
     # handle response
     pass
 
@@ -152,7 +152,7 @@ res = s.passthrough.patch_passthrough_json(request=operations.PatchPassthroughJS
     path='/mnt',
 ))
 
-if res.body is not None:
+if res is not None:
     # handle response
     pass
 
@@ -192,7 +192,7 @@ res = s.passthrough.patch_passthrough_raw(request=operations.PatchPassthroughRaw
     path='/mnt',
 ))
 
-if res.body is not None:
+if res is not None:
     # handle response
     pass
 
@@ -232,7 +232,7 @@ res = s.passthrough.remove_passthrough(request=operations.RemovePassthroughReque
     path='/Applications',
 ))
 
-if res.body is not None:
+if res is not None:
     # handle response
     pass
 
@@ -272,7 +272,7 @@ res = s.passthrough.update_passthrough_json(request=operations.UpdatePassthrough
     path='/dev',
 ))
 
-if res.body is not None:
+if res is not None:
     # handle response
     pass
 
@@ -312,7 +312,7 @@ res = s.passthrough.update_passthrough_raw(request=operations.UpdatePassthroughR
     path='/dev',
 ))
 
-if res.body is not None:
+if res is not None:
     # handle response
     pass
 

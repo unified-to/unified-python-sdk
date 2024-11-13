@@ -26,10 +26,15 @@ class PatchPassthroughJSONResponse:
     r"""HTTP response status code for this operation"""
     raw_response: requests_http.Response = dataclasses.field()
     r"""Raw HTTP response; suitable for custom response parsing"""
-    two_xx_application_json_any: Optional[Any] = dataclasses.field(default=None)
+    default_wildcard_wildcard_response_stream: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Successful"""
-    two_xx_text_plain_res: Optional[str] = dataclasses.field(default=None)
+    default_application_json_any: Optional[Any] = dataclasses.field(default=None)
     r"""Successful"""
-    body: Optional[bytes] = dataclasses.field(default=None)
+    default_application_xml_res: Optional[str] = dataclasses.field(default=None)
+    r"""Successful"""
+    default_text_csv_res: Optional[str] = dataclasses.field(default=None)
+    r"""Successful"""
+    default_text_plain_res: Optional[str] = dataclasses.field(default=None)
+    r"""Successful"""
     
 

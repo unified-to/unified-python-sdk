@@ -3,6 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
+from typing import Dict, List
 
 
 @dataclasses.dataclass
@@ -19,6 +20,7 @@ class RemoveAccountingInvoiceRequest:
 class RemoveAccountingInvoiceResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
+    headers: Dict[str, List[str]] = dataclasses.field()
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
     raw_response: requests_http.Response = dataclasses.field()

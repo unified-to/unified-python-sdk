@@ -10,42 +10,58 @@ from unified_to.models import errors, operations
 
 class CreatePassthroughJsonAcceptEnum(str, Enum):
     APPLICATION_JSON = "application/json"
+    TEXT_CSV = "text/csv"
     TEXT_PLAIN = "text/plain"
+    APPLICATION_XML = "application/xml"
     WILDCARD_WILDCARD_ = "*/*"
 
 class CreatePassthroughRawAcceptEnum(str, Enum):
     APPLICATION_JSON = "application/json"
+    TEXT_CSV = "text/csv"
     TEXT_PLAIN = "text/plain"
+    APPLICATION_XML = "application/xml"
     WILDCARD_WILDCARD_ = "*/*"
 
 class ListPassthroughsAcceptEnum(str, Enum):
     APPLICATION_JSON = "application/json"
+    TEXT_CSV = "text/csv"
     TEXT_PLAIN = "text/plain"
+    APPLICATION_XML = "application/xml"
     WILDCARD_WILDCARD_ = "*/*"
 
 class PatchPassthroughJsonAcceptEnum(str, Enum):
     APPLICATION_JSON = "application/json"
+    TEXT_CSV = "text/csv"
     TEXT_PLAIN = "text/plain"
+    APPLICATION_XML = "application/xml"
     WILDCARD_WILDCARD_ = "*/*"
 
 class PatchPassthroughRawAcceptEnum(str, Enum):
     APPLICATION_JSON = "application/json"
+    TEXT_CSV = "text/csv"
     TEXT_PLAIN = "text/plain"
+    APPLICATION_XML = "application/xml"
     WILDCARD_WILDCARD_ = "*/*"
 
 class RemovePassthroughAcceptEnum(str, Enum):
     APPLICATION_JSON = "application/json"
+    TEXT_CSV = "text/csv"
     TEXT_PLAIN = "text/plain"
+    APPLICATION_XML = "application/xml"
     WILDCARD_WILDCARD_ = "*/*"
 
 class UpdatePassthroughJsonAcceptEnum(str, Enum):
     APPLICATION_JSON = "application/json"
+    TEXT_CSV = "text/csv"
     TEXT_PLAIN = "text/plain"
+    APPLICATION_XML = "application/xml"
     WILDCARD_WILDCARD_ = "*/*"
 
 class UpdatePassthroughRawAcceptEnum(str, Enum):
     APPLICATION_JSON = "application/json"
+    TEXT_CSV = "text/csv"
     TEXT_PLAIN = "text/plain"
+    APPLICATION_XML = "application/xml"
     WILDCARD_WILDCARD_ = "*/*"
 
 class Passthrough:
@@ -74,7 +90,7 @@ class Passthrough:
         if accept_header_override is not None:
             headers['Accept'] = accept_header_override.value
         else:
-            headers['Accept'] = 'application/json;q=1, text/plain;q=0.7, */*;q=0'
+            headers['Accept'] = 'application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
         
@@ -103,24 +119,30 @@ class Passthrough:
         if http_res.status_code in [204, 205, 304]:
             res.headers = http_res.headers
             
-        elif http_res.status_code >= 200 and http_res.status_code < 300:
-            # pylint: disable=no-else-return
-            if utils.match_content_type(http_res.headers.get('Content-Type') or '', '*/*'):                
-                res.body = http_res.content
-            # pylint: disable=no-else-return
-            elif utils.match_content_type(http_res.headers.get('Content-Type') or '', 'application/json'):                
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.two_xx_application_json_any = out
-            # pylint: disable=no-else-return
-            elif utils.match_content_type(http_res.headers.get('Content-Type') or '', 'text/plain'):                
-                res.two_xx_text_plain_res = http_res.text
-            else:
-                content_type = http_res.headers.get('Content-Type')
-                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
         elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
             raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
         else:
-            raise errors.SDKError('unknown status code received', http_res.status_code, http_res.text, http_res)
+            res.headers = http_res.headers
+            
+            # pylint: disable=no-else-return
+            if utils.match_content_type(http_res.headers.get('Content-Type') or '', '*/*'):                
+                res.default_wildcard_wildcard_response_stream = http_res
+            # pylint: disable=no-else-return
+            elif utils.match_content_type(http_res.headers.get('Content-Type') or '', 'application/json'):                
+                out = utils.unmarshal_json(http_res.text, Optional[Any])
+                res.default_application_json_any = out
+            # pylint: disable=no-else-return
+            elif utils.match_content_type(http_res.headers.get('Content-Type') or '', 'application/xml'):                
+                res.default_application_xml_res = http_res.text
+            # pylint: disable=no-else-return
+            elif utils.match_content_type(http_res.headers.get('Content-Type') or '', 'text/csv'):                
+                res.default_text_csv_res = http_res.text
+            # pylint: disable=no-else-return
+            elif utils.match_content_type(http_res.headers.get('Content-Type') or '', 'text/plain'):                
+                res.default_text_plain_res = http_res.text
+            else:
+                content_type = http_res.headers.get('Content-Type')
+                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
 
         return res
 
@@ -144,7 +166,7 @@ class Passthrough:
         if accept_header_override is not None:
             headers['Accept'] = accept_header_override.value
         else:
-            headers['Accept'] = 'application/json;q=1, text/plain;q=0.7, */*;q=0'
+            headers['Accept'] = 'application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
         
@@ -173,24 +195,30 @@ class Passthrough:
         if http_res.status_code in [204, 205, 304]:
             res.headers = http_res.headers
             
-        elif http_res.status_code >= 200 and http_res.status_code < 300:
-            # pylint: disable=no-else-return
-            if utils.match_content_type(http_res.headers.get('Content-Type') or '', '*/*'):                
-                res.body = http_res.content
-            # pylint: disable=no-else-return
-            elif utils.match_content_type(http_res.headers.get('Content-Type') or '', 'application/json'):                
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.two_xx_application_json_any = out
-            # pylint: disable=no-else-return
-            elif utils.match_content_type(http_res.headers.get('Content-Type') or '', 'text/plain'):                
-                res.two_xx_text_plain_res = http_res.text
-            else:
-                content_type = http_res.headers.get('Content-Type')
-                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
         elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
             raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
         else:
-            raise errors.SDKError('unknown status code received', http_res.status_code, http_res.text, http_res)
+            res.headers = http_res.headers
+            
+            # pylint: disable=no-else-return
+            if utils.match_content_type(http_res.headers.get('Content-Type') or '', '*/*'):                
+                res.default_wildcard_wildcard_response_stream = http_res
+            # pylint: disable=no-else-return
+            elif utils.match_content_type(http_res.headers.get('Content-Type') or '', 'application/json'):                
+                out = utils.unmarshal_json(http_res.text, Optional[Any])
+                res.default_application_json_any = out
+            # pylint: disable=no-else-return
+            elif utils.match_content_type(http_res.headers.get('Content-Type') or '', 'application/xml'):                
+                res.default_application_xml_res = http_res.text
+            # pylint: disable=no-else-return
+            elif utils.match_content_type(http_res.headers.get('Content-Type') or '', 'text/csv'):                
+                res.default_text_csv_res = http_res.text
+            # pylint: disable=no-else-return
+            elif utils.match_content_type(http_res.headers.get('Content-Type') or '', 'text/plain'):                
+                res.default_text_plain_res = http_res.text
+            else:
+                content_type = http_res.headers.get('Content-Type')
+                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
 
         return res
 
@@ -211,7 +239,7 @@ class Passthrough:
         if accept_header_override is not None:
             headers['Accept'] = accept_header_override.value
         else:
-            headers['Accept'] = 'application/json;q=1, text/plain;q=0.7, */*;q=0'
+            headers['Accept'] = 'application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
         
@@ -240,24 +268,30 @@ class Passthrough:
         if http_res.status_code in [204, 205, 304]:
             res.headers = http_res.headers
             
-        elif http_res.status_code >= 200 and http_res.status_code < 300:
-            # pylint: disable=no-else-return
-            if utils.match_content_type(http_res.headers.get('Content-Type') or '', '*/*'):                
-                res.body = http_res.content
-            # pylint: disable=no-else-return
-            elif utils.match_content_type(http_res.headers.get('Content-Type') or '', 'application/json'):                
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.two_xx_application_json_any = out
-            # pylint: disable=no-else-return
-            elif utils.match_content_type(http_res.headers.get('Content-Type') or '', 'text/plain'):                
-                res.two_xx_text_plain_res = http_res.text
-            else:
-                content_type = http_res.headers.get('Content-Type')
-                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
         elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
             raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
         else:
-            raise errors.SDKError('unknown status code received', http_res.status_code, http_res.text, http_res)
+            res.headers = http_res.headers
+            
+            # pylint: disable=no-else-return
+            if utils.match_content_type(http_res.headers.get('Content-Type') or '', '*/*'):                
+                res.default_wildcard_wildcard_response_stream = http_res
+            # pylint: disable=no-else-return
+            elif utils.match_content_type(http_res.headers.get('Content-Type') or '', 'application/json'):                
+                out = utils.unmarshal_json(http_res.text, Optional[Any])
+                res.default_application_json_any = out
+            # pylint: disable=no-else-return
+            elif utils.match_content_type(http_res.headers.get('Content-Type') or '', 'application/xml'):                
+                res.default_application_xml_res = http_res.text
+            # pylint: disable=no-else-return
+            elif utils.match_content_type(http_res.headers.get('Content-Type') or '', 'text/csv'):                
+                res.default_text_csv_res = http_res.text
+            # pylint: disable=no-else-return
+            elif utils.match_content_type(http_res.headers.get('Content-Type') or '', 'text/plain'):                
+                res.default_text_plain_res = http_res.text
+            else:
+                content_type = http_res.headers.get('Content-Type')
+                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
 
         return res
 
@@ -281,7 +315,7 @@ class Passthrough:
         if accept_header_override is not None:
             headers['Accept'] = accept_header_override.value
         else:
-            headers['Accept'] = 'application/json;q=1, text/plain;q=0.7, */*;q=0'
+            headers['Accept'] = 'application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
         
@@ -310,24 +344,30 @@ class Passthrough:
         if http_res.status_code in [204, 205, 304]:
             res.headers = http_res.headers
             
-        elif http_res.status_code >= 200 and http_res.status_code < 300:
-            # pylint: disable=no-else-return
-            if utils.match_content_type(http_res.headers.get('Content-Type') or '', '*/*'):                
-                res.body = http_res.content
-            # pylint: disable=no-else-return
-            elif utils.match_content_type(http_res.headers.get('Content-Type') or '', 'application/json'):                
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.two_xx_application_json_any = out
-            # pylint: disable=no-else-return
-            elif utils.match_content_type(http_res.headers.get('Content-Type') or '', 'text/plain'):                
-                res.two_xx_text_plain_res = http_res.text
-            else:
-                content_type = http_res.headers.get('Content-Type')
-                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
         elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
             raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
         else:
-            raise errors.SDKError('unknown status code received', http_res.status_code, http_res.text, http_res)
+            res.headers = http_res.headers
+            
+            # pylint: disable=no-else-return
+            if utils.match_content_type(http_res.headers.get('Content-Type') or '', '*/*'):                
+                res.default_wildcard_wildcard_response_stream = http_res
+            # pylint: disable=no-else-return
+            elif utils.match_content_type(http_res.headers.get('Content-Type') or '', 'application/json'):                
+                out = utils.unmarshal_json(http_res.text, Optional[Any])
+                res.default_application_json_any = out
+            # pylint: disable=no-else-return
+            elif utils.match_content_type(http_res.headers.get('Content-Type') or '', 'application/xml'):                
+                res.default_application_xml_res = http_res.text
+            # pylint: disable=no-else-return
+            elif utils.match_content_type(http_res.headers.get('Content-Type') or '', 'text/csv'):                
+                res.default_text_csv_res = http_res.text
+            # pylint: disable=no-else-return
+            elif utils.match_content_type(http_res.headers.get('Content-Type') or '', 'text/plain'):                
+                res.default_text_plain_res = http_res.text
+            else:
+                content_type = http_res.headers.get('Content-Type')
+                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
 
         return res
 
@@ -351,7 +391,7 @@ class Passthrough:
         if accept_header_override is not None:
             headers['Accept'] = accept_header_override.value
         else:
-            headers['Accept'] = 'application/json;q=1, text/plain;q=0.7, */*;q=0'
+            headers['Accept'] = 'application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
         
@@ -380,24 +420,30 @@ class Passthrough:
         if http_res.status_code in [204, 205, 304]:
             res.headers = http_res.headers
             
-        elif http_res.status_code >= 200 and http_res.status_code < 300:
-            # pylint: disable=no-else-return
-            if utils.match_content_type(http_res.headers.get('Content-Type') or '', '*/*'):                
-                res.body = http_res.content
-            # pylint: disable=no-else-return
-            elif utils.match_content_type(http_res.headers.get('Content-Type') or '', 'application/json'):                
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.two_xx_application_json_any = out
-            # pylint: disable=no-else-return
-            elif utils.match_content_type(http_res.headers.get('Content-Type') or '', 'text/plain'):                
-                res.two_xx_text_plain_res = http_res.text
-            else:
-                content_type = http_res.headers.get('Content-Type')
-                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
         elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
             raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
         else:
-            raise errors.SDKError('unknown status code received', http_res.status_code, http_res.text, http_res)
+            res.headers = http_res.headers
+            
+            # pylint: disable=no-else-return
+            if utils.match_content_type(http_res.headers.get('Content-Type') or '', '*/*'):                
+                res.default_wildcard_wildcard_response_stream = http_res
+            # pylint: disable=no-else-return
+            elif utils.match_content_type(http_res.headers.get('Content-Type') or '', 'application/json'):                
+                out = utils.unmarshal_json(http_res.text, Optional[Any])
+                res.default_application_json_any = out
+            # pylint: disable=no-else-return
+            elif utils.match_content_type(http_res.headers.get('Content-Type') or '', 'application/xml'):                
+                res.default_application_xml_res = http_res.text
+            # pylint: disable=no-else-return
+            elif utils.match_content_type(http_res.headers.get('Content-Type') or '', 'text/csv'):                
+                res.default_text_csv_res = http_res.text
+            # pylint: disable=no-else-return
+            elif utils.match_content_type(http_res.headers.get('Content-Type') or '', 'text/plain'):                
+                res.default_text_plain_res = http_res.text
+            else:
+                content_type = http_res.headers.get('Content-Type')
+                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
 
         return res
 
@@ -418,7 +464,7 @@ class Passthrough:
         if accept_header_override is not None:
             headers['Accept'] = accept_header_override.value
         else:
-            headers['Accept'] = 'application/json;q=1, text/plain;q=0.7, */*;q=0'
+            headers['Accept'] = 'application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
         
@@ -447,24 +493,30 @@ class Passthrough:
         if http_res.status_code in [204, 205, 304]:
             res.headers = http_res.headers
             
-        elif http_res.status_code >= 200 and http_res.status_code < 300:
-            # pylint: disable=no-else-return
-            if utils.match_content_type(http_res.headers.get('Content-Type') or '', '*/*'):                
-                res.body = http_res.content
-            # pylint: disable=no-else-return
-            elif utils.match_content_type(http_res.headers.get('Content-Type') or '', 'application/json'):                
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.two_xx_application_json_any = out
-            # pylint: disable=no-else-return
-            elif utils.match_content_type(http_res.headers.get('Content-Type') or '', 'text/plain'):                
-                res.two_xx_text_plain_res = http_res.text
-            else:
-                content_type = http_res.headers.get('Content-Type')
-                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
         elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
             raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
         else:
-            raise errors.SDKError('unknown status code received', http_res.status_code, http_res.text, http_res)
+            res.headers = http_res.headers
+            
+            # pylint: disable=no-else-return
+            if utils.match_content_type(http_res.headers.get('Content-Type') or '', '*/*'):                
+                res.default_wildcard_wildcard_response_stream = http_res
+            # pylint: disable=no-else-return
+            elif utils.match_content_type(http_res.headers.get('Content-Type') or '', 'application/json'):                
+                out = utils.unmarshal_json(http_res.text, Optional[Any])
+                res.default_application_json_any = out
+            # pylint: disable=no-else-return
+            elif utils.match_content_type(http_res.headers.get('Content-Type') or '', 'application/xml'):                
+                res.default_application_xml_res = http_res.text
+            # pylint: disable=no-else-return
+            elif utils.match_content_type(http_res.headers.get('Content-Type') or '', 'text/csv'):                
+                res.default_text_csv_res = http_res.text
+            # pylint: disable=no-else-return
+            elif utils.match_content_type(http_res.headers.get('Content-Type') or '', 'text/plain'):                
+                res.default_text_plain_res = http_res.text
+            else:
+                content_type = http_res.headers.get('Content-Type')
+                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
 
         return res
 
@@ -488,7 +540,7 @@ class Passthrough:
         if accept_header_override is not None:
             headers['Accept'] = accept_header_override.value
         else:
-            headers['Accept'] = 'application/json;q=1, text/plain;q=0.7, */*;q=0'
+            headers['Accept'] = 'application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
         
@@ -517,24 +569,30 @@ class Passthrough:
         if http_res.status_code in [204, 205, 304]:
             res.headers = http_res.headers
             
-        elif http_res.status_code >= 200 and http_res.status_code < 300:
-            # pylint: disable=no-else-return
-            if utils.match_content_type(http_res.headers.get('Content-Type') or '', '*/*'):                
-                res.body = http_res.content
-            # pylint: disable=no-else-return
-            elif utils.match_content_type(http_res.headers.get('Content-Type') or '', 'application/json'):                
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.two_xx_application_json_any = out
-            # pylint: disable=no-else-return
-            elif utils.match_content_type(http_res.headers.get('Content-Type') or '', 'text/plain'):                
-                res.two_xx_text_plain_res = http_res.text
-            else:
-                content_type = http_res.headers.get('Content-Type')
-                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
         elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
             raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
         else:
-            raise errors.SDKError('unknown status code received', http_res.status_code, http_res.text, http_res)
+            res.headers = http_res.headers
+            
+            # pylint: disable=no-else-return
+            if utils.match_content_type(http_res.headers.get('Content-Type') or '', '*/*'):                
+                res.default_wildcard_wildcard_response_stream = http_res
+            # pylint: disable=no-else-return
+            elif utils.match_content_type(http_res.headers.get('Content-Type') or '', 'application/json'):                
+                out = utils.unmarshal_json(http_res.text, Optional[Any])
+                res.default_application_json_any = out
+            # pylint: disable=no-else-return
+            elif utils.match_content_type(http_res.headers.get('Content-Type') or '', 'application/xml'):                
+                res.default_application_xml_res = http_res.text
+            # pylint: disable=no-else-return
+            elif utils.match_content_type(http_res.headers.get('Content-Type') or '', 'text/csv'):                
+                res.default_text_csv_res = http_res.text
+            # pylint: disable=no-else-return
+            elif utils.match_content_type(http_res.headers.get('Content-Type') or '', 'text/plain'):                
+                res.default_text_plain_res = http_res.text
+            else:
+                content_type = http_res.headers.get('Content-Type')
+                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
 
         return res
 
@@ -558,7 +616,7 @@ class Passthrough:
         if accept_header_override is not None:
             headers['Accept'] = accept_header_override.value
         else:
-            headers['Accept'] = 'application/json;q=1, text/plain;q=0.7, */*;q=0'
+            headers['Accept'] = 'application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0'
         headers['user-agent'] = self.sdk_configuration.user_agent
         client = self.sdk_configuration.client
         
@@ -587,24 +645,30 @@ class Passthrough:
         if http_res.status_code in [204, 205, 304]:
             res.headers = http_res.headers
             
-        elif http_res.status_code >= 200 and http_res.status_code < 300:
-            # pylint: disable=no-else-return
-            if utils.match_content_type(http_res.headers.get('Content-Type') or '', '*/*'):                
-                res.body = http_res.content
-            # pylint: disable=no-else-return
-            elif utils.match_content_type(http_res.headers.get('Content-Type') or '', 'application/json'):                
-                out = utils.unmarshal_json(http_res.text, Optional[Any])
-                res.two_xx_application_json_any = out
-            # pylint: disable=no-else-return
-            elif utils.match_content_type(http_res.headers.get('Content-Type') or '', 'text/plain'):                
-                res.two_xx_text_plain_res = http_res.text
-            else:
-                content_type = http_res.headers.get('Content-Type')
-                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
         elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:
             raise errors.SDKError('API error occurred', http_res.status_code, http_res.text, http_res)
         else:
-            raise errors.SDKError('unknown status code received', http_res.status_code, http_res.text, http_res)
+            res.headers = http_res.headers
+            
+            # pylint: disable=no-else-return
+            if utils.match_content_type(http_res.headers.get('Content-Type') or '', '*/*'):                
+                res.default_wildcard_wildcard_response_stream = http_res
+            # pylint: disable=no-else-return
+            elif utils.match_content_type(http_res.headers.get('Content-Type') or '', 'application/json'):                
+                out = utils.unmarshal_json(http_res.text, Optional[Any])
+                res.default_application_json_any = out
+            # pylint: disable=no-else-return
+            elif utils.match_content_type(http_res.headers.get('Content-Type') or '', 'application/xml'):                
+                res.default_application_xml_res = http_res.text
+            # pylint: disable=no-else-return
+            elif utils.match_content_type(http_res.headers.get('Content-Type') or '', 'text/csv'):                
+                res.default_text_csv_res = http_res.text
+            # pylint: disable=no-else-return
+            elif utils.match_content_type(http_res.headers.get('Content-Type') or '', 'text/plain'):                
+                res.default_text_plain_res = http_res.text
+            else:
+                content_type = http_res.headers.get('Content-Type')
+                raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
 
         return res
 
