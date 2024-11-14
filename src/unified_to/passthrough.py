@@ -125,10 +125,7 @@ class Passthrough:
             res.headers = http_res.headers
             
             # pylint: disable=no-else-return
-            if utils.match_content_type(http_res.headers.get('Content-Type') or '', '*/*'):                
-                res.default_wildcard_wildcard_response_stream = http_res
-            # pylint: disable=no-else-return
-            elif utils.match_content_type(http_res.headers.get('Content-Type') or '', 'application/json'):                
+            if utils.match_content_type(http_res.headers.get('Content-Type') or '', 'application/json'):                
                 out = utils.unmarshal_json(http_res.text, Optional[Any])
                 res.default_application_json_any = out
             # pylint: disable=no-else-return
@@ -140,6 +137,9 @@ class Passthrough:
             # pylint: disable=no-else-return
             elif utils.match_content_type(http_res.headers.get('Content-Type') or '', 'text/plain'):                
                 res.default_text_plain_res = http_res.text
+            # pylint: disable=no-else-return
+            elif utils.match_content_type(http_res.headers.get('Content-Type') or '', '*/*'):                
+                res.default_wildcard_wildcard_response_stream = http_res
             else:
                 content_type = http_res.headers.get('Content-Type')
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
@@ -201,10 +201,7 @@ class Passthrough:
             res.headers = http_res.headers
             
             # pylint: disable=no-else-return
-            if utils.match_content_type(http_res.headers.get('Content-Type') or '', '*/*'):                
-                res.default_wildcard_wildcard_response_stream = http_res
-            # pylint: disable=no-else-return
-            elif utils.match_content_type(http_res.headers.get('Content-Type') or '', 'application/json'):                
+            if utils.match_content_type(http_res.headers.get('Content-Type') or '', 'application/json'):                
                 out = utils.unmarshal_json(http_res.text, Optional[Any])
                 res.default_application_json_any = out
             # pylint: disable=no-else-return
@@ -216,6 +213,9 @@ class Passthrough:
             # pylint: disable=no-else-return
             elif utils.match_content_type(http_res.headers.get('Content-Type') or '', 'text/plain'):                
                 res.default_text_plain_res = http_res.text
+            # pylint: disable=no-else-return
+            elif utils.match_content_type(http_res.headers.get('Content-Type') or '', '*/*'):                
+                res.default_wildcard_wildcard_response_stream = http_res
             else:
                 content_type = http_res.headers.get('Content-Type')
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
@@ -274,10 +274,7 @@ class Passthrough:
             res.headers = http_res.headers
             
             # pylint: disable=no-else-return
-            if utils.match_content_type(http_res.headers.get('Content-Type') or '', '*/*'):                
-                res.default_wildcard_wildcard_response_stream = http_res
-            # pylint: disable=no-else-return
-            elif utils.match_content_type(http_res.headers.get('Content-Type') or '', 'application/json'):                
+            if utils.match_content_type(http_res.headers.get('Content-Type') or '', 'application/json'):                
                 out = utils.unmarshal_json(http_res.text, Optional[Any])
                 res.default_application_json_any = out
             # pylint: disable=no-else-return
@@ -289,6 +286,9 @@ class Passthrough:
             # pylint: disable=no-else-return
             elif utils.match_content_type(http_res.headers.get('Content-Type') or '', 'text/plain'):                
                 res.default_text_plain_res = http_res.text
+            # pylint: disable=no-else-return
+            elif utils.match_content_type(http_res.headers.get('Content-Type') or '', '*/*'):                
+                res.default_wildcard_wildcard_response_stream = http_res
             else:
                 content_type = http_res.headers.get('Content-Type')
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
@@ -350,10 +350,7 @@ class Passthrough:
             res.headers = http_res.headers
             
             # pylint: disable=no-else-return
-            if utils.match_content_type(http_res.headers.get('Content-Type') or '', '*/*'):                
-                res.default_wildcard_wildcard_response_stream = http_res
-            # pylint: disable=no-else-return
-            elif utils.match_content_type(http_res.headers.get('Content-Type') or '', 'application/json'):                
+            if utils.match_content_type(http_res.headers.get('Content-Type') or '', 'application/json'):                
                 out = utils.unmarshal_json(http_res.text, Optional[Any])
                 res.default_application_json_any = out
             # pylint: disable=no-else-return
@@ -365,6 +362,9 @@ class Passthrough:
             # pylint: disable=no-else-return
             elif utils.match_content_type(http_res.headers.get('Content-Type') or '', 'text/plain'):                
                 res.default_text_plain_res = http_res.text
+            # pylint: disable=no-else-return
+            elif utils.match_content_type(http_res.headers.get('Content-Type') or '', '*/*'):                
+                res.default_wildcard_wildcard_response_stream = http_res
             else:
                 content_type = http_res.headers.get('Content-Type')
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
@@ -426,10 +426,7 @@ class Passthrough:
             res.headers = http_res.headers
             
             # pylint: disable=no-else-return
-            if utils.match_content_type(http_res.headers.get('Content-Type') or '', '*/*'):                
-                res.default_wildcard_wildcard_response_stream = http_res
-            # pylint: disable=no-else-return
-            elif utils.match_content_type(http_res.headers.get('Content-Type') or '', 'application/json'):                
+            if utils.match_content_type(http_res.headers.get('Content-Type') or '', 'application/json'):                
                 out = utils.unmarshal_json(http_res.text, Optional[Any])
                 res.default_application_json_any = out
             # pylint: disable=no-else-return
@@ -441,6 +438,9 @@ class Passthrough:
             # pylint: disable=no-else-return
             elif utils.match_content_type(http_res.headers.get('Content-Type') or '', 'text/plain'):                
                 res.default_text_plain_res = http_res.text
+            # pylint: disable=no-else-return
+            elif utils.match_content_type(http_res.headers.get('Content-Type') or '', '*/*'):                
+                res.default_wildcard_wildcard_response_stream = http_res
             else:
                 content_type = http_res.headers.get('Content-Type')
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
@@ -499,10 +499,7 @@ class Passthrough:
             res.headers = http_res.headers
             
             # pylint: disable=no-else-return
-            if utils.match_content_type(http_res.headers.get('Content-Type') or '', '*/*'):                
-                res.default_wildcard_wildcard_response_stream = http_res
-            # pylint: disable=no-else-return
-            elif utils.match_content_type(http_res.headers.get('Content-Type') or '', 'application/json'):                
+            if utils.match_content_type(http_res.headers.get('Content-Type') or '', 'application/json'):                
                 out = utils.unmarshal_json(http_res.text, Optional[Any])
                 res.default_application_json_any = out
             # pylint: disable=no-else-return
@@ -514,6 +511,9 @@ class Passthrough:
             # pylint: disable=no-else-return
             elif utils.match_content_type(http_res.headers.get('Content-Type') or '', 'text/plain'):                
                 res.default_text_plain_res = http_res.text
+            # pylint: disable=no-else-return
+            elif utils.match_content_type(http_res.headers.get('Content-Type') or '', '*/*'):                
+                res.default_wildcard_wildcard_response_stream = http_res
             else:
                 content_type = http_res.headers.get('Content-Type')
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
@@ -575,10 +575,7 @@ class Passthrough:
             res.headers = http_res.headers
             
             # pylint: disable=no-else-return
-            if utils.match_content_type(http_res.headers.get('Content-Type') or '', '*/*'):                
-                res.default_wildcard_wildcard_response_stream = http_res
-            # pylint: disable=no-else-return
-            elif utils.match_content_type(http_res.headers.get('Content-Type') or '', 'application/json'):                
+            if utils.match_content_type(http_res.headers.get('Content-Type') or '', 'application/json'):                
                 out = utils.unmarshal_json(http_res.text, Optional[Any])
                 res.default_application_json_any = out
             # pylint: disable=no-else-return
@@ -590,6 +587,9 @@ class Passthrough:
             # pylint: disable=no-else-return
             elif utils.match_content_type(http_res.headers.get('Content-Type') or '', 'text/plain'):                
                 res.default_text_plain_res = http_res.text
+            # pylint: disable=no-else-return
+            elif utils.match_content_type(http_res.headers.get('Content-Type') or '', '*/*'):                
+                res.default_wildcard_wildcard_response_stream = http_res
             else:
                 content_type = http_res.headers.get('Content-Type')
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
@@ -651,10 +651,7 @@ class Passthrough:
             res.headers = http_res.headers
             
             # pylint: disable=no-else-return
-            if utils.match_content_type(http_res.headers.get('Content-Type') or '', '*/*'):                
-                res.default_wildcard_wildcard_response_stream = http_res
-            # pylint: disable=no-else-return
-            elif utils.match_content_type(http_res.headers.get('Content-Type') or '', 'application/json'):                
+            if utils.match_content_type(http_res.headers.get('Content-Type') or '', 'application/json'):                
                 out = utils.unmarshal_json(http_res.text, Optional[Any])
                 res.default_application_json_any = out
             # pylint: disable=no-else-return
@@ -666,6 +663,9 @@ class Passthrough:
             # pylint: disable=no-else-return
             elif utils.match_content_type(http_res.headers.get('Content-Type') or '', 'text/plain'):                
                 res.default_text_plain_res = http_res.text
+            # pylint: disable=no-else-return
+            elif utils.match_content_type(http_res.headers.get('Content-Type') or '', '*/*'):                
+                res.default_wildcard_wildcard_response_stream = http_res
             else:
                 content_type = http_res.headers.get('Content-Type')
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
