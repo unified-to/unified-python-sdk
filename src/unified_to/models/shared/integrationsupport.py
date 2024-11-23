@@ -231,6 +231,18 @@ class ListUserID(str, Enum):
     NOT_SUPPORTED = 'not-supported'
 
 
+class NativeWebhookParentID(str, Enum):
+    SUPPORTED_REQUIRED = 'supported-required'
+    SUPPORTED = 'supported'
+    NOT_SUPPORTED = 'not-supported'
+
+
+class NativeWebhookProjectID(str, Enum):
+    SUPPORTED_REQUIRED = 'supported-required'
+    SUPPORTED = 'supported'
+    NOT_SUPPORTED = 'not-supported'
+
+
 class SearchDomain(str, Enum):
     SUPPORTED_REQUIRED = 'supported-required'
     SUPPORTED = 'supported'
@@ -256,6 +268,66 @@ class SearchName(str, Enum):
 
 
 class SearchTwitter(str, Enum):
+    SUPPORTED_REQUIRED = 'supported-required'
+    SUPPORTED = 'supported'
+    NOT_SUPPORTED = 'not-supported'
+
+
+class VirtualWebhookChannelID(str, Enum):
+    SUPPORTED_REQUIRED = 'supported-required'
+    SUPPORTED = 'supported'
+    NOT_SUPPORTED = 'not-supported'
+
+
+class VirtualWebhookCompanyID(str, Enum):
+    SUPPORTED_REQUIRED = 'supported-required'
+    SUPPORTED = 'supported'
+    NOT_SUPPORTED = 'not-supported'
+
+
+class VirtualWebhookContactID(str, Enum):
+    SUPPORTED_REQUIRED = 'supported-required'
+    SUPPORTED = 'supported'
+    NOT_SUPPORTED = 'not-supported'
+
+
+class VirtualWebhookDealID(str, Enum):
+    SUPPORTED_REQUIRED = 'supported-required'
+    SUPPORTED = 'supported'
+    NOT_SUPPORTED = 'not-supported'
+
+
+class VirtualWebhookLimit(str, Enum):
+    SUPPORTED_REQUIRED = 'supported-required'
+    SUPPORTED = 'supported'
+    NOT_SUPPORTED = 'not-supported'
+
+
+class VirtualWebhookParentID(str, Enum):
+    SUPPORTED_REQUIRED = 'supported-required'
+    SUPPORTED = 'supported'
+    NOT_SUPPORTED = 'not-supported'
+
+
+class VirtualWebhookTicketID(str, Enum):
+    SUPPORTED_REQUIRED = 'supported-required'
+    SUPPORTED = 'supported'
+    NOT_SUPPORTED = 'not-supported'
+
+
+class VirtualWebhookType(str, Enum):
+    SUPPORTED_REQUIRED = 'supported-required'
+    SUPPORTED = 'supported'
+    NOT_SUPPORTED = 'not-supported'
+
+
+class VirtualWebhookUpdatedGte(str, Enum):
+    SUPPORTED_REQUIRED = 'supported-required'
+    SUPPORTED = 'supported'
+    NOT_SUPPORTED = 'not-supported'
+
+
+class VirtualWebhookUserID(str, Enum):
     SUPPORTED_REQUIRED = 'supported-required'
     SUPPORTED = 'supported'
     NOT_SUPPORTED = 'not-supported'
@@ -303,6 +375,8 @@ class IntegrationSupport:
     list_updated_gte: Optional[ListUpdatedGte] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('list_updated_gte'), 'exclude': lambda f: f is None }})
     list_user_id: Optional[ListUserID] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('list_user_id'), 'exclude': lambda f: f is None }})
     methods: Optional[Dict[str, bool]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('methods'), 'exclude': lambda f: f is None }})
+    native_webhook_parent_id: Optional[NativeWebhookParentID] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('native_webhook_parent_id'), 'exclude': lambda f: f is None }})
+    native_webhook_project_id: Optional[NativeWebhookProjectID] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('native_webhook_project_id'), 'exclude': lambda f: f is None }})
     outbound_fields: Optional[Dict[str, Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('outbound_fields'), 'exclude': lambda f: f is None }})
     raw_objects: Optional[List[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('raw_objects'), 'exclude': lambda f: f is None }})
     r"""objects that we map from in the integration"""
@@ -311,6 +385,16 @@ class IntegrationSupport:
     search_linkedinurl: Optional[SearchLinkedinurl] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('search_linkedinurl'), 'exclude': lambda f: f is None }})
     search_name: Optional[SearchName] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('search_name'), 'exclude': lambda f: f is None }})
     search_twitter: Optional[SearchTwitter] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('search_twitter'), 'exclude': lambda f: f is None }})
+    virtual_webhook_channel_id: Optional[VirtualWebhookChannelID] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('virtual_webhook_channel_id'), 'exclude': lambda f: f is None }})
+    virtual_webhook_company_id: Optional[VirtualWebhookCompanyID] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('virtual_webhook_company_id'), 'exclude': lambda f: f is None }})
+    virtual_webhook_contact_id: Optional[VirtualWebhookContactID] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('virtual_webhook_contact_id'), 'exclude': lambda f: f is None }})
+    virtual_webhook_deal_id: Optional[VirtualWebhookDealID] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('virtual_webhook_deal_id'), 'exclude': lambda f: f is None }})
+    virtual_webhook_limit: Optional[VirtualWebhookLimit] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('virtual_webhook_limit'), 'exclude': lambda f: f is None }})
+    virtual_webhook_parent_id: Optional[VirtualWebhookParentID] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('virtual_webhook_parent_id'), 'exclude': lambda f: f is None }})
+    virtual_webhook_ticket_id: Optional[VirtualWebhookTicketID] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('virtual_webhook_ticket_id'), 'exclude': lambda f: f is None }})
+    virtual_webhook_type: Optional[VirtualWebhookType] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('virtual_webhook_type'), 'exclude': lambda f: f is None }})
+    virtual_webhook_updated_gte: Optional[VirtualWebhookUpdatedGte] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('virtual_webhook_updated_gte'), 'exclude': lambda f: f is None }})
+    virtual_webhook_user_id: Optional[VirtualWebhookUserID] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('virtual_webhook_user_id'), 'exclude': lambda f: f is None }})
     webhook_events: Optional[PropertyIntegrationSupportWebhookEvents] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('webhook_events'), 'exclude': lambda f: f is None }})
     
 

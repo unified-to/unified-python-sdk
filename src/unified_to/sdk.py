@@ -52,6 +52,7 @@ from .martech import Martech
 from .member import Member
 from .message import Message
 from .messaging import Messaging
+from .metadata import Metadata
 from .model import Model
 from .note import Note
 from .order import Order
@@ -117,6 +118,7 @@ class UnifiedTo:
     inventory: Inventory
     item: Item
     location: Location
+    metadata: Metadata
     crm: Crm
     deal: Deal
     event: Event
@@ -256,6 +258,7 @@ class UnifiedTo:
         self.inventory = Inventory(self.sdk_configuration)
         self.item = Item(self.sdk_configuration)
         self.location = Location(self.sdk_configuration)
+        self.metadata = Metadata(self.sdk_configuration)
         self.crm = Crm(self.sdk_configuration)
         self.deal = Deal(self.sdk_configuration)
         self.event = Event(self.sdk_configuration)

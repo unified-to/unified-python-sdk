@@ -248,26 +248,32 @@ if res.accounting_account is not None:
 * [create_commerce_inventory](docs/sdks/commerce/README.md#create_commerce_inventory) - Create an inventory
 * [create_commerce_item](docs/sdks/commerce/README.md#create_commerce_item) - Create an item
 * [create_commerce_location](docs/sdks/commerce/README.md#create_commerce_location) - Create a location
+* [create_commerce_metadata](docs/sdks/commerce/README.md#create_commerce_metadata) - Create a metadata
 * [get_commerce_collection](docs/sdks/commerce/README.md#get_commerce_collection) - Retrieve a collection
 * [get_commerce_inventory](docs/sdks/commerce/README.md#get_commerce_inventory) - Retrieve an inventory
 * [get_commerce_item](docs/sdks/commerce/README.md#get_commerce_item) - Retrieve an item
 * [get_commerce_location](docs/sdks/commerce/README.md#get_commerce_location) - Retrieve a location
+* [get_commerce_metadata](docs/sdks/commerce/README.md#get_commerce_metadata) - Retrieve a metadata
 * [list_commerce_collections](docs/sdks/commerce/README.md#list_commerce_collections) - List all collections
 * [list_commerce_inventories](docs/sdks/commerce/README.md#list_commerce_inventories) - List all inventories
 * [list_commerce_items](docs/sdks/commerce/README.md#list_commerce_items) - List all items
 * [list_commerce_locations](docs/sdks/commerce/README.md#list_commerce_locations) - List all locations
+* [list_commerce_metadatas](docs/sdks/commerce/README.md#list_commerce_metadatas) - List all metadatas
 * [patch_commerce_collection](docs/sdks/commerce/README.md#patch_commerce_collection) - Update a collection
 * [patch_commerce_inventory](docs/sdks/commerce/README.md#patch_commerce_inventory) - Update an inventory
 * [patch_commerce_item](docs/sdks/commerce/README.md#patch_commerce_item) - Update an item
 * [patch_commerce_location](docs/sdks/commerce/README.md#patch_commerce_location) - Update a location
+* [patch_commerce_metadata](docs/sdks/commerce/README.md#patch_commerce_metadata) - Update a metadata
 * [remove_commerce_collection](docs/sdks/commerce/README.md#remove_commerce_collection) - Remove a collection
 * [remove_commerce_inventory](docs/sdks/commerce/README.md#remove_commerce_inventory) - Remove an inventory
 * [remove_commerce_item](docs/sdks/commerce/README.md#remove_commerce_item) - Remove an item
 * [remove_commerce_location](docs/sdks/commerce/README.md#remove_commerce_location) - Remove a location
+* [remove_commerce_metadata](docs/sdks/commerce/README.md#remove_commerce_metadata) - Remove a metadata
 * [update_commerce_collection](docs/sdks/commerce/README.md#update_commerce_collection) - Update a collection
 * [update_commerce_inventory](docs/sdks/commerce/README.md#update_commerce_inventory) - Update an inventory
 * [update_commerce_item](docs/sdks/commerce/README.md#update_commerce_item) - Update an item
 * [update_commerce_location](docs/sdks/commerce/README.md#update_commerce_location) - Update a location
+* [update_commerce_metadata](docs/sdks/commerce/README.md#update_commerce_metadata) - Update a metadata
 
 ### [commit](docs/sdks/commit/README.md)
 
@@ -688,6 +694,15 @@ if res.accounting_account is not None:
 * [patch_messaging_message](docs/sdks/messaging/README.md#patch_messaging_message) - Update a message
 * [remove_messaging_message](docs/sdks/messaging/README.md#remove_messaging_message) - Remove a message
 * [update_messaging_message](docs/sdks/messaging/README.md#update_messaging_message) - Update a message
+
+### [metadata](docs/sdks/metadata/README.md)
+
+* [create_commerce_metadata](docs/sdks/metadata/README.md#create_commerce_metadata) - Create a metadata
+* [get_commerce_metadata](docs/sdks/metadata/README.md#get_commerce_metadata) - Retrieve a metadata
+* [list_commerce_metadatas](docs/sdks/metadata/README.md#list_commerce_metadatas) - List all metadatas
+* [patch_commerce_metadata](docs/sdks/metadata/README.md#patch_commerce_metadata) - Update a metadata
+* [remove_commerce_metadata](docs/sdks/metadata/README.md#remove_commerce_metadata) - Remove a metadata
+* [update_commerce_metadata](docs/sdks/metadata/README.md#update_commerce_metadata) - Update a metadata
 
 ### [model](docs/sdks/model/README.md)
 

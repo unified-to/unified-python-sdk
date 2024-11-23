@@ -35,6 +35,8 @@
 | `COMMERCE_INVENTORY_WRITE`     | commerce_inventory_write       |
 | `COMMERCE_LOCATION_READ`       | commerce_location_read         |
 | `COMMERCE_LOCATION_WRITE`      | commerce_location_write        |
+| `COMMERCE_METADATA_READ`       | commerce_metadata_read         |
+| `COMMERCE_METADATA_WRITE`      | commerce_metadata_write        |
 | `ATS_ACTIVITY_READ`            | ats_activity_read              |
 | `ATS_ACTIVITY_WRITE`           | ats_activity_write             |
 | `ATS_APPLICATION_READ`         | ats_application_read           |

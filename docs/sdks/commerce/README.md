@@ -9,26 +9,32 @@
 * [create_commerce_inventory](#create_commerce_inventory) - Create an inventory
 * [create_commerce_item](#create_commerce_item) - Create an item
 * [create_commerce_location](#create_commerce_location) - Create a location
+* [create_commerce_metadata](#create_commerce_metadata) - Create a metadata
 * [get_commerce_collection](#get_commerce_collection) - Retrieve a collection
 * [get_commerce_inventory](#get_commerce_inventory) - Retrieve an inventory
 * [get_commerce_item](#get_commerce_item) - Retrieve an item
 * [get_commerce_location](#get_commerce_location) - Retrieve a location
+* [get_commerce_metadata](#get_commerce_metadata) - Retrieve a metadata
 * [list_commerce_collections](#list_commerce_collections) - List all collections
 * [list_commerce_inventories](#list_commerce_inventories) - List all inventories
 * [list_commerce_items](#list_commerce_items) - List all items
 * [list_commerce_locations](#list_commerce_locations) - List all locations
+* [list_commerce_metadatas](#list_commerce_metadatas) - List all metadatas
 * [patch_commerce_collection](#patch_commerce_collection) - Update a collection
 * [patch_commerce_inventory](#patch_commerce_inventory) - Update an inventory
 * [patch_commerce_item](#patch_commerce_item) - Update an item
 * [patch_commerce_location](#patch_commerce_location) - Update a location
+* [patch_commerce_metadata](#patch_commerce_metadata) - Update a metadata
 * [remove_commerce_collection](#remove_commerce_collection) - Remove a collection
 * [remove_commerce_inventory](#remove_commerce_inventory) - Remove an inventory
 * [remove_commerce_item](#remove_commerce_item) - Remove an item
 * [remove_commerce_location](#remove_commerce_location) - Remove a location
+* [remove_commerce_metadata](#remove_commerce_metadata) - Remove a metadata
 * [update_commerce_collection](#update_commerce_collection) - Update a collection
 * [update_commerce_inventory](#update_commerce_inventory) - Update an inventory
 * [update_commerce_item](#update_commerce_item) - Update an item
 * [update_commerce_location](#update_commerce_location) - Update a location
+* [update_commerce_metadata](#update_commerce_metadata) - Update a metadata
 
 ## create_commerce_collection
 
@@ -179,6 +185,45 @@ if res.commerce_location is not None:
 ### Response
 
 **[operations.CreateCommerceLocationResponse](../../models/operations/createcommercelocationresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## create_commerce_metadata
+
+Create a metadata
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations
+
+s = unified_to.UnifiedTo()
+
+
+res = s.commerce.create_commerce_metadata(request=operations.CreateCommerceMetadataRequest(
+    connection_id='<id>',
+))
+
+if res.commerce_metadata is not None:
+    # handle response
+    pass
+
+```
+
+### Parameters
+
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `request`                                                                                            | [operations.CreateCommerceMetadataRequest](../../models/operations/createcommercemetadatarequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+
+### Response
+
+**[operations.CreateCommerceMetadataResponse](../../models/operations/createcommercemetadataresponse.md)**
 
 ### Errors
 
@@ -346,6 +391,46 @@ if res.commerce_location is not None:
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## get_commerce_metadata
+
+Retrieve a metadata
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations
+
+s = unified_to.UnifiedTo()
+
+
+res = s.commerce.get_commerce_metadata(request=operations.GetCommerceMetadataRequest(
+    connection_id='<id>',
+    id='<id>',
+))
+
+if res.commerce_metadata is not None:
+    # handle response
+    pass
+
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `request`                                                                                      | [operations.GetCommerceMetadataRequest](../../models/operations/getcommercemetadatarequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+
+### Response
+
+**[operations.GetCommerceMetadataResponse](../../models/operations/getcommercemetadataresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## list_commerce_collections
 
 List all collections
@@ -495,6 +580,45 @@ if res.commerce_locations is not None:
 ### Response
 
 **[operations.ListCommerceLocationsResponse](../../models/operations/listcommercelocationsresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## list_commerce_metadatas
+
+List all metadatas
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations
+
+s = unified_to.UnifiedTo()
+
+
+res = s.commerce.list_commerce_metadatas(request=operations.ListCommerceMetadatasRequest(
+    connection_id='<id>',
+))
+
+if res.commerce_metadatas is not None:
+    # handle response
+    pass
+
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `request`                                                                                          | [operations.ListCommerceMetadatasRequest](../../models/operations/listcommercemetadatasrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+
+### Response
+
+**[operations.ListCommerceMetadatasResponse](../../models/operations/listcommercemetadatasresponse.md)**
 
 ### Errors
 
@@ -662,6 +786,46 @@ if res.commerce_location is not None:
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## patch_commerce_metadata
+
+Update a metadata
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations
+
+s = unified_to.UnifiedTo()
+
+
+res = s.commerce.patch_commerce_metadata(request=operations.PatchCommerceMetadataRequest(
+    connection_id='<id>',
+    id='<id>',
+))
+
+if res.commerce_metadata is not None:
+    # handle response
+    pass
+
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `request`                                                                                          | [operations.PatchCommerceMetadataRequest](../../models/operations/patchcommercemetadatarequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+
+### Response
+
+**[operations.PatchCommerceMetadataResponse](../../models/operations/patchcommercemetadataresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## remove_commerce_collection
 
 Remove a collection
@@ -822,6 +986,46 @@ if res is not None:
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## remove_commerce_metadata
+
+Remove a metadata
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations
+
+s = unified_to.UnifiedTo()
+
+
+res = s.commerce.remove_commerce_metadata(request=operations.RemoveCommerceMetadataRequest(
+    connection_id='<id>',
+    id='<id>',
+))
+
+if res is not None:
+    # handle response
+    pass
+
+```
+
+### Parameters
+
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `request`                                                                                            | [operations.RemoveCommerceMetadataRequest](../../models/operations/removecommercemetadatarequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+
+### Response
+
+**[operations.RemoveCommerceMetadataResponse](../../models/operations/removecommercemetadataresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## update_commerce_collection
 
 Update a collection
@@ -975,6 +1179,46 @@ if res.commerce_location is not None:
 ### Response
 
 **[operations.UpdateCommerceLocationResponse](../../models/operations/updatecommercelocationresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## update_commerce_metadata
+
+Update a metadata
+
+### Example Usage
+
+```python
+import unified_to
+from unified_to.models import operations
+
+s = unified_to.UnifiedTo()
+
+
+res = s.commerce.update_commerce_metadata(request=operations.UpdateCommerceMetadataRequest(
+    connection_id='<id>',
+    id='<id>',
+))
+
+if res.commerce_metadata is not None:
+    # handle response
+    pass
+
+```
+
+### Parameters
+
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `request`                                                                                            | [operations.UpdateCommerceMetadataRequest](../../models/operations/updatecommercemetadatarequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+
+### Response
+
+**[operations.UpdateCommerceMetadataResponse](../../models/operations/updatecommercemetadataresponse.md)**
 
 ### Errors
 

@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: dbb26a77c5273b6a4bfbeec2d8a7c22d
+  docChecksum: a69d016e113a8d9eb83404e95207c9eb
   docVersion: "1.0"
-  speakeasyVersion: 1.440.1
-  generationVersion: 2.460.1
-  releaseVersion: 0.25.2
-  configChecksum: e52af166bfe9fdaa8ec2c8959e3181df
+  speakeasyVersion: 1.444.1
+  generationVersion: 2.461.4
+  releaseVersion: 0.25.3
+  configChecksum: 4d1aea90ad3a30203eb97b7d88406b0c
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -65,6 +65,8 @@ generatedFiles:
   - docs/models/operations/createcommerceitemresponse.md
   - docs/models/operations/createcommercelocationrequest.md
   - docs/models/operations/createcommercelocationresponse.md
+  - docs/models/operations/createcommercemetadatarequest.md
+  - docs/models/operations/createcommercemetadataresponse.md
   - docs/models/operations/createcrmcompanyrequest.md
   - docs/models/operations/createcrmcompanyresponse.md
   - docs/models/operations/createcrmcontactrequest.md
@@ -184,6 +186,8 @@ generatedFiles:
   - docs/models/operations/getcommerceitemresponse.md
   - docs/models/operations/getcommercelocationrequest.md
   - docs/models/operations/getcommercelocationresponse.md
+  - docs/models/operations/getcommercemetadatarequest.md
+  - docs/models/operations/getcommercemetadataresponse.md
   - docs/models/operations/getcrmcompanyrequest.md
   - docs/models/operations/getcrmcompanyresponse.md
   - docs/models/operations/getcrmcontactrequest.md
@@ -317,6 +321,8 @@ generatedFiles:
   - docs/models/operations/listcommerceitemsresponse.md
   - docs/models/operations/listcommercelocationsrequest.md
   - docs/models/operations/listcommercelocationsresponse.md
+  - docs/models/operations/listcommercemetadatasrequest.md
+  - docs/models/operations/listcommercemetadatasresponse.md
   - docs/models/operations/listcrmcompaniesrequest.md
   - docs/models/operations/listcrmcompaniesresponse.md
   - docs/models/operations/listcrmcontactsrequest.md
@@ -456,6 +462,8 @@ generatedFiles:
   - docs/models/operations/patchcommerceitemresponse.md
   - docs/models/operations/patchcommercelocationrequest.md
   - docs/models/operations/patchcommercelocationresponse.md
+  - docs/models/operations/patchcommercemetadatarequest.md
+  - docs/models/operations/patchcommercemetadataresponse.md
   - docs/models/operations/patchcrmcompanyrequest.md
   - docs/models/operations/patchcrmcompanyresponse.md
   - docs/models/operations/patchcrmcontactrequest.md
@@ -573,6 +581,8 @@ generatedFiles:
   - docs/models/operations/removecommerceitemresponse.md
   - docs/models/operations/removecommercelocationrequest.md
   - docs/models/operations/removecommercelocationresponse.md
+  - docs/models/operations/removecommercemetadatarequest.md
+  - docs/models/operations/removecommercemetadataresponse.md
   - docs/models/operations/removecrmcompanyrequest.md
   - docs/models/operations/removecrmcompanyresponse.md
   - docs/models/operations/removecrmcontactrequest.md
@@ -686,6 +696,8 @@ generatedFiles:
   - docs/models/operations/updatecommerceitemresponse.md
   - docs/models/operations/updatecommercelocationrequest.md
   - docs/models/operations/updatecommercelocationresponse.md
+  - docs/models/operations/updatecommercemetadatarequest.md
+  - docs/models/operations/updatecommercemetadataresponse.md
   - docs/models/operations/updatecrmcompanyrequest.md
   - docs/models/operations/updatecrmcompanyresponse.md
   - docs/models/operations/updatecrmcontactrequest.md
@@ -823,6 +835,7 @@ generatedFiles:
   - docs/models/shared/commerceitem.md
   - docs/models/shared/commerceitemmedia.md
   - docs/models/shared/commerceitemmediatype.md
+  - docs/models/shared/commerceitemmetadata.md
   - docs/models/shared/commerceitemoption.md
   - docs/models/shared/commerceitemprice.md
   - docs/models/shared/commerceitemvariant.md
@@ -939,6 +952,8 @@ generatedFiles:
   - docs/models/shared/messagingchannel.md
   - docs/models/shared/messagingmember.md
   - docs/models/shared/messagingmessage.md
+  - docs/models/shared/nativewebhookparentid.md
+  - docs/models/shared/nativewebhookprojectid.md
   - docs/models/shared/objecttype.md
   - docs/models/shared/operation.md
   - docs/models/shared/origin.md
@@ -1064,6 +1079,16 @@ generatedFiles:
   - docs/models/shared/ucemailtype.md
   - docs/models/shared/uctelephone.md
   - docs/models/shared/uctelephonetype.md
+  - docs/models/shared/virtualwebhookchannelid.md
+  - docs/models/shared/virtualwebhookcompanyid.md
+  - docs/models/shared/virtualwebhookcontactid.md
+  - docs/models/shared/virtualwebhookdealid.md
+  - docs/models/shared/virtualwebhooklimit.md
+  - docs/models/shared/virtualwebhookparentid.md
+  - docs/models/shared/virtualwebhookticketid.md
+  - docs/models/shared/virtualwebhooktype.md
+  - docs/models/shared/virtualwebhookupdatedgte.md
+  - docs/models/shared/virtualwebhookuserid.md
   - docs/models/shared/webhook.md
   - docs/models/shared/webhooktype.md
   - docs/models/shared/weightunit.md
@@ -1118,6 +1143,7 @@ generatedFiles:
   - docs/sdks/member/README.md
   - docs/sdks/message/README.md
   - docs/sdks/messaging/README.md
+  - docs/sdks/metadata/README.md
   - docs/sdks/model/README.md
   - docs/sdks/note/README.md
   - docs/sdks/order/README.md
@@ -1210,6 +1236,7 @@ generatedFiles:
   - src/unified_to/member.py
   - src/unified_to/message.py
   - src/unified_to/messaging.py
+  - src/unified_to/metadata.py
   - src/unified_to/model.py
   - src/unified_to/models/__init__.py
   - src/unified_to/models/errors/__init__.py
@@ -1233,6 +1260,7 @@ generatedFiles:
   - src/unified_to/models/operations/createcommerceinventory.py
   - src/unified_to/models/operations/createcommerceitem.py
   - src/unified_to/models/operations/createcommercelocation.py
+  - src/unified_to/models/operations/createcommercemetadata.py
   - src/unified_to/models/operations/createcrmcompany.py
   - src/unified_to/models/operations/createcrmcontact.py
   - src/unified_to/models/operations/createcrmdeal.py
@@ -1293,6 +1321,7 @@ generatedFiles:
   - src/unified_to/models/operations/getcommerceinventory.py
   - src/unified_to/models/operations/getcommerceitem.py
   - src/unified_to/models/operations/getcommercelocation.py
+  - src/unified_to/models/operations/getcommercemetadata.py
   - src/unified_to/models/operations/getcrmcompany.py
   - src/unified_to/models/operations/getcrmcontact.py
   - src/unified_to/models/operations/getcrmdeal.py
@@ -1359,6 +1388,7 @@ generatedFiles:
   - src/unified_to/models/operations/listcommerceinventories.py
   - src/unified_to/models/operations/listcommerceitems.py
   - src/unified_to/models/operations/listcommercelocations.py
+  - src/unified_to/models/operations/listcommercemetadatas.py
   - src/unified_to/models/operations/listcrmcompanies.py
   - src/unified_to/models/operations/listcrmcontacts.py
   - src/unified_to/models/operations/listcrmdeals.py
@@ -1428,6 +1458,7 @@ generatedFiles:
   - src/unified_to/models/operations/patchcommerceinventory.py
   - src/unified_to/models/operations/patchcommerceitem.py
   - src/unified_to/models/operations/patchcommercelocation.py
+  - src/unified_to/models/operations/patchcommercemetadata.py
   - src/unified_to/models/operations/patchcrmcompany.py
   - src/unified_to/models/operations/patchcrmcontact.py
   - src/unified_to/models/operations/patchcrmdeal.py
@@ -1486,6 +1517,7 @@ generatedFiles:
   - src/unified_to/models/operations/removecommerceinventory.py
   - src/unified_to/models/operations/removecommerceitem.py
   - src/unified_to/models/operations/removecommercelocation.py
+  - src/unified_to/models/operations/removecommercemetadata.py
   - src/unified_to/models/operations/removecrmcompany.py
   - src/unified_to/models/operations/removecrmcontact.py
   - src/unified_to/models/operations/removecrmdeal.py
@@ -1542,6 +1574,7 @@ generatedFiles:
   - src/unified_to/models/operations/updatecommerceinventory.py
   - src/unified_to/models/operations/updatecommerceitem.py
   - src/unified_to/models/operations/updatecommercelocation.py
+  - src/unified_to/models/operations/updatecommercemetadata.py
   - src/unified_to/models/operations/updatecrmcompany.py
   - src/unified_to/models/operations/updatecrmcontact.py
   - src/unified_to/models/operations/updatecrmdeal.py
@@ -1620,6 +1653,7 @@ generatedFiles:
   - src/unified_to/models/shared/commerceinventory.py
   - src/unified_to/models/shared/commerceitem.py
   - src/unified_to/models/shared/commerceitemmedia.py
+  - src/unified_to/models/shared/commerceitemmetadata.py
   - src/unified_to/models/shared/commerceitemoption.py
   - src/unified_to/models/shared/commerceitemprice.py
   - src/unified_to/models/shared/commerceitemvariant.py
@@ -4617,3 +4651,45 @@ examples:
       responses:
         "200":
           application/json: {"name": "<value>"}
+  createCommerceMetadata:
+    speakeasy-default-create-commerce-metadata:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+  getCommerceMetadata:
+    speakeasy-default-get-commerce-metadata:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+  listCommerceMetadatas:
+    speakeasy-default-list-commerce-metadatas:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: []
+  patchCommerceMetadata:
+    speakeasy-default-patch-commerce-metadata:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+  removeCommerceMetadata:
+    speakeasy-default-remove-commerce-metadata:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateCommerceMetadata:
+    speakeasy-default-update-commerce-metadata:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
