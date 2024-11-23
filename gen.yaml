@@ -14,11 +14,11 @@ generation:
   baseServerURL: ""
   flattenGlobalSecurity: true
 python:
-  version: 1.0.0
+  version: 0.26.0
   additionalDependencies:
     dev: {}
     main: {}
-  authors: 
+  authors:
     - Unified API Inc.
   clientServerStatusCodesAsErrors: true
   defaultErrorName: SDKError
