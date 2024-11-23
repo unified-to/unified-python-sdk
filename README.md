@@ -14,23 +14,49 @@ Unified.to API: One API to Rule Them All
 ## Table of Contents
 
 * [SDK Installation](#sdk-installation)
+* [IDE Support](#ide-support)
 * [SDK Example Usage](#sdk-example-usage)
 * [Available Resources and Operations](#available-resources-and-operations)
+* [File uploads](#file-uploads)
+* [Retries](#retries)
 * [Error Handling](#error-handling)
 * [Server Selection](#server-selection)
 * [Custom HTTP Client](#custom-http-client)
 * [Authentication](#authentication)
+* [Debugging](#debugging)
 <!-- End Table of Contents [toc] -->
 
 <!-- Start SDK Installation [installation] -->
 ## SDK Installation
 
-The SDK can be installed using the *pip* package manager, with dependencies and metadata stored in the `setup.py` file.
+The SDK can be installed with either *pip* or *poetry* package managers.
+
+### PIP
+
+*PIP* is the default package installer for Python, enabling easy installation and management of packages from PyPI via the command line.
 
 ```bash
 pip install Unified-python-sdk
 ```
+
+### Poetry
+
+*Poetry* is a modern tool that simplifies dependency management and package publishing by using a single `pyproject.toml` file to handle project metadata and dependencies.
+
+```bash
+poetry add Unified-python-sdk
+```
 <!-- End SDK Installation [installation] -->
+
+<!-- Start IDE Support [idesupport] -->
+## IDE Support
+
+### PyCharm
+
+Generally, the SDK will work well with most IDEs out of the box. However, when using PyCharm, you can enjoy much better integration with Pydantic by installing an additional plugin.
+
+- [PyCharm Pydantic Plugin](https://docs.pydantic.dev/latest/integrations/pycharm/)
+<!-- End IDE Support [idesupport] -->
 
 <!-- Start SDK Example Usage [usage] -->
 ## SDK Example Usage
@@ -38,20 +64,38 @@ pip install Unified-python-sdk
 ### Example
 
 ```python
-import unified_to
-from unified_to.models import operations
+# Synchronous Example
+from unified_python_sdk import UnifiedTo
 
-s = unified_to.UnifiedTo()
+s = UnifiedTo()
 
-
-res = s.accounting.create_accounting_account(request=operations.CreateAccountingAccountRequest(
-    connection_id='<value>',
-))
+res = s.accounting.create_accounting_account(request={
+    "connection_id": "<value>",
+})
 
 if res.accounting_account is not None:
     # handle response
     pass
+```
 
+</br>
+
+The same SDK client can also be used to make asychronous requests by importing asyncio.
+```python
+# Asynchronous Example
+import asyncio
+from unified_python_sdk import UnifiedTo
+
+async def main():
+    s = UnifiedTo()
+    res = await s.accounting.create_accounting_account_async(request={
+        "connection_id": "<value>",
+    })
+    if res.accounting_account is not None:
+        # handle response
+        pass
+
+asyncio.run(main())
 ```
 <!-- End SDK Example Usage [usage] -->
 
@@ -1050,6 +1094,76 @@ if res.accounting_account is not None:
 
 
 
+<!-- Start File uploads [file-upload] -->
+## File uploads
+
+Certain SDK methods accept file objects as part of a request body or multi-part request. It is possible and typically recommended to upload files as a stream rather than reading the entire contents into memory. This avoids excessive memory consumption and potentially crashing with out-of-memory errors when working with very large files. The following example demonstrates how to attach a file stream to a request.
+
+> [!TIP]
+>
+> For endpoints that handle file uploads bytes arrays can also be used. However, using streams is recommended for large files.
+>
+
+```python
+from unified_python_sdk import UnifiedTo
+
+s = UnifiedTo()
+
+res = s.passthrough.create_passthrough_raw(request={
+    "connection_id": "<value>",
+    "path": "/etc/periodic",
+})
+
+if res is not None:
+    # handle response
+    pass
+
+```
+<!-- End File uploads [file-upload] -->
+
+<!-- Start Retries [retries] -->
+## Retries
+
+Some of the endpoints in this SDK support retries. If you use the SDK without any configuration, it will fall back to the default retry strategy provided by the API. However, the default retry strategy can be overridden on a per-operation basis, or across the entire SDK.
+
+To change the default retry strategy for a single API call, simply provide a `RetryConfig` object to the call:
+```python
+from unified_python_sdk import UnifiedTo
+from unified_to.utils import BackoffStrategy, RetryConfig
+
+s = UnifiedTo()
+
+res = s.accounting.create_accounting_account(request={
+    "connection_id": "<value>",
+},
+    RetryConfig("backoff", BackoffStrategy(1, 50, 1.1, 100), False))
+
+if res.accounting_account is not None:
+    # handle response
+    pass
+
+```
+
+If you'd like to override the default retry strategy for all operations that support retries, you can use the `retry_config` optional parameter when initializing the SDK:
+```python
+from unified_python_sdk import UnifiedTo
+from unified_to.utils import BackoffStrategy, RetryConfig
+
+s = UnifiedTo(
+    retry_config=RetryConfig("backoff", BackoffStrategy(1, 50, 1.1, 100), False),
+)
+
+res = s.accounting.create_accounting_account(request={
+    "connection_id": "<value>",
+})
+
+if res.accounting_account is not None:
+    # handle response
+    pass
+
+```
+<!-- End Retries [retries] -->
+
 <!-- Start Error Handling [errors] -->
 ## Error Handling
 
@@ -1064,7 +1178,7 @@ By default, an API error will raise a errors.SDKError exception, which has the f
 | `.raw_response` | *httpx.Response* | The raw HTTP response |
 | `.body`         | *str*            | The response content  |
 
-When custom error responses are specified for an operation, the SDK may also raise their associated exception. You can refer to respective *Errors* tables in SDK docs for more details on possible exception types for each operation. For example, the `create_accounting_account` method may raise the following exceptions:
+When custom error responses are specified for an operation, the SDK may also raise their associated exceptions. You can refer to respective *Errors* tables in SDK docs for more details on possible exception types for each operation. For example, the `create_accounting_account_async` method may raise the following exceptions:
 
 | Error Type      | Status Code | Content Type |
 | --------------- | ----------- | ------------ |
@@ -1073,25 +1187,24 @@ When custom error responses are specified for an operation, the SDK may also rai
 ### Example
 
 ```python
-import unified_to
-from unified_to.models import errors, operations
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import errors
 
-s = unified_to.UnifiedTo()
+s = UnifiedTo()
 
 res = None
 try:
-    res = s.accounting.create_accounting_account(request=operations.CreateAccountingAccountRequest(
-    connection_id='<value>',
-))
+    res = s.accounting.create_accounting_account(request={
+        "connection_id": "<value>",
+    })
+
+    if res.accounting_account is not None:
+        # handle response
+        pass
 
 except errors.SDKError as e:
     # handle exception
     raise(e)
-
-if res.accounting_account is not None:
-    # handle response
-    pass
-
 ```
 <!-- End Error Handling [errors] -->
 
@@ -1112,17 +1225,15 @@ You can override the default server globally by passing a server index to the `s
 #### Example
 
 ```python
-import unified_to
-from unified_to.models import operations
+from unified_python_sdk import UnifiedTo
 
-s = unified_to.UnifiedTo(
+s = UnifiedTo(
     server_idx=1,
 )
 
-
-res = s.accounting.create_accounting_account(request=operations.CreateAccountingAccountRequest(
-    connection_id='<value>',
-))
+res = s.accounting.create_accounting_account(request={
+    "connection_id": "<value>",
+})
 
 if res.accounting_account is not None:
     # handle response
@@ -1134,17 +1245,15 @@ if res.accounting_account is not None:
 
 The default server can also be overridden globally by passing a URL to the `server_url: str` optional parameter when initializing the SDK client instance. For example:
 ```python
-import unified_to
-from unified_to.models import operations
+from unified_python_sdk import UnifiedTo
 
-s = unified_to.UnifiedTo(
+s = UnifiedTo(
     server_url="https://api.unified.to",
 )
 
-
-res = s.accounting.create_accounting_account(request=operations.CreateAccountingAccountRequest(
-    connection_id='<value>',
-))
+res = s.accounting.create_accounting_account(request={
+    "connection_id": "<value>",
+})
 
 if res.accounting_account is not None:
     # handle response
@@ -1158,16 +1267,81 @@ if res.accounting_account is not None:
 <!-- Start Custom HTTP Client [http-client] -->
 ## Custom HTTP Client
 
-The Python SDK makes API calls using the [requests](https://pypi.org/project/requests/) HTTP library.  In order to provide a convenient way to configure timeouts, cookies, proxies, custom headers, and other low-level configuration, you can initialize the SDK client with a custom `requests.Session` object.
+The Python SDK makes API calls using the [httpx](https://www.python-httpx.org/) HTTP library.  In order to provide a convenient way to configure timeouts, cookies, proxies, custom headers, and other low-level configuration, you can initialize the SDK client with your own HTTP client instance.
+Depending on whether you are using the sync or async version of the SDK, you can pass an instance of `HttpClient` or `AsyncHttpClient` respectively, which are Protocol's ensuring that the client has the necessary methods to make API calls.
+This allows you to wrap the client with your own custom logic, such as adding custom headers, logging, or error handling, or you can just pass an instance of `httpx.Client` or `httpx.AsyncClient` directly.
 
 For example, you could specify a header for every request that this sdk makes as follows:
 ```python
-import unified_to
-import requests
+from unified_python_sdk import UnifiedTo
+import httpx
 
-http_client = requests.Session()
-http_client.headers.update({'x-custom-header': 'someValue'})
-s = unified_to.UnifiedTo(client=http_client)
+http_client = httpx.Client(headers={"x-custom-header": "someValue"})
+s = UnifiedTo(client=http_client)
+```
+
+or you could wrap the client with your own custom logic:
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.httpclient import AsyncHttpClient
+import httpx
+
+class CustomClient(AsyncHttpClient):
+    client: AsyncHttpClient
+
+    def __init__(self, client: AsyncHttpClient):
+        self.client = client
+
+    async def send(
+        self,
+        request: httpx.Request,
+        *,
+        stream: bool = False,
+        auth: Union[
+            httpx._types.AuthTypes, httpx._client.UseClientDefault, None
+        ] = httpx.USE_CLIENT_DEFAULT,
+        follow_redirects: Union[
+            bool, httpx._client.UseClientDefault
+        ] = httpx.USE_CLIENT_DEFAULT,
+    ) -> httpx.Response:
+        request.headers["Client-Level-Header"] = "added by client"
+
+        return await self.client.send(
+            request, stream=stream, auth=auth, follow_redirects=follow_redirects
+        )
+
+    def build_request(
+        self,
+        method: str,
+        url: httpx._types.URLTypes,
+        *,
+        content: Optional[httpx._types.RequestContent] = None,
+        data: Optional[httpx._types.RequestData] = None,
+        files: Optional[httpx._types.RequestFiles] = None,
+        json: Optional[Any] = None,
+        params: Optional[httpx._types.QueryParamTypes] = None,
+        headers: Optional[httpx._types.HeaderTypes] = None,
+        cookies: Optional[httpx._types.CookieTypes] = None,
+        timeout: Union[
+            httpx._types.TimeoutTypes, httpx._client.UseClientDefault
+        ] = httpx.USE_CLIENT_DEFAULT,
+        extensions: Optional[httpx._types.RequestExtensions] = None,
+    ) -> httpx.Request:
+        return self.client.build_request(
+            method,
+            url,
+            content=content,
+            data=data,
+            files=files,
+            json=json,
+            params=params,
+            headers=headers,
+            cookies=cookies,
+            timeout=timeout,
+            extensions=extensions,
+        )
+
+s = UnifiedTo(async_client=CustomClient(httpx.AsyncClient()))
 ```
 <!-- End Custom HTTP Client [http-client] -->
 
@@ -1186,19 +1360,18 @@ This SDK supports the following security scheme globally:
 
 You can set the security parameters through the `security` optional parameter when initializing the SDK client instance. For example:
 ```python
-import unified_to
-from unified_to.models import operations, shared
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = unified_to.UnifiedTo(
+s = UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 )
 
-
-res = s.accounting.create_accounting_account(request=operations.CreateAccountingAccountRequest(
-    connection_id='<value>',
-))
+res = s.accounting.create_accounting_account(request={
+    "connection_id": "<value>",
+})
 
 if res.accounting_account is not None:
     # handle response
@@ -1206,6 +1379,21 @@ if res.accounting_account is not None:
 
 ```
 <!-- End Authentication [security] -->
+
+<!-- Start Debugging [debug] -->
+## Debugging
+
+You can setup your SDK to emit debug logs for SDK requests and responses.
+
+You can pass your own logger class directly into your SDK.
+```python
+from unified_python_sdk import UnifiedTo
+import logging
+
+logging.basicConfig(level=logging.DEBUG)
+s = UnifiedTo(debug_logger=logging.getLogger("unified_python_sdk"))
+```
+<!-- End Debugging [debug] -->
 
 <!-- Placeholder for Future Speakeasy SDK Sections -->
 

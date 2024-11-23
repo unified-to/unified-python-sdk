@@ -15,16 +15,14 @@ Retrieve a timeoff
 ### Example Usage
 
 ```python
-import unified_to
-from unified_to.models import operations
+from unified_python_sdk import UnifiedTo
 
-s = unified_to.UnifiedTo()
+s = UnifiedTo()
 
-
-res = s.timeoff.get_hris_timeoff(request=operations.GetHrisTimeoffRequest(
-    connection_id='<value>',
-    id='<id>',
-))
+res = s.timeoff.get_hris_timeoff(request={
+    "connection_id": "<value>",
+    "id": "<id>",
+})
 
 if res.hris_timeoff is not None:
     # handle response
@@ -37,6 +35,7 @@ if res.hris_timeoff is not None:
 | Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
 | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
 | `request`                                                                            | [operations.GetHrisTimeoffRequest](../../models/operations/gethristimeoffrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `retries`                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                     | :heavy_minus_sign:                                                                   | Configuration to override the default retry behavior of the client.                  |
 
 ### Response
 
@@ -55,15 +54,13 @@ List all timeoffs
 ### Example Usage
 
 ```python
-import unified_to
-from unified_to.models import operations
+from unified_python_sdk import UnifiedTo
 
-s = unified_to.UnifiedTo()
+s = UnifiedTo()
 
-
-res = s.timeoff.list_hris_timeoffs(request=operations.ListHrisTimeoffsRequest(
-    connection_id='<value>',
-))
+res = s.timeoff.list_hris_timeoffs(request={
+    "connection_id": "<value>",
+})
 
 if res.hris_timeoffs is not None:
     # handle response
@@ -76,6 +73,7 @@ if res.hris_timeoffs is not None:
 | Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
 | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
 | `request`                                                                                | [operations.ListHrisTimeoffsRequest](../../models/operations/listhristimeoffsrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
 
 ### Response
 

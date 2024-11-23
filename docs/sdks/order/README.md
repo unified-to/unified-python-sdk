@@ -19,15 +19,13 @@ Create an order
 ### Example Usage
 
 ```python
-import unified_to
-from unified_to.models import operations
+from unified_python_sdk import UnifiedTo
 
-s = unified_to.UnifiedTo()
+s = UnifiedTo()
 
-
-res = s.order.create_accounting_order(request=operations.CreateAccountingOrderRequest(
-    connection_id='<id>',
-))
+res = s.order.create_accounting_order(request={
+    "connection_id": "<id>",
+})
 
 if res.accounting_order is not None:
     # handle response
@@ -40,6 +38,7 @@ if res.accounting_order is not None:
 | Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
 | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
 | `request`                                                                                          | [operations.CreateAccountingOrderRequest](../../models/operations/createaccountingorderrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `retries`                                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                   | :heavy_minus_sign:                                                                                 | Configuration to override the default retry behavior of the client.                                |
 
 ### Response
 
@@ -58,16 +57,14 @@ Retrieve an order
 ### Example Usage
 
 ```python
-import unified_to
-from unified_to.models import operations
+from unified_python_sdk import UnifiedTo
 
-s = unified_to.UnifiedTo()
+s = UnifiedTo()
 
-
-res = s.order.get_accounting_order(request=operations.GetAccountingOrderRequest(
-    connection_id='<id>',
-    id='<id>',
-))
+res = s.order.get_accounting_order(request={
+    "connection_id": "<id>",
+    "id": "<id>",
+})
 
 if res.accounting_order is not None:
     # handle response
@@ -80,6 +77,7 @@ if res.accounting_order is not None:
 | Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
 | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
 | `request`                                                                                    | [operations.GetAccountingOrderRequest](../../models/operations/getaccountingorderrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
 
 ### Response
 
@@ -98,15 +96,13 @@ List all orders
 ### Example Usage
 
 ```python
-import unified_to
-from unified_to.models import operations
+from unified_python_sdk import UnifiedTo
 
-s = unified_to.UnifiedTo()
+s = UnifiedTo()
 
-
-res = s.order.list_accounting_orders(request=operations.ListAccountingOrdersRequest(
-    connection_id='<id>',
-))
+res = s.order.list_accounting_orders(request={
+    "connection_id": "<id>",
+})
 
 if res.accounting_orders is not None:
     # handle response
@@ -119,6 +115,7 @@ if res.accounting_orders is not None:
 | Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
 | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
 | `request`                                                                                        | [operations.ListAccountingOrdersRequest](../../models/operations/listaccountingordersrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `retries`                                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                 | :heavy_minus_sign:                                                                               | Configuration to override the default retry behavior of the client.                              |
 
 ### Response
 
@@ -137,16 +134,14 @@ Update an order
 ### Example Usage
 
 ```python
-import unified_to
-from unified_to.models import operations
+from unified_python_sdk import UnifiedTo
 
-s = unified_to.UnifiedTo()
+s = UnifiedTo()
 
-
-res = s.order.patch_accounting_order(request=operations.PatchAccountingOrderRequest(
-    connection_id='<id>',
-    id='<id>',
-))
+res = s.order.patch_accounting_order(request={
+    "connection_id": "<id>",
+    "id": "<id>",
+})
 
 if res.accounting_order is not None:
     # handle response
@@ -159,6 +154,7 @@ if res.accounting_order is not None:
 | Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
 | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
 | `request`                                                                                        | [operations.PatchAccountingOrderRequest](../../models/operations/patchaccountingorderrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `retries`                                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                 | :heavy_minus_sign:                                                                               | Configuration to override the default retry behavior of the client.                              |
 
 ### Response
 
@@ -177,16 +173,14 @@ Remove an order
 ### Example Usage
 
 ```python
-import unified_to
-from unified_to.models import operations
+from unified_python_sdk import UnifiedTo
 
-s = unified_to.UnifiedTo()
+s = UnifiedTo()
 
-
-res = s.order.remove_accounting_order(request=operations.RemoveAccountingOrderRequest(
-    connection_id='<id>',
-    id='<id>',
-))
+res = s.order.remove_accounting_order(request={
+    "connection_id": "<id>",
+    "id": "<id>",
+})
 
 if res is not None:
     # handle response
@@ -199,6 +193,7 @@ if res is not None:
 | Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
 | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
 | `request`                                                                                          | [operations.RemoveAccountingOrderRequest](../../models/operations/removeaccountingorderrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `retries`                                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                   | :heavy_minus_sign:                                                                                 | Configuration to override the default retry behavior of the client.                                |
 
 ### Response
 
@@ -217,16 +212,14 @@ Update an order
 ### Example Usage
 
 ```python
-import unified_to
-from unified_to.models import operations
+from unified_python_sdk import UnifiedTo
 
-s = unified_to.UnifiedTo()
+s = UnifiedTo()
 
-
-res = s.order.update_accounting_order(request=operations.UpdateAccountingOrderRequest(
-    connection_id='<id>',
-    id='<id>',
-))
+res = s.order.update_accounting_order(request={
+    "connection_id": "<id>",
+    "id": "<id>",
+})
 
 if res.accounting_order is not None:
     # handle response
@@ -239,6 +232,7 @@ if res.accounting_order is not None:
 | Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
 | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
 | `request`                                                                                          | [operations.UpdateAccountingOrderRequest](../../models/operations/updateaccountingorderrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `retries`                                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                   | :heavy_minus_sign:                                                                                 | Configuration to override the default retry behavior of the client.                                |
 
 ### Response
 

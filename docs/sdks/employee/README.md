@@ -19,15 +19,13 @@ Create an employee
 ### Example Usage
 
 ```python
-import unified_to
-from unified_to.models import operations
+from unified_python_sdk import UnifiedTo
 
-s = unified_to.UnifiedTo()
+s = UnifiedTo()
 
-
-res = s.employee.create_hris_employee(request=operations.CreateHrisEmployeeRequest(
-    connection_id='<value>',
-))
+res = s.employee.create_hris_employee(request={
+    "connection_id": "<value>",
+})
 
 if res.hris_employee is not None:
     # handle response
@@ -40,6 +38,7 @@ if res.hris_employee is not None:
 | Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
 | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
 | `request`                                                                                    | [operations.CreateHrisEmployeeRequest](../../models/operations/createhrisemployeerequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
 
 ### Response
 
@@ -58,16 +57,14 @@ Retrieve an employee
 ### Example Usage
 
 ```python
-import unified_to
-from unified_to.models import operations
+from unified_python_sdk import UnifiedTo
 
-s = unified_to.UnifiedTo()
+s = UnifiedTo()
 
-
-res = s.employee.get_hris_employee(request=operations.GetHrisEmployeeRequest(
-    connection_id='<value>',
-    id='<id>',
-))
+res = s.employee.get_hris_employee(request={
+    "connection_id": "<value>",
+    "id": "<id>",
+})
 
 if res.hris_employee is not None:
     # handle response
@@ -80,6 +77,7 @@ if res.hris_employee is not None:
 | Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
 | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
 | `request`                                                                              | [operations.GetHrisEmployeeRequest](../../models/operations/gethrisemployeerequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `retries`                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                       | :heavy_minus_sign:                                                                     | Configuration to override the default retry behavior of the client.                    |
 
 ### Response
 
@@ -98,15 +96,13 @@ List all employees
 ### Example Usage
 
 ```python
-import unified_to
-from unified_to.models import operations
+from unified_python_sdk import UnifiedTo
 
-s = unified_to.UnifiedTo()
+s = UnifiedTo()
 
-
-res = s.employee.list_hris_employees(request=operations.ListHrisEmployeesRequest(
-    connection_id='<value>',
-))
+res = s.employee.list_hris_employees(request={
+    "connection_id": "<value>",
+})
 
 if res.hris_employees is not None:
     # handle response
@@ -119,6 +115,7 @@ if res.hris_employees is not None:
 | Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
 | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
 | `request`                                                                                  | [operations.ListHrisEmployeesRequest](../../models/operations/listhrisemployeesrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
 
 ### Response
 
@@ -137,16 +134,14 @@ Update an employee
 ### Example Usage
 
 ```python
-import unified_to
-from unified_to.models import operations
+from unified_python_sdk import UnifiedTo
 
-s = unified_to.UnifiedTo()
+s = UnifiedTo()
 
-
-res = s.employee.patch_hris_employee(request=operations.PatchHrisEmployeeRequest(
-    connection_id='<value>',
-    id='<id>',
-))
+res = s.employee.patch_hris_employee(request={
+    "connection_id": "<value>",
+    "id": "<id>",
+})
 
 if res.hris_employee is not None:
     # handle response
@@ -159,6 +154,7 @@ if res.hris_employee is not None:
 | Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
 | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
 | `request`                                                                                  | [operations.PatchHrisEmployeeRequest](../../models/operations/patchhrisemployeerequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
 
 ### Response
 
@@ -177,16 +173,14 @@ Remove an employee
 ### Example Usage
 
 ```python
-import unified_to
-from unified_to.models import operations
+from unified_python_sdk import UnifiedTo
 
-s = unified_to.UnifiedTo()
+s = UnifiedTo()
 
-
-res = s.employee.remove_hris_employee(request=operations.RemoveHrisEmployeeRequest(
-    connection_id='<value>',
-    id='<id>',
-))
+res = s.employee.remove_hris_employee(request={
+    "connection_id": "<value>",
+    "id": "<id>",
+})
 
 if res is not None:
     # handle response
@@ -199,6 +193,7 @@ if res is not None:
 | Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
 | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
 | `request`                                                                                    | [operations.RemoveHrisEmployeeRequest](../../models/operations/removehrisemployeerequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
 
 ### Response
 
@@ -217,16 +212,14 @@ Update an employee
 ### Example Usage
 
 ```python
-import unified_to
-from unified_to.models import operations
+from unified_python_sdk import UnifiedTo
 
-s = unified_to.UnifiedTo()
+s = UnifiedTo()
 
-
-res = s.employee.update_hris_employee(request=operations.UpdateHrisEmployeeRequest(
-    connection_id='<value>',
-    id='<id>',
-))
+res = s.employee.update_hris_employee(request={
+    "connection_id": "<value>",
+    "id": "<id>",
+})
 
 if res.hris_employee is not None:
     # handle response
@@ -239,6 +232,7 @@ if res.hris_employee is not None:
 | Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
 | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
 | `request`                                                                                    | [operations.UpdateHrisEmployeeRequest](../../models/operations/updatehrisemployeerequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
 
 ### Response
 

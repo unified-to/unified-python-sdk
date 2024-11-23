@@ -19,15 +19,13 @@ Create a student
 ### Example Usage
 
 ```python
-import unified_to
-from unified_to.models import operations
+from unified_python_sdk import UnifiedTo
 
-s = unified_to.UnifiedTo()
+s = UnifiedTo()
 
-
-res = s.student.create_lms_student(request=operations.CreateLmsStudentRequest(
-    connection_id='<id>',
-))
+res = s.student.create_lms_student(request={
+    "connection_id": "<id>",
+})
 
 if res.lms_student is not None:
     # handle response
@@ -40,6 +38,7 @@ if res.lms_student is not None:
 | Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
 | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
 | `request`                                                                                | [operations.CreateLmsStudentRequest](../../models/operations/createlmsstudentrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
 
 ### Response
 
@@ -58,16 +57,14 @@ Retrieve a student
 ### Example Usage
 
 ```python
-import unified_to
-from unified_to.models import operations
+from unified_python_sdk import UnifiedTo
 
-s = unified_to.UnifiedTo()
+s = UnifiedTo()
 
-
-res = s.student.get_lms_student(request=operations.GetLmsStudentRequest(
-    connection_id='<id>',
-    id='<id>',
-))
+res = s.student.get_lms_student(request={
+    "connection_id": "<id>",
+    "id": "<id>",
+})
 
 if res.lms_student is not None:
     # handle response
@@ -80,6 +77,7 @@ if res.lms_student is not None:
 | Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
 | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
 | `request`                                                                          | [operations.GetLmsStudentRequest](../../models/operations/getlmsstudentrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| `retries`                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                   | :heavy_minus_sign:                                                                 | Configuration to override the default retry behavior of the client.                |
 
 ### Response
 
@@ -98,15 +96,13 @@ List all students
 ### Example Usage
 
 ```python
-import unified_to
-from unified_to.models import operations
+from unified_python_sdk import UnifiedTo
 
-s = unified_to.UnifiedTo()
+s = UnifiedTo()
 
-
-res = s.student.list_lms_students(request=operations.ListLmsStudentsRequest(
-    connection_id='<id>',
-))
+res = s.student.list_lms_students(request={
+    "connection_id": "<id>",
+})
 
 if res.lms_students is not None:
     # handle response
@@ -119,6 +115,7 @@ if res.lms_students is not None:
 | Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
 | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
 | `request`                                                                              | [operations.ListLmsStudentsRequest](../../models/operations/listlmsstudentsrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `retries`                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                       | :heavy_minus_sign:                                                                     | Configuration to override the default retry behavior of the client.                    |
 
 ### Response
 
@@ -137,16 +134,14 @@ Update a student
 ### Example Usage
 
 ```python
-import unified_to
-from unified_to.models import operations
+from unified_python_sdk import UnifiedTo
 
-s = unified_to.UnifiedTo()
+s = UnifiedTo()
 
-
-res = s.student.patch_lms_student(request=operations.PatchLmsStudentRequest(
-    connection_id='<id>',
-    id='<id>',
-))
+res = s.student.patch_lms_student(request={
+    "connection_id": "<id>",
+    "id": "<id>",
+})
 
 if res.lms_student is not None:
     # handle response
@@ -159,6 +154,7 @@ if res.lms_student is not None:
 | Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
 | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
 | `request`                                                                              | [operations.PatchLmsStudentRequest](../../models/operations/patchlmsstudentrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `retries`                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                       | :heavy_minus_sign:                                                                     | Configuration to override the default retry behavior of the client.                    |
 
 ### Response
 
@@ -177,16 +173,14 @@ Remove a student
 ### Example Usage
 
 ```python
-import unified_to
-from unified_to.models import operations
+from unified_python_sdk import UnifiedTo
 
-s = unified_to.UnifiedTo()
+s = UnifiedTo()
 
-
-res = s.student.remove_lms_student(request=operations.RemoveLmsStudentRequest(
-    connection_id='<id>',
-    id='<id>',
-))
+res = s.student.remove_lms_student(request={
+    "connection_id": "<id>",
+    "id": "<id>",
+})
 
 if res is not None:
     # handle response
@@ -199,6 +193,7 @@ if res is not None:
 | Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
 | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
 | `request`                                                                                | [operations.RemoveLmsStudentRequest](../../models/operations/removelmsstudentrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
 
 ### Response
 
@@ -217,16 +212,14 @@ Update a student
 ### Example Usage
 
 ```python
-import unified_to
-from unified_to.models import operations
+from unified_python_sdk import UnifiedTo
 
-s = unified_to.UnifiedTo()
+s = UnifiedTo()
 
-
-res = s.student.update_lms_student(request=operations.UpdateLmsStudentRequest(
-    connection_id='<id>',
-    id='<id>',
-))
+res = s.student.update_lms_student(request={
+    "connection_id": "<id>",
+    "id": "<id>",
+})
 
 if res.lms_student is not None:
     # handle response
@@ -239,6 +232,7 @@ if res.lms_student is not None:
 | Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
 | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
 | `request`                                                                                | [operations.UpdateLmsStudentRequest](../../models/operations/updatelmsstudentrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
 
 ### Response
 

@@ -19,15 +19,13 @@ Create an invoice
 ### Example Usage
 
 ```python
-import unified_to
-from unified_to.models import operations
+from unified_python_sdk import UnifiedTo
 
-s = unified_to.UnifiedTo()
+s = UnifiedTo()
 
-
-res = s.invoice.create_accounting_invoice(request=operations.CreateAccountingInvoiceRequest(
-    connection_id='<value>',
-))
+res = s.invoice.create_accounting_invoice(request={
+    "connection_id": "<value>",
+})
 
 if res.accounting_invoice is not None:
     # handle response
@@ -40,6 +38,7 @@ if res.accounting_invoice is not None:
 | Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
 | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
 | `request`                                                                                              | [operations.CreateAccountingInvoiceRequest](../../models/operations/createaccountinginvoicerequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `retries`                                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                       | :heavy_minus_sign:                                                                                     | Configuration to override the default retry behavior of the client.                                    |
 
 ### Response
 
@@ -58,16 +57,14 @@ Retrieve an invoice
 ### Example Usage
 
 ```python
-import unified_to
-from unified_to.models import operations
+from unified_python_sdk import UnifiedTo
 
-s = unified_to.UnifiedTo()
+s = UnifiedTo()
 
-
-res = s.invoice.get_accounting_invoice(request=operations.GetAccountingInvoiceRequest(
-    connection_id='<value>',
-    id='<id>',
-))
+res = s.invoice.get_accounting_invoice(request={
+    "connection_id": "<value>",
+    "id": "<id>",
+})
 
 if res.accounting_invoice is not None:
     # handle response
@@ -80,6 +77,7 @@ if res.accounting_invoice is not None:
 | Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
 | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
 | `request`                                                                                        | [operations.GetAccountingInvoiceRequest](../../models/operations/getaccountinginvoicerequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `retries`                                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                 | :heavy_minus_sign:                                                                               | Configuration to override the default retry behavior of the client.                              |
 
 ### Response
 
@@ -98,15 +96,13 @@ List all invoices
 ### Example Usage
 
 ```python
-import unified_to
-from unified_to.models import operations
+from unified_python_sdk import UnifiedTo
 
-s = unified_to.UnifiedTo()
+s = UnifiedTo()
 
-
-res = s.invoice.list_accounting_invoices(request=operations.ListAccountingInvoicesRequest(
-    connection_id='<value>',
-))
+res = s.invoice.list_accounting_invoices(request={
+    "connection_id": "<value>",
+})
 
 if res.accounting_invoices is not None:
     # handle response
@@ -119,6 +115,7 @@ if res.accounting_invoices is not None:
 | Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
 | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
 | `request`                                                                                            | [operations.ListAccountingInvoicesRequest](../../models/operations/listaccountinginvoicesrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `retries`                                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                     | :heavy_minus_sign:                                                                                   | Configuration to override the default retry behavior of the client.                                  |
 
 ### Response
 
@@ -137,16 +134,14 @@ Update an invoice
 ### Example Usage
 
 ```python
-import unified_to
-from unified_to.models import operations
+from unified_python_sdk import UnifiedTo
 
-s = unified_to.UnifiedTo()
+s = UnifiedTo()
 
-
-res = s.invoice.patch_accounting_invoice(request=operations.PatchAccountingInvoiceRequest(
-    connection_id='<value>',
-    id='<id>',
-))
+res = s.invoice.patch_accounting_invoice(request={
+    "connection_id": "<value>",
+    "id": "<id>",
+})
 
 if res.accounting_invoice is not None:
     # handle response
@@ -159,6 +154,7 @@ if res.accounting_invoice is not None:
 | Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
 | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
 | `request`                                                                                            | [operations.PatchAccountingInvoiceRequest](../../models/operations/patchaccountinginvoicerequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `retries`                                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                     | :heavy_minus_sign:                                                                                   | Configuration to override the default retry behavior of the client.                                  |
 
 ### Response
 
@@ -177,16 +173,14 @@ Remove an invoice
 ### Example Usage
 
 ```python
-import unified_to
-from unified_to.models import operations
+from unified_python_sdk import UnifiedTo
 
-s = unified_to.UnifiedTo()
+s = UnifiedTo()
 
-
-res = s.invoice.remove_accounting_invoice(request=operations.RemoveAccountingInvoiceRequest(
-    connection_id='<value>',
-    id='<id>',
-))
+res = s.invoice.remove_accounting_invoice(request={
+    "connection_id": "<value>",
+    "id": "<id>",
+})
 
 if res is not None:
     # handle response
@@ -199,6 +193,7 @@ if res is not None:
 | Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
 | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
 | `request`                                                                                              | [operations.RemoveAccountingInvoiceRequest](../../models/operations/removeaccountinginvoicerequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `retries`                                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                       | :heavy_minus_sign:                                                                                     | Configuration to override the default retry behavior of the client.                                    |
 
 ### Response
 
@@ -217,16 +212,14 @@ Update an invoice
 ### Example Usage
 
 ```python
-import unified_to
-from unified_to.models import operations
+from unified_python_sdk import UnifiedTo
 
-s = unified_to.UnifiedTo()
+s = UnifiedTo()
 
-
-res = s.invoice.update_accounting_invoice(request=operations.UpdateAccountingInvoiceRequest(
-    connection_id='<value>',
-    id='<id>',
-))
+res = s.invoice.update_accounting_invoice(request={
+    "connection_id": "<value>",
+    "id": "<id>",
+})
 
 if res.accounting_invoice is not None:
     # handle response
@@ -239,6 +232,7 @@ if res.accounting_invoice is not None:
 | Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
 | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
 | `request`                                                                                              | [operations.UpdateAccountingInvoiceRequest](../../models/operations/updateaccountinginvoicerequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `retries`                                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                       | :heavy_minus_sign:                                                                                     | Configuration to override the default retry behavior of the client.                                    |
 
 ### Response
 

@@ -43,15 +43,13 @@ Create a collection
 ### Example Usage
 
 ```python
-import unified_to
-from unified_to.models import operations
+from unified_python_sdk import UnifiedTo
 
-s = unified_to.UnifiedTo()
+s = UnifiedTo()
 
-
-res = s.commerce.create_commerce_collection(request=operations.CreateCommerceCollectionRequest(
-    connection_id='<value>',
-))
+res = s.commerce.create_commerce_collection(request={
+    "connection_id": "<value>",
+})
 
 if res.commerce_collection is not None:
     # handle response
@@ -64,6 +62,7 @@ if res.commerce_collection is not None:
 | Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
 | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
 | `request`                                                                                                | [operations.CreateCommerceCollectionRequest](../../models/operations/createcommercecollectionrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| `retries`                                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                         | :heavy_minus_sign:                                                                                       | Configuration to override the default retry behavior of the client.                                      |
 
 ### Response
 
@@ -82,15 +81,13 @@ Create an inventory
 ### Example Usage
 
 ```python
-import unified_to
-from unified_to.models import operations
+from unified_python_sdk import UnifiedTo
 
-s = unified_to.UnifiedTo()
+s = UnifiedTo()
 
-
-res = s.commerce.create_commerce_inventory(request=operations.CreateCommerceInventoryRequest(
-    connection_id='<value>',
-))
+res = s.commerce.create_commerce_inventory(request={
+    "connection_id": "<value>",
+})
 
 if res.commerce_inventory is not None:
     # handle response
@@ -103,6 +100,7 @@ if res.commerce_inventory is not None:
 | Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
 | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
 | `request`                                                                                              | [operations.CreateCommerceInventoryRequest](../../models/operations/createcommerceinventoryrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `retries`                                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                       | :heavy_minus_sign:                                                                                     | Configuration to override the default retry behavior of the client.                                    |
 
 ### Response
 
@@ -121,15 +119,13 @@ Create an item
 ### Example Usage
 
 ```python
-import unified_to
-from unified_to.models import operations
+from unified_python_sdk import UnifiedTo
 
-s = unified_to.UnifiedTo()
+s = UnifiedTo()
 
-
-res = s.commerce.create_commerce_item(request=operations.CreateCommerceItemRequest(
-    connection_id='<value>',
-))
+res = s.commerce.create_commerce_item(request={
+    "connection_id": "<value>",
+})
 
 if res.commerce_item is not None:
     # handle response
@@ -142,6 +138,7 @@ if res.commerce_item is not None:
 | Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
 | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
 | `request`                                                                                    | [operations.CreateCommerceItemRequest](../../models/operations/createcommerceitemrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
 
 ### Response
 
@@ -160,15 +157,13 @@ Create a location
 ### Example Usage
 
 ```python
-import unified_to
-from unified_to.models import operations
+from unified_python_sdk import UnifiedTo
 
-s = unified_to.UnifiedTo()
+s = UnifiedTo()
 
-
-res = s.commerce.create_commerce_location(request=operations.CreateCommerceLocationRequest(
-    connection_id='<value>',
-))
+res = s.commerce.create_commerce_location(request={
+    "connection_id": "<value>",
+})
 
 if res.commerce_location is not None:
     # handle response
@@ -181,6 +176,7 @@ if res.commerce_location is not None:
 | Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
 | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
 | `request`                                                                                            | [operations.CreateCommerceLocationRequest](../../models/operations/createcommercelocationrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `retries`                                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                     | :heavy_minus_sign:                                                                                   | Configuration to override the default retry behavior of the client.                                  |
 
 ### Response
 
@@ -199,15 +195,13 @@ Create a metadata
 ### Example Usage
 
 ```python
-import unified_to
-from unified_to.models import operations
+from unified_python_sdk import UnifiedTo
 
-s = unified_to.UnifiedTo()
+s = UnifiedTo()
 
-
-res = s.commerce.create_commerce_metadata(request=operations.CreateCommerceMetadataRequest(
-    connection_id='<id>',
-))
+res = s.commerce.create_commerce_metadata(request={
+    "connection_id": "<id>",
+})
 
 if res.commerce_metadata is not None:
     # handle response
@@ -220,6 +214,7 @@ if res.commerce_metadata is not None:
 | Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
 | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
 | `request`                                                                                            | [operations.CreateCommerceMetadataRequest](../../models/operations/createcommercemetadatarequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `retries`                                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                     | :heavy_minus_sign:                                                                                   | Configuration to override the default retry behavior of the client.                                  |
 
 ### Response
 
@@ -238,16 +233,14 @@ Retrieve a collection
 ### Example Usage
 
 ```python
-import unified_to
-from unified_to.models import operations
+from unified_python_sdk import UnifiedTo
 
-s = unified_to.UnifiedTo()
+s = UnifiedTo()
 
-
-res = s.commerce.get_commerce_collection(request=operations.GetCommerceCollectionRequest(
-    connection_id='<value>',
-    id='<id>',
-))
+res = s.commerce.get_commerce_collection(request={
+    "connection_id": "<value>",
+    "id": "<id>",
+})
 
 if res.commerce_collection is not None:
     # handle response
@@ -260,6 +253,7 @@ if res.commerce_collection is not None:
 | Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
 | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
 | `request`                                                                                          | [operations.GetCommerceCollectionRequest](../../models/operations/getcommercecollectionrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `retries`                                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                   | :heavy_minus_sign:                                                                                 | Configuration to override the default retry behavior of the client.                                |
 
 ### Response
 
@@ -278,16 +272,14 @@ Retrieve an inventory
 ### Example Usage
 
 ```python
-import unified_to
-from unified_to.models import operations
+from unified_python_sdk import UnifiedTo
 
-s = unified_to.UnifiedTo()
+s = UnifiedTo()
 
-
-res = s.commerce.get_commerce_inventory(request=operations.GetCommerceInventoryRequest(
-    connection_id='<value>',
-    id='<id>',
-))
+res = s.commerce.get_commerce_inventory(request={
+    "connection_id": "<value>",
+    "id": "<id>",
+})
 
 if res.commerce_inventory is not None:
     # handle response
@@ -300,6 +292,7 @@ if res.commerce_inventory is not None:
 | Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
 | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
 | `request`                                                                                        | [operations.GetCommerceInventoryRequest](../../models/operations/getcommerceinventoryrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `retries`                                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                 | :heavy_minus_sign:                                                                               | Configuration to override the default retry behavior of the client.                              |
 
 ### Response
 
@@ -318,16 +311,14 @@ Retrieve an item
 ### Example Usage
 
 ```python
-import unified_to
-from unified_to.models import operations
+from unified_python_sdk import UnifiedTo
 
-s = unified_to.UnifiedTo()
+s = UnifiedTo()
 
-
-res = s.commerce.get_commerce_item(request=operations.GetCommerceItemRequest(
-    connection_id='<value>',
-    id='<id>',
-))
+res = s.commerce.get_commerce_item(request={
+    "connection_id": "<value>",
+    "id": "<id>",
+})
 
 if res.commerce_item is not None:
     # handle response
@@ -340,6 +331,7 @@ if res.commerce_item is not None:
 | Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
 | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
 | `request`                                                                              | [operations.GetCommerceItemRequest](../../models/operations/getcommerceitemrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `retries`                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                       | :heavy_minus_sign:                                                                     | Configuration to override the default retry behavior of the client.                    |
 
 ### Response
 
@@ -358,16 +350,14 @@ Retrieve a location
 ### Example Usage
 
 ```python
-import unified_to
-from unified_to.models import operations
+from unified_python_sdk import UnifiedTo
 
-s = unified_to.UnifiedTo()
+s = UnifiedTo()
 
-
-res = s.commerce.get_commerce_location(request=operations.GetCommerceLocationRequest(
-    connection_id='<value>',
-    id='<id>',
-))
+res = s.commerce.get_commerce_location(request={
+    "connection_id": "<value>",
+    "id": "<id>",
+})
 
 if res.commerce_location is not None:
     # handle response
@@ -380,6 +370,7 @@ if res.commerce_location is not None:
 | Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
 | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
 | `request`                                                                                      | [operations.GetCommerceLocationRequest](../../models/operations/getcommercelocationrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `retries`                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                               | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
 
 ### Response
 
@@ -398,16 +389,14 @@ Retrieve a metadata
 ### Example Usage
 
 ```python
-import unified_to
-from unified_to.models import operations
+from unified_python_sdk import UnifiedTo
 
-s = unified_to.UnifiedTo()
+s = UnifiedTo()
 
-
-res = s.commerce.get_commerce_metadata(request=operations.GetCommerceMetadataRequest(
-    connection_id='<id>',
-    id='<id>',
-))
+res = s.commerce.get_commerce_metadata(request={
+    "connection_id": "<id>",
+    "id": "<id>",
+})
 
 if res.commerce_metadata is not None:
     # handle response
@@ -420,6 +409,7 @@ if res.commerce_metadata is not None:
 | Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
 | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
 | `request`                                                                                      | [operations.GetCommerceMetadataRequest](../../models/operations/getcommercemetadatarequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `retries`                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                               | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
 
 ### Response
 
@@ -438,15 +428,13 @@ List all collections
 ### Example Usage
 
 ```python
-import unified_to
-from unified_to.models import operations
+from unified_python_sdk import UnifiedTo
 
-s = unified_to.UnifiedTo()
+s = UnifiedTo()
 
-
-res = s.commerce.list_commerce_collections(request=operations.ListCommerceCollectionsRequest(
-    connection_id='<value>',
-))
+res = s.commerce.list_commerce_collections(request={
+    "connection_id": "<value>",
+})
 
 if res.commerce_collections is not None:
     # handle response
@@ -459,6 +447,7 @@ if res.commerce_collections is not None:
 | Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
 | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
 | `request`                                                                                              | [operations.ListCommerceCollectionsRequest](../../models/operations/listcommercecollectionsrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `retries`                                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                       | :heavy_minus_sign:                                                                                     | Configuration to override the default retry behavior of the client.                                    |
 
 ### Response
 
@@ -477,15 +466,13 @@ List all inventories
 ### Example Usage
 
 ```python
-import unified_to
-from unified_to.models import operations
+from unified_python_sdk import UnifiedTo
 
-s = unified_to.UnifiedTo()
+s = UnifiedTo()
 
-
-res = s.commerce.list_commerce_inventories(request=operations.ListCommerceInventoriesRequest(
-    connection_id='<value>',
-))
+res = s.commerce.list_commerce_inventories(request={
+    "connection_id": "<value>",
+})
 
 if res.commerce_inventories is not None:
     # handle response
@@ -498,6 +485,7 @@ if res.commerce_inventories is not None:
 | Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
 | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
 | `request`                                                                                              | [operations.ListCommerceInventoriesRequest](../../models/operations/listcommerceinventoriesrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `retries`                                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                       | :heavy_minus_sign:                                                                                     | Configuration to override the default retry behavior of the client.                                    |
 
 ### Response
 
@@ -516,15 +504,13 @@ List all items
 ### Example Usage
 
 ```python
-import unified_to
-from unified_to.models import operations
+from unified_python_sdk import UnifiedTo
 
-s = unified_to.UnifiedTo()
+s = UnifiedTo()
 
-
-res = s.commerce.list_commerce_items(request=operations.ListCommerceItemsRequest(
-    connection_id='<value>',
-))
+res = s.commerce.list_commerce_items(request={
+    "connection_id": "<value>",
+})
 
 if res.commerce_items is not None:
     # handle response
@@ -537,6 +523,7 @@ if res.commerce_items is not None:
 | Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
 | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
 | `request`                                                                                  | [operations.ListCommerceItemsRequest](../../models/operations/listcommerceitemsrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
 
 ### Response
 
@@ -555,15 +542,13 @@ List all locations
 ### Example Usage
 
 ```python
-import unified_to
-from unified_to.models import operations
+from unified_python_sdk import UnifiedTo
 
-s = unified_to.UnifiedTo()
+s = UnifiedTo()
 
-
-res = s.commerce.list_commerce_locations(request=operations.ListCommerceLocationsRequest(
-    connection_id='<value>',
-))
+res = s.commerce.list_commerce_locations(request={
+    "connection_id": "<value>",
+})
 
 if res.commerce_locations is not None:
     # handle response
@@ -576,6 +561,7 @@ if res.commerce_locations is not None:
 | Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
 | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
 | `request`                                                                                          | [operations.ListCommerceLocationsRequest](../../models/operations/listcommercelocationsrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `retries`                                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                   | :heavy_minus_sign:                                                                                 | Configuration to override the default retry behavior of the client.                                |
 
 ### Response
 
@@ -594,15 +580,13 @@ List all metadatas
 ### Example Usage
 
 ```python
-import unified_to
-from unified_to.models import operations
+from unified_python_sdk import UnifiedTo
 
-s = unified_to.UnifiedTo()
+s = UnifiedTo()
 
-
-res = s.commerce.list_commerce_metadatas(request=operations.ListCommerceMetadatasRequest(
-    connection_id='<id>',
-))
+res = s.commerce.list_commerce_metadatas(request={
+    "connection_id": "<id>",
+})
 
 if res.commerce_metadatas is not None:
     # handle response
@@ -615,6 +599,7 @@ if res.commerce_metadatas is not None:
 | Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
 | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
 | `request`                                                                                          | [operations.ListCommerceMetadatasRequest](../../models/operations/listcommercemetadatasrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `retries`                                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                   | :heavy_minus_sign:                                                                                 | Configuration to override the default retry behavior of the client.                                |
 
 ### Response
 
@@ -633,16 +618,14 @@ Update a collection
 ### Example Usage
 
 ```python
-import unified_to
-from unified_to.models import operations
+from unified_python_sdk import UnifiedTo
 
-s = unified_to.UnifiedTo()
+s = UnifiedTo()
 
-
-res = s.commerce.patch_commerce_collection(request=operations.PatchCommerceCollectionRequest(
-    connection_id='<value>',
-    id='<id>',
-))
+res = s.commerce.patch_commerce_collection(request={
+    "connection_id": "<value>",
+    "id": "<id>",
+})
 
 if res.commerce_collection is not None:
     # handle response
@@ -655,6 +638,7 @@ if res.commerce_collection is not None:
 | Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
 | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
 | `request`                                                                                              | [operations.PatchCommerceCollectionRequest](../../models/operations/patchcommercecollectionrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `retries`                                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                       | :heavy_minus_sign:                                                                                     | Configuration to override the default retry behavior of the client.                                    |
 
 ### Response
 
@@ -673,16 +657,14 @@ Update an inventory
 ### Example Usage
 
 ```python
-import unified_to
-from unified_to.models import operations
+from unified_python_sdk import UnifiedTo
 
-s = unified_to.UnifiedTo()
+s = UnifiedTo()
 
-
-res = s.commerce.patch_commerce_inventory(request=operations.PatchCommerceInventoryRequest(
-    connection_id='<value>',
-    id='<id>',
-))
+res = s.commerce.patch_commerce_inventory(request={
+    "connection_id": "<value>",
+    "id": "<id>",
+})
 
 if res.commerce_inventory is not None:
     # handle response
@@ -695,6 +677,7 @@ if res.commerce_inventory is not None:
 | Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
 | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
 | `request`                                                                                            | [operations.PatchCommerceInventoryRequest](../../models/operations/patchcommerceinventoryrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `retries`                                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                     | :heavy_minus_sign:                                                                                   | Configuration to override the default retry behavior of the client.                                  |
 
 ### Response
 
@@ -713,16 +696,14 @@ Update an item
 ### Example Usage
 
 ```python
-import unified_to
-from unified_to.models import operations
+from unified_python_sdk import UnifiedTo
 
-s = unified_to.UnifiedTo()
+s = UnifiedTo()
 
-
-res = s.commerce.patch_commerce_item(request=operations.PatchCommerceItemRequest(
-    connection_id='<value>',
-    id='<id>',
-))
+res = s.commerce.patch_commerce_item(request={
+    "connection_id": "<value>",
+    "id": "<id>",
+})
 
 if res.commerce_item is not None:
     # handle response
@@ -735,6 +716,7 @@ if res.commerce_item is not None:
 | Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
 | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
 | `request`                                                                                  | [operations.PatchCommerceItemRequest](../../models/operations/patchcommerceitemrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
 
 ### Response
 
@@ -753,16 +735,14 @@ Update a location
 ### Example Usage
 
 ```python
-import unified_to
-from unified_to.models import operations
+from unified_python_sdk import UnifiedTo
 
-s = unified_to.UnifiedTo()
+s = UnifiedTo()
 
-
-res = s.commerce.patch_commerce_location(request=operations.PatchCommerceLocationRequest(
-    connection_id='<value>',
-    id='<id>',
-))
+res = s.commerce.patch_commerce_location(request={
+    "connection_id": "<value>",
+    "id": "<id>",
+})
 
 if res.commerce_location is not None:
     # handle response
@@ -775,6 +755,7 @@ if res.commerce_location is not None:
 | Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
 | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
 | `request`                                                                                          | [operations.PatchCommerceLocationRequest](../../models/operations/patchcommercelocationrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `retries`                                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                   | :heavy_minus_sign:                                                                                 | Configuration to override the default retry behavior of the client.                                |
 
 ### Response
 
@@ -793,16 +774,14 @@ Update a metadata
 ### Example Usage
 
 ```python
-import unified_to
-from unified_to.models import operations
+from unified_python_sdk import UnifiedTo
 
-s = unified_to.UnifiedTo()
+s = UnifiedTo()
 
-
-res = s.commerce.patch_commerce_metadata(request=operations.PatchCommerceMetadataRequest(
-    connection_id='<id>',
-    id='<id>',
-))
+res = s.commerce.patch_commerce_metadata(request={
+    "connection_id": "<id>",
+    "id": "<id>",
+})
 
 if res.commerce_metadata is not None:
     # handle response
@@ -815,6 +794,7 @@ if res.commerce_metadata is not None:
 | Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
 | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
 | `request`                                                                                          | [operations.PatchCommerceMetadataRequest](../../models/operations/patchcommercemetadatarequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `retries`                                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                   | :heavy_minus_sign:                                                                                 | Configuration to override the default retry behavior of the client.                                |
 
 ### Response
 
@@ -833,16 +813,14 @@ Remove a collection
 ### Example Usage
 
 ```python
-import unified_to
-from unified_to.models import operations
+from unified_python_sdk import UnifiedTo
 
-s = unified_to.UnifiedTo()
+s = UnifiedTo()
 
-
-res = s.commerce.remove_commerce_collection(request=operations.RemoveCommerceCollectionRequest(
-    connection_id='<value>',
-    id='<id>',
-))
+res = s.commerce.remove_commerce_collection(request={
+    "connection_id": "<value>",
+    "id": "<id>",
+})
 
 if res is not None:
     # handle response
@@ -855,6 +833,7 @@ if res is not None:
 | Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
 | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
 | `request`                                                                                                | [operations.RemoveCommerceCollectionRequest](../../models/operations/removecommercecollectionrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| `retries`                                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                         | :heavy_minus_sign:                                                                                       | Configuration to override the default retry behavior of the client.                                      |
 
 ### Response
 
@@ -873,16 +852,14 @@ Remove an inventory
 ### Example Usage
 
 ```python
-import unified_to
-from unified_to.models import operations
+from unified_python_sdk import UnifiedTo
 
-s = unified_to.UnifiedTo()
+s = UnifiedTo()
 
-
-res = s.commerce.remove_commerce_inventory(request=operations.RemoveCommerceInventoryRequest(
-    connection_id='<value>',
-    id='<id>',
-))
+res = s.commerce.remove_commerce_inventory(request={
+    "connection_id": "<value>",
+    "id": "<id>",
+})
 
 if res is not None:
     # handle response
@@ -895,6 +872,7 @@ if res is not None:
 | Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
 | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
 | `request`                                                                                              | [operations.RemoveCommerceInventoryRequest](../../models/operations/removecommerceinventoryrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `retries`                                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                       | :heavy_minus_sign:                                                                                     | Configuration to override the default retry behavior of the client.                                    |
 
 ### Response
 
@@ -913,16 +891,14 @@ Remove an item
 ### Example Usage
 
 ```python
-import unified_to
-from unified_to.models import operations
+from unified_python_sdk import UnifiedTo
 
-s = unified_to.UnifiedTo()
+s = UnifiedTo()
 
-
-res = s.commerce.remove_commerce_item(request=operations.RemoveCommerceItemRequest(
-    connection_id='<value>',
-    id='<id>',
-))
+res = s.commerce.remove_commerce_item(request={
+    "connection_id": "<value>",
+    "id": "<id>",
+})
 
 if res is not None:
     # handle response
@@ -935,6 +911,7 @@ if res is not None:
 | Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
 | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
 | `request`                                                                                    | [operations.RemoveCommerceItemRequest](../../models/operations/removecommerceitemrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
 
 ### Response
 
@@ -953,16 +930,14 @@ Remove a location
 ### Example Usage
 
 ```python
-import unified_to
-from unified_to.models import operations
+from unified_python_sdk import UnifiedTo
 
-s = unified_to.UnifiedTo()
+s = UnifiedTo()
 
-
-res = s.commerce.remove_commerce_location(request=operations.RemoveCommerceLocationRequest(
-    connection_id='<value>',
-    id='<id>',
-))
+res = s.commerce.remove_commerce_location(request={
+    "connection_id": "<value>",
+    "id": "<id>",
+})
 
 if res is not None:
     # handle response
@@ -975,6 +950,7 @@ if res is not None:
 | Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
 | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
 | `request`                                                                                            | [operations.RemoveCommerceLocationRequest](../../models/operations/removecommercelocationrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `retries`                                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                     | :heavy_minus_sign:                                                                                   | Configuration to override the default retry behavior of the client.                                  |
 
 ### Response
 
@@ -993,16 +969,14 @@ Remove a metadata
 ### Example Usage
 
 ```python
-import unified_to
-from unified_to.models import operations
+from unified_python_sdk import UnifiedTo
 
-s = unified_to.UnifiedTo()
+s = UnifiedTo()
 
-
-res = s.commerce.remove_commerce_metadata(request=operations.RemoveCommerceMetadataRequest(
-    connection_id='<id>',
-    id='<id>',
-))
+res = s.commerce.remove_commerce_metadata(request={
+    "connection_id": "<id>",
+    "id": "<id>",
+})
 
 if res is not None:
     # handle response
@@ -1015,6 +989,7 @@ if res is not None:
 | Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
 | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
 | `request`                                                                                            | [operations.RemoveCommerceMetadataRequest](../../models/operations/removecommercemetadatarequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `retries`                                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                     | :heavy_minus_sign:                                                                                   | Configuration to override the default retry behavior of the client.                                  |
 
 ### Response
 
@@ -1033,16 +1008,14 @@ Update a collection
 ### Example Usage
 
 ```python
-import unified_to
-from unified_to.models import operations
+from unified_python_sdk import UnifiedTo
 
-s = unified_to.UnifiedTo()
+s = UnifiedTo()
 
-
-res = s.commerce.update_commerce_collection(request=operations.UpdateCommerceCollectionRequest(
-    connection_id='<value>',
-    id='<id>',
-))
+res = s.commerce.update_commerce_collection(request={
+    "connection_id": "<value>",
+    "id": "<id>",
+})
 
 if res.commerce_collection is not None:
     # handle response
@@ -1055,6 +1028,7 @@ if res.commerce_collection is not None:
 | Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
 | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
 | `request`                                                                                                | [operations.UpdateCommerceCollectionRequest](../../models/operations/updatecommercecollectionrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| `retries`                                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                         | :heavy_minus_sign:                                                                                       | Configuration to override the default retry behavior of the client.                                      |
 
 ### Response
 
@@ -1073,16 +1047,14 @@ Update an inventory
 ### Example Usage
 
 ```python
-import unified_to
-from unified_to.models import operations
+from unified_python_sdk import UnifiedTo
 
-s = unified_to.UnifiedTo()
+s = UnifiedTo()
 
-
-res = s.commerce.update_commerce_inventory(request=operations.UpdateCommerceInventoryRequest(
-    connection_id='<value>',
-    id='<id>',
-))
+res = s.commerce.update_commerce_inventory(request={
+    "connection_id": "<value>",
+    "id": "<id>",
+})
 
 if res.commerce_inventory is not None:
     # handle response
@@ -1095,6 +1067,7 @@ if res.commerce_inventory is not None:
 | Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
 | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
 | `request`                                                                                              | [operations.UpdateCommerceInventoryRequest](../../models/operations/updatecommerceinventoryrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `retries`                                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                       | :heavy_minus_sign:                                                                                     | Configuration to override the default retry behavior of the client.                                    |
 
 ### Response
 
@@ -1113,16 +1086,14 @@ Update an item
 ### Example Usage
 
 ```python
-import unified_to
-from unified_to.models import operations
+from unified_python_sdk import UnifiedTo
 
-s = unified_to.UnifiedTo()
+s = UnifiedTo()
 
-
-res = s.commerce.update_commerce_item(request=operations.UpdateCommerceItemRequest(
-    connection_id='<value>',
-    id='<id>',
-))
+res = s.commerce.update_commerce_item(request={
+    "connection_id": "<value>",
+    "id": "<id>",
+})
 
 if res.commerce_item is not None:
     # handle response
@@ -1135,6 +1106,7 @@ if res.commerce_item is not None:
 | Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
 | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
 | `request`                                                                                    | [operations.UpdateCommerceItemRequest](../../models/operations/updatecommerceitemrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
 
 ### Response
 
@@ -1153,16 +1125,14 @@ Update a location
 ### Example Usage
 
 ```python
-import unified_to
-from unified_to.models import operations
+from unified_python_sdk import UnifiedTo
 
-s = unified_to.UnifiedTo()
+s = UnifiedTo()
 
-
-res = s.commerce.update_commerce_location(request=operations.UpdateCommerceLocationRequest(
-    connection_id='<value>',
-    id='<id>',
-))
+res = s.commerce.update_commerce_location(request={
+    "connection_id": "<value>",
+    "id": "<id>",
+})
 
 if res.commerce_location is not None:
     # handle response
@@ -1175,6 +1145,7 @@ if res.commerce_location is not None:
 | Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
 | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
 | `request`                                                                                            | [operations.UpdateCommerceLocationRequest](../../models/operations/updatecommercelocationrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `retries`                                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                     | :heavy_minus_sign:                                                                                   | Configuration to override the default retry behavior of the client.                                  |
 
 ### Response
 
@@ -1193,16 +1164,14 @@ Update a metadata
 ### Example Usage
 
 ```python
-import unified_to
-from unified_to.models import operations
+from unified_python_sdk import UnifiedTo
 
-s = unified_to.UnifiedTo()
+s = UnifiedTo()
 
-
-res = s.commerce.update_commerce_metadata(request=operations.UpdateCommerceMetadataRequest(
-    connection_id='<id>',
-    id='<id>',
-))
+res = s.commerce.update_commerce_metadata(request={
+    "connection_id": "<id>",
+    "id": "<id>",
+})
 
 if res.commerce_metadata is not None:
     # handle response
@@ -1215,6 +1184,7 @@ if res.commerce_metadata is not None:
 | Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
 | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
 | `request`                                                                                            | [operations.UpdateCommerceMetadataRequest](../../models/operations/updatecommercemetadatarequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `retries`                                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                     | :heavy_minus_sign:                                                                                   | Configuration to override the default retry behavior of the client.                                  |
 
 ### Response
 

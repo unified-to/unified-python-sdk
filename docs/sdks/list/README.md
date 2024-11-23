@@ -19,15 +19,13 @@ Create a list
 ### Example Usage
 
 ```python
-import unified_to
-from unified_to.models import operations
+from unified_python_sdk import UnifiedTo
 
-s = unified_to.UnifiedTo()
+s = UnifiedTo()
 
-
-res = s.list.create_martech_list(request=operations.CreateMartechListRequest(
-    connection_id='<value>',
-))
+res = s.list.create_martech_list(request={
+    "connection_id": "<value>",
+})
 
 if res.marketing_list is not None:
     # handle response
@@ -40,6 +38,7 @@ if res.marketing_list is not None:
 | Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
 | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
 | `request`                                                                                  | [operations.CreateMartechListRequest](../../models/operations/createmartechlistrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
 
 ### Response
 
@@ -58,16 +57,14 @@ Retrieve a list
 ### Example Usage
 
 ```python
-import unified_to
-from unified_to.models import operations
+from unified_python_sdk import UnifiedTo
 
-s = unified_to.UnifiedTo()
+s = UnifiedTo()
 
-
-res = s.list.get_martech_list(request=operations.GetMartechListRequest(
-    connection_id='<value>',
-    id='<id>',
-))
+res = s.list.get_martech_list(request={
+    "connection_id": "<value>",
+    "id": "<id>",
+})
 
 if res.marketing_list is not None:
     # handle response
@@ -80,6 +77,7 @@ if res.marketing_list is not None:
 | Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
 | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
 | `request`                                                                            | [operations.GetMartechListRequest](../../models/operations/getmartechlistrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `retries`                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                     | :heavy_minus_sign:                                                                   | Configuration to override the default retry behavior of the client.                  |
 
 ### Response
 
@@ -98,15 +96,13 @@ List all lists
 ### Example Usage
 
 ```python
-import unified_to
-from unified_to.models import operations
+from unified_python_sdk import UnifiedTo
 
-s = unified_to.UnifiedTo()
+s = UnifiedTo()
 
-
-res = s.list.list_martech_lists(request=operations.ListMartechListsRequest(
-    connection_id='<value>',
-))
+res = s.list.list_martech_lists(request={
+    "connection_id": "<value>",
+})
 
 if res.marketing_lists is not None:
     # handle response
@@ -119,6 +115,7 @@ if res.marketing_lists is not None:
 | Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
 | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
 | `request`                                                                                | [operations.ListMartechListsRequest](../../models/operations/listmartechlistsrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
 
 ### Response
 
@@ -137,16 +134,14 @@ Update a list
 ### Example Usage
 
 ```python
-import unified_to
-from unified_to.models import operations
+from unified_python_sdk import UnifiedTo
 
-s = unified_to.UnifiedTo()
+s = UnifiedTo()
 
-
-res = s.list.patch_martech_list(request=operations.PatchMartechListRequest(
-    connection_id='<value>',
-    id='<id>',
-))
+res = s.list.patch_martech_list(request={
+    "connection_id": "<value>",
+    "id": "<id>",
+})
 
 if res.marketing_list is not None:
     # handle response
@@ -159,6 +154,7 @@ if res.marketing_list is not None:
 | Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
 | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
 | `request`                                                                                | [operations.PatchMartechListRequest](../../models/operations/patchmartechlistrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
 
 ### Response
 
@@ -177,16 +173,14 @@ Remove a list
 ### Example Usage
 
 ```python
-import unified_to
-from unified_to.models import operations
+from unified_python_sdk import UnifiedTo
 
-s = unified_to.UnifiedTo()
+s = UnifiedTo()
 
-
-res = s.list.remove_martech_list(request=operations.RemoveMartechListRequest(
-    connection_id='<value>',
-    id='<id>',
-))
+res = s.list.remove_martech_list(request={
+    "connection_id": "<value>",
+    "id": "<id>",
+})
 
 if res is not None:
     # handle response
@@ -199,6 +193,7 @@ if res is not None:
 | Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
 | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
 | `request`                                                                                  | [operations.RemoveMartechListRequest](../../models/operations/removemartechlistrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
 
 ### Response
 
@@ -217,16 +212,14 @@ Update a list
 ### Example Usage
 
 ```python
-import unified_to
-from unified_to.models import operations
+from unified_python_sdk import UnifiedTo
 
-s = unified_to.UnifiedTo()
+s = UnifiedTo()
 
-
-res = s.list.update_martech_list(request=operations.UpdateMartechListRequest(
-    connection_id='<value>',
-    id='<id>',
-))
+res = s.list.update_martech_list(request={
+    "connection_id": "<value>",
+    "id": "<id>",
+})
 
 if res.marketing_list is not None:
     # handle response
@@ -239,6 +232,7 @@ if res.marketing_list is not None:
 | Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
 | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
 | `request`                                                                                  | [operations.UpdateMartechListRequest](../../models/operations/updatemartechlistrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
 
 ### Response
 

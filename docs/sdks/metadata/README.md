@@ -19,15 +19,13 @@ Create a metadata
 ### Example Usage
 
 ```python
-import unified_to
-from unified_to.models import operations
+from unified_python_sdk import UnifiedTo
 
-s = unified_to.UnifiedTo()
+s = UnifiedTo()
 
-
-res = s.metadata.create_commerce_metadata(request=operations.CreateCommerceMetadataRequest(
-    connection_id='<id>',
-))
+res = s.metadata.create_commerce_metadata(request={
+    "connection_id": "<id>",
+})
 
 if res.commerce_metadata is not None:
     # handle response
@@ -40,6 +38,7 @@ if res.commerce_metadata is not None:
 | Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
 | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
 | `request`                                                                                            | [operations.CreateCommerceMetadataRequest](../../models/operations/createcommercemetadatarequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `retries`                                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                     | :heavy_minus_sign:                                                                                   | Configuration to override the default retry behavior of the client.                                  |
 
 ### Response
 
@@ -58,16 +57,14 @@ Retrieve a metadata
 ### Example Usage
 
 ```python
-import unified_to
-from unified_to.models import operations
+from unified_python_sdk import UnifiedTo
 
-s = unified_to.UnifiedTo()
+s = UnifiedTo()
 
-
-res = s.metadata.get_commerce_metadata(request=operations.GetCommerceMetadataRequest(
-    connection_id='<id>',
-    id='<id>',
-))
+res = s.metadata.get_commerce_metadata(request={
+    "connection_id": "<id>",
+    "id": "<id>",
+})
 
 if res.commerce_metadata is not None:
     # handle response
@@ -80,6 +77,7 @@ if res.commerce_metadata is not None:
 | Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
 | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
 | `request`                                                                                      | [operations.GetCommerceMetadataRequest](../../models/operations/getcommercemetadatarequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `retries`                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                               | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
 
 ### Response
 
@@ -98,15 +96,13 @@ List all metadatas
 ### Example Usage
 
 ```python
-import unified_to
-from unified_to.models import operations
+from unified_python_sdk import UnifiedTo
 
-s = unified_to.UnifiedTo()
+s = UnifiedTo()
 
-
-res = s.metadata.list_commerce_metadatas(request=operations.ListCommerceMetadatasRequest(
-    connection_id='<id>',
-))
+res = s.metadata.list_commerce_metadatas(request={
+    "connection_id": "<id>",
+})
 
 if res.commerce_metadatas is not None:
     # handle response
@@ -119,6 +115,7 @@ if res.commerce_metadatas is not None:
 | Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
 | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
 | `request`                                                                                          | [operations.ListCommerceMetadatasRequest](../../models/operations/listcommercemetadatasrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `retries`                                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                   | :heavy_minus_sign:                                                                                 | Configuration to override the default retry behavior of the client.                                |
 
 ### Response
 
@@ -137,16 +134,14 @@ Update a metadata
 ### Example Usage
 
 ```python
-import unified_to
-from unified_to.models import operations
+from unified_python_sdk import UnifiedTo
 
-s = unified_to.UnifiedTo()
+s = UnifiedTo()
 
-
-res = s.metadata.patch_commerce_metadata(request=operations.PatchCommerceMetadataRequest(
-    connection_id='<id>',
-    id='<id>',
-))
+res = s.metadata.patch_commerce_metadata(request={
+    "connection_id": "<id>",
+    "id": "<id>",
+})
 
 if res.commerce_metadata is not None:
     # handle response
@@ -159,6 +154,7 @@ if res.commerce_metadata is not None:
 | Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
 | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
 | `request`                                                                                          | [operations.PatchCommerceMetadataRequest](../../models/operations/patchcommercemetadatarequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `retries`                                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                   | :heavy_minus_sign:                                                                                 | Configuration to override the default retry behavior of the client.                                |
 
 ### Response
 
@@ -177,16 +173,14 @@ Remove a metadata
 ### Example Usage
 
 ```python
-import unified_to
-from unified_to.models import operations
+from unified_python_sdk import UnifiedTo
 
-s = unified_to.UnifiedTo()
+s = UnifiedTo()
 
-
-res = s.metadata.remove_commerce_metadata(request=operations.RemoveCommerceMetadataRequest(
-    connection_id='<id>',
-    id='<id>',
-))
+res = s.metadata.remove_commerce_metadata(request={
+    "connection_id": "<id>",
+    "id": "<id>",
+})
 
 if res is not None:
     # handle response
@@ -199,6 +193,7 @@ if res is not None:
 | Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
 | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
 | `request`                                                                                            | [operations.RemoveCommerceMetadataRequest](../../models/operations/removecommercemetadatarequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `retries`                                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                     | :heavy_minus_sign:                                                                                   | Configuration to override the default retry behavior of the client.                                  |
 
 ### Response
 
@@ -217,16 +212,14 @@ Update a metadata
 ### Example Usage
 
 ```python
-import unified_to
-from unified_to.models import operations
+from unified_python_sdk import UnifiedTo
 
-s = unified_to.UnifiedTo()
+s = UnifiedTo()
 
-
-res = s.metadata.update_commerce_metadata(request=operations.UpdateCommerceMetadataRequest(
-    connection_id='<id>',
-    id='<id>',
-))
+res = s.metadata.update_commerce_metadata(request={
+    "connection_id": "<id>",
+    "id": "<id>",
+})
 
 if res.commerce_metadata is not None:
     # handle response
@@ -239,6 +232,7 @@ if res.commerce_metadata is not None:
 | Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
 | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
 | `request`                                                                                            | [operations.UpdateCommerceMetadataRequest](../../models/operations/updatecommercemetadatarequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `retries`                                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                     | :heavy_minus_sign:                                                                                   | Configuration to override the default retry behavior of the client.                                  |
 
 ### Response
 
