@@ -14,11 +14,10 @@ generation:
   baseServerURL: ""
   flattenGlobalSecurity: true
 python:
-  version: 0.25.3
+  version: 1.0.0
   additionalDependencies:
-    dependencies: {}
-    extraDependencies:
-      dev: {}
+    dev: {}
+    main: {}
   author: Unified API Inc
   clientServerStatusCodesAsErrors: true
   defaultErrorName: SDKError
@@ -39,4 +38,6 @@ python:
   packageName: Unified-python-sdk
   projectUrls: {}
   responseFormat: envelope
-  templateVersion: v1
+  templateVersion: v2
+
+
