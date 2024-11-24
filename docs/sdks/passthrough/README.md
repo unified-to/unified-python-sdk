@@ -21,16 +21,14 @@ Passthrough POST
 ### Example Usage
 
 ```python
-import unified_to
-from unified_to.models import operations
+from unified_python_sdk import UnifiedTo
 
-s = unified_to.UnifiedTo()
+s = UnifiedTo()
 
-
-res = s.passthrough.create_passthrough_json(request=operations.CreatePassthroughJSONRequest(
-    connection_id='<value>',
-    path='/etc/periodic',
-))
+res = s.passthrough.create_passthrough_json(request={
+    "connection_id": "<value>",
+    "path": "/etc/periodic",
+})
 
 if res is not None:
     # handle response
@@ -43,6 +41,7 @@ if res is not None:
 | Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
 | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
 | `request`                                                                                          | [operations.CreatePassthroughJSONRequest](../../models/operations/createpassthroughjsonrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `retries`                                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                   | :heavy_minus_sign:                                                                                 | Configuration to override the default retry behavior of the client.                                |
 
 ### Response
 
@@ -61,16 +60,14 @@ Passthrough POST
 ### Example Usage
 
 ```python
-import unified_to
-from unified_to.models import operations
+from unified_python_sdk import UnifiedTo
 
-s = unified_to.UnifiedTo()
+s = UnifiedTo()
 
-
-res = s.passthrough.create_passthrough_raw(request=operations.CreatePassthroughRawRequest(
-    connection_id='<value>',
-    path='/etc/periodic',
-))
+res = s.passthrough.create_passthrough_raw(request={
+    "connection_id": "<value>",
+    "path": "/etc/periodic",
+})
 
 if res is not None:
     # handle response
@@ -83,6 +80,7 @@ if res is not None:
 | Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
 | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
 | `request`                                                                                        | [operations.CreatePassthroughRawRequest](../../models/operations/createpassthroughrawrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `retries`                                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                 | :heavy_minus_sign:                                                                               | Configuration to override the default retry behavior of the client.                              |
 
 ### Response
 
@@ -101,16 +99,14 @@ Passthrough GET
 ### Example Usage
 
 ```python
-import unified_to
-from unified_to.models import operations
+from unified_python_sdk import UnifiedTo
 
-s = unified_to.UnifiedTo()
+s = UnifiedTo()
 
-
-res = s.passthrough.list_passthroughs(request=operations.ListPassthroughsRequest(
-    connection_id='<value>',
-    path='/selinux',
-))
+res = s.passthrough.list_passthroughs(request={
+    "connection_id": "<value>",
+    "path": "/selinux",
+})
 
 if res is not None:
     # handle response
@@ -123,6 +119,7 @@ if res is not None:
 | Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
 | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
 | `request`                                                                                | [operations.ListPassthroughsRequest](../../models/operations/listpassthroughsrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
 
 ### Response
 
@@ -141,16 +138,14 @@ Passthrough PUT
 ### Example Usage
 
 ```python
-import unified_to
-from unified_to.models import operations
+from unified_python_sdk import UnifiedTo
 
-s = unified_to.UnifiedTo()
+s = UnifiedTo()
 
-
-res = s.passthrough.patch_passthrough_json(request=operations.PatchPassthroughJSONRequest(
-    connection_id='<value>',
-    path='/mnt',
-))
+res = s.passthrough.patch_passthrough_json(request={
+    "connection_id": "<value>",
+    "path": "/mnt",
+})
 
 if res is not None:
     # handle response
@@ -163,6 +158,7 @@ if res is not None:
 | Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
 | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
 | `request`                                                                                        | [operations.PatchPassthroughJSONRequest](../../models/operations/patchpassthroughjsonrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `retries`                                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                 | :heavy_minus_sign:                                                                               | Configuration to override the default retry behavior of the client.                              |
 
 ### Response
 
@@ -181,16 +177,14 @@ Passthrough PUT
 ### Example Usage
 
 ```python
-import unified_to
-from unified_to.models import operations
+from unified_python_sdk import UnifiedTo
 
-s = unified_to.UnifiedTo()
+s = UnifiedTo()
 
-
-res = s.passthrough.patch_passthrough_raw(request=operations.PatchPassthroughRawRequest(
-    connection_id='<value>',
-    path='/mnt',
-))
+res = s.passthrough.patch_passthrough_raw(request={
+    "connection_id": "<value>",
+    "path": "/mnt",
+})
 
 if res is not None:
     # handle response
@@ -203,6 +197,7 @@ if res is not None:
 | Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
 | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
 | `request`                                                                                      | [operations.PatchPassthroughRawRequest](../../models/operations/patchpassthroughrawrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `retries`                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                               | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
 
 ### Response
 
@@ -221,16 +216,14 @@ Passthrough DELETE
 ### Example Usage
 
 ```python
-import unified_to
-from unified_to.models import operations
+from unified_python_sdk import UnifiedTo
 
-s = unified_to.UnifiedTo()
+s = UnifiedTo()
 
-
-res = s.passthrough.remove_passthrough(request=operations.RemovePassthroughRequest(
-    connection_id='<value>',
-    path='/Applications',
-))
+res = s.passthrough.remove_passthrough(request={
+    "connection_id": "<value>",
+    "path": "/Applications",
+})
 
 if res is not None:
     # handle response
@@ -243,6 +236,7 @@ if res is not None:
 | Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
 | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
 | `request`                                                                                  | [operations.RemovePassthroughRequest](../../models/operations/removepassthroughrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
 
 ### Response
 
@@ -261,16 +255,14 @@ Passthrough PUT
 ### Example Usage
 
 ```python
-import unified_to
-from unified_to.models import operations
+from unified_python_sdk import UnifiedTo
 
-s = unified_to.UnifiedTo()
+s = UnifiedTo()
 
-
-res = s.passthrough.update_passthrough_json(request=operations.UpdatePassthroughJSONRequest(
-    connection_id='<value>',
-    path='/dev',
-))
+res = s.passthrough.update_passthrough_json(request={
+    "connection_id": "<value>",
+    "path": "/dev",
+})
 
 if res is not None:
     # handle response
@@ -283,6 +275,7 @@ if res is not None:
 | Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
 | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
 | `request`                                                                                          | [operations.UpdatePassthroughJSONRequest](../../models/operations/updatepassthroughjsonrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `retries`                                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                   | :heavy_minus_sign:                                                                                 | Configuration to override the default retry behavior of the client.                                |
 
 ### Response
 
@@ -301,16 +294,14 @@ Passthrough PUT
 ### Example Usage
 
 ```python
-import unified_to
-from unified_to.models import operations
+from unified_python_sdk import UnifiedTo
 
-s = unified_to.UnifiedTo()
+s = UnifiedTo()
 
-
-res = s.passthrough.update_passthrough_raw(request=operations.UpdatePassthroughRawRequest(
-    connection_id='<value>',
-    path='/dev',
-))
+res = s.passthrough.update_passthrough_raw(request={
+    "connection_id": "<value>",
+    "path": "/dev",
+})
 
 if res is not None:
     # handle response
@@ -323,6 +314,7 @@ if res is not None:
 | Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
 | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
 | `request`                                                                                        | [operations.UpdatePassthroughRawRequest](../../models/operations/updatepassthroughrawrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `retries`                                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                 | :heavy_minus_sign:                                                                               | Configuration to override the default retry behavior of the client.                              |
 
 ### Response
 

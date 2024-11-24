@@ -15,16 +15,14 @@ Returns an authorization URL for the specified integration.  Once a successful a
 ### Example Usage
 
 ```python
-import unified_to
-from unified_to.models import operations
+from unified_python_sdk import UnifiedTo
 
-s = unified_to.UnifiedTo()
+s = UnifiedTo()
 
-
-res = s.auth.get_unified_integration_auth(request=operations.GetUnifiedIntegrationAuthRequest(
-    integration_type='<value>',
-    workspace_id='<value>',
-))
+res = s.auth.get_unified_integration_auth(request={
+    "integration_type": "<value>",
+    "workspace_id": "<value>",
+})
 
 if res.res is not None:
     # handle response
@@ -37,6 +35,7 @@ if res.res is not None:
 | Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
 | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
 | `request`                                                                                                  | [operations.GetUnifiedIntegrationAuthRequest](../../models/operations/getunifiedintegrationauthrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| `retries`                                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                           | :heavy_minus_sign:                                                                                         | Configuration to override the default retry behavior of the client.                                        |
 
 ### Response
 
@@ -55,16 +54,14 @@ Returns an authentication URL for the specified integration.  Once a successful 
 ### Example Usage
 
 ```python
-import unified_to
-from unified_to.models import operations
+from unified_python_sdk import UnifiedTo
 
-s = unified_to.UnifiedTo()
+s = UnifiedTo()
 
-
-res = s.auth.get_unified_integration_login(request=operations.GetUnifiedIntegrationLoginRequest(
-    integration_type='<value>',
-    workspace_id='<value>',
-))
+res = s.auth.get_unified_integration_login(request={
+    "integration_type": "<value>",
+    "workspace_id": "<value>",
+})
 
 if res.res is not None:
     # handle response
@@ -77,6 +74,7 @@ if res.res is not None:
 | Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
 | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
 | `request`                                                                                                    | [operations.GetUnifiedIntegrationLoginRequest](../../models/operations/getunifiedintegrationloginrequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| `retries`                                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                             | :heavy_minus_sign:                                                                                           | Configuration to override the default retry behavior of the client.                                          |
 
 ### Response
 
