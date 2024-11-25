@@ -1,0 +1,33 @@
+speakeasyVersion: 1.444.4
+sources:
+    my-source:
+        sourceNamespace: my-source
+        sourceRevisionDigest: sha256:e1c15170ce08f89e2ad24a7e7dea8c18dc77f3f54a548735942b202bb1ff65c2
+        sourceBlobDigest: sha256:67c147e8682542de89705a35a12d9c69f682f4604d302953b820e9ff08abeffd
+        tags:
+            - latest
+            - speakeasy-sdk-regen-1732544945
+            - "1.0"
+targets:
+    python-target:
+        source: my-source
+        sourceNamespace: my-source
+        sourceRevisionDigest: sha256:e1c15170ce08f89e2ad24a7e7dea8c18dc77f3f54a548735942b202bb1ff65c2
+        sourceBlobDigest: sha256:67c147e8682542de89705a35a12d9c69f682f4604d302953b820e9ff08abeffd
+workflow:
+    workflowVersion: 1.0.0
+    speakeasyVersion: latest
+    sources:
+        my-source:
+            inputs:
+                - location: https://api.unified.to/openapi.json
+                  authSecret: $openapi_doc_auth_token
+            registry:
+                location: registry.speakeasyapi.dev/unified/unified/my-source
+    targets:
+        python-target:
+            target: python
+            source: my-source
+            publish:
+                pypi:
+                    token: $PYPI_TOKEN
