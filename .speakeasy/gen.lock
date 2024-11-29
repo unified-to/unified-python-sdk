@@ -5,8 +5,8 @@ management:
   docVersion: "1.0"
   speakeasyVersion: 1.448.2
   generationVersion: 2.467.4
-  releaseVersion: 0.26.1
-  configChecksum: 5c7b57017da315407fdd11d365c7b039
+  releaseVersion: 0.26.2
+  configChecksum: fdf10bcf8cde69abc669c8463528b043
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
