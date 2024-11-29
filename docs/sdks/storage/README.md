@@ -20,16 +20,20 @@ Create a file
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.storage.create_storage_file(request={
+        "connection_id": "<value>",
+    })
 
-res = s.storage.create_storage_file(request={
-    "connection_id": "<value>",
-})
-
-if res.storage_file is not None:
-    # handle response
-    pass
+    if res.storage_file is not None:
+        # handle response
+        pass
 
 ```
 
@@ -58,17 +62,21 @@ Retrieve a file
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.storage.get_storage_file(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.storage.get_storage_file(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.storage_file is not None:
-    # handle response
-    pass
+    if res.storage_file is not None:
+        # handle response
+        pass
 
 ```
 
@@ -97,16 +105,20 @@ List all files
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.storage.list_storage_files(request={
+        "connection_id": "<value>",
+    })
 
-res = s.storage.list_storage_files(request={
-    "connection_id": "<value>",
-})
-
-if res.storage_files is not None:
-    # handle response
-    pass
+    if res.storage_files is not None:
+        # handle response
+        pass
 
 ```
 
@@ -135,17 +147,21 @@ Update a file
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.storage.patch_storage_file(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.storage.patch_storage_file(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.storage_file is not None:
-    # handle response
-    pass
+    if res.storage_file is not None:
+        # handle response
+        pass
 
 ```
 
@@ -174,17 +190,21 @@ Remove a file
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.storage.remove_storage_file(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.storage.remove_storage_file(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -213,17 +233,21 @@ Update a file
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.storage.update_storage_file(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.storage.update_storage_file(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.storage_file is not None:
-    # handle response
-    pass
+    if res.storage_file is not None:
+        # handle response
+        pass
 
 ```
 

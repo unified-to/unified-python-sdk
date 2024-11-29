@@ -20,16 +20,20 @@ Create a space
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.space.create_kms_space(request={
+        "connection_id": "<value>",
+    })
 
-res = s.space.create_kms_space(request={
-    "connection_id": "<value>",
-})
-
-if res.kms_space is not None:
-    # handle response
-    pass
+    if res.kms_space is not None:
+        # handle response
+        pass
 
 ```
 
@@ -58,17 +62,21 @@ Retrieve a space
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.space.get_kms_space(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.space.get_kms_space(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.kms_space is not None:
-    # handle response
-    pass
+    if res.kms_space is not None:
+        # handle response
+        pass
 
 ```
 
@@ -97,16 +105,20 @@ List all spaces
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.space.list_kms_spaces(request={
+        "connection_id": "<value>",
+    })
 
-res = s.space.list_kms_spaces(request={
-    "connection_id": "<value>",
-})
-
-if res.kms_spaces is not None:
-    # handle response
-    pass
+    if res.kms_spaces is not None:
+        # handle response
+        pass
 
 ```
 
@@ -135,17 +147,21 @@ Update a space
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.space.patch_kms_space(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.space.patch_kms_space(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.kms_space is not None:
-    # handle response
-    pass
+    if res.kms_space is not None:
+        # handle response
+        pass
 
 ```
 
@@ -174,17 +190,21 @@ Remove a space
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.space.remove_kms_space(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.space.remove_kms_space(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -213,17 +233,21 @@ Update a space
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.space.update_kms_space(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.space.update_kms_space(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.kms_space is not None:
-    # handle response
-    pass
+    if res.kms_space is not None:
+        # handle response
+        pass
 
 ```
 

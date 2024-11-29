@@ -20,16 +20,20 @@ Create an activity
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.activity.create_ats_activity(request={
+        "connection_id": "<value>",
+    })
 
-res = s.activity.create_ats_activity(request={
-    "connection_id": "<value>",
-})
-
-if res.ats_activity is not None:
-    # handle response
-    pass
+    if res.ats_activity is not None:
+        # handle response
+        pass
 
 ```
 
@@ -58,17 +62,21 @@ Retrieve an activity
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.activity.get_ats_activity(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.activity.get_ats_activity(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.ats_activity is not None:
-    # handle response
-    pass
+    if res.ats_activity is not None:
+        # handle response
+        pass
 
 ```
 
@@ -97,16 +105,20 @@ List all activities
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.activity.list_ats_activities(request={
+        "connection_id": "<value>",
+    })
 
-res = s.activity.list_ats_activities(request={
-    "connection_id": "<value>",
-})
-
-if res.ats_activities is not None:
-    # handle response
-    pass
+    if res.ats_activities is not None:
+        # handle response
+        pass
 
 ```
 
@@ -135,17 +147,21 @@ Update an activity
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.activity.patch_ats_activity(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.activity.patch_ats_activity(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.ats_activity is not None:
-    # handle response
-    pass
+    if res.ats_activity is not None:
+        # handle response
+        pass
 
 ```
 
@@ -174,17 +190,21 @@ Remove an activity
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.activity.remove_ats_activity(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.activity.remove_ats_activity(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -213,17 +233,21 @@ Update an activity
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.activity.update_ats_activity(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.activity.update_ats_activity(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.ats_activity is not None:
-    # handle response
-    pass
+    if res.ats_activity is not None:
+        # handle response
+        pass
 
 ```
 

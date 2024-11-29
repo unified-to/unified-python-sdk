@@ -16,16 +16,20 @@ Retrieve specific API Call by its ID
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.apicall.get_unified_apicall(request={
+        "id": "<id>",
+    })
 
-res = s.apicall.get_unified_apicall(request={
-    "id": "<id>",
-})
-
-if res.api_call is not None:
-    # handle response
-    pass
+    if res.api_call is not None:
+        # handle response
+        pass
 
 ```
 
@@ -54,14 +58,18 @@ Returns API Calls
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.apicall.list_unified_apicalls(request={})
 
-res = s.apicall.list_unified_apicalls(request={})
-
-if res.api_calls is not None:
-    # handle response
-    pass
+    if res.api_calls is not None:
+        # handle response
+        pass
 
 ```
 

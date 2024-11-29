@@ -16,17 +16,21 @@ Retrieve a refund
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.refund.get_payment_refund(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.refund.get_payment_refund(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.payment_refund is not None:
-    # handle response
-    pass
+    if res.payment_refund is not None:
+        # handle response
+        pass
 
 ```
 
@@ -55,16 +59,20 @@ List all refunds
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.refund.list_payment_refunds(request={
+        "connection_id": "<value>",
+    })
 
-res = s.refund.list_payment_refunds(request={
-    "connection_id": "<value>",
-})
-
-if res.payment_refunds is not None:
-    # handle response
-    pass
+    if res.payment_refunds is not None:
+        # handle response
+        pass
 
 ```
 

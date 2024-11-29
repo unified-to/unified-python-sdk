@@ -16,17 +16,21 @@ Retrieve a payslip
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.payslip.get_hris_payslip(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.payslip.get_hris_payslip(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.hris_payslip is not None:
-    # handle response
-    pass
+    if res.hris_payslip is not None:
+        # handle response
+        pass
 
 ```
 
@@ -55,16 +59,20 @@ List all payslips
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.payslip.list_hris_payslips(request={
+        "connection_id": "<value>",
+    })
 
-res = s.payslip.list_hris_payslips(request={
-    "connection_id": "<value>",
-})
-
-if res.hris_payslips is not None:
-    # handle response
-    pass
+    if res.hris_payslips is not None:
+        # handle response
+        pass
 
 ```
 

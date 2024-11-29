@@ -20,16 +20,20 @@ Create a document
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.document.create_ats_document(request={
+        "connection_id": "<value>",
+    })
 
-res = s.document.create_ats_document(request={
-    "connection_id": "<value>",
-})
-
-if res.ats_document is not None:
-    # handle response
-    pass
+    if res.ats_document is not None:
+        # handle response
+        pass
 
 ```
 
@@ -58,17 +62,21 @@ Retrieve a document
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.document.get_ats_document(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.document.get_ats_document(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.ats_document is not None:
-    # handle response
-    pass
+    if res.ats_document is not None:
+        # handle response
+        pass
 
 ```
 
@@ -97,16 +105,20 @@ List all documents
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.document.list_ats_documents(request={
+        "connection_id": "<value>",
+    })
 
-res = s.document.list_ats_documents(request={
-    "connection_id": "<value>",
-})
-
-if res.ats_documents is not None:
-    # handle response
-    pass
+    if res.ats_documents is not None:
+        # handle response
+        pass
 
 ```
 
@@ -135,17 +147,21 @@ Update a document
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.document.patch_ats_document(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.document.patch_ats_document(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.ats_document is not None:
-    # handle response
-    pass
+    if res.ats_document is not None:
+        # handle response
+        pass
 
 ```
 
@@ -174,17 +190,21 @@ Remove a document
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.document.remove_ats_document(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.document.remove_ats_document(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -213,17 +233,21 @@ Update a document
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.document.update_ats_document(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.document.update_ats_document(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.ats_document is not None:
-    # handle response
-    pass
+    if res.ats_document is not None:
+        # handle response
+        pass
 
 ```
 

@@ -26,16 +26,20 @@ Create a project
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.task.create_task_project(request={
+        "connection_id": "<value>",
+    })
 
-res = s.task.create_task_project(request={
-    "connection_id": "<value>",
-})
-
-if res.task_project is not None:
-    # handle response
-    pass
+    if res.task_project is not None:
+        # handle response
+        pass
 
 ```
 
@@ -64,16 +68,20 @@ Create a task
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.task.create_task_task(request={
+        "connection_id": "<value>",
+    })
 
-res = s.task.create_task_task(request={
-    "connection_id": "<value>",
-})
-
-if res.task_task is not None:
-    # handle response
-    pass
+    if res.task_task is not None:
+        # handle response
+        pass
 
 ```
 
@@ -102,17 +110,21 @@ Retrieve a project
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.task.get_task_project(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.task.get_task_project(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.task_project is not None:
-    # handle response
-    pass
+    if res.task_project is not None:
+        # handle response
+        pass
 
 ```
 
@@ -141,17 +153,21 @@ Retrieve a task
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.task.get_task_task(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.task.get_task_task(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.task_task is not None:
-    # handle response
-    pass
+    if res.task_task is not None:
+        # handle response
+        pass
 
 ```
 
@@ -180,16 +196,20 @@ List all projects
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.task.list_task_projects(request={
+        "connection_id": "<value>",
+    })
 
-res = s.task.list_task_projects(request={
-    "connection_id": "<value>",
-})
-
-if res.task_projects is not None:
-    # handle response
-    pass
+    if res.task_projects is not None:
+        # handle response
+        pass
 
 ```
 
@@ -218,16 +238,20 @@ List all tasks
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.task.list_task_tasks(request={
+        "connection_id": "<value>",
+    })
 
-res = s.task.list_task_tasks(request={
-    "connection_id": "<value>",
-})
-
-if res.task_tasks is not None:
-    # handle response
-    pass
+    if res.task_tasks is not None:
+        # handle response
+        pass
 
 ```
 
@@ -256,17 +280,21 @@ Update a project
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.task.patch_task_project(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.task.patch_task_project(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.task_project is not None:
-    # handle response
-    pass
+    if res.task_project is not None:
+        # handle response
+        pass
 
 ```
 
@@ -295,17 +323,21 @@ Update a task
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.task.patch_task_task(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.task.patch_task_task(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.task_task is not None:
-    # handle response
-    pass
+    if res.task_task is not None:
+        # handle response
+        pass
 
 ```
 
@@ -334,17 +366,21 @@ Remove a project
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.task.remove_task_project(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.task.remove_task_project(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -373,17 +409,21 @@ Remove a task
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.task.remove_task_task(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.task.remove_task_task(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -412,17 +452,21 @@ Update a project
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.task.update_task_project(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.task.update_task_project(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.task_project is not None:
-    # handle response
-    pass
+    if res.task_project is not None:
+        # handle response
+        pass
 
 ```
 
@@ -451,17 +495,21 @@ Update a task
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.task.update_task_task(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.task.update_task_task(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.task_task is not None:
-    # handle response
-    pass
+    if res.task_task is not None:
+        # handle response
+        pass
 
 ```
 

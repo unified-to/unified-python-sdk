@@ -50,16 +50,20 @@ Create a company
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.crm.create_crm_company(request={
+        "connection_id": "<value>",
+    })
 
-res = s.crm.create_crm_company(request={
-    "connection_id": "<value>",
-})
-
-if res.crm_company is not None:
-    # handle response
-    pass
+    if res.crm_company is not None:
+        # handle response
+        pass
 
 ```
 
@@ -88,16 +92,20 @@ Create a contact
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.crm.create_crm_contact(request={
+        "connection_id": "<value>",
+    })
 
-res = s.crm.create_crm_contact(request={
-    "connection_id": "<value>",
-})
-
-if res.crm_contact is not None:
-    # handle response
-    pass
+    if res.crm_contact is not None:
+        # handle response
+        pass
 
 ```
 
@@ -126,16 +134,20 @@ Create a deal
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.crm.create_crm_deal(request={
+        "connection_id": "<value>",
+    })
 
-res = s.crm.create_crm_deal(request={
-    "connection_id": "<value>",
-})
-
-if res.crm_deal is not None:
-    # handle response
-    pass
+    if res.crm_deal is not None:
+        # handle response
+        pass
 
 ```
 
@@ -164,16 +176,20 @@ Create an event
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.crm.create_crm_event(request={
+        "connection_id": "<value>",
+    })
 
-res = s.crm.create_crm_event(request={
-    "connection_id": "<value>",
-})
-
-if res.crm_event is not None:
-    # handle response
-    pass
+    if res.crm_event is not None:
+        # handle response
+        pass
 
 ```
 
@@ -202,16 +218,20 @@ Create a lead
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.crm.create_crm_lead(request={
+        "connection_id": "<value>",
+    })
 
-res = s.crm.create_crm_lead(request={
-    "connection_id": "<value>",
-})
-
-if res.crm_lead is not None:
-    # handle response
-    pass
+    if res.crm_lead is not None:
+        # handle response
+        pass
 
 ```
 
@@ -240,16 +260,20 @@ Create a pipeline
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.crm.create_crm_pipeline(request={
+        "connection_id": "<value>",
+    })
 
-res = s.crm.create_crm_pipeline(request={
-    "connection_id": "<value>",
-})
-
-if res.crm_pipeline is not None:
-    # handle response
-    pass
+    if res.crm_pipeline is not None:
+        # handle response
+        pass
 
 ```
 
@@ -278,17 +302,21 @@ Retrieve a company
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.crm.get_crm_company(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.crm.get_crm_company(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.crm_company is not None:
-    # handle response
-    pass
+    if res.crm_company is not None:
+        # handle response
+        pass
 
 ```
 
@@ -317,17 +345,21 @@ Retrieve a contact
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.crm.get_crm_contact(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.crm.get_crm_contact(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.crm_contact is not None:
-    # handle response
-    pass
+    if res.crm_contact is not None:
+        # handle response
+        pass
 
 ```
 
@@ -356,17 +388,21 @@ Retrieve a deal
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.crm.get_crm_deal(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.crm.get_crm_deal(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.crm_deal is not None:
-    # handle response
-    pass
+    if res.crm_deal is not None:
+        # handle response
+        pass
 
 ```
 
@@ -395,17 +431,21 @@ Retrieve an event
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.crm.get_crm_event(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.crm.get_crm_event(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.crm_event is not None:
-    # handle response
-    pass
+    if res.crm_event is not None:
+        # handle response
+        pass
 
 ```
 
@@ -434,17 +474,21 @@ Retrieve a lead
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.crm.get_crm_lead(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.crm.get_crm_lead(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.crm_lead is not None:
-    # handle response
-    pass
+    if res.crm_lead is not None:
+        # handle response
+        pass
 
 ```
 
@@ -473,17 +517,21 @@ Retrieve a pipeline
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.crm.get_crm_pipeline(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.crm.get_crm_pipeline(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.crm_pipeline is not None:
-    # handle response
-    pass
+    if res.crm_pipeline is not None:
+        # handle response
+        pass
 
 ```
 
@@ -512,16 +560,20 @@ List all companies
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.crm.list_crm_companies(request={
+        "connection_id": "<value>",
+    })
 
-res = s.crm.list_crm_companies(request={
-    "connection_id": "<value>",
-})
-
-if res.crm_companies is not None:
-    # handle response
-    pass
+    if res.crm_companies is not None:
+        # handle response
+        pass
 
 ```
 
@@ -550,16 +602,20 @@ List all contacts
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.crm.list_crm_contacts(request={
+        "connection_id": "<value>",
+    })
 
-res = s.crm.list_crm_contacts(request={
-    "connection_id": "<value>",
-})
-
-if res.crm_contacts is not None:
-    # handle response
-    pass
+    if res.crm_contacts is not None:
+        # handle response
+        pass
 
 ```
 
@@ -588,16 +644,20 @@ List all deals
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.crm.list_crm_deals(request={
+        "connection_id": "<value>",
+    })
 
-res = s.crm.list_crm_deals(request={
-    "connection_id": "<value>",
-})
-
-if res.crm_deals is not None:
-    # handle response
-    pass
+    if res.crm_deals is not None:
+        # handle response
+        pass
 
 ```
 
@@ -626,16 +686,20 @@ List all events
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.crm.list_crm_events(request={
+        "connection_id": "<value>",
+    })
 
-res = s.crm.list_crm_events(request={
-    "connection_id": "<value>",
-})
-
-if res.crm_events is not None:
-    # handle response
-    pass
+    if res.crm_events is not None:
+        # handle response
+        pass
 
 ```
 
@@ -664,16 +728,20 @@ List all leads
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.crm.list_crm_leads(request={
+        "connection_id": "<value>",
+    })
 
-res = s.crm.list_crm_leads(request={
-    "connection_id": "<value>",
-})
-
-if res.crm_leads is not None:
-    # handle response
-    pass
+    if res.crm_leads is not None:
+        # handle response
+        pass
 
 ```
 
@@ -702,16 +770,20 @@ List all pipelines
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.crm.list_crm_pipelines(request={
+        "connection_id": "<value>",
+    })
 
-res = s.crm.list_crm_pipelines(request={
-    "connection_id": "<value>",
-})
-
-if res.crm_pipelines is not None:
-    # handle response
-    pass
+    if res.crm_pipelines is not None:
+        # handle response
+        pass
 
 ```
 
@@ -740,17 +812,21 @@ Update a company
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.crm.patch_crm_company(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.crm.patch_crm_company(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.crm_company is not None:
-    # handle response
-    pass
+    if res.crm_company is not None:
+        # handle response
+        pass
 
 ```
 
@@ -779,17 +855,21 @@ Update a contact
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.crm.patch_crm_contact(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.crm.patch_crm_contact(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.crm_contact is not None:
-    # handle response
-    pass
+    if res.crm_contact is not None:
+        # handle response
+        pass
 
 ```
 
@@ -818,17 +898,21 @@ Update a deal
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.crm.patch_crm_deal(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.crm.patch_crm_deal(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.crm_deal is not None:
-    # handle response
-    pass
+    if res.crm_deal is not None:
+        # handle response
+        pass
 
 ```
 
@@ -857,17 +941,21 @@ Update an event
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.crm.patch_crm_event(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.crm.patch_crm_event(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.crm_event is not None:
-    # handle response
-    pass
+    if res.crm_event is not None:
+        # handle response
+        pass
 
 ```
 
@@ -896,17 +984,21 @@ Update a lead
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.crm.patch_crm_lead(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.crm.patch_crm_lead(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.crm_lead is not None:
-    # handle response
-    pass
+    if res.crm_lead is not None:
+        # handle response
+        pass
 
 ```
 
@@ -935,17 +1027,21 @@ Update a pipeline
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.crm.patch_crm_pipeline(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.crm.patch_crm_pipeline(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.crm_pipeline is not None:
-    # handle response
-    pass
+    if res.crm_pipeline is not None:
+        # handle response
+        pass
 
 ```
 
@@ -974,17 +1070,21 @@ Remove a company
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.crm.remove_crm_company(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.crm.remove_crm_company(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -1013,17 +1113,21 @@ Remove a contact
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.crm.remove_crm_contact(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.crm.remove_crm_contact(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -1052,17 +1156,21 @@ Remove a deal
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.crm.remove_crm_deal(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.crm.remove_crm_deal(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -1091,17 +1199,21 @@ Remove an event
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.crm.remove_crm_event(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.crm.remove_crm_event(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -1130,17 +1242,21 @@ Remove a lead
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.crm.remove_crm_lead(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.crm.remove_crm_lead(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -1169,17 +1285,21 @@ Remove a pipeline
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.crm.remove_crm_pipeline(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.crm.remove_crm_pipeline(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -1208,17 +1328,21 @@ Update a company
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.crm.update_crm_company(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.crm.update_crm_company(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.crm_company is not None:
-    # handle response
-    pass
+    if res.crm_company is not None:
+        # handle response
+        pass
 
 ```
 
@@ -1247,17 +1371,21 @@ Update a contact
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.crm.update_crm_contact(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.crm.update_crm_contact(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.crm_contact is not None:
-    # handle response
-    pass
+    if res.crm_contact is not None:
+        # handle response
+        pass
 
 ```
 
@@ -1286,17 +1414,21 @@ Update a deal
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.crm.update_crm_deal(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.crm.update_crm_deal(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.crm_deal is not None:
-    # handle response
-    pass
+    if res.crm_deal is not None:
+        # handle response
+        pass
 
 ```
 
@@ -1325,17 +1457,21 @@ Update an event
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.crm.update_crm_event(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.crm.update_crm_event(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.crm_event is not None:
-    # handle response
-    pass
+    if res.crm_event is not None:
+        # handle response
+        pass
 
 ```
 
@@ -1364,17 +1500,21 @@ Update a lead
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.crm.update_crm_lead(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.crm.update_crm_lead(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.crm_lead is not None:
-    # handle response
-    pass
+    if res.crm_lead is not None:
+        # handle response
+        pass
 
 ```
 
@@ -1403,17 +1543,21 @@ Update a pipeline
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.crm.update_crm_pipeline(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.crm.update_crm_pipeline(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.crm_pipeline is not None:
-    # handle response
-    pass
+    if res.crm_pipeline is not None:
+        # handle response
+        pass
 
 ```
 

@@ -20,16 +20,20 @@ Create a collection
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.collection.create_commerce_collection(request={
+        "connection_id": "<value>",
+    })
 
-res = s.collection.create_commerce_collection(request={
-    "connection_id": "<value>",
-})
-
-if res.commerce_collection is not None:
-    # handle response
-    pass
+    if res.commerce_collection is not None:
+        # handle response
+        pass
 
 ```
 
@@ -58,17 +62,21 @@ Retrieve a collection
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.collection.get_commerce_collection(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.collection.get_commerce_collection(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.commerce_collection is not None:
-    # handle response
-    pass
+    if res.commerce_collection is not None:
+        # handle response
+        pass
 
 ```
 
@@ -97,16 +105,20 @@ List all collections
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.collection.list_commerce_collections(request={
+        "connection_id": "<value>",
+    })
 
-res = s.collection.list_commerce_collections(request={
-    "connection_id": "<value>",
-})
-
-if res.commerce_collections is not None:
-    # handle response
-    pass
+    if res.commerce_collections is not None:
+        # handle response
+        pass
 
 ```
 
@@ -135,17 +147,21 @@ Update a collection
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.collection.patch_commerce_collection(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.collection.patch_commerce_collection(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.commerce_collection is not None:
-    # handle response
-    pass
+    if res.commerce_collection is not None:
+        # handle response
+        pass
 
 ```
 
@@ -174,17 +190,21 @@ Remove a collection
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.collection.remove_commerce_collection(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.collection.remove_commerce_collection(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -213,17 +233,21 @@ Update a collection
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.collection.update_commerce_collection(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.collection.update_commerce_collection(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.commerce_collection is not None:
-    # handle response
-    pass
+    if res.commerce_collection is not None:
+        # handle response
+        pass
 
 ```
 

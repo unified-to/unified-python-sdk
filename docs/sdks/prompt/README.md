@@ -15,16 +15,20 @@ Create a prompt
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.prompt.create_genai_prompt(request={
+        "connection_id": "<value>",
+    })
 
-res = s.prompt.create_genai_prompt(request={
-    "connection_id": "<value>",
-})
-
-if res.genai_prompt is not None:
-    # handle response
-    pass
+    if res.genai_prompt is not None:
+        # handle response
+        pass
 
 ```
 

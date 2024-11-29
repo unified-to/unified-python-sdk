@@ -22,17 +22,21 @@ Passthrough POST
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.passthrough.create_passthrough_json(request={
+        "connection_id": "<value>",
+        "path": "/etc/periodic",
+    })
 
-res = s.passthrough.create_passthrough_json(request={
-    "connection_id": "<value>",
-    "path": "/etc/periodic",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -61,17 +65,21 @@ Passthrough POST
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.passthrough.create_passthrough_raw(request={
+        "connection_id": "<value>",
+        "path": "/etc/periodic",
+    })
 
-res = s.passthrough.create_passthrough_raw(request={
-    "connection_id": "<value>",
-    "path": "/etc/periodic",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -100,17 +108,21 @@ Passthrough GET
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.passthrough.list_passthroughs(request={
+        "connection_id": "<value>",
+        "path": "/selinux",
+    })
 
-res = s.passthrough.list_passthroughs(request={
-    "connection_id": "<value>",
-    "path": "/selinux",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -139,17 +151,21 @@ Passthrough PUT
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.passthrough.patch_passthrough_json(request={
+        "connection_id": "<value>",
+        "path": "/mnt",
+    })
 
-res = s.passthrough.patch_passthrough_json(request={
-    "connection_id": "<value>",
-    "path": "/mnt",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -178,17 +194,21 @@ Passthrough PUT
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.passthrough.patch_passthrough_raw(request={
+        "connection_id": "<value>",
+        "path": "/mnt",
+    })
 
-res = s.passthrough.patch_passthrough_raw(request={
-    "connection_id": "<value>",
-    "path": "/mnt",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -217,17 +237,21 @@ Passthrough DELETE
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.passthrough.remove_passthrough(request={
+        "connection_id": "<value>",
+        "path": "/Applications",
+    })
 
-res = s.passthrough.remove_passthrough(request={
-    "connection_id": "<value>",
-    "path": "/Applications",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -256,17 +280,21 @@ Passthrough PUT
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.passthrough.update_passthrough_json(request={
+        "connection_id": "<value>",
+        "path": "/dev",
+    })
 
-res = s.passthrough.update_passthrough_json(request={
-    "connection_id": "<value>",
-    "path": "/dev",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -295,17 +323,21 @@ Passthrough PUT
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.passthrough.update_passthrough_raw(request={
+        "connection_id": "<value>",
+        "path": "/dev",
+    })
 
-res = s.passthrough.update_passthrough_raw(request={
-    "connection_id": "<value>",
-    "path": "/dev",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 

@@ -187,9 +187,7 @@ class UnifiedTo(BaseSDK):
 
     def __init__(
         self,
-        security: Optional[
-            Union[shared.Security, Callable[[], shared.Security]]
-        ] = None,
+        security: Union[shared.Security, Callable[[], shared.Security]],
         server_idx: Optional[int] = None,
         server_url: Optional[str] = None,
         url_params: Optional[Dict[str, str]] = None,
@@ -344,3 +342,17 @@ class UnifiedTo(BaseSDK):
         self.login = Login(self.sdk_configuration)
         self.issue = Issue(self.sdk_configuration)
         self.webhook = Webhook(self.sdk_configuration)
+
+    def __enter__(self):
+        return self
+
+    async def __aenter__(self):
+        return self
+
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        if self.sdk_configuration.client is not None:
+            self.sdk_configuration.client.close()
+
+    async def __aexit__(self, exc_type, exc_val, exc_tb):
+        if self.sdk_configuration.async_client is not None:
+            await self.sdk_configuration.async_client.aclose()

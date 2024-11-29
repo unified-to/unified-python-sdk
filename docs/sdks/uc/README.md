@@ -21,16 +21,20 @@ Create a contact
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.uc.create_uc_contact(request={
+        "connection_id": "<value>",
+    })
 
-res = s.uc.create_uc_contact(request={
-    "connection_id": "<value>",
-})
-
-if res.uc_contact is not None:
-    # handle response
-    pass
+    if res.uc_contact is not None:
+        # handle response
+        pass
 
 ```
 
@@ -59,17 +63,21 @@ Retrieve a contact
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.uc.get_uc_contact(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.uc.get_uc_contact(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.uc_contact is not None:
-    # handle response
-    pass
+    if res.uc_contact is not None:
+        # handle response
+        pass
 
 ```
 
@@ -98,16 +106,20 @@ List all calls
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.uc.list_uc_calls(request={
+        "connection_id": "<value>",
+    })
 
-res = s.uc.list_uc_calls(request={
-    "connection_id": "<value>",
-})
-
-if res.uc_calls is not None:
-    # handle response
-    pass
+    if res.uc_calls is not None:
+        # handle response
+        pass
 
 ```
 
@@ -136,16 +148,20 @@ List all contacts
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.uc.list_uc_contacts(request={
+        "connection_id": "<value>",
+    })
 
-res = s.uc.list_uc_contacts(request={
-    "connection_id": "<value>",
-})
-
-if res.uc_contacts is not None:
-    # handle response
-    pass
+    if res.uc_contacts is not None:
+        # handle response
+        pass
 
 ```
 
@@ -174,17 +190,21 @@ Update a contact
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.uc.patch_uc_contact(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.uc.patch_uc_contact(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.uc_contact is not None:
-    # handle response
-    pass
+    if res.uc_contact is not None:
+        # handle response
+        pass
 
 ```
 
@@ -213,17 +233,21 @@ Remove a contact
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.uc.remove_uc_contact(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.uc.remove_uc_contact(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -252,17 +276,21 @@ Update a contact
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.uc.update_uc_contact(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.uc.update_uc_contact(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.uc_contact is not None:
-    # handle response
-    pass
+    if res.uc_contact is not None:
+        # handle response
+        pass
 
 ```
 

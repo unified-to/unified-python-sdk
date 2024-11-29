@@ -30,16 +30,20 @@ Create a link
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.payment.create_payment_link(request={
+        "connection_id": "<value>",
+    })
 
-res = s.payment.create_payment_link(request={
-    "connection_id": "<value>",
-})
-
-if res.payment_link is not None:
-    # handle response
-    pass
+    if res.payment_link is not None:
+        # handle response
+        pass
 
 ```
 
@@ -68,16 +72,20 @@ Create a payment
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.payment.create_payment_payment(request={
+        "connection_id": "<value>",
+    })
 
-res = s.payment.create_payment_payment(request={
-    "connection_id": "<value>",
-})
-
-if res.payment_payment is not None:
-    # handle response
-    pass
+    if res.payment_payment is not None:
+        # handle response
+        pass
 
 ```
 
@@ -106,17 +114,21 @@ Retrieve a link
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.payment.get_payment_link(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.payment.get_payment_link(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.payment_link is not None:
-    # handle response
-    pass
+    if res.payment_link is not None:
+        # handle response
+        pass
 
 ```
 
@@ -145,17 +157,21 @@ Retrieve a payment
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.payment.get_payment_payment(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.payment.get_payment_payment(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.payment_payment is not None:
-    # handle response
-    pass
+    if res.payment_payment is not None:
+        # handle response
+        pass
 
 ```
 
@@ -184,17 +200,21 @@ Retrieve a payout
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.payment.get_payment_payout(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.payment.get_payment_payout(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.payment_payout is not None:
-    # handle response
-    pass
+    if res.payment_payout is not None:
+        # handle response
+        pass
 
 ```
 
@@ -223,17 +243,21 @@ Retrieve a refund
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.payment.get_payment_refund(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.payment.get_payment_refund(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.payment_refund is not None:
-    # handle response
-    pass
+    if res.payment_refund is not None:
+        # handle response
+        pass
 
 ```
 
@@ -262,16 +286,20 @@ List all links
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.payment.list_payment_links(request={
+        "connection_id": "<value>",
+    })
 
-res = s.payment.list_payment_links(request={
-    "connection_id": "<value>",
-})
-
-if res.payment_links is not None:
-    # handle response
-    pass
+    if res.payment_links is not None:
+        # handle response
+        pass
 
 ```
 
@@ -300,16 +328,20 @@ List all payments
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.payment.list_payment_payments(request={
+        "connection_id": "<value>",
+    })
 
-res = s.payment.list_payment_payments(request={
-    "connection_id": "<value>",
-})
-
-if res.payment_payments is not None:
-    # handle response
-    pass
+    if res.payment_payments is not None:
+        # handle response
+        pass
 
 ```
 
@@ -338,16 +370,20 @@ List all payouts
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.payment.list_payment_payouts(request={
+        "connection_id": "<value>",
+    })
 
-res = s.payment.list_payment_payouts(request={
-    "connection_id": "<value>",
-})
-
-if res.payment_payouts is not None:
-    # handle response
-    pass
+    if res.payment_payouts is not None:
+        # handle response
+        pass
 
 ```
 
@@ -376,16 +412,20 @@ List all refunds
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.payment.list_payment_refunds(request={
+        "connection_id": "<value>",
+    })
 
-res = s.payment.list_payment_refunds(request={
-    "connection_id": "<value>",
-})
-
-if res.payment_refunds is not None:
-    # handle response
-    pass
+    if res.payment_refunds is not None:
+        # handle response
+        pass
 
 ```
 
@@ -414,17 +454,21 @@ Update a link
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.payment.patch_payment_link(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.payment.patch_payment_link(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.payment_link is not None:
-    # handle response
-    pass
+    if res.payment_link is not None:
+        # handle response
+        pass
 
 ```
 
@@ -453,17 +497,21 @@ Update a payment
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.payment.patch_payment_payment(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.payment.patch_payment_payment(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.payment_payment is not None:
-    # handle response
-    pass
+    if res.payment_payment is not None:
+        # handle response
+        pass
 
 ```
 
@@ -492,17 +540,21 @@ Remove a link
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.payment.remove_payment_link(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.payment.remove_payment_link(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -531,17 +583,21 @@ Remove a payment
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.payment.remove_payment_payment(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.payment.remove_payment_payment(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -570,17 +626,21 @@ Update a link
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.payment.update_payment_link(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.payment.update_payment_link(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.payment_link is not None:
-    # handle response
-    pass
+    if res.payment_link is not None:
+        # handle response
+        pass
 
 ```
 
@@ -609,17 +669,21 @@ Update a payment
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.payment.update_payment_payment(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.payment.update_payment_payment(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.payment_payment is not None:
-    # handle response
-    pass
+    if res.payment_payment is not None:
+        # handle response
+        pass
 
 ```
 

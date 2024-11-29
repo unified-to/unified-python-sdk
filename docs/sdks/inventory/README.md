@@ -20,16 +20,20 @@ Create an inventory
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.inventory.create_commerce_inventory(request={
+        "connection_id": "<value>",
+    })
 
-res = s.inventory.create_commerce_inventory(request={
-    "connection_id": "<value>",
-})
-
-if res.commerce_inventory is not None:
-    # handle response
-    pass
+    if res.commerce_inventory is not None:
+        # handle response
+        pass
 
 ```
 
@@ -58,17 +62,21 @@ Retrieve an inventory
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.inventory.get_commerce_inventory(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.inventory.get_commerce_inventory(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.commerce_inventory is not None:
-    # handle response
-    pass
+    if res.commerce_inventory is not None:
+        # handle response
+        pass
 
 ```
 
@@ -97,16 +105,20 @@ List all inventories
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.inventory.list_commerce_inventories(request={
+        "connection_id": "<value>",
+    })
 
-res = s.inventory.list_commerce_inventories(request={
-    "connection_id": "<value>",
-})
-
-if res.commerce_inventories is not None:
-    # handle response
-    pass
+    if res.commerce_inventories is not None:
+        # handle response
+        pass
 
 ```
 
@@ -135,17 +147,21 @@ Update an inventory
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.inventory.patch_commerce_inventory(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.inventory.patch_commerce_inventory(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.commerce_inventory is not None:
-    # handle response
-    pass
+    if res.commerce_inventory is not None:
+        # handle response
+        pass
 
 ```
 
@@ -174,17 +190,21 @@ Remove an inventory
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.inventory.remove_commerce_inventory(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.inventory.remove_commerce_inventory(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -213,17 +233,21 @@ Update an inventory
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.inventory.update_commerce_inventory(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.inventory.update_commerce_inventory(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.commerce_inventory is not None:
-    # handle response
-    pass
+    if res.commerce_inventory is not None:
+        # handle response
+        pass
 
 ```
 

@@ -12,18 +12,19 @@ Unified.to API: One API to Rule Them All
 
 <!-- Start Table of Contents [toc] -->
 ## Table of Contents
+<!-- $toc-max-depth=2 -->
+  * [SDK Installation](#sdk-installation)
+  * [IDE Support](#ide-support)
+  * [SDK Example Usage](#sdk-example-usage)
+  * [Available Resources and Operations](#available-resources-and-operations)
+  * [File uploads](#file-uploads)
+  * [Retries](#retries)
+  * [Error Handling](#error-handling)
+  * [Server Selection](#server-selection)
+  * [Custom HTTP Client](#custom-http-client)
+  * [Authentication](#authentication)
+  * [Debugging](#debugging)
 
-* [SDK Installation](#sdk-installation)
-* [IDE Support](#ide-support)
-* [SDK Example Usage](#sdk-example-usage)
-* [Available Resources and Operations](#available-resources-and-operations)
-* [File uploads](#file-uploads)
-* [Retries](#retries)
-* [Error Handling](#error-handling)
-* [Server Selection](#server-selection)
-* [Custom HTTP Client](#custom-http-client)
-* [Authentication](#authentication)
-* [Debugging](#debugging)
 <!-- End Table of Contents [toc] -->
 
 <!-- Start SDK Installation [installation] -->
@@ -66,16 +67,20 @@ Generally, the SDK will work well with most IDEs out of the box. However, when u
 ```python
 # Synchronous Example
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.accounting.create_accounting_account(request={
+        "connection_id": "<value>",
+    })
 
-res = s.accounting.create_accounting_account(request={
-    "connection_id": "<value>",
-})
-
-if res.accounting_account is not None:
-    # handle response
-    pass
+    if res.accounting_account is not None:
+        # handle response
+        pass
 ```
 
 </br>
@@ -85,15 +90,21 @@ The same SDK client can also be used to make asychronous requests by importing a
 # Asynchronous Example
 import asyncio
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
 async def main():
-    s = UnifiedTo()
-    res = await s.accounting.create_accounting_account_async(request={
-        "connection_id": "<value>",
-    })
-    if res.accounting_account is not None:
-        # handle response
-        pass
+    async with UnifiedTo(
+        security=shared.Security(
+            jwt="<YOUR_API_KEY_HERE>",
+        ),
+    ) as s:
+        res = await s.accounting.create_accounting_account_async(request={
+            "connection_id": "<value>",
+        })
+
+        if res.accounting_account is not None:
+            # handle response
+            pass
 
 asyncio.run(main())
 ```
@@ -1106,17 +1117,21 @@ Certain SDK methods accept file objects as part of a request body or multi-part 
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.passthrough.create_passthrough_raw(request={
+        "connection_id": "<value>",
+        "path": "/etc/periodic",
+    })
 
-res = s.passthrough.create_passthrough_raw(request={
-    "connection_id": "<value>",
-    "path": "/etc/periodic",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 <!-- End File uploads [file-upload] -->
@@ -1129,37 +1144,44 @@ Some of the endpoints in this SDK support retries. If you use the SDK without an
 To change the default retry strategy for a single API call, simply provide a `RetryConfig` object to the call:
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 from unified_to.utils import BackoffStrategy, RetryConfig
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.accounting.create_accounting_account(request={
+        "connection_id": "<value>",
+    },
+        RetryConfig("backoff", BackoffStrategy(1, 50, 1.1, 100), False))
 
-res = s.accounting.create_accounting_account(request={
-    "connection_id": "<value>",
-},
-    RetryConfig("backoff", BackoffStrategy(1, 50, 1.1, 100), False))
-
-if res.accounting_account is not None:
-    # handle response
-    pass
+    if res.accounting_account is not None:
+        # handle response
+        pass
 
 ```
 
 If you'd like to override the default retry strategy for all operations that support retries, you can use the `retry_config` optional parameter when initializing the SDK:
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 from unified_to.utils import BackoffStrategy, RetryConfig
 
-s = UnifiedTo(
+with UnifiedTo(
     retry_config=RetryConfig("backoff", BackoffStrategy(1, 50, 1.1, 100), False),
-)
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.accounting.create_accounting_account(request={
+        "connection_id": "<value>",
+    })
 
-res = s.accounting.create_accounting_account(request={
-    "connection_id": "<value>",
-})
-
-if res.accounting_account is not None:
-    # handle response
-    pass
+    if res.accounting_account is not None:
+        # handle response
+        pass
 
 ```
 <!-- End Retries [retries] -->
@@ -1188,23 +1210,26 @@ When custom error responses are specified for an operation, the SDK may also rai
 
 ```python
 from unified_python_sdk import UnifiedTo
-from unified_python_sdk.models import errors
+from unified_python_sdk.models import errors, shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = None
+    try:
+        res = s.accounting.create_accounting_account(request={
+            "connection_id": "<value>",
+        })
 
-res = None
-try:
-    res = s.accounting.create_accounting_account(request={
-        "connection_id": "<value>",
-    })
+        if res.accounting_account is not None:
+            # handle response
+            pass
 
-    if res.accounting_account is not None:
-        # handle response
-        pass
-
-except errors.SDKError as e:
-    # handle exception
-    raise(e)
+    except errors.SDKError as e:
+        # handle exception
+        raise(e)
 ```
 <!-- End Error Handling [errors] -->
 
@@ -1226,18 +1251,21 @@ You can override the default server globally by passing a server index to the `s
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo(
+with UnifiedTo(
     server_idx=1,
-)
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.accounting.create_accounting_account(request={
+        "connection_id": "<value>",
+    })
 
-res = s.accounting.create_accounting_account(request={
-    "connection_id": "<value>",
-})
-
-if res.accounting_account is not None:
-    # handle response
-    pass
+    if res.accounting_account is not None:
+        # handle response
+        pass
 
 ```
 
@@ -1246,18 +1274,21 @@ if res.accounting_account is not None:
 The default server can also be overridden globally by passing a URL to the `server_url: str` optional parameter when initializing the SDK client instance. For example:
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo(
+with UnifiedTo(
     server_url="https://api.unified.to",
-)
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.accounting.create_accounting_account(request={
+        "connection_id": "<value>",
+    })
 
-res = s.accounting.create_accounting_account(request={
-    "connection_id": "<value>",
-})
-
-if res.accounting_account is not None:
-    # handle response
-    pass
+    if res.accounting_account is not None:
+        # handle response
+        pass
 
 ```
 <!-- End Server Selection [server] -->
@@ -1363,19 +1394,18 @@ You can set the security parameters through the `security` optional parameter wh
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
-s = UnifiedTo(
+with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-)
+) as s:
+    res = s.accounting.create_accounting_account(request={
+        "connection_id": "<value>",
+    })
 
-res = s.accounting.create_accounting_account(request={
-    "connection_id": "<value>",
-})
-
-if res.accounting_account is not None:
-    # handle response
-    pass
+    if res.accounting_account is not None:
+        # handle response
+        pass
 
 ```
 <!-- End Authentication [security] -->

@@ -20,16 +20,20 @@ Create a member
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.member.create_martech_member(request={
+        "connection_id": "<value>",
+    })
 
-res = s.member.create_martech_member(request={
-    "connection_id": "<value>",
-})
-
-if res.marketing_member is not None:
-    # handle response
-    pass
+    if res.marketing_member is not None:
+        # handle response
+        pass
 
 ```
 
@@ -58,17 +62,21 @@ Retrieve a member
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.member.get_martech_member(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.member.get_martech_member(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.marketing_member is not None:
-    # handle response
-    pass
+    if res.marketing_member is not None:
+        # handle response
+        pass
 
 ```
 
@@ -97,16 +105,20 @@ List all members
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.member.list_martech_members(request={
+        "connection_id": "<value>",
+    })
 
-res = s.member.list_martech_members(request={
-    "connection_id": "<value>",
-})
-
-if res.marketing_members is not None:
-    # handle response
-    pass
+    if res.marketing_members is not None:
+        # handle response
+        pass
 
 ```
 
@@ -135,17 +147,21 @@ Update a member
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.member.patch_martech_member(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.member.patch_martech_member(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.marketing_member is not None:
-    # handle response
-    pass
+    if res.marketing_member is not None:
+        # handle response
+        pass
 
 ```
 
@@ -174,17 +190,21 @@ Remove a member
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.member.remove_martech_member(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.member.remove_martech_member(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -213,17 +233,21 @@ Update a member
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.member.update_martech_member(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.member.update_martech_member(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.marketing_member is not None:
-    # handle response
-    pass
+    if res.marketing_member is not None:
+        # handle response
+        pass
 
 ```
 

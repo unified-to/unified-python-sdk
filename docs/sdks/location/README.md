@@ -26,16 +26,20 @@ Create a location
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.location.create_commerce_location(request={
+        "connection_id": "<value>",
+    })
 
-res = s.location.create_commerce_location(request={
-    "connection_id": "<value>",
-})
-
-if res.commerce_location is not None:
-    # handle response
-    pass
+    if res.commerce_location is not None:
+        # handle response
+        pass
 
 ```
 
@@ -64,16 +68,20 @@ Create a location
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.location.create_hris_location(request={
+        "connection_id": "<value>",
+    })
 
-res = s.location.create_hris_location(request={
-    "connection_id": "<value>",
-})
-
-if res.hris_location is not None:
-    # handle response
-    pass
+    if res.hris_location is not None:
+        # handle response
+        pass
 
 ```
 
@@ -102,17 +110,21 @@ Retrieve a location
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.location.get_commerce_location(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.location.get_commerce_location(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.commerce_location is not None:
-    # handle response
-    pass
+    if res.commerce_location is not None:
+        # handle response
+        pass
 
 ```
 
@@ -141,17 +153,21 @@ Retrieve a location
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.location.get_hris_location(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.location.get_hris_location(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.hris_location is not None:
-    # handle response
-    pass
+    if res.hris_location is not None:
+        # handle response
+        pass
 
 ```
 
@@ -180,16 +196,20 @@ List all locations
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.location.list_commerce_locations(request={
+        "connection_id": "<value>",
+    })
 
-res = s.location.list_commerce_locations(request={
-    "connection_id": "<value>",
-})
-
-if res.commerce_locations is not None:
-    # handle response
-    pass
+    if res.commerce_locations is not None:
+        # handle response
+        pass
 
 ```
 
@@ -218,16 +238,20 @@ List all locations
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.location.list_hris_locations(request={
+        "connection_id": "<value>",
+    })
 
-res = s.location.list_hris_locations(request={
-    "connection_id": "<value>",
-})
-
-if res.hris_locations is not None:
-    # handle response
-    pass
+    if res.hris_locations is not None:
+        # handle response
+        pass
 
 ```
 
@@ -256,17 +280,21 @@ Update a location
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.location.patch_commerce_location(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.location.patch_commerce_location(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.commerce_location is not None:
-    # handle response
-    pass
+    if res.commerce_location is not None:
+        # handle response
+        pass
 
 ```
 
@@ -295,17 +323,21 @@ Update a location
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.location.patch_hris_location(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.location.patch_hris_location(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.hris_location is not None:
-    # handle response
-    pass
+    if res.hris_location is not None:
+        # handle response
+        pass
 
 ```
 
@@ -334,17 +366,21 @@ Remove a location
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.location.remove_commerce_location(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.location.remove_commerce_location(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -373,17 +409,21 @@ Remove a location
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.location.remove_hris_location(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.location.remove_hris_location(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -412,17 +452,21 @@ Update a location
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.location.update_commerce_location(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.location.update_commerce_location(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.commerce_location is not None:
-    # handle response
-    pass
+    if res.commerce_location is not None:
+        # handle response
+        pass
 
 ```
 
@@ -451,17 +495,21 @@ Update a location
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.location.update_hris_location(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.location.update_hris_location(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.hris_location is not None:
-    # handle response
-    pass
+    if res.hris_location is not None:
+        # handle response
+        pass
 
 ```
 

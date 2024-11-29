@@ -16,16 +16,20 @@ Create a prompt
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.genai.create_genai_prompt(request={
+        "connection_id": "<value>",
+    })
 
-res = s.genai.create_genai_prompt(request={
-    "connection_id": "<value>",
-})
-
-if res.genai_prompt is not None:
-    # handle response
-    pass
+    if res.genai_prompt is not None:
+        # handle response
+        pass
 
 ```
 
@@ -54,16 +58,20 @@ List all models
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.genai.list_genai_models(request={
+        "connection_id": "<value>",
+    })
 
-res = s.genai.list_genai_models(request={
-    "connection_id": "<value>",
-})
-
-if res.genai_models is not None:
-    # handle response
-    pass
+    if res.genai_models is not None:
+        # handle response
+        pass
 
 ```
 

@@ -20,16 +20,20 @@ Create a scorecard
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.scorecard.create_ats_scorecard(request={
+        "connection_id": "<value>",
+    })
 
-res = s.scorecard.create_ats_scorecard(request={
-    "connection_id": "<value>",
-})
-
-if res.ats_scorecard is not None:
-    # handle response
-    pass
+    if res.ats_scorecard is not None:
+        # handle response
+        pass
 
 ```
 
@@ -58,17 +62,21 @@ Retrieve a scorecard
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.scorecard.get_ats_scorecard(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.scorecard.get_ats_scorecard(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.ats_scorecard is not None:
-    # handle response
-    pass
+    if res.ats_scorecard is not None:
+        # handle response
+        pass
 
 ```
 
@@ -97,16 +105,20 @@ List all scorecards
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.scorecard.list_ats_scorecards(request={
+        "connection_id": "<value>",
+    })
 
-res = s.scorecard.list_ats_scorecards(request={
-    "connection_id": "<value>",
-})
-
-if res.ats_scorecards is not None:
-    # handle response
-    pass
+    if res.ats_scorecards is not None:
+        # handle response
+        pass
 
 ```
 
@@ -135,17 +147,21 @@ Update a scorecard
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.scorecard.patch_ats_scorecard(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.scorecard.patch_ats_scorecard(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.ats_scorecard is not None:
-    # handle response
-    pass
+    if res.ats_scorecard is not None:
+        # handle response
+        pass
 
 ```
 
@@ -174,17 +190,21 @@ Remove a scorecard
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.scorecard.remove_ats_scorecard(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.scorecard.remove_ats_scorecard(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -213,17 +233,21 @@ Update a scorecard
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.scorecard.update_ats_scorecard(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.scorecard.update_ats_scorecard(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.ats_scorecard is not None:
-    # handle response
-    pass
+    if res.ats_scorecard is not None:
+        # handle response
+        pass
 
 ```
 

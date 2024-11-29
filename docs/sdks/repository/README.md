@@ -20,16 +20,20 @@ Create a repository
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.repository.create_repo_repository(request={
+        "connection_id": "<id>",
+    })
 
-res = s.repository.create_repo_repository(request={
-    "connection_id": "<id>",
-})
-
-if res.repo_repository is not None:
-    # handle response
-    pass
+    if res.repo_repository is not None:
+        # handle response
+        pass
 
 ```
 
@@ -58,17 +62,21 @@ Retrieve a repository
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.repository.get_repo_repository(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
 
-res = s.repository.get_repo_repository(request={
-    "connection_id": "<id>",
-    "id": "<id>",
-})
-
-if res.repo_repository is not None:
-    # handle response
-    pass
+    if res.repo_repository is not None:
+        # handle response
+        pass
 
 ```
 
@@ -97,16 +105,20 @@ List all repositories
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.repository.list_repo_repositories(request={
+        "connection_id": "<id>",
+    })
 
-res = s.repository.list_repo_repositories(request={
-    "connection_id": "<id>",
-})
-
-if res.repo_repositories is not None:
-    # handle response
-    pass
+    if res.repo_repositories is not None:
+        # handle response
+        pass
 
 ```
 
@@ -135,17 +147,21 @@ Update a repository
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.repository.patch_repo_repository(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
 
-res = s.repository.patch_repo_repository(request={
-    "connection_id": "<id>",
-    "id": "<id>",
-})
-
-if res.repo_repository is not None:
-    # handle response
-    pass
+    if res.repo_repository is not None:
+        # handle response
+        pass
 
 ```
 
@@ -174,17 +190,21 @@ Remove a repository
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.repository.remove_repo_repository(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
 
-res = s.repository.remove_repo_repository(request={
-    "connection_id": "<id>",
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -213,17 +233,21 @@ Update a repository
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.repository.update_repo_repository(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
 
-res = s.repository.update_repo_repository(request={
-    "connection_id": "<id>",
-    "id": "<id>",
-})
-
-if res.repo_repository is not None:
-    # handle response
-    pass
+    if res.repo_repository is not None:
+        # handle response
+        pass
 
 ```
 

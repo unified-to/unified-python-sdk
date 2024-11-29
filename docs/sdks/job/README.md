@@ -20,16 +20,20 @@ Create a job
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.job.create_ats_job(request={
+        "connection_id": "<value>",
+    })
 
-res = s.job.create_ats_job(request={
-    "connection_id": "<value>",
-})
-
-if res.ats_job is not None:
-    # handle response
-    pass
+    if res.ats_job is not None:
+        # handle response
+        pass
 
 ```
 
@@ -58,17 +62,21 @@ Retrieve a job
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.job.get_ats_job(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.job.get_ats_job(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.ats_job is not None:
-    # handle response
-    pass
+    if res.ats_job is not None:
+        # handle response
+        pass
 
 ```
 
@@ -97,16 +105,20 @@ List all jobs
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.job.list_ats_jobs(request={
+        "connection_id": "<value>",
+    })
 
-res = s.job.list_ats_jobs(request={
-    "connection_id": "<value>",
-})
-
-if res.ats_jobs is not None:
-    # handle response
-    pass
+    if res.ats_jobs is not None:
+        # handle response
+        pass
 
 ```
 
@@ -135,17 +147,21 @@ Update a job
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.job.patch_ats_job(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.job.patch_ats_job(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.ats_job is not None:
-    # handle response
-    pass
+    if res.ats_job is not None:
+        # handle response
+        pass
 
 ```
 
@@ -174,17 +190,21 @@ Remove a job
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.job.remove_ats_job(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.job.remove_ats_job(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -213,17 +233,21 @@ Update a job
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.job.update_ats_job(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.job.update_ats_job(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.ats_job is not None:
-    # handle response
-    pass
+    if res.ats_job is not None:
+        # handle response
+        pass
 
 ```
 

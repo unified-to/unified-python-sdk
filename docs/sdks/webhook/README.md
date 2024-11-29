@@ -22,14 +22,18 @@ The data payload received by your server is described at https://docs.unified.to
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.webhook.create_unified_webhook(request={})
 
-res = s.webhook.create_unified_webhook(request={})
-
-if res.webhook is not None:
-    # handle response
-    pass
+    if res.webhook is not None:
+        # handle response
+        pass
 
 ```
 
@@ -58,16 +62,20 @@ Retrieve webhook by its ID
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.webhook.get_unified_webhook(request={
+        "id": "<id>",
+    })
 
-res = s.webhook.get_unified_webhook(request={
-    "id": "<id>",
-})
-
-if res.webhook is not None:
-    # handle response
-    pass
+    if res.webhook is not None:
+        # handle response
+        pass
 
 ```
 
@@ -96,14 +104,18 @@ Returns all registered webhooks
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.webhook.list_unified_webhooks(request={})
 
-res = s.webhook.list_unified_webhooks(request={})
-
-if res.webhooks is not None:
-    # handle response
-    pass
+    if res.webhooks is not None:
+        # handle response
+        pass
 
 ```
 
@@ -132,16 +144,20 @@ Update webhook subscription
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.webhook.patch_unified_webhook(request={
+        "id": "<id>",
+    })
 
-res = s.webhook.patch_unified_webhook(request={
-    "id": "<id>",
-})
-
-if res.webhook is not None:
-    # handle response
-    pass
+    if res.webhook is not None:
+        # handle response
+        pass
 
 ```
 
@@ -170,16 +186,20 @@ Trigger webhook
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.webhook.patch_unified_webhook_trigger(request={
+        "id": "<id>",
+    })
 
-res = s.webhook.patch_unified_webhook_trigger(request={
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -208,16 +228,20 @@ Remove webhook subscription
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.webhook.remove_unified_webhook(request={
+        "id": "<id>",
+    })
 
-res = s.webhook.remove_unified_webhook(request={
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -246,16 +270,20 @@ Update webhook subscription
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.webhook.update_unified_webhook(request={
+        "id": "<id>",
+    })
 
-res = s.webhook.update_unified_webhook(request={
-    "id": "<id>",
-})
-
-if res.webhook is not None:
-    # handle response
-    pass
+    if res.webhook is not None:
+        # handle response
+        pass
 
 ```
 
@@ -284,16 +312,20 @@ Trigger webhook
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.webhook.update_unified_webhook_trigger(request={
+        "id": "<id>",
+    })
 
-res = s.webhook.update_unified_webhook_trigger(request={
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 

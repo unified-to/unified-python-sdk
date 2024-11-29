@@ -20,16 +20,20 @@ Create a deal
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.deal.create_crm_deal(request={
+        "connection_id": "<value>",
+    })
 
-res = s.deal.create_crm_deal(request={
-    "connection_id": "<value>",
-})
-
-if res.crm_deal is not None:
-    # handle response
-    pass
+    if res.crm_deal is not None:
+        # handle response
+        pass
 
 ```
 
@@ -58,17 +62,21 @@ Retrieve a deal
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.deal.get_crm_deal(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.deal.get_crm_deal(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.crm_deal is not None:
-    # handle response
-    pass
+    if res.crm_deal is not None:
+        # handle response
+        pass
 
 ```
 
@@ -97,16 +105,20 @@ List all deals
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.deal.list_crm_deals(request={
+        "connection_id": "<value>",
+    })
 
-res = s.deal.list_crm_deals(request={
-    "connection_id": "<value>",
-})
-
-if res.crm_deals is not None:
-    # handle response
-    pass
+    if res.crm_deals is not None:
+        # handle response
+        pass
 
 ```
 
@@ -135,17 +147,21 @@ Update a deal
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.deal.patch_crm_deal(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.deal.patch_crm_deal(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.crm_deal is not None:
-    # handle response
-    pass
+    if res.crm_deal is not None:
+        # handle response
+        pass
 
 ```
 
@@ -174,17 +190,21 @@ Remove a deal
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.deal.remove_crm_deal(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.deal.remove_crm_deal(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -213,17 +233,21 @@ Update a deal
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.deal.update_crm_deal(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.deal.update_crm_deal(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.crm_deal is not None:
-    # handle response
-    pass
+    if res.crm_deal is not None:
+        # handle response
+        pass
 
 ```
 

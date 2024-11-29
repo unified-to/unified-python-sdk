@@ -44,16 +44,20 @@ Create a collection
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.commerce.create_commerce_collection(request={
+        "connection_id": "<value>",
+    })
 
-res = s.commerce.create_commerce_collection(request={
-    "connection_id": "<value>",
-})
-
-if res.commerce_collection is not None:
-    # handle response
-    pass
+    if res.commerce_collection is not None:
+        # handle response
+        pass
 
 ```
 
@@ -82,16 +86,20 @@ Create an inventory
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.commerce.create_commerce_inventory(request={
+        "connection_id": "<value>",
+    })
 
-res = s.commerce.create_commerce_inventory(request={
-    "connection_id": "<value>",
-})
-
-if res.commerce_inventory is not None:
-    # handle response
-    pass
+    if res.commerce_inventory is not None:
+        # handle response
+        pass
 
 ```
 
@@ -120,16 +128,20 @@ Create an item
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.commerce.create_commerce_item(request={
+        "connection_id": "<value>",
+    })
 
-res = s.commerce.create_commerce_item(request={
-    "connection_id": "<value>",
-})
-
-if res.commerce_item is not None:
-    # handle response
-    pass
+    if res.commerce_item is not None:
+        # handle response
+        pass
 
 ```
 
@@ -158,16 +170,20 @@ Create a location
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.commerce.create_commerce_location(request={
+        "connection_id": "<value>",
+    })
 
-res = s.commerce.create_commerce_location(request={
-    "connection_id": "<value>",
-})
-
-if res.commerce_location is not None:
-    # handle response
-    pass
+    if res.commerce_location is not None:
+        # handle response
+        pass
 
 ```
 
@@ -196,16 +212,20 @@ Create a metadata
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.commerce.create_commerce_metadata(request={
+        "connection_id": "<id>",
+    })
 
-res = s.commerce.create_commerce_metadata(request={
-    "connection_id": "<id>",
-})
-
-if res.commerce_metadata is not None:
-    # handle response
-    pass
+    if res.commerce_metadata is not None:
+        # handle response
+        pass
 
 ```
 
@@ -234,17 +254,21 @@ Retrieve a collection
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.commerce.get_commerce_collection(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.commerce.get_commerce_collection(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.commerce_collection is not None:
-    # handle response
-    pass
+    if res.commerce_collection is not None:
+        # handle response
+        pass
 
 ```
 
@@ -273,17 +297,21 @@ Retrieve an inventory
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.commerce.get_commerce_inventory(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.commerce.get_commerce_inventory(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.commerce_inventory is not None:
-    # handle response
-    pass
+    if res.commerce_inventory is not None:
+        # handle response
+        pass
 
 ```
 
@@ -312,17 +340,21 @@ Retrieve an item
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.commerce.get_commerce_item(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.commerce.get_commerce_item(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.commerce_item is not None:
-    # handle response
-    pass
+    if res.commerce_item is not None:
+        # handle response
+        pass
 
 ```
 
@@ -351,17 +383,21 @@ Retrieve a location
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.commerce.get_commerce_location(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.commerce.get_commerce_location(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.commerce_location is not None:
-    # handle response
-    pass
+    if res.commerce_location is not None:
+        # handle response
+        pass
 
 ```
 
@@ -390,17 +426,21 @@ Retrieve a metadata
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.commerce.get_commerce_metadata(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
 
-res = s.commerce.get_commerce_metadata(request={
-    "connection_id": "<id>",
-    "id": "<id>",
-})
-
-if res.commerce_metadata is not None:
-    # handle response
-    pass
+    if res.commerce_metadata is not None:
+        # handle response
+        pass
 
 ```
 
@@ -429,16 +469,20 @@ List all collections
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.commerce.list_commerce_collections(request={
+        "connection_id": "<value>",
+    })
 
-res = s.commerce.list_commerce_collections(request={
-    "connection_id": "<value>",
-})
-
-if res.commerce_collections is not None:
-    # handle response
-    pass
+    if res.commerce_collections is not None:
+        # handle response
+        pass
 
 ```
 
@@ -467,16 +511,20 @@ List all inventories
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.commerce.list_commerce_inventories(request={
+        "connection_id": "<value>",
+    })
 
-res = s.commerce.list_commerce_inventories(request={
-    "connection_id": "<value>",
-})
-
-if res.commerce_inventories is not None:
-    # handle response
-    pass
+    if res.commerce_inventories is not None:
+        # handle response
+        pass
 
 ```
 
@@ -505,16 +553,20 @@ List all items
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.commerce.list_commerce_items(request={
+        "connection_id": "<value>",
+    })
 
-res = s.commerce.list_commerce_items(request={
-    "connection_id": "<value>",
-})
-
-if res.commerce_items is not None:
-    # handle response
-    pass
+    if res.commerce_items is not None:
+        # handle response
+        pass
 
 ```
 
@@ -543,16 +595,20 @@ List all locations
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.commerce.list_commerce_locations(request={
+        "connection_id": "<value>",
+    })
 
-res = s.commerce.list_commerce_locations(request={
-    "connection_id": "<value>",
-})
-
-if res.commerce_locations is not None:
-    # handle response
-    pass
+    if res.commerce_locations is not None:
+        # handle response
+        pass
 
 ```
 
@@ -581,16 +637,20 @@ List all metadatas
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.commerce.list_commerce_metadatas(request={
+        "connection_id": "<id>",
+    })
 
-res = s.commerce.list_commerce_metadatas(request={
-    "connection_id": "<id>",
-})
-
-if res.commerce_metadatas is not None:
-    # handle response
-    pass
+    if res.commerce_metadatas is not None:
+        # handle response
+        pass
 
 ```
 
@@ -619,17 +679,21 @@ Update a collection
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.commerce.patch_commerce_collection(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.commerce.patch_commerce_collection(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.commerce_collection is not None:
-    # handle response
-    pass
+    if res.commerce_collection is not None:
+        # handle response
+        pass
 
 ```
 
@@ -658,17 +722,21 @@ Update an inventory
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.commerce.patch_commerce_inventory(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.commerce.patch_commerce_inventory(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.commerce_inventory is not None:
-    # handle response
-    pass
+    if res.commerce_inventory is not None:
+        # handle response
+        pass
 
 ```
 
@@ -697,17 +765,21 @@ Update an item
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.commerce.patch_commerce_item(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.commerce.patch_commerce_item(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.commerce_item is not None:
-    # handle response
-    pass
+    if res.commerce_item is not None:
+        # handle response
+        pass
 
 ```
 
@@ -736,17 +808,21 @@ Update a location
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.commerce.patch_commerce_location(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.commerce.patch_commerce_location(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.commerce_location is not None:
-    # handle response
-    pass
+    if res.commerce_location is not None:
+        # handle response
+        pass
 
 ```
 
@@ -775,17 +851,21 @@ Update a metadata
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.commerce.patch_commerce_metadata(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
 
-res = s.commerce.patch_commerce_metadata(request={
-    "connection_id": "<id>",
-    "id": "<id>",
-})
-
-if res.commerce_metadata is not None:
-    # handle response
-    pass
+    if res.commerce_metadata is not None:
+        # handle response
+        pass
 
 ```
 
@@ -814,17 +894,21 @@ Remove a collection
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.commerce.remove_commerce_collection(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.commerce.remove_commerce_collection(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -853,17 +937,21 @@ Remove an inventory
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.commerce.remove_commerce_inventory(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.commerce.remove_commerce_inventory(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -892,17 +980,21 @@ Remove an item
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.commerce.remove_commerce_item(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.commerce.remove_commerce_item(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -931,17 +1023,21 @@ Remove a location
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.commerce.remove_commerce_location(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.commerce.remove_commerce_location(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -970,17 +1066,21 @@ Remove a metadata
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.commerce.remove_commerce_metadata(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
 
-res = s.commerce.remove_commerce_metadata(request={
-    "connection_id": "<id>",
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -1009,17 +1109,21 @@ Update a collection
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.commerce.update_commerce_collection(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.commerce.update_commerce_collection(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.commerce_collection is not None:
-    # handle response
-    pass
+    if res.commerce_collection is not None:
+        # handle response
+        pass
 
 ```
 
@@ -1048,17 +1152,21 @@ Update an inventory
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.commerce.update_commerce_inventory(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.commerce.update_commerce_inventory(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.commerce_inventory is not None:
-    # handle response
-    pass
+    if res.commerce_inventory is not None:
+        # handle response
+        pass
 
 ```
 
@@ -1087,17 +1195,21 @@ Update an item
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.commerce.update_commerce_item(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.commerce.update_commerce_item(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.commerce_item is not None:
-    # handle response
-    pass
+    if res.commerce_item is not None:
+        # handle response
+        pass
 
 ```
 
@@ -1126,17 +1238,21 @@ Update a location
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.commerce.update_commerce_location(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.commerce.update_commerce_location(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.commerce_location is not None:
-    # handle response
-    pass
+    if res.commerce_location is not None:
+        # handle response
+        pass
 
 ```
 
@@ -1165,17 +1281,21 @@ Update a metadata
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.commerce.update_commerce_metadata(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
 
-res = s.commerce.update_commerce_metadata(request={
-    "connection_id": "<id>",
-    "id": "<id>",
-})
-
-if res.commerce_metadata is not None:
-    # handle response
-    pass
+    if res.commerce_metadata is not None:
+        # handle response
+        pass
 
 ```
 

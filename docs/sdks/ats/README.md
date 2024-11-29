@@ -59,16 +59,20 @@ Create an activity
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.ats.create_ats_activity(request={
+        "connection_id": "<value>",
+    })
 
-res = s.ats.create_ats_activity(request={
-    "connection_id": "<value>",
-})
-
-if res.ats_activity is not None:
-    # handle response
-    pass
+    if res.ats_activity is not None:
+        # handle response
+        pass
 
 ```
 
@@ -97,16 +101,20 @@ Create an application
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.ats.create_ats_application(request={
+        "connection_id": "<value>",
+    })
 
-res = s.ats.create_ats_application(request={
-    "connection_id": "<value>",
-})
-
-if res.ats_application is not None:
-    # handle response
-    pass
+    if res.ats_application is not None:
+        # handle response
+        pass
 
 ```
 
@@ -135,16 +143,20 @@ Create a candidate
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.ats.create_ats_candidate(request={
+        "connection_id": "<value>",
+    })
 
-res = s.ats.create_ats_candidate(request={
-    "connection_id": "<value>",
-})
-
-if res.ats_candidate is not None:
-    # handle response
-    pass
+    if res.ats_candidate is not None:
+        # handle response
+        pass
 
 ```
 
@@ -173,16 +185,20 @@ Create a document
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.ats.create_ats_document(request={
+        "connection_id": "<value>",
+    })
 
-res = s.ats.create_ats_document(request={
-    "connection_id": "<value>",
-})
-
-if res.ats_document is not None:
-    # handle response
-    pass
+    if res.ats_document is not None:
+        # handle response
+        pass
 
 ```
 
@@ -211,16 +227,20 @@ Create an interview
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.ats.create_ats_interview(request={
+        "connection_id": "<value>",
+    })
 
-res = s.ats.create_ats_interview(request={
-    "connection_id": "<value>",
-})
-
-if res.ats_interview is not None:
-    # handle response
-    pass
+    if res.ats_interview is not None:
+        # handle response
+        pass
 
 ```
 
@@ -249,16 +269,20 @@ Create a job
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.ats.create_ats_job(request={
+        "connection_id": "<value>",
+    })
 
-res = s.ats.create_ats_job(request={
-    "connection_id": "<value>",
-})
-
-if res.ats_job is not None:
-    # handle response
-    pass
+    if res.ats_job is not None:
+        # handle response
+        pass
 
 ```
 
@@ -287,16 +311,20 @@ Create a scorecard
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.ats.create_ats_scorecard(request={
+        "connection_id": "<value>",
+    })
 
-res = s.ats.create_ats_scorecard(request={
-    "connection_id": "<value>",
-})
-
-if res.ats_scorecard is not None:
-    # handle response
-    pass
+    if res.ats_scorecard is not None:
+        # handle response
+        pass
 
 ```
 
@@ -325,17 +353,21 @@ Retrieve an activity
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.ats.get_ats_activity(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.ats.get_ats_activity(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.ats_activity is not None:
-    # handle response
-    pass
+    if res.ats_activity is not None:
+        # handle response
+        pass
 
 ```
 
@@ -364,17 +396,21 @@ Retrieve an application
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.ats.get_ats_application(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.ats.get_ats_application(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.ats_application is not None:
-    # handle response
-    pass
+    if res.ats_application is not None:
+        # handle response
+        pass
 
 ```
 
@@ -403,17 +439,21 @@ Retrieve a candidate
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.ats.get_ats_candidate(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.ats.get_ats_candidate(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.ats_candidate is not None:
-    # handle response
-    pass
+    if res.ats_candidate is not None:
+        # handle response
+        pass
 
 ```
 
@@ -442,17 +482,21 @@ Retrieve a company
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.ats.get_ats_company(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.ats.get_ats_company(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.ats_company is not None:
-    # handle response
-    pass
+    if res.ats_company is not None:
+        # handle response
+        pass
 
 ```
 
@@ -481,17 +525,21 @@ Retrieve a document
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.ats.get_ats_document(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.ats.get_ats_document(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.ats_document is not None:
-    # handle response
-    pass
+    if res.ats_document is not None:
+        # handle response
+        pass
 
 ```
 
@@ -520,17 +568,21 @@ Retrieve an interview
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.ats.get_ats_interview(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.ats.get_ats_interview(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.ats_interview is not None:
-    # handle response
-    pass
+    if res.ats_interview is not None:
+        # handle response
+        pass
 
 ```
 
@@ -559,17 +611,21 @@ Retrieve a job
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.ats.get_ats_job(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.ats.get_ats_job(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.ats_job is not None:
-    # handle response
-    pass
+    if res.ats_job is not None:
+        # handle response
+        pass
 
 ```
 
@@ -598,17 +654,21 @@ Retrieve a scorecard
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.ats.get_ats_scorecard(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.ats.get_ats_scorecard(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.ats_scorecard is not None:
-    # handle response
-    pass
+    if res.ats_scorecard is not None:
+        # handle response
+        pass
 
 ```
 
@@ -637,16 +697,20 @@ List all activities
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.ats.list_ats_activities(request={
+        "connection_id": "<value>",
+    })
 
-res = s.ats.list_ats_activities(request={
-    "connection_id": "<value>",
-})
-
-if res.ats_activities is not None:
-    # handle response
-    pass
+    if res.ats_activities is not None:
+        # handle response
+        pass
 
 ```
 
@@ -675,16 +739,20 @@ List all applications
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.ats.list_ats_applications(request={
+        "connection_id": "<value>",
+    })
 
-res = s.ats.list_ats_applications(request={
-    "connection_id": "<value>",
-})
-
-if res.ats_applications is not None:
-    # handle response
-    pass
+    if res.ats_applications is not None:
+        # handle response
+        pass
 
 ```
 
@@ -713,16 +781,20 @@ List all applicationstatuses
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.ats.list_ats_applicationstatuses(request={
+        "connection_id": "<value>",
+    })
 
-res = s.ats.list_ats_applicationstatuses(request={
-    "connection_id": "<value>",
-})
-
-if res.ats_statuses is not None:
-    # handle response
-    pass
+    if res.ats_statuses is not None:
+        # handle response
+        pass
 
 ```
 
@@ -751,16 +823,20 @@ List all candidates
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.ats.list_ats_candidates(request={
+        "connection_id": "<value>",
+    })
 
-res = s.ats.list_ats_candidates(request={
-    "connection_id": "<value>",
-})
-
-if res.ats_candidates is not None:
-    # handle response
-    pass
+    if res.ats_candidates is not None:
+        # handle response
+        pass
 
 ```
 
@@ -789,16 +865,20 @@ List all companies
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.ats.list_ats_companies(request={
+        "connection_id": "<value>",
+    })
 
-res = s.ats.list_ats_companies(request={
-    "connection_id": "<value>",
-})
-
-if res.ats_companies is not None:
-    # handle response
-    pass
+    if res.ats_companies is not None:
+        # handle response
+        pass
 
 ```
 
@@ -827,16 +907,20 @@ List all documents
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.ats.list_ats_documents(request={
+        "connection_id": "<value>",
+    })
 
-res = s.ats.list_ats_documents(request={
-    "connection_id": "<value>",
-})
-
-if res.ats_documents is not None:
-    # handle response
-    pass
+    if res.ats_documents is not None:
+        # handle response
+        pass
 
 ```
 
@@ -865,16 +949,20 @@ List all interviews
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.ats.list_ats_interviews(request={
+        "connection_id": "<value>",
+    })
 
-res = s.ats.list_ats_interviews(request={
-    "connection_id": "<value>",
-})
-
-if res.ats_interviews is not None:
-    # handle response
-    pass
+    if res.ats_interviews is not None:
+        # handle response
+        pass
 
 ```
 
@@ -903,16 +991,20 @@ List all jobs
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.ats.list_ats_jobs(request={
+        "connection_id": "<value>",
+    })
 
-res = s.ats.list_ats_jobs(request={
-    "connection_id": "<value>",
-})
-
-if res.ats_jobs is not None:
-    # handle response
-    pass
+    if res.ats_jobs is not None:
+        # handle response
+        pass
 
 ```
 
@@ -941,16 +1033,20 @@ List all scorecards
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.ats.list_ats_scorecards(request={
+        "connection_id": "<value>",
+    })
 
-res = s.ats.list_ats_scorecards(request={
-    "connection_id": "<value>",
-})
-
-if res.ats_scorecards is not None:
-    # handle response
-    pass
+    if res.ats_scorecards is not None:
+        # handle response
+        pass
 
 ```
 
@@ -979,17 +1075,21 @@ Update an activity
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.ats.patch_ats_activity(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.ats.patch_ats_activity(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.ats_activity is not None:
-    # handle response
-    pass
+    if res.ats_activity is not None:
+        # handle response
+        pass
 
 ```
 
@@ -1018,17 +1118,21 @@ Update an application
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.ats.patch_ats_application(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.ats.patch_ats_application(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.ats_application is not None:
-    # handle response
-    pass
+    if res.ats_application is not None:
+        # handle response
+        pass
 
 ```
 
@@ -1057,17 +1161,21 @@ Update a candidate
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.ats.patch_ats_candidate(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.ats.patch_ats_candidate(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.ats_candidate is not None:
-    # handle response
-    pass
+    if res.ats_candidate is not None:
+        # handle response
+        pass
 
 ```
 
@@ -1096,17 +1204,21 @@ Update a document
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.ats.patch_ats_document(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.ats.patch_ats_document(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.ats_document is not None:
-    # handle response
-    pass
+    if res.ats_document is not None:
+        # handle response
+        pass
 
 ```
 
@@ -1135,17 +1247,21 @@ Update an interview
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.ats.patch_ats_interview(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.ats.patch_ats_interview(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.ats_interview is not None:
-    # handle response
-    pass
+    if res.ats_interview is not None:
+        # handle response
+        pass
 
 ```
 
@@ -1174,17 +1290,21 @@ Update a job
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.ats.patch_ats_job(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.ats.patch_ats_job(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.ats_job is not None:
-    # handle response
-    pass
+    if res.ats_job is not None:
+        # handle response
+        pass
 
 ```
 
@@ -1213,17 +1333,21 @@ Update a scorecard
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.ats.patch_ats_scorecard(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.ats.patch_ats_scorecard(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.ats_scorecard is not None:
-    # handle response
-    pass
+    if res.ats_scorecard is not None:
+        # handle response
+        pass
 
 ```
 
@@ -1252,17 +1376,21 @@ Remove an activity
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.ats.remove_ats_activity(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.ats.remove_ats_activity(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -1291,17 +1419,21 @@ Remove an application
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.ats.remove_ats_application(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.ats.remove_ats_application(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -1330,17 +1462,21 @@ Remove a candidate
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.ats.remove_ats_candidate(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.ats.remove_ats_candidate(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -1369,17 +1505,21 @@ Remove a document
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.ats.remove_ats_document(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.ats.remove_ats_document(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -1408,17 +1548,21 @@ Remove an interview
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.ats.remove_ats_interview(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.ats.remove_ats_interview(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -1447,17 +1591,21 @@ Remove a job
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.ats.remove_ats_job(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.ats.remove_ats_job(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -1486,17 +1634,21 @@ Remove a scorecard
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.ats.remove_ats_scorecard(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.ats.remove_ats_scorecard(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -1525,17 +1677,21 @@ Update an activity
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.ats.update_ats_activity(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.ats.update_ats_activity(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.ats_activity is not None:
-    # handle response
-    pass
+    if res.ats_activity is not None:
+        # handle response
+        pass
 
 ```
 
@@ -1564,17 +1720,21 @@ Update an application
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.ats.update_ats_application(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.ats.update_ats_application(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.ats_application is not None:
-    # handle response
-    pass
+    if res.ats_application is not None:
+        # handle response
+        pass
 
 ```
 
@@ -1603,17 +1763,21 @@ Update a candidate
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.ats.update_ats_candidate(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.ats.update_ats_candidate(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.ats_candidate is not None:
-    # handle response
-    pass
+    if res.ats_candidate is not None:
+        # handle response
+        pass
 
 ```
 
@@ -1642,17 +1806,21 @@ Update a document
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.ats.update_ats_document(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.ats.update_ats_document(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.ats_document is not None:
-    # handle response
-    pass
+    if res.ats_document is not None:
+        # handle response
+        pass
 
 ```
 
@@ -1681,17 +1849,21 @@ Update an interview
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.ats.update_ats_interview(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.ats.update_ats_interview(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.ats_interview is not None:
-    # handle response
-    pass
+    if res.ats_interview is not None:
+        # handle response
+        pass
 
 ```
 
@@ -1720,17 +1892,21 @@ Update a job
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.ats.update_ats_job(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.ats.update_ats_job(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.ats_job is not None:
-    # handle response
-    pass
+    if res.ats_job is not None:
+        # handle response
+        pass
 
 ```
 
@@ -1759,17 +1935,21 @@ Update a scorecard
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.ats.update_ats_scorecard(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.ats.update_ats_scorecard(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.ats_scorecard is not None:
-    # handle response
-    pass
+    if res.ats_scorecard is not None:
+        # handle response
+        pass
 
 ```
 

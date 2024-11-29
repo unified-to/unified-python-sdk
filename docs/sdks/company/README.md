@@ -29,16 +29,20 @@ Create a company
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.company.create_crm_company(request={
+        "connection_id": "<value>",
+    })
 
-res = s.company.create_crm_company(request={
-    "connection_id": "<value>",
-})
-
-if res.crm_company is not None:
-    # handle response
-    pass
+    if res.crm_company is not None:
+        # handle response
+        pass
 
 ```
 
@@ -67,16 +71,20 @@ Create a company
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.company.create_hris_company(request={
+        "connection_id": "<value>",
+    })
 
-res = s.company.create_hris_company(request={
-    "connection_id": "<value>",
-})
-
-if res.hris_company is not None:
-    # handle response
-    pass
+    if res.hris_company is not None:
+        # handle response
+        pass
 
 ```
 
@@ -105,17 +113,21 @@ Retrieve a company
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.company.get_ats_company(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.company.get_ats_company(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.ats_company is not None:
-    # handle response
-    pass
+    if res.ats_company is not None:
+        # handle response
+        pass
 
 ```
 
@@ -144,17 +156,21 @@ Retrieve a company
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.company.get_crm_company(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.company.get_crm_company(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.crm_company is not None:
-    # handle response
-    pass
+    if res.crm_company is not None:
+        # handle response
+        pass
 
 ```
 
@@ -183,17 +199,21 @@ Retrieve a company
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.company.get_hris_company(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.company.get_hris_company(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.hris_company is not None:
-    # handle response
-    pass
+    if res.hris_company is not None:
+        # handle response
+        pass
 
 ```
 
@@ -222,16 +242,20 @@ List all companies
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.company.list_ats_companies(request={
+        "connection_id": "<value>",
+    })
 
-res = s.company.list_ats_companies(request={
-    "connection_id": "<value>",
-})
-
-if res.ats_companies is not None:
-    # handle response
-    pass
+    if res.ats_companies is not None:
+        # handle response
+        pass
 
 ```
 
@@ -260,16 +284,20 @@ List all companies
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.company.list_crm_companies(request={
+        "connection_id": "<value>",
+    })
 
-res = s.company.list_crm_companies(request={
-    "connection_id": "<value>",
-})
-
-if res.crm_companies is not None:
-    # handle response
-    pass
+    if res.crm_companies is not None:
+        # handle response
+        pass
 
 ```
 
@@ -298,16 +326,20 @@ Retrieve enrichment information for a company
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.company.list_enrich_companies(request={
+        "connection_id": "<value>",
+    })
 
-res = s.company.list_enrich_companies(request={
-    "connection_id": "<value>",
-})
-
-if res.enrich_company is not None:
-    # handle response
-    pass
+    if res.enrich_company is not None:
+        # handle response
+        pass
 
 ```
 
@@ -336,16 +368,20 @@ List all companies
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.company.list_hris_companies(request={
+        "connection_id": "<value>",
+    })
 
-res = s.company.list_hris_companies(request={
-    "connection_id": "<value>",
-})
-
-if res.hris_companies is not None:
-    # handle response
-    pass
+    if res.hris_companies is not None:
+        # handle response
+        pass
 
 ```
 
@@ -374,17 +410,21 @@ Update a company
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.company.patch_crm_company(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.company.patch_crm_company(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.crm_company is not None:
-    # handle response
-    pass
+    if res.crm_company is not None:
+        # handle response
+        pass
 
 ```
 
@@ -413,17 +453,21 @@ Update a company
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.company.patch_hris_company(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.company.patch_hris_company(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.hris_company is not None:
-    # handle response
-    pass
+    if res.hris_company is not None:
+        # handle response
+        pass
 
 ```
 
@@ -452,17 +496,21 @@ Remove a company
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.company.remove_crm_company(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.company.remove_crm_company(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -491,17 +539,21 @@ Remove a company
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.company.remove_hris_company(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.company.remove_hris_company(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -530,17 +582,21 @@ Update a company
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.company.update_crm_company(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.company.update_crm_company(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.crm_company is not None:
-    # handle response
-    pass
+    if res.crm_company is not None:
+        # handle response
+        pass
 
 ```
 
@@ -569,17 +625,21 @@ Update a company
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.company.update_hris_company(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.company.update_hris_company(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.hris_company is not None:
-    # handle response
-    pass
+    if res.hris_company is not None:
+        # handle response
+        pass
 
 ```
 

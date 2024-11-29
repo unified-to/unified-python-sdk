@@ -20,16 +20,20 @@ Create user
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.user.create_scim_users(request={
+        "connection_id": "<id>",
+    })
 
-res = s.user.create_scim_users(request={
-    "connection_id": "<id>",
-})
-
-if res.scim_user is not None:
-    # handle response
-    pass
+    if res.scim_user is not None:
+        # handle response
+        pass
 
 ```
 
@@ -58,17 +62,21 @@ Get user
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.user.get_scim_users(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
 
-res = s.user.get_scim_users(request={
-    "connection_id": "<id>",
-    "id": "<id>",
-})
-
-if res.scim_user is not None:
-    # handle response
-    pass
+    if res.scim_user is not None:
+        # handle response
+        pass
 
 ```
 
@@ -97,16 +105,20 @@ List users
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.user.list_scim_users(request={
+        "connection_id": "<id>",
+    })
 
-res = s.user.list_scim_users(request={
-    "connection_id": "<id>",
-})
-
-if res.scim_users is not None:
-    # handle response
-    pass
+    if res.scim_users is not None:
+        # handle response
+        pass
 
 ```
 
@@ -135,17 +147,21 @@ Update user
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.user.patch_scim_users(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
 
-res = s.user.patch_scim_users(request={
-    "connection_id": "<id>",
-    "id": "<id>",
-})
-
-if res.scim_user is not None:
-    # handle response
-    pass
+    if res.scim_user is not None:
+        # handle response
+        pass
 
 ```
 
@@ -174,17 +190,21 @@ Delete user
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.user.remove_scim_users(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
 
-res = s.user.remove_scim_users(request={
-    "connection_id": "<id>",
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -213,17 +233,21 @@ Update user
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.user.update_scim_users(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
 
-res = s.user.update_scim_users(request={
-    "connection_id": "<id>",
-    "id": "<id>",
-})
-
-if res.scim_user is not None:
-    # handle response
-    pass
+    if res.scim_user is not None:
+        # handle response
+        pass
 
 ```
 

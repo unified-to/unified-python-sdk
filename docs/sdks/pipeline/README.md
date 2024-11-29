@@ -20,16 +20,20 @@ Create a pipeline
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.pipeline.create_crm_pipeline(request={
+        "connection_id": "<value>",
+    })
 
-res = s.pipeline.create_crm_pipeline(request={
-    "connection_id": "<value>",
-})
-
-if res.crm_pipeline is not None:
-    # handle response
-    pass
+    if res.crm_pipeline is not None:
+        # handle response
+        pass
 
 ```
 
@@ -58,17 +62,21 @@ Retrieve a pipeline
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.pipeline.get_crm_pipeline(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.pipeline.get_crm_pipeline(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.crm_pipeline is not None:
-    # handle response
-    pass
+    if res.crm_pipeline is not None:
+        # handle response
+        pass
 
 ```
 
@@ -97,16 +105,20 @@ List all pipelines
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.pipeline.list_crm_pipelines(request={
+        "connection_id": "<value>",
+    })
 
-res = s.pipeline.list_crm_pipelines(request={
-    "connection_id": "<value>",
-})
-
-if res.crm_pipelines is not None:
-    # handle response
-    pass
+    if res.crm_pipelines is not None:
+        # handle response
+        pass
 
 ```
 
@@ -135,17 +147,21 @@ Update a pipeline
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.pipeline.patch_crm_pipeline(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.pipeline.patch_crm_pipeline(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.crm_pipeline is not None:
-    # handle response
-    pass
+    if res.crm_pipeline is not None:
+        # handle response
+        pass
 
 ```
 
@@ -174,17 +190,21 @@ Remove a pipeline
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.pipeline.remove_crm_pipeline(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.pipeline.remove_crm_pipeline(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -213,17 +233,21 @@ Update a pipeline
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.pipeline.update_crm_pipeline(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.pipeline.update_crm_pipeline(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.crm_pipeline is not None:
-    # handle response
-    pass
+    if res.crm_pipeline is not None:
+        # handle response
+        pass
 
 ```
 

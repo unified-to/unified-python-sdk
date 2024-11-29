@@ -20,16 +20,20 @@ Create a commit
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.commit.create_repo_commit(request={
+        "connection_id": "<id>",
+    })
 
-res = s.commit.create_repo_commit(request={
-    "connection_id": "<id>",
-})
-
-if res.repo_commit is not None:
-    # handle response
-    pass
+    if res.repo_commit is not None:
+        # handle response
+        pass
 
 ```
 
@@ -58,17 +62,21 @@ Retrieve a commit
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.commit.get_repo_commit(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
 
-res = s.commit.get_repo_commit(request={
-    "connection_id": "<id>",
-    "id": "<id>",
-})
-
-if res.repo_commit is not None:
-    # handle response
-    pass
+    if res.repo_commit is not None:
+        # handle response
+        pass
 
 ```
 
@@ -97,16 +105,20 @@ List all commits
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.commit.list_repo_commits(request={
+        "connection_id": "<id>",
+    })
 
-res = s.commit.list_repo_commits(request={
-    "connection_id": "<id>",
-})
-
-if res.repo_commits is not None:
-    # handle response
-    pass
+    if res.repo_commits is not None:
+        # handle response
+        pass
 
 ```
 
@@ -135,17 +147,21 @@ Update a commit
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.commit.patch_repo_commit(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
 
-res = s.commit.patch_repo_commit(request={
-    "connection_id": "<id>",
-    "id": "<id>",
-})
-
-if res.repo_commit is not None:
-    # handle response
-    pass
+    if res.repo_commit is not None:
+        # handle response
+        pass
 
 ```
 
@@ -174,17 +190,21 @@ Remove a commit
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.commit.remove_repo_commit(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
 
-res = s.commit.remove_repo_commit(request={
-    "connection_id": "<id>",
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -213,17 +233,21 @@ Update a commit
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.commit.update_repo_commit(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
 
-res = s.commit.update_repo_commit(request={
-    "connection_id": "<id>",
-    "id": "<id>",
-})
-
-if res.repo_commit is not None:
-    # handle response
-    pass
+    if res.repo_commit is not None:
+        # handle response
+        pass
 
 ```
 

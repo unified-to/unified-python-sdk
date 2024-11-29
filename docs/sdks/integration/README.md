@@ -17,17 +17,21 @@ Returns an authorization URL for the specified integration.  Once a successful a
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.integration.get_unified_integration_auth(request={
+        "integration_type": "<value>",
+        "workspace_id": "<value>",
+    })
 
-res = s.integration.get_unified_integration_auth(request={
-    "integration_type": "<value>",
-    "workspace_id": "<value>",
-})
-
-if res.res is not None:
-    # handle response
-    pass
+    if res.res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -56,16 +60,20 @@ No authentication required as this is to be used by front-end interface
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.integration.list_unified_integration_workspaces(request={
+        "workspace_id": "<value>",
+    })
 
-res = s.integration.list_unified_integration_workspaces(request={
-    "workspace_id": "<value>",
-})
-
-if res.integrations is not None:
-    # handle response
-    pass
+    if res.integrations is not None:
+        # handle response
+        pass
 
 ```
 
@@ -94,14 +102,18 @@ Returns all integrations
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.integration.list_unified_integrations(request={})
 
-res = s.integration.list_unified_integrations(request={})
-
-if res.integrations is not None:
-    # handle response
-    pass
+    if res.integrations is not None:
+        # handle response
+        pass
 
 ```
 

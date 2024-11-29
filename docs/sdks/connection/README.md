@@ -20,14 +20,18 @@ Used only to import existing customer credentials; use "Create connection indire
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.connection.create_unified_connection()
 
-res = s.connection.create_unified_connection()
-
-if res.connection is not None:
-    # handle response
-    pass
+    if res.connection is not None:
+        # handle response
+        pass
 
 ```
 
@@ -56,16 +60,20 @@ Retrieve connection
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.connection.get_unified_connection(request={
+        "id": "<id>",
+    })
 
-res = s.connection.get_unified_connection(request={
-    "id": "<id>",
-})
-
-if res.connection is not None:
-    # handle response
-    pass
+    if res.connection is not None:
+        # handle response
+        pass
 
 ```
 
@@ -94,14 +102,18 @@ List all connections
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.connection.list_unified_connections(request={})
 
-res = s.connection.list_unified_connections(request={})
-
-if res.connections is not None:
-    # handle response
-    pass
+    if res.connections is not None:
+        # handle response
+        pass
 
 ```
 
@@ -130,16 +142,20 @@ Update connection
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.connection.patch_unified_connection(request={
+        "id": "<id>",
+    })
 
-res = s.connection.patch_unified_connection(request={
-    "id": "<id>",
-})
-
-if res.connection is not None:
-    # handle response
-    pass
+    if res.connection is not None:
+        # handle response
+        pass
 
 ```
 
@@ -168,16 +184,20 @@ Remove connection
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.connection.remove_unified_connection(request={
+        "id": "<id>",
+    })
 
-res = s.connection.remove_unified_connection(request={
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -206,16 +226,20 @@ Update connection
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.connection.update_unified_connection(request={
+        "id": "<id>",
+    })
 
-res = s.connection.update_unified_connection(request={
-    "id": "<id>",
-})
-
-if res.connection is not None:
-    # handle response
-    pass
+    if res.connection is not None:
+        # handle response
+        pass
 
 ```
 

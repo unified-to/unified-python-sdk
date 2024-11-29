@@ -20,16 +20,20 @@ Create a ticket
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.ticket.create_ticketing_ticket(request={
+        "connection_id": "<value>",
+    })
 
-res = s.ticket.create_ticketing_ticket(request={
-    "connection_id": "<value>",
-})
-
-if res.ticketing_ticket is not None:
-    # handle response
-    pass
+    if res.ticketing_ticket is not None:
+        # handle response
+        pass
 
 ```
 
@@ -58,17 +62,21 @@ Retrieve a ticket
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.ticket.get_ticketing_ticket(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.ticket.get_ticketing_ticket(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.ticketing_ticket is not None:
-    # handle response
-    pass
+    if res.ticketing_ticket is not None:
+        # handle response
+        pass
 
 ```
 
@@ -97,16 +105,20 @@ List all tickets
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.ticket.list_ticketing_tickets(request={
+        "connection_id": "<value>",
+    })
 
-res = s.ticket.list_ticketing_tickets(request={
-    "connection_id": "<value>",
-})
-
-if res.ticketing_tickets is not None:
-    # handle response
-    pass
+    if res.ticketing_tickets is not None:
+        # handle response
+        pass
 
 ```
 
@@ -135,17 +147,21 @@ Update a ticket
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.ticket.patch_ticketing_ticket(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.ticket.patch_ticketing_ticket(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.ticketing_ticket is not None:
-    # handle response
-    pass
+    if res.ticketing_ticket is not None:
+        # handle response
+        pass
 
 ```
 
@@ -174,17 +190,21 @@ Remove a ticket
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.ticket.remove_ticketing_ticket(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.ticket.remove_ticketing_ticket(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -213,17 +233,21 @@ Update a ticket
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.ticket.update_ticketing_ticket(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.ticket.update_ticketing_ticket(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.ticketing_ticket is not None:
-    # handle response
-    pass
+    if res.ticketing_ticket is not None:
+        # handle response
+        pass
 
 ```
 

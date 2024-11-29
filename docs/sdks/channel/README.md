@@ -16,17 +16,21 @@ Retrieve a channel
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.channel.get_messaging_channel(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.channel.get_messaging_channel(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.messaging_channel is not None:
-    # handle response
-    pass
+    if res.messaging_channel is not None:
+        # handle response
+        pass
 
 ```
 
@@ -55,16 +59,20 @@ List all channels
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.channel.list_messaging_channels(request={
+        "connection_id": "<value>",
+    })
 
-res = s.channel.list_messaging_channels(request={
-    "connection_id": "<value>",
-})
-
-if res.messaging_channels is not None:
-    # handle response
-    pass
+    if res.messaging_channels is not None:
+        # handle response
+        pass
 
 ```
 

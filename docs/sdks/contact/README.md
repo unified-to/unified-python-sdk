@@ -32,16 +32,20 @@ Create a contact
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.contact.create_accounting_contact(request={
+        "connection_id": "<value>",
+    })
 
-res = s.contact.create_accounting_contact(request={
-    "connection_id": "<value>",
-})
-
-if res.accounting_contact is not None:
-    # handle response
-    pass
+    if res.accounting_contact is not None:
+        # handle response
+        pass
 
 ```
 
@@ -70,16 +74,20 @@ Create a contact
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.contact.create_crm_contact(request={
+        "connection_id": "<value>",
+    })
 
-res = s.contact.create_crm_contact(request={
-    "connection_id": "<value>",
-})
-
-if res.crm_contact is not None:
-    # handle response
-    pass
+    if res.crm_contact is not None:
+        # handle response
+        pass
 
 ```
 
@@ -108,16 +116,20 @@ Create a contact
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.contact.create_uc_contact(request={
+        "connection_id": "<value>",
+    })
 
-res = s.contact.create_uc_contact(request={
-    "connection_id": "<value>",
-})
-
-if res.uc_contact is not None:
-    # handle response
-    pass
+    if res.uc_contact is not None:
+        # handle response
+        pass
 
 ```
 
@@ -146,17 +158,21 @@ Retrieve a contact
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.contact.get_accounting_contact(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.contact.get_accounting_contact(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.accounting_contact is not None:
-    # handle response
-    pass
+    if res.accounting_contact is not None:
+        # handle response
+        pass
 
 ```
 
@@ -185,17 +201,21 @@ Retrieve a contact
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.contact.get_crm_contact(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.contact.get_crm_contact(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.crm_contact is not None:
-    # handle response
-    pass
+    if res.crm_contact is not None:
+        # handle response
+        pass
 
 ```
 
@@ -224,17 +244,21 @@ Retrieve a contact
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.contact.get_uc_contact(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.contact.get_uc_contact(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.uc_contact is not None:
-    # handle response
-    pass
+    if res.uc_contact is not None:
+        # handle response
+        pass
 
 ```
 
@@ -263,16 +287,20 @@ List all contacts
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.contact.list_accounting_contacts(request={
+        "connection_id": "<value>",
+    })
 
-res = s.contact.list_accounting_contacts(request={
-    "connection_id": "<value>",
-})
-
-if res.accounting_contacts is not None:
-    # handle response
-    pass
+    if res.accounting_contacts is not None:
+        # handle response
+        pass
 
 ```
 
@@ -301,16 +329,20 @@ List all contacts
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.contact.list_crm_contacts(request={
+        "connection_id": "<value>",
+    })
 
-res = s.contact.list_crm_contacts(request={
-    "connection_id": "<value>",
-})
-
-if res.crm_contacts is not None:
-    # handle response
-    pass
+    if res.crm_contacts is not None:
+        # handle response
+        pass
 
 ```
 
@@ -339,16 +371,20 @@ List all contacts
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.contact.list_uc_contacts(request={
+        "connection_id": "<value>",
+    })
 
-res = s.contact.list_uc_contacts(request={
-    "connection_id": "<value>",
-})
-
-if res.uc_contacts is not None:
-    # handle response
-    pass
+    if res.uc_contacts is not None:
+        # handle response
+        pass
 
 ```
 
@@ -377,17 +413,21 @@ Update a contact
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.contact.patch_accounting_contact(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.contact.patch_accounting_contact(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.accounting_contact is not None:
-    # handle response
-    pass
+    if res.accounting_contact is not None:
+        # handle response
+        pass
 
 ```
 
@@ -416,17 +456,21 @@ Update a contact
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.contact.patch_crm_contact(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.contact.patch_crm_contact(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.crm_contact is not None:
-    # handle response
-    pass
+    if res.crm_contact is not None:
+        # handle response
+        pass
 
 ```
 
@@ -455,17 +499,21 @@ Update a contact
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.contact.patch_uc_contact(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.contact.patch_uc_contact(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.uc_contact is not None:
-    # handle response
-    pass
+    if res.uc_contact is not None:
+        # handle response
+        pass
 
 ```
 
@@ -494,17 +542,21 @@ Remove a contact
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.contact.remove_accounting_contact(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.contact.remove_accounting_contact(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -533,17 +585,21 @@ Remove a contact
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.contact.remove_crm_contact(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.contact.remove_crm_contact(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -572,17 +628,21 @@ Remove a contact
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.contact.remove_uc_contact(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.contact.remove_uc_contact(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -611,17 +671,21 @@ Update a contact
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.contact.update_accounting_contact(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.contact.update_accounting_contact(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.accounting_contact is not None:
-    # handle response
-    pass
+    if res.accounting_contact is not None:
+        # handle response
+        pass
 
 ```
 
@@ -650,17 +714,21 @@ Update a contact
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.contact.update_crm_contact(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.contact.update_crm_contact(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.crm_contact is not None:
-    # handle response
-    pass
+    if res.crm_contact is not None:
+        # handle response
+        pass
 
 ```
 
@@ -689,17 +757,21 @@ Update a contact
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.contact.update_uc_contact(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.contact.update_uc_contact(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.uc_contact is not None:
-    # handle response
-    pass
+    if res.uc_contact is not None:
+        # handle response
+        pass
 
 ```
 

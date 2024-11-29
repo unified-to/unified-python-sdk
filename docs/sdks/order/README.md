@@ -20,16 +20,20 @@ Create an order
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.order.create_accounting_order(request={
+        "connection_id": "<id>",
+    })
 
-res = s.order.create_accounting_order(request={
-    "connection_id": "<id>",
-})
-
-if res.accounting_order is not None:
-    # handle response
-    pass
+    if res.accounting_order is not None:
+        # handle response
+        pass
 
 ```
 
@@ -58,17 +62,21 @@ Retrieve an order
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.order.get_accounting_order(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
 
-res = s.order.get_accounting_order(request={
-    "connection_id": "<id>",
-    "id": "<id>",
-})
-
-if res.accounting_order is not None:
-    # handle response
-    pass
+    if res.accounting_order is not None:
+        # handle response
+        pass
 
 ```
 
@@ -97,16 +105,20 @@ List all orders
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.order.list_accounting_orders(request={
+        "connection_id": "<id>",
+    })
 
-res = s.order.list_accounting_orders(request={
-    "connection_id": "<id>",
-})
-
-if res.accounting_orders is not None:
-    # handle response
-    pass
+    if res.accounting_orders is not None:
+        # handle response
+        pass
 
 ```
 
@@ -135,17 +147,21 @@ Update an order
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.order.patch_accounting_order(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
 
-res = s.order.patch_accounting_order(request={
-    "connection_id": "<id>",
-    "id": "<id>",
-})
-
-if res.accounting_order is not None:
-    # handle response
-    pass
+    if res.accounting_order is not None:
+        # handle response
+        pass
 
 ```
 
@@ -174,17 +190,21 @@ Remove an order
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.order.remove_accounting_order(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
 
-res = s.order.remove_accounting_order(request={
-    "connection_id": "<id>",
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -213,17 +233,21 @@ Update an order
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.order.update_accounting_order(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
 
-res = s.order.update_accounting_order(request={
-    "connection_id": "<id>",
-    "id": "<id>",
-})
-
-if res.accounting_order is not None:
-    # handle response
-    pass
+    if res.accounting_order is not None:
+        # handle response
+        pass
 
 ```
 

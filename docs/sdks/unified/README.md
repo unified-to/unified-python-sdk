@@ -34,14 +34,18 @@ Used only to import existing customer credentials; use "Create connection indire
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.unified.create_unified_connection()
 
-res = s.unified.create_unified_connection()
-
-if res.connection is not None:
-    # handle response
-    pass
+    if res.connection is not None:
+        # handle response
+        pass
 
 ```
 
@@ -70,14 +74,18 @@ The data payload received by your server is described at https://docs.unified.to
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.unified.create_unified_webhook(request={})
 
-res = s.unified.create_unified_webhook(request={})
-
-if res.webhook is not None:
-    # handle response
-    pass
+    if res.webhook is not None:
+        # handle response
+        pass
 
 ```
 
@@ -106,16 +114,20 @@ Retrieve specific API Call by its ID
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.unified.get_unified_apicall(request={
+        "id": "<id>",
+    })
 
-res = s.unified.get_unified_apicall(request={
-    "id": "<id>",
-})
-
-if res.api_call is not None:
-    # handle response
-    pass
+    if res.api_call is not None:
+        # handle response
+        pass
 
 ```
 
@@ -144,16 +156,20 @@ Retrieve connection
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.unified.get_unified_connection(request={
+        "id": "<id>",
+    })
 
-res = s.unified.get_unified_connection(request={
-    "id": "<id>",
-})
-
-if res.connection is not None:
-    # handle response
-    pass
+    if res.connection is not None:
+        # handle response
+        pass
 
 ```
 
@@ -182,17 +198,21 @@ Returns an authorization URL for the specified integration.  Once a successful a
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.unified.get_unified_integration_auth(request={
+        "integration_type": "<value>",
+        "workspace_id": "<value>",
+    })
 
-res = s.unified.get_unified_integration_auth(request={
-    "integration_type": "<value>",
-    "workspace_id": "<value>",
-})
-
-if res.res is not None:
-    # handle response
-    pass
+    if res.res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -221,16 +241,20 @@ Retrieve webhook by its ID
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.unified.get_unified_webhook(request={
+        "id": "<id>",
+    })
 
-res = s.unified.get_unified_webhook(request={
-    "id": "<id>",
-})
-
-if res.webhook is not None:
-    # handle response
-    pass
+    if res.webhook is not None:
+        # handle response
+        pass
 
 ```
 
@@ -259,14 +283,18 @@ Returns API Calls
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.unified.list_unified_apicalls(request={})
 
-res = s.unified.list_unified_apicalls(request={})
-
-if res.api_calls is not None:
-    # handle response
-    pass
+    if res.api_calls is not None:
+        # handle response
+        pass
 
 ```
 
@@ -295,14 +323,18 @@ List all connections
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.unified.list_unified_connections(request={})
 
-res = s.unified.list_unified_connections(request={})
-
-if res.connections is not None:
-    # handle response
-    pass
+    if res.connections is not None:
+        # handle response
+        pass
 
 ```
 
@@ -331,16 +363,20 @@ No authentication required as this is to be used by front-end interface
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.unified.list_unified_integration_workspaces(request={
+        "workspace_id": "<value>",
+    })
 
-res = s.unified.list_unified_integration_workspaces(request={
-    "workspace_id": "<value>",
-})
-
-if res.integrations is not None:
-    # handle response
-    pass
+    if res.integrations is not None:
+        # handle response
+        pass
 
 ```
 
@@ -369,14 +405,18 @@ Returns all integrations
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.unified.list_unified_integrations(request={})
 
-res = s.unified.list_unified_integrations(request={})
-
-if res.integrations is not None:
-    # handle response
-    pass
+    if res.integrations is not None:
+        # handle response
+        pass
 
 ```
 
@@ -405,14 +445,18 @@ List support issues
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.unified.list_unified_issues(request={})
 
-res = s.unified.list_unified_issues(request={})
-
-if res.issues is not None:
-    # handle response
-    pass
+    if res.issues is not None:
+        # handle response
+        pass
 
 ```
 
@@ -441,14 +485,18 @@ Returns all registered webhooks
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.unified.list_unified_webhooks(request={})
 
-res = s.unified.list_unified_webhooks(request={})
-
-if res.webhooks is not None:
-    # handle response
-    pass
+    if res.webhooks is not None:
+        # handle response
+        pass
 
 ```
 
@@ -477,16 +525,20 @@ Update connection
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.unified.patch_unified_connection(request={
+        "id": "<id>",
+    })
 
-res = s.unified.patch_unified_connection(request={
-    "id": "<id>",
-})
-
-if res.connection is not None:
-    # handle response
-    pass
+    if res.connection is not None:
+        # handle response
+        pass
 
 ```
 
@@ -515,16 +567,20 @@ Update webhook subscription
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.unified.patch_unified_webhook(request={
+        "id": "<id>",
+    })
 
-res = s.unified.patch_unified_webhook(request={
-    "id": "<id>",
-})
-
-if res.webhook is not None:
-    # handle response
-    pass
+    if res.webhook is not None:
+        # handle response
+        pass
 
 ```
 
@@ -553,16 +609,20 @@ Trigger webhook
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.unified.patch_unified_webhook_trigger(request={
+        "id": "<id>",
+    })
 
-res = s.unified.patch_unified_webhook_trigger(request={
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -591,16 +651,20 @@ Remove connection
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.unified.remove_unified_connection(request={
+        "id": "<id>",
+    })
 
-res = s.unified.remove_unified_connection(request={
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -629,16 +693,20 @@ Remove webhook subscription
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.unified.remove_unified_webhook(request={
+        "id": "<id>",
+    })
 
-res = s.unified.remove_unified_webhook(request={
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -667,16 +735,20 @@ Update connection
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.unified.update_unified_connection(request={
+        "id": "<id>",
+    })
 
-res = s.unified.update_unified_connection(request={
-    "id": "<id>",
-})
-
-if res.connection is not None:
-    # handle response
-    pass
+    if res.connection is not None:
+        # handle response
+        pass
 
 ```
 
@@ -705,16 +777,20 @@ Update webhook subscription
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.unified.update_unified_webhook(request={
+        "id": "<id>",
+    })
 
-res = s.unified.update_unified_webhook(request={
-    "id": "<id>",
-})
-
-if res.webhook is not None:
-    # handle response
-    pass
+    if res.webhook is not None:
+        # handle response
+        pass
 
 ```
 
@@ -743,16 +819,20 @@ Trigger webhook
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.unified.update_unified_webhook_trigger(request={
+        "id": "<id>",
+    })
 
-res = s.unified.update_unified_webhook_trigger(request={
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 

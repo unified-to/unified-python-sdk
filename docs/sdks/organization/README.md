@@ -22,16 +22,20 @@ Create an organization
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.organization.create_repo_organization(request={
+        "connection_id": "<id>",
+    })
 
-res = s.organization.create_repo_organization(request={
-    "connection_id": "<id>",
-})
-
-if res.repo_organization is not None:
-    # handle response
-    pass
+    if res.repo_organization is not None:
+        # handle response
+        pass
 
 ```
 
@@ -60,17 +64,21 @@ Retrieve an organization
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.organization.get_accounting_organization(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.organization.get_accounting_organization(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.accounting_organization is not None:
-    # handle response
-    pass
+    if res.accounting_organization is not None:
+        # handle response
+        pass
 
 ```
 
@@ -99,17 +107,21 @@ Retrieve an organization
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.organization.get_repo_organization(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
 
-res = s.organization.get_repo_organization(request={
-    "connection_id": "<id>",
-    "id": "<id>",
-})
-
-if res.repo_organization is not None:
-    # handle response
-    pass
+    if res.repo_organization is not None:
+        # handle response
+        pass
 
 ```
 
@@ -138,16 +150,20 @@ List all organizations
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.organization.list_accounting_organizations(request={
+        "connection_id": "<value>",
+    })
 
-res = s.organization.list_accounting_organizations(request={
-    "connection_id": "<value>",
-})
-
-if res.accounting_organizations is not None:
-    # handle response
-    pass
+    if res.accounting_organizations is not None:
+        # handle response
+        pass
 
 ```
 
@@ -176,16 +192,20 @@ List all organizations
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.organization.list_repo_organizations(request={
+        "connection_id": "<id>",
+    })
 
-res = s.organization.list_repo_organizations(request={
-    "connection_id": "<id>",
-})
-
-if res.repo_organizations is not None:
-    # handle response
-    pass
+    if res.repo_organizations is not None:
+        # handle response
+        pass
 
 ```
 
@@ -214,17 +234,21 @@ Update an organization
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.organization.patch_repo_organization(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
 
-res = s.organization.patch_repo_organization(request={
-    "connection_id": "<id>",
-    "id": "<id>",
-})
-
-if res.repo_organization is not None:
-    # handle response
-    pass
+    if res.repo_organization is not None:
+        # handle response
+        pass
 
 ```
 
@@ -253,17 +277,21 @@ Remove an organization
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.organization.remove_repo_organization(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
 
-res = s.organization.remove_repo_organization(request={
-    "connection_id": "<id>",
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -292,17 +320,21 @@ Update an organization
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.organization.update_repo_organization(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
 
-res = s.organization.update_repo_organization(request={
-    "connection_id": "<id>",
-    "id": "<id>",
-})
-
-if res.repo_organization is not None:
-    # handle response
-    pass
+    if res.repo_organization is not None:
+        # handle response
+        pass
 
 ```
 

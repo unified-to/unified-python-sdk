@@ -20,16 +20,20 @@ Create an event
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.event.create_crm_event(request={
+        "connection_id": "<value>",
+    })
 
-res = s.event.create_crm_event(request={
-    "connection_id": "<value>",
-})
-
-if res.crm_event is not None:
-    # handle response
-    pass
+    if res.crm_event is not None:
+        # handle response
+        pass
 
 ```
 
@@ -58,17 +62,21 @@ Retrieve an event
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.event.get_crm_event(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.event.get_crm_event(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.crm_event is not None:
-    # handle response
-    pass
+    if res.crm_event is not None:
+        # handle response
+        pass
 
 ```
 
@@ -97,16 +105,20 @@ List all events
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.event.list_crm_events(request={
+        "connection_id": "<value>",
+    })
 
-res = s.event.list_crm_events(request={
-    "connection_id": "<value>",
-})
-
-if res.crm_events is not None:
-    # handle response
-    pass
+    if res.crm_events is not None:
+        # handle response
+        pass
 
 ```
 
@@ -135,17 +147,21 @@ Update an event
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.event.patch_crm_event(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.event.patch_crm_event(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.crm_event is not None:
-    # handle response
-    pass
+    if res.crm_event is not None:
+        # handle response
+        pass
 
 ```
 
@@ -174,17 +190,21 @@ Remove an event
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.event.remove_crm_event(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.event.remove_crm_event(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -213,17 +233,21 @@ Update an event
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.event.update_crm_event(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.event.update_crm_event(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.crm_event is not None:
-    # handle response
-    pass
+    if res.crm_event is not None:
+        # handle response
+        pass
 
 ```
 

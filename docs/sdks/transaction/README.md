@@ -20,16 +20,20 @@ Create a transaction
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.transaction.create_accounting_transaction(request={
+        "connection_id": "<value>",
+    })
 
-res = s.transaction.create_accounting_transaction(request={
-    "connection_id": "<value>",
-})
-
-if res.accounting_transaction is not None:
-    # handle response
-    pass
+    if res.accounting_transaction is not None:
+        # handle response
+        pass
 
 ```
 
@@ -58,17 +62,21 @@ Retrieve a transaction
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.transaction.get_accounting_transaction(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.transaction.get_accounting_transaction(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.accounting_transaction is not None:
-    # handle response
-    pass
+    if res.accounting_transaction is not None:
+        # handle response
+        pass
 
 ```
 
@@ -97,16 +105,20 @@ List all transactions
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.transaction.list_accounting_transactions(request={
+        "connection_id": "<value>",
+    })
 
-res = s.transaction.list_accounting_transactions(request={
-    "connection_id": "<value>",
-})
-
-if res.accounting_transactions is not None:
-    # handle response
-    pass
+    if res.accounting_transactions is not None:
+        # handle response
+        pass
 
 ```
 
@@ -135,17 +147,21 @@ Update a transaction
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.transaction.patch_accounting_transaction(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.transaction.patch_accounting_transaction(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.accounting_transaction is not None:
-    # handle response
-    pass
+    if res.accounting_transaction is not None:
+        # handle response
+        pass
 
 ```
 
@@ -174,17 +190,21 @@ Remove a transaction
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.transaction.remove_accounting_transaction(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.transaction.remove_accounting_transaction(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -213,17 +233,21 @@ Update a transaction
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.transaction.update_accounting_transaction(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.transaction.update_accounting_transaction(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.accounting_transaction is not None:
-    # handle response
-    pass
+    if res.accounting_transaction is not None:
+        # handle response
+        pass
 
 ```
 

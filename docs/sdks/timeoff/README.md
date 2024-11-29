@@ -16,17 +16,21 @@ Retrieve a timeoff
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.timeoff.get_hris_timeoff(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.timeoff.get_hris_timeoff(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.hris_timeoff is not None:
-    # handle response
-    pass
+    if res.hris_timeoff is not None:
+        # handle response
+        pass
 
 ```
 
@@ -55,16 +59,20 @@ List all timeoffs
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.timeoff.list_hris_timeoffs(request={
+        "connection_id": "<value>",
+    })
 
-res = s.timeoff.list_hris_timeoffs(request={
-    "connection_id": "<value>",
-})
-
-if res.hris_timeoffs is not None:
-    # handle response
-    pass
+    if res.hris_timeoffs is not None:
+        # handle response
+        pass
 
 ```
 

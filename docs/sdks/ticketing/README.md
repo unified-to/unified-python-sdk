@@ -32,16 +32,20 @@ Create a customer
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.ticketing.create_ticketing_customer(request={
+        "connection_id": "<value>",
+    })
 
-res = s.ticketing.create_ticketing_customer(request={
-    "connection_id": "<value>",
-})
-
-if res.ticketing_customer is not None:
-    # handle response
-    pass
+    if res.ticketing_customer is not None:
+        # handle response
+        pass
 
 ```
 
@@ -70,16 +74,20 @@ Create a note
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.ticketing.create_ticketing_note(request={
+        "connection_id": "<value>",
+    })
 
-res = s.ticketing.create_ticketing_note(request={
-    "connection_id": "<value>",
-})
-
-if res.ticketing_note is not None:
-    # handle response
-    pass
+    if res.ticketing_note is not None:
+        # handle response
+        pass
 
 ```
 
@@ -108,16 +116,20 @@ Create a ticket
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.ticketing.create_ticketing_ticket(request={
+        "connection_id": "<value>",
+    })
 
-res = s.ticketing.create_ticketing_ticket(request={
-    "connection_id": "<value>",
-})
-
-if res.ticketing_ticket is not None:
-    # handle response
-    pass
+    if res.ticketing_ticket is not None:
+        # handle response
+        pass
 
 ```
 
@@ -146,17 +158,21 @@ Retrieve a customer
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.ticketing.get_ticketing_customer(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.ticketing.get_ticketing_customer(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.ticketing_customer is not None:
-    # handle response
-    pass
+    if res.ticketing_customer is not None:
+        # handle response
+        pass
 
 ```
 
@@ -185,17 +201,21 @@ Retrieve a note
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.ticketing.get_ticketing_note(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.ticketing.get_ticketing_note(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.ticketing_note is not None:
-    # handle response
-    pass
+    if res.ticketing_note is not None:
+        # handle response
+        pass
 
 ```
 
@@ -224,17 +244,21 @@ Retrieve a ticket
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.ticketing.get_ticketing_ticket(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.ticketing.get_ticketing_ticket(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.ticketing_ticket is not None:
-    # handle response
-    pass
+    if res.ticketing_ticket is not None:
+        # handle response
+        pass
 
 ```
 
@@ -263,16 +287,20 @@ List all customers
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.ticketing.list_ticketing_customers(request={
+        "connection_id": "<value>",
+    })
 
-res = s.ticketing.list_ticketing_customers(request={
-    "connection_id": "<value>",
-})
-
-if res.ticketing_customers is not None:
-    # handle response
-    pass
+    if res.ticketing_customers is not None:
+        # handle response
+        pass
 
 ```
 
@@ -301,16 +329,20 @@ List all notes
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.ticketing.list_ticketing_notes(request={
+        "connection_id": "<value>",
+    })
 
-res = s.ticketing.list_ticketing_notes(request={
-    "connection_id": "<value>",
-})
-
-if res.ticketing_notes is not None:
-    # handle response
-    pass
+    if res.ticketing_notes is not None:
+        # handle response
+        pass
 
 ```
 
@@ -339,16 +371,20 @@ List all tickets
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.ticketing.list_ticketing_tickets(request={
+        "connection_id": "<value>",
+    })
 
-res = s.ticketing.list_ticketing_tickets(request={
-    "connection_id": "<value>",
-})
-
-if res.ticketing_tickets is not None:
-    # handle response
-    pass
+    if res.ticketing_tickets is not None:
+        # handle response
+        pass
 
 ```
 
@@ -377,17 +413,21 @@ Update a customer
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.ticketing.patch_ticketing_customer(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.ticketing.patch_ticketing_customer(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.ticketing_customer is not None:
-    # handle response
-    pass
+    if res.ticketing_customer is not None:
+        # handle response
+        pass
 
 ```
 
@@ -416,17 +456,21 @@ Update a note
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.ticketing.patch_ticketing_note(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.ticketing.patch_ticketing_note(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.ticketing_note is not None:
-    # handle response
-    pass
+    if res.ticketing_note is not None:
+        # handle response
+        pass
 
 ```
 
@@ -455,17 +499,21 @@ Update a ticket
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.ticketing.patch_ticketing_ticket(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.ticketing.patch_ticketing_ticket(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.ticketing_ticket is not None:
-    # handle response
-    pass
+    if res.ticketing_ticket is not None:
+        # handle response
+        pass
 
 ```
 
@@ -494,17 +542,21 @@ Remove a customer
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.ticketing.remove_ticketing_customer(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.ticketing.remove_ticketing_customer(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -533,17 +585,21 @@ Remove a note
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.ticketing.remove_ticketing_note(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.ticketing.remove_ticketing_note(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -572,17 +628,21 @@ Remove a ticket
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.ticketing.remove_ticketing_ticket(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.ticketing.remove_ticketing_ticket(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -611,17 +671,21 @@ Update a customer
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.ticketing.update_ticketing_customer(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.ticketing.update_ticketing_customer(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.ticketing_customer is not None:
-    # handle response
-    pass
+    if res.ticketing_customer is not None:
+        # handle response
+        pass
 
 ```
 
@@ -650,17 +714,21 @@ Update a note
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.ticketing.update_ticketing_note(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.ticketing.update_ticketing_note(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.ticketing_note is not None:
-    # handle response
-    pass
+    if res.ticketing_note is not None:
+        # handle response
+        pass
 
 ```
 
@@ -689,17 +757,21 @@ Update a ticket
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.ticketing.update_ticketing_ticket(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.ticketing.update_ticketing_ticket(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.ticketing_ticket is not None:
-    # handle response
-    pass
+    if res.ticketing_ticket is not None:
+        # handle response
+        pass
 
 ```
 

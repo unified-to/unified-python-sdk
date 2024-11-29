@@ -20,16 +20,20 @@ Create an invoice
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.invoice.create_accounting_invoice(request={
+        "connection_id": "<value>",
+    })
 
-res = s.invoice.create_accounting_invoice(request={
-    "connection_id": "<value>",
-})
-
-if res.accounting_invoice is not None:
-    # handle response
-    pass
+    if res.accounting_invoice is not None:
+        # handle response
+        pass
 
 ```
 
@@ -58,17 +62,21 @@ Retrieve an invoice
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.invoice.get_accounting_invoice(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.invoice.get_accounting_invoice(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.accounting_invoice is not None:
-    # handle response
-    pass
+    if res.accounting_invoice is not None:
+        # handle response
+        pass
 
 ```
 
@@ -97,16 +105,20 @@ List all invoices
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.invoice.list_accounting_invoices(request={
+        "connection_id": "<value>",
+    })
 
-res = s.invoice.list_accounting_invoices(request={
-    "connection_id": "<value>",
-})
-
-if res.accounting_invoices is not None:
-    # handle response
-    pass
+    if res.accounting_invoices is not None:
+        # handle response
+        pass
 
 ```
 
@@ -135,17 +147,21 @@ Update an invoice
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.invoice.patch_accounting_invoice(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.invoice.patch_accounting_invoice(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.accounting_invoice is not None:
-    # handle response
-    pass
+    if res.accounting_invoice is not None:
+        # handle response
+        pass
 
 ```
 
@@ -174,17 +190,21 @@ Remove an invoice
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.invoice.remove_accounting_invoice(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.invoice.remove_accounting_invoice(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -213,17 +233,21 @@ Update an invoice
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.invoice.update_accounting_invoice(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.invoice.update_accounting_invoice(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.accounting_invoice is not None:
-    # handle response
-    pass
+    if res.accounting_invoice is not None:
+        # handle response
+        pass
 
 ```
 

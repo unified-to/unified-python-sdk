@@ -15,14 +15,18 @@ List support issues
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.issue.list_unified_issues(request={})
 
-res = s.issue.list_unified_issues(request={})
-
-if res.issues is not None:
-    # handle response
-    pass
+    if res.issues is not None:
+        # handle response
+        pass
 
 ```
 

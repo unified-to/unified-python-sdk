@@ -20,16 +20,20 @@ Create an employee
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.employee.create_hris_employee(request={
+        "connection_id": "<value>",
+    })
 
-res = s.employee.create_hris_employee(request={
-    "connection_id": "<value>",
-})
-
-if res.hris_employee is not None:
-    # handle response
-    pass
+    if res.hris_employee is not None:
+        # handle response
+        pass
 
 ```
 
@@ -58,17 +62,21 @@ Retrieve an employee
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.employee.get_hris_employee(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.employee.get_hris_employee(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.hris_employee is not None:
-    # handle response
-    pass
+    if res.hris_employee is not None:
+        # handle response
+        pass
 
 ```
 
@@ -97,16 +105,20 @@ List all employees
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.employee.list_hris_employees(request={
+        "connection_id": "<value>",
+    })
 
-res = s.employee.list_hris_employees(request={
-    "connection_id": "<value>",
-})
-
-if res.hris_employees is not None:
-    # handle response
-    pass
+    if res.hris_employees is not None:
+        # handle response
+        pass
 
 ```
 
@@ -135,17 +147,21 @@ Update an employee
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.employee.patch_hris_employee(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.employee.patch_hris_employee(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.hris_employee is not None:
-    # handle response
-    pass
+    if res.hris_employee is not None:
+        # handle response
+        pass
 
 ```
 
@@ -174,17 +190,21 @@ Remove an employee
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.employee.remove_hris_employee(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.employee.remove_hris_employee(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -213,17 +233,21 @@ Update an employee
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.employee.update_hris_employee(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.employee.update_hris_employee(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.hris_employee is not None:
-    # handle response
-    pass
+    if res.hris_employee is not None:
+        # handle response
+        pass
 
 ```
 

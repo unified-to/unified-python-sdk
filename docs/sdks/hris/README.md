@@ -42,16 +42,20 @@ Create a company
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.hris.create_hris_company(request={
+        "connection_id": "<value>",
+    })
 
-res = s.hris.create_hris_company(request={
-    "connection_id": "<value>",
-})
-
-if res.hris_company is not None:
-    # handle response
-    pass
+    if res.hris_company is not None:
+        # handle response
+        pass
 
 ```
 
@@ -80,16 +84,20 @@ Create an employee
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.hris.create_hris_employee(request={
+        "connection_id": "<value>",
+    })
 
-res = s.hris.create_hris_employee(request={
-    "connection_id": "<value>",
-})
-
-if res.hris_employee is not None:
-    # handle response
-    pass
+    if res.hris_employee is not None:
+        # handle response
+        pass
 
 ```
 
@@ -118,16 +126,20 @@ Create a group
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.hris.create_hris_group(request={
+        "connection_id": "<value>",
+    })
 
-res = s.hris.create_hris_group(request={
-    "connection_id": "<value>",
-})
-
-if res.hris_group is not None:
-    # handle response
-    pass
+    if res.hris_group is not None:
+        # handle response
+        pass
 
 ```
 
@@ -156,16 +168,20 @@ Create a location
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.hris.create_hris_location(request={
+        "connection_id": "<value>",
+    })
 
-res = s.hris.create_hris_location(request={
-    "connection_id": "<value>",
-})
-
-if res.hris_location is not None:
-    # handle response
-    pass
+    if res.hris_location is not None:
+        # handle response
+        pass
 
 ```
 
@@ -194,17 +210,21 @@ Retrieve a company
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.hris.get_hris_company(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.hris.get_hris_company(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.hris_company is not None:
-    # handle response
-    pass
+    if res.hris_company is not None:
+        # handle response
+        pass
 
 ```
 
@@ -233,17 +253,21 @@ Retrieve an employee
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.hris.get_hris_employee(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.hris.get_hris_employee(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.hris_employee is not None:
-    # handle response
-    pass
+    if res.hris_employee is not None:
+        # handle response
+        pass
 
 ```
 
@@ -272,17 +296,21 @@ Retrieve a group
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.hris.get_hris_group(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.hris.get_hris_group(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.hris_group is not None:
-    # handle response
-    pass
+    if res.hris_group is not None:
+        # handle response
+        pass
 
 ```
 
@@ -311,17 +339,21 @@ Retrieve a location
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.hris.get_hris_location(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.hris.get_hris_location(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.hris_location is not None:
-    # handle response
-    pass
+    if res.hris_location is not None:
+        # handle response
+        pass
 
 ```
 
@@ -350,17 +382,21 @@ Retrieve a payslip
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.hris.get_hris_payslip(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.hris.get_hris_payslip(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.hris_payslip is not None:
-    # handle response
-    pass
+    if res.hris_payslip is not None:
+        # handle response
+        pass
 
 ```
 
@@ -389,17 +425,21 @@ Retrieve a timeoff
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.hris.get_hris_timeoff(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.hris.get_hris_timeoff(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.hris_timeoff is not None:
-    # handle response
-    pass
+    if res.hris_timeoff is not None:
+        # handle response
+        pass
 
 ```
 
@@ -428,16 +468,20 @@ List all companies
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.hris.list_hris_companies(request={
+        "connection_id": "<value>",
+    })
 
-res = s.hris.list_hris_companies(request={
-    "connection_id": "<value>",
-})
-
-if res.hris_companies is not None:
-    # handle response
-    pass
+    if res.hris_companies is not None:
+        # handle response
+        pass
 
 ```
 
@@ -466,16 +510,20 @@ List all employees
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.hris.list_hris_employees(request={
+        "connection_id": "<value>",
+    })
 
-res = s.hris.list_hris_employees(request={
-    "connection_id": "<value>",
-})
-
-if res.hris_employees is not None:
-    # handle response
-    pass
+    if res.hris_employees is not None:
+        # handle response
+        pass
 
 ```
 
@@ -504,16 +552,20 @@ List all groups
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.hris.list_hris_groups(request={
+        "connection_id": "<value>",
+    })
 
-res = s.hris.list_hris_groups(request={
-    "connection_id": "<value>",
-})
-
-if res.hris_groups is not None:
-    # handle response
-    pass
+    if res.hris_groups is not None:
+        # handle response
+        pass
 
 ```
 
@@ -542,16 +594,20 @@ List all locations
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.hris.list_hris_locations(request={
+        "connection_id": "<value>",
+    })
 
-res = s.hris.list_hris_locations(request={
-    "connection_id": "<value>",
-})
-
-if res.hris_locations is not None:
-    # handle response
-    pass
+    if res.hris_locations is not None:
+        # handle response
+        pass
 
 ```
 
@@ -580,16 +636,20 @@ List all payslips
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.hris.list_hris_payslips(request={
+        "connection_id": "<value>",
+    })
 
-res = s.hris.list_hris_payslips(request={
-    "connection_id": "<value>",
-})
-
-if res.hris_payslips is not None:
-    # handle response
-    pass
+    if res.hris_payslips is not None:
+        # handle response
+        pass
 
 ```
 
@@ -618,16 +678,20 @@ List all timeoffs
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.hris.list_hris_timeoffs(request={
+        "connection_id": "<value>",
+    })
 
-res = s.hris.list_hris_timeoffs(request={
-    "connection_id": "<value>",
-})
-
-if res.hris_timeoffs is not None:
-    # handle response
-    pass
+    if res.hris_timeoffs is not None:
+        # handle response
+        pass
 
 ```
 
@@ -656,17 +720,21 @@ Update a company
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.hris.patch_hris_company(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.hris.patch_hris_company(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.hris_company is not None:
-    # handle response
-    pass
+    if res.hris_company is not None:
+        # handle response
+        pass
 
 ```
 
@@ -695,17 +763,21 @@ Update an employee
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.hris.patch_hris_employee(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.hris.patch_hris_employee(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.hris_employee is not None:
-    # handle response
-    pass
+    if res.hris_employee is not None:
+        # handle response
+        pass
 
 ```
 
@@ -734,17 +806,21 @@ Update a group
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.hris.patch_hris_group(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.hris.patch_hris_group(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.hris_group is not None:
-    # handle response
-    pass
+    if res.hris_group is not None:
+        # handle response
+        pass
 
 ```
 
@@ -773,17 +849,21 @@ Update a location
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.hris.patch_hris_location(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.hris.patch_hris_location(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.hris_location is not None:
-    # handle response
-    pass
+    if res.hris_location is not None:
+        # handle response
+        pass
 
 ```
 
@@ -812,17 +892,21 @@ Remove a company
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.hris.remove_hris_company(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.hris.remove_hris_company(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -851,17 +935,21 @@ Remove an employee
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.hris.remove_hris_employee(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.hris.remove_hris_employee(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -890,17 +978,21 @@ Remove a group
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.hris.remove_hris_group(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.hris.remove_hris_group(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -929,17 +1021,21 @@ Remove a location
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.hris.remove_hris_location(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.hris.remove_hris_location(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -968,17 +1064,21 @@ Update a company
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.hris.update_hris_company(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.hris.update_hris_company(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.hris_company is not None:
-    # handle response
-    pass
+    if res.hris_company is not None:
+        # handle response
+        pass
 
 ```
 
@@ -1007,17 +1107,21 @@ Update an employee
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.hris.update_hris_employee(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.hris.update_hris_employee(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.hris_employee is not None:
-    # handle response
-    pass
+    if res.hris_employee is not None:
+        # handle response
+        pass
 
 ```
 
@@ -1046,17 +1150,21 @@ Update a group
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.hris.update_hris_group(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.hris.update_hris_group(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.hris_group is not None:
-    # handle response
-    pass
+    if res.hris_group is not None:
+        # handle response
+        pass
 
 ```
 
@@ -1085,17 +1193,21 @@ Update a location
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.hris.update_hris_location(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.hris.update_hris_location(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.hris_location is not None:
-    # handle response
-    pass
+    if res.hris_location is not None:
+        # handle response
+        pass
 
 ```
 

@@ -20,16 +20,20 @@ Create a course
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.course.create_lms_course(request={
+        "connection_id": "<id>",
+    })
 
-res = s.course.create_lms_course(request={
-    "connection_id": "<id>",
-})
-
-if res.lms_course is not None:
-    # handle response
-    pass
+    if res.lms_course is not None:
+        # handle response
+        pass
 
 ```
 
@@ -58,17 +62,21 @@ Retrieve a course
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.course.get_lms_course(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
 
-res = s.course.get_lms_course(request={
-    "connection_id": "<id>",
-    "id": "<id>",
-})
-
-if res.lms_course is not None:
-    # handle response
-    pass
+    if res.lms_course is not None:
+        # handle response
+        pass
 
 ```
 
@@ -97,16 +105,20 @@ List all courses
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.course.list_lms_courses(request={
+        "connection_id": "<id>",
+    })
 
-res = s.course.list_lms_courses(request={
-    "connection_id": "<id>",
-})
-
-if res.lms_courses is not None:
-    # handle response
-    pass
+    if res.lms_courses is not None:
+        # handle response
+        pass
 
 ```
 
@@ -135,17 +147,21 @@ Update a course
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.course.patch_lms_course(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
 
-res = s.course.patch_lms_course(request={
-    "connection_id": "<id>",
-    "id": "<id>",
-})
-
-if res.lms_course is not None:
-    # handle response
-    pass
+    if res.lms_course is not None:
+        # handle response
+        pass
 
 ```
 
@@ -174,17 +190,21 @@ Remove a course
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.course.remove_lms_course(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
 
-res = s.course.remove_lms_course(request={
-    "connection_id": "<id>",
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -213,17 +233,21 @@ Update a course
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.course.update_lms_course(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
 
-res = s.course.update_lms_course(request={
-    "connection_id": "<id>",
-    "id": "<id>",
-})
-
-if res.lms_course is not None:
-    # handle response
-    pass
+    if res.lms_course is not None:
+        # handle response
+        pass
 
 ```
 

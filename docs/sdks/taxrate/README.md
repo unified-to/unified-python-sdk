@@ -20,16 +20,20 @@ Create a taxrate
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.taxrate.create_accounting_taxrate(request={
+        "connection_id": "<value>",
+    })
 
-res = s.taxrate.create_accounting_taxrate(request={
-    "connection_id": "<value>",
-})
-
-if res.accounting_taxrate is not None:
-    # handle response
-    pass
+    if res.accounting_taxrate is not None:
+        # handle response
+        pass
 
 ```
 
@@ -58,17 +62,21 @@ Retrieve a taxrate
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.taxrate.get_accounting_taxrate(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.taxrate.get_accounting_taxrate(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.accounting_taxrate is not None:
-    # handle response
-    pass
+    if res.accounting_taxrate is not None:
+        # handle response
+        pass
 
 ```
 
@@ -97,16 +105,20 @@ List all taxrates
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.taxrate.list_accounting_taxrates(request={
+        "connection_id": "<value>",
+    })
 
-res = s.taxrate.list_accounting_taxrates(request={
-    "connection_id": "<value>",
-})
-
-if res.accounting_taxrates is not None:
-    # handle response
-    pass
+    if res.accounting_taxrates is not None:
+        # handle response
+        pass
 
 ```
 
@@ -135,17 +147,21 @@ Update a taxrate
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.taxrate.patch_accounting_taxrate(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.taxrate.patch_accounting_taxrate(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.accounting_taxrate is not None:
-    # handle response
-    pass
+    if res.accounting_taxrate is not None:
+        # handle response
+        pass
 
 ```
 
@@ -174,17 +190,21 @@ Remove a taxrate
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.taxrate.remove_accounting_taxrate(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.taxrate.remove_accounting_taxrate(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -213,17 +233,21 @@ Update a taxrate
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.taxrate.update_accounting_taxrate(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.taxrate.update_accounting_taxrate(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.accounting_taxrate is not None:
-    # handle response
-    pass
+    if res.accounting_taxrate is not None:
+        # handle response
+        pass
 
 ```
 

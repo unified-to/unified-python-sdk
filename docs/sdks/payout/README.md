@@ -16,17 +16,21 @@ Retrieve a payout
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.payout.get_payment_payout(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.payout.get_payment_payout(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.payment_payout is not None:
-    # handle response
-    pass
+    if res.payment_payout is not None:
+        # handle response
+        pass
 
 ```
 
@@ -55,16 +59,20 @@ List all payouts
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.payout.list_payment_payouts(request={
+        "connection_id": "<value>",
+    })
 
-res = s.payout.list_payment_payouts(request={
-    "connection_id": "<value>",
-})
-
-if res.payment_payouts is not None:
-    # handle response
-    pass
+    if res.payment_payouts is not None:
+        # handle response
+        pass
 
 ```
 

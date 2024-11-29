@@ -15,17 +15,21 @@ Returns an authentication URL for the specified integration.  Once a successful 
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.login.get_unified_integration_login(request={
+        "integration_type": "<value>",
+        "workspace_id": "<value>",
+    })
 
-res = s.login.get_unified_integration_login(request={
-    "integration_type": "<value>",
-    "workspace_id": "<value>",
-})
-
-if res.res is not None:
-    # handle response
-    pass
+    if res.res is not None:
+        # handle response
+        pass
 
 ```
 

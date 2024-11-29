@@ -15,16 +15,20 @@ List all calls
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.call.list_uc_calls(request={
+        "connection_id": "<value>",
+    })
 
-res = s.call.list_uc_calls(request={
-    "connection_id": "<value>",
-})
-
-if res.uc_calls is not None:
-    # handle response
-    pass
+    if res.uc_calls is not None:
+        # handle response
+        pass
 
 ```
 

@@ -20,16 +20,20 @@ Create a class
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.class_.create_lms_class(request={
+        "connection_id": "<id>",
+    })
 
-res = s.class_.create_lms_class(request={
-    "connection_id": "<id>",
-})
-
-if res.lms_class is not None:
-    # handle response
-    pass
+    if res.lms_class is not None:
+        # handle response
+        pass
 
 ```
 
@@ -58,17 +62,21 @@ Retrieve a class
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.class_.get_lms_class(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
 
-res = s.class_.get_lms_class(request={
-    "connection_id": "<id>",
-    "id": "<id>",
-})
-
-if res.lms_class is not None:
-    # handle response
-    pass
+    if res.lms_class is not None:
+        # handle response
+        pass
 
 ```
 
@@ -97,16 +105,20 @@ List all classes
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.class_.list_lms_classes(request={
+        "connection_id": "<id>",
+    })
 
-res = s.class_.list_lms_classes(request={
-    "connection_id": "<id>",
-})
-
-if res.lms_classes is not None:
-    # handle response
-    pass
+    if res.lms_classes is not None:
+        # handle response
+        pass
 
 ```
 
@@ -135,17 +147,21 @@ Update a class
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.class_.patch_lms_class(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
 
-res = s.class_.patch_lms_class(request={
-    "connection_id": "<id>",
-    "id": "<id>",
-})
-
-if res.lms_class is not None:
-    # handle response
-    pass
+    if res.lms_class is not None:
+        # handle response
+        pass
 
 ```
 
@@ -174,17 +190,21 @@ Remove a class
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.class_.remove_lms_class(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
 
-res = s.class_.remove_lms_class(request={
-    "connection_id": "<id>",
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -213,17 +233,21 @@ Update a class
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.class_.update_lms_class(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
 
-res = s.class_.update_lms_class(request={
-    "connection_id": "<id>",
-    "id": "<id>",
-})
-
-if res.lms_class is not None:
-    # handle response
-    pass
+    if res.lms_class is not None:
+        # handle response
+        pass
 
 ```
 

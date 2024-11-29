@@ -20,16 +20,20 @@ Create an application
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.application.create_ats_application(request={
+        "connection_id": "<value>",
+    })
 
-res = s.application.create_ats_application(request={
-    "connection_id": "<value>",
-})
-
-if res.ats_application is not None:
-    # handle response
-    pass
+    if res.ats_application is not None:
+        # handle response
+        pass
 
 ```
 
@@ -58,17 +62,21 @@ Retrieve an application
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.application.get_ats_application(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.application.get_ats_application(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.ats_application is not None:
-    # handle response
-    pass
+    if res.ats_application is not None:
+        # handle response
+        pass
 
 ```
 
@@ -97,16 +105,20 @@ List all applications
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.application.list_ats_applications(request={
+        "connection_id": "<value>",
+    })
 
-res = s.application.list_ats_applications(request={
-    "connection_id": "<value>",
-})
-
-if res.ats_applications is not None:
-    # handle response
-    pass
+    if res.ats_applications is not None:
+        # handle response
+        pass
 
 ```
 
@@ -135,17 +147,21 @@ Update an application
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.application.patch_ats_application(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.application.patch_ats_application(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.ats_application is not None:
-    # handle response
-    pass
+    if res.ats_application is not None:
+        # handle response
+        pass
 
 ```
 
@@ -174,17 +190,21 @@ Remove an application
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.application.remove_ats_application(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.application.remove_ats_application(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -213,17 +233,21 @@ Update an application
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.application.update_ats_application(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.application.update_ats_application(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.ats_application is not None:
-    # handle response
-    pass
+    if res.ats_application is not None:
+        # handle response
+        pass
 
 ```
 

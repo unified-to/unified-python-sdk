@@ -20,16 +20,20 @@ Create a branch
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.branch.create_repo_branch(request={
+        "connection_id": "<id>",
+    })
 
-res = s.branch.create_repo_branch(request={
-    "connection_id": "<id>",
-})
-
-if res.repo_branch is not None:
-    # handle response
-    pass
+    if res.repo_branch is not None:
+        # handle response
+        pass
 
 ```
 
@@ -58,17 +62,21 @@ Retrieve a branch
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.branch.get_repo_branch(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
 
-res = s.branch.get_repo_branch(request={
-    "connection_id": "<id>",
-    "id": "<id>",
-})
-
-if res.repo_branch is not None:
-    # handle response
-    pass
+    if res.repo_branch is not None:
+        # handle response
+        pass
 
 ```
 
@@ -97,16 +105,20 @@ List all branches
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.branch.list_repo_branches(request={
+        "connection_id": "<id>",
+    })
 
-res = s.branch.list_repo_branches(request={
-    "connection_id": "<id>",
-})
-
-if res.repo_branches is not None:
-    # handle response
-    pass
+    if res.repo_branches is not None:
+        # handle response
+        pass
 
 ```
 
@@ -135,17 +147,21 @@ Update a branch
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.branch.patch_repo_branch(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
 
-res = s.branch.patch_repo_branch(request={
-    "connection_id": "<id>",
-    "id": "<id>",
-})
-
-if res.repo_branch is not None:
-    # handle response
-    pass
+    if res.repo_branch is not None:
+        # handle response
+        pass
 
 ```
 
@@ -174,17 +190,21 @@ Remove a branch
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.branch.remove_repo_branch(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
 
-res = s.branch.remove_repo_branch(request={
-    "connection_id": "<id>",
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -213,17 +233,21 @@ Update a branch
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.branch.update_repo_branch(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
 
-res = s.branch.update_repo_branch(request={
-    "connection_id": "<id>",
-    "id": "<id>",
-})
-
-if res.repo_branch is not None:
-    # handle response
-    pass
+    if res.repo_branch is not None:
+        # handle response
+        pass
 
 ```
 

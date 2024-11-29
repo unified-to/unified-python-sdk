@@ -26,16 +26,20 @@ Create a group
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.group.create_hris_group(request={
+        "connection_id": "<value>",
+    })
 
-res = s.group.create_hris_group(request={
-    "connection_id": "<value>",
-})
-
-if res.hris_group is not None:
-    # handle response
-    pass
+    if res.hris_group is not None:
+        # handle response
+        pass
 
 ```
 
@@ -64,16 +68,20 @@ Create group
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.group.create_scim_groups(request={
+        "connection_id": "<id>",
+    })
 
-res = s.group.create_scim_groups(request={
-    "connection_id": "<id>",
-})
-
-if res.scim_group is not None:
-    # handle response
-    pass
+    if res.scim_group is not None:
+        # handle response
+        pass
 
 ```
 
@@ -102,17 +110,21 @@ Retrieve a group
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.group.get_hris_group(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.group.get_hris_group(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.hris_group is not None:
-    # handle response
-    pass
+    if res.hris_group is not None:
+        # handle response
+        pass
 
 ```
 
@@ -141,17 +153,21 @@ Get group
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.group.get_scim_groups(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
 
-res = s.group.get_scim_groups(request={
-    "connection_id": "<id>",
-    "id": "<id>",
-})
-
-if res.scim_group is not None:
-    # handle response
-    pass
+    if res.scim_group is not None:
+        # handle response
+        pass
 
 ```
 
@@ -180,16 +196,20 @@ List all groups
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.group.list_hris_groups(request={
+        "connection_id": "<value>",
+    })
 
-res = s.group.list_hris_groups(request={
-    "connection_id": "<value>",
-})
-
-if res.hris_groups is not None:
-    # handle response
-    pass
+    if res.hris_groups is not None:
+        # handle response
+        pass
 
 ```
 
@@ -218,16 +238,20 @@ List groups
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.group.list_scim_groups(request={
+        "connection_id": "<id>",
+    })
 
-res = s.group.list_scim_groups(request={
-    "connection_id": "<id>",
-})
-
-if res.scim_groups is not None:
-    # handle response
-    pass
+    if res.scim_groups is not None:
+        # handle response
+        pass
 
 ```
 
@@ -256,17 +280,21 @@ Update a group
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.group.patch_hris_group(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.group.patch_hris_group(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.hris_group is not None:
-    # handle response
-    pass
+    if res.hris_group is not None:
+        # handle response
+        pass
 
 ```
 
@@ -295,17 +323,21 @@ Update group
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.group.patch_scim_groups(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
 
-res = s.group.patch_scim_groups(request={
-    "connection_id": "<id>",
-    "id": "<id>",
-})
-
-if res.scim_group is not None:
-    # handle response
-    pass
+    if res.scim_group is not None:
+        # handle response
+        pass
 
 ```
 
@@ -334,17 +366,21 @@ Remove a group
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.group.remove_hris_group(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.group.remove_hris_group(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -373,17 +409,21 @@ Delete group
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.group.remove_scim_groups(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
 
-res = s.group.remove_scim_groups(request={
-    "connection_id": "<id>",
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -412,17 +452,21 @@ Update a group
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.group.update_hris_group(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.group.update_hris_group(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.hris_group is not None:
-    # handle response
-    pass
+    if res.hris_group is not None:
+        # handle response
+        pass
 
 ```
 
@@ -451,17 +495,21 @@ Update group
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.group.update_scim_groups(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
 
-res = s.group.update_scim_groups(request={
-    "connection_id": "<id>",
-    "id": "<id>",
-})
-
-if res.scim_group is not None:
-    # handle response
-    pass
+    if res.scim_group is not None:
+        # handle response
+        pass
 
 ```
 

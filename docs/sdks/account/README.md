@@ -20,16 +20,20 @@ Create an account
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.account.create_accounting_account(request={
+        "connection_id": "<value>",
+    })
 
-res = s.account.create_accounting_account(request={
-    "connection_id": "<value>",
-})
-
-if res.accounting_account is not None:
-    # handle response
-    pass
+    if res.accounting_account is not None:
+        # handle response
+        pass
 
 ```
 
@@ -58,17 +62,21 @@ Retrieve an account
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.account.get_accounting_account(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.account.get_accounting_account(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.accounting_account is not None:
-    # handle response
-    pass
+    if res.accounting_account is not None:
+        # handle response
+        pass
 
 ```
 
@@ -97,16 +105,20 @@ List all accounts
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.account.list_accounting_accounts(request={
+        "connection_id": "<value>",
+    })
 
-res = s.account.list_accounting_accounts(request={
-    "connection_id": "<value>",
-})
-
-if res.accounting_accounts is not None:
-    # handle response
-    pass
+    if res.accounting_accounts is not None:
+        # handle response
+        pass
 
 ```
 
@@ -135,17 +147,21 @@ Update an account
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.account.patch_accounting_account(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.account.patch_accounting_account(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.accounting_account is not None:
-    # handle response
-    pass
+    if res.accounting_account is not None:
+        # handle response
+        pass
 
 ```
 
@@ -174,17 +190,21 @@ Remove an account
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.account.remove_accounting_account(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.account.remove_accounting_account(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -213,17 +233,21 @@ Update an account
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.account.update_accounting_account(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.account.update_accounting_account(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.accounting_account is not None:
-    # handle response
-    pass
+    if res.accounting_account is not None:
+        # handle response
+        pass
 
 ```
 

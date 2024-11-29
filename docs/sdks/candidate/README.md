@@ -20,16 +20,20 @@ Create a candidate
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.candidate.create_ats_candidate(request={
+        "connection_id": "<value>",
+    })
 
-res = s.candidate.create_ats_candidate(request={
-    "connection_id": "<value>",
-})
-
-if res.ats_candidate is not None:
-    # handle response
-    pass
+    if res.ats_candidate is not None:
+        # handle response
+        pass
 
 ```
 
@@ -58,17 +62,21 @@ Retrieve a candidate
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.candidate.get_ats_candidate(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.candidate.get_ats_candidate(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.ats_candidate is not None:
-    # handle response
-    pass
+    if res.ats_candidate is not None:
+        # handle response
+        pass
 
 ```
 
@@ -97,16 +105,20 @@ List all candidates
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.candidate.list_ats_candidates(request={
+        "connection_id": "<value>",
+    })
 
-res = s.candidate.list_ats_candidates(request={
-    "connection_id": "<value>",
-})
-
-if res.ats_candidates is not None:
-    # handle response
-    pass
+    if res.ats_candidates is not None:
+        # handle response
+        pass
 
 ```
 
@@ -135,17 +147,21 @@ Update a candidate
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.candidate.patch_ats_candidate(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.candidate.patch_ats_candidate(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.ats_candidate is not None:
-    # handle response
-    pass
+    if res.ats_candidate is not None:
+        # handle response
+        pass
 
 ```
 
@@ -174,17 +190,21 @@ Remove a candidate
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.candidate.remove_ats_candidate(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.candidate.remove_ats_candidate(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -213,17 +233,21 @@ Update a candidate
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.candidate.update_ats_candidate(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.candidate.update_ats_candidate(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.ats_candidate is not None:
-    # handle response
-    pass
+    if res.ats_candidate is not None:
+        # handle response
+        pass
 
 ```
 

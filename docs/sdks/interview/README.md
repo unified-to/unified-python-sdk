@@ -20,16 +20,20 @@ Create an interview
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.interview.create_ats_interview(request={
+        "connection_id": "<value>",
+    })
 
-res = s.interview.create_ats_interview(request={
-    "connection_id": "<value>",
-})
-
-if res.ats_interview is not None:
-    # handle response
-    pass
+    if res.ats_interview is not None:
+        # handle response
+        pass
 
 ```
 
@@ -58,17 +62,21 @@ Retrieve an interview
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.interview.get_ats_interview(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.interview.get_ats_interview(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.ats_interview is not None:
-    # handle response
-    pass
+    if res.ats_interview is not None:
+        # handle response
+        pass
 
 ```
 
@@ -97,16 +105,20 @@ List all interviews
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.interview.list_ats_interviews(request={
+        "connection_id": "<value>",
+    })
 
-res = s.interview.list_ats_interviews(request={
-    "connection_id": "<value>",
-})
-
-if res.ats_interviews is not None:
-    # handle response
-    pass
+    if res.ats_interviews is not None:
+        # handle response
+        pass
 
 ```
 
@@ -135,17 +147,21 @@ Update an interview
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.interview.patch_ats_interview(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.interview.patch_ats_interview(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.ats_interview is not None:
-    # handle response
-    pass
+    if res.ats_interview is not None:
+        # handle response
+        pass
 
 ```
 
@@ -174,17 +190,21 @@ Remove an interview
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.interview.remove_ats_interview(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.interview.remove_ats_interview(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -213,17 +233,21 @@ Update an interview
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.interview.update_ats_interview(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.interview.update_ats_interview(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.ats_interview is not None:
-    # handle response
-    pass
+    if res.ats_interview is not None:
+        # handle response
+        pass
 
 ```
 

@@ -20,16 +20,20 @@ Create a page
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.page.create_kms_page(request={
+        "connection_id": "<value>",
+    })
 
-res = s.page.create_kms_page(request={
-    "connection_id": "<value>",
-})
-
-if res.kms_page is not None:
-    # handle response
-    pass
+    if res.kms_page is not None:
+        # handle response
+        pass
 
 ```
 
@@ -58,17 +62,21 @@ Retrieve a page
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.page.get_kms_page(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.page.get_kms_page(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.kms_page is not None:
-    # handle response
-    pass
+    if res.kms_page is not None:
+        # handle response
+        pass
 
 ```
 
@@ -97,16 +105,20 @@ List all pages
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.page.list_kms_pages(request={
+        "connection_id": "<value>",
+    })
 
-res = s.page.list_kms_pages(request={
-    "connection_id": "<value>",
-})
-
-if res.kms_pages is not None:
-    # handle response
-    pass
+    if res.kms_pages is not None:
+        # handle response
+        pass
 
 ```
 
@@ -135,17 +147,21 @@ Update a page
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.page.patch_kms_page(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.page.patch_kms_page(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.kms_page is not None:
-    # handle response
-    pass
+    if res.kms_page is not None:
+        # handle response
+        pass
 
 ```
 
@@ -174,17 +190,21 @@ Remove a page
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.page.remove_kms_page(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.page.remove_kms_page(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -213,17 +233,21 @@ Update a page
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.page.update_kms_page(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.page.update_kms_page(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.kms_page is not None:
-    # handle response
-    pass
+    if res.kms_page is not None:
+        # handle response
+        pass
 
 ```
 

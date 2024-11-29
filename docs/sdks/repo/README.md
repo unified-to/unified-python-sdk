@@ -44,16 +44,20 @@ Create a branch
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.repo.create_repo_branch(request={
+        "connection_id": "<id>",
+    })
 
-res = s.repo.create_repo_branch(request={
-    "connection_id": "<id>",
-})
-
-if res.repo_branch is not None:
-    # handle response
-    pass
+    if res.repo_branch is not None:
+        # handle response
+        pass
 
 ```
 
@@ -82,16 +86,20 @@ Create a commit
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.repo.create_repo_commit(request={
+        "connection_id": "<id>",
+    })
 
-res = s.repo.create_repo_commit(request={
-    "connection_id": "<id>",
-})
-
-if res.repo_commit is not None:
-    # handle response
-    pass
+    if res.repo_commit is not None:
+        # handle response
+        pass
 
 ```
 
@@ -120,16 +128,20 @@ Create an organization
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.repo.create_repo_organization(request={
+        "connection_id": "<id>",
+    })
 
-res = s.repo.create_repo_organization(request={
-    "connection_id": "<id>",
-})
-
-if res.repo_organization is not None:
-    # handle response
-    pass
+    if res.repo_organization is not None:
+        # handle response
+        pass
 
 ```
 
@@ -158,16 +170,20 @@ Create a pullrequest
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.repo.create_repo_pullrequest(request={
+        "connection_id": "<id>",
+    })
 
-res = s.repo.create_repo_pullrequest(request={
-    "connection_id": "<id>",
-})
-
-if res.repo_pullrequest is not None:
-    # handle response
-    pass
+    if res.repo_pullrequest is not None:
+        # handle response
+        pass
 
 ```
 
@@ -196,16 +212,20 @@ Create a repository
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.repo.create_repo_repository(request={
+        "connection_id": "<id>",
+    })
 
-res = s.repo.create_repo_repository(request={
-    "connection_id": "<id>",
-})
-
-if res.repo_repository is not None:
-    # handle response
-    pass
+    if res.repo_repository is not None:
+        # handle response
+        pass
 
 ```
 
@@ -234,17 +254,21 @@ Retrieve a branch
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.repo.get_repo_branch(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
 
-res = s.repo.get_repo_branch(request={
-    "connection_id": "<id>",
-    "id": "<id>",
-})
-
-if res.repo_branch is not None:
-    # handle response
-    pass
+    if res.repo_branch is not None:
+        # handle response
+        pass
 
 ```
 
@@ -273,17 +297,21 @@ Retrieve a commit
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.repo.get_repo_commit(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
 
-res = s.repo.get_repo_commit(request={
-    "connection_id": "<id>",
-    "id": "<id>",
-})
-
-if res.repo_commit is not None:
-    # handle response
-    pass
+    if res.repo_commit is not None:
+        # handle response
+        pass
 
 ```
 
@@ -312,17 +340,21 @@ Retrieve an organization
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.repo.get_repo_organization(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
 
-res = s.repo.get_repo_organization(request={
-    "connection_id": "<id>",
-    "id": "<id>",
-})
-
-if res.repo_organization is not None:
-    # handle response
-    pass
+    if res.repo_organization is not None:
+        # handle response
+        pass
 
 ```
 
@@ -351,17 +383,21 @@ Retrieve a pullrequest
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.repo.get_repo_pullrequest(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
 
-res = s.repo.get_repo_pullrequest(request={
-    "connection_id": "<id>",
-    "id": "<id>",
-})
-
-if res.repo_pullrequest is not None:
-    # handle response
-    pass
+    if res.repo_pullrequest is not None:
+        # handle response
+        pass
 
 ```
 
@@ -390,17 +426,21 @@ Retrieve a repository
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.repo.get_repo_repository(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
 
-res = s.repo.get_repo_repository(request={
-    "connection_id": "<id>",
-    "id": "<id>",
-})
-
-if res.repo_repository is not None:
-    # handle response
-    pass
+    if res.repo_repository is not None:
+        # handle response
+        pass
 
 ```
 
@@ -429,16 +469,20 @@ List all branches
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.repo.list_repo_branches(request={
+        "connection_id": "<id>",
+    })
 
-res = s.repo.list_repo_branches(request={
-    "connection_id": "<id>",
-})
-
-if res.repo_branches is not None:
-    # handle response
-    pass
+    if res.repo_branches is not None:
+        # handle response
+        pass
 
 ```
 
@@ -467,16 +511,20 @@ List all commits
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.repo.list_repo_commits(request={
+        "connection_id": "<id>",
+    })
 
-res = s.repo.list_repo_commits(request={
-    "connection_id": "<id>",
-})
-
-if res.repo_commits is not None:
-    # handle response
-    pass
+    if res.repo_commits is not None:
+        # handle response
+        pass
 
 ```
 
@@ -505,16 +553,20 @@ List all organizations
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.repo.list_repo_organizations(request={
+        "connection_id": "<id>",
+    })
 
-res = s.repo.list_repo_organizations(request={
-    "connection_id": "<id>",
-})
-
-if res.repo_organizations is not None:
-    # handle response
-    pass
+    if res.repo_organizations is not None:
+        # handle response
+        pass
 
 ```
 
@@ -543,16 +595,20 @@ List all pullrequests
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.repo.list_repo_pullrequests(request={
+        "connection_id": "<id>",
+    })
 
-res = s.repo.list_repo_pullrequests(request={
-    "connection_id": "<id>",
-})
-
-if res.repo_pullrequests is not None:
-    # handle response
-    pass
+    if res.repo_pullrequests is not None:
+        # handle response
+        pass
 
 ```
 
@@ -581,16 +637,20 @@ List all repositories
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.repo.list_repo_repositories(request={
+        "connection_id": "<id>",
+    })
 
-res = s.repo.list_repo_repositories(request={
-    "connection_id": "<id>",
-})
-
-if res.repo_repositories is not None:
-    # handle response
-    pass
+    if res.repo_repositories is not None:
+        # handle response
+        pass
 
 ```
 
@@ -619,17 +679,21 @@ Update a branch
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.repo.patch_repo_branch(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
 
-res = s.repo.patch_repo_branch(request={
-    "connection_id": "<id>",
-    "id": "<id>",
-})
-
-if res.repo_branch is not None:
-    # handle response
-    pass
+    if res.repo_branch is not None:
+        # handle response
+        pass
 
 ```
 
@@ -658,17 +722,21 @@ Update a commit
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.repo.patch_repo_commit(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
 
-res = s.repo.patch_repo_commit(request={
-    "connection_id": "<id>",
-    "id": "<id>",
-})
-
-if res.repo_commit is not None:
-    # handle response
-    pass
+    if res.repo_commit is not None:
+        # handle response
+        pass
 
 ```
 
@@ -697,17 +765,21 @@ Update an organization
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.repo.patch_repo_organization(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
 
-res = s.repo.patch_repo_organization(request={
-    "connection_id": "<id>",
-    "id": "<id>",
-})
-
-if res.repo_organization is not None:
-    # handle response
-    pass
+    if res.repo_organization is not None:
+        # handle response
+        pass
 
 ```
 
@@ -736,17 +808,21 @@ Update a pullrequest
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.repo.patch_repo_pullrequest(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
 
-res = s.repo.patch_repo_pullrequest(request={
-    "connection_id": "<id>",
-    "id": "<id>",
-})
-
-if res.repo_pullrequest is not None:
-    # handle response
-    pass
+    if res.repo_pullrequest is not None:
+        # handle response
+        pass
 
 ```
 
@@ -775,17 +851,21 @@ Update a repository
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.repo.patch_repo_repository(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
 
-res = s.repo.patch_repo_repository(request={
-    "connection_id": "<id>",
-    "id": "<id>",
-})
-
-if res.repo_repository is not None:
-    # handle response
-    pass
+    if res.repo_repository is not None:
+        # handle response
+        pass
 
 ```
 
@@ -814,17 +894,21 @@ Remove a branch
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.repo.remove_repo_branch(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
 
-res = s.repo.remove_repo_branch(request={
-    "connection_id": "<id>",
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -853,17 +937,21 @@ Remove a commit
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.repo.remove_repo_commit(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
 
-res = s.repo.remove_repo_commit(request={
-    "connection_id": "<id>",
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -892,17 +980,21 @@ Remove an organization
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.repo.remove_repo_organization(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
 
-res = s.repo.remove_repo_organization(request={
-    "connection_id": "<id>",
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -931,17 +1023,21 @@ Remove a pullrequest
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.repo.remove_repo_pullrequest(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
 
-res = s.repo.remove_repo_pullrequest(request={
-    "connection_id": "<id>",
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -970,17 +1066,21 @@ Remove a repository
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.repo.remove_repo_repository(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
 
-res = s.repo.remove_repo_repository(request={
-    "connection_id": "<id>",
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -1009,17 +1109,21 @@ Update a branch
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.repo.update_repo_branch(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
 
-res = s.repo.update_repo_branch(request={
-    "connection_id": "<id>",
-    "id": "<id>",
-})
-
-if res.repo_branch is not None:
-    # handle response
-    pass
+    if res.repo_branch is not None:
+        # handle response
+        pass
 
 ```
 
@@ -1048,17 +1152,21 @@ Update a commit
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.repo.update_repo_commit(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
 
-res = s.repo.update_repo_commit(request={
-    "connection_id": "<id>",
-    "id": "<id>",
-})
-
-if res.repo_commit is not None:
-    # handle response
-    pass
+    if res.repo_commit is not None:
+        # handle response
+        pass
 
 ```
 
@@ -1087,17 +1195,21 @@ Update an organization
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.repo.update_repo_organization(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
 
-res = s.repo.update_repo_organization(request={
-    "connection_id": "<id>",
-    "id": "<id>",
-})
-
-if res.repo_organization is not None:
-    # handle response
-    pass
+    if res.repo_organization is not None:
+        # handle response
+        pass
 
 ```
 
@@ -1126,17 +1238,21 @@ Update a pullrequest
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.repo.update_repo_pullrequest(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
 
-res = s.repo.update_repo_pullrequest(request={
-    "connection_id": "<id>",
-    "id": "<id>",
-})
-
-if res.repo_pullrequest is not None:
-    # handle response
-    pass
+    if res.repo_pullrequest is not None:
+        # handle response
+        pass
 
 ```
 
@@ -1165,17 +1281,21 @@ Update a repository
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.repo.update_repo_repository(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
 
-res = s.repo.update_repo_repository(request={
-    "connection_id": "<id>",
-    "id": "<id>",
-})
-
-if res.repo_repository is not None:
-    # handle response
-    pass
+    if res.repo_repository is not None:
+        # handle response
+        pass
 
 ```
 

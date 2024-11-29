@@ -15,16 +15,20 @@ List all models
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.model.list_genai_models(request={
+        "connection_id": "<value>",
+    })
 
-res = s.model.list_genai_models(request={
-    "connection_id": "<value>",
-})
-
-if res.genai_models is not None:
-    # handle response
-    pass
+    if res.genai_models is not None:
+        # handle response
+        pass
 
 ```
 

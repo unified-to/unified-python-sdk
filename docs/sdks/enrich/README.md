@@ -16,16 +16,20 @@ Retrieve enrichment information for a company
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.enrich.list_enrich_companies(request={
+        "connection_id": "<value>",
+    })
 
-res = s.enrich.list_enrich_companies(request={
-    "connection_id": "<value>",
-})
-
-if res.enrich_company is not None:
-    # handle response
-    pass
+    if res.enrich_company is not None:
+        # handle response
+        pass
 
 ```
 
@@ -54,16 +58,20 @@ Retrieve enrichment information for a person
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.enrich.list_enrich_people(request={
+        "connection_id": "<value>",
+    })
 
-res = s.enrich.list_enrich_people(request={
-    "connection_id": "<value>",
-})
-
-if res.enrich_person is not None:
-    # handle response
-    pass
+    if res.enrich_person is not None:
+        # handle response
+        pass
 
 ```
 

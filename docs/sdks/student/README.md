@@ -20,16 +20,20 @@ Create a student
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.student.create_lms_student(request={
+        "connection_id": "<id>",
+    })
 
-res = s.student.create_lms_student(request={
-    "connection_id": "<id>",
-})
-
-if res.lms_student is not None:
-    # handle response
-    pass
+    if res.lms_student is not None:
+        # handle response
+        pass
 
 ```
 
@@ -58,17 +62,21 @@ Retrieve a student
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.student.get_lms_student(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
 
-res = s.student.get_lms_student(request={
-    "connection_id": "<id>",
-    "id": "<id>",
-})
-
-if res.lms_student is not None:
-    # handle response
-    pass
+    if res.lms_student is not None:
+        # handle response
+        pass
 
 ```
 
@@ -97,16 +105,20 @@ List all students
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.student.list_lms_students(request={
+        "connection_id": "<id>",
+    })
 
-res = s.student.list_lms_students(request={
-    "connection_id": "<id>",
-})
-
-if res.lms_students is not None:
-    # handle response
-    pass
+    if res.lms_students is not None:
+        # handle response
+        pass
 
 ```
 
@@ -135,17 +147,21 @@ Update a student
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.student.patch_lms_student(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
 
-res = s.student.patch_lms_student(request={
-    "connection_id": "<id>",
-    "id": "<id>",
-})
-
-if res.lms_student is not None:
-    # handle response
-    pass
+    if res.lms_student is not None:
+        # handle response
+        pass
 
 ```
 
@@ -174,17 +190,21 @@ Remove a student
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.student.remove_lms_student(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
 
-res = s.student.remove_lms_student(request={
-    "connection_id": "<id>",
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -213,17 +233,21 @@ Update a student
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.student.update_lms_student(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
 
-res = s.student.update_lms_student(request={
-    "connection_id": "<id>",
-    "id": "<id>",
-})
-
-if res.lms_student is not None:
-    # handle response
-    pass
+    if res.lms_student is not None:
+        # handle response
+        pass
 
 ```
 

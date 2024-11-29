@@ -20,16 +20,20 @@ Create a metadata
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.metadata.create_commerce_metadata(request={
+        "connection_id": "<id>",
+    })
 
-res = s.metadata.create_commerce_metadata(request={
-    "connection_id": "<id>",
-})
-
-if res.commerce_metadata is not None:
-    # handle response
-    pass
+    if res.commerce_metadata is not None:
+        # handle response
+        pass
 
 ```
 
@@ -58,17 +62,21 @@ Retrieve a metadata
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.metadata.get_commerce_metadata(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
 
-res = s.metadata.get_commerce_metadata(request={
-    "connection_id": "<id>",
-    "id": "<id>",
-})
-
-if res.commerce_metadata is not None:
-    # handle response
-    pass
+    if res.commerce_metadata is not None:
+        # handle response
+        pass
 
 ```
 
@@ -97,16 +105,20 @@ List all metadatas
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.metadata.list_commerce_metadatas(request={
+        "connection_id": "<id>",
+    })
 
-res = s.metadata.list_commerce_metadatas(request={
-    "connection_id": "<id>",
-})
-
-if res.commerce_metadatas is not None:
-    # handle response
-    pass
+    if res.commerce_metadatas is not None:
+        # handle response
+        pass
 
 ```
 
@@ -135,17 +147,21 @@ Update a metadata
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.metadata.patch_commerce_metadata(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
 
-res = s.metadata.patch_commerce_metadata(request={
-    "connection_id": "<id>",
-    "id": "<id>",
-})
-
-if res.commerce_metadata is not None:
-    # handle response
-    pass
+    if res.commerce_metadata is not None:
+        # handle response
+        pass
 
 ```
 
@@ -174,17 +190,21 @@ Remove a metadata
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.metadata.remove_commerce_metadata(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
 
-res = s.metadata.remove_commerce_metadata(request={
-    "connection_id": "<id>",
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -213,17 +233,21 @@ Update a metadata
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.metadata.update_commerce_metadata(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
 
-res = s.metadata.update_commerce_metadata(request={
-    "connection_id": "<id>",
-    "id": "<id>",
-})
-
-if res.commerce_metadata is not None:
-    # handle response
-    pass
+    if res.commerce_metadata is not None:
+        # handle response
+        pass
 
 ```
 

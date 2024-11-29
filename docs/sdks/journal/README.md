@@ -20,16 +20,20 @@ Create a journal
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.journal.create_accounting_journal(request={
+        "connection_id": "<value>",
+    })
 
-res = s.journal.create_accounting_journal(request={
-    "connection_id": "<value>",
-})
-
-if res.accounting_journal is not None:
-    # handle response
-    pass
+    if res.accounting_journal is not None:
+        # handle response
+        pass
 
 ```
 
@@ -58,17 +62,21 @@ Retrieve a journal
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.journal.get_accounting_journal(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.journal.get_accounting_journal(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.accounting_journal is not None:
-    # handle response
-    pass
+    if res.accounting_journal is not None:
+        # handle response
+        pass
 
 ```
 
@@ -97,16 +105,20 @@ List all journals
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.journal.list_accounting_journals(request={
+        "connection_id": "<value>",
+    })
 
-res = s.journal.list_accounting_journals(request={
-    "connection_id": "<value>",
-})
-
-if res.accounting_journals is not None:
-    # handle response
-    pass
+    if res.accounting_journals is not None:
+        # handle response
+        pass
 
 ```
 
@@ -135,17 +147,21 @@ Update a journal
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.journal.patch_accounting_journal(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.journal.patch_accounting_journal(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.accounting_journal is not None:
-    # handle response
-    pass
+    if res.accounting_journal is not None:
+        # handle response
+        pass
 
 ```
 
@@ -174,17 +190,21 @@ Remove a journal
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.journal.remove_accounting_journal(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.journal.remove_accounting_journal(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -213,17 +233,21 @@ Update a journal
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.journal.update_accounting_journal(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.journal.update_accounting_journal(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.accounting_journal is not None:
-    # handle response
-    pass
+    if res.accounting_journal is not None:
+        # handle response
+        pass
 
 ```
 

@@ -58,16 +58,20 @@ Create an account
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.accounting.create_accounting_account(request={
+        "connection_id": "<value>",
+    })
 
-res = s.accounting.create_accounting_account(request={
-    "connection_id": "<value>",
-})
-
-if res.accounting_account is not None:
-    # handle response
-    pass
+    if res.accounting_account is not None:
+        # handle response
+        pass
 
 ```
 
@@ -96,16 +100,20 @@ Create a contact
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.accounting.create_accounting_contact(request={
+        "connection_id": "<value>",
+    })
 
-res = s.accounting.create_accounting_contact(request={
-    "connection_id": "<value>",
-})
-
-if res.accounting_contact is not None:
-    # handle response
-    pass
+    if res.accounting_contact is not None:
+        # handle response
+        pass
 
 ```
 
@@ -134,16 +142,20 @@ Create an invoice
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.accounting.create_accounting_invoice(request={
+        "connection_id": "<value>",
+    })
 
-res = s.accounting.create_accounting_invoice(request={
-    "connection_id": "<value>",
-})
-
-if res.accounting_invoice is not None:
-    # handle response
-    pass
+    if res.accounting_invoice is not None:
+        # handle response
+        pass
 
 ```
 
@@ -172,16 +184,20 @@ Create a journal
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.accounting.create_accounting_journal(request={
+        "connection_id": "<value>",
+    })
 
-res = s.accounting.create_accounting_journal(request={
-    "connection_id": "<value>",
-})
-
-if res.accounting_journal is not None:
-    # handle response
-    pass
+    if res.accounting_journal is not None:
+        # handle response
+        pass
 
 ```
 
@@ -210,16 +226,20 @@ Create an order
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.accounting.create_accounting_order(request={
+        "connection_id": "<id>",
+    })
 
-res = s.accounting.create_accounting_order(request={
-    "connection_id": "<id>",
-})
-
-if res.accounting_order is not None:
-    # handle response
-    pass
+    if res.accounting_order is not None:
+        # handle response
+        pass
 
 ```
 
@@ -248,16 +268,20 @@ Create a taxrate
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.accounting.create_accounting_taxrate(request={
+        "connection_id": "<value>",
+    })
 
-res = s.accounting.create_accounting_taxrate(request={
-    "connection_id": "<value>",
-})
-
-if res.accounting_taxrate is not None:
-    # handle response
-    pass
+    if res.accounting_taxrate is not None:
+        # handle response
+        pass
 
 ```
 
@@ -286,16 +310,20 @@ Create a transaction
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.accounting.create_accounting_transaction(request={
+        "connection_id": "<value>",
+    })
 
-res = s.accounting.create_accounting_transaction(request={
-    "connection_id": "<value>",
-})
-
-if res.accounting_transaction is not None:
-    # handle response
-    pass
+    if res.accounting_transaction is not None:
+        # handle response
+        pass
 
 ```
 
@@ -324,17 +352,21 @@ Retrieve an account
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.accounting.get_accounting_account(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.accounting.get_accounting_account(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.accounting_account is not None:
-    # handle response
-    pass
+    if res.accounting_account is not None:
+        # handle response
+        pass
 
 ```
 
@@ -363,17 +395,21 @@ Retrieve a contact
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.accounting.get_accounting_contact(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.accounting.get_accounting_contact(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.accounting_contact is not None:
-    # handle response
-    pass
+    if res.accounting_contact is not None:
+        # handle response
+        pass
 
 ```
 
@@ -402,17 +438,21 @@ Retrieve an invoice
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.accounting.get_accounting_invoice(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.accounting.get_accounting_invoice(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.accounting_invoice is not None:
-    # handle response
-    pass
+    if res.accounting_invoice is not None:
+        # handle response
+        pass
 
 ```
 
@@ -441,17 +481,21 @@ Retrieve a journal
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.accounting.get_accounting_journal(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.accounting.get_accounting_journal(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.accounting_journal is not None:
-    # handle response
-    pass
+    if res.accounting_journal is not None:
+        # handle response
+        pass
 
 ```
 
@@ -480,17 +524,21 @@ Retrieve an order
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.accounting.get_accounting_order(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
 
-res = s.accounting.get_accounting_order(request={
-    "connection_id": "<id>",
-    "id": "<id>",
-})
-
-if res.accounting_order is not None:
-    # handle response
-    pass
+    if res.accounting_order is not None:
+        # handle response
+        pass
 
 ```
 
@@ -519,17 +567,21 @@ Retrieve an organization
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.accounting.get_accounting_organization(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.accounting.get_accounting_organization(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.accounting_organization is not None:
-    # handle response
-    pass
+    if res.accounting_organization is not None:
+        # handle response
+        pass
 
 ```
 
@@ -558,17 +610,21 @@ Retrieve a taxrate
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.accounting.get_accounting_taxrate(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.accounting.get_accounting_taxrate(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.accounting_taxrate is not None:
-    # handle response
-    pass
+    if res.accounting_taxrate is not None:
+        # handle response
+        pass
 
 ```
 
@@ -597,17 +653,21 @@ Retrieve a transaction
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.accounting.get_accounting_transaction(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.accounting.get_accounting_transaction(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.accounting_transaction is not None:
-    # handle response
-    pass
+    if res.accounting_transaction is not None:
+        # handle response
+        pass
 
 ```
 
@@ -636,16 +696,20 @@ List all accounts
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.accounting.list_accounting_accounts(request={
+        "connection_id": "<value>",
+    })
 
-res = s.accounting.list_accounting_accounts(request={
-    "connection_id": "<value>",
-})
-
-if res.accounting_accounts is not None:
-    # handle response
-    pass
+    if res.accounting_accounts is not None:
+        # handle response
+        pass
 
 ```
 
@@ -674,16 +738,20 @@ List all contacts
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.accounting.list_accounting_contacts(request={
+        "connection_id": "<value>",
+    })
 
-res = s.accounting.list_accounting_contacts(request={
-    "connection_id": "<value>",
-})
-
-if res.accounting_contacts is not None:
-    # handle response
-    pass
+    if res.accounting_contacts is not None:
+        # handle response
+        pass
 
 ```
 
@@ -712,16 +780,20 @@ List all invoices
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.accounting.list_accounting_invoices(request={
+        "connection_id": "<value>",
+    })
 
-res = s.accounting.list_accounting_invoices(request={
-    "connection_id": "<value>",
-})
-
-if res.accounting_invoices is not None:
-    # handle response
-    pass
+    if res.accounting_invoices is not None:
+        # handle response
+        pass
 
 ```
 
@@ -750,16 +822,20 @@ List all journals
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.accounting.list_accounting_journals(request={
+        "connection_id": "<value>",
+    })
 
-res = s.accounting.list_accounting_journals(request={
-    "connection_id": "<value>",
-})
-
-if res.accounting_journals is not None:
-    # handle response
-    pass
+    if res.accounting_journals is not None:
+        # handle response
+        pass
 
 ```
 
@@ -788,16 +864,20 @@ List all orders
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.accounting.list_accounting_orders(request={
+        "connection_id": "<id>",
+    })
 
-res = s.accounting.list_accounting_orders(request={
-    "connection_id": "<id>",
-})
-
-if res.accounting_orders is not None:
-    # handle response
-    pass
+    if res.accounting_orders is not None:
+        # handle response
+        pass
 
 ```
 
@@ -826,16 +906,20 @@ List all organizations
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.accounting.list_accounting_organizations(request={
+        "connection_id": "<value>",
+    })
 
-res = s.accounting.list_accounting_organizations(request={
-    "connection_id": "<value>",
-})
-
-if res.accounting_organizations is not None:
-    # handle response
-    pass
+    if res.accounting_organizations is not None:
+        # handle response
+        pass
 
 ```
 
@@ -864,16 +948,20 @@ List all taxrates
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.accounting.list_accounting_taxrates(request={
+        "connection_id": "<value>",
+    })
 
-res = s.accounting.list_accounting_taxrates(request={
-    "connection_id": "<value>",
-})
-
-if res.accounting_taxrates is not None:
-    # handle response
-    pass
+    if res.accounting_taxrates is not None:
+        # handle response
+        pass
 
 ```
 
@@ -902,16 +990,20 @@ List all transactions
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.accounting.list_accounting_transactions(request={
+        "connection_id": "<value>",
+    })
 
-res = s.accounting.list_accounting_transactions(request={
-    "connection_id": "<value>",
-})
-
-if res.accounting_transactions is not None:
-    # handle response
-    pass
+    if res.accounting_transactions is not None:
+        # handle response
+        pass
 
 ```
 
@@ -940,17 +1032,21 @@ Update an account
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.accounting.patch_accounting_account(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.accounting.patch_accounting_account(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.accounting_account is not None:
-    # handle response
-    pass
+    if res.accounting_account is not None:
+        # handle response
+        pass
 
 ```
 
@@ -979,17 +1075,21 @@ Update a contact
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.accounting.patch_accounting_contact(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.accounting.patch_accounting_contact(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.accounting_contact is not None:
-    # handle response
-    pass
+    if res.accounting_contact is not None:
+        # handle response
+        pass
 
 ```
 
@@ -1018,17 +1118,21 @@ Update an invoice
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.accounting.patch_accounting_invoice(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.accounting.patch_accounting_invoice(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.accounting_invoice is not None:
-    # handle response
-    pass
+    if res.accounting_invoice is not None:
+        # handle response
+        pass
 
 ```
 
@@ -1057,17 +1161,21 @@ Update a journal
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.accounting.patch_accounting_journal(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.accounting.patch_accounting_journal(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.accounting_journal is not None:
-    # handle response
-    pass
+    if res.accounting_journal is not None:
+        # handle response
+        pass
 
 ```
 
@@ -1096,17 +1204,21 @@ Update an order
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.accounting.patch_accounting_order(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
 
-res = s.accounting.patch_accounting_order(request={
-    "connection_id": "<id>",
-    "id": "<id>",
-})
-
-if res.accounting_order is not None:
-    # handle response
-    pass
+    if res.accounting_order is not None:
+        # handle response
+        pass
 
 ```
 
@@ -1135,17 +1247,21 @@ Update a taxrate
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.accounting.patch_accounting_taxrate(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.accounting.patch_accounting_taxrate(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.accounting_taxrate is not None:
-    # handle response
-    pass
+    if res.accounting_taxrate is not None:
+        # handle response
+        pass
 
 ```
 
@@ -1174,17 +1290,21 @@ Update a transaction
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.accounting.patch_accounting_transaction(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.accounting.patch_accounting_transaction(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.accounting_transaction is not None:
-    # handle response
-    pass
+    if res.accounting_transaction is not None:
+        # handle response
+        pass
 
 ```
 
@@ -1213,17 +1333,21 @@ Remove an account
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.accounting.remove_accounting_account(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.accounting.remove_accounting_account(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -1252,17 +1376,21 @@ Remove a contact
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.accounting.remove_accounting_contact(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.accounting.remove_accounting_contact(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -1291,17 +1419,21 @@ Remove an invoice
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.accounting.remove_accounting_invoice(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.accounting.remove_accounting_invoice(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -1330,17 +1462,21 @@ Remove a journal
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.accounting.remove_accounting_journal(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.accounting.remove_accounting_journal(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -1369,17 +1505,21 @@ Remove an order
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.accounting.remove_accounting_order(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
 
-res = s.accounting.remove_accounting_order(request={
-    "connection_id": "<id>",
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -1408,17 +1548,21 @@ Remove a taxrate
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.accounting.remove_accounting_taxrate(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.accounting.remove_accounting_taxrate(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -1447,17 +1591,21 @@ Remove a transaction
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.accounting.remove_accounting_transaction(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.accounting.remove_accounting_transaction(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -1486,17 +1634,21 @@ Update an account
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.accounting.update_accounting_account(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.accounting.update_accounting_account(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.accounting_account is not None:
-    # handle response
-    pass
+    if res.accounting_account is not None:
+        # handle response
+        pass
 
 ```
 
@@ -1525,17 +1677,21 @@ Update a contact
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.accounting.update_accounting_contact(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.accounting.update_accounting_contact(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.accounting_contact is not None:
-    # handle response
-    pass
+    if res.accounting_contact is not None:
+        # handle response
+        pass
 
 ```
 
@@ -1564,17 +1720,21 @@ Update an invoice
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.accounting.update_accounting_invoice(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.accounting.update_accounting_invoice(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.accounting_invoice is not None:
-    # handle response
-    pass
+    if res.accounting_invoice is not None:
+        # handle response
+        pass
 
 ```
 
@@ -1603,17 +1763,21 @@ Update a journal
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.accounting.update_accounting_journal(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.accounting.update_accounting_journal(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.accounting_journal is not None:
-    # handle response
-    pass
+    if res.accounting_journal is not None:
+        # handle response
+        pass
 
 ```
 
@@ -1642,17 +1806,21 @@ Update an order
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.accounting.update_accounting_order(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
 
-res = s.accounting.update_accounting_order(request={
-    "connection_id": "<id>",
-    "id": "<id>",
-})
-
-if res.accounting_order is not None:
-    # handle response
-    pass
+    if res.accounting_order is not None:
+        # handle response
+        pass
 
 ```
 
@@ -1681,17 +1849,21 @@ Update a taxrate
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.accounting.update_accounting_taxrate(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.accounting.update_accounting_taxrate(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.accounting_taxrate is not None:
-    # handle response
-    pass
+    if res.accounting_taxrate is not None:
+        # handle response
+        pass
 
 ```
 
@@ -1720,17 +1892,21 @@ Update a transaction
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.accounting.update_accounting_transaction(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.accounting.update_accounting_transaction(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.accounting_transaction is not None:
-    # handle response
-    pass
+    if res.accounting_transaction is not None:
+        # handle response
+        pass
 
 ```
 

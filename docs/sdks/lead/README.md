@@ -20,16 +20,20 @@ Create a lead
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.lead.create_crm_lead(request={
+        "connection_id": "<value>",
+    })
 
-res = s.lead.create_crm_lead(request={
-    "connection_id": "<value>",
-})
-
-if res.crm_lead is not None:
-    # handle response
-    pass
+    if res.crm_lead is not None:
+        # handle response
+        pass
 
 ```
 
@@ -58,17 +62,21 @@ Retrieve a lead
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.lead.get_crm_lead(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.lead.get_crm_lead(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.crm_lead is not None:
-    # handle response
-    pass
+    if res.crm_lead is not None:
+        # handle response
+        pass
 
 ```
 
@@ -97,16 +105,20 @@ List all leads
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.lead.list_crm_leads(request={
+        "connection_id": "<value>",
+    })
 
-res = s.lead.list_crm_leads(request={
-    "connection_id": "<value>",
-})
-
-if res.crm_leads is not None:
-    # handle response
-    pass
+    if res.crm_leads is not None:
+        # handle response
+        pass
 
 ```
 
@@ -135,17 +147,21 @@ Update a lead
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.lead.patch_crm_lead(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.lead.patch_crm_lead(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.crm_lead is not None:
-    # handle response
-    pass
+    if res.crm_lead is not None:
+        # handle response
+        pass
 
 ```
 
@@ -174,17 +190,21 @@ Remove a lead
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.lead.remove_crm_lead(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.lead.remove_crm_lead(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -213,17 +233,21 @@ Update a lead
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.lead.update_crm_lead(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.lead.update_crm_lead(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.crm_lead is not None:
-    # handle response
-    pass
+    if res.crm_lead is not None:
+        # handle response
+        pass
 
 ```
 

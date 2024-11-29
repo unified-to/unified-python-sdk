@@ -22,16 +22,20 @@ Create a message
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.messaging.create_messaging_message(request={
+        "connection_id": "<value>",
+    })
 
-res = s.messaging.create_messaging_message(request={
-    "connection_id": "<value>",
-})
-
-if res.messaging_message is not None:
-    # handle response
-    pass
+    if res.messaging_message is not None:
+        # handle response
+        pass
 
 ```
 
@@ -60,17 +64,21 @@ Retrieve a channel
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.messaging.get_messaging_channel(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.messaging.get_messaging_channel(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.messaging_channel is not None:
-    # handle response
-    pass
+    if res.messaging_channel is not None:
+        # handle response
+        pass
 
 ```
 
@@ -99,17 +107,21 @@ Retrieve a message
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.messaging.get_messaging_message(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.messaging.get_messaging_message(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.messaging_message is not None:
-    # handle response
-    pass
+    if res.messaging_message is not None:
+        # handle response
+        pass
 
 ```
 
@@ -138,16 +150,20 @@ List all channels
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.messaging.list_messaging_channels(request={
+        "connection_id": "<value>",
+    })
 
-res = s.messaging.list_messaging_channels(request={
-    "connection_id": "<value>",
-})
-
-if res.messaging_channels is not None:
-    # handle response
-    pass
+    if res.messaging_channels is not None:
+        # handle response
+        pass
 
 ```
 
@@ -176,16 +192,20 @@ List all messages
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.messaging.list_messaging_messages(request={
+        "connection_id": "<value>",
+    })
 
-res = s.messaging.list_messaging_messages(request={
-    "connection_id": "<value>",
-})
-
-if res.messaging_messages is not None:
-    # handle response
-    pass
+    if res.messaging_messages is not None:
+        # handle response
+        pass
 
 ```
 
@@ -214,17 +234,21 @@ Update a message
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.messaging.patch_messaging_message(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.messaging.patch_messaging_message(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.messaging_message is not None:
-    # handle response
-    pass
+    if res.messaging_message is not None:
+        # handle response
+        pass
 
 ```
 
@@ -253,17 +277,21 @@ Remove a message
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.messaging.remove_messaging_message(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.messaging.remove_messaging_message(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -292,17 +320,21 @@ Update a message
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.messaging.update_messaging_message(request={
+        "connection_id": "<value>",
+        "id": "<id>",
+    })
 
-res = s.messaging.update_messaging_message(request={
-    "connection_id": "<value>",
-    "id": "<id>",
-})
-
-if res.messaging_message is not None:
-    # handle response
-    pass
+    if res.messaging_message is not None:
+        # handle response
+        pass
 
 ```
 

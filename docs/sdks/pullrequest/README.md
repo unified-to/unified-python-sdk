@@ -20,16 +20,20 @@ Create a pullrequest
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.pullrequest.create_repo_pullrequest(request={
+        "connection_id": "<id>",
+    })
 
-res = s.pullrequest.create_repo_pullrequest(request={
-    "connection_id": "<id>",
-})
-
-if res.repo_pullrequest is not None:
-    # handle response
-    pass
+    if res.repo_pullrequest is not None:
+        # handle response
+        pass
 
 ```
 
@@ -58,17 +62,21 @@ Retrieve a pullrequest
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.pullrequest.get_repo_pullrequest(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
 
-res = s.pullrequest.get_repo_pullrequest(request={
-    "connection_id": "<id>",
-    "id": "<id>",
-})
-
-if res.repo_pullrequest is not None:
-    # handle response
-    pass
+    if res.repo_pullrequest is not None:
+        # handle response
+        pass
 
 ```
 
@@ -97,16 +105,20 @@ List all pullrequests
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.pullrequest.list_repo_pullrequests(request={
+        "connection_id": "<id>",
+    })
 
-res = s.pullrequest.list_repo_pullrequests(request={
-    "connection_id": "<id>",
-})
-
-if res.repo_pullrequests is not None:
-    # handle response
-    pass
+    if res.repo_pullrequests is not None:
+        # handle response
+        pass
 
 ```
 
@@ -135,17 +147,21 @@ Update a pullrequest
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.pullrequest.patch_repo_pullrequest(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
 
-res = s.pullrequest.patch_repo_pullrequest(request={
-    "connection_id": "<id>",
-    "id": "<id>",
-})
-
-if res.repo_pullrequest is not None:
-    # handle response
-    pass
+    if res.repo_pullrequest is not None:
+        # handle response
+        pass
 
 ```
 
@@ -174,17 +190,21 @@ Remove a pullrequest
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.pullrequest.remove_repo_pullrequest(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
 
-res = s.pullrequest.remove_repo_pullrequest(request={
-    "connection_id": "<id>",
-    "id": "<id>",
-})
-
-if res is not None:
-    # handle response
-    pass
+    if res is not None:
+        # handle response
+        pass
 
 ```
 
@@ -213,17 +233,21 @@ Update a pullrequest
 
 ```python
 from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
 
-s = UnifiedTo()
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as s:
+    res = s.pullrequest.update_repo_pullrequest(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
 
-res = s.pullrequest.update_repo_pullrequest(request={
-    "connection_id": "<id>",
-    "id": "<id>",
-})
-
-if res.repo_pullrequest is not None:
-    # handle response
-    pass
+    if res.repo_pullrequest is not None:
+        # handle response
+        pass
 
 ```
 
