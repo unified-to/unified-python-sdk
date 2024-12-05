@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: 67e00d4a73575e52ca9920bf86b071e8
+  docChecksum: 3707cd341db19ec6652e51126ae52977
   docVersion: "1.0"
-  speakeasyVersion: 1.448.2
-  generationVersion: 2.467.4
-  releaseVersion: 0.26.2
-  configChecksum: fdf10bcf8cde69abc669c8463528b043
+  speakeasyVersion: 1.451.5
+  generationVersion: 2.471.2
+  releaseVersion: 0.26.3
+  configChecksum: 58d15859d115e0688dffdfb4ebc2f3de
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -16,7 +16,7 @@ features:
     acceptHeaders: 3.0.0
     additionalDependencies: 1.0.0
     constsAndDefaults: 1.0.5
-    core: 5.6.8
+    core: 5.6.9
     defaultEnabledRetries: 0.2.0
     downloadStreams: 1.0.1
     enumUnions: 0.1.0
@@ -903,6 +903,7 @@ generatedFiles:
   - docs/models/shared/issue.md
   - docs/models/shared/issuestatus.md
   - docs/models/shared/kmspage.md
+  - docs/models/shared/kmspagemetadata.md
   - docs/models/shared/kmspagetype.md
   - docs/models/shared/kmsspace.md
   - docs/models/shared/listaccountid.md
@@ -1703,6 +1704,7 @@ generatedFiles:
   - src/unified_python_sdk/models/shared/integrationsupport.py
   - src/unified_python_sdk/models/shared/issue.py
   - src/unified_python_sdk/models/shared/kmspage.py
+  - src/unified_python_sdk/models/shared/kmspagemetadata.py
   - src/unified_python_sdk/models/shared/kmsspace.py
   - src/unified_python_sdk/models/shared/lmsclass.py
   - src/unified_python_sdk/models/shared/lmscourse.py

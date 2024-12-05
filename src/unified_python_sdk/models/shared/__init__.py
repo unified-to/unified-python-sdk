@@ -226,6 +226,7 @@ from .integrationsupport import (
 )
 from .issue import Issue, IssueStatus, IssueTypedDict
 from .kmspage import KmsPage, KmsPageType, KmsPageTypedDict
+from .kmspagemetadata import KmsPageMetadata, KmsPageMetadataTypedDict
 from .kmsspace import KmsSpace, KmsSpaceTypedDict
 from .lmsclass import LmsClass, LmsClassTypedDict
 from .lmscourse import LmsCourse, LmsCourseTypedDict
@@ -648,6 +649,8 @@ __all__ = [
     "IssueStatus",
     "IssueTypedDict",
     "KmsPage",
+    "KmsPageMetadata",
+    "KmsPageMetadataTypedDict",
     "KmsPageType",
     "KmsPageTypedDict",
     "KmsSpace",
