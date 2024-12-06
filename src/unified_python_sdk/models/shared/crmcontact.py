@@ -26,6 +26,7 @@ class CrmContactTypedDict(TypedDict):
     emails: NotRequired[List[CrmEmailTypedDict]]
     r"""An array of email addresses for this contact"""
     id: NotRequired[str]
+    link_urls: NotRequired[List[str]]
     name: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
     r"""The raw data returned by the integration for this contact"""
@@ -55,6 +56,8 @@ class CrmContact(BaseModel):
     r"""An array of email addresses for this contact"""
 
     id: Optional[str] = None
+
+    link_urls: Optional[List[str]] = None
 
     name: Optional[str] = None
 

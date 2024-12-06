@@ -23,6 +23,7 @@ class CrmLeadTypedDict(TypedDict):
     emails: NotRequired[List[CrmEmailTypedDict]]
     id: NotRequired[str]
     is_active: NotRequired[bool]
+    link_urls: NotRequired[List[str]]
     name: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
     source: NotRequired[str]
@@ -50,6 +51,8 @@ class CrmLead(BaseModel):
     id: Optional[str] = None
 
     is_active: Optional[bool] = None
+
+    link_urls: Optional[List[str]] = None
 
     name: Optional[str] = None
 
