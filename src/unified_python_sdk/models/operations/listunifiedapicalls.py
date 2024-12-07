@@ -12,14 +12,14 @@ from unified_python_sdk.utils import FieldMetadata, QueryParamMetadata
 
 class ListUnifiedApicallsRequestTypedDict(TypedDict):
     connection_id: NotRequired[str]
-    r"""Filter the results to just this integration's API calls"""
+    r"""Filter the results to just this integration"""
     env: NotRequired[str]
     error: NotRequired[bool]
     r"""Filter the results for API Calls with errors"""
     external_xref: NotRequired[str]
     r"""Filter the results to only those integrations for your user referenced by this value"""
     integration_type: NotRequired[str]
-    r"""Filter the results for connections with this integration"""
+    r"""Filter the results to just this integration"""
     limit: NotRequired[float]
     offset: NotRequired[float]
     order: NotRequired[str]
@@ -33,7 +33,7 @@ class ListUnifiedApicallsRequest(BaseModel):
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
-    r"""Filter the results to just this integration's API calls"""
+    r"""Filter the results to just this integration"""
 
     env: Annotated[
         Optional[str],
@@ -56,7 +56,7 @@ class ListUnifiedApicallsRequest(BaseModel):
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
-    r"""Filter the results for connections with this integration"""
+    r"""Filter the results to just this integration"""
 
     limit: Annotated[
         Optional[float],

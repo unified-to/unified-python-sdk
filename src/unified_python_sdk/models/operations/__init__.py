@@ -1185,10 +1185,6 @@ from .listunifiedissues import (
     ListUnifiedIssuesResponseTypedDict,
 )
 from .listunifiedwebhooks import (
-    ConnectionID,
-    ConnectionIDTypedDict,
-    IntegrationType,
-    IntegrationTypeTypedDict,
     ListUnifiedWebhooksRequest,
     ListUnifiedWebhooksRequestTypedDict,
     ListUnifiedWebhooksResponse,
@@ -2247,8 +2243,6 @@ from .updateunifiedwebhooktrigger import (
 
 __all__ = [
     "Categories",
-    "ConnectionID",
-    "ConnectionIDTypedDict",
     "CreateAccountingAccountRequest",
     "CreateAccountingAccountRequestTypedDict",
     "CreateAccountingAccountResponse",
@@ -2747,8 +2741,6 @@ __all__ = [
     "GetUnifiedWebhookRequestTypedDict",
     "GetUnifiedWebhookResponse",
     "GetUnifiedWebhookResponseTypedDict",
-    "IntegrationType",
-    "IntegrationTypeTypedDict",
     "ListAccountingAccountsRequest",
     "ListAccountingAccountsRequestTypedDict",
     "ListAccountingAccountsResponse",

@@ -27,6 +27,7 @@ class MessagingMessageTypedDict(TypedDict):
     parent_message_id: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
     reference: NotRequired[str]
+    root_message_id: NotRequired[str]
     subject: NotRequired[str]
     updated_at: NotRequired[datetime]
     web_url: NotRequired[str]
@@ -58,6 +59,8 @@ class MessagingMessage(BaseModel):
     raw: Optional[Dict[str, Any]] = None
 
     reference: Optional[str] = None
+
+    root_message_id: Optional[str] = None
 
     subject: Optional[str] = None
 

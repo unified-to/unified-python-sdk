@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: fdbcce3cd82999739c54ae5c1af3eaae
+  docChecksum: 42f573170bad12dc387a71808ef7cd22
   docVersion: "1.0"
-  speakeasyVersion: 1.453.0
-  generationVersion: 2.472.1
-  releaseVersion: 0.26.4
-  configChecksum: 1425d2c8678b4f88b80b80db5fe7b4cc
+  speakeasyVersion: 1.453.1
+  generationVersion: 2.474.4
+  releaseVersion: 0.26.5
+  configChecksum: 0b6266cf66a53f485dcdb1be9e9cc64b
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -35,7 +35,6 @@ generatedFiles:
   - CONTRIBUTING.md
   - USAGE.md
   - docs/models/operations/categories.md
-  - docs/models/operations/connectionid.md
   - docs/models/operations/createaccountingaccountrequest.md
   - docs/models/operations/createaccountingaccountresponse.md
   - docs/models/operations/createaccountingcontactrequest.md
@@ -285,7 +284,6 @@ generatedFiles:
   - docs/models/operations/getunifiedintegrationloginresponse.md
   - docs/models/operations/getunifiedwebhookrequest.md
   - docs/models/operations/getunifiedwebhookresponse.md
-  - docs/models/operations/integrationtype.md
   - docs/models/operations/listaccountingaccountsrequest.md
   - docs/models/operations/listaccountingaccountsresponse.md
   - docs/models/operations/listaccountingcontactsrequest.md
@@ -933,6 +931,7 @@ generatedFiles:
   - docs/models/shared/listprojectid.md
   - docs/models/shared/listquery.md
   - docs/models/shared/listrawfields.md
+  - docs/models/shared/listrootid.md
   - docs/models/shared/listsortbycreatedat.md
   - docs/models/shared/listsortbyname.md
   - docs/models/shared/listsortbyupdatedat.md

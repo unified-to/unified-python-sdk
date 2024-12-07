@@ -10,30 +10,14 @@ from unified_python_sdk.types import BaseModel
 from unified_python_sdk.utils import FieldMetadata, QueryParamMetadata
 
 
-class ConnectionIDTypedDict(TypedDict):
-    r"""A connection represents a specific authentication of an integration."""
-
-
-class ConnectionID(BaseModel):
-    r"""A connection represents a specific authentication of an integration."""
-
-
-class IntegrationTypeTypedDict(TypedDict):
-    r"""Informational object for supported integrations."""
-
-
-class IntegrationType(BaseModel):
-    r"""Informational object for supported integrations."""
-
-
 class ListUnifiedWebhooksRequestTypedDict(TypedDict):
-    connection_id: NotRequired[ConnectionIDTypedDict]
-    r"""A connection represents a specific authentication of an integration."""
+    connection_id: NotRequired[str]
+    r"""Filter the results to just this integration"""
     created_lte: NotRequired[datetime]
     r"""Return only results whose created date is equal or less to this value"""
     env: NotRequired[str]
-    integration_type: NotRequired[IntegrationTypeTypedDict]
-    r"""Informational object for supported integrations."""
+    integration_type: NotRequired[str]
+    r"""Filter the results to just this integration"""
     limit: NotRequired[float]
     object: NotRequired[str]
     r"""Filter the results for webhooks for only this object"""
@@ -46,10 +30,10 @@ class ListUnifiedWebhooksRequestTypedDict(TypedDict):
 
 class ListUnifiedWebhooksRequest(BaseModel):
     connection_id: Annotated[
-        Optional[ConnectionID],
+        Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
-    r"""A connection represents a specific authentication of an integration."""
+    r"""Filter the results to just this integration"""
 
     created_lte: Annotated[
         Optional[datetime],
@@ -63,10 +47,10 @@ class ListUnifiedWebhooksRequest(BaseModel):
     ] = None
 
     integration_type: Annotated[
-        Optional[IntegrationType],
+        Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
-    r"""Informational object for supported integrations."""
+    r"""Filter the results to just this integration"""
 
     limit: Annotated[
         Optional[float],
