@@ -108,7 +108,6 @@ from .commerceitemvariant import (
     WeightUnit,
 )
 from .commercelocation import CommerceLocation, CommerceLocationTypedDict
-from .commercemetadata import CommerceMetadata, CommerceMetadataTypedDict
 from .connection import Connection, ConnectionTypedDict
 from .crmcompany import CrmCompany, CrmCompanyTypedDict
 from .crmcontact import CrmContact, CrmContactTypedDict
@@ -243,6 +242,7 @@ from .messagingattachment import MessagingAttachment, MessagingAttachmentTypedDi
 from .messagingchannel import MessagingChannel, MessagingChannelTypedDict
 from .messagingmember import MessagingMember, MessagingMemberTypedDict
 from .messagingmessage import MessagingMessage, MessagingMessageTypedDict
+from .metadatametadata import MetadataMetadata, MetadataMetadataTypedDict
 from .paymentlink import PaymentLink, PaymentLinkTypedDict
 from .paymentlinklineitem import PaymentLinkLineitem, PaymentLinkLineitemTypedDict
 from .paymentpayment import PaymentPayment, PaymentPaymentTypedDict
@@ -562,8 +562,6 @@ __all__ = [
     "CommerceItemVariantTypedDict",
     "CommerceLocation",
     "CommerceLocationTypedDict",
-    "CommerceMetadata",
-    "CommerceMetadataTypedDict",
     "Connection",
     "ConnectionTypedDict",
     "CrmCompany",
@@ -725,6 +723,8 @@ __all__ = [
     "MessagingMemberTypedDict",
     "MessagingMessage",
     "MessagingMessageTypedDict",
+    "MetadataMetadata",
+    "MetadataMetadataTypedDict",
     "NativeWebhookParentID",
     "NativeWebhookProjectID",
     "ObjectType",

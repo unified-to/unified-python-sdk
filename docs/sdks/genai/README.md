@@ -22,8 +22,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.genai.create_genai_prompt(request={
+) as unified_to:
+    res = unified_to.genai.create_genai_prompt(request={
         "connection_id": "<value>",
     })
 
@@ -64,8 +64,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.genai.list_genai_models(request={
+) as unified_to:
+    res = unified_to.genai.list_genai_models(request={
         "connection_id": "<value>",
     })
 

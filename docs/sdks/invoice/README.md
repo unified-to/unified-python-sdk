@@ -26,8 +26,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.invoice.create_accounting_invoice(request={
+) as unified_to:
+    res = unified_to.invoice.create_accounting_invoice(request={
         "connection_id": "<value>",
     })
 
@@ -68,8 +68,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.invoice.get_accounting_invoice(request={
+) as unified_to:
+    res = unified_to.invoice.get_accounting_invoice(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -111,8 +111,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.invoice.list_accounting_invoices(request={
+) as unified_to:
+    res = unified_to.invoice.list_accounting_invoices(request={
         "connection_id": "<value>",
     })
 
@@ -153,8 +153,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.invoice.patch_accounting_invoice(request={
+) as unified_to:
+    res = unified_to.invoice.patch_accounting_invoice(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -196,8 +196,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.invoice.remove_accounting_invoice(request={
+) as unified_to:
+    res = unified_to.invoice.remove_accounting_invoice(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -239,8 +239,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.invoice.update_accounting_invoice(request={
+) as unified_to:
+    res = unified_to.invoice.update_accounting_invoice(request={
         "connection_id": "<value>",
         "id": "<id>",
     })

@@ -26,8 +26,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.link.create_payment_link(request={
+) as unified_to:
+    res = unified_to.link.create_payment_link(request={
         "connection_id": "<value>",
     })
 
@@ -68,8 +68,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.link.get_payment_link(request={
+) as unified_to:
+    res = unified_to.link.get_payment_link(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -111,8 +111,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.link.list_payment_links(request={
+) as unified_to:
+    res = unified_to.link.list_payment_links(request={
         "connection_id": "<value>",
     })
 
@@ -153,8 +153,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.link.patch_payment_link(request={
+) as unified_to:
+    res = unified_to.link.patch_payment_link(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -196,8 +196,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.link.remove_payment_link(request={
+) as unified_to:
+    res = unified_to.link.remove_payment_link(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -239,8 +239,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.link.update_payment_link(request={
+) as unified_to:
+    res = unified_to.link.update_payment_link(request={
         "connection_id": "<value>",
         "id": "<id>",
     })

@@ -21,8 +21,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.applicationstatus.list_ats_applicationstatuses(request={
+) as unified_to:
+    res = unified_to.applicationstatus.list_ats_applicationstatuses(request={
         "connection_id": "<value>",
     })
 

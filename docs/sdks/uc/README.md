@@ -27,8 +27,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.uc.create_uc_contact(request={
+) as unified_to:
+    res = unified_to.uc.create_uc_contact(request={
         "connection_id": "<value>",
     })
 
@@ -69,8 +69,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.uc.get_uc_contact(request={
+) as unified_to:
+    res = unified_to.uc.get_uc_contact(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -112,8 +112,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.uc.list_uc_calls(request={
+) as unified_to:
+    res = unified_to.uc.list_uc_calls(request={
         "connection_id": "<value>",
     })
 
@@ -154,8 +154,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.uc.list_uc_contacts(request={
+) as unified_to:
+    res = unified_to.uc.list_uc_contacts(request={
         "connection_id": "<value>",
     })
 
@@ -196,8 +196,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.uc.patch_uc_contact(request={
+) as unified_to:
+    res = unified_to.uc.patch_uc_contact(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -239,8 +239,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.uc.remove_uc_contact(request={
+) as unified_to:
+    res = unified_to.uc.remove_uc_contact(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -282,8 +282,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.uc.update_uc_contact(request={
+) as unified_to:
+    res = unified_to.uc.update_uc_contact(request={
         "connection_id": "<value>",
         "id": "<id>",
     })

@@ -26,8 +26,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.order.create_accounting_order(request={
+) as unified_to:
+    res = unified_to.order.create_accounting_order(request={
         "connection_id": "<id>",
     })
 
@@ -68,8 +68,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.order.get_accounting_order(request={
+) as unified_to:
+    res = unified_to.order.get_accounting_order(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -111,8 +111,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.order.list_accounting_orders(request={
+) as unified_to:
+    res = unified_to.order.list_accounting_orders(request={
         "connection_id": "<id>",
     })
 
@@ -153,8 +153,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.order.patch_accounting_order(request={
+) as unified_to:
+    res = unified_to.order.patch_accounting_order(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -196,8 +196,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.order.remove_accounting_order(request={
+) as unified_to:
+    res = unified_to.order.remove_accounting_order(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -239,8 +239,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.order.update_accounting_order(request={
+) as unified_to:
+    res = unified_to.order.update_accounting_order(request={
         "connection_id": "<id>",
         "id": "<id>",
     })

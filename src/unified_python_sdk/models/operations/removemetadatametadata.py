@@ -8,14 +8,14 @@ from unified_python_sdk.types import BaseModel
 from unified_python_sdk.utils import FieldMetadata, PathParamMetadata
 
 
-class RemoveCommerceMetadataRequestTypedDict(TypedDict):
+class RemoveMetadataMetadataRequestTypedDict(TypedDict):
     connection_id: str
     r"""ID of the connection"""
     id: str
     r"""ID of the Metadata"""
 
 
-class RemoveCommerceMetadataRequest(BaseModel):
+class RemoveMetadataMetadataRequest(BaseModel):
     connection_id: Annotated[
         str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))
     ]
@@ -27,7 +27,7 @@ class RemoveCommerceMetadataRequest(BaseModel):
     r"""ID of the Metadata"""
 
 
-class RemoveCommerceMetadataResponseTypedDict(TypedDict):
+class RemoveMetadataMetadataResponseTypedDict(TypedDict):
     content_type: str
     r"""HTTP response content type for this operation"""
     headers: Dict[str, List[str]]
@@ -37,7 +37,7 @@ class RemoveCommerceMetadataResponseTypedDict(TypedDict):
     r"""Raw HTTP response; suitable for custom response parsing"""
 
 
-class RemoveCommerceMetadataResponse(BaseModel):
+class RemoveMetadataMetadataResponse(BaseModel):
     content_type: str
     r"""HTTP response content type for this operation"""
 

@@ -73,8 +73,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.accounting.create_accounting_account(request={
+) as unified_to:
+    res = unified_to.accounting.create_accounting_account(request={
         "connection_id": "<value>",
     })
 
@@ -97,8 +97,8 @@ async def main():
         security=shared.Security(
             jwt="<YOUR_API_KEY_HERE>",
         ),
-    ) as s:
-        res = await s.accounting.create_accounting_account_async(request={
+    ) as unified_to:
+        res = await unified_to.accounting.create_accounting_account_async(request={
             "connection_id": "<value>",
         })
 
@@ -303,32 +303,26 @@ asyncio.run(main())
 * [create_commerce_inventory](docs/sdks/commerce/README.md#create_commerce_inventory) - Create an inventory
 * [create_commerce_item](docs/sdks/commerce/README.md#create_commerce_item) - Create an item
 * [create_commerce_location](docs/sdks/commerce/README.md#create_commerce_location) - Create a location
-* [create_commerce_metadata](docs/sdks/commerce/README.md#create_commerce_metadata) - Create a metadata
 * [get_commerce_collection](docs/sdks/commerce/README.md#get_commerce_collection) - Retrieve a collection
 * [get_commerce_inventory](docs/sdks/commerce/README.md#get_commerce_inventory) - Retrieve an inventory
 * [get_commerce_item](docs/sdks/commerce/README.md#get_commerce_item) - Retrieve an item
 * [get_commerce_location](docs/sdks/commerce/README.md#get_commerce_location) - Retrieve a location
-* [get_commerce_metadata](docs/sdks/commerce/README.md#get_commerce_metadata) - Retrieve a metadata
 * [list_commerce_collections](docs/sdks/commerce/README.md#list_commerce_collections) - List all collections
 * [list_commerce_inventories](docs/sdks/commerce/README.md#list_commerce_inventories) - List all inventories
 * [list_commerce_items](docs/sdks/commerce/README.md#list_commerce_items) - List all items
 * [list_commerce_locations](docs/sdks/commerce/README.md#list_commerce_locations) - List all locations
-* [list_commerce_metadatas](docs/sdks/commerce/README.md#list_commerce_metadatas) - List all metadatas
 * [patch_commerce_collection](docs/sdks/commerce/README.md#patch_commerce_collection) - Update a collection
 * [patch_commerce_inventory](docs/sdks/commerce/README.md#patch_commerce_inventory) - Update an inventory
 * [patch_commerce_item](docs/sdks/commerce/README.md#patch_commerce_item) - Update an item
 * [patch_commerce_location](docs/sdks/commerce/README.md#patch_commerce_location) - Update a location
-* [patch_commerce_metadata](docs/sdks/commerce/README.md#patch_commerce_metadata) - Update a metadata
 * [remove_commerce_collection](docs/sdks/commerce/README.md#remove_commerce_collection) - Remove a collection
 * [remove_commerce_inventory](docs/sdks/commerce/README.md#remove_commerce_inventory) - Remove an inventory
 * [remove_commerce_item](docs/sdks/commerce/README.md#remove_commerce_item) - Remove an item
 * [remove_commerce_location](docs/sdks/commerce/README.md#remove_commerce_location) - Remove a location
-* [remove_commerce_metadata](docs/sdks/commerce/README.md#remove_commerce_metadata) - Remove a metadata
 * [update_commerce_collection](docs/sdks/commerce/README.md#update_commerce_collection) - Update a collection
 * [update_commerce_inventory](docs/sdks/commerce/README.md#update_commerce_inventory) - Update an inventory
 * [update_commerce_item](docs/sdks/commerce/README.md#update_commerce_item) - Update an item
 * [update_commerce_location](docs/sdks/commerce/README.md#update_commerce_location) - Update a location
-* [update_commerce_metadata](docs/sdks/commerce/README.md#update_commerce_metadata) - Update a metadata
 
 ### [commit](docs/sdks/commit/README.md)
 
@@ -752,12 +746,12 @@ asyncio.run(main())
 
 ### [metadata](docs/sdks/metadata/README.md)
 
-* [create_commerce_metadata](docs/sdks/metadata/README.md#create_commerce_metadata) - Create a metadata
-* [get_commerce_metadata](docs/sdks/metadata/README.md#get_commerce_metadata) - Retrieve a metadata
-* [list_commerce_metadatas](docs/sdks/metadata/README.md#list_commerce_metadatas) - List all metadatas
-* [patch_commerce_metadata](docs/sdks/metadata/README.md#patch_commerce_metadata) - Update a metadata
-* [remove_commerce_metadata](docs/sdks/metadata/README.md#remove_commerce_metadata) - Remove a metadata
-* [update_commerce_metadata](docs/sdks/metadata/README.md#update_commerce_metadata) - Update a metadata
+* [create_metadata_metadata](docs/sdks/metadata/README.md#create_metadata_metadata) - Create a metadata
+* [get_metadata_metadata](docs/sdks/metadata/README.md#get_metadata_metadata) - Retrieve a metadata
+* [list_metadata_metadatas](docs/sdks/metadata/README.md#list_metadata_metadatas) - List all metadatas
+* [patch_metadata_metadata](docs/sdks/metadata/README.md#patch_metadata_metadata) - Update a metadata
+* [remove_metadata_metadata](docs/sdks/metadata/README.md#remove_metadata_metadata) - Remove a metadata
+* [update_metadata_metadata](docs/sdks/metadata/README.md#update_metadata_metadata) - Update a metadata
 
 ### [model](docs/sdks/model/README.md)
 
@@ -1123,8 +1117,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.passthrough.create_passthrough_raw(request={
+) as unified_to:
+    res = unified_to.passthrough.create_passthrough_raw(request={
         "connection_id": "<value>",
         "path": "/etc/periodic",
     })
@@ -1145,14 +1139,14 @@ To change the default retry strategy for a single API call, simply provide a `Re
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
-from unified_to.utils import BackoffStrategy, RetryConfig
+from unified_python_sdk.utils import BackoffStrategy, RetryConfig
 
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.accounting.create_accounting_account(request={
+) as unified_to:
+    res = unified_to.accounting.create_accounting_account(request={
         "connection_id": "<value>",
     },
         RetryConfig("backoff", BackoffStrategy(1, 50, 1.1, 100), False))
@@ -1167,15 +1161,15 @@ If you'd like to override the default retry strategy for all operations that sup
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
-from unified_to.utils import BackoffStrategy, RetryConfig
+from unified_python_sdk.utils import BackoffStrategy, RetryConfig
 
 with UnifiedTo(
     retry_config=RetryConfig("backoff", BackoffStrategy(1, 50, 1.1, 100), False),
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.accounting.create_accounting_account(request={
+) as unified_to:
+    res = unified_to.accounting.create_accounting_account(request={
         "connection_id": "<value>",
     })
 
@@ -1216,10 +1210,10 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
+) as unified_to:
     res = None
     try:
-        res = s.accounting.create_accounting_account(request={
+        res = unified_to.accounting.create_accounting_account(request={
             "connection_id": "<value>",
         })
 
@@ -1258,8 +1252,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.accounting.create_accounting_account(request={
+) as unified_to:
+    res = unified_to.accounting.create_accounting_account(request={
         "connection_id": "<value>",
     })
 
@@ -1281,8 +1275,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.accounting.create_accounting_account(request={
+) as unified_to:
+    res = unified_to.accounting.create_accounting_account(request={
         "connection_id": "<value>",
     })
 
@@ -1398,8 +1392,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.accounting.create_accounting_account(request={
+) as unified_to:
+    res = unified_to.accounting.create_accounting_account(request={
         "connection_id": "<value>",
     })
 

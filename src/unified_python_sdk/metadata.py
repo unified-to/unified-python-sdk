@@ -9,17 +9,17 @@ from unified_python_sdk.types import BaseModel, OptionalNullable, UNSET
 
 
 class Metadata(BaseSDK):
-    def create_commerce_metadata(
+    def create_metadata_metadata(
         self,
         *,
         request: Union[
-            operations.CreateCommerceMetadataRequest,
-            operations.CreateCommerceMetadataRequestTypedDict,
+            operations.CreateMetadataMetadataRequest,
+            operations.CreateMetadataMetadataRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
-    ) -> operations.CreateCommerceMetadataResponse:
+    ) -> operations.CreateMetadataMetadataResponse:
         r"""Create a metadata
 
         :param request: The request object to send.
@@ -36,12 +36,12 @@ class Metadata(BaseSDK):
             base_url = server_url
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateCommerceMetadataRequest)
-        request = cast(operations.CreateCommerceMetadataRequest, request)
+            request = utils.unmarshal(request, operations.CreateMetadataMetadataRequest)
+        request = cast(operations.CreateMetadataMetadataRequest, request)
 
         req = self.build_request(
             method="POST",
-            path="/commerce/{connection_id}/metadata",
+            path="/metadata/{connection_id}/metadata",
             base_url=base_url,
             url_variables=url_variables,
             request=request,
@@ -52,11 +52,11 @@ class Metadata(BaseSDK):
             accept_header_value="application/json",
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.commerce_metadata,
+                request.metadata_metadata,
                 False,
                 True,
                 "json",
-                Optional[shared.CommerceMetadata],
+                Optional[shared.MetadataMetadata],
             ),
             timeout_ms=timeout_ms,
         )
@@ -71,7 +71,7 @@ class Metadata(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
-                operation_id="createCommerceMetadata",
+                operation_id="createMetadataMetadata",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
             ),
@@ -81,9 +81,9 @@ class Metadata(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateCommerceMetadataResponse(
-                commerce_metadata=utils.unmarshal_json(
-                    http_res.text, Optional[shared.CommerceMetadata]
+            return operations.CreateMetadataMetadataResponse(
+                metadata_metadata=utils.unmarshal_json(
+                    http_res.text, Optional[shared.MetadataMetadata]
                 ),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -104,17 +104,17 @@ class Metadata(BaseSDK):
             http_res,
         )
 
-    async def create_commerce_metadata_async(
+    async def create_metadata_metadata_async(
         self,
         *,
         request: Union[
-            operations.CreateCommerceMetadataRequest,
-            operations.CreateCommerceMetadataRequestTypedDict,
+            operations.CreateMetadataMetadataRequest,
+            operations.CreateMetadataMetadataRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
-    ) -> operations.CreateCommerceMetadataResponse:
+    ) -> operations.CreateMetadataMetadataResponse:
         r"""Create a metadata
 
         :param request: The request object to send.
@@ -131,12 +131,12 @@ class Metadata(BaseSDK):
             base_url = server_url
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.CreateCommerceMetadataRequest)
-        request = cast(operations.CreateCommerceMetadataRequest, request)
+            request = utils.unmarshal(request, operations.CreateMetadataMetadataRequest)
+        request = cast(operations.CreateMetadataMetadataRequest, request)
 
         req = self.build_request_async(
             method="POST",
-            path="/commerce/{connection_id}/metadata",
+            path="/metadata/{connection_id}/metadata",
             base_url=base_url,
             url_variables=url_variables,
             request=request,
@@ -147,11 +147,11 @@ class Metadata(BaseSDK):
             accept_header_value="application/json",
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.commerce_metadata,
+                request.metadata_metadata,
                 False,
                 True,
                 "json",
-                Optional[shared.CommerceMetadata],
+                Optional[shared.MetadataMetadata],
             ),
             timeout_ms=timeout_ms,
         )
@@ -166,7 +166,7 @@ class Metadata(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
-                operation_id="createCommerceMetadata",
+                operation_id="createMetadataMetadata",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
             ),
@@ -176,9 +176,9 @@ class Metadata(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.CreateCommerceMetadataResponse(
-                commerce_metadata=utils.unmarshal_json(
-                    http_res.text, Optional[shared.CommerceMetadata]
+            return operations.CreateMetadataMetadataResponse(
+                metadata_metadata=utils.unmarshal_json(
+                    http_res.text, Optional[shared.MetadataMetadata]
                 ),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -199,17 +199,17 @@ class Metadata(BaseSDK):
             http_res,
         )
 
-    def get_commerce_metadata(
+    def get_metadata_metadata(
         self,
         *,
         request: Union[
-            operations.GetCommerceMetadataRequest,
-            operations.GetCommerceMetadataRequestTypedDict,
+            operations.GetMetadataMetadataRequest,
+            operations.GetMetadataMetadataRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
-    ) -> operations.GetCommerceMetadataResponse:
+    ) -> operations.GetMetadataMetadataResponse:
         r"""Retrieve a metadata
 
         :param request: The request object to send.
@@ -226,12 +226,12 @@ class Metadata(BaseSDK):
             base_url = server_url
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetCommerceMetadataRequest)
-        request = cast(operations.GetCommerceMetadataRequest, request)
+            request = utils.unmarshal(request, operations.GetMetadataMetadataRequest)
+        request = cast(operations.GetMetadataMetadataRequest, request)
 
         req = self.build_request(
             method="GET",
-            path="/commerce/{connection_id}/metadata/{id}",
+            path="/metadata/{connection_id}/metadata/{id}",
             base_url=base_url,
             url_variables=url_variables,
             request=request,
@@ -254,7 +254,7 @@ class Metadata(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
-                operation_id="getCommerceMetadata",
+                operation_id="getMetadataMetadata",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
             ),
@@ -264,9 +264,9 @@ class Metadata(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetCommerceMetadataResponse(
-                commerce_metadata=utils.unmarshal_json(
-                    http_res.text, Optional[shared.CommerceMetadata]
+            return operations.GetMetadataMetadataResponse(
+                metadata_metadata=utils.unmarshal_json(
+                    http_res.text, Optional[shared.MetadataMetadata]
                 ),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -287,17 +287,17 @@ class Metadata(BaseSDK):
             http_res,
         )
 
-    async def get_commerce_metadata_async(
+    async def get_metadata_metadata_async(
         self,
         *,
         request: Union[
-            operations.GetCommerceMetadataRequest,
-            operations.GetCommerceMetadataRequestTypedDict,
+            operations.GetMetadataMetadataRequest,
+            operations.GetMetadataMetadataRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
-    ) -> operations.GetCommerceMetadataResponse:
+    ) -> operations.GetMetadataMetadataResponse:
         r"""Retrieve a metadata
 
         :param request: The request object to send.
@@ -314,12 +314,12 @@ class Metadata(BaseSDK):
             base_url = server_url
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.GetCommerceMetadataRequest)
-        request = cast(operations.GetCommerceMetadataRequest, request)
+            request = utils.unmarshal(request, operations.GetMetadataMetadataRequest)
+        request = cast(operations.GetMetadataMetadataRequest, request)
 
         req = self.build_request_async(
             method="GET",
-            path="/commerce/{connection_id}/metadata/{id}",
+            path="/metadata/{connection_id}/metadata/{id}",
             base_url=base_url,
             url_variables=url_variables,
             request=request,
@@ -342,7 +342,7 @@ class Metadata(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
-                operation_id="getCommerceMetadata",
+                operation_id="getMetadataMetadata",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
             ),
@@ -352,9 +352,9 @@ class Metadata(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.GetCommerceMetadataResponse(
-                commerce_metadata=utils.unmarshal_json(
-                    http_res.text, Optional[shared.CommerceMetadata]
+            return operations.GetMetadataMetadataResponse(
+                metadata_metadata=utils.unmarshal_json(
+                    http_res.text, Optional[shared.MetadataMetadata]
                 ),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -375,17 +375,17 @@ class Metadata(BaseSDK):
             http_res,
         )
 
-    def list_commerce_metadatas(
+    def list_metadata_metadatas(
         self,
         *,
         request: Union[
-            operations.ListCommerceMetadatasRequest,
-            operations.ListCommerceMetadatasRequestTypedDict,
+            operations.ListMetadataMetadatasRequest,
+            operations.ListMetadataMetadatasRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
-    ) -> operations.ListCommerceMetadatasResponse:
+    ) -> operations.ListMetadataMetadatasResponse:
         r"""List all metadatas
 
         :param request: The request object to send.
@@ -402,12 +402,12 @@ class Metadata(BaseSDK):
             base_url = server_url
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListCommerceMetadatasRequest)
-        request = cast(operations.ListCommerceMetadatasRequest, request)
+            request = utils.unmarshal(request, operations.ListMetadataMetadatasRequest)
+        request = cast(operations.ListMetadataMetadatasRequest, request)
 
         req = self.build_request(
             method="GET",
-            path="/commerce/{connection_id}/metadata",
+            path="/metadata/{connection_id}/metadata",
             base_url=base_url,
             url_variables=url_variables,
             request=request,
@@ -430,7 +430,7 @@ class Metadata(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
-                operation_id="listCommerceMetadatas",
+                operation_id="listMetadataMetadatas",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
             ),
@@ -440,9 +440,9 @@ class Metadata(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListCommerceMetadatasResponse(
-                commerce_metadatas=utils.unmarshal_json(
-                    http_res.text, Optional[List[shared.CommerceMetadata]]
+            return operations.ListMetadataMetadatasResponse(
+                metadata_metadatas=utils.unmarshal_json(
+                    http_res.text, Optional[List[shared.MetadataMetadata]]
                 ),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -463,17 +463,17 @@ class Metadata(BaseSDK):
             http_res,
         )
 
-    async def list_commerce_metadatas_async(
+    async def list_metadata_metadatas_async(
         self,
         *,
         request: Union[
-            operations.ListCommerceMetadatasRequest,
-            operations.ListCommerceMetadatasRequestTypedDict,
+            operations.ListMetadataMetadatasRequest,
+            operations.ListMetadataMetadatasRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
-    ) -> operations.ListCommerceMetadatasResponse:
+    ) -> operations.ListMetadataMetadatasResponse:
         r"""List all metadatas
 
         :param request: The request object to send.
@@ -490,12 +490,12 @@ class Metadata(BaseSDK):
             base_url = server_url
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.ListCommerceMetadatasRequest)
-        request = cast(operations.ListCommerceMetadatasRequest, request)
+            request = utils.unmarshal(request, operations.ListMetadataMetadatasRequest)
+        request = cast(operations.ListMetadataMetadatasRequest, request)
 
         req = self.build_request_async(
             method="GET",
-            path="/commerce/{connection_id}/metadata",
+            path="/metadata/{connection_id}/metadata",
             base_url=base_url,
             url_variables=url_variables,
             request=request,
@@ -518,7 +518,7 @@ class Metadata(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
-                operation_id="listCommerceMetadatas",
+                operation_id="listMetadataMetadatas",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
             ),
@@ -528,9 +528,9 @@ class Metadata(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.ListCommerceMetadatasResponse(
-                commerce_metadatas=utils.unmarshal_json(
-                    http_res.text, Optional[List[shared.CommerceMetadata]]
+            return operations.ListMetadataMetadatasResponse(
+                metadata_metadatas=utils.unmarshal_json(
+                    http_res.text, Optional[List[shared.MetadataMetadata]]
                 ),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -551,17 +551,17 @@ class Metadata(BaseSDK):
             http_res,
         )
 
-    def patch_commerce_metadata(
+    def patch_metadata_metadata(
         self,
         *,
         request: Union[
-            operations.PatchCommerceMetadataRequest,
-            operations.PatchCommerceMetadataRequestTypedDict,
+            operations.PatchMetadataMetadataRequest,
+            operations.PatchMetadataMetadataRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
-    ) -> operations.PatchCommerceMetadataResponse:
+    ) -> operations.PatchMetadataMetadataResponse:
         r"""Update a metadata
 
         :param request: The request object to send.
@@ -578,12 +578,12 @@ class Metadata(BaseSDK):
             base_url = server_url
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchCommerceMetadataRequest)
-        request = cast(operations.PatchCommerceMetadataRequest, request)
+            request = utils.unmarshal(request, operations.PatchMetadataMetadataRequest)
+        request = cast(operations.PatchMetadataMetadataRequest, request)
 
         req = self.build_request(
             method="PATCH",
-            path="/commerce/{connection_id}/metadata/{id}",
+            path="/metadata/{connection_id}/metadata/{id}",
             base_url=base_url,
             url_variables=url_variables,
             request=request,
@@ -594,11 +594,11 @@ class Metadata(BaseSDK):
             accept_header_value="application/json",
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.commerce_metadata,
+                request.metadata_metadata,
                 False,
                 True,
                 "json",
-                Optional[shared.CommerceMetadata],
+                Optional[shared.MetadataMetadata],
             ),
             timeout_ms=timeout_ms,
         )
@@ -613,7 +613,7 @@ class Metadata(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
-                operation_id="patchCommerceMetadata",
+                operation_id="patchMetadataMetadata",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
             ),
@@ -623,9 +623,9 @@ class Metadata(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchCommerceMetadataResponse(
-                commerce_metadata=utils.unmarshal_json(
-                    http_res.text, Optional[shared.CommerceMetadata]
+            return operations.PatchMetadataMetadataResponse(
+                metadata_metadata=utils.unmarshal_json(
+                    http_res.text, Optional[shared.MetadataMetadata]
                 ),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -646,17 +646,17 @@ class Metadata(BaseSDK):
             http_res,
         )
 
-    async def patch_commerce_metadata_async(
+    async def patch_metadata_metadata_async(
         self,
         *,
         request: Union[
-            operations.PatchCommerceMetadataRequest,
-            operations.PatchCommerceMetadataRequestTypedDict,
+            operations.PatchMetadataMetadataRequest,
+            operations.PatchMetadataMetadataRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
-    ) -> operations.PatchCommerceMetadataResponse:
+    ) -> operations.PatchMetadataMetadataResponse:
         r"""Update a metadata
 
         :param request: The request object to send.
@@ -673,12 +673,12 @@ class Metadata(BaseSDK):
             base_url = server_url
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.PatchCommerceMetadataRequest)
-        request = cast(operations.PatchCommerceMetadataRequest, request)
+            request = utils.unmarshal(request, operations.PatchMetadataMetadataRequest)
+        request = cast(operations.PatchMetadataMetadataRequest, request)
 
         req = self.build_request_async(
             method="PATCH",
-            path="/commerce/{connection_id}/metadata/{id}",
+            path="/metadata/{connection_id}/metadata/{id}",
             base_url=base_url,
             url_variables=url_variables,
             request=request,
@@ -689,11 +689,11 @@ class Metadata(BaseSDK):
             accept_header_value="application/json",
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.commerce_metadata,
+                request.metadata_metadata,
                 False,
                 True,
                 "json",
-                Optional[shared.CommerceMetadata],
+                Optional[shared.MetadataMetadata],
             ),
             timeout_ms=timeout_ms,
         )
@@ -708,7 +708,7 @@ class Metadata(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
-                operation_id="patchCommerceMetadata",
+                operation_id="patchMetadataMetadata",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
             ),
@@ -718,9 +718,9 @@ class Metadata(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.PatchCommerceMetadataResponse(
-                commerce_metadata=utils.unmarshal_json(
-                    http_res.text, Optional[shared.CommerceMetadata]
+            return operations.PatchMetadataMetadataResponse(
+                metadata_metadata=utils.unmarshal_json(
+                    http_res.text, Optional[shared.MetadataMetadata]
                 ),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -741,17 +741,17 @@ class Metadata(BaseSDK):
             http_res,
         )
 
-    def remove_commerce_metadata(
+    def remove_metadata_metadata(
         self,
         *,
         request: Union[
-            operations.RemoveCommerceMetadataRequest,
-            operations.RemoveCommerceMetadataRequestTypedDict,
+            operations.RemoveMetadataMetadataRequest,
+            operations.RemoveMetadataMetadataRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
-    ) -> operations.RemoveCommerceMetadataResponse:
+    ) -> operations.RemoveMetadataMetadataResponse:
         r"""Remove a metadata
 
         :param request: The request object to send.
@@ -768,12 +768,12 @@ class Metadata(BaseSDK):
             base_url = server_url
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveCommerceMetadataRequest)
-        request = cast(operations.RemoveCommerceMetadataRequest, request)
+            request = utils.unmarshal(request, operations.RemoveMetadataMetadataRequest)
+        request = cast(operations.RemoveMetadataMetadataRequest, request)
 
         req = self.build_request(
             method="DELETE",
-            path="/commerce/{connection_id}/metadata/{id}",
+            path="/metadata/{connection_id}/metadata/{id}",
             base_url=base_url,
             url_variables=url_variables,
             request=request,
@@ -796,7 +796,7 @@ class Metadata(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
-                operation_id="removeCommerceMetadata",
+                operation_id="removeMetadataMetadata",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
             ),
@@ -806,7 +806,7 @@ class Metadata(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveCommerceMetadataResponse(
+            return operations.RemoveMetadataMetadataResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -818,7 +818,7 @@ class Metadata(BaseSDK):
                 "API error occurred", http_res.status_code, http_res_text, http_res
             )
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveCommerceMetadataResponse(
+            return operations.RemoveMetadataMetadataResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -834,17 +834,17 @@ class Metadata(BaseSDK):
             http_res,
         )
 
-    async def remove_commerce_metadata_async(
+    async def remove_metadata_metadata_async(
         self,
         *,
         request: Union[
-            operations.RemoveCommerceMetadataRequest,
-            operations.RemoveCommerceMetadataRequestTypedDict,
+            operations.RemoveMetadataMetadataRequest,
+            operations.RemoveMetadataMetadataRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
-    ) -> operations.RemoveCommerceMetadataResponse:
+    ) -> operations.RemoveMetadataMetadataResponse:
         r"""Remove a metadata
 
         :param request: The request object to send.
@@ -861,12 +861,12 @@ class Metadata(BaseSDK):
             base_url = server_url
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.RemoveCommerceMetadataRequest)
-        request = cast(operations.RemoveCommerceMetadataRequest, request)
+            request = utils.unmarshal(request, operations.RemoveMetadataMetadataRequest)
+        request = cast(operations.RemoveMetadataMetadataRequest, request)
 
         req = self.build_request_async(
             method="DELETE",
-            path="/commerce/{connection_id}/metadata/{id}",
+            path="/metadata/{connection_id}/metadata/{id}",
             base_url=base_url,
             url_variables=url_variables,
             request=request,
@@ -889,7 +889,7 @@ class Metadata(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
-                operation_id="removeCommerceMetadata",
+                operation_id="removeMetadataMetadata",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
             ),
@@ -899,7 +899,7 @@ class Metadata(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "*"):
-            return operations.RemoveCommerceMetadataResponse(
+            return operations.RemoveMetadataMetadataResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -911,7 +911,7 @@ class Metadata(BaseSDK):
                 "API error occurred", http_res.status_code, http_res_text, http_res
             )
         if utils.match_response(http_res, "default", "*"):
-            return operations.RemoveCommerceMetadataResponse(
+            return operations.RemoveMetadataMetadataResponse(
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -927,17 +927,17 @@ class Metadata(BaseSDK):
             http_res,
         )
 
-    def update_commerce_metadata(
+    def update_metadata_metadata(
         self,
         *,
         request: Union[
-            operations.UpdateCommerceMetadataRequest,
-            operations.UpdateCommerceMetadataRequestTypedDict,
+            operations.UpdateMetadataMetadataRequest,
+            operations.UpdateMetadataMetadataRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
-    ) -> operations.UpdateCommerceMetadataResponse:
+    ) -> operations.UpdateMetadataMetadataResponse:
         r"""Update a metadata
 
         :param request: The request object to send.
@@ -954,12 +954,12 @@ class Metadata(BaseSDK):
             base_url = server_url
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateCommerceMetadataRequest)
-        request = cast(operations.UpdateCommerceMetadataRequest, request)
+            request = utils.unmarshal(request, operations.UpdateMetadataMetadataRequest)
+        request = cast(operations.UpdateMetadataMetadataRequest, request)
 
         req = self.build_request(
             method="PUT",
-            path="/commerce/{connection_id}/metadata/{id}",
+            path="/metadata/{connection_id}/metadata/{id}",
             base_url=base_url,
             url_variables=url_variables,
             request=request,
@@ -970,11 +970,11 @@ class Metadata(BaseSDK):
             accept_header_value="application/json",
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.commerce_metadata,
+                request.metadata_metadata,
                 False,
                 True,
                 "json",
-                Optional[shared.CommerceMetadata],
+                Optional[shared.MetadataMetadata],
             ),
             timeout_ms=timeout_ms,
         )
@@ -989,7 +989,7 @@ class Metadata(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
-                operation_id="updateCommerceMetadata",
+                operation_id="updateMetadataMetadata",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
             ),
@@ -999,9 +999,9 @@ class Metadata(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateCommerceMetadataResponse(
-                commerce_metadata=utils.unmarshal_json(
-                    http_res.text, Optional[shared.CommerceMetadata]
+            return operations.UpdateMetadataMetadataResponse(
+                metadata_metadata=utils.unmarshal_json(
+                    http_res.text, Optional[shared.MetadataMetadata]
                 ),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -1022,17 +1022,17 @@ class Metadata(BaseSDK):
             http_res,
         )
 
-    async def update_commerce_metadata_async(
+    async def update_metadata_metadata_async(
         self,
         *,
         request: Union[
-            operations.UpdateCommerceMetadataRequest,
-            operations.UpdateCommerceMetadataRequestTypedDict,
+            operations.UpdateMetadataMetadataRequest,
+            operations.UpdateMetadataMetadataRequestTypedDict,
         ],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
-    ) -> operations.UpdateCommerceMetadataResponse:
+    ) -> operations.UpdateMetadataMetadataResponse:
         r"""Update a metadata
 
         :param request: The request object to send.
@@ -1049,12 +1049,12 @@ class Metadata(BaseSDK):
             base_url = server_url
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, operations.UpdateCommerceMetadataRequest)
-        request = cast(operations.UpdateCommerceMetadataRequest, request)
+            request = utils.unmarshal(request, operations.UpdateMetadataMetadataRequest)
+        request = cast(operations.UpdateMetadataMetadataRequest, request)
 
         req = self.build_request_async(
             method="PUT",
-            path="/commerce/{connection_id}/metadata/{id}",
+            path="/metadata/{connection_id}/metadata/{id}",
             base_url=base_url,
             url_variables=url_variables,
             request=request,
@@ -1065,11 +1065,11 @@ class Metadata(BaseSDK):
             accept_header_value="application/json",
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.commerce_metadata,
+                request.metadata_metadata,
                 False,
                 True,
                 "json",
-                Optional[shared.CommerceMetadata],
+                Optional[shared.MetadataMetadata],
             ),
             timeout_ms=timeout_ms,
         )
@@ -1084,7 +1084,7 @@ class Metadata(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
-                operation_id="updateCommerceMetadata",
+                operation_id="updateMetadataMetadata",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
             ),
@@ -1094,9 +1094,9 @@ class Metadata(BaseSDK):
         )
 
         if utils.match_response(http_res, "200", "application/json"):
-            return operations.UpdateCommerceMetadataResponse(
-                commerce_metadata=utils.unmarshal_json(
-                    http_res.text, Optional[shared.CommerceMetadata]
+            return operations.UpdateMetadataMetadataResponse(
+                metadata_metadata=utils.unmarshal_json(
+                    http_res.text, Optional[shared.MetadataMetadata]
                 ),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",

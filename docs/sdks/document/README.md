@@ -26,8 +26,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.document.create_ats_document(request={
+) as unified_to:
+    res = unified_to.document.create_ats_document(request={
         "connection_id": "<value>",
     })
 
@@ -68,8 +68,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.document.get_ats_document(request={
+) as unified_to:
+    res = unified_to.document.get_ats_document(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -111,8 +111,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.document.list_ats_documents(request={
+) as unified_to:
+    res = unified_to.document.list_ats_documents(request={
         "connection_id": "<value>",
     })
 
@@ -153,8 +153,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.document.patch_ats_document(request={
+) as unified_to:
+    res = unified_to.document.patch_ats_document(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -196,8 +196,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.document.remove_ats_document(request={
+) as unified_to:
+    res = unified_to.document.remove_ats_document(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -239,8 +239,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.document.update_ats_document(request={
+) as unified_to:
+    res = unified_to.document.update_ats_document(request={
         "connection_id": "<value>",
         "id": "<id>",
     })

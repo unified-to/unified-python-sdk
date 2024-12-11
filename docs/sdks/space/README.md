@@ -26,8 +26,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.space.create_kms_space(request={
+) as unified_to:
+    res = unified_to.space.create_kms_space(request={
         "connection_id": "<value>",
     })
 
@@ -68,8 +68,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.space.get_kms_space(request={
+) as unified_to:
+    res = unified_to.space.get_kms_space(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -111,8 +111,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.space.list_kms_spaces(request={
+) as unified_to:
+    res = unified_to.space.list_kms_spaces(request={
         "connection_id": "<value>",
     })
 
@@ -153,8 +153,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.space.patch_kms_space(request={
+) as unified_to:
+    res = unified_to.space.patch_kms_space(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -196,8 +196,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.space.remove_kms_space(request={
+) as unified_to:
+    res = unified_to.space.remove_kms_space(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -239,8 +239,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.space.update_kms_space(request={
+) as unified_to:
+    res = unified_to.space.update_kms_space(request={
         "connection_id": "<value>",
         "id": "<id>",
     })

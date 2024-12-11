@@ -32,8 +32,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.martech.create_martech_list(request={
+) as unified_to:
+    res = unified_to.martech.create_martech_list(request={
         "connection_id": "<value>",
     })
 
@@ -74,8 +74,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.martech.create_martech_member(request={
+) as unified_to:
+    res = unified_to.martech.create_martech_member(request={
         "connection_id": "<value>",
     })
 
@@ -116,8 +116,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.martech.get_martech_list(request={
+) as unified_to:
+    res = unified_to.martech.get_martech_list(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -159,8 +159,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.martech.get_martech_member(request={
+) as unified_to:
+    res = unified_to.martech.get_martech_member(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -202,8 +202,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.martech.list_martech_lists(request={
+) as unified_to:
+    res = unified_to.martech.list_martech_lists(request={
         "connection_id": "<value>",
     })
 
@@ -244,8 +244,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.martech.list_martech_members(request={
+) as unified_to:
+    res = unified_to.martech.list_martech_members(request={
         "connection_id": "<value>",
     })
 
@@ -286,8 +286,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.martech.patch_martech_list(request={
+) as unified_to:
+    res = unified_to.martech.patch_martech_list(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -329,8 +329,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.martech.patch_martech_member(request={
+) as unified_to:
+    res = unified_to.martech.patch_martech_member(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -372,8 +372,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.martech.remove_martech_list(request={
+) as unified_to:
+    res = unified_to.martech.remove_martech_list(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -415,8 +415,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.martech.remove_martech_member(request={
+) as unified_to:
+    res = unified_to.martech.remove_martech_member(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -458,8 +458,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.martech.update_martech_list(request={
+) as unified_to:
+    res = unified_to.martech.update_martech_list(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -501,8 +501,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.martech.update_martech_member(request={
+) as unified_to:
+    res = unified_to.martech.update_martech_member(request={
         "connection_id": "<value>",
         "id": "<id>",
     })

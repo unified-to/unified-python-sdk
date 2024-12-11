@@ -28,8 +28,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.webhook.create_unified_webhook(request={})
+) as unified_to:
+    res = unified_to.webhook.create_unified_webhook(request={})
 
     if res.webhook is not None:
         # handle response
@@ -68,8 +68,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.webhook.get_unified_webhook(request={
+) as unified_to:
+    res = unified_to.webhook.get_unified_webhook(request={
         "id": "<id>",
     })
 
@@ -110,8 +110,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.webhook.list_unified_webhooks(request={})
+) as unified_to:
+    res = unified_to.webhook.list_unified_webhooks(request={})
 
     if res.webhooks is not None:
         # handle response
@@ -150,8 +150,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.webhook.patch_unified_webhook(request={
+) as unified_to:
+    res = unified_to.webhook.patch_unified_webhook(request={
         "id": "<id>",
     })
 
@@ -192,8 +192,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.webhook.patch_unified_webhook_trigger(request={
+) as unified_to:
+    res = unified_to.webhook.patch_unified_webhook_trigger(request={
         "id": "<id>",
     })
 
@@ -234,8 +234,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.webhook.remove_unified_webhook(request={
+) as unified_to:
+    res = unified_to.webhook.remove_unified_webhook(request={
         "id": "<id>",
     })
 
@@ -276,8 +276,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.webhook.update_unified_webhook(request={
+) as unified_to:
+    res = unified_to.webhook.update_unified_webhook(request={
         "id": "<id>",
     })
 
@@ -318,8 +318,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.webhook.update_unified_webhook_trigger(request={
+) as unified_to:
+    res = unified_to.webhook.update_unified_webhook_trigger(request={
         "id": "<id>",
     })
 

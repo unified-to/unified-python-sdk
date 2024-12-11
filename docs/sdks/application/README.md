@@ -26,8 +26,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.application.create_ats_application(request={
+) as unified_to:
+    res = unified_to.application.create_ats_application(request={
         "connection_id": "<value>",
     })
 
@@ -68,8 +68,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.application.get_ats_application(request={
+) as unified_to:
+    res = unified_to.application.get_ats_application(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -111,8 +111,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.application.list_ats_applications(request={
+) as unified_to:
+    res = unified_to.application.list_ats_applications(request={
         "connection_id": "<value>",
     })
 
@@ -153,8 +153,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.application.patch_ats_application(request={
+) as unified_to:
+    res = unified_to.application.patch_ats_application(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -196,8 +196,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.application.remove_ats_application(request={
+) as unified_to:
+    res = unified_to.application.remove_ats_application(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -239,8 +239,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.application.update_ats_application(request={
+) as unified_to:
+    res = unified_to.application.update_ats_application(request={
         "connection_id": "<value>",
         "id": "<id>",
     })

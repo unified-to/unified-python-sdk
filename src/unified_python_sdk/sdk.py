@@ -124,7 +124,6 @@ class UnifiedTo(BaseSDK):
     inventory: Inventory
     item: Item
     location: Location
-    metadata: Metadata
     crm: Crm
     deal: Deal
     event: Event
@@ -154,6 +153,7 @@ class UnifiedTo(BaseSDK):
     messaging: Messaging
     channel: Channel
     message: Message
+    metadata: Metadata
     passthrough: Passthrough
     payment: Payment
     link: Link
@@ -282,7 +282,6 @@ class UnifiedTo(BaseSDK):
         self.inventory = Inventory(self.sdk_configuration)
         self.item = Item(self.sdk_configuration)
         self.location = Location(self.sdk_configuration)
-        self.metadata = Metadata(self.sdk_configuration)
         self.crm = Crm(self.sdk_configuration)
         self.deal = Deal(self.sdk_configuration)
         self.event = Event(self.sdk_configuration)
@@ -312,6 +311,7 @@ class UnifiedTo(BaseSDK):
         self.messaging = Messaging(self.sdk_configuration)
         self.channel = Channel(self.sdk_configuration)
         self.message = Message(self.sdk_configuration)
+        self.metadata = Metadata(self.sdk_configuration)
         self.passthrough = Passthrough(self.sdk_configuration)
         self.payment = Payment(self.sdk_configuration)
         self.link = Link(self.sdk_configuration)

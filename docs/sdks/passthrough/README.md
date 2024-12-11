@@ -28,8 +28,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.passthrough.create_passthrough_json(request={
+) as unified_to:
+    res = unified_to.passthrough.create_passthrough_json(request={
         "connection_id": "<value>",
         "path": "/etc/periodic",
     })
@@ -71,8 +71,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.passthrough.create_passthrough_raw(request={
+) as unified_to:
+    res = unified_to.passthrough.create_passthrough_raw(request={
         "connection_id": "<value>",
         "path": "/etc/periodic",
     })
@@ -114,8 +114,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.passthrough.list_passthroughs(request={
+) as unified_to:
+    res = unified_to.passthrough.list_passthroughs(request={
         "connection_id": "<value>",
         "path": "/selinux",
     })
@@ -157,8 +157,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.passthrough.patch_passthrough_json(request={
+) as unified_to:
+    res = unified_to.passthrough.patch_passthrough_json(request={
         "connection_id": "<value>",
         "path": "/mnt",
     })
@@ -200,8 +200,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.passthrough.patch_passthrough_raw(request={
+) as unified_to:
+    res = unified_to.passthrough.patch_passthrough_raw(request={
         "connection_id": "<value>",
         "path": "/mnt",
     })
@@ -243,8 +243,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.passthrough.remove_passthrough(request={
+) as unified_to:
+    res = unified_to.passthrough.remove_passthrough(request={
         "connection_id": "<value>",
         "path": "/Applications",
     })
@@ -286,8 +286,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.passthrough.update_passthrough_json(request={
+) as unified_to:
+    res = unified_to.passthrough.update_passthrough_json(request={
         "connection_id": "<value>",
         "path": "/dev",
     })
@@ -329,8 +329,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.passthrough.update_passthrough_raw(request={
+) as unified_to:
+    res = unified_to.passthrough.update_passthrough_raw(request={
         "connection_id": "<value>",
         "path": "/dev",
     })

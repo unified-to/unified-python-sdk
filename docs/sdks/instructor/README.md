@@ -26,8 +26,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.instructor.create_lms_instructor(request={
+) as unified_to:
+    res = unified_to.instructor.create_lms_instructor(request={
         "connection_id": "<id>",
     })
 
@@ -68,8 +68,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.instructor.get_lms_instructor(request={
+) as unified_to:
+    res = unified_to.instructor.get_lms_instructor(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -111,8 +111,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.instructor.list_lms_instructors(request={
+) as unified_to:
+    res = unified_to.instructor.list_lms_instructors(request={
         "connection_id": "<id>",
     })
 
@@ -153,8 +153,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.instructor.patch_lms_instructor(request={
+) as unified_to:
+    res = unified_to.instructor.patch_lms_instructor(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -196,8 +196,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.instructor.remove_lms_instructor(request={
+) as unified_to:
+    res = unified_to.instructor.remove_lms_instructor(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -239,8 +239,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.instructor.update_lms_instructor(request={
+) as unified_to:
+    res = unified_to.instructor.update_lms_instructor(request={
         "connection_id": "<id>",
         "id": "<id>",
     })

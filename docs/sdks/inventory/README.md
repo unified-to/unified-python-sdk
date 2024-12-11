@@ -26,8 +26,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.inventory.create_commerce_inventory(request={
+) as unified_to:
+    res = unified_to.inventory.create_commerce_inventory(request={
         "connection_id": "<value>",
     })
 
@@ -68,8 +68,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.inventory.get_commerce_inventory(request={
+) as unified_to:
+    res = unified_to.inventory.get_commerce_inventory(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -111,8 +111,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.inventory.list_commerce_inventories(request={
+) as unified_to:
+    res = unified_to.inventory.list_commerce_inventories(request={
         "connection_id": "<value>",
     })
 
@@ -153,8 +153,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.inventory.patch_commerce_inventory(request={
+) as unified_to:
+    res = unified_to.inventory.patch_commerce_inventory(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -196,8 +196,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.inventory.remove_commerce_inventory(request={
+) as unified_to:
+    res = unified_to.inventory.remove_commerce_inventory(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -239,8 +239,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.inventory.update_commerce_inventory(request={
+) as unified_to:
+    res = unified_to.inventory.update_commerce_inventory(request={
         "connection_id": "<value>",
         "id": "<id>",
     })

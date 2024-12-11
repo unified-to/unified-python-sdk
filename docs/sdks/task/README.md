@@ -32,8 +32,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.task.create_task_project(request={
+) as unified_to:
+    res = unified_to.task.create_task_project(request={
         "connection_id": "<value>",
     })
 
@@ -74,8 +74,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.task.create_task_task(request={
+) as unified_to:
+    res = unified_to.task.create_task_task(request={
         "connection_id": "<value>",
     })
 
@@ -116,8 +116,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.task.get_task_project(request={
+) as unified_to:
+    res = unified_to.task.get_task_project(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -159,8 +159,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.task.get_task_task(request={
+) as unified_to:
+    res = unified_to.task.get_task_task(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -202,8 +202,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.task.list_task_projects(request={
+) as unified_to:
+    res = unified_to.task.list_task_projects(request={
         "connection_id": "<value>",
     })
 
@@ -244,8 +244,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.task.list_task_tasks(request={
+) as unified_to:
+    res = unified_to.task.list_task_tasks(request={
         "connection_id": "<value>",
     })
 
@@ -286,8 +286,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.task.patch_task_project(request={
+) as unified_to:
+    res = unified_to.task.patch_task_project(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -329,8 +329,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.task.patch_task_task(request={
+) as unified_to:
+    res = unified_to.task.patch_task_task(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -372,8 +372,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.task.remove_task_project(request={
+) as unified_to:
+    res = unified_to.task.remove_task_project(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -415,8 +415,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.task.remove_task_task(request={
+) as unified_to:
+    res = unified_to.task.remove_task_task(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -458,8 +458,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.task.update_task_project(request={
+) as unified_to:
+    res = unified_to.task.update_task_project(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -501,8 +501,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.task.update_task_task(request={
+) as unified_to:
+    res = unified_to.task.update_task_task(request={
         "connection_id": "<value>",
         "id": "<id>",
     })

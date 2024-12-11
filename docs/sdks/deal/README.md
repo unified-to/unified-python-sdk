@@ -26,8 +26,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.deal.create_crm_deal(request={
+) as unified_to:
+    res = unified_to.deal.create_crm_deal(request={
         "connection_id": "<value>",
     })
 
@@ -68,8 +68,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.deal.get_crm_deal(request={
+) as unified_to:
+    res = unified_to.deal.get_crm_deal(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -111,8 +111,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.deal.list_crm_deals(request={
+) as unified_to:
+    res = unified_to.deal.list_crm_deals(request={
         "connection_id": "<value>",
     })
 
@@ -153,8 +153,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.deal.patch_crm_deal(request={
+) as unified_to:
+    res = unified_to.deal.patch_crm_deal(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -196,8 +196,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.deal.remove_crm_deal(request={
+) as unified_to:
+    res = unified_to.deal.remove_crm_deal(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -239,8 +239,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.deal.update_crm_deal(request={
+) as unified_to:
+    res = unified_to.deal.update_crm_deal(request={
         "connection_id": "<value>",
         "id": "<id>",
     })

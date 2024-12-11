@@ -22,8 +22,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.apicall.get_unified_apicall(request={
+) as unified_to:
+    res = unified_to.apicall.get_unified_apicall(request={
         "id": "<id>",
     })
 
@@ -64,8 +64,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.apicall.list_unified_apicalls(request={})
+) as unified_to:
+    res = unified_to.apicall.list_unified_apicalls(request={})
 
     if res.api_calls is not None:
         # handle response

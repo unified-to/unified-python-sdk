@@ -26,8 +26,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.journal.create_accounting_journal(request={
+) as unified_to:
+    res = unified_to.journal.create_accounting_journal(request={
         "connection_id": "<value>",
     })
 
@@ -68,8 +68,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.journal.get_accounting_journal(request={
+) as unified_to:
+    res = unified_to.journal.get_accounting_journal(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -111,8 +111,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.journal.list_accounting_journals(request={
+) as unified_to:
+    res = unified_to.journal.list_accounting_journals(request={
         "connection_id": "<value>",
     })
 
@@ -153,8 +153,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.journal.patch_accounting_journal(request={
+) as unified_to:
+    res = unified_to.journal.patch_accounting_journal(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -196,8 +196,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.journal.remove_accounting_journal(request={
+) as unified_to:
+    res = unified_to.journal.remove_accounting_journal(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -239,8 +239,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.journal.update_accounting_journal(request={
+) as unified_to:
+    res = unified_to.journal.update_accounting_journal(request={
         "connection_id": "<value>",
         "id": "<id>",
     })

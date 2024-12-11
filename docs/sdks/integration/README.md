@@ -23,8 +23,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.integration.get_unified_integration_auth(request={
+) as unified_to:
+    res = unified_to.integration.get_unified_integration_auth(request={
         "integration_type": "<value>",
         "workspace_id": "<value>",
     })
@@ -66,8 +66,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.integration.list_unified_integration_workspaces(request={
+) as unified_to:
+    res = unified_to.integration.list_unified_integration_workspaces(request={
         "workspace_id": "<value>",
     })
 
@@ -108,8 +108,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.integration.list_unified_integrations(request={})
+) as unified_to:
+    res = unified_to.integration.list_unified_integrations(request={})
 
     if res.integrations is not None:
         # handle response

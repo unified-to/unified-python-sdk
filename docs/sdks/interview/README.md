@@ -26,8 +26,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.interview.create_ats_interview(request={
+) as unified_to:
+    res = unified_to.interview.create_ats_interview(request={
         "connection_id": "<value>",
     })
 
@@ -68,8 +68,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.interview.get_ats_interview(request={
+) as unified_to:
+    res = unified_to.interview.get_ats_interview(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -111,8 +111,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.interview.list_ats_interviews(request={
+) as unified_to:
+    res = unified_to.interview.list_ats_interviews(request={
         "connection_id": "<value>",
     })
 
@@ -153,8 +153,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.interview.patch_ats_interview(request={
+) as unified_to:
+    res = unified_to.interview.patch_ats_interview(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -196,8 +196,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.interview.remove_ats_interview(request={
+) as unified_to:
+    res = unified_to.interview.remove_ats_interview(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -239,8 +239,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.interview.update_ats_interview(request={
+) as unified_to:
+    res = unified_to.interview.update_ats_interview(request={
         "connection_id": "<value>",
         "id": "<id>",
     })

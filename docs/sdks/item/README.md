@@ -26,8 +26,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.item.create_commerce_item(request={
+) as unified_to:
+    res = unified_to.item.create_commerce_item(request={
         "connection_id": "<value>",
     })
 
@@ -68,8 +68,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.item.get_commerce_item(request={
+) as unified_to:
+    res = unified_to.item.get_commerce_item(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -111,8 +111,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.item.list_commerce_items(request={
+) as unified_to:
+    res = unified_to.item.list_commerce_items(request={
         "connection_id": "<value>",
     })
 
@@ -153,8 +153,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.item.patch_commerce_item(request={
+) as unified_to:
+    res = unified_to.item.patch_commerce_item(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -196,8 +196,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.item.remove_commerce_item(request={
+) as unified_to:
+    res = unified_to.item.remove_commerce_item(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -239,8 +239,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.item.update_commerce_item(request={
+) as unified_to:
+    res = unified_to.item.update_commerce_item(request={
         "connection_id": "<value>",
         "id": "<id>",
     })

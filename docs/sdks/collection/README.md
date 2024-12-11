@@ -26,8 +26,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.collection.create_commerce_collection(request={
+) as unified_to:
+    res = unified_to.collection.create_commerce_collection(request={
         "connection_id": "<value>",
     })
 
@@ -68,8 +68,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.collection.get_commerce_collection(request={
+) as unified_to:
+    res = unified_to.collection.get_commerce_collection(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -111,8 +111,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.collection.list_commerce_collections(request={
+) as unified_to:
+    res = unified_to.collection.list_commerce_collections(request={
         "connection_id": "<value>",
     })
 
@@ -153,8 +153,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.collection.patch_commerce_collection(request={
+) as unified_to:
+    res = unified_to.collection.patch_commerce_collection(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -196,8 +196,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.collection.remove_commerce_collection(request={
+) as unified_to:
+    res = unified_to.collection.remove_commerce_collection(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -239,8 +239,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.collection.update_commerce_collection(request={
+) as unified_to:
+    res = unified_to.collection.update_commerce_collection(request={
         "connection_id": "<value>",
         "id": "<id>",
     })

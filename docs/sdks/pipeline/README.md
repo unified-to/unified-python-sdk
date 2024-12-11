@@ -26,8 +26,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.pipeline.create_crm_pipeline(request={
+) as unified_to:
+    res = unified_to.pipeline.create_crm_pipeline(request={
         "connection_id": "<value>",
     })
 
@@ -68,8 +68,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.pipeline.get_crm_pipeline(request={
+) as unified_to:
+    res = unified_to.pipeline.get_crm_pipeline(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -111,8 +111,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.pipeline.list_crm_pipelines(request={
+) as unified_to:
+    res = unified_to.pipeline.list_crm_pipelines(request={
         "connection_id": "<value>",
     })
 
@@ -153,8 +153,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.pipeline.patch_crm_pipeline(request={
+) as unified_to:
+    res = unified_to.pipeline.patch_crm_pipeline(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -196,8 +196,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.pipeline.remove_crm_pipeline(request={
+) as unified_to:
+    res = unified_to.pipeline.remove_crm_pipeline(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -239,8 +239,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.pipeline.update_crm_pipeline(request={
+) as unified_to:
+    res = unified_to.pipeline.update_crm_pipeline(request={
         "connection_id": "<value>",
         "id": "<id>",
     })

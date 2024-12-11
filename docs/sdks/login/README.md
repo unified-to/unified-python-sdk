@@ -21,8 +21,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.login.get_unified_integration_login(request={
+) as unified_to:
+    res = unified_to.login.get_unified_integration_login(request={
         "integration_type": "<value>",
         "workspace_id": "<value>",
     })

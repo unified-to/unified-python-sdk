@@ -22,8 +22,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.timeoff.get_hris_timeoff(request={
+) as unified_to:
+    res = unified_to.timeoff.get_hris_timeoff(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -65,8 +65,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.timeoff.list_hris_timeoffs(request={
+) as unified_to:
+    res = unified_to.timeoff.list_hris_timeoffs(request={
         "connection_id": "<value>",
     })
 

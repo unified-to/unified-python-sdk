@@ -32,8 +32,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.scim.create_scim_groups(request={
+) as unified_to:
+    res = unified_to.scim.create_scim_groups(request={
         "connection_id": "<id>",
     })
 
@@ -74,8 +74,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.scim.create_scim_users(request={
+) as unified_to:
+    res = unified_to.scim.create_scim_users(request={
         "connection_id": "<id>",
     })
 
@@ -116,8 +116,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.scim.get_scim_groups(request={
+) as unified_to:
+    res = unified_to.scim.get_scim_groups(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -159,8 +159,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.scim.get_scim_users(request={
+) as unified_to:
+    res = unified_to.scim.get_scim_users(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -202,8 +202,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.scim.list_scim_groups(request={
+) as unified_to:
+    res = unified_to.scim.list_scim_groups(request={
         "connection_id": "<id>",
     })
 
@@ -244,8 +244,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.scim.list_scim_users(request={
+) as unified_to:
+    res = unified_to.scim.list_scim_users(request={
         "connection_id": "<id>",
     })
 
@@ -286,8 +286,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.scim.patch_scim_groups(request={
+) as unified_to:
+    res = unified_to.scim.patch_scim_groups(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -329,8 +329,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.scim.patch_scim_users(request={
+) as unified_to:
+    res = unified_to.scim.patch_scim_users(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -372,8 +372,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.scim.remove_scim_groups(request={
+) as unified_to:
+    res = unified_to.scim.remove_scim_groups(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -415,8 +415,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.scim.remove_scim_users(request={
+) as unified_to:
+    res = unified_to.scim.remove_scim_users(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -458,8 +458,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.scim.update_scim_groups(request={
+) as unified_to:
+    res = unified_to.scim.update_scim_groups(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -501,8 +501,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.scim.update_scim_users(request={
+) as unified_to:
+    res = unified_to.scim.update_scim_users(request={
         "connection_id": "<id>",
         "id": "<id>",
     })

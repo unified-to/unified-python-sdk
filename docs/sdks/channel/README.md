@@ -22,8 +22,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.channel.get_messaging_channel(request={
+) as unified_to:
+    res = unified_to.channel.get_messaging_channel(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -65,8 +65,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.channel.list_messaging_channels(request={
+) as unified_to:
+    res = unified_to.channel.list_messaging_channels(request={
         "connection_id": "<value>",
     })
 

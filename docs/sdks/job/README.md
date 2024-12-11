@@ -26,8 +26,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.job.create_ats_job(request={
+) as unified_to:
+    res = unified_to.job.create_ats_job(request={
         "connection_id": "<value>",
     })
 
@@ -68,8 +68,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.job.get_ats_job(request={
+) as unified_to:
+    res = unified_to.job.get_ats_job(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -111,8 +111,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.job.list_ats_jobs(request={
+) as unified_to:
+    res = unified_to.job.list_ats_jobs(request={
         "connection_id": "<value>",
     })
 
@@ -153,8 +153,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.job.patch_ats_job(request={
+) as unified_to:
+    res = unified_to.job.patch_ats_job(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -196,8 +196,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.job.remove_ats_job(request={
+) as unified_to:
+    res = unified_to.job.remove_ats_job(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -239,8 +239,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.job.update_ats_job(request={
+) as unified_to:
+    res = unified_to.job.update_ats_job(request={
         "connection_id": "<value>",
         "id": "<id>",
     })

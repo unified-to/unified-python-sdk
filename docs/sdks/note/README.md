@@ -26,8 +26,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.note.create_ticketing_note(request={
+) as unified_to:
+    res = unified_to.note.create_ticketing_note(request={
         "connection_id": "<value>",
     })
 
@@ -68,8 +68,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.note.get_ticketing_note(request={
+) as unified_to:
+    res = unified_to.note.get_ticketing_note(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -111,8 +111,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.note.list_ticketing_notes(request={
+) as unified_to:
+    res = unified_to.note.list_ticketing_notes(request={
         "connection_id": "<value>",
     })
 
@@ -153,8 +153,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.note.patch_ticketing_note(request={
+) as unified_to:
+    res = unified_to.note.patch_ticketing_note(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -196,8 +196,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.note.remove_ticketing_note(request={
+) as unified_to:
+    res = unified_to.note.remove_ticketing_note(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -239,8 +239,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.note.update_ticketing_note(request={
+) as unified_to:
+    res = unified_to.note.update_ticketing_note(request={
         "connection_id": "<value>",
         "id": "<id>",
     })

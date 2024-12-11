@@ -22,8 +22,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.payout.get_payment_payout(request={
+) as unified_to:
+    res = unified_to.payout.get_payment_payout(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -65,8 +65,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.payout.list_payment_payouts(request={
+) as unified_to:
+    res = unified_to.payout.list_payment_payouts(request={
         "connection_id": "<value>",
     })
 

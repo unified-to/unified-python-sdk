@@ -26,8 +26,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.event.create_crm_event(request={
+) as unified_to:
+    res = unified_to.event.create_crm_event(request={
         "connection_id": "<value>",
     })
 
@@ -68,8 +68,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.event.get_crm_event(request={
+) as unified_to:
+    res = unified_to.event.get_crm_event(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -111,8 +111,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.event.list_crm_events(request={
+) as unified_to:
+    res = unified_to.event.list_crm_events(request={
         "connection_id": "<value>",
     })
 
@@ -153,8 +153,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.event.patch_crm_event(request={
+) as unified_to:
+    res = unified_to.event.patch_crm_event(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -196,8 +196,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.event.remove_crm_event(request={
+) as unified_to:
+    res = unified_to.event.remove_crm_event(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -239,8 +239,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.event.update_crm_event(request={
+) as unified_to:
+    res = unified_to.event.update_crm_event(request={
         "connection_id": "<value>",
         "id": "<id>",
     })

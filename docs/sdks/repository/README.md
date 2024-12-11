@@ -26,8 +26,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.repository.create_repo_repository(request={
+) as unified_to:
+    res = unified_to.repository.create_repo_repository(request={
         "connection_id": "<id>",
     })
 
@@ -68,8 +68,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.repository.get_repo_repository(request={
+) as unified_to:
+    res = unified_to.repository.get_repo_repository(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -111,8 +111,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.repository.list_repo_repositories(request={
+) as unified_to:
+    res = unified_to.repository.list_repo_repositories(request={
         "connection_id": "<id>",
     })
 
@@ -153,8 +153,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.repository.patch_repo_repository(request={
+) as unified_to:
+    res = unified_to.repository.patch_repo_repository(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -196,8 +196,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.repository.remove_repo_repository(request={
+) as unified_to:
+    res = unified_to.repository.remove_repo_repository(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -239,8 +239,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.repository.update_repo_repository(request={
+) as unified_to:
+    res = unified_to.repository.update_repo_repository(request={
         "connection_id": "<id>",
         "id": "<id>",
     })

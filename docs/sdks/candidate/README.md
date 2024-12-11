@@ -26,8 +26,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.candidate.create_ats_candidate(request={
+) as unified_to:
+    res = unified_to.candidate.create_ats_candidate(request={
         "connection_id": "<value>",
     })
 
@@ -68,8 +68,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.candidate.get_ats_candidate(request={
+) as unified_to:
+    res = unified_to.candidate.get_ats_candidate(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -111,8 +111,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.candidate.list_ats_candidates(request={
+) as unified_to:
+    res = unified_to.candidate.list_ats_candidates(request={
         "connection_id": "<value>",
     })
 
@@ -153,8 +153,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.candidate.patch_ats_candidate(request={
+) as unified_to:
+    res = unified_to.candidate.patch_ats_candidate(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -196,8 +196,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.candidate.remove_ats_candidate(request={
+) as unified_to:
+    res = unified_to.candidate.remove_ats_candidate(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -239,8 +239,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.candidate.update_ats_candidate(request={
+) as unified_to:
+    res = unified_to.candidate.update_ats_candidate(request={
         "connection_id": "<value>",
         "id": "<id>",
     })

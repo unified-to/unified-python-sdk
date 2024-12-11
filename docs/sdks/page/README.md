@@ -26,8 +26,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.page.create_kms_page(request={
+) as unified_to:
+    res = unified_to.page.create_kms_page(request={
         "connection_id": "<value>",
     })
 
@@ -68,8 +68,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.page.get_kms_page(request={
+) as unified_to:
+    res = unified_to.page.get_kms_page(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -111,8 +111,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.page.list_kms_pages(request={
+) as unified_to:
+    res = unified_to.page.list_kms_pages(request={
         "connection_id": "<value>",
     })
 
@@ -153,8 +153,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.page.patch_kms_page(request={
+) as unified_to:
+    res = unified_to.page.patch_kms_page(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -196,8 +196,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.page.remove_kms_page(request={
+) as unified_to:
+    res = unified_to.page.remove_kms_page(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -239,8 +239,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.page.update_kms_page(request={
+) as unified_to:
+    res = unified_to.page.update_kms_page(request={
         "connection_id": "<value>",
         "id": "<id>",
     })

@@ -21,8 +21,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.model.list_genai_models(request={
+) as unified_to:
+    res = unified_to.model.list_genai_models(request={
         "connection_id": "<value>",
     })
 

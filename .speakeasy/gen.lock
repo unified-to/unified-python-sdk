@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: 42f573170bad12dc387a71808ef7cd22
+  docChecksum: 41f6fed774011bab102d612247a8bfd9
   docVersion: "1.0"
-  speakeasyVersion: 1.453.1
-  generationVersion: 2.474.4
-  releaseVersion: 0.26.5
-  configChecksum: 0b6266cf66a53f485dcdb1be9e9cc64b
+  speakeasyVersion: 1.453.10
+  generationVersion: 2.474.15
+  releaseVersion: 0.26.6
+  configChecksum: f8ef0f636332bd4c626c56d4f5811551
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -16,7 +16,7 @@ features:
     acceptHeaders: 3.0.0
     additionalDependencies: 1.0.0
     constsAndDefaults: 1.0.5
-    core: 5.6.9
+    core: 5.6.11
     defaultEnabledRetries: 0.2.0
     downloadStreams: 1.0.1
     enumUnions: 0.1.0
@@ -71,8 +71,6 @@ generatedFiles:
   - docs/models/operations/createcommerceitemresponse.md
   - docs/models/operations/createcommercelocationrequest.md
   - docs/models/operations/createcommercelocationresponse.md
-  - docs/models/operations/createcommercemetadatarequest.md
-  - docs/models/operations/createcommercemetadataresponse.md
   - docs/models/operations/createcrmcompanyrequest.md
   - docs/models/operations/createcrmcompanyresponse.md
   - docs/models/operations/createcrmcontactrequest.md
@@ -113,6 +111,8 @@ generatedFiles:
   - docs/models/operations/createmartechmemberresponse.md
   - docs/models/operations/createmessagingmessagerequest.md
   - docs/models/operations/createmessagingmessageresponse.md
+  - docs/models/operations/createmetadatametadatarequest.md
+  - docs/models/operations/createmetadatametadataresponse.md
   - docs/models/operations/createpassthroughjsonrequest.md
   - docs/models/operations/createpassthroughjsonresponse.md
   - docs/models/operations/createpassthroughrawrequest.md
@@ -192,8 +192,6 @@ generatedFiles:
   - docs/models/operations/getcommerceitemresponse.md
   - docs/models/operations/getcommercelocationrequest.md
   - docs/models/operations/getcommercelocationresponse.md
-  - docs/models/operations/getcommercemetadatarequest.md
-  - docs/models/operations/getcommercemetadataresponse.md
   - docs/models/operations/getcrmcompanyrequest.md
   - docs/models/operations/getcrmcompanyresponse.md
   - docs/models/operations/getcrmcontactrequest.md
@@ -238,6 +236,8 @@ generatedFiles:
   - docs/models/operations/getmessagingchannelresponse.md
   - docs/models/operations/getmessagingmessagerequest.md
   - docs/models/operations/getmessagingmessageresponse.md
+  - docs/models/operations/getmetadatametadatarequest.md
+  - docs/models/operations/getmetadatametadataresponse.md
   - docs/models/operations/getpaymentlinkrequest.md
   - docs/models/operations/getpaymentlinkresponse.md
   - docs/models/operations/getpaymentpaymentrequest.md
@@ -326,8 +326,6 @@ generatedFiles:
   - docs/models/operations/listcommerceitemsresponse.md
   - docs/models/operations/listcommercelocationsrequest.md
   - docs/models/operations/listcommercelocationsresponse.md
-  - docs/models/operations/listcommercemetadatasrequest.md
-  - docs/models/operations/listcommercemetadatasresponse.md
   - docs/models/operations/listcrmcompaniesrequest.md
   - docs/models/operations/listcrmcompaniesresponse.md
   - docs/models/operations/listcrmcontactsrequest.md
@@ -378,6 +376,8 @@ generatedFiles:
   - docs/models/operations/listmessagingchannelsresponse.md
   - docs/models/operations/listmessagingmessagesrequest.md
   - docs/models/operations/listmessagingmessagesresponse.md
+  - docs/models/operations/listmetadatametadatasrequest.md
+  - docs/models/operations/listmetadatametadatasresponse.md
   - docs/models/operations/listpassthroughsrequest.md
   - docs/models/operations/listpassthroughsresponse.md
   - docs/models/operations/listpaymentlinksrequest.md
@@ -467,8 +467,6 @@ generatedFiles:
   - docs/models/operations/patchcommerceitemresponse.md
   - docs/models/operations/patchcommercelocationrequest.md
   - docs/models/operations/patchcommercelocationresponse.md
-  - docs/models/operations/patchcommercemetadatarequest.md
-  - docs/models/operations/patchcommercemetadataresponse.md
   - docs/models/operations/patchcrmcompanyrequest.md
   - docs/models/operations/patchcrmcompanyresponse.md
   - docs/models/operations/patchcrmcontactrequest.md
@@ -507,6 +505,8 @@ generatedFiles:
   - docs/models/operations/patchmartechmemberresponse.md
   - docs/models/operations/patchmessagingmessagerequest.md
   - docs/models/operations/patchmessagingmessageresponse.md
+  - docs/models/operations/patchmetadatametadatarequest.md
+  - docs/models/operations/patchmetadatametadataresponse.md
   - docs/models/operations/patchpassthroughjsonrequest.md
   - docs/models/operations/patchpassthroughjsonresponse.md
   - docs/models/operations/patchpassthroughrawrequest.md
@@ -586,8 +586,6 @@ generatedFiles:
   - docs/models/operations/removecommerceitemresponse.md
   - docs/models/operations/removecommercelocationrequest.md
   - docs/models/operations/removecommercelocationresponse.md
-  - docs/models/operations/removecommercemetadatarequest.md
-  - docs/models/operations/removecommercemetadataresponse.md
   - docs/models/operations/removecrmcompanyrequest.md
   - docs/models/operations/removecrmcompanyresponse.md
   - docs/models/operations/removecrmcontactrequest.md
@@ -626,6 +624,8 @@ generatedFiles:
   - docs/models/operations/removemartechmemberresponse.md
   - docs/models/operations/removemessagingmessagerequest.md
   - docs/models/operations/removemessagingmessageresponse.md
+  - docs/models/operations/removemetadatametadatarequest.md
+  - docs/models/operations/removemetadatametadataresponse.md
   - docs/models/operations/removepassthroughrequest.md
   - docs/models/operations/removepassthroughresponse.md
   - docs/models/operations/removepaymentlinkrequest.md
@@ -701,8 +701,6 @@ generatedFiles:
   - docs/models/operations/updatecommerceitemresponse.md
   - docs/models/operations/updatecommercelocationrequest.md
   - docs/models/operations/updatecommercelocationresponse.md
-  - docs/models/operations/updatecommercemetadatarequest.md
-  - docs/models/operations/updatecommercemetadataresponse.md
   - docs/models/operations/updatecrmcompanyrequest.md
   - docs/models/operations/updatecrmcompanyresponse.md
   - docs/models/operations/updatecrmcontactrequest.md
@@ -741,6 +739,8 @@ generatedFiles:
   - docs/models/operations/updatemartechmemberresponse.md
   - docs/models/operations/updatemessagingmessagerequest.md
   - docs/models/operations/updatemessagingmessageresponse.md
+  - docs/models/operations/updatemetadatametadatarequest.md
+  - docs/models/operations/updatemetadatametadataresponse.md
   - docs/models/operations/updatepassthroughjsonrequest.md
   - docs/models/operations/updatepassthroughjsonresponse.md
   - docs/models/operations/updatepassthroughrawrequest.md
@@ -845,7 +845,6 @@ generatedFiles:
   - docs/models/shared/commerceitemprice.md
   - docs/models/shared/commerceitemvariant.md
   - docs/models/shared/commercelocation.md
-  - docs/models/shared/commercemetadata.md
   - docs/models/shared/connection.md
   - docs/models/shared/crmcompany.md
   - docs/models/shared/crmcontact.md
@@ -959,6 +958,7 @@ generatedFiles:
   - docs/models/shared/messagingchannel.md
   - docs/models/shared/messagingmember.md
   - docs/models/shared/messagingmessage.md
+  - docs/models/shared/metadatametadata.md
   - docs/models/shared/nativewebhookparentid.md
   - docs/models/shared/nativewebhookprojectid.md
   - docs/models/shared/objecttype.md
@@ -1272,7 +1272,6 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/createcommerceinventory.py
   - src/unified_python_sdk/models/operations/createcommerceitem.py
   - src/unified_python_sdk/models/operations/createcommercelocation.py
-  - src/unified_python_sdk/models/operations/createcommercemetadata.py
   - src/unified_python_sdk/models/operations/createcrmcompany.py
   - src/unified_python_sdk/models/operations/createcrmcontact.py
   - src/unified_python_sdk/models/operations/createcrmdeal.py
@@ -1293,6 +1292,7 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/createmartechlist.py
   - src/unified_python_sdk/models/operations/createmartechmember.py
   - src/unified_python_sdk/models/operations/createmessagingmessage.py
+  - src/unified_python_sdk/models/operations/createmetadatametadata.py
   - src/unified_python_sdk/models/operations/createpassthrough_json.py
   - src/unified_python_sdk/models/operations/createpassthrough_raw.py
   - src/unified_python_sdk/models/operations/createpaymentlink.py
@@ -1333,7 +1333,6 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/getcommerceinventory.py
   - src/unified_python_sdk/models/operations/getcommerceitem.py
   - src/unified_python_sdk/models/operations/getcommercelocation.py
-  - src/unified_python_sdk/models/operations/getcommercemetadata.py
   - src/unified_python_sdk/models/operations/getcrmcompany.py
   - src/unified_python_sdk/models/operations/getcrmcontact.py
   - src/unified_python_sdk/models/operations/getcrmdeal.py
@@ -1356,6 +1355,7 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/getmartechmember.py
   - src/unified_python_sdk/models/operations/getmessagingchannel.py
   - src/unified_python_sdk/models/operations/getmessagingmessage.py
+  - src/unified_python_sdk/models/operations/getmetadatametadata.py
   - src/unified_python_sdk/models/operations/getpaymentlink.py
   - src/unified_python_sdk/models/operations/getpaymentpayment.py
   - src/unified_python_sdk/models/operations/getpaymentpayout.py
@@ -1400,7 +1400,6 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/listcommerceinventories.py
   - src/unified_python_sdk/models/operations/listcommerceitems.py
   - src/unified_python_sdk/models/operations/listcommercelocations.py
-  - src/unified_python_sdk/models/operations/listcommercemetadatas.py
   - src/unified_python_sdk/models/operations/listcrmcompanies.py
   - src/unified_python_sdk/models/operations/listcrmcontacts.py
   - src/unified_python_sdk/models/operations/listcrmdeals.py
@@ -1426,6 +1425,7 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/listmartechmembers.py
   - src/unified_python_sdk/models/operations/listmessagingchannels.py
   - src/unified_python_sdk/models/operations/listmessagingmessages.py
+  - src/unified_python_sdk/models/operations/listmetadatametadatas.py
   - src/unified_python_sdk/models/operations/listpassthroughs.py
   - src/unified_python_sdk/models/operations/listpaymentlinks.py
   - src/unified_python_sdk/models/operations/listpaymentpayments.py
@@ -1470,7 +1470,6 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/patchcommerceinventory.py
   - src/unified_python_sdk/models/operations/patchcommerceitem.py
   - src/unified_python_sdk/models/operations/patchcommercelocation.py
-  - src/unified_python_sdk/models/operations/patchcommercemetadata.py
   - src/unified_python_sdk/models/operations/patchcrmcompany.py
   - src/unified_python_sdk/models/operations/patchcrmcontact.py
   - src/unified_python_sdk/models/operations/patchcrmdeal.py
@@ -1490,6 +1489,7 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/patchmartechlist.py
   - src/unified_python_sdk/models/operations/patchmartechmember.py
   - src/unified_python_sdk/models/operations/patchmessagingmessage.py
+  - src/unified_python_sdk/models/operations/patchmetadatametadata.py
   - src/unified_python_sdk/models/operations/patchpassthrough_json.py
   - src/unified_python_sdk/models/operations/patchpassthrough_raw.py
   - src/unified_python_sdk/models/operations/patchpaymentlink.py
@@ -1529,7 +1529,6 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/removecommerceinventory.py
   - src/unified_python_sdk/models/operations/removecommerceitem.py
   - src/unified_python_sdk/models/operations/removecommercelocation.py
-  - src/unified_python_sdk/models/operations/removecommercemetadata.py
   - src/unified_python_sdk/models/operations/removecrmcompany.py
   - src/unified_python_sdk/models/operations/removecrmcontact.py
   - src/unified_python_sdk/models/operations/removecrmdeal.py
@@ -1549,6 +1548,7 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/removemartechlist.py
   - src/unified_python_sdk/models/operations/removemartechmember.py
   - src/unified_python_sdk/models/operations/removemessagingmessage.py
+  - src/unified_python_sdk/models/operations/removemetadatametadata.py
   - src/unified_python_sdk/models/operations/removepassthrough.py
   - src/unified_python_sdk/models/operations/removepaymentlink.py
   - src/unified_python_sdk/models/operations/removepaymentpayment.py
@@ -1586,7 +1586,6 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/updatecommerceinventory.py
   - src/unified_python_sdk/models/operations/updatecommerceitem.py
   - src/unified_python_sdk/models/operations/updatecommercelocation.py
-  - src/unified_python_sdk/models/operations/updatecommercemetadata.py
   - src/unified_python_sdk/models/operations/updatecrmcompany.py
   - src/unified_python_sdk/models/operations/updatecrmcontact.py
   - src/unified_python_sdk/models/operations/updatecrmdeal.py
@@ -1606,6 +1605,7 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/updatemartechlist.py
   - src/unified_python_sdk/models/operations/updatemartechmember.py
   - src/unified_python_sdk/models/operations/updatemessagingmessage.py
+  - src/unified_python_sdk/models/operations/updatemetadatametadata.py
   - src/unified_python_sdk/models/operations/updatepassthrough_json.py
   - src/unified_python_sdk/models/operations/updatepassthrough_raw.py
   - src/unified_python_sdk/models/operations/updatepaymentlink.py
@@ -1670,7 +1670,6 @@ generatedFiles:
   - src/unified_python_sdk/models/shared/commerceitemprice.py
   - src/unified_python_sdk/models/shared/commerceitemvariant.py
   - src/unified_python_sdk/models/shared/commercelocation.py
-  - src/unified_python_sdk/models/shared/commercemetadata.py
   - src/unified_python_sdk/models/shared/connection.py
   - src/unified_python_sdk/models/shared/crmcompany.py
   - src/unified_python_sdk/models/shared/crmcontact.py
@@ -1719,6 +1718,7 @@ generatedFiles:
   - src/unified_python_sdk/models/shared/messagingchannel.py
   - src/unified_python_sdk/models/shared/messagingmember.py
   - src/unified_python_sdk/models/shared/messagingmessage.py
+  - src/unified_python_sdk/models/shared/metadatametadata.py
   - src/unified_python_sdk/models/shared/paymentlink.py
   - src/unified_python_sdk/models/shared/paymentlinklineitem.py
   - src/unified_python_sdk/models/shared/paymentpayment.py
@@ -4721,4 +4721,58 @@ examples:
           connection_id: "<id>"
           id: "<id>"
         query: {}
+  createMetadataMetadata:
+    speakeasy-default-create-metadata-metadata:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {"name": "<value>", "object_type": "<value>"}
+  getMetadataMetadata:
+    speakeasy-default-get-metadata-metadata:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {"name": "<value>", "object_type": "<value>"}
+  listMetadataMetadatas:
+    speakeasy-default-list-metadata-metadatas:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: []
+  patchMetadataMetadata:
+    speakeasy-default-patch-metadata-metadata:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {"name": "<value>", "object_type": "<value>"}
+  removeMetadataMetadata:
+    speakeasy-default-remove-metadata-metadata:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateMetadataMetadata:
+    speakeasy-default-update-metadata-metadata:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {"name": "<value>", "object_type": "<value>"}
 generatedTests: {}

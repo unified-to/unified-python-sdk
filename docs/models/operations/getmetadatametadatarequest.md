@@ -1,4 +1,4 @@
-# GetCommerceMetadataRequest
+# GetMetadataMetadataRequest
 
 
 ## Fields

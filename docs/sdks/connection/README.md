@@ -26,8 +26,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.connection.create_unified_connection()
+) as unified_to:
+    res = unified_to.connection.create_unified_connection()
 
     if res.connection is not None:
         # handle response
@@ -66,8 +66,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.connection.get_unified_connection(request={
+) as unified_to:
+    res = unified_to.connection.get_unified_connection(request={
         "id": "<id>",
     })
 
@@ -108,8 +108,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.connection.list_unified_connections(request={})
+) as unified_to:
+    res = unified_to.connection.list_unified_connections(request={})
 
     if res.connections is not None:
         # handle response
@@ -148,8 +148,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.connection.patch_unified_connection(request={
+) as unified_to:
+    res = unified_to.connection.patch_unified_connection(request={
         "id": "<id>",
     })
 
@@ -190,8 +190,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.connection.remove_unified_connection(request={
+) as unified_to:
+    res = unified_to.connection.remove_unified_connection(request={
         "id": "<id>",
     })
 
@@ -232,8 +232,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.connection.update_unified_connection(request={
+) as unified_to:
+    res = unified_to.connection.update_unified_connection(request={
         "id": "<id>",
     })
 

@@ -35,8 +35,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.company.create_crm_company(request={
+) as unified_to:
+    res = unified_to.company.create_crm_company(request={
         "connection_id": "<value>",
     })
 
@@ -77,8 +77,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.company.create_hris_company(request={
+) as unified_to:
+    res = unified_to.company.create_hris_company(request={
         "connection_id": "<value>",
     })
 
@@ -119,8 +119,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.company.get_ats_company(request={
+) as unified_to:
+    res = unified_to.company.get_ats_company(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -162,8 +162,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.company.get_crm_company(request={
+) as unified_to:
+    res = unified_to.company.get_crm_company(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -205,8 +205,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.company.get_hris_company(request={
+) as unified_to:
+    res = unified_to.company.get_hris_company(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -248,8 +248,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.company.list_ats_companies(request={
+) as unified_to:
+    res = unified_to.company.list_ats_companies(request={
         "connection_id": "<value>",
     })
 
@@ -290,8 +290,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.company.list_crm_companies(request={
+) as unified_to:
+    res = unified_to.company.list_crm_companies(request={
         "connection_id": "<value>",
     })
 
@@ -332,8 +332,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.company.list_enrich_companies(request={
+) as unified_to:
+    res = unified_to.company.list_enrich_companies(request={
         "connection_id": "<value>",
     })
 
@@ -374,8 +374,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.company.list_hris_companies(request={
+) as unified_to:
+    res = unified_to.company.list_hris_companies(request={
         "connection_id": "<value>",
     })
 
@@ -416,8 +416,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.company.patch_crm_company(request={
+) as unified_to:
+    res = unified_to.company.patch_crm_company(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -459,8 +459,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.company.patch_hris_company(request={
+) as unified_to:
+    res = unified_to.company.patch_hris_company(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -502,8 +502,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.company.remove_crm_company(request={
+) as unified_to:
+    res = unified_to.company.remove_crm_company(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -545,8 +545,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.company.remove_hris_company(request={
+) as unified_to:
+    res = unified_to.company.remove_hris_company(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -588,8 +588,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.company.update_crm_company(request={
+) as unified_to:
+    res = unified_to.company.update_crm_company(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -631,8 +631,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.company.update_hris_company(request={
+) as unified_to:
+    res = unified_to.company.update_hris_company(request={
         "connection_id": "<value>",
         "id": "<id>",
     })

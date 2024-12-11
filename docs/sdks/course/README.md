@@ -26,8 +26,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.course.create_lms_course(request={
+) as unified_to:
+    res = unified_to.course.create_lms_course(request={
         "connection_id": "<id>",
     })
 
@@ -68,8 +68,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.course.get_lms_course(request={
+) as unified_to:
+    res = unified_to.course.get_lms_course(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -111,8 +111,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.course.list_lms_courses(request={
+) as unified_to:
+    res = unified_to.course.list_lms_courses(request={
         "connection_id": "<id>",
     })
 
@@ -153,8 +153,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.course.patch_lms_course(request={
+) as unified_to:
+    res = unified_to.course.patch_lms_course(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -196,8 +196,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.course.remove_lms_course(request={
+) as unified_to:
+    res = unified_to.course.remove_lms_course(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -239,8 +239,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.course.update_lms_course(request={
+) as unified_to:
+    res = unified_to.course.update_lms_course(request={
         "connection_id": "<id>",
         "id": "<id>",
     })

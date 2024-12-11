@@ -26,8 +26,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.employee.create_hris_employee(request={
+) as unified_to:
+    res = unified_to.employee.create_hris_employee(request={
         "connection_id": "<value>",
     })
 
@@ -68,8 +68,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.employee.get_hris_employee(request={
+) as unified_to:
+    res = unified_to.employee.get_hris_employee(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -111,8 +111,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.employee.list_hris_employees(request={
+) as unified_to:
+    res = unified_to.employee.list_hris_employees(request={
         "connection_id": "<value>",
     })
 
@@ -153,8 +153,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.employee.patch_hris_employee(request={
+) as unified_to:
+    res = unified_to.employee.patch_hris_employee(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -196,8 +196,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.employee.remove_hris_employee(request={
+) as unified_to:
+    res = unified_to.employee.remove_hris_employee(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -239,8 +239,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.employee.update_hris_employee(request={
+) as unified_to:
+    res = unified_to.employee.update_hris_employee(request={
         "connection_id": "<value>",
         "id": "<id>",
     })

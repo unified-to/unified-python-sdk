@@ -4,7 +4,7 @@ from __future__ import annotations
 import httpx
 from typing import List, Optional
 from typing_extensions import Annotated, NotRequired, TypedDict
-from unified_python_sdk.models.shared import commercemetadata as shared_commercemetadata
+from unified_python_sdk.models.shared import metadatametadata as shared_metadatametadata
 from unified_python_sdk.types import BaseModel
 from unified_python_sdk.utils import (
     FieldMetadata,
@@ -14,17 +14,17 @@ from unified_python_sdk.utils import (
 )
 
 
-class UpdateCommerceMetadataRequestTypedDict(TypedDict):
+class UpdateMetadataMetadataRequestTypedDict(TypedDict):
     connection_id: str
     r"""ID of the connection"""
     id: str
     r"""ID of the Metadata"""
-    commerce_metadata: NotRequired[shared_commercemetadata.CommerceMetadataTypedDict]
+    metadata_metadata: NotRequired[shared_metadatametadata.MetadataMetadataTypedDict]
     fields: NotRequired[List[str]]
     r"""Comma-delimited fields to return"""
 
 
-class UpdateCommerceMetadataRequest(BaseModel):
+class UpdateMetadataMetadataRequest(BaseModel):
     connection_id: Annotated[
         str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))
     ]
@@ -35,8 +35,8 @@ class UpdateCommerceMetadataRequest(BaseModel):
     ]
     r"""ID of the Metadata"""
 
-    commerce_metadata: Annotated[
-        Optional[shared_commercemetadata.CommerceMetadata],
+    metadata_metadata: Annotated[
+        Optional[shared_metadatametadata.MetadataMetadata],
         FieldMetadata(request=RequestMetadata(media_type="application/json")),
     ] = None
 
@@ -47,18 +47,18 @@ class UpdateCommerceMetadataRequest(BaseModel):
     r"""Comma-delimited fields to return"""
 
 
-class UpdateCommerceMetadataResponseTypedDict(TypedDict):
+class UpdateMetadataMetadataResponseTypedDict(TypedDict):
     content_type: str
     r"""HTTP response content type for this operation"""
     status_code: int
     r"""HTTP response status code for this operation"""
     raw_response: httpx.Response
     r"""Raw HTTP response; suitable for custom response parsing"""
-    commerce_metadata: NotRequired[shared_commercemetadata.CommerceMetadataTypedDict]
+    metadata_metadata: NotRequired[shared_metadatametadata.MetadataMetadataTypedDict]
     r"""Successful"""
 
 
-class UpdateCommerceMetadataResponse(BaseModel):
+class UpdateMetadataMetadataResponse(BaseModel):
     content_type: str
     r"""HTTP response content type for this operation"""
 
@@ -68,5 +68,5 @@ class UpdateCommerceMetadataResponse(BaseModel):
     raw_response: httpx.Response
     r"""Raw HTTP response; suitable for custom response parsing"""
 
-    commerce_metadata: Optional[shared_commercemetadata.CommerceMetadata] = None
+    metadata_metadata: Optional[shared_metadatametadata.MetadataMetadata] = None
     r"""Successful"""

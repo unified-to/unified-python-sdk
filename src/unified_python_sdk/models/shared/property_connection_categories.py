@@ -25,3 +25,4 @@ class PropertyConnectionCategories(str, Enum):
     SCIM = "scim"
     LMS = "lms"
     REPO = "repo"
+    METADATA = "metadata"

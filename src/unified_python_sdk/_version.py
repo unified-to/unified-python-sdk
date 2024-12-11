@@ -3,7 +3,7 @@
 import importlib.metadata
 
 __title__: str = "Unified-python-sdk"
-__version__: str = "0.26.5"
+__version__: str = "0.26.6"
 
 try:
     if __package__ is not None:

@@ -31,6 +31,7 @@ class ListUnifiedIntegrationsQueryParamCategories(str, Enum):
     SCIM = "scim"
     LMS = "lms"
     REPO = "repo"
+    METADATA = "metadata"
 
 
 class ListUnifiedIntegrationsRequestTypedDict(TypedDict):

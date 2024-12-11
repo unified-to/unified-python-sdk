@@ -5,14 +5,14 @@
 
 ### Available Operations
 
-* [create_commerce_metadata](#create_commerce_metadata) - Create a metadata
-* [get_commerce_metadata](#get_commerce_metadata) - Retrieve a metadata
-* [list_commerce_metadatas](#list_commerce_metadatas) - List all metadatas
-* [patch_commerce_metadata](#patch_commerce_metadata) - Update a metadata
-* [remove_commerce_metadata](#remove_commerce_metadata) - Remove a metadata
-* [update_commerce_metadata](#update_commerce_metadata) - Update a metadata
+* [create_metadata_metadata](#create_metadata_metadata) - Create a metadata
+* [get_metadata_metadata](#get_metadata_metadata) - Retrieve a metadata
+* [list_metadata_metadatas](#list_metadata_metadatas) - List all metadatas
+* [patch_metadata_metadata](#patch_metadata_metadata) - Update a metadata
+* [remove_metadata_metadata](#remove_metadata_metadata) - Remove a metadata
+* [update_metadata_metadata](#update_metadata_metadata) - Update a metadata
 
-## create_commerce_metadata
+## create_metadata_metadata
 
 Create a metadata
 
@@ -26,12 +26,12 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.metadata.create_commerce_metadata(request={
+) as unified_to:
+    res = unified_to.metadata.create_metadata_metadata(request={
         "connection_id": "<id>",
     })
 
-    if res.commerce_metadata is not None:
+    if res.metadata_metadata is not None:
         # handle response
         pass
 
@@ -41,12 +41,12 @@ with UnifiedTo(
 
 | Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
 | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `request`                                                                                            | [operations.CreateCommerceMetadataRequest](../../models/operations/createcommercemetadatarequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `request`                                                                                            | [operations.CreateMetadataMetadataRequest](../../models/operations/createmetadatametadatarequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 | `retries`                                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                     | :heavy_minus_sign:                                                                                   | Configuration to override the default retry behavior of the client.                                  |
 
 ### Response
 
-**[operations.CreateCommerceMetadataResponse](../../models/operations/createcommercemetadataresponse.md)**
+**[operations.CreateMetadataMetadataResponse](../../models/operations/createmetadatametadataresponse.md)**
 
 ### Errors
 
@@ -54,7 +54,7 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## get_commerce_metadata
+## get_metadata_metadata
 
 Retrieve a metadata
 
@@ -68,13 +68,13 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.metadata.get_commerce_metadata(request={
+) as unified_to:
+    res = unified_to.metadata.get_metadata_metadata(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
 
-    if res.commerce_metadata is not None:
+    if res.metadata_metadata is not None:
         # handle response
         pass
 
@@ -84,12 +84,12 @@ with UnifiedTo(
 
 | Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
 | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `request`                                                                                      | [operations.GetCommerceMetadataRequest](../../models/operations/getcommercemetadatarequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `request`                                                                                      | [operations.GetMetadataMetadataRequest](../../models/operations/getmetadatametadatarequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
 | `retries`                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                               | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
 
 ### Response
 
-**[operations.GetCommerceMetadataResponse](../../models/operations/getcommercemetadataresponse.md)**
+**[operations.GetMetadataMetadataResponse](../../models/operations/getmetadatametadataresponse.md)**
 
 ### Errors
 
@@ -97,7 +97,7 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## list_commerce_metadatas
+## list_metadata_metadatas
 
 List all metadatas
 
@@ -111,12 +111,12 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.metadata.list_commerce_metadatas(request={
+) as unified_to:
+    res = unified_to.metadata.list_metadata_metadatas(request={
         "connection_id": "<id>",
     })
 
-    if res.commerce_metadatas is not None:
+    if res.metadata_metadatas is not None:
         # handle response
         pass
 
@@ -126,12 +126,12 @@ with UnifiedTo(
 
 | Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
 | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `request`                                                                                          | [operations.ListCommerceMetadatasRequest](../../models/operations/listcommercemetadatasrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `request`                                                                                          | [operations.ListMetadataMetadatasRequest](../../models/operations/listmetadatametadatasrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
 | `retries`                                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                   | :heavy_minus_sign:                                                                                 | Configuration to override the default retry behavior of the client.                                |
 
 ### Response
 
-**[operations.ListCommerceMetadatasResponse](../../models/operations/listcommercemetadatasresponse.md)**
+**[operations.ListMetadataMetadatasResponse](../../models/operations/listmetadatametadatasresponse.md)**
 
 ### Errors
 
@@ -139,7 +139,7 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## patch_commerce_metadata
+## patch_metadata_metadata
 
 Update a metadata
 
@@ -153,13 +153,13 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.metadata.patch_commerce_metadata(request={
+) as unified_to:
+    res = unified_to.metadata.patch_metadata_metadata(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
 
-    if res.commerce_metadata is not None:
+    if res.metadata_metadata is not None:
         # handle response
         pass
 
@@ -169,12 +169,12 @@ with UnifiedTo(
 
 | Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
 | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `request`                                                                                          | [operations.PatchCommerceMetadataRequest](../../models/operations/patchcommercemetadatarequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `request`                                                                                          | [operations.PatchMetadataMetadataRequest](../../models/operations/patchmetadatametadatarequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
 | `retries`                                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                   | :heavy_minus_sign:                                                                                 | Configuration to override the default retry behavior of the client.                                |
 
 ### Response
 
-**[operations.PatchCommerceMetadataResponse](../../models/operations/patchcommercemetadataresponse.md)**
+**[operations.PatchMetadataMetadataResponse](../../models/operations/patchmetadatametadataresponse.md)**
 
 ### Errors
 
@@ -182,7 +182,7 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## remove_commerce_metadata
+## remove_metadata_metadata
 
 Remove a metadata
 
@@ -196,8 +196,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.metadata.remove_commerce_metadata(request={
+) as unified_to:
+    res = unified_to.metadata.remove_metadata_metadata(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -212,12 +212,12 @@ with UnifiedTo(
 
 | Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
 | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `request`                                                                                            | [operations.RemoveCommerceMetadataRequest](../../models/operations/removecommercemetadatarequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `request`                                                                                            | [operations.RemoveMetadataMetadataRequest](../../models/operations/removemetadatametadatarequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 | `retries`                                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                     | :heavy_minus_sign:                                                                                   | Configuration to override the default retry behavior of the client.                                  |
 
 ### Response
 
-**[operations.RemoveCommerceMetadataResponse](../../models/operations/removecommercemetadataresponse.md)**
+**[operations.RemoveMetadataMetadataResponse](../../models/operations/removemetadatametadataresponse.md)**
 
 ### Errors
 
@@ -225,7 +225,7 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## update_commerce_metadata
+## update_metadata_metadata
 
 Update a metadata
 
@@ -239,13 +239,13 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.metadata.update_commerce_metadata(request={
+) as unified_to:
+    res = unified_to.metadata.update_metadata_metadata(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
 
-    if res.commerce_metadata is not None:
+    if res.metadata_metadata is not None:
         # handle response
         pass
 
@@ -255,12 +255,12 @@ with UnifiedTo(
 
 | Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
 | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `request`                                                                                            | [operations.UpdateCommerceMetadataRequest](../../models/operations/updatecommercemetadatarequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `request`                                                                                            | [operations.UpdateMetadataMetadataRequest](../../models/operations/updatemetadatametadatarequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
 | `retries`                                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                     | :heavy_minus_sign:                                                                                   | Configuration to override the default retry behavior of the client.                                  |
 
 ### Response
 
-**[operations.UpdateCommerceMetadataResponse](../../models/operations/updatecommercemetadataresponse.md)**
+**[operations.UpdateMetadataMetadataResponse](../../models/operations/updatemetadatametadataresponse.md)**
 
 ### Errors
 

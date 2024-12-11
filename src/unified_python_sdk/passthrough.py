@@ -15,7 +15,7 @@ class CreatePassthroughJsonAcceptEnum(str, Enum):
     TEXT_CSV = "text/csv"
     TEXT_PLAIN = "text/plain"
     APPLICATION_XML = "application/xml"
-    WILDCARD_WILDCARD_ = "*/*"
+    WILDCARD_ROOT_WILDCARD_ = "*/*"
 
 
 class CreatePassthroughRawAcceptEnum(str, Enum):
@@ -23,7 +23,7 @@ class CreatePassthroughRawAcceptEnum(str, Enum):
     TEXT_CSV = "text/csv"
     TEXT_PLAIN = "text/plain"
     APPLICATION_XML = "application/xml"
-    WILDCARD_WILDCARD_ = "*/*"
+    WILDCARD_ROOT_WILDCARD_ = "*/*"
 
 
 class ListPassthroughsAcceptEnum(str, Enum):
@@ -31,7 +31,7 @@ class ListPassthroughsAcceptEnum(str, Enum):
     TEXT_CSV = "text/csv"
     TEXT_PLAIN = "text/plain"
     APPLICATION_XML = "application/xml"
-    WILDCARD_WILDCARD_ = "*/*"
+    WILDCARD_ROOT_WILDCARD_ = "*/*"
 
 
 class PatchPassthroughJsonAcceptEnum(str, Enum):
@@ -39,7 +39,7 @@ class PatchPassthroughJsonAcceptEnum(str, Enum):
     TEXT_CSV = "text/csv"
     TEXT_PLAIN = "text/plain"
     APPLICATION_XML = "application/xml"
-    WILDCARD_WILDCARD_ = "*/*"
+    WILDCARD_ROOT_WILDCARD_ = "*/*"
 
 
 class PatchPassthroughRawAcceptEnum(str, Enum):
@@ -47,7 +47,7 @@ class PatchPassthroughRawAcceptEnum(str, Enum):
     TEXT_CSV = "text/csv"
     TEXT_PLAIN = "text/plain"
     APPLICATION_XML = "application/xml"
-    WILDCARD_WILDCARD_ = "*/*"
+    WILDCARD_ROOT_WILDCARD_ = "*/*"
 
 
 class RemovePassthroughAcceptEnum(str, Enum):
@@ -55,7 +55,7 @@ class RemovePassthroughAcceptEnum(str, Enum):
     TEXT_CSV = "text/csv"
     TEXT_PLAIN = "text/plain"
     APPLICATION_XML = "application/xml"
-    WILDCARD_WILDCARD_ = "*/*"
+    WILDCARD_ROOT_WILDCARD_ = "*/*"
 
 
 class UpdatePassthroughJsonAcceptEnum(str, Enum):
@@ -63,7 +63,7 @@ class UpdatePassthroughJsonAcceptEnum(str, Enum):
     TEXT_CSV = "text/csv"
     TEXT_PLAIN = "text/plain"
     APPLICATION_XML = "application/xml"
-    WILDCARD_WILDCARD_ = "*/*"
+    WILDCARD_ROOT_WILDCARD_ = "*/*"
 
 
 class UpdatePassthroughRawAcceptEnum(str, Enum):
@@ -71,7 +71,7 @@ class UpdatePassthroughRawAcceptEnum(str, Enum):
     TEXT_CSV = "text/csv"
     TEXT_PLAIN = "text/plain"
     APPLICATION_XML = "application/xml"
-    WILDCARD_WILDCARD_ = "*/*"
+    WILDCARD_ROOT_WILDCARD_ = "*/*"
 
 
 class Passthrough(BaseSDK):

@@ -26,8 +26,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.file.create_storage_file(request={
+) as unified_to:
+    res = unified_to.file.create_storage_file(request={
         "connection_id": "<value>",
     })
 
@@ -68,8 +68,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.file.get_storage_file(request={
+) as unified_to:
+    res = unified_to.file.get_storage_file(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -111,8 +111,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.file.list_storage_files(request={
+) as unified_to:
+    res = unified_to.file.list_storage_files(request={
         "connection_id": "<value>",
     })
 
@@ -153,8 +153,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.file.patch_storage_file(request={
+) as unified_to:
+    res = unified_to.file.patch_storage_file(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -196,8 +196,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.file.remove_storage_file(request={
+) as unified_to:
+    res = unified_to.file.remove_storage_file(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -239,8 +239,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.file.update_storage_file(request={
+) as unified_to:
+    res = unified_to.file.update_storage_file(request={
         "connection_id": "<value>",
         "id": "<id>",
     })

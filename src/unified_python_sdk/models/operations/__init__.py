@@ -108,12 +108,6 @@ from .createcommercelocation import (
     CreateCommerceLocationResponse,
     CreateCommerceLocationResponseTypedDict,
 )
-from .createcommercemetadata import (
-    CreateCommerceMetadataRequest,
-    CreateCommerceMetadataRequestTypedDict,
-    CreateCommerceMetadataResponse,
-    CreateCommerceMetadataResponseTypedDict,
-)
 from .createcrmcompany import (
     CreateCrmCompanyRequest,
     CreateCrmCompanyRequestTypedDict,
@@ -233,6 +227,12 @@ from .createmessagingmessage import (
     CreateMessagingMessageRequestTypedDict,
     CreateMessagingMessageResponse,
     CreateMessagingMessageResponseTypedDict,
+)
+from .createmetadatametadata import (
+    CreateMetadataMetadataRequest,
+    CreateMetadataMetadataRequestTypedDict,
+    CreateMetadataMetadataResponse,
+    CreateMetadataMetadataResponseTypedDict,
 )
 from .createpassthrough_json import (
     CreatePassthroughJSONRequest,
@@ -472,12 +472,6 @@ from .getcommercelocation import (
     GetCommerceLocationResponse,
     GetCommerceLocationResponseTypedDict,
 )
-from .getcommercemetadata import (
-    GetCommerceMetadataRequest,
-    GetCommerceMetadataRequestTypedDict,
-    GetCommerceMetadataResponse,
-    GetCommerceMetadataResponseTypedDict,
-)
 from .getcrmcompany import (
     GetCrmCompanyRequest,
     GetCrmCompanyRequestTypedDict,
@@ -609,6 +603,12 @@ from .getmessagingmessage import (
     GetMessagingMessageRequestTypedDict,
     GetMessagingMessageResponse,
     GetMessagingMessageResponseTypedDict,
+)
+from .getmetadatametadata import (
+    GetMetadataMetadataRequest,
+    GetMetadataMetadataRequestTypedDict,
+    GetMetadataMetadataResponse,
+    GetMetadataMetadataResponseTypedDict,
 )
 from .getpaymentlink import (
     GetPaymentLinkRequest,
@@ -875,12 +875,6 @@ from .listcommercelocations import (
     ListCommerceLocationsResponse,
     ListCommerceLocationsResponseTypedDict,
 )
-from .listcommercemetadatas import (
-    ListCommerceMetadatasRequest,
-    ListCommerceMetadatasRequestTypedDict,
-    ListCommerceMetadatasResponse,
-    ListCommerceMetadatasResponseTypedDict,
-)
 from .listcrmcompanies import (
     ListCrmCompaniesRequest,
     ListCrmCompaniesRequestTypedDict,
@@ -1030,6 +1024,12 @@ from .listmessagingmessages import (
     ListMessagingMessagesRequestTypedDict,
     ListMessagingMessagesResponse,
     ListMessagingMessagesResponseTypedDict,
+)
+from .listmetadatametadatas import (
+    ListMetadataMetadatasRequest,
+    ListMetadataMetadatasRequestTypedDict,
+    ListMetadataMetadatasResponse,
+    ListMetadataMetadatasResponseTypedDict,
 )
 from .listpassthroughs import (
     ListPassthroughsRequest,
@@ -1298,12 +1298,6 @@ from .patchcommercelocation import (
     PatchCommerceLocationResponse,
     PatchCommerceLocationResponseTypedDict,
 )
-from .patchcommercemetadata import (
-    PatchCommerceMetadataRequest,
-    PatchCommerceMetadataRequestTypedDict,
-    PatchCommerceMetadataResponse,
-    PatchCommerceMetadataResponseTypedDict,
-)
 from .patchcrmcompany import (
     PatchCrmCompanyRequest,
     PatchCrmCompanyRequestTypedDict,
@@ -1417,6 +1411,12 @@ from .patchmessagingmessage import (
     PatchMessagingMessageRequestTypedDict,
     PatchMessagingMessageResponse,
     PatchMessagingMessageResponseTypedDict,
+)
+from .patchmetadatametadata import (
+    PatchMetadataMetadataRequest,
+    PatchMetadataMetadataRequestTypedDict,
+    PatchMetadataMetadataResponse,
+    PatchMetadataMetadataResponseTypedDict,
 )
 from .patchpassthrough_json import (
     PatchPassthroughJSONRequest,
@@ -1652,12 +1652,6 @@ from .removecommercelocation import (
     RemoveCommerceLocationResponse,
     RemoveCommerceLocationResponseTypedDict,
 )
-from .removecommercemetadata import (
-    RemoveCommerceMetadataRequest,
-    RemoveCommerceMetadataRequestTypedDict,
-    RemoveCommerceMetadataResponse,
-    RemoveCommerceMetadataResponseTypedDict,
-)
 from .removecrmcompany import (
     RemoveCrmCompanyRequest,
     RemoveCrmCompanyRequestTypedDict,
@@ -1771,6 +1765,12 @@ from .removemessagingmessage import (
     RemoveMessagingMessageRequestTypedDict,
     RemoveMessagingMessageResponse,
     RemoveMessagingMessageResponseTypedDict,
+)
+from .removemetadatametadata import (
+    RemoveMetadataMetadataRequest,
+    RemoveMetadataMetadataRequestTypedDict,
+    RemoveMetadataMetadataResponse,
+    RemoveMetadataMetadataResponseTypedDict,
 )
 from .removepassthrough import (
     RemovePassthroughRequest,
@@ -1994,12 +1994,6 @@ from .updatecommercelocation import (
     UpdateCommerceLocationResponse,
     UpdateCommerceLocationResponseTypedDict,
 )
-from .updatecommercemetadata import (
-    UpdateCommerceMetadataRequest,
-    UpdateCommerceMetadataRequestTypedDict,
-    UpdateCommerceMetadataResponse,
-    UpdateCommerceMetadataResponseTypedDict,
-)
 from .updatecrmcompany import (
     UpdateCrmCompanyRequest,
     UpdateCrmCompanyRequestTypedDict,
@@ -2113,6 +2107,12 @@ from .updatemessagingmessage import (
     UpdateMessagingMessageRequestTypedDict,
     UpdateMessagingMessageResponse,
     UpdateMessagingMessageResponseTypedDict,
+)
+from .updatemetadatametadata import (
+    UpdateMetadataMetadataRequest,
+    UpdateMetadataMetadataRequestTypedDict,
+    UpdateMetadataMetadataResponse,
+    UpdateMetadataMetadataResponseTypedDict,
 )
 from .updatepassthrough_json import (
     UpdatePassthroughJSONRequest,
@@ -2315,10 +2315,6 @@ __all__ = [
     "CreateCommerceLocationRequestTypedDict",
     "CreateCommerceLocationResponse",
     "CreateCommerceLocationResponseTypedDict",
-    "CreateCommerceMetadataRequest",
-    "CreateCommerceMetadataRequestTypedDict",
-    "CreateCommerceMetadataResponse",
-    "CreateCommerceMetadataResponseTypedDict",
     "CreateCrmCompanyRequest",
     "CreateCrmCompanyRequestTypedDict",
     "CreateCrmCompanyResponse",
@@ -2399,6 +2395,10 @@ __all__ = [
     "CreateMessagingMessageRequestTypedDict",
     "CreateMessagingMessageResponse",
     "CreateMessagingMessageResponseTypedDict",
+    "CreateMetadataMetadataRequest",
+    "CreateMetadataMetadataRequestTypedDict",
+    "CreateMetadataMetadataResponse",
+    "CreateMetadataMetadataResponseTypedDict",
     "CreatePassthroughJSONRequest",
     "CreatePassthroughJSONRequestTypedDict",
     "CreatePassthroughJSONResponse",
@@ -2557,10 +2557,6 @@ __all__ = [
     "GetCommerceLocationRequestTypedDict",
     "GetCommerceLocationResponse",
     "GetCommerceLocationResponseTypedDict",
-    "GetCommerceMetadataRequest",
-    "GetCommerceMetadataRequestTypedDict",
-    "GetCommerceMetadataResponse",
-    "GetCommerceMetadataResponseTypedDict",
     "GetCrmCompanyRequest",
     "GetCrmCompanyRequestTypedDict",
     "GetCrmCompanyResponse",
@@ -2649,6 +2645,10 @@ __all__ = [
     "GetMessagingMessageRequestTypedDict",
     "GetMessagingMessageResponse",
     "GetMessagingMessageResponseTypedDict",
+    "GetMetadataMetadataRequest",
+    "GetMetadataMetadataRequestTypedDict",
+    "GetMetadataMetadataResponse",
+    "GetMetadataMetadataResponseTypedDict",
     "GetPaymentLinkRequest",
     "GetPaymentLinkRequestTypedDict",
     "GetPaymentLinkResponse",
@@ -2825,10 +2825,6 @@ __all__ = [
     "ListCommerceLocationsRequestTypedDict",
     "ListCommerceLocationsResponse",
     "ListCommerceLocationsResponseTypedDict",
-    "ListCommerceMetadatasRequest",
-    "ListCommerceMetadatasRequestTypedDict",
-    "ListCommerceMetadatasResponse",
-    "ListCommerceMetadatasResponseTypedDict",
     "ListCrmCompaniesRequest",
     "ListCrmCompaniesRequestTypedDict",
     "ListCrmCompaniesResponse",
@@ -2929,6 +2925,10 @@ __all__ = [
     "ListMessagingMessagesRequestTypedDict",
     "ListMessagingMessagesResponse",
     "ListMessagingMessagesResponseTypedDict",
+    "ListMetadataMetadatasRequest",
+    "ListMetadataMetadatasRequestTypedDict",
+    "ListMetadataMetadatasResponse",
+    "ListMetadataMetadatasResponseTypedDict",
     "ListPassthroughsRequest",
     "ListPassthroughsRequestTypedDict",
     "ListPassthroughsResponse",
@@ -3106,10 +3106,6 @@ __all__ = [
     "PatchCommerceLocationRequestTypedDict",
     "PatchCommerceLocationResponse",
     "PatchCommerceLocationResponseTypedDict",
-    "PatchCommerceMetadataRequest",
-    "PatchCommerceMetadataRequestTypedDict",
-    "PatchCommerceMetadataResponse",
-    "PatchCommerceMetadataResponseTypedDict",
     "PatchCrmCompanyRequest",
     "PatchCrmCompanyRequestTypedDict",
     "PatchCrmCompanyResponse",
@@ -3186,6 +3182,10 @@ __all__ = [
     "PatchMessagingMessageRequestTypedDict",
     "PatchMessagingMessageResponse",
     "PatchMessagingMessageResponseTypedDict",
+    "PatchMetadataMetadataRequest",
+    "PatchMetadataMetadataRequestTypedDict",
+    "PatchMetadataMetadataResponse",
+    "PatchMetadataMetadataResponseTypedDict",
     "PatchPassthroughJSONRequest",
     "PatchPassthroughJSONRequestTypedDict",
     "PatchPassthroughJSONResponse",
@@ -3343,10 +3343,6 @@ __all__ = [
     "RemoveCommerceLocationRequestTypedDict",
     "RemoveCommerceLocationResponse",
     "RemoveCommerceLocationResponseTypedDict",
-    "RemoveCommerceMetadataRequest",
-    "RemoveCommerceMetadataRequestTypedDict",
-    "RemoveCommerceMetadataResponse",
-    "RemoveCommerceMetadataResponseTypedDict",
     "RemoveCrmCompanyRequest",
     "RemoveCrmCompanyRequestTypedDict",
     "RemoveCrmCompanyResponse",
@@ -3423,6 +3419,10 @@ __all__ = [
     "RemoveMessagingMessageRequestTypedDict",
     "RemoveMessagingMessageResponse",
     "RemoveMessagingMessageResponseTypedDict",
+    "RemoveMetadataMetadataRequest",
+    "RemoveMetadataMetadataRequestTypedDict",
+    "RemoveMetadataMetadataResponse",
+    "RemoveMetadataMetadataResponseTypedDict",
     "RemovePassthroughRequest",
     "RemovePassthroughRequestTypedDict",
     "RemovePassthroughResponse",
@@ -3572,10 +3572,6 @@ __all__ = [
     "UpdateCommerceLocationRequestTypedDict",
     "UpdateCommerceLocationResponse",
     "UpdateCommerceLocationResponseTypedDict",
-    "UpdateCommerceMetadataRequest",
-    "UpdateCommerceMetadataRequestTypedDict",
-    "UpdateCommerceMetadataResponse",
-    "UpdateCommerceMetadataResponseTypedDict",
     "UpdateCrmCompanyRequest",
     "UpdateCrmCompanyRequestTypedDict",
     "UpdateCrmCompanyResponse",
@@ -3652,6 +3648,10 @@ __all__ = [
     "UpdateMessagingMessageRequestTypedDict",
     "UpdateMessagingMessageResponse",
     "UpdateMessagingMessageResponseTypedDict",
+    "UpdateMetadataMetadataRequest",
+    "UpdateMetadataMetadataRequestTypedDict",
+    "UpdateMetadataMetadataResponse",
+    "UpdateMetadataMetadataResponseTypedDict",
     "UpdatePassthroughJSONRequest",
     "UpdatePassthroughJSONRequestTypedDict",
     "UpdatePassthroughJSONResponse",

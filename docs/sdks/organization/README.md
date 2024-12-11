@@ -28,8 +28,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.organization.create_repo_organization(request={
+) as unified_to:
+    res = unified_to.organization.create_repo_organization(request={
         "connection_id": "<id>",
     })
 
@@ -70,8 +70,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.organization.get_accounting_organization(request={
+) as unified_to:
+    res = unified_to.organization.get_accounting_organization(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -113,8 +113,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.organization.get_repo_organization(request={
+) as unified_to:
+    res = unified_to.organization.get_repo_organization(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -156,8 +156,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.organization.list_accounting_organizations(request={
+) as unified_to:
+    res = unified_to.organization.list_accounting_organizations(request={
         "connection_id": "<value>",
     })
 
@@ -198,8 +198,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.organization.list_repo_organizations(request={
+) as unified_to:
+    res = unified_to.organization.list_repo_organizations(request={
         "connection_id": "<id>",
     })
 
@@ -240,8 +240,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.organization.patch_repo_organization(request={
+) as unified_to:
+    res = unified_to.organization.patch_repo_organization(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -283,8 +283,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.organization.remove_repo_organization(request={
+) as unified_to:
+    res = unified_to.organization.remove_repo_organization(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -326,8 +326,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.organization.update_repo_organization(request={
+) as unified_to:
+    res = unified_to.organization.update_repo_organization(request={
         "connection_id": "<id>",
         "id": "<id>",
     })

@@ -26,8 +26,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.message.create_messaging_message(request={
+) as unified_to:
+    res = unified_to.message.create_messaging_message(request={
         "connection_id": "<value>",
     })
 
@@ -68,8 +68,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.message.get_messaging_message(request={
+) as unified_to:
+    res = unified_to.message.get_messaging_message(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -111,8 +111,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.message.list_messaging_messages(request={
+) as unified_to:
+    res = unified_to.message.list_messaging_messages(request={
         "connection_id": "<value>",
     })
 
@@ -153,8 +153,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.message.patch_messaging_message(request={
+) as unified_to:
+    res = unified_to.message.patch_messaging_message(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -196,8 +196,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.message.remove_messaging_message(request={
+) as unified_to:
+    res = unified_to.message.remove_messaging_message(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -239,8 +239,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.message.update_messaging_message(request={
+) as unified_to:
+    res = unified_to.message.update_messaging_message(request={
         "connection_id": "<value>",
         "id": "<id>",
     })

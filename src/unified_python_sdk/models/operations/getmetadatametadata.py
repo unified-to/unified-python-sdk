@@ -4,7 +4,7 @@ from __future__ import annotations
 import httpx
 from typing import List, Optional
 from typing_extensions import Annotated, NotRequired, TypedDict
-from unified_python_sdk.models.shared import commercemetadata as shared_commercemetadata
+from unified_python_sdk.models.shared import metadatametadata as shared_metadatametadata
 from unified_python_sdk.types import BaseModel
 from unified_python_sdk.utils import (
     FieldMetadata,
@@ -13,7 +13,7 @@ from unified_python_sdk.utils import (
 )
 
 
-class GetCommerceMetadataRequestTypedDict(TypedDict):
+class GetMetadataMetadataRequestTypedDict(TypedDict):
     connection_id: str
     r"""ID of the connection"""
     id: str
@@ -22,7 +22,7 @@ class GetCommerceMetadataRequestTypedDict(TypedDict):
     r"""Comma-delimited fields to return"""
 
 
-class GetCommerceMetadataRequest(BaseModel):
+class GetMetadataMetadataRequest(BaseModel):
     connection_id: Annotated[
         str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))
     ]
@@ -40,18 +40,18 @@ class GetCommerceMetadataRequest(BaseModel):
     r"""Comma-delimited fields to return"""
 
 
-class GetCommerceMetadataResponseTypedDict(TypedDict):
+class GetMetadataMetadataResponseTypedDict(TypedDict):
     content_type: str
     r"""HTTP response content type for this operation"""
     status_code: int
     r"""HTTP response status code for this operation"""
     raw_response: httpx.Response
     r"""Raw HTTP response; suitable for custom response parsing"""
-    commerce_metadata: NotRequired[shared_commercemetadata.CommerceMetadataTypedDict]
+    metadata_metadata: NotRequired[shared_metadatametadata.MetadataMetadataTypedDict]
     r"""Successful"""
 
 
-class GetCommerceMetadataResponse(BaseModel):
+class GetMetadataMetadataResponse(BaseModel):
     content_type: str
     r"""HTTP response content type for this operation"""
 
@@ -61,5 +61,5 @@ class GetCommerceMetadataResponse(BaseModel):
     raw_response: httpx.Response
     r"""Raw HTTP response; suitable for custom response parsing"""
 
-    commerce_metadata: Optional[shared_commercemetadata.CommerceMetadata] = None
+    metadata_metadata: Optional[shared_metadatametadata.MetadataMetadata] = None
     r"""Successful"""

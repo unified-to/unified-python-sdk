@@ -21,8 +21,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.issue.list_unified_issues(request={})
+) as unified_to:
+    res = unified_to.issue.list_unified_issues(request={})
 
     if res.issues is not None:
         # handle response

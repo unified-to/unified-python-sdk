@@ -38,8 +38,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.ticketing.create_ticketing_customer(request={
+) as unified_to:
+    res = unified_to.ticketing.create_ticketing_customer(request={
         "connection_id": "<value>",
     })
 
@@ -80,8 +80,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.ticketing.create_ticketing_note(request={
+) as unified_to:
+    res = unified_to.ticketing.create_ticketing_note(request={
         "connection_id": "<value>",
     })
 
@@ -122,8 +122,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.ticketing.create_ticketing_ticket(request={
+) as unified_to:
+    res = unified_to.ticketing.create_ticketing_ticket(request={
         "connection_id": "<value>",
     })
 
@@ -164,8 +164,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.ticketing.get_ticketing_customer(request={
+) as unified_to:
+    res = unified_to.ticketing.get_ticketing_customer(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -207,8 +207,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.ticketing.get_ticketing_note(request={
+) as unified_to:
+    res = unified_to.ticketing.get_ticketing_note(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -250,8 +250,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.ticketing.get_ticketing_ticket(request={
+) as unified_to:
+    res = unified_to.ticketing.get_ticketing_ticket(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -293,8 +293,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.ticketing.list_ticketing_customers(request={
+) as unified_to:
+    res = unified_to.ticketing.list_ticketing_customers(request={
         "connection_id": "<value>",
     })
 
@@ -335,8 +335,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.ticketing.list_ticketing_notes(request={
+) as unified_to:
+    res = unified_to.ticketing.list_ticketing_notes(request={
         "connection_id": "<value>",
     })
 
@@ -377,8 +377,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.ticketing.list_ticketing_tickets(request={
+) as unified_to:
+    res = unified_to.ticketing.list_ticketing_tickets(request={
         "connection_id": "<value>",
     })
 
@@ -419,8 +419,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.ticketing.patch_ticketing_customer(request={
+) as unified_to:
+    res = unified_to.ticketing.patch_ticketing_customer(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -462,8 +462,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.ticketing.patch_ticketing_note(request={
+) as unified_to:
+    res = unified_to.ticketing.patch_ticketing_note(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -505,8 +505,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.ticketing.patch_ticketing_ticket(request={
+) as unified_to:
+    res = unified_to.ticketing.patch_ticketing_ticket(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -548,8 +548,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.ticketing.remove_ticketing_customer(request={
+) as unified_to:
+    res = unified_to.ticketing.remove_ticketing_customer(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -591,8 +591,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.ticketing.remove_ticketing_note(request={
+) as unified_to:
+    res = unified_to.ticketing.remove_ticketing_note(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -634,8 +634,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.ticketing.remove_ticketing_ticket(request={
+) as unified_to:
+    res = unified_to.ticketing.remove_ticketing_ticket(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -677,8 +677,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.ticketing.update_ticketing_customer(request={
+) as unified_to:
+    res = unified_to.ticketing.update_ticketing_customer(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -720,8 +720,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.ticketing.update_ticketing_note(request={
+) as unified_to:
+    res = unified_to.ticketing.update_ticketing_note(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -763,8 +763,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.ticketing.update_ticketing_ticket(request={
+) as unified_to:
+    res = unified_to.ticketing.update_ticketing_ticket(request={
         "connection_id": "<value>",
         "id": "<id>",
     })

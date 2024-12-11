@@ -1,4 +1,4 @@
-# RemoveCommerceMetadataRequest
+# RemoveMetadataMetadataRequest
 
 
 ## Fields

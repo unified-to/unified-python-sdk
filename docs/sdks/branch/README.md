@@ -26,8 +26,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.branch.create_repo_branch(request={
+) as unified_to:
+    res = unified_to.branch.create_repo_branch(request={
         "connection_id": "<id>",
     })
 
@@ -68,8 +68,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.branch.get_repo_branch(request={
+) as unified_to:
+    res = unified_to.branch.get_repo_branch(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -111,8 +111,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.branch.list_repo_branches(request={
+) as unified_to:
+    res = unified_to.branch.list_repo_branches(request={
         "connection_id": "<id>",
     })
 
@@ -153,8 +153,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.branch.patch_repo_branch(request={
+) as unified_to:
+    res = unified_to.branch.patch_repo_branch(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -196,8 +196,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.branch.remove_repo_branch(request={
+) as unified_to:
+    res = unified_to.branch.remove_repo_branch(request={
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -239,8 +239,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.branch.update_repo_branch(request={
+) as unified_to:
+    res = unified_to.branch.update_repo_branch(request={
         "connection_id": "<id>",
         "id": "<id>",
     })

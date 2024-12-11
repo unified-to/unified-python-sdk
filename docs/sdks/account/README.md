@@ -26,8 +26,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.account.create_accounting_account(request={
+) as unified_to:
+    res = unified_to.account.create_accounting_account(request={
         "connection_id": "<value>",
     })
 
@@ -68,8 +68,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.account.get_accounting_account(request={
+) as unified_to:
+    res = unified_to.account.get_accounting_account(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -111,8 +111,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.account.list_accounting_accounts(request={
+) as unified_to:
+    res = unified_to.account.list_accounting_accounts(request={
         "connection_id": "<value>",
     })
 
@@ -153,8 +153,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.account.patch_accounting_account(request={
+) as unified_to:
+    res = unified_to.account.patch_accounting_account(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -196,8 +196,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.account.remove_accounting_account(request={
+) as unified_to:
+    res = unified_to.account.remove_accounting_account(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -239,8 +239,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.account.update_accounting_account(request={
+) as unified_to:
+    res = unified_to.account.update_accounting_account(request={
         "connection_id": "<value>",
         "id": "<id>",
     })

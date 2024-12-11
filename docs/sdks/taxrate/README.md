@@ -26,8 +26,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.taxrate.create_accounting_taxrate(request={
+) as unified_to:
+    res = unified_to.taxrate.create_accounting_taxrate(request={
         "connection_id": "<value>",
     })
 
@@ -68,8 +68,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.taxrate.get_accounting_taxrate(request={
+) as unified_to:
+    res = unified_to.taxrate.get_accounting_taxrate(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -111,8 +111,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.taxrate.list_accounting_taxrates(request={
+) as unified_to:
+    res = unified_to.taxrate.list_accounting_taxrates(request={
         "connection_id": "<value>",
     })
 
@@ -153,8 +153,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.taxrate.patch_accounting_taxrate(request={
+) as unified_to:
+    res = unified_to.taxrate.patch_accounting_taxrate(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -196,8 +196,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.taxrate.remove_accounting_taxrate(request={
+) as unified_to:
+    res = unified_to.taxrate.remove_accounting_taxrate(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -239,8 +239,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.taxrate.update_accounting_taxrate(request={
+) as unified_to:
+    res = unified_to.taxrate.update_accounting_taxrate(request={
         "connection_id": "<value>",
         "id": "<id>",
     })

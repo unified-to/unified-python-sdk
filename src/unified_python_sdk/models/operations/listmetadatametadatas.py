@@ -5,7 +5,7 @@ from datetime import datetime
 import httpx
 from typing import List, Optional
 from typing_extensions import Annotated, NotRequired, TypedDict
-from unified_python_sdk.models.shared import commercemetadata as shared_commercemetadata
+from unified_python_sdk.models.shared import metadatametadata as shared_metadatametadata
 from unified_python_sdk.types import BaseModel
 from unified_python_sdk.utils import (
     FieldMetadata,
@@ -14,7 +14,7 @@ from unified_python_sdk.utils import (
 )
 
 
-class ListCommerceMetadatasRequestTypedDict(TypedDict):
+class ListMetadataMetadatasRequestTypedDict(TypedDict):
     connection_id: str
     r"""ID of the connection"""
     fields: NotRequired[List[str]]
@@ -25,11 +25,12 @@ class ListCommerceMetadatasRequestTypedDict(TypedDict):
     query: NotRequired[str]
     r"""Query string to search. eg. email address or name"""
     sort: NotRequired[str]
+    type: NotRequired[str]
     updated_gte: NotRequired[datetime]
     r"""Return only results whose updated date is equal or greater to this value"""
 
 
-class ListCommerceMetadatasRequest(BaseModel):
+class ListMetadataMetadatasRequest(BaseModel):
     connection_id: Annotated[
         str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))
     ]
@@ -67,6 +68,11 @@ class ListCommerceMetadatasRequest(BaseModel):
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
 
+    type: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+
     updated_gte: Annotated[
         Optional[datetime],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
@@ -74,20 +80,20 @@ class ListCommerceMetadatasRequest(BaseModel):
     r"""Return only results whose updated date is equal or greater to this value"""
 
 
-class ListCommerceMetadatasResponseTypedDict(TypedDict):
+class ListMetadataMetadatasResponseTypedDict(TypedDict):
     content_type: str
     r"""HTTP response content type for this operation"""
     status_code: int
     r"""HTTP response status code for this operation"""
     raw_response: httpx.Response
     r"""Raw HTTP response; suitable for custom response parsing"""
-    commerce_metadatas: NotRequired[
-        List[shared_commercemetadata.CommerceMetadataTypedDict]
+    metadata_metadatas: NotRequired[
+        List[shared_metadatametadata.MetadataMetadataTypedDict]
     ]
     r"""Successful"""
 
 
-class ListCommerceMetadatasResponse(BaseModel):
+class ListMetadataMetadatasResponse(BaseModel):
     content_type: str
     r"""HTTP response content type for this operation"""
 
@@ -97,5 +103,5 @@ class ListCommerceMetadatasResponse(BaseModel):
     raw_response: httpx.Response
     r"""Raw HTTP response; suitable for custom response parsing"""
 
-    commerce_metadatas: Optional[List[shared_commercemetadata.CommerceMetadata]] = None
+    metadata_metadatas: Optional[List[shared_metadatametadata.MetadataMetadata]] = None
     r"""Successful"""

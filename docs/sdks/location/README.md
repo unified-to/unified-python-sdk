@@ -32,8 +32,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.location.create_commerce_location(request={
+) as unified_to:
+    res = unified_to.location.create_commerce_location(request={
         "connection_id": "<value>",
     })
 
@@ -74,8 +74,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.location.create_hris_location(request={
+) as unified_to:
+    res = unified_to.location.create_hris_location(request={
         "connection_id": "<value>",
     })
 
@@ -116,8 +116,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.location.get_commerce_location(request={
+) as unified_to:
+    res = unified_to.location.get_commerce_location(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -159,8 +159,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.location.get_hris_location(request={
+) as unified_to:
+    res = unified_to.location.get_hris_location(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -202,8 +202,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.location.list_commerce_locations(request={
+) as unified_to:
+    res = unified_to.location.list_commerce_locations(request={
         "connection_id": "<value>",
     })
 
@@ -244,8 +244,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.location.list_hris_locations(request={
+) as unified_to:
+    res = unified_to.location.list_hris_locations(request={
         "connection_id": "<value>",
     })
 
@@ -286,8 +286,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.location.patch_commerce_location(request={
+) as unified_to:
+    res = unified_to.location.patch_commerce_location(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -329,8 +329,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.location.patch_hris_location(request={
+) as unified_to:
+    res = unified_to.location.patch_hris_location(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -372,8 +372,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.location.remove_commerce_location(request={
+) as unified_to:
+    res = unified_to.location.remove_commerce_location(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -415,8 +415,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.location.remove_hris_location(request={
+) as unified_to:
+    res = unified_to.location.remove_hris_location(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -458,8 +458,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.location.update_commerce_location(request={
+) as unified_to:
+    res = unified_to.location.update_commerce_location(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
@@ -501,8 +501,8 @@ with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
-) as s:
-    res = s.location.update_hris_location(request={
+) as unified_to:
+    res = unified_to.location.update_hris_location(request={
         "connection_id": "<value>",
         "id": "<id>",
     })
