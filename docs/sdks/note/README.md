@@ -27,6 +27,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.note.create_ticketing_note(request={
         "connection_id": "<value>",
     })
@@ -69,6 +70,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.note.get_ticketing_note(request={
         "connection_id": "<value>",
         "id": "<id>",
@@ -112,6 +114,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.note.list_ticketing_notes(request={
         "connection_id": "<value>",
     })
@@ -154,6 +157,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.note.patch_ticketing_note(request={
         "connection_id": "<value>",
         "id": "<id>",
@@ -197,6 +201,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.note.remove_ticketing_note(request={
         "connection_id": "<value>",
         "id": "<id>",
@@ -240,6 +245,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.note.update_ticketing_note(request={
         "connection_id": "<value>",
         "id": "<id>",

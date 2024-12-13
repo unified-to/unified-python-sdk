@@ -27,6 +27,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.user.create_scim_users(request={
         "connection_id": "<id>",
     })
@@ -69,6 +70,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.user.get_scim_users(request={
         "connection_id": "<id>",
         "id": "<id>",
@@ -112,6 +114,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.user.list_scim_users(request={
         "connection_id": "<id>",
     })
@@ -154,6 +157,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.user.patch_scim_users(request={
         "connection_id": "<id>",
         "id": "<id>",
@@ -197,6 +201,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.user.remove_scim_users(request={
         "connection_id": "<id>",
         "id": "<id>",
@@ -240,6 +245,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.user.update_scim_users(request={
         "connection_id": "<id>",
         "id": "<id>",

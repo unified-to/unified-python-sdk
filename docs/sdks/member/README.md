@@ -27,6 +27,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.member.create_martech_member(request={
         "connection_id": "<value>",
     })
@@ -69,6 +70,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.member.get_martech_member(request={
         "connection_id": "<value>",
         "id": "<id>",
@@ -112,6 +114,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.member.list_martech_members(request={
         "connection_id": "<value>",
     })
@@ -154,6 +157,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.member.patch_martech_member(request={
         "connection_id": "<value>",
         "id": "<id>",
@@ -197,6 +201,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.member.remove_martech_member(request={
         "connection_id": "<value>",
         "id": "<id>",
@@ -240,6 +245,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.member.update_martech_member(request={
         "connection_id": "<value>",
         "id": "<id>",

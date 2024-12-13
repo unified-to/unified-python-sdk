@@ -27,6 +27,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.branch.create_repo_branch(request={
         "connection_id": "<id>",
     })
@@ -69,6 +70,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.branch.get_repo_branch(request={
         "connection_id": "<id>",
         "id": "<id>",
@@ -112,6 +114,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.branch.list_repo_branches(request={
         "connection_id": "<id>",
     })
@@ -154,6 +157,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.branch.patch_repo_branch(request={
         "connection_id": "<id>",
         "id": "<id>",
@@ -197,6 +201,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.branch.remove_repo_branch(request={
         "connection_id": "<id>",
         "id": "<id>",
@@ -240,6 +245,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.branch.update_repo_branch(request={
         "connection_id": "<id>",
         "id": "<id>",

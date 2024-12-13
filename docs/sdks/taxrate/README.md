@@ -27,6 +27,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.taxrate.create_accounting_taxrate(request={
         "connection_id": "<value>",
     })
@@ -69,6 +70,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.taxrate.get_accounting_taxrate(request={
         "connection_id": "<value>",
         "id": "<id>",
@@ -112,6 +114,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.taxrate.list_accounting_taxrates(request={
         "connection_id": "<value>",
     })
@@ -154,6 +157,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.taxrate.patch_accounting_taxrate(request={
         "connection_id": "<value>",
         "id": "<id>",
@@ -197,6 +201,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.taxrate.remove_accounting_taxrate(request={
         "connection_id": "<value>",
         "id": "<id>",
@@ -240,6 +245,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.taxrate.update_accounting_taxrate(request={
         "connection_id": "<value>",
         "id": "<id>",

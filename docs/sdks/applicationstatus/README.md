@@ -22,6 +22,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.applicationstatus.list_ats_applicationstatuses(request={
         "connection_id": "<value>",
     })

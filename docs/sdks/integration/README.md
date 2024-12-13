@@ -24,6 +24,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.integration.get_unified_integration_auth(request={
         "integration_type": "<value>",
         "workspace_id": "<value>",
@@ -67,6 +68,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.integration.list_unified_integration_workspaces(request={
         "workspace_id": "<value>",
     })
@@ -109,6 +111,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.integration.list_unified_integrations(request={})
 
     if res.integrations is not None:

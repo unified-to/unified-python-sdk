@@ -29,6 +29,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.passthrough.create_passthrough_json(request={
         "connection_id": "<value>",
         "path": "/etc/periodic",
@@ -72,6 +73,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.passthrough.create_passthrough_raw(request={
         "connection_id": "<value>",
         "path": "/etc/periodic",
@@ -115,6 +117,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.passthrough.list_passthroughs(request={
         "connection_id": "<value>",
         "path": "/selinux",
@@ -158,6 +161,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.passthrough.patch_passthrough_json(request={
         "connection_id": "<value>",
         "path": "/mnt",
@@ -201,6 +205,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.passthrough.patch_passthrough_raw(request={
         "connection_id": "<value>",
         "path": "/mnt",
@@ -244,6 +249,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.passthrough.remove_passthrough(request={
         "connection_id": "<value>",
         "path": "/Applications",
@@ -287,6 +293,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.passthrough.update_passthrough_json(request={
         "connection_id": "<value>",
         "path": "/dev",
@@ -330,6 +337,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.passthrough.update_passthrough_raw(request={
         "connection_id": "<value>",
         "path": "/dev",

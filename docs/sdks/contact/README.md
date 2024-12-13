@@ -39,6 +39,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.contact.create_accounting_contact(request={
         "connection_id": "<value>",
     })
@@ -81,6 +82,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.contact.create_crm_contact(request={
         "connection_id": "<value>",
     })
@@ -123,6 +125,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.contact.create_uc_contact(request={
         "connection_id": "<value>",
     })
@@ -165,6 +168,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.contact.get_accounting_contact(request={
         "connection_id": "<value>",
         "id": "<id>",
@@ -208,6 +212,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.contact.get_crm_contact(request={
         "connection_id": "<value>",
         "id": "<id>",
@@ -251,6 +256,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.contact.get_uc_contact(request={
         "connection_id": "<value>",
         "id": "<id>",
@@ -294,6 +300,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.contact.list_accounting_contacts(request={
         "connection_id": "<value>",
     })
@@ -336,6 +343,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.contact.list_crm_contacts(request={
         "connection_id": "<value>",
     })
@@ -378,6 +386,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.contact.list_uc_contacts(request={
         "connection_id": "<value>",
     })
@@ -420,6 +429,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.contact.patch_accounting_contact(request={
         "connection_id": "<value>",
         "id": "<id>",
@@ -463,6 +473,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.contact.patch_crm_contact(request={
         "connection_id": "<value>",
         "id": "<id>",
@@ -506,6 +517,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.contact.patch_uc_contact(request={
         "connection_id": "<value>",
         "id": "<id>",
@@ -549,6 +561,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.contact.remove_accounting_contact(request={
         "connection_id": "<value>",
         "id": "<id>",
@@ -592,6 +605,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.contact.remove_crm_contact(request={
         "connection_id": "<value>",
         "id": "<id>",
@@ -635,6 +649,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.contact.remove_uc_contact(request={
         "connection_id": "<value>",
         "id": "<id>",
@@ -678,6 +693,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.contact.update_accounting_contact(request={
         "connection_id": "<value>",
         "id": "<id>",
@@ -721,6 +737,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.contact.update_crm_contact(request={
         "connection_id": "<value>",
         "id": "<id>",
@@ -764,6 +781,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.contact.update_uc_contact(request={
         "connection_id": "<value>",
         "id": "<id>",

@@ -27,6 +27,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.connection.create_unified_connection()
 
     if res.connection is not None:
@@ -67,6 +68,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.connection.get_unified_connection(request={
         "id": "<id>",
     })
@@ -109,6 +111,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.connection.list_unified_connections(request={})
 
     if res.connections is not None:
@@ -149,6 +152,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.connection.patch_unified_connection(request={
         "id": "<id>",
     })
@@ -191,6 +195,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.connection.remove_unified_connection(request={
         "id": "<id>",
     })
@@ -233,6 +238,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.connection.update_unified_connection(request={
         "id": "<id>",
     })

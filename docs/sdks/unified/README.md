@@ -41,6 +41,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.unified.create_unified_connection()
 
     if res.connection is not None:
@@ -81,6 +82,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.unified.create_unified_webhook(request={})
 
     if res.webhook is not None:
@@ -121,6 +123,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.unified.get_unified_apicall(request={
         "id": "<id>",
     })
@@ -163,6 +166,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.unified.get_unified_connection(request={
         "id": "<id>",
     })
@@ -205,6 +209,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.unified.get_unified_integration_auth(request={
         "integration_type": "<value>",
         "workspace_id": "<value>",
@@ -248,6 +253,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.unified.get_unified_webhook(request={
         "id": "<id>",
     })
@@ -290,6 +296,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.unified.list_unified_apicalls(request={})
 
     if res.api_calls is not None:
@@ -330,6 +337,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.unified.list_unified_connections(request={})
 
     if res.connections is not None:
@@ -370,6 +378,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.unified.list_unified_integration_workspaces(request={
         "workspace_id": "<value>",
     })
@@ -412,6 +421,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.unified.list_unified_integrations(request={})
 
     if res.integrations is not None:
@@ -452,6 +462,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.unified.list_unified_issues(request={})
 
     if res.issues is not None:
@@ -492,6 +503,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.unified.list_unified_webhooks(request={})
 
     if res.webhooks is not None:
@@ -532,6 +544,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.unified.patch_unified_connection(request={
         "id": "<id>",
     })
@@ -574,6 +587,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.unified.patch_unified_webhook(request={
         "id": "<id>",
     })
@@ -616,6 +630,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.unified.patch_unified_webhook_trigger(request={
         "id": "<id>",
     })
@@ -658,6 +673,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.unified.remove_unified_connection(request={
         "id": "<id>",
     })
@@ -700,6 +716,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.unified.remove_unified_webhook(request={
         "id": "<id>",
     })
@@ -742,6 +759,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.unified.update_unified_connection(request={
         "id": "<id>",
     })
@@ -784,6 +802,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.unified.update_unified_webhook(request={
         "id": "<id>",
     })
@@ -826,6 +845,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.unified.update_unified_webhook_trigger(request={
         "id": "<id>",
     })

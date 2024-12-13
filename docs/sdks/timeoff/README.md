@@ -23,6 +23,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.timeoff.get_hris_timeoff(request={
         "connection_id": "<value>",
         "id": "<id>",
@@ -66,6 +67,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.timeoff.list_hris_timeoffs(request={
         "connection_id": "<value>",
     })

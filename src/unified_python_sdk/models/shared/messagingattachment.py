@@ -7,6 +7,7 @@ from unified_python_sdk.types import BaseModel
 
 
 class MessagingAttachmentTypedDict(TypedDict):
+    content_identifier: NotRequired[str]
     content_type: NotRequired[str]
     download_url: NotRequired[str]
     filename: NotRequired[str]
@@ -15,6 +16,8 @@ class MessagingAttachmentTypedDict(TypedDict):
 
 
 class MessagingAttachment(BaseModel):
+    content_identifier: Optional[str] = None
+
     content_type: Optional[str] = None
 
     download_url: Optional[str] = None

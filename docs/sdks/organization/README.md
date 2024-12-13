@@ -29,6 +29,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.organization.create_repo_organization(request={
         "connection_id": "<id>",
     })
@@ -71,6 +72,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.organization.get_accounting_organization(request={
         "connection_id": "<value>",
         "id": "<id>",
@@ -114,6 +116,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.organization.get_repo_organization(request={
         "connection_id": "<id>",
         "id": "<id>",
@@ -157,6 +160,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.organization.list_accounting_organizations(request={
         "connection_id": "<value>",
     })
@@ -199,6 +203,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.organization.list_repo_organizations(request={
         "connection_id": "<id>",
     })
@@ -241,6 +246,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.organization.patch_repo_organization(request={
         "connection_id": "<id>",
         "id": "<id>",
@@ -284,6 +290,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.organization.remove_repo_organization(request={
         "connection_id": "<id>",
         "id": "<id>",
@@ -327,6 +334,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.organization.update_repo_organization(request={
         "connection_id": "<id>",
         "id": "<id>",

@@ -22,6 +22,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.issue.list_unified_issues(request={})
 
     if res.issues is not None:

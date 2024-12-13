@@ -23,6 +23,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.apicall.get_unified_apicall(request={
         "id": "<id>",
     })
@@ -65,6 +66,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.apicall.list_unified_apicalls(request={})
 
     if res.api_calls is not None:

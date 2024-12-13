@@ -74,6 +74,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.accounting.create_accounting_account(request={
         "connection_id": "<value>",
     })
@@ -98,6 +99,7 @@ async def main():
             jwt="<YOUR_API_KEY_HERE>",
         ),
     ) as unified_to:
+
         res = await unified_to.accounting.create_accounting_account_async(request={
             "connection_id": "<value>",
         })
@@ -1118,6 +1120,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.passthrough.create_passthrough_raw(request={
         "connection_id": "<value>",
         "path": "/etc/periodic",
@@ -1146,6 +1149,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.accounting.create_accounting_account(request={
         "connection_id": "<value>",
     },
@@ -1169,6 +1173,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.accounting.create_accounting_account(request={
         "connection_id": "<value>",
     })
@@ -1213,6 +1218,7 @@ with UnifiedTo(
 ) as unified_to:
     res = None
     try:
+
         res = unified_to.accounting.create_accounting_account(request={
             "connection_id": "<value>",
         })
@@ -1253,6 +1259,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.accounting.create_accounting_account(request={
         "connection_id": "<value>",
     })
@@ -1276,6 +1283,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.accounting.create_accounting_account(request={
         "connection_id": "<value>",
     })
@@ -1393,6 +1401,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.accounting.create_accounting_account(request={
         "connection_id": "<value>",
     })

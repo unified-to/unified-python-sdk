@@ -39,6 +39,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.ticketing.create_ticketing_customer(request={
         "connection_id": "<value>",
     })
@@ -81,6 +82,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.ticketing.create_ticketing_note(request={
         "connection_id": "<value>",
     })
@@ -123,6 +125,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.ticketing.create_ticketing_ticket(request={
         "connection_id": "<value>",
     })
@@ -165,6 +168,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.ticketing.get_ticketing_customer(request={
         "connection_id": "<value>",
         "id": "<id>",
@@ -208,6 +212,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.ticketing.get_ticketing_note(request={
         "connection_id": "<value>",
         "id": "<id>",
@@ -251,6 +256,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.ticketing.get_ticketing_ticket(request={
         "connection_id": "<value>",
         "id": "<id>",
@@ -294,6 +300,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.ticketing.list_ticketing_customers(request={
         "connection_id": "<value>",
     })
@@ -336,6 +343,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.ticketing.list_ticketing_notes(request={
         "connection_id": "<value>",
     })
@@ -378,6 +386,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.ticketing.list_ticketing_tickets(request={
         "connection_id": "<value>",
     })
@@ -420,6 +429,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.ticketing.patch_ticketing_customer(request={
         "connection_id": "<value>",
         "id": "<id>",
@@ -463,6 +473,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.ticketing.patch_ticketing_note(request={
         "connection_id": "<value>",
         "id": "<id>",
@@ -506,6 +517,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.ticketing.patch_ticketing_ticket(request={
         "connection_id": "<value>",
         "id": "<id>",
@@ -549,6 +561,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.ticketing.remove_ticketing_customer(request={
         "connection_id": "<value>",
         "id": "<id>",
@@ -592,6 +605,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.ticketing.remove_ticketing_note(request={
         "connection_id": "<value>",
         "id": "<id>",
@@ -635,6 +649,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.ticketing.remove_ticketing_ticket(request={
         "connection_id": "<value>",
         "id": "<id>",
@@ -678,6 +693,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.ticketing.update_ticketing_customer(request={
         "connection_id": "<value>",
         "id": "<id>",
@@ -721,6 +737,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.ticketing.update_ticketing_note(request={
         "connection_id": "<value>",
         "id": "<id>",
@@ -764,6 +781,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.ticketing.update_ticketing_ticket(request={
         "connection_id": "<value>",
         "id": "<id>",

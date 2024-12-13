@@ -23,6 +23,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.payout.get_payment_payout(request={
         "connection_id": "<value>",
         "id": "<id>",
@@ -66,6 +67,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.payout.list_payment_payouts(request={
         "connection_id": "<value>",
     })

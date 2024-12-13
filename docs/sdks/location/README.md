@@ -33,6 +33,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.location.create_commerce_location(request={
         "connection_id": "<value>",
     })
@@ -75,6 +76,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.location.create_hris_location(request={
         "connection_id": "<value>",
     })
@@ -117,6 +119,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.location.get_commerce_location(request={
         "connection_id": "<value>",
         "id": "<id>",
@@ -160,6 +163,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.location.get_hris_location(request={
         "connection_id": "<value>",
         "id": "<id>",
@@ -203,6 +207,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.location.list_commerce_locations(request={
         "connection_id": "<value>",
     })
@@ -245,6 +250,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.location.list_hris_locations(request={
         "connection_id": "<value>",
     })
@@ -287,6 +293,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.location.patch_commerce_location(request={
         "connection_id": "<value>",
         "id": "<id>",
@@ -330,6 +337,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.location.patch_hris_location(request={
         "connection_id": "<value>",
         "id": "<id>",
@@ -373,6 +381,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.location.remove_commerce_location(request={
         "connection_id": "<value>",
         "id": "<id>",
@@ -416,6 +425,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.location.remove_hris_location(request={
         "connection_id": "<value>",
         "id": "<id>",
@@ -459,6 +469,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.location.update_commerce_location(request={
         "connection_id": "<value>",
         "id": "<id>",
@@ -502,6 +513,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.location.update_hris_location(request={
         "connection_id": "<value>",
         "id": "<id>",

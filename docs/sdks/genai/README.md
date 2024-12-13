@@ -23,6 +23,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.genai.create_genai_prompt(request={
         "connection_id": "<value>",
     })
@@ -65,6 +66,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.genai.list_genai_models(request={
         "connection_id": "<value>",
     })

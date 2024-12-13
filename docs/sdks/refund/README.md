@@ -23,6 +23,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.refund.get_payment_refund(request={
         "connection_id": "<value>",
         "id": "<id>",
@@ -66,6 +67,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.refund.list_payment_refunds(request={
         "connection_id": "<value>",
     })

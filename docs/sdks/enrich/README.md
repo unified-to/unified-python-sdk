@@ -23,6 +23,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.enrich.list_enrich_companies(request={
         "connection_id": "<value>",
     })
@@ -65,6 +66,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.enrich.list_enrich_people(request={
         "connection_id": "<value>",
     })

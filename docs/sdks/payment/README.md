@@ -37,6 +37,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.payment.create_payment_link(request={
         "connection_id": "<value>",
     })
@@ -79,6 +80,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.payment.create_payment_payment(request={
         "connection_id": "<value>",
     })
@@ -121,6 +123,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.payment.get_payment_link(request={
         "connection_id": "<value>",
         "id": "<id>",
@@ -164,6 +167,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.payment.get_payment_payment(request={
         "connection_id": "<value>",
         "id": "<id>",
@@ -207,6 +211,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.payment.get_payment_payout(request={
         "connection_id": "<value>",
         "id": "<id>",
@@ -250,6 +255,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.payment.get_payment_refund(request={
         "connection_id": "<value>",
         "id": "<id>",
@@ -293,6 +299,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.payment.list_payment_links(request={
         "connection_id": "<value>",
     })
@@ -335,6 +342,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.payment.list_payment_payments(request={
         "connection_id": "<value>",
     })
@@ -377,6 +385,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.payment.list_payment_payouts(request={
         "connection_id": "<value>",
     })
@@ -419,6 +428,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.payment.list_payment_refunds(request={
         "connection_id": "<value>",
     })
@@ -461,6 +471,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.payment.patch_payment_link(request={
         "connection_id": "<value>",
         "id": "<id>",
@@ -504,6 +515,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.payment.patch_payment_payment(request={
         "connection_id": "<value>",
         "id": "<id>",
@@ -547,6 +559,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.payment.remove_payment_link(request={
         "connection_id": "<value>",
         "id": "<id>",
@@ -590,6 +603,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.payment.remove_payment_payment(request={
         "connection_id": "<value>",
         "id": "<id>",
@@ -633,6 +647,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.payment.update_payment_link(request={
         "connection_id": "<value>",
         "id": "<id>",
@@ -676,6 +691,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.payment.update_payment_payment(request={
         "connection_id": "<value>",
         "id": "<id>",

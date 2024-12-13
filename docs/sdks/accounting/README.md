@@ -65,6 +65,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.accounting.create_accounting_account(request={
         "connection_id": "<value>",
     })
@@ -107,6 +108,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.accounting.create_accounting_contact(request={
         "connection_id": "<value>",
     })
@@ -149,6 +151,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.accounting.create_accounting_invoice(request={
         "connection_id": "<value>",
     })
@@ -191,6 +194,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.accounting.create_accounting_journal(request={
         "connection_id": "<value>",
     })
@@ -233,6 +237,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.accounting.create_accounting_order(request={
         "connection_id": "<id>",
     })
@@ -275,6 +280,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.accounting.create_accounting_taxrate(request={
         "connection_id": "<value>",
     })
@@ -317,6 +323,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.accounting.create_accounting_transaction(request={
         "connection_id": "<value>",
     })
@@ -359,6 +366,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.accounting.get_accounting_account(request={
         "connection_id": "<value>",
         "id": "<id>",
@@ -402,6 +410,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.accounting.get_accounting_contact(request={
         "connection_id": "<value>",
         "id": "<id>",
@@ -445,6 +454,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.accounting.get_accounting_invoice(request={
         "connection_id": "<value>",
         "id": "<id>",
@@ -488,6 +498,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.accounting.get_accounting_journal(request={
         "connection_id": "<value>",
         "id": "<id>",
@@ -531,6 +542,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.accounting.get_accounting_order(request={
         "connection_id": "<id>",
         "id": "<id>",
@@ -574,6 +586,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.accounting.get_accounting_organization(request={
         "connection_id": "<value>",
         "id": "<id>",
@@ -617,6 +630,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.accounting.get_accounting_taxrate(request={
         "connection_id": "<value>",
         "id": "<id>",
@@ -660,6 +674,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.accounting.get_accounting_transaction(request={
         "connection_id": "<value>",
         "id": "<id>",
@@ -703,6 +718,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.accounting.list_accounting_accounts(request={
         "connection_id": "<value>",
     })
@@ -745,6 +761,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.accounting.list_accounting_contacts(request={
         "connection_id": "<value>",
     })
@@ -787,6 +804,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.accounting.list_accounting_invoices(request={
         "connection_id": "<value>",
     })
@@ -829,6 +847,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.accounting.list_accounting_journals(request={
         "connection_id": "<value>",
     })
@@ -871,6 +890,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.accounting.list_accounting_orders(request={
         "connection_id": "<id>",
     })
@@ -913,6 +933,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.accounting.list_accounting_organizations(request={
         "connection_id": "<value>",
     })
@@ -955,6 +976,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.accounting.list_accounting_taxrates(request={
         "connection_id": "<value>",
     })
@@ -997,6 +1019,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.accounting.list_accounting_transactions(request={
         "connection_id": "<value>",
     })
@@ -1039,6 +1062,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.accounting.patch_accounting_account(request={
         "connection_id": "<value>",
         "id": "<id>",
@@ -1082,6 +1106,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.accounting.patch_accounting_contact(request={
         "connection_id": "<value>",
         "id": "<id>",
@@ -1125,6 +1150,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.accounting.patch_accounting_invoice(request={
         "connection_id": "<value>",
         "id": "<id>",
@@ -1168,6 +1194,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.accounting.patch_accounting_journal(request={
         "connection_id": "<value>",
         "id": "<id>",
@@ -1211,6 +1238,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.accounting.patch_accounting_order(request={
         "connection_id": "<id>",
         "id": "<id>",
@@ -1254,6 +1282,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.accounting.patch_accounting_taxrate(request={
         "connection_id": "<value>",
         "id": "<id>",
@@ -1297,6 +1326,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.accounting.patch_accounting_transaction(request={
         "connection_id": "<value>",
         "id": "<id>",
@@ -1340,6 +1370,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.accounting.remove_accounting_account(request={
         "connection_id": "<value>",
         "id": "<id>",
@@ -1383,6 +1414,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.accounting.remove_accounting_contact(request={
         "connection_id": "<value>",
         "id": "<id>",
@@ -1426,6 +1458,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.accounting.remove_accounting_invoice(request={
         "connection_id": "<value>",
         "id": "<id>",
@@ -1469,6 +1502,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.accounting.remove_accounting_journal(request={
         "connection_id": "<value>",
         "id": "<id>",
@@ -1512,6 +1546,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.accounting.remove_accounting_order(request={
         "connection_id": "<id>",
         "id": "<id>",
@@ -1555,6 +1590,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.accounting.remove_accounting_taxrate(request={
         "connection_id": "<value>",
         "id": "<id>",
@@ -1598,6 +1634,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.accounting.remove_accounting_transaction(request={
         "connection_id": "<value>",
         "id": "<id>",
@@ -1641,6 +1678,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.accounting.update_accounting_account(request={
         "connection_id": "<value>",
         "id": "<id>",
@@ -1684,6 +1722,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.accounting.update_accounting_contact(request={
         "connection_id": "<value>",
         "id": "<id>",
@@ -1727,6 +1766,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.accounting.update_accounting_invoice(request={
         "connection_id": "<value>",
         "id": "<id>",
@@ -1770,6 +1810,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.accounting.update_accounting_journal(request={
         "connection_id": "<value>",
         "id": "<id>",
@@ -1813,6 +1854,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.accounting.update_accounting_order(request={
         "connection_id": "<id>",
         "id": "<id>",
@@ -1856,6 +1898,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.accounting.update_accounting_taxrate(request={
         "connection_id": "<value>",
         "id": "<id>",
@@ -1899,6 +1942,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.accounting.update_accounting_transaction(request={
         "connection_id": "<value>",
         "id": "<id>",

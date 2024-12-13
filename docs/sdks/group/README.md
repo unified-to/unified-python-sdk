@@ -33,6 +33,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.group.create_hris_group(request={
         "connection_id": "<value>",
     })
@@ -75,6 +76,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.group.create_scim_groups(request={
         "connection_id": "<id>",
     })
@@ -117,6 +119,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.group.get_hris_group(request={
         "connection_id": "<value>",
         "id": "<id>",
@@ -160,6 +163,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.group.get_scim_groups(request={
         "connection_id": "<id>",
         "id": "<id>",
@@ -203,6 +207,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.group.list_hris_groups(request={
         "connection_id": "<value>",
     })
@@ -245,6 +250,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.group.list_scim_groups(request={
         "connection_id": "<id>",
     })
@@ -287,6 +293,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.group.patch_hris_group(request={
         "connection_id": "<value>",
         "id": "<id>",
@@ -330,6 +337,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.group.patch_scim_groups(request={
         "connection_id": "<id>",
         "id": "<id>",
@@ -373,6 +381,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.group.remove_hris_group(request={
         "connection_id": "<value>",
         "id": "<id>",
@@ -416,6 +425,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.group.remove_scim_groups(request={
         "connection_id": "<id>",
         "id": "<id>",
@@ -459,6 +469,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.group.update_hris_group(request={
         "connection_id": "<value>",
         "id": "<id>",
@@ -502,6 +513,7 @@ with UnifiedTo(
         jwt="<YOUR_API_KEY_HERE>",
     ),
 ) as unified_to:
+
     res = unified_to.group.update_scim_groups(request={
         "connection_id": "<id>",
         "id": "<id>",
