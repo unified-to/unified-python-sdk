@@ -32,9 +32,10 @@ with UnifiedTo(
         "connection_id": "<id>",
     })
 
-    if res.metadata_metadata is not None:
-        # handle response
-        pass
+    assert res.metadata_metadata is not None
+
+    # Handle response
+    print(res.metadata_metadata)
 
 ```
 
@@ -76,9 +77,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.metadata_metadata is not None:
-        # handle response
-        pass
+    assert res.metadata_metadata is not None
+
+    # Handle response
+    print(res.metadata_metadata)
 
 ```
 
@@ -119,9 +121,10 @@ with UnifiedTo(
         "connection_id": "<id>",
     })
 
-    if res.metadata_metadatas is not None:
-        # handle response
-        pass
+    assert res.metadata_metadatas is not None
+
+    # Handle response
+    print(res.metadata_metadatas)
 
 ```
 
@@ -163,9 +166,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.metadata_metadata is not None:
-        # handle response
-        pass
+    assert res.metadata_metadata is not None
+
+    # Handle response
+    print(res.metadata_metadata)
 
 ```
 
@@ -207,9 +211,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res is not None:
-        # handle response
-        pass
+    assert res is not None
+
+    # Handle response
+    print(res)
 
 ```
 
@@ -251,9 +256,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.metadata_metadata is not None:
-        # handle response
-        pass
+    assert res.metadata_metadata is not None
+
+    # Handle response
+    print(res.metadata_metadata)
 
 ```
 

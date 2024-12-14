@@ -32,9 +32,10 @@ with UnifiedTo(
         "connection_id": "<id>",
     })
 
-    if res.scim_user is not None:
-        # handle response
-        pass
+    assert res.scim_user is not None
+
+    # Handle response
+    print(res.scim_user)
 
 ```
 
@@ -76,9 +77,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.scim_user is not None:
-        # handle response
-        pass
+    assert res.scim_user is not None
+
+    # Handle response
+    print(res.scim_user)
 
 ```
 
@@ -119,9 +121,10 @@ with UnifiedTo(
         "connection_id": "<id>",
     })
 
-    if res.scim_users is not None:
-        # handle response
-        pass
+    assert res.scim_users is not None
+
+    # Handle response
+    print(res.scim_users)
 
 ```
 
@@ -163,9 +166,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.scim_user is not None:
-        # handle response
-        pass
+    assert res.scim_user is not None
+
+    # Handle response
+    print(res.scim_user)
 
 ```
 
@@ -207,9 +211,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res is not None:
-        # handle response
-        pass
+    assert res is not None
+
+    # Handle response
+    print(res)
 
 ```
 
@@ -251,9 +256,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.scim_user is not None:
-        # handle response
-        pass
+    assert res.scim_user is not None
+
+    # Handle response
+    print(res.scim_user)
 
 ```
 

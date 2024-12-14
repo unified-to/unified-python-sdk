@@ -38,9 +38,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.marketing_list is not None:
-        # handle response
-        pass
+    assert res.marketing_list is not None
+
+    # Handle response
+    print(res.marketing_list)
 
 ```
 
@@ -81,9 +82,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.marketing_member is not None:
-        # handle response
-        pass
+    assert res.marketing_member is not None
+
+    # Handle response
+    print(res.marketing_member)
 
 ```
 
@@ -125,9 +127,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.marketing_list is not None:
-        # handle response
-        pass
+    assert res.marketing_list is not None
+
+    # Handle response
+    print(res.marketing_list)
 
 ```
 
@@ -169,9 +172,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.marketing_member is not None:
-        # handle response
-        pass
+    assert res.marketing_member is not None
+
+    # Handle response
+    print(res.marketing_member)
 
 ```
 
@@ -212,9 +216,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.marketing_lists is not None:
-        # handle response
-        pass
+    assert res.marketing_lists is not None
+
+    # Handle response
+    print(res.marketing_lists)
 
 ```
 
@@ -255,9 +260,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.marketing_members is not None:
-        # handle response
-        pass
+    assert res.marketing_members is not None
+
+    # Handle response
+    print(res.marketing_members)
 
 ```
 
@@ -299,9 +305,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.marketing_list is not None:
-        # handle response
-        pass
+    assert res.marketing_list is not None
+
+    # Handle response
+    print(res.marketing_list)
 
 ```
 
@@ -343,9 +350,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.marketing_member is not None:
-        # handle response
-        pass
+    assert res.marketing_member is not None
+
+    # Handle response
+    print(res.marketing_member)
 
 ```
 
@@ -387,9 +395,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res is not None:
-        # handle response
-        pass
+    assert res is not None
+
+    # Handle response
+    print(res)
 
 ```
 
@@ -431,9 +440,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res is not None:
-        # handle response
-        pass
+    assert res is not None
+
+    # Handle response
+    print(res)
 
 ```
 
@@ -475,9 +485,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.marketing_list is not None:
-        # handle response
-        pass
+    assert res.marketing_list is not None
+
+    # Handle response
+    print(res.marketing_list)
 
 ```
 
@@ -519,9 +530,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.marketing_member is not None:
-        # handle response
-        pass
+    assert res.marketing_member is not None
+
+    # Handle response
+    print(res.marketing_member)
 
 ```
 

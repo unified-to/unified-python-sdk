@@ -29,9 +29,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.hris_timeoff is not None:
-        # handle response
-        pass
+    assert res.hris_timeoff is not None
+
+    # Handle response
+    print(res.hris_timeoff)
 
 ```
 
@@ -72,9 +73,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.hris_timeoffs is not None:
-        # handle response
-        pass
+    assert res.hris_timeoffs is not None
+
+    # Handle response
+    print(res.hris_timeoffs)
 
 ```
 

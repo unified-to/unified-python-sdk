@@ -30,9 +30,10 @@ with UnifiedTo(
 
     res = unified_to.connection.create_unified_connection()
 
-    if res.connection is not None:
-        # handle response
-        pass
+    assert res.connection is not None
+
+    # Handle response
+    print(res.connection)
 
 ```
 
@@ -73,9 +74,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.connection is not None:
-        # handle response
-        pass
+    assert res.connection is not None
+
+    # Handle response
+    print(res.connection)
 
 ```
 
@@ -114,9 +116,10 @@ with UnifiedTo(
 
     res = unified_to.connection.list_unified_connections(request={})
 
-    if res.connections is not None:
-        # handle response
-        pass
+    assert res.connections is not None
+
+    # Handle response
+    print(res.connections)
 
 ```
 
@@ -157,9 +160,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.connection is not None:
-        # handle response
-        pass
+    assert res.connection is not None
+
+    # Handle response
+    print(res.connection)
 
 ```
 
@@ -200,9 +204,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res is not None:
-        # handle response
-        pass
+    assert res is not None
+
+    # Handle response
+    print(res)
 
 ```
 
@@ -243,9 +248,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.connection is not None:
-        # handle response
-        pass
+    assert res.connection is not None
+
+    # Handle response
+    print(res.connection)
 
 ```
 

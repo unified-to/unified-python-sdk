@@ -32,9 +32,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.storage_file is not None:
-        # handle response
-        pass
+    assert res.storage_file is not None
+
+    # Handle response
+    print(res.storage_file)
 
 ```
 
@@ -76,9 +77,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.storage_file is not None:
-        # handle response
-        pass
+    assert res.storage_file is not None
+
+    # Handle response
+    print(res.storage_file)
 
 ```
 
@@ -119,9 +121,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.storage_files is not None:
-        # handle response
-        pass
+    assert res.storage_files is not None
+
+    # Handle response
+    print(res.storage_files)
 
 ```
 
@@ -163,9 +166,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.storage_file is not None:
-        # handle response
-        pass
+    assert res.storage_file is not None
+
+    # Handle response
+    print(res.storage_file)
 
 ```
 
@@ -207,9 +211,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res is not None:
-        # handle response
-        pass
+    assert res is not None
+
+    # Handle response
+    print(res)
 
 ```
 
@@ -251,9 +256,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.storage_file is not None:
-        # handle response
-        pass
+    assert res.storage_file is not None
+
+    # Handle response
+    print(res.storage_file)
 
 ```
 

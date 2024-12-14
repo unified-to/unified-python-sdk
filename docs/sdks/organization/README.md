@@ -34,9 +34,10 @@ with UnifiedTo(
         "connection_id": "<id>",
     })
 
-    if res.repo_organization is not None:
-        # handle response
-        pass
+    assert res.repo_organization is not None
+
+    # Handle response
+    print(res.repo_organization)
 
 ```
 
@@ -78,9 +79,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.accounting_organization is not None:
-        # handle response
-        pass
+    assert res.accounting_organization is not None
+
+    # Handle response
+    print(res.accounting_organization)
 
 ```
 
@@ -122,9 +124,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.repo_organization is not None:
-        # handle response
-        pass
+    assert res.repo_organization is not None
+
+    # Handle response
+    print(res.repo_organization)
 
 ```
 
@@ -165,9 +168,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.accounting_organizations is not None:
-        # handle response
-        pass
+    assert res.accounting_organizations is not None
+
+    # Handle response
+    print(res.accounting_organizations)
 
 ```
 
@@ -208,9 +212,10 @@ with UnifiedTo(
         "connection_id": "<id>",
     })
 
-    if res.repo_organizations is not None:
-        # handle response
-        pass
+    assert res.repo_organizations is not None
+
+    # Handle response
+    print(res.repo_organizations)
 
 ```
 
@@ -252,9 +257,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.repo_organization is not None:
-        # handle response
-        pass
+    assert res.repo_organization is not None
+
+    # Handle response
+    print(res.repo_organization)
 
 ```
 
@@ -296,9 +302,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res is not None:
-        # handle response
-        pass
+    assert res is not None
+
+    # Handle response
+    print(res)
 
 ```
 
@@ -340,9 +347,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.repo_organization is not None:
-        # handle response
-        pass
+    assert res.repo_organization is not None
+
+    # Handle response
+    print(res.repo_organization)
 
 ```
 

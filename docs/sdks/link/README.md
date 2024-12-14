@@ -32,9 +32,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.payment_link is not None:
-        # handle response
-        pass
+    assert res.payment_link is not None
+
+    # Handle response
+    print(res.payment_link)
 
 ```
 
@@ -76,9 +77,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.payment_link is not None:
-        # handle response
-        pass
+    assert res.payment_link is not None
+
+    # Handle response
+    print(res.payment_link)
 
 ```
 
@@ -119,9 +121,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.payment_links is not None:
-        # handle response
-        pass
+    assert res.payment_links is not None
+
+    # Handle response
+    print(res.payment_links)
 
 ```
 
@@ -163,9 +166,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.payment_link is not None:
-        # handle response
-        pass
+    assert res.payment_link is not None
+
+    # Handle response
+    print(res.payment_link)
 
 ```
 
@@ -207,9 +211,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res is not None:
-        # handle response
-        pass
+    assert res is not None
+
+    # Handle response
+    print(res)
 
 ```
 
@@ -251,9 +256,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.payment_link is not None:
-        # handle response
-        pass
+    assert res.payment_link is not None
+
+    # Handle response
+    print(res.payment_link)
 
 ```
 

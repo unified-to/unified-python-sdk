@@ -32,9 +32,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.crm_event is not None:
-        # handle response
-        pass
+    assert res.crm_event is not None
+
+    # Handle response
+    print(res.crm_event)
 
 ```
 
@@ -76,9 +77,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.crm_event is not None:
-        # handle response
-        pass
+    assert res.crm_event is not None
+
+    # Handle response
+    print(res.crm_event)
 
 ```
 
@@ -119,9 +121,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.crm_events is not None:
-        # handle response
-        pass
+    assert res.crm_events is not None
+
+    # Handle response
+    print(res.crm_events)
 
 ```
 
@@ -163,9 +166,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.crm_event is not None:
-        # handle response
-        pass
+    assert res.crm_event is not None
+
+    # Handle response
+    print(res.crm_event)
 
 ```
 
@@ -207,9 +211,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res is not None:
-        # handle response
-        pass
+    assert res is not None
+
+    # Handle response
+    print(res)
 
 ```
 
@@ -251,9 +256,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.crm_event is not None:
-        # handle response
-        pass
+    assert res.crm_event is not None
+
+    # Handle response
+    print(res.crm_event)
 
 ```
 

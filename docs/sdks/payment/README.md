@@ -42,9 +42,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.payment_link is not None:
-        # handle response
-        pass
+    assert res.payment_link is not None
+
+    # Handle response
+    print(res.payment_link)
 
 ```
 
@@ -85,9 +86,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.payment_payment is not None:
-        # handle response
-        pass
+    assert res.payment_payment is not None
+
+    # Handle response
+    print(res.payment_payment)
 
 ```
 
@@ -129,9 +131,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.payment_link is not None:
-        # handle response
-        pass
+    assert res.payment_link is not None
+
+    # Handle response
+    print(res.payment_link)
 
 ```
 
@@ -173,9 +176,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.payment_payment is not None:
-        # handle response
-        pass
+    assert res.payment_payment is not None
+
+    # Handle response
+    print(res.payment_payment)
 
 ```
 
@@ -217,9 +221,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.payment_payout is not None:
-        # handle response
-        pass
+    assert res.payment_payout is not None
+
+    # Handle response
+    print(res.payment_payout)
 
 ```
 
@@ -261,9 +266,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.payment_refund is not None:
-        # handle response
-        pass
+    assert res.payment_refund is not None
+
+    # Handle response
+    print(res.payment_refund)
 
 ```
 
@@ -304,9 +310,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.payment_links is not None:
-        # handle response
-        pass
+    assert res.payment_links is not None
+
+    # Handle response
+    print(res.payment_links)
 
 ```
 
@@ -347,9 +354,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.payment_payments is not None:
-        # handle response
-        pass
+    assert res.payment_payments is not None
+
+    # Handle response
+    print(res.payment_payments)
 
 ```
 
@@ -390,9 +398,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.payment_payouts is not None:
-        # handle response
-        pass
+    assert res.payment_payouts is not None
+
+    # Handle response
+    print(res.payment_payouts)
 
 ```
 
@@ -433,9 +442,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.payment_refunds is not None:
-        # handle response
-        pass
+    assert res.payment_refunds is not None
+
+    # Handle response
+    print(res.payment_refunds)
 
 ```
 
@@ -477,9 +487,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.payment_link is not None:
-        # handle response
-        pass
+    assert res.payment_link is not None
+
+    # Handle response
+    print(res.payment_link)
 
 ```
 
@@ -521,9 +532,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.payment_payment is not None:
-        # handle response
-        pass
+    assert res.payment_payment is not None
+
+    # Handle response
+    print(res.payment_payment)
 
 ```
 
@@ -565,9 +577,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res is not None:
-        # handle response
-        pass
+    assert res is not None
+
+    # Handle response
+    print(res)
 
 ```
 
@@ -609,9 +622,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res is not None:
-        # handle response
-        pass
+    assert res is not None
+
+    # Handle response
+    print(res)
 
 ```
 
@@ -653,9 +667,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.payment_link is not None:
-        # handle response
-        pass
+    assert res.payment_link is not None
+
+    # Handle response
+    print(res.payment_link)
 
 ```
 
@@ -697,9 +712,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.payment_payment is not None:
-        # handle response
-        pass
+    assert res.payment_payment is not None
+
+    # Handle response
+    print(res.payment_payment)
 
 ```
 

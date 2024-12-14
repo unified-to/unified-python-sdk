@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: aa3c8602e58a30faa2d1085e078be4b2
+  docChecksum: 5cab2e21dd40857ac20e5d0a4eaf95d0
   docVersion: "1.0"
-  speakeasyVersion: 1.454.2
-  generationVersion: 2.477.4
-  releaseVersion: 0.26.7
-  configChecksum: bcc21013f414222077cb2d5051727810
+  speakeasyVersion: 1.455.3
+  generationVersion: 2.479.3
+  releaseVersion: 0.27.0
+  configChecksum: 6722bcae06d954a4f0733178f652e1c6
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -16,7 +16,7 @@ features:
     acceptHeaders: 3.0.0
     additionalDependencies: 1.0.0
     constsAndDefaults: 1.0.5
-    core: 5.6.11
+    core: 5.7.2
     defaultEnabledRetries: 0.2.0
     downloadStreams: 1.0.1
     enumUnions: 0.1.0
@@ -926,10 +926,12 @@ generatedFiles:
   - docs/models/shared/listlocationid.md
   - docs/models/shared/listoffset.md
   - docs/models/shared/listorder.md
+  - docs/models/shared/listorgid.md
   - docs/models/shared/listparentid.md
   - docs/models/shared/listprojectid.md
   - docs/models/shared/listquery.md
   - docs/models/shared/listrawfields.md
+  - docs/models/shared/listrepoid.md
   - docs/models/shared/listrootid.md
   - docs/models/shared/listsortbycreatedat.md
   - docs/models/shared/listsortbyname.md
@@ -1090,6 +1092,7 @@ generatedFiles:
   - docs/models/shared/virtualwebhookcompanyid.md
   - docs/models/shared/virtualwebhookcontactid.md
   - docs/models/shared/virtualwebhookdealid.md
+  - docs/models/shared/virtualwebhookjobid.md
   - docs/models/shared/virtualwebhooklimit.md
   - docs/models/shared/virtualwebhookparentid.md
   - docs/models/shared/virtualwebhookticketid.md

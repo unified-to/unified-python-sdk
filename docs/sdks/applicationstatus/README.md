@@ -27,9 +27,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.ats_statuses is not None:
-        # handle response
-        pass
+    assert res.ats_statuses is not None
+
+    # Handle response
+    print(res.ats_statuses)
 
 ```
 

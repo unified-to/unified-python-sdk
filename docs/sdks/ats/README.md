@@ -71,9 +71,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.ats_activity is not None:
-        # handle response
-        pass
+    assert res.ats_activity is not None
+
+    # Handle response
+    print(res.ats_activity)
 
 ```
 
@@ -114,9 +115,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.ats_application is not None:
-        # handle response
-        pass
+    assert res.ats_application is not None
+
+    # Handle response
+    print(res.ats_application)
 
 ```
 
@@ -157,9 +159,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.ats_candidate is not None:
-        # handle response
-        pass
+    assert res.ats_candidate is not None
+
+    # Handle response
+    print(res.ats_candidate)
 
 ```
 
@@ -200,9 +203,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.ats_document is not None:
-        # handle response
-        pass
+    assert res.ats_document is not None
+
+    # Handle response
+    print(res.ats_document)
 
 ```
 
@@ -243,9 +247,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.ats_interview is not None:
-        # handle response
-        pass
+    assert res.ats_interview is not None
+
+    # Handle response
+    print(res.ats_interview)
 
 ```
 
@@ -286,9 +291,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.ats_job is not None:
-        # handle response
-        pass
+    assert res.ats_job is not None
+
+    # Handle response
+    print(res.ats_job)
 
 ```
 
@@ -329,9 +335,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.ats_scorecard is not None:
-        # handle response
-        pass
+    assert res.ats_scorecard is not None
+
+    # Handle response
+    print(res.ats_scorecard)
 
 ```
 
@@ -373,9 +380,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.ats_activity is not None:
-        # handle response
-        pass
+    assert res.ats_activity is not None
+
+    # Handle response
+    print(res.ats_activity)
 
 ```
 
@@ -417,9 +425,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.ats_application is not None:
-        # handle response
-        pass
+    assert res.ats_application is not None
+
+    # Handle response
+    print(res.ats_application)
 
 ```
 
@@ -461,9 +470,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.ats_candidate is not None:
-        # handle response
-        pass
+    assert res.ats_candidate is not None
+
+    # Handle response
+    print(res.ats_candidate)
 
 ```
 
@@ -505,9 +515,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.ats_company is not None:
-        # handle response
-        pass
+    assert res.ats_company is not None
+
+    # Handle response
+    print(res.ats_company)
 
 ```
 
@@ -549,9 +560,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.ats_document is not None:
-        # handle response
-        pass
+    assert res.ats_document is not None
+
+    # Handle response
+    print(res.ats_document)
 
 ```
 
@@ -593,9 +605,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.ats_interview is not None:
-        # handle response
-        pass
+    assert res.ats_interview is not None
+
+    # Handle response
+    print(res.ats_interview)
 
 ```
 
@@ -637,9 +650,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.ats_job is not None:
-        # handle response
-        pass
+    assert res.ats_job is not None
+
+    # Handle response
+    print(res.ats_job)
 
 ```
 
@@ -681,9 +695,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.ats_scorecard is not None:
-        # handle response
-        pass
+    assert res.ats_scorecard is not None
+
+    # Handle response
+    print(res.ats_scorecard)
 
 ```
 
@@ -724,9 +739,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.ats_activities is not None:
-        # handle response
-        pass
+    assert res.ats_activities is not None
+
+    # Handle response
+    print(res.ats_activities)
 
 ```
 
@@ -767,9 +783,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.ats_applications is not None:
-        # handle response
-        pass
+    assert res.ats_applications is not None
+
+    # Handle response
+    print(res.ats_applications)
 
 ```
 
@@ -810,9 +827,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.ats_statuses is not None:
-        # handle response
-        pass
+    assert res.ats_statuses is not None
+
+    # Handle response
+    print(res.ats_statuses)
 
 ```
 
@@ -853,9 +871,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.ats_candidates is not None:
-        # handle response
-        pass
+    assert res.ats_candidates is not None
+
+    # Handle response
+    print(res.ats_candidates)
 
 ```
 
@@ -896,9 +915,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.ats_companies is not None:
-        # handle response
-        pass
+    assert res.ats_companies is not None
+
+    # Handle response
+    print(res.ats_companies)
 
 ```
 
@@ -939,9 +959,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.ats_documents is not None:
-        # handle response
-        pass
+    assert res.ats_documents is not None
+
+    # Handle response
+    print(res.ats_documents)
 
 ```
 
@@ -982,9 +1003,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.ats_interviews is not None:
-        # handle response
-        pass
+    assert res.ats_interviews is not None
+
+    # Handle response
+    print(res.ats_interviews)
 
 ```
 
@@ -1025,9 +1047,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.ats_jobs is not None:
-        # handle response
-        pass
+    assert res.ats_jobs is not None
+
+    # Handle response
+    print(res.ats_jobs)
 
 ```
 
@@ -1068,9 +1091,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.ats_scorecards is not None:
-        # handle response
-        pass
+    assert res.ats_scorecards is not None
+
+    # Handle response
+    print(res.ats_scorecards)
 
 ```
 
@@ -1112,9 +1136,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.ats_activity is not None:
-        # handle response
-        pass
+    assert res.ats_activity is not None
+
+    # Handle response
+    print(res.ats_activity)
 
 ```
 
@@ -1156,9 +1181,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.ats_application is not None:
-        # handle response
-        pass
+    assert res.ats_application is not None
+
+    # Handle response
+    print(res.ats_application)
 
 ```
 
@@ -1200,9 +1226,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.ats_candidate is not None:
-        # handle response
-        pass
+    assert res.ats_candidate is not None
+
+    # Handle response
+    print(res.ats_candidate)
 
 ```
 
@@ -1244,9 +1271,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.ats_document is not None:
-        # handle response
-        pass
+    assert res.ats_document is not None
+
+    # Handle response
+    print(res.ats_document)
 
 ```
 
@@ -1288,9 +1316,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.ats_interview is not None:
-        # handle response
-        pass
+    assert res.ats_interview is not None
+
+    # Handle response
+    print(res.ats_interview)
 
 ```
 
@@ -1332,9 +1361,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.ats_job is not None:
-        # handle response
-        pass
+    assert res.ats_job is not None
+
+    # Handle response
+    print(res.ats_job)
 
 ```
 
@@ -1376,9 +1406,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.ats_scorecard is not None:
-        # handle response
-        pass
+    assert res.ats_scorecard is not None
+
+    # Handle response
+    print(res.ats_scorecard)
 
 ```
 
@@ -1420,9 +1451,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res is not None:
-        # handle response
-        pass
+    assert res is not None
+
+    # Handle response
+    print(res)
 
 ```
 
@@ -1464,9 +1496,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res is not None:
-        # handle response
-        pass
+    assert res is not None
+
+    # Handle response
+    print(res)
 
 ```
 
@@ -1508,9 +1541,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res is not None:
-        # handle response
-        pass
+    assert res is not None
+
+    # Handle response
+    print(res)
 
 ```
 
@@ -1552,9 +1586,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res is not None:
-        # handle response
-        pass
+    assert res is not None
+
+    # Handle response
+    print(res)
 
 ```
 
@@ -1596,9 +1631,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res is not None:
-        # handle response
-        pass
+    assert res is not None
+
+    # Handle response
+    print(res)
 
 ```
 
@@ -1640,9 +1676,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res is not None:
-        # handle response
-        pass
+    assert res is not None
+
+    # Handle response
+    print(res)
 
 ```
 
@@ -1684,9 +1721,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res is not None:
-        # handle response
-        pass
+    assert res is not None
+
+    # Handle response
+    print(res)
 
 ```
 
@@ -1728,9 +1766,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.ats_activity is not None:
-        # handle response
-        pass
+    assert res.ats_activity is not None
+
+    # Handle response
+    print(res.ats_activity)
 
 ```
 
@@ -1772,9 +1811,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.ats_application is not None:
-        # handle response
-        pass
+    assert res.ats_application is not None
+
+    # Handle response
+    print(res.ats_application)
 
 ```
 
@@ -1816,9 +1856,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.ats_candidate is not None:
-        # handle response
-        pass
+    assert res.ats_candidate is not None
+
+    # Handle response
+    print(res.ats_candidate)
 
 ```
 
@@ -1860,9 +1901,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.ats_document is not None:
-        # handle response
-        pass
+    assert res.ats_document is not None
+
+    # Handle response
+    print(res.ats_document)
 
 ```
 
@@ -1904,9 +1946,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.ats_interview is not None:
-        # handle response
-        pass
+    assert res.ats_interview is not None
+
+    # Handle response
+    print(res.ats_interview)
 
 ```
 
@@ -1948,9 +1991,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.ats_job is not None:
-        # handle response
-        pass
+    assert res.ats_job is not None
+
+    # Handle response
+    print(res.ats_job)
 
 ```
 
@@ -1992,9 +2036,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.ats_scorecard is not None:
-        # handle response
-        pass
+    assert res.ats_scorecard is not None
+
+    # Handle response
+    print(res.ats_scorecard)
 
 ```
 

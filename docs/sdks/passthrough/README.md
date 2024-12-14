@@ -35,9 +35,10 @@ with UnifiedTo(
         "path": "/etc/periodic",
     })
 
-    if res is not None:
-        # handle response
-        pass
+    assert res is not None
+
+    # Handle response
+    print(res)
 
 ```
 
@@ -79,9 +80,10 @@ with UnifiedTo(
         "path": "/etc/periodic",
     })
 
-    if res is not None:
-        # handle response
-        pass
+    assert res is not None
+
+    # Handle response
+    print(res)
 
 ```
 
@@ -123,9 +125,10 @@ with UnifiedTo(
         "path": "/selinux",
     })
 
-    if res is not None:
-        # handle response
-        pass
+    assert res is not None
+
+    # Handle response
+    print(res)
 
 ```
 
@@ -167,9 +170,10 @@ with UnifiedTo(
         "path": "/mnt",
     })
 
-    if res is not None:
-        # handle response
-        pass
+    assert res is not None
+
+    # Handle response
+    print(res)
 
 ```
 
@@ -211,9 +215,10 @@ with UnifiedTo(
         "path": "/mnt",
     })
 
-    if res is not None:
-        # handle response
-        pass
+    assert res is not None
+
+    # Handle response
+    print(res)
 
 ```
 
@@ -255,9 +260,10 @@ with UnifiedTo(
         "path": "/Applications",
     })
 
-    if res is not None:
-        # handle response
-        pass
+    assert res is not None
+
+    # Handle response
+    print(res)
 
 ```
 
@@ -299,9 +305,10 @@ with UnifiedTo(
         "path": "/dev",
     })
 
-    if res is not None:
-        # handle response
-        pass
+    assert res is not None
+
+    # Handle response
+    print(res)
 
 ```
 
@@ -343,9 +350,10 @@ with UnifiedTo(
         "path": "/dev",
     })
 
-    if res is not None:
-        # handle response
-        pass
+    assert res is not None
+
+    # Handle response
+    print(res)
 
 ```
 

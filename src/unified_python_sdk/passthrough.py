@@ -3,7 +3,7 @@
 from .basesdk import BaseSDK
 from enum import Enum
 import io
-from typing import Any, IO, Optional, Union, cast
+from typing import Any, IO, Mapping, Optional, Union, cast
 from unified_python_sdk import utils
 from unified_python_sdk._hooks import HookContext
 from unified_python_sdk.models import errors, operations
@@ -86,6 +86,7 @@ class Passthrough(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         accept_header_override: Optional[CreatePassthroughJsonAcceptEnum] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreatePassthroughJSONResponse:
         r"""Passthrough POST
 
@@ -94,6 +95,7 @@ class Passthrough(BaseSDK):
         :param server_url: Override the default server URL for this method
         :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
         :param accept_header_override: Override the default accept header for this method
+        :param http_headers: Additional headers to set or replace on requests.
         """
         base_url = None
         url_variables = None
@@ -120,6 +122,7 @@ class Passthrough(BaseSDK):
             accept_header_value=accept_header_override.value
             if accept_header_override is not None
             else "application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0",
+            http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.request_body, False, True, "json", Optional[Any]
@@ -226,6 +229,7 @@ class Passthrough(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         accept_header_override: Optional[CreatePassthroughJsonAcceptEnum] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreatePassthroughJSONResponse:
         r"""Passthrough POST
 
@@ -234,6 +238,7 @@ class Passthrough(BaseSDK):
         :param server_url: Override the default server URL for this method
         :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
         :param accept_header_override: Override the default accept header for this method
+        :param http_headers: Additional headers to set or replace on requests.
         """
         base_url = None
         url_variables = None
@@ -260,6 +265,7 @@ class Passthrough(BaseSDK):
             accept_header_value=accept_header_override.value
             if accept_header_override is not None
             else "application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0",
+            http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.request_body, False, True, "json", Optional[Any]
@@ -366,6 +372,7 @@ class Passthrough(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         accept_header_override: Optional[CreatePassthroughRawAcceptEnum] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreatePassthroughRawResponse:
         r"""Passthrough POST
 
@@ -374,6 +381,7 @@ class Passthrough(BaseSDK):
         :param server_url: Override the default server URL for this method
         :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
         :param accept_header_override: Override the default accept header for this method
+        :param http_headers: Additional headers to set or replace on requests.
         """
         base_url = None
         url_variables = None
@@ -400,6 +408,7 @@ class Passthrough(BaseSDK):
             accept_header_value=accept_header_override.value
             if accept_header_override is not None
             else "application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0",
+            http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.request_body,
@@ -510,6 +519,7 @@ class Passthrough(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         accept_header_override: Optional[CreatePassthroughRawAcceptEnum] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreatePassthroughRawResponse:
         r"""Passthrough POST
 
@@ -518,6 +528,7 @@ class Passthrough(BaseSDK):
         :param server_url: Override the default server URL for this method
         :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
         :param accept_header_override: Override the default accept header for this method
+        :param http_headers: Additional headers to set or replace on requests.
         """
         base_url = None
         url_variables = None
@@ -544,6 +555,7 @@ class Passthrough(BaseSDK):
             accept_header_value=accept_header_override.value
             if accept_header_override is not None
             else "application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0",
+            http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.request_body,
@@ -654,6 +666,7 @@ class Passthrough(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         accept_header_override: Optional[ListPassthroughsAcceptEnum] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListPassthroughsResponse:
         r"""Passthrough GET
 
@@ -662,6 +675,7 @@ class Passthrough(BaseSDK):
         :param server_url: Override the default server URL for this method
         :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
         :param accept_header_override: Override the default accept header for this method
+        :param http_headers: Additional headers to set or replace on requests.
         """
         base_url = None
         url_variables = None
@@ -688,6 +702,7 @@ class Passthrough(BaseSDK):
             accept_header_value=accept_header_override.value
             if accept_header_override is not None
             else "application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0",
+            http_headers=http_headers,
             security=self.sdk_configuration.security,
             timeout_ms=timeout_ms,
         )
@@ -791,6 +806,7 @@ class Passthrough(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         accept_header_override: Optional[ListPassthroughsAcceptEnum] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListPassthroughsResponse:
         r"""Passthrough GET
 
@@ -799,6 +815,7 @@ class Passthrough(BaseSDK):
         :param server_url: Override the default server URL for this method
         :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
         :param accept_header_override: Override the default accept header for this method
+        :param http_headers: Additional headers to set or replace on requests.
         """
         base_url = None
         url_variables = None
@@ -825,6 +842,7 @@ class Passthrough(BaseSDK):
             accept_header_value=accept_header_override.value
             if accept_header_override is not None
             else "application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0",
+            http_headers=http_headers,
             security=self.sdk_configuration.security,
             timeout_ms=timeout_ms,
         )
@@ -928,6 +946,7 @@ class Passthrough(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         accept_header_override: Optional[PatchPassthroughJsonAcceptEnum] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchPassthroughJSONResponse:
         r"""Passthrough PUT
 
@@ -936,6 +955,7 @@ class Passthrough(BaseSDK):
         :param server_url: Override the default server URL for this method
         :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
         :param accept_header_override: Override the default accept header for this method
+        :param http_headers: Additional headers to set or replace on requests.
         """
         base_url = None
         url_variables = None
@@ -962,6 +982,7 @@ class Passthrough(BaseSDK):
             accept_header_value=accept_header_override.value
             if accept_header_override is not None
             else "application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0",
+            http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.request_body, False, True, "json", Optional[Any]
@@ -1068,6 +1089,7 @@ class Passthrough(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         accept_header_override: Optional[PatchPassthroughJsonAcceptEnum] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchPassthroughJSONResponse:
         r"""Passthrough PUT
 
@@ -1076,6 +1098,7 @@ class Passthrough(BaseSDK):
         :param server_url: Override the default server URL for this method
         :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
         :param accept_header_override: Override the default accept header for this method
+        :param http_headers: Additional headers to set or replace on requests.
         """
         base_url = None
         url_variables = None
@@ -1102,6 +1125,7 @@ class Passthrough(BaseSDK):
             accept_header_value=accept_header_override.value
             if accept_header_override is not None
             else "application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0",
+            http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.request_body, False, True, "json", Optional[Any]
@@ -1208,6 +1232,7 @@ class Passthrough(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         accept_header_override: Optional[PatchPassthroughRawAcceptEnum] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchPassthroughRawResponse:
         r"""Passthrough PUT
 
@@ -1216,6 +1241,7 @@ class Passthrough(BaseSDK):
         :param server_url: Override the default server URL for this method
         :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
         :param accept_header_override: Override the default accept header for this method
+        :param http_headers: Additional headers to set or replace on requests.
         """
         base_url = None
         url_variables = None
@@ -1242,6 +1268,7 @@ class Passthrough(BaseSDK):
             accept_header_value=accept_header_override.value
             if accept_header_override is not None
             else "application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0",
+            http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.request_body,
@@ -1352,6 +1379,7 @@ class Passthrough(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         accept_header_override: Optional[PatchPassthroughRawAcceptEnum] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchPassthroughRawResponse:
         r"""Passthrough PUT
 
@@ -1360,6 +1388,7 @@ class Passthrough(BaseSDK):
         :param server_url: Override the default server URL for this method
         :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
         :param accept_header_override: Override the default accept header for this method
+        :param http_headers: Additional headers to set or replace on requests.
         """
         base_url = None
         url_variables = None
@@ -1386,6 +1415,7 @@ class Passthrough(BaseSDK):
             accept_header_value=accept_header_override.value
             if accept_header_override is not None
             else "application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0",
+            http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.request_body,
@@ -1496,6 +1526,7 @@ class Passthrough(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         accept_header_override: Optional[RemovePassthroughAcceptEnum] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemovePassthroughResponse:
         r"""Passthrough DELETE
 
@@ -1504,6 +1535,7 @@ class Passthrough(BaseSDK):
         :param server_url: Override the default server URL for this method
         :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
         :param accept_header_override: Override the default accept header for this method
+        :param http_headers: Additional headers to set or replace on requests.
         """
         base_url = None
         url_variables = None
@@ -1530,6 +1562,7 @@ class Passthrough(BaseSDK):
             accept_header_value=accept_header_override.value
             if accept_header_override is not None
             else "application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0",
+            http_headers=http_headers,
             security=self.sdk_configuration.security,
             timeout_ms=timeout_ms,
         )
@@ -1633,6 +1666,7 @@ class Passthrough(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         accept_header_override: Optional[RemovePassthroughAcceptEnum] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemovePassthroughResponse:
         r"""Passthrough DELETE
 
@@ -1641,6 +1675,7 @@ class Passthrough(BaseSDK):
         :param server_url: Override the default server URL for this method
         :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
         :param accept_header_override: Override the default accept header for this method
+        :param http_headers: Additional headers to set or replace on requests.
         """
         base_url = None
         url_variables = None
@@ -1667,6 +1702,7 @@ class Passthrough(BaseSDK):
             accept_header_value=accept_header_override.value
             if accept_header_override is not None
             else "application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0",
+            http_headers=http_headers,
             security=self.sdk_configuration.security,
             timeout_ms=timeout_ms,
         )
@@ -1770,6 +1806,7 @@ class Passthrough(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         accept_header_override: Optional[UpdatePassthroughJsonAcceptEnum] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdatePassthroughJSONResponse:
         r"""Passthrough PUT
 
@@ -1778,6 +1815,7 @@ class Passthrough(BaseSDK):
         :param server_url: Override the default server URL for this method
         :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
         :param accept_header_override: Override the default accept header for this method
+        :param http_headers: Additional headers to set or replace on requests.
         """
         base_url = None
         url_variables = None
@@ -1804,6 +1842,7 @@ class Passthrough(BaseSDK):
             accept_header_value=accept_header_override.value
             if accept_header_override is not None
             else "application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0",
+            http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.request_body, False, True, "json", Optional[Any]
@@ -1910,6 +1949,7 @@ class Passthrough(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         accept_header_override: Optional[UpdatePassthroughJsonAcceptEnum] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdatePassthroughJSONResponse:
         r"""Passthrough PUT
 
@@ -1918,6 +1958,7 @@ class Passthrough(BaseSDK):
         :param server_url: Override the default server URL for this method
         :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
         :param accept_header_override: Override the default accept header for this method
+        :param http_headers: Additional headers to set or replace on requests.
         """
         base_url = None
         url_variables = None
@@ -1944,6 +1985,7 @@ class Passthrough(BaseSDK):
             accept_header_value=accept_header_override.value
             if accept_header_override is not None
             else "application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0",
+            http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.request_body, False, True, "json", Optional[Any]
@@ -2050,6 +2092,7 @@ class Passthrough(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         accept_header_override: Optional[UpdatePassthroughRawAcceptEnum] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdatePassthroughRawResponse:
         r"""Passthrough PUT
 
@@ -2058,6 +2101,7 @@ class Passthrough(BaseSDK):
         :param server_url: Override the default server URL for this method
         :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
         :param accept_header_override: Override the default accept header for this method
+        :param http_headers: Additional headers to set or replace on requests.
         """
         base_url = None
         url_variables = None
@@ -2084,6 +2128,7 @@ class Passthrough(BaseSDK):
             accept_header_value=accept_header_override.value
             if accept_header_override is not None
             else "application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0",
+            http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.request_body,
@@ -2194,6 +2239,7 @@ class Passthrough(BaseSDK):
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
         accept_header_override: Optional[UpdatePassthroughRawAcceptEnum] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdatePassthroughRawResponse:
         r"""Passthrough PUT
 
@@ -2202,6 +2248,7 @@ class Passthrough(BaseSDK):
         :param server_url: Override the default server URL for this method
         :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
         :param accept_header_override: Override the default accept header for this method
+        :param http_headers: Additional headers to set or replace on requests.
         """
         base_url = None
         url_variables = None
@@ -2228,6 +2275,7 @@ class Passthrough(BaseSDK):
             accept_header_value=accept_header_override.value
             if accept_header_override is not None
             else "application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0",
+            http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.request_body,

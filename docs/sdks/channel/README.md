@@ -29,9 +29,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.messaging_channel is not None:
-        # handle response
-        pass
+    assert res.messaging_channel is not None
+
+    # Handle response
+    print(res.messaging_channel)
 
 ```
 
@@ -72,9 +73,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.messaging_channels is not None:
-        # handle response
-        pass
+    assert res.messaging_channels is not None
+
+    # Handle response
+    print(res.messaging_channels)
 
 ```
 

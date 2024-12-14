@@ -54,9 +54,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.hris_company is not None:
-        # handle response
-        pass
+    assert res.hris_company is not None
+
+    # Handle response
+    print(res.hris_company)
 
 ```
 
@@ -97,9 +98,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.hris_employee is not None:
-        # handle response
-        pass
+    assert res.hris_employee is not None
+
+    # Handle response
+    print(res.hris_employee)
 
 ```
 
@@ -140,9 +142,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.hris_group is not None:
-        # handle response
-        pass
+    assert res.hris_group is not None
+
+    # Handle response
+    print(res.hris_group)
 
 ```
 
@@ -183,9 +186,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.hris_location is not None:
-        # handle response
-        pass
+    assert res.hris_location is not None
+
+    # Handle response
+    print(res.hris_location)
 
 ```
 
@@ -227,9 +231,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.hris_company is not None:
-        # handle response
-        pass
+    assert res.hris_company is not None
+
+    # Handle response
+    print(res.hris_company)
 
 ```
 
@@ -271,9 +276,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.hris_employee is not None:
-        # handle response
-        pass
+    assert res.hris_employee is not None
+
+    # Handle response
+    print(res.hris_employee)
 
 ```
 
@@ -315,9 +321,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.hris_group is not None:
-        # handle response
-        pass
+    assert res.hris_group is not None
+
+    # Handle response
+    print(res.hris_group)
 
 ```
 
@@ -359,9 +366,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.hris_location is not None:
-        # handle response
-        pass
+    assert res.hris_location is not None
+
+    # Handle response
+    print(res.hris_location)
 
 ```
 
@@ -403,9 +411,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.hris_payslip is not None:
-        # handle response
-        pass
+    assert res.hris_payslip is not None
+
+    # Handle response
+    print(res.hris_payslip)
 
 ```
 
@@ -447,9 +456,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.hris_timeoff is not None:
-        # handle response
-        pass
+    assert res.hris_timeoff is not None
+
+    # Handle response
+    print(res.hris_timeoff)
 
 ```
 
@@ -490,9 +500,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.hris_companies is not None:
-        # handle response
-        pass
+    assert res.hris_companies is not None
+
+    # Handle response
+    print(res.hris_companies)
 
 ```
 
@@ -533,9 +544,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.hris_employees is not None:
-        # handle response
-        pass
+    assert res.hris_employees is not None
+
+    # Handle response
+    print(res.hris_employees)
 
 ```
 
@@ -576,9 +588,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.hris_groups is not None:
-        # handle response
-        pass
+    assert res.hris_groups is not None
+
+    # Handle response
+    print(res.hris_groups)
 
 ```
 
@@ -619,9 +632,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.hris_locations is not None:
-        # handle response
-        pass
+    assert res.hris_locations is not None
+
+    # Handle response
+    print(res.hris_locations)
 
 ```
 
@@ -662,9 +676,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.hris_payslips is not None:
-        # handle response
-        pass
+    assert res.hris_payslips is not None
+
+    # Handle response
+    print(res.hris_payslips)
 
 ```
 
@@ -705,9 +720,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.hris_timeoffs is not None:
-        # handle response
-        pass
+    assert res.hris_timeoffs is not None
+
+    # Handle response
+    print(res.hris_timeoffs)
 
 ```
 
@@ -749,9 +765,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.hris_company is not None:
-        # handle response
-        pass
+    assert res.hris_company is not None
+
+    # Handle response
+    print(res.hris_company)
 
 ```
 
@@ -793,9 +810,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.hris_employee is not None:
-        # handle response
-        pass
+    assert res.hris_employee is not None
+
+    # Handle response
+    print(res.hris_employee)
 
 ```
 
@@ -837,9 +855,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.hris_group is not None:
-        # handle response
-        pass
+    assert res.hris_group is not None
+
+    # Handle response
+    print(res.hris_group)
 
 ```
 
@@ -881,9 +900,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.hris_location is not None:
-        # handle response
-        pass
+    assert res.hris_location is not None
+
+    # Handle response
+    print(res.hris_location)
 
 ```
 
@@ -925,9 +945,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res is not None:
-        # handle response
-        pass
+    assert res is not None
+
+    # Handle response
+    print(res)
 
 ```
 
@@ -969,9 +990,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res is not None:
-        # handle response
-        pass
+    assert res is not None
+
+    # Handle response
+    print(res)
 
 ```
 
@@ -1013,9 +1035,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res is not None:
-        # handle response
-        pass
+    assert res is not None
+
+    # Handle response
+    print(res)
 
 ```
 
@@ -1057,9 +1080,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res is not None:
-        # handle response
-        pass
+    assert res is not None
+
+    # Handle response
+    print(res)
 
 ```
 
@@ -1101,9 +1125,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.hris_company is not None:
-        # handle response
-        pass
+    assert res.hris_company is not None
+
+    # Handle response
+    print(res.hris_company)
 
 ```
 
@@ -1145,9 +1170,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.hris_employee is not None:
-        # handle response
-        pass
+    assert res.hris_employee is not None
+
+    # Handle response
+    print(res.hris_employee)
 
 ```
 
@@ -1189,9 +1215,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.hris_group is not None:
-        # handle response
-        pass
+    assert res.hris_group is not None
+
+    # Handle response
+    print(res.hris_group)
 
 ```
 
@@ -1233,9 +1260,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.hris_location is not None:
-        # handle response
-        pass
+    assert res.hris_location is not None
+
+    # Handle response
+    print(res.hris_location)
 
 ```
 

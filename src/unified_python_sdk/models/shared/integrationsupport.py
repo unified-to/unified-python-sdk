@@ -155,6 +155,12 @@ class ListOrder(str, Enum):
     NOT_SUPPORTED = "not-supported"
 
 
+class ListOrgID(str, Enum):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
 class ListParentID(str, Enum):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
@@ -174,6 +180,12 @@ class ListQuery(str, Enum):
 
 
 class ListRawFields(str, Enum):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
+class ListRepoID(str, Enum):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
     NOT_SUPPORTED = "not-supported"
@@ -305,6 +317,12 @@ class VirtualWebhookDealID(str, Enum):
     NOT_SUPPORTED = "not-supported"
 
 
+class VirtualWebhookJobID(str, Enum):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
 class VirtualWebhookLimit(str, Enum):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
@@ -367,10 +385,12 @@ class IntegrationSupportTypedDict(TypedDict):
     list_location_id: NotRequired[ListLocationID]
     list_offset: NotRequired[ListOffset]
     list_order: NotRequired[ListOrder]
+    list_org_id: NotRequired[ListOrgID]
     list_parent_id: NotRequired[ListParentID]
     list_project_id: NotRequired[ListProjectID]
     list_query: NotRequired[ListQuery]
     list_raw_fields: NotRequired[ListRawFields]
+    list_repo_id: NotRequired[ListRepoID]
     list_root_id: NotRequired[ListRootID]
     list_sort_by_created_at: NotRequired[ListSortByCreatedAt]
     list_sort_by_name: NotRequired[ListSortByName]
@@ -396,6 +416,7 @@ class IntegrationSupportTypedDict(TypedDict):
     virtual_webhook_company_id: NotRequired[VirtualWebhookCompanyID]
     virtual_webhook_contact_id: NotRequired[VirtualWebhookContactID]
     virtual_webhook_deal_id: NotRequired[VirtualWebhookDealID]
+    virtual_webhook_job_id: NotRequired[VirtualWebhookJobID]
     virtual_webhook_limit: NotRequired[VirtualWebhookLimit]
     virtual_webhook_parent_id: NotRequired[VirtualWebhookParentID]
     virtual_webhook_ticket_id: NotRequired[VirtualWebhookTicketID]
@@ -456,6 +477,8 @@ class IntegrationSupport(BaseModel):
 
     list_order: Optional[ListOrder] = None
 
+    list_org_id: Optional[ListOrgID] = None
+
     list_parent_id: Optional[ListParentID] = None
 
     list_project_id: Optional[ListProjectID] = None
@@ -463,6 +486,8 @@ class IntegrationSupport(BaseModel):
     list_query: Optional[ListQuery] = None
 
     list_raw_fields: Optional[ListRawFields] = None
+
+    list_repo_id: Optional[ListRepoID] = None
 
     list_root_id: Optional[ListRootID] = None
 
@@ -512,6 +537,8 @@ class IntegrationSupport(BaseModel):
     virtual_webhook_contact_id: Optional[VirtualWebhookContactID] = None
 
     virtual_webhook_deal_id: Optional[VirtualWebhookDealID] = None
+
+    virtual_webhook_job_id: Optional[VirtualWebhookJobID] = None
 
     virtual_webhook_limit: Optional[VirtualWebhookLimit] = None
 

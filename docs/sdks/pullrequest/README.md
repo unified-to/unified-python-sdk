@@ -32,9 +32,10 @@ with UnifiedTo(
         "connection_id": "<id>",
     })
 
-    if res.repo_pullrequest is not None:
-        # handle response
-        pass
+    assert res.repo_pullrequest is not None
+
+    # Handle response
+    print(res.repo_pullrequest)
 
 ```
 
@@ -76,9 +77,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.repo_pullrequest is not None:
-        # handle response
-        pass
+    assert res.repo_pullrequest is not None
+
+    # Handle response
+    print(res.repo_pullrequest)
 
 ```
 
@@ -119,9 +121,10 @@ with UnifiedTo(
         "connection_id": "<id>",
     })
 
-    if res.repo_pullrequests is not None:
-        # handle response
-        pass
+    assert res.repo_pullrequests is not None
+
+    # Handle response
+    print(res.repo_pullrequests)
 
 ```
 
@@ -163,9 +166,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.repo_pullrequest is not None:
-        # handle response
-        pass
+    assert res.repo_pullrequest is not None
+
+    # Handle response
+    print(res.repo_pullrequest)
 
 ```
 
@@ -207,9 +211,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res is not None:
-        # handle response
-        pass
+    assert res is not None
+
+    # Handle response
+    print(res)
 
 ```
 
@@ -251,9 +256,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.repo_pullrequest is not None:
-        # handle response
-        pass
+    assert res.repo_pullrequest is not None
+
+    # Handle response
+    print(res.repo_pullrequest)
 
 ```
 

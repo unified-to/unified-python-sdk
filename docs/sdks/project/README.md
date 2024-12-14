@@ -32,9 +32,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.task_project is not None:
-        # handle response
-        pass
+    assert res.task_project is not None
+
+    # Handle response
+    print(res.task_project)
 
 ```
 
@@ -76,9 +77,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.task_project is not None:
-        # handle response
-        pass
+    assert res.task_project is not None
+
+    # Handle response
+    print(res.task_project)
 
 ```
 
@@ -119,9 +121,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.task_projects is not None:
-        # handle response
-        pass
+    assert res.task_projects is not None
+
+    # Handle response
+    print(res.task_projects)
 
 ```
 
@@ -163,9 +166,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.task_project is not None:
-        # handle response
-        pass
+    assert res.task_project is not None
+
+    # Handle response
+    print(res.task_project)
 
 ```
 
@@ -207,9 +211,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res is not None:
-        # handle response
-        pass
+    assert res is not None
+
+    # Handle response
+    print(res)
 
 ```
 
@@ -251,9 +256,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.task_project is not None:
-        # handle response
-        pass
+    assert res.task_project is not None
+
+    # Handle response
+    print(res.task_project)
 
 ```
 

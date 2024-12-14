@@ -32,9 +32,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.kms_space is not None:
-        # handle response
-        pass
+    assert res.kms_space is not None
+
+    # Handle response
+    print(res.kms_space)
 
 ```
 
@@ -76,9 +77,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.kms_space is not None:
-        # handle response
-        pass
+    assert res.kms_space is not None
+
+    # Handle response
+    print(res.kms_space)
 
 ```
 
@@ -119,9 +121,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.kms_spaces is not None:
-        # handle response
-        pass
+    assert res.kms_spaces is not None
+
+    # Handle response
+    print(res.kms_spaces)
 
 ```
 
@@ -163,9 +166,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.kms_space is not None:
-        # handle response
-        pass
+    assert res.kms_space is not None
+
+    # Handle response
+    print(res.kms_space)
 
 ```
 
@@ -207,9 +211,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res is not None:
-        # handle response
-        pass
+    assert res is not None
+
+    # Handle response
+    print(res)
 
 ```
 
@@ -251,9 +256,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.kms_space is not None:
-        # handle response
-        pass
+    assert res.kms_space is not None
+
+    # Handle response
+    print(res.kms_space)
 
 ```
 

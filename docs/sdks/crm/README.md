@@ -62,9 +62,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.crm_company is not None:
-        # handle response
-        pass
+    assert res.crm_company is not None
+
+    # Handle response
+    print(res.crm_company)
 
 ```
 
@@ -105,9 +106,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.crm_contact is not None:
-        # handle response
-        pass
+    assert res.crm_contact is not None
+
+    # Handle response
+    print(res.crm_contact)
 
 ```
 
@@ -148,9 +150,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.crm_deal is not None:
-        # handle response
-        pass
+    assert res.crm_deal is not None
+
+    # Handle response
+    print(res.crm_deal)
 
 ```
 
@@ -191,9 +194,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.crm_event is not None:
-        # handle response
-        pass
+    assert res.crm_event is not None
+
+    # Handle response
+    print(res.crm_event)
 
 ```
 
@@ -234,9 +238,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.crm_lead is not None:
-        # handle response
-        pass
+    assert res.crm_lead is not None
+
+    # Handle response
+    print(res.crm_lead)
 
 ```
 
@@ -277,9 +282,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.crm_pipeline is not None:
-        # handle response
-        pass
+    assert res.crm_pipeline is not None
+
+    # Handle response
+    print(res.crm_pipeline)
 
 ```
 
@@ -321,9 +327,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.crm_company is not None:
-        # handle response
-        pass
+    assert res.crm_company is not None
+
+    # Handle response
+    print(res.crm_company)
 
 ```
 
@@ -365,9 +372,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.crm_contact is not None:
-        # handle response
-        pass
+    assert res.crm_contact is not None
+
+    # Handle response
+    print(res.crm_contact)
 
 ```
 
@@ -409,9 +417,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.crm_deal is not None:
-        # handle response
-        pass
+    assert res.crm_deal is not None
+
+    # Handle response
+    print(res.crm_deal)
 
 ```
 
@@ -453,9 +462,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.crm_event is not None:
-        # handle response
-        pass
+    assert res.crm_event is not None
+
+    # Handle response
+    print(res.crm_event)
 
 ```
 
@@ -497,9 +507,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.crm_lead is not None:
-        # handle response
-        pass
+    assert res.crm_lead is not None
+
+    # Handle response
+    print(res.crm_lead)
 
 ```
 
@@ -541,9 +552,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.crm_pipeline is not None:
-        # handle response
-        pass
+    assert res.crm_pipeline is not None
+
+    # Handle response
+    print(res.crm_pipeline)
 
 ```
 
@@ -584,9 +596,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.crm_companies is not None:
-        # handle response
-        pass
+    assert res.crm_companies is not None
+
+    # Handle response
+    print(res.crm_companies)
 
 ```
 
@@ -627,9 +640,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.crm_contacts is not None:
-        # handle response
-        pass
+    assert res.crm_contacts is not None
+
+    # Handle response
+    print(res.crm_contacts)
 
 ```
 
@@ -670,9 +684,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.crm_deals is not None:
-        # handle response
-        pass
+    assert res.crm_deals is not None
+
+    # Handle response
+    print(res.crm_deals)
 
 ```
 
@@ -713,9 +728,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.crm_events is not None:
-        # handle response
-        pass
+    assert res.crm_events is not None
+
+    # Handle response
+    print(res.crm_events)
 
 ```
 
@@ -756,9 +772,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.crm_leads is not None:
-        # handle response
-        pass
+    assert res.crm_leads is not None
+
+    # Handle response
+    print(res.crm_leads)
 
 ```
 
@@ -799,9 +816,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.crm_pipelines is not None:
-        # handle response
-        pass
+    assert res.crm_pipelines is not None
+
+    # Handle response
+    print(res.crm_pipelines)
 
 ```
 
@@ -843,9 +861,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.crm_company is not None:
-        # handle response
-        pass
+    assert res.crm_company is not None
+
+    # Handle response
+    print(res.crm_company)
 
 ```
 
@@ -887,9 +906,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.crm_contact is not None:
-        # handle response
-        pass
+    assert res.crm_contact is not None
+
+    # Handle response
+    print(res.crm_contact)
 
 ```
 
@@ -931,9 +951,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.crm_deal is not None:
-        # handle response
-        pass
+    assert res.crm_deal is not None
+
+    # Handle response
+    print(res.crm_deal)
 
 ```
 
@@ -975,9 +996,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.crm_event is not None:
-        # handle response
-        pass
+    assert res.crm_event is not None
+
+    # Handle response
+    print(res.crm_event)
 
 ```
 
@@ -1019,9 +1041,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.crm_lead is not None:
-        # handle response
-        pass
+    assert res.crm_lead is not None
+
+    # Handle response
+    print(res.crm_lead)
 
 ```
 
@@ -1063,9 +1086,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.crm_pipeline is not None:
-        # handle response
-        pass
+    assert res.crm_pipeline is not None
+
+    # Handle response
+    print(res.crm_pipeline)
 
 ```
 
@@ -1107,9 +1131,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res is not None:
-        # handle response
-        pass
+    assert res is not None
+
+    # Handle response
+    print(res)
 
 ```
 
@@ -1151,9 +1176,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res is not None:
-        # handle response
-        pass
+    assert res is not None
+
+    # Handle response
+    print(res)
 
 ```
 
@@ -1195,9 +1221,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res is not None:
-        # handle response
-        pass
+    assert res is not None
+
+    # Handle response
+    print(res)
 
 ```
 
@@ -1239,9 +1266,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res is not None:
-        # handle response
-        pass
+    assert res is not None
+
+    # Handle response
+    print(res)
 
 ```
 
@@ -1283,9 +1311,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res is not None:
-        # handle response
-        pass
+    assert res is not None
+
+    # Handle response
+    print(res)
 
 ```
 
@@ -1327,9 +1356,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res is not None:
-        # handle response
-        pass
+    assert res is not None
+
+    # Handle response
+    print(res)
 
 ```
 
@@ -1371,9 +1401,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.crm_company is not None:
-        # handle response
-        pass
+    assert res.crm_company is not None
+
+    # Handle response
+    print(res.crm_company)
 
 ```
 
@@ -1415,9 +1446,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.crm_contact is not None:
-        # handle response
-        pass
+    assert res.crm_contact is not None
+
+    # Handle response
+    print(res.crm_contact)
 
 ```
 
@@ -1459,9 +1491,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.crm_deal is not None:
-        # handle response
-        pass
+    assert res.crm_deal is not None
+
+    # Handle response
+    print(res.crm_deal)
 
 ```
 
@@ -1503,9 +1536,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.crm_event is not None:
-        # handle response
-        pass
+    assert res.crm_event is not None
+
+    # Handle response
+    print(res.crm_event)
 
 ```
 
@@ -1547,9 +1581,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.crm_lead is not None:
-        # handle response
-        pass
+    assert res.crm_lead is not None
+
+    # Handle response
+    print(res.crm_lead)
 
 ```
 
@@ -1591,9 +1626,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.crm_pipeline is not None:
-        # handle response
-        pass
+    assert res.crm_pipeline is not None
+
+    # Handle response
+    print(res.crm_pipeline)
 
 ```
 

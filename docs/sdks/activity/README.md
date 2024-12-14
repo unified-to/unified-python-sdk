@@ -32,9 +32,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.ats_activity is not None:
-        # handle response
-        pass
+    assert res.ats_activity is not None
+
+    # Handle response
+    print(res.ats_activity)
 
 ```
 
@@ -76,9 +77,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.ats_activity is not None:
-        # handle response
-        pass
+    assert res.ats_activity is not None
+
+    # Handle response
+    print(res.ats_activity)
 
 ```
 
@@ -119,9 +121,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.ats_activities is not None:
-        # handle response
-        pass
+    assert res.ats_activities is not None
+
+    # Handle response
+    print(res.ats_activities)
 
 ```
 
@@ -163,9 +166,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.ats_activity is not None:
-        # handle response
-        pass
+    assert res.ats_activity is not None
+
+    # Handle response
+    print(res.ats_activity)
 
 ```
 
@@ -207,9 +211,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res is not None:
-        # handle response
-        pass
+    assert res is not None
+
+    # Handle response
+    print(res)
 
 ```
 
@@ -251,9 +256,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.ats_activity is not None:
-        # handle response
-        pass
+    assert res.ats_activity is not None
+
+    # Handle response
+    print(res.ats_activity)
 
 ```
 

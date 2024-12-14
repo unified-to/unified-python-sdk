@@ -44,9 +44,10 @@ with UnifiedTo(
 
     res = unified_to.unified.create_unified_connection()
 
-    if res.connection is not None:
-        # handle response
-        pass
+    assert res.connection is not None
+
+    # Handle response
+    print(res.connection)
 
 ```
 
@@ -85,9 +86,10 @@ with UnifiedTo(
 
     res = unified_to.unified.create_unified_webhook(request={})
 
-    if res.webhook is not None:
-        # handle response
-        pass
+    assert res.webhook is not None
+
+    # Handle response
+    print(res.webhook)
 
 ```
 
@@ -128,9 +130,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.api_call is not None:
-        # handle response
-        pass
+    assert res.api_call is not None
+
+    # Handle response
+    print(res.api_call)
 
 ```
 
@@ -171,9 +174,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.connection is not None:
-        # handle response
-        pass
+    assert res.connection is not None
+
+    # Handle response
+    print(res.connection)
 
 ```
 
@@ -215,9 +219,10 @@ with UnifiedTo(
         "workspace_id": "<value>",
     })
 
-    if res.res is not None:
-        # handle response
-        pass
+    assert res.res is not None
+
+    # Handle response
+    print(res.res)
 
 ```
 
@@ -258,9 +263,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.webhook is not None:
-        # handle response
-        pass
+    assert res.webhook is not None
+
+    # Handle response
+    print(res.webhook)
 
 ```
 
@@ -299,9 +305,10 @@ with UnifiedTo(
 
     res = unified_to.unified.list_unified_apicalls(request={})
 
-    if res.api_calls is not None:
-        # handle response
-        pass
+    assert res.api_calls is not None
+
+    # Handle response
+    print(res.api_calls)
 
 ```
 
@@ -340,9 +347,10 @@ with UnifiedTo(
 
     res = unified_to.unified.list_unified_connections(request={})
 
-    if res.connections is not None:
-        # handle response
-        pass
+    assert res.connections is not None
+
+    # Handle response
+    print(res.connections)
 
 ```
 
@@ -383,9 +391,10 @@ with UnifiedTo(
         "workspace_id": "<value>",
     })
 
-    if res.integrations is not None:
-        # handle response
-        pass
+    assert res.integrations is not None
+
+    # Handle response
+    print(res.integrations)
 
 ```
 
@@ -424,9 +433,10 @@ with UnifiedTo(
 
     res = unified_to.unified.list_unified_integrations(request={})
 
-    if res.integrations is not None:
-        # handle response
-        pass
+    assert res.integrations is not None
+
+    # Handle response
+    print(res.integrations)
 
 ```
 
@@ -465,9 +475,10 @@ with UnifiedTo(
 
     res = unified_to.unified.list_unified_issues(request={})
 
-    if res.issues is not None:
-        # handle response
-        pass
+    assert res.issues is not None
+
+    # Handle response
+    print(res.issues)
 
 ```
 
@@ -506,9 +517,10 @@ with UnifiedTo(
 
     res = unified_to.unified.list_unified_webhooks(request={})
 
-    if res.webhooks is not None:
-        # handle response
-        pass
+    assert res.webhooks is not None
+
+    # Handle response
+    print(res.webhooks)
 
 ```
 
@@ -549,9 +561,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.connection is not None:
-        # handle response
-        pass
+    assert res.connection is not None
+
+    # Handle response
+    print(res.connection)
 
 ```
 
@@ -592,9 +605,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.webhook is not None:
-        # handle response
-        pass
+    assert res.webhook is not None
+
+    # Handle response
+    print(res.webhook)
 
 ```
 
@@ -635,9 +649,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res is not None:
-        # handle response
-        pass
+    assert res is not None
+
+    # Handle response
+    print(res)
 
 ```
 
@@ -678,9 +693,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res is not None:
-        # handle response
-        pass
+    assert res is not None
+
+    # Handle response
+    print(res)
 
 ```
 
@@ -721,9 +737,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res is not None:
-        # handle response
-        pass
+    assert res is not None
+
+    # Handle response
+    print(res)
 
 ```
 
@@ -764,9 +781,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.connection is not None:
-        # handle response
-        pass
+    assert res.connection is not None
+
+    # Handle response
+    print(res.connection)
 
 ```
 
@@ -807,9 +825,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.webhook is not None:
-        # handle response
-        pass
+    assert res.webhook is not None
+
+    # Handle response
+    print(res.webhook)
 
 ```
 
@@ -850,9 +869,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res is not None:
-        # handle response
-        pass
+    assert res is not None
+
+    # Handle response
+    print(res)
 
 ```
 

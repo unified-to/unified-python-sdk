@@ -28,9 +28,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.api_call is not None:
-        # handle response
-        pass
+    assert res.api_call is not None
+
+    # Handle response
+    print(res.api_call)
 
 ```
 
@@ -69,9 +70,10 @@ with UnifiedTo(
 
     res = unified_to.apicall.list_unified_apicalls(request={})
 
-    if res.api_calls is not None:
-        # handle response
-        pass
+    assert res.api_calls is not None
+
+    # Handle response
+    print(res.api_calls)
 
 ```
 

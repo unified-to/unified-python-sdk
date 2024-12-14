@@ -28,9 +28,10 @@ with UnifiedTo(
         "workspace_id": "<value>",
     })
 
-    if res.res is not None:
-        # handle response
-        pass
+    assert res.res is not None
+
+    # Handle response
+    print(res.res)
 
 ```
 

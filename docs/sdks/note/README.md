@@ -32,9 +32,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.ticketing_note is not None:
-        # handle response
-        pass
+    assert res.ticketing_note is not None
+
+    # Handle response
+    print(res.ticketing_note)
 
 ```
 
@@ -76,9 +77,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.ticketing_note is not None:
-        # handle response
-        pass
+    assert res.ticketing_note is not None
+
+    # Handle response
+    print(res.ticketing_note)
 
 ```
 
@@ -119,9 +121,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.ticketing_notes is not None:
-        # handle response
-        pass
+    assert res.ticketing_notes is not None
+
+    # Handle response
+    print(res.ticketing_notes)
 
 ```
 
@@ -163,9 +166,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.ticketing_note is not None:
-        # handle response
-        pass
+    assert res.ticketing_note is not None
+
+    # Handle response
+    print(res.ticketing_note)
 
 ```
 
@@ -207,9 +211,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res is not None:
-        # handle response
-        pass
+    assert res is not None
+
+    # Handle response
+    print(res)
 
 ```
 
@@ -251,9 +256,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.ticketing_note is not None:
-        # handle response
-        pass
+    assert res.ticketing_note is not None
+
+    # Handle response
+    print(res.ticketing_note)
 
 ```
 

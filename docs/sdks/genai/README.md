@@ -28,9 +28,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.genai_prompt is not None:
-        # handle response
-        pass
+    assert res.genai_prompt is not None
+
+    # Handle response
+    print(res.genai_prompt)
 
 ```
 
@@ -71,9 +72,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.genai_models is not None:
-        # handle response
-        pass
+    assert res.genai_models is not None
+
+    # Handle response
+    print(res.genai_models)
 
 ```
 

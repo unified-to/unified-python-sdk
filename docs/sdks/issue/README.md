@@ -25,9 +25,10 @@ with UnifiedTo(
 
     res = unified_to.issue.list_unified_issues(request={})
 
-    if res.issues is not None:
-        # handle response
-        pass
+    assert res.issues is not None
+
+    # Handle response
+    print(res.issues)
 
 ```
 

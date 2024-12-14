@@ -29,9 +29,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.hris_payslip is not None:
-        # handle response
-        pass
+    assert res.hris_payslip is not None
+
+    # Handle response
+    print(res.hris_payslip)
 
 ```
 
@@ -72,9 +73,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.hris_payslips is not None:
-        # handle response
-        pass
+    assert res.hris_payslips is not None
+
+    # Handle response
+    print(res.hris_payslips)
 
 ```
 

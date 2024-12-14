@@ -56,9 +56,10 @@ with UnifiedTo(
         "connection_id": "<id>",
     })
 
-    if res.repo_branch is not None:
-        # handle response
-        pass
+    assert res.repo_branch is not None
+
+    # Handle response
+    print(res.repo_branch)
 
 ```
 
@@ -99,9 +100,10 @@ with UnifiedTo(
         "connection_id": "<id>",
     })
 
-    if res.repo_commit is not None:
-        # handle response
-        pass
+    assert res.repo_commit is not None
+
+    # Handle response
+    print(res.repo_commit)
 
 ```
 
@@ -142,9 +144,10 @@ with UnifiedTo(
         "connection_id": "<id>",
     })
 
-    if res.repo_organization is not None:
-        # handle response
-        pass
+    assert res.repo_organization is not None
+
+    # Handle response
+    print(res.repo_organization)
 
 ```
 
@@ -185,9 +188,10 @@ with UnifiedTo(
         "connection_id": "<id>",
     })
 
-    if res.repo_pullrequest is not None:
-        # handle response
-        pass
+    assert res.repo_pullrequest is not None
+
+    # Handle response
+    print(res.repo_pullrequest)
 
 ```
 
@@ -228,9 +232,10 @@ with UnifiedTo(
         "connection_id": "<id>",
     })
 
-    if res.repo_repository is not None:
-        # handle response
-        pass
+    assert res.repo_repository is not None
+
+    # Handle response
+    print(res.repo_repository)
 
 ```
 
@@ -272,9 +277,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.repo_branch is not None:
-        # handle response
-        pass
+    assert res.repo_branch is not None
+
+    # Handle response
+    print(res.repo_branch)
 
 ```
 
@@ -316,9 +322,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.repo_commit is not None:
-        # handle response
-        pass
+    assert res.repo_commit is not None
+
+    # Handle response
+    print(res.repo_commit)
 
 ```
 
@@ -360,9 +367,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.repo_organization is not None:
-        # handle response
-        pass
+    assert res.repo_organization is not None
+
+    # Handle response
+    print(res.repo_organization)
 
 ```
 
@@ -404,9 +412,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.repo_pullrequest is not None:
-        # handle response
-        pass
+    assert res.repo_pullrequest is not None
+
+    # Handle response
+    print(res.repo_pullrequest)
 
 ```
 
@@ -448,9 +457,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.repo_repository is not None:
-        # handle response
-        pass
+    assert res.repo_repository is not None
+
+    # Handle response
+    print(res.repo_repository)
 
 ```
 
@@ -491,9 +501,10 @@ with UnifiedTo(
         "connection_id": "<id>",
     })
 
-    if res.repo_branches is not None:
-        # handle response
-        pass
+    assert res.repo_branches is not None
+
+    # Handle response
+    print(res.repo_branches)
 
 ```
 
@@ -534,9 +545,10 @@ with UnifiedTo(
         "connection_id": "<id>",
     })
 
-    if res.repo_commits is not None:
-        # handle response
-        pass
+    assert res.repo_commits is not None
+
+    # Handle response
+    print(res.repo_commits)
 
 ```
 
@@ -577,9 +589,10 @@ with UnifiedTo(
         "connection_id": "<id>",
     })
 
-    if res.repo_organizations is not None:
-        # handle response
-        pass
+    assert res.repo_organizations is not None
+
+    # Handle response
+    print(res.repo_organizations)
 
 ```
 
@@ -620,9 +633,10 @@ with UnifiedTo(
         "connection_id": "<id>",
     })
 
-    if res.repo_pullrequests is not None:
-        # handle response
-        pass
+    assert res.repo_pullrequests is not None
+
+    # Handle response
+    print(res.repo_pullrequests)
 
 ```
 
@@ -663,9 +677,10 @@ with UnifiedTo(
         "connection_id": "<id>",
     })
 
-    if res.repo_repositories is not None:
-        # handle response
-        pass
+    assert res.repo_repositories is not None
+
+    # Handle response
+    print(res.repo_repositories)
 
 ```
 
@@ -707,9 +722,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.repo_branch is not None:
-        # handle response
-        pass
+    assert res.repo_branch is not None
+
+    # Handle response
+    print(res.repo_branch)
 
 ```
 
@@ -751,9 +767,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.repo_commit is not None:
-        # handle response
-        pass
+    assert res.repo_commit is not None
+
+    # Handle response
+    print(res.repo_commit)
 
 ```
 
@@ -795,9 +812,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.repo_organization is not None:
-        # handle response
-        pass
+    assert res.repo_organization is not None
+
+    # Handle response
+    print(res.repo_organization)
 
 ```
 
@@ -839,9 +857,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.repo_pullrequest is not None:
-        # handle response
-        pass
+    assert res.repo_pullrequest is not None
+
+    # Handle response
+    print(res.repo_pullrequest)
 
 ```
 
@@ -883,9 +902,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.repo_repository is not None:
-        # handle response
-        pass
+    assert res.repo_repository is not None
+
+    # Handle response
+    print(res.repo_repository)
 
 ```
 
@@ -927,9 +947,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res is not None:
-        # handle response
-        pass
+    assert res is not None
+
+    # Handle response
+    print(res)
 
 ```
 
@@ -971,9 +992,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res is not None:
-        # handle response
-        pass
+    assert res is not None
+
+    # Handle response
+    print(res)
 
 ```
 
@@ -1015,9 +1037,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res is not None:
-        # handle response
-        pass
+    assert res is not None
+
+    # Handle response
+    print(res)
 
 ```
 
@@ -1059,9 +1082,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res is not None:
-        # handle response
-        pass
+    assert res is not None
+
+    # Handle response
+    print(res)
 
 ```
 
@@ -1103,9 +1127,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res is not None:
-        # handle response
-        pass
+    assert res is not None
+
+    # Handle response
+    print(res)
 
 ```
 
@@ -1147,9 +1172,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.repo_branch is not None:
-        # handle response
-        pass
+    assert res.repo_branch is not None
+
+    # Handle response
+    print(res.repo_branch)
 
 ```
 
@@ -1191,9 +1217,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.repo_commit is not None:
-        # handle response
-        pass
+    assert res.repo_commit is not None
+
+    # Handle response
+    print(res.repo_commit)
 
 ```
 
@@ -1235,9 +1262,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.repo_organization is not None:
-        # handle response
-        pass
+    assert res.repo_organization is not None
+
+    # Handle response
+    print(res.repo_organization)
 
 ```
 
@@ -1279,9 +1307,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.repo_pullrequest is not None:
-        # handle response
-        pass
+    assert res.repo_pullrequest is not None
+
+    # Handle response
+    print(res.repo_pullrequest)
 
 ```
 
@@ -1323,9 +1352,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.repo_repository is not None:
-        # handle response
-        pass
+    assert res.repo_repository is not None
+
+    # Handle response
+    print(res.repo_repository)
 
 ```
 

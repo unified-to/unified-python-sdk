@@ -32,9 +32,10 @@ with UnifiedTo(
 
     res = unified_to.webhook.create_unified_webhook(request={})
 
-    if res.webhook is not None:
-        # handle response
-        pass
+    assert res.webhook is not None
+
+    # Handle response
+    print(res.webhook)
 
 ```
 
@@ -75,9 +76,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.webhook is not None:
-        # handle response
-        pass
+    assert res.webhook is not None
+
+    # Handle response
+    print(res.webhook)
 
 ```
 
@@ -116,9 +118,10 @@ with UnifiedTo(
 
     res = unified_to.webhook.list_unified_webhooks(request={})
 
-    if res.webhooks is not None:
-        # handle response
-        pass
+    assert res.webhooks is not None
+
+    # Handle response
+    print(res.webhooks)
 
 ```
 
@@ -159,9 +162,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.webhook is not None:
-        # handle response
-        pass
+    assert res.webhook is not None
+
+    # Handle response
+    print(res.webhook)
 
 ```
 
@@ -202,9 +206,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res is not None:
-        # handle response
-        pass
+    assert res is not None
+
+    # Handle response
+    print(res)
 
 ```
 
@@ -245,9 +250,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res is not None:
-        # handle response
-        pass
+    assert res is not None
+
+    # Handle response
+    print(res)
 
 ```
 
@@ -288,9 +294,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.webhook is not None:
-        # handle response
-        pass
+    assert res.webhook is not None
+
+    # Handle response
+    print(res.webhook)
 
 ```
 
@@ -331,9 +338,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res is not None:
-        # handle response
-        pass
+    assert res is not None
+
+    # Handle response
+    print(res)
 
 ```
 

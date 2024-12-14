@@ -44,9 +44,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.ticketing_customer is not None:
-        # handle response
-        pass
+    assert res.ticketing_customer is not None
+
+    # Handle response
+    print(res.ticketing_customer)
 
 ```
 
@@ -87,9 +88,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.ticketing_note is not None:
-        # handle response
-        pass
+    assert res.ticketing_note is not None
+
+    # Handle response
+    print(res.ticketing_note)
 
 ```
 
@@ -130,9 +132,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.ticketing_ticket is not None:
-        # handle response
-        pass
+    assert res.ticketing_ticket is not None
+
+    # Handle response
+    print(res.ticketing_ticket)
 
 ```
 
@@ -174,9 +177,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.ticketing_customer is not None:
-        # handle response
-        pass
+    assert res.ticketing_customer is not None
+
+    # Handle response
+    print(res.ticketing_customer)
 
 ```
 
@@ -218,9 +222,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.ticketing_note is not None:
-        # handle response
-        pass
+    assert res.ticketing_note is not None
+
+    # Handle response
+    print(res.ticketing_note)
 
 ```
 
@@ -262,9 +267,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.ticketing_ticket is not None:
-        # handle response
-        pass
+    assert res.ticketing_ticket is not None
+
+    # Handle response
+    print(res.ticketing_ticket)
 
 ```
 
@@ -305,9 +311,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.ticketing_customers is not None:
-        # handle response
-        pass
+    assert res.ticketing_customers is not None
+
+    # Handle response
+    print(res.ticketing_customers)
 
 ```
 
@@ -348,9 +355,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.ticketing_notes is not None:
-        # handle response
-        pass
+    assert res.ticketing_notes is not None
+
+    # Handle response
+    print(res.ticketing_notes)
 
 ```
 
@@ -391,9 +399,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.ticketing_tickets is not None:
-        # handle response
-        pass
+    assert res.ticketing_tickets is not None
+
+    # Handle response
+    print(res.ticketing_tickets)
 
 ```
 
@@ -435,9 +444,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.ticketing_customer is not None:
-        # handle response
-        pass
+    assert res.ticketing_customer is not None
+
+    # Handle response
+    print(res.ticketing_customer)
 
 ```
 
@@ -479,9 +489,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.ticketing_note is not None:
-        # handle response
-        pass
+    assert res.ticketing_note is not None
+
+    # Handle response
+    print(res.ticketing_note)
 
 ```
 
@@ -523,9 +534,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.ticketing_ticket is not None:
-        # handle response
-        pass
+    assert res.ticketing_ticket is not None
+
+    # Handle response
+    print(res.ticketing_ticket)
 
 ```
 
@@ -567,9 +579,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res is not None:
-        # handle response
-        pass
+    assert res is not None
+
+    # Handle response
+    print(res)
 
 ```
 
@@ -611,9 +624,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res is not None:
-        # handle response
-        pass
+    assert res is not None
+
+    # Handle response
+    print(res)
 
 ```
 
@@ -655,9 +669,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res is not None:
-        # handle response
-        pass
+    assert res is not None
+
+    # Handle response
+    print(res)
 
 ```
 
@@ -699,9 +714,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.ticketing_customer is not None:
-        # handle response
-        pass
+    assert res.ticketing_customer is not None
+
+    # Handle response
+    print(res.ticketing_customer)
 
 ```
 
@@ -743,9 +759,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.ticketing_note is not None:
-        # handle response
-        pass
+    assert res.ticketing_note is not None
+
+    # Handle response
+    print(res.ticketing_note)
 
 ```
 
@@ -787,9 +804,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.ticketing_ticket is not None:
-        # handle response
-        pass
+    assert res.ticketing_ticket is not None
+
+    # Handle response
+    print(res.ticketing_ticket)
 
 ```
 

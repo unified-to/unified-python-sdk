@@ -38,9 +38,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.commerce_location is not None:
-        # handle response
-        pass
+    assert res.commerce_location is not None
+
+    # Handle response
+    print(res.commerce_location)
 
 ```
 
@@ -81,9 +82,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.hris_location is not None:
-        # handle response
-        pass
+    assert res.hris_location is not None
+
+    # Handle response
+    print(res.hris_location)
 
 ```
 
@@ -125,9 +127,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.commerce_location is not None:
-        # handle response
-        pass
+    assert res.commerce_location is not None
+
+    # Handle response
+    print(res.commerce_location)
 
 ```
 
@@ -169,9 +172,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.hris_location is not None:
-        # handle response
-        pass
+    assert res.hris_location is not None
+
+    # Handle response
+    print(res.hris_location)
 
 ```
 
@@ -212,9 +216,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.commerce_locations is not None:
-        # handle response
-        pass
+    assert res.commerce_locations is not None
+
+    # Handle response
+    print(res.commerce_locations)
 
 ```
 
@@ -255,9 +260,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.hris_locations is not None:
-        # handle response
-        pass
+    assert res.hris_locations is not None
+
+    # Handle response
+    print(res.hris_locations)
 
 ```
 
@@ -299,9 +305,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.commerce_location is not None:
-        # handle response
-        pass
+    assert res.commerce_location is not None
+
+    # Handle response
+    print(res.commerce_location)
 
 ```
 
@@ -343,9 +350,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.hris_location is not None:
-        # handle response
-        pass
+    assert res.hris_location is not None
+
+    # Handle response
+    print(res.hris_location)
 
 ```
 
@@ -387,9 +395,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res is not None:
-        # handle response
-        pass
+    assert res is not None
+
+    # Handle response
+    print(res)
 
 ```
 
@@ -431,9 +440,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res is not None:
-        # handle response
-        pass
+    assert res is not None
+
+    # Handle response
+    print(res)
 
 ```
 
@@ -475,9 +485,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.commerce_location is not None:
-        # handle response
-        pass
+    assert res.commerce_location is not None
+
+    # Handle response
+    print(res.commerce_location)
 
 ```
 
@@ -519,9 +530,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.hris_location is not None:
-        # handle response
-        pass
+    assert res.hris_location is not None
+
+    # Handle response
+    print(res.hris_location)
 
 ```
 

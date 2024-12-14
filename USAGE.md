@@ -14,9 +14,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.accounting_account is not None:
-        # handle response
-        pass
+    assert res.accounting_account is not None
+
+    # Handle response
+    print(res.accounting_account)
 ```
 
 </br>
@@ -39,9 +40,10 @@ async def main():
             "connection_id": "<value>",
         })
 
-        if res.accounting_account is not None:
-            # handle response
-            pass
+        assert res.accounting_account is not None
+
+        # Handle response
+        print(res.accounting_account)
 
 asyncio.run(main())
 ```

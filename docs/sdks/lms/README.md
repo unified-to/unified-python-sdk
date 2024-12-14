@@ -50,9 +50,10 @@ with UnifiedTo(
         "connection_id": "<id>",
     })
 
-    if res.lms_class is not None:
-        # handle response
-        pass
+    assert res.lms_class is not None
+
+    # Handle response
+    print(res.lms_class)
 
 ```
 
@@ -93,9 +94,10 @@ with UnifiedTo(
         "connection_id": "<id>",
     })
 
-    if res.lms_course is not None:
-        # handle response
-        pass
+    assert res.lms_course is not None
+
+    # Handle response
+    print(res.lms_course)
 
 ```
 
@@ -136,9 +138,10 @@ with UnifiedTo(
         "connection_id": "<id>",
     })
 
-    if res.lms_instructor is not None:
-        # handle response
-        pass
+    assert res.lms_instructor is not None
+
+    # Handle response
+    print(res.lms_instructor)
 
 ```
 
@@ -179,9 +182,10 @@ with UnifiedTo(
         "connection_id": "<id>",
     })
 
-    if res.lms_student is not None:
-        # handle response
-        pass
+    assert res.lms_student is not None
+
+    # Handle response
+    print(res.lms_student)
 
 ```
 
@@ -223,9 +227,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.lms_class is not None:
-        # handle response
-        pass
+    assert res.lms_class is not None
+
+    # Handle response
+    print(res.lms_class)
 
 ```
 
@@ -267,9 +272,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.lms_course is not None:
-        # handle response
-        pass
+    assert res.lms_course is not None
+
+    # Handle response
+    print(res.lms_course)
 
 ```
 
@@ -311,9 +317,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.lms_instructor is not None:
-        # handle response
-        pass
+    assert res.lms_instructor is not None
+
+    # Handle response
+    print(res.lms_instructor)
 
 ```
 
@@ -355,9 +362,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.lms_student is not None:
-        # handle response
-        pass
+    assert res.lms_student is not None
+
+    # Handle response
+    print(res.lms_student)
 
 ```
 
@@ -398,9 +406,10 @@ with UnifiedTo(
         "connection_id": "<id>",
     })
 
-    if res.lms_classes is not None:
-        # handle response
-        pass
+    assert res.lms_classes is not None
+
+    # Handle response
+    print(res.lms_classes)
 
 ```
 
@@ -441,9 +450,10 @@ with UnifiedTo(
         "connection_id": "<id>",
     })
 
-    if res.lms_courses is not None:
-        # handle response
-        pass
+    assert res.lms_courses is not None
+
+    # Handle response
+    print(res.lms_courses)
 
 ```
 
@@ -484,9 +494,10 @@ with UnifiedTo(
         "connection_id": "<id>",
     })
 
-    if res.lms_instructors is not None:
-        # handle response
-        pass
+    assert res.lms_instructors is not None
+
+    # Handle response
+    print(res.lms_instructors)
 
 ```
 
@@ -527,9 +538,10 @@ with UnifiedTo(
         "connection_id": "<id>",
     })
 
-    if res.lms_students is not None:
-        # handle response
-        pass
+    assert res.lms_students is not None
+
+    # Handle response
+    print(res.lms_students)
 
 ```
 
@@ -571,9 +583,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.lms_class is not None:
-        # handle response
-        pass
+    assert res.lms_class is not None
+
+    # Handle response
+    print(res.lms_class)
 
 ```
 
@@ -615,9 +628,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.lms_course is not None:
-        # handle response
-        pass
+    assert res.lms_course is not None
+
+    # Handle response
+    print(res.lms_course)
 
 ```
 
@@ -659,9 +673,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.lms_instructor is not None:
-        # handle response
-        pass
+    assert res.lms_instructor is not None
+
+    # Handle response
+    print(res.lms_instructor)
 
 ```
 
@@ -703,9 +718,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.lms_student is not None:
-        # handle response
-        pass
+    assert res.lms_student is not None
+
+    # Handle response
+    print(res.lms_student)
 
 ```
 
@@ -747,9 +763,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res is not None:
-        # handle response
-        pass
+    assert res is not None
+
+    # Handle response
+    print(res)
 
 ```
 
@@ -791,9 +808,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res is not None:
-        # handle response
-        pass
+    assert res is not None
+
+    # Handle response
+    print(res)
 
 ```
 
@@ -835,9 +853,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res is not None:
-        # handle response
-        pass
+    assert res is not None
+
+    # Handle response
+    print(res)
 
 ```
 
@@ -879,9 +898,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res is not None:
-        # handle response
-        pass
+    assert res is not None
+
+    # Handle response
+    print(res)
 
 ```
 
@@ -923,9 +943,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.lms_class is not None:
-        # handle response
-        pass
+    assert res.lms_class is not None
+
+    # Handle response
+    print(res.lms_class)
 
 ```
 
@@ -967,9 +988,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.lms_course is not None:
-        # handle response
-        pass
+    assert res.lms_course is not None
+
+    # Handle response
+    print(res.lms_course)
 
 ```
 
@@ -1011,9 +1033,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.lms_instructor is not None:
-        # handle response
-        pass
+    assert res.lms_instructor is not None
+
+    # Handle response
+    print(res.lms_instructor)
 
 ```
 
@@ -1055,9 +1078,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.lms_student is not None:
-        # handle response
-        pass
+    assert res.lms_student is not None
+
+    # Handle response
+    print(res.lms_student)
 
 ```
 

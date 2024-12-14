@@ -32,9 +32,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.ats_scorecard is not None:
-        # handle response
-        pass
+    assert res.ats_scorecard is not None
+
+    # Handle response
+    print(res.ats_scorecard)
 
 ```
 
@@ -76,9 +77,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.ats_scorecard is not None:
-        # handle response
-        pass
+    assert res.ats_scorecard is not None
+
+    # Handle response
+    print(res.ats_scorecard)
 
 ```
 
@@ -119,9 +121,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.ats_scorecards is not None:
-        # handle response
-        pass
+    assert res.ats_scorecards is not None
+
+    # Handle response
+    print(res.ats_scorecards)
 
 ```
 
@@ -163,9 +166,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.ats_scorecard is not None:
-        # handle response
-        pass
+    assert res.ats_scorecard is not None
+
+    # Handle response
+    print(res.ats_scorecard)
 
 ```
 
@@ -207,9 +211,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res is not None:
-        # handle response
-        pass
+    assert res is not None
+
+    # Handle response
+    print(res)
 
 ```
 
@@ -251,9 +256,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.ats_scorecard is not None:
-        # handle response
-        pass
+    assert res.ats_scorecard is not None
+
+    # Handle response
+    print(res.ats_scorecard)
 
 ```
 

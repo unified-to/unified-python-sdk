@@ -32,9 +32,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.commerce_inventory is not None:
-        # handle response
-        pass
+    assert res.commerce_inventory is not None
+
+    # Handle response
+    print(res.commerce_inventory)
 
 ```
 
@@ -76,9 +77,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.commerce_inventory is not None:
-        # handle response
-        pass
+    assert res.commerce_inventory is not None
+
+    # Handle response
+    print(res.commerce_inventory)
 
 ```
 
@@ -119,9 +121,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.commerce_inventories is not None:
-        # handle response
-        pass
+    assert res.commerce_inventories is not None
+
+    # Handle response
+    print(res.commerce_inventories)
 
 ```
 
@@ -163,9 +166,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.commerce_inventory is not None:
-        # handle response
-        pass
+    assert res.commerce_inventory is not None
+
+    # Handle response
+    print(res.commerce_inventory)
 
 ```
 
@@ -207,9 +211,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res is not None:
-        # handle response
-        pass
+    assert res is not None
+
+    # Handle response
+    print(res)
 
 ```
 
@@ -251,9 +256,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.commerce_inventory is not None:
-        # handle response
-        pass
+    assert res.commerce_inventory is not None
+
+    # Handle response
+    print(res.commerce_inventory)
 
 ```
 

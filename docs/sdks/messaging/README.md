@@ -34,9 +34,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.messaging_message is not None:
-        # handle response
-        pass
+    assert res.messaging_message is not None
+
+    # Handle response
+    print(res.messaging_message)
 
 ```
 
@@ -78,9 +79,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.messaging_channel is not None:
-        # handle response
-        pass
+    assert res.messaging_channel is not None
+
+    # Handle response
+    print(res.messaging_channel)
 
 ```
 
@@ -122,9 +124,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.messaging_message is not None:
-        # handle response
-        pass
+    assert res.messaging_message is not None
+
+    # Handle response
+    print(res.messaging_message)
 
 ```
 
@@ -165,9 +168,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.messaging_channels is not None:
-        # handle response
-        pass
+    assert res.messaging_channels is not None
+
+    # Handle response
+    print(res.messaging_channels)
 
 ```
 
@@ -208,9 +212,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.messaging_messages is not None:
-        # handle response
-        pass
+    assert res.messaging_messages is not None
+
+    # Handle response
+    print(res.messaging_messages)
 
 ```
 
@@ -252,9 +257,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.messaging_message is not None:
-        # handle response
-        pass
+    assert res.messaging_message is not None
+
+    # Handle response
+    print(res.messaging_message)
 
 ```
 
@@ -296,9 +302,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res is not None:
-        # handle response
-        pass
+    assert res is not None
+
+    # Handle response
+    print(res)
 
 ```
 
@@ -340,9 +347,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.messaging_message is not None:
-        # handle response
-        pass
+    assert res.messaging_message is not None
+
+    # Handle response
+    print(res.messaging_message)
 
 ```
 

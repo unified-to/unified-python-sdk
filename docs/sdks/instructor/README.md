@@ -32,9 +32,10 @@ with UnifiedTo(
         "connection_id": "<id>",
     })
 
-    if res.lms_instructor is not None:
-        # handle response
-        pass
+    assert res.lms_instructor is not None
+
+    # Handle response
+    print(res.lms_instructor)
 
 ```
 
@@ -76,9 +77,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.lms_instructor is not None:
-        # handle response
-        pass
+    assert res.lms_instructor is not None
+
+    # Handle response
+    print(res.lms_instructor)
 
 ```
 
@@ -119,9 +121,10 @@ with UnifiedTo(
         "connection_id": "<id>",
     })
 
-    if res.lms_instructors is not None:
-        # handle response
-        pass
+    assert res.lms_instructors is not None
+
+    # Handle response
+    print(res.lms_instructors)
 
 ```
 
@@ -163,9 +166,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.lms_instructor is not None:
-        # handle response
-        pass
+    assert res.lms_instructor is not None
+
+    # Handle response
+    print(res.lms_instructor)
 
 ```
 
@@ -207,9 +211,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res is not None:
-        # handle response
-        pass
+    assert res is not None
+
+    # Handle response
+    print(res)
 
 ```
 
@@ -251,9 +256,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.lms_instructor is not None:
-        # handle response
-        pass
+    assert res.lms_instructor is not None
+
+    # Handle response
+    print(res.lms_instructor)
 
 ```
 

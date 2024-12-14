@@ -29,9 +29,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.payment_payout is not None:
-        # handle response
-        pass
+    assert res.payment_payout is not None
+
+    # Handle response
+    print(res.payment_payout)
 
 ```
 
@@ -72,9 +73,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.payment_payouts is not None:
-        # handle response
-        pass
+    assert res.payment_payouts is not None
+
+    # Handle response
+    print(res.payment_payouts)
 
 ```
 

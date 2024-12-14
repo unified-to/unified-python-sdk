@@ -50,9 +50,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.commerce_collection is not None:
-        # handle response
-        pass
+    assert res.commerce_collection is not None
+
+    # Handle response
+    print(res.commerce_collection)
 
 ```
 
@@ -93,9 +94,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.commerce_inventory is not None:
-        # handle response
-        pass
+    assert res.commerce_inventory is not None
+
+    # Handle response
+    print(res.commerce_inventory)
 
 ```
 
@@ -136,9 +138,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.commerce_item is not None:
-        # handle response
-        pass
+    assert res.commerce_item is not None
+
+    # Handle response
+    print(res.commerce_item)
 
 ```
 
@@ -179,9 +182,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.commerce_location is not None:
-        # handle response
-        pass
+    assert res.commerce_location is not None
+
+    # Handle response
+    print(res.commerce_location)
 
 ```
 
@@ -223,9 +227,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.commerce_collection is not None:
-        # handle response
-        pass
+    assert res.commerce_collection is not None
+
+    # Handle response
+    print(res.commerce_collection)
 
 ```
 
@@ -267,9 +272,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.commerce_inventory is not None:
-        # handle response
-        pass
+    assert res.commerce_inventory is not None
+
+    # Handle response
+    print(res.commerce_inventory)
 
 ```
 
@@ -311,9 +317,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.commerce_item is not None:
-        # handle response
-        pass
+    assert res.commerce_item is not None
+
+    # Handle response
+    print(res.commerce_item)
 
 ```
 
@@ -355,9 +362,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.commerce_location is not None:
-        # handle response
-        pass
+    assert res.commerce_location is not None
+
+    # Handle response
+    print(res.commerce_location)
 
 ```
 
@@ -398,9 +406,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.commerce_collections is not None:
-        # handle response
-        pass
+    assert res.commerce_collections is not None
+
+    # Handle response
+    print(res.commerce_collections)
 
 ```
 
@@ -441,9 +450,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.commerce_inventories is not None:
-        # handle response
-        pass
+    assert res.commerce_inventories is not None
+
+    # Handle response
+    print(res.commerce_inventories)
 
 ```
 
@@ -484,9 +494,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.commerce_items is not None:
-        # handle response
-        pass
+    assert res.commerce_items is not None
+
+    # Handle response
+    print(res.commerce_items)
 
 ```
 
@@ -527,9 +538,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.commerce_locations is not None:
-        # handle response
-        pass
+    assert res.commerce_locations is not None
+
+    # Handle response
+    print(res.commerce_locations)
 
 ```
 
@@ -571,9 +583,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.commerce_collection is not None:
-        # handle response
-        pass
+    assert res.commerce_collection is not None
+
+    # Handle response
+    print(res.commerce_collection)
 
 ```
 
@@ -615,9 +628,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.commerce_inventory is not None:
-        # handle response
-        pass
+    assert res.commerce_inventory is not None
+
+    # Handle response
+    print(res.commerce_inventory)
 
 ```
 
@@ -659,9 +673,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.commerce_item is not None:
-        # handle response
-        pass
+    assert res.commerce_item is not None
+
+    # Handle response
+    print(res.commerce_item)
 
 ```
 
@@ -703,9 +718,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.commerce_location is not None:
-        # handle response
-        pass
+    assert res.commerce_location is not None
+
+    # Handle response
+    print(res.commerce_location)
 
 ```
 
@@ -747,9 +763,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res is not None:
-        # handle response
-        pass
+    assert res is not None
+
+    # Handle response
+    print(res)
 
 ```
 
@@ -791,9 +808,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res is not None:
-        # handle response
-        pass
+    assert res is not None
+
+    # Handle response
+    print(res)
 
 ```
 
@@ -835,9 +853,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res is not None:
-        # handle response
-        pass
+    assert res is not None
+
+    # Handle response
+    print(res)
 
 ```
 
@@ -879,9 +898,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res is not None:
-        # handle response
-        pass
+    assert res is not None
+
+    # Handle response
+    print(res)
 
 ```
 
@@ -923,9 +943,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.commerce_collection is not None:
-        # handle response
-        pass
+    assert res.commerce_collection is not None
+
+    # Handle response
+    print(res.commerce_collection)
 
 ```
 
@@ -967,9 +988,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.commerce_inventory is not None:
-        # handle response
-        pass
+    assert res.commerce_inventory is not None
+
+    # Handle response
+    print(res.commerce_inventory)
 
 ```
 
@@ -1011,9 +1033,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.commerce_item is not None:
-        # handle response
-        pass
+    assert res.commerce_item is not None
+
+    # Handle response
+    print(res.commerce_item)
 
 ```
 
@@ -1055,9 +1078,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.commerce_location is not None:
-        # handle response
-        pass
+    assert res.commerce_location is not None
+
+    # Handle response
+    print(res.commerce_location)
 
 ```
 

@@ -33,9 +33,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.uc_contact is not None:
-        # handle response
-        pass
+    assert res.uc_contact is not None
+
+    # Handle response
+    print(res.uc_contact)
 
 ```
 
@@ -77,9 +78,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.uc_contact is not None:
-        # handle response
-        pass
+    assert res.uc_contact is not None
+
+    # Handle response
+    print(res.uc_contact)
 
 ```
 
@@ -120,9 +122,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.uc_calls is not None:
-        # handle response
-        pass
+    assert res.uc_calls is not None
+
+    # Handle response
+    print(res.uc_calls)
 
 ```
 
@@ -163,9 +166,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.uc_contacts is not None:
-        # handle response
-        pass
+    assert res.uc_contacts is not None
+
+    # Handle response
+    print(res.uc_contacts)
 
 ```
 
@@ -207,9 +211,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.uc_contact is not None:
-        # handle response
-        pass
+    assert res.uc_contact is not None
+
+    # Handle response
+    print(res.uc_contact)
 
 ```
 
@@ -251,9 +256,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res is not None:
-        # handle response
-        pass
+    assert res is not None
+
+    # Handle response
+    print(res)
 
 ```
 
@@ -295,9 +301,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.uc_contact is not None:
-        # handle response
-        pass
+    assert res.uc_contact is not None
+
+    # Handle response
+    print(res.uc_contact)
 
 ```
 

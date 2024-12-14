@@ -27,9 +27,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.enrich_person is not None:
-        # handle response
-        pass
+    assert res.enrich_person is not None
+
+    # Handle response
+    print(res.enrich_person)
 
 ```
 

@@ -70,9 +70,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.accounting_account is not None:
-        # handle response
-        pass
+    assert res.accounting_account is not None
+
+    # Handle response
+    print(res.accounting_account)
 
 ```
 
@@ -113,9 +114,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.accounting_contact is not None:
-        # handle response
-        pass
+    assert res.accounting_contact is not None
+
+    # Handle response
+    print(res.accounting_contact)
 
 ```
 
@@ -156,9 +158,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.accounting_invoice is not None:
-        # handle response
-        pass
+    assert res.accounting_invoice is not None
+
+    # Handle response
+    print(res.accounting_invoice)
 
 ```
 
@@ -199,9 +202,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.accounting_journal is not None:
-        # handle response
-        pass
+    assert res.accounting_journal is not None
+
+    # Handle response
+    print(res.accounting_journal)
 
 ```
 
@@ -242,9 +246,10 @@ with UnifiedTo(
         "connection_id": "<id>",
     })
 
-    if res.accounting_order is not None:
-        # handle response
-        pass
+    assert res.accounting_order is not None
+
+    # Handle response
+    print(res.accounting_order)
 
 ```
 
@@ -285,9 +290,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.accounting_taxrate is not None:
-        # handle response
-        pass
+    assert res.accounting_taxrate is not None
+
+    # Handle response
+    print(res.accounting_taxrate)
 
 ```
 
@@ -328,9 +334,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.accounting_transaction is not None:
-        # handle response
-        pass
+    assert res.accounting_transaction is not None
+
+    # Handle response
+    print(res.accounting_transaction)
 
 ```
 
@@ -372,9 +379,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.accounting_account is not None:
-        # handle response
-        pass
+    assert res.accounting_account is not None
+
+    # Handle response
+    print(res.accounting_account)
 
 ```
 
@@ -416,9 +424,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.accounting_contact is not None:
-        # handle response
-        pass
+    assert res.accounting_contact is not None
+
+    # Handle response
+    print(res.accounting_contact)
 
 ```
 
@@ -460,9 +469,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.accounting_invoice is not None:
-        # handle response
-        pass
+    assert res.accounting_invoice is not None
+
+    # Handle response
+    print(res.accounting_invoice)
 
 ```
 
@@ -504,9 +514,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.accounting_journal is not None:
-        # handle response
-        pass
+    assert res.accounting_journal is not None
+
+    # Handle response
+    print(res.accounting_journal)
 
 ```
 
@@ -548,9 +559,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.accounting_order is not None:
-        # handle response
-        pass
+    assert res.accounting_order is not None
+
+    # Handle response
+    print(res.accounting_order)
 
 ```
 
@@ -592,9 +604,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.accounting_organization is not None:
-        # handle response
-        pass
+    assert res.accounting_organization is not None
+
+    # Handle response
+    print(res.accounting_organization)
 
 ```
 
@@ -636,9 +649,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.accounting_taxrate is not None:
-        # handle response
-        pass
+    assert res.accounting_taxrate is not None
+
+    # Handle response
+    print(res.accounting_taxrate)
 
 ```
 
@@ -680,9 +694,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.accounting_transaction is not None:
-        # handle response
-        pass
+    assert res.accounting_transaction is not None
+
+    # Handle response
+    print(res.accounting_transaction)
 
 ```
 
@@ -723,9 +738,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.accounting_accounts is not None:
-        # handle response
-        pass
+    assert res.accounting_accounts is not None
+
+    # Handle response
+    print(res.accounting_accounts)
 
 ```
 
@@ -766,9 +782,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.accounting_contacts is not None:
-        # handle response
-        pass
+    assert res.accounting_contacts is not None
+
+    # Handle response
+    print(res.accounting_contacts)
 
 ```
 
@@ -809,9 +826,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.accounting_invoices is not None:
-        # handle response
-        pass
+    assert res.accounting_invoices is not None
+
+    # Handle response
+    print(res.accounting_invoices)
 
 ```
 
@@ -852,9 +870,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.accounting_journals is not None:
-        # handle response
-        pass
+    assert res.accounting_journals is not None
+
+    # Handle response
+    print(res.accounting_journals)
 
 ```
 
@@ -895,9 +914,10 @@ with UnifiedTo(
         "connection_id": "<id>",
     })
 
-    if res.accounting_orders is not None:
-        # handle response
-        pass
+    assert res.accounting_orders is not None
+
+    # Handle response
+    print(res.accounting_orders)
 
 ```
 
@@ -938,9 +958,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.accounting_organizations is not None:
-        # handle response
-        pass
+    assert res.accounting_organizations is not None
+
+    # Handle response
+    print(res.accounting_organizations)
 
 ```
 
@@ -981,9 +1002,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.accounting_taxrates is not None:
-        # handle response
-        pass
+    assert res.accounting_taxrates is not None
+
+    # Handle response
+    print(res.accounting_taxrates)
 
 ```
 
@@ -1024,9 +1046,10 @@ with UnifiedTo(
         "connection_id": "<value>",
     })
 
-    if res.accounting_transactions is not None:
-        # handle response
-        pass
+    assert res.accounting_transactions is not None
+
+    # Handle response
+    print(res.accounting_transactions)
 
 ```
 
@@ -1068,9 +1091,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.accounting_account is not None:
-        # handle response
-        pass
+    assert res.accounting_account is not None
+
+    # Handle response
+    print(res.accounting_account)
 
 ```
 
@@ -1112,9 +1136,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.accounting_contact is not None:
-        # handle response
-        pass
+    assert res.accounting_contact is not None
+
+    # Handle response
+    print(res.accounting_contact)
 
 ```
 
@@ -1156,9 +1181,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.accounting_invoice is not None:
-        # handle response
-        pass
+    assert res.accounting_invoice is not None
+
+    # Handle response
+    print(res.accounting_invoice)
 
 ```
 
@@ -1200,9 +1226,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.accounting_journal is not None:
-        # handle response
-        pass
+    assert res.accounting_journal is not None
+
+    # Handle response
+    print(res.accounting_journal)
 
 ```
 
@@ -1244,9 +1271,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.accounting_order is not None:
-        # handle response
-        pass
+    assert res.accounting_order is not None
+
+    # Handle response
+    print(res.accounting_order)
 
 ```
 
@@ -1288,9 +1316,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.accounting_taxrate is not None:
-        # handle response
-        pass
+    assert res.accounting_taxrate is not None
+
+    # Handle response
+    print(res.accounting_taxrate)
 
 ```
 
@@ -1332,9 +1361,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.accounting_transaction is not None:
-        # handle response
-        pass
+    assert res.accounting_transaction is not None
+
+    # Handle response
+    print(res.accounting_transaction)
 
 ```
 
@@ -1376,9 +1406,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res is not None:
-        # handle response
-        pass
+    assert res is not None
+
+    # Handle response
+    print(res)
 
 ```
 
@@ -1420,9 +1451,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res is not None:
-        # handle response
-        pass
+    assert res is not None
+
+    # Handle response
+    print(res)
 
 ```
 
@@ -1464,9 +1496,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res is not None:
-        # handle response
-        pass
+    assert res is not None
+
+    # Handle response
+    print(res)
 
 ```
 
@@ -1508,9 +1541,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res is not None:
-        # handle response
-        pass
+    assert res is not None
+
+    # Handle response
+    print(res)
 
 ```
 
@@ -1552,9 +1586,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res is not None:
-        # handle response
-        pass
+    assert res is not None
+
+    # Handle response
+    print(res)
 
 ```
 
@@ -1596,9 +1631,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res is not None:
-        # handle response
-        pass
+    assert res is not None
+
+    # Handle response
+    print(res)
 
 ```
 
@@ -1640,9 +1676,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res is not None:
-        # handle response
-        pass
+    assert res is not None
+
+    # Handle response
+    print(res)
 
 ```
 
@@ -1684,9 +1721,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.accounting_account is not None:
-        # handle response
-        pass
+    assert res.accounting_account is not None
+
+    # Handle response
+    print(res.accounting_account)
 
 ```
 
@@ -1728,9 +1766,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.accounting_contact is not None:
-        # handle response
-        pass
+    assert res.accounting_contact is not None
+
+    # Handle response
+    print(res.accounting_contact)
 
 ```
 
@@ -1772,9 +1811,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.accounting_invoice is not None:
-        # handle response
-        pass
+    assert res.accounting_invoice is not None
+
+    # Handle response
+    print(res.accounting_invoice)
 
 ```
 
@@ -1816,9 +1856,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.accounting_journal is not None:
-        # handle response
-        pass
+    assert res.accounting_journal is not None
+
+    # Handle response
+    print(res.accounting_journal)
 
 ```
 
@@ -1860,9 +1901,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.accounting_order is not None:
-        # handle response
-        pass
+    assert res.accounting_order is not None
+
+    # Handle response
+    print(res.accounting_order)
 
 ```
 
@@ -1904,9 +1946,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.accounting_taxrate is not None:
-        # handle response
-        pass
+    assert res.accounting_taxrate is not None
+
+    # Handle response
+    print(res.accounting_taxrate)
 
 ```
 
@@ -1948,9 +1991,10 @@ with UnifiedTo(
         "id": "<id>",
     })
 
-    if res.accounting_transaction is not None:
-        # handle response
-        pass
+    assert res.accounting_transaction is not None
+
+    # Handle response
+    print(res.accounting_transaction)
 
 ```
 
