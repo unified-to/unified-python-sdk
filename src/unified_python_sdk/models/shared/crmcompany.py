@@ -17,6 +17,8 @@ class CrmCompanyTypedDict(TypedDict):
     r"""A company represents an organization that optionally is associated with a deal and/or contacts"""
 
     address: NotRequired[PropertyCrmCompanyAddressTypedDict]
+    contact_ids: NotRequired[List[str]]
+    r"""An array of contact IDs associated with this company"""
     created_at: NotRequired[datetime]
     deal_ids: NotRequired[List[str]]
     r"""An array of deal IDs associated with this contact"""
@@ -42,6 +44,9 @@ class CrmCompany(BaseModel):
     r"""A company represents an organization that optionally is associated with a deal and/or contacts"""
 
     address: Optional[PropertyCrmCompanyAddress] = None
+
+    contact_ids: Optional[List[str]] = None
+    r"""An array of contact IDs associated with this company"""
 
     created_at: Optional[datetime] = None
 
