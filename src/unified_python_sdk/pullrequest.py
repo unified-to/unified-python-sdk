@@ -41,7 +41,7 @@ class Pullrequest(BaseSDK):
             request = utils.unmarshal(request, operations.CreateRepoPullrequestRequest)
         request = cast(operations.CreateRepoPullrequestRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="POST",
             path="/repo/{connection_id}/pullrequest",
             base_url=base_url,
@@ -139,7 +139,7 @@ class Pullrequest(BaseSDK):
             request = utils.unmarshal(request, operations.CreateRepoPullrequestRequest)
         request = cast(operations.CreateRepoPullrequestRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="POST",
             path="/repo/{connection_id}/pullrequest",
             base_url=base_url,
@@ -237,7 +237,7 @@ class Pullrequest(BaseSDK):
             request = utils.unmarshal(request, operations.GetRepoPullrequestRequest)
         request = cast(operations.GetRepoPullrequestRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/repo/{connection_id}/pullrequest/{id}",
             base_url=base_url,
@@ -328,7 +328,7 @@ class Pullrequest(BaseSDK):
             request = utils.unmarshal(request, operations.GetRepoPullrequestRequest)
         request = cast(operations.GetRepoPullrequestRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/repo/{connection_id}/pullrequest/{id}",
             base_url=base_url,
@@ -419,7 +419,7 @@ class Pullrequest(BaseSDK):
             request = utils.unmarshal(request, operations.ListRepoPullrequestsRequest)
         request = cast(operations.ListRepoPullrequestsRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/repo/{connection_id}/pullrequest",
             base_url=base_url,
@@ -510,7 +510,7 @@ class Pullrequest(BaseSDK):
             request = utils.unmarshal(request, operations.ListRepoPullrequestsRequest)
         request = cast(operations.ListRepoPullrequestsRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/repo/{connection_id}/pullrequest",
             base_url=base_url,
@@ -601,7 +601,7 @@ class Pullrequest(BaseSDK):
             request = utils.unmarshal(request, operations.PatchRepoPullrequestRequest)
         request = cast(operations.PatchRepoPullrequestRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PATCH",
             path="/repo/{connection_id}/pullrequest/{id}",
             base_url=base_url,
@@ -699,7 +699,7 @@ class Pullrequest(BaseSDK):
             request = utils.unmarshal(request, operations.PatchRepoPullrequestRequest)
         request = cast(operations.PatchRepoPullrequestRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PATCH",
             path="/repo/{connection_id}/pullrequest/{id}",
             base_url=base_url,
@@ -797,7 +797,7 @@ class Pullrequest(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveRepoPullrequestRequest)
         request = cast(operations.RemoveRepoPullrequestRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="DELETE",
             path="/repo/{connection_id}/pullrequest/{id}",
             base_url=base_url,
@@ -893,7 +893,7 @@ class Pullrequest(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveRepoPullrequestRequest)
         request = cast(operations.RemoveRepoPullrequestRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="DELETE",
             path="/repo/{connection_id}/pullrequest/{id}",
             base_url=base_url,
@@ -989,7 +989,7 @@ class Pullrequest(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateRepoPullrequestRequest)
         request = cast(operations.UpdateRepoPullrequestRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PUT",
             path="/repo/{connection_id}/pullrequest/{id}",
             base_url=base_url,
@@ -1087,7 +1087,7 @@ class Pullrequest(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateRepoPullrequestRequest)
         request = cast(operations.UpdateRepoPullrequestRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PUT",
             path="/repo/{connection_id}/pullrequest/{id}",
             base_url=base_url,

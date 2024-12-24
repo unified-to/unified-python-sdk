@@ -41,7 +41,7 @@ class ListT(BaseSDK):
             request = utils.unmarshal(request, operations.CreateMartechListRequest)
         request = cast(operations.CreateMartechListRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="POST",
             path="/martech/{connection_id}/list",
             base_url=base_url,
@@ -139,7 +139,7 @@ class ListT(BaseSDK):
             request = utils.unmarshal(request, operations.CreateMartechListRequest)
         request = cast(operations.CreateMartechListRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="POST",
             path="/martech/{connection_id}/list",
             base_url=base_url,
@@ -236,7 +236,7 @@ class ListT(BaseSDK):
             request = utils.unmarshal(request, operations.GetMartechListRequest)
         request = cast(operations.GetMartechListRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/martech/{connection_id}/list/{id}",
             base_url=base_url,
@@ -326,7 +326,7 @@ class ListT(BaseSDK):
             request = utils.unmarshal(request, operations.GetMartechListRequest)
         request = cast(operations.GetMartechListRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/martech/{connection_id}/list/{id}",
             base_url=base_url,
@@ -417,7 +417,7 @@ class ListT(BaseSDK):
             request = utils.unmarshal(request, operations.ListMartechListsRequest)
         request = cast(operations.ListMartechListsRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/martech/{connection_id}/list",
             base_url=base_url,
@@ -508,7 +508,7 @@ class ListT(BaseSDK):
             request = utils.unmarshal(request, operations.ListMartechListsRequest)
         request = cast(operations.ListMartechListsRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/martech/{connection_id}/list",
             base_url=base_url,
@@ -599,7 +599,7 @@ class ListT(BaseSDK):
             request = utils.unmarshal(request, operations.PatchMartechListRequest)
         request = cast(operations.PatchMartechListRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PATCH",
             path="/martech/{connection_id}/list/{id}",
             base_url=base_url,
@@ -697,7 +697,7 @@ class ListT(BaseSDK):
             request = utils.unmarshal(request, operations.PatchMartechListRequest)
         request = cast(operations.PatchMartechListRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PATCH",
             path="/martech/{connection_id}/list/{id}",
             base_url=base_url,
@@ -795,7 +795,7 @@ class ListT(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveMartechListRequest)
         request = cast(operations.RemoveMartechListRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="DELETE",
             path="/martech/{connection_id}/list/{id}",
             base_url=base_url,
@@ -891,7 +891,7 @@ class ListT(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveMartechListRequest)
         request = cast(operations.RemoveMartechListRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="DELETE",
             path="/martech/{connection_id}/list/{id}",
             base_url=base_url,
@@ -987,7 +987,7 @@ class ListT(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateMartechListRequest)
         request = cast(operations.UpdateMartechListRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PUT",
             path="/martech/{connection_id}/list/{id}",
             base_url=base_url,
@@ -1085,7 +1085,7 @@ class ListT(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateMartechListRequest)
         request = cast(operations.UpdateMartechListRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PUT",
             path="/martech/{connection_id}/list/{id}",
             base_url=base_url,

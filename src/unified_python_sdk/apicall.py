@@ -41,7 +41,7 @@ class Apicall(BaseSDK):
             request = utils.unmarshal(request, operations.GetUnifiedApicallRequest)
         request = cast(operations.GetUnifiedApicallRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/unified/apicall/{id}",
             base_url=base_url,
@@ -130,7 +130,7 @@ class Apicall(BaseSDK):
             request = utils.unmarshal(request, operations.GetUnifiedApicallRequest)
         request = cast(operations.GetUnifiedApicallRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/unified/apicall/{id}",
             base_url=base_url,
@@ -219,7 +219,7 @@ class Apicall(BaseSDK):
             request = utils.unmarshal(request, operations.ListUnifiedApicallsRequest)
         request = cast(operations.ListUnifiedApicallsRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/unified/apicall",
             base_url=base_url,
@@ -310,7 +310,7 @@ class Apicall(BaseSDK):
             request = utils.unmarshal(request, operations.ListUnifiedApicallsRequest)
         request = cast(operations.ListUnifiedApicallsRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/unified/apicall",
             base_url=base_url,

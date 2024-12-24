@@ -40,7 +40,7 @@ class Lms(BaseSDK):
             request = utils.unmarshal(request, operations.CreateLmsClassRequest)
         request = cast(operations.CreateLmsClassRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="POST",
             path="/lms/{connection_id}/class",
             base_url=base_url,
@@ -133,7 +133,7 @@ class Lms(BaseSDK):
             request = utils.unmarshal(request, operations.CreateLmsClassRequest)
         request = cast(operations.CreateLmsClassRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="POST",
             path="/lms/{connection_id}/class",
             base_url=base_url,
@@ -227,7 +227,7 @@ class Lms(BaseSDK):
             request = utils.unmarshal(request, operations.CreateLmsCourseRequest)
         request = cast(operations.CreateLmsCourseRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="POST",
             path="/lms/{connection_id}/course",
             base_url=base_url,
@@ -321,7 +321,7 @@ class Lms(BaseSDK):
             request = utils.unmarshal(request, operations.CreateLmsCourseRequest)
         request = cast(operations.CreateLmsCourseRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="POST",
             path="/lms/{connection_id}/course",
             base_url=base_url,
@@ -415,7 +415,7 @@ class Lms(BaseSDK):
             request = utils.unmarshal(request, operations.CreateLmsInstructorRequest)
         request = cast(operations.CreateLmsInstructorRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="POST",
             path="/lms/{connection_id}/instructor",
             base_url=base_url,
@@ -513,7 +513,7 @@ class Lms(BaseSDK):
             request = utils.unmarshal(request, operations.CreateLmsInstructorRequest)
         request = cast(operations.CreateLmsInstructorRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="POST",
             path="/lms/{connection_id}/instructor",
             base_url=base_url,
@@ -611,7 +611,7 @@ class Lms(BaseSDK):
             request = utils.unmarshal(request, operations.CreateLmsStudentRequest)
         request = cast(operations.CreateLmsStudentRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="POST",
             path="/lms/{connection_id}/student",
             base_url=base_url,
@@ -705,7 +705,7 @@ class Lms(BaseSDK):
             request = utils.unmarshal(request, operations.CreateLmsStudentRequest)
         request = cast(operations.CreateLmsStudentRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="POST",
             path="/lms/{connection_id}/student",
             base_url=base_url,
@@ -798,7 +798,7 @@ class Lms(BaseSDK):
             request = utils.unmarshal(request, operations.GetLmsClassRequest)
         request = cast(operations.GetLmsClassRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/lms/{connection_id}/class/{id}",
             base_url=base_url,
@@ -888,7 +888,7 @@ class Lms(BaseSDK):
             request = utils.unmarshal(request, operations.GetLmsClassRequest)
         request = cast(operations.GetLmsClassRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/lms/{connection_id}/class/{id}",
             base_url=base_url,
@@ -978,7 +978,7 @@ class Lms(BaseSDK):
             request = utils.unmarshal(request, operations.GetLmsCourseRequest)
         request = cast(operations.GetLmsCourseRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/lms/{connection_id}/course/{id}",
             base_url=base_url,
@@ -1068,7 +1068,7 @@ class Lms(BaseSDK):
             request = utils.unmarshal(request, operations.GetLmsCourseRequest)
         request = cast(operations.GetLmsCourseRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/lms/{connection_id}/course/{id}",
             base_url=base_url,
@@ -1159,7 +1159,7 @@ class Lms(BaseSDK):
             request = utils.unmarshal(request, operations.GetLmsInstructorRequest)
         request = cast(operations.GetLmsInstructorRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/lms/{connection_id}/instructor/{id}",
             base_url=base_url,
@@ -1250,7 +1250,7 @@ class Lms(BaseSDK):
             request = utils.unmarshal(request, operations.GetLmsInstructorRequest)
         request = cast(operations.GetLmsInstructorRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/lms/{connection_id}/instructor/{id}",
             base_url=base_url,
@@ -1340,7 +1340,7 @@ class Lms(BaseSDK):
             request = utils.unmarshal(request, operations.GetLmsStudentRequest)
         request = cast(operations.GetLmsStudentRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/lms/{connection_id}/student/{id}",
             base_url=base_url,
@@ -1430,7 +1430,7 @@ class Lms(BaseSDK):
             request = utils.unmarshal(request, operations.GetLmsStudentRequest)
         request = cast(operations.GetLmsStudentRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/lms/{connection_id}/student/{id}",
             base_url=base_url,
@@ -1520,7 +1520,7 @@ class Lms(BaseSDK):
             request = utils.unmarshal(request, operations.ListLmsClassesRequest)
         request = cast(operations.ListLmsClassesRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/lms/{connection_id}/class",
             base_url=base_url,
@@ -1610,7 +1610,7 @@ class Lms(BaseSDK):
             request = utils.unmarshal(request, operations.ListLmsClassesRequest)
         request = cast(operations.ListLmsClassesRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/lms/{connection_id}/class",
             base_url=base_url,
@@ -1700,7 +1700,7 @@ class Lms(BaseSDK):
             request = utils.unmarshal(request, operations.ListLmsCoursesRequest)
         request = cast(operations.ListLmsCoursesRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/lms/{connection_id}/course",
             base_url=base_url,
@@ -1790,7 +1790,7 @@ class Lms(BaseSDK):
             request = utils.unmarshal(request, operations.ListLmsCoursesRequest)
         request = cast(operations.ListLmsCoursesRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/lms/{connection_id}/course",
             base_url=base_url,
@@ -1881,7 +1881,7 @@ class Lms(BaseSDK):
             request = utils.unmarshal(request, operations.ListLmsInstructorsRequest)
         request = cast(operations.ListLmsInstructorsRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/lms/{connection_id}/instructor",
             base_url=base_url,
@@ -1972,7 +1972,7 @@ class Lms(BaseSDK):
             request = utils.unmarshal(request, operations.ListLmsInstructorsRequest)
         request = cast(operations.ListLmsInstructorsRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/lms/{connection_id}/instructor",
             base_url=base_url,
@@ -2063,7 +2063,7 @@ class Lms(BaseSDK):
             request = utils.unmarshal(request, operations.ListLmsStudentsRequest)
         request = cast(operations.ListLmsStudentsRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/lms/{connection_id}/student",
             base_url=base_url,
@@ -2154,7 +2154,7 @@ class Lms(BaseSDK):
             request = utils.unmarshal(request, operations.ListLmsStudentsRequest)
         request = cast(operations.ListLmsStudentsRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/lms/{connection_id}/student",
             base_url=base_url,
@@ -2244,7 +2244,7 @@ class Lms(BaseSDK):
             request = utils.unmarshal(request, operations.PatchLmsClassRequest)
         request = cast(operations.PatchLmsClassRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PATCH",
             path="/lms/{connection_id}/class/{id}",
             base_url=base_url,
@@ -2337,7 +2337,7 @@ class Lms(BaseSDK):
             request = utils.unmarshal(request, operations.PatchLmsClassRequest)
         request = cast(operations.PatchLmsClassRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PATCH",
             path="/lms/{connection_id}/class/{id}",
             base_url=base_url,
@@ -2430,7 +2430,7 @@ class Lms(BaseSDK):
             request = utils.unmarshal(request, operations.PatchLmsCourseRequest)
         request = cast(operations.PatchLmsCourseRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PATCH",
             path="/lms/{connection_id}/course/{id}",
             base_url=base_url,
@@ -2523,7 +2523,7 @@ class Lms(BaseSDK):
             request = utils.unmarshal(request, operations.PatchLmsCourseRequest)
         request = cast(operations.PatchLmsCourseRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PATCH",
             path="/lms/{connection_id}/course/{id}",
             base_url=base_url,
@@ -2617,7 +2617,7 @@ class Lms(BaseSDK):
             request = utils.unmarshal(request, operations.PatchLmsInstructorRequest)
         request = cast(operations.PatchLmsInstructorRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PATCH",
             path="/lms/{connection_id}/instructor/{id}",
             base_url=base_url,
@@ -2715,7 +2715,7 @@ class Lms(BaseSDK):
             request = utils.unmarshal(request, operations.PatchLmsInstructorRequest)
         request = cast(operations.PatchLmsInstructorRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PATCH",
             path="/lms/{connection_id}/instructor/{id}",
             base_url=base_url,
@@ -2813,7 +2813,7 @@ class Lms(BaseSDK):
             request = utils.unmarshal(request, operations.PatchLmsStudentRequest)
         request = cast(operations.PatchLmsStudentRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PATCH",
             path="/lms/{connection_id}/student/{id}",
             base_url=base_url,
@@ -2907,7 +2907,7 @@ class Lms(BaseSDK):
             request = utils.unmarshal(request, operations.PatchLmsStudentRequest)
         request = cast(operations.PatchLmsStudentRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PATCH",
             path="/lms/{connection_id}/student/{id}",
             base_url=base_url,
@@ -3000,7 +3000,7 @@ class Lms(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveLmsClassRequest)
         request = cast(operations.RemoveLmsClassRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="DELETE",
             path="/lms/{connection_id}/class/{id}",
             base_url=base_url,
@@ -3095,7 +3095,7 @@ class Lms(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveLmsClassRequest)
         request = cast(operations.RemoveLmsClassRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="DELETE",
             path="/lms/{connection_id}/class/{id}",
             base_url=base_url,
@@ -3191,7 +3191,7 @@ class Lms(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveLmsCourseRequest)
         request = cast(operations.RemoveLmsCourseRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="DELETE",
             path="/lms/{connection_id}/course/{id}",
             base_url=base_url,
@@ -3287,7 +3287,7 @@ class Lms(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveLmsCourseRequest)
         request = cast(operations.RemoveLmsCourseRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="DELETE",
             path="/lms/{connection_id}/course/{id}",
             base_url=base_url,
@@ -3383,7 +3383,7 @@ class Lms(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveLmsInstructorRequest)
         request = cast(operations.RemoveLmsInstructorRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="DELETE",
             path="/lms/{connection_id}/instructor/{id}",
             base_url=base_url,
@@ -3479,7 +3479,7 @@ class Lms(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveLmsInstructorRequest)
         request = cast(operations.RemoveLmsInstructorRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="DELETE",
             path="/lms/{connection_id}/instructor/{id}",
             base_url=base_url,
@@ -3575,7 +3575,7 @@ class Lms(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveLmsStudentRequest)
         request = cast(operations.RemoveLmsStudentRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="DELETE",
             path="/lms/{connection_id}/student/{id}",
             base_url=base_url,
@@ -3671,7 +3671,7 @@ class Lms(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveLmsStudentRequest)
         request = cast(operations.RemoveLmsStudentRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="DELETE",
             path="/lms/{connection_id}/student/{id}",
             base_url=base_url,
@@ -3766,7 +3766,7 @@ class Lms(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateLmsClassRequest)
         request = cast(operations.UpdateLmsClassRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PUT",
             path="/lms/{connection_id}/class/{id}",
             base_url=base_url,
@@ -3859,7 +3859,7 @@ class Lms(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateLmsClassRequest)
         request = cast(operations.UpdateLmsClassRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PUT",
             path="/lms/{connection_id}/class/{id}",
             base_url=base_url,
@@ -3953,7 +3953,7 @@ class Lms(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateLmsCourseRequest)
         request = cast(operations.UpdateLmsCourseRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PUT",
             path="/lms/{connection_id}/course/{id}",
             base_url=base_url,
@@ -4047,7 +4047,7 @@ class Lms(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateLmsCourseRequest)
         request = cast(operations.UpdateLmsCourseRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PUT",
             path="/lms/{connection_id}/course/{id}",
             base_url=base_url,
@@ -4141,7 +4141,7 @@ class Lms(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateLmsInstructorRequest)
         request = cast(operations.UpdateLmsInstructorRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PUT",
             path="/lms/{connection_id}/instructor/{id}",
             base_url=base_url,
@@ -4239,7 +4239,7 @@ class Lms(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateLmsInstructorRequest)
         request = cast(operations.UpdateLmsInstructorRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PUT",
             path="/lms/{connection_id}/instructor/{id}",
             base_url=base_url,
@@ -4337,7 +4337,7 @@ class Lms(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateLmsStudentRequest)
         request = cast(operations.UpdateLmsStudentRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PUT",
             path="/lms/{connection_id}/student/{id}",
             base_url=base_url,
@@ -4431,7 +4431,7 @@ class Lms(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateLmsStudentRequest)
         request = cast(operations.UpdateLmsStudentRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PUT",
             path="/lms/{connection_id}/student/{id}",
             base_url=base_url,

@@ -41,7 +41,7 @@ class Ticket(BaseSDK):
             request = utils.unmarshal(request, operations.CreateTicketingTicketRequest)
         request = cast(operations.CreateTicketingTicketRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="POST",
             path="/ticketing/{connection_id}/ticket",
             base_url=base_url,
@@ -139,7 +139,7 @@ class Ticket(BaseSDK):
             request = utils.unmarshal(request, operations.CreateTicketingTicketRequest)
         request = cast(operations.CreateTicketingTicketRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="POST",
             path="/ticketing/{connection_id}/ticket",
             base_url=base_url,
@@ -237,7 +237,7 @@ class Ticket(BaseSDK):
             request = utils.unmarshal(request, operations.GetTicketingTicketRequest)
         request = cast(operations.GetTicketingTicketRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/ticketing/{connection_id}/ticket/{id}",
             base_url=base_url,
@@ -328,7 +328,7 @@ class Ticket(BaseSDK):
             request = utils.unmarshal(request, operations.GetTicketingTicketRequest)
         request = cast(operations.GetTicketingTicketRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/ticketing/{connection_id}/ticket/{id}",
             base_url=base_url,
@@ -419,7 +419,7 @@ class Ticket(BaseSDK):
             request = utils.unmarshal(request, operations.ListTicketingTicketsRequest)
         request = cast(operations.ListTicketingTicketsRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/ticketing/{connection_id}/ticket",
             base_url=base_url,
@@ -510,7 +510,7 @@ class Ticket(BaseSDK):
             request = utils.unmarshal(request, operations.ListTicketingTicketsRequest)
         request = cast(operations.ListTicketingTicketsRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/ticketing/{connection_id}/ticket",
             base_url=base_url,
@@ -601,7 +601,7 @@ class Ticket(BaseSDK):
             request = utils.unmarshal(request, operations.PatchTicketingTicketRequest)
         request = cast(operations.PatchTicketingTicketRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PATCH",
             path="/ticketing/{connection_id}/ticket/{id}",
             base_url=base_url,
@@ -699,7 +699,7 @@ class Ticket(BaseSDK):
             request = utils.unmarshal(request, operations.PatchTicketingTicketRequest)
         request = cast(operations.PatchTicketingTicketRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PATCH",
             path="/ticketing/{connection_id}/ticket/{id}",
             base_url=base_url,
@@ -797,7 +797,7 @@ class Ticket(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveTicketingTicketRequest)
         request = cast(operations.RemoveTicketingTicketRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="DELETE",
             path="/ticketing/{connection_id}/ticket/{id}",
             base_url=base_url,
@@ -893,7 +893,7 @@ class Ticket(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveTicketingTicketRequest)
         request = cast(operations.RemoveTicketingTicketRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="DELETE",
             path="/ticketing/{connection_id}/ticket/{id}",
             base_url=base_url,
@@ -989,7 +989,7 @@ class Ticket(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateTicketingTicketRequest)
         request = cast(operations.UpdateTicketingTicketRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PUT",
             path="/ticketing/{connection_id}/ticket/{id}",
             base_url=base_url,
@@ -1087,7 +1087,7 @@ class Ticket(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateTicketingTicketRequest)
         request = cast(operations.UpdateTicketingTicketRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PUT",
             path="/ticketing/{connection_id}/ticket/{id}",
             base_url=base_url,

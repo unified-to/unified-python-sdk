@@ -43,7 +43,7 @@ class Inventory(BaseSDK):
             )
         request = cast(operations.CreateCommerceInventoryRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="POST",
             path="/commerce/{connection_id}/inventory",
             base_url=base_url,
@@ -143,7 +143,7 @@ class Inventory(BaseSDK):
             )
         request = cast(operations.CreateCommerceInventoryRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="POST",
             path="/commerce/{connection_id}/inventory",
             base_url=base_url,
@@ -241,7 +241,7 @@ class Inventory(BaseSDK):
             request = utils.unmarshal(request, operations.GetCommerceInventoryRequest)
         request = cast(operations.GetCommerceInventoryRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/commerce/{connection_id}/inventory/{id}",
             base_url=base_url,
@@ -332,7 +332,7 @@ class Inventory(BaseSDK):
             request = utils.unmarshal(request, operations.GetCommerceInventoryRequest)
         request = cast(operations.GetCommerceInventoryRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/commerce/{connection_id}/inventory/{id}",
             base_url=base_url,
@@ -425,7 +425,7 @@ class Inventory(BaseSDK):
             )
         request = cast(operations.ListCommerceInventoriesRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/commerce/{connection_id}/inventory",
             base_url=base_url,
@@ -518,7 +518,7 @@ class Inventory(BaseSDK):
             )
         request = cast(operations.ListCommerceInventoriesRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/commerce/{connection_id}/inventory",
             base_url=base_url,
@@ -609,7 +609,7 @@ class Inventory(BaseSDK):
             request = utils.unmarshal(request, operations.PatchCommerceInventoryRequest)
         request = cast(operations.PatchCommerceInventoryRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PATCH",
             path="/commerce/{connection_id}/inventory/{id}",
             base_url=base_url,
@@ -707,7 +707,7 @@ class Inventory(BaseSDK):
             request = utils.unmarshal(request, operations.PatchCommerceInventoryRequest)
         request = cast(operations.PatchCommerceInventoryRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PATCH",
             path="/commerce/{connection_id}/inventory/{id}",
             base_url=base_url,
@@ -807,7 +807,7 @@ class Inventory(BaseSDK):
             )
         request = cast(operations.RemoveCommerceInventoryRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="DELETE",
             path="/commerce/{connection_id}/inventory/{id}",
             base_url=base_url,
@@ -905,7 +905,7 @@ class Inventory(BaseSDK):
             )
         request = cast(operations.RemoveCommerceInventoryRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="DELETE",
             path="/commerce/{connection_id}/inventory/{id}",
             base_url=base_url,
@@ -1003,7 +1003,7 @@ class Inventory(BaseSDK):
             )
         request = cast(operations.UpdateCommerceInventoryRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PUT",
             path="/commerce/{connection_id}/inventory/{id}",
             base_url=base_url,
@@ -1103,7 +1103,7 @@ class Inventory(BaseSDK):
             )
         request = cast(operations.UpdateCommerceInventoryRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PUT",
             path="/commerce/{connection_id}/inventory/{id}",
             base_url=base_url,

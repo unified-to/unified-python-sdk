@@ -41,7 +41,7 @@ class Task(BaseSDK):
             request = utils.unmarshal(request, operations.CreateTaskProjectRequest)
         request = cast(operations.CreateTaskProjectRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="POST",
             path="/task/{connection_id}/project",
             base_url=base_url,
@@ -135,7 +135,7 @@ class Task(BaseSDK):
             request = utils.unmarshal(request, operations.CreateTaskProjectRequest)
         request = cast(operations.CreateTaskProjectRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="POST",
             path="/task/{connection_id}/project",
             base_url=base_url,
@@ -228,7 +228,7 @@ class Task(BaseSDK):
             request = utils.unmarshal(request, operations.CreateTaskTaskRequest)
         request = cast(operations.CreateTaskTaskRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="POST",
             path="/task/{connection_id}/task",
             base_url=base_url,
@@ -321,7 +321,7 @@ class Task(BaseSDK):
             request = utils.unmarshal(request, operations.CreateTaskTaskRequest)
         request = cast(operations.CreateTaskTaskRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="POST",
             path="/task/{connection_id}/task",
             base_url=base_url,
@@ -414,7 +414,7 @@ class Task(BaseSDK):
             request = utils.unmarshal(request, operations.GetTaskProjectRequest)
         request = cast(operations.GetTaskProjectRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/task/{connection_id}/project/{id}",
             base_url=base_url,
@@ -504,7 +504,7 @@ class Task(BaseSDK):
             request = utils.unmarshal(request, operations.GetTaskProjectRequest)
         request = cast(operations.GetTaskProjectRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/task/{connection_id}/project/{id}",
             base_url=base_url,
@@ -594,7 +594,7 @@ class Task(BaseSDK):
             request = utils.unmarshal(request, operations.GetTaskTaskRequest)
         request = cast(operations.GetTaskTaskRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/task/{connection_id}/task/{id}",
             base_url=base_url,
@@ -684,7 +684,7 @@ class Task(BaseSDK):
             request = utils.unmarshal(request, operations.GetTaskTaskRequest)
         request = cast(operations.GetTaskTaskRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/task/{connection_id}/task/{id}",
             base_url=base_url,
@@ -775,7 +775,7 @@ class Task(BaseSDK):
             request = utils.unmarshal(request, operations.ListTaskProjectsRequest)
         request = cast(operations.ListTaskProjectsRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/task/{connection_id}/project",
             base_url=base_url,
@@ -866,7 +866,7 @@ class Task(BaseSDK):
             request = utils.unmarshal(request, operations.ListTaskProjectsRequest)
         request = cast(operations.ListTaskProjectsRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/task/{connection_id}/project",
             base_url=base_url,
@@ -956,7 +956,7 @@ class Task(BaseSDK):
             request = utils.unmarshal(request, operations.ListTaskTasksRequest)
         request = cast(operations.ListTaskTasksRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/task/{connection_id}/task",
             base_url=base_url,
@@ -1046,7 +1046,7 @@ class Task(BaseSDK):
             request = utils.unmarshal(request, operations.ListTaskTasksRequest)
         request = cast(operations.ListTaskTasksRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/task/{connection_id}/task",
             base_url=base_url,
@@ -1137,7 +1137,7 @@ class Task(BaseSDK):
             request = utils.unmarshal(request, operations.PatchTaskProjectRequest)
         request = cast(operations.PatchTaskProjectRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PATCH",
             path="/task/{connection_id}/project/{id}",
             base_url=base_url,
@@ -1231,7 +1231,7 @@ class Task(BaseSDK):
             request = utils.unmarshal(request, operations.PatchTaskProjectRequest)
         request = cast(operations.PatchTaskProjectRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PATCH",
             path="/task/{connection_id}/project/{id}",
             base_url=base_url,
@@ -1324,7 +1324,7 @@ class Task(BaseSDK):
             request = utils.unmarshal(request, operations.PatchTaskTaskRequest)
         request = cast(operations.PatchTaskTaskRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PATCH",
             path="/task/{connection_id}/task/{id}",
             base_url=base_url,
@@ -1417,7 +1417,7 @@ class Task(BaseSDK):
             request = utils.unmarshal(request, operations.PatchTaskTaskRequest)
         request = cast(operations.PatchTaskTaskRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PATCH",
             path="/task/{connection_id}/task/{id}",
             base_url=base_url,
@@ -1511,7 +1511,7 @@ class Task(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveTaskProjectRequest)
         request = cast(operations.RemoveTaskProjectRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="DELETE",
             path="/task/{connection_id}/project/{id}",
             base_url=base_url,
@@ -1607,7 +1607,7 @@ class Task(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveTaskProjectRequest)
         request = cast(operations.RemoveTaskProjectRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="DELETE",
             path="/task/{connection_id}/project/{id}",
             base_url=base_url,
@@ -1702,7 +1702,7 @@ class Task(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveTaskTaskRequest)
         request = cast(operations.RemoveTaskTaskRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="DELETE",
             path="/task/{connection_id}/task/{id}",
             base_url=base_url,
@@ -1797,7 +1797,7 @@ class Task(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveTaskTaskRequest)
         request = cast(operations.RemoveTaskTaskRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="DELETE",
             path="/task/{connection_id}/task/{id}",
             base_url=base_url,
@@ -1893,7 +1893,7 @@ class Task(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateTaskProjectRequest)
         request = cast(operations.UpdateTaskProjectRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PUT",
             path="/task/{connection_id}/project/{id}",
             base_url=base_url,
@@ -1987,7 +1987,7 @@ class Task(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateTaskProjectRequest)
         request = cast(operations.UpdateTaskProjectRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PUT",
             path="/task/{connection_id}/project/{id}",
             base_url=base_url,
@@ -2080,7 +2080,7 @@ class Task(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateTaskTaskRequest)
         request = cast(operations.UpdateTaskTaskRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PUT",
             path="/task/{connection_id}/task/{id}",
             base_url=base_url,
@@ -2173,7 +2173,7 @@ class Task(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateTaskTaskRequest)
         request = cast(operations.UpdateTaskTaskRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PUT",
             path="/task/{connection_id}/task/{id}",
             base_url=base_url,

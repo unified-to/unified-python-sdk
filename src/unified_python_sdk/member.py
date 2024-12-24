@@ -41,7 +41,7 @@ class Member(BaseSDK):
             request = utils.unmarshal(request, operations.CreateMartechMemberRequest)
         request = cast(operations.CreateMartechMemberRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="POST",
             path="/martech/{connection_id}/member",
             base_url=base_url,
@@ -139,7 +139,7 @@ class Member(BaseSDK):
             request = utils.unmarshal(request, operations.CreateMartechMemberRequest)
         request = cast(operations.CreateMartechMemberRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="POST",
             path="/martech/{connection_id}/member",
             base_url=base_url,
@@ -237,7 +237,7 @@ class Member(BaseSDK):
             request = utils.unmarshal(request, operations.GetMartechMemberRequest)
         request = cast(operations.GetMartechMemberRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/martech/{connection_id}/member/{id}",
             base_url=base_url,
@@ -328,7 +328,7 @@ class Member(BaseSDK):
             request = utils.unmarshal(request, operations.GetMartechMemberRequest)
         request = cast(operations.GetMartechMemberRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/martech/{connection_id}/member/{id}",
             base_url=base_url,
@@ -419,7 +419,7 @@ class Member(BaseSDK):
             request = utils.unmarshal(request, operations.ListMartechMembersRequest)
         request = cast(operations.ListMartechMembersRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/martech/{connection_id}/member",
             base_url=base_url,
@@ -510,7 +510,7 @@ class Member(BaseSDK):
             request = utils.unmarshal(request, operations.ListMartechMembersRequest)
         request = cast(operations.ListMartechMembersRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/martech/{connection_id}/member",
             base_url=base_url,
@@ -601,7 +601,7 @@ class Member(BaseSDK):
             request = utils.unmarshal(request, operations.PatchMartechMemberRequest)
         request = cast(operations.PatchMartechMemberRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PATCH",
             path="/martech/{connection_id}/member/{id}",
             base_url=base_url,
@@ -699,7 +699,7 @@ class Member(BaseSDK):
             request = utils.unmarshal(request, operations.PatchMartechMemberRequest)
         request = cast(operations.PatchMartechMemberRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PATCH",
             path="/martech/{connection_id}/member/{id}",
             base_url=base_url,
@@ -797,7 +797,7 @@ class Member(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveMartechMemberRequest)
         request = cast(operations.RemoveMartechMemberRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="DELETE",
             path="/martech/{connection_id}/member/{id}",
             base_url=base_url,
@@ -893,7 +893,7 @@ class Member(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveMartechMemberRequest)
         request = cast(operations.RemoveMartechMemberRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="DELETE",
             path="/martech/{connection_id}/member/{id}",
             base_url=base_url,
@@ -989,7 +989,7 @@ class Member(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateMartechMemberRequest)
         request = cast(operations.UpdateMartechMemberRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PUT",
             path="/martech/{connection_id}/member/{id}",
             base_url=base_url,
@@ -1087,7 +1087,7 @@ class Member(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateMartechMemberRequest)
         request = cast(operations.UpdateMartechMemberRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PUT",
             path="/martech/{connection_id}/member/{id}",
             base_url=base_url,

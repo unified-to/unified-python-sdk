@@ -41,7 +41,7 @@ class Issue(BaseSDK):
             request = utils.unmarshal(request, operations.ListUnifiedIssuesRequest)
         request = cast(operations.ListUnifiedIssuesRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/unified/issue",
             base_url=base_url,
@@ -132,7 +132,7 @@ class Issue(BaseSDK):
             request = utils.unmarshal(request, operations.ListUnifiedIssuesRequest)
         request = cast(operations.ListUnifiedIssuesRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/unified/issue",
             base_url=base_url,

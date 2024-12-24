@@ -41,7 +41,7 @@ class Uc(BaseSDK):
             request = utils.unmarshal(request, operations.CreateUcContactRequest)
         request = cast(operations.CreateUcContactRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="POST",
             path="/uc/{connection_id}/contact",
             base_url=base_url,
@@ -135,7 +135,7 @@ class Uc(BaseSDK):
             request = utils.unmarshal(request, operations.CreateUcContactRequest)
         request = cast(operations.CreateUcContactRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="POST",
             path="/uc/{connection_id}/contact",
             base_url=base_url,
@@ -228,7 +228,7 @@ class Uc(BaseSDK):
             request = utils.unmarshal(request, operations.GetUcContactRequest)
         request = cast(operations.GetUcContactRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/uc/{connection_id}/contact/{id}",
             base_url=base_url,
@@ -318,7 +318,7 @@ class Uc(BaseSDK):
             request = utils.unmarshal(request, operations.GetUcContactRequest)
         request = cast(operations.GetUcContactRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/uc/{connection_id}/contact/{id}",
             base_url=base_url,
@@ -408,7 +408,7 @@ class Uc(BaseSDK):
             request = utils.unmarshal(request, operations.ListUcCallsRequest)
         request = cast(operations.ListUcCallsRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/uc/{connection_id}/call",
             base_url=base_url,
@@ -498,7 +498,7 @@ class Uc(BaseSDK):
             request = utils.unmarshal(request, operations.ListUcCallsRequest)
         request = cast(operations.ListUcCallsRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/uc/{connection_id}/call",
             base_url=base_url,
@@ -588,7 +588,7 @@ class Uc(BaseSDK):
             request = utils.unmarshal(request, operations.ListUcContactsRequest)
         request = cast(operations.ListUcContactsRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/uc/{connection_id}/contact",
             base_url=base_url,
@@ -678,7 +678,7 @@ class Uc(BaseSDK):
             request = utils.unmarshal(request, operations.ListUcContactsRequest)
         request = cast(operations.ListUcContactsRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/uc/{connection_id}/contact",
             base_url=base_url,
@@ -768,7 +768,7 @@ class Uc(BaseSDK):
             request = utils.unmarshal(request, operations.PatchUcContactRequest)
         request = cast(operations.PatchUcContactRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PATCH",
             path="/uc/{connection_id}/contact/{id}",
             base_url=base_url,
@@ -861,7 +861,7 @@ class Uc(BaseSDK):
             request = utils.unmarshal(request, operations.PatchUcContactRequest)
         request = cast(operations.PatchUcContactRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PATCH",
             path="/uc/{connection_id}/contact/{id}",
             base_url=base_url,
@@ -955,7 +955,7 @@ class Uc(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveUcContactRequest)
         request = cast(operations.RemoveUcContactRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="DELETE",
             path="/uc/{connection_id}/contact/{id}",
             base_url=base_url,
@@ -1051,7 +1051,7 @@ class Uc(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveUcContactRequest)
         request = cast(operations.RemoveUcContactRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="DELETE",
             path="/uc/{connection_id}/contact/{id}",
             base_url=base_url,
@@ -1147,7 +1147,7 @@ class Uc(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateUcContactRequest)
         request = cast(operations.UpdateUcContactRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PUT",
             path="/uc/{connection_id}/contact/{id}",
             base_url=base_url,
@@ -1241,7 +1241,7 @@ class Uc(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateUcContactRequest)
         request = cast(operations.UpdateUcContactRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PUT",
             path="/uc/{connection_id}/contact/{id}",
             base_url=base_url,

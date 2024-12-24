@@ -40,7 +40,7 @@ class Payslip(BaseSDK):
             request = utils.unmarshal(request, operations.GetHrisPayslipRequest)
         request = cast(operations.GetHrisPayslipRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/hris/{connection_id}/payslip/{id}",
             base_url=base_url,
@@ -130,7 +130,7 @@ class Payslip(BaseSDK):
             request = utils.unmarshal(request, operations.GetHrisPayslipRequest)
         request = cast(operations.GetHrisPayslipRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/hris/{connection_id}/payslip/{id}",
             base_url=base_url,
@@ -221,7 +221,7 @@ class Payslip(BaseSDK):
             request = utils.unmarshal(request, operations.ListHrisPayslipsRequest)
         request = cast(operations.ListHrisPayslipsRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/hris/{connection_id}/payslip",
             base_url=base_url,
@@ -312,7 +312,7 @@ class Payslip(BaseSDK):
             request = utils.unmarshal(request, operations.ListHrisPayslipsRequest)
         request = cast(operations.ListHrisPayslipsRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/hris/{connection_id}/payslip",
             base_url=base_url,

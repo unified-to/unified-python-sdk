@@ -41,7 +41,7 @@ class Genai(BaseSDK):
             request = utils.unmarshal(request, operations.CreateGenaiPromptRequest)
         request = cast(operations.CreateGenaiPromptRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="POST",
             path="/genai/{connection_id}/prompt",
             base_url=base_url,
@@ -135,7 +135,7 @@ class Genai(BaseSDK):
             request = utils.unmarshal(request, operations.CreateGenaiPromptRequest)
         request = cast(operations.CreateGenaiPromptRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="POST",
             path="/genai/{connection_id}/prompt",
             base_url=base_url,
@@ -229,7 +229,7 @@ class Genai(BaseSDK):
             request = utils.unmarshal(request, operations.ListGenaiModelsRequest)
         request = cast(operations.ListGenaiModelsRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/genai/{connection_id}/model",
             base_url=base_url,
@@ -320,7 +320,7 @@ class Genai(BaseSDK):
             request = utils.unmarshal(request, operations.ListGenaiModelsRequest)
         request = cast(operations.ListGenaiModelsRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/genai/{connection_id}/model",
             base_url=base_url,

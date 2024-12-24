@@ -41,7 +41,7 @@ class User(BaseSDK):
             request = utils.unmarshal(request, operations.CreateScimUsersRequest)
         request = cast(operations.CreateScimUsersRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="POST",
             path="/scim/{connection_id}/users",
             base_url=base_url,
@@ -135,7 +135,7 @@ class User(BaseSDK):
             request = utils.unmarshal(request, operations.CreateScimUsersRequest)
         request = cast(operations.CreateScimUsersRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="POST",
             path="/scim/{connection_id}/users",
             base_url=base_url,
@@ -228,7 +228,7 @@ class User(BaseSDK):
             request = utils.unmarshal(request, operations.GetScimUsersRequest)
         request = cast(operations.GetScimUsersRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/scim/{connection_id}/users/{id}",
             base_url=base_url,
@@ -318,7 +318,7 @@ class User(BaseSDK):
             request = utils.unmarshal(request, operations.GetScimUsersRequest)
         request = cast(operations.GetScimUsersRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/scim/{connection_id}/users/{id}",
             base_url=base_url,
@@ -408,7 +408,7 @@ class User(BaseSDK):
             request = utils.unmarshal(request, operations.ListScimUsersRequest)
         request = cast(operations.ListScimUsersRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/scim/{connection_id}/users",
             base_url=base_url,
@@ -498,7 +498,7 @@ class User(BaseSDK):
             request = utils.unmarshal(request, operations.ListScimUsersRequest)
         request = cast(operations.ListScimUsersRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/scim/{connection_id}/users",
             base_url=base_url,
@@ -588,7 +588,7 @@ class User(BaseSDK):
             request = utils.unmarshal(request, operations.PatchScimUsersRequest)
         request = cast(operations.PatchScimUsersRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PATCH",
             path="/scim/{connection_id}/users/{id}",
             base_url=base_url,
@@ -681,7 +681,7 @@ class User(BaseSDK):
             request = utils.unmarshal(request, operations.PatchScimUsersRequest)
         request = cast(operations.PatchScimUsersRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PATCH",
             path="/scim/{connection_id}/users/{id}",
             base_url=base_url,
@@ -775,7 +775,7 @@ class User(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveScimUsersRequest)
         request = cast(operations.RemoveScimUsersRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="DELETE",
             path="/scim/{connection_id}/users/{id}",
             base_url=base_url,
@@ -871,7 +871,7 @@ class User(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveScimUsersRequest)
         request = cast(operations.RemoveScimUsersRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="DELETE",
             path="/scim/{connection_id}/users/{id}",
             base_url=base_url,
@@ -967,7 +967,7 @@ class User(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateScimUsersRequest)
         request = cast(operations.UpdateScimUsersRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PUT",
             path="/scim/{connection_id}/users/{id}",
             base_url=base_url,
@@ -1061,7 +1061,7 @@ class User(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateScimUsersRequest)
         request = cast(operations.UpdateScimUsersRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PUT",
             path="/scim/{connection_id}/users/{id}",
             base_url=base_url,

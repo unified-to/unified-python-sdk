@@ -41,7 +41,7 @@ class Scorecard(BaseSDK):
             request = utils.unmarshal(request, operations.CreateAtsScorecardRequest)
         request = cast(operations.CreateAtsScorecardRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="POST",
             path="/ats/{connection_id}/scorecard",
             base_url=base_url,
@@ -139,7 +139,7 @@ class Scorecard(BaseSDK):
             request = utils.unmarshal(request, operations.CreateAtsScorecardRequest)
         request = cast(operations.CreateAtsScorecardRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="POST",
             path="/ats/{connection_id}/scorecard",
             base_url=base_url,
@@ -237,7 +237,7 @@ class Scorecard(BaseSDK):
             request = utils.unmarshal(request, operations.GetAtsScorecardRequest)
         request = cast(operations.GetAtsScorecardRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/ats/{connection_id}/scorecard/{id}",
             base_url=base_url,
@@ -328,7 +328,7 @@ class Scorecard(BaseSDK):
             request = utils.unmarshal(request, operations.GetAtsScorecardRequest)
         request = cast(operations.GetAtsScorecardRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/ats/{connection_id}/scorecard/{id}",
             base_url=base_url,
@@ -419,7 +419,7 @@ class Scorecard(BaseSDK):
             request = utils.unmarshal(request, operations.ListAtsScorecardsRequest)
         request = cast(operations.ListAtsScorecardsRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/ats/{connection_id}/scorecard",
             base_url=base_url,
@@ -510,7 +510,7 @@ class Scorecard(BaseSDK):
             request = utils.unmarshal(request, operations.ListAtsScorecardsRequest)
         request = cast(operations.ListAtsScorecardsRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/ats/{connection_id}/scorecard",
             base_url=base_url,
@@ -601,7 +601,7 @@ class Scorecard(BaseSDK):
             request = utils.unmarshal(request, operations.PatchAtsScorecardRequest)
         request = cast(operations.PatchAtsScorecardRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PATCH",
             path="/ats/{connection_id}/scorecard/{id}",
             base_url=base_url,
@@ -699,7 +699,7 @@ class Scorecard(BaseSDK):
             request = utils.unmarshal(request, operations.PatchAtsScorecardRequest)
         request = cast(operations.PatchAtsScorecardRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PATCH",
             path="/ats/{connection_id}/scorecard/{id}",
             base_url=base_url,
@@ -797,7 +797,7 @@ class Scorecard(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveAtsScorecardRequest)
         request = cast(operations.RemoveAtsScorecardRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="DELETE",
             path="/ats/{connection_id}/scorecard/{id}",
             base_url=base_url,
@@ -893,7 +893,7 @@ class Scorecard(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveAtsScorecardRequest)
         request = cast(operations.RemoveAtsScorecardRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="DELETE",
             path="/ats/{connection_id}/scorecard/{id}",
             base_url=base_url,
@@ -989,7 +989,7 @@ class Scorecard(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateAtsScorecardRequest)
         request = cast(operations.UpdateAtsScorecardRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PUT",
             path="/ats/{connection_id}/scorecard/{id}",
             base_url=base_url,
@@ -1087,7 +1087,7 @@ class Scorecard(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateAtsScorecardRequest)
         request = cast(operations.UpdateAtsScorecardRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PUT",
             path="/ats/{connection_id}/scorecard/{id}",
             base_url=base_url,

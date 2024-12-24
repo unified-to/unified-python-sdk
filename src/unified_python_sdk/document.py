@@ -41,7 +41,7 @@ class Document(BaseSDK):
             request = utils.unmarshal(request, operations.CreateAtsDocumentRequest)
         request = cast(operations.CreateAtsDocumentRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="POST",
             path="/ats/{connection_id}/document",
             base_url=base_url,
@@ -135,7 +135,7 @@ class Document(BaseSDK):
             request = utils.unmarshal(request, operations.CreateAtsDocumentRequest)
         request = cast(operations.CreateAtsDocumentRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="POST",
             path="/ats/{connection_id}/document",
             base_url=base_url,
@@ -228,7 +228,7 @@ class Document(BaseSDK):
             request = utils.unmarshal(request, operations.GetAtsDocumentRequest)
         request = cast(operations.GetAtsDocumentRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/ats/{connection_id}/document/{id}",
             base_url=base_url,
@@ -318,7 +318,7 @@ class Document(BaseSDK):
             request = utils.unmarshal(request, operations.GetAtsDocumentRequest)
         request = cast(operations.GetAtsDocumentRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/ats/{connection_id}/document/{id}",
             base_url=base_url,
@@ -409,7 +409,7 @@ class Document(BaseSDK):
             request = utils.unmarshal(request, operations.ListAtsDocumentsRequest)
         request = cast(operations.ListAtsDocumentsRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/ats/{connection_id}/document",
             base_url=base_url,
@@ -500,7 +500,7 @@ class Document(BaseSDK):
             request = utils.unmarshal(request, operations.ListAtsDocumentsRequest)
         request = cast(operations.ListAtsDocumentsRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/ats/{connection_id}/document",
             base_url=base_url,
@@ -591,7 +591,7 @@ class Document(BaseSDK):
             request = utils.unmarshal(request, operations.PatchAtsDocumentRequest)
         request = cast(operations.PatchAtsDocumentRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PATCH",
             path="/ats/{connection_id}/document/{id}",
             base_url=base_url,
@@ -685,7 +685,7 @@ class Document(BaseSDK):
             request = utils.unmarshal(request, operations.PatchAtsDocumentRequest)
         request = cast(operations.PatchAtsDocumentRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PATCH",
             path="/ats/{connection_id}/document/{id}",
             base_url=base_url,
@@ -779,7 +779,7 @@ class Document(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveAtsDocumentRequest)
         request = cast(operations.RemoveAtsDocumentRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="DELETE",
             path="/ats/{connection_id}/document/{id}",
             base_url=base_url,
@@ -875,7 +875,7 @@ class Document(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveAtsDocumentRequest)
         request = cast(operations.RemoveAtsDocumentRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="DELETE",
             path="/ats/{connection_id}/document/{id}",
             base_url=base_url,
@@ -971,7 +971,7 @@ class Document(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateAtsDocumentRequest)
         request = cast(operations.UpdateAtsDocumentRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PUT",
             path="/ats/{connection_id}/document/{id}",
             base_url=base_url,
@@ -1065,7 +1065,7 @@ class Document(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateAtsDocumentRequest)
         request = cast(operations.UpdateAtsDocumentRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PUT",
             path="/ats/{connection_id}/document/{id}",
             base_url=base_url,

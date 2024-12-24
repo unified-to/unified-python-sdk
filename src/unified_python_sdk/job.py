@@ -40,7 +40,7 @@ class Job(BaseSDK):
             request = utils.unmarshal(request, operations.CreateAtsJobRequest)
         request = cast(operations.CreateAtsJobRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="POST",
             path="/ats/{connection_id}/job",
             base_url=base_url,
@@ -131,7 +131,7 @@ class Job(BaseSDK):
             request = utils.unmarshal(request, operations.CreateAtsJobRequest)
         request = cast(operations.CreateAtsJobRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="POST",
             path="/ats/{connection_id}/job",
             base_url=base_url,
@@ -222,7 +222,7 @@ class Job(BaseSDK):
             request = utils.unmarshal(request, operations.GetAtsJobRequest)
         request = cast(operations.GetAtsJobRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/ats/{connection_id}/job/{id}",
             base_url=base_url,
@@ -310,7 +310,7 @@ class Job(BaseSDK):
             request = utils.unmarshal(request, operations.GetAtsJobRequest)
         request = cast(operations.GetAtsJobRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/ats/{connection_id}/job/{id}",
             base_url=base_url,
@@ -398,7 +398,7 @@ class Job(BaseSDK):
             request = utils.unmarshal(request, operations.ListAtsJobsRequest)
         request = cast(operations.ListAtsJobsRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/ats/{connection_id}/job",
             base_url=base_url,
@@ -488,7 +488,7 @@ class Job(BaseSDK):
             request = utils.unmarshal(request, operations.ListAtsJobsRequest)
         request = cast(operations.ListAtsJobsRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/ats/{connection_id}/job",
             base_url=base_url,
@@ -578,7 +578,7 @@ class Job(BaseSDK):
             request = utils.unmarshal(request, operations.PatchAtsJobRequest)
         request = cast(operations.PatchAtsJobRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PATCH",
             path="/ats/{connection_id}/job/{id}",
             base_url=base_url,
@@ -669,7 +669,7 @@ class Job(BaseSDK):
             request = utils.unmarshal(request, operations.PatchAtsJobRequest)
         request = cast(operations.PatchAtsJobRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PATCH",
             path="/ats/{connection_id}/job/{id}",
             base_url=base_url,
@@ -760,7 +760,7 @@ class Job(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveAtsJobRequest)
         request = cast(operations.RemoveAtsJobRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="DELETE",
             path="/ats/{connection_id}/job/{id}",
             base_url=base_url,
@@ -855,7 +855,7 @@ class Job(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveAtsJobRequest)
         request = cast(operations.RemoveAtsJobRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="DELETE",
             path="/ats/{connection_id}/job/{id}",
             base_url=base_url,
@@ -950,7 +950,7 @@ class Job(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateAtsJobRequest)
         request = cast(operations.UpdateAtsJobRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PUT",
             path="/ats/{connection_id}/job/{id}",
             base_url=base_url,
@@ -1041,7 +1041,7 @@ class Job(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateAtsJobRequest)
         request = cast(operations.UpdateAtsJobRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PUT",
             path="/ats/{connection_id}/job/{id}",
             base_url=base_url,

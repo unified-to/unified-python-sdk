@@ -41,7 +41,7 @@ class Order(BaseSDK):
             request = utils.unmarshal(request, operations.CreateAccountingOrderRequest)
         request = cast(operations.CreateAccountingOrderRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="POST",
             path="/accounting/{connection_id}/order",
             base_url=base_url,
@@ -139,7 +139,7 @@ class Order(BaseSDK):
             request = utils.unmarshal(request, operations.CreateAccountingOrderRequest)
         request = cast(operations.CreateAccountingOrderRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="POST",
             path="/accounting/{connection_id}/order",
             base_url=base_url,
@@ -237,7 +237,7 @@ class Order(BaseSDK):
             request = utils.unmarshal(request, operations.GetAccountingOrderRequest)
         request = cast(operations.GetAccountingOrderRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/accounting/{connection_id}/order/{id}",
             base_url=base_url,
@@ -328,7 +328,7 @@ class Order(BaseSDK):
             request = utils.unmarshal(request, operations.GetAccountingOrderRequest)
         request = cast(operations.GetAccountingOrderRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/accounting/{connection_id}/order/{id}",
             base_url=base_url,
@@ -419,7 +419,7 @@ class Order(BaseSDK):
             request = utils.unmarshal(request, operations.ListAccountingOrdersRequest)
         request = cast(operations.ListAccountingOrdersRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/accounting/{connection_id}/order",
             base_url=base_url,
@@ -510,7 +510,7 @@ class Order(BaseSDK):
             request = utils.unmarshal(request, operations.ListAccountingOrdersRequest)
         request = cast(operations.ListAccountingOrdersRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/accounting/{connection_id}/order",
             base_url=base_url,
@@ -601,7 +601,7 @@ class Order(BaseSDK):
             request = utils.unmarshal(request, operations.PatchAccountingOrderRequest)
         request = cast(operations.PatchAccountingOrderRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PATCH",
             path="/accounting/{connection_id}/order/{id}",
             base_url=base_url,
@@ -699,7 +699,7 @@ class Order(BaseSDK):
             request = utils.unmarshal(request, operations.PatchAccountingOrderRequest)
         request = cast(operations.PatchAccountingOrderRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PATCH",
             path="/accounting/{connection_id}/order/{id}",
             base_url=base_url,
@@ -797,7 +797,7 @@ class Order(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveAccountingOrderRequest)
         request = cast(operations.RemoveAccountingOrderRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="DELETE",
             path="/accounting/{connection_id}/order/{id}",
             base_url=base_url,
@@ -893,7 +893,7 @@ class Order(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveAccountingOrderRequest)
         request = cast(operations.RemoveAccountingOrderRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="DELETE",
             path="/accounting/{connection_id}/order/{id}",
             base_url=base_url,
@@ -989,7 +989,7 @@ class Order(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateAccountingOrderRequest)
         request = cast(operations.UpdateAccountingOrderRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PUT",
             path="/accounting/{connection_id}/order/{id}",
             base_url=base_url,
@@ -1087,7 +1087,7 @@ class Order(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateAccountingOrderRequest)
         request = cast(operations.UpdateAccountingOrderRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PUT",
             path="/accounting/{connection_id}/order/{id}",
             base_url=base_url,

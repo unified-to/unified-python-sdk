@@ -41,7 +41,7 @@ class Refund(BaseSDK):
             request = utils.unmarshal(request, operations.GetPaymentRefundRequest)
         request = cast(operations.GetPaymentRefundRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/payment/{connection_id}/refund/{id}",
             base_url=base_url,
@@ -132,7 +132,7 @@ class Refund(BaseSDK):
             request = utils.unmarshal(request, operations.GetPaymentRefundRequest)
         request = cast(operations.GetPaymentRefundRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/payment/{connection_id}/refund/{id}",
             base_url=base_url,
@@ -223,7 +223,7 @@ class Refund(BaseSDK):
             request = utils.unmarshal(request, operations.ListPaymentRefundsRequest)
         request = cast(operations.ListPaymentRefundsRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/payment/{connection_id}/refund",
             base_url=base_url,
@@ -314,7 +314,7 @@ class Refund(BaseSDK):
             request = utils.unmarshal(request, operations.ListPaymentRefundsRequest)
         request = cast(operations.ListPaymentRefundsRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/payment/{connection_id}/refund",
             base_url=base_url,

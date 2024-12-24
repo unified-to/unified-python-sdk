@@ -41,7 +41,7 @@ class Payout(BaseSDK):
             request = utils.unmarshal(request, operations.GetPaymentPayoutRequest)
         request = cast(operations.GetPaymentPayoutRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/payment/{connection_id}/payout/{id}",
             base_url=base_url,
@@ -132,7 +132,7 @@ class Payout(BaseSDK):
             request = utils.unmarshal(request, operations.GetPaymentPayoutRequest)
         request = cast(operations.GetPaymentPayoutRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/payment/{connection_id}/payout/{id}",
             base_url=base_url,
@@ -223,7 +223,7 @@ class Payout(BaseSDK):
             request = utils.unmarshal(request, operations.ListPaymentPayoutsRequest)
         request = cast(operations.ListPaymentPayoutsRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/payment/{connection_id}/payout",
             base_url=base_url,
@@ -314,7 +314,7 @@ class Payout(BaseSDK):
             request = utils.unmarshal(request, operations.ListPaymentPayoutsRequest)
         request = cast(operations.ListPaymentPayoutsRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/payment/{connection_id}/payout",
             base_url=base_url,

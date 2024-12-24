@@ -41,7 +41,7 @@ class Storage(BaseSDK):
             request = utils.unmarshal(request, operations.CreateStorageFileRequest)
         request = cast(operations.CreateStorageFileRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="POST",
             path="/storage/{connection_id}/file",
             base_url=base_url,
@@ -135,7 +135,7 @@ class Storage(BaseSDK):
             request = utils.unmarshal(request, operations.CreateStorageFileRequest)
         request = cast(operations.CreateStorageFileRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="POST",
             path="/storage/{connection_id}/file",
             base_url=base_url,
@@ -228,7 +228,7 @@ class Storage(BaseSDK):
             request = utils.unmarshal(request, operations.GetStorageFileRequest)
         request = cast(operations.GetStorageFileRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/storage/{connection_id}/file/{id}",
             base_url=base_url,
@@ -318,7 +318,7 @@ class Storage(BaseSDK):
             request = utils.unmarshal(request, operations.GetStorageFileRequest)
         request = cast(operations.GetStorageFileRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/storage/{connection_id}/file/{id}",
             base_url=base_url,
@@ -409,7 +409,7 @@ class Storage(BaseSDK):
             request = utils.unmarshal(request, operations.ListStorageFilesRequest)
         request = cast(operations.ListStorageFilesRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/storage/{connection_id}/file",
             base_url=base_url,
@@ -500,7 +500,7 @@ class Storage(BaseSDK):
             request = utils.unmarshal(request, operations.ListStorageFilesRequest)
         request = cast(operations.ListStorageFilesRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/storage/{connection_id}/file",
             base_url=base_url,
@@ -591,7 +591,7 @@ class Storage(BaseSDK):
             request = utils.unmarshal(request, operations.PatchStorageFileRequest)
         request = cast(operations.PatchStorageFileRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PATCH",
             path="/storage/{connection_id}/file/{id}",
             base_url=base_url,
@@ -685,7 +685,7 @@ class Storage(BaseSDK):
             request = utils.unmarshal(request, operations.PatchStorageFileRequest)
         request = cast(operations.PatchStorageFileRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PATCH",
             path="/storage/{connection_id}/file/{id}",
             base_url=base_url,
@@ -779,7 +779,7 @@ class Storage(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveStorageFileRequest)
         request = cast(operations.RemoveStorageFileRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="DELETE",
             path="/storage/{connection_id}/file/{id}",
             base_url=base_url,
@@ -875,7 +875,7 @@ class Storage(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveStorageFileRequest)
         request = cast(operations.RemoveStorageFileRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="DELETE",
             path="/storage/{connection_id}/file/{id}",
             base_url=base_url,
@@ -971,7 +971,7 @@ class Storage(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateStorageFileRequest)
         request = cast(operations.UpdateStorageFileRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PUT",
             path="/storage/{connection_id}/file/{id}",
             base_url=base_url,
@@ -1065,7 +1065,7 @@ class Storage(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateStorageFileRequest)
         request = cast(operations.UpdateStorageFileRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PUT",
             path="/storage/{connection_id}/file/{id}",
             base_url=base_url,

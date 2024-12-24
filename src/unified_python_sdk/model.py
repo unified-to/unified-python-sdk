@@ -41,7 +41,7 @@ class Model(BaseSDK):
             request = utils.unmarshal(request, operations.ListGenaiModelsRequest)
         request = cast(operations.ListGenaiModelsRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/genai/{connection_id}/model",
             base_url=base_url,
@@ -132,7 +132,7 @@ class Model(BaseSDK):
             request = utils.unmarshal(request, operations.ListGenaiModelsRequest)
         request = cast(operations.ListGenaiModelsRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/genai/{connection_id}/model",
             base_url=base_url,

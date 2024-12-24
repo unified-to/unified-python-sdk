@@ -41,7 +41,7 @@ class Person(BaseSDK):
             request = utils.unmarshal(request, operations.ListEnrichPeopleRequest)
         request = cast(operations.ListEnrichPeopleRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/enrich/{connection_id}/person",
             base_url=base_url,
@@ -132,7 +132,7 @@ class Person(BaseSDK):
             request = utils.unmarshal(request, operations.ListEnrichPeopleRequest)
         request = cast(operations.ListEnrichPeopleRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/enrich/{connection_id}/person",
             base_url=base_url,

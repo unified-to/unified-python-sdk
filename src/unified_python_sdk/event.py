@@ -40,7 +40,7 @@ class Event(BaseSDK):
             request = utils.unmarshal(request, operations.CreateCrmEventRequest)
         request = cast(operations.CreateCrmEventRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="POST",
             path="/crm/{connection_id}/event",
             base_url=base_url,
@@ -133,7 +133,7 @@ class Event(BaseSDK):
             request = utils.unmarshal(request, operations.CreateCrmEventRequest)
         request = cast(operations.CreateCrmEventRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="POST",
             path="/crm/{connection_id}/event",
             base_url=base_url,
@@ -226,7 +226,7 @@ class Event(BaseSDK):
             request = utils.unmarshal(request, operations.GetCrmEventRequest)
         request = cast(operations.GetCrmEventRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/crm/{connection_id}/event/{id}",
             base_url=base_url,
@@ -316,7 +316,7 @@ class Event(BaseSDK):
             request = utils.unmarshal(request, operations.GetCrmEventRequest)
         request = cast(operations.GetCrmEventRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/crm/{connection_id}/event/{id}",
             base_url=base_url,
@@ -406,7 +406,7 @@ class Event(BaseSDK):
             request = utils.unmarshal(request, operations.ListCrmEventsRequest)
         request = cast(operations.ListCrmEventsRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/crm/{connection_id}/event",
             base_url=base_url,
@@ -496,7 +496,7 @@ class Event(BaseSDK):
             request = utils.unmarshal(request, operations.ListCrmEventsRequest)
         request = cast(operations.ListCrmEventsRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/crm/{connection_id}/event",
             base_url=base_url,
@@ -586,7 +586,7 @@ class Event(BaseSDK):
             request = utils.unmarshal(request, operations.PatchCrmEventRequest)
         request = cast(operations.PatchCrmEventRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PATCH",
             path="/crm/{connection_id}/event/{id}",
             base_url=base_url,
@@ -679,7 +679,7 @@ class Event(BaseSDK):
             request = utils.unmarshal(request, operations.PatchCrmEventRequest)
         request = cast(operations.PatchCrmEventRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PATCH",
             path="/crm/{connection_id}/event/{id}",
             base_url=base_url,
@@ -772,7 +772,7 @@ class Event(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveCrmEventRequest)
         request = cast(operations.RemoveCrmEventRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="DELETE",
             path="/crm/{connection_id}/event/{id}",
             base_url=base_url,
@@ -867,7 +867,7 @@ class Event(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveCrmEventRequest)
         request = cast(operations.RemoveCrmEventRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="DELETE",
             path="/crm/{connection_id}/event/{id}",
             base_url=base_url,
@@ -962,7 +962,7 @@ class Event(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateCrmEventRequest)
         request = cast(operations.UpdateCrmEventRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PUT",
             path="/crm/{connection_id}/event/{id}",
             base_url=base_url,
@@ -1055,7 +1055,7 @@ class Event(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateCrmEventRequest)
         request = cast(operations.UpdateCrmEventRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PUT",
             path="/crm/{connection_id}/event/{id}",
             base_url=base_url,

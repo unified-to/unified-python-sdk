@@ -40,7 +40,7 @@ class Deal(BaseSDK):
             request = utils.unmarshal(request, operations.CreateCrmDealRequest)
         request = cast(operations.CreateCrmDealRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="POST",
             path="/crm/{connection_id}/deal",
             base_url=base_url,
@@ -131,7 +131,7 @@ class Deal(BaseSDK):
             request = utils.unmarshal(request, operations.CreateCrmDealRequest)
         request = cast(operations.CreateCrmDealRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="POST",
             path="/crm/{connection_id}/deal",
             base_url=base_url,
@@ -222,7 +222,7 @@ class Deal(BaseSDK):
             request = utils.unmarshal(request, operations.GetCrmDealRequest)
         request = cast(operations.GetCrmDealRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/crm/{connection_id}/deal/{id}",
             base_url=base_url,
@@ -310,7 +310,7 @@ class Deal(BaseSDK):
             request = utils.unmarshal(request, operations.GetCrmDealRequest)
         request = cast(operations.GetCrmDealRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/crm/{connection_id}/deal/{id}",
             base_url=base_url,
@@ -398,7 +398,7 @@ class Deal(BaseSDK):
             request = utils.unmarshal(request, operations.ListCrmDealsRequest)
         request = cast(operations.ListCrmDealsRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/crm/{connection_id}/deal",
             base_url=base_url,
@@ -488,7 +488,7 @@ class Deal(BaseSDK):
             request = utils.unmarshal(request, operations.ListCrmDealsRequest)
         request = cast(operations.ListCrmDealsRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/crm/{connection_id}/deal",
             base_url=base_url,
@@ -578,7 +578,7 @@ class Deal(BaseSDK):
             request = utils.unmarshal(request, operations.PatchCrmDealRequest)
         request = cast(operations.PatchCrmDealRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PATCH",
             path="/crm/{connection_id}/deal/{id}",
             base_url=base_url,
@@ -669,7 +669,7 @@ class Deal(BaseSDK):
             request = utils.unmarshal(request, operations.PatchCrmDealRequest)
         request = cast(operations.PatchCrmDealRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PATCH",
             path="/crm/{connection_id}/deal/{id}",
             base_url=base_url,
@@ -760,7 +760,7 @@ class Deal(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveCrmDealRequest)
         request = cast(operations.RemoveCrmDealRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="DELETE",
             path="/crm/{connection_id}/deal/{id}",
             base_url=base_url,
@@ -855,7 +855,7 @@ class Deal(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveCrmDealRequest)
         request = cast(operations.RemoveCrmDealRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="DELETE",
             path="/crm/{connection_id}/deal/{id}",
             base_url=base_url,
@@ -950,7 +950,7 @@ class Deal(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateCrmDealRequest)
         request = cast(operations.UpdateCrmDealRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PUT",
             path="/crm/{connection_id}/deal/{id}",
             base_url=base_url,
@@ -1041,7 +1041,7 @@ class Deal(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateCrmDealRequest)
         request = cast(operations.UpdateCrmDealRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PUT",
             path="/crm/{connection_id}/deal/{id}",
             base_url=base_url,

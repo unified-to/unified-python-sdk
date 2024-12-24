@@ -41,7 +41,7 @@ class Channel(BaseSDK):
             request = utils.unmarshal(request, operations.GetMessagingChannelRequest)
         request = cast(operations.GetMessagingChannelRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/messaging/{connection_id}/channel/{id}",
             base_url=base_url,
@@ -132,7 +132,7 @@ class Channel(BaseSDK):
             request = utils.unmarshal(request, operations.GetMessagingChannelRequest)
         request = cast(operations.GetMessagingChannelRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/messaging/{connection_id}/channel/{id}",
             base_url=base_url,
@@ -223,7 +223,7 @@ class Channel(BaseSDK):
             request = utils.unmarshal(request, operations.ListMessagingChannelsRequest)
         request = cast(operations.ListMessagingChannelsRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/messaging/{connection_id}/channel",
             base_url=base_url,
@@ -314,7 +314,7 @@ class Channel(BaseSDK):
             request = utils.unmarshal(request, operations.ListMessagingChannelsRequest)
         request = cast(operations.ListMessagingChannelsRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/messaging/{connection_id}/channel",
             base_url=base_url,

@@ -41,7 +41,7 @@ class Prompt(BaseSDK):
             request = utils.unmarshal(request, operations.CreateGenaiPromptRequest)
         request = cast(operations.CreateGenaiPromptRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="POST",
             path="/genai/{connection_id}/prompt",
             base_url=base_url,
@@ -135,7 +135,7 @@ class Prompt(BaseSDK):
             request = utils.unmarshal(request, operations.CreateGenaiPromptRequest)
         request = cast(operations.CreateGenaiPromptRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="POST",
             path="/genai/{connection_id}/prompt",
             base_url=base_url,

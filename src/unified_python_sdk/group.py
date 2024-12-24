@@ -41,7 +41,7 @@ class Group(BaseSDK):
             request = utils.unmarshal(request, operations.CreateHrisGroupRequest)
         request = cast(operations.CreateHrisGroupRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="POST",
             path="/hris/{connection_id}/group",
             base_url=base_url,
@@ -135,7 +135,7 @@ class Group(BaseSDK):
             request = utils.unmarshal(request, operations.CreateHrisGroupRequest)
         request = cast(operations.CreateHrisGroupRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="POST",
             path="/hris/{connection_id}/group",
             base_url=base_url,
@@ -229,7 +229,7 @@ class Group(BaseSDK):
             request = utils.unmarshal(request, operations.CreateScimGroupsRequest)
         request = cast(operations.CreateScimGroupsRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="POST",
             path="/scim/{connection_id}/groups",
             base_url=base_url,
@@ -323,7 +323,7 @@ class Group(BaseSDK):
             request = utils.unmarshal(request, operations.CreateScimGroupsRequest)
         request = cast(operations.CreateScimGroupsRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="POST",
             path="/scim/{connection_id}/groups",
             base_url=base_url,
@@ -416,7 +416,7 @@ class Group(BaseSDK):
             request = utils.unmarshal(request, operations.GetHrisGroupRequest)
         request = cast(operations.GetHrisGroupRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/hris/{connection_id}/group/{id}",
             base_url=base_url,
@@ -506,7 +506,7 @@ class Group(BaseSDK):
             request = utils.unmarshal(request, operations.GetHrisGroupRequest)
         request = cast(operations.GetHrisGroupRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/hris/{connection_id}/group/{id}",
             base_url=base_url,
@@ -596,7 +596,7 @@ class Group(BaseSDK):
             request = utils.unmarshal(request, operations.GetScimGroupsRequest)
         request = cast(operations.GetScimGroupsRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/scim/{connection_id}/groups/{id}",
             base_url=base_url,
@@ -686,7 +686,7 @@ class Group(BaseSDK):
             request = utils.unmarshal(request, operations.GetScimGroupsRequest)
         request = cast(operations.GetScimGroupsRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/scim/{connection_id}/groups/{id}",
             base_url=base_url,
@@ -776,7 +776,7 @@ class Group(BaseSDK):
             request = utils.unmarshal(request, operations.ListHrisGroupsRequest)
         request = cast(operations.ListHrisGroupsRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/hris/{connection_id}/group",
             base_url=base_url,
@@ -866,7 +866,7 @@ class Group(BaseSDK):
             request = utils.unmarshal(request, operations.ListHrisGroupsRequest)
         request = cast(operations.ListHrisGroupsRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/hris/{connection_id}/group",
             base_url=base_url,
@@ -956,7 +956,7 @@ class Group(BaseSDK):
             request = utils.unmarshal(request, operations.ListScimGroupsRequest)
         request = cast(operations.ListScimGroupsRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/scim/{connection_id}/groups",
             base_url=base_url,
@@ -1046,7 +1046,7 @@ class Group(BaseSDK):
             request = utils.unmarshal(request, operations.ListScimGroupsRequest)
         request = cast(operations.ListScimGroupsRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/scim/{connection_id}/groups",
             base_url=base_url,
@@ -1136,7 +1136,7 @@ class Group(BaseSDK):
             request = utils.unmarshal(request, operations.PatchHrisGroupRequest)
         request = cast(operations.PatchHrisGroupRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PATCH",
             path="/hris/{connection_id}/group/{id}",
             base_url=base_url,
@@ -1229,7 +1229,7 @@ class Group(BaseSDK):
             request = utils.unmarshal(request, operations.PatchHrisGroupRequest)
         request = cast(operations.PatchHrisGroupRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PATCH",
             path="/hris/{connection_id}/group/{id}",
             base_url=base_url,
@@ -1323,7 +1323,7 @@ class Group(BaseSDK):
             request = utils.unmarshal(request, operations.PatchScimGroupsRequest)
         request = cast(operations.PatchScimGroupsRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PATCH",
             path="/scim/{connection_id}/groups/{id}",
             base_url=base_url,
@@ -1417,7 +1417,7 @@ class Group(BaseSDK):
             request = utils.unmarshal(request, operations.PatchScimGroupsRequest)
         request = cast(operations.PatchScimGroupsRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PATCH",
             path="/scim/{connection_id}/groups/{id}",
             base_url=base_url,
@@ -1511,7 +1511,7 @@ class Group(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveHrisGroupRequest)
         request = cast(operations.RemoveHrisGroupRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="DELETE",
             path="/hris/{connection_id}/group/{id}",
             base_url=base_url,
@@ -1607,7 +1607,7 @@ class Group(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveHrisGroupRequest)
         request = cast(operations.RemoveHrisGroupRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="DELETE",
             path="/hris/{connection_id}/group/{id}",
             base_url=base_url,
@@ -1703,7 +1703,7 @@ class Group(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveScimGroupsRequest)
         request = cast(operations.RemoveScimGroupsRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="DELETE",
             path="/scim/{connection_id}/groups/{id}",
             base_url=base_url,
@@ -1799,7 +1799,7 @@ class Group(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveScimGroupsRequest)
         request = cast(operations.RemoveScimGroupsRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="DELETE",
             path="/scim/{connection_id}/groups/{id}",
             base_url=base_url,
@@ -1895,7 +1895,7 @@ class Group(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateHrisGroupRequest)
         request = cast(operations.UpdateHrisGroupRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PUT",
             path="/hris/{connection_id}/group/{id}",
             base_url=base_url,
@@ -1989,7 +1989,7 @@ class Group(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateHrisGroupRequest)
         request = cast(operations.UpdateHrisGroupRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PUT",
             path="/hris/{connection_id}/group/{id}",
             base_url=base_url,
@@ -2083,7 +2083,7 @@ class Group(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateScimGroupsRequest)
         request = cast(operations.UpdateScimGroupsRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PUT",
             path="/scim/{connection_id}/groups/{id}",
             base_url=base_url,
@@ -2177,7 +2177,7 @@ class Group(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateScimGroupsRequest)
         request = cast(operations.UpdateScimGroupsRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PUT",
             path="/scim/{connection_id}/groups/{id}",
             base_url=base_url,

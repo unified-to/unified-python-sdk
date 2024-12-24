@@ -43,7 +43,7 @@ class Accounting(BaseSDK):
             )
         request = cast(operations.CreateAccountingAccountRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="POST",
             path="/accounting/{connection_id}/account",
             base_url=base_url,
@@ -143,7 +143,7 @@ class Accounting(BaseSDK):
             )
         request = cast(operations.CreateAccountingAccountRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="POST",
             path="/accounting/{connection_id}/account",
             base_url=base_url,
@@ -243,7 +243,7 @@ class Accounting(BaseSDK):
             )
         request = cast(operations.CreateAccountingContactRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="POST",
             path="/accounting/{connection_id}/contact",
             base_url=base_url,
@@ -343,7 +343,7 @@ class Accounting(BaseSDK):
             )
         request = cast(operations.CreateAccountingContactRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="POST",
             path="/accounting/{connection_id}/contact",
             base_url=base_url,
@@ -443,7 +443,7 @@ class Accounting(BaseSDK):
             )
         request = cast(operations.CreateAccountingInvoiceRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="POST",
             path="/accounting/{connection_id}/invoice",
             base_url=base_url,
@@ -543,7 +543,7 @@ class Accounting(BaseSDK):
             )
         request = cast(operations.CreateAccountingInvoiceRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="POST",
             path="/accounting/{connection_id}/invoice",
             base_url=base_url,
@@ -643,7 +643,7 @@ class Accounting(BaseSDK):
             )
         request = cast(operations.CreateAccountingJournalRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="POST",
             path="/accounting/{connection_id}/journal",
             base_url=base_url,
@@ -743,7 +743,7 @@ class Accounting(BaseSDK):
             )
         request = cast(operations.CreateAccountingJournalRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="POST",
             path="/accounting/{connection_id}/journal",
             base_url=base_url,
@@ -841,7 +841,7 @@ class Accounting(BaseSDK):
             request = utils.unmarshal(request, operations.CreateAccountingOrderRequest)
         request = cast(operations.CreateAccountingOrderRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="POST",
             path="/accounting/{connection_id}/order",
             base_url=base_url,
@@ -939,7 +939,7 @@ class Accounting(BaseSDK):
             request = utils.unmarshal(request, operations.CreateAccountingOrderRequest)
         request = cast(operations.CreateAccountingOrderRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="POST",
             path="/accounting/{connection_id}/order",
             base_url=base_url,
@@ -1039,7 +1039,7 @@ class Accounting(BaseSDK):
             )
         request = cast(operations.CreateAccountingTaxrateRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="POST",
             path="/accounting/{connection_id}/taxrate",
             base_url=base_url,
@@ -1139,7 +1139,7 @@ class Accounting(BaseSDK):
             )
         request = cast(operations.CreateAccountingTaxrateRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="POST",
             path="/accounting/{connection_id}/taxrate",
             base_url=base_url,
@@ -1239,7 +1239,7 @@ class Accounting(BaseSDK):
             )
         request = cast(operations.CreateAccountingTransactionRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="POST",
             path="/accounting/{connection_id}/transaction",
             base_url=base_url,
@@ -1339,7 +1339,7 @@ class Accounting(BaseSDK):
             )
         request = cast(operations.CreateAccountingTransactionRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="POST",
             path="/accounting/{connection_id}/transaction",
             base_url=base_url,
@@ -1437,7 +1437,7 @@ class Accounting(BaseSDK):
             request = utils.unmarshal(request, operations.GetAccountingAccountRequest)
         request = cast(operations.GetAccountingAccountRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/accounting/{connection_id}/account/{id}",
             base_url=base_url,
@@ -1528,7 +1528,7 @@ class Accounting(BaseSDK):
             request = utils.unmarshal(request, operations.GetAccountingAccountRequest)
         request = cast(operations.GetAccountingAccountRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/accounting/{connection_id}/account/{id}",
             base_url=base_url,
@@ -1619,7 +1619,7 @@ class Accounting(BaseSDK):
             request = utils.unmarshal(request, operations.GetAccountingContactRequest)
         request = cast(operations.GetAccountingContactRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/accounting/{connection_id}/contact/{id}",
             base_url=base_url,
@@ -1710,7 +1710,7 @@ class Accounting(BaseSDK):
             request = utils.unmarshal(request, operations.GetAccountingContactRequest)
         request = cast(operations.GetAccountingContactRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/accounting/{connection_id}/contact/{id}",
             base_url=base_url,
@@ -1801,7 +1801,7 @@ class Accounting(BaseSDK):
             request = utils.unmarshal(request, operations.GetAccountingInvoiceRequest)
         request = cast(operations.GetAccountingInvoiceRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/accounting/{connection_id}/invoice/{id}",
             base_url=base_url,
@@ -1892,7 +1892,7 @@ class Accounting(BaseSDK):
             request = utils.unmarshal(request, operations.GetAccountingInvoiceRequest)
         request = cast(operations.GetAccountingInvoiceRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/accounting/{connection_id}/invoice/{id}",
             base_url=base_url,
@@ -1983,7 +1983,7 @@ class Accounting(BaseSDK):
             request = utils.unmarshal(request, operations.GetAccountingJournalRequest)
         request = cast(operations.GetAccountingJournalRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/accounting/{connection_id}/journal/{id}",
             base_url=base_url,
@@ -2074,7 +2074,7 @@ class Accounting(BaseSDK):
             request = utils.unmarshal(request, operations.GetAccountingJournalRequest)
         request = cast(operations.GetAccountingJournalRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/accounting/{connection_id}/journal/{id}",
             base_url=base_url,
@@ -2165,7 +2165,7 @@ class Accounting(BaseSDK):
             request = utils.unmarshal(request, operations.GetAccountingOrderRequest)
         request = cast(operations.GetAccountingOrderRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/accounting/{connection_id}/order/{id}",
             base_url=base_url,
@@ -2256,7 +2256,7 @@ class Accounting(BaseSDK):
             request = utils.unmarshal(request, operations.GetAccountingOrderRequest)
         request = cast(operations.GetAccountingOrderRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/accounting/{connection_id}/order/{id}",
             base_url=base_url,
@@ -2349,7 +2349,7 @@ class Accounting(BaseSDK):
             )
         request = cast(operations.GetAccountingOrganizationRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/accounting/{connection_id}/organization/{id}",
             base_url=base_url,
@@ -2442,7 +2442,7 @@ class Accounting(BaseSDK):
             )
         request = cast(operations.GetAccountingOrganizationRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/accounting/{connection_id}/organization/{id}",
             base_url=base_url,
@@ -2533,7 +2533,7 @@ class Accounting(BaseSDK):
             request = utils.unmarshal(request, operations.GetAccountingTaxrateRequest)
         request = cast(operations.GetAccountingTaxrateRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/accounting/{connection_id}/taxrate/{id}",
             base_url=base_url,
@@ -2624,7 +2624,7 @@ class Accounting(BaseSDK):
             request = utils.unmarshal(request, operations.GetAccountingTaxrateRequest)
         request = cast(operations.GetAccountingTaxrateRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/accounting/{connection_id}/taxrate/{id}",
             base_url=base_url,
@@ -2717,7 +2717,7 @@ class Accounting(BaseSDK):
             )
         request = cast(operations.GetAccountingTransactionRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/accounting/{connection_id}/transaction/{id}",
             base_url=base_url,
@@ -2810,7 +2810,7 @@ class Accounting(BaseSDK):
             )
         request = cast(operations.GetAccountingTransactionRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/accounting/{connection_id}/transaction/{id}",
             base_url=base_url,
@@ -2901,7 +2901,7 @@ class Accounting(BaseSDK):
             request = utils.unmarshal(request, operations.ListAccountingAccountsRequest)
         request = cast(operations.ListAccountingAccountsRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/accounting/{connection_id}/account",
             base_url=base_url,
@@ -2992,7 +2992,7 @@ class Accounting(BaseSDK):
             request = utils.unmarshal(request, operations.ListAccountingAccountsRequest)
         request = cast(operations.ListAccountingAccountsRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/accounting/{connection_id}/account",
             base_url=base_url,
@@ -3083,7 +3083,7 @@ class Accounting(BaseSDK):
             request = utils.unmarshal(request, operations.ListAccountingContactsRequest)
         request = cast(operations.ListAccountingContactsRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/accounting/{connection_id}/contact",
             base_url=base_url,
@@ -3174,7 +3174,7 @@ class Accounting(BaseSDK):
             request = utils.unmarshal(request, operations.ListAccountingContactsRequest)
         request = cast(operations.ListAccountingContactsRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/accounting/{connection_id}/contact",
             base_url=base_url,
@@ -3265,7 +3265,7 @@ class Accounting(BaseSDK):
             request = utils.unmarshal(request, operations.ListAccountingInvoicesRequest)
         request = cast(operations.ListAccountingInvoicesRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/accounting/{connection_id}/invoice",
             base_url=base_url,
@@ -3356,7 +3356,7 @@ class Accounting(BaseSDK):
             request = utils.unmarshal(request, operations.ListAccountingInvoicesRequest)
         request = cast(operations.ListAccountingInvoicesRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/accounting/{connection_id}/invoice",
             base_url=base_url,
@@ -3447,7 +3447,7 @@ class Accounting(BaseSDK):
             request = utils.unmarshal(request, operations.ListAccountingJournalsRequest)
         request = cast(operations.ListAccountingJournalsRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/accounting/{connection_id}/journal",
             base_url=base_url,
@@ -3538,7 +3538,7 @@ class Accounting(BaseSDK):
             request = utils.unmarshal(request, operations.ListAccountingJournalsRequest)
         request = cast(operations.ListAccountingJournalsRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/accounting/{connection_id}/journal",
             base_url=base_url,
@@ -3629,7 +3629,7 @@ class Accounting(BaseSDK):
             request = utils.unmarshal(request, operations.ListAccountingOrdersRequest)
         request = cast(operations.ListAccountingOrdersRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/accounting/{connection_id}/order",
             base_url=base_url,
@@ -3720,7 +3720,7 @@ class Accounting(BaseSDK):
             request = utils.unmarshal(request, operations.ListAccountingOrdersRequest)
         request = cast(operations.ListAccountingOrdersRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/accounting/{connection_id}/order",
             base_url=base_url,
@@ -3813,7 +3813,7 @@ class Accounting(BaseSDK):
             )
         request = cast(operations.ListAccountingOrganizationsRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/accounting/{connection_id}/organization",
             base_url=base_url,
@@ -3906,7 +3906,7 @@ class Accounting(BaseSDK):
             )
         request = cast(operations.ListAccountingOrganizationsRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/accounting/{connection_id}/organization",
             base_url=base_url,
@@ -3997,7 +3997,7 @@ class Accounting(BaseSDK):
             request = utils.unmarshal(request, operations.ListAccountingTaxratesRequest)
         request = cast(operations.ListAccountingTaxratesRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/accounting/{connection_id}/taxrate",
             base_url=base_url,
@@ -4088,7 +4088,7 @@ class Accounting(BaseSDK):
             request = utils.unmarshal(request, operations.ListAccountingTaxratesRequest)
         request = cast(operations.ListAccountingTaxratesRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/accounting/{connection_id}/taxrate",
             base_url=base_url,
@@ -4181,7 +4181,7 @@ class Accounting(BaseSDK):
             )
         request = cast(operations.ListAccountingTransactionsRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/accounting/{connection_id}/transaction",
             base_url=base_url,
@@ -4274,7 +4274,7 @@ class Accounting(BaseSDK):
             )
         request = cast(operations.ListAccountingTransactionsRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/accounting/{connection_id}/transaction",
             base_url=base_url,
@@ -4365,7 +4365,7 @@ class Accounting(BaseSDK):
             request = utils.unmarshal(request, operations.PatchAccountingAccountRequest)
         request = cast(operations.PatchAccountingAccountRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PATCH",
             path="/accounting/{connection_id}/account/{id}",
             base_url=base_url,
@@ -4463,7 +4463,7 @@ class Accounting(BaseSDK):
             request = utils.unmarshal(request, operations.PatchAccountingAccountRequest)
         request = cast(operations.PatchAccountingAccountRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PATCH",
             path="/accounting/{connection_id}/account/{id}",
             base_url=base_url,
@@ -4561,7 +4561,7 @@ class Accounting(BaseSDK):
             request = utils.unmarshal(request, operations.PatchAccountingContactRequest)
         request = cast(operations.PatchAccountingContactRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PATCH",
             path="/accounting/{connection_id}/contact/{id}",
             base_url=base_url,
@@ -4659,7 +4659,7 @@ class Accounting(BaseSDK):
             request = utils.unmarshal(request, operations.PatchAccountingContactRequest)
         request = cast(operations.PatchAccountingContactRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PATCH",
             path="/accounting/{connection_id}/contact/{id}",
             base_url=base_url,
@@ -4757,7 +4757,7 @@ class Accounting(BaseSDK):
             request = utils.unmarshal(request, operations.PatchAccountingInvoiceRequest)
         request = cast(operations.PatchAccountingInvoiceRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PATCH",
             path="/accounting/{connection_id}/invoice/{id}",
             base_url=base_url,
@@ -4855,7 +4855,7 @@ class Accounting(BaseSDK):
             request = utils.unmarshal(request, operations.PatchAccountingInvoiceRequest)
         request = cast(operations.PatchAccountingInvoiceRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PATCH",
             path="/accounting/{connection_id}/invoice/{id}",
             base_url=base_url,
@@ -4953,7 +4953,7 @@ class Accounting(BaseSDK):
             request = utils.unmarshal(request, operations.PatchAccountingJournalRequest)
         request = cast(operations.PatchAccountingJournalRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PATCH",
             path="/accounting/{connection_id}/journal/{id}",
             base_url=base_url,
@@ -5051,7 +5051,7 @@ class Accounting(BaseSDK):
             request = utils.unmarshal(request, operations.PatchAccountingJournalRequest)
         request = cast(operations.PatchAccountingJournalRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PATCH",
             path="/accounting/{connection_id}/journal/{id}",
             base_url=base_url,
@@ -5149,7 +5149,7 @@ class Accounting(BaseSDK):
             request = utils.unmarshal(request, operations.PatchAccountingOrderRequest)
         request = cast(operations.PatchAccountingOrderRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PATCH",
             path="/accounting/{connection_id}/order/{id}",
             base_url=base_url,
@@ -5247,7 +5247,7 @@ class Accounting(BaseSDK):
             request = utils.unmarshal(request, operations.PatchAccountingOrderRequest)
         request = cast(operations.PatchAccountingOrderRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PATCH",
             path="/accounting/{connection_id}/order/{id}",
             base_url=base_url,
@@ -5345,7 +5345,7 @@ class Accounting(BaseSDK):
             request = utils.unmarshal(request, operations.PatchAccountingTaxrateRequest)
         request = cast(operations.PatchAccountingTaxrateRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PATCH",
             path="/accounting/{connection_id}/taxrate/{id}",
             base_url=base_url,
@@ -5443,7 +5443,7 @@ class Accounting(BaseSDK):
             request = utils.unmarshal(request, operations.PatchAccountingTaxrateRequest)
         request = cast(operations.PatchAccountingTaxrateRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PATCH",
             path="/accounting/{connection_id}/taxrate/{id}",
             base_url=base_url,
@@ -5543,7 +5543,7 @@ class Accounting(BaseSDK):
             )
         request = cast(operations.PatchAccountingTransactionRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PATCH",
             path="/accounting/{connection_id}/transaction/{id}",
             base_url=base_url,
@@ -5643,7 +5643,7 @@ class Accounting(BaseSDK):
             )
         request = cast(operations.PatchAccountingTransactionRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PATCH",
             path="/accounting/{connection_id}/transaction/{id}",
             base_url=base_url,
@@ -5743,7 +5743,7 @@ class Accounting(BaseSDK):
             )
         request = cast(operations.RemoveAccountingAccountRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="DELETE",
             path="/accounting/{connection_id}/account/{id}",
             base_url=base_url,
@@ -5841,7 +5841,7 @@ class Accounting(BaseSDK):
             )
         request = cast(operations.RemoveAccountingAccountRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="DELETE",
             path="/accounting/{connection_id}/account/{id}",
             base_url=base_url,
@@ -5939,7 +5939,7 @@ class Accounting(BaseSDK):
             )
         request = cast(operations.RemoveAccountingContactRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="DELETE",
             path="/accounting/{connection_id}/contact/{id}",
             base_url=base_url,
@@ -6037,7 +6037,7 @@ class Accounting(BaseSDK):
             )
         request = cast(operations.RemoveAccountingContactRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="DELETE",
             path="/accounting/{connection_id}/contact/{id}",
             base_url=base_url,
@@ -6135,7 +6135,7 @@ class Accounting(BaseSDK):
             )
         request = cast(operations.RemoveAccountingInvoiceRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="DELETE",
             path="/accounting/{connection_id}/invoice/{id}",
             base_url=base_url,
@@ -6233,7 +6233,7 @@ class Accounting(BaseSDK):
             )
         request = cast(operations.RemoveAccountingInvoiceRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="DELETE",
             path="/accounting/{connection_id}/invoice/{id}",
             base_url=base_url,
@@ -6331,7 +6331,7 @@ class Accounting(BaseSDK):
             )
         request = cast(operations.RemoveAccountingJournalRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="DELETE",
             path="/accounting/{connection_id}/journal/{id}",
             base_url=base_url,
@@ -6429,7 +6429,7 @@ class Accounting(BaseSDK):
             )
         request = cast(operations.RemoveAccountingJournalRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="DELETE",
             path="/accounting/{connection_id}/journal/{id}",
             base_url=base_url,
@@ -6525,7 +6525,7 @@ class Accounting(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveAccountingOrderRequest)
         request = cast(operations.RemoveAccountingOrderRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="DELETE",
             path="/accounting/{connection_id}/order/{id}",
             base_url=base_url,
@@ -6621,7 +6621,7 @@ class Accounting(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveAccountingOrderRequest)
         request = cast(operations.RemoveAccountingOrderRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="DELETE",
             path="/accounting/{connection_id}/order/{id}",
             base_url=base_url,
@@ -6719,7 +6719,7 @@ class Accounting(BaseSDK):
             )
         request = cast(operations.RemoveAccountingTaxrateRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="DELETE",
             path="/accounting/{connection_id}/taxrate/{id}",
             base_url=base_url,
@@ -6817,7 +6817,7 @@ class Accounting(BaseSDK):
             )
         request = cast(operations.RemoveAccountingTaxrateRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="DELETE",
             path="/accounting/{connection_id}/taxrate/{id}",
             base_url=base_url,
@@ -6915,7 +6915,7 @@ class Accounting(BaseSDK):
             )
         request = cast(operations.RemoveAccountingTransactionRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="DELETE",
             path="/accounting/{connection_id}/transaction/{id}",
             base_url=base_url,
@@ -7013,7 +7013,7 @@ class Accounting(BaseSDK):
             )
         request = cast(operations.RemoveAccountingTransactionRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="DELETE",
             path="/accounting/{connection_id}/transaction/{id}",
             base_url=base_url,
@@ -7111,7 +7111,7 @@ class Accounting(BaseSDK):
             )
         request = cast(operations.UpdateAccountingAccountRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PUT",
             path="/accounting/{connection_id}/account/{id}",
             base_url=base_url,
@@ -7211,7 +7211,7 @@ class Accounting(BaseSDK):
             )
         request = cast(operations.UpdateAccountingAccountRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PUT",
             path="/accounting/{connection_id}/account/{id}",
             base_url=base_url,
@@ -7311,7 +7311,7 @@ class Accounting(BaseSDK):
             )
         request = cast(operations.UpdateAccountingContactRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PUT",
             path="/accounting/{connection_id}/contact/{id}",
             base_url=base_url,
@@ -7411,7 +7411,7 @@ class Accounting(BaseSDK):
             )
         request = cast(operations.UpdateAccountingContactRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PUT",
             path="/accounting/{connection_id}/contact/{id}",
             base_url=base_url,
@@ -7511,7 +7511,7 @@ class Accounting(BaseSDK):
             )
         request = cast(operations.UpdateAccountingInvoiceRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PUT",
             path="/accounting/{connection_id}/invoice/{id}",
             base_url=base_url,
@@ -7611,7 +7611,7 @@ class Accounting(BaseSDK):
             )
         request = cast(operations.UpdateAccountingInvoiceRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PUT",
             path="/accounting/{connection_id}/invoice/{id}",
             base_url=base_url,
@@ -7711,7 +7711,7 @@ class Accounting(BaseSDK):
             )
         request = cast(operations.UpdateAccountingJournalRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PUT",
             path="/accounting/{connection_id}/journal/{id}",
             base_url=base_url,
@@ -7811,7 +7811,7 @@ class Accounting(BaseSDK):
             )
         request = cast(operations.UpdateAccountingJournalRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PUT",
             path="/accounting/{connection_id}/journal/{id}",
             base_url=base_url,
@@ -7909,7 +7909,7 @@ class Accounting(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateAccountingOrderRequest)
         request = cast(operations.UpdateAccountingOrderRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PUT",
             path="/accounting/{connection_id}/order/{id}",
             base_url=base_url,
@@ -8007,7 +8007,7 @@ class Accounting(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateAccountingOrderRequest)
         request = cast(operations.UpdateAccountingOrderRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PUT",
             path="/accounting/{connection_id}/order/{id}",
             base_url=base_url,
@@ -8107,7 +8107,7 @@ class Accounting(BaseSDK):
             )
         request = cast(operations.UpdateAccountingTaxrateRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PUT",
             path="/accounting/{connection_id}/taxrate/{id}",
             base_url=base_url,
@@ -8207,7 +8207,7 @@ class Accounting(BaseSDK):
             )
         request = cast(operations.UpdateAccountingTaxrateRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PUT",
             path="/accounting/{connection_id}/taxrate/{id}",
             base_url=base_url,
@@ -8307,7 +8307,7 @@ class Accounting(BaseSDK):
             )
         request = cast(operations.UpdateAccountingTransactionRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PUT",
             path="/accounting/{connection_id}/transaction/{id}",
             base_url=base_url,
@@ -8407,7 +8407,7 @@ class Accounting(BaseSDK):
             )
         request = cast(operations.UpdateAccountingTransactionRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PUT",
             path="/accounting/{connection_id}/transaction/{id}",
             base_url=base_url,

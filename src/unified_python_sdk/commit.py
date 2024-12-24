@@ -41,7 +41,7 @@ class Commit(BaseSDK):
             request = utils.unmarshal(request, operations.CreateRepoCommitRequest)
         request = cast(operations.CreateRepoCommitRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="POST",
             path="/repo/{connection_id}/commit",
             base_url=base_url,
@@ -135,7 +135,7 @@ class Commit(BaseSDK):
             request = utils.unmarshal(request, operations.CreateRepoCommitRequest)
         request = cast(operations.CreateRepoCommitRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="POST",
             path="/repo/{connection_id}/commit",
             base_url=base_url,
@@ -228,7 +228,7 @@ class Commit(BaseSDK):
             request = utils.unmarshal(request, operations.GetRepoCommitRequest)
         request = cast(operations.GetRepoCommitRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/repo/{connection_id}/commit/{id}",
             base_url=base_url,
@@ -318,7 +318,7 @@ class Commit(BaseSDK):
             request = utils.unmarshal(request, operations.GetRepoCommitRequest)
         request = cast(operations.GetRepoCommitRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/repo/{connection_id}/commit/{id}",
             base_url=base_url,
@@ -409,7 +409,7 @@ class Commit(BaseSDK):
             request = utils.unmarshal(request, operations.ListRepoCommitsRequest)
         request = cast(operations.ListRepoCommitsRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/repo/{connection_id}/commit",
             base_url=base_url,
@@ -500,7 +500,7 @@ class Commit(BaseSDK):
             request = utils.unmarshal(request, operations.ListRepoCommitsRequest)
         request = cast(operations.ListRepoCommitsRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/repo/{connection_id}/commit",
             base_url=base_url,
@@ -591,7 +591,7 @@ class Commit(BaseSDK):
             request = utils.unmarshal(request, operations.PatchRepoCommitRequest)
         request = cast(operations.PatchRepoCommitRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PATCH",
             path="/repo/{connection_id}/commit/{id}",
             base_url=base_url,
@@ -685,7 +685,7 @@ class Commit(BaseSDK):
             request = utils.unmarshal(request, operations.PatchRepoCommitRequest)
         request = cast(operations.PatchRepoCommitRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PATCH",
             path="/repo/{connection_id}/commit/{id}",
             base_url=base_url,
@@ -779,7 +779,7 @@ class Commit(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveRepoCommitRequest)
         request = cast(operations.RemoveRepoCommitRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="DELETE",
             path="/repo/{connection_id}/commit/{id}",
             base_url=base_url,
@@ -875,7 +875,7 @@ class Commit(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveRepoCommitRequest)
         request = cast(operations.RemoveRepoCommitRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="DELETE",
             path="/repo/{connection_id}/commit/{id}",
             base_url=base_url,
@@ -971,7 +971,7 @@ class Commit(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateRepoCommitRequest)
         request = cast(operations.UpdateRepoCommitRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PUT",
             path="/repo/{connection_id}/commit/{id}",
             base_url=base_url,
@@ -1065,7 +1065,7 @@ class Commit(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateRepoCommitRequest)
         request = cast(operations.UpdateRepoCommitRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PUT",
             path="/repo/{connection_id}/commit/{id}",
             base_url=base_url,

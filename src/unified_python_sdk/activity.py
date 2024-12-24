@@ -41,7 +41,7 @@ class Activity(BaseSDK):
             request = utils.unmarshal(request, operations.CreateAtsActivityRequest)
         request = cast(operations.CreateAtsActivityRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="POST",
             path="/ats/{connection_id}/activity",
             base_url=base_url,
@@ -135,7 +135,7 @@ class Activity(BaseSDK):
             request = utils.unmarshal(request, operations.CreateAtsActivityRequest)
         request = cast(operations.CreateAtsActivityRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="POST",
             path="/ats/{connection_id}/activity",
             base_url=base_url,
@@ -228,7 +228,7 @@ class Activity(BaseSDK):
             request = utils.unmarshal(request, operations.GetAtsActivityRequest)
         request = cast(operations.GetAtsActivityRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/ats/{connection_id}/activity/{id}",
             base_url=base_url,
@@ -318,7 +318,7 @@ class Activity(BaseSDK):
             request = utils.unmarshal(request, operations.GetAtsActivityRequest)
         request = cast(operations.GetAtsActivityRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/ats/{connection_id}/activity/{id}",
             base_url=base_url,
@@ -409,7 +409,7 @@ class Activity(BaseSDK):
             request = utils.unmarshal(request, operations.ListAtsActivitiesRequest)
         request = cast(operations.ListAtsActivitiesRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/ats/{connection_id}/activity",
             base_url=base_url,
@@ -500,7 +500,7 @@ class Activity(BaseSDK):
             request = utils.unmarshal(request, operations.ListAtsActivitiesRequest)
         request = cast(operations.ListAtsActivitiesRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/ats/{connection_id}/activity",
             base_url=base_url,
@@ -591,7 +591,7 @@ class Activity(BaseSDK):
             request = utils.unmarshal(request, operations.PatchAtsActivityRequest)
         request = cast(operations.PatchAtsActivityRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PATCH",
             path="/ats/{connection_id}/activity/{id}",
             base_url=base_url,
@@ -685,7 +685,7 @@ class Activity(BaseSDK):
             request = utils.unmarshal(request, operations.PatchAtsActivityRequest)
         request = cast(operations.PatchAtsActivityRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PATCH",
             path="/ats/{connection_id}/activity/{id}",
             base_url=base_url,
@@ -779,7 +779,7 @@ class Activity(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveAtsActivityRequest)
         request = cast(operations.RemoveAtsActivityRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="DELETE",
             path="/ats/{connection_id}/activity/{id}",
             base_url=base_url,
@@ -875,7 +875,7 @@ class Activity(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveAtsActivityRequest)
         request = cast(operations.RemoveAtsActivityRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="DELETE",
             path="/ats/{connection_id}/activity/{id}",
             base_url=base_url,
@@ -971,7 +971,7 @@ class Activity(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateAtsActivityRequest)
         request = cast(operations.UpdateAtsActivityRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PUT",
             path="/ats/{connection_id}/activity/{id}",
             base_url=base_url,
@@ -1065,7 +1065,7 @@ class Activity(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateAtsActivityRequest)
         request = cast(operations.UpdateAtsActivityRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PUT",
             path="/ats/{connection_id}/activity/{id}",
             base_url=base_url,

@@ -43,7 +43,7 @@ class Collection(BaseSDK):
             )
         request = cast(operations.CreateCommerceCollectionRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="POST",
             path="/commerce/{connection_id}/collection",
             base_url=base_url,
@@ -143,7 +143,7 @@ class Collection(BaseSDK):
             )
         request = cast(operations.CreateCommerceCollectionRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="POST",
             path="/commerce/{connection_id}/collection",
             base_url=base_url,
@@ -241,7 +241,7 @@ class Collection(BaseSDK):
             request = utils.unmarshal(request, operations.GetCommerceCollectionRequest)
         request = cast(operations.GetCommerceCollectionRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/commerce/{connection_id}/collection/{id}",
             base_url=base_url,
@@ -332,7 +332,7 @@ class Collection(BaseSDK):
             request = utils.unmarshal(request, operations.GetCommerceCollectionRequest)
         request = cast(operations.GetCommerceCollectionRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/commerce/{connection_id}/collection/{id}",
             base_url=base_url,
@@ -425,7 +425,7 @@ class Collection(BaseSDK):
             )
         request = cast(operations.ListCommerceCollectionsRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/commerce/{connection_id}/collection",
             base_url=base_url,
@@ -518,7 +518,7 @@ class Collection(BaseSDK):
             )
         request = cast(operations.ListCommerceCollectionsRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/commerce/{connection_id}/collection",
             base_url=base_url,
@@ -611,7 +611,7 @@ class Collection(BaseSDK):
             )
         request = cast(operations.PatchCommerceCollectionRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PATCH",
             path="/commerce/{connection_id}/collection/{id}",
             base_url=base_url,
@@ -711,7 +711,7 @@ class Collection(BaseSDK):
             )
         request = cast(operations.PatchCommerceCollectionRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PATCH",
             path="/commerce/{connection_id}/collection/{id}",
             base_url=base_url,
@@ -811,7 +811,7 @@ class Collection(BaseSDK):
             )
         request = cast(operations.RemoveCommerceCollectionRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="DELETE",
             path="/commerce/{connection_id}/collection/{id}",
             base_url=base_url,
@@ -909,7 +909,7 @@ class Collection(BaseSDK):
             )
         request = cast(operations.RemoveCommerceCollectionRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="DELETE",
             path="/commerce/{connection_id}/collection/{id}",
             base_url=base_url,
@@ -1007,7 +1007,7 @@ class Collection(BaseSDK):
             )
         request = cast(operations.UpdateCommerceCollectionRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PUT",
             path="/commerce/{connection_id}/collection/{id}",
             base_url=base_url,
@@ -1107,7 +1107,7 @@ class Collection(BaseSDK):
             )
         request = cast(operations.UpdateCommerceCollectionRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PUT",
             path="/commerce/{connection_id}/collection/{id}",
             base_url=base_url,

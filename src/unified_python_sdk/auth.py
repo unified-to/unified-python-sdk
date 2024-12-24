@@ -45,7 +45,7 @@ class Auth(BaseSDK):
             )
         request = cast(operations.GetUnifiedIntegrationAuthRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/unified/integration/auth/{workspace_id}/{integration_type}",
             base_url=base_url,
@@ -138,7 +138,7 @@ class Auth(BaseSDK):
             )
         request = cast(operations.GetUnifiedIntegrationAuthRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/unified/integration/auth/{workspace_id}/{integration_type}",
             base_url=base_url,
@@ -231,7 +231,7 @@ class Auth(BaseSDK):
             )
         request = cast(operations.GetUnifiedIntegrationLoginRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/unified/integration/login/{workspace_id}/{integration_type}",
             base_url=base_url,
@@ -324,7 +324,7 @@ class Auth(BaseSDK):
             )
         request = cast(operations.GetUnifiedIntegrationLoginRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/unified/integration/login/{workspace_id}/{integration_type}",
             base_url=base_url,

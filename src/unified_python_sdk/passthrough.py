@@ -109,7 +109,7 @@ class Passthrough(BaseSDK):
             request = utils.unmarshal(request, operations.CreatePassthroughJSONRequest)
         request = cast(operations.CreatePassthroughJSONRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="POST",
             path="/passthrough/{connection_id}/{path}",
             base_url=base_url,
@@ -252,7 +252,7 @@ class Passthrough(BaseSDK):
             request = utils.unmarshal(request, operations.CreatePassthroughJSONRequest)
         request = cast(operations.CreatePassthroughJSONRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="POST",
             path="/passthrough/{connection_id}/{path}",
             base_url=base_url,
@@ -395,7 +395,7 @@ class Passthrough(BaseSDK):
             request = utils.unmarshal(request, operations.CreatePassthroughRawRequest)
         request = cast(operations.CreatePassthroughRawRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="POST",
             path="/passthrough/{connection_id}/{path}",
             base_url=base_url,
@@ -542,7 +542,7 @@ class Passthrough(BaseSDK):
             request = utils.unmarshal(request, operations.CreatePassthroughRawRequest)
         request = cast(operations.CreatePassthroughRawRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="POST",
             path="/passthrough/{connection_id}/{path}",
             base_url=base_url,
@@ -689,7 +689,7 @@ class Passthrough(BaseSDK):
             request = utils.unmarshal(request, operations.ListPassthroughsRequest)
         request = cast(operations.ListPassthroughsRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/passthrough/{connection_id}/{path}",
             base_url=base_url,
@@ -829,7 +829,7 @@ class Passthrough(BaseSDK):
             request = utils.unmarshal(request, operations.ListPassthroughsRequest)
         request = cast(operations.ListPassthroughsRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/passthrough/{connection_id}/{path}",
             base_url=base_url,
@@ -969,7 +969,7 @@ class Passthrough(BaseSDK):
             request = utils.unmarshal(request, operations.PatchPassthroughJSONRequest)
         request = cast(operations.PatchPassthroughJSONRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PATCH",
             path="/passthrough/{connection_id}/{path}",
             base_url=base_url,
@@ -1112,7 +1112,7 @@ class Passthrough(BaseSDK):
             request = utils.unmarshal(request, operations.PatchPassthroughJSONRequest)
         request = cast(operations.PatchPassthroughJSONRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PATCH",
             path="/passthrough/{connection_id}/{path}",
             base_url=base_url,
@@ -1255,7 +1255,7 @@ class Passthrough(BaseSDK):
             request = utils.unmarshal(request, operations.PatchPassthroughRawRequest)
         request = cast(operations.PatchPassthroughRawRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PATCH",
             path="/passthrough/{connection_id}/{path}",
             base_url=base_url,
@@ -1402,7 +1402,7 @@ class Passthrough(BaseSDK):
             request = utils.unmarshal(request, operations.PatchPassthroughRawRequest)
         request = cast(operations.PatchPassthroughRawRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PATCH",
             path="/passthrough/{connection_id}/{path}",
             base_url=base_url,
@@ -1549,7 +1549,7 @@ class Passthrough(BaseSDK):
             request = utils.unmarshal(request, operations.RemovePassthroughRequest)
         request = cast(operations.RemovePassthroughRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="DELETE",
             path="/passthrough/{connection_id}/{path}",
             base_url=base_url,
@@ -1689,7 +1689,7 @@ class Passthrough(BaseSDK):
             request = utils.unmarshal(request, operations.RemovePassthroughRequest)
         request = cast(operations.RemovePassthroughRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="DELETE",
             path="/passthrough/{connection_id}/{path}",
             base_url=base_url,
@@ -1829,7 +1829,7 @@ class Passthrough(BaseSDK):
             request = utils.unmarshal(request, operations.UpdatePassthroughJSONRequest)
         request = cast(operations.UpdatePassthroughJSONRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PUT",
             path="/passthrough/{connection_id}/{path}",
             base_url=base_url,
@@ -1972,7 +1972,7 @@ class Passthrough(BaseSDK):
             request = utils.unmarshal(request, operations.UpdatePassthroughJSONRequest)
         request = cast(operations.UpdatePassthroughJSONRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PUT",
             path="/passthrough/{connection_id}/{path}",
             base_url=base_url,
@@ -2115,7 +2115,7 @@ class Passthrough(BaseSDK):
             request = utils.unmarshal(request, operations.UpdatePassthroughRawRequest)
         request = cast(operations.UpdatePassthroughRawRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PUT",
             path="/passthrough/{connection_id}/{path}",
             base_url=base_url,
@@ -2262,7 +2262,7 @@ class Passthrough(BaseSDK):
             request = utils.unmarshal(request, operations.UpdatePassthroughRawRequest)
         request = cast(operations.UpdatePassthroughRawRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PUT",
             path="/passthrough/{connection_id}/{path}",
             base_url=base_url,

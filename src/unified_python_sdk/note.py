@@ -41,7 +41,7 @@ class Note(BaseSDK):
             request = utils.unmarshal(request, operations.CreateTicketingNoteRequest)
         request = cast(operations.CreateTicketingNoteRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="POST",
             path="/ticketing/{connection_id}/note",
             base_url=base_url,
@@ -139,7 +139,7 @@ class Note(BaseSDK):
             request = utils.unmarshal(request, operations.CreateTicketingNoteRequest)
         request = cast(operations.CreateTicketingNoteRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="POST",
             path="/ticketing/{connection_id}/note",
             base_url=base_url,
@@ -237,7 +237,7 @@ class Note(BaseSDK):
             request = utils.unmarshal(request, operations.GetTicketingNoteRequest)
         request = cast(operations.GetTicketingNoteRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/ticketing/{connection_id}/note/{id}",
             base_url=base_url,
@@ -328,7 +328,7 @@ class Note(BaseSDK):
             request = utils.unmarshal(request, operations.GetTicketingNoteRequest)
         request = cast(operations.GetTicketingNoteRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/ticketing/{connection_id}/note/{id}",
             base_url=base_url,
@@ -419,7 +419,7 @@ class Note(BaseSDK):
             request = utils.unmarshal(request, operations.ListTicketingNotesRequest)
         request = cast(operations.ListTicketingNotesRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/ticketing/{connection_id}/note",
             base_url=base_url,
@@ -510,7 +510,7 @@ class Note(BaseSDK):
             request = utils.unmarshal(request, operations.ListTicketingNotesRequest)
         request = cast(operations.ListTicketingNotesRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/ticketing/{connection_id}/note",
             base_url=base_url,
@@ -601,7 +601,7 @@ class Note(BaseSDK):
             request = utils.unmarshal(request, operations.PatchTicketingNoteRequest)
         request = cast(operations.PatchTicketingNoteRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PATCH",
             path="/ticketing/{connection_id}/note/{id}",
             base_url=base_url,
@@ -699,7 +699,7 @@ class Note(BaseSDK):
             request = utils.unmarshal(request, operations.PatchTicketingNoteRequest)
         request = cast(operations.PatchTicketingNoteRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PATCH",
             path="/ticketing/{connection_id}/note/{id}",
             base_url=base_url,
@@ -797,7 +797,7 @@ class Note(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveTicketingNoteRequest)
         request = cast(operations.RemoveTicketingNoteRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="DELETE",
             path="/ticketing/{connection_id}/note/{id}",
             base_url=base_url,
@@ -893,7 +893,7 @@ class Note(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveTicketingNoteRequest)
         request = cast(operations.RemoveTicketingNoteRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="DELETE",
             path="/ticketing/{connection_id}/note/{id}",
             base_url=base_url,
@@ -989,7 +989,7 @@ class Note(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateTicketingNoteRequest)
         request = cast(operations.UpdateTicketingNoteRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PUT",
             path="/ticketing/{connection_id}/note/{id}",
             base_url=base_url,
@@ -1087,7 +1087,7 @@ class Note(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateTicketingNoteRequest)
         request = cast(operations.UpdateTicketingNoteRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PUT",
             path="/ticketing/{connection_id}/note/{id}",
             base_url=base_url,

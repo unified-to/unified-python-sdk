@@ -41,7 +41,7 @@ class Location(BaseSDK):
             request = utils.unmarshal(request, operations.CreateCommerceLocationRequest)
         request = cast(operations.CreateCommerceLocationRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="POST",
             path="/commerce/{connection_id}/location",
             base_url=base_url,
@@ -139,7 +139,7 @@ class Location(BaseSDK):
             request = utils.unmarshal(request, operations.CreateCommerceLocationRequest)
         request = cast(operations.CreateCommerceLocationRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="POST",
             path="/commerce/{connection_id}/location",
             base_url=base_url,
@@ -237,7 +237,7 @@ class Location(BaseSDK):
             request = utils.unmarshal(request, operations.CreateHrisLocationRequest)
         request = cast(operations.CreateHrisLocationRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="POST",
             path="/hris/{connection_id}/location",
             base_url=base_url,
@@ -335,7 +335,7 @@ class Location(BaseSDK):
             request = utils.unmarshal(request, operations.CreateHrisLocationRequest)
         request = cast(operations.CreateHrisLocationRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="POST",
             path="/hris/{connection_id}/location",
             base_url=base_url,
@@ -433,7 +433,7 @@ class Location(BaseSDK):
             request = utils.unmarshal(request, operations.GetCommerceLocationRequest)
         request = cast(operations.GetCommerceLocationRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/commerce/{connection_id}/location/{id}",
             base_url=base_url,
@@ -524,7 +524,7 @@ class Location(BaseSDK):
             request = utils.unmarshal(request, operations.GetCommerceLocationRequest)
         request = cast(operations.GetCommerceLocationRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/commerce/{connection_id}/location/{id}",
             base_url=base_url,
@@ -615,7 +615,7 @@ class Location(BaseSDK):
             request = utils.unmarshal(request, operations.GetHrisLocationRequest)
         request = cast(operations.GetHrisLocationRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/hris/{connection_id}/location/{id}",
             base_url=base_url,
@@ -706,7 +706,7 @@ class Location(BaseSDK):
             request = utils.unmarshal(request, operations.GetHrisLocationRequest)
         request = cast(operations.GetHrisLocationRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/hris/{connection_id}/location/{id}",
             base_url=base_url,
@@ -797,7 +797,7 @@ class Location(BaseSDK):
             request = utils.unmarshal(request, operations.ListCommerceLocationsRequest)
         request = cast(operations.ListCommerceLocationsRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/commerce/{connection_id}/location",
             base_url=base_url,
@@ -888,7 +888,7 @@ class Location(BaseSDK):
             request = utils.unmarshal(request, operations.ListCommerceLocationsRequest)
         request = cast(operations.ListCommerceLocationsRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/commerce/{connection_id}/location",
             base_url=base_url,
@@ -979,7 +979,7 @@ class Location(BaseSDK):
             request = utils.unmarshal(request, operations.ListHrisLocationsRequest)
         request = cast(operations.ListHrisLocationsRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/hris/{connection_id}/location",
             base_url=base_url,
@@ -1070,7 +1070,7 @@ class Location(BaseSDK):
             request = utils.unmarshal(request, operations.ListHrisLocationsRequest)
         request = cast(operations.ListHrisLocationsRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/hris/{connection_id}/location",
             base_url=base_url,
@@ -1161,7 +1161,7 @@ class Location(BaseSDK):
             request = utils.unmarshal(request, operations.PatchCommerceLocationRequest)
         request = cast(operations.PatchCommerceLocationRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PATCH",
             path="/commerce/{connection_id}/location/{id}",
             base_url=base_url,
@@ -1259,7 +1259,7 @@ class Location(BaseSDK):
             request = utils.unmarshal(request, operations.PatchCommerceLocationRequest)
         request = cast(operations.PatchCommerceLocationRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PATCH",
             path="/commerce/{connection_id}/location/{id}",
             base_url=base_url,
@@ -1357,7 +1357,7 @@ class Location(BaseSDK):
             request = utils.unmarshal(request, operations.PatchHrisLocationRequest)
         request = cast(operations.PatchHrisLocationRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PATCH",
             path="/hris/{connection_id}/location/{id}",
             base_url=base_url,
@@ -1455,7 +1455,7 @@ class Location(BaseSDK):
             request = utils.unmarshal(request, operations.PatchHrisLocationRequest)
         request = cast(operations.PatchHrisLocationRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PATCH",
             path="/hris/{connection_id}/location/{id}",
             base_url=base_url,
@@ -1553,7 +1553,7 @@ class Location(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveCommerceLocationRequest)
         request = cast(operations.RemoveCommerceLocationRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="DELETE",
             path="/commerce/{connection_id}/location/{id}",
             base_url=base_url,
@@ -1649,7 +1649,7 @@ class Location(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveCommerceLocationRequest)
         request = cast(operations.RemoveCommerceLocationRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="DELETE",
             path="/commerce/{connection_id}/location/{id}",
             base_url=base_url,
@@ -1745,7 +1745,7 @@ class Location(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveHrisLocationRequest)
         request = cast(operations.RemoveHrisLocationRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="DELETE",
             path="/hris/{connection_id}/location/{id}",
             base_url=base_url,
@@ -1841,7 +1841,7 @@ class Location(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveHrisLocationRequest)
         request = cast(operations.RemoveHrisLocationRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="DELETE",
             path="/hris/{connection_id}/location/{id}",
             base_url=base_url,
@@ -1937,7 +1937,7 @@ class Location(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateCommerceLocationRequest)
         request = cast(operations.UpdateCommerceLocationRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PUT",
             path="/commerce/{connection_id}/location/{id}",
             base_url=base_url,
@@ -2035,7 +2035,7 @@ class Location(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateCommerceLocationRequest)
         request = cast(operations.UpdateCommerceLocationRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PUT",
             path="/commerce/{connection_id}/location/{id}",
             base_url=base_url,
@@ -2133,7 +2133,7 @@ class Location(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateHrisLocationRequest)
         request = cast(operations.UpdateHrisLocationRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PUT",
             path="/hris/{connection_id}/location/{id}",
             base_url=base_url,
@@ -2231,7 +2231,7 @@ class Location(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateHrisLocationRequest)
         request = cast(operations.UpdateHrisLocationRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PUT",
             path="/hris/{connection_id}/location/{id}",
             base_url=base_url,

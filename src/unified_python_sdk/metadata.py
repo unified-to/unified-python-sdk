@@ -41,7 +41,7 @@ class Metadata(BaseSDK):
             request = utils.unmarshal(request, operations.CreateMetadataMetadataRequest)
         request = cast(operations.CreateMetadataMetadataRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="POST",
             path="/metadata/{connection_id}/metadata",
             base_url=base_url,
@@ -139,7 +139,7 @@ class Metadata(BaseSDK):
             request = utils.unmarshal(request, operations.CreateMetadataMetadataRequest)
         request = cast(operations.CreateMetadataMetadataRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="POST",
             path="/metadata/{connection_id}/metadata",
             base_url=base_url,
@@ -237,7 +237,7 @@ class Metadata(BaseSDK):
             request = utils.unmarshal(request, operations.GetMetadataMetadataRequest)
         request = cast(operations.GetMetadataMetadataRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/metadata/{connection_id}/metadata/{id}",
             base_url=base_url,
@@ -328,7 +328,7 @@ class Metadata(BaseSDK):
             request = utils.unmarshal(request, operations.GetMetadataMetadataRequest)
         request = cast(operations.GetMetadataMetadataRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/metadata/{connection_id}/metadata/{id}",
             base_url=base_url,
@@ -419,7 +419,7 @@ class Metadata(BaseSDK):
             request = utils.unmarshal(request, operations.ListMetadataMetadatasRequest)
         request = cast(operations.ListMetadataMetadatasRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/metadata/{connection_id}/metadata",
             base_url=base_url,
@@ -510,7 +510,7 @@ class Metadata(BaseSDK):
             request = utils.unmarshal(request, operations.ListMetadataMetadatasRequest)
         request = cast(operations.ListMetadataMetadatasRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/metadata/{connection_id}/metadata",
             base_url=base_url,
@@ -601,7 +601,7 @@ class Metadata(BaseSDK):
             request = utils.unmarshal(request, operations.PatchMetadataMetadataRequest)
         request = cast(operations.PatchMetadataMetadataRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PATCH",
             path="/metadata/{connection_id}/metadata/{id}",
             base_url=base_url,
@@ -699,7 +699,7 @@ class Metadata(BaseSDK):
             request = utils.unmarshal(request, operations.PatchMetadataMetadataRequest)
         request = cast(operations.PatchMetadataMetadataRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PATCH",
             path="/metadata/{connection_id}/metadata/{id}",
             base_url=base_url,
@@ -797,7 +797,7 @@ class Metadata(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveMetadataMetadataRequest)
         request = cast(operations.RemoveMetadataMetadataRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="DELETE",
             path="/metadata/{connection_id}/metadata/{id}",
             base_url=base_url,
@@ -893,7 +893,7 @@ class Metadata(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveMetadataMetadataRequest)
         request = cast(operations.RemoveMetadataMetadataRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="DELETE",
             path="/metadata/{connection_id}/metadata/{id}",
             base_url=base_url,
@@ -989,7 +989,7 @@ class Metadata(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateMetadataMetadataRequest)
         request = cast(operations.UpdateMetadataMetadataRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PUT",
             path="/metadata/{connection_id}/metadata/{id}",
             base_url=base_url,
@@ -1087,7 +1087,7 @@ class Metadata(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateMetadataMetadataRequest)
         request = cast(operations.UpdateMetadataMetadataRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PUT",
             path="/metadata/{connection_id}/metadata/{id}",
             base_url=base_url,

@@ -40,7 +40,7 @@ class Page(BaseSDK):
             request = utils.unmarshal(request, operations.CreateKmsPageRequest)
         request = cast(operations.CreateKmsPageRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="POST",
             path="/kms/{connection_id}/page",
             base_url=base_url,
@@ -131,7 +131,7 @@ class Page(BaseSDK):
             request = utils.unmarshal(request, operations.CreateKmsPageRequest)
         request = cast(operations.CreateKmsPageRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="POST",
             path="/kms/{connection_id}/page",
             base_url=base_url,
@@ -222,7 +222,7 @@ class Page(BaseSDK):
             request = utils.unmarshal(request, operations.GetKmsPageRequest)
         request = cast(operations.GetKmsPageRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/kms/{connection_id}/page/{id}",
             base_url=base_url,
@@ -310,7 +310,7 @@ class Page(BaseSDK):
             request = utils.unmarshal(request, operations.GetKmsPageRequest)
         request = cast(operations.GetKmsPageRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/kms/{connection_id}/page/{id}",
             base_url=base_url,
@@ -398,7 +398,7 @@ class Page(BaseSDK):
             request = utils.unmarshal(request, operations.ListKmsPagesRequest)
         request = cast(operations.ListKmsPagesRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/kms/{connection_id}/page",
             base_url=base_url,
@@ -488,7 +488,7 @@ class Page(BaseSDK):
             request = utils.unmarshal(request, operations.ListKmsPagesRequest)
         request = cast(operations.ListKmsPagesRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/kms/{connection_id}/page",
             base_url=base_url,
@@ -578,7 +578,7 @@ class Page(BaseSDK):
             request = utils.unmarshal(request, operations.PatchKmsPageRequest)
         request = cast(operations.PatchKmsPageRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PATCH",
             path="/kms/{connection_id}/page/{id}",
             base_url=base_url,
@@ -669,7 +669,7 @@ class Page(BaseSDK):
             request = utils.unmarshal(request, operations.PatchKmsPageRequest)
         request = cast(operations.PatchKmsPageRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PATCH",
             path="/kms/{connection_id}/page/{id}",
             base_url=base_url,
@@ -760,7 +760,7 @@ class Page(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveKmsPageRequest)
         request = cast(operations.RemoveKmsPageRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="DELETE",
             path="/kms/{connection_id}/page/{id}",
             base_url=base_url,
@@ -855,7 +855,7 @@ class Page(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveKmsPageRequest)
         request = cast(operations.RemoveKmsPageRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="DELETE",
             path="/kms/{connection_id}/page/{id}",
             base_url=base_url,
@@ -950,7 +950,7 @@ class Page(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateKmsPageRequest)
         request = cast(operations.UpdateKmsPageRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PUT",
             path="/kms/{connection_id}/page/{id}",
             base_url=base_url,
@@ -1041,7 +1041,7 @@ class Page(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateKmsPageRequest)
         request = cast(operations.UpdateKmsPageRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PUT",
             path="/kms/{connection_id}/page/{id}",
             base_url=base_url,

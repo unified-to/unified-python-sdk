@@ -43,7 +43,7 @@ class Webhook(BaseSDK):
             request = utils.unmarshal(request, operations.CreateUnifiedWebhookRequest)
         request = cast(operations.CreateUnifiedWebhookRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="POST",
             path="/unified/webhook",
             base_url=base_url,
@@ -137,7 +137,7 @@ class Webhook(BaseSDK):
             request = utils.unmarshal(request, operations.CreateUnifiedWebhookRequest)
         request = cast(operations.CreateUnifiedWebhookRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="POST",
             path="/unified/webhook",
             base_url=base_url,
@@ -229,7 +229,7 @@ class Webhook(BaseSDK):
             request = utils.unmarshal(request, operations.GetUnifiedWebhookRequest)
         request = cast(operations.GetUnifiedWebhookRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/unified/webhook/{id}",
             base_url=base_url,
@@ -318,7 +318,7 @@ class Webhook(BaseSDK):
             request = utils.unmarshal(request, operations.GetUnifiedWebhookRequest)
         request = cast(operations.GetUnifiedWebhookRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/unified/webhook/{id}",
             base_url=base_url,
@@ -407,7 +407,7 @@ class Webhook(BaseSDK):
             request = utils.unmarshal(request, operations.ListUnifiedWebhooksRequest)
         request = cast(operations.ListUnifiedWebhooksRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/unified/webhook",
             base_url=base_url,
@@ -498,7 +498,7 @@ class Webhook(BaseSDK):
             request = utils.unmarshal(request, operations.ListUnifiedWebhooksRequest)
         request = cast(operations.ListUnifiedWebhooksRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/unified/webhook",
             base_url=base_url,
@@ -589,7 +589,7 @@ class Webhook(BaseSDK):
             request = utils.unmarshal(request, operations.PatchUnifiedWebhookRequest)
         request = cast(operations.PatchUnifiedWebhookRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PATCH",
             path="/unified/webhook/{id}",
             base_url=base_url,
@@ -681,7 +681,7 @@ class Webhook(BaseSDK):
             request = utils.unmarshal(request, operations.PatchUnifiedWebhookRequest)
         request = cast(operations.PatchUnifiedWebhookRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PATCH",
             path="/unified/webhook/{id}",
             base_url=base_url,
@@ -775,7 +775,7 @@ class Webhook(BaseSDK):
             )
         request = cast(operations.PatchUnifiedWebhookTriggerRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PATCH",
             path="/unified/webhook/{id}/trigger",
             base_url=base_url,
@@ -873,7 +873,7 @@ class Webhook(BaseSDK):
             )
         request = cast(operations.PatchUnifiedWebhookTriggerRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PATCH",
             path="/unified/webhook/{id}/trigger",
             base_url=base_url,
@@ -969,7 +969,7 @@ class Webhook(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveUnifiedWebhookRequest)
         request = cast(operations.RemoveUnifiedWebhookRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="DELETE",
             path="/unified/webhook/{id}",
             base_url=base_url,
@@ -1065,7 +1065,7 @@ class Webhook(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveUnifiedWebhookRequest)
         request = cast(operations.RemoveUnifiedWebhookRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="DELETE",
             path="/unified/webhook/{id}",
             base_url=base_url,
@@ -1161,7 +1161,7 @@ class Webhook(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateUnifiedWebhookRequest)
         request = cast(operations.UpdateUnifiedWebhookRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PUT",
             path="/unified/webhook/{id}",
             base_url=base_url,
@@ -1253,7 +1253,7 @@ class Webhook(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateUnifiedWebhookRequest)
         request = cast(operations.UpdateUnifiedWebhookRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PUT",
             path="/unified/webhook/{id}",
             base_url=base_url,
@@ -1347,7 +1347,7 @@ class Webhook(BaseSDK):
             )
         request = cast(operations.UpdateUnifiedWebhookTriggerRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PUT",
             path="/unified/webhook/{id}/trigger",
             base_url=base_url,
@@ -1445,7 +1445,7 @@ class Webhook(BaseSDK):
             )
         request = cast(operations.UpdateUnifiedWebhookTriggerRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PUT",
             path="/unified/webhook/{id}/trigger",
             base_url=base_url,

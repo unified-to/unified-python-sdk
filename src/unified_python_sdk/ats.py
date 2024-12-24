@@ -41,7 +41,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.CreateAtsActivityRequest)
         request = cast(operations.CreateAtsActivityRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="POST",
             path="/ats/{connection_id}/activity",
             base_url=base_url,
@@ -135,7 +135,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.CreateAtsActivityRequest)
         request = cast(operations.CreateAtsActivityRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="POST",
             path="/ats/{connection_id}/activity",
             base_url=base_url,
@@ -229,7 +229,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.CreateAtsApplicationRequest)
         request = cast(operations.CreateAtsApplicationRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="POST",
             path="/ats/{connection_id}/application",
             base_url=base_url,
@@ -327,7 +327,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.CreateAtsApplicationRequest)
         request = cast(operations.CreateAtsApplicationRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="POST",
             path="/ats/{connection_id}/application",
             base_url=base_url,
@@ -425,7 +425,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.CreateAtsCandidateRequest)
         request = cast(operations.CreateAtsCandidateRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="POST",
             path="/ats/{connection_id}/candidate",
             base_url=base_url,
@@ -523,7 +523,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.CreateAtsCandidateRequest)
         request = cast(operations.CreateAtsCandidateRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="POST",
             path="/ats/{connection_id}/candidate",
             base_url=base_url,
@@ -621,7 +621,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.CreateAtsDocumentRequest)
         request = cast(operations.CreateAtsDocumentRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="POST",
             path="/ats/{connection_id}/document",
             base_url=base_url,
@@ -715,7 +715,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.CreateAtsDocumentRequest)
         request = cast(operations.CreateAtsDocumentRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="POST",
             path="/ats/{connection_id}/document",
             base_url=base_url,
@@ -809,7 +809,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.CreateAtsInterviewRequest)
         request = cast(operations.CreateAtsInterviewRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="POST",
             path="/ats/{connection_id}/interview",
             base_url=base_url,
@@ -907,7 +907,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.CreateAtsInterviewRequest)
         request = cast(operations.CreateAtsInterviewRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="POST",
             path="/ats/{connection_id}/interview",
             base_url=base_url,
@@ -1004,7 +1004,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.CreateAtsJobRequest)
         request = cast(operations.CreateAtsJobRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="POST",
             path="/ats/{connection_id}/job",
             base_url=base_url,
@@ -1095,7 +1095,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.CreateAtsJobRequest)
         request = cast(operations.CreateAtsJobRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="POST",
             path="/ats/{connection_id}/job",
             base_url=base_url,
@@ -1187,7 +1187,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.CreateAtsScorecardRequest)
         request = cast(operations.CreateAtsScorecardRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="POST",
             path="/ats/{connection_id}/scorecard",
             base_url=base_url,
@@ -1285,7 +1285,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.CreateAtsScorecardRequest)
         request = cast(operations.CreateAtsScorecardRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="POST",
             path="/ats/{connection_id}/scorecard",
             base_url=base_url,
@@ -1382,7 +1382,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.GetAtsActivityRequest)
         request = cast(operations.GetAtsActivityRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/ats/{connection_id}/activity/{id}",
             base_url=base_url,
@@ -1472,7 +1472,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.GetAtsActivityRequest)
         request = cast(operations.GetAtsActivityRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/ats/{connection_id}/activity/{id}",
             base_url=base_url,
@@ -1563,7 +1563,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.GetAtsApplicationRequest)
         request = cast(operations.GetAtsApplicationRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/ats/{connection_id}/application/{id}",
             base_url=base_url,
@@ -1654,7 +1654,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.GetAtsApplicationRequest)
         request = cast(operations.GetAtsApplicationRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/ats/{connection_id}/application/{id}",
             base_url=base_url,
@@ -1745,7 +1745,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.GetAtsCandidateRequest)
         request = cast(operations.GetAtsCandidateRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/ats/{connection_id}/candidate/{id}",
             base_url=base_url,
@@ -1836,7 +1836,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.GetAtsCandidateRequest)
         request = cast(operations.GetAtsCandidateRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/ats/{connection_id}/candidate/{id}",
             base_url=base_url,
@@ -1926,7 +1926,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.GetAtsCompanyRequest)
         request = cast(operations.GetAtsCompanyRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/ats/{connection_id}/company/{id}",
             base_url=base_url,
@@ -2016,7 +2016,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.GetAtsCompanyRequest)
         request = cast(operations.GetAtsCompanyRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/ats/{connection_id}/company/{id}",
             base_url=base_url,
@@ -2106,7 +2106,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.GetAtsDocumentRequest)
         request = cast(operations.GetAtsDocumentRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/ats/{connection_id}/document/{id}",
             base_url=base_url,
@@ -2196,7 +2196,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.GetAtsDocumentRequest)
         request = cast(operations.GetAtsDocumentRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/ats/{connection_id}/document/{id}",
             base_url=base_url,
@@ -2287,7 +2287,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.GetAtsInterviewRequest)
         request = cast(operations.GetAtsInterviewRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/ats/{connection_id}/interview/{id}",
             base_url=base_url,
@@ -2378,7 +2378,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.GetAtsInterviewRequest)
         request = cast(operations.GetAtsInterviewRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/ats/{connection_id}/interview/{id}",
             base_url=base_url,
@@ -2468,7 +2468,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.GetAtsJobRequest)
         request = cast(operations.GetAtsJobRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/ats/{connection_id}/job/{id}",
             base_url=base_url,
@@ -2556,7 +2556,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.GetAtsJobRequest)
         request = cast(operations.GetAtsJobRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/ats/{connection_id}/job/{id}",
             base_url=base_url,
@@ -2645,7 +2645,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.GetAtsScorecardRequest)
         request = cast(operations.GetAtsScorecardRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/ats/{connection_id}/scorecard/{id}",
             base_url=base_url,
@@ -2736,7 +2736,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.GetAtsScorecardRequest)
         request = cast(operations.GetAtsScorecardRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/ats/{connection_id}/scorecard/{id}",
             base_url=base_url,
@@ -2827,7 +2827,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.ListAtsActivitiesRequest)
         request = cast(operations.ListAtsActivitiesRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/ats/{connection_id}/activity",
             base_url=base_url,
@@ -2918,7 +2918,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.ListAtsActivitiesRequest)
         request = cast(operations.ListAtsActivitiesRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/ats/{connection_id}/activity",
             base_url=base_url,
@@ -3009,7 +3009,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.ListAtsApplicationsRequest)
         request = cast(operations.ListAtsApplicationsRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/ats/{connection_id}/application",
             base_url=base_url,
@@ -3100,7 +3100,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.ListAtsApplicationsRequest)
         request = cast(operations.ListAtsApplicationsRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/ats/{connection_id}/application",
             base_url=base_url,
@@ -3193,7 +3193,7 @@ class Ats(BaseSDK):
             )
         request = cast(operations.ListAtsApplicationstatusesRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/ats/{connection_id}/applicationstatus",
             base_url=base_url,
@@ -3286,7 +3286,7 @@ class Ats(BaseSDK):
             )
         request = cast(operations.ListAtsApplicationstatusesRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/ats/{connection_id}/applicationstatus",
             base_url=base_url,
@@ -3377,7 +3377,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.ListAtsCandidatesRequest)
         request = cast(operations.ListAtsCandidatesRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/ats/{connection_id}/candidate",
             base_url=base_url,
@@ -3468,7 +3468,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.ListAtsCandidatesRequest)
         request = cast(operations.ListAtsCandidatesRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/ats/{connection_id}/candidate",
             base_url=base_url,
@@ -3559,7 +3559,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.ListAtsCompaniesRequest)
         request = cast(operations.ListAtsCompaniesRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/ats/{connection_id}/company",
             base_url=base_url,
@@ -3650,7 +3650,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.ListAtsCompaniesRequest)
         request = cast(operations.ListAtsCompaniesRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/ats/{connection_id}/company",
             base_url=base_url,
@@ -3741,7 +3741,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.ListAtsDocumentsRequest)
         request = cast(operations.ListAtsDocumentsRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/ats/{connection_id}/document",
             base_url=base_url,
@@ -3832,7 +3832,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.ListAtsDocumentsRequest)
         request = cast(operations.ListAtsDocumentsRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/ats/{connection_id}/document",
             base_url=base_url,
@@ -3923,7 +3923,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.ListAtsInterviewsRequest)
         request = cast(operations.ListAtsInterviewsRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/ats/{connection_id}/interview",
             base_url=base_url,
@@ -4014,7 +4014,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.ListAtsInterviewsRequest)
         request = cast(operations.ListAtsInterviewsRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/ats/{connection_id}/interview",
             base_url=base_url,
@@ -4104,7 +4104,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.ListAtsJobsRequest)
         request = cast(operations.ListAtsJobsRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/ats/{connection_id}/job",
             base_url=base_url,
@@ -4194,7 +4194,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.ListAtsJobsRequest)
         request = cast(operations.ListAtsJobsRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/ats/{connection_id}/job",
             base_url=base_url,
@@ -4285,7 +4285,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.ListAtsScorecardsRequest)
         request = cast(operations.ListAtsScorecardsRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/ats/{connection_id}/scorecard",
             base_url=base_url,
@@ -4376,7 +4376,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.ListAtsScorecardsRequest)
         request = cast(operations.ListAtsScorecardsRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/ats/{connection_id}/scorecard",
             base_url=base_url,
@@ -4467,7 +4467,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.PatchAtsActivityRequest)
         request = cast(operations.PatchAtsActivityRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PATCH",
             path="/ats/{connection_id}/activity/{id}",
             base_url=base_url,
@@ -4561,7 +4561,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.PatchAtsActivityRequest)
         request = cast(operations.PatchAtsActivityRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PATCH",
             path="/ats/{connection_id}/activity/{id}",
             base_url=base_url,
@@ -4655,7 +4655,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.PatchAtsApplicationRequest)
         request = cast(operations.PatchAtsApplicationRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PATCH",
             path="/ats/{connection_id}/application/{id}",
             base_url=base_url,
@@ -4753,7 +4753,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.PatchAtsApplicationRequest)
         request = cast(operations.PatchAtsApplicationRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PATCH",
             path="/ats/{connection_id}/application/{id}",
             base_url=base_url,
@@ -4851,7 +4851,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.PatchAtsCandidateRequest)
         request = cast(operations.PatchAtsCandidateRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PATCH",
             path="/ats/{connection_id}/candidate/{id}",
             base_url=base_url,
@@ -4949,7 +4949,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.PatchAtsCandidateRequest)
         request = cast(operations.PatchAtsCandidateRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PATCH",
             path="/ats/{connection_id}/candidate/{id}",
             base_url=base_url,
@@ -5047,7 +5047,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.PatchAtsDocumentRequest)
         request = cast(operations.PatchAtsDocumentRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PATCH",
             path="/ats/{connection_id}/document/{id}",
             base_url=base_url,
@@ -5141,7 +5141,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.PatchAtsDocumentRequest)
         request = cast(operations.PatchAtsDocumentRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PATCH",
             path="/ats/{connection_id}/document/{id}",
             base_url=base_url,
@@ -5235,7 +5235,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.PatchAtsInterviewRequest)
         request = cast(operations.PatchAtsInterviewRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PATCH",
             path="/ats/{connection_id}/interview/{id}",
             base_url=base_url,
@@ -5333,7 +5333,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.PatchAtsInterviewRequest)
         request = cast(operations.PatchAtsInterviewRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PATCH",
             path="/ats/{connection_id}/interview/{id}",
             base_url=base_url,
@@ -5430,7 +5430,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.PatchAtsJobRequest)
         request = cast(operations.PatchAtsJobRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PATCH",
             path="/ats/{connection_id}/job/{id}",
             base_url=base_url,
@@ -5521,7 +5521,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.PatchAtsJobRequest)
         request = cast(operations.PatchAtsJobRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PATCH",
             path="/ats/{connection_id}/job/{id}",
             base_url=base_url,
@@ -5613,7 +5613,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.PatchAtsScorecardRequest)
         request = cast(operations.PatchAtsScorecardRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PATCH",
             path="/ats/{connection_id}/scorecard/{id}",
             base_url=base_url,
@@ -5711,7 +5711,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.PatchAtsScorecardRequest)
         request = cast(operations.PatchAtsScorecardRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PATCH",
             path="/ats/{connection_id}/scorecard/{id}",
             base_url=base_url,
@@ -5809,7 +5809,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveAtsActivityRequest)
         request = cast(operations.RemoveAtsActivityRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="DELETE",
             path="/ats/{connection_id}/activity/{id}",
             base_url=base_url,
@@ -5905,7 +5905,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveAtsActivityRequest)
         request = cast(operations.RemoveAtsActivityRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="DELETE",
             path="/ats/{connection_id}/activity/{id}",
             base_url=base_url,
@@ -6001,7 +6001,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveAtsApplicationRequest)
         request = cast(operations.RemoveAtsApplicationRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="DELETE",
             path="/ats/{connection_id}/application/{id}",
             base_url=base_url,
@@ -6097,7 +6097,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveAtsApplicationRequest)
         request = cast(operations.RemoveAtsApplicationRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="DELETE",
             path="/ats/{connection_id}/application/{id}",
             base_url=base_url,
@@ -6193,7 +6193,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveAtsCandidateRequest)
         request = cast(operations.RemoveAtsCandidateRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="DELETE",
             path="/ats/{connection_id}/candidate/{id}",
             base_url=base_url,
@@ -6289,7 +6289,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveAtsCandidateRequest)
         request = cast(operations.RemoveAtsCandidateRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="DELETE",
             path="/ats/{connection_id}/candidate/{id}",
             base_url=base_url,
@@ -6385,7 +6385,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveAtsDocumentRequest)
         request = cast(operations.RemoveAtsDocumentRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="DELETE",
             path="/ats/{connection_id}/document/{id}",
             base_url=base_url,
@@ -6481,7 +6481,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveAtsDocumentRequest)
         request = cast(operations.RemoveAtsDocumentRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="DELETE",
             path="/ats/{connection_id}/document/{id}",
             base_url=base_url,
@@ -6577,7 +6577,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveAtsInterviewRequest)
         request = cast(operations.RemoveAtsInterviewRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="DELETE",
             path="/ats/{connection_id}/interview/{id}",
             base_url=base_url,
@@ -6673,7 +6673,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveAtsInterviewRequest)
         request = cast(operations.RemoveAtsInterviewRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="DELETE",
             path="/ats/{connection_id}/interview/{id}",
             base_url=base_url,
@@ -6768,7 +6768,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveAtsJobRequest)
         request = cast(operations.RemoveAtsJobRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="DELETE",
             path="/ats/{connection_id}/job/{id}",
             base_url=base_url,
@@ -6863,7 +6863,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveAtsJobRequest)
         request = cast(operations.RemoveAtsJobRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="DELETE",
             path="/ats/{connection_id}/job/{id}",
             base_url=base_url,
@@ -6959,7 +6959,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveAtsScorecardRequest)
         request = cast(operations.RemoveAtsScorecardRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="DELETE",
             path="/ats/{connection_id}/scorecard/{id}",
             base_url=base_url,
@@ -7055,7 +7055,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveAtsScorecardRequest)
         request = cast(operations.RemoveAtsScorecardRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="DELETE",
             path="/ats/{connection_id}/scorecard/{id}",
             base_url=base_url,
@@ -7151,7 +7151,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateAtsActivityRequest)
         request = cast(operations.UpdateAtsActivityRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PUT",
             path="/ats/{connection_id}/activity/{id}",
             base_url=base_url,
@@ -7245,7 +7245,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateAtsActivityRequest)
         request = cast(operations.UpdateAtsActivityRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PUT",
             path="/ats/{connection_id}/activity/{id}",
             base_url=base_url,
@@ -7339,7 +7339,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateAtsApplicationRequest)
         request = cast(operations.UpdateAtsApplicationRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PUT",
             path="/ats/{connection_id}/application/{id}",
             base_url=base_url,
@@ -7437,7 +7437,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateAtsApplicationRequest)
         request = cast(operations.UpdateAtsApplicationRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PUT",
             path="/ats/{connection_id}/application/{id}",
             base_url=base_url,
@@ -7535,7 +7535,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateAtsCandidateRequest)
         request = cast(operations.UpdateAtsCandidateRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PUT",
             path="/ats/{connection_id}/candidate/{id}",
             base_url=base_url,
@@ -7633,7 +7633,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateAtsCandidateRequest)
         request = cast(operations.UpdateAtsCandidateRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PUT",
             path="/ats/{connection_id}/candidate/{id}",
             base_url=base_url,
@@ -7731,7 +7731,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateAtsDocumentRequest)
         request = cast(operations.UpdateAtsDocumentRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PUT",
             path="/ats/{connection_id}/document/{id}",
             base_url=base_url,
@@ -7825,7 +7825,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateAtsDocumentRequest)
         request = cast(operations.UpdateAtsDocumentRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PUT",
             path="/ats/{connection_id}/document/{id}",
             base_url=base_url,
@@ -7919,7 +7919,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateAtsInterviewRequest)
         request = cast(operations.UpdateAtsInterviewRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PUT",
             path="/ats/{connection_id}/interview/{id}",
             base_url=base_url,
@@ -8017,7 +8017,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateAtsInterviewRequest)
         request = cast(operations.UpdateAtsInterviewRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PUT",
             path="/ats/{connection_id}/interview/{id}",
             base_url=base_url,
@@ -8114,7 +8114,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateAtsJobRequest)
         request = cast(operations.UpdateAtsJobRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PUT",
             path="/ats/{connection_id}/job/{id}",
             base_url=base_url,
@@ -8205,7 +8205,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateAtsJobRequest)
         request = cast(operations.UpdateAtsJobRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PUT",
             path="/ats/{connection_id}/job/{id}",
             base_url=base_url,
@@ -8297,7 +8297,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateAtsScorecardRequest)
         request = cast(operations.UpdateAtsScorecardRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PUT",
             path="/ats/{connection_id}/scorecard/{id}",
             base_url=base_url,
@@ -8395,7 +8395,7 @@ class Ats(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateAtsScorecardRequest)
         request = cast(operations.UpdateAtsScorecardRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PUT",
             path="/ats/{connection_id}/scorecard/{id}",
             base_url=base_url,

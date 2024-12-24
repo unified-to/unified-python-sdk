@@ -41,7 +41,7 @@ class Hris(BaseSDK):
             request = utils.unmarshal(request, operations.CreateHrisCompanyRequest)
         request = cast(operations.CreateHrisCompanyRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="POST",
             path="/hris/{connection_id}/company",
             base_url=base_url,
@@ -135,7 +135,7 @@ class Hris(BaseSDK):
             request = utils.unmarshal(request, operations.CreateHrisCompanyRequest)
         request = cast(operations.CreateHrisCompanyRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="POST",
             path="/hris/{connection_id}/company",
             base_url=base_url,
@@ -229,7 +229,7 @@ class Hris(BaseSDK):
             request = utils.unmarshal(request, operations.CreateHrisEmployeeRequest)
         request = cast(operations.CreateHrisEmployeeRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="POST",
             path="/hris/{connection_id}/employee",
             base_url=base_url,
@@ -327,7 +327,7 @@ class Hris(BaseSDK):
             request = utils.unmarshal(request, operations.CreateHrisEmployeeRequest)
         request = cast(operations.CreateHrisEmployeeRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="POST",
             path="/hris/{connection_id}/employee",
             base_url=base_url,
@@ -425,7 +425,7 @@ class Hris(BaseSDK):
             request = utils.unmarshal(request, operations.CreateHrisGroupRequest)
         request = cast(operations.CreateHrisGroupRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="POST",
             path="/hris/{connection_id}/group",
             base_url=base_url,
@@ -519,7 +519,7 @@ class Hris(BaseSDK):
             request = utils.unmarshal(request, operations.CreateHrisGroupRequest)
         request = cast(operations.CreateHrisGroupRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="POST",
             path="/hris/{connection_id}/group",
             base_url=base_url,
@@ -613,7 +613,7 @@ class Hris(BaseSDK):
             request = utils.unmarshal(request, operations.CreateHrisLocationRequest)
         request = cast(operations.CreateHrisLocationRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="POST",
             path="/hris/{connection_id}/location",
             base_url=base_url,
@@ -711,7 +711,7 @@ class Hris(BaseSDK):
             request = utils.unmarshal(request, operations.CreateHrisLocationRequest)
         request = cast(operations.CreateHrisLocationRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="POST",
             path="/hris/{connection_id}/location",
             base_url=base_url,
@@ -808,7 +808,7 @@ class Hris(BaseSDK):
             request = utils.unmarshal(request, operations.GetHrisCompanyRequest)
         request = cast(operations.GetHrisCompanyRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/hris/{connection_id}/company/{id}",
             base_url=base_url,
@@ -898,7 +898,7 @@ class Hris(BaseSDK):
             request = utils.unmarshal(request, operations.GetHrisCompanyRequest)
         request = cast(operations.GetHrisCompanyRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/hris/{connection_id}/company/{id}",
             base_url=base_url,
@@ -989,7 +989,7 @@ class Hris(BaseSDK):
             request = utils.unmarshal(request, operations.GetHrisEmployeeRequest)
         request = cast(operations.GetHrisEmployeeRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/hris/{connection_id}/employee/{id}",
             base_url=base_url,
@@ -1080,7 +1080,7 @@ class Hris(BaseSDK):
             request = utils.unmarshal(request, operations.GetHrisEmployeeRequest)
         request = cast(operations.GetHrisEmployeeRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/hris/{connection_id}/employee/{id}",
             base_url=base_url,
@@ -1170,7 +1170,7 @@ class Hris(BaseSDK):
             request = utils.unmarshal(request, operations.GetHrisGroupRequest)
         request = cast(operations.GetHrisGroupRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/hris/{connection_id}/group/{id}",
             base_url=base_url,
@@ -1260,7 +1260,7 @@ class Hris(BaseSDK):
             request = utils.unmarshal(request, operations.GetHrisGroupRequest)
         request = cast(operations.GetHrisGroupRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/hris/{connection_id}/group/{id}",
             base_url=base_url,
@@ -1351,7 +1351,7 @@ class Hris(BaseSDK):
             request = utils.unmarshal(request, operations.GetHrisLocationRequest)
         request = cast(operations.GetHrisLocationRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/hris/{connection_id}/location/{id}",
             base_url=base_url,
@@ -1442,7 +1442,7 @@ class Hris(BaseSDK):
             request = utils.unmarshal(request, operations.GetHrisLocationRequest)
         request = cast(operations.GetHrisLocationRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/hris/{connection_id}/location/{id}",
             base_url=base_url,
@@ -1532,7 +1532,7 @@ class Hris(BaseSDK):
             request = utils.unmarshal(request, operations.GetHrisPayslipRequest)
         request = cast(operations.GetHrisPayslipRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/hris/{connection_id}/payslip/{id}",
             base_url=base_url,
@@ -1622,7 +1622,7 @@ class Hris(BaseSDK):
             request = utils.unmarshal(request, operations.GetHrisPayslipRequest)
         request = cast(operations.GetHrisPayslipRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/hris/{connection_id}/payslip/{id}",
             base_url=base_url,
@@ -1712,7 +1712,7 @@ class Hris(BaseSDK):
             request = utils.unmarshal(request, operations.GetHrisTimeoffRequest)
         request = cast(operations.GetHrisTimeoffRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/hris/{connection_id}/timeoff/{id}",
             base_url=base_url,
@@ -1802,7 +1802,7 @@ class Hris(BaseSDK):
             request = utils.unmarshal(request, operations.GetHrisTimeoffRequest)
         request = cast(operations.GetHrisTimeoffRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/hris/{connection_id}/timeoff/{id}",
             base_url=base_url,
@@ -1893,7 +1893,7 @@ class Hris(BaseSDK):
             request = utils.unmarshal(request, operations.ListHrisCompaniesRequest)
         request = cast(operations.ListHrisCompaniesRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/hris/{connection_id}/company",
             base_url=base_url,
@@ -1984,7 +1984,7 @@ class Hris(BaseSDK):
             request = utils.unmarshal(request, operations.ListHrisCompaniesRequest)
         request = cast(operations.ListHrisCompaniesRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/hris/{connection_id}/company",
             base_url=base_url,
@@ -2075,7 +2075,7 @@ class Hris(BaseSDK):
             request = utils.unmarshal(request, operations.ListHrisEmployeesRequest)
         request = cast(operations.ListHrisEmployeesRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/hris/{connection_id}/employee",
             base_url=base_url,
@@ -2166,7 +2166,7 @@ class Hris(BaseSDK):
             request = utils.unmarshal(request, operations.ListHrisEmployeesRequest)
         request = cast(operations.ListHrisEmployeesRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/hris/{connection_id}/employee",
             base_url=base_url,
@@ -2256,7 +2256,7 @@ class Hris(BaseSDK):
             request = utils.unmarshal(request, operations.ListHrisGroupsRequest)
         request = cast(operations.ListHrisGroupsRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/hris/{connection_id}/group",
             base_url=base_url,
@@ -2346,7 +2346,7 @@ class Hris(BaseSDK):
             request = utils.unmarshal(request, operations.ListHrisGroupsRequest)
         request = cast(operations.ListHrisGroupsRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/hris/{connection_id}/group",
             base_url=base_url,
@@ -2437,7 +2437,7 @@ class Hris(BaseSDK):
             request = utils.unmarshal(request, operations.ListHrisLocationsRequest)
         request = cast(operations.ListHrisLocationsRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/hris/{connection_id}/location",
             base_url=base_url,
@@ -2528,7 +2528,7 @@ class Hris(BaseSDK):
             request = utils.unmarshal(request, operations.ListHrisLocationsRequest)
         request = cast(operations.ListHrisLocationsRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/hris/{connection_id}/location",
             base_url=base_url,
@@ -2619,7 +2619,7 @@ class Hris(BaseSDK):
             request = utils.unmarshal(request, operations.ListHrisPayslipsRequest)
         request = cast(operations.ListHrisPayslipsRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/hris/{connection_id}/payslip",
             base_url=base_url,
@@ -2710,7 +2710,7 @@ class Hris(BaseSDK):
             request = utils.unmarshal(request, operations.ListHrisPayslipsRequest)
         request = cast(operations.ListHrisPayslipsRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/hris/{connection_id}/payslip",
             base_url=base_url,
@@ -2801,7 +2801,7 @@ class Hris(BaseSDK):
             request = utils.unmarshal(request, operations.ListHrisTimeoffsRequest)
         request = cast(operations.ListHrisTimeoffsRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/hris/{connection_id}/timeoff",
             base_url=base_url,
@@ -2892,7 +2892,7 @@ class Hris(BaseSDK):
             request = utils.unmarshal(request, operations.ListHrisTimeoffsRequest)
         request = cast(operations.ListHrisTimeoffsRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/hris/{connection_id}/timeoff",
             base_url=base_url,
@@ -2983,7 +2983,7 @@ class Hris(BaseSDK):
             request = utils.unmarshal(request, operations.PatchHrisCompanyRequest)
         request = cast(operations.PatchHrisCompanyRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PATCH",
             path="/hris/{connection_id}/company/{id}",
             base_url=base_url,
@@ -3077,7 +3077,7 @@ class Hris(BaseSDK):
             request = utils.unmarshal(request, operations.PatchHrisCompanyRequest)
         request = cast(operations.PatchHrisCompanyRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PATCH",
             path="/hris/{connection_id}/company/{id}",
             base_url=base_url,
@@ -3171,7 +3171,7 @@ class Hris(BaseSDK):
             request = utils.unmarshal(request, operations.PatchHrisEmployeeRequest)
         request = cast(operations.PatchHrisEmployeeRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PATCH",
             path="/hris/{connection_id}/employee/{id}",
             base_url=base_url,
@@ -3269,7 +3269,7 @@ class Hris(BaseSDK):
             request = utils.unmarshal(request, operations.PatchHrisEmployeeRequest)
         request = cast(operations.PatchHrisEmployeeRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PATCH",
             path="/hris/{connection_id}/employee/{id}",
             base_url=base_url,
@@ -3366,7 +3366,7 @@ class Hris(BaseSDK):
             request = utils.unmarshal(request, operations.PatchHrisGroupRequest)
         request = cast(operations.PatchHrisGroupRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PATCH",
             path="/hris/{connection_id}/group/{id}",
             base_url=base_url,
@@ -3459,7 +3459,7 @@ class Hris(BaseSDK):
             request = utils.unmarshal(request, operations.PatchHrisGroupRequest)
         request = cast(operations.PatchHrisGroupRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PATCH",
             path="/hris/{connection_id}/group/{id}",
             base_url=base_url,
@@ -3553,7 +3553,7 @@ class Hris(BaseSDK):
             request = utils.unmarshal(request, operations.PatchHrisLocationRequest)
         request = cast(operations.PatchHrisLocationRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PATCH",
             path="/hris/{connection_id}/location/{id}",
             base_url=base_url,
@@ -3651,7 +3651,7 @@ class Hris(BaseSDK):
             request = utils.unmarshal(request, operations.PatchHrisLocationRequest)
         request = cast(operations.PatchHrisLocationRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PATCH",
             path="/hris/{connection_id}/location/{id}",
             base_url=base_url,
@@ -3749,7 +3749,7 @@ class Hris(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveHrisCompanyRequest)
         request = cast(operations.RemoveHrisCompanyRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="DELETE",
             path="/hris/{connection_id}/company/{id}",
             base_url=base_url,
@@ -3845,7 +3845,7 @@ class Hris(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveHrisCompanyRequest)
         request = cast(operations.RemoveHrisCompanyRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="DELETE",
             path="/hris/{connection_id}/company/{id}",
             base_url=base_url,
@@ -3941,7 +3941,7 @@ class Hris(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveHrisEmployeeRequest)
         request = cast(operations.RemoveHrisEmployeeRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="DELETE",
             path="/hris/{connection_id}/employee/{id}",
             base_url=base_url,
@@ -4037,7 +4037,7 @@ class Hris(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveHrisEmployeeRequest)
         request = cast(operations.RemoveHrisEmployeeRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="DELETE",
             path="/hris/{connection_id}/employee/{id}",
             base_url=base_url,
@@ -4133,7 +4133,7 @@ class Hris(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveHrisGroupRequest)
         request = cast(operations.RemoveHrisGroupRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="DELETE",
             path="/hris/{connection_id}/group/{id}",
             base_url=base_url,
@@ -4229,7 +4229,7 @@ class Hris(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveHrisGroupRequest)
         request = cast(operations.RemoveHrisGroupRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="DELETE",
             path="/hris/{connection_id}/group/{id}",
             base_url=base_url,
@@ -4325,7 +4325,7 @@ class Hris(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveHrisLocationRequest)
         request = cast(operations.RemoveHrisLocationRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="DELETE",
             path="/hris/{connection_id}/location/{id}",
             base_url=base_url,
@@ -4421,7 +4421,7 @@ class Hris(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveHrisLocationRequest)
         request = cast(operations.RemoveHrisLocationRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="DELETE",
             path="/hris/{connection_id}/location/{id}",
             base_url=base_url,
@@ -4517,7 +4517,7 @@ class Hris(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateHrisCompanyRequest)
         request = cast(operations.UpdateHrisCompanyRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PUT",
             path="/hris/{connection_id}/company/{id}",
             base_url=base_url,
@@ -4611,7 +4611,7 @@ class Hris(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateHrisCompanyRequest)
         request = cast(operations.UpdateHrisCompanyRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PUT",
             path="/hris/{connection_id}/company/{id}",
             base_url=base_url,
@@ -4705,7 +4705,7 @@ class Hris(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateHrisEmployeeRequest)
         request = cast(operations.UpdateHrisEmployeeRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PUT",
             path="/hris/{connection_id}/employee/{id}",
             base_url=base_url,
@@ -4803,7 +4803,7 @@ class Hris(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateHrisEmployeeRequest)
         request = cast(operations.UpdateHrisEmployeeRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PUT",
             path="/hris/{connection_id}/employee/{id}",
             base_url=base_url,
@@ -4901,7 +4901,7 @@ class Hris(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateHrisGroupRequest)
         request = cast(operations.UpdateHrisGroupRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PUT",
             path="/hris/{connection_id}/group/{id}",
             base_url=base_url,
@@ -4995,7 +4995,7 @@ class Hris(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateHrisGroupRequest)
         request = cast(operations.UpdateHrisGroupRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PUT",
             path="/hris/{connection_id}/group/{id}",
             base_url=base_url,
@@ -5089,7 +5089,7 @@ class Hris(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateHrisLocationRequest)
         request = cast(operations.UpdateHrisLocationRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PUT",
             path="/hris/{connection_id}/location/{id}",
             base_url=base_url,
@@ -5187,7 +5187,7 @@ class Hris(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateHrisLocationRequest)
         request = cast(operations.UpdateHrisLocationRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PUT",
             path="/hris/{connection_id}/location/{id}",
             base_url=base_url,

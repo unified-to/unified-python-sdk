@@ -41,7 +41,7 @@ class Repository(BaseSDK):
             request = utils.unmarshal(request, operations.CreateRepoRepositoryRequest)
         request = cast(operations.CreateRepoRepositoryRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="POST",
             path="/repo/{connection_id}/repository",
             base_url=base_url,
@@ -139,7 +139,7 @@ class Repository(BaseSDK):
             request = utils.unmarshal(request, operations.CreateRepoRepositoryRequest)
         request = cast(operations.CreateRepoRepositoryRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="POST",
             path="/repo/{connection_id}/repository",
             base_url=base_url,
@@ -237,7 +237,7 @@ class Repository(BaseSDK):
             request = utils.unmarshal(request, operations.GetRepoRepositoryRequest)
         request = cast(operations.GetRepoRepositoryRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/repo/{connection_id}/repository/{id}",
             base_url=base_url,
@@ -328,7 +328,7 @@ class Repository(BaseSDK):
             request = utils.unmarshal(request, operations.GetRepoRepositoryRequest)
         request = cast(operations.GetRepoRepositoryRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/repo/{connection_id}/repository/{id}",
             base_url=base_url,
@@ -419,7 +419,7 @@ class Repository(BaseSDK):
             request = utils.unmarshal(request, operations.ListRepoRepositoriesRequest)
         request = cast(operations.ListRepoRepositoriesRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/repo/{connection_id}/repository",
             base_url=base_url,
@@ -510,7 +510,7 @@ class Repository(BaseSDK):
             request = utils.unmarshal(request, operations.ListRepoRepositoriesRequest)
         request = cast(operations.ListRepoRepositoriesRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/repo/{connection_id}/repository",
             base_url=base_url,
@@ -601,7 +601,7 @@ class Repository(BaseSDK):
             request = utils.unmarshal(request, operations.PatchRepoRepositoryRequest)
         request = cast(operations.PatchRepoRepositoryRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PATCH",
             path="/repo/{connection_id}/repository/{id}",
             base_url=base_url,
@@ -699,7 +699,7 @@ class Repository(BaseSDK):
             request = utils.unmarshal(request, operations.PatchRepoRepositoryRequest)
         request = cast(operations.PatchRepoRepositoryRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PATCH",
             path="/repo/{connection_id}/repository/{id}",
             base_url=base_url,
@@ -797,7 +797,7 @@ class Repository(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveRepoRepositoryRequest)
         request = cast(operations.RemoveRepoRepositoryRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="DELETE",
             path="/repo/{connection_id}/repository/{id}",
             base_url=base_url,
@@ -893,7 +893,7 @@ class Repository(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveRepoRepositoryRequest)
         request = cast(operations.RemoveRepoRepositoryRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="DELETE",
             path="/repo/{connection_id}/repository/{id}",
             base_url=base_url,
@@ -989,7 +989,7 @@ class Repository(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateRepoRepositoryRequest)
         request = cast(operations.UpdateRepoRepositoryRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PUT",
             path="/repo/{connection_id}/repository/{id}",
             base_url=base_url,
@@ -1087,7 +1087,7 @@ class Repository(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateRepoRepositoryRequest)
         request = cast(operations.UpdateRepoRepositoryRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PUT",
             path="/repo/{connection_id}/repository/{id}",
             base_url=base_url,

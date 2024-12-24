@@ -41,7 +41,7 @@ class Item(BaseSDK):
             request = utils.unmarshal(request, operations.CreateCommerceItemRequest)
         request = cast(operations.CreateCommerceItemRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="POST",
             path="/commerce/{connection_id}/item",
             base_url=base_url,
@@ -139,7 +139,7 @@ class Item(BaseSDK):
             request = utils.unmarshal(request, operations.CreateCommerceItemRequest)
         request = cast(operations.CreateCommerceItemRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="POST",
             path="/commerce/{connection_id}/item",
             base_url=base_url,
@@ -237,7 +237,7 @@ class Item(BaseSDK):
             request = utils.unmarshal(request, operations.GetCommerceItemRequest)
         request = cast(operations.GetCommerceItemRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/commerce/{connection_id}/item/{id}",
             base_url=base_url,
@@ -328,7 +328,7 @@ class Item(BaseSDK):
             request = utils.unmarshal(request, operations.GetCommerceItemRequest)
         request = cast(operations.GetCommerceItemRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/commerce/{connection_id}/item/{id}",
             base_url=base_url,
@@ -419,7 +419,7 @@ class Item(BaseSDK):
             request = utils.unmarshal(request, operations.ListCommerceItemsRequest)
         request = cast(operations.ListCommerceItemsRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/commerce/{connection_id}/item",
             base_url=base_url,
@@ -510,7 +510,7 @@ class Item(BaseSDK):
             request = utils.unmarshal(request, operations.ListCommerceItemsRequest)
         request = cast(operations.ListCommerceItemsRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/commerce/{connection_id}/item",
             base_url=base_url,
@@ -601,7 +601,7 @@ class Item(BaseSDK):
             request = utils.unmarshal(request, operations.PatchCommerceItemRequest)
         request = cast(operations.PatchCommerceItemRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PATCH",
             path="/commerce/{connection_id}/item/{id}",
             base_url=base_url,
@@ -699,7 +699,7 @@ class Item(BaseSDK):
             request = utils.unmarshal(request, operations.PatchCommerceItemRequest)
         request = cast(operations.PatchCommerceItemRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PATCH",
             path="/commerce/{connection_id}/item/{id}",
             base_url=base_url,
@@ -797,7 +797,7 @@ class Item(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveCommerceItemRequest)
         request = cast(operations.RemoveCommerceItemRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="DELETE",
             path="/commerce/{connection_id}/item/{id}",
             base_url=base_url,
@@ -893,7 +893,7 @@ class Item(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveCommerceItemRequest)
         request = cast(operations.RemoveCommerceItemRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="DELETE",
             path="/commerce/{connection_id}/item/{id}",
             base_url=base_url,
@@ -989,7 +989,7 @@ class Item(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateCommerceItemRequest)
         request = cast(operations.UpdateCommerceItemRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PUT",
             path="/commerce/{connection_id}/item/{id}",
             base_url=base_url,
@@ -1087,7 +1087,7 @@ class Item(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateCommerceItemRequest)
         request = cast(operations.UpdateCommerceItemRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PUT",
             path="/commerce/{connection_id}/item/{id}",
             base_url=base_url,

@@ -43,7 +43,7 @@ class Contact(BaseSDK):
             )
         request = cast(operations.CreateAccountingContactRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="POST",
             path="/accounting/{connection_id}/contact",
             base_url=base_url,
@@ -143,7 +143,7 @@ class Contact(BaseSDK):
             )
         request = cast(operations.CreateAccountingContactRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="POST",
             path="/accounting/{connection_id}/contact",
             base_url=base_url,
@@ -241,7 +241,7 @@ class Contact(BaseSDK):
             request = utils.unmarshal(request, operations.CreateCrmContactRequest)
         request = cast(operations.CreateCrmContactRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="POST",
             path="/crm/{connection_id}/contact",
             base_url=base_url,
@@ -335,7 +335,7 @@ class Contact(BaseSDK):
             request = utils.unmarshal(request, operations.CreateCrmContactRequest)
         request = cast(operations.CreateCrmContactRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="POST",
             path="/crm/{connection_id}/contact",
             base_url=base_url,
@@ -429,7 +429,7 @@ class Contact(BaseSDK):
             request = utils.unmarshal(request, operations.CreateUcContactRequest)
         request = cast(operations.CreateUcContactRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="POST",
             path="/uc/{connection_id}/contact",
             base_url=base_url,
@@ -523,7 +523,7 @@ class Contact(BaseSDK):
             request = utils.unmarshal(request, operations.CreateUcContactRequest)
         request = cast(operations.CreateUcContactRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="POST",
             path="/uc/{connection_id}/contact",
             base_url=base_url,
@@ -617,7 +617,7 @@ class Contact(BaseSDK):
             request = utils.unmarshal(request, operations.GetAccountingContactRequest)
         request = cast(operations.GetAccountingContactRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/accounting/{connection_id}/contact/{id}",
             base_url=base_url,
@@ -708,7 +708,7 @@ class Contact(BaseSDK):
             request = utils.unmarshal(request, operations.GetAccountingContactRequest)
         request = cast(operations.GetAccountingContactRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/accounting/{connection_id}/contact/{id}",
             base_url=base_url,
@@ -798,7 +798,7 @@ class Contact(BaseSDK):
             request = utils.unmarshal(request, operations.GetCrmContactRequest)
         request = cast(operations.GetCrmContactRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/crm/{connection_id}/contact/{id}",
             base_url=base_url,
@@ -888,7 +888,7 @@ class Contact(BaseSDK):
             request = utils.unmarshal(request, operations.GetCrmContactRequest)
         request = cast(operations.GetCrmContactRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/crm/{connection_id}/contact/{id}",
             base_url=base_url,
@@ -978,7 +978,7 @@ class Contact(BaseSDK):
             request = utils.unmarshal(request, operations.GetUcContactRequest)
         request = cast(operations.GetUcContactRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/uc/{connection_id}/contact/{id}",
             base_url=base_url,
@@ -1068,7 +1068,7 @@ class Contact(BaseSDK):
             request = utils.unmarshal(request, operations.GetUcContactRequest)
         request = cast(operations.GetUcContactRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/uc/{connection_id}/contact/{id}",
             base_url=base_url,
@@ -1159,7 +1159,7 @@ class Contact(BaseSDK):
             request = utils.unmarshal(request, operations.ListAccountingContactsRequest)
         request = cast(operations.ListAccountingContactsRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/accounting/{connection_id}/contact",
             base_url=base_url,
@@ -1250,7 +1250,7 @@ class Contact(BaseSDK):
             request = utils.unmarshal(request, operations.ListAccountingContactsRequest)
         request = cast(operations.ListAccountingContactsRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/accounting/{connection_id}/contact",
             base_url=base_url,
@@ -1341,7 +1341,7 @@ class Contact(BaseSDK):
             request = utils.unmarshal(request, operations.ListCrmContactsRequest)
         request = cast(operations.ListCrmContactsRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/crm/{connection_id}/contact",
             base_url=base_url,
@@ -1432,7 +1432,7 @@ class Contact(BaseSDK):
             request = utils.unmarshal(request, operations.ListCrmContactsRequest)
         request = cast(operations.ListCrmContactsRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/crm/{connection_id}/contact",
             base_url=base_url,
@@ -1522,7 +1522,7 @@ class Contact(BaseSDK):
             request = utils.unmarshal(request, operations.ListUcContactsRequest)
         request = cast(operations.ListUcContactsRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/uc/{connection_id}/contact",
             base_url=base_url,
@@ -1612,7 +1612,7 @@ class Contact(BaseSDK):
             request = utils.unmarshal(request, operations.ListUcContactsRequest)
         request = cast(operations.ListUcContactsRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/uc/{connection_id}/contact",
             base_url=base_url,
@@ -1703,7 +1703,7 @@ class Contact(BaseSDK):
             request = utils.unmarshal(request, operations.PatchAccountingContactRequest)
         request = cast(operations.PatchAccountingContactRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PATCH",
             path="/accounting/{connection_id}/contact/{id}",
             base_url=base_url,
@@ -1801,7 +1801,7 @@ class Contact(BaseSDK):
             request = utils.unmarshal(request, operations.PatchAccountingContactRequest)
         request = cast(operations.PatchAccountingContactRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PATCH",
             path="/accounting/{connection_id}/contact/{id}",
             base_url=base_url,
@@ -1899,7 +1899,7 @@ class Contact(BaseSDK):
             request = utils.unmarshal(request, operations.PatchCrmContactRequest)
         request = cast(operations.PatchCrmContactRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PATCH",
             path="/crm/{connection_id}/contact/{id}",
             base_url=base_url,
@@ -1993,7 +1993,7 @@ class Contact(BaseSDK):
             request = utils.unmarshal(request, operations.PatchCrmContactRequest)
         request = cast(operations.PatchCrmContactRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PATCH",
             path="/crm/{connection_id}/contact/{id}",
             base_url=base_url,
@@ -2086,7 +2086,7 @@ class Contact(BaseSDK):
             request = utils.unmarshal(request, operations.PatchUcContactRequest)
         request = cast(operations.PatchUcContactRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PATCH",
             path="/uc/{connection_id}/contact/{id}",
             base_url=base_url,
@@ -2179,7 +2179,7 @@ class Contact(BaseSDK):
             request = utils.unmarshal(request, operations.PatchUcContactRequest)
         request = cast(operations.PatchUcContactRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PATCH",
             path="/uc/{connection_id}/contact/{id}",
             base_url=base_url,
@@ -2275,7 +2275,7 @@ class Contact(BaseSDK):
             )
         request = cast(operations.RemoveAccountingContactRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="DELETE",
             path="/accounting/{connection_id}/contact/{id}",
             base_url=base_url,
@@ -2373,7 +2373,7 @@ class Contact(BaseSDK):
             )
         request = cast(operations.RemoveAccountingContactRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="DELETE",
             path="/accounting/{connection_id}/contact/{id}",
             base_url=base_url,
@@ -2469,7 +2469,7 @@ class Contact(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveCrmContactRequest)
         request = cast(operations.RemoveCrmContactRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="DELETE",
             path="/crm/{connection_id}/contact/{id}",
             base_url=base_url,
@@ -2565,7 +2565,7 @@ class Contact(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveCrmContactRequest)
         request = cast(operations.RemoveCrmContactRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="DELETE",
             path="/crm/{connection_id}/contact/{id}",
             base_url=base_url,
@@ -2661,7 +2661,7 @@ class Contact(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveUcContactRequest)
         request = cast(operations.RemoveUcContactRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="DELETE",
             path="/uc/{connection_id}/contact/{id}",
             base_url=base_url,
@@ -2757,7 +2757,7 @@ class Contact(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveUcContactRequest)
         request = cast(operations.RemoveUcContactRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="DELETE",
             path="/uc/{connection_id}/contact/{id}",
             base_url=base_url,
@@ -2855,7 +2855,7 @@ class Contact(BaseSDK):
             )
         request = cast(operations.UpdateAccountingContactRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PUT",
             path="/accounting/{connection_id}/contact/{id}",
             base_url=base_url,
@@ -2955,7 +2955,7 @@ class Contact(BaseSDK):
             )
         request = cast(operations.UpdateAccountingContactRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PUT",
             path="/accounting/{connection_id}/contact/{id}",
             base_url=base_url,
@@ -3053,7 +3053,7 @@ class Contact(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateCrmContactRequest)
         request = cast(operations.UpdateCrmContactRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PUT",
             path="/crm/{connection_id}/contact/{id}",
             base_url=base_url,
@@ -3147,7 +3147,7 @@ class Contact(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateCrmContactRequest)
         request = cast(operations.UpdateCrmContactRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PUT",
             path="/crm/{connection_id}/contact/{id}",
             base_url=base_url,
@@ -3241,7 +3241,7 @@ class Contact(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateUcContactRequest)
         request = cast(operations.UpdateUcContactRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PUT",
             path="/uc/{connection_id}/contact/{id}",
             base_url=base_url,
@@ -3335,7 +3335,7 @@ class Contact(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateUcContactRequest)
         request = cast(operations.UpdateUcContactRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PUT",
             path="/uc/{connection_id}/contact/{id}",
             base_url=base_url,

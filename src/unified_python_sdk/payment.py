@@ -41,7 +41,7 @@ class Payment(BaseSDK):
             request = utils.unmarshal(request, operations.CreatePaymentLinkRequest)
         request = cast(operations.CreatePaymentLinkRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="POST",
             path="/payment/{connection_id}/link",
             base_url=base_url,
@@ -135,7 +135,7 @@ class Payment(BaseSDK):
             request = utils.unmarshal(request, operations.CreatePaymentLinkRequest)
         request = cast(operations.CreatePaymentLinkRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="POST",
             path="/payment/{connection_id}/link",
             base_url=base_url,
@@ -229,7 +229,7 @@ class Payment(BaseSDK):
             request = utils.unmarshal(request, operations.CreatePaymentPaymentRequest)
         request = cast(operations.CreatePaymentPaymentRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="POST",
             path="/payment/{connection_id}/payment",
             base_url=base_url,
@@ -327,7 +327,7 @@ class Payment(BaseSDK):
             request = utils.unmarshal(request, operations.CreatePaymentPaymentRequest)
         request = cast(operations.CreatePaymentPaymentRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="POST",
             path="/payment/{connection_id}/payment",
             base_url=base_url,
@@ -424,7 +424,7 @@ class Payment(BaseSDK):
             request = utils.unmarshal(request, operations.GetPaymentLinkRequest)
         request = cast(operations.GetPaymentLinkRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/payment/{connection_id}/link/{id}",
             base_url=base_url,
@@ -514,7 +514,7 @@ class Payment(BaseSDK):
             request = utils.unmarshal(request, operations.GetPaymentLinkRequest)
         request = cast(operations.GetPaymentLinkRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/payment/{connection_id}/link/{id}",
             base_url=base_url,
@@ -605,7 +605,7 @@ class Payment(BaseSDK):
             request = utils.unmarshal(request, operations.GetPaymentPaymentRequest)
         request = cast(operations.GetPaymentPaymentRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/payment/{connection_id}/payment/{id}",
             base_url=base_url,
@@ -696,7 +696,7 @@ class Payment(BaseSDK):
             request = utils.unmarshal(request, operations.GetPaymentPaymentRequest)
         request = cast(operations.GetPaymentPaymentRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/payment/{connection_id}/payment/{id}",
             base_url=base_url,
@@ -787,7 +787,7 @@ class Payment(BaseSDK):
             request = utils.unmarshal(request, operations.GetPaymentPayoutRequest)
         request = cast(operations.GetPaymentPayoutRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/payment/{connection_id}/payout/{id}",
             base_url=base_url,
@@ -878,7 +878,7 @@ class Payment(BaseSDK):
             request = utils.unmarshal(request, operations.GetPaymentPayoutRequest)
         request = cast(operations.GetPaymentPayoutRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/payment/{connection_id}/payout/{id}",
             base_url=base_url,
@@ -969,7 +969,7 @@ class Payment(BaseSDK):
             request = utils.unmarshal(request, operations.GetPaymentRefundRequest)
         request = cast(operations.GetPaymentRefundRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/payment/{connection_id}/refund/{id}",
             base_url=base_url,
@@ -1060,7 +1060,7 @@ class Payment(BaseSDK):
             request = utils.unmarshal(request, operations.GetPaymentRefundRequest)
         request = cast(operations.GetPaymentRefundRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/payment/{connection_id}/refund/{id}",
             base_url=base_url,
@@ -1151,7 +1151,7 @@ class Payment(BaseSDK):
             request = utils.unmarshal(request, operations.ListPaymentLinksRequest)
         request = cast(operations.ListPaymentLinksRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/payment/{connection_id}/link",
             base_url=base_url,
@@ -1242,7 +1242,7 @@ class Payment(BaseSDK):
             request = utils.unmarshal(request, operations.ListPaymentLinksRequest)
         request = cast(operations.ListPaymentLinksRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/payment/{connection_id}/link",
             base_url=base_url,
@@ -1333,7 +1333,7 @@ class Payment(BaseSDK):
             request = utils.unmarshal(request, operations.ListPaymentPaymentsRequest)
         request = cast(operations.ListPaymentPaymentsRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/payment/{connection_id}/payment",
             base_url=base_url,
@@ -1424,7 +1424,7 @@ class Payment(BaseSDK):
             request = utils.unmarshal(request, operations.ListPaymentPaymentsRequest)
         request = cast(operations.ListPaymentPaymentsRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/payment/{connection_id}/payment",
             base_url=base_url,
@@ -1515,7 +1515,7 @@ class Payment(BaseSDK):
             request = utils.unmarshal(request, operations.ListPaymentPayoutsRequest)
         request = cast(operations.ListPaymentPayoutsRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/payment/{connection_id}/payout",
             base_url=base_url,
@@ -1606,7 +1606,7 @@ class Payment(BaseSDK):
             request = utils.unmarshal(request, operations.ListPaymentPayoutsRequest)
         request = cast(operations.ListPaymentPayoutsRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/payment/{connection_id}/payout",
             base_url=base_url,
@@ -1697,7 +1697,7 @@ class Payment(BaseSDK):
             request = utils.unmarshal(request, operations.ListPaymentRefundsRequest)
         request = cast(operations.ListPaymentRefundsRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/payment/{connection_id}/refund",
             base_url=base_url,
@@ -1788,7 +1788,7 @@ class Payment(BaseSDK):
             request = utils.unmarshal(request, operations.ListPaymentRefundsRequest)
         request = cast(operations.ListPaymentRefundsRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/payment/{connection_id}/refund",
             base_url=base_url,
@@ -1879,7 +1879,7 @@ class Payment(BaseSDK):
             request = utils.unmarshal(request, operations.PatchPaymentLinkRequest)
         request = cast(operations.PatchPaymentLinkRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PATCH",
             path="/payment/{connection_id}/link/{id}",
             base_url=base_url,
@@ -1973,7 +1973,7 @@ class Payment(BaseSDK):
             request = utils.unmarshal(request, operations.PatchPaymentLinkRequest)
         request = cast(operations.PatchPaymentLinkRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PATCH",
             path="/payment/{connection_id}/link/{id}",
             base_url=base_url,
@@ -2067,7 +2067,7 @@ class Payment(BaseSDK):
             request = utils.unmarshal(request, operations.PatchPaymentPaymentRequest)
         request = cast(operations.PatchPaymentPaymentRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PATCH",
             path="/payment/{connection_id}/payment/{id}",
             base_url=base_url,
@@ -2165,7 +2165,7 @@ class Payment(BaseSDK):
             request = utils.unmarshal(request, operations.PatchPaymentPaymentRequest)
         request = cast(operations.PatchPaymentPaymentRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PATCH",
             path="/payment/{connection_id}/payment/{id}",
             base_url=base_url,
@@ -2263,7 +2263,7 @@ class Payment(BaseSDK):
             request = utils.unmarshal(request, operations.RemovePaymentLinkRequest)
         request = cast(operations.RemovePaymentLinkRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="DELETE",
             path="/payment/{connection_id}/link/{id}",
             base_url=base_url,
@@ -2359,7 +2359,7 @@ class Payment(BaseSDK):
             request = utils.unmarshal(request, operations.RemovePaymentLinkRequest)
         request = cast(operations.RemovePaymentLinkRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="DELETE",
             path="/payment/{connection_id}/link/{id}",
             base_url=base_url,
@@ -2455,7 +2455,7 @@ class Payment(BaseSDK):
             request = utils.unmarshal(request, operations.RemovePaymentPaymentRequest)
         request = cast(operations.RemovePaymentPaymentRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="DELETE",
             path="/payment/{connection_id}/payment/{id}",
             base_url=base_url,
@@ -2551,7 +2551,7 @@ class Payment(BaseSDK):
             request = utils.unmarshal(request, operations.RemovePaymentPaymentRequest)
         request = cast(operations.RemovePaymentPaymentRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="DELETE",
             path="/payment/{connection_id}/payment/{id}",
             base_url=base_url,
@@ -2647,7 +2647,7 @@ class Payment(BaseSDK):
             request = utils.unmarshal(request, operations.UpdatePaymentLinkRequest)
         request = cast(operations.UpdatePaymentLinkRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PUT",
             path="/payment/{connection_id}/link/{id}",
             base_url=base_url,
@@ -2741,7 +2741,7 @@ class Payment(BaseSDK):
             request = utils.unmarshal(request, operations.UpdatePaymentLinkRequest)
         request = cast(operations.UpdatePaymentLinkRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PUT",
             path="/payment/{connection_id}/link/{id}",
             base_url=base_url,
@@ -2835,7 +2835,7 @@ class Payment(BaseSDK):
             request = utils.unmarshal(request, operations.UpdatePaymentPaymentRequest)
         request = cast(operations.UpdatePaymentPaymentRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PUT",
             path="/payment/{connection_id}/payment/{id}",
             base_url=base_url,
@@ -2933,7 +2933,7 @@ class Payment(BaseSDK):
             request = utils.unmarshal(request, operations.UpdatePaymentPaymentRequest)
         request = cast(operations.UpdatePaymentPaymentRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PUT",
             path="/payment/{connection_id}/payment/{id}",
             base_url=base_url,

@@ -43,7 +43,7 @@ class Applicationstatus(BaseSDK):
             )
         request = cast(operations.ListAtsApplicationstatusesRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/ats/{connection_id}/applicationstatus",
             base_url=base_url,
@@ -136,7 +136,7 @@ class Applicationstatus(BaseSDK):
             )
         request = cast(operations.ListAtsApplicationstatusesRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/ats/{connection_id}/applicationstatus",
             base_url=base_url,

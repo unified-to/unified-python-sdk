@@ -43,7 +43,7 @@ class Taxrate(BaseSDK):
             )
         request = cast(operations.CreateAccountingTaxrateRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="POST",
             path="/accounting/{connection_id}/taxrate",
             base_url=base_url,
@@ -143,7 +143,7 @@ class Taxrate(BaseSDK):
             )
         request = cast(operations.CreateAccountingTaxrateRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="POST",
             path="/accounting/{connection_id}/taxrate",
             base_url=base_url,
@@ -241,7 +241,7 @@ class Taxrate(BaseSDK):
             request = utils.unmarshal(request, operations.GetAccountingTaxrateRequest)
         request = cast(operations.GetAccountingTaxrateRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/accounting/{connection_id}/taxrate/{id}",
             base_url=base_url,
@@ -332,7 +332,7 @@ class Taxrate(BaseSDK):
             request = utils.unmarshal(request, operations.GetAccountingTaxrateRequest)
         request = cast(operations.GetAccountingTaxrateRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/accounting/{connection_id}/taxrate/{id}",
             base_url=base_url,
@@ -423,7 +423,7 @@ class Taxrate(BaseSDK):
             request = utils.unmarshal(request, operations.ListAccountingTaxratesRequest)
         request = cast(operations.ListAccountingTaxratesRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/accounting/{connection_id}/taxrate",
             base_url=base_url,
@@ -514,7 +514,7 @@ class Taxrate(BaseSDK):
             request = utils.unmarshal(request, operations.ListAccountingTaxratesRequest)
         request = cast(operations.ListAccountingTaxratesRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/accounting/{connection_id}/taxrate",
             base_url=base_url,
@@ -605,7 +605,7 @@ class Taxrate(BaseSDK):
             request = utils.unmarshal(request, operations.PatchAccountingTaxrateRequest)
         request = cast(operations.PatchAccountingTaxrateRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PATCH",
             path="/accounting/{connection_id}/taxrate/{id}",
             base_url=base_url,
@@ -703,7 +703,7 @@ class Taxrate(BaseSDK):
             request = utils.unmarshal(request, operations.PatchAccountingTaxrateRequest)
         request = cast(operations.PatchAccountingTaxrateRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PATCH",
             path="/accounting/{connection_id}/taxrate/{id}",
             base_url=base_url,
@@ -803,7 +803,7 @@ class Taxrate(BaseSDK):
             )
         request = cast(operations.RemoveAccountingTaxrateRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="DELETE",
             path="/accounting/{connection_id}/taxrate/{id}",
             base_url=base_url,
@@ -901,7 +901,7 @@ class Taxrate(BaseSDK):
             )
         request = cast(operations.RemoveAccountingTaxrateRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="DELETE",
             path="/accounting/{connection_id}/taxrate/{id}",
             base_url=base_url,
@@ -999,7 +999,7 @@ class Taxrate(BaseSDK):
             )
         request = cast(operations.UpdateAccountingTaxrateRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PUT",
             path="/accounting/{connection_id}/taxrate/{id}",
             base_url=base_url,
@@ -1099,7 +1099,7 @@ class Taxrate(BaseSDK):
             )
         request = cast(operations.UpdateAccountingTaxrateRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PUT",
             path="/accounting/{connection_id}/taxrate/{id}",
             base_url=base_url,

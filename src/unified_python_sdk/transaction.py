@@ -43,7 +43,7 @@ class Transaction(BaseSDK):
             )
         request = cast(operations.CreateAccountingTransactionRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="POST",
             path="/accounting/{connection_id}/transaction",
             base_url=base_url,
@@ -143,7 +143,7 @@ class Transaction(BaseSDK):
             )
         request = cast(operations.CreateAccountingTransactionRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="POST",
             path="/accounting/{connection_id}/transaction",
             base_url=base_url,
@@ -243,7 +243,7 @@ class Transaction(BaseSDK):
             )
         request = cast(operations.GetAccountingTransactionRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/accounting/{connection_id}/transaction/{id}",
             base_url=base_url,
@@ -336,7 +336,7 @@ class Transaction(BaseSDK):
             )
         request = cast(operations.GetAccountingTransactionRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/accounting/{connection_id}/transaction/{id}",
             base_url=base_url,
@@ -429,7 +429,7 @@ class Transaction(BaseSDK):
             )
         request = cast(operations.ListAccountingTransactionsRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/accounting/{connection_id}/transaction",
             base_url=base_url,
@@ -522,7 +522,7 @@ class Transaction(BaseSDK):
             )
         request = cast(operations.ListAccountingTransactionsRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/accounting/{connection_id}/transaction",
             base_url=base_url,
@@ -615,7 +615,7 @@ class Transaction(BaseSDK):
             )
         request = cast(operations.PatchAccountingTransactionRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PATCH",
             path="/accounting/{connection_id}/transaction/{id}",
             base_url=base_url,
@@ -715,7 +715,7 @@ class Transaction(BaseSDK):
             )
         request = cast(operations.PatchAccountingTransactionRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PATCH",
             path="/accounting/{connection_id}/transaction/{id}",
             base_url=base_url,
@@ -815,7 +815,7 @@ class Transaction(BaseSDK):
             )
         request = cast(operations.RemoveAccountingTransactionRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="DELETE",
             path="/accounting/{connection_id}/transaction/{id}",
             base_url=base_url,
@@ -913,7 +913,7 @@ class Transaction(BaseSDK):
             )
         request = cast(operations.RemoveAccountingTransactionRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="DELETE",
             path="/accounting/{connection_id}/transaction/{id}",
             base_url=base_url,
@@ -1011,7 +1011,7 @@ class Transaction(BaseSDK):
             )
         request = cast(operations.UpdateAccountingTransactionRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PUT",
             path="/accounting/{connection_id}/transaction/{id}",
             base_url=base_url,
@@ -1111,7 +1111,7 @@ class Transaction(BaseSDK):
             )
         request = cast(operations.UpdateAccountingTransactionRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PUT",
             path="/accounting/{connection_id}/transaction/{id}",
             base_url=base_url,

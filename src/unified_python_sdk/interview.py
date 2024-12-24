@@ -41,7 +41,7 @@ class Interview(BaseSDK):
             request = utils.unmarshal(request, operations.CreateAtsInterviewRequest)
         request = cast(operations.CreateAtsInterviewRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="POST",
             path="/ats/{connection_id}/interview",
             base_url=base_url,
@@ -139,7 +139,7 @@ class Interview(BaseSDK):
             request = utils.unmarshal(request, operations.CreateAtsInterviewRequest)
         request = cast(operations.CreateAtsInterviewRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="POST",
             path="/ats/{connection_id}/interview",
             base_url=base_url,
@@ -237,7 +237,7 @@ class Interview(BaseSDK):
             request = utils.unmarshal(request, operations.GetAtsInterviewRequest)
         request = cast(operations.GetAtsInterviewRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/ats/{connection_id}/interview/{id}",
             base_url=base_url,
@@ -328,7 +328,7 @@ class Interview(BaseSDK):
             request = utils.unmarshal(request, operations.GetAtsInterviewRequest)
         request = cast(operations.GetAtsInterviewRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/ats/{connection_id}/interview/{id}",
             base_url=base_url,
@@ -419,7 +419,7 @@ class Interview(BaseSDK):
             request = utils.unmarshal(request, operations.ListAtsInterviewsRequest)
         request = cast(operations.ListAtsInterviewsRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/ats/{connection_id}/interview",
             base_url=base_url,
@@ -510,7 +510,7 @@ class Interview(BaseSDK):
             request = utils.unmarshal(request, operations.ListAtsInterviewsRequest)
         request = cast(operations.ListAtsInterviewsRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/ats/{connection_id}/interview",
             base_url=base_url,
@@ -601,7 +601,7 @@ class Interview(BaseSDK):
             request = utils.unmarshal(request, operations.PatchAtsInterviewRequest)
         request = cast(operations.PatchAtsInterviewRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PATCH",
             path="/ats/{connection_id}/interview/{id}",
             base_url=base_url,
@@ -699,7 +699,7 @@ class Interview(BaseSDK):
             request = utils.unmarshal(request, operations.PatchAtsInterviewRequest)
         request = cast(operations.PatchAtsInterviewRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PATCH",
             path="/ats/{connection_id}/interview/{id}",
             base_url=base_url,
@@ -797,7 +797,7 @@ class Interview(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveAtsInterviewRequest)
         request = cast(operations.RemoveAtsInterviewRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="DELETE",
             path="/ats/{connection_id}/interview/{id}",
             base_url=base_url,
@@ -893,7 +893,7 @@ class Interview(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveAtsInterviewRequest)
         request = cast(operations.RemoveAtsInterviewRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="DELETE",
             path="/ats/{connection_id}/interview/{id}",
             base_url=base_url,
@@ -989,7 +989,7 @@ class Interview(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateAtsInterviewRequest)
         request = cast(operations.UpdateAtsInterviewRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PUT",
             path="/ats/{connection_id}/interview/{id}",
             base_url=base_url,
@@ -1087,7 +1087,7 @@ class Interview(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateAtsInterviewRequest)
         request = cast(operations.UpdateAtsInterviewRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PUT",
             path="/ats/{connection_id}/interview/{id}",
             base_url=base_url,

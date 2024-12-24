@@ -41,7 +41,7 @@ class Company(BaseSDK):
             request = utils.unmarshal(request, operations.CreateCrmCompanyRequest)
         request = cast(operations.CreateCrmCompanyRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="POST",
             path="/crm/{connection_id}/company",
             base_url=base_url,
@@ -135,7 +135,7 @@ class Company(BaseSDK):
             request = utils.unmarshal(request, operations.CreateCrmCompanyRequest)
         request = cast(operations.CreateCrmCompanyRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="POST",
             path="/crm/{connection_id}/company",
             base_url=base_url,
@@ -229,7 +229,7 @@ class Company(BaseSDK):
             request = utils.unmarshal(request, operations.CreateHrisCompanyRequest)
         request = cast(operations.CreateHrisCompanyRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="POST",
             path="/hris/{connection_id}/company",
             base_url=base_url,
@@ -323,7 +323,7 @@ class Company(BaseSDK):
             request = utils.unmarshal(request, operations.CreateHrisCompanyRequest)
         request = cast(operations.CreateHrisCompanyRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="POST",
             path="/hris/{connection_id}/company",
             base_url=base_url,
@@ -416,7 +416,7 @@ class Company(BaseSDK):
             request = utils.unmarshal(request, operations.GetAtsCompanyRequest)
         request = cast(operations.GetAtsCompanyRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/ats/{connection_id}/company/{id}",
             base_url=base_url,
@@ -506,7 +506,7 @@ class Company(BaseSDK):
             request = utils.unmarshal(request, operations.GetAtsCompanyRequest)
         request = cast(operations.GetAtsCompanyRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/ats/{connection_id}/company/{id}",
             base_url=base_url,
@@ -596,7 +596,7 @@ class Company(BaseSDK):
             request = utils.unmarshal(request, operations.GetCrmCompanyRequest)
         request = cast(operations.GetCrmCompanyRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/crm/{connection_id}/company/{id}",
             base_url=base_url,
@@ -686,7 +686,7 @@ class Company(BaseSDK):
             request = utils.unmarshal(request, operations.GetCrmCompanyRequest)
         request = cast(operations.GetCrmCompanyRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/crm/{connection_id}/company/{id}",
             base_url=base_url,
@@ -776,7 +776,7 @@ class Company(BaseSDK):
             request = utils.unmarshal(request, operations.GetHrisCompanyRequest)
         request = cast(operations.GetHrisCompanyRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/hris/{connection_id}/company/{id}",
             base_url=base_url,
@@ -866,7 +866,7 @@ class Company(BaseSDK):
             request = utils.unmarshal(request, operations.GetHrisCompanyRequest)
         request = cast(operations.GetHrisCompanyRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/hris/{connection_id}/company/{id}",
             base_url=base_url,
@@ -957,7 +957,7 @@ class Company(BaseSDK):
             request = utils.unmarshal(request, operations.ListAtsCompaniesRequest)
         request = cast(operations.ListAtsCompaniesRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/ats/{connection_id}/company",
             base_url=base_url,
@@ -1048,7 +1048,7 @@ class Company(BaseSDK):
             request = utils.unmarshal(request, operations.ListAtsCompaniesRequest)
         request = cast(operations.ListAtsCompaniesRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/ats/{connection_id}/company",
             base_url=base_url,
@@ -1139,7 +1139,7 @@ class Company(BaseSDK):
             request = utils.unmarshal(request, operations.ListCrmCompaniesRequest)
         request = cast(operations.ListCrmCompaniesRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/crm/{connection_id}/company",
             base_url=base_url,
@@ -1230,7 +1230,7 @@ class Company(BaseSDK):
             request = utils.unmarshal(request, operations.ListCrmCompaniesRequest)
         request = cast(operations.ListCrmCompaniesRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/crm/{connection_id}/company",
             base_url=base_url,
@@ -1321,7 +1321,7 @@ class Company(BaseSDK):
             request = utils.unmarshal(request, operations.ListEnrichCompaniesRequest)
         request = cast(operations.ListEnrichCompaniesRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/enrich/{connection_id}/company",
             base_url=base_url,
@@ -1412,7 +1412,7 @@ class Company(BaseSDK):
             request = utils.unmarshal(request, operations.ListEnrichCompaniesRequest)
         request = cast(operations.ListEnrichCompaniesRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/enrich/{connection_id}/company",
             base_url=base_url,
@@ -1503,7 +1503,7 @@ class Company(BaseSDK):
             request = utils.unmarshal(request, operations.ListHrisCompaniesRequest)
         request = cast(operations.ListHrisCompaniesRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/hris/{connection_id}/company",
             base_url=base_url,
@@ -1594,7 +1594,7 @@ class Company(BaseSDK):
             request = utils.unmarshal(request, operations.ListHrisCompaniesRequest)
         request = cast(operations.ListHrisCompaniesRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/hris/{connection_id}/company",
             base_url=base_url,
@@ -1685,7 +1685,7 @@ class Company(BaseSDK):
             request = utils.unmarshal(request, operations.PatchCrmCompanyRequest)
         request = cast(operations.PatchCrmCompanyRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PATCH",
             path="/crm/{connection_id}/company/{id}",
             base_url=base_url,
@@ -1779,7 +1779,7 @@ class Company(BaseSDK):
             request = utils.unmarshal(request, operations.PatchCrmCompanyRequest)
         request = cast(operations.PatchCrmCompanyRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PATCH",
             path="/crm/{connection_id}/company/{id}",
             base_url=base_url,
@@ -1873,7 +1873,7 @@ class Company(BaseSDK):
             request = utils.unmarshal(request, operations.PatchHrisCompanyRequest)
         request = cast(operations.PatchHrisCompanyRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PATCH",
             path="/hris/{connection_id}/company/{id}",
             base_url=base_url,
@@ -1967,7 +1967,7 @@ class Company(BaseSDK):
             request = utils.unmarshal(request, operations.PatchHrisCompanyRequest)
         request = cast(operations.PatchHrisCompanyRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PATCH",
             path="/hris/{connection_id}/company/{id}",
             base_url=base_url,
@@ -2061,7 +2061,7 @@ class Company(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveCrmCompanyRequest)
         request = cast(operations.RemoveCrmCompanyRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="DELETE",
             path="/crm/{connection_id}/company/{id}",
             base_url=base_url,
@@ -2157,7 +2157,7 @@ class Company(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveCrmCompanyRequest)
         request = cast(operations.RemoveCrmCompanyRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="DELETE",
             path="/crm/{connection_id}/company/{id}",
             base_url=base_url,
@@ -2253,7 +2253,7 @@ class Company(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveHrisCompanyRequest)
         request = cast(operations.RemoveHrisCompanyRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="DELETE",
             path="/hris/{connection_id}/company/{id}",
             base_url=base_url,
@@ -2349,7 +2349,7 @@ class Company(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveHrisCompanyRequest)
         request = cast(operations.RemoveHrisCompanyRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="DELETE",
             path="/hris/{connection_id}/company/{id}",
             base_url=base_url,
@@ -2445,7 +2445,7 @@ class Company(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateCrmCompanyRequest)
         request = cast(operations.UpdateCrmCompanyRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PUT",
             path="/crm/{connection_id}/company/{id}",
             base_url=base_url,
@@ -2539,7 +2539,7 @@ class Company(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateCrmCompanyRequest)
         request = cast(operations.UpdateCrmCompanyRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PUT",
             path="/crm/{connection_id}/company/{id}",
             base_url=base_url,
@@ -2633,7 +2633,7 @@ class Company(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateHrisCompanyRequest)
         request = cast(operations.UpdateHrisCompanyRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PUT",
             path="/hris/{connection_id}/company/{id}",
             base_url=base_url,
@@ -2727,7 +2727,7 @@ class Company(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateHrisCompanyRequest)
         request = cast(operations.UpdateHrisCompanyRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PUT",
             path="/hris/{connection_id}/company/{id}",
             base_url=base_url,

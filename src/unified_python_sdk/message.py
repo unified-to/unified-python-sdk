@@ -41,7 +41,7 @@ class Message(BaseSDK):
             request = utils.unmarshal(request, operations.CreateMessagingMessageRequest)
         request = cast(operations.CreateMessagingMessageRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="POST",
             path="/messaging/{connection_id}/message",
             base_url=base_url,
@@ -139,7 +139,7 @@ class Message(BaseSDK):
             request = utils.unmarshal(request, operations.CreateMessagingMessageRequest)
         request = cast(operations.CreateMessagingMessageRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="POST",
             path="/messaging/{connection_id}/message",
             base_url=base_url,
@@ -237,7 +237,7 @@ class Message(BaseSDK):
             request = utils.unmarshal(request, operations.GetMessagingMessageRequest)
         request = cast(operations.GetMessagingMessageRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/messaging/{connection_id}/message/{id}",
             base_url=base_url,
@@ -328,7 +328,7 @@ class Message(BaseSDK):
             request = utils.unmarshal(request, operations.GetMessagingMessageRequest)
         request = cast(operations.GetMessagingMessageRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/messaging/{connection_id}/message/{id}",
             base_url=base_url,
@@ -419,7 +419,7 @@ class Message(BaseSDK):
             request = utils.unmarshal(request, operations.ListMessagingMessagesRequest)
         request = cast(operations.ListMessagingMessagesRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/messaging/{connection_id}/message",
             base_url=base_url,
@@ -510,7 +510,7 @@ class Message(BaseSDK):
             request = utils.unmarshal(request, operations.ListMessagingMessagesRequest)
         request = cast(operations.ListMessagingMessagesRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/messaging/{connection_id}/message",
             base_url=base_url,
@@ -601,7 +601,7 @@ class Message(BaseSDK):
             request = utils.unmarshal(request, operations.PatchMessagingMessageRequest)
         request = cast(operations.PatchMessagingMessageRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PATCH",
             path="/messaging/{connection_id}/message/{id}",
             base_url=base_url,
@@ -699,7 +699,7 @@ class Message(BaseSDK):
             request = utils.unmarshal(request, operations.PatchMessagingMessageRequest)
         request = cast(operations.PatchMessagingMessageRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PATCH",
             path="/messaging/{connection_id}/message/{id}",
             base_url=base_url,
@@ -797,7 +797,7 @@ class Message(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveMessagingMessageRequest)
         request = cast(operations.RemoveMessagingMessageRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="DELETE",
             path="/messaging/{connection_id}/message/{id}",
             base_url=base_url,
@@ -893,7 +893,7 @@ class Message(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveMessagingMessageRequest)
         request = cast(operations.RemoveMessagingMessageRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="DELETE",
             path="/messaging/{connection_id}/message/{id}",
             base_url=base_url,
@@ -989,7 +989,7 @@ class Message(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateMessagingMessageRequest)
         request = cast(operations.UpdateMessagingMessageRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PUT",
             path="/messaging/{connection_id}/message/{id}",
             base_url=base_url,
@@ -1087,7 +1087,7 @@ class Message(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateMessagingMessageRequest)
         request = cast(operations.UpdateMessagingMessageRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PUT",
             path="/messaging/{connection_id}/message/{id}",
             base_url=base_url,

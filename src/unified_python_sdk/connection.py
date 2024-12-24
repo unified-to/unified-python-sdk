@@ -40,7 +40,7 @@ class Connection(BaseSDK):
             request = utils.unmarshal(request, Optional[shared.Connection])
         request = cast(Optional[shared.Connection], request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="POST",
             path="/unified/connection",
             base_url=base_url,
@@ -133,7 +133,7 @@ class Connection(BaseSDK):
             request = utils.unmarshal(request, Optional[shared.Connection])
         request = cast(Optional[shared.Connection], request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="POST",
             path="/unified/connection",
             base_url=base_url,
@@ -227,7 +227,7 @@ class Connection(BaseSDK):
             request = utils.unmarshal(request, operations.GetUnifiedConnectionRequest)
         request = cast(operations.GetUnifiedConnectionRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/unified/connection/{id}",
             base_url=base_url,
@@ -318,7 +318,7 @@ class Connection(BaseSDK):
             request = utils.unmarshal(request, operations.GetUnifiedConnectionRequest)
         request = cast(operations.GetUnifiedConnectionRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/unified/connection/{id}",
             base_url=base_url,
@@ -409,7 +409,7 @@ class Connection(BaseSDK):
             request = utils.unmarshal(request, operations.ListUnifiedConnectionsRequest)
         request = cast(operations.ListUnifiedConnectionsRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/unified/connection",
             base_url=base_url,
@@ -500,7 +500,7 @@ class Connection(BaseSDK):
             request = utils.unmarshal(request, operations.ListUnifiedConnectionsRequest)
         request = cast(operations.ListUnifiedConnectionsRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/unified/connection",
             base_url=base_url,
@@ -591,7 +591,7 @@ class Connection(BaseSDK):
             request = utils.unmarshal(request, operations.PatchUnifiedConnectionRequest)
         request = cast(operations.PatchUnifiedConnectionRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PATCH",
             path="/unified/connection/{id}",
             base_url=base_url,
@@ -685,7 +685,7 @@ class Connection(BaseSDK):
             request = utils.unmarshal(request, operations.PatchUnifiedConnectionRequest)
         request = cast(operations.PatchUnifiedConnectionRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PATCH",
             path="/unified/connection/{id}",
             base_url=base_url,
@@ -781,7 +781,7 @@ class Connection(BaseSDK):
             )
         request = cast(operations.RemoveUnifiedConnectionRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="DELETE",
             path="/unified/connection/{id}",
             base_url=base_url,
@@ -879,7 +879,7 @@ class Connection(BaseSDK):
             )
         request = cast(operations.RemoveUnifiedConnectionRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="DELETE",
             path="/unified/connection/{id}",
             base_url=base_url,
@@ -977,7 +977,7 @@ class Connection(BaseSDK):
             )
         request = cast(operations.UpdateUnifiedConnectionRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PUT",
             path="/unified/connection/{id}",
             base_url=base_url,
@@ -1073,7 +1073,7 @@ class Connection(BaseSDK):
             )
         request = cast(operations.UpdateUnifiedConnectionRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PUT",
             path="/unified/connection/{id}",
             base_url=base_url,

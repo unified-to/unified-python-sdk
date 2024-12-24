@@ -40,7 +40,7 @@ class Call(BaseSDK):
             request = utils.unmarshal(request, operations.ListUcCallsRequest)
         request = cast(operations.ListUcCallsRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/uc/{connection_id}/call",
             base_url=base_url,
@@ -130,7 +130,7 @@ class Call(BaseSDK):
             request = utils.unmarshal(request, operations.ListUcCallsRequest)
         request = cast(operations.ListUcCallsRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/uc/{connection_id}/call",
             base_url=base_url,

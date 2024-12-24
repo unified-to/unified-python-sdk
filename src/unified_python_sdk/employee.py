@@ -41,7 +41,7 @@ class Employee(BaseSDK):
             request = utils.unmarshal(request, operations.CreateHrisEmployeeRequest)
         request = cast(operations.CreateHrisEmployeeRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="POST",
             path="/hris/{connection_id}/employee",
             base_url=base_url,
@@ -139,7 +139,7 @@ class Employee(BaseSDK):
             request = utils.unmarshal(request, operations.CreateHrisEmployeeRequest)
         request = cast(operations.CreateHrisEmployeeRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="POST",
             path="/hris/{connection_id}/employee",
             base_url=base_url,
@@ -237,7 +237,7 @@ class Employee(BaseSDK):
             request = utils.unmarshal(request, operations.GetHrisEmployeeRequest)
         request = cast(operations.GetHrisEmployeeRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/hris/{connection_id}/employee/{id}",
             base_url=base_url,
@@ -328,7 +328,7 @@ class Employee(BaseSDK):
             request = utils.unmarshal(request, operations.GetHrisEmployeeRequest)
         request = cast(operations.GetHrisEmployeeRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/hris/{connection_id}/employee/{id}",
             base_url=base_url,
@@ -419,7 +419,7 @@ class Employee(BaseSDK):
             request = utils.unmarshal(request, operations.ListHrisEmployeesRequest)
         request = cast(operations.ListHrisEmployeesRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/hris/{connection_id}/employee",
             base_url=base_url,
@@ -510,7 +510,7 @@ class Employee(BaseSDK):
             request = utils.unmarshal(request, operations.ListHrisEmployeesRequest)
         request = cast(operations.ListHrisEmployeesRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/hris/{connection_id}/employee",
             base_url=base_url,
@@ -601,7 +601,7 @@ class Employee(BaseSDK):
             request = utils.unmarshal(request, operations.PatchHrisEmployeeRequest)
         request = cast(operations.PatchHrisEmployeeRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PATCH",
             path="/hris/{connection_id}/employee/{id}",
             base_url=base_url,
@@ -699,7 +699,7 @@ class Employee(BaseSDK):
             request = utils.unmarshal(request, operations.PatchHrisEmployeeRequest)
         request = cast(operations.PatchHrisEmployeeRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PATCH",
             path="/hris/{connection_id}/employee/{id}",
             base_url=base_url,
@@ -797,7 +797,7 @@ class Employee(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveHrisEmployeeRequest)
         request = cast(operations.RemoveHrisEmployeeRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="DELETE",
             path="/hris/{connection_id}/employee/{id}",
             base_url=base_url,
@@ -893,7 +893,7 @@ class Employee(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveHrisEmployeeRequest)
         request = cast(operations.RemoveHrisEmployeeRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="DELETE",
             path="/hris/{connection_id}/employee/{id}",
             base_url=base_url,
@@ -989,7 +989,7 @@ class Employee(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateHrisEmployeeRequest)
         request = cast(operations.UpdateHrisEmployeeRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PUT",
             path="/hris/{connection_id}/employee/{id}",
             base_url=base_url,
@@ -1087,7 +1087,7 @@ class Employee(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateHrisEmployeeRequest)
         request = cast(operations.UpdateHrisEmployeeRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PUT",
             path="/hris/{connection_id}/employee/{id}",
             base_url=base_url,

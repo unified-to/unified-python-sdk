@@ -40,7 +40,7 @@ class Lead(BaseSDK):
             request = utils.unmarshal(request, operations.CreateCrmLeadRequest)
         request = cast(operations.CreateCrmLeadRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="POST",
             path="/crm/{connection_id}/lead",
             base_url=base_url,
@@ -131,7 +131,7 @@ class Lead(BaseSDK):
             request = utils.unmarshal(request, operations.CreateCrmLeadRequest)
         request = cast(operations.CreateCrmLeadRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="POST",
             path="/crm/{connection_id}/lead",
             base_url=base_url,
@@ -222,7 +222,7 @@ class Lead(BaseSDK):
             request = utils.unmarshal(request, operations.GetCrmLeadRequest)
         request = cast(operations.GetCrmLeadRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/crm/{connection_id}/lead/{id}",
             base_url=base_url,
@@ -310,7 +310,7 @@ class Lead(BaseSDK):
             request = utils.unmarshal(request, operations.GetCrmLeadRequest)
         request = cast(operations.GetCrmLeadRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/crm/{connection_id}/lead/{id}",
             base_url=base_url,
@@ -398,7 +398,7 @@ class Lead(BaseSDK):
             request = utils.unmarshal(request, operations.ListCrmLeadsRequest)
         request = cast(operations.ListCrmLeadsRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="GET",
             path="/crm/{connection_id}/lead",
             base_url=base_url,
@@ -488,7 +488,7 @@ class Lead(BaseSDK):
             request = utils.unmarshal(request, operations.ListCrmLeadsRequest)
         request = cast(operations.ListCrmLeadsRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="GET",
             path="/crm/{connection_id}/lead",
             base_url=base_url,
@@ -578,7 +578,7 @@ class Lead(BaseSDK):
             request = utils.unmarshal(request, operations.PatchCrmLeadRequest)
         request = cast(operations.PatchCrmLeadRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PATCH",
             path="/crm/{connection_id}/lead/{id}",
             base_url=base_url,
@@ -669,7 +669,7 @@ class Lead(BaseSDK):
             request = utils.unmarshal(request, operations.PatchCrmLeadRequest)
         request = cast(operations.PatchCrmLeadRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PATCH",
             path="/crm/{connection_id}/lead/{id}",
             base_url=base_url,
@@ -760,7 +760,7 @@ class Lead(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveCrmLeadRequest)
         request = cast(operations.RemoveCrmLeadRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="DELETE",
             path="/crm/{connection_id}/lead/{id}",
             base_url=base_url,
@@ -855,7 +855,7 @@ class Lead(BaseSDK):
             request = utils.unmarshal(request, operations.RemoveCrmLeadRequest)
         request = cast(operations.RemoveCrmLeadRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="DELETE",
             path="/crm/{connection_id}/lead/{id}",
             base_url=base_url,
@@ -950,7 +950,7 @@ class Lead(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateCrmLeadRequest)
         request = cast(operations.UpdateCrmLeadRequest, request)
 
-        req = self.build_request(
+        req = self._build_request(
             method="PUT",
             path="/crm/{connection_id}/lead/{id}",
             base_url=base_url,
@@ -1041,7 +1041,7 @@ class Lead(BaseSDK):
             request = utils.unmarshal(request, operations.UpdateCrmLeadRequest)
         request = cast(operations.UpdateCrmLeadRequest, request)
 
-        req = self.build_request_async(
+        req = self._build_request_async(
             method="PUT",
             path="/crm/{connection_id}/lead/{id}",
             base_url=base_url,
