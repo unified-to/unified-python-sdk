@@ -7,32 +7,31 @@ from typing_extensions import Annotated, NotRequired, TypedDict
 from unified_python_sdk.types import BaseModel
 
 
-class PropertyCrmEventEmailTypedDict(TypedDict):
-    r"""The email object, when type = email"""
-
+class PropertyCrmEventMarketingEmailTypedDict(TypedDict):
     attachment_file_ids: NotRequired[List[str]]
     body: NotRequired[str]
     cc: NotRequired[List[str]]
-    r"""The event email's cc name & email (name )"""
+    r"""The event email's cc name & email (name <test@test.com>)"""
     from_: NotRequired[str]
+    name: NotRequired[str]
     subject: NotRequired[str]
     to: NotRequired[List[str]]
-    r"""The event email's \"to\" name & email (name )"""
+    r"""The event email's \"to\" name & email (name <test@test.com>)"""
 
 
-class PropertyCrmEventEmail(BaseModel):
-    r"""The email object, when type = email"""
-
+class PropertyCrmEventMarketingEmail(BaseModel):
     attachment_file_ids: Optional[List[str]] = None
 
     body: Optional[str] = None
 
     cc: Optional[List[str]] = None
-    r"""The event email's cc name & email (name )"""
+    r"""The event email's cc name & email (name <test@test.com>)"""
 
     from_: Annotated[Optional[str], pydantic.Field(alias="from")] = None
+
+    name: Optional[str] = None
 
     subject: Optional[str] = None
 
     to: Optional[List[str]] = None
-    r"""The event email's \"to\" name & email (name )"""
+    r"""The event email's \"to\" name & email (name <test@test.com>)"""

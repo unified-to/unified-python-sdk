@@ -6,11 +6,20 @@ from .property_crmevent_email import (
     PropertyCrmEventEmail,
     PropertyCrmEventEmailTypedDict,
 )
+from .property_crmevent_form import PropertyCrmEventForm, PropertyCrmEventFormTypedDict
+from .property_crmevent_marketing_email import (
+    PropertyCrmEventMarketingEmail,
+    PropertyCrmEventMarketingEmailTypedDict,
+)
 from .property_crmevent_meeting import (
     PropertyCrmEventMeeting,
     PropertyCrmEventMeetingTypedDict,
 )
 from .property_crmevent_note import PropertyCrmEventNote, PropertyCrmEventNoteTypedDict
+from .property_crmevent_page_view import (
+    PropertyCrmEventPageView,
+    PropertyCrmEventPageViewTypedDict,
+)
 from .property_crmevent_task import PropertyCrmEventTask, PropertyCrmEventTaskTypedDict
 from datetime import datetime
 from enum import Enum
@@ -25,6 +34,9 @@ class CrmEventType(str, Enum):
     TASK = "TASK"
     MEETING = "MEETING"
     CALL = "CALL"
+    MARKETING_EMAIL = "MARKETING_EMAIL"
+    FORM = "FORM"
+    PAGE_VIEW = "PAGE_VIEW"
 
 
 class CrmEventTypedDict(TypedDict):
@@ -41,12 +53,15 @@ class CrmEventTypedDict(TypedDict):
     r"""An array of deal IDs associated with this event"""
     email: NotRequired[PropertyCrmEventEmailTypedDict]
     r"""The email object, when type = email"""
+    form: NotRequired[PropertyCrmEventFormTypedDict]
     id: NotRequired[str]
     lead_ids: NotRequired[List[str]]
+    marketing_email: NotRequired[PropertyCrmEventMarketingEmailTypedDict]
     meeting: NotRequired[PropertyCrmEventMeetingTypedDict]
     r"""The meeting object, when type = meeting"""
     note: NotRequired[PropertyCrmEventNoteTypedDict]
     r"""The note object, when type = note"""
+    page_view: NotRequired[PropertyCrmEventPageViewTypedDict]
     raw: NotRequired[Dict[str, Any]]
     r"""The raw data returned by the integration for this event."""
     task: NotRequired[PropertyCrmEventTaskTypedDict]
@@ -76,15 +91,21 @@ class CrmEvent(BaseModel):
     email: Optional[PropertyCrmEventEmail] = None
     r"""The email object, when type = email"""
 
+    form: Optional[PropertyCrmEventForm] = None
+
     id: Optional[str] = None
 
     lead_ids: Optional[List[str]] = None
+
+    marketing_email: Optional[PropertyCrmEventMarketingEmail] = None
 
     meeting: Optional[PropertyCrmEventMeeting] = None
     r"""The meeting object, when type = meeting"""
 
     note: Optional[PropertyCrmEventNote] = None
     r"""The note object, when type = note"""
+
+    page_view: Optional[PropertyCrmEventPageView] = None
 
     raw: Optional[Dict[str, Any]] = None
     r"""The raw data returned by the integration for this event."""

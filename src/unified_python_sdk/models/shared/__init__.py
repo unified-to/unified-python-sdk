@@ -114,6 +114,12 @@ from .crmcontact import CrmContact, CrmContactTypedDict
 from .crmdeal import CrmDeal, CrmDealTypedDict
 from .crmemail import CrmEmail, CrmEmailType, CrmEmailTypedDict
 from .crmevent import CrmEvent, CrmEventType, CrmEventTypedDict
+from .crmeventformfield import (
+    CrmEventFormField,
+    CrmEventFormFieldType,
+    CrmEventFormFieldTypedDict,
+)
+from .crmeventformoption import CrmEventFormOption, CrmEventFormOptionTypedDict
 from .crmlead import CrmLead, CrmLeadTypedDict
 from .crmpipeline import CrmPipeline, CrmPipelineTypedDict
 from .crmstage import CrmStage, CrmStageTypedDict
@@ -307,11 +313,20 @@ from .property_crmevent_email import (
     PropertyCrmEventEmail,
     PropertyCrmEventEmailTypedDict,
 )
+from .property_crmevent_form import PropertyCrmEventForm, PropertyCrmEventFormTypedDict
+from .property_crmevent_marketing_email import (
+    PropertyCrmEventMarketingEmail,
+    PropertyCrmEventMarketingEmailTypedDict,
+)
 from .property_crmevent_meeting import (
     PropertyCrmEventMeeting,
     PropertyCrmEventMeetingTypedDict,
 )
 from .property_crmevent_note import PropertyCrmEventNote, PropertyCrmEventNoteTypedDict
+from .property_crmevent_page_view import (
+    PropertyCrmEventPageView,
+    PropertyCrmEventPageViewTypedDict,
+)
 from .property_crmevent_task import (
     Priority,
     PropertyCrmEventTask,
@@ -577,6 +592,11 @@ __all__ = [
     "CrmEmailType",
     "CrmEmailTypedDict",
     "CrmEvent",
+    "CrmEventFormField",
+    "CrmEventFormFieldType",
+    "CrmEventFormFieldTypedDict",
+    "CrmEventFormOption",
+    "CrmEventFormOptionTypedDict",
     "CrmEventType",
     "CrmEventTypedDict",
     "CrmLead",
@@ -781,10 +801,16 @@ __all__ = [
     "PropertyCrmEventCallTypedDict",
     "PropertyCrmEventEmail",
     "PropertyCrmEventEmailTypedDict",
+    "PropertyCrmEventForm",
+    "PropertyCrmEventFormTypedDict",
+    "PropertyCrmEventMarketingEmail",
+    "PropertyCrmEventMarketingEmailTypedDict",
     "PropertyCrmEventMeeting",
     "PropertyCrmEventMeetingTypedDict",
     "PropertyCrmEventNote",
     "PropertyCrmEventNoteTypedDict",
+    "PropertyCrmEventPageView",
+    "PropertyCrmEventPageViewTypedDict",
     "PropertyCrmEventTask",
     "PropertyCrmEventTaskStatus",
     "PropertyCrmEventTaskTypedDict",

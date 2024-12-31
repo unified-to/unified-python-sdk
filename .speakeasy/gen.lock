@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: 11363cbfd40306b24119fb60c9ea2fc5
+  docChecksum: 05ab7803e5b317202af3aacb4835f336
   docVersion: "1.0"
-  speakeasyVersion: 1.460.2
+  speakeasyVersion: 1.460.3
   generationVersion: 2.484.0
-  releaseVersion: 0.28.1
-  configChecksum: 87192148a144e7115ad157ec5816967c
+  releaseVersion: 0.28.2
+  configChecksum: 46806278a344e18450733b7d42fa488a
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -852,6 +852,9 @@ generatedFiles:
   - docs/models/shared/crmemail.md
   - docs/models/shared/crmemailtype.md
   - docs/models/shared/crmevent.md
+  - docs/models/shared/crmeventformfield.md
+  - docs/models/shared/crmeventformfieldtype.md
+  - docs/models/shared/crmeventformoption.md
   - docs/models/shared/crmeventtype.md
   - docs/models/shared/crmlead.md
   - docs/models/shared/crmpipeline.md
@@ -993,8 +996,11 @@ generatedFiles:
   - docs/models/shared/propertycrmcontactaddress.md
   - docs/models/shared/propertycrmeventcall.md
   - docs/models/shared/propertycrmeventemail.md
+  - docs/models/shared/propertycrmeventform.md
+  - docs/models/shared/propertycrmeventmarketingemail.md
   - docs/models/shared/propertycrmeventmeeting.md
   - docs/models/shared/propertycrmeventnote.md
+  - docs/models/shared/propertycrmeventpageview.md
   - docs/models/shared/propertycrmeventtask.md
   - docs/models/shared/propertycrmeventtaskstatus.md
   - docs/models/shared/propertycrmleadaddress.md
@@ -1679,6 +1685,8 @@ generatedFiles:
   - src/unified_python_sdk/models/shared/crmdeal.py
   - src/unified_python_sdk/models/shared/crmemail.py
   - src/unified_python_sdk/models/shared/crmevent.py
+  - src/unified_python_sdk/models/shared/crmeventformfield.py
+  - src/unified_python_sdk/models/shared/crmeventformoption.py
   - src/unified_python_sdk/models/shared/crmlead.py
   - src/unified_python_sdk/models/shared/crmpipeline.py
   - src/unified_python_sdk/models/shared/crmstage.py
@@ -1743,8 +1751,11 @@ generatedFiles:
   - src/unified_python_sdk/models/shared/property_crmcontact_address.py
   - src/unified_python_sdk/models/shared/property_crmevent_call.py
   - src/unified_python_sdk/models/shared/property_crmevent_email.py
+  - src/unified_python_sdk/models/shared/property_crmevent_form.py
+  - src/unified_python_sdk/models/shared/property_crmevent_marketing_email.py
   - src/unified_python_sdk/models/shared/property_crmevent_meeting.py
   - src/unified_python_sdk/models/shared/property_crmevent_note.py
+  - src/unified_python_sdk/models/shared/property_crmevent_page_view.py
   - src/unified_python_sdk/models/shared/property_crmevent_task.py
   - src/unified_python_sdk/models/shared/property_crmlead_address.py
   - src/unified_python_sdk/models/shared/property_enrichcompany_address.py
