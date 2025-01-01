@@ -258,6 +258,12 @@ from .createpaymentpayment import (
     CreatePaymentPaymentResponse,
     CreatePaymentPaymentResponseTypedDict,
 )
+from .createpaymentsubscription import (
+    CreatePaymentSubscriptionRequest,
+    CreatePaymentSubscriptionRequestTypedDict,
+    CreatePaymentSubscriptionResponse,
+    CreatePaymentSubscriptionResponseTypedDict,
+)
 from .createrepobranch import (
     CreateRepoBranchRequest,
     CreateRepoBranchRequestTypedDict,
@@ -633,6 +639,12 @@ from .getpaymentrefund import (
     GetPaymentRefundRequestTypedDict,
     GetPaymentRefundResponse,
     GetPaymentRefundResponseTypedDict,
+)
+from .getpaymentsubscription import (
+    GetPaymentSubscriptionRequest,
+    GetPaymentSubscriptionRequestTypedDict,
+    GetPaymentSubscriptionResponse,
+    GetPaymentSubscriptionResponseTypedDict,
 )
 from .getrepobranch import (
     GetRepoBranchRequest,
@@ -1061,6 +1073,12 @@ from .listpaymentrefunds import (
     ListPaymentRefundsResponse,
     ListPaymentRefundsResponseTypedDict,
 )
+from .listpaymentsubscriptions import (
+    ListPaymentSubscriptionsRequest,
+    ListPaymentSubscriptionsRequestTypedDict,
+    ListPaymentSubscriptionsResponse,
+    ListPaymentSubscriptionsResponseTypedDict,
+)
 from .listrepobranches import (
     ListRepoBranchesRequest,
     ListRepoBranchesRequestTypedDict,
@@ -1442,6 +1460,12 @@ from .patchpaymentpayment import (
     PatchPaymentPaymentResponse,
     PatchPaymentPaymentResponseTypedDict,
 )
+from .patchpaymentsubscription import (
+    PatchPaymentSubscriptionRequest,
+    PatchPaymentSubscriptionRequestTypedDict,
+    PatchPaymentSubscriptionResponse,
+    PatchPaymentSubscriptionResponseTypedDict,
+)
 from .patchrepobranch import (
     PatchRepoBranchRequest,
     PatchRepoBranchRequestTypedDict,
@@ -1789,6 +1813,12 @@ from .removepaymentpayment import (
     RemovePaymentPaymentRequestTypedDict,
     RemovePaymentPaymentResponse,
     RemovePaymentPaymentResponseTypedDict,
+)
+from .removepaymentsubscription import (
+    RemovePaymentSubscriptionRequest,
+    RemovePaymentSubscriptionRequestTypedDict,
+    RemovePaymentSubscriptionResponse,
+    RemovePaymentSubscriptionResponseTypedDict,
 )
 from .removerepobranch import (
     RemoveRepoBranchRequest,
@@ -2138,6 +2168,12 @@ from .updatepaymentpayment import (
     UpdatePaymentPaymentResponse,
     UpdatePaymentPaymentResponseTypedDict,
 )
+from .updatepaymentsubscription import (
+    UpdatePaymentSubscriptionRequest,
+    UpdatePaymentSubscriptionRequestTypedDict,
+    UpdatePaymentSubscriptionResponse,
+    UpdatePaymentSubscriptionResponseTypedDict,
+)
 from .updaterepobranch import (
     UpdateRepoBranchRequest,
     UpdateRepoBranchRequestTypedDict,
@@ -2415,6 +2451,10 @@ __all__ = [
     "CreatePaymentPaymentRequestTypedDict",
     "CreatePaymentPaymentResponse",
     "CreatePaymentPaymentResponseTypedDict",
+    "CreatePaymentSubscriptionRequest",
+    "CreatePaymentSubscriptionRequestTypedDict",
+    "CreatePaymentSubscriptionResponse",
+    "CreatePaymentSubscriptionResponseTypedDict",
     "CreateRepoBranchRequest",
     "CreateRepoBranchRequestTypedDict",
     "CreateRepoBranchResponse",
@@ -2665,6 +2705,10 @@ __all__ = [
     "GetPaymentRefundRequestTypedDict",
     "GetPaymentRefundResponse",
     "GetPaymentRefundResponseTypedDict",
+    "GetPaymentSubscriptionRequest",
+    "GetPaymentSubscriptionRequestTypedDict",
+    "GetPaymentSubscriptionResponse",
+    "GetPaymentSubscriptionResponseTypedDict",
     "GetRepoBranchRequest",
     "GetRepoBranchRequestTypedDict",
     "GetRepoBranchResponse",
@@ -2949,6 +2993,10 @@ __all__ = [
     "ListPaymentRefundsRequestTypedDict",
     "ListPaymentRefundsResponse",
     "ListPaymentRefundsResponseTypedDict",
+    "ListPaymentSubscriptionsRequest",
+    "ListPaymentSubscriptionsRequestTypedDict",
+    "ListPaymentSubscriptionsResponse",
+    "ListPaymentSubscriptionsResponseTypedDict",
     "ListRepoBranchesRequest",
     "ListRepoBranchesRequestTypedDict",
     "ListRepoBranchesResponse",
@@ -3202,6 +3250,10 @@ __all__ = [
     "PatchPaymentPaymentRequestTypedDict",
     "PatchPaymentPaymentResponse",
     "PatchPaymentPaymentResponseTypedDict",
+    "PatchPaymentSubscriptionRequest",
+    "PatchPaymentSubscriptionRequestTypedDict",
+    "PatchPaymentSubscriptionResponse",
+    "PatchPaymentSubscriptionResponseTypedDict",
     "PatchRepoBranchRequest",
     "PatchRepoBranchRequestTypedDict",
     "PatchRepoBranchResponse",
@@ -3435,6 +3487,10 @@ __all__ = [
     "RemovePaymentPaymentRequestTypedDict",
     "RemovePaymentPaymentResponse",
     "RemovePaymentPaymentResponseTypedDict",
+    "RemovePaymentSubscriptionRequest",
+    "RemovePaymentSubscriptionRequestTypedDict",
+    "RemovePaymentSubscriptionResponse",
+    "RemovePaymentSubscriptionResponseTypedDict",
     "RemoveRepoBranchRequest",
     "RemoveRepoBranchRequestTypedDict",
     "RemoveRepoBranchResponse",
@@ -3668,6 +3724,10 @@ __all__ = [
     "UpdatePaymentPaymentRequestTypedDict",
     "UpdatePaymentPaymentResponse",
     "UpdatePaymentPaymentResponseTypedDict",
+    "UpdatePaymentSubscriptionRequest",
+    "UpdatePaymentSubscriptionRequestTypedDict",
+    "UpdatePaymentSubscriptionResponse",
+    "UpdatePaymentSubscriptionResponseTypedDict",
     "UpdateRepoBranchRequest",
     "UpdateRepoBranchRequestTypedDict",
     "UpdateRepoBranchResponse",

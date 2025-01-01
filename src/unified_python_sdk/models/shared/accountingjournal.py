@@ -5,13 +5,14 @@ from .accountingjournallineitem import (
     AccountingJournalLineitem,
     AccountingJournalLineitemTypedDict,
 )
+from datetime import datetime
 from typing import Any, Dict, List, Optional
 from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk.types import BaseModel
 
 
 class AccountingJournalTypedDict(TypedDict):
-    created_at: NotRequired[str]
+    created_at: NotRequired[datetime]
     currency: NotRequired[str]
     description: NotRequired[str]
     id: NotRequired[str]
@@ -21,11 +22,11 @@ class AccountingJournalTypedDict(TypedDict):
     reference: NotRequired[str]
     tax_amount: NotRequired[float]
     taxrate_id: NotRequired[str]
-    updated_at: NotRequired[str]
+    updated_at: NotRequired[datetime]
 
 
 class AccountingJournal(BaseModel):
-    created_at: Optional[str] = None
+    created_at: Optional[datetime] = None
 
     currency: Optional[str] = None
 
@@ -44,4 +45,4 @@ class AccountingJournal(BaseModel):
 
     taxrate_id: Optional[str] = None
 
-    updated_at: Optional[str] = None
+    updated_at: Optional[datetime] = None

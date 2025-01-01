@@ -1,4 +1,4 @@
-# PaymentLinkLineitem
+# PaymentLineitem
 
 
 ## Fields

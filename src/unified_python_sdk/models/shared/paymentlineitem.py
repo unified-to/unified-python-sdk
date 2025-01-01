@@ -7,7 +7,7 @@ from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk.types import BaseModel
 
 
-class PaymentLinkLineitemTypedDict(TypedDict):
+class PaymentLineitemTypedDict(TypedDict):
     account_id: NotRequired[str]
     created_at: NotRequired[datetime]
     discount_amount: NotRequired[float]
@@ -27,7 +27,7 @@ class PaymentLinkLineitemTypedDict(TypedDict):
     updated_at: NotRequired[datetime]
 
 
-class PaymentLinkLineitem(BaseModel):
+class PaymentLineitem(BaseModel):
     account_id: Optional[str] = None
 
     created_at: Optional[datetime] = None

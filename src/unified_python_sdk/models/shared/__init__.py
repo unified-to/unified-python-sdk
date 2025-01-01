@@ -252,11 +252,17 @@ from .messagingchannel import MessagingChannel, MessagingChannelTypedDict
 from .messagingmember import MessagingMember, MessagingMemberTypedDict
 from .messagingmessage import MessagingMessage, MessagingMessageTypedDict
 from .metadatametadata import MetadataMetadata, MetadataMetadataTypedDict
+from .paymentlineitem import PaymentLineitem, PaymentLineitemTypedDict
 from .paymentlink import PaymentLink, PaymentLinkTypedDict
-from .paymentlinklineitem import PaymentLinkLineitem, PaymentLinkLineitemTypedDict
 from .paymentpayment import PaymentPayment, PaymentPaymentTypedDict
 from .paymentpayout import PaymentPayout, PaymentPayoutStatus, PaymentPayoutTypedDict
 from .paymentrefund import PaymentRefund, PaymentRefundStatus, PaymentRefundTypedDict
+from .paymentsubscription import (
+    IntervalUnit,
+    PaymentSubscription,
+    PaymentSubscriptionStatus,
+    PaymentSubscriptionTypedDict,
+)
 from .property_accountingcontact_billing_address import (
     PropertyAccountingContactBillingAddress,
     PropertyAccountingContactBillingAddressTypedDict,
@@ -667,6 +673,7 @@ __all__ = [
     "IntegrationSupport",
     "IntegrationSupportTypedDict",
     "IntegrationTypedDict",
+    "IntervalUnit",
     "Issue",
     "IssueStatus",
     "IssueTypedDict",
@@ -756,9 +763,9 @@ __all__ = [
     "Operation",
     "Origin",
     "PaymentCollectionMethod",
+    "PaymentLineitem",
+    "PaymentLineitemTypedDict",
     "PaymentLink",
-    "PaymentLinkLineitem",
-    "PaymentLinkLineitemTypedDict",
     "PaymentLinkTypedDict",
     "PaymentPayment",
     "PaymentPaymentTypedDict",
@@ -768,6 +775,9 @@ __all__ = [
     "PaymentRefund",
     "PaymentRefundStatus",
     "PaymentRefundTypedDict",
+    "PaymentSubscription",
+    "PaymentSubscriptionStatus",
+    "PaymentSubscriptionTypedDict",
     "PaymentType",
     "Priority",
     "PropertyAccountingContactBillingAddress",

@@ -14,7 +14,7 @@ class TicketingNoteTypedDict(TypedDict):
     id: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
     ticket_id: NotRequired[str]
-    updated_at: NotRequired[str]
+    updated_at: NotRequired[datetime]
     user_id: NotRequired[str]
 
 
@@ -31,6 +31,6 @@ class TicketingNote(BaseModel):
 
     ticket_id: Optional[str] = None
 
-    updated_at: Optional[str] = None
+    updated_at: Optional[datetime] = None
 
     user_id: Optional[str] = None

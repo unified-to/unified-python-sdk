@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: 05ab7803e5b317202af3aacb4835f336
+  docChecksum: d3ff121f2a7d483c6c660192f0d72464
   docVersion: "1.0"
   speakeasyVersion: 1.460.3
   generationVersion: 2.484.0
-  releaseVersion: 0.28.2
-  configChecksum: 46806278a344e18450733b7d42fa488a
+  releaseVersion: 0.28.3
+  configChecksum: 0efba27baf94ad2e1c55bb380ebb773e
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -121,6 +121,8 @@ generatedFiles:
   - docs/models/operations/createpaymentlinkresponse.md
   - docs/models/operations/createpaymentpaymentrequest.md
   - docs/models/operations/createpaymentpaymentresponse.md
+  - docs/models/operations/createpaymentsubscriptionrequest.md
+  - docs/models/operations/createpaymentsubscriptionresponse.md
   - docs/models/operations/createrepobranchrequest.md
   - docs/models/operations/createrepobranchresponse.md
   - docs/models/operations/createrepocommitrequest.md
@@ -246,6 +248,8 @@ generatedFiles:
   - docs/models/operations/getpaymentpayoutresponse.md
   - docs/models/operations/getpaymentrefundrequest.md
   - docs/models/operations/getpaymentrefundresponse.md
+  - docs/models/operations/getpaymentsubscriptionrequest.md
+  - docs/models/operations/getpaymentsubscriptionresponse.md
   - docs/models/operations/getrepobranchrequest.md
   - docs/models/operations/getrepobranchresponse.md
   - docs/models/operations/getrepocommitrequest.md
@@ -388,6 +392,8 @@ generatedFiles:
   - docs/models/operations/listpaymentpayoutsresponse.md
   - docs/models/operations/listpaymentrefundsrequest.md
   - docs/models/operations/listpaymentrefundsresponse.md
+  - docs/models/operations/listpaymentsubscriptionsrequest.md
+  - docs/models/operations/listpaymentsubscriptionsresponse.md
   - docs/models/operations/listrepobranchesrequest.md
   - docs/models/operations/listrepobranchesresponse.md
   - docs/models/operations/listrepocommitsrequest.md
@@ -515,6 +521,8 @@ generatedFiles:
   - docs/models/operations/patchpaymentlinkresponse.md
   - docs/models/operations/patchpaymentpaymentrequest.md
   - docs/models/operations/patchpaymentpaymentresponse.md
+  - docs/models/operations/patchpaymentsubscriptionrequest.md
+  - docs/models/operations/patchpaymentsubscriptionresponse.md
   - docs/models/operations/patchrepobranchrequest.md
   - docs/models/operations/patchrepobranchresponse.md
   - docs/models/operations/patchrepocommitrequest.md
@@ -632,6 +640,8 @@ generatedFiles:
   - docs/models/operations/removepaymentlinkresponse.md
   - docs/models/operations/removepaymentpaymentrequest.md
   - docs/models/operations/removepaymentpaymentresponse.md
+  - docs/models/operations/removepaymentsubscriptionrequest.md
+  - docs/models/operations/removepaymentsubscriptionresponse.md
   - docs/models/operations/removerepobranchrequest.md
   - docs/models/operations/removerepobranchresponse.md
   - docs/models/operations/removerepocommitrequest.md
@@ -749,6 +759,8 @@ generatedFiles:
   - docs/models/operations/updatepaymentlinkresponse.md
   - docs/models/operations/updatepaymentpaymentrequest.md
   - docs/models/operations/updatepaymentpaymentresponse.md
+  - docs/models/operations/updatepaymentsubscriptionrequest.md
+  - docs/models/operations/updatepaymentsubscriptionresponse.md
   - docs/models/operations/updaterepobranchrequest.md
   - docs/models/operations/updaterepobranchresponse.md
   - docs/models/operations/updaterepocommitrequest.md
@@ -900,6 +912,7 @@ generatedFiles:
   - docs/models/shared/hristimeofftype.md
   - docs/models/shared/integration.md
   - docs/models/shared/integrationsupport.md
+  - docs/models/shared/intervalunit.md
   - docs/models/shared/issue.md
   - docs/models/shared/issuestatus.md
   - docs/models/shared/kmspage.md
@@ -970,13 +983,15 @@ generatedFiles:
   - docs/models/shared/operation.md
   - docs/models/shared/origin.md
   - docs/models/shared/paymentcollectionmethod.md
+  - docs/models/shared/paymentlineitem.md
   - docs/models/shared/paymentlink.md
-  - docs/models/shared/paymentlinklineitem.md
   - docs/models/shared/paymentpayment.md
   - docs/models/shared/paymentpayout.md
   - docs/models/shared/paymentpayoutstatus.md
   - docs/models/shared/paymentrefund.md
   - docs/models/shared/paymentrefundstatus.md
+  - docs/models/shared/paymentsubscription.md
+  - docs/models/shared/paymentsubscriptionstatus.md
   - docs/models/shared/paymenttype.md
   - docs/models/shared/priority.md
   - docs/models/shared/propertyaccountingcontactbillingaddress.md
@@ -1183,6 +1198,7 @@ generatedFiles:
   - docs/sdks/space/README.md
   - docs/sdks/storage/README.md
   - docs/sdks/student/README.md
+  - docs/sdks/subscription/README.md
   - docs/sdks/task/README.md
   - docs/sdks/taxrate/README.md
   - docs/sdks/ticket/README.md
@@ -1306,6 +1322,7 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/createpassthrough_raw.py
   - src/unified_python_sdk/models/operations/createpaymentlink.py
   - src/unified_python_sdk/models/operations/createpaymentpayment.py
+  - src/unified_python_sdk/models/operations/createpaymentsubscription.py
   - src/unified_python_sdk/models/operations/createrepobranch.py
   - src/unified_python_sdk/models/operations/createrepocommit.py
   - src/unified_python_sdk/models/operations/createrepoorganization.py
@@ -1369,6 +1386,7 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/getpaymentpayment.py
   - src/unified_python_sdk/models/operations/getpaymentpayout.py
   - src/unified_python_sdk/models/operations/getpaymentrefund.py
+  - src/unified_python_sdk/models/operations/getpaymentsubscription.py
   - src/unified_python_sdk/models/operations/getrepobranch.py
   - src/unified_python_sdk/models/operations/getrepocommit.py
   - src/unified_python_sdk/models/operations/getrepoorganization.py
@@ -1440,6 +1458,7 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/listpaymentpayments.py
   - src/unified_python_sdk/models/operations/listpaymentpayouts.py
   - src/unified_python_sdk/models/operations/listpaymentrefunds.py
+  - src/unified_python_sdk/models/operations/listpaymentsubscriptions.py
   - src/unified_python_sdk/models/operations/listrepobranches.py
   - src/unified_python_sdk/models/operations/listrepocommits.py
   - src/unified_python_sdk/models/operations/listrepoorganizations.py
@@ -1503,6 +1522,7 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/patchpassthrough_raw.py
   - src/unified_python_sdk/models/operations/patchpaymentlink.py
   - src/unified_python_sdk/models/operations/patchpaymentpayment.py
+  - src/unified_python_sdk/models/operations/patchpaymentsubscription.py
   - src/unified_python_sdk/models/operations/patchrepobranch.py
   - src/unified_python_sdk/models/operations/patchrepocommit.py
   - src/unified_python_sdk/models/operations/patchrepoorganization.py
@@ -1561,6 +1581,7 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/removepassthrough.py
   - src/unified_python_sdk/models/operations/removepaymentlink.py
   - src/unified_python_sdk/models/operations/removepaymentpayment.py
+  - src/unified_python_sdk/models/operations/removepaymentsubscription.py
   - src/unified_python_sdk/models/operations/removerepobranch.py
   - src/unified_python_sdk/models/operations/removerepocommit.py
   - src/unified_python_sdk/models/operations/removerepoorganization.py
@@ -1619,6 +1640,7 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/updatepassthrough_raw.py
   - src/unified_python_sdk/models/operations/updatepaymentlink.py
   - src/unified_python_sdk/models/operations/updatepaymentpayment.py
+  - src/unified_python_sdk/models/operations/updatepaymentsubscription.py
   - src/unified_python_sdk/models/operations/updaterepobranch.py
   - src/unified_python_sdk/models/operations/updaterepocommit.py
   - src/unified_python_sdk/models/operations/updaterepoorganization.py
@@ -1730,11 +1752,12 @@ generatedFiles:
   - src/unified_python_sdk/models/shared/messagingmember.py
   - src/unified_python_sdk/models/shared/messagingmessage.py
   - src/unified_python_sdk/models/shared/metadatametadata.py
+  - src/unified_python_sdk/models/shared/paymentlineitem.py
   - src/unified_python_sdk/models/shared/paymentlink.py
-  - src/unified_python_sdk/models/shared/paymentlinklineitem.py
   - src/unified_python_sdk/models/shared/paymentpayment.py
   - src/unified_python_sdk/models/shared/paymentpayout.py
   - src/unified_python_sdk/models/shared/paymentrefund.py
+  - src/unified_python_sdk/models/shared/paymentsubscription.py
   - src/unified_python_sdk/models/shared/property_accountingcontact_billing_address.py
   - src/unified_python_sdk/models/shared/property_accountingcontact_shipping_address.py
   - src/unified_python_sdk/models/shared/property_accountingorder_billing_address.py
@@ -1838,6 +1861,7 @@ generatedFiles:
   - src/unified_python_sdk/space.py
   - src/unified_python_sdk/storage.py
   - src/unified_python_sdk/student.py
+  - src/unified_python_sdk/subscription.py
   - src/unified_python_sdk/task.py
   - src/unified_python_sdk/taxrate.py
   - src/unified_python_sdk/ticket.py
@@ -5293,4 +5317,58 @@ examples:
       responses:
         "200":
           application/json: {"name": "<value>", "object_type": "<value>"}
+  createPaymentSubscription:
+    speakeasy-default-create-payment-subscription:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {}
+  getPaymentSubscription:
+    speakeasy-default-get-payment-subscription:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {}
+  listPaymentSubscriptions:
+    speakeasy-default-list-payment-subscriptions:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: [{}]
+  patchPaymentSubscription:
+    speakeasy-default-patch-payment-subscription:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {}
+  removePaymentSubscription:
+    speakeasy-default-remove-payment-subscription:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updatePaymentSubscription:
+    speakeasy-default-update-payment-subscription:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {}
 generatedTests: {}

@@ -814,20 +814,26 @@ asyncio.run(main())
 
 * [create_payment_link](docs/sdks/payment/README.md#create_payment_link) - Create a link
 * [create_payment_payment](docs/sdks/payment/README.md#create_payment_payment) - Create a payment
+* [create_payment_subscription](docs/sdks/payment/README.md#create_payment_subscription) - Create a subscription
 * [get_payment_link](docs/sdks/payment/README.md#get_payment_link) - Retrieve a link
 * [get_payment_payment](docs/sdks/payment/README.md#get_payment_payment) - Retrieve a payment
 * [get_payment_payout](docs/sdks/payment/README.md#get_payment_payout) - Retrieve a payout
 * [get_payment_refund](docs/sdks/payment/README.md#get_payment_refund) - Retrieve a refund
+* [get_payment_subscription](docs/sdks/payment/README.md#get_payment_subscription) - Retrieve a subscription
 * [list_payment_links](docs/sdks/payment/README.md#list_payment_links) - List all links
 * [list_payment_payments](docs/sdks/payment/README.md#list_payment_payments) - List all payments
 * [list_payment_payouts](docs/sdks/payment/README.md#list_payment_payouts) - List all payouts
 * [list_payment_refunds](docs/sdks/payment/README.md#list_payment_refunds) - List all refunds
+* [list_payment_subscriptions](docs/sdks/payment/README.md#list_payment_subscriptions) - List all subscriptions
 * [patch_payment_link](docs/sdks/payment/README.md#patch_payment_link) - Update a link
 * [patch_payment_payment](docs/sdks/payment/README.md#patch_payment_payment) - Update a payment
+* [patch_payment_subscription](docs/sdks/payment/README.md#patch_payment_subscription) - Update a subscription
 * [remove_payment_link](docs/sdks/payment/README.md#remove_payment_link) - Remove a link
 * [remove_payment_payment](docs/sdks/payment/README.md#remove_payment_payment) - Remove a payment
+* [remove_payment_subscription](docs/sdks/payment/README.md#remove_payment_subscription) - Remove a subscription
 * [update_payment_link](docs/sdks/payment/README.md#update_payment_link) - Update a link
 * [update_payment_payment](docs/sdks/payment/README.md#update_payment_payment) - Update a payment
+* [update_payment_subscription](docs/sdks/payment/README.md#update_payment_subscription) - Update a subscription
 
 ### [payout](docs/sdks/payout/README.md)
 
@@ -971,6 +977,15 @@ asyncio.run(main())
 * [patch_lms_student](docs/sdks/student/README.md#patch_lms_student) - Update a student
 * [remove_lms_student](docs/sdks/student/README.md#remove_lms_student) - Remove a student
 * [update_lms_student](docs/sdks/student/README.md#update_lms_student) - Update a student
+
+### [subscription](docs/sdks/subscription/README.md)
+
+* [create_payment_subscription](docs/sdks/subscription/README.md#create_payment_subscription) - Create a subscription
+* [get_payment_subscription](docs/sdks/subscription/README.md#get_payment_subscription) - Retrieve a subscription
+* [list_payment_subscriptions](docs/sdks/subscription/README.md#list_payment_subscriptions) - List all subscriptions
+* [patch_payment_subscription](docs/sdks/subscription/README.md#patch_payment_subscription) - Update a subscription
+* [remove_payment_subscription](docs/sdks/subscription/README.md#remove_payment_subscription) - Remove a subscription
+* [update_payment_subscription](docs/sdks/subscription/README.md#update_payment_subscription) - Update a subscription
 
 ### [task](docs/sdks/task/README.md)
 

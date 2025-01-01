@@ -36,6 +36,8 @@ class Scopes(str, Enum):
     PAYMENT_REFUND_READ = "payment_refund_read"
     PAYMENT_LINK_READ = "payment_link_read"
     PAYMENT_LINK_WRITE = "payment_link_write"
+    PAYMENT_SUBSCRIPTION_READ = "payment_subscription_read"
+    PAYMENT_SUBSCRIPTION_WRITE = "payment_subscription_write"
     COMMERCE_ITEM_READ = "commerce_item_read"
     COMMERCE_ITEM_WRITE = "commerce_item_write"
     COMMERCE_COLLECTION_READ = "commerce_collection_read"

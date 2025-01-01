@@ -17,6 +17,7 @@
 | `PAYMENT_LINK`            | payment_link              |
 | `PAYMENT_PAYOUT`          | payment_payout            |
 | `PAYMENT_REFUND`          | payment_refund            |
+| `PAYMENT_SUBSCRIPTION`    | payment_subscription      |
 | `COMMERCE_ITEM`           | commerce_item             |
 | `COMMERCE_COLLECTION`     | commerce_collection       |
 | `COMMERCE_INVENTORY`      | commerce_inventory        |

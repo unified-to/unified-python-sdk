@@ -84,6 +84,7 @@ from unified_python_sdk.scorecard import Scorecard
 from unified_python_sdk.space import Space
 from unified_python_sdk.storage import Storage
 from unified_python_sdk.student import Student
+from unified_python_sdk.subscription import Subscription
 from unified_python_sdk.task import Task
 from unified_python_sdk.taxrate import Taxrate
 from unified_python_sdk.ticket import Ticket
@@ -159,6 +160,7 @@ class UnifiedTo(BaseSDK):
     link: Link
     payout: Payout
     refund: Refund
+    subscription: Subscription
     repo: Repo
     branch: Branch
     commit: Commit
@@ -317,6 +319,7 @@ class UnifiedTo(BaseSDK):
         self.link = Link(self.sdk_configuration)
         self.payout = Payout(self.sdk_configuration)
         self.refund = Refund(self.sdk_configuration)
+        self.subscription = Subscription(self.sdk_configuration)
         self.repo = Repo(self.sdk_configuration)
         self.branch = Branch(self.sdk_configuration)
         self.commit = Commit(self.sdk_configuration)
