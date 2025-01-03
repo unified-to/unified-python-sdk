@@ -23,6 +23,7 @@ from unified_python_sdk.candidate import Candidate
 from unified_python_sdk.channel import Channel
 from unified_python_sdk.class_ import Class
 from unified_python_sdk.collection import Collection
+from unified_python_sdk.comment import Comment
 from unified_python_sdk.commerce import Commerce
 from unified_python_sdk.commit import Commit
 from unified_python_sdk.company import Company
@@ -171,6 +172,7 @@ class UnifiedTo(BaseSDK):
     storage: Storage
     file: File
     task: Task
+    comment: Comment
     project: Project
     ticketing: Ticketing
     customer: Customer
@@ -330,6 +332,7 @@ class UnifiedTo(BaseSDK):
         self.storage = Storage(self.sdk_configuration)
         self.file = File(self.sdk_configuration)
         self.task = Task(self.sdk_configuration)
+        self.comment = Comment(self.sdk_configuration)
         self.project = Project(self.sdk_configuration)
         self.ticketing = Ticketing(self.sdk_configuration)
         self.customer = Customer(self.sdk_configuration)

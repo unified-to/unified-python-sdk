@@ -16,6 +16,8 @@ class TaskTaskStatus(str, Enum):
 
 class TaskTaskTypedDict(TypedDict):
     assigned_user_ids: NotRequired[List[str]]
+    attachment_ids: NotRequired[List[str]]
+    r"""Array of attachment IDs retrieved from StorageFile.Get endpoint"""
     completed_at: NotRequired[datetime]
     created_at: NotRequired[datetime]
     creator_user_id: NotRequired[str]
@@ -37,6 +39,9 @@ class TaskTaskTypedDict(TypedDict):
 
 class TaskTask(BaseModel):
     assigned_user_ids: Optional[List[str]] = None
+
+    attachment_ids: Optional[List[str]] = None
+    r"""Array of attachment IDs retrieved from StorageFile.Get endpoint"""
 
     completed_at: Optional[datetime] = None
 

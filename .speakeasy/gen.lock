@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: d3ff121f2a7d483c6c660192f0d72464
+  docChecksum: 20714033389bb63e345a793caa0911b9
   docVersion: "1.0"
-  speakeasyVersion: 1.460.3
+  speakeasyVersion: 1.460.5
   generationVersion: 2.484.0
-  releaseVersion: 0.28.3
-  configChecksum: 0efba27baf94ad2e1c55bb380ebb773e
+  releaseVersion: 0.28.4
+  configChecksum: 445a9d4286bffa237060f991049115e4
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -139,6 +139,8 @@ generatedFiles:
   - docs/models/operations/createscimusersresponse.md
   - docs/models/operations/createstoragefilerequest.md
   - docs/models/operations/createstoragefileresponse.md
+  - docs/models/operations/createtaskcommentrequest.md
+  - docs/models/operations/createtaskcommentresponse.md
   - docs/models/operations/createtaskprojectrequest.md
   - docs/models/operations/createtaskprojectresponse.md
   - docs/models/operations/createtasktaskrequest.md
@@ -266,6 +268,8 @@ generatedFiles:
   - docs/models/operations/getscimusersresponse.md
   - docs/models/operations/getstoragefilerequest.md
   - docs/models/operations/getstoragefileresponse.md
+  - docs/models/operations/gettaskcommentrequest.md
+  - docs/models/operations/gettaskcommentresponse.md
   - docs/models/operations/gettaskprojectrequest.md
   - docs/models/operations/gettaskprojectresponse.md
   - docs/models/operations/gettasktaskrequest.md
@@ -410,6 +414,8 @@ generatedFiles:
   - docs/models/operations/listscimusersresponse.md
   - docs/models/operations/liststoragefilesrequest.md
   - docs/models/operations/liststoragefilesresponse.md
+  - docs/models/operations/listtaskcommentsrequest.md
+  - docs/models/operations/listtaskcommentsresponse.md
   - docs/models/operations/listtaskprojectsrequest.md
   - docs/models/operations/listtaskprojectsresponse.md
   - docs/models/operations/listtasktasksrequest.md
@@ -539,6 +545,8 @@ generatedFiles:
   - docs/models/operations/patchscimusersresponse.md
   - docs/models/operations/patchstoragefilerequest.md
   - docs/models/operations/patchstoragefileresponse.md
+  - docs/models/operations/patchtaskcommentrequest.md
+  - docs/models/operations/patchtaskcommentresponse.md
   - docs/models/operations/patchtaskprojectrequest.md
   - docs/models/operations/patchtaskprojectresponse.md
   - docs/models/operations/patchtasktaskrequest.md
@@ -658,6 +666,8 @@ generatedFiles:
   - docs/models/operations/removescimusersresponse.md
   - docs/models/operations/removestoragefilerequest.md
   - docs/models/operations/removestoragefileresponse.md
+  - docs/models/operations/removetaskcommentrequest.md
+  - docs/models/operations/removetaskcommentresponse.md
   - docs/models/operations/removetaskprojectrequest.md
   - docs/models/operations/removetaskprojectresponse.md
   - docs/models/operations/removetasktaskrequest.md
@@ -777,6 +787,8 @@ generatedFiles:
   - docs/models/operations/updatescimusersresponse.md
   - docs/models/operations/updatestoragefilerequest.md
   - docs/models/operations/updatestoragefileresponse.md
+  - docs/models/operations/updatetaskcommentrequest.md
+  - docs/models/operations/updatetaskcommentresponse.md
   - docs/models/operations/updatetaskprojectrequest.md
   - docs/models/operations/updatetaskprojectresponse.md
   - docs/models/operations/updatetasktaskrequest.md
@@ -1090,6 +1102,7 @@ generatedFiles:
   - docs/models/shared/storagefile.md
   - docs/models/shared/storagefiletype.md
   - docs/models/shared/storagepermission.md
+  - docs/models/shared/taskcomment.md
   - docs/models/shared/taskproject.md
   - docs/models/shared/tasktask.md
   - docs/models/shared/tasktaskstatus.md
@@ -1138,6 +1151,7 @@ generatedFiles:
   - docs/sdks/channel/README.md
   - docs/sdks/class/README.md
   - docs/sdks/collection/README.md
+  - docs/sdks/comment/README.md
   - docs/sdks/commerce/README.md
   - docs/sdks/commit/README.md
   - docs/sdks/company/README.md
@@ -1236,6 +1250,7 @@ generatedFiles:
   - src/unified_python_sdk/channel.py
   - src/unified_python_sdk/class_.py
   - src/unified_python_sdk/collection.py
+  - src/unified_python_sdk/comment.py
   - src/unified_python_sdk/commerce.py
   - src/unified_python_sdk/commit.py
   - src/unified_python_sdk/company.py
@@ -1331,6 +1346,7 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/createscimgroups.py
   - src/unified_python_sdk/models/operations/createscimusers.py
   - src/unified_python_sdk/models/operations/createstoragefile.py
+  - src/unified_python_sdk/models/operations/createtaskcomment.py
   - src/unified_python_sdk/models/operations/createtaskproject.py
   - src/unified_python_sdk/models/operations/createtasktask.py
   - src/unified_python_sdk/models/operations/createticketingcustomer.py
@@ -1395,6 +1411,7 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/getscimgroups.py
   - src/unified_python_sdk/models/operations/getscimusers.py
   - src/unified_python_sdk/models/operations/getstoragefile.py
+  - src/unified_python_sdk/models/operations/gettaskcomment.py
   - src/unified_python_sdk/models/operations/gettaskproject.py
   - src/unified_python_sdk/models/operations/gettasktask.py
   - src/unified_python_sdk/models/operations/getticketingcustomer.py
@@ -1467,6 +1484,7 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/listscimgroups.py
   - src/unified_python_sdk/models/operations/listscimusers.py
   - src/unified_python_sdk/models/operations/liststoragefiles.py
+  - src/unified_python_sdk/models/operations/listtaskcomments.py
   - src/unified_python_sdk/models/operations/listtaskprojects.py
   - src/unified_python_sdk/models/operations/listtasktasks.py
   - src/unified_python_sdk/models/operations/listticketingcustomers.py
@@ -1531,6 +1549,7 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/patchscimgroups.py
   - src/unified_python_sdk/models/operations/patchscimusers.py
   - src/unified_python_sdk/models/operations/patchstoragefile.py
+  - src/unified_python_sdk/models/operations/patchtaskcomment.py
   - src/unified_python_sdk/models/operations/patchtaskproject.py
   - src/unified_python_sdk/models/operations/patchtasktask.py
   - src/unified_python_sdk/models/operations/patchticketingcustomer.py
@@ -1590,6 +1609,7 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/removescimgroups.py
   - src/unified_python_sdk/models/operations/removescimusers.py
   - src/unified_python_sdk/models/operations/removestoragefile.py
+  - src/unified_python_sdk/models/operations/removetaskcomment.py
   - src/unified_python_sdk/models/operations/removetaskproject.py
   - src/unified_python_sdk/models/operations/removetasktask.py
   - src/unified_python_sdk/models/operations/removeticketingcustomer.py
@@ -1649,6 +1669,7 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/updatescimgroups.py
   - src/unified_python_sdk/models/operations/updatescimusers.py
   - src/unified_python_sdk/models/operations/updatestoragefile.py
+  - src/unified_python_sdk/models/operations/updatetaskcomment.py
   - src/unified_python_sdk/models/operations/updatetaskproject.py
   - src/unified_python_sdk/models/operations/updatetasktask.py
   - src/unified_python_sdk/models/operations/updateticketingcustomer.py
@@ -1825,6 +1846,7 @@ generatedFiles:
   - src/unified_python_sdk/models/shared/security.py
   - src/unified_python_sdk/models/shared/storagefile.py
   - src/unified_python_sdk/models/shared/storagepermission.py
+  - src/unified_python_sdk/models/shared/taskcomment.py
   - src/unified_python_sdk/models/shared/taskproject.py
   - src/unified_python_sdk/models/shared/tasktask.py
   - src/unified_python_sdk/models/shared/ticketingcustomer.py
@@ -5371,4 +5393,58 @@ examples:
       responses:
         "200":
           application/json: {}
+  createTaskComment:
+    speakeasy-default-create-task-comment:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {"task_id": "<id>", "text": "<value>"}
+  getTaskComment:
+    speakeasy-default-get-task-comment:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {"task_id": "<id>", "text": "<value>"}
+  listTaskComments:
+    speakeasy-default-list-task-comments:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: []
+  patchTaskComment:
+    speakeasy-default-patch-task-comment:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {"task_id": "<id>", "text": "<value>"}
+  removeTaskComment:
+    speakeasy-default-remove-task-comment:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateTaskComment:
+    speakeasy-default-update-task-comment:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {"task_id": "<id>", "text": "<value>"}
 generatedTests: {}

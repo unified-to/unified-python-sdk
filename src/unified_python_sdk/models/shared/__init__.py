@@ -460,6 +460,7 @@ from .scimusergroups import ScimUserGroups, ScimUserGroupsType, ScimUserGroupsTy
 from .security import Security, SecurityTypedDict
 from .storagefile import StorageFile, StorageFileType, StorageFileTypedDict
 from .storagepermission import StoragePermission, StoragePermissionTypedDict
+from .taskcomment import TaskComment, TaskCommentTypedDict
 from .taskproject import TaskProject, TaskProjectTypedDict
 from .tasktask import TaskTask, TaskTaskStatus, TaskTaskTypedDict
 from .ticketingcustomer import TicketingCustomer, TicketingCustomerTypedDict
@@ -933,6 +934,8 @@ __all__ = [
     "StorageFileTypedDict",
     "StoragePermission",
     "StoragePermissionTypedDict",
+    "TaskComment",
+    "TaskCommentTypedDict",
     "TaskProject",
     "TaskProjectTypedDict",
     "TaskTask",

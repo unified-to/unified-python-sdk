@@ -301,6 +301,15 @@ asyncio.run(main())
 * [remove_commerce_collection](docs/sdks/collection/README.md#remove_commerce_collection) - Remove a collection
 * [update_commerce_collection](docs/sdks/collection/README.md#update_commerce_collection) - Update a collection
 
+### [comment](docs/sdks/comment/README.md)
+
+* [create_task_comment](docs/sdks/comment/README.md#create_task_comment) - Create a comment
+* [get_task_comment](docs/sdks/comment/README.md#get_task_comment) - Retrieve a comment
+* [list_task_comments](docs/sdks/comment/README.md#list_task_comments) - List all comments
+* [patch_task_comment](docs/sdks/comment/README.md#patch_task_comment) - Update a comment
+* [remove_task_comment](docs/sdks/comment/README.md#remove_task_comment) - Remove a comment
+* [update_task_comment](docs/sdks/comment/README.md#update_task_comment) - Update a comment
+
 ### [commerce](docs/sdks/commerce/README.md)
 
 * [create_commerce_collection](docs/sdks/commerce/README.md#create_commerce_collection) - Create a collection
@@ -989,16 +998,22 @@ asyncio.run(main())
 
 ### [task](docs/sdks/task/README.md)
 
+* [create_task_comment](docs/sdks/task/README.md#create_task_comment) - Create a comment
 * [create_task_project](docs/sdks/task/README.md#create_task_project) - Create a project
 * [create_task_task](docs/sdks/task/README.md#create_task_task) - Create a task
+* [get_task_comment](docs/sdks/task/README.md#get_task_comment) - Retrieve a comment
 * [get_task_project](docs/sdks/task/README.md#get_task_project) - Retrieve a project
 * [get_task_task](docs/sdks/task/README.md#get_task_task) - Retrieve a task
+* [list_task_comments](docs/sdks/task/README.md#list_task_comments) - List all comments
 * [list_task_projects](docs/sdks/task/README.md#list_task_projects) - List all projects
 * [list_task_tasks](docs/sdks/task/README.md#list_task_tasks) - List all tasks
+* [patch_task_comment](docs/sdks/task/README.md#patch_task_comment) - Update a comment
 * [patch_task_project](docs/sdks/task/README.md#patch_task_project) - Update a project
 * [patch_task_task](docs/sdks/task/README.md#patch_task_task) - Update a task
+* [remove_task_comment](docs/sdks/task/README.md#remove_task_comment) - Remove a comment
 * [remove_task_project](docs/sdks/task/README.md#remove_task_project) - Remove a project
 * [remove_task_task](docs/sdks/task/README.md#remove_task_task) - Remove a task
+* [update_task_comment](docs/sdks/task/README.md#update_task_comment) - Update a comment
 * [update_task_project](docs/sdks/task/README.md#update_task_project) - Update a project
 * [update_task_task](docs/sdks/task/README.md#update_task_task) - Update a task
 

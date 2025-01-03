@@ -312,6 +312,12 @@ from .createstoragefile import (
     CreateStorageFileResponse,
     CreateStorageFileResponseTypedDict,
 )
+from .createtaskcomment import (
+    CreateTaskCommentRequest,
+    CreateTaskCommentRequestTypedDict,
+    CreateTaskCommentResponse,
+    CreateTaskCommentResponseTypedDict,
+)
 from .createtaskproject import (
     CreateTaskProjectRequest,
     CreateTaskProjectRequestTypedDict,
@@ -693,6 +699,12 @@ from .getstoragefile import (
     GetStorageFileRequestTypedDict,
     GetStorageFileResponse,
     GetStorageFileResponseTypedDict,
+)
+from .gettaskcomment import (
+    GetTaskCommentRequest,
+    GetTaskCommentRequestTypedDict,
+    GetTaskCommentResponse,
+    GetTaskCommentResponseTypedDict,
 )
 from .gettaskproject import (
     GetTaskProjectRequest,
@@ -1127,6 +1139,12 @@ from .liststoragefiles import (
     ListStorageFilesResponse,
     ListStorageFilesResponseTypedDict,
 )
+from .listtaskcomments import (
+    ListTaskCommentsRequest,
+    ListTaskCommentsRequestTypedDict,
+    ListTaskCommentsResponse,
+    ListTaskCommentsResponseTypedDict,
+)
 from .listtaskprojects import (
     ListTaskProjectsRequest,
     ListTaskProjectsRequestTypedDict,
@@ -1514,6 +1532,12 @@ from .patchstoragefile import (
     PatchStorageFileResponse,
     PatchStorageFileResponseTypedDict,
 )
+from .patchtaskcomment import (
+    PatchTaskCommentRequest,
+    PatchTaskCommentRequestTypedDict,
+    PatchTaskCommentResponse,
+    PatchTaskCommentResponseTypedDict,
+)
 from .patchtaskproject import (
     PatchTaskProjectRequest,
     PatchTaskProjectRequestTypedDict,
@@ -1867,6 +1891,12 @@ from .removestoragefile import (
     RemoveStorageFileRequestTypedDict,
     RemoveStorageFileResponse,
     RemoveStorageFileResponseTypedDict,
+)
+from .removetaskcomment import (
+    RemoveTaskCommentRequest,
+    RemoveTaskCommentRequestTypedDict,
+    RemoveTaskCommentResponse,
+    RemoveTaskCommentResponseTypedDict,
 )
 from .removetaskproject import (
     RemoveTaskProjectRequest,
@@ -2222,6 +2252,12 @@ from .updatestoragefile import (
     UpdateStorageFileResponse,
     UpdateStorageFileResponseTypedDict,
 )
+from .updatetaskcomment import (
+    UpdateTaskCommentRequest,
+    UpdateTaskCommentRequestTypedDict,
+    UpdateTaskCommentResponse,
+    UpdateTaskCommentResponseTypedDict,
+)
 from .updatetaskproject import (
     UpdateTaskProjectRequest,
     UpdateTaskProjectRequestTypedDict,
@@ -2487,6 +2523,10 @@ __all__ = [
     "CreateStorageFileRequestTypedDict",
     "CreateStorageFileResponse",
     "CreateStorageFileResponseTypedDict",
+    "CreateTaskCommentRequest",
+    "CreateTaskCommentRequestTypedDict",
+    "CreateTaskCommentResponse",
+    "CreateTaskCommentResponseTypedDict",
     "CreateTaskProjectRequest",
     "CreateTaskProjectRequestTypedDict",
     "CreateTaskProjectResponse",
@@ -2741,6 +2781,10 @@ __all__ = [
     "GetStorageFileRequestTypedDict",
     "GetStorageFileResponse",
     "GetStorageFileResponseTypedDict",
+    "GetTaskCommentRequest",
+    "GetTaskCommentRequestTypedDict",
+    "GetTaskCommentResponse",
+    "GetTaskCommentResponseTypedDict",
     "GetTaskProjectRequest",
     "GetTaskProjectRequestTypedDict",
     "GetTaskProjectResponse",
@@ -3029,6 +3073,10 @@ __all__ = [
     "ListStorageFilesRequestTypedDict",
     "ListStorageFilesResponse",
     "ListStorageFilesResponseTypedDict",
+    "ListTaskCommentsRequest",
+    "ListTaskCommentsRequestTypedDict",
+    "ListTaskCommentsResponse",
+    "ListTaskCommentsResponseTypedDict",
     "ListTaskProjectsRequest",
     "ListTaskProjectsRequestTypedDict",
     "ListTaskProjectsResponse",
@@ -3286,6 +3334,10 @@ __all__ = [
     "PatchStorageFileRequestTypedDict",
     "PatchStorageFileResponse",
     "PatchStorageFileResponseTypedDict",
+    "PatchTaskCommentRequest",
+    "PatchTaskCommentRequestTypedDict",
+    "PatchTaskCommentResponse",
+    "PatchTaskCommentResponseTypedDict",
     "PatchTaskProjectRequest",
     "PatchTaskProjectRequestTypedDict",
     "PatchTaskProjectResponse",
@@ -3523,6 +3575,10 @@ __all__ = [
     "RemoveStorageFileRequestTypedDict",
     "RemoveStorageFileResponse",
     "RemoveStorageFileResponseTypedDict",
+    "RemoveTaskCommentRequest",
+    "RemoveTaskCommentRequestTypedDict",
+    "RemoveTaskCommentResponse",
+    "RemoveTaskCommentResponseTypedDict",
     "RemoveTaskProjectRequest",
     "RemoveTaskProjectRequestTypedDict",
     "RemoveTaskProjectResponse",
@@ -3760,6 +3816,10 @@ __all__ = [
     "UpdateStorageFileRequestTypedDict",
     "UpdateStorageFileResponse",
     "UpdateStorageFileResponseTypedDict",
+    "UpdateTaskCommentRequest",
+    "UpdateTaskCommentRequestTypedDict",
+    "UpdateTaskCommentResponse",
+    "UpdateTaskCommentResponseTypedDict",
     "UpdateTaskProjectRequest",
     "UpdateTaskProjectRequestTypedDict",
     "UpdateTaskProjectResponse",
