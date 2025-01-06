@@ -17,7 +17,6 @@ class KmsPageType(str, Enum):
 
 class KmsPageTypedDict(TypedDict):
     download_url: str
-    space_id: str
     title: str
     type: KmsPageType
     created_at: NotRequired[datetime]
@@ -27,14 +26,13 @@ class KmsPageTypedDict(TypedDict):
     metadata: NotRequired[List[KmsPageMetadataTypedDict]]
     parent_page_id: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
+    space_id: NotRequired[str]
     updated_at: NotRequired[datetime]
     user_id: NotRequired[str]
 
 
 class KmsPage(BaseModel):
     download_url: str
-
-    space_id: str
 
     title: str
 
@@ -53,6 +51,8 @@ class KmsPage(BaseModel):
     parent_page_id: Optional[str] = None
 
     raw: Optional[Dict[str, Any]] = None
+
+    space_id: Optional[str] = None
 
     updated_at: Optional[datetime] = None
 
