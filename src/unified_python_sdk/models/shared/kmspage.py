@@ -29,6 +29,7 @@ class KmsPageTypedDict(TypedDict):
     space_id: NotRequired[str]
     updated_at: NotRequired[datetime]
     user_id: NotRequired[str]
+    web_url: NotRequired[str]
 
 
 class KmsPage(BaseModel):
@@ -57,3 +58,5 @@ class KmsPage(BaseModel):
     updated_at: Optional[datetime] = None
 
     user_id: Optional[str] = None
+
+    web_url: Optional[str] = None

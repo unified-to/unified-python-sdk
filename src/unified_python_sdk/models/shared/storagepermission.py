@@ -10,6 +10,8 @@ from unified_python_sdk.types import BaseModel
 class StoragePermissionTypedDict(TypedDict):
     roles: List[PropertyStoragePermissionRoles]
     group_id: NotRequired[str]
+    is_hidden: NotRequired[bool]
+    is_public: NotRequired[bool]
     user_id: NotRequired[str]
 
 
@@ -17,5 +19,9 @@ class StoragePermission(BaseModel):
     roles: List[PropertyStoragePermissionRoles]
 
     group_id: Optional[str] = None
+
+    is_hidden: Optional[bool] = None
+
+    is_public: Optional[bool] = None
 
     user_id: Optional[str] = None

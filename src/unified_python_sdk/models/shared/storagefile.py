@@ -31,6 +31,7 @@ class StorageFileTypedDict(TypedDict):
     updated_at: NotRequired[datetime]
     user_id: NotRequired[str]
     version: NotRequired[str]
+    web_url: NotRequired[str]
 
 
 class StorageFile(BaseModel):
@@ -65,3 +66,5 @@ class StorageFile(BaseModel):
     user_id: Optional[str] = None
 
     version: Optional[str] = None
+
+    web_url: Optional[str] = None
