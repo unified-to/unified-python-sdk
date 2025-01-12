@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: 3613acd1631dbba37d5cd8b1d0150cb1
+  docChecksum: d4d729a2453d8e64af714d75ba2fa32b
   docVersion: "1.0"
-  speakeasyVersion: 1.465.1
-  generationVersion: 2.488.4
-  releaseVersion: 0.28.6
-  configChecksum: cc9d5aa73ac371d2c848eb2648c91505
+  speakeasyVersion: 1.468.2
+  generationVersion: 2.493.4
+  releaseVersion: 0.29.0
+  configChecksum: d0872a80300d75d725bf281494f566ad
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -16,7 +16,7 @@ features:
     acceptHeaders: 3.0.0
     additionalDependencies: 1.0.0
     constsAndDefaults: 1.0.5
-    core: 5.7.6
+    core: 5.10.1
     defaultEnabledRetries: 0.2.0
     downloadStreams: 1.0.1
     enumUnions: 0.1.0
@@ -32,7 +32,6 @@ generatedFiles:
   - .gitattributes
   - .python-version
   - .vscode/settings.json
-  - CONTRIBUTING.md
   - USAGE.md
   - docs/models/operations/categories.md
   - docs/models/operations/createaccountingaccountrequest.md
@@ -966,6 +965,7 @@ generatedFiles:
   - docs/models/shared/listsortbyupdatedat.md
   - docs/models/shared/listspaceid.md
   - docs/models/shared/liststudentid.md
+  - docs/models/shared/listtaskid.md
   - docs/models/shared/listticketid.md
   - docs/models/shared/listtype.md
   - docs/models/shared/listupdatedgte.md

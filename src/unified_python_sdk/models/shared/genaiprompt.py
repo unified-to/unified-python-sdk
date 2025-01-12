@@ -14,6 +14,7 @@ class GenaiPromptTypedDict(TypedDict):
     raw: NotRequired[Dict[str, Any]]
     responses: NotRequired[List[str]]
     temperature: NotRequired[float]
+    tokens_used: NotRequired[float]
 
 
 class GenaiPrompt(BaseModel):
@@ -28,3 +29,5 @@ class GenaiPrompt(BaseModel):
     responses: Optional[List[str]] = None
 
     temperature: Optional[float] = None
+
+    tokens_used: Optional[float] = None

@@ -227,6 +227,12 @@ class ListStudentID(str, Enum):
     NOT_SUPPORTED = "not-supported"
 
 
+class ListTaskID(str, Enum):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
 class ListTicketID(str, Enum):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
@@ -397,6 +403,7 @@ class IntegrationSupportTypedDict(TypedDict):
     list_sort_by_updated_at: NotRequired[ListSortByUpdatedAt]
     list_space_id: NotRequired[ListSpaceID]
     list_student_id: NotRequired[ListStudentID]
+    list_task_id: NotRequired[ListTaskID]
     list_ticket_id: NotRequired[ListTicketID]
     list_type: NotRequired[ListType]
     list_updated_gte: NotRequired[ListUpdatedGte]
@@ -500,6 +507,8 @@ class IntegrationSupport(BaseModel):
     list_space_id: Optional[ListSpaceID] = None
 
     list_student_id: Optional[ListStudentID] = None
+
+    list_task_id: Optional[ListTaskID] = None
 
     list_ticket_id: Optional[ListTicketID] = None
 
