@@ -17,6 +17,8 @@ class MessagingMessageTypedDict(TypedDict):
     attachments: NotRequired[List[MessagingAttachmentTypedDict]]
     author_member: NotRequired[PropertyMessagingMessageAuthorMemberTypedDict]
     channel_id: NotRequired[str]
+    channel_ids: NotRequired[List[str]]
+    r"""Represents the IDs of all channels to which the message is sent. Identifies the channels where the message is posted."""
     created_at: NotRequired[datetime]
     destination_members: NotRequired[List[MessagingMemberTypedDict]]
     hidden_members: NotRequired[List[MessagingMemberTypedDict]]
@@ -39,6 +41,9 @@ class MessagingMessage(BaseModel):
     author_member: Optional[PropertyMessagingMessageAuthorMember] = None
 
     channel_id: Optional[str] = None
+
+    channel_ids: Optional[List[str]] = None
+    r"""Represents the IDs of all channels to which the message is sent. Identifies the channels where the message is posted."""
 
     created_at: Optional[datetime] = None
 

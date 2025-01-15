@@ -2,6 +2,5 @@
 
 from .sdkerror import SDKError
 
-__all__ = [
-    "SDKError",
-]
+
+__all__ = ["SDKError"]
