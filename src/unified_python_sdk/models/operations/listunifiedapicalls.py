@@ -20,12 +20,18 @@ class ListUnifiedApicallsRequestTypedDict(TypedDict):
     r"""Filter the results to only those integrations for your user referenced by this value"""
     integration_type: NotRequired[str]
     r"""Filter the results to just this integration"""
+    is_billable: NotRequired[bool]
+    r"""Filter the results for only billable API Calls"""
     limit: NotRequired[float]
     offset: NotRequired[float]
     order: NotRequired[str]
     sort: NotRequired[str]
+    type: NotRequired[str]
+    r"""Filter the results to just this type"""
     updated_gte: NotRequired[datetime]
     r"""Return only results whose updated date is equal or greater to this value"""
+    webhook_id: NotRequired[str]
+    r"""Filter the results to just this webhook"""
 
 
 class ListUnifiedApicallsRequest(BaseModel):
@@ -58,6 +64,12 @@ class ListUnifiedApicallsRequest(BaseModel):
     ] = None
     r"""Filter the results to just this integration"""
 
+    is_billable: Annotated[
+        Optional[bool],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+    r"""Filter the results for only billable API Calls"""
+
     limit: Annotated[
         Optional[float],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
@@ -78,11 +90,23 @@ class ListUnifiedApicallsRequest(BaseModel):
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
 
+    type: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+    r"""Filter the results to just this type"""
+
     updated_gte: Annotated[
         Optional[datetime],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
     r"""Return only results whose updated date is equal or greater to this value"""
+
+    webhook_id: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+    r"""Filter the results to just this webhook"""
 
 
 class ListUnifiedApicallsResponseTypedDict(TypedDict):
