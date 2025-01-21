@@ -31,8 +31,8 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.passthrough.create_passthrough_json(request={
-        "connection_id": "<value>",
-        "path": "/etc/periodic",
+        "connection_id": "<id>",
+        "path": "/opt/lib",
     })
 
     assert res is not None
@@ -76,8 +76,8 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.passthrough.create_passthrough_raw(request={
-        "connection_id": "<value>",
-        "path": "/etc/periodic",
+        "connection_id": "<id>",
+        "path": "/opt/lib",
     })
 
     assert res is not None
@@ -121,7 +121,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.passthrough.list_passthroughs(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "path": "/selinux",
     })
 
@@ -166,8 +166,8 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.passthrough.patch_passthrough_json(request={
-        "connection_id": "<value>",
-        "path": "/mnt",
+        "connection_id": "<id>",
+        "path": "/home/user",
     })
 
     assert res is not None
@@ -211,8 +211,8 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.passthrough.patch_passthrough_raw(request={
-        "connection_id": "<value>",
-        "path": "/mnt",
+        "connection_id": "<id>",
+        "path": "/home/user",
     })
 
     assert res is not None
@@ -256,7 +256,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.passthrough.remove_passthrough(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "path": "/Applications",
     })
 
@@ -301,8 +301,8 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.passthrough.update_passthrough_json(request={
-        "connection_id": "<value>",
-        "path": "/dev",
+        "connection_id": "<id>",
+        "path": "/etc/namedb",
     })
 
     assert res is not None
@@ -346,8 +346,8 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.passthrough.update_passthrough_raw(request={
-        "connection_id": "<value>",
-        "path": "/dev",
+        "connection_id": "<id>",
+        "path": "/etc/namedb",
     })
 
     assert res is not None

@@ -29,7 +29,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.candidate.create_ats_candidate(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
     })
 
     assert res.ats_candidate is not None
@@ -73,7 +73,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.candidate.get_ats_candidate(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -118,7 +118,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.candidate.list_ats_candidates(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
     })
 
     assert res.ats_candidates is not None
@@ -162,7 +162,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.candidate.patch_ats_candidate(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -207,7 +207,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.candidate.remove_ats_candidate(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -252,7 +252,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.candidate.update_ats_candidate(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 

@@ -30,7 +30,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.uc.create_uc_contact(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
     })
 
     assert res.uc_contact is not None
@@ -74,7 +74,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.uc.get_uc_contact(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -119,7 +119,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.uc.list_uc_calls(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
     })
 
     assert res.uc_calls is not None
@@ -163,7 +163,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.uc.list_uc_contacts(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
     })
 
     assert res.uc_contacts is not None
@@ -207,7 +207,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.uc.patch_uc_contact(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -252,7 +252,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.uc.remove_uc_contact(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -297,7 +297,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.uc.update_uc_contact(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 

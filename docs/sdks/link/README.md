@@ -29,7 +29,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.link.create_payment_link(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
     })
 
     assert res.payment_link is not None
@@ -73,7 +73,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.link.get_payment_link(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -118,7 +118,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.link.list_payment_links(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
     })
 
     assert res.payment_links is not None
@@ -162,7 +162,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.link.patch_payment_link(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -207,7 +207,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.link.remove_payment_link(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -252,7 +252,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.link.update_payment_link(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 

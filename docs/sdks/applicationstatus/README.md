@@ -24,7 +24,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.applicationstatus.list_ats_applicationstatuses(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
     })
 
     assert res.ats_statuses is not None

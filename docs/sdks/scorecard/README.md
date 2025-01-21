@@ -29,7 +29,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.scorecard.create_ats_scorecard(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
     })
 
     assert res.ats_scorecard is not None
@@ -73,7 +73,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.scorecard.get_ats_scorecard(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -118,7 +118,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.scorecard.list_ats_scorecards(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
     })
 
     assert res.ats_scorecards is not None
@@ -162,7 +162,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.scorecard.patch_ats_scorecard(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -207,7 +207,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.scorecard.remove_ats_scorecard(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -252,7 +252,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.scorecard.update_ats_scorecard(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 

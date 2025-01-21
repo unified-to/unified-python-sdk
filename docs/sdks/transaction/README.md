@@ -29,7 +29,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.transaction.create_accounting_transaction(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
     })
 
     assert res.accounting_transaction is not None
@@ -73,7 +73,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.transaction.get_accounting_transaction(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -118,7 +118,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.transaction.list_accounting_transactions(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
     })
 
     assert res.accounting_transactions is not None
@@ -162,7 +162,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.transaction.patch_accounting_transaction(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -207,7 +207,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.transaction.remove_accounting_transaction(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -252,7 +252,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.transaction.update_accounting_transaction(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 

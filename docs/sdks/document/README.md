@@ -29,7 +29,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.document.create_ats_document(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
     })
 
     assert res.ats_document is not None
@@ -73,7 +73,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.document.get_ats_document(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -118,7 +118,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.document.list_ats_documents(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
     })
 
     assert res.ats_documents is not None
@@ -162,7 +162,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.document.patch_ats_document(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -207,7 +207,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.document.remove_ats_document(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -252,7 +252,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.document.update_ats_document(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 

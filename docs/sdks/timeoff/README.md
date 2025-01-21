@@ -25,7 +25,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.timeoff.get_hris_timeoff(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -70,7 +70,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.timeoff.list_hris_timeoffs(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
     })
 
     assert res.hris_timeoffs is not None

@@ -25,7 +25,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.enrich.list_enrich_companies(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
     })
 
     assert res.enrich_company is not None
@@ -69,7 +69,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.enrich.list_enrich_people(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
     })
 
     assert res.enrich_person is not None

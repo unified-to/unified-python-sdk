@@ -27,7 +27,7 @@ with UnifiedTo(
 
     res = unified_to.integration.get_unified_integration_auth(request={
         "integration_type": "<value>",
-        "workspace_id": "<value>",
+        "workspace_id": "<id>",
     })
 
     assert res.res is not None
@@ -71,7 +71,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.integration.list_unified_integration_workspaces(request={
-        "workspace_id": "<value>",
+        "workspace_id": "<id>",
     })
 
     assert res.integrations is not None

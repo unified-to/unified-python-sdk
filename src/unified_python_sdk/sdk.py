@@ -142,6 +142,7 @@ class UnifiedTo(BaseSDK):
     payslip: Payslip
     timeoff: Timeoff
     kms: Kms
+    comment: Comment
     page: Page
     space: Space
     lms: Lms
@@ -172,7 +173,6 @@ class UnifiedTo(BaseSDK):
     storage: Storage
     file: File
     task: Task
-    comment: Comment
     project: Project
     ticketing: Ticketing
     customer: Customer
@@ -302,6 +302,7 @@ class UnifiedTo(BaseSDK):
         self.payslip = Payslip(self.sdk_configuration)
         self.timeoff = Timeoff(self.sdk_configuration)
         self.kms = Kms(self.sdk_configuration)
+        self.comment = Comment(self.sdk_configuration)
         self.page = Page(self.sdk_configuration)
         self.space = Space(self.sdk_configuration)
         self.lms = Lms(self.sdk_configuration)
@@ -332,7 +333,6 @@ class UnifiedTo(BaseSDK):
         self.storage = Storage(self.sdk_configuration)
         self.file = File(self.sdk_configuration)
         self.task = Task(self.sdk_configuration)
-        self.comment = Comment(self.sdk_configuration)
         self.project = Project(self.sdk_configuration)
         self.ticketing = Ticketing(self.sdk_configuration)
         self.customer = Customer(self.sdk_configuration)

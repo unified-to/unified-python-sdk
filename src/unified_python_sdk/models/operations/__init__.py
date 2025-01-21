@@ -174,6 +174,12 @@ from .createhrislocation import (
     CreateHrisLocationResponse,
     CreateHrisLocationResponseTypedDict,
 )
+from .createkmscomment import (
+    CreateKmsCommentRequest,
+    CreateKmsCommentRequestTypedDict,
+    CreateKmsCommentResponse,
+    CreateKmsCommentResponseTypedDict,
+)
 from .createkmspage import (
     CreateKmsPageRequest,
     CreateKmsPageRequestTypedDict,
@@ -555,6 +561,12 @@ from .gethristimeoff import (
     GetHrisTimeoffRequestTypedDict,
     GetHrisTimeoffResponse,
     GetHrisTimeoffResponseTypedDict,
+)
+from .getkmscomment import (
+    GetKmsCommentRequest,
+    GetKmsCommentRequestTypedDict,
+    GetKmsCommentResponse,
+    GetKmsCommentResponseTypedDict,
 )
 from .getkmspage import (
     GetKmsPageRequest,
@@ -989,6 +1001,12 @@ from .listhristimeoffs import (
     ListHrisTimeoffsResponse,
     ListHrisTimeoffsResponseTypedDict,
 )
+from .listkmscomments import (
+    ListKmsCommentsRequest,
+    ListKmsCommentsRequestTypedDict,
+    ListKmsCommentsResponse,
+    ListKmsCommentsResponseTypedDict,
+)
 from .listkmspages import (
     ListKmsPagesRequest,
     ListKmsPagesRequestTypedDict,
@@ -1394,6 +1412,12 @@ from .patchhrislocation import (
     PatchHrisLocationResponse,
     PatchHrisLocationResponseTypedDict,
 )
+from .patchkmscomment import (
+    PatchKmsCommentRequest,
+    PatchKmsCommentRequestTypedDict,
+    PatchKmsCommentResponse,
+    PatchKmsCommentResponseTypedDict,
+)
 from .patchkmspage import (
     PatchKmsPageRequest,
     PatchKmsPageRequestTypedDict,
@@ -1760,6 +1784,12 @@ from .removehrislocation import (
     RemoveHrisLocationResponse,
     RemoveHrisLocationResponseTypedDict,
 )
+from .removekmscomment import (
+    RemoveKmsCommentRequest,
+    RemoveKmsCommentRequestTypedDict,
+    RemoveKmsCommentResponse,
+    RemoveKmsCommentResponseTypedDict,
+)
 from .removekmspage import (
     RemoveKmsPageRequest,
     RemoveKmsPageRequestTypedDict,
@@ -2114,6 +2144,12 @@ from .updatehrislocation import (
     UpdateHrisLocationResponse,
     UpdateHrisLocationResponseTypedDict,
 )
+from .updatekmscomment import (
+    UpdateKmsCommentRequest,
+    UpdateKmsCommentRequestTypedDict,
+    UpdateKmsCommentResponse,
+    UpdateKmsCommentResponseTypedDict,
+)
 from .updatekmspage import (
     UpdateKmsPageRequest,
     UpdateKmsPageRequestTypedDict,
@@ -2432,6 +2468,10 @@ __all__ = [
     "CreateHrisLocationRequestTypedDict",
     "CreateHrisLocationResponse",
     "CreateHrisLocationResponseTypedDict",
+    "CreateKmsCommentRequest",
+    "CreateKmsCommentRequestTypedDict",
+    "CreateKmsCommentResponse",
+    "CreateKmsCommentResponseTypedDict",
     "CreateKmsPageRequest",
     "CreateKmsPageRequestTypedDict",
     "CreateKmsPageResponse",
@@ -2686,6 +2726,10 @@ __all__ = [
     "GetHrisTimeoffRequestTypedDict",
     "GetHrisTimeoffResponse",
     "GetHrisTimeoffResponseTypedDict",
+    "GetKmsCommentRequest",
+    "GetKmsCommentRequestTypedDict",
+    "GetKmsCommentResponse",
+    "GetKmsCommentResponseTypedDict",
     "GetKmsPageRequest",
     "GetKmsPageRequestTypedDict",
     "GetKmsPageResponse",
@@ -2974,6 +3018,10 @@ __all__ = [
     "ListHrisTimeoffsRequestTypedDict",
     "ListHrisTimeoffsResponse",
     "ListHrisTimeoffsResponseTypedDict",
+    "ListKmsCommentsRequest",
+    "ListKmsCommentsRequestTypedDict",
+    "ListKmsCommentsResponse",
+    "ListKmsCommentsResponseTypedDict",
     "ListKmsPagesRequest",
     "ListKmsPagesRequestTypedDict",
     "ListKmsPagesResponse",
@@ -3243,6 +3291,10 @@ __all__ = [
     "PatchHrisLocationRequestTypedDict",
     "PatchHrisLocationResponse",
     "PatchHrisLocationResponseTypedDict",
+    "PatchKmsCommentRequest",
+    "PatchKmsCommentRequestTypedDict",
+    "PatchKmsCommentResponse",
+    "PatchKmsCommentResponseTypedDict",
     "PatchKmsPageRequest",
     "PatchKmsPageRequestTypedDict",
     "PatchKmsPageResponse",
@@ -3488,6 +3540,10 @@ __all__ = [
     "RemoveHrisLocationRequestTypedDict",
     "RemoveHrisLocationResponse",
     "RemoveHrisLocationResponseTypedDict",
+    "RemoveKmsCommentRequest",
+    "RemoveKmsCommentRequestTypedDict",
+    "RemoveKmsCommentResponse",
+    "RemoveKmsCommentResponseTypedDict",
     "RemoveKmsPageRequest",
     "RemoveKmsPageRequestTypedDict",
     "RemoveKmsPageResponse",
@@ -3725,6 +3781,10 @@ __all__ = [
     "UpdateHrisLocationRequestTypedDict",
     "UpdateHrisLocationResponse",
     "UpdateHrisLocationResponseTypedDict",
+    "UpdateKmsCommentRequest",
+    "UpdateKmsCommentRequestTypedDict",
+    "UpdateKmsCommentResponse",
+    "UpdateKmsCommentResponseTypedDict",
     "UpdateKmsPageRequest",
     "UpdateKmsPageRequestTypedDict",
     "UpdateKmsPageResponse",

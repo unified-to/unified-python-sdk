@@ -75,7 +75,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.organization.get_accounting_organization(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -165,7 +165,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.organization.list_accounting_organizations(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
     })
 
     assert res.accounting_organizations is not None

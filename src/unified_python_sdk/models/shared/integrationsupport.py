@@ -161,6 +161,12 @@ class ListOrgID(str, Enum):
     NOT_SUPPORTED = "not-supported"
 
 
+class ListPageID(str, Enum):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
 class ListParentID(str, Enum):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
@@ -392,6 +398,7 @@ class IntegrationSupportTypedDict(TypedDict):
     list_offset: NotRequired[ListOffset]
     list_order: NotRequired[ListOrder]
     list_org_id: NotRequired[ListOrgID]
+    list_page_id: NotRequired[ListPageID]
     list_parent_id: NotRequired[ListParentID]
     list_project_id: NotRequired[ListProjectID]
     list_query: NotRequired[ListQuery]
@@ -419,6 +426,7 @@ class IntegrationSupportTypedDict(TypedDict):
     search_linkedinurl: NotRequired[SearchLinkedinurl]
     search_name: NotRequired[SearchName]
     search_twitter: NotRequired[SearchTwitter]
+    slow_fields: NotRequired[List[str]]
     virtual_webhook_channel_id: NotRequired[VirtualWebhookChannelID]
     virtual_webhook_company_id: NotRequired[VirtualWebhookCompanyID]
     virtual_webhook_contact_id: NotRequired[VirtualWebhookContactID]
@@ -486,6 +494,8 @@ class IntegrationSupport(BaseModel):
 
     list_org_id: Optional[ListOrgID] = None
 
+    list_page_id: Optional[ListPageID] = None
+
     list_parent_id: Optional[ListParentID] = None
 
     list_project_id: Optional[ListProjectID] = None
@@ -538,6 +548,8 @@ class IntegrationSupport(BaseModel):
     search_name: Optional[SearchName] = None
 
     search_twitter: Optional[SearchTwitter] = None
+
+    slow_fields: Optional[List[str]] = None
 
     virtual_webhook_channel_id: Optional[VirtualWebhookChannelID] = None
 

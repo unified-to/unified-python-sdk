@@ -24,7 +24,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.call.list_uc_calls(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
     })
 
     assert res.uc_calls is not None

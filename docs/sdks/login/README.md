@@ -25,7 +25,7 @@ with UnifiedTo(
 
     res = unified_to.login.get_unified_integration_login(request={
         "integration_type": "<value>",
-        "workspace_id": "<value>",
+        "workspace_id": "<id>",
     })
 
     assert res.res is not None

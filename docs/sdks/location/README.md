@@ -35,7 +35,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.location.create_commerce_location(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
     })
 
     assert res.commerce_location is not None
@@ -79,7 +79,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.location.create_hris_location(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
     })
 
     assert res.hris_location is not None
@@ -123,7 +123,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.location.get_commerce_location(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -168,7 +168,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.location.get_hris_location(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -213,7 +213,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.location.list_commerce_locations(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
     })
 
     assert res.commerce_locations is not None
@@ -257,7 +257,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.location.list_hris_locations(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
     })
 
     assert res.hris_locations is not None
@@ -301,7 +301,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.location.patch_commerce_location(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -346,7 +346,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.location.patch_hris_location(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -391,7 +391,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.location.remove_commerce_location(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -436,7 +436,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.location.remove_hris_location(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -481,7 +481,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.location.update_commerce_location(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -526,7 +526,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.location.update_hris_location(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 

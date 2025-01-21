@@ -24,7 +24,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.prompt.create_genai_prompt(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
     })
 
     assert res.genai_prompt is not None

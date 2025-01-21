@@ -51,7 +51,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.hris.create_hris_company(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
     })
 
     assert res.hris_company is not None
@@ -95,7 +95,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.hris.create_hris_employee(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
     })
 
     assert res.hris_employee is not None
@@ -139,7 +139,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.hris.create_hris_group(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
     })
 
     assert res.hris_group is not None
@@ -183,7 +183,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.hris.create_hris_location(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
     })
 
     assert res.hris_location is not None
@@ -227,7 +227,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.hris.get_hris_company(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -272,7 +272,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.hris.get_hris_employee(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -317,7 +317,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.hris.get_hris_group(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -362,7 +362,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.hris.get_hris_location(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -407,7 +407,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.hris.get_hris_payslip(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -452,7 +452,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.hris.get_hris_timeoff(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -497,7 +497,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.hris.list_hris_companies(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
     })
 
     assert res.hris_companies is not None
@@ -541,7 +541,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.hris.list_hris_employees(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
     })
 
     assert res.hris_employees is not None
@@ -585,7 +585,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.hris.list_hris_groups(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
     })
 
     assert res.hris_groups is not None
@@ -629,7 +629,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.hris.list_hris_locations(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
     })
 
     assert res.hris_locations is not None
@@ -673,7 +673,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.hris.list_hris_payslips(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
     })
 
     assert res.hris_payslips is not None
@@ -717,7 +717,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.hris.list_hris_timeoffs(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
     })
 
     assert res.hris_timeoffs is not None
@@ -761,7 +761,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.hris.patch_hris_company(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -806,7 +806,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.hris.patch_hris_employee(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -851,7 +851,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.hris.patch_hris_group(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -896,7 +896,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.hris.patch_hris_location(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -941,7 +941,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.hris.remove_hris_company(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -986,7 +986,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.hris.remove_hris_employee(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -1031,7 +1031,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.hris.remove_hris_group(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -1076,7 +1076,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.hris.remove_hris_location(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -1121,7 +1121,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.hris.update_hris_company(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -1166,7 +1166,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.hris.update_hris_employee(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -1211,7 +1211,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.hris.update_hris_group(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -1256,7 +1256,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.hris.update_hris_location(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 

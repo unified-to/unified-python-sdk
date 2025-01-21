@@ -35,7 +35,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.group.create_hris_group(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
     })
 
     assert res.hris_group is not None
@@ -123,7 +123,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.group.get_hris_group(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -213,7 +213,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.group.list_hris_groups(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
     })
 
     assert res.hris_groups is not None
@@ -301,7 +301,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.group.patch_hris_group(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -391,7 +391,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.group.remove_hris_group(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -481,7 +481,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.group.update_hris_group(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 

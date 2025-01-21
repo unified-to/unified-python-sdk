@@ -25,7 +25,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.channel.get_messaging_channel(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -70,7 +70,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.channel.list_messaging_channels(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
     })
 
     assert res.messaging_channels is not None

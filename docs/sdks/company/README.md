@@ -38,7 +38,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.company.create_crm_company(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
     })
 
     assert res.crm_company is not None
@@ -82,7 +82,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.company.create_hris_company(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
     })
 
     assert res.hris_company is not None
@@ -126,7 +126,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.company.get_ats_company(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -171,7 +171,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.company.get_crm_company(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -216,7 +216,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.company.get_hris_company(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -261,7 +261,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.company.list_ats_companies(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
     })
 
     assert res.ats_companies is not None
@@ -305,7 +305,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.company.list_crm_companies(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
     })
 
     assert res.crm_companies is not None
@@ -349,7 +349,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.company.list_enrich_companies(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
     })
 
     assert res.enrich_company is not None
@@ -393,7 +393,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.company.list_hris_companies(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
     })
 
     assert res.hris_companies is not None
@@ -437,7 +437,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.company.patch_crm_company(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -482,7 +482,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.company.patch_hris_company(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -527,7 +527,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.company.remove_crm_company(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -572,7 +572,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.company.remove_hris_company(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -617,7 +617,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.company.update_crm_company(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -662,7 +662,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.company.update_hris_company(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 

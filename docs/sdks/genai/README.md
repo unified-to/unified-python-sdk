@@ -25,7 +25,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.genai.create_genai_prompt(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
     })
 
     assert res.genai_prompt is not None
@@ -69,7 +69,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.genai.list_genai_models(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
     })
 
     assert res.genai_models is not None

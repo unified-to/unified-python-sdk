@@ -199,6 +199,7 @@ from .integrationsupport import (
     ListOffset,
     ListOrder,
     ListOrgID,
+    ListPageID,
     ListParentID,
     ListProjectID,
     ListQuery,
@@ -235,6 +236,7 @@ from .integrationsupport import (
     VirtualWebhookUserID,
 )
 from .issue import Issue, IssueStatus, IssueTypedDict
+from .kmscomment import ContentType, KmsComment, KmsCommentType, KmsCommentTypedDict
 from .kmspage import KmsPage, KmsPageType, KmsPageTypedDict
 from .kmspagemetadata import KmsPageMetadata, KmsPageMetadataTypedDict
 from .kmsspace import KmsSpace, KmsSpaceTypedDict
@@ -591,6 +593,7 @@ __all__ = [
     "CommerceLocationTypedDict",
     "Connection",
     "ConnectionTypedDict",
+    "ContentType",
     "CrmCompany",
     "CrmCompanyTypedDict",
     "CrmContact",
@@ -680,6 +683,9 @@ __all__ = [
     "Issue",
     "IssueStatus",
     "IssueTypedDict",
+    "KmsComment",
+    "KmsCommentType",
+    "KmsCommentTypedDict",
     "KmsPage",
     "KmsPageMetadata",
     "KmsPageMetadataTypedDict",
@@ -711,6 +717,7 @@ __all__ = [
     "ListOffset",
     "ListOrder",
     "ListOrgID",
+    "ListPageID",
     "ListParentID",
     "ListProjectID",
     "ListQuery",

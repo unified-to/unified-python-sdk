@@ -11,7 +11,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.create_accounting_account(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
     })
 
     assert res.accounting_account is not None
@@ -37,7 +37,7 @@ async def main():
     ) as unified_to:
 
         res = await unified_to.accounting.create_accounting_account_async(request={
-            "connection_id": "<value>",
+            "connection_id": "<id>",
         })
 
         assert res.accounting_account is not None

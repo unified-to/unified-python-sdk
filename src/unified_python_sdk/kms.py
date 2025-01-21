@@ -9,6 +9,194 @@ from unified_python_sdk.types import BaseModel, OptionalNullable, UNSET
 
 
 class Kms(BaseSDK):
+    def create_kms_comment(
+        self,
+        *,
+        request: Union[
+            operations.CreateKmsCommentRequest,
+            operations.CreateKmsCommentRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.CreateKmsCommentResponse:
+        r"""Create a comment
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(request, operations.CreateKmsCommentRequest)
+        request = cast(operations.CreateKmsCommentRequest, request)
+
+        req = self._build_request(
+            method="POST",
+            path="/kms/{connection_id}/comment",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=False,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            get_serialized_body=lambda: utils.serialize_request_body(
+                request.kms_comment, False, True, "json", Optional[shared.KmsComment]
+            ),
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = self.do_request(
+            hook_ctx=HookContext(
+                operation_id="createKmsComment",
+                oauth2_scopes=[],
+                security_source=self.sdk_configuration.security,
+            ),
+            request=req,
+            error_status_codes=["4XX", "5XX"],
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.CreateKmsCommentResponse(
+                kms_comment=utils.unmarshal_json(
+                    http_res.text, Optional[shared.KmsComment]
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+
+        content_type = http_res.headers.get("Content-Type")
+        http_res_text = utils.stream_to_text(http_res)
+        raise errors.SDKError(
+            f"Unexpected response received (code: {http_res.status_code}, type: {content_type})",
+            http_res.status_code,
+            http_res_text,
+            http_res,
+        )
+
+    async def create_kms_comment_async(
+        self,
+        *,
+        request: Union[
+            operations.CreateKmsCommentRequest,
+            operations.CreateKmsCommentRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.CreateKmsCommentResponse:
+        r"""Create a comment
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(request, operations.CreateKmsCommentRequest)
+        request = cast(operations.CreateKmsCommentRequest, request)
+
+        req = self._build_request_async(
+            method="POST",
+            path="/kms/{connection_id}/comment",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=False,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            get_serialized_body=lambda: utils.serialize_request_body(
+                request.kms_comment, False, True, "json", Optional[shared.KmsComment]
+            ),
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = await self.do_request_async(
+            hook_ctx=HookContext(
+                operation_id="createKmsComment",
+                oauth2_scopes=[],
+                security_source=self.sdk_configuration.security,
+            ),
+            request=req,
+            error_status_codes=["4XX", "5XX"],
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.CreateKmsCommentResponse(
+                kms_comment=utils.unmarshal_json(
+                    http_res.text, Optional[shared.KmsComment]
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+
+        content_type = http_res.headers.get("Content-Type")
+        http_res_text = await utils.stream_to_text_async(http_res)
+        raise errors.SDKError(
+            f"Unexpected response received (code: {http_res.status_code}, type: {content_type})",
+            http_res.status_code,
+            http_res_text,
+            http_res,
+        )
+
     def create_kms_page(
         self,
         *,
@@ -357,6 +545,186 @@ class Kms(BaseSDK):
             return operations.CreateKmsSpaceResponse(
                 kms_space=utils.unmarshal_json(
                     http_res.text, Optional[shared.KmsSpace]
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+
+        content_type = http_res.headers.get("Content-Type")
+        http_res_text = await utils.stream_to_text_async(http_res)
+        raise errors.SDKError(
+            f"Unexpected response received (code: {http_res.status_code}, type: {content_type})",
+            http_res.status_code,
+            http_res_text,
+            http_res,
+        )
+
+    def get_kms_comment(
+        self,
+        *,
+        request: Union[
+            operations.GetKmsCommentRequest, operations.GetKmsCommentRequestTypedDict
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.GetKmsCommentResponse:
+        r"""Retrieve a comment
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(request, operations.GetKmsCommentRequest)
+        request = cast(operations.GetKmsCommentRequest, request)
+
+        req = self._build_request(
+            method="GET",
+            path="/kms/{connection_id}/comment/{id}",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=False,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = self.do_request(
+            hook_ctx=HookContext(
+                operation_id="getKmsComment",
+                oauth2_scopes=[],
+                security_source=self.sdk_configuration.security,
+            ),
+            request=req,
+            error_status_codes=["4XX", "5XX"],
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.GetKmsCommentResponse(
+                kms_comment=utils.unmarshal_json(
+                    http_res.text, Optional[shared.KmsComment]
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+
+        content_type = http_res.headers.get("Content-Type")
+        http_res_text = utils.stream_to_text(http_res)
+        raise errors.SDKError(
+            f"Unexpected response received (code: {http_res.status_code}, type: {content_type})",
+            http_res.status_code,
+            http_res_text,
+            http_res,
+        )
+
+    async def get_kms_comment_async(
+        self,
+        *,
+        request: Union[
+            operations.GetKmsCommentRequest, operations.GetKmsCommentRequestTypedDict
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.GetKmsCommentResponse:
+        r"""Retrieve a comment
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(request, operations.GetKmsCommentRequest)
+        request = cast(operations.GetKmsCommentRequest, request)
+
+        req = self._build_request_async(
+            method="GET",
+            path="/kms/{connection_id}/comment/{id}",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=False,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = await self.do_request_async(
+            hook_ctx=HookContext(
+                operation_id="getKmsComment",
+                oauth2_scopes=[],
+                security_source=self.sdk_configuration.security,
+            ),
+            request=req,
+            error_status_codes=["4XX", "5XX"],
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.GetKmsCommentResponse(
+                kms_comment=utils.unmarshal_json(
+                    http_res.text, Optional[shared.KmsComment]
                 ),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -733,6 +1101,188 @@ class Kms(BaseSDK):
             http_res,
         )
 
+    def list_kms_comments(
+        self,
+        *,
+        request: Union[
+            operations.ListKmsCommentsRequest,
+            operations.ListKmsCommentsRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.ListKmsCommentsResponse:
+        r"""List all comments
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(request, operations.ListKmsCommentsRequest)
+        request = cast(operations.ListKmsCommentsRequest, request)
+
+        req = self._build_request(
+            method="GET",
+            path="/kms/{connection_id}/comment",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=False,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = self.do_request(
+            hook_ctx=HookContext(
+                operation_id="listKmsComments",
+                oauth2_scopes=[],
+                security_source=self.sdk_configuration.security,
+            ),
+            request=req,
+            error_status_codes=["4XX", "5XX"],
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.ListKmsCommentsResponse(
+                kms_comments=utils.unmarshal_json(
+                    http_res.text, Optional[List[shared.KmsComment]]
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+
+        content_type = http_res.headers.get("Content-Type")
+        http_res_text = utils.stream_to_text(http_res)
+        raise errors.SDKError(
+            f"Unexpected response received (code: {http_res.status_code}, type: {content_type})",
+            http_res.status_code,
+            http_res_text,
+            http_res,
+        )
+
+    async def list_kms_comments_async(
+        self,
+        *,
+        request: Union[
+            operations.ListKmsCommentsRequest,
+            operations.ListKmsCommentsRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.ListKmsCommentsResponse:
+        r"""List all comments
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(request, operations.ListKmsCommentsRequest)
+        request = cast(operations.ListKmsCommentsRequest, request)
+
+        req = self._build_request_async(
+            method="GET",
+            path="/kms/{connection_id}/comment",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=False,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = await self.do_request_async(
+            hook_ctx=HookContext(
+                operation_id="listKmsComments",
+                oauth2_scopes=[],
+                security_source=self.sdk_configuration.security,
+            ),
+            request=req,
+            error_status_codes=["4XX", "5XX"],
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.ListKmsCommentsResponse(
+                kms_comments=utils.unmarshal_json(
+                    http_res.text, Optional[List[shared.KmsComment]]
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+
+        content_type = http_res.headers.get("Content-Type")
+        http_res_text = await utils.stream_to_text_async(http_res)
+        raise errors.SDKError(
+            f"Unexpected response received (code: {http_res.status_code}, type: {content_type})",
+            http_res.status_code,
+            http_res_text,
+            http_res,
+        )
+
     def list_kms_pages(
         self,
         *,
@@ -1073,6 +1623,194 @@ class Kms(BaseSDK):
             return operations.ListKmsSpacesResponse(
                 kms_spaces=utils.unmarshal_json(
                     http_res.text, Optional[List[shared.KmsSpace]]
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+
+        content_type = http_res.headers.get("Content-Type")
+        http_res_text = await utils.stream_to_text_async(http_res)
+        raise errors.SDKError(
+            f"Unexpected response received (code: {http_res.status_code}, type: {content_type})",
+            http_res.status_code,
+            http_res_text,
+            http_res,
+        )
+
+    def patch_kms_comment(
+        self,
+        *,
+        request: Union[
+            operations.PatchKmsCommentRequest,
+            operations.PatchKmsCommentRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.PatchKmsCommentResponse:
+        r"""Update a comment
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(request, operations.PatchKmsCommentRequest)
+        request = cast(operations.PatchKmsCommentRequest, request)
+
+        req = self._build_request(
+            method="PATCH",
+            path="/kms/{connection_id}/comment/{id}",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=False,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            get_serialized_body=lambda: utils.serialize_request_body(
+                request.kms_comment, False, True, "json", Optional[shared.KmsComment]
+            ),
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = self.do_request(
+            hook_ctx=HookContext(
+                operation_id="patchKmsComment",
+                oauth2_scopes=[],
+                security_source=self.sdk_configuration.security,
+            ),
+            request=req,
+            error_status_codes=["4XX", "5XX"],
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.PatchKmsCommentResponse(
+                kms_comment=utils.unmarshal_json(
+                    http_res.text, Optional[shared.KmsComment]
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+
+        content_type = http_res.headers.get("Content-Type")
+        http_res_text = utils.stream_to_text(http_res)
+        raise errors.SDKError(
+            f"Unexpected response received (code: {http_res.status_code}, type: {content_type})",
+            http_res.status_code,
+            http_res_text,
+            http_res,
+        )
+
+    async def patch_kms_comment_async(
+        self,
+        *,
+        request: Union[
+            operations.PatchKmsCommentRequest,
+            operations.PatchKmsCommentRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.PatchKmsCommentResponse:
+        r"""Update a comment
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(request, operations.PatchKmsCommentRequest)
+        request = cast(operations.PatchKmsCommentRequest, request)
+
+        req = self._build_request_async(
+            method="PATCH",
+            path="/kms/{connection_id}/comment/{id}",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=False,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            get_serialized_body=lambda: utils.serialize_request_body(
+                request.kms_comment, False, True, "json", Optional[shared.KmsComment]
+            ),
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = await self.do_request_async(
+            hook_ctx=HookContext(
+                operation_id="patchKmsComment",
+                oauth2_scopes=[],
+                security_source=self.sdk_configuration.security,
+            ),
+            request=req,
+            error_status_codes=["4XX", "5XX"],
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.PatchKmsCommentResponse(
+                kms_comment=utils.unmarshal_json(
+                    http_res.text, Optional[shared.KmsComment]
                 ),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -1461,6 +2199,198 @@ class Kms(BaseSDK):
             http_res,
         )
 
+    def remove_kms_comment(
+        self,
+        *,
+        request: Union[
+            operations.RemoveKmsCommentRequest,
+            operations.RemoveKmsCommentRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.RemoveKmsCommentResponse:
+        r"""Remove a comment
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(request, operations.RemoveKmsCommentRequest)
+        request = cast(operations.RemoveKmsCommentRequest, request)
+
+        req = self._build_request(
+            method="DELETE",
+            path="/kms/{connection_id}/comment/{id}",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=False,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="*/*",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = self.do_request(
+            hook_ctx=HookContext(
+                operation_id="removeKmsComment",
+                oauth2_scopes=[],
+                security_source=self.sdk_configuration.security,
+            ),
+            request=req,
+            error_status_codes=["4XX", "5XX"],
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "*"):
+            return operations.RemoveKmsCommentResponse(
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+                headers={},
+            )
+        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "default", "*"):
+            return operations.RemoveKmsCommentResponse(
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+                headers=utils.get_response_headers(http_res.headers),
+            )
+
+        content_type = http_res.headers.get("Content-Type")
+        http_res_text = utils.stream_to_text(http_res)
+        raise errors.SDKError(
+            f"Unexpected response received (code: {http_res.status_code}, type: {content_type})",
+            http_res.status_code,
+            http_res_text,
+            http_res,
+        )
+
+    async def remove_kms_comment_async(
+        self,
+        *,
+        request: Union[
+            operations.RemoveKmsCommentRequest,
+            operations.RemoveKmsCommentRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.RemoveKmsCommentResponse:
+        r"""Remove a comment
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(request, operations.RemoveKmsCommentRequest)
+        request = cast(operations.RemoveKmsCommentRequest, request)
+
+        req = self._build_request_async(
+            method="DELETE",
+            path="/kms/{connection_id}/comment/{id}",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=False,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="*/*",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = await self.do_request_async(
+            hook_ctx=HookContext(
+                operation_id="removeKmsComment",
+                oauth2_scopes=[],
+                security_source=self.sdk_configuration.security,
+            ),
+            request=req,
+            error_status_codes=["4XX", "5XX"],
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "*"):
+            return operations.RemoveKmsCommentResponse(
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+                headers={},
+            )
+        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "default", "*"):
+            return operations.RemoveKmsCommentResponse(
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+                headers=utils.get_response_headers(http_res.headers),
+            )
+
+        content_type = http_res.headers.get("Content-Type")
+        http_res_text = await utils.stream_to_text_async(http_res)
+        raise errors.SDKError(
+            f"Unexpected response received (code: {http_res.status_code}, type: {content_type})",
+            http_res.status_code,
+            http_res_text,
+            http_res,
+        )
+
     def remove_kms_page(
         self,
         *,
@@ -1830,6 +2760,194 @@ class Kms(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
                 headers=utils.get_response_headers(http_res.headers),
+            )
+
+        content_type = http_res.headers.get("Content-Type")
+        http_res_text = await utils.stream_to_text_async(http_res)
+        raise errors.SDKError(
+            f"Unexpected response received (code: {http_res.status_code}, type: {content_type})",
+            http_res.status_code,
+            http_res_text,
+            http_res,
+        )
+
+    def update_kms_comment(
+        self,
+        *,
+        request: Union[
+            operations.UpdateKmsCommentRequest,
+            operations.UpdateKmsCommentRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.UpdateKmsCommentResponse:
+        r"""Update a comment
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(request, operations.UpdateKmsCommentRequest)
+        request = cast(operations.UpdateKmsCommentRequest, request)
+
+        req = self._build_request(
+            method="PUT",
+            path="/kms/{connection_id}/comment/{id}",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=False,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            get_serialized_body=lambda: utils.serialize_request_body(
+                request.kms_comment, False, True, "json", Optional[shared.KmsComment]
+            ),
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = self.do_request(
+            hook_ctx=HookContext(
+                operation_id="updateKmsComment",
+                oauth2_scopes=[],
+                security_source=self.sdk_configuration.security,
+            ),
+            request=req,
+            error_status_codes=["4XX", "5XX"],
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.UpdateKmsCommentResponse(
+                kms_comment=utils.unmarshal_json(
+                    http_res.text, Optional[shared.KmsComment]
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+
+        content_type = http_res.headers.get("Content-Type")
+        http_res_text = utils.stream_to_text(http_res)
+        raise errors.SDKError(
+            f"Unexpected response received (code: {http_res.status_code}, type: {content_type})",
+            http_res.status_code,
+            http_res_text,
+            http_res,
+        )
+
+    async def update_kms_comment_async(
+        self,
+        *,
+        request: Union[
+            operations.UpdateKmsCommentRequest,
+            operations.UpdateKmsCommentRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.UpdateKmsCommentResponse:
+        r"""Update a comment
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(request, operations.UpdateKmsCommentRequest)
+        request = cast(operations.UpdateKmsCommentRequest, request)
+
+        req = self._build_request_async(
+            method="PUT",
+            path="/kms/{connection_id}/comment/{id}",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=False,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            get_serialized_body=lambda: utils.serialize_request_body(
+                request.kms_comment, False, True, "json", Optional[shared.KmsComment]
+            ),
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = await self.do_request_async(
+            hook_ctx=HookContext(
+                operation_id="updateKmsComment",
+                oauth2_scopes=[],
+                security_source=self.sdk_configuration.security,
+            ),
+            request=req,
+            error_status_codes=["4XX", "5XX"],
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.UpdateKmsCommentResponse(
+                kms_comment=utils.unmarshal_json(
+                    http_res.text, Optional[shared.KmsComment]
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
             )
 
         content_type = http_res.headers.get("Content-Type")

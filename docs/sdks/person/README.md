@@ -24,7 +24,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.person.list_enrich_people(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
     })
 
     assert res.enrich_person is not None

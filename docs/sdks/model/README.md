@@ -24,7 +24,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.model.list_genai_models(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
     })
 
     assert res.genai_models is not None

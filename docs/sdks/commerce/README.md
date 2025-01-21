@@ -47,7 +47,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.commerce.create_commerce_collection(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
     })
 
     assert res.commerce_collection is not None
@@ -91,7 +91,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.commerce.create_commerce_inventory(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
     })
 
     assert res.commerce_inventory is not None
@@ -135,7 +135,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.commerce.create_commerce_item(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
     })
 
     assert res.commerce_item is not None
@@ -179,7 +179,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.commerce.create_commerce_location(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
     })
 
     assert res.commerce_location is not None
@@ -223,7 +223,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.commerce.get_commerce_collection(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -268,7 +268,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.commerce.get_commerce_inventory(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -313,7 +313,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.commerce.get_commerce_item(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -358,7 +358,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.commerce.get_commerce_location(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -403,7 +403,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.commerce.list_commerce_collections(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
     })
 
     assert res.commerce_collections is not None
@@ -447,7 +447,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.commerce.list_commerce_inventories(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
     })
 
     assert res.commerce_inventories is not None
@@ -491,7 +491,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.commerce.list_commerce_items(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
     })
 
     assert res.commerce_items is not None
@@ -535,7 +535,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.commerce.list_commerce_locations(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
     })
 
     assert res.commerce_locations is not None
@@ -579,7 +579,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.commerce.patch_commerce_collection(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -624,7 +624,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.commerce.patch_commerce_inventory(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -669,7 +669,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.commerce.patch_commerce_item(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -714,7 +714,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.commerce.patch_commerce_location(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -759,7 +759,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.commerce.remove_commerce_collection(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -804,7 +804,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.commerce.remove_commerce_inventory(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -849,7 +849,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.commerce.remove_commerce_item(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -894,7 +894,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.commerce.remove_commerce_location(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -939,7 +939,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.commerce.update_commerce_collection(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -984,7 +984,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.commerce.update_commerce_inventory(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -1029,7 +1029,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.commerce.update_commerce_item(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -1074,7 +1074,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.commerce.update_commerce_location(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 

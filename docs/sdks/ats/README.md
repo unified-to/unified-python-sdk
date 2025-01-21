@@ -68,7 +68,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ats.create_ats_activity(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
     })
 
     assert res.ats_activity is not None
@@ -112,7 +112,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ats.create_ats_application(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
     })
 
     assert res.ats_application is not None
@@ -156,7 +156,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ats.create_ats_candidate(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
     })
 
     assert res.ats_candidate is not None
@@ -200,7 +200,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ats.create_ats_document(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
     })
 
     assert res.ats_document is not None
@@ -244,7 +244,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ats.create_ats_interview(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
     })
 
     assert res.ats_interview is not None
@@ -288,7 +288,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ats.create_ats_job(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
     })
 
     assert res.ats_job is not None
@@ -332,7 +332,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ats.create_ats_scorecard(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
     })
 
     assert res.ats_scorecard is not None
@@ -376,7 +376,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ats.get_ats_activity(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -421,7 +421,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ats.get_ats_application(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -466,7 +466,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ats.get_ats_candidate(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -511,7 +511,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ats.get_ats_company(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -556,7 +556,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ats.get_ats_document(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -601,7 +601,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ats.get_ats_interview(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -646,7 +646,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ats.get_ats_job(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -691,7 +691,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ats.get_ats_scorecard(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -736,7 +736,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ats.list_ats_activities(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
     })
 
     assert res.ats_activities is not None
@@ -780,7 +780,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ats.list_ats_applications(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
     })
 
     assert res.ats_applications is not None
@@ -824,7 +824,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ats.list_ats_applicationstatuses(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
     })
 
     assert res.ats_statuses is not None
@@ -868,7 +868,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ats.list_ats_candidates(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
     })
 
     assert res.ats_candidates is not None
@@ -912,7 +912,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ats.list_ats_companies(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
     })
 
     assert res.ats_companies is not None
@@ -956,7 +956,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ats.list_ats_documents(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
     })
 
     assert res.ats_documents is not None
@@ -1000,7 +1000,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ats.list_ats_interviews(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
     })
 
     assert res.ats_interviews is not None
@@ -1044,7 +1044,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ats.list_ats_jobs(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
     })
 
     assert res.ats_jobs is not None
@@ -1088,7 +1088,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ats.list_ats_scorecards(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
     })
 
     assert res.ats_scorecards is not None
@@ -1132,7 +1132,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ats.patch_ats_activity(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -1177,7 +1177,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ats.patch_ats_application(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -1222,7 +1222,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ats.patch_ats_candidate(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -1267,7 +1267,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ats.patch_ats_document(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -1312,7 +1312,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ats.patch_ats_interview(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -1357,7 +1357,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ats.patch_ats_job(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -1402,7 +1402,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ats.patch_ats_scorecard(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -1447,7 +1447,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ats.remove_ats_activity(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -1492,7 +1492,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ats.remove_ats_application(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -1537,7 +1537,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ats.remove_ats_candidate(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -1582,7 +1582,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ats.remove_ats_document(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -1627,7 +1627,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ats.remove_ats_interview(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -1672,7 +1672,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ats.remove_ats_job(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -1717,7 +1717,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ats.remove_ats_scorecard(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -1762,7 +1762,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ats.update_ats_activity(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -1807,7 +1807,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ats.update_ats_application(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -1852,7 +1852,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ats.update_ats_candidate(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -1897,7 +1897,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ats.update_ats_document(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -1942,7 +1942,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ats.update_ats_interview(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -1987,7 +1987,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ats.update_ats_job(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -2032,7 +2032,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ats.update_ats_scorecard(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 

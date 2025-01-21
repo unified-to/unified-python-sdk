@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 from datetime import datetime
-from typing import Any, Dict, Optional
+from typing import Any, Dict, List, Optional
 from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk.types import BaseModel
 
@@ -15,6 +15,8 @@ class RepoOrganizationTypedDict(TypedDict):
     name: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
     updated_at: NotRequired[datetime]
+    user_ids: NotRequired[List[str]]
+    r"""id values of the users/employees associated with this organization"""
     web_url: NotRequired[str]
 
 
@@ -32,5 +34,8 @@ class RepoOrganization(BaseModel):
     raw: Optional[Dict[str, Any]] = None
 
     updated_at: Optional[datetime] = None
+
+    user_ids: Optional[List[str]] = None
+    r"""id values of the users/employees associated with this organization"""
 
     web_url: Optional[str] = None

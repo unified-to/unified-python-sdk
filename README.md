@@ -76,7 +76,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.create_accounting_account(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
     })
 
     assert res.accounting_account is not None
@@ -102,7 +102,7 @@ async def main():
     ) as unified_to:
 
         res = await unified_to.accounting.create_accounting_account_async(request={
-            "connection_id": "<value>",
+            "connection_id": "<id>",
         })
 
         assert res.accounting_account is not None
@@ -303,11 +303,17 @@ asyncio.run(main())
 
 ### [comment](docs/sdks/comment/README.md)
 
+* [create_kms_comment](docs/sdks/comment/README.md#create_kms_comment) - Create a comment
 * [create_task_comment](docs/sdks/comment/README.md#create_task_comment) - Create a comment
+* [get_kms_comment](docs/sdks/comment/README.md#get_kms_comment) - Retrieve a comment
 * [get_task_comment](docs/sdks/comment/README.md#get_task_comment) - Retrieve a comment
+* [list_kms_comments](docs/sdks/comment/README.md#list_kms_comments) - List all comments
 * [list_task_comments](docs/sdks/comment/README.md#list_task_comments) - List all comments
+* [patch_kms_comment](docs/sdks/comment/README.md#patch_kms_comment) - Update a comment
 * [patch_task_comment](docs/sdks/comment/README.md#patch_task_comment) - Update a comment
+* [remove_kms_comment](docs/sdks/comment/README.md#remove_kms_comment) - Remove a comment
 * [remove_task_comment](docs/sdks/comment/README.md#remove_task_comment) - Remove a comment
+* [update_kms_comment](docs/sdks/comment/README.md#update_kms_comment) - Update a comment
 * [update_task_comment](docs/sdks/comment/README.md#update_task_comment) - Update a comment
 
 ### [commerce](docs/sdks/commerce/README.md)
@@ -627,16 +633,22 @@ asyncio.run(main())
 
 ### [kms](docs/sdks/kms/README.md)
 
+* [create_kms_comment](docs/sdks/kms/README.md#create_kms_comment) - Create a comment
 * [create_kms_page](docs/sdks/kms/README.md#create_kms_page) - Create a page
 * [create_kms_space](docs/sdks/kms/README.md#create_kms_space) - Create a space
+* [get_kms_comment](docs/sdks/kms/README.md#get_kms_comment) - Retrieve a comment
 * [get_kms_page](docs/sdks/kms/README.md#get_kms_page) - Retrieve a page
 * [get_kms_space](docs/sdks/kms/README.md#get_kms_space) - Retrieve a space
+* [list_kms_comments](docs/sdks/kms/README.md#list_kms_comments) - List all comments
 * [list_kms_pages](docs/sdks/kms/README.md#list_kms_pages) - List all pages
 * [list_kms_spaces](docs/sdks/kms/README.md#list_kms_spaces) - List all spaces
+* [patch_kms_comment](docs/sdks/kms/README.md#patch_kms_comment) - Update a comment
 * [patch_kms_page](docs/sdks/kms/README.md#patch_kms_page) - Update a page
 * [patch_kms_space](docs/sdks/kms/README.md#patch_kms_space) - Update a space
+* [remove_kms_comment](docs/sdks/kms/README.md#remove_kms_comment) - Remove a comment
 * [remove_kms_page](docs/sdks/kms/README.md#remove_kms_page) - Remove a page
 * [remove_kms_space](docs/sdks/kms/README.md#remove_kms_space) - Remove a space
+* [update_kms_comment](docs/sdks/kms/README.md#update_kms_comment) - Update a comment
 * [update_kms_page](docs/sdks/kms/README.md#update_kms_page) - Update a page
 * [update_kms_space](docs/sdks/kms/README.md#update_kms_space) - Update a space
 
@@ -1154,8 +1166,8 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.passthrough.create_passthrough_raw(request={
-        "connection_id": "<value>",
-        "path": "/etc/periodic",
+        "connection_id": "<id>",
+        "path": "/opt/lib",
     })
 
     assert res is not None
@@ -1184,7 +1196,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.create_accounting_account(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
     },
         RetryConfig("backoff", BackoffStrategy(1, 50, 1.1, 100), False))
 
@@ -1209,7 +1221,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.create_accounting_account(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
     })
 
     assert res.accounting_account is not None
@@ -1255,7 +1267,7 @@ with UnifiedTo(
     try:
 
         res = unified_to.accounting.create_accounting_account(request={
-            "connection_id": "<value>",
+            "connection_id": "<id>",
         })
 
         assert res.accounting_account is not None
@@ -1297,7 +1309,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.create_accounting_account(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
     })
 
     assert res.accounting_account is not None
@@ -1322,7 +1334,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.create_accounting_account(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
     })
 
     assert res.accounting_account is not None
@@ -1441,7 +1453,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.create_accounting_account(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
     })
 
     assert res.accounting_account is not None

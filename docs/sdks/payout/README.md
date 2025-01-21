@@ -25,7 +25,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.payout.get_payment_payout(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -70,7 +70,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.payout.list_payment_payouts(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
     })
 
     assert res.payment_payouts is not None

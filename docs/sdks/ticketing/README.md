@@ -41,7 +41,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ticketing.create_ticketing_customer(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
     })
 
     assert res.ticketing_customer is not None
@@ -85,7 +85,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ticketing.create_ticketing_note(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
     })
 
     assert res.ticketing_note is not None
@@ -129,7 +129,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ticketing.create_ticketing_ticket(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
     })
 
     assert res.ticketing_ticket is not None
@@ -173,7 +173,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ticketing.get_ticketing_customer(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -218,7 +218,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ticketing.get_ticketing_note(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -263,7 +263,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ticketing.get_ticketing_ticket(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -308,7 +308,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ticketing.list_ticketing_customers(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
     })
 
     assert res.ticketing_customers is not None
@@ -352,7 +352,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ticketing.list_ticketing_notes(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
     })
 
     assert res.ticketing_notes is not None
@@ -396,7 +396,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ticketing.list_ticketing_tickets(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
     })
 
     assert res.ticketing_tickets is not None
@@ -440,7 +440,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ticketing.patch_ticketing_customer(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -485,7 +485,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ticketing.patch_ticketing_note(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -530,7 +530,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ticketing.patch_ticketing_ticket(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -575,7 +575,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ticketing.remove_ticketing_customer(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -620,7 +620,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ticketing.remove_ticketing_note(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -665,7 +665,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ticketing.remove_ticketing_ticket(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -710,7 +710,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ticketing.update_ticketing_customer(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -755,7 +755,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ticketing.update_ticketing_note(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -800,7 +800,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ticketing.update_ticketing_ticket(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 

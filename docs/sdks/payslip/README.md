@@ -25,7 +25,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.payslip.get_hris_payslip(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
         "id": "<id>",
     })
 
@@ -70,7 +70,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.payslip.list_hris_payslips(request={
-        "connection_id": "<value>",
+        "connection_id": "<id>",
     })
 
     assert res.hris_payslips is not None
