@@ -8,3 +8,4 @@
 | `HTML`     | HTML       |
 | `MARKDOWN` | MARKDOWN   |
 | `TEXT`     | TEXT       |
+| `OTHER`    | OTHER      |

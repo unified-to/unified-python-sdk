@@ -12,6 +12,7 @@ class ContentType(str, Enum):
     HTML = "HTML"
     MARKDOWN = "MARKDOWN"
     TEXT = "TEXT"
+    OTHER = "OTHER"
 
 
 class KmsCommentType(str, Enum):

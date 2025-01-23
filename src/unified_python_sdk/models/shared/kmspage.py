@@ -13,13 +13,14 @@ class KmsPageType(str, Enum):
     HTML = "HTML"
     MARKDOWN = "MARKDOWN"
     TEXT = "TEXT"
+    OTHER = "OTHER"
 
 
 class KmsPageTypedDict(TypedDict):
-    download_url: str
     title: str
     type: KmsPageType
     created_at: NotRequired[datetime]
+    download_url: NotRequired[str]
     has_children: NotRequired[bool]
     id: NotRequired[str]
     is_active: NotRequired[bool]
@@ -33,13 +34,13 @@ class KmsPageTypedDict(TypedDict):
 
 
 class KmsPage(BaseModel):
-    download_url: str
-
     title: str
 
     type: KmsPageType
 
     created_at: Optional[datetime] = None
+
+    download_url: Optional[str] = None
 
     has_children: Optional[bool] = None
 
