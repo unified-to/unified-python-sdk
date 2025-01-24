@@ -26,7 +26,6 @@ class ListMessagingMessagesRequestTypedDict(TypedDict):
     parent_id: NotRequired[str]
     query: NotRequired[str]
     r"""Query string to search. eg. email address or name"""
-    root_id: NotRequired[str]
     sort: NotRequired[str]
     updated_gte: NotRequired[datetime]
     r"""Return only results whose updated date is equal or greater to this value"""
@@ -74,11 +73,6 @@ class ListMessagingMessagesRequest(BaseModel):
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
     r"""Query string to search. eg. email address or name"""
-
-    root_id: Annotated[
-        Optional[str],
-        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
-    ] = None
 
     sort: Annotated[
         Optional[str],

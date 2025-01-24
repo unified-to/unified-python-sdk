@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: 201637bb4fc843138eba316a282cdc6d
+  docChecksum: 0348382e89126471fa3b06fe46a31486
   docVersion: "1.0"
   speakeasyVersion: 1.468.6
   generationVersion: 2.493.13
-  releaseVersion: 0.29.10
-  configChecksum: 2ad134670b1227e00c1a8decb495ec15
+  releaseVersion: 0.29.12
+  configChecksum: 35e483100c5e474ae3c95906cbe1af4f
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -975,7 +975,6 @@ generatedFiles:
   - docs/models/shared/listquery.md
   - docs/models/shared/listrawfields.md
   - docs/models/shared/listrepoid.md
-  - docs/models/shared/listrootid.md
   - docs/models/shared/listsortbycreatedat.md
   - docs/models/shared/listsortbyname.md
   - docs/models/shared/listsortbyupdatedat.md
