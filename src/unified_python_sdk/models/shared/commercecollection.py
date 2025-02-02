@@ -5,9 +5,17 @@ from .commerceitemmedia import CommerceItemMedia, CommerceItemMediaTypedDict
 from .commerceitemmetadata import CommerceItemMetadata, CommerceItemMetadataTypedDict
 from datetime import datetime
 from enum import Enum
-from typing import Any, Dict, List, Optional
+from typing import List, Optional
 from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk.types import BaseModel
+
+
+class RawTypedDict(TypedDict):
+    pass
+
+
+class Raw(BaseModel):
+    pass
 
 
 class CommerceCollectionType(str, Enum):
@@ -31,7 +39,7 @@ class CommerceCollectionTypedDict(TypedDict):
     parent_id: NotRequired[str]
     public_description: NotRequired[str]
     public_name: NotRequired[str]
-    raw: NotRequired[Dict[str, Any]]
+    raw: NotRequired[RawTypedDict]
     tags: NotRequired[List[str]]
     type: NotRequired[CommerceCollectionType]
     updated_at: NotRequired[datetime]
@@ -64,7 +72,7 @@ class CommerceCollection(BaseModel):
 
     public_name: Optional[str] = None
 
-    raw: Optional[Dict[str, Any]] = None
+    raw: Optional[Raw] = None
 
     tags: Optional[List[str]] = None
 

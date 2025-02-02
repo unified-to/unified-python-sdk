@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: 0348382e89126471fa3b06fe46a31486
+  docChecksum: 00e71c38f182c4bad7a19b0c7bb3e211
   docVersion: "1.0"
   speakeasyVersion: 1.468.6
   generationVersion: 2.493.13
-  releaseVersion: 0.29.12
-  configChecksum: 35e483100c5e474ae3c95906cbe1af4f
+  releaseVersion: 0.29.14
+  configChecksum: 6a3636d1f2a12c676a9bbedc5dc37fd3
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -872,14 +872,17 @@ generatedFiles:
   - docs/models/shared/commercecollection.md
   - docs/models/shared/commercecollectiontype.md
   - docs/models/shared/commerceinventory.md
+  - docs/models/shared/commerceinventoryraw.md
   - docs/models/shared/commerceitem.md
   - docs/models/shared/commerceitemmedia.md
   - docs/models/shared/commerceitemmediatype.md
   - docs/models/shared/commerceitemmetadata.md
   - docs/models/shared/commerceitemoption.md
   - docs/models/shared/commerceitemprice.md
+  - docs/models/shared/commerceitemraw.md
   - docs/models/shared/commerceitemvariant.md
   - docs/models/shared/commercelocation.md
+  - docs/models/shared/commercelocationraw.md
   - docs/models/shared/connection.md
   - docs/models/shared/contenttype.md
   - docs/models/shared/crmcompany.md
@@ -908,6 +911,7 @@ generatedFiles:
   - docs/models/shared/enrichtelephonetype.md
   - docs/models/shared/ethnicity.md
   - docs/models/shared/event.md
+  - docs/models/shared/extradata.md
   - docs/models/shared/frequency.md
   - docs/models/shared/fromwebhook.md
   - docs/models/shared/genaicontent.md
@@ -1076,6 +1080,7 @@ generatedFiles:
   - docs/models/shared/propertystoragepermissionroles.md
   - docs/models/shared/propertyuccalltelephone.md
   - docs/models/shared/propertyuccalltelephonetype.md
+  - docs/models/shared/raw.md
   - docs/models/shared/recommendation.md
   - docs/models/shared/repobranch.md
   - docs/models/shared/repocommit.md
@@ -1137,6 +1142,7 @@ generatedFiles:
   - docs/models/shared/ucemailtype.md
   - docs/models/shared/uctelephone.md
   - docs/models/shared/uctelephonetype.md
+  - docs/models/shared/value.md
   - docs/models/shared/virtualwebhookchannelid.md
   - docs/models/shared/virtualwebhookcompanyid.md
   - docs/models/shared/virtualwebhookcontactid.md

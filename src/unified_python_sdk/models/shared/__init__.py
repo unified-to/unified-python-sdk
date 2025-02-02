@@ -90,15 +90,34 @@ from .commercecollection import (
     CommerceCollection,
     CommerceCollectionType,
     CommerceCollectionTypedDict,
+    Raw,
+    RawTypedDict,
 )
-from .commerceinventory import CommerceInventory, CommerceInventoryTypedDict
-from .commerceitem import CommerceItem, CommerceItemTypedDict
+from .commerceinventory import (
+    CommerceInventory,
+    CommerceInventoryRaw,
+    CommerceInventoryRawTypedDict,
+    CommerceInventoryTypedDict,
+)
+from .commerceitem import (
+    CommerceItem,
+    CommerceItemRaw,
+    CommerceItemRawTypedDict,
+    CommerceItemTypedDict,
+)
 from .commerceitemmedia import (
     CommerceItemMedia,
     CommerceItemMediaType,
     CommerceItemMediaTypedDict,
 )
-from .commerceitemmetadata import CommerceItemMetadata, CommerceItemMetadataTypedDict
+from .commerceitemmetadata import (
+    CommerceItemMetadata,
+    CommerceItemMetadataTypedDict,
+    ExtraData,
+    ExtraDataTypedDict,
+    Value,
+    ValueTypedDict,
+)
 from .commerceitemoption import CommerceItemOption, CommerceItemOptionTypedDict
 from .commerceitemprice import CommerceItemPrice, CommerceItemPriceTypedDict
 from .commerceitemvariant import (
@@ -107,7 +126,12 @@ from .commerceitemvariant import (
     SizeUnit,
     WeightUnit,
 )
-from .commercelocation import CommerceLocation, CommerceLocationTypedDict
+from .commercelocation import (
+    CommerceLocation,
+    CommerceLocationRaw,
+    CommerceLocationRawTypedDict,
+    CommerceLocationTypedDict,
+)
 from .connection import Connection, ConnectionTypedDict
 from .crmcompany import CrmCompany, CrmCompanyTypedDict
 from .crmcontact import CrmContact, CrmContactTypedDict
@@ -574,6 +598,8 @@ __all__ = [
     "CommerceCollectionType",
     "CommerceCollectionTypedDict",
     "CommerceInventory",
+    "CommerceInventoryRaw",
+    "CommerceInventoryRawTypedDict",
     "CommerceInventoryTypedDict",
     "CommerceItem",
     "CommerceItemMedia",
@@ -585,10 +611,14 @@ __all__ = [
     "CommerceItemOptionTypedDict",
     "CommerceItemPrice",
     "CommerceItemPriceTypedDict",
+    "CommerceItemRaw",
+    "CommerceItemRawTypedDict",
     "CommerceItemTypedDict",
     "CommerceItemVariant",
     "CommerceItemVariantTypedDict",
     "CommerceLocation",
+    "CommerceLocationRaw",
+    "CommerceLocationRawTypedDict",
     "CommerceLocationTypedDict",
     "Connection",
     "ConnectionTypedDict",
@@ -635,6 +665,8 @@ __all__ = [
     "EnrichTelephoneTypedDict",
     "Ethnicity",
     "Event",
+    "ExtraData",
+    "ExtraDataTypedDict",
     "Frequency",
     "FromWebhook",
     "GenaiContent",
@@ -881,6 +913,8 @@ __all__ = [
     "PropertyUcCallTelephone",
     "PropertyUcCallTelephoneType",
     "PropertyUcCallTelephoneTypedDict",
+    "Raw",
+    "RawTypedDict",
     "Recommendation",
     "RepoBranch",
     "RepoBranchTypedDict",
@@ -974,6 +1008,8 @@ __all__ = [
     "UcTelephone",
     "UcTelephoneType",
     "UcTelephoneTypedDict",
+    "Value",
+    "ValueTypedDict",
     "VirtualWebhookChannelID",
     "VirtualWebhookCompanyID",
     "VirtualWebhookContactID",

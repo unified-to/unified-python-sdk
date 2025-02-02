@@ -6,9 +6,17 @@ from .property_commercelocation_address import (
     PropertyCommerceLocationAddressTypedDict,
 )
 from datetime import datetime
-from typing import Any, Dict, Optional
+from typing import Optional
 from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk.types import BaseModel
+
+
+class CommerceLocationRawTypedDict(TypedDict):
+    pass
+
+
+class CommerceLocationRaw(BaseModel):
+    pass
 
 
 class CommerceLocationTypedDict(TypedDict):
@@ -18,7 +26,7 @@ class CommerceLocationTypedDict(TypedDict):
     description: NotRequired[str]
     id: NotRequired[str]
     is_active: NotRequired[bool]
-    raw: NotRequired[Dict[str, Any]]
+    raw: NotRequired[CommerceLocationRawTypedDict]
     updated_at: NotRequired[datetime]
 
 
@@ -35,6 +43,6 @@ class CommerceLocation(BaseModel):
 
     is_active: Optional[bool] = None
 
-    raw: Optional[Dict[str, Any]] = None
+    raw: Optional[CommerceLocationRaw] = None
 
     updated_at: Optional[datetime] = None
