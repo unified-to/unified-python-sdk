@@ -229,6 +229,7 @@ from .integrationsupport import (
     ListQuery,
     ListRawFields,
     ListRepoID,
+    ListRootID,
     ListSortByCreatedAt,
     ListSortByName,
     ListSortByUpdatedAt,
@@ -328,6 +329,8 @@ from .property_commercelocation_address import (
 )
 from .property_connection_auth import (
     PropertyConnectionAuth,
+    PropertyConnectionAuthMeta,
+    PropertyConnectionAuthMetaTypedDict,
     PropertyConnectionAuthTypedDict,
 )
 from .property_connection_categories import PropertyConnectionCategories
@@ -506,7 +509,15 @@ from .uccall import UcCall, UcCallTypedDict
 from .uccontact import UcContact, UcContactTypedDict
 from .ucemail import UcEmail, UcEmailType, UcEmailTypedDict
 from .uctelephone import UcTelephone, UcTelephoneType, UcTelephoneTypedDict
-from .webhook import Event, ObjectType, Webhook, WebhookType, WebhookTypedDict
+from .webhook import (
+    Event,
+    Meta,
+    MetaTypedDict,
+    ObjectType,
+    Webhook,
+    WebhookType,
+    WebhookTypedDict,
+)
 
 
 __all__ = [
@@ -754,6 +765,7 @@ __all__ = [
     "ListQuery",
     "ListRawFields",
     "ListRepoID",
+    "ListRootID",
     "ListSortByCreatedAt",
     "ListSortByName",
     "ListSortByUpdatedAt",
@@ -796,6 +808,8 @@ __all__ = [
     "MessagingMemberTypedDict",
     "MessagingMessage",
     "MessagingMessageTypedDict",
+    "Meta",
+    "MetaTypedDict",
     "MetadataMetadata",
     "MetadataMetadataTypedDict",
     "NativeWebhookParentID",
@@ -841,6 +855,8 @@ __all__ = [
     "PropertyCommerceLocationAddress",
     "PropertyCommerceLocationAddressTypedDict",
     "PropertyConnectionAuth",
+    "PropertyConnectionAuthMeta",
+    "PropertyConnectionAuthMetaTypedDict",
     "PropertyConnectionAuthTypedDict",
     "PropertyConnectionCategories",
     "PropertyConnectionPermissions",

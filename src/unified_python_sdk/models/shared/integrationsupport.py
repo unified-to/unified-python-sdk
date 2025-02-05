@@ -197,6 +197,12 @@ class ListRepoID(str, Enum):
     NOT_SUPPORTED = "not-supported"
 
 
+class ListRootID(str, Enum):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
 class ListSortByCreatedAt(str, Enum):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
@@ -398,6 +404,7 @@ class IntegrationSupportTypedDict(TypedDict):
     list_query: NotRequired[ListQuery]
     list_raw_fields: NotRequired[ListRawFields]
     list_repo_id: NotRequired[ListRepoID]
+    list_root_id: NotRequired[ListRootID]
     list_sort_by_created_at: NotRequired[ListSortByCreatedAt]
     list_sort_by_name: NotRequired[ListSortByName]
     list_sort_by_updated_at: NotRequired[ListSortByUpdatedAt]
@@ -498,6 +505,8 @@ class IntegrationSupport(BaseModel):
     list_raw_fields: Optional[ListRawFields] = None
 
     list_repo_id: Optional[ListRepoID] = None
+
+    list_root_id: Optional[ListRootID] = None
 
     list_sort_by_created_at: Optional[ListSortByCreatedAt] = None
 

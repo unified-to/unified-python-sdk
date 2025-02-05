@@ -17,6 +17,7 @@ from unified_python_sdk.utils import (
 class ListHrisTimeoffsRequestTypedDict(TypedDict):
     connection_id: str
     r"""ID of the connection"""
+    company_id: NotRequired[str]
     fields: NotRequired[List[str]]
     r"""Comma-delimited fields to return"""
     limit: NotRequired[float]
@@ -35,6 +36,11 @@ class ListHrisTimeoffsRequest(BaseModel):
         str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))
     ]
     r"""ID of the connection"""
+
+    company_id: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
 
     fields: Annotated[
         Optional[List[str]],

@@ -18,6 +18,7 @@ class ConnectionTypedDict(TypedDict):
 
     categories: List[PropertyConnectionCategories]
     r"""The Integration categories that this connection supports"""
+    integration_name: str
     integration_type: str
     permissions: List[PropertyConnectionPermissions]
     auth: NotRequired[PropertyConnectionAuthTypedDict]
@@ -39,6 +40,8 @@ class Connection(BaseModel):
 
     categories: List[PropertyConnectionCategories]
     r"""The Integration categories that this connection supports"""
+
+    integration_name: str
 
     integration_type: str
 

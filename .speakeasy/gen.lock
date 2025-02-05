@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: 00e71c38f182c4bad7a19b0c7bb3e211
+  docChecksum: 075b9cea2675db23b5f8cea829ebb57f
   docVersion: "1.0"
   speakeasyVersion: 1.468.6
   generationVersion: 2.493.13
-  releaseVersion: 0.29.14
-  configChecksum: 6a3636d1f2a12c676a9bbedc5dc37fd3
+  releaseVersion: 0.29.16
+  configChecksum: 277795ecf65f80a532f86a8c29f7b949
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -979,6 +979,7 @@ generatedFiles:
   - docs/models/shared/listquery.md
   - docs/models/shared/listrawfields.md
   - docs/models/shared/listrepoid.md
+  - docs/models/shared/listrootid.md
   - docs/models/shared/listsortbycreatedat.md
   - docs/models/shared/listsortbyname.md
   - docs/models/shared/listsortbyupdatedat.md
@@ -1007,6 +1008,7 @@ generatedFiles:
   - docs/models/shared/messagingchannel.md
   - docs/models/shared/messagingmember.md
   - docs/models/shared/messagingmessage.md
+  - docs/models/shared/meta.md
   - docs/models/shared/metadatametadata.md
   - docs/models/shared/nativewebhookparentid.md
   - docs/models/shared/nativewebhookprojectid.md
@@ -1036,6 +1038,7 @@ generatedFiles:
   - docs/models/shared/propertyatscompanyaddress.md
   - docs/models/shared/propertycommercelocationaddress.md
   - docs/models/shared/propertyconnectionauth.md
+  - docs/models/shared/propertyconnectionauthmeta.md
   - docs/models/shared/propertyconnectioncategories.md
   - docs/models/shared/propertyconnectionpermissions.md
   - docs/models/shared/propertycrmcompanyaddress.md
@@ -5303,7 +5306,7 @@ examples:
     speakeasy-default-create-unified-connection:
       responses:
         "200":
-          application/json: {"categories": ["accounting", "martech", "martech"], "environment": "Production", "integration_type": "<value>", "permissions": ["lms_course_read", "scim_users_read"]}
+          application/json: {"categories": ["accounting", "martech", "martech"], "environment": "Production", "integration_name": "<value>", "integration_type": "<value>", "permissions": ["lms_course_read", "scim_users_read"]}
   createUnifiedWebhook:
     speakeasy-default-create-unified-webhook:
       responses:
@@ -5324,7 +5327,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {"categories": ["storage"], "environment": "Production", "integration_type": "<value>", "permissions": ["kms_page_read"]}
+          application/json: {"categories": ["storage"], "environment": "Production", "integration_name": "<value>", "integration_type": "<value>", "permissions": ["kms_page_read"]}
   getUnifiedIntegrationAuth:
     speakeasy-default-get-unified-integration-auth:
       parameters:
@@ -5352,7 +5355,7 @@ examples:
     speakeasy-default-list-unified-connections:
       responses:
         "200":
-          application/json: [{"categories": [], "environment": "Production", "integration_type": "<value>", "permissions": ["kms_comment_write", "kms_space_read"]}, {"categories": ["auth"], "environment": "Production", "integration_type": "<value>", "permissions": ["crm_deal_write", "ats_interview_read", "repo_pullrequest_read"]}]
+          application/json: [{"categories": [], "environment": "Production", "integration_name": "<value>", "integration_type": "<value>", "permissions": ["kms_comment_write", "kms_space_read"]}, {"categories": ["auth"], "environment": "Production", "integration_name": "<value>", "integration_type": "<value>", "permissions": ["crm_deal_write", "ats_interview_read", "repo_pullrequest_read"]}]
   listUnifiedIntegrationWorkspaces:
     speakeasy-default-list-unified-integration-workspaces:
       parameters:
@@ -5384,7 +5387,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {"categories": ["metadata", "crm"], "environment": "Production", "integration_type": "<value>", "permissions": []}
+          application/json: {"categories": ["metadata", "crm"], "environment": "Production", "integration_name": "<value>", "integration_type": "<value>", "permissions": []}
   patchUnifiedWebhook:
     speakeasy-default-patch-unified-webhook:
       parameters:
@@ -5415,7 +5418,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {"categories": ["metadata", "accounting", "metadata"], "environment": "Production", "integration_type": "<value>", "permissions": []}
+          application/json: {"categories": ["metadata", "accounting", "metadata"], "environment": "Production", "integration_name": "<value>", "integration_type": "<value>", "permissions": []}
   updateUnifiedWebhook:
     speakeasy-default-update-unified-webhook:
       parameters:

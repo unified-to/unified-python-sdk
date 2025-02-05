@@ -2,9 +2,17 @@
 
 from __future__ import annotations
 from datetime import datetime
-from typing import Any, Dict, List, Optional
+from typing import List, Optional
 from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk.types import BaseModel
+
+
+class PropertyConnectionAuthMetaTypedDict(TypedDict):
+    pass
+
+
+class PropertyConnectionAuthMeta(BaseModel):
+    pass
 
 
 class PropertyConnectionAuthTypedDict(TypedDict):
@@ -23,7 +31,7 @@ class PropertyConnectionAuthTypedDict(TypedDict):
     expires_in: NotRequired[float]
     expiry_date: NotRequired[datetime]
     key: NotRequired[str]
-    meta: NotRequired[Dict[str, Any]]
+    meta: NotRequired[PropertyConnectionAuthMetaTypedDict]
     name: NotRequired[str]
     other_auth_info: NotRequired[List[str]]
     r"""When integration.auth_type = \"other\", this field contains the authentication credentials in the same order as token_names"""
@@ -65,7 +73,7 @@ class PropertyConnectionAuth(BaseModel):
 
     key: Optional[str] = None
 
-    meta: Optional[Dict[str, Any]] = None
+    meta: Optional[PropertyConnectionAuthMeta] = None
 
     name: Optional[str] = None
 
