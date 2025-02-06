@@ -278,7 +278,13 @@ from .messagingattachment import MessagingAttachment, MessagingAttachmentTypedDi
 from .messagingchannel import MessagingChannel, MessagingChannelTypedDict
 from .messagingmember import MessagingMember, MessagingMemberTypedDict
 from .messagingmessage import MessagingMessage, MessagingMessageTypedDict
-from .metadatametadata import MetadataMetadata, MetadataMetadataTypedDict
+from .metadatametadata import (
+    MetadataMetadata,
+    MetadataMetadataRaw,
+    MetadataMetadataRawTypedDict,
+    MetadataMetadataType,
+    MetadataMetadataTypedDict,
+)
 from .paymentlineitem import PaymentLineitem, PaymentLineitemTypedDict
 from .paymentlink import PaymentLink, PaymentLinkTypedDict
 from .paymentpayment import PaymentPayment, PaymentPaymentTypedDict
@@ -811,6 +817,9 @@ __all__ = [
     "Meta",
     "MetaTypedDict",
     "MetadataMetadata",
+    "MetadataMetadataRaw",
+    "MetadataMetadataRawTypedDict",
+    "MetadataMetadataType",
     "MetadataMetadataTypedDict",
     "NativeWebhookParentID",
     "NativeWebhookProjectID",

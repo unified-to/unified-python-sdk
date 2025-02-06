@@ -2,9 +2,34 @@
 
 from __future__ import annotations
 from datetime import datetime
-from typing import Any, Dict, Optional
+from enum import Enum
+from typing import Dict, List, Optional
 from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk.types import BaseModel
+
+
+class MetadataMetadataRawTypedDict(TypedDict):
+    pass
+
+
+class MetadataMetadataRaw(BaseModel):
+    pass
+
+
+class MetadataMetadataType(str, Enum):
+    TEXT = "TEXT"
+    NUMBER = "NUMBER"
+    DATE = "DATE"
+    BOOLEAN = "BOOLEAN"
+    FILE = "FILE"
+    TEXTAREA = "TEXTAREA"
+    SINGLE_SELECT = "SINGLE_SELECT"
+    MULTIPLE_SELECT = "MULTIPLE_SELECT"
+    MEASUREMENT = "MEASUREMENT"
+    PRICE = "PRICE"
+    YES_NO = "YES_NO"
+    CURRENCY = "CURRENCY"
+    URL = "URL"
 
 
 class MetadataMetadataTypedDict(TypedDict):
@@ -13,8 +38,9 @@ class MetadataMetadataTypedDict(TypedDict):
     created_at: NotRequired[datetime]
     id: NotRequired[str]
     objects: NotRequired[Dict[str, str]]
-    raw: NotRequired[Dict[str, Any]]
-    type: NotRequired[str]
+    options: NotRequired[List[str]]
+    raw: NotRequired[MetadataMetadataRawTypedDict]
+    type: NotRequired[MetadataMetadataType]
     updated_at: NotRequired[datetime]
 
 
@@ -29,8 +55,10 @@ class MetadataMetadata(BaseModel):
 
     objects: Optional[Dict[str, str]] = None
 
-    raw: Optional[Dict[str, Any]] = None
+    options: Optional[List[str]] = None
 
-    type: Optional[str] = None
+    raw: Optional[MetadataMetadataRaw] = None
+
+    type: Optional[MetadataMetadataType] = None
 
     updated_at: Optional[datetime] = None

@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: 075b9cea2675db23b5f8cea829ebb57f
+  docChecksum: d11952529f2b721f734977d81996920c
   docVersion: "1.0"
   speakeasyVersion: 1.468.6
   generationVersion: 2.493.13
-  releaseVersion: 0.29.16
-  configChecksum: 277795ecf65f80a532f86a8c29f7b949
+  releaseVersion: 0.29.18
+  configChecksum: 2746d29e981d387b6fe50e2e65990315
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -1010,6 +1010,8 @@ generatedFiles:
   - docs/models/shared/messagingmessage.md
   - docs/models/shared/meta.md
   - docs/models/shared/metadatametadata.md
+  - docs/models/shared/metadatametadataraw.md
+  - docs/models/shared/metadatametadatatype.md
   - docs/models/shared/nativewebhookparentid.md
   - docs/models/shared/nativewebhookprojectid.md
   - docs/models/shared/objecttype.md

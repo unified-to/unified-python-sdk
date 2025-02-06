@@ -18,7 +18,6 @@ class ConnectionTypedDict(TypedDict):
 
     categories: List[PropertyConnectionCategories]
     r"""The Integration categories that this connection supports"""
-    integration_name: str
     integration_type: str
     permissions: List[PropertyConnectionPermissions]
     auth: NotRequired[PropertyConnectionAuthTypedDict]
@@ -28,6 +27,7 @@ class ConnectionTypedDict(TypedDict):
     environment: NotRequired[str]
     external_xref: NotRequired[str]
     id: NotRequired[str]
+    integration_name: NotRequired[str]
     is_paused: NotRequired[bool]
     last_healthy_at: NotRequired[datetime]
     last_unhealthy_at: NotRequired[datetime]
@@ -40,8 +40,6 @@ class Connection(BaseModel):
 
     categories: List[PropertyConnectionCategories]
     r"""The Integration categories that this connection supports"""
-
-    integration_name: str
 
     integration_type: str
 
@@ -59,6 +57,8 @@ class Connection(BaseModel):
     external_xref: Optional[str] = None
 
     id: Optional[str] = None
+
+    integration_name: Optional[str] = None
 
     is_paused: Optional[bool] = None
 
