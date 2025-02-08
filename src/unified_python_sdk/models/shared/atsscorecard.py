@@ -4,9 +4,17 @@ from __future__ import annotations
 from .atsscorecardquestion import AtsScorecardQuestion, AtsScorecardQuestionTypedDict
 from datetime import datetime
 from enum import Enum
-from typing import Any, Dict, List, Optional
+from typing import List, Optional
 from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk.types import BaseModel
+
+
+class AtsScorecardRawTypedDict(TypedDict):
+    pass
+
+
+class AtsScorecardRaw(BaseModel):
+    pass
 
 
 class Recommendation(str, Enum):
@@ -26,7 +34,7 @@ class AtsScorecardTypedDict(TypedDict):
     interviewer_id: NotRequired[str]
     job_id: NotRequired[str]
     questions: NotRequired[List[AtsScorecardQuestionTypedDict]]
-    raw: NotRequired[Dict[str, Any]]
+    raw: NotRequired[AtsScorecardRawTypedDict]
     recommendation: NotRequired[Recommendation]
     updated_at: NotRequired[datetime]
 
@@ -50,7 +58,7 @@ class AtsScorecard(BaseModel):
 
     questions: Optional[List[AtsScorecardQuestion]] = None
 
-    raw: Optional[Dict[str, Any]] = None
+    raw: Optional[AtsScorecardRaw] = None
 
     recommendation: Optional[Recommendation] = None
 

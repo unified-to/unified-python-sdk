@@ -2,9 +2,17 @@
 
 from __future__ import annotations
 from enum import Enum
-from typing import Any, Dict, Optional
+from typing import Optional
 from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk.types import BaseModel
+
+
+class AtsStatusRawTypedDict(TypedDict):
+    pass
+
+
+class AtsStatusRaw(BaseModel):
+    pass
 
 
 class AtsStatusStatus(str, Enum):
@@ -28,7 +36,7 @@ class AtsStatusTypedDict(TypedDict):
     description: NotRequired[str]
     id: NotRequired[str]
     original_status: NotRequired[str]
-    raw: NotRequired[Dict[str, Any]]
+    raw: NotRequired[AtsStatusRawTypedDict]
     status: NotRequired[AtsStatusStatus]
 
 
@@ -39,6 +47,6 @@ class AtsStatus(BaseModel):
 
     original_status: Optional[str] = None
 
-    raw: Optional[Dict[str, Any]] = None
+    raw: Optional[AtsStatusRaw] = None
 
     status: Optional[AtsStatusStatus] = None

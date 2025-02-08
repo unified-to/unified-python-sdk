@@ -9,7 +9,7 @@ from .property_atscandidate_address import (
 )
 from datetime import datetime
 from enum import Enum
-from typing import Any, Dict, List, Optional
+from typing import List, Optional
 from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk.types import BaseModel
 
@@ -21,6 +21,14 @@ class Origin(str, Enum):
     REFERRED = "REFERRED"
     SOURCED = "SOURCED"
     UNIVERSITY = "UNIVERSITY"
+
+
+class AtsCandidateRawTypedDict(TypedDict):
+    pass
+
+
+class AtsCandidateRaw(BaseModel):
+    pass
 
 
 class AtsCandidateTypedDict(TypedDict):
@@ -37,7 +45,7 @@ class AtsCandidateTypedDict(TypedDict):
     r"""URLs for web pages containing additional material about the candidate (LinkedIn, other social media, articles, etc.)"""
     name: NotRequired[str]
     origin: NotRequired[Origin]
-    raw: NotRequired[Dict[str, Any]]
+    raw: NotRequired[AtsCandidateRawTypedDict]
     sources: NotRequired[List[str]]
     tags: NotRequired[List[str]]
     telephones: NotRequired[List[AtsTelephoneTypedDict]]
@@ -73,7 +81,7 @@ class AtsCandidate(BaseModel):
 
     origin: Optional[Origin] = None
 
-    raw: Optional[Dict[str, Any]] = None
+    raw: Optional[AtsCandidateRaw] = None
 
     sources: Optional[List[str]] = None
 

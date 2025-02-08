@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: d11952529f2b721f734977d81996920c
+  docChecksum: 079a662c33e65673ca2fb2b1cc54edc4
   docVersion: "1.0"
   speakeasyVersion: 1.468.6
   generationVersion: 2.493.13
-  releaseVersion: 0.29.18
-  configChecksum: 2746d29e981d387b6fe50e2e65990315
+  releaseVersion: 0.30.1
+  configChecksum: 1eebbf2bbb0f2735a02e7b3737327d57
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -847,29 +847,39 @@ generatedFiles:
   - docs/models/shared/atsaddress.md
   - docs/models/shared/atsapplication.md
   - docs/models/shared/atsapplicationanswer.md
+  - docs/models/shared/atsapplicationraw.md
   - docs/models/shared/atsapplicationstatus.md
   - docs/models/shared/atscandidate.md
+  - docs/models/shared/atscandidateraw.md
   - docs/models/shared/atscompany.md
+  - docs/models/shared/atscompanyraw.md
   - docs/models/shared/atscompensation.md
   - docs/models/shared/atscompensationtype.md
   - docs/models/shared/atsdocument.md
+  - docs/models/shared/atsdocumentraw.md
   - docs/models/shared/atsdocumenttype.md
   - docs/models/shared/atsemail.md
   - docs/models/shared/atsemailtype.md
   - docs/models/shared/atsinterview.md
+  - docs/models/shared/atsinterviewraw.md
   - docs/models/shared/atsinterviewstatus.md
   - docs/models/shared/atsjob.md
+  - docs/models/shared/atsjobposting.md
   - docs/models/shared/atsjobquestion.md
   - docs/models/shared/atsjobquestiontype.md
+  - docs/models/shared/atsjobraw.md
   - docs/models/shared/atsjobstatus.md
   - docs/models/shared/atsoffer.md
   - docs/models/shared/atsscorecard.md
   - docs/models/shared/atsscorecardquestion.md
+  - docs/models/shared/atsscorecardraw.md
   - docs/models/shared/atsstatus.md
+  - docs/models/shared/atsstatusraw.md
   - docs/models/shared/atsstatusstatus.md
   - docs/models/shared/atstelephone.md
   - docs/models/shared/atstelephonetype.md
   - docs/models/shared/commercecollection.md
+  - docs/models/shared/commercecollectionraw.md
   - docs/models/shared/commercecollectiontype.md
   - docs/models/shared/commerceinventory.md
   - docs/models/shared/commerceinventoryraw.md
@@ -1038,6 +1048,7 @@ generatedFiles:
   - docs/models/shared/propertyatsactivityfromtype.md
   - docs/models/shared/propertyatscandidateaddress.md
   - docs/models/shared/propertyatscompanyaddress.md
+  - docs/models/shared/propertyatsjobpostingaddress.md
   - docs/models/shared/propertycommercelocationaddress.md
   - docs/models/shared/propertyconnectionauth.md
   - docs/models/shared/propertyconnectionauthmeta.md
@@ -1739,6 +1750,7 @@ generatedFiles:
   - src/unified_python_sdk/models/shared/atsemail.py
   - src/unified_python_sdk/models/shared/atsinterview.py
   - src/unified_python_sdk/models/shared/atsjob.py
+  - src/unified_python_sdk/models/shared/atsjobposting.py
   - src/unified_python_sdk/models/shared/atsjobquestion.py
   - src/unified_python_sdk/models/shared/atsoffer.py
   - src/unified_python_sdk/models/shared/atsscorecard.py
@@ -1820,6 +1832,7 @@ generatedFiles:
   - src/unified_python_sdk/models/shared/property_atsactivity_from.py
   - src/unified_python_sdk/models/shared/property_atscandidate_address.py
   - src/unified_python_sdk/models/shared/property_atscompany_address.py
+  - src/unified_python_sdk/models/shared/property_atsjobposting_address.py
   - src/unified_python_sdk/models/shared/property_commercelocation_address.py
   - src/unified_python_sdk/models/shared/property_connection_auth.py
   - src/unified_python_sdk/models/shared/property_connection_categories.py

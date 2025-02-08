@@ -5,9 +5,17 @@ from .atsapplicationanswer import AtsApplicationAnswer, AtsApplicationAnswerType
 from .atsoffer import AtsOffer, AtsOfferTypedDict
 from datetime import datetime
 from enum import Enum
-from typing import Any, Dict, List, Optional
+from typing import List, Optional
 from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk.types import BaseModel
+
+
+class AtsApplicationRawTypedDict(TypedDict):
+    pass
+
+
+class AtsApplicationRaw(BaseModel):
+    pass
 
 
 class AtsApplicationStatus(str, Enum):
@@ -37,7 +45,7 @@ class AtsApplicationTypedDict(TypedDict):
     job_id: NotRequired[str]
     offers: NotRequired[List[AtsOfferTypedDict]]
     original_status: NotRequired[str]
-    raw: NotRequired[Dict[str, Any]]
+    raw: NotRequired[AtsApplicationRawTypedDict]
     rejected_at: NotRequired[datetime]
     rejected_reason: NotRequired[str]
     source: NotRequired[str]
@@ -64,7 +72,7 @@ class AtsApplication(BaseModel):
 
     original_status: Optional[str] = None
 
-    raw: Optional[Dict[str, Any]] = None
+    raw: Optional[AtsApplicationRaw] = None
 
     rejected_at: Optional[datetime] = None
 

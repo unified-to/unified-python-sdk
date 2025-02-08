@@ -3,9 +3,17 @@
 from __future__ import annotations
 from datetime import datetime
 from enum import Enum
-from typing import Any, Dict, Optional
+from typing import Optional
 from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk.types import BaseModel
+
+
+class AtsDocumentRawTypedDict(TypedDict):
+    pass
+
+
+class AtsDocumentRaw(BaseModel):
+    pass
 
 
 class AtsDocumentType(str, Enum):
@@ -26,7 +34,7 @@ class AtsDocumentTypedDict(TypedDict):
     filename: NotRequired[str]
     id: NotRequired[str]
     job_id: NotRequired[str]
-    raw: NotRequired[Dict[str, Any]]
+    raw: NotRequired[AtsDocumentRawTypedDict]
     type: NotRequired[AtsDocumentType]
     updated_at: NotRequired[datetime]
     user_id: NotRequired[str]
@@ -49,7 +57,7 @@ class AtsDocument(BaseModel):
 
     job_id: Optional[str] = None
 
-    raw: Optional[Dict[str, Any]] = None
+    raw: Optional[AtsDocumentRaw] = None
 
     type: Optional[AtsDocumentType] = None
 

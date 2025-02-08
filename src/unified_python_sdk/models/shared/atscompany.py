@@ -6,9 +6,17 @@ from .property_atscompany_address import (
     PropertyAtsCompanyAddressTypedDict,
 )
 from datetime import datetime
-from typing import Any, Dict, List, Optional
+from typing import List, Optional
 from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk.types import BaseModel
+
+
+class AtsCompanyRawTypedDict(TypedDict):
+    pass
+
+
+class AtsCompanyRaw(BaseModel):
+    pass
 
 
 class AtsCompanyTypedDict(TypedDict):
@@ -18,7 +26,7 @@ class AtsCompanyTypedDict(TypedDict):
     id: NotRequired[str]
     parent_id: NotRequired[str]
     phone: NotRequired[str]
-    raw: NotRequired[Dict[str, Any]]
+    raw: NotRequired[AtsCompanyRawTypedDict]
     recruiter_ids: NotRequired[List[str]]
     updated_at: NotRequired[datetime]
     website_url: NotRequired[str]
@@ -37,7 +45,7 @@ class AtsCompany(BaseModel):
 
     phone: Optional[str] = None
 
-    raw: Optional[Dict[str, Any]] = None
+    raw: Optional[AtsCompanyRaw] = None
 
     recruiter_ids: Optional[List[str]] = None
 

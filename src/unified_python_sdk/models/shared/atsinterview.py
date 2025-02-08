@@ -3,9 +3,17 @@
 from __future__ import annotations
 from datetime import datetime
 from enum import Enum
-from typing import Any, Dict, List, Optional
+from typing import List, Optional
 from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk.types import BaseModel
+
+
+class AtsInterviewRawTypedDict(TypedDict):
+    pass
+
+
+class AtsInterviewRaw(BaseModel):
+    pass
 
 
 class AtsInterviewStatus(str, Enum):
@@ -25,7 +33,7 @@ class AtsInterviewTypedDict(TypedDict):
     id: NotRequired[str]
     job_id: NotRequired[str]
     location: NotRequired[str]
-    raw: NotRequired[Dict[str, Any]]
+    raw: NotRequired[AtsInterviewRawTypedDict]
     start_at: NotRequired[datetime]
     status: NotRequired[AtsInterviewStatus]
     updated_at: NotRequired[datetime]
@@ -49,7 +57,7 @@ class AtsInterview(BaseModel):
 
     location: Optional[str] = None
 
-    raw: Optional[Dict[str, Any]] = None
+    raw: Optional[AtsInterviewRaw] = None
 
     start_at: Optional[datetime] = None
 

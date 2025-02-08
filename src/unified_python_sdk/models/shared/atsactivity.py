@@ -9,9 +9,17 @@ from .property_atsactivity_from import (
 from datetime import datetime
 from enum import Enum
 import pydantic
-from typing import Any, Dict, List, Optional
+from typing import List, Optional
 from typing_extensions import Annotated, NotRequired, TypedDict
 from unified_python_sdk.types import BaseModel
+
+
+class RawTypedDict(TypedDict):
+    pass
+
+
+class Raw(BaseModel):
+    pass
 
 
 class AtsActivityType(str, Enum):
@@ -33,7 +41,7 @@ class AtsActivityTypedDict(TypedDict):
     interview_id: NotRequired[str]
     is_private: NotRequired[bool]
     job_id: NotRequired[str]
-    raw: NotRequired[Dict[str, Any]]
+    raw: NotRequired[RawTypedDict]
     sub_type: NotRequired[str]
     title: NotRequired[str]
     to: NotRequired[List[AtsEmailTypedDict]]
@@ -70,7 +78,7 @@ class AtsActivity(BaseModel):
 
     job_id: Optional[str] = None
 
-    raw: Optional[Dict[str, Any]] = None
+    raw: Optional[Raw] = None
 
     sub_type: Optional[str] = None
 

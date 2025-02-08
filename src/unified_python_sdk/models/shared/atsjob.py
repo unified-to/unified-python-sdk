@@ -3,10 +3,11 @@
 from __future__ import annotations
 from .atsaddress import AtsAddress, AtsAddressTypedDict
 from .atscompensation import AtsCompensation, AtsCompensationTypedDict
+from .atsjobposting import AtsJobPosting, AtsJobPostingTypedDict
 from .atsjobquestion import AtsJobQuestion, AtsJobQuestionTypedDict
 from datetime import datetime
 from enum import Enum
-from typing import Any, Dict, List, Optional
+from typing import List, Optional
 from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk.types import BaseModel
 
@@ -22,6 +23,14 @@ class EmploymentType(str, Enum):
     SEASONAL = "SEASONAL"
     FREELANCE = "FREELANCE"
     OTHER = "OTHER"
+
+
+class AtsJobRawTypedDict(TypedDict):
+    pass
+
+
+class AtsJobRaw(BaseModel):
+    pass
 
 
 class AtsJobStatus(str, Enum):
@@ -47,10 +56,12 @@ class AtsJobTypedDict(TypedDict):
     language_locale: NotRequired[str]
     name: NotRequired[str]
     number_of_openings: NotRequired[float]
+    postings: NotRequired[List[AtsJobPostingTypedDict]]
+    r"""Public job postings"""
     public_job_urls: NotRequired[List[str]]
     r"""URLs for pages containing public listings for the job"""
     questions: NotRequired[List[AtsJobQuestionTypedDict]]
-    raw: NotRequired[Dict[str, Any]]
+    raw: NotRequired[AtsJobRawTypedDict]
     recruiter_ids: NotRequired[List[str]]
     remote: NotRequired[bool]
     status: NotRequired[AtsJobStatus]
@@ -85,12 +96,15 @@ class AtsJob(BaseModel):
 
     number_of_openings: Optional[float] = None
 
+    postings: Optional[List[AtsJobPosting]] = None
+    r"""Public job postings"""
+
     public_job_urls: Optional[List[str]] = None
     r"""URLs for pages containing public listings for the job"""
 
     questions: Optional[List[AtsJobQuestion]] = None
 
-    raw: Optional[Dict[str, Any]] = None
+    raw: Optional[AtsJobRaw] = None
 
     recruiter_ids: Optional[List[str]] = None
 

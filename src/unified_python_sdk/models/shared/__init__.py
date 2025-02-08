@@ -60,38 +60,89 @@ from .accountingtransactionlineitem import (
     AccountingTransactionLineItemTypedDict,
 )
 from .apicall import APICall, APICallType, APICallTypedDict
-from .atsactivity import AtsActivity, AtsActivityType, AtsActivityTypedDict
+from .atsactivity import (
+    AtsActivity,
+    AtsActivityType,
+    AtsActivityTypedDict,
+    Raw,
+    RawTypedDict,
+)
 from .atsaddress import AtsAddress, AtsAddressTypedDict
 from .atsapplication import (
     AtsApplication,
+    AtsApplicationRaw,
+    AtsApplicationRawTypedDict,
     AtsApplicationStatus,
     AtsApplicationTypedDict,
 )
 from .atsapplicationanswer import AtsApplicationAnswer, AtsApplicationAnswerTypedDict
-from .atscandidate import AtsCandidate, AtsCandidateTypedDict, Origin
-from .atscompany import AtsCompany, AtsCompanyTypedDict
+from .atscandidate import (
+    AtsCandidate,
+    AtsCandidateRaw,
+    AtsCandidateRawTypedDict,
+    AtsCandidateTypedDict,
+    Origin,
+)
+from .atscompany import (
+    AtsCompany,
+    AtsCompanyRaw,
+    AtsCompanyRawTypedDict,
+    AtsCompanyTypedDict,
+)
 from .atscompensation import (
     AtsCompensation,
     AtsCompensationType,
     AtsCompensationTypedDict,
     Frequency,
 )
-from .atsdocument import AtsDocument, AtsDocumentType, AtsDocumentTypedDict
+from .atsdocument import (
+    AtsDocument,
+    AtsDocumentRaw,
+    AtsDocumentRawTypedDict,
+    AtsDocumentType,
+    AtsDocumentTypedDict,
+)
 from .atsemail import AtsEmail, AtsEmailType, AtsEmailTypedDict
-from .atsinterview import AtsInterview, AtsInterviewStatus, AtsInterviewTypedDict
-from .atsjob import AtsJob, AtsJobStatus, AtsJobTypedDict, EmploymentType
+from .atsinterview import (
+    AtsInterview,
+    AtsInterviewRaw,
+    AtsInterviewRawTypedDict,
+    AtsInterviewStatus,
+    AtsInterviewTypedDict,
+)
+from .atsjob import (
+    AtsJob,
+    AtsJobRaw,
+    AtsJobRawTypedDict,
+    AtsJobStatus,
+    AtsJobTypedDict,
+    EmploymentType,
+)
+from .atsjobposting import AtsJobPosting, AtsJobPostingTypedDict
 from .atsjobquestion import AtsJobQuestion, AtsJobQuestionType, AtsJobQuestionTypedDict
 from .atsoffer import AtsOffer, AtsOfferTypedDict
-from .atsscorecard import AtsScorecard, AtsScorecardTypedDict, Recommendation
+from .atsscorecard import (
+    AtsScorecard,
+    AtsScorecardRaw,
+    AtsScorecardRawTypedDict,
+    AtsScorecardTypedDict,
+    Recommendation,
+)
 from .atsscorecardquestion import AtsScorecardQuestion, AtsScorecardQuestionTypedDict
-from .atsstatus import AtsStatus, AtsStatusStatus, AtsStatusTypedDict
+from .atsstatus import (
+    AtsStatus,
+    AtsStatusRaw,
+    AtsStatusRawTypedDict,
+    AtsStatusStatus,
+    AtsStatusTypedDict,
+)
 from .atstelephone import AtsTelephone, AtsTelephoneType, AtsTelephoneTypedDict
 from .commercecollection import (
     CommerceCollection,
+    CommerceCollectionRaw,
+    CommerceCollectionRawTypedDict,
     CommerceCollectionType,
     CommerceCollectionTypedDict,
-    Raw,
-    RawTypedDict,
 )
 from .commerceinventory import (
     CommerceInventory,
@@ -328,6 +379,10 @@ from .property_atscandidate_address import (
 from .property_atscompany_address import (
     PropertyAtsCompanyAddress,
     PropertyAtsCompanyAddressTypedDict,
+)
+from .property_atsjobposting_address import (
+    PropertyAtsJobPostingAddress,
+    PropertyAtsJobPostingAddressTypedDict,
 )
 from .property_commercelocation_address import (
     PropertyCommerceLocationAddress,
@@ -575,28 +630,42 @@ __all__ = [
     "AtsApplication",
     "AtsApplicationAnswer",
     "AtsApplicationAnswerTypedDict",
+    "AtsApplicationRaw",
+    "AtsApplicationRawTypedDict",
     "AtsApplicationStatus",
     "AtsApplicationTypedDict",
     "AtsCandidate",
+    "AtsCandidateRaw",
+    "AtsCandidateRawTypedDict",
     "AtsCandidateTypedDict",
     "AtsCompany",
+    "AtsCompanyRaw",
+    "AtsCompanyRawTypedDict",
     "AtsCompanyTypedDict",
     "AtsCompensation",
     "AtsCompensationType",
     "AtsCompensationTypedDict",
     "AtsDocument",
+    "AtsDocumentRaw",
+    "AtsDocumentRawTypedDict",
     "AtsDocumentType",
     "AtsDocumentTypedDict",
     "AtsEmail",
     "AtsEmailType",
     "AtsEmailTypedDict",
     "AtsInterview",
+    "AtsInterviewRaw",
+    "AtsInterviewRawTypedDict",
     "AtsInterviewStatus",
     "AtsInterviewTypedDict",
     "AtsJob",
+    "AtsJobPosting",
+    "AtsJobPostingTypedDict",
     "AtsJobQuestion",
     "AtsJobQuestionType",
     "AtsJobQuestionTypedDict",
+    "AtsJobRaw",
+    "AtsJobRawTypedDict",
     "AtsJobStatus",
     "AtsJobTypedDict",
     "AtsOffer",
@@ -604,14 +673,20 @@ __all__ = [
     "AtsScorecard",
     "AtsScorecardQuestion",
     "AtsScorecardQuestionTypedDict",
+    "AtsScorecardRaw",
+    "AtsScorecardRawTypedDict",
     "AtsScorecardTypedDict",
     "AtsStatus",
+    "AtsStatusRaw",
+    "AtsStatusRawTypedDict",
     "AtsStatusStatus",
     "AtsStatusTypedDict",
     "AtsTelephone",
     "AtsTelephoneType",
     "AtsTelephoneTypedDict",
     "CommerceCollection",
+    "CommerceCollectionRaw",
+    "CommerceCollectionRawTypedDict",
     "CommerceCollectionType",
     "CommerceCollectionTypedDict",
     "CommerceInventory",
@@ -861,6 +936,8 @@ __all__ = [
     "PropertyAtsCandidateAddressTypedDict",
     "PropertyAtsCompanyAddress",
     "PropertyAtsCompanyAddressTypedDict",
+    "PropertyAtsJobPostingAddress",
+    "PropertyAtsJobPostingAddressTypedDict",
     "PropertyCommerceLocationAddress",
     "PropertyCommerceLocationAddressTypedDict",
     "PropertyConnectionAuth",
