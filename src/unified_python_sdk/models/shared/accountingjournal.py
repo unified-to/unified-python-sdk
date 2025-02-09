@@ -6,9 +6,17 @@ from .accountingjournallineitem import (
     AccountingJournalLineitemTypedDict,
 )
 from datetime import datetime
-from typing import Any, Dict, List, Optional
+from typing import List, Optional
 from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk.types import BaseModel
+
+
+class AccountingJournalRawTypedDict(TypedDict):
+    pass
+
+
+class AccountingJournalRaw(BaseModel):
+    pass
 
 
 class AccountingJournalTypedDict(TypedDict):
@@ -18,7 +26,7 @@ class AccountingJournalTypedDict(TypedDict):
     id: NotRequired[str]
     lineitems: NotRequired[List[AccountingJournalLineitemTypedDict]]
     r"""new field name"""
-    raw: NotRequired[Dict[str, Any]]
+    raw: NotRequired[AccountingJournalRawTypedDict]
     reference: NotRequired[str]
     tax_amount: NotRequired[float]
     taxrate_id: NotRequired[str]
@@ -37,7 +45,7 @@ class AccountingJournal(BaseModel):
     lineitems: Optional[List[AccountingJournalLineitem]] = None
     r"""new field name"""
 
-    raw: Optional[Dict[str, Any]] = None
+    raw: Optional[AccountingJournalRaw] = None
 
     reference: Optional[str] = None
 

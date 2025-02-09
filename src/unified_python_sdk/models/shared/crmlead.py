@@ -8,9 +8,17 @@ from .property_crmlead_address import (
     PropertyCrmLeadAddressTypedDict,
 )
 from datetime import datetime
-from typing import Any, Dict, List, Optional
+from typing import List, Optional
 from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk.types import BaseModel
+
+
+class CrmLeadRawTypedDict(TypedDict):
+    pass
+
+
+class CrmLeadRaw(BaseModel):
+    pass
 
 
 class CrmLeadTypedDict(TypedDict):
@@ -25,7 +33,7 @@ class CrmLeadTypedDict(TypedDict):
     is_active: NotRequired[bool]
     link_urls: NotRequired[List[str]]
     name: NotRequired[str]
-    raw: NotRequired[Dict[str, Any]]
+    raw: NotRequired[CrmLeadRawTypedDict]
     source: NotRequired[str]
     status: NotRequired[str]
     telephones: NotRequired[List[CrmTelephoneTypedDict]]
@@ -56,7 +64,7 @@ class CrmLead(BaseModel):
 
     name: Optional[str] = None
 
-    raw: Optional[Dict[str, Any]] = None
+    raw: Optional[CrmLeadRaw] = None
 
     source: Optional[str] = None
 

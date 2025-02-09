@@ -4,7 +4,7 @@ from __future__ import annotations
 from .hrispayslipdetail import HrisPayslipDetail, HrisPayslipDetailTypedDict
 from datetime import datetime
 from enum import Enum
-from typing import Any, Dict, List, Optional
+from typing import List, Optional
 from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk.types import BaseModel
 
@@ -15,9 +15,17 @@ class PaymentType(str, Enum):
     CASH = "CASH"
 
 
+class HrisPayslipRawTypedDict(TypedDict):
+    pass
+
+
+class HrisPayslipRaw(BaseModel):
+    pass
+
+
 class HrisPayslipTypedDict(TypedDict):
-    raw: Dict[str, Any]
-    user_id: str
+    raw: HrisPayslipRawTypedDict
+    company_id: NotRequired[str]
     created_at: NotRequired[datetime]
     currency: NotRequired[str]
     details: NotRequired[List[HrisPayslipDetailTypedDict]]
@@ -29,12 +37,13 @@ class HrisPayslipTypedDict(TypedDict):
     payment_type: NotRequired[PaymentType]
     start_at: NotRequired[datetime]
     updated_at: NotRequired[datetime]
+    user_id: NotRequired[str]
 
 
 class HrisPayslip(BaseModel):
-    raw: Dict[str, Any]
+    raw: HrisPayslipRaw
 
-    user_id: str
+    company_id: Optional[str] = None
 
     created_at: Optional[datetime] = None
 
@@ -57,3 +66,5 @@ class HrisPayslip(BaseModel):
     start_at: Optional[datetime] = None
 
     updated_at: Optional[datetime] = None
+
+    user_id: Optional[str] = None

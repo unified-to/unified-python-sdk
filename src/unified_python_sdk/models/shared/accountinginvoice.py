@@ -4,7 +4,7 @@ from __future__ import annotations
 from .accountinglineitem import AccountingLineitem, AccountingLineitemTypedDict
 from datetime import datetime
 from enum import Enum
-from typing import Any, Dict, List, Optional
+from typing import List, Optional
 from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk.types import BaseModel
 
@@ -12,6 +12,14 @@ from unified_python_sdk.types import BaseModel
 class PaymentCollectionMethod(str, Enum):
     SEND_INVOICE = "send_invoice"
     CHARGE_AUTOMATICALLY = "charge_automatically"
+
+
+class AccountingInvoiceRawTypedDict(TypedDict):
+    pass
+
+
+class AccountingInvoiceRaw(BaseModel):
+    pass
 
 
 class AccountingInvoiceStatus(str, Enum):
@@ -45,7 +53,7 @@ class AccountingInvoiceTypedDict(TypedDict):
     paid_amount: NotRequired[float]
     paid_at: NotRequired[datetime]
     payment_collection_method: NotRequired[PaymentCollectionMethod]
-    raw: NotRequired[Dict[str, Any]]
+    raw: NotRequired[AccountingInvoiceRawTypedDict]
     refund_amount: NotRequired[float]
     refund_reason: NotRequired[str]
     refunded_at: NotRequired[datetime]
@@ -88,7 +96,7 @@ class AccountingInvoice(BaseModel):
 
     payment_collection_method: Optional[PaymentCollectionMethod] = None
 
-    raw: Optional[Dict[str, Any]] = None
+    raw: Optional[AccountingInvoiceRaw] = None
 
     refund_amount: Optional[float] = None
 

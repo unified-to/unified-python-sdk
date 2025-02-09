@@ -3,9 +3,17 @@
 from __future__ import annotations
 from .crmstage import CrmStage, CrmStageTypedDict
 from datetime import datetime
-from typing import Any, Dict, List, Optional
+from typing import List, Optional
 from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk.types import BaseModel
+
+
+class CrmPipelineRawTypedDict(TypedDict):
+    pass
+
+
+class CrmPipelineRaw(BaseModel):
+    pass
 
 
 class CrmPipelineTypedDict(TypedDict):
@@ -15,7 +23,7 @@ class CrmPipelineTypedDict(TypedDict):
     id: NotRequired[str]
     is_active: NotRequired[bool]
     name: NotRequired[str]
-    raw: NotRequired[Dict[str, Any]]
+    raw: NotRequired[CrmPipelineRawTypedDict]
     stages: NotRequired[List[CrmStageTypedDict]]
     updated_at: NotRequired[datetime]
 
@@ -33,7 +41,7 @@ class CrmPipeline(BaseModel):
 
     name: Optional[str] = None
 
-    raw: Optional[Dict[str, Any]] = None
+    raw: Optional[CrmPipelineRaw] = None
 
     stages: Optional[List[CrmStage]] = None
 

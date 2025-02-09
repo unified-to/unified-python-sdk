@@ -14,11 +14,11 @@ from typing_extensions import Annotated, NotRequired, TypedDict
 from unified_python_sdk.types import BaseModel
 
 
-class RawTypedDict(TypedDict):
+class AtsActivityRawTypedDict(TypedDict):
     pass
 
 
-class Raw(BaseModel):
+class AtsActivityRaw(BaseModel):
     pass
 
 
@@ -41,7 +41,7 @@ class AtsActivityTypedDict(TypedDict):
     interview_id: NotRequired[str]
     is_private: NotRequired[bool]
     job_id: NotRequired[str]
-    raw: NotRequired[RawTypedDict]
+    raw: NotRequired[AtsActivityRawTypedDict]
     sub_type: NotRequired[str]
     title: NotRequired[str]
     to: NotRequired[List[AtsEmailTypedDict]]
@@ -78,7 +78,7 @@ class AtsActivity(BaseModel):
 
     job_id: Optional[str] = None
 
-    raw: Optional[Raw] = None
+    raw: Optional[AtsActivityRaw] = None
 
     sub_type: Optional[str] = None
 

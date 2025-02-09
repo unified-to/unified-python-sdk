@@ -8,9 +8,17 @@ from .property_crmcompany_address import (
     PropertyCrmCompanyAddressTypedDict,
 )
 from datetime import datetime
-from typing import Any, Dict, List, Optional
+from typing import List, Optional
 from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk.types import BaseModel
+
+
+class CrmCompanyRawTypedDict(TypedDict):
+    pass
+
+
+class CrmCompanyRaw(BaseModel):
+    pass
 
 
 class CrmCompanyTypedDict(TypedDict):
@@ -29,9 +37,9 @@ class CrmCompanyTypedDict(TypedDict):
     industry: NotRequired[str]
     is_active: NotRequired[bool]
     link_urls: NotRequired[List[str]]
+    r"""Additional URLs associated with the contact e.g., LinkedIn, website, etc"""
     name: NotRequired[str]
-    raw: NotRequired[Dict[str, Any]]
-    r"""The raw data returned by the integration for this company"""
+    raw: NotRequired[CrmCompanyRawTypedDict]
     tags: NotRequired[List[str]]
     telephones: NotRequired[List[CrmTelephoneTypedDict]]
     timezone: NotRequired[str]
@@ -66,11 +74,11 @@ class CrmCompany(BaseModel):
     is_active: Optional[bool] = None
 
     link_urls: Optional[List[str]] = None
+    r"""Additional URLs associated with the contact e.g., LinkedIn, website, etc"""
 
     name: Optional[str] = None
 
-    raw: Optional[Dict[str, Any]] = None
-    r"""The raw data returned by the integration for this company"""
+    raw: Optional[CrmCompanyRaw] = None
 
     tags: Optional[List[str]] = None
 

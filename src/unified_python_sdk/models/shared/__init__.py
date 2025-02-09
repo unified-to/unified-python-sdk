@@ -3,11 +3,15 @@
 from .accountingaccount import (
     AccountingAccount,
     AccountingAccountTypedDict,
+    Raw,
+    RawTypedDict,
     Status,
     Type,
 )
 from .accountingcontact import (
     AccountingContact,
+    AccountingContactRaw,
+    AccountingContactRawTypedDict,
     AccountingContactTypedDict,
     TaxExemption,
 )
@@ -23,12 +27,19 @@ from .accountingemail import (
 )
 from .accountinginvoice import (
     AccountingInvoice,
+    AccountingInvoiceRaw,
+    AccountingInvoiceRawTypedDict,
     AccountingInvoiceStatus,
     AccountingInvoiceType,
     AccountingInvoiceTypedDict,
     PaymentCollectionMethod,
 )
-from .accountingjournal import AccountingJournal, AccountingJournalTypedDict
+from .accountingjournal import (
+    AccountingJournal,
+    AccountingJournalRaw,
+    AccountingJournalRawTypedDict,
+    AccountingJournalTypedDict,
+)
 from .accountingjournallineitem import (
     AccountingJournalLineitem,
     AccountingJournalLineitemTypedDict,
@@ -36,21 +47,35 @@ from .accountingjournallineitem import (
 from .accountinglineitem import AccountingLineitem, AccountingLineitemTypedDict
 from .accountingorder import (
     AccountingOrder,
+    AccountingOrderRaw,
+    AccountingOrderRawTypedDict,
     AccountingOrderStatus,
     AccountingOrderType,
     AccountingOrderTypedDict,
 )
 from .accountingorganization import (
     AccountingOrganization,
+    AccountingOrganizationRaw,
+    AccountingOrganizationRawTypedDict,
     AccountingOrganizationTypedDict,
 )
-from .accountingtaxrate import AccountingTaxrate, AccountingTaxrateTypedDict
+from .accountingtaxrate import (
+    AccountingTaxrate,
+    AccountingTaxrateRaw,
+    AccountingTaxrateRawTypedDict,
+    AccountingTaxrateTypedDict,
+)
 from .accountingtelephone import (
     AccountingTelephone,
     AccountingTelephoneType,
     AccountingTelephoneTypedDict,
 )
-from .accountingtransaction import AccountingTransaction, AccountingTransactionTypedDict
+from .accountingtransaction import (
+    AccountingTransaction,
+    AccountingTransactionRaw,
+    AccountingTransactionRawTypedDict,
+    AccountingTransactionTypedDict,
+)
 from .accountingtransactioncontact import (
     AccountingTransactionContact,
     AccountingTransactionContactTypedDict,
@@ -62,10 +87,10 @@ from .accountingtransactionlineitem import (
 from .apicall import APICall, APICallType, APICallTypedDict
 from .atsactivity import (
     AtsActivity,
+    AtsActivityRaw,
+    AtsActivityRawTypedDict,
     AtsActivityType,
     AtsActivityTypedDict,
-    Raw,
-    RawTypedDict,
 )
 from .atsaddress import AtsAddress, AtsAddressTypedDict
 from .atsapplication import (
@@ -120,7 +145,13 @@ from .atsjob import (
 )
 from .atsjobposting import AtsJobPosting, AtsJobPostingTypedDict
 from .atsjobquestion import AtsJobQuestion, AtsJobQuestionType, AtsJobQuestionTypedDict
-from .atsoffer import AtsOffer, AtsOfferTypedDict
+from .atsoffer import (
+    AtsOffer,
+    AtsOfferRaw,
+    AtsOfferRawTypedDict,
+    AtsOfferStatus,
+    AtsOfferTypedDict,
+)
 from .atsscorecard import (
     AtsScorecard,
     AtsScorecardRaw,
@@ -184,19 +215,40 @@ from .commercelocation import (
     CommerceLocationTypedDict,
 )
 from .connection import Connection, ConnectionTypedDict
-from .crmcompany import CrmCompany, CrmCompanyTypedDict
-from .crmcontact import CrmContact, CrmContactTypedDict
-from .crmdeal import CrmDeal, CrmDealTypedDict
+from .crmcompany import (
+    CrmCompany,
+    CrmCompanyRaw,
+    CrmCompanyRawTypedDict,
+    CrmCompanyTypedDict,
+)
+from .crmcontact import (
+    CrmContact,
+    CrmContactRaw,
+    CrmContactRawTypedDict,
+    CrmContactTypedDict,
+)
+from .crmdeal import CrmDeal, CrmDealRaw, CrmDealRawTypedDict, CrmDealTypedDict
 from .crmemail import CrmEmail, CrmEmailType, CrmEmailTypedDict
-from .crmevent import CrmEvent, CrmEventType, CrmEventTypedDict
+from .crmevent import (
+    CrmEvent,
+    CrmEventRaw,
+    CrmEventRawTypedDict,
+    CrmEventType,
+    CrmEventTypedDict,
+)
 from .crmeventformfield import (
     CrmEventFormField,
     CrmEventFormFieldType,
     CrmEventFormFieldTypedDict,
 )
 from .crmeventformoption import CrmEventFormOption, CrmEventFormOptionTypedDict
-from .crmlead import CrmLead, CrmLeadTypedDict
-from .crmpipeline import CrmPipeline, CrmPipelineTypedDict
+from .crmlead import CrmLead, CrmLeadRaw, CrmLeadRawTypedDict, CrmLeadTypedDict
+from .crmpipeline import (
+    CrmPipeline,
+    CrmPipelineRaw,
+    CrmPipelineRawTypedDict,
+    CrmPipelineTypedDict,
+)
 from .crmstage import CrmStage, CrmStageTypedDict
 from .crmtelephone import CrmTelephone, CrmTelephoneType, CrmTelephoneTypedDict
 from .enrichcompany import EnrichCompany, EnrichCompanyTypedDict
@@ -214,7 +266,12 @@ from .enrichtelephone import (
 from .genaicontent import GenaiContent, GenaiContentTypedDict, Role
 from .genaimodel import GenaiModel, GenaiModelTypedDict
 from .genaiprompt import GenaiPrompt, GenaiPromptTypedDict
-from .hriscompany import HrisCompany, HrisCompanyTypedDict
+from .hriscompany import (
+    HrisCompany,
+    HrisCompanyRaw,
+    HrisCompanyRawTypedDict,
+    HrisCompanyTypedDict,
+)
 from .hriscompensation import (
     HrisCompensation,
     HrisCompensationFrequency,
@@ -227,12 +284,31 @@ from .hrisemployee import (
     HrisEmployee,
     HrisEmployeeEmploymentType,
     HrisEmployeeGender,
+    HrisEmployeeRaw,
+    HrisEmployeeRawTypedDict,
     HrisEmployeeTypedDict,
     MaritalStatus,
 )
-from .hrisgroup import HrisGroup, HrisGroupType, HrisGroupTypedDict
-from .hrislocation import HrisLocation, HrisLocationTypedDict
-from .hrispayslip import HrisPayslip, HrisPayslipTypedDict, PaymentType
+from .hrisgroup import (
+    HrisGroup,
+    HrisGroupRaw,
+    HrisGroupRawTypedDict,
+    HrisGroupType,
+    HrisGroupTypedDict,
+)
+from .hrislocation import (
+    HrisLocation,
+    HrisLocationRaw,
+    HrisLocationRawTypedDict,
+    HrisLocationTypedDict,
+)
+from .hrispayslip import (
+    HrisPayslip,
+    HrisPayslipRaw,
+    HrisPayslipRawTypedDict,
+    HrisPayslipTypedDict,
+    PaymentType,
+)
 from .hrispayslipdetail import (
     HrisPayslipDetail,
     HrisPayslipDetailType,
@@ -241,6 +317,8 @@ from .hrispayslipdetail import (
 from .hristelephone import HrisTelephone, HrisTelephoneType, HrisTelephoneTypedDict
 from .hristimeoff import (
     HrisTimeoff,
+    HrisTimeoffRaw,
+    HrisTimeoffRawTypedDict,
     HrisTimeoffStatus,
     HrisTimeoffType,
     HrisTimeoffTypedDict,
@@ -591,27 +669,39 @@ __all__ = [
     "AccountingContactPaymentMethod",
     "AccountingContactPaymentMethodType",
     "AccountingContactPaymentMethodTypedDict",
+    "AccountingContactRaw",
+    "AccountingContactRawTypedDict",
     "AccountingContactTypedDict",
     "AccountingEmail",
     "AccountingEmailType",
     "AccountingEmailTypedDict",
     "AccountingInvoice",
+    "AccountingInvoiceRaw",
+    "AccountingInvoiceRawTypedDict",
     "AccountingInvoiceStatus",
     "AccountingInvoiceType",
     "AccountingInvoiceTypedDict",
     "AccountingJournal",
     "AccountingJournalLineitem",
     "AccountingJournalLineitemTypedDict",
+    "AccountingJournalRaw",
+    "AccountingJournalRawTypedDict",
     "AccountingJournalTypedDict",
     "AccountingLineitem",
     "AccountingLineitemTypedDict",
     "AccountingOrder",
+    "AccountingOrderRaw",
+    "AccountingOrderRawTypedDict",
     "AccountingOrderStatus",
     "AccountingOrderType",
     "AccountingOrderTypedDict",
     "AccountingOrganization",
+    "AccountingOrganizationRaw",
+    "AccountingOrganizationRawTypedDict",
     "AccountingOrganizationTypedDict",
     "AccountingTaxrate",
+    "AccountingTaxrateRaw",
+    "AccountingTaxrateRawTypedDict",
     "AccountingTaxrateTypedDict",
     "AccountingTelephone",
     "AccountingTelephoneType",
@@ -621,8 +711,12 @@ __all__ = [
     "AccountingTransactionContactTypedDict",
     "AccountingTransactionLineItem",
     "AccountingTransactionLineItemTypedDict",
+    "AccountingTransactionRaw",
+    "AccountingTransactionRawTypedDict",
     "AccountingTransactionTypedDict",
     "AtsActivity",
+    "AtsActivityRaw",
+    "AtsActivityRawTypedDict",
     "AtsActivityType",
     "AtsActivityTypedDict",
     "AtsAddress",
@@ -669,6 +763,9 @@ __all__ = [
     "AtsJobStatus",
     "AtsJobTypedDict",
     "AtsOffer",
+    "AtsOfferRaw",
+    "AtsOfferRawTypedDict",
+    "AtsOfferStatus",
     "AtsOfferTypedDict",
     "AtsScorecard",
     "AtsScorecardQuestion",
@@ -716,10 +813,16 @@ __all__ = [
     "ConnectionTypedDict",
     "ContentType",
     "CrmCompany",
+    "CrmCompanyRaw",
+    "CrmCompanyRawTypedDict",
     "CrmCompanyTypedDict",
     "CrmContact",
+    "CrmContactRaw",
+    "CrmContactRawTypedDict",
     "CrmContactTypedDict",
     "CrmDeal",
+    "CrmDealRaw",
+    "CrmDealRawTypedDict",
     "CrmDealTypedDict",
     "CrmEmail",
     "CrmEmailType",
@@ -730,11 +833,17 @@ __all__ = [
     "CrmEventFormFieldTypedDict",
     "CrmEventFormOption",
     "CrmEventFormOptionTypedDict",
+    "CrmEventRaw",
+    "CrmEventRawTypedDict",
     "CrmEventType",
     "CrmEventTypedDict",
     "CrmLead",
+    "CrmLeadRaw",
+    "CrmLeadRawTypedDict",
     "CrmLeadTypedDict",
     "CrmPipeline",
+    "CrmPipelineRaw",
+    "CrmPipelineRawTypedDict",
     "CrmPipelineTypedDict",
     "CrmStage",
     "CrmStageTypedDict",
@@ -769,6 +878,8 @@ __all__ = [
     "GenaiPromptTypedDict",
     "Gender",
     "HrisCompany",
+    "HrisCompanyRaw",
+    "HrisCompanyRawTypedDict",
     "HrisCompanyTypedDict",
     "HrisCompensation",
     "HrisCompensationFrequency",
@@ -780,21 +891,31 @@ __all__ = [
     "HrisEmployee",
     "HrisEmployeeEmploymentType",
     "HrisEmployeeGender",
+    "HrisEmployeeRaw",
+    "HrisEmployeeRawTypedDict",
     "HrisEmployeeTypedDict",
     "HrisGroup",
+    "HrisGroupRaw",
+    "HrisGroupRawTypedDict",
     "HrisGroupType",
     "HrisGroupTypedDict",
     "HrisLocation",
+    "HrisLocationRaw",
+    "HrisLocationRawTypedDict",
     "HrisLocationTypedDict",
     "HrisPayslip",
     "HrisPayslipDetail",
     "HrisPayslipDetailType",
     "HrisPayslipDetailTypedDict",
+    "HrisPayslipRaw",
+    "HrisPayslipRawTypedDict",
     "HrisPayslipTypedDict",
     "HrisTelephone",
     "HrisTelephoneType",
     "HrisTelephoneTypedDict",
     "HrisTimeoff",
+    "HrisTimeoffRaw",
+    "HrisTimeoffRawTypedDict",
     "HrisTimeoffStatus",
     "HrisTimeoffType",
     "HrisTimeoffTypedDict",

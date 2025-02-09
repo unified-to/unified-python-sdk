@@ -23,9 +23,17 @@ from .property_crmevent_page_view import (
 from .property_crmevent_task import PropertyCrmEventTask, PropertyCrmEventTaskTypedDict
 from datetime import datetime
 from enum import Enum
-from typing import Any, Dict, List, Optional
+from typing import List, Optional
 from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk.types import BaseModel
+
+
+class CrmEventRawTypedDict(TypedDict):
+    pass
+
+
+class CrmEventRaw(BaseModel):
+    pass
 
 
 class CrmEventType(str, Enum):
@@ -62,8 +70,7 @@ class CrmEventTypedDict(TypedDict):
     note: NotRequired[PropertyCrmEventNoteTypedDict]
     r"""The note object, when type = note"""
     page_view: NotRequired[PropertyCrmEventPageViewTypedDict]
-    raw: NotRequired[Dict[str, Any]]
-    r"""The raw data returned by the integration for this event."""
+    raw: NotRequired[CrmEventRawTypedDict]
     task: NotRequired[PropertyCrmEventTaskTypedDict]
     r"""The task object, when type = task"""
     type: NotRequired[CrmEventType]
@@ -107,8 +114,7 @@ class CrmEvent(BaseModel):
 
     page_view: Optional[PropertyCrmEventPageView] = None
 
-    raw: Optional[Dict[str, Any]] = None
-    r"""The raw data returned by the integration for this event."""
+    raw: Optional[CrmEventRaw] = None
 
     task: Optional[PropertyCrmEventTask] = None
     r"""The task object, when type = task"""

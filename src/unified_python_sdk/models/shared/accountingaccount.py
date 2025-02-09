@@ -3,9 +3,17 @@
 from __future__ import annotations
 from datetime import datetime
 from enum import Enum
-from typing import Any, Dict, Optional
+from typing import Optional
 from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk.types import BaseModel
+
+
+class RawTypedDict(TypedDict):
+    pass
+
+
+class Raw(BaseModel):
+    pass
 
 
 class Status(str, Enum):
@@ -39,8 +47,7 @@ class AccountingAccountTypedDict(TypedDict):
     is_payable: NotRequired[bool]
     name: NotRequired[str]
     parent_account_id: NotRequired[str]
-    raw: NotRequired[Dict[str, Any]]
-    r"""The original data from the integration's API"""
+    raw: NotRequired[RawTypedDict]
     section: NotRequired[str]
     status: NotRequired[Status]
     subgroup: NotRequired[str]
@@ -72,8 +79,7 @@ class AccountingAccount(BaseModel):
 
     parent_account_id: Optional[str] = None
 
-    raw: Optional[Dict[str, Any]] = None
-    r"""The original data from the integration's API"""
+    raw: Optional[Raw] = None
 
     section: Optional[str] = None
 

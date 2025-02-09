@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: 079a662c33e65673ca2fb2b1cc54edc4
+  docChecksum: b8229482579a72269cca223071c1d36c
   docVersion: "1.0"
   speakeasyVersion: 1.468.6
   generationVersion: 2.493.13
-  releaseVersion: 0.30.1
-  configChecksum: 1eebbf2bbb0f2735a02e7b3737327d57
+  releaseVersion: 0.31.1
+  configChecksum: 581434da9869b7db89f99d746ee6f8fe
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -822,27 +822,35 @@ generatedFiles:
   - docs/models/shared/accountingcontact.md
   - docs/models/shared/accountingcontactpaymentmethod.md
   - docs/models/shared/accountingcontactpaymentmethodtype.md
+  - docs/models/shared/accountingcontactraw.md
   - docs/models/shared/accountingemail.md
   - docs/models/shared/accountingemailtype.md
   - docs/models/shared/accountinginvoice.md
+  - docs/models/shared/accountinginvoiceraw.md
   - docs/models/shared/accountinginvoicestatus.md
   - docs/models/shared/accountinginvoicetype.md
   - docs/models/shared/accountingjournal.md
   - docs/models/shared/accountingjournallineitem.md
+  - docs/models/shared/accountingjournalraw.md
   - docs/models/shared/accountinglineitem.md
   - docs/models/shared/accountingorder.md
+  - docs/models/shared/accountingorderraw.md
   - docs/models/shared/accountingorderstatus.md
   - docs/models/shared/accountingordertype.md
   - docs/models/shared/accountingorganization.md
+  - docs/models/shared/accountingorganizationraw.md
   - docs/models/shared/accountingtaxrate.md
+  - docs/models/shared/accountingtaxrateraw.md
   - docs/models/shared/accountingtelephone.md
   - docs/models/shared/accountingtelephonetype.md
   - docs/models/shared/accountingtransaction.md
   - docs/models/shared/accountingtransactioncontact.md
   - docs/models/shared/accountingtransactionlineitem.md
+  - docs/models/shared/accountingtransactionraw.md
   - docs/models/shared/apicall.md
   - docs/models/shared/apicalltype.md
   - docs/models/shared/atsactivity.md
+  - docs/models/shared/atsactivityraw.md
   - docs/models/shared/atsactivitytype.md
   - docs/models/shared/atsaddress.md
   - docs/models/shared/atsapplication.md
@@ -870,6 +878,8 @@ generatedFiles:
   - docs/models/shared/atsjobraw.md
   - docs/models/shared/atsjobstatus.md
   - docs/models/shared/atsoffer.md
+  - docs/models/shared/atsofferraw.md
+  - docs/models/shared/atsofferstatus.md
   - docs/models/shared/atsscorecard.md
   - docs/models/shared/atsscorecardquestion.md
   - docs/models/shared/atsscorecardraw.md
@@ -896,17 +906,23 @@ generatedFiles:
   - docs/models/shared/connection.md
   - docs/models/shared/contenttype.md
   - docs/models/shared/crmcompany.md
+  - docs/models/shared/crmcompanyraw.md
   - docs/models/shared/crmcontact.md
+  - docs/models/shared/crmcontactraw.md
   - docs/models/shared/crmdeal.md
+  - docs/models/shared/crmdealraw.md
   - docs/models/shared/crmemail.md
   - docs/models/shared/crmemailtype.md
   - docs/models/shared/crmevent.md
   - docs/models/shared/crmeventformfield.md
   - docs/models/shared/crmeventformfieldtype.md
   - docs/models/shared/crmeventformoption.md
+  - docs/models/shared/crmeventraw.md
   - docs/models/shared/crmeventtype.md
   - docs/models/shared/crmlead.md
+  - docs/models/shared/crmleadraw.md
   - docs/models/shared/crmpipeline.md
+  - docs/models/shared/crmpipelineraw.md
   - docs/models/shared/crmstage.md
   - docs/models/shared/crmtelephone.md
   - docs/models/shared/crmtelephonetype.md
@@ -929,6 +945,7 @@ generatedFiles:
   - docs/models/shared/genaiprompt.md
   - docs/models/shared/gender.md
   - docs/models/shared/hriscompany.md
+  - docs/models/shared/hriscompanyraw.md
   - docs/models/shared/hriscompensation.md
   - docs/models/shared/hriscompensationfrequency.md
   - docs/models/shared/hriscompensationtype.md
@@ -937,15 +954,20 @@ generatedFiles:
   - docs/models/shared/hrisemployee.md
   - docs/models/shared/hrisemployeeemploymenttype.md
   - docs/models/shared/hrisemployeegender.md
+  - docs/models/shared/hrisemployeeraw.md
   - docs/models/shared/hrisgroup.md
+  - docs/models/shared/hrisgroupraw.md
   - docs/models/shared/hrisgrouptype.md
   - docs/models/shared/hrislocation.md
+  - docs/models/shared/hrislocationraw.md
   - docs/models/shared/hrispayslip.md
   - docs/models/shared/hrispayslipdetail.md
   - docs/models/shared/hrispayslipdetailtype.md
+  - docs/models/shared/hrispayslipraw.md
   - docs/models/shared/hristelephone.md
   - docs/models/shared/hristelephonetype.md
   - docs/models/shared/hristimeoff.md
+  - docs/models/shared/hristimeoffraw.md
   - docs/models/shared/hristimeoffstatus.md
   - docs/models/shared/hristimeofftype.md
   - docs/models/shared/integration.md
@@ -3637,7 +3659,7 @@ examples:
         query: {}
       responses:
         "200":
-          application/json: [{"raw": {"key": "<value>"}, "user_id": "<id>"}]
+          application/json: [{"raw": {}, "user_id": "<id>"}]
   listHrisTimeoffs:
     speakeasy-default-list-hris-timeoffs:
       parameters:

@@ -6,9 +6,17 @@ from .property_accountingorganization_address import (
     PropertyAccountingOrganizationAddressTypedDict,
 )
 from datetime import datetime
-from typing import Any, Dict, Optional
+from typing import Optional
 from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk.types import BaseModel
+
+
+class AccountingOrganizationRawTypedDict(TypedDict):
+    pass
+
+
+class AccountingOrganizationRaw(BaseModel):
+    pass
 
 
 class AccountingOrganizationTypedDict(TypedDict):
@@ -20,7 +28,7 @@ class AccountingOrganizationTypedDict(TypedDict):
     id: NotRequired[str]
     legal_name: NotRequired[str]
     organization_code: NotRequired[str]
-    raw: NotRequired[Dict[str, Any]]
+    raw: NotRequired[AccountingOrganizationRawTypedDict]
     tax_number: NotRequired[str]
     timezone: NotRequired[str]
     updated_at: NotRequired[datetime]
@@ -44,7 +52,7 @@ class AccountingOrganization(BaseModel):
 
     organization_code: Optional[str] = None
 
-    raw: Optional[Dict[str, Any]] = None
+    raw: Optional[AccountingOrganizationRaw] = None
 
     tax_number: Optional[str] = None
 

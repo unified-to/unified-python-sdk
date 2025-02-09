@@ -2,9 +2,17 @@
 
 from __future__ import annotations
 from datetime import datetime
-from typing import Any, Dict, Optional
+from typing import Optional
 from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk.types import BaseModel
+
+
+class AccountingTaxrateRawTypedDict(TypedDict):
+    pass
+
+
+class AccountingTaxrateRaw(BaseModel):
+    pass
 
 
 class AccountingTaxrateTypedDict(TypedDict):
@@ -14,7 +22,7 @@ class AccountingTaxrateTypedDict(TypedDict):
     is_active: NotRequired[bool]
     name: NotRequired[str]
     rate: NotRequired[float]
-    raw: NotRequired[Dict[str, Any]]
+    raw: NotRequired[AccountingTaxrateRawTypedDict]
     updated_at: NotRequired[datetime]
 
 
@@ -31,6 +39,6 @@ class AccountingTaxrate(BaseModel):
 
     rate: Optional[float] = None
 
-    raw: Optional[Dict[str, Any]] = None
+    raw: Optional[AccountingTaxrateRaw] = None
 
     updated_at: Optional[datetime] = None

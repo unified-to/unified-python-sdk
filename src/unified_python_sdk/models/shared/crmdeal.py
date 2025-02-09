@@ -2,9 +2,17 @@
 
 from __future__ import annotations
 from datetime import datetime
-from typing import Any, Dict, List, Optional
+from typing import List, Optional
 from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk.types import BaseModel
+
+
+class CrmDealRawTypedDict(TypedDict):
+    pass
+
+
+class CrmDealRaw(BaseModel):
+    pass
 
 
 class CrmDealTypedDict(TypedDict):
@@ -12,6 +20,8 @@ class CrmDealTypedDict(TypedDict):
 
     amount: NotRequired[float]
     closed_at: NotRequired[datetime]
+    company_ids: NotRequired[List[str]]
+    contact_ids: NotRequired[List[str]]
     created_at: NotRequired[datetime]
     currency: NotRequired[str]
     id: NotRequired[str]
@@ -20,8 +30,7 @@ class CrmDealTypedDict(TypedDict):
     pipeline: NotRequired[str]
     pipeline_id: NotRequired[str]
     probability: NotRequired[float]
-    raw: NotRequired[Dict[str, Any]]
-    r"""The raw data returned by the integration for this deal"""
+    raw: NotRequired[CrmDealRawTypedDict]
     source: NotRequired[str]
     stage: NotRequired[str]
     stage_id: NotRequired[str]
@@ -37,6 +46,10 @@ class CrmDeal(BaseModel):
     amount: Optional[float] = None
 
     closed_at: Optional[datetime] = None
+
+    company_ids: Optional[List[str]] = None
+
+    contact_ids: Optional[List[str]] = None
 
     created_at: Optional[datetime] = None
 
@@ -54,8 +67,7 @@ class CrmDeal(BaseModel):
 
     probability: Optional[float] = None
 
-    raw: Optional[Dict[str, Any]] = None
-    r"""The raw data returned by the integration for this deal"""
+    raw: Optional[CrmDealRaw] = None
 
     source: Optional[str] = None
 
