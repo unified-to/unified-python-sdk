@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: b8229482579a72269cca223071c1d36c
+  docChecksum: 9242e0b56a832180eec64ef3e27e0be0
   docVersion: "1.0"
   speakeasyVersion: 1.468.6
   generationVersion: 2.493.13
-  releaseVersion: 0.31.1
-  configChecksum: 581434da9869b7db89f99d746ee6f8fe
+  releaseVersion: 0.32.1
+  configChecksum: a4bc35b06c5dd5f022131def8efcabe3
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -926,6 +926,7 @@ generatedFiles:
   - docs/models/shared/crmstage.md
   - docs/models/shared/crmtelephone.md
   - docs/models/shared/crmtelephonetype.md
+  - docs/models/shared/dbtype.md
   - docs/models/shared/employmentstatus.md
   - docs/models/shared/employmenttype.md
   - docs/models/shared/enrichcompany.md

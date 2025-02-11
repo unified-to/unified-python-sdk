@@ -649,6 +649,7 @@ from .uccontact import UcContact, UcContactTypedDict
 from .ucemail import UcEmail, UcEmailType, UcEmailTypedDict
 from .uctelephone import UcTelephone, UcTelephoneType, UcTelephoneTypedDict
 from .webhook import (
+    DbType,
     Event,
     Meta,
     MetaTypedDict,
@@ -850,6 +851,7 @@ __all__ = [
     "CrmTelephone",
     "CrmTelephoneType",
     "CrmTelephoneTypedDict",
+    "DbType",
     "EmploymentStatus",
     "EmploymentType",
     "EnrichCompany",

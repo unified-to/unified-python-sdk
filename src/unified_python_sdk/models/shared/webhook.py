@@ -8,6 +8,14 @@ from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk.types import BaseModel
 
 
+class DbType(str, Enum):
+    MONGODB = "mongodb"
+    MYSQL = "mysql"
+    POSTGRES = "postgres"
+    MSSQL = "mssql"
+    MARIADB = "mariadb"
+
+
 class Event(str, Enum):
     UPDATED = "updated"
     CREATED = "created"
@@ -106,13 +114,16 @@ class WebhookTypedDict(TypedDict):
 
     connection_id: str
     event: Event
-    hook_url: str
     object_type: ObjectType
     checked_at: NotRequired[datetime]
     created_at: NotRequired[datetime]
+    db_name_prefix: NotRequired[str]
+    db_type: NotRequired[DbType]
+    db_url: NotRequired[str]
     environment: NotRequired[str]
     fields: NotRequired[str]
     filters: NotRequired[Dict[str, str]]
+    hook_url: NotRequired[str]
     id: NotRequired[str]
     integration_type: NotRequired[str]
     interval: NotRequired[float]
@@ -133,19 +144,25 @@ class Webhook(BaseModel):
 
     event: Event
 
-    hook_url: str
-
     object_type: ObjectType
 
     checked_at: Optional[datetime] = None
 
     created_at: Optional[datetime] = None
 
+    db_name_prefix: Optional[str] = None
+
+    db_type: Optional[DbType] = None
+
+    db_url: Optional[str] = None
+
     environment: Optional[str] = "Production"
 
     fields: Optional[str] = None
 
     filters: Optional[Dict[str, str]] = None
+
+    hook_url: Optional[str] = None
 
     id: Optional[str] = None
 
