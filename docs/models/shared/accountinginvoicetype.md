@@ -3,7 +3,8 @@
 
 ## Values
 
-| Name      | Value     |
-| --------- | --------- |
-| `BILL`    | BILL      |
-| `INVOICE` | INVOICE   |
+| Name         | Value        |
+| ------------ | ------------ |
+| `BILL`       | BILL         |
+| `INVOICE`    | INVOICE      |
+| `CREDITMEMO` | CREDITMEMO   |

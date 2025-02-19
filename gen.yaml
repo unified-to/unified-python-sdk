@@ -8,13 +8,15 @@ generation:
     nameResolutionDec2023: false
     parameterOrderingFeb2024: false
     requestResponseComponentNamesFeb2024: false
+    nameResolutionFeb2025: false
+    securityFeb2025: false
   auth:
     oAuth2ClientCredentialsEnabled: false
     oAuth2PasswordEnabled: false
   baseServerURL: ""
   flattenGlobalSecurity: true
 python:
-  version: 0.32.1
+  version: 0.33.1
   additionalDependencies:
     dev: {}
     main: {}
@@ -44,5 +46,6 @@ python:
   outputModelSuffix: output
   packageName: Unified-python-sdk
   projectUrls: {}
+  pytestTimeout: 0
   responseFormat: envelope
   templateVersion: v2

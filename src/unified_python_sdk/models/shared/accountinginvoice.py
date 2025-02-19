@@ -35,6 +35,7 @@ class AccountingInvoiceStatus(str, Enum):
 class AccountingInvoiceType(str, Enum):
     BILL = "BILL"
     INVOICE = "INVOICE"
+    CREDITMEMO = "CREDITMEMO"
 
 
 class AccountingInvoiceTypedDict(TypedDict):

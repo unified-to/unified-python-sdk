@@ -28,6 +28,7 @@ class ListAccountingInvoicesRequestTypedDict(TypedDict):
     query: NotRequired[str]
     r"""Query string to search. eg. email address or name"""
     sort: NotRequired[str]
+    type: NotRequired[str]
     updated_gte: NotRequired[datetime]
     r"""Return only results whose updated date is equal or greater to this value"""
 
@@ -71,6 +72,11 @@ class ListAccountingInvoicesRequest(BaseModel):
     r"""Query string to search. eg. email address or name"""
 
     sort: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+
+    type: Annotated[
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
