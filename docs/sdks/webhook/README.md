@@ -30,7 +30,14 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.webhook.create_unified_webhook(request={})
+    res = unified_to.webhook.create_unified_webhook(request={
+        "webhook": {
+            "connection_id": "<id>",
+            "event": shared.Event.CREATED,
+            "object_type": shared.ObjectType.HRIS_EMPLOYEE,
+            "environment": "Production",
+        },
+    })
 
     assert res.webhook is not None
 
@@ -159,6 +166,12 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.webhook.patch_unified_webhook(request={
+        "webhook": {
+            "connection_id": "<id>",
+            "event": shared.Event.DELETED,
+            "object_type": shared.ObjectType.CRM_DEAL,
+            "environment": "Production",
+        },
         "id": "<id>",
     })
 
@@ -291,6 +304,12 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.webhook.update_unified_webhook(request={
+        "webhook": {
+            "connection_id": "<id>",
+            "event": shared.Event.CREATED,
+            "object_type": shared.ObjectType.PAYMENT_LINK,
+            "environment": "Production",
+        },
         "id": "<id>",
     })
 

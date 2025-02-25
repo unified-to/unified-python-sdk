@@ -47,7 +47,7 @@ class Kms(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -55,7 +55,7 @@ class Kms(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.kms_comment, False, True, "json", Optional[shared.KmsComment]
+                request.kms_comment, False, False, "json", shared.KmsComment
             ),
             timeout_ms=timeout_ms,
         )
@@ -141,7 +141,7 @@ class Kms(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -149,7 +149,7 @@ class Kms(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.kms_comment, False, True, "json", Optional[shared.KmsComment]
+                request.kms_comment, False, False, "json", shared.KmsComment
             ),
             timeout_ms=timeout_ms,
         )
@@ -234,7 +234,7 @@ class Kms(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -242,7 +242,7 @@ class Kms(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.kms_page, False, True, "json", Optional[shared.KmsPage]
+                request.kms_page, False, False, "json", shared.KmsPage
             ),
             timeout_ms=timeout_ms,
         )
@@ -325,7 +325,7 @@ class Kms(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -333,7 +333,7 @@ class Kms(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.kms_page, False, True, "json", Optional[shared.KmsPage]
+                request.kms_page, False, False, "json", shared.KmsPage
             ),
             timeout_ms=timeout_ms,
         )
@@ -416,7 +416,7 @@ class Kms(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -424,7 +424,7 @@ class Kms(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.kms_space, False, True, "json", Optional[shared.KmsSpace]
+                request.kms_space, False, False, "json", shared.KmsSpace
             ),
             timeout_ms=timeout_ms,
         )
@@ -509,7 +509,7 @@ class Kms(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -517,7 +517,7 @@ class Kms(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.kms_space, False, True, "json", Optional[shared.KmsSpace]
+                request.kms_space, False, False, "json", shared.KmsSpace
             ),
             timeout_ms=timeout_ms,
         )
@@ -1681,7 +1681,7 @@ class Kms(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -1689,7 +1689,7 @@ class Kms(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.kms_comment, False, True, "json", Optional[shared.KmsComment]
+                request.kms_comment, False, False, "json", shared.KmsComment
             ),
             timeout_ms=timeout_ms,
         )
@@ -1775,7 +1775,7 @@ class Kms(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -1783,7 +1783,7 @@ class Kms(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.kms_comment, False, True, "json", Optional[shared.KmsComment]
+                request.kms_comment, False, False, "json", shared.KmsComment
             ),
             timeout_ms=timeout_ms,
         )
@@ -1868,7 +1868,7 @@ class Kms(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -1876,7 +1876,7 @@ class Kms(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.kms_page, False, True, "json", Optional[shared.KmsPage]
+                request.kms_page, False, False, "json", shared.KmsPage
             ),
             timeout_ms=timeout_ms,
         )
@@ -1959,7 +1959,7 @@ class Kms(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -1967,7 +1967,7 @@ class Kms(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.kms_page, False, True, "json", Optional[shared.KmsPage]
+                request.kms_page, False, False, "json", shared.KmsPage
             ),
             timeout_ms=timeout_ms,
         )
@@ -2050,7 +2050,7 @@ class Kms(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -2058,7 +2058,7 @@ class Kms(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.kms_space, False, True, "json", Optional[shared.KmsSpace]
+                request.kms_space, False, False, "json", shared.KmsSpace
             ),
             timeout_ms=timeout_ms,
         )
@@ -2143,7 +2143,7 @@ class Kms(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -2151,7 +2151,7 @@ class Kms(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.kms_space, False, True, "json", Optional[shared.KmsSpace]
+                request.kms_space, False, False, "json", shared.KmsSpace
             ),
             timeout_ms=timeout_ms,
         )
@@ -2809,7 +2809,7 @@ class Kms(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -2817,7 +2817,7 @@ class Kms(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.kms_comment, False, True, "json", Optional[shared.KmsComment]
+                request.kms_comment, False, False, "json", shared.KmsComment
             ),
             timeout_ms=timeout_ms,
         )
@@ -2903,7 +2903,7 @@ class Kms(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -2911,7 +2911,7 @@ class Kms(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.kms_comment, False, True, "json", Optional[shared.KmsComment]
+                request.kms_comment, False, False, "json", shared.KmsComment
             ),
             timeout_ms=timeout_ms,
         )
@@ -2996,7 +2996,7 @@ class Kms(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -3004,7 +3004,7 @@ class Kms(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.kms_page, False, True, "json", Optional[shared.KmsPage]
+                request.kms_page, False, False, "json", shared.KmsPage
             ),
             timeout_ms=timeout_ms,
         )
@@ -3087,7 +3087,7 @@ class Kms(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -3095,7 +3095,7 @@ class Kms(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.kms_page, False, True, "json", Optional[shared.KmsPage]
+                request.kms_page, False, False, "json", shared.KmsPage
             ),
             timeout_ms=timeout_ms,
         )
@@ -3178,7 +3178,7 @@ class Kms(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -3186,7 +3186,7 @@ class Kms(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.kms_space, False, True, "json", Optional[shared.KmsSpace]
+                request.kms_space, False, False, "json", shared.KmsSpace
             ),
             timeout_ms=timeout_ms,
         )
@@ -3271,7 +3271,7 @@ class Kms(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -3279,7 +3279,7 @@ class Kms(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.kms_space, False, True, "json", Optional[shared.KmsSpace]
+                request.kms_space, False, False, "json", shared.KmsSpace
             ),
             timeout_ms=timeout_ms,
         )

@@ -47,7 +47,7 @@ class Prompt(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -55,7 +55,7 @@ class Prompt(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.genai_prompt, False, True, "json", Optional[shared.GenaiPrompt]
+                request.genai_prompt, False, False, "json", shared.GenaiPrompt
             ),
             timeout_ms=timeout_ms,
         )
@@ -141,7 +141,7 @@ class Prompt(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -149,7 +149,7 @@ class Prompt(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.genai_prompt, False, True, "json", Optional[shared.GenaiPrompt]
+                request.genai_prompt, False, False, "json", shared.GenaiPrompt
             ),
             timeout_ms=timeout_ms,
         )

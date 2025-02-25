@@ -29,6 +29,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.student.create_lms_student(request={
+        "lms_student": {},
         "connection_id": "<id>",
     })
 
@@ -162,6 +163,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.student.patch_lms_student(request={
+        "lms_student": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -252,6 +254,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.student.update_lms_student(request={
+        "lms_student": {},
         "connection_id": "<id>",
         "id": "<id>",
     })

@@ -29,6 +29,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.event.create_crm_event(request={
+        "crm_event": {},
         "connection_id": "<id>",
     })
 
@@ -162,6 +163,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.event.patch_crm_event(request={
+        "crm_event": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -252,6 +254,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.event.update_crm_event(request={
+        "crm_event": {},
         "connection_id": "<id>",
         "id": "<id>",
     })

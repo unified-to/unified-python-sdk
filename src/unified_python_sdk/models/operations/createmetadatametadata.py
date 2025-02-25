@@ -15,23 +15,23 @@ from unified_python_sdk.utils import (
 
 
 class CreateMetadataMetadataRequestTypedDict(TypedDict):
+    metadata_metadata: shared_metadatametadata.MetadataMetadataTypedDict
     connection_id: str
     r"""ID of the connection"""
-    metadata_metadata: NotRequired[shared_metadatametadata.MetadataMetadataTypedDict]
     fields: NotRequired[List[str]]
     r"""Comma-delimited fields to return"""
 
 
 class CreateMetadataMetadataRequest(BaseModel):
+    metadata_metadata: Annotated[
+        shared_metadatametadata.MetadataMetadata,
+        FieldMetadata(request=RequestMetadata(media_type="application/json")),
+    ]
+
     connection_id: Annotated[
         str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))
     ]
     r"""ID of the connection"""
-
-    metadata_metadata: Annotated[
-        Optional[shared_metadatametadata.MetadataMetadata],
-        FieldMetadata(request=RequestMetadata(media_type="application/json")),
-    ] = None
 
     fields: Annotated[
         Optional[List[str]],

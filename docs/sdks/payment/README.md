@@ -45,6 +45,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.payment.create_payment_link(request={
+        "payment_link": {},
         "connection_id": "<id>",
     })
 
@@ -89,6 +90,9 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.payment.create_payment_payment(request={
+        "payment_payment": {
+            "currency": "USD",
+        },
         "connection_id": "<id>",
     })
 
@@ -133,6 +137,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.payment.create_payment_subscription(request={
+        "payment_subscription": {},
         "connection_id": "<id>",
     })
 
@@ -622,6 +627,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.payment.patch_payment_link(request={
+        "payment_link": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -667,6 +673,9 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.payment.patch_payment_payment(request={
+        "payment_payment": {
+            "currency": "USD",
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -712,6 +721,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.payment.patch_payment_subscription(request={
+        "payment_subscription": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -892,6 +902,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.payment.update_payment_link(request={
+        "payment_link": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -937,6 +948,9 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.payment.update_payment_payment(request={
+        "payment_payment": {
+            "currency": "USD",
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -982,6 +996,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.payment.update_payment_subscription(request={
+        "payment_subscription": {},
         "connection_id": "<id>",
         "id": "<id>",
     })

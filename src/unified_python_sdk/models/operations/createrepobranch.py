@@ -15,23 +15,23 @@ from unified_python_sdk.utils import (
 
 
 class CreateRepoBranchRequestTypedDict(TypedDict):
+    repo_branch: shared_repobranch.RepoBranchTypedDict
     connection_id: str
     r"""ID of the connection"""
-    repo_branch: NotRequired[shared_repobranch.RepoBranchTypedDict]
     fields: NotRequired[List[str]]
     r"""Comma-delimited fields to return"""
 
 
 class CreateRepoBranchRequest(BaseModel):
+    repo_branch: Annotated[
+        shared_repobranch.RepoBranch,
+        FieldMetadata(request=RequestMetadata(media_type="application/json")),
+    ]
+
     connection_id: Annotated[
         str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))
     ]
     r"""ID of the connection"""
-
-    repo_branch: Annotated[
-        Optional[shared_repobranch.RepoBranch],
-        FieldMetadata(request=RequestMetadata(media_type="application/json")),
-    ] = None
 
     fields: Annotated[
         Optional[List[str]],

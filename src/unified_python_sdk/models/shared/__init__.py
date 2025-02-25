@@ -128,6 +128,7 @@ from .atsdocument import (
     AtsDocumentTypedDict,
 )
 from .atsemail import AtsEmail, AtsEmailType, AtsEmailTypedDict
+from .atsgroup import AtsGroup, AtsGroupType, AtsGroupTypedDict
 from .atsinterview import (
     AtsInterview,
     AtsInterviewRaw,
@@ -339,6 +340,7 @@ from .integrationsupport import (
     ListCourseID,
     ListCustomerID,
     ListDealID,
+    ListEndLe,
     ListInstructorID,
     ListInterviewID,
     ListInvoiceID,
@@ -363,6 +365,7 @@ from .integrationsupport import (
     ListSortByName,
     ListSortByUpdatedAt,
     ListSpaceID,
+    ListStartGte,
     ListStudentID,
     ListTaskID,
     ListTicketID,
@@ -408,10 +411,10 @@ from .messagingchannel import MessagingChannel, MessagingChannelTypedDict
 from .messagingmember import MessagingMember, MessagingMemberTypedDict
 from .messagingmessage import MessagingMessage, MessagingMessageTypedDict
 from .metadatametadata import (
+    Format,
     MetadataMetadata,
     MetadataMetadataRaw,
     MetadataMetadataRawTypedDict,
-    MetadataMetadataType,
     MetadataMetadataTypedDict,
 )
 from .paymentlineitem import PaymentLineitem, PaymentLineitemTypedDict
@@ -748,6 +751,9 @@ __all__ = [
     "AtsEmail",
     "AtsEmailType",
     "AtsEmailTypedDict",
+    "AtsGroup",
+    "AtsGroupType",
+    "AtsGroupTypedDict",
     "AtsInterview",
     "AtsInterviewRaw",
     "AtsInterviewRawTypedDict",
@@ -870,6 +876,7 @@ __all__ = [
     "Event",
     "ExtraData",
     "ExtraDataTypedDict",
+    "Format",
     "Frequency",
     "FromWebhook",
     "GenaiContent",
@@ -950,6 +957,7 @@ __all__ = [
     "ListCourseID",
     "ListCustomerID",
     "ListDealID",
+    "ListEndLe",
     "ListInstructorID",
     "ListInterviewID",
     "ListInvoiceID",
@@ -974,6 +982,7 @@ __all__ = [
     "ListSortByName",
     "ListSortByUpdatedAt",
     "ListSpaceID",
+    "ListStartGte",
     "ListStudentID",
     "ListTaskID",
     "ListTicketID",
@@ -1017,7 +1026,6 @@ __all__ = [
     "MetadataMetadata",
     "MetadataMetadataRaw",
     "MetadataMetadataRawTypedDict",
-    "MetadataMetadataType",
     "MetadataMetadataTypedDict",
     "NativeWebhookParentID",
     "NativeWebhookProjectID",

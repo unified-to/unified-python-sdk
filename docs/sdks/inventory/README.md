@@ -29,6 +29,9 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.inventory.create_commerce_inventory(request={
+        "commerce_inventory": {
+            "available": 5165.08,
+        },
         "connection_id": "<id>",
     })
 
@@ -162,6 +165,9 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.inventory.patch_commerce_inventory(request={
+        "commerce_inventory": {
+            "available": 615.23,
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -252,6 +258,9 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.inventory.update_commerce_inventory(request={
+        "commerce_inventory": {
+            "available": 9360.02,
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })

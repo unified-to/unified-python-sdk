@@ -29,6 +29,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ticket.create_ticketing_ticket(request={
+        "ticketing_ticket": {},
         "connection_id": "<id>",
     })
 
@@ -162,6 +163,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ticket.patch_ticketing_ticket(request={
+        "ticketing_ticket": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -252,6 +254,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ticket.update_ticketing_ticket(request={
+        "ticketing_ticket": {},
         "connection_id": "<id>",
         "id": "<id>",
     })

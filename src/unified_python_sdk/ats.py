@@ -47,7 +47,7 @@ class Ats(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -55,7 +55,7 @@ class Ats(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.ats_activity, False, True, "json", Optional[shared.AtsActivity]
+                request.ats_activity, False, False, "json", shared.AtsActivity
             ),
             timeout_ms=timeout_ms,
         )
@@ -141,7 +141,7 @@ class Ats(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -149,7 +149,7 @@ class Ats(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.ats_activity, False, True, "json", Optional[shared.AtsActivity]
+                request.ats_activity, False, False, "json", shared.AtsActivity
             ),
             timeout_ms=timeout_ms,
         )
@@ -235,7 +235,7 @@ class Ats(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -243,11 +243,7 @@ class Ats(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.ats_application,
-                False,
-                True,
-                "json",
-                Optional[shared.AtsApplication],
+                request.ats_application, False, False, "json", shared.AtsApplication
             ),
             timeout_ms=timeout_ms,
         )
@@ -333,7 +329,7 @@ class Ats(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -341,11 +337,7 @@ class Ats(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.ats_application,
-                False,
-                True,
-                "json",
-                Optional[shared.AtsApplication],
+                request.ats_application, False, False, "json", shared.AtsApplication
             ),
             timeout_ms=timeout_ms,
         )
@@ -431,7 +423,7 @@ class Ats(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -439,11 +431,7 @@ class Ats(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.ats_candidate,
-                False,
-                True,
-                "json",
-                Optional[shared.AtsCandidate],
+                request.ats_candidate, False, False, "json", shared.AtsCandidate
             ),
             timeout_ms=timeout_ms,
         )
@@ -529,7 +517,7 @@ class Ats(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -537,11 +525,7 @@ class Ats(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.ats_candidate,
-                False,
-                True,
-                "json",
-                Optional[shared.AtsCandidate],
+                request.ats_candidate, False, False, "json", shared.AtsCandidate
             ),
             timeout_ms=timeout_ms,
         )
@@ -627,7 +611,7 @@ class Ats(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -635,7 +619,7 @@ class Ats(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.ats_document, False, True, "json", Optional[shared.AtsDocument]
+                request.ats_document, False, False, "json", shared.AtsDocument
             ),
             timeout_ms=timeout_ms,
         )
@@ -721,7 +705,7 @@ class Ats(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -729,7 +713,7 @@ class Ats(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.ats_document, False, True, "json", Optional[shared.AtsDocument]
+                request.ats_document, False, False, "json", shared.AtsDocument
             ),
             timeout_ms=timeout_ms,
         )
@@ -815,7 +799,7 @@ class Ats(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -823,11 +807,7 @@ class Ats(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.ats_interview,
-                False,
-                True,
-                "json",
-                Optional[shared.AtsInterview],
+                request.ats_interview, False, False, "json", shared.AtsInterview
             ),
             timeout_ms=timeout_ms,
         )
@@ -913,7 +893,7 @@ class Ats(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -921,11 +901,7 @@ class Ats(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.ats_interview,
-                False,
-                True,
-                "json",
-                Optional[shared.AtsInterview],
+                request.ats_interview, False, False, "json", shared.AtsInterview
             ),
             timeout_ms=timeout_ms,
         )
@@ -1010,7 +986,7 @@ class Ats(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -1018,7 +994,7 @@ class Ats(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.ats_job, False, True, "json", Optional[shared.AtsJob]
+                request.ats_job, False, False, "json", shared.AtsJob
             ),
             timeout_ms=timeout_ms,
         )
@@ -1101,7 +1077,7 @@ class Ats(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -1109,7 +1085,7 @@ class Ats(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.ats_job, False, True, "json", Optional[shared.AtsJob]
+                request.ats_job, False, False, "json", shared.AtsJob
             ),
             timeout_ms=timeout_ms,
         )
@@ -1193,7 +1169,7 @@ class Ats(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -1201,11 +1177,7 @@ class Ats(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.ats_scorecard,
-                False,
-                True,
-                "json",
-                Optional[shared.AtsScorecard],
+                request.ats_scorecard, False, False, "json", shared.AtsScorecard
             ),
             timeout_ms=timeout_ms,
         )
@@ -1291,7 +1263,7 @@ class Ats(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -1299,11 +1271,7 @@ class Ats(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.ats_scorecard,
-                False,
-                True,
-                "json",
-                Optional[shared.AtsScorecard],
+                request.ats_scorecard, False, False, "json", shared.AtsScorecard
             ),
             timeout_ms=timeout_ms,
         )
@@ -4473,7 +4441,7 @@ class Ats(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -4481,7 +4449,7 @@ class Ats(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.ats_activity, False, True, "json", Optional[shared.AtsActivity]
+                request.ats_activity, False, False, "json", shared.AtsActivity
             ),
             timeout_ms=timeout_ms,
         )
@@ -4567,7 +4535,7 @@ class Ats(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -4575,7 +4543,7 @@ class Ats(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.ats_activity, False, True, "json", Optional[shared.AtsActivity]
+                request.ats_activity, False, False, "json", shared.AtsActivity
             ),
             timeout_ms=timeout_ms,
         )
@@ -4661,7 +4629,7 @@ class Ats(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -4669,11 +4637,7 @@ class Ats(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.ats_application,
-                False,
-                True,
-                "json",
-                Optional[shared.AtsApplication],
+                request.ats_application, False, False, "json", shared.AtsApplication
             ),
             timeout_ms=timeout_ms,
         )
@@ -4759,7 +4723,7 @@ class Ats(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -4767,11 +4731,7 @@ class Ats(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.ats_application,
-                False,
-                True,
-                "json",
-                Optional[shared.AtsApplication],
+                request.ats_application, False, False, "json", shared.AtsApplication
             ),
             timeout_ms=timeout_ms,
         )
@@ -4857,7 +4817,7 @@ class Ats(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -4865,11 +4825,7 @@ class Ats(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.ats_candidate,
-                False,
-                True,
-                "json",
-                Optional[shared.AtsCandidate],
+                request.ats_candidate, False, False, "json", shared.AtsCandidate
             ),
             timeout_ms=timeout_ms,
         )
@@ -4955,7 +4911,7 @@ class Ats(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -4963,11 +4919,7 @@ class Ats(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.ats_candidate,
-                False,
-                True,
-                "json",
-                Optional[shared.AtsCandidate],
+                request.ats_candidate, False, False, "json", shared.AtsCandidate
             ),
             timeout_ms=timeout_ms,
         )
@@ -5053,7 +5005,7 @@ class Ats(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -5061,7 +5013,7 @@ class Ats(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.ats_document, False, True, "json", Optional[shared.AtsDocument]
+                request.ats_document, False, False, "json", shared.AtsDocument
             ),
             timeout_ms=timeout_ms,
         )
@@ -5147,7 +5099,7 @@ class Ats(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -5155,7 +5107,7 @@ class Ats(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.ats_document, False, True, "json", Optional[shared.AtsDocument]
+                request.ats_document, False, False, "json", shared.AtsDocument
             ),
             timeout_ms=timeout_ms,
         )
@@ -5241,7 +5193,7 @@ class Ats(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -5249,11 +5201,7 @@ class Ats(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.ats_interview,
-                False,
-                True,
-                "json",
-                Optional[shared.AtsInterview],
+                request.ats_interview, False, False, "json", shared.AtsInterview
             ),
             timeout_ms=timeout_ms,
         )
@@ -5339,7 +5287,7 @@ class Ats(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -5347,11 +5295,7 @@ class Ats(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.ats_interview,
-                False,
-                True,
-                "json",
-                Optional[shared.AtsInterview],
+                request.ats_interview, False, False, "json", shared.AtsInterview
             ),
             timeout_ms=timeout_ms,
         )
@@ -5436,7 +5380,7 @@ class Ats(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -5444,7 +5388,7 @@ class Ats(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.ats_job, False, True, "json", Optional[shared.AtsJob]
+                request.ats_job, False, False, "json", shared.AtsJob
             ),
             timeout_ms=timeout_ms,
         )
@@ -5527,7 +5471,7 @@ class Ats(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -5535,7 +5479,7 @@ class Ats(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.ats_job, False, True, "json", Optional[shared.AtsJob]
+                request.ats_job, False, False, "json", shared.AtsJob
             ),
             timeout_ms=timeout_ms,
         )
@@ -5619,7 +5563,7 @@ class Ats(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -5627,11 +5571,7 @@ class Ats(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.ats_scorecard,
-                False,
-                True,
-                "json",
-                Optional[shared.AtsScorecard],
+                request.ats_scorecard, False, False, "json", shared.AtsScorecard
             ),
             timeout_ms=timeout_ms,
         )
@@ -5717,7 +5657,7 @@ class Ats(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -5725,11 +5665,7 @@ class Ats(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.ats_scorecard,
-                False,
-                True,
-                "json",
-                Optional[shared.AtsScorecard],
+                request.ats_scorecard, False, False, "json", shared.AtsScorecard
             ),
             timeout_ms=timeout_ms,
         )
@@ -7157,7 +7093,7 @@ class Ats(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -7165,7 +7101,7 @@ class Ats(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.ats_activity, False, True, "json", Optional[shared.AtsActivity]
+                request.ats_activity, False, False, "json", shared.AtsActivity
             ),
             timeout_ms=timeout_ms,
         )
@@ -7251,7 +7187,7 @@ class Ats(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -7259,7 +7195,7 @@ class Ats(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.ats_activity, False, True, "json", Optional[shared.AtsActivity]
+                request.ats_activity, False, False, "json", shared.AtsActivity
             ),
             timeout_ms=timeout_ms,
         )
@@ -7345,7 +7281,7 @@ class Ats(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -7353,11 +7289,7 @@ class Ats(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.ats_application,
-                False,
-                True,
-                "json",
-                Optional[shared.AtsApplication],
+                request.ats_application, False, False, "json", shared.AtsApplication
             ),
             timeout_ms=timeout_ms,
         )
@@ -7443,7 +7375,7 @@ class Ats(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -7451,11 +7383,7 @@ class Ats(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.ats_application,
-                False,
-                True,
-                "json",
-                Optional[shared.AtsApplication],
+                request.ats_application, False, False, "json", shared.AtsApplication
             ),
             timeout_ms=timeout_ms,
         )
@@ -7541,7 +7469,7 @@ class Ats(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -7549,11 +7477,7 @@ class Ats(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.ats_candidate,
-                False,
-                True,
-                "json",
-                Optional[shared.AtsCandidate],
+                request.ats_candidate, False, False, "json", shared.AtsCandidate
             ),
             timeout_ms=timeout_ms,
         )
@@ -7639,7 +7563,7 @@ class Ats(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -7647,11 +7571,7 @@ class Ats(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.ats_candidate,
-                False,
-                True,
-                "json",
-                Optional[shared.AtsCandidate],
+                request.ats_candidate, False, False, "json", shared.AtsCandidate
             ),
             timeout_ms=timeout_ms,
         )
@@ -7737,7 +7657,7 @@ class Ats(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -7745,7 +7665,7 @@ class Ats(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.ats_document, False, True, "json", Optional[shared.AtsDocument]
+                request.ats_document, False, False, "json", shared.AtsDocument
             ),
             timeout_ms=timeout_ms,
         )
@@ -7831,7 +7751,7 @@ class Ats(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -7839,7 +7759,7 @@ class Ats(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.ats_document, False, True, "json", Optional[shared.AtsDocument]
+                request.ats_document, False, False, "json", shared.AtsDocument
             ),
             timeout_ms=timeout_ms,
         )
@@ -7925,7 +7845,7 @@ class Ats(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -7933,11 +7853,7 @@ class Ats(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.ats_interview,
-                False,
-                True,
-                "json",
-                Optional[shared.AtsInterview],
+                request.ats_interview, False, False, "json", shared.AtsInterview
             ),
             timeout_ms=timeout_ms,
         )
@@ -8023,7 +7939,7 @@ class Ats(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -8031,11 +7947,7 @@ class Ats(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.ats_interview,
-                False,
-                True,
-                "json",
-                Optional[shared.AtsInterview],
+                request.ats_interview, False, False, "json", shared.AtsInterview
             ),
             timeout_ms=timeout_ms,
         )
@@ -8120,7 +8032,7 @@ class Ats(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -8128,7 +8040,7 @@ class Ats(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.ats_job, False, True, "json", Optional[shared.AtsJob]
+                request.ats_job, False, False, "json", shared.AtsJob
             ),
             timeout_ms=timeout_ms,
         )
@@ -8211,7 +8123,7 @@ class Ats(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -8219,7 +8131,7 @@ class Ats(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.ats_job, False, True, "json", Optional[shared.AtsJob]
+                request.ats_job, False, False, "json", shared.AtsJob
             ),
             timeout_ms=timeout_ms,
         )
@@ -8303,7 +8215,7 @@ class Ats(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -8311,11 +8223,7 @@ class Ats(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.ats_scorecard,
-                False,
-                True,
-                "json",
-                Optional[shared.AtsScorecard],
+                request.ats_scorecard, False, False, "json", shared.AtsScorecard
             ),
             timeout_ms=timeout_ms,
         )
@@ -8401,7 +8309,7 @@ class Ats(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -8409,11 +8317,7 @@ class Ats(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.ats_scorecard,
-                False,
-                True,
-                "json",
-                Optional[shared.AtsScorecard],
+                request.ats_scorecard, False, False, "json", shared.AtsScorecard
             ),
             timeout_ms=timeout_ms,
         )

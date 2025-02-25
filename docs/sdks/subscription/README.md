@@ -29,6 +29,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.subscription.create_payment_subscription(request={
+        "payment_subscription": {},
         "connection_id": "<id>",
     })
 
@@ -162,6 +163,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.subscription.patch_payment_subscription(request={
+        "payment_subscription": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -252,6 +254,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.subscription.update_payment_subscription(request={
+        "payment_subscription": {},
         "connection_id": "<id>",
         "id": "<id>",
     })

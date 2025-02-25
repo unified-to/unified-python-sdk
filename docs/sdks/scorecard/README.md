@@ -29,6 +29,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.scorecard.create_ats_scorecard(request={
+        "ats_scorecard": {},
         "connection_id": "<id>",
     })
 
@@ -162,6 +163,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.scorecard.patch_ats_scorecard(request={
+        "ats_scorecard": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -252,6 +254,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.scorecard.update_ats_scorecard(request={
+        "ats_scorecard": {},
         "connection_id": "<id>",
         "id": "<id>",
     })

@@ -29,6 +29,10 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.class_.create_lms_class(request={
+        "lms_class": {
+            "course_id": "<id>",
+            "name": "<value>",
+        },
         "connection_id": "<id>",
     })
 
@@ -162,6 +166,10 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.class_.patch_lms_class(request={
+        "lms_class": {
+            "course_id": "<id>",
+            "name": "<value>",
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -252,6 +260,10 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.class_.update_lms_class(request={
+        "lms_class": {
+            "course_id": "<id>",
+            "name": "<value>",
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })

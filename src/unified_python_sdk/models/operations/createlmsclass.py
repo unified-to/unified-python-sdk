@@ -15,23 +15,23 @@ from unified_python_sdk.utils import (
 
 
 class CreateLmsClassRequestTypedDict(TypedDict):
+    lms_class: shared_lmsclass.LmsClassTypedDict
     connection_id: str
     r"""ID of the connection"""
-    lms_class: NotRequired[shared_lmsclass.LmsClassTypedDict]
     fields: NotRequired[List[str]]
     r"""Comma-delimited fields to return"""
 
 
 class CreateLmsClassRequest(BaseModel):
+    lms_class: Annotated[
+        shared_lmsclass.LmsClass,
+        FieldMetadata(request=RequestMetadata(media_type="application/json")),
+    ]
+
     connection_id: Annotated[
         str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))
     ]
     r"""ID of the connection"""
-
-    lms_class: Annotated[
-        Optional[shared_lmsclass.LmsClass],
-        FieldMetadata(request=RequestMetadata(media_type="application/json")),
-    ] = None
 
     fields: Annotated[
         Optional[List[str]],

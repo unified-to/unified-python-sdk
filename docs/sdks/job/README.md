@@ -29,6 +29,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.job.create_ats_job(request={
+        "ats_job": {},
         "connection_id": "<id>",
     })
 
@@ -162,6 +163,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.job.patch_ats_job(request={
+        "ats_job": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -252,6 +254,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.job.update_ats_job(request={
+        "ats_job": {},
         "connection_id": "<id>",
         "id": "<id>",
     })

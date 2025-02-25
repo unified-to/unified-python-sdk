@@ -41,6 +41,10 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.task.create_task_comment(request={
+        "task_comment": {
+            "task_id": "<id>",
+            "text": "<value>",
+        },
         "connection_id": "<id>",
     })
 
@@ -85,6 +89,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.task.create_task_project(request={
+        "task_project": {},
         "connection_id": "<id>",
     })
 
@@ -129,6 +134,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.task.create_task_task(request={
+        "task_task": {},
         "connection_id": "<id>",
     })
 
@@ -440,6 +446,10 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.task.patch_task_comment(request={
+        "task_comment": {
+            "task_id": "<id>",
+            "text": "<value>",
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -485,6 +495,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.task.patch_task_project(request={
+        "task_project": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -530,6 +541,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.task.patch_task_task(request={
+        "task_task": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -710,6 +722,10 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.task.update_task_comment(request={
+        "task_comment": {
+            "task_id": "<id>",
+            "text": "<value>",
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -755,6 +771,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.task.update_task_project(request={
+        "task_project": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -800,6 +817,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.task.update_task_task(request={
+        "task_task": {},
         "connection_id": "<id>",
         "id": "<id>",
     })

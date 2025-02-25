@@ -17,19 +17,23 @@ from unified_python_sdk.utils import (
 
 
 class PatchCommerceCollectionRequestTypedDict(TypedDict):
+    commerce_collection: shared_commercecollection.CommerceCollectionTypedDict
+    r"""A collection of items/products/services"""
     connection_id: str
     r"""ID of the connection"""
     id: str
     r"""ID of the Collection"""
-    commerce_collection: NotRequired[
-        shared_commercecollection.CommerceCollectionTypedDict
-    ]
-    r"""A collection of items/products/services"""
     fields: NotRequired[List[str]]
     r"""Comma-delimited fields to return"""
 
 
 class PatchCommerceCollectionRequest(BaseModel):
+    commerce_collection: Annotated[
+        shared_commercecollection.CommerceCollection,
+        FieldMetadata(request=RequestMetadata(media_type="application/json")),
+    ]
+    r"""A collection of items/products/services"""
+
     connection_id: Annotated[
         str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))
     ]
@@ -39,12 +43,6 @@ class PatchCommerceCollectionRequest(BaseModel):
         str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))
     ]
     r"""ID of the Collection"""
-
-    commerce_collection: Annotated[
-        Optional[shared_commercecollection.CommerceCollection],
-        FieldMetadata(request=RequestMetadata(media_type="application/json")),
-    ] = None
-    r"""A collection of items/products/services"""
 
     fields: Annotated[
         Optional[List[str]],

@@ -17,17 +17,23 @@ from unified_python_sdk.utils import (
 
 
 class PatchAccountingAccountRequestTypedDict(TypedDict):
+    accounting_account: shared_accountingaccount.AccountingAccountTypedDict
+    r"""Chart of accounts"""
     connection_id: str
     r"""ID of the connection"""
     id: str
     r"""ID of the Account"""
-    accounting_account: NotRequired[shared_accountingaccount.AccountingAccountTypedDict]
-    r"""Chart of accounts"""
     fields: NotRequired[List[str]]
     r"""Comma-delimited fields to return"""
 
 
 class PatchAccountingAccountRequest(BaseModel):
+    accounting_account: Annotated[
+        shared_accountingaccount.AccountingAccount,
+        FieldMetadata(request=RequestMetadata(media_type="application/json")),
+    ]
+    r"""Chart of accounts"""
+
     connection_id: Annotated[
         str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))
     ]
@@ -37,12 +43,6 @@ class PatchAccountingAccountRequest(BaseModel):
         str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))
     ]
     r"""ID of the Account"""
-
-    accounting_account: Annotated[
-        Optional[shared_accountingaccount.AccountingAccount],
-        FieldMetadata(request=RequestMetadata(media_type="application/json")),
-    ] = None
-    r"""Chart of accounts"""
 
     fields: Annotated[
         Optional[List[str]],

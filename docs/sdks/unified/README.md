@@ -42,7 +42,19 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.unified.create_unified_connection()
+    res = unified_to.unified.create_unified_connection(request={
+        "categories": [
+            shared.PropertyConnectionCategories.ACCOUNTING,
+            shared.PropertyConnectionCategories.MARTECH,
+            shared.PropertyConnectionCategories.MARTECH,
+        ],
+        "integration_type": "<value>",
+        "permissions": [
+            shared.PropertyConnectionPermissions.LMS_COURSE_READ,
+            shared.PropertyConnectionPermissions.SCIM_USERS_READ,
+        ],
+        "environment": "Production",
+    })
 
     assert res.connection is not None
 
@@ -84,7 +96,14 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.unified.create_unified_webhook(request={})
+    res = unified_to.unified.create_unified_webhook(request={
+        "webhook": {
+            "connection_id": "<id>",
+            "event": shared.Event.CREATED,
+            "object_type": shared.ObjectType.HRIS_EMPLOYEE,
+            "environment": "Production",
+        },
+    })
 
     assert res.webhook is not None
 
@@ -558,6 +577,17 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.unified.patch_unified_connection(request={
+        "connection": {
+            "categories": [
+                shared.PropertyConnectionCategories.METADATA,
+                shared.PropertyConnectionCategories.CRM,
+            ],
+            "integration_type": "<value>",
+            "permissions": [
+
+            ],
+            "environment": "Production",
+        },
         "id": "<id>",
     })
 
@@ -602,6 +632,12 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.unified.patch_unified_webhook(request={
+        "webhook": {
+            "connection_id": "<id>",
+            "event": shared.Event.DELETED,
+            "object_type": shared.ObjectType.CRM_DEAL,
+            "environment": "Production",
+        },
         "id": "<id>",
     })
 
@@ -778,6 +814,18 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.unified.update_unified_connection(request={
+        "connection": {
+            "categories": [
+                shared.PropertyConnectionCategories.METADATA,
+                shared.PropertyConnectionCategories.ACCOUNTING,
+                shared.PropertyConnectionCategories.METADATA,
+            ],
+            "integration_type": "<value>",
+            "permissions": [
+
+            ],
+            "environment": "Production",
+        },
         "id": "<id>",
     })
 
@@ -822,6 +870,12 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.unified.update_unified_webhook(request={
+        "webhook": {
+            "connection_id": "<id>",
+            "event": shared.Event.CREATED,
+            "object_type": shared.ObjectType.PAYMENT_LINK,
+            "environment": "Production",
+        },
         "id": "<id>",
     })
 

@@ -10,21 +10,21 @@ from unified_python_sdk.utils import FieldMetadata, PathParamMetadata, RequestMe
 
 
 class CreateScimGroupsRequestTypedDict(TypedDict):
+    scim_group: shared_scimgroup.ScimGroupTypedDict
     connection_id: str
     r"""ID of the connection"""
-    scim_group: NotRequired[shared_scimgroup.ScimGroupTypedDict]
 
 
 class CreateScimGroupsRequest(BaseModel):
+    scim_group: Annotated[
+        shared_scimgroup.ScimGroup,
+        FieldMetadata(request=RequestMetadata(media_type="application/json")),
+    ]
+
     connection_id: Annotated[
         str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))
     ]
     r"""ID of the connection"""
-
-    scim_group: Annotated[
-        Optional[shared_scimgroup.ScimGroup],
-        FieldMetadata(request=RequestMetadata(media_type="application/json")),
-    ] = None
 
 
 class CreateScimGroupsResponseTypedDict(TypedDict):

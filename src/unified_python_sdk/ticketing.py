@@ -49,7 +49,7 @@ class Ticketing(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -59,9 +59,9 @@ class Ticketing(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.ticketing_customer,
                 False,
-                True,
+                False,
                 "json",
-                Optional[shared.TicketingCustomer],
+                shared.TicketingCustomer,
             ),
             timeout_ms=timeout_ms,
         )
@@ -149,7 +149,7 @@ class Ticketing(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -159,9 +159,9 @@ class Ticketing(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.ticketing_customer,
                 False,
-                True,
+                False,
                 "json",
-                Optional[shared.TicketingCustomer],
+                shared.TicketingCustomer,
             ),
             timeout_ms=timeout_ms,
         )
@@ -247,7 +247,7 @@ class Ticketing(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -255,11 +255,7 @@ class Ticketing(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.ticketing_note,
-                False,
-                True,
-                "json",
-                Optional[shared.TicketingNote],
+                request.ticketing_note, False, False, "json", shared.TicketingNote
             ),
             timeout_ms=timeout_ms,
         )
@@ -345,7 +341,7 @@ class Ticketing(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -353,11 +349,7 @@ class Ticketing(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.ticketing_note,
-                False,
-                True,
-                "json",
-                Optional[shared.TicketingNote],
+                request.ticketing_note, False, False, "json", shared.TicketingNote
             ),
             timeout_ms=timeout_ms,
         )
@@ -443,7 +435,7 @@ class Ticketing(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -451,11 +443,7 @@ class Ticketing(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.ticketing_ticket,
-                False,
-                True,
-                "json",
-                Optional[shared.TicketingTicket],
+                request.ticketing_ticket, False, False, "json", shared.TicketingTicket
             ),
             timeout_ms=timeout_ms,
         )
@@ -541,7 +529,7 @@ class Ticketing(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -549,11 +537,7 @@ class Ticketing(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.ticketing_ticket,
-                False,
-                True,
-                "json",
-                Optional[shared.TicketingTicket],
+                request.ticketing_ticket, False, False, "json", shared.TicketingTicket
             ),
             timeout_ms=timeout_ms,
         )
@@ -1731,7 +1715,7 @@ class Ticketing(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -1741,9 +1725,9 @@ class Ticketing(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.ticketing_customer,
                 False,
-                True,
+                False,
                 "json",
-                Optional[shared.TicketingCustomer],
+                shared.TicketingCustomer,
             ),
             timeout_ms=timeout_ms,
         )
@@ -1829,7 +1813,7 @@ class Ticketing(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -1839,9 +1823,9 @@ class Ticketing(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.ticketing_customer,
                 False,
-                True,
+                False,
                 "json",
-                Optional[shared.TicketingCustomer],
+                shared.TicketingCustomer,
             ),
             timeout_ms=timeout_ms,
         )
@@ -1927,7 +1911,7 @@ class Ticketing(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -1935,11 +1919,7 @@ class Ticketing(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.ticketing_note,
-                False,
-                True,
-                "json",
-                Optional[shared.TicketingNote],
+                request.ticketing_note, False, False, "json", shared.TicketingNote
             ),
             timeout_ms=timeout_ms,
         )
@@ -2025,7 +2005,7 @@ class Ticketing(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -2033,11 +2013,7 @@ class Ticketing(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.ticketing_note,
-                False,
-                True,
-                "json",
-                Optional[shared.TicketingNote],
+                request.ticketing_note, False, False, "json", shared.TicketingNote
             ),
             timeout_ms=timeout_ms,
         )
@@ -2123,7 +2099,7 @@ class Ticketing(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -2131,11 +2107,7 @@ class Ticketing(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.ticketing_ticket,
-                False,
-                True,
-                "json",
-                Optional[shared.TicketingTicket],
+                request.ticketing_ticket, False, False, "json", shared.TicketingTicket
             ),
             timeout_ms=timeout_ms,
         )
@@ -2221,7 +2193,7 @@ class Ticketing(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -2229,11 +2201,7 @@ class Ticketing(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.ticketing_ticket,
-                False,
-                True,
-                "json",
-                Optional[shared.TicketingTicket],
+                request.ticketing_ticket, False, False, "json", shared.TicketingTicket
             ),
             timeout_ms=timeout_ms,
         )
@@ -2901,7 +2869,7 @@ class Ticketing(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -2911,9 +2879,9 @@ class Ticketing(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.ticketing_customer,
                 False,
-                True,
+                False,
                 "json",
-                Optional[shared.TicketingCustomer],
+                shared.TicketingCustomer,
             ),
             timeout_ms=timeout_ms,
         )
@@ -3001,7 +2969,7 @@ class Ticketing(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -3011,9 +2979,9 @@ class Ticketing(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.ticketing_customer,
                 False,
-                True,
+                False,
                 "json",
-                Optional[shared.TicketingCustomer],
+                shared.TicketingCustomer,
             ),
             timeout_ms=timeout_ms,
         )
@@ -3099,7 +3067,7 @@ class Ticketing(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -3107,11 +3075,7 @@ class Ticketing(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.ticketing_note,
-                False,
-                True,
-                "json",
-                Optional[shared.TicketingNote],
+                request.ticketing_note, False, False, "json", shared.TicketingNote
             ),
             timeout_ms=timeout_ms,
         )
@@ -3197,7 +3161,7 @@ class Ticketing(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -3205,11 +3169,7 @@ class Ticketing(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.ticketing_note,
-                False,
-                True,
-                "json",
-                Optional[shared.TicketingNote],
+                request.ticketing_note, False, False, "json", shared.TicketingNote
             ),
             timeout_ms=timeout_ms,
         )
@@ -3295,7 +3255,7 @@ class Ticketing(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -3303,11 +3263,7 @@ class Ticketing(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.ticketing_ticket,
-                False,
-                True,
-                "json",
-                Optional[shared.TicketingTicket],
+                request.ticketing_ticket, False, False, "json", shared.TicketingTicket
             ),
             timeout_ms=timeout_ms,
         )
@@ -3393,7 +3349,7 @@ class Ticketing(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -3401,11 +3357,7 @@ class Ticketing(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.ticketing_ticket,
-                False,
-                True,
-                "json",
-                Optional[shared.TicketingTicket],
+                request.ticketing_ticket, False, False, "json", shared.TicketingTicket
             ),
             timeout_ms=timeout_ms,
         )

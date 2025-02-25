@@ -29,6 +29,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.item.create_commerce_item(request={
+        "commerce_item": {},
         "connection_id": "<id>",
     })
 
@@ -162,6 +163,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.item.patch_commerce_item(request={
+        "commerce_item": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -252,6 +254,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.item.update_commerce_item(request={
+        "commerce_item": {},
         "connection_id": "<id>",
         "id": "<id>",
     })

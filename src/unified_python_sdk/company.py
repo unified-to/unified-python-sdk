@@ -47,7 +47,7 @@ class Company(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -55,7 +55,7 @@ class Company(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.crm_company, False, True, "json", Optional[shared.CrmCompany]
+                request.crm_company, False, False, "json", shared.CrmCompany
             ),
             timeout_ms=timeout_ms,
         )
@@ -141,7 +141,7 @@ class Company(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -149,7 +149,7 @@ class Company(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.crm_company, False, True, "json", Optional[shared.CrmCompany]
+                request.crm_company, False, False, "json", shared.CrmCompany
             ),
             timeout_ms=timeout_ms,
         )
@@ -235,7 +235,7 @@ class Company(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -243,7 +243,7 @@ class Company(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.hris_company, False, True, "json", Optional[shared.HrisCompany]
+                request.hris_company, False, False, "json", shared.HrisCompany
             ),
             timeout_ms=timeout_ms,
         )
@@ -329,7 +329,7 @@ class Company(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -337,7 +337,7 @@ class Company(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.hris_company, False, True, "json", Optional[shared.HrisCompany]
+                request.hris_company, False, False, "json", shared.HrisCompany
             ),
             timeout_ms=timeout_ms,
         )
@@ -1691,7 +1691,7 @@ class Company(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -1699,7 +1699,7 @@ class Company(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.crm_company, False, True, "json", Optional[shared.CrmCompany]
+                request.crm_company, False, False, "json", shared.CrmCompany
             ),
             timeout_ms=timeout_ms,
         )
@@ -1785,7 +1785,7 @@ class Company(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -1793,7 +1793,7 @@ class Company(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.crm_company, False, True, "json", Optional[shared.CrmCompany]
+                request.crm_company, False, False, "json", shared.CrmCompany
             ),
             timeout_ms=timeout_ms,
         )
@@ -1879,7 +1879,7 @@ class Company(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -1887,7 +1887,7 @@ class Company(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.hris_company, False, True, "json", Optional[shared.HrisCompany]
+                request.hris_company, False, False, "json", shared.HrisCompany
             ),
             timeout_ms=timeout_ms,
         )
@@ -1973,7 +1973,7 @@ class Company(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -1981,7 +1981,7 @@ class Company(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.hris_company, False, True, "json", Optional[shared.HrisCompany]
+                request.hris_company, False, False, "json", shared.HrisCompany
             ),
             timeout_ms=timeout_ms,
         )
@@ -2451,7 +2451,7 @@ class Company(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -2459,7 +2459,7 @@ class Company(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.crm_company, False, True, "json", Optional[shared.CrmCompany]
+                request.crm_company, False, False, "json", shared.CrmCompany
             ),
             timeout_ms=timeout_ms,
         )
@@ -2545,7 +2545,7 @@ class Company(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -2553,7 +2553,7 @@ class Company(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.crm_company, False, True, "json", Optional[shared.CrmCompany]
+                request.crm_company, False, False, "json", shared.CrmCompany
             ),
             timeout_ms=timeout_ms,
         )
@@ -2639,7 +2639,7 @@ class Company(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -2647,7 +2647,7 @@ class Company(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.hris_company, False, True, "json", Optional[shared.HrisCompany]
+                request.hris_company, False, False, "json", shared.HrisCompany
             ),
             timeout_ms=timeout_ms,
         )
@@ -2733,7 +2733,7 @@ class Company(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -2741,7 +2741,7 @@ class Company(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.hris_company, False, True, "json", Optional[shared.HrisCompany]
+                request.hris_company, False, False, "json", shared.HrisCompany
             ),
             timeout_ms=timeout_ms,
         )

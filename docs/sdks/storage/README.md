@@ -29,6 +29,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.storage.create_storage_file(request={
+        "storage_file": {},
         "connection_id": "<id>",
     })
 
@@ -162,6 +163,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.storage.patch_storage_file(request={
+        "storage_file": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -252,6 +254,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.storage.update_storage_file(request={
+        "storage_file": {},
         "connection_id": "<id>",
         "id": "<id>",
     })

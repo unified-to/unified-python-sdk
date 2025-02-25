@@ -29,6 +29,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.application.create_ats_application(request={
+        "ats_application": {},
         "connection_id": "<id>",
     })
 
@@ -162,6 +163,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.application.patch_ats_application(request={
+        "ats_application": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -252,6 +254,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.application.update_ats_application(request={
+        "ats_application": {},
         "connection_id": "<id>",
         "id": "<id>",
     })

@@ -12,7 +12,7 @@ class Unified(BaseSDK):
     def create_unified_connection(
         self,
         *,
-        request: Optional[Union[shared.Connection, shared.ConnectionTypedDict]] = None,
+        request: Union[shared.Connection, shared.ConnectionTypedDict],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
@@ -37,8 +37,8 @@ class Unified(BaseSDK):
             base_url = server_url
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, Optional[shared.Connection])
-        request = cast(Optional[shared.Connection], request)
+            request = utils.unmarshal(request, shared.Connection)
+        request = cast(shared.Connection, request)
 
         req = self._build_request(
             method="POST",
@@ -46,7 +46,7 @@ class Unified(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=False,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -54,7 +54,7 @@ class Unified(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request, False, True, "json", Optional[shared.Connection]
+                request, False, False, "json", shared.Connection
             ),
             timeout_ms=timeout_ms,
         )
@@ -105,7 +105,7 @@ class Unified(BaseSDK):
     async def create_unified_connection_async(
         self,
         *,
-        request: Optional[Union[shared.Connection, shared.ConnectionTypedDict]] = None,
+        request: Union[shared.Connection, shared.ConnectionTypedDict],
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
@@ -130,8 +130,8 @@ class Unified(BaseSDK):
             base_url = server_url
 
         if not isinstance(request, BaseModel):
-            request = utils.unmarshal(request, Optional[shared.Connection])
-        request = cast(Optional[shared.Connection], request)
+            request = utils.unmarshal(request, shared.Connection)
+        request = cast(shared.Connection, request)
 
         req = self._build_request_async(
             method="POST",
@@ -139,7 +139,7 @@ class Unified(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=False,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -147,7 +147,7 @@ class Unified(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request, False, True, "json", Optional[shared.Connection]
+                request, False, False, "json", shared.Connection
             ),
             timeout_ms=timeout_ms,
         )
@@ -235,7 +235,7 @@ class Unified(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=False,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -243,7 +243,7 @@ class Unified(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.webhook, False, True, "json", Optional[shared.Webhook]
+                request.webhook, False, False, "json", shared.Webhook
             ),
             timeout_ms=timeout_ms,
         )
@@ -329,7 +329,7 @@ class Unified(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=False,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -337,7 +337,7 @@ class Unified(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.webhook, False, True, "json", Optional[shared.Webhook]
+                request.webhook, False, False, "json", shared.Webhook
             ),
             timeout_ms=timeout_ms,
         )
@@ -2249,7 +2249,7 @@ class Unified(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -2257,7 +2257,7 @@ class Unified(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.connection, False, True, "json", Optional[shared.Connection]
+                request.connection, False, False, "json", shared.Connection
             ),
             timeout_ms=timeout_ms,
         )
@@ -2343,7 +2343,7 @@ class Unified(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -2351,7 +2351,7 @@ class Unified(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.connection, False, True, "json", Optional[shared.Connection]
+                request.connection, False, False, "json", shared.Connection
             ),
             timeout_ms=timeout_ms,
         )
@@ -2437,7 +2437,7 @@ class Unified(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -2445,7 +2445,7 @@ class Unified(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.webhook, False, True, "json", Optional[shared.Webhook]
+                request.webhook, False, False, "json", shared.Webhook
             ),
             timeout_ms=timeout_ms,
         )
@@ -2529,7 +2529,7 @@ class Unified(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -2537,7 +2537,7 @@ class Unified(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.webhook, False, True, "json", Optional[shared.Webhook]
+                request.webhook, False, False, "json", shared.Webhook
             ),
             timeout_ms=timeout_ms,
         )
@@ -3207,7 +3207,7 @@ class Unified(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -3215,7 +3215,7 @@ class Unified(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.connection, False, True, "json", Optional[shared.Connection]
+                request.connection, False, False, "json", shared.Connection
             ),
             timeout_ms=timeout_ms,
         )
@@ -3303,7 +3303,7 @@ class Unified(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -3311,7 +3311,7 @@ class Unified(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.connection, False, True, "json", Optional[shared.Connection]
+                request.connection, False, False, "json", shared.Connection
             ),
             timeout_ms=timeout_ms,
         )
@@ -3397,7 +3397,7 @@ class Unified(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -3405,7 +3405,7 @@ class Unified(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.webhook, False, True, "json", Optional[shared.Webhook]
+                request.webhook, False, False, "json", shared.Webhook
             ),
             timeout_ms=timeout_ms,
         )
@@ -3489,7 +3489,7 @@ class Unified(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -3497,7 +3497,7 @@ class Unified(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.webhook, False, True, "json", Optional[shared.Webhook]
+                request.webhook, False, False, "json", shared.Webhook
             ),
             timeout_ms=timeout_ms,
         )

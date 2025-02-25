@@ -15,23 +15,23 @@ from unified_python_sdk.utils import (
 
 
 class CreateTaskTaskRequestTypedDict(TypedDict):
+    task_task: shared_tasktask.TaskTaskTypedDict
     connection_id: str
     r"""ID of the connection"""
-    task_task: NotRequired[shared_tasktask.TaskTaskTypedDict]
     fields: NotRequired[List[str]]
     r"""Comma-delimited fields to return"""
 
 
 class CreateTaskTaskRequest(BaseModel):
+    task_task: Annotated[
+        shared_tasktask.TaskTask,
+        FieldMetadata(request=RequestMetadata(media_type="application/json")),
+    ]
+
     connection_id: Annotated[
         str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))
     ]
     r"""ID of the connection"""
-
-    task_task: Annotated[
-        Optional[shared_tasktask.TaskTask],
-        FieldMetadata(request=RequestMetadata(media_type="application/json")),
-    ] = None
 
     fields: Annotated[
         Optional[List[str]],

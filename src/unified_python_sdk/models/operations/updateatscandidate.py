@@ -15,16 +15,21 @@ from unified_python_sdk.utils import (
 
 
 class UpdateAtsCandidateRequestTypedDict(TypedDict):
+    ats_candidate: shared_atscandidate.AtsCandidateTypedDict
     connection_id: str
     r"""ID of the connection"""
     id: str
     r"""ID of the Candidate"""
-    ats_candidate: NotRequired[shared_atscandidate.AtsCandidateTypedDict]
     fields: NotRequired[List[str]]
     r"""Comma-delimited fields to return"""
 
 
 class UpdateAtsCandidateRequest(BaseModel):
+    ats_candidate: Annotated[
+        shared_atscandidate.AtsCandidate,
+        FieldMetadata(request=RequestMetadata(media_type="application/json")),
+    ]
+
     connection_id: Annotated[
         str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))
     ]
@@ -34,11 +39,6 @@ class UpdateAtsCandidateRequest(BaseModel):
         str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))
     ]
     r"""ID of the Candidate"""
-
-    ats_candidate: Annotated[
-        Optional[shared_atscandidate.AtsCandidate],
-        FieldMetadata(request=RequestMetadata(media_type="application/json")),
-    ] = None
 
     fields: Annotated[
         Optional[List[str]],

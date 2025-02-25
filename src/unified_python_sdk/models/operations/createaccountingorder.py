@@ -15,23 +15,23 @@ from unified_python_sdk.utils import (
 
 
 class CreateAccountingOrderRequestTypedDict(TypedDict):
+    accounting_order: shared_accountingorder.AccountingOrderTypedDict
     connection_id: str
     r"""ID of the connection"""
-    accounting_order: NotRequired[shared_accountingorder.AccountingOrderTypedDict]
     fields: NotRequired[List[str]]
     r"""Comma-delimited fields to return"""
 
 
 class CreateAccountingOrderRequest(BaseModel):
+    accounting_order: Annotated[
+        shared_accountingorder.AccountingOrder,
+        FieldMetadata(request=RequestMetadata(media_type="application/json")),
+    ]
+
     connection_id: Annotated[
         str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))
     ]
     r"""ID of the connection"""
-
-    accounting_order: Annotated[
-        Optional[shared_accountingorder.AccountingOrder],
-        FieldMetadata(request=RequestMetadata(media_type="application/json")),
-    ] = None
 
     fields: Annotated[
         Optional[List[str]],

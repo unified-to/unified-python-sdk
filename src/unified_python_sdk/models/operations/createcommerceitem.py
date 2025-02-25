@@ -15,23 +15,23 @@ from unified_python_sdk.utils import (
 
 
 class CreateCommerceItemRequestTypedDict(TypedDict):
+    commerce_item: shared_commerceitem.CommerceItemTypedDict
     connection_id: str
     r"""ID of the connection"""
-    commerce_item: NotRequired[shared_commerceitem.CommerceItemTypedDict]
     fields: NotRequired[List[str]]
     r"""Comma-delimited fields to return"""
 
 
 class CreateCommerceItemRequest(BaseModel):
+    commerce_item: Annotated[
+        shared_commerceitem.CommerceItem,
+        FieldMetadata(request=RequestMetadata(media_type="application/json")),
+    ]
+
     connection_id: Annotated[
         str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))
     ]
     r"""ID of the connection"""
-
-    commerce_item: Annotated[
-        Optional[shared_commerceitem.CommerceItem],
-        FieldMetadata(request=RequestMetadata(media_type="application/json")),
-    ] = None
 
     fields: Annotated[
         Optional[List[str]],

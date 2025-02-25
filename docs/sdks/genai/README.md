@@ -25,6 +25,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.genai.create_genai_prompt(request={
+        "genai_prompt": {},
         "connection_id": "<id>",
     })
 

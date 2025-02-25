@@ -36,6 +36,8 @@ class AtsActivityTypedDict(TypedDict):
     created_at: NotRequired[datetime]
     description: NotRequired[str]
     document_id: NotRequired[str]
+    document_ids: NotRequired[List[str]]
+    r"""IDs for AtsDocument.get"""
     from_: NotRequired[PropertyAtsActivityFromTypedDict]
     id: NotRequired[str]
     interview_id: NotRequired[str]
@@ -65,6 +67,9 @@ class AtsActivity(BaseModel):
     description: Optional[str] = None
 
     document_id: Optional[str] = None
+
+    document_ids: Optional[List[str]] = None
+    r"""IDs for AtsDocument.get"""
 
     from_: Annotated[
         Optional[PropertyAtsActivityFrom], pydantic.Field(alias="from")

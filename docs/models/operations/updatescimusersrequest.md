@@ -3,8 +3,8 @@
 
 ## Fields
 
-| Field                                                        | Type                                                         | Required                                                     | Description                                                  |
-| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| `connection_id`                                              | *str*                                                        | :heavy_check_mark:                                           | ID of the connection                                         |
-| `id`                                                         | *str*                                                        | :heavy_check_mark:                                           | ID of the User                                               |
-| `scim_user`                                                  | [Optional[shared.ScimUser]](../../models/shared/scimuser.md) | :heavy_minus_sign:                                           | N/A                                                          |
+| Field                                              | Type                                               | Required                                           | Description                                        |
+| -------------------------------------------------- | -------------------------------------------------- | -------------------------------------------------- | -------------------------------------------------- |
+| `scim_user`                                        | [shared.ScimUser](../../models/shared/scimuser.md) | :heavy_check_mark:                                 | N/A                                                |
+| `connection_id`                                    | *str*                                              | :heavy_check_mark:                                 | ID of the connection                               |
+| `id`                                               | *str*                                              | :heavy_check_mark:                                 | ID of the User                                     |

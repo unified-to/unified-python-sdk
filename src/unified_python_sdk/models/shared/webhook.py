@@ -128,6 +128,7 @@ class WebhookTypedDict(TypedDict):
     integration_type: NotRequired[str]
     interval: NotRequired[float]
     is_healthy: NotRequired[bool]
+    is_paused: NotRequired[bool]
     meta: NotRequired[MetaTypedDict]
     page_max_limit: NotRequired[float]
     runs: NotRequired[List[str]]
@@ -171,6 +172,8 @@ class Webhook(BaseModel):
     interval: Optional[float] = None
 
     is_healthy: Optional[bool] = None
+
+    is_paused: Optional[bool] = None
 
     meta: Optional[Meta] = None
 

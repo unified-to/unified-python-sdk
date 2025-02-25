@@ -38,6 +38,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.company.create_crm_company(request={
+        "crm_company": {},
         "connection_id": "<id>",
     })
 
@@ -82,6 +83,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.company.create_hris_company(request={
+        "hris_company": {},
         "connection_id": "<id>",
     })
 
@@ -437,6 +439,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.company.patch_crm_company(request={
+        "crm_company": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -482,6 +485,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.company.patch_hris_company(request={
+        "hris_company": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -617,6 +621,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.company.update_crm_company(request={
+        "crm_company": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -662,6 +667,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.company.update_hris_company(request={
+        "hris_company": {},
         "connection_id": "<id>",
         "id": "<id>",
     })

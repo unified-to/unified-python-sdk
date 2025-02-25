@@ -15,23 +15,23 @@ from unified_python_sdk.utils import (
 
 
 class CreateCrmPipelineRequestTypedDict(TypedDict):
+    crm_pipeline: shared_crmpipeline.CrmPipelineTypedDict
     connection_id: str
     r"""ID of the connection"""
-    crm_pipeline: NotRequired[shared_crmpipeline.CrmPipelineTypedDict]
     fields: NotRequired[List[str]]
     r"""Comma-delimited fields to return"""
 
 
 class CreateCrmPipelineRequest(BaseModel):
+    crm_pipeline: Annotated[
+        shared_crmpipeline.CrmPipeline,
+        FieldMetadata(request=RequestMetadata(media_type="application/json")),
+    ]
+
     connection_id: Annotated[
         str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))
     ]
     r"""ID of the connection"""
-
-    crm_pipeline: Annotated[
-        Optional[shared_crmpipeline.CrmPipeline],
-        FieldMetadata(request=RequestMetadata(media_type="application/json")),
-    ] = None
 
     fields: Annotated[
         Optional[List[str]],

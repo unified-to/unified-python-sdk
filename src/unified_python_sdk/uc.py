@@ -47,7 +47,7 @@ class Uc(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -55,7 +55,7 @@ class Uc(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.uc_contact, False, True, "json", Optional[shared.UcContact]
+                request.uc_contact, False, False, "json", shared.UcContact
             ),
             timeout_ms=timeout_ms,
         )
@@ -141,7 +141,7 @@ class Uc(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -149,7 +149,7 @@ class Uc(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.uc_contact, False, True, "json", Optional[shared.UcContact]
+                request.uc_contact, False, False, "json", shared.UcContact
             ),
             timeout_ms=timeout_ms,
         )
@@ -774,7 +774,7 @@ class Uc(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -782,7 +782,7 @@ class Uc(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.uc_contact, False, True, "json", Optional[shared.UcContact]
+                request.uc_contact, False, False, "json", shared.UcContact
             ),
             timeout_ms=timeout_ms,
         )
@@ -867,7 +867,7 @@ class Uc(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -875,7 +875,7 @@ class Uc(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.uc_contact, False, True, "json", Optional[shared.UcContact]
+                request.uc_contact, False, False, "json", shared.UcContact
             ),
             timeout_ms=timeout_ms,
         )
@@ -1153,7 +1153,7 @@ class Uc(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -1161,7 +1161,7 @@ class Uc(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.uc_contact, False, True, "json", Optional[shared.UcContact]
+                request.uc_contact, False, False, "json", shared.UcContact
             ),
             timeout_ms=timeout_ms,
         )
@@ -1247,7 +1247,7 @@ class Uc(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -1255,7 +1255,7 @@ class Uc(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.uc_contact, False, True, "json", Optional[shared.UcContact]
+                request.uc_contact, False, False, "json", shared.UcContact
             ),
             timeout_ms=timeout_ms,
         )

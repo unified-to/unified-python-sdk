@@ -29,6 +29,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.user.create_scim_users(request={
+        "scim_user": {},
         "connection_id": "<id>",
     })
 
@@ -162,6 +163,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.user.patch_scim_users(request={
+        "scim_user": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -252,6 +254,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.user.update_scim_users(request={
+        "scim_user": {},
         "connection_id": "<id>",
         "id": "<id>",
     })

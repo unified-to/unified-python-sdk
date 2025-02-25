@@ -49,7 +49,7 @@ class Webhook(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=False,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -57,7 +57,7 @@ class Webhook(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.webhook, False, True, "json", Optional[shared.Webhook]
+                request.webhook, False, False, "json", shared.Webhook
             ),
             timeout_ms=timeout_ms,
         )
@@ -143,7 +143,7 @@ class Webhook(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=False,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -151,7 +151,7 @@ class Webhook(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.webhook, False, True, "json", Optional[shared.Webhook]
+                request.webhook, False, False, "json", shared.Webhook
             ),
             timeout_ms=timeout_ms,
         )
@@ -595,7 +595,7 @@ class Webhook(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -603,7 +603,7 @@ class Webhook(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.webhook, False, True, "json", Optional[shared.Webhook]
+                request.webhook, False, False, "json", shared.Webhook
             ),
             timeout_ms=timeout_ms,
         )
@@ -687,7 +687,7 @@ class Webhook(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -695,7 +695,7 @@ class Webhook(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.webhook, False, True, "json", Optional[shared.Webhook]
+                request.webhook, False, False, "json", shared.Webhook
             ),
             timeout_ms=timeout_ms,
         )
@@ -1167,7 +1167,7 @@ class Webhook(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -1175,7 +1175,7 @@ class Webhook(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.webhook, False, True, "json", Optional[shared.Webhook]
+                request.webhook, False, False, "json", shared.Webhook
             ),
             timeout_ms=timeout_ms,
         )
@@ -1259,7 +1259,7 @@ class Webhook(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -1267,7 +1267,7 @@ class Webhook(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.webhook, False, True, "json", Optional[shared.Webhook]
+                request.webhook, False, False, "json", shared.Webhook
             ),
             timeout_ms=timeout_ms,
         )

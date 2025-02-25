@@ -15,25 +15,25 @@ from unified_python_sdk.utils import (
 
 
 class CreateCrmContactRequestTypedDict(TypedDict):
+    crm_contact: shared_crmcontact.CrmContactTypedDict
+    r"""A contact represents a person that optionally is associated with a deal and/or a company"""
     connection_id: str
     r"""ID of the connection"""
-    crm_contact: NotRequired[shared_crmcontact.CrmContactTypedDict]
-    r"""A contact represents a person that optionally is associated with a deal and/or a company"""
     fields: NotRequired[List[str]]
     r"""Comma-delimited fields to return"""
 
 
 class CreateCrmContactRequest(BaseModel):
+    crm_contact: Annotated[
+        shared_crmcontact.CrmContact,
+        FieldMetadata(request=RequestMetadata(media_type="application/json")),
+    ]
+    r"""A contact represents a person that optionally is associated with a deal and/or a company"""
+
     connection_id: Annotated[
         str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))
     ]
     r"""ID of the connection"""
-
-    crm_contact: Annotated[
-        Optional[shared_crmcontact.CrmContact],
-        FieldMetadata(request=RequestMetadata(media_type="application/json")),
-    ] = None
-    r"""A contact represents a person that optionally is associated with a deal and/or a company"""
 
     fields: Annotated[
         Optional[List[str]],

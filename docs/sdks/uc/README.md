@@ -30,6 +30,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.uc.create_uc_contact(request={
+        "uc_contact": {},
         "connection_id": "<id>",
     })
 
@@ -207,6 +208,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.uc.patch_uc_contact(request={
+        "uc_contact": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -297,6 +299,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.uc.update_uc_contact(request={
+        "uc_contact": {},
         "connection_id": "<id>",
         "id": "<id>",
     })

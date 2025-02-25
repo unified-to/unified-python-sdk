@@ -29,6 +29,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.candidate.create_ats_candidate(request={
+        "ats_candidate": {},
         "connection_id": "<id>",
     })
 
@@ -162,6 +163,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.candidate.patch_ats_candidate(request={
+        "ats_candidate": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -252,6 +254,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.candidate.update_ats_candidate(request={
+        "ats_candidate": {},
         "connection_id": "<id>",
         "id": "<id>",
     })

@@ -15,16 +15,21 @@ from unified_python_sdk.utils import (
 
 
 class PatchAtsJobRequestTypedDict(TypedDict):
+    ats_job: shared_atsjob.AtsJobTypedDict
     connection_id: str
     r"""ID of the connection"""
     id: str
     r"""ID of the Job"""
-    ats_job: NotRequired[shared_atsjob.AtsJobTypedDict]
     fields: NotRequired[List[str]]
     r"""Comma-delimited fields to return"""
 
 
 class PatchAtsJobRequest(BaseModel):
+    ats_job: Annotated[
+        shared_atsjob.AtsJob,
+        FieldMetadata(request=RequestMetadata(media_type="application/json")),
+    ]
+
     connection_id: Annotated[
         str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))
     ]
@@ -34,11 +39,6 @@ class PatchAtsJobRequest(BaseModel):
         str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))
     ]
     r"""ID of the Job"""
-
-    ats_job: Annotated[
-        Optional[shared_atsjob.AtsJob],
-        FieldMetadata(request=RequestMetadata(media_type="application/json")),
-    ] = None
 
     fields: Annotated[
         Optional[List[str]],

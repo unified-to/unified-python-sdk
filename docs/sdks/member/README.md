@@ -29,6 +29,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.member.create_martech_member(request={
+        "marketing_member": {},
         "connection_id": "<id>",
     })
 
@@ -162,6 +163,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.member.patch_martech_member(request={
+        "marketing_member": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -252,6 +254,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.member.update_martech_member(request={
+        "marketing_member": {},
         "connection_id": "<id>",
         "id": "<id>",
     })

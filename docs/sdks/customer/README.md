@@ -29,6 +29,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.customer.create_ticketing_customer(request={
+        "ticketing_customer": {},
         "connection_id": "<id>",
     })
 
@@ -162,6 +163,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.customer.patch_ticketing_customer(request={
+        "ticketing_customer": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -252,6 +254,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.customer.update_ticketing_customer(request={
+        "ticketing_customer": {},
         "connection_id": "<id>",
         "id": "<id>",
     })

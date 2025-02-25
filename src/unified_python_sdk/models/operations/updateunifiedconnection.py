@@ -10,23 +10,23 @@ from unified_python_sdk.utils import FieldMetadata, PathParamMetadata, RequestMe
 
 
 class UpdateUnifiedConnectionRequestTypedDict(TypedDict):
+    connection: shared_connection.ConnectionTypedDict
+    r"""A connection represents a specific authentication of an integration."""
     id: str
     r"""ID of the Connection"""
-    connection: NotRequired[shared_connection.ConnectionTypedDict]
-    r"""A connection represents a specific authentication of an integration."""
 
 
 class UpdateUnifiedConnectionRequest(BaseModel):
+    connection: Annotated[
+        shared_connection.Connection,
+        FieldMetadata(request=RequestMetadata(media_type="application/json")),
+    ]
+    r"""A connection represents a specific authentication of an integration."""
+
     id: Annotated[
         str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))
     ]
     r"""ID of the Connection"""
-
-    connection: Annotated[
-        Optional[shared_connection.Connection],
-        FieldMetadata(request=RequestMetadata(media_type="application/json")),
-    ] = None
-    r"""A connection represents a specific authentication of an integration."""
 
 
 class UpdateUnifiedConnectionResponseTypedDict(TypedDict):

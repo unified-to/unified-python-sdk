@@ -29,6 +29,9 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.collection.create_commerce_collection(request={
+        "commerce_collection": {
+            "name": "<value>",
+        },
         "connection_id": "<id>",
     })
 
@@ -162,6 +165,9 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.collection.patch_commerce_collection(request={
+        "commerce_collection": {
+            "name": "<value>",
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -252,6 +258,9 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.collection.update_commerce_collection(request={
+        "commerce_collection": {
+            "name": "<value>",
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })

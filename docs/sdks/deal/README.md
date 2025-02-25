@@ -29,6 +29,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.deal.create_crm_deal(request={
+        "crm_deal": {},
         "connection_id": "<id>",
     })
 
@@ -162,6 +163,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.deal.patch_crm_deal(request={
+        "crm_deal": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -252,6 +254,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.deal.update_crm_deal(request={
+        "crm_deal": {},
         "connection_id": "<id>",
         "id": "<id>",
     })

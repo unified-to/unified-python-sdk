@@ -29,6 +29,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.project.create_task_project(request={
+        "task_project": {},
         "connection_id": "<id>",
     })
 
@@ -162,6 +163,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.project.patch_task_project(request={
+        "task_project": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -252,6 +254,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.project.update_task_project(request={
+        "task_project": {},
         "connection_id": "<id>",
         "id": "<id>",
     })

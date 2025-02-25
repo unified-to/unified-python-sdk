@@ -47,7 +47,7 @@ class Martech(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -55,11 +55,7 @@ class Martech(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.marketing_list,
-                False,
-                True,
-                "json",
-                Optional[shared.MarketingList],
+                request.marketing_list, False, False, "json", shared.MarketingList
             ),
             timeout_ms=timeout_ms,
         )
@@ -145,7 +141,7 @@ class Martech(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -153,11 +149,7 @@ class Martech(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.marketing_list,
-                False,
-                True,
-                "json",
-                Optional[shared.MarketingList],
+                request.marketing_list, False, False, "json", shared.MarketingList
             ),
             timeout_ms=timeout_ms,
         )
@@ -243,7 +235,7 @@ class Martech(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -251,11 +243,7 @@ class Martech(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.marketing_member,
-                False,
-                True,
-                "json",
-                Optional[shared.MarketingMember],
+                request.marketing_member, False, False, "json", shared.MarketingMember
             ),
             timeout_ms=timeout_ms,
         )
@@ -341,7 +329,7 @@ class Martech(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -349,11 +337,7 @@ class Martech(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.marketing_member,
-                False,
-                True,
-                "json",
-                Optional[shared.MarketingMember],
+                request.marketing_member, False, False, "json", shared.MarketingMember
             ),
             timeout_ms=timeout_ms,
         )
@@ -1165,7 +1149,7 @@ class Martech(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -1173,11 +1157,7 @@ class Martech(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.marketing_list,
-                False,
-                True,
-                "json",
-                Optional[shared.MarketingList],
+                request.marketing_list, False, False, "json", shared.MarketingList
             ),
             timeout_ms=timeout_ms,
         )
@@ -1263,7 +1243,7 @@ class Martech(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -1271,11 +1251,7 @@ class Martech(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.marketing_list,
-                False,
-                True,
-                "json",
-                Optional[shared.MarketingList],
+                request.marketing_list, False, False, "json", shared.MarketingList
             ),
             timeout_ms=timeout_ms,
         )
@@ -1361,7 +1337,7 @@ class Martech(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -1369,11 +1345,7 @@ class Martech(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.marketing_member,
-                False,
-                True,
-                "json",
-                Optional[shared.MarketingMember],
+                request.marketing_member, False, False, "json", shared.MarketingMember
             ),
             timeout_ms=timeout_ms,
         )
@@ -1459,7 +1431,7 @@ class Martech(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -1467,11 +1439,7 @@ class Martech(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.marketing_member,
-                False,
-                True,
-                "json",
-                Optional[shared.MarketingMember],
+                request.marketing_member, False, False, "json", shared.MarketingMember
             ),
             timeout_ms=timeout_ms,
         )
@@ -1941,7 +1909,7 @@ class Martech(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -1949,11 +1917,7 @@ class Martech(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.marketing_list,
-                False,
-                True,
-                "json",
-                Optional[shared.MarketingList],
+                request.marketing_list, False, False, "json", shared.MarketingList
             ),
             timeout_ms=timeout_ms,
         )
@@ -2039,7 +2003,7 @@ class Martech(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -2047,11 +2011,7 @@ class Martech(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.marketing_list,
-                False,
-                True,
-                "json",
-                Optional[shared.MarketingList],
+                request.marketing_list, False, False, "json", shared.MarketingList
             ),
             timeout_ms=timeout_ms,
         )
@@ -2137,7 +2097,7 @@ class Martech(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -2145,11 +2105,7 @@ class Martech(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.marketing_member,
-                False,
-                True,
-                "json",
-                Optional[shared.MarketingMember],
+                request.marketing_member, False, False, "json", shared.MarketingMember
             ),
             timeout_ms=timeout_ms,
         )
@@ -2235,7 +2191,7 @@ class Martech(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -2243,11 +2199,7 @@ class Martech(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.marketing_member,
-                False,
-                True,
-                "json",
-                Optional[shared.MarketingMember],
+                request.marketing_member, False, False, "json", shared.MarketingMember
             ),
             timeout_ms=timeout_ms,
         )

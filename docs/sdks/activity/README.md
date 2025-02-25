@@ -29,6 +29,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.activity.create_ats_activity(request={
+        "ats_activity": {},
         "connection_id": "<id>",
     })
 
@@ -162,6 +163,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.activity.patch_ats_activity(request={
+        "ats_activity": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -252,6 +254,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.activity.update_ats_activity(request={
+        "ats_activity": {},
         "connection_id": "<id>",
         "id": "<id>",
     })

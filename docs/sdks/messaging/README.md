@@ -31,6 +31,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.messaging.create_messaging_message(request={
+        "messaging_message": {},
         "connection_id": "<id>",
     })
 
@@ -253,6 +254,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.messaging.patch_messaging_message(request={
+        "messaging_message": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -343,6 +345,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.messaging.update_messaging_message(request={
+        "messaging_message": {},
         "connection_id": "<id>",
         "id": "<id>",
     })

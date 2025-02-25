@@ -29,6 +29,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.instructor.create_lms_instructor(request={
+        "lms_instructor": {},
         "connection_id": "<id>",
     })
 
@@ -162,6 +163,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.instructor.patch_lms_instructor(request={
+        "lms_instructor": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -252,6 +254,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.instructor.update_lms_instructor(request={
+        "lms_instructor": {},
         "connection_id": "<id>",
         "id": "<id>",
     })

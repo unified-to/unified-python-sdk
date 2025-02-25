@@ -15,23 +15,23 @@ from unified_python_sdk.utils import (
 
 
 class CreateGenaiPromptRequestTypedDict(TypedDict):
+    genai_prompt: shared_genaiprompt.GenaiPromptTypedDict
     connection_id: str
     r"""ID of the connection"""
-    genai_prompt: NotRequired[shared_genaiprompt.GenaiPromptTypedDict]
     fields: NotRequired[List[str]]
     r"""Comma-delimited fields to return"""
 
 
 class CreateGenaiPromptRequest(BaseModel):
+    genai_prompt: Annotated[
+        shared_genaiprompt.GenaiPrompt,
+        FieldMetadata(request=RequestMetadata(media_type="application/json")),
+    ]
+
     connection_id: Annotated[
         str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))
     ]
     r"""ID of the connection"""
-
-    genai_prompt: Annotated[
-        Optional[shared_genaiprompt.GenaiPrompt],
-        FieldMetadata(request=RequestMetadata(media_type="application/json")),
-    ] = None
 
     fields: Annotated[
         Optional[List[str]],

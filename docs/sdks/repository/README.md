@@ -29,6 +29,9 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.repository.create_repo_repository(request={
+        "repo_repository": {
+            "name": "<value>",
+        },
         "connection_id": "<id>",
     })
 
@@ -162,6 +165,9 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.repository.patch_repo_repository(request={
+        "repo_repository": {
+            "name": "<value>",
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -252,6 +258,9 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.repository.update_repo_repository(request={
+        "repo_repository": {
+            "name": "<value>",
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })

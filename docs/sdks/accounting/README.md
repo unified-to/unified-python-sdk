@@ -67,6 +67,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.create_accounting_account(request={
+        "accounting_account": {},
         "connection_id": "<id>",
     })
 
@@ -111,6 +112,9 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.create_accounting_contact(request={
+        "accounting_contact": {
+            "currency": "USD",
+        },
         "connection_id": "<id>",
     })
 
@@ -155,6 +159,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.create_accounting_invoice(request={
+        "accounting_invoice": {},
         "connection_id": "<id>",
     })
 
@@ -199,6 +204,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.create_accounting_journal(request={
+        "accounting_journal": {},
         "connection_id": "<id>",
     })
 
@@ -243,6 +249,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.create_accounting_order(request={
+        "accounting_order": {},
         "connection_id": "<id>",
     })
 
@@ -287,6 +294,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.create_accounting_taxrate(request={
+        "accounting_taxrate": {},
         "connection_id": "<id>",
     })
 
@@ -331,6 +339,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.create_accounting_transaction(request={
+        "accounting_transaction": {},
         "connection_id": "<id>",
     })
 
@@ -1087,6 +1096,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.patch_accounting_account(request={
+        "accounting_account": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -1132,6 +1142,9 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.patch_accounting_contact(request={
+        "accounting_contact": {
+            "currency": "USD",
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -1177,6 +1190,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.patch_accounting_invoice(request={
+        "accounting_invoice": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -1222,6 +1236,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.patch_accounting_journal(request={
+        "accounting_journal": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -1267,6 +1282,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.patch_accounting_order(request={
+        "accounting_order": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -1312,6 +1328,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.patch_accounting_taxrate(request={
+        "accounting_taxrate": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -1357,6 +1374,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.patch_accounting_transaction(request={
+        "accounting_transaction": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -1717,6 +1735,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.update_accounting_account(request={
+        "accounting_account": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -1762,6 +1781,9 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.update_accounting_contact(request={
+        "accounting_contact": {
+            "currency": "USD",
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -1807,6 +1829,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.update_accounting_invoice(request={
+        "accounting_invoice": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -1852,6 +1875,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.update_accounting_journal(request={
+        "accounting_journal": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -1897,6 +1921,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.update_accounting_order(request={
+        "accounting_order": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -1942,6 +1967,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.update_accounting_taxrate(request={
+        "accounting_taxrate": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -1987,6 +2013,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.update_accounting_transaction(request={
+        "accounting_transaction": {},
         "connection_id": "<id>",
         "id": "<id>",
     })

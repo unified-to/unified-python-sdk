@@ -47,7 +47,7 @@ class Payment(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -55,7 +55,7 @@ class Payment(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.payment_link, False, True, "json", Optional[shared.PaymentLink]
+                request.payment_link, False, False, "json", shared.PaymentLink
             ),
             timeout_ms=timeout_ms,
         )
@@ -141,7 +141,7 @@ class Payment(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -149,7 +149,7 @@ class Payment(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.payment_link, False, True, "json", Optional[shared.PaymentLink]
+                request.payment_link, False, False, "json", shared.PaymentLink
             ),
             timeout_ms=timeout_ms,
         )
@@ -235,7 +235,7 @@ class Payment(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -243,11 +243,7 @@ class Payment(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.payment_payment,
-                False,
-                True,
-                "json",
-                Optional[shared.PaymentPayment],
+                request.payment_payment, False, False, "json", shared.PaymentPayment
             ),
             timeout_ms=timeout_ms,
         )
@@ -333,7 +329,7 @@ class Payment(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -341,11 +337,7 @@ class Payment(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.payment_payment,
-                False,
-                True,
-                "json",
-                Optional[shared.PaymentPayment],
+                request.payment_payment, False, False, "json", shared.PaymentPayment
             ),
             timeout_ms=timeout_ms,
         )
@@ -433,7 +425,7 @@ class Payment(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -443,9 +435,9 @@ class Payment(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.payment_subscription,
                 False,
-                True,
+                False,
                 "json",
-                Optional[shared.PaymentSubscription],
+                shared.PaymentSubscription,
             ),
             timeout_ms=timeout_ms,
         )
@@ -533,7 +525,7 @@ class Payment(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -543,9 +535,9 @@ class Payment(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.payment_subscription,
                 False,
-                True,
+                False,
                 "json",
-                Optional[shared.PaymentSubscription],
+                shared.PaymentSubscription,
             ),
             timeout_ms=timeout_ms,
         )
@@ -2453,7 +2445,7 @@ class Payment(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -2461,7 +2453,7 @@ class Payment(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.payment_link, False, True, "json", Optional[shared.PaymentLink]
+                request.payment_link, False, False, "json", shared.PaymentLink
             ),
             timeout_ms=timeout_ms,
         )
@@ -2547,7 +2539,7 @@ class Payment(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -2555,7 +2547,7 @@ class Payment(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.payment_link, False, True, "json", Optional[shared.PaymentLink]
+                request.payment_link, False, False, "json", shared.PaymentLink
             ),
             timeout_ms=timeout_ms,
         )
@@ -2641,7 +2633,7 @@ class Payment(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -2649,11 +2641,7 @@ class Payment(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.payment_payment,
-                False,
-                True,
-                "json",
-                Optional[shared.PaymentPayment],
+                request.payment_payment, False, False, "json", shared.PaymentPayment
             ),
             timeout_ms=timeout_ms,
         )
@@ -2739,7 +2727,7 @@ class Payment(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -2747,11 +2735,7 @@ class Payment(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.payment_payment,
-                False,
-                True,
-                "json",
-                Optional[shared.PaymentPayment],
+                request.payment_payment, False, False, "json", shared.PaymentPayment
             ),
             timeout_ms=timeout_ms,
         )
@@ -2839,7 +2823,7 @@ class Payment(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -2849,9 +2833,9 @@ class Payment(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.payment_subscription,
                 False,
-                True,
+                False,
                 "json",
-                Optional[shared.PaymentSubscription],
+                shared.PaymentSubscription,
             ),
             timeout_ms=timeout_ms,
         )
@@ -2939,7 +2923,7 @@ class Payment(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -2949,9 +2933,9 @@ class Payment(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.payment_subscription,
                 False,
-                True,
+                False,
                 "json",
-                Optional[shared.PaymentSubscription],
+                shared.PaymentSubscription,
             ),
             timeout_ms=timeout_ms,
         )
@@ -3617,7 +3601,7 @@ class Payment(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -3625,7 +3609,7 @@ class Payment(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.payment_link, False, True, "json", Optional[shared.PaymentLink]
+                request.payment_link, False, False, "json", shared.PaymentLink
             ),
             timeout_ms=timeout_ms,
         )
@@ -3711,7 +3695,7 @@ class Payment(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -3719,7 +3703,7 @@ class Payment(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.payment_link, False, True, "json", Optional[shared.PaymentLink]
+                request.payment_link, False, False, "json", shared.PaymentLink
             ),
             timeout_ms=timeout_ms,
         )
@@ -3805,7 +3789,7 @@ class Payment(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -3813,11 +3797,7 @@ class Payment(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.payment_payment,
-                False,
-                True,
-                "json",
-                Optional[shared.PaymentPayment],
+                request.payment_payment, False, False, "json", shared.PaymentPayment
             ),
             timeout_ms=timeout_ms,
         )
@@ -3903,7 +3883,7 @@ class Payment(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -3911,11 +3891,7 @@ class Payment(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.payment_payment,
-                False,
-                True,
-                "json",
-                Optional[shared.PaymentPayment],
+                request.payment_payment, False, False, "json", shared.PaymentPayment
             ),
             timeout_ms=timeout_ms,
         )
@@ -4003,7 +3979,7 @@ class Payment(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -4013,9 +3989,9 @@ class Payment(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.payment_subscription,
                 False,
-                True,
+                False,
                 "json",
-                Optional[shared.PaymentSubscription],
+                shared.PaymentSubscription,
             ),
             timeout_ms=timeout_ms,
         )
@@ -4103,7 +4079,7 @@ class Payment(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -4113,9 +4089,9 @@ class Payment(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.payment_subscription,
                 False,
-                True,
+                False,
                 "json",
-                Optional[shared.PaymentSubscription],
+                shared.PaymentSubscription,
             ),
             timeout_ms=timeout_ms,
         )

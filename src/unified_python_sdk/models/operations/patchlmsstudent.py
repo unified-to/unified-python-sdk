@@ -15,16 +15,21 @@ from unified_python_sdk.utils import (
 
 
 class PatchLmsStudentRequestTypedDict(TypedDict):
+    lms_student: shared_lmsstudent.LmsStudentTypedDict
     connection_id: str
     r"""ID of the connection"""
     id: str
     r"""ID of the Student"""
-    lms_student: NotRequired[shared_lmsstudent.LmsStudentTypedDict]
     fields: NotRequired[List[str]]
     r"""Comma-delimited fields to return"""
 
 
 class PatchLmsStudentRequest(BaseModel):
+    lms_student: Annotated[
+        shared_lmsstudent.LmsStudent,
+        FieldMetadata(request=RequestMetadata(media_type="application/json")),
+    ]
+
     connection_id: Annotated[
         str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))
     ]
@@ -34,11 +39,6 @@ class PatchLmsStudentRequest(BaseModel):
         str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))
     ]
     r"""ID of the Student"""
-
-    lms_student: Annotated[
-        Optional[shared_lmsstudent.LmsStudent],
-        FieldMetadata(request=RequestMetadata(media_type="application/json")),
-    ] = None
 
     fields: Annotated[
         Optional[List[str]],

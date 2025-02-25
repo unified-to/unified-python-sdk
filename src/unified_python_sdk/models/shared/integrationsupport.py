@@ -83,6 +83,12 @@ class ListDealID(str, Enum):
     NOT_SUPPORTED = "not-supported"
 
 
+class ListEndLe(str, Enum):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
 class ListInstructorID(str, Enum):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
@@ -222,6 +228,12 @@ class ListSortByUpdatedAt(str, Enum):
 
 
 class ListSpaceID(str, Enum):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
+class ListStartGte(str, Enum):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
     NOT_SUPPORTED = "not-supported"
@@ -385,6 +397,7 @@ class IntegrationSupportTypedDict(TypedDict):
     list_course_id: NotRequired[ListCourseID]
     list_customer_id: NotRequired[ListCustomerID]
     list_deal_id: NotRequired[ListDealID]
+    list_end_le: NotRequired[ListEndLe]
     list_instructor_id: NotRequired[ListInstructorID]
     list_interview_id: NotRequired[ListInterviewID]
     list_invoice_id: NotRequired[ListInvoiceID]
@@ -409,6 +422,7 @@ class IntegrationSupportTypedDict(TypedDict):
     list_sort_by_name: NotRequired[ListSortByName]
     list_sort_by_updated_at: NotRequired[ListSortByUpdatedAt]
     list_space_id: NotRequired[ListSpaceID]
+    list_start_gte: NotRequired[ListStartGte]
     list_student_id: NotRequired[ListStudentID]
     list_task_id: NotRequired[ListTaskID]
     list_ticket_id: NotRequired[ListTicketID]
@@ -468,6 +482,8 @@ class IntegrationSupport(BaseModel):
 
     list_deal_id: Optional[ListDealID] = None
 
+    list_end_le: Optional[ListEndLe] = None
+
     list_instructor_id: Optional[ListInstructorID] = None
 
     list_interview_id: Optional[ListInterviewID] = None
@@ -515,6 +531,8 @@ class IntegrationSupport(BaseModel):
     list_sort_by_updated_at: Optional[ListSortByUpdatedAt] = None
 
     list_space_id: Optional[ListSpaceID] = None
+
+    list_start_gte: Optional[ListStartGte] = None
 
     list_student_id: Optional[ListStudentID] = None
 

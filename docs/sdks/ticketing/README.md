@@ -41,6 +41,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ticketing.create_ticketing_customer(request={
+        "ticketing_customer": {},
         "connection_id": "<id>",
     })
 
@@ -85,6 +86,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ticketing.create_ticketing_note(request={
+        "ticketing_note": {},
         "connection_id": "<id>",
     })
 
@@ -129,6 +131,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ticketing.create_ticketing_ticket(request={
+        "ticketing_ticket": {},
         "connection_id": "<id>",
     })
 
@@ -440,6 +443,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ticketing.patch_ticketing_customer(request={
+        "ticketing_customer": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -485,6 +489,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ticketing.patch_ticketing_note(request={
+        "ticketing_note": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -530,6 +535,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ticketing.patch_ticketing_ticket(request={
+        "ticketing_ticket": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -710,6 +716,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ticketing.update_ticketing_customer(request={
+        "ticketing_customer": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -755,6 +762,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ticketing.update_ticketing_note(request={
+        "ticketing_note": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -800,6 +808,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ticketing.update_ticketing_ticket(request={
+        "ticketing_ticket": {},
         "connection_id": "<id>",
         "id": "<id>",
     })

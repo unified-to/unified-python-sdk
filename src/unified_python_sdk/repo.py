@@ -47,7 +47,7 @@ class Repo(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -55,7 +55,7 @@ class Repo(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.repo_branch, False, True, "json", Optional[shared.RepoBranch]
+                request.repo_branch, False, False, "json", shared.RepoBranch
             ),
             timeout_ms=timeout_ms,
         )
@@ -141,7 +141,7 @@ class Repo(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -149,7 +149,7 @@ class Repo(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.repo_branch, False, True, "json", Optional[shared.RepoBranch]
+                request.repo_branch, False, False, "json", shared.RepoBranch
             ),
             timeout_ms=timeout_ms,
         )
@@ -235,7 +235,7 @@ class Repo(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -243,7 +243,7 @@ class Repo(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.repo_commit, False, True, "json", Optional[shared.RepoCommit]
+                request.repo_commit, False, False, "json", shared.RepoCommit
             ),
             timeout_ms=timeout_ms,
         )
@@ -329,7 +329,7 @@ class Repo(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -337,7 +337,7 @@ class Repo(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.repo_commit, False, True, "json", Optional[shared.RepoCommit]
+                request.repo_commit, False, False, "json", shared.RepoCommit
             ),
             timeout_ms=timeout_ms,
         )
@@ -423,7 +423,7 @@ class Repo(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -431,11 +431,7 @@ class Repo(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.repo_organization,
-                False,
-                True,
-                "json",
-                Optional[shared.RepoOrganization],
+                request.repo_organization, False, False, "json", shared.RepoOrganization
             ),
             timeout_ms=timeout_ms,
         )
@@ -521,7 +517,7 @@ class Repo(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -529,11 +525,7 @@ class Repo(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.repo_organization,
-                False,
-                True,
-                "json",
-                Optional[shared.RepoOrganization],
+                request.repo_organization, False, False, "json", shared.RepoOrganization
             ),
             timeout_ms=timeout_ms,
         )
@@ -619,7 +611,7 @@ class Repo(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -627,11 +619,7 @@ class Repo(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.repo_pullrequest,
-                False,
-                True,
-                "json",
-                Optional[shared.RepoPullrequest],
+                request.repo_pullrequest, False, False, "json", shared.RepoPullrequest
             ),
             timeout_ms=timeout_ms,
         )
@@ -717,7 +705,7 @@ class Repo(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -725,11 +713,7 @@ class Repo(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.repo_pullrequest,
-                False,
-                True,
-                "json",
-                Optional[shared.RepoPullrequest],
+                request.repo_pullrequest, False, False, "json", shared.RepoPullrequest
             ),
             timeout_ms=timeout_ms,
         )
@@ -815,7 +799,7 @@ class Repo(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -823,11 +807,7 @@ class Repo(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.repo_repository,
-                False,
-                True,
-                "json",
-                Optional[shared.RepoRepository],
+                request.repo_repository, False, False, "json", shared.RepoRepository
             ),
             timeout_ms=timeout_ms,
         )
@@ -913,7 +893,7 @@ class Repo(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -921,11 +901,7 @@ class Repo(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.repo_repository,
-                False,
-                True,
-                "json",
-                Optional[shared.RepoRepository],
+                request.repo_repository, False, False, "json", shared.RepoRepository
             ),
             timeout_ms=timeout_ms,
         )
@@ -2827,7 +2803,7 @@ class Repo(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -2835,7 +2811,7 @@ class Repo(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.repo_branch, False, True, "json", Optional[shared.RepoBranch]
+                request.repo_branch, False, False, "json", shared.RepoBranch
             ),
             timeout_ms=timeout_ms,
         )
@@ -2921,7 +2897,7 @@ class Repo(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -2929,7 +2905,7 @@ class Repo(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.repo_branch, False, True, "json", Optional[shared.RepoBranch]
+                request.repo_branch, False, False, "json", shared.RepoBranch
             ),
             timeout_ms=timeout_ms,
         )
@@ -3015,7 +2991,7 @@ class Repo(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -3023,7 +2999,7 @@ class Repo(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.repo_commit, False, True, "json", Optional[shared.RepoCommit]
+                request.repo_commit, False, False, "json", shared.RepoCommit
             ),
             timeout_ms=timeout_ms,
         )
@@ -3109,7 +3085,7 @@ class Repo(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -3117,7 +3093,7 @@ class Repo(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.repo_commit, False, True, "json", Optional[shared.RepoCommit]
+                request.repo_commit, False, False, "json", shared.RepoCommit
             ),
             timeout_ms=timeout_ms,
         )
@@ -3203,7 +3179,7 @@ class Repo(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -3211,11 +3187,7 @@ class Repo(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.repo_organization,
-                False,
-                True,
-                "json",
-                Optional[shared.RepoOrganization],
+                request.repo_organization, False, False, "json", shared.RepoOrganization
             ),
             timeout_ms=timeout_ms,
         )
@@ -3301,7 +3273,7 @@ class Repo(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -3309,11 +3281,7 @@ class Repo(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.repo_organization,
-                False,
-                True,
-                "json",
-                Optional[shared.RepoOrganization],
+                request.repo_organization, False, False, "json", shared.RepoOrganization
             ),
             timeout_ms=timeout_ms,
         )
@@ -3399,7 +3367,7 @@ class Repo(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -3407,11 +3375,7 @@ class Repo(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.repo_pullrequest,
-                False,
-                True,
-                "json",
-                Optional[shared.RepoPullrequest],
+                request.repo_pullrequest, False, False, "json", shared.RepoPullrequest
             ),
             timeout_ms=timeout_ms,
         )
@@ -3497,7 +3461,7 @@ class Repo(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -3505,11 +3469,7 @@ class Repo(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.repo_pullrequest,
-                False,
-                True,
-                "json",
-                Optional[shared.RepoPullrequest],
+                request.repo_pullrequest, False, False, "json", shared.RepoPullrequest
             ),
             timeout_ms=timeout_ms,
         )
@@ -3595,7 +3555,7 @@ class Repo(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -3603,11 +3563,7 @@ class Repo(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.repo_repository,
-                False,
-                True,
-                "json",
-                Optional[shared.RepoRepository],
+                request.repo_repository, False, False, "json", shared.RepoRepository
             ),
             timeout_ms=timeout_ms,
         )
@@ -3693,7 +3649,7 @@ class Repo(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -3701,11 +3657,7 @@ class Repo(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.repo_repository,
-                False,
-                True,
-                "json",
-                Optional[shared.RepoRepository],
+                request.repo_repository, False, False, "json", shared.RepoRepository
             ),
             timeout_ms=timeout_ms,
         )
@@ -4751,7 +4703,7 @@ class Repo(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -4759,7 +4711,7 @@ class Repo(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.repo_branch, False, True, "json", Optional[shared.RepoBranch]
+                request.repo_branch, False, False, "json", shared.RepoBranch
             ),
             timeout_ms=timeout_ms,
         )
@@ -4845,7 +4797,7 @@ class Repo(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -4853,7 +4805,7 @@ class Repo(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.repo_branch, False, True, "json", Optional[shared.RepoBranch]
+                request.repo_branch, False, False, "json", shared.RepoBranch
             ),
             timeout_ms=timeout_ms,
         )
@@ -4939,7 +4891,7 @@ class Repo(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -4947,7 +4899,7 @@ class Repo(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.repo_commit, False, True, "json", Optional[shared.RepoCommit]
+                request.repo_commit, False, False, "json", shared.RepoCommit
             ),
             timeout_ms=timeout_ms,
         )
@@ -5033,7 +4985,7 @@ class Repo(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -5041,7 +4993,7 @@ class Repo(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.repo_commit, False, True, "json", Optional[shared.RepoCommit]
+                request.repo_commit, False, False, "json", shared.RepoCommit
             ),
             timeout_ms=timeout_ms,
         )
@@ -5127,7 +5079,7 @@ class Repo(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -5135,11 +5087,7 @@ class Repo(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.repo_organization,
-                False,
-                True,
-                "json",
-                Optional[shared.RepoOrganization],
+                request.repo_organization, False, False, "json", shared.RepoOrganization
             ),
             timeout_ms=timeout_ms,
         )
@@ -5225,7 +5173,7 @@ class Repo(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -5233,11 +5181,7 @@ class Repo(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.repo_organization,
-                False,
-                True,
-                "json",
-                Optional[shared.RepoOrganization],
+                request.repo_organization, False, False, "json", shared.RepoOrganization
             ),
             timeout_ms=timeout_ms,
         )
@@ -5323,7 +5267,7 @@ class Repo(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -5331,11 +5275,7 @@ class Repo(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.repo_pullrequest,
-                False,
-                True,
-                "json",
-                Optional[shared.RepoPullrequest],
+                request.repo_pullrequest, False, False, "json", shared.RepoPullrequest
             ),
             timeout_ms=timeout_ms,
         )
@@ -5421,7 +5361,7 @@ class Repo(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -5429,11 +5369,7 @@ class Repo(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.repo_pullrequest,
-                False,
-                True,
-                "json",
-                Optional[shared.RepoPullrequest],
+                request.repo_pullrequest, False, False, "json", shared.RepoPullrequest
             ),
             timeout_ms=timeout_ms,
         )
@@ -5519,7 +5455,7 @@ class Repo(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -5527,11 +5463,7 @@ class Repo(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.repo_repository,
-                False,
-                True,
-                "json",
-                Optional[shared.RepoRepository],
+                request.repo_repository, False, False, "json", shared.RepoRepository
             ),
             timeout_ms=timeout_ms,
         )
@@ -5617,7 +5549,7 @@ class Repo(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -5625,11 +5557,7 @@ class Repo(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.repo_repository,
-                False,
-                True,
-                "json",
-                Optional[shared.RepoRepository],
+                request.repo_repository, False, False, "json", shared.RepoRepository
             ),
             timeout_ms=timeout_ms,
         )

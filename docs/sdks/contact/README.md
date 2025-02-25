@@ -41,6 +41,9 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.contact.create_accounting_contact(request={
+        "accounting_contact": {
+            "currency": "USD",
+        },
         "connection_id": "<id>",
     })
 
@@ -85,6 +88,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.contact.create_crm_contact(request={
+        "crm_contact": {},
         "connection_id": "<id>",
     })
 
@@ -129,6 +133,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.contact.create_uc_contact(request={
+        "uc_contact": {},
         "connection_id": "<id>",
     })
 
@@ -440,6 +445,9 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.contact.patch_accounting_contact(request={
+        "accounting_contact": {
+            "currency": "USD",
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -485,6 +493,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.contact.patch_crm_contact(request={
+        "crm_contact": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -530,6 +539,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.contact.patch_uc_contact(request={
+        "uc_contact": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -710,6 +720,9 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.contact.update_accounting_contact(request={
+        "accounting_contact": {
+            "currency": "USD",
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -755,6 +768,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.contact.update_crm_contact(request={
+        "crm_contact": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -800,6 +814,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.contact.update_uc_contact(request={
+        "uc_contact": {},
         "connection_id": "<id>",
         "id": "<id>",
     })

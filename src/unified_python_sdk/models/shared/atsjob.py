@@ -3,6 +3,7 @@
 from __future__ import annotations
 from .atsaddress import AtsAddress, AtsAddressTypedDict
 from .atscompensation import AtsCompensation, AtsCompensationTypedDict
+from .atsgroup import AtsGroup, AtsGroupTypedDict
 from .atsjobposting import AtsJobPosting, AtsJobPostingTypedDict
 from .atsjobquestion import AtsJobQuestion, AtsJobQuestionTypedDict
 from datetime import datetime
@@ -48,9 +49,11 @@ class AtsJobTypedDict(TypedDict):
     compensation: NotRequired[List[AtsCompensationTypedDict]]
     created_at: NotRequired[datetime]
     departments: NotRequired[List[str]]
-    r"""The names of the departments/divisions that this job belongs to"""
+    r"""@deprecated Use `groups` instead"""
     description: NotRequired[str]
     employment_type: NotRequired[EmploymentType]
+    groups: NotRequired[List[AtsGroupTypedDict]]
+    r"""The departments/divisions/teams that this job belongs to"""
     hiring_manager_ids: NotRequired[List[str]]
     id: NotRequired[str]
     language_locale: NotRequired[str]
@@ -80,11 +83,14 @@ class AtsJob(BaseModel):
     created_at: Optional[datetime] = None
 
     departments: Optional[List[str]] = None
-    r"""The names of the departments/divisions that this job belongs to"""
+    r"""@deprecated Use `groups` instead"""
 
     description: Optional[str] = None
 
     employment_type: Optional[EmploymentType] = None
+
+    groups: Optional[List[AtsGroup]] = None
+    r"""The departments/divisions/teams that this job belongs to"""
 
     hiring_manager_ids: Optional[List[str]] = None
 

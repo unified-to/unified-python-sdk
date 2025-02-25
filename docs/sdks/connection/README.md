@@ -28,7 +28,19 @@ with UnifiedTo(
     ),
 ) as unified_to:
 
-    res = unified_to.connection.create_unified_connection()
+    res = unified_to.connection.create_unified_connection(request={
+        "categories": [
+            shared.PropertyConnectionCategories.ACCOUNTING,
+            shared.PropertyConnectionCategories.MARTECH,
+            shared.PropertyConnectionCategories.MARTECH,
+        ],
+        "integration_type": "<value>",
+        "permissions": [
+            shared.PropertyConnectionPermissions.LMS_COURSE_READ,
+            shared.PropertyConnectionPermissions.SCIM_USERS_READ,
+        ],
+        "environment": "Production",
+    })
 
     assert res.connection is not None
 
@@ -157,6 +169,17 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.connection.patch_unified_connection(request={
+        "connection": {
+            "categories": [
+                shared.PropertyConnectionCategories.METADATA,
+                shared.PropertyConnectionCategories.CRM,
+            ],
+            "integration_type": "<value>",
+            "permissions": [
+
+            ],
+            "environment": "Production",
+        },
         "id": "<id>",
     })
 
@@ -245,6 +268,18 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.connection.update_unified_connection(request={
+        "connection": {
+            "categories": [
+                shared.PropertyConnectionCategories.METADATA,
+                shared.PropertyConnectionCategories.ACCOUNTING,
+                shared.PropertyConnectionCategories.METADATA,
+            ],
+            "integration_type": "<value>",
+            "permissions": [
+
+            ],
+            "environment": "Production",
+        },
         "id": "<id>",
     })
 

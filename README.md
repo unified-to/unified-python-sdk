@@ -77,6 +77,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.create_accounting_account(request={
+        "accounting_account": {},
         "connection_id": "<id>",
     })
 
@@ -103,6 +104,7 @@ async def main():
     ) as unified_to:
 
         res = await unified_to.accounting.create_accounting_account_async(request={
+            "accounting_account": {},
             "connection_id": "<id>",
         })
 
@@ -1197,6 +1199,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.create_accounting_account(request={
+        "accounting_account": {},
         "connection_id": "<id>",
     },
         RetryConfig("backoff", BackoffStrategy(1, 50, 1.1, 100), False))
@@ -1222,6 +1225,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.create_accounting_account(request={
+        "accounting_account": {},
         "connection_id": "<id>",
     })
 
@@ -1268,6 +1272,7 @@ with UnifiedTo(
     try:
 
         res = unified_to.accounting.create_accounting_account(request={
+            "accounting_account": {},
             "connection_id": "<id>",
         })
 
@@ -1310,6 +1315,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.create_accounting_account(request={
+        "accounting_account": {},
         "connection_id": "<id>",
     })
 
@@ -1335,6 +1341,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.create_accounting_account(request={
+        "accounting_account": {},
         "connection_id": "<id>",
     })
 
@@ -1454,6 +1461,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.accounting.create_accounting_account(request={
+        "accounting_account": {},
         "connection_id": "<id>",
     })
 

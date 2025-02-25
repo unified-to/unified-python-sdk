@@ -35,6 +35,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.group.create_hris_group(request={
+        "hris_group": {},
         "connection_id": "<id>",
     })
 
@@ -79,6 +80,9 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.group.create_scim_groups(request={
+        "scim_group": {
+            "display_name": "Bert89",
+        },
         "connection_id": "<id>",
     })
 
@@ -301,6 +305,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.group.patch_hris_group(request={
+        "hris_group": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -346,6 +351,9 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.group.patch_scim_groups(request={
+        "scim_group": {
+            "display_name": "Damon_Rutherford93",
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -481,6 +489,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.group.update_hris_group(request={
+        "hris_group": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -526,6 +535,9 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.group.update_scim_groups(request={
+        "scim_group": {
+            "display_name": "Frederic.Reichel",
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })

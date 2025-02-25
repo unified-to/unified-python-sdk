@@ -15,23 +15,23 @@ from unified_python_sdk.utils import (
 
 
 class CreateRepoPullrequestRequestTypedDict(TypedDict):
+    repo_pullrequest: shared_repopullrequest.RepoPullrequestTypedDict
     connection_id: str
     r"""ID of the connection"""
-    repo_pullrequest: NotRequired[shared_repopullrequest.RepoPullrequestTypedDict]
     fields: NotRequired[List[str]]
     r"""Comma-delimited fields to return"""
 
 
 class CreateRepoPullrequestRequest(BaseModel):
+    repo_pullrequest: Annotated[
+        shared_repopullrequest.RepoPullrequest,
+        FieldMetadata(request=RequestMetadata(media_type="application/json")),
+    ]
+
     connection_id: Annotated[
         str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))
     ]
     r"""ID of the connection"""
-
-    repo_pullrequest: Annotated[
-        Optional[shared_repopullrequest.RepoPullrequest],
-        FieldMetadata(request=RequestMetadata(media_type="application/json")),
-    ] = None
 
     fields: Annotated[
         Optional[List[str]],

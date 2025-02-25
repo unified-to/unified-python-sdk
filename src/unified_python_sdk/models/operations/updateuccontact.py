@@ -15,17 +15,23 @@ from unified_python_sdk.utils import (
 
 
 class UpdateUcContactRequestTypedDict(TypedDict):
+    uc_contact: shared_uccontact.UcContactTypedDict
+    r"""A contact represents a person that optionally is associated with a call"""
     connection_id: str
     r"""ID of the connection"""
     id: str
     r"""ID of the Contact"""
-    uc_contact: NotRequired[shared_uccontact.UcContactTypedDict]
-    r"""A contact represents a person that optionally is associated with a call"""
     fields: NotRequired[List[str]]
     r"""Comma-delimited fields to return"""
 
 
 class UpdateUcContactRequest(BaseModel):
+    uc_contact: Annotated[
+        shared_uccontact.UcContact,
+        FieldMetadata(request=RequestMetadata(media_type="application/json")),
+    ]
+    r"""A contact represents a person that optionally is associated with a call"""
+
     connection_id: Annotated[
         str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))
     ]
@@ -35,12 +41,6 @@ class UpdateUcContactRequest(BaseModel):
         str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))
     ]
     r"""ID of the Contact"""
-
-    uc_contact: Annotated[
-        Optional[shared_uccontact.UcContact],
-        FieldMetadata(request=RequestMetadata(media_type="application/json")),
-    ] = None
-    r"""A contact represents a person that optionally is associated with a call"""
 
     fields: Annotated[
         Optional[List[str]],

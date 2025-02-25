@@ -29,6 +29,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.account.create_accounting_account(request={
+        "accounting_account": {},
         "connection_id": "<id>",
     })
 
@@ -162,6 +163,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.account.patch_accounting_account(request={
+        "accounting_account": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -252,6 +254,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.account.update_accounting_account(request={
+        "accounting_account": {},
         "connection_id": "<id>",
         "id": "<id>",
     })

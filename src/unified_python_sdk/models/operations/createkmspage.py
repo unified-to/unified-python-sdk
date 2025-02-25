@@ -15,23 +15,23 @@ from unified_python_sdk.utils import (
 
 
 class CreateKmsPageRequestTypedDict(TypedDict):
+    kms_page: shared_kmspage.KmsPageTypedDict
     connection_id: str
     r"""ID of the connection"""
-    kms_page: NotRequired[shared_kmspage.KmsPageTypedDict]
     fields: NotRequired[List[str]]
     r"""Comma-delimited fields to return"""
 
 
 class CreateKmsPageRequest(BaseModel):
+    kms_page: Annotated[
+        shared_kmspage.KmsPage,
+        FieldMetadata(request=RequestMetadata(media_type="application/json")),
+    ]
+
     connection_id: Annotated[
         str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))
     ]
     r"""ID of the connection"""
-
-    kms_page: Annotated[
-        Optional[shared_kmspage.KmsPage],
-        FieldMetadata(request=RequestMetadata(media_type="application/json")),
-    ] = None
 
     fields: Annotated[
         Optional[List[str]],

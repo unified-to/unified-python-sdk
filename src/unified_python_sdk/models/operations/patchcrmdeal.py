@@ -15,17 +15,23 @@ from unified_python_sdk.utils import (
 
 
 class PatchCrmDealRequestTypedDict(TypedDict):
+    crm_deal: shared_crmdeal.CrmDealTypedDict
+    r"""A deal represents an opportunity with companies and/or contacts"""
     connection_id: str
     r"""ID of the connection"""
     id: str
     r"""ID of the Deal"""
-    crm_deal: NotRequired[shared_crmdeal.CrmDealTypedDict]
-    r"""A deal represents an opportunity with companies and/or contacts"""
     fields: NotRequired[List[str]]
     r"""Comma-delimited fields to return"""
 
 
 class PatchCrmDealRequest(BaseModel):
+    crm_deal: Annotated[
+        shared_crmdeal.CrmDeal,
+        FieldMetadata(request=RequestMetadata(media_type="application/json")),
+    ]
+    r"""A deal represents an opportunity with companies and/or contacts"""
+
     connection_id: Annotated[
         str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))
     ]
@@ -35,12 +41,6 @@ class PatchCrmDealRequest(BaseModel):
         str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))
     ]
     r"""ID of the Deal"""
-
-    crm_deal: Annotated[
-        Optional[shared_crmdeal.CrmDeal],
-        FieldMetadata(request=RequestMetadata(media_type="application/json")),
-    ] = None
-    r"""A deal represents an opportunity with companies and/or contacts"""
 
     fields: Annotated[
         Optional[List[str]],

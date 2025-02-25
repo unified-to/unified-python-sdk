@@ -31,6 +31,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.organization.create_repo_organization(request={
+        "repo_organization": {},
         "connection_id": "<id>",
     })
 
@@ -253,6 +254,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.organization.patch_repo_organization(request={
+        "repo_organization": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -343,6 +345,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.organization.update_repo_organization(request={
+        "repo_organization": {},
         "connection_id": "<id>",
         "id": "<id>",
     })

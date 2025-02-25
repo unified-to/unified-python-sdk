@@ -29,6 +29,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.invoice.create_accounting_invoice(request={
+        "accounting_invoice": {},
         "connection_id": "<id>",
     })
 
@@ -162,6 +163,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.invoice.patch_accounting_invoice(request={
+        "accounting_invoice": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -252,6 +254,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.invoice.update_accounting_invoice(request={
+        "accounting_invoice": {},
         "connection_id": "<id>",
         "id": "<id>",
     })

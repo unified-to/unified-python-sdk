@@ -29,6 +29,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.pipeline.create_crm_pipeline(request={
+        "crm_pipeline": {},
         "connection_id": "<id>",
     })
 
@@ -162,6 +163,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.pipeline.patch_crm_pipeline(request={
+        "crm_pipeline": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -252,6 +254,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.pipeline.update_crm_pipeline(request={
+        "crm_pipeline": {},
         "connection_id": "<id>",
         "id": "<id>",
     })

@@ -15,25 +15,25 @@ from unified_python_sdk.utils import (
 
 
 class CreateMartechListRequestTypedDict(TypedDict):
+    marketing_list: shared_marketinglist.MarketingListTypedDict
+    r"""Mailing List"""
     connection_id: str
     r"""ID of the connection"""
-    marketing_list: NotRequired[shared_marketinglist.MarketingListTypedDict]
-    r"""Mailing List"""
     fields: NotRequired[List[str]]
     r"""Comma-delimited fields to return"""
 
 
 class CreateMartechListRequest(BaseModel):
+    marketing_list: Annotated[
+        shared_marketinglist.MarketingList,
+        FieldMetadata(request=RequestMetadata(media_type="application/json")),
+    ]
+    r"""Mailing List"""
+
     connection_id: Annotated[
         str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))
     ]
     r"""ID of the connection"""
-
-    marketing_list: Annotated[
-        Optional[shared_marketinglist.MarketingList],
-        FieldMetadata(request=RequestMetadata(media_type="application/json")),
-    ] = None
-    r"""Mailing List"""
 
     fields: Annotated[
         Optional[List[str]],

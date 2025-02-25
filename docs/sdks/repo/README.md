@@ -53,6 +53,10 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.repo.create_repo_branch(request={
+        "repo_branch": {
+            "name": "<value>",
+            "repo_id": "<id>",
+        },
         "connection_id": "<id>",
     })
 
@@ -97,6 +101,10 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.repo.create_repo_commit(request={
+        "repo_commit": {
+            "repo_id": "<id>",
+            "user_id": "<id>",
+        },
         "connection_id": "<id>",
     })
 
@@ -141,6 +149,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.repo.create_repo_organization(request={
+        "repo_organization": {},
         "connection_id": "<id>",
     })
 
@@ -185,6 +194,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.repo.create_repo_pullrequest(request={
+        "repo_pullrequest": {},
         "connection_id": "<id>",
     })
 
@@ -229,6 +239,9 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.repo.create_repo_repository(request={
+        "repo_repository": {
+            "name": "<value>",
+        },
         "connection_id": "<id>",
     })
 
@@ -718,6 +731,10 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.repo.patch_repo_branch(request={
+        "repo_branch": {
+            "name": "<value>",
+            "repo_id": "<id>",
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -763,6 +780,10 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.repo.patch_repo_commit(request={
+        "repo_commit": {
+            "repo_id": "<id>",
+            "user_id": "<id>",
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -808,6 +829,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.repo.patch_repo_organization(request={
+        "repo_organization": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -853,6 +875,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.repo.patch_repo_pullrequest(request={
+        "repo_pullrequest": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -898,6 +921,9 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.repo.patch_repo_repository(request={
+        "repo_repository": {
+            "name": "<value>",
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -1168,6 +1194,10 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.repo.update_repo_branch(request={
+        "repo_branch": {
+            "name": "<value>",
+            "repo_id": "<id>",
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -1213,6 +1243,10 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.repo.update_repo_commit(request={
+        "repo_commit": {
+            "repo_id": "<id>",
+            "user_id": "<id>",
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -1258,6 +1292,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.repo.update_repo_organization(request={
+        "repo_organization": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -1303,6 +1338,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.repo.update_repo_pullrequest(request={
+        "repo_pullrequest": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -1348,6 +1384,9 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.repo.update_repo_repository(request={
+        "repo_repository": {
+            "name": "<value>",
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })

@@ -29,6 +29,10 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.branch.create_repo_branch(request={
+        "repo_branch": {
+            "name": "<value>",
+            "repo_id": "<id>",
+        },
         "connection_id": "<id>",
     })
 
@@ -162,6 +166,10 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.branch.patch_repo_branch(request={
+        "repo_branch": {
+            "name": "<value>",
+            "repo_id": "<id>",
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -252,6 +260,10 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.branch.update_repo_branch(request={
+        "repo_branch": {
+            "name": "<value>",
+            "repo_id": "<id>",
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })

@@ -47,7 +47,7 @@ class Crm(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -55,7 +55,7 @@ class Crm(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.crm_company, False, True, "json", Optional[shared.CrmCompany]
+                request.crm_company, False, False, "json", shared.CrmCompany
             ),
             timeout_ms=timeout_ms,
         )
@@ -141,7 +141,7 @@ class Crm(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -149,7 +149,7 @@ class Crm(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.crm_company, False, True, "json", Optional[shared.CrmCompany]
+                request.crm_company, False, False, "json", shared.CrmCompany
             ),
             timeout_ms=timeout_ms,
         )
@@ -235,7 +235,7 @@ class Crm(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -243,7 +243,7 @@ class Crm(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.crm_contact, False, True, "json", Optional[shared.CrmContact]
+                request.crm_contact, False, False, "json", shared.CrmContact
             ),
             timeout_ms=timeout_ms,
         )
@@ -329,7 +329,7 @@ class Crm(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -337,7 +337,7 @@ class Crm(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.crm_contact, False, True, "json", Optional[shared.CrmContact]
+                request.crm_contact, False, False, "json", shared.CrmContact
             ),
             timeout_ms=timeout_ms,
         )
@@ -422,7 +422,7 @@ class Crm(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -430,7 +430,7 @@ class Crm(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.crm_deal, False, True, "json", Optional[shared.CrmDeal]
+                request.crm_deal, False, False, "json", shared.CrmDeal
             ),
             timeout_ms=timeout_ms,
         )
@@ -513,7 +513,7 @@ class Crm(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -521,7 +521,7 @@ class Crm(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.crm_deal, False, True, "json", Optional[shared.CrmDeal]
+                request.crm_deal, False, False, "json", shared.CrmDeal
             ),
             timeout_ms=timeout_ms,
         )
@@ -604,7 +604,7 @@ class Crm(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -612,7 +612,7 @@ class Crm(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.crm_event, False, True, "json", Optional[shared.CrmEvent]
+                request.crm_event, False, False, "json", shared.CrmEvent
             ),
             timeout_ms=timeout_ms,
         )
@@ -697,7 +697,7 @@ class Crm(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -705,7 +705,7 @@ class Crm(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.crm_event, False, True, "json", Optional[shared.CrmEvent]
+                request.crm_event, False, False, "json", shared.CrmEvent
             ),
             timeout_ms=timeout_ms,
         )
@@ -790,7 +790,7 @@ class Crm(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -798,7 +798,7 @@ class Crm(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.crm_lead, False, True, "json", Optional[shared.CrmLead]
+                request.crm_lead, False, False, "json", shared.CrmLead
             ),
             timeout_ms=timeout_ms,
         )
@@ -881,7 +881,7 @@ class Crm(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -889,7 +889,7 @@ class Crm(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.crm_lead, False, True, "json", Optional[shared.CrmLead]
+                request.crm_lead, False, False, "json", shared.CrmLead
             ),
             timeout_ms=timeout_ms,
         )
@@ -973,7 +973,7 @@ class Crm(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -981,7 +981,7 @@ class Crm(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.crm_pipeline, False, True, "json", Optional[shared.CrmPipeline]
+                request.crm_pipeline, False, False, "json", shared.CrmPipeline
             ),
             timeout_ms=timeout_ms,
         )
@@ -1067,7 +1067,7 @@ class Crm(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -1075,7 +1075,7 @@ class Crm(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.crm_pipeline, False, True, "json", Optional[shared.CrmPipeline]
+                request.crm_pipeline, False, False, "json", shared.CrmPipeline
             ),
             timeout_ms=timeout_ms,
         )
@@ -3319,7 +3319,7 @@ class Crm(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -3327,7 +3327,7 @@ class Crm(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.crm_company, False, True, "json", Optional[shared.CrmCompany]
+                request.crm_company, False, False, "json", shared.CrmCompany
             ),
             timeout_ms=timeout_ms,
         )
@@ -3413,7 +3413,7 @@ class Crm(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -3421,7 +3421,7 @@ class Crm(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.crm_company, False, True, "json", Optional[shared.CrmCompany]
+                request.crm_company, False, False, "json", shared.CrmCompany
             ),
             timeout_ms=timeout_ms,
         )
@@ -3507,7 +3507,7 @@ class Crm(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -3515,7 +3515,7 @@ class Crm(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.crm_contact, False, True, "json", Optional[shared.CrmContact]
+                request.crm_contact, False, False, "json", shared.CrmContact
             ),
             timeout_ms=timeout_ms,
         )
@@ -3601,7 +3601,7 @@ class Crm(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -3609,7 +3609,7 @@ class Crm(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.crm_contact, False, True, "json", Optional[shared.CrmContact]
+                request.crm_contact, False, False, "json", shared.CrmContact
             ),
             timeout_ms=timeout_ms,
         )
@@ -3694,7 +3694,7 @@ class Crm(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -3702,7 +3702,7 @@ class Crm(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.crm_deal, False, True, "json", Optional[shared.CrmDeal]
+                request.crm_deal, False, False, "json", shared.CrmDeal
             ),
             timeout_ms=timeout_ms,
         )
@@ -3785,7 +3785,7 @@ class Crm(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -3793,7 +3793,7 @@ class Crm(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.crm_deal, False, True, "json", Optional[shared.CrmDeal]
+                request.crm_deal, False, False, "json", shared.CrmDeal
             ),
             timeout_ms=timeout_ms,
         )
@@ -3876,7 +3876,7 @@ class Crm(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -3884,7 +3884,7 @@ class Crm(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.crm_event, False, True, "json", Optional[shared.CrmEvent]
+                request.crm_event, False, False, "json", shared.CrmEvent
             ),
             timeout_ms=timeout_ms,
         )
@@ -3969,7 +3969,7 @@ class Crm(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -3977,7 +3977,7 @@ class Crm(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.crm_event, False, True, "json", Optional[shared.CrmEvent]
+                request.crm_event, False, False, "json", shared.CrmEvent
             ),
             timeout_ms=timeout_ms,
         )
@@ -4062,7 +4062,7 @@ class Crm(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -4070,7 +4070,7 @@ class Crm(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.crm_lead, False, True, "json", Optional[shared.CrmLead]
+                request.crm_lead, False, False, "json", shared.CrmLead
             ),
             timeout_ms=timeout_ms,
         )
@@ -4153,7 +4153,7 @@ class Crm(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -4161,7 +4161,7 @@ class Crm(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.crm_lead, False, True, "json", Optional[shared.CrmLead]
+                request.crm_lead, False, False, "json", shared.CrmLead
             ),
             timeout_ms=timeout_ms,
         )
@@ -4245,7 +4245,7 @@ class Crm(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -4253,7 +4253,7 @@ class Crm(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.crm_pipeline, False, True, "json", Optional[shared.CrmPipeline]
+                request.crm_pipeline, False, False, "json", shared.CrmPipeline
             ),
             timeout_ms=timeout_ms,
         )
@@ -4339,7 +4339,7 @@ class Crm(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -4347,7 +4347,7 @@ class Crm(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.crm_pipeline, False, True, "json", Optional[shared.CrmPipeline]
+                request.crm_pipeline, False, False, "json", shared.CrmPipeline
             ),
             timeout_ms=timeout_ms,
         )
@@ -5579,7 +5579,7 @@ class Crm(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -5587,7 +5587,7 @@ class Crm(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.crm_company, False, True, "json", Optional[shared.CrmCompany]
+                request.crm_company, False, False, "json", shared.CrmCompany
             ),
             timeout_ms=timeout_ms,
         )
@@ -5673,7 +5673,7 @@ class Crm(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -5681,7 +5681,7 @@ class Crm(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.crm_company, False, True, "json", Optional[shared.CrmCompany]
+                request.crm_company, False, False, "json", shared.CrmCompany
             ),
             timeout_ms=timeout_ms,
         )
@@ -5767,7 +5767,7 @@ class Crm(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -5775,7 +5775,7 @@ class Crm(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.crm_contact, False, True, "json", Optional[shared.CrmContact]
+                request.crm_contact, False, False, "json", shared.CrmContact
             ),
             timeout_ms=timeout_ms,
         )
@@ -5861,7 +5861,7 @@ class Crm(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -5869,7 +5869,7 @@ class Crm(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.crm_contact, False, True, "json", Optional[shared.CrmContact]
+                request.crm_contact, False, False, "json", shared.CrmContact
             ),
             timeout_ms=timeout_ms,
         )
@@ -5954,7 +5954,7 @@ class Crm(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -5962,7 +5962,7 @@ class Crm(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.crm_deal, False, True, "json", Optional[shared.CrmDeal]
+                request.crm_deal, False, False, "json", shared.CrmDeal
             ),
             timeout_ms=timeout_ms,
         )
@@ -6045,7 +6045,7 @@ class Crm(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -6053,7 +6053,7 @@ class Crm(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.crm_deal, False, True, "json", Optional[shared.CrmDeal]
+                request.crm_deal, False, False, "json", shared.CrmDeal
             ),
             timeout_ms=timeout_ms,
         )
@@ -6136,7 +6136,7 @@ class Crm(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -6144,7 +6144,7 @@ class Crm(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.crm_event, False, True, "json", Optional[shared.CrmEvent]
+                request.crm_event, False, False, "json", shared.CrmEvent
             ),
             timeout_ms=timeout_ms,
         )
@@ -6229,7 +6229,7 @@ class Crm(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -6237,7 +6237,7 @@ class Crm(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.crm_event, False, True, "json", Optional[shared.CrmEvent]
+                request.crm_event, False, False, "json", shared.CrmEvent
             ),
             timeout_ms=timeout_ms,
         )
@@ -6322,7 +6322,7 @@ class Crm(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -6330,7 +6330,7 @@ class Crm(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.crm_lead, False, True, "json", Optional[shared.CrmLead]
+                request.crm_lead, False, False, "json", shared.CrmLead
             ),
             timeout_ms=timeout_ms,
         )
@@ -6413,7 +6413,7 @@ class Crm(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -6421,7 +6421,7 @@ class Crm(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.crm_lead, False, True, "json", Optional[shared.CrmLead]
+                request.crm_lead, False, False, "json", shared.CrmLead
             ),
             timeout_ms=timeout_ms,
         )
@@ -6505,7 +6505,7 @@ class Crm(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -6513,7 +6513,7 @@ class Crm(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.crm_pipeline, False, True, "json", Optional[shared.CrmPipeline]
+                request.crm_pipeline, False, False, "json", shared.CrmPipeline
             ),
             timeout_ms=timeout_ms,
         )
@@ -6599,7 +6599,7 @@ class Crm(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -6607,7 +6607,7 @@ class Crm(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.crm_pipeline, False, True, "json", Optional[shared.CrmPipeline]
+                request.crm_pipeline, False, False, "json", shared.CrmPipeline
             ),
             timeout_ms=timeout_ms,
         )

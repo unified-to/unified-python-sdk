@@ -47,7 +47,7 @@ class Interview(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -55,11 +55,7 @@ class Interview(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.ats_interview,
-                False,
-                True,
-                "json",
-                Optional[shared.AtsInterview],
+                request.ats_interview, False, False, "json", shared.AtsInterview
             ),
             timeout_ms=timeout_ms,
         )
@@ -145,7 +141,7 @@ class Interview(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -153,11 +149,7 @@ class Interview(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.ats_interview,
-                False,
-                True,
-                "json",
-                Optional[shared.AtsInterview],
+                request.ats_interview, False, False, "json", shared.AtsInterview
             ),
             timeout_ms=timeout_ms,
         )
@@ -607,7 +599,7 @@ class Interview(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -615,11 +607,7 @@ class Interview(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.ats_interview,
-                False,
-                True,
-                "json",
-                Optional[shared.AtsInterview],
+                request.ats_interview, False, False, "json", shared.AtsInterview
             ),
             timeout_ms=timeout_ms,
         )
@@ -705,7 +693,7 @@ class Interview(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -713,11 +701,7 @@ class Interview(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.ats_interview,
-                False,
-                True,
-                "json",
-                Optional[shared.AtsInterview],
+                request.ats_interview, False, False, "json", shared.AtsInterview
             ),
             timeout_ms=timeout_ms,
         )
@@ -995,7 +979,7 @@ class Interview(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -1003,11 +987,7 @@ class Interview(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.ats_interview,
-                False,
-                True,
-                "json",
-                Optional[shared.AtsInterview],
+                request.ats_interview, False, False, "json", shared.AtsInterview
             ),
             timeout_ms=timeout_ms,
         )
@@ -1093,7 +1073,7 @@ class Interview(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -1101,11 +1081,7 @@ class Interview(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.ats_interview,
-                False,
-                True,
-                "json",
-                Optional[shared.AtsInterview],
+                request.ats_interview, False, False, "json", shared.AtsInterview
             ),
             timeout_ms=timeout_ms,
         )

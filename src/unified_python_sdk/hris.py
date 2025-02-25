@@ -47,7 +47,7 @@ class Hris(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -55,7 +55,7 @@ class Hris(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.hris_company, False, True, "json", Optional[shared.HrisCompany]
+                request.hris_company, False, False, "json", shared.HrisCompany
             ),
             timeout_ms=timeout_ms,
         )
@@ -141,7 +141,7 @@ class Hris(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -149,7 +149,7 @@ class Hris(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.hris_company, False, True, "json", Optional[shared.HrisCompany]
+                request.hris_company, False, False, "json", shared.HrisCompany
             ),
             timeout_ms=timeout_ms,
         )
@@ -235,7 +235,7 @@ class Hris(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -243,11 +243,7 @@ class Hris(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.hris_employee,
-                False,
-                True,
-                "json",
-                Optional[shared.HrisEmployee],
+                request.hris_employee, False, False, "json", shared.HrisEmployee
             ),
             timeout_ms=timeout_ms,
         )
@@ -333,7 +329,7 @@ class Hris(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -341,11 +337,7 @@ class Hris(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.hris_employee,
-                False,
-                True,
-                "json",
-                Optional[shared.HrisEmployee],
+                request.hris_employee, False, False, "json", shared.HrisEmployee
             ),
             timeout_ms=timeout_ms,
         )
@@ -431,7 +423,7 @@ class Hris(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -439,7 +431,7 @@ class Hris(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.hris_group, False, True, "json", Optional[shared.HrisGroup]
+                request.hris_group, False, False, "json", shared.HrisGroup
             ),
             timeout_ms=timeout_ms,
         )
@@ -525,7 +517,7 @@ class Hris(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -533,7 +525,7 @@ class Hris(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.hris_group, False, True, "json", Optional[shared.HrisGroup]
+                request.hris_group, False, False, "json", shared.HrisGroup
             ),
             timeout_ms=timeout_ms,
         )
@@ -619,7 +611,7 @@ class Hris(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -627,11 +619,7 @@ class Hris(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.hris_location,
-                False,
-                True,
-                "json",
-                Optional[shared.HrisLocation],
+                request.hris_location, False, False, "json", shared.HrisLocation
             ),
             timeout_ms=timeout_ms,
         )
@@ -717,7 +705,7 @@ class Hris(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -725,11 +713,7 @@ class Hris(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.hris_location,
-                False,
-                True,
-                "json",
-                Optional[shared.HrisLocation],
+                request.hris_location, False, False, "json", shared.HrisLocation
             ),
             timeout_ms=timeout_ms,
         )
@@ -2989,7 +2973,7 @@ class Hris(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -2997,7 +2981,7 @@ class Hris(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.hris_company, False, True, "json", Optional[shared.HrisCompany]
+                request.hris_company, False, False, "json", shared.HrisCompany
             ),
             timeout_ms=timeout_ms,
         )
@@ -3083,7 +3067,7 @@ class Hris(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -3091,7 +3075,7 @@ class Hris(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.hris_company, False, True, "json", Optional[shared.HrisCompany]
+                request.hris_company, False, False, "json", shared.HrisCompany
             ),
             timeout_ms=timeout_ms,
         )
@@ -3177,7 +3161,7 @@ class Hris(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -3185,11 +3169,7 @@ class Hris(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.hris_employee,
-                False,
-                True,
-                "json",
-                Optional[shared.HrisEmployee],
+                request.hris_employee, False, False, "json", shared.HrisEmployee
             ),
             timeout_ms=timeout_ms,
         )
@@ -3275,7 +3255,7 @@ class Hris(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -3283,11 +3263,7 @@ class Hris(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.hris_employee,
-                False,
-                True,
-                "json",
-                Optional[shared.HrisEmployee],
+                request.hris_employee, False, False, "json", shared.HrisEmployee
             ),
             timeout_ms=timeout_ms,
         )
@@ -3372,7 +3348,7 @@ class Hris(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -3380,7 +3356,7 @@ class Hris(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.hris_group, False, True, "json", Optional[shared.HrisGroup]
+                request.hris_group, False, False, "json", shared.HrisGroup
             ),
             timeout_ms=timeout_ms,
         )
@@ -3465,7 +3441,7 @@ class Hris(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -3473,7 +3449,7 @@ class Hris(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.hris_group, False, True, "json", Optional[shared.HrisGroup]
+                request.hris_group, False, False, "json", shared.HrisGroup
             ),
             timeout_ms=timeout_ms,
         )
@@ -3559,7 +3535,7 @@ class Hris(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -3567,11 +3543,7 @@ class Hris(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.hris_location,
-                False,
-                True,
-                "json",
-                Optional[shared.HrisLocation],
+                request.hris_location, False, False, "json", shared.HrisLocation
             ),
             timeout_ms=timeout_ms,
         )
@@ -3657,7 +3629,7 @@ class Hris(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -3665,11 +3637,7 @@ class Hris(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.hris_location,
-                False,
-                True,
-                "json",
-                Optional[shared.HrisLocation],
+                request.hris_location, False, False, "json", shared.HrisLocation
             ),
             timeout_ms=timeout_ms,
         )
@@ -4523,7 +4491,7 @@ class Hris(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -4531,7 +4499,7 @@ class Hris(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.hris_company, False, True, "json", Optional[shared.HrisCompany]
+                request.hris_company, False, False, "json", shared.HrisCompany
             ),
             timeout_ms=timeout_ms,
         )
@@ -4617,7 +4585,7 @@ class Hris(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -4625,7 +4593,7 @@ class Hris(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.hris_company, False, True, "json", Optional[shared.HrisCompany]
+                request.hris_company, False, False, "json", shared.HrisCompany
             ),
             timeout_ms=timeout_ms,
         )
@@ -4711,7 +4679,7 @@ class Hris(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -4719,11 +4687,7 @@ class Hris(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.hris_employee,
-                False,
-                True,
-                "json",
-                Optional[shared.HrisEmployee],
+                request.hris_employee, False, False, "json", shared.HrisEmployee
             ),
             timeout_ms=timeout_ms,
         )
@@ -4809,7 +4773,7 @@ class Hris(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -4817,11 +4781,7 @@ class Hris(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.hris_employee,
-                False,
-                True,
-                "json",
-                Optional[shared.HrisEmployee],
+                request.hris_employee, False, False, "json", shared.HrisEmployee
             ),
             timeout_ms=timeout_ms,
         )
@@ -4907,7 +4867,7 @@ class Hris(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -4915,7 +4875,7 @@ class Hris(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.hris_group, False, True, "json", Optional[shared.HrisGroup]
+                request.hris_group, False, False, "json", shared.HrisGroup
             ),
             timeout_ms=timeout_ms,
         )
@@ -5001,7 +4961,7 @@ class Hris(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -5009,7 +4969,7 @@ class Hris(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.hris_group, False, True, "json", Optional[shared.HrisGroup]
+                request.hris_group, False, False, "json", shared.HrisGroup
             ),
             timeout_ms=timeout_ms,
         )
@@ -5095,7 +5055,7 @@ class Hris(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -5103,11 +5063,7 @@ class Hris(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.hris_location,
-                False,
-                True,
-                "json",
-                Optional[shared.HrisLocation],
+                request.hris_location, False, False, "json", shared.HrisLocation
             ),
             timeout_ms=timeout_ms,
         )
@@ -5193,7 +5149,7 @@ class Hris(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -5201,11 +5157,7 @@ class Hris(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.hris_location,
-                False,
-                True,
-                "json",
-                Optional[shared.HrisLocation],
+                request.hris_location, False, False, "json", shared.HrisLocation
             ),
             timeout_ms=timeout_ms,
         )

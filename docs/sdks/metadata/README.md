@@ -29,6 +29,10 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.metadata.create_metadata_metadata(request={
+        "metadata_metadata": {
+            "name": "<value>",
+            "object_type": "<value>",
+        },
         "connection_id": "<id>",
     })
 
@@ -162,6 +166,10 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.metadata.patch_metadata_metadata(request={
+        "metadata_metadata": {
+            "name": "<value>",
+            "object_type": "<value>",
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -252,6 +260,10 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.metadata.update_metadata_metadata(request={
+        "metadata_metadata": {
+            "name": "<value>",
+            "object_type": "<value>",
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })

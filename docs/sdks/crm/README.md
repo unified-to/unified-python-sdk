@@ -59,6 +59,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.crm.create_crm_company(request={
+        "crm_company": {},
         "connection_id": "<id>",
     })
 
@@ -103,6 +104,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.crm.create_crm_contact(request={
+        "crm_contact": {},
         "connection_id": "<id>",
     })
 
@@ -147,6 +149,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.crm.create_crm_deal(request={
+        "crm_deal": {},
         "connection_id": "<id>",
     })
 
@@ -191,6 +194,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.crm.create_crm_event(request={
+        "crm_event": {},
         "connection_id": "<id>",
     })
 
@@ -235,6 +239,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.crm.create_crm_lead(request={
+        "crm_lead": {},
         "connection_id": "<id>",
     })
 
@@ -279,6 +284,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.crm.create_crm_pipeline(request={
+        "crm_pipeline": {},
         "connection_id": "<id>",
     })
 
@@ -857,6 +863,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.crm.patch_crm_company(request={
+        "crm_company": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -902,6 +909,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.crm.patch_crm_contact(request={
+        "crm_contact": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -947,6 +955,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.crm.patch_crm_deal(request={
+        "crm_deal": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -992,6 +1001,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.crm.patch_crm_event(request={
+        "crm_event": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -1037,6 +1047,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.crm.patch_crm_lead(request={
+        "crm_lead": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -1082,6 +1093,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.crm.patch_crm_pipeline(request={
+        "crm_pipeline": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -1397,6 +1409,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.crm.update_crm_company(request={
+        "crm_company": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -1442,6 +1455,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.crm.update_crm_contact(request={
+        "crm_contact": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -1487,6 +1501,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.crm.update_crm_deal(request={
+        "crm_deal": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -1532,6 +1547,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.crm.update_crm_event(request={
+        "crm_event": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -1577,6 +1593,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.crm.update_crm_lead(request={
+        "crm_lead": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -1622,6 +1639,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.crm.update_crm_pipeline(request={
+        "crm_pipeline": {},
         "connection_id": "<id>",
         "id": "<id>",
     })

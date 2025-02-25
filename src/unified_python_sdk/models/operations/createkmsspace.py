@@ -15,23 +15,23 @@ from unified_python_sdk.utils import (
 
 
 class CreateKmsSpaceRequestTypedDict(TypedDict):
+    kms_space: shared_kmsspace.KmsSpaceTypedDict
     connection_id: str
     r"""ID of the connection"""
-    kms_space: NotRequired[shared_kmsspace.KmsSpaceTypedDict]
     fields: NotRequired[List[str]]
     r"""Comma-delimited fields to return"""
 
 
 class CreateKmsSpaceRequest(BaseModel):
+    kms_space: Annotated[
+        shared_kmsspace.KmsSpace,
+        FieldMetadata(request=RequestMetadata(media_type="application/json")),
+    ]
+
     connection_id: Annotated[
         str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))
     ]
     r"""ID of the connection"""
-
-    kms_space: Annotated[
-        Optional[shared_kmsspace.KmsSpace],
-        FieldMetadata(request=RequestMetadata(media_type="application/json")),
-    ] = None
 
     fields: Annotated[
         Optional[List[str]],

@@ -35,6 +35,9 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.comment.create_kms_comment(request={
+        "kms_comment": {
+            "content": "<value>",
+        },
         "connection_id": "<id>",
     })
 
@@ -79,6 +82,10 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.comment.create_task_comment(request={
+        "task_comment": {
+            "task_id": "<id>",
+            "text": "<value>",
+        },
         "connection_id": "<id>",
     })
 
@@ -301,6 +308,9 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.comment.patch_kms_comment(request={
+        "kms_comment": {
+            "content": "<value>",
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -346,6 +356,10 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.comment.patch_task_comment(request={
+        "task_comment": {
+            "task_id": "<id>",
+            "text": "<value>",
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -481,6 +495,9 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.comment.update_kms_comment(request={
+        "kms_comment": {
+            "content": "<value>",
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -526,6 +543,10 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.comment.update_task_comment(request={
+        "task_comment": {
+            "task_id": "<id>",
+            "text": "<value>",
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })

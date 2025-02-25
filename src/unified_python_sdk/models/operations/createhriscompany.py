@@ -15,23 +15,23 @@ from unified_python_sdk.utils import (
 
 
 class CreateHrisCompanyRequestTypedDict(TypedDict):
+    hris_company: shared_hriscompany.HrisCompanyTypedDict
     connection_id: str
     r"""ID of the connection"""
-    hris_company: NotRequired[shared_hriscompany.HrisCompanyTypedDict]
     fields: NotRequired[List[str]]
     r"""Comma-delimited fields to return"""
 
 
 class CreateHrisCompanyRequest(BaseModel):
+    hris_company: Annotated[
+        shared_hriscompany.HrisCompany,
+        FieldMetadata(request=RequestMetadata(media_type="application/json")),
+    ]
+
     connection_id: Annotated[
         str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))
     ]
     r"""ID of the connection"""
-
-    hris_company: Annotated[
-        Optional[shared_hriscompany.HrisCompany],
-        FieldMetadata(request=RequestMetadata(media_type="application/json")),
-    ] = None
 
     fields: Annotated[
         Optional[List[str]],

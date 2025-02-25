@@ -29,6 +29,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.list.create_martech_list(request={
+        "marketing_list": {},
         "connection_id": "<id>",
     })
 
@@ -162,6 +163,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.list.patch_martech_list(request={
+        "marketing_list": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -252,6 +254,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.list.update_martech_list(request={
+        "marketing_list": {},
         "connection_id": "<id>",
         "id": "<id>",
     })

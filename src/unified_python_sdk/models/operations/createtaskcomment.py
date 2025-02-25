@@ -15,23 +15,23 @@ from unified_python_sdk.utils import (
 
 
 class CreateTaskCommentRequestTypedDict(TypedDict):
+    task_comment: shared_taskcomment.TaskCommentTypedDict
     connection_id: str
     r"""ID of the connection"""
-    task_comment: NotRequired[shared_taskcomment.TaskCommentTypedDict]
     fields: NotRequired[List[str]]
     r"""Comma-delimited fields to return"""
 
 
 class CreateTaskCommentRequest(BaseModel):
+    task_comment: Annotated[
+        shared_taskcomment.TaskComment,
+        FieldMetadata(request=RequestMetadata(media_type="application/json")),
+    ]
+
     connection_id: Annotated[
         str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))
     ]
     r"""ID of the connection"""
-
-    task_comment: Annotated[
-        Optional[shared_taskcomment.TaskComment],
-        FieldMetadata(request=RequestMetadata(media_type="application/json")),
-    ] = None
 
     fields: Annotated[
         Optional[List[str]],

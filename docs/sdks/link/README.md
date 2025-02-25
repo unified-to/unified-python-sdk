@@ -29,6 +29,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.link.create_payment_link(request={
+        "payment_link": {},
         "connection_id": "<id>",
     })
 
@@ -162,6 +163,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.link.patch_payment_link(request={
+        "payment_link": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -252,6 +254,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.link.update_payment_link(request={
+        "payment_link": {},
         "connection_id": "<id>",
         "id": "<id>",
     })

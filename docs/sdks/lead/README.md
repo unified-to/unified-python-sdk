@@ -29,6 +29,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.lead.create_crm_lead(request={
+        "crm_lead": {},
         "connection_id": "<id>",
     })
 
@@ -162,6 +163,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.lead.patch_crm_lead(request={
+        "crm_lead": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -252,6 +254,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.lead.update_crm_lead(request={
+        "crm_lead": {},
         "connection_id": "<id>",
         "id": "<id>",
     })

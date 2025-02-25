@@ -15,16 +15,21 @@ from unified_python_sdk.utils import (
 
 
 class PatchCrmPipelineRequestTypedDict(TypedDict):
+    crm_pipeline: shared_crmpipeline.CrmPipelineTypedDict
     connection_id: str
     r"""ID of the connection"""
     id: str
     r"""ID of the Pipeline"""
-    crm_pipeline: NotRequired[shared_crmpipeline.CrmPipelineTypedDict]
     fields: NotRequired[List[str]]
     r"""Comma-delimited fields to return"""
 
 
 class PatchCrmPipelineRequest(BaseModel):
+    crm_pipeline: Annotated[
+        shared_crmpipeline.CrmPipeline,
+        FieldMetadata(request=RequestMetadata(media_type="application/json")),
+    ]
+
     connection_id: Annotated[
         str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))
     ]
@@ -34,11 +39,6 @@ class PatchCrmPipelineRequest(BaseModel):
         str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))
     ]
     r"""ID of the Pipeline"""
-
-    crm_pipeline: Annotated[
-        Optional[shared_crmpipeline.CrmPipeline],
-        FieldMetadata(request=RequestMetadata(media_type="application/json")),
-    ] = None
 
     fields: Annotated[
         Optional[List[str]],

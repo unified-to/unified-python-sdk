@@ -15,17 +15,23 @@ from unified_python_sdk.utils import (
 
 
 class UpdateMartechMemberRequestTypedDict(TypedDict):
+    marketing_member: shared_marketingmember.MarketingMemberTypedDict
+    r"""A member represents a person"""
     connection_id: str
     r"""ID of the connection"""
     id: str
     r"""ID of the Member"""
-    marketing_member: NotRequired[shared_marketingmember.MarketingMemberTypedDict]
-    r"""A member represents a person"""
     fields: NotRequired[List[str]]
     r"""Comma-delimited fields to return"""
 
 
 class UpdateMartechMemberRequest(BaseModel):
+    marketing_member: Annotated[
+        shared_marketingmember.MarketingMember,
+        FieldMetadata(request=RequestMetadata(media_type="application/json")),
+    ]
+    r"""A member represents a person"""
+
     connection_id: Annotated[
         str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))
     ]
@@ -35,12 +41,6 @@ class UpdateMartechMemberRequest(BaseModel):
         str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))
     ]
     r"""ID of the Member"""
-
-    marketing_member: Annotated[
-        Optional[shared_marketingmember.MarketingMember],
-        FieldMetadata(request=RequestMetadata(media_type="application/json")),
-    ] = None
-    r"""A member represents a person"""
 
     fields: Annotated[
         Optional[List[str]],

@@ -15,16 +15,21 @@ from unified_python_sdk.utils import (
 
 
 class PatchAtsApplicationRequestTypedDict(TypedDict):
+    ats_application: shared_atsapplication.AtsApplicationTypedDict
     connection_id: str
     r"""ID of the connection"""
     id: str
     r"""ID of the Application"""
-    ats_application: NotRequired[shared_atsapplication.AtsApplicationTypedDict]
     fields: NotRequired[List[str]]
     r"""Comma-delimited fields to return"""
 
 
 class PatchAtsApplicationRequest(BaseModel):
+    ats_application: Annotated[
+        shared_atsapplication.AtsApplication,
+        FieldMetadata(request=RequestMetadata(media_type="application/json")),
+    ]
+
     connection_id: Annotated[
         str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))
     ]
@@ -34,11 +39,6 @@ class PatchAtsApplicationRequest(BaseModel):
         str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))
     ]
     r"""ID of the Application"""
-
-    ats_application: Annotated[
-        Optional[shared_atsapplication.AtsApplication],
-        FieldMetadata(request=RequestMetadata(media_type="application/json")),
-    ] = None
 
     fields: Annotated[
         Optional[List[str]],

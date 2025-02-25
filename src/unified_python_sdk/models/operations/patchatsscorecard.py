@@ -15,16 +15,21 @@ from unified_python_sdk.utils import (
 
 
 class PatchAtsScorecardRequestTypedDict(TypedDict):
+    ats_scorecard: shared_atsscorecard.AtsScorecardTypedDict
     connection_id: str
     r"""ID of the connection"""
     id: str
     r"""ID of the Scorecard"""
-    ats_scorecard: NotRequired[shared_atsscorecard.AtsScorecardTypedDict]
     fields: NotRequired[List[str]]
     r"""Comma-delimited fields to return"""
 
 
 class PatchAtsScorecardRequest(BaseModel):
+    ats_scorecard: Annotated[
+        shared_atsscorecard.AtsScorecard,
+        FieldMetadata(request=RequestMetadata(media_type="application/json")),
+    ]
+
     connection_id: Annotated[
         str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))
     ]
@@ -34,11 +39,6 @@ class PatchAtsScorecardRequest(BaseModel):
         str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))
     ]
     r"""ID of the Scorecard"""
-
-    ats_scorecard: Annotated[
-        Optional[shared_atsscorecard.AtsScorecard],
-        FieldMetadata(request=RequestMetadata(media_type="application/json")),
-    ] = None
 
     fields: Annotated[
         Optional[List[str]],

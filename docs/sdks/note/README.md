@@ -29,6 +29,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.note.create_ticketing_note(request={
+        "ticketing_note": {},
         "connection_id": "<id>",
     })
 
@@ -162,6 +163,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.note.patch_ticketing_note(request={
+        "ticketing_note": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -252,6 +254,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.note.update_ticketing_note(request={
+        "ticketing_note": {},
         "connection_id": "<id>",
         "id": "<id>",
     })

@@ -51,6 +51,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.hris.create_hris_company(request={
+        "hris_company": {},
         "connection_id": "<id>",
     })
 
@@ -95,6 +96,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.hris.create_hris_employee(request={
+        "hris_employee": {},
         "connection_id": "<id>",
     })
 
@@ -139,6 +141,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.hris.create_hris_group(request={
+        "hris_group": {},
         "connection_id": "<id>",
     })
 
@@ -183,6 +186,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.hris.create_hris_location(request={
+        "hris_location": {},
         "connection_id": "<id>",
     })
 
@@ -761,6 +765,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.hris.patch_hris_company(request={
+        "hris_company": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -806,6 +811,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.hris.patch_hris_employee(request={
+        "hris_employee": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -851,6 +857,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.hris.patch_hris_group(request={
+        "hris_group": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -896,6 +903,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.hris.patch_hris_location(request={
+        "hris_location": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -1121,6 +1129,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.hris.update_hris_company(request={
+        "hris_company": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -1166,6 +1175,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.hris.update_hris_employee(request={
+        "hris_employee": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -1211,6 +1221,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.hris.update_hris_group(request={
+        "hris_group": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -1256,6 +1267,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.hris.update_hris_location(request={
+        "hris_location": {},
         "connection_id": "<id>",
         "id": "<id>",
     })

@@ -3,20 +3,13 @@
 from __future__ import annotations
 from datetime import datetime
 from enum import Enum
+import pydantic
 from typing import Dict, List, Optional
-from typing_extensions import NotRequired, TypedDict
+from typing_extensions import Annotated, NotRequired, TypedDict
 from unified_python_sdk.types import BaseModel
 
 
-class MetadataMetadataRawTypedDict(TypedDict):
-    pass
-
-
-class MetadataMetadataRaw(BaseModel):
-    pass
-
-
-class MetadataMetadataType(str, Enum):
+class Format(str, Enum):
     TEXT = "TEXT"
     NUMBER = "NUMBER"
     DATE = "DATE"
@@ -32,15 +25,24 @@ class MetadataMetadataType(str, Enum):
     URL = "URL"
 
 
+class MetadataMetadataRawTypedDict(TypedDict):
+    pass
+
+
+class MetadataMetadataRaw(BaseModel):
+    pass
+
+
 class MetadataMetadataTypedDict(TypedDict):
     name: str
     object_type: str
     created_at: NotRequired[datetime]
+    format_: NotRequired[Format]
     id: NotRequired[str]
     objects: NotRequired[Dict[str, str]]
     options: NotRequired[List[str]]
+    original_format: NotRequired[str]
     raw: NotRequired[MetadataMetadataRawTypedDict]
-    type: NotRequired[MetadataMetadataType]
     updated_at: NotRequired[datetime]
 
 
@@ -51,14 +53,16 @@ class MetadataMetadata(BaseModel):
 
     created_at: Optional[datetime] = None
 
+    format_: Annotated[Optional[Format], pydantic.Field(alias="format")] = None
+
     id: Optional[str] = None
 
     objects: Optional[Dict[str, str]] = None
 
     options: Optional[List[str]] = None
 
-    raw: Optional[MetadataMetadataRaw] = None
+    original_format: Optional[str] = None
 
-    type: Optional[MetadataMetadataType] = None
+    raw: Optional[MetadataMetadataRaw] = None
 
     updated_at: Optional[datetime] = None

@@ -29,6 +29,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.employee.create_hris_employee(request={
+        "hris_employee": {},
         "connection_id": "<id>",
     })
 
@@ -162,6 +163,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.employee.patch_hris_employee(request={
+        "hris_employee": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -252,6 +254,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.employee.update_hris_employee(request={
+        "hris_employee": {},
         "connection_id": "<id>",
         "id": "<id>",
     })

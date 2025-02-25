@@ -3,8 +3,8 @@
 
 ## Fields
 
-| Field                                                                  | Type                                                                   | Required                                                               | Description                                                            |
-| ---------------------------------------------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- |
-| `connection_id`                                                        | *str*                                                                  | :heavy_check_mark:                                                     | ID of the connection                                                   |
-| `marketing_list`                                                       | [Optional[shared.MarketingList]](../../models/shared/marketinglist.md) | :heavy_minus_sign:                                                     | Mailing List                                                           |
-| `fields`                                                               | List[*str*]                                                            | :heavy_minus_sign:                                                     | Comma-delimited fields to return                                       |
+| Field                                                        | Type                                                         | Required                                                     | Description                                                  |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| `marketing_list`                                             | [shared.MarketingList](../../models/shared/marketinglist.md) | :heavy_check_mark:                                           | Mailing List                                                 |
+| `connection_id`                                              | *str*                                                        | :heavy_check_mark:                                           | ID of the connection                                         |
+| `fields`                                                     | List[*str*]                                                  | :heavy_minus_sign:                                           | Comma-delimited fields to return                             |

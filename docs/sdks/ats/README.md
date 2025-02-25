@@ -68,6 +68,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ats.create_ats_activity(request={
+        "ats_activity": {},
         "connection_id": "<id>",
     })
 
@@ -112,6 +113,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ats.create_ats_application(request={
+        "ats_application": {},
         "connection_id": "<id>",
     })
 
@@ -156,6 +158,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ats.create_ats_candidate(request={
+        "ats_candidate": {},
         "connection_id": "<id>",
     })
 
@@ -200,6 +203,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ats.create_ats_document(request={
+        "ats_document": {},
         "connection_id": "<id>",
     })
 
@@ -244,6 +248,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ats.create_ats_interview(request={
+        "ats_interview": {},
         "connection_id": "<id>",
     })
 
@@ -288,6 +293,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ats.create_ats_job(request={
+        "ats_job": {},
         "connection_id": "<id>",
     })
 
@@ -332,6 +338,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ats.create_ats_scorecard(request={
+        "ats_scorecard": {},
         "connection_id": "<id>",
     })
 
@@ -1132,6 +1139,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ats.patch_ats_activity(request={
+        "ats_activity": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -1177,6 +1185,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ats.patch_ats_application(request={
+        "ats_application": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -1222,6 +1231,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ats.patch_ats_candidate(request={
+        "ats_candidate": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -1267,6 +1277,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ats.patch_ats_document(request={
+        "ats_document": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -1312,6 +1323,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ats.patch_ats_interview(request={
+        "ats_interview": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -1357,6 +1369,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ats.patch_ats_job(request={
+        "ats_job": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -1402,6 +1415,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ats.patch_ats_scorecard(request={
+        "ats_scorecard": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -1762,6 +1776,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ats.update_ats_activity(request={
+        "ats_activity": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -1807,6 +1822,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ats.update_ats_application(request={
+        "ats_application": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -1852,6 +1868,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ats.update_ats_candidate(request={
+        "ats_candidate": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -1897,6 +1914,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ats.update_ats_document(request={
+        "ats_document": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -1942,6 +1960,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ats.update_ats_interview(request={
+        "ats_interview": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -1987,6 +2006,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ats.update_ats_job(request={
+        "ats_job": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -2032,6 +2052,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.ats.update_ats_scorecard(request={
+        "ats_scorecard": {},
         "connection_id": "<id>",
         "id": "<id>",
     })

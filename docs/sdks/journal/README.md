@@ -29,6 +29,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.journal.create_accounting_journal(request={
+        "accounting_journal": {},
         "connection_id": "<id>",
     })
 
@@ -162,6 +163,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.journal.patch_accounting_journal(request={
+        "accounting_journal": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -252,6 +254,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.journal.update_accounting_journal(request={
+        "accounting_journal": {},
         "connection_id": "<id>",
         "id": "<id>",
     })

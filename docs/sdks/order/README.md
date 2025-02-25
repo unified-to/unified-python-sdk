@@ -29,6 +29,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.order.create_accounting_order(request={
+        "accounting_order": {},
         "connection_id": "<id>",
     })
 
@@ -162,6 +163,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.order.patch_accounting_order(request={
+        "accounting_order": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -252,6 +254,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.order.update_accounting_order(request={
+        "accounting_order": {},
         "connection_id": "<id>",
         "id": "<id>",
     })

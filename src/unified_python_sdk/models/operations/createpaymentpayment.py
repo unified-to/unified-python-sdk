@@ -15,23 +15,23 @@ from unified_python_sdk.utils import (
 
 
 class CreatePaymentPaymentRequestTypedDict(TypedDict):
+    payment_payment: shared_paymentpayment.PaymentPaymentTypedDict
     connection_id: str
     r"""ID of the connection"""
-    payment_payment: NotRequired[shared_paymentpayment.PaymentPaymentTypedDict]
     fields: NotRequired[List[str]]
     r"""Comma-delimited fields to return"""
 
 
 class CreatePaymentPaymentRequest(BaseModel):
+    payment_payment: Annotated[
+        shared_paymentpayment.PaymentPayment,
+        FieldMetadata(request=RequestMetadata(media_type="application/json")),
+    ]
+
     connection_id: Annotated[
         str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))
     ]
     r"""ID of the connection"""
-
-    payment_payment: Annotated[
-        Optional[shared_paymentpayment.PaymentPayment],
-        FieldMetadata(request=RequestMetadata(media_type="application/json")),
-    ] = None
 
     fields: Annotated[
         Optional[List[str]],

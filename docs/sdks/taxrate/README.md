@@ -29,6 +29,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.taxrate.create_accounting_taxrate(request={
+        "accounting_taxrate": {},
         "connection_id": "<id>",
     })
 
@@ -162,6 +163,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.taxrate.patch_accounting_taxrate(request={
+        "accounting_taxrate": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -252,6 +254,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.taxrate.update_accounting_taxrate(request={
+        "accounting_taxrate": {},
         "connection_id": "<id>",
         "id": "<id>",
     })

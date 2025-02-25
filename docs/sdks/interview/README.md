@@ -29,6 +29,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.interview.create_ats_interview(request={
+        "ats_interview": {},
         "connection_id": "<id>",
     })
 
@@ -162,6 +163,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.interview.patch_ats_interview(request={
+        "ats_interview": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -252,6 +254,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.interview.update_ats_interview(request={
+        "ats_interview": {},
         "connection_id": "<id>",
         "id": "<id>",
     })

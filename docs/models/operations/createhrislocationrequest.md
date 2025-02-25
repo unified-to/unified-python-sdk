@@ -3,8 +3,8 @@
 
 ## Fields
 
-| Field                                                                | Type                                                                 | Required                                                             | Description                                                          |
-| -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- |
-| `connection_id`                                                      | *str*                                                                | :heavy_check_mark:                                                   | ID of the connection                                                 |
-| `hris_location`                                                      | [Optional[shared.HrisLocation]](../../models/shared/hrislocation.md) | :heavy_minus_sign:                                                   | N/A                                                                  |
-| `fields`                                                             | List[*str*]                                                          | :heavy_minus_sign:                                                   | Comma-delimited fields to return                                     |
+| Field                                                      | Type                                                       | Required                                                   | Description                                                |
+| ---------------------------------------------------------- | ---------------------------------------------------------- | ---------------------------------------------------------- | ---------------------------------------------------------- |
+| `hris_location`                                            | [shared.HrisLocation](../../models/shared/hrislocation.md) | :heavy_check_mark:                                         | N/A                                                        |
+| `connection_id`                                            | *str*                                                      | :heavy_check_mark:                                         | ID of the connection                                       |
+| `fields`                                                   | List[*str*]                                                | :heavy_minus_sign:                                         | Comma-delimited fields to return                           |

@@ -16,9 +16,9 @@ from unified_python_sdk.utils import (
 
 
 class CreateScimUsersRequestTypedDict(TypedDict):
+    scim_user: shared_scimuser.ScimUserTypedDict
     connection_id: str
     r"""ID of the connection"""
-    scim_user: NotRequired[shared_scimuser.ScimUserTypedDict]
     count: NotRequired[float]
     filter_: NotRequired[str]
     sort_by: NotRequired[str]
@@ -27,15 +27,15 @@ class CreateScimUsersRequestTypedDict(TypedDict):
 
 
 class CreateScimUsersRequest(BaseModel):
+    scim_user: Annotated[
+        shared_scimuser.ScimUser,
+        FieldMetadata(request=RequestMetadata(media_type="application/json")),
+    ]
+
     connection_id: Annotated[
         str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))
     ]
     r"""ID of the connection"""
-
-    scim_user: Annotated[
-        Optional[shared_scimuser.ScimUser],
-        FieldMetadata(request=RequestMetadata(media_type="application/json")),
-    ] = None
 
     count: Annotated[
         Optional[float],

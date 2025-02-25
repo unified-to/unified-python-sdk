@@ -15,16 +15,21 @@ from unified_python_sdk.utils import (
 
 
 class UpdateRepoOrganizationRequestTypedDict(TypedDict):
+    repo_organization: shared_repoorganization.RepoOrganizationTypedDict
     connection_id: str
     r"""ID of the connection"""
     id: str
     r"""ID of the Organization"""
-    repo_organization: NotRequired[shared_repoorganization.RepoOrganizationTypedDict]
     fields: NotRequired[List[str]]
     r"""Comma-delimited fields to return"""
 
 
 class UpdateRepoOrganizationRequest(BaseModel):
+    repo_organization: Annotated[
+        shared_repoorganization.RepoOrganization,
+        FieldMetadata(request=RequestMetadata(media_type="application/json")),
+    ]
+
     connection_id: Annotated[
         str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))
     ]
@@ -34,11 +39,6 @@ class UpdateRepoOrganizationRequest(BaseModel):
         str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))
     ]
     r"""ID of the Organization"""
-
-    repo_organization: Annotated[
-        Optional[shared_repoorganization.RepoOrganization],
-        FieldMetadata(request=RequestMetadata(media_type="application/json")),
-    ] = None
 
     fields: Annotated[
         Optional[List[str]],

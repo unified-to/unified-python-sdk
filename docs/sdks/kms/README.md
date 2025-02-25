@@ -41,6 +41,9 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.kms.create_kms_comment(request={
+        "kms_comment": {
+            "content": "<value>",
+        },
         "connection_id": "<id>",
     })
 
@@ -85,6 +88,10 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.kms.create_kms_page(request={
+        "kms_page": {
+            "title": "<value>",
+            "type": shared.KmsPageType.HTML,
+        },
         "connection_id": "<id>",
     })
 
@@ -129,6 +136,10 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.kms.create_kms_space(request={
+        "kms_space": {
+            "name": "<value>",
+            "parent_space_id": "sp",
+        },
         "connection_id": "<id>",
     })
 
@@ -440,6 +451,9 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.kms.patch_kms_comment(request={
+        "kms_comment": {
+            "content": "<value>",
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -485,6 +499,10 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.kms.patch_kms_page(request={
+        "kms_page": {
+            "title": "<value>",
+            "type": shared.KmsPageType.TEXT,
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -530,6 +548,10 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.kms.patch_kms_space(request={
+        "kms_space": {
+            "name": "<value>",
+            "parent_space_id": "sp",
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -710,6 +732,9 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.kms.update_kms_comment(request={
+        "kms_comment": {
+            "content": "<value>",
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -755,6 +780,10 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.kms.update_kms_page(request={
+        "kms_page": {
+            "title": "<value>",
+            "type": shared.KmsPageType.OTHER,
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -800,6 +829,10 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.kms.update_kms_space(request={
+        "kms_space": {
+            "name": "<value>",
+            "parent_space_id": "sp",
+        },
         "connection_id": "<id>",
         "id": "<id>",
     })

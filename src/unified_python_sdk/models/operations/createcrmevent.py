@@ -15,25 +15,25 @@ from unified_python_sdk.utils import (
 
 
 class CreateCrmEventRequestTypedDict(TypedDict):
+    crm_event: shared_crmevent.CrmEventTypedDict
+    r"""An event represents an event, activity, or engagement and is always associated with a deal, contact, or company"""
     connection_id: str
     r"""ID of the connection"""
-    crm_event: NotRequired[shared_crmevent.CrmEventTypedDict]
-    r"""An event represents an event, activity, or engagement and is always associated with a deal, contact, or company"""
     fields: NotRequired[List[str]]
     r"""Comma-delimited fields to return"""
 
 
 class CreateCrmEventRequest(BaseModel):
+    crm_event: Annotated[
+        shared_crmevent.CrmEvent,
+        FieldMetadata(request=RequestMetadata(media_type="application/json")),
+    ]
+    r"""An event represents an event, activity, or engagement and is always associated with a deal, contact, or company"""
+
     connection_id: Annotated[
         str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))
     ]
     r"""ID of the connection"""
-
-    crm_event: Annotated[
-        Optional[shared_crmevent.CrmEvent],
-        FieldMetadata(request=RequestMetadata(media_type="application/json")),
-    ] = None
-    r"""An event represents an event, activity, or engagement and is always associated with a deal, contact, or company"""
 
     fields: Annotated[
         Optional[List[str]],

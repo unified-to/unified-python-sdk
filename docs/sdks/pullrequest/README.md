@@ -29,6 +29,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.pullrequest.create_repo_pullrequest(request={
+        "repo_pullrequest": {},
         "connection_id": "<id>",
     })
 
@@ -162,6 +163,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.pullrequest.patch_repo_pullrequest(request={
+        "repo_pullrequest": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -252,6 +254,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.pullrequest.update_repo_pullrequest(request={
+        "repo_pullrequest": {},
         "connection_id": "<id>",
         "id": "<id>",
     })

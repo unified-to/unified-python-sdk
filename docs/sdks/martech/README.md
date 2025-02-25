@@ -35,6 +35,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.martech.create_martech_list(request={
+        "marketing_list": {},
         "connection_id": "<id>",
     })
 
@@ -79,6 +80,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.martech.create_martech_member(request={
+        "marketing_member": {},
         "connection_id": "<id>",
     })
 
@@ -301,6 +303,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.martech.patch_martech_list(request={
+        "marketing_list": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -346,6 +349,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.martech.patch_martech_member(request={
+        "marketing_member": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -481,6 +485,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.martech.update_martech_list(request={
+        "marketing_list": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -526,6 +531,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.martech.update_martech_member(request={
+        "marketing_member": {},
         "connection_id": "<id>",
         "id": "<id>",
     })

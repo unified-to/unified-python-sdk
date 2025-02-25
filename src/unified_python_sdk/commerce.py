@@ -49,7 +49,7 @@ class Commerce(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -59,9 +59,9 @@ class Commerce(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.commerce_collection,
                 False,
-                True,
+                False,
                 "json",
-                Optional[shared.CommerceCollection],
+                shared.CommerceCollection,
             ),
             timeout_ms=timeout_ms,
         )
@@ -149,7 +149,7 @@ class Commerce(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -159,9 +159,9 @@ class Commerce(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.commerce_collection,
                 False,
-                True,
+                False,
                 "json",
-                Optional[shared.CommerceCollection],
+                shared.CommerceCollection,
             ),
             timeout_ms=timeout_ms,
         )
@@ -249,7 +249,7 @@ class Commerce(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -259,9 +259,9 @@ class Commerce(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.commerce_inventory,
                 False,
-                True,
+                False,
                 "json",
-                Optional[shared.CommerceInventory],
+                shared.CommerceInventory,
             ),
             timeout_ms=timeout_ms,
         )
@@ -349,7 +349,7 @@ class Commerce(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -359,9 +359,9 @@ class Commerce(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.commerce_inventory,
                 False,
-                True,
+                False,
                 "json",
-                Optional[shared.CommerceInventory],
+                shared.CommerceInventory,
             ),
             timeout_ms=timeout_ms,
         )
@@ -447,7 +447,7 @@ class Commerce(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -455,11 +455,7 @@ class Commerce(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.commerce_item,
-                False,
-                True,
-                "json",
-                Optional[shared.CommerceItem],
+                request.commerce_item, False, False, "json", shared.CommerceItem
             ),
             timeout_ms=timeout_ms,
         )
@@ -545,7 +541,7 @@ class Commerce(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -553,11 +549,7 @@ class Commerce(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.commerce_item,
-                False,
-                True,
-                "json",
-                Optional[shared.CommerceItem],
+                request.commerce_item, False, False, "json", shared.CommerceItem
             ),
             timeout_ms=timeout_ms,
         )
@@ -643,7 +635,7 @@ class Commerce(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -651,11 +643,7 @@ class Commerce(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.commerce_location,
-                False,
-                True,
-                "json",
-                Optional[shared.CommerceLocation],
+                request.commerce_location, False, False, "json", shared.CommerceLocation
             ),
             timeout_ms=timeout_ms,
         )
@@ -741,7 +729,7 @@ class Commerce(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -749,11 +737,7 @@ class Commerce(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.commerce_location,
-                False,
-                True,
-                "json",
-                Optional[shared.CommerceLocation],
+                request.commerce_location, False, False, "json", shared.CommerceLocation
             ),
             timeout_ms=timeout_ms,
         )
@@ -2305,7 +2289,7 @@ class Commerce(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -2315,9 +2299,9 @@ class Commerce(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.commerce_collection,
                 False,
-                True,
+                False,
                 "json",
-                Optional[shared.CommerceCollection],
+                shared.CommerceCollection,
             ),
             timeout_ms=timeout_ms,
         )
@@ -2405,7 +2389,7 @@ class Commerce(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -2415,9 +2399,9 @@ class Commerce(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.commerce_collection,
                 False,
-                True,
+                False,
                 "json",
-                Optional[shared.CommerceCollection],
+                shared.CommerceCollection,
             ),
             timeout_ms=timeout_ms,
         )
@@ -2503,7 +2487,7 @@ class Commerce(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -2513,9 +2497,9 @@ class Commerce(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.commerce_inventory,
                 False,
-                True,
+                False,
                 "json",
-                Optional[shared.CommerceInventory],
+                shared.CommerceInventory,
             ),
             timeout_ms=timeout_ms,
         )
@@ -2601,7 +2585,7 @@ class Commerce(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -2611,9 +2595,9 @@ class Commerce(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.commerce_inventory,
                 False,
-                True,
+                False,
                 "json",
-                Optional[shared.CommerceInventory],
+                shared.CommerceInventory,
             ),
             timeout_ms=timeout_ms,
         )
@@ -2699,7 +2683,7 @@ class Commerce(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -2707,11 +2691,7 @@ class Commerce(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.commerce_item,
-                False,
-                True,
-                "json",
-                Optional[shared.CommerceItem],
+                request.commerce_item, False, False, "json", shared.CommerceItem
             ),
             timeout_ms=timeout_ms,
         )
@@ -2797,7 +2777,7 @@ class Commerce(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -2805,11 +2785,7 @@ class Commerce(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.commerce_item,
-                False,
-                True,
-                "json",
-                Optional[shared.CommerceItem],
+                request.commerce_item, False, False, "json", shared.CommerceItem
             ),
             timeout_ms=timeout_ms,
         )
@@ -2895,7 +2871,7 @@ class Commerce(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -2903,11 +2879,7 @@ class Commerce(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.commerce_location,
-                False,
-                True,
-                "json",
-                Optional[shared.CommerceLocation],
+                request.commerce_location, False, False, "json", shared.CommerceLocation
             ),
             timeout_ms=timeout_ms,
         )
@@ -2993,7 +2965,7 @@ class Commerce(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -3001,11 +2973,7 @@ class Commerce(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.commerce_location,
-                False,
-                True,
-                "json",
-                Optional[shared.CommerceLocation],
+                request.commerce_location, False, False, "json", shared.CommerceLocation
             ),
             timeout_ms=timeout_ms,
         )
@@ -3869,7 +3837,7 @@ class Commerce(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -3879,9 +3847,9 @@ class Commerce(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.commerce_collection,
                 False,
-                True,
+                False,
                 "json",
-                Optional[shared.CommerceCollection],
+                shared.CommerceCollection,
             ),
             timeout_ms=timeout_ms,
         )
@@ -3969,7 +3937,7 @@ class Commerce(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -3979,9 +3947,9 @@ class Commerce(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.commerce_collection,
                 False,
-                True,
+                False,
                 "json",
-                Optional[shared.CommerceCollection],
+                shared.CommerceCollection,
             ),
             timeout_ms=timeout_ms,
         )
@@ -4069,7 +4037,7 @@ class Commerce(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -4079,9 +4047,9 @@ class Commerce(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.commerce_inventory,
                 False,
-                True,
+                False,
                 "json",
-                Optional[shared.CommerceInventory],
+                shared.CommerceInventory,
             ),
             timeout_ms=timeout_ms,
         )
@@ -4169,7 +4137,7 @@ class Commerce(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -4179,9 +4147,9 @@ class Commerce(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.commerce_inventory,
                 False,
-                True,
+                False,
                 "json",
-                Optional[shared.CommerceInventory],
+                shared.CommerceInventory,
             ),
             timeout_ms=timeout_ms,
         )
@@ -4267,7 +4235,7 @@ class Commerce(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -4275,11 +4243,7 @@ class Commerce(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.commerce_item,
-                False,
-                True,
-                "json",
-                Optional[shared.CommerceItem],
+                request.commerce_item, False, False, "json", shared.CommerceItem
             ),
             timeout_ms=timeout_ms,
         )
@@ -4365,7 +4329,7 @@ class Commerce(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -4373,11 +4337,7 @@ class Commerce(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.commerce_item,
-                False,
-                True,
-                "json",
-                Optional[shared.CommerceItem],
+                request.commerce_item, False, False, "json", shared.CommerceItem
             ),
             timeout_ms=timeout_ms,
         )
@@ -4463,7 +4423,7 @@ class Commerce(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -4471,11 +4431,7 @@ class Commerce(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.commerce_location,
-                False,
-                True,
-                "json",
-                Optional[shared.CommerceLocation],
+                request.commerce_location, False, False, "json", shared.CommerceLocation
             ),
             timeout_ms=timeout_ms,
         )
@@ -4561,7 +4517,7 @@ class Commerce(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -4569,11 +4525,7 @@ class Commerce(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.commerce_location,
-                False,
-                True,
-                "json",
-                Optional[shared.CommerceLocation],
+                request.commerce_location, False, False, "json", shared.CommerceLocation
             ),
             timeout_ms=timeout_ms,
         )

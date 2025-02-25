@@ -10,23 +10,23 @@ from unified_python_sdk.utils import FieldMetadata, PathParamMetadata, RequestMe
 
 
 class UpdateUnifiedWebhookRequestTypedDict(TypedDict):
+    webhook: shared_webhook.WebhookTypedDict
+    r"""A webhook is used to POST new/updated information to your server."""
     id: str
     r"""ID of the Webhook"""
-    webhook: NotRequired[shared_webhook.WebhookTypedDict]
-    r"""A webhook is used to POST new/updated information to your server."""
 
 
 class UpdateUnifiedWebhookRequest(BaseModel):
+    webhook: Annotated[
+        shared_webhook.Webhook,
+        FieldMetadata(request=RequestMetadata(media_type="application/json")),
+    ]
+    r"""A webhook is used to POST new/updated information to your server."""
+
     id: Annotated[
         str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))
     ]
     r"""ID of the Webhook"""
-
-    webhook: Annotated[
-        Optional[shared_webhook.Webhook],
-        FieldMetadata(request=RequestMetadata(media_type="application/json")),
-    ] = None
-    r"""A webhook is used to POST new/updated information to your server."""
 
 
 class UpdateUnifiedWebhookResponseTypedDict(TypedDict):

@@ -46,7 +46,7 @@ class Lms(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -54,7 +54,7 @@ class Lms(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.lms_class, False, True, "json", Optional[shared.LmsClass]
+                request.lms_class, False, False, "json", shared.LmsClass
             ),
             timeout_ms=timeout_ms,
         )
@@ -139,7 +139,7 @@ class Lms(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -147,7 +147,7 @@ class Lms(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.lms_class, False, True, "json", Optional[shared.LmsClass]
+                request.lms_class, False, False, "json", shared.LmsClass
             ),
             timeout_ms=timeout_ms,
         )
@@ -233,7 +233,7 @@ class Lms(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -241,7 +241,7 @@ class Lms(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.lms_course, False, True, "json", Optional[shared.LmsCourse]
+                request.lms_course, False, False, "json", shared.LmsCourse
             ),
             timeout_ms=timeout_ms,
         )
@@ -327,7 +327,7 @@ class Lms(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -335,7 +335,7 @@ class Lms(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.lms_course, False, True, "json", Optional[shared.LmsCourse]
+                request.lms_course, False, False, "json", shared.LmsCourse
             ),
             timeout_ms=timeout_ms,
         )
@@ -421,7 +421,7 @@ class Lms(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -429,11 +429,7 @@ class Lms(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.lms_instructor,
-                False,
-                True,
-                "json",
-                Optional[shared.LmsInstructor],
+                request.lms_instructor, False, False, "json", shared.LmsInstructor
             ),
             timeout_ms=timeout_ms,
         )
@@ -519,7 +515,7 @@ class Lms(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -527,11 +523,7 @@ class Lms(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.lms_instructor,
-                False,
-                True,
-                "json",
-                Optional[shared.LmsInstructor],
+                request.lms_instructor, False, False, "json", shared.LmsInstructor
             ),
             timeout_ms=timeout_ms,
         )
@@ -617,7 +609,7 @@ class Lms(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -625,7 +617,7 @@ class Lms(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.lms_student, False, True, "json", Optional[shared.LmsStudent]
+                request.lms_student, False, False, "json", shared.LmsStudent
             ),
             timeout_ms=timeout_ms,
         )
@@ -711,7 +703,7 @@ class Lms(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -719,7 +711,7 @@ class Lms(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.lms_student, False, True, "json", Optional[shared.LmsStudent]
+                request.lms_student, False, False, "json", shared.LmsStudent
             ),
             timeout_ms=timeout_ms,
         )
@@ -2250,7 +2242,7 @@ class Lms(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -2258,7 +2250,7 @@ class Lms(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.lms_class, False, True, "json", Optional[shared.LmsClass]
+                request.lms_class, False, False, "json", shared.LmsClass
             ),
             timeout_ms=timeout_ms,
         )
@@ -2343,7 +2335,7 @@ class Lms(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -2351,7 +2343,7 @@ class Lms(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.lms_class, False, True, "json", Optional[shared.LmsClass]
+                request.lms_class, False, False, "json", shared.LmsClass
             ),
             timeout_ms=timeout_ms,
         )
@@ -2436,7 +2428,7 @@ class Lms(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -2444,7 +2436,7 @@ class Lms(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.lms_course, False, True, "json", Optional[shared.LmsCourse]
+                request.lms_course, False, False, "json", shared.LmsCourse
             ),
             timeout_ms=timeout_ms,
         )
@@ -2529,7 +2521,7 @@ class Lms(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -2537,7 +2529,7 @@ class Lms(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.lms_course, False, True, "json", Optional[shared.LmsCourse]
+                request.lms_course, False, False, "json", shared.LmsCourse
             ),
             timeout_ms=timeout_ms,
         )
@@ -2623,7 +2615,7 @@ class Lms(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -2631,11 +2623,7 @@ class Lms(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.lms_instructor,
-                False,
-                True,
-                "json",
-                Optional[shared.LmsInstructor],
+                request.lms_instructor, False, False, "json", shared.LmsInstructor
             ),
             timeout_ms=timeout_ms,
         )
@@ -2721,7 +2709,7 @@ class Lms(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -2729,11 +2717,7 @@ class Lms(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.lms_instructor,
-                False,
-                True,
-                "json",
-                Optional[shared.LmsInstructor],
+                request.lms_instructor, False, False, "json", shared.LmsInstructor
             ),
             timeout_ms=timeout_ms,
         )
@@ -2819,7 +2803,7 @@ class Lms(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -2827,7 +2811,7 @@ class Lms(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.lms_student, False, True, "json", Optional[shared.LmsStudent]
+                request.lms_student, False, False, "json", shared.LmsStudent
             ),
             timeout_ms=timeout_ms,
         )
@@ -2913,7 +2897,7 @@ class Lms(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -2921,7 +2905,7 @@ class Lms(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.lms_student, False, True, "json", Optional[shared.LmsStudent]
+                request.lms_student, False, False, "json", shared.LmsStudent
             ),
             timeout_ms=timeout_ms,
         )
@@ -3772,7 +3756,7 @@ class Lms(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -3780,7 +3764,7 @@ class Lms(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.lms_class, False, True, "json", Optional[shared.LmsClass]
+                request.lms_class, False, False, "json", shared.LmsClass
             ),
             timeout_ms=timeout_ms,
         )
@@ -3865,7 +3849,7 @@ class Lms(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -3873,7 +3857,7 @@ class Lms(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.lms_class, False, True, "json", Optional[shared.LmsClass]
+                request.lms_class, False, False, "json", shared.LmsClass
             ),
             timeout_ms=timeout_ms,
         )
@@ -3959,7 +3943,7 @@ class Lms(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -3967,7 +3951,7 @@ class Lms(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.lms_course, False, True, "json", Optional[shared.LmsCourse]
+                request.lms_course, False, False, "json", shared.LmsCourse
             ),
             timeout_ms=timeout_ms,
         )
@@ -4053,7 +4037,7 @@ class Lms(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -4061,7 +4045,7 @@ class Lms(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.lms_course, False, True, "json", Optional[shared.LmsCourse]
+                request.lms_course, False, False, "json", shared.LmsCourse
             ),
             timeout_ms=timeout_ms,
         )
@@ -4147,7 +4131,7 @@ class Lms(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -4155,11 +4139,7 @@ class Lms(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.lms_instructor,
-                False,
-                True,
-                "json",
-                Optional[shared.LmsInstructor],
+                request.lms_instructor, False, False, "json", shared.LmsInstructor
             ),
             timeout_ms=timeout_ms,
         )
@@ -4245,7 +4225,7 @@ class Lms(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -4253,11 +4233,7 @@ class Lms(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.lms_instructor,
-                False,
-                True,
-                "json",
-                Optional[shared.LmsInstructor],
+                request.lms_instructor, False, False, "json", shared.LmsInstructor
             ),
             timeout_ms=timeout_ms,
         )
@@ -4343,7 +4319,7 @@ class Lms(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -4351,7 +4327,7 @@ class Lms(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.lms_student, False, True, "json", Optional[shared.LmsStudent]
+                request.lms_student, False, False, "json", shared.LmsStudent
             ),
             timeout_ms=timeout_ms,
         )
@@ -4437,7 +4413,7 @@ class Lms(BaseSDK):
             base_url=base_url,
             url_variables=url_variables,
             request=request,
-            request_body_required=False,
+            request_body_required=True,
             request_has_path_params=True,
             request_has_query_params=True,
             user_agent_header="user-agent",
@@ -4445,7 +4421,7 @@ class Lms(BaseSDK):
             http_headers=http_headers,
             security=self.sdk_configuration.security,
             get_serialized_body=lambda: utils.serialize_request_body(
-                request.lms_student, False, True, "json", Optional[shared.LmsStudent]
+                request.lms_student, False, False, "json", shared.LmsStudent
             ),
             timeout_ms=timeout_ms,
         )
