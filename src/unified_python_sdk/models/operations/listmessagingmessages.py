@@ -18,6 +18,7 @@ class ListMessagingMessagesRequestTypedDict(TypedDict):
     connection_id: str
     r"""ID of the connection"""
     channel_id: NotRequired[str]
+    end_le: NotRequired[str]
     fields: NotRequired[List[str]]
     r"""Comma-delimited fields to return"""
     limit: NotRequired[float]
@@ -27,6 +28,7 @@ class ListMessagingMessagesRequestTypedDict(TypedDict):
     query: NotRequired[str]
     r"""Query string to search. eg. email address or name"""
     sort: NotRequired[str]
+    start_gte: NotRequired[str]
     updated_gte: NotRequired[datetime]
     r"""Return only results whose updated date is equal or greater to this value"""
 
@@ -38,6 +40,11 @@ class ListMessagingMessagesRequest(BaseModel):
     r"""ID of the connection"""
 
     channel_id: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+
+    end_le: Annotated[
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
@@ -75,6 +82,11 @@ class ListMessagingMessagesRequest(BaseModel):
     r"""Query string to search. eg. email address or name"""
 
     sort: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+
+    start_gte: Annotated[
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
