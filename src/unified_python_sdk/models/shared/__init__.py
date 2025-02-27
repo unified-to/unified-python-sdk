@@ -108,6 +108,11 @@ from .atscandidate import (
     AtsCandidateTypedDict,
     Origin,
 )
+from .atscandidateeducation import AtsCandidateEducation, AtsCandidateEducationTypedDict
+from .atscandidateexperience import (
+    AtsCandidateExperience,
+    AtsCandidateExperienceTypedDict,
+)
 from .atscompany import (
     AtsCompany,
     AtsCompanyRaw,
@@ -733,6 +738,10 @@ __all__ = [
     "AtsApplicationStatus",
     "AtsApplicationTypedDict",
     "AtsCandidate",
+    "AtsCandidateEducation",
+    "AtsCandidateEducationTypedDict",
+    "AtsCandidateExperience",
+    "AtsCandidateExperienceTypedDict",
     "AtsCandidateRaw",
     "AtsCandidateRawTypedDict",
     "AtsCandidateTypedDict",

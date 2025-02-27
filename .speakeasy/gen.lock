@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: eed3e21cce15d18d6d589ec03e5be2ce
+  docChecksum: a642c7bece4e0a94752d9efa149625ea
   docVersion: "1.0"
   speakeasyVersion: 1.468.6
   generationVersion: 2.493.13
-  releaseVersion: 0.35.1
-  configChecksum: 3e622cedfba3d49fff26adf09984f166
+  releaseVersion: 0.36.1
+  configChecksum: 707d4174e65444008d4de8278ee928b3
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -858,6 +858,8 @@ generatedFiles:
   - docs/models/shared/atsapplicationraw.md
   - docs/models/shared/atsapplicationstatus.md
   - docs/models/shared/atscandidate.md
+  - docs/models/shared/atscandidateeducation.md
+  - docs/models/shared/atscandidateexperience.md
   - docs/models/shared/atscandidateraw.md
   - docs/models/shared/atscompany.md
   - docs/models/shared/atscompanyraw.md
@@ -1771,6 +1773,8 @@ generatedFiles:
   - src/unified_python_sdk/models/shared/atsapplication.py
   - src/unified_python_sdk/models/shared/atsapplicationanswer.py
   - src/unified_python_sdk/models/shared/atscandidate.py
+  - src/unified_python_sdk/models/shared/atscandidateeducation.py
+  - src/unified_python_sdk/models/shared/atscandidateexperience.py
   - src/unified_python_sdk/models/shared/atscompany.py
   - src/unified_python_sdk/models/shared/atscompensation.py
   - src/unified_python_sdk/models/shared/atsdocument.py

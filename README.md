@@ -1484,6 +1484,7 @@ The `UnifiedTo` class implements the context manager protocol and registers a fi
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 def main():
+
     with UnifiedTo(
         security=shared.Security(
             jwt="<YOUR_API_KEY_HERE>",
@@ -1494,6 +1495,7 @@ def main():
 
 # Or when using async:
 async def amain():
+
     async with UnifiedTo(
         security=shared.Security(
             jwt="<YOUR_API_KEY_HERE>",
