@@ -36,6 +36,7 @@ class QueryParamCategories(str, Enum):
     LMS = "lms"
     REPO = "repo"
     METADATA = "metadata"
+    CALENDAR = "calendar"
 
 
 class ListUnifiedIntegrationWorkspacesRequestTypedDict(TypedDict):

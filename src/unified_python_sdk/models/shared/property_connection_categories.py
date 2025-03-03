@@ -26,3 +26,4 @@ class PropertyConnectionCategories(str, Enum):
     LMS = "lms"
     REPO = "repo"
     METADATA = "metadata"
+    CALENDAR = "calendar"

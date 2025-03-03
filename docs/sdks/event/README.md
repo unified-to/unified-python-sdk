@@ -5,12 +5,67 @@
 
 ### Available Operations
 
+* [create_calendar_event](#create_calendar_event) - Create an event
 * [create_crm_event](#create_crm_event) - Create an event
+* [get_calendar_event](#get_calendar_event) - Retrieve an event
 * [get_crm_event](#get_crm_event) - Retrieve an event
+* [list_calendar_events](#list_calendar_events) - List all events
 * [list_crm_events](#list_crm_events) - List all events
+* [patch_calendar_event](#patch_calendar_event) - Update an event
 * [patch_crm_event](#patch_crm_event) - Update an event
+* [remove_calendar_event](#remove_calendar_event) - Remove an event
 * [remove_crm_event](#remove_crm_event) - Remove an event
+* [update_calendar_event](#update_calendar_event) - Update an event
 * [update_crm_event](#update_crm_event) - Update an event
+
+## create_calendar_event
+
+Create an event
+
+### Example Usage
+
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.event.create_calendar_event(request={
+        "calendar_event": {
+            "end_at": "<value>",
+            "start_at": "<value>",
+            "subject": "<value>",
+        },
+        "connection_id": "<id>",
+    })
+
+    assert res.calendar_event is not None
+
+    # Handle response
+    print(res.calendar_event)
+
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `request`                                                                                      | [operations.CreateCalendarEventRequest](../../models/operations/createcalendareventrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `retries`                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                               | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
+
+### Response
+
+**[operations.CreateCalendarEventResponse](../../models/operations/createcalendareventresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## create_crm_event
 
@@ -50,6 +105,51 @@ with UnifiedTo(
 ### Response
 
 **[operations.CreateCrmEventResponse](../../models/operations/createcrmeventresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## get_calendar_event
+
+Retrieve an event
+
+### Example Usage
+
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.event.get_calendar_event(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.calendar_event is not None
+
+    # Handle response
+    print(res.calendar_event)
+
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.GetCalendarEventRequest](../../models/operations/getcalendareventrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
+
+### Response
+
+**[operations.GetCalendarEventResponse](../../models/operations/getcalendareventresponse.md)**
 
 ### Errors
 
@@ -102,6 +202,50 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## list_calendar_events
+
+List all events
+
+### Example Usage
+
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.event.list_calendar_events(request={
+        "connection_id": "<id>",
+    })
+
+    assert res.calendar_events is not None
+
+    # Handle response
+    print(res.calendar_events)
+
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.ListCalendarEventsRequest](../../models/operations/listcalendareventsrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
+
+### Response
+
+**[operations.ListCalendarEventsResponse](../../models/operations/listcalendareventsresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## list_crm_events
 
 List all events
@@ -139,6 +283,56 @@ with UnifiedTo(
 ### Response
 
 **[operations.ListCrmEventsResponse](../../models/operations/listcrmeventsresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## patch_calendar_event
+
+Update an event
+
+### Example Usage
+
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.event.patch_calendar_event(request={
+        "calendar_event": {
+            "end_at": "<value>",
+            "start_at": "<value>",
+            "subject": "<value>",
+        },
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.calendar_event is not None
+
+    # Handle response
+    print(res.calendar_event)
+
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.PatchCalendarEventRequest](../../models/operations/patchcalendareventrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
+
+### Response
+
+**[operations.PatchCalendarEventResponse](../../models/operations/patchcalendareventresponse.md)**
 
 ### Errors
 
@@ -192,6 +386,51 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## remove_calendar_event
+
+Remove an event
+
+### Example Usage
+
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.event.remove_calendar_event(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res is not None
+
+    # Handle response
+    print(res)
+
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `request`                                                                                      | [operations.RemoveCalendarEventRequest](../../models/operations/removecalendareventrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `retries`                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                               | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
+
+### Response
+
+**[operations.RemoveCalendarEventResponse](../../models/operations/removecalendareventresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## remove_crm_event
 
 Remove an event
@@ -230,6 +469,56 @@ with UnifiedTo(
 ### Response
 
 **[operations.RemoveCrmEventResponse](../../models/operations/removecrmeventresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## update_calendar_event
+
+Update an event
+
+### Example Usage
+
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.event.update_calendar_event(request={
+        "calendar_event": {
+            "end_at": "<value>",
+            "start_at": "<value>",
+            "subject": "<value>",
+        },
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.calendar_event is not None
+
+    # Handle response
+    print(res.calendar_event)
+
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `request`                                                                                      | [operations.UpdateCalendarEventRequest](../../models/operations/updatecalendareventrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `retries`                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                               | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
+
+### Response
+
+**[operations.UpdateCalendarEventResponse](../../models/operations/updatecalendareventresponse.md)**
 
 ### Errors
 

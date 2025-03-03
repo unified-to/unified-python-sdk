@@ -84,6 +84,24 @@ from .createatsscorecard import (
     CreateAtsScorecardResponse,
     CreateAtsScorecardResponseTypedDict,
 )
+from .createcalendarcalendar import (
+    CreateCalendarCalendarRequest,
+    CreateCalendarCalendarRequestTypedDict,
+    CreateCalendarCalendarResponse,
+    CreateCalendarCalendarResponseTypedDict,
+)
+from .createcalendarevent import (
+    CreateCalendarEventRequest,
+    CreateCalendarEventRequestTypedDict,
+    CreateCalendarEventResponse,
+    CreateCalendarEventResponseTypedDict,
+)
+from .createcalendarlink import (
+    CreateCalendarLinkRequest,
+    CreateCalendarLinkRequestTypedDict,
+    CreateCalendarLinkResponse,
+    CreateCalendarLinkResponseTypedDict,
+)
 from .createcommercecollection import (
     CreateCommerceCollectionRequest,
     CreateCommerceCollectionRequestTypedDict,
@@ -465,6 +483,30 @@ from .getatsscorecard import (
     GetAtsScorecardRequestTypedDict,
     GetAtsScorecardResponse,
     GetAtsScorecardResponseTypedDict,
+)
+from .getcalendarcalendar import (
+    GetCalendarCalendarRequest,
+    GetCalendarCalendarRequestTypedDict,
+    GetCalendarCalendarResponse,
+    GetCalendarCalendarResponseTypedDict,
+)
+from .getcalendarevent import (
+    GetCalendarEventRequest,
+    GetCalendarEventRequestTypedDict,
+    GetCalendarEventResponse,
+    GetCalendarEventResponseTypedDict,
+)
+from .getcalendarlink import (
+    GetCalendarLinkRequest,
+    GetCalendarLinkRequestTypedDict,
+    GetCalendarLinkResponse,
+    GetCalendarLinkResponseTypedDict,
+)
+from .getcalendarrecording import (
+    GetCalendarRecordingRequest,
+    GetCalendarRecordingRequestTypedDict,
+    GetCalendarRecordingResponse,
+    GetCalendarRecordingResponseTypedDict,
 )
 from .getcommercecollection import (
     GetCommerceCollectionRequest,
@@ -886,6 +928,36 @@ from .listatsscorecards import (
     ListAtsScorecardsRequestTypedDict,
     ListAtsScorecardsResponse,
     ListAtsScorecardsResponseTypedDict,
+)
+from .listcalendarbusies import (
+    ListCalendarBusiesRequest,
+    ListCalendarBusiesRequestTypedDict,
+    ListCalendarBusiesResponse,
+    ListCalendarBusiesResponseTypedDict,
+)
+from .listcalendarcalendars import (
+    ListCalendarCalendarsRequest,
+    ListCalendarCalendarsRequestTypedDict,
+    ListCalendarCalendarsResponse,
+    ListCalendarCalendarsResponseTypedDict,
+)
+from .listcalendarevents import (
+    ListCalendarEventsRequest,
+    ListCalendarEventsRequestTypedDict,
+    ListCalendarEventsResponse,
+    ListCalendarEventsResponseTypedDict,
+)
+from .listcalendarlinks import (
+    ListCalendarLinksRequest,
+    ListCalendarLinksRequestTypedDict,
+    ListCalendarLinksResponse,
+    ListCalendarLinksResponseTypedDict,
+)
+from .listcalendarrecordings import (
+    ListCalendarRecordingsRequest,
+    ListCalendarRecordingsRequestTypedDict,
+    ListCalendarRecordingsResponse,
+    ListCalendarRecordingsResponseTypedDict,
 )
 from .listcommercecollections import (
     ListCommerceCollectionsRequest,
@@ -1328,6 +1400,24 @@ from .patchatsscorecard import (
     PatchAtsScorecardResponse,
     PatchAtsScorecardResponseTypedDict,
 )
+from .patchcalendarcalendar import (
+    PatchCalendarCalendarRequest,
+    PatchCalendarCalendarRequestTypedDict,
+    PatchCalendarCalendarResponse,
+    PatchCalendarCalendarResponseTypedDict,
+)
+from .patchcalendarevent import (
+    PatchCalendarEventRequest,
+    PatchCalendarEventRequestTypedDict,
+    PatchCalendarEventResponse,
+    PatchCalendarEventResponseTypedDict,
+)
+from .patchcalendarlink import (
+    PatchCalendarLinkRequest,
+    PatchCalendarLinkRequestTypedDict,
+    PatchCalendarLinkResponse,
+    PatchCalendarLinkResponseTypedDict,
+)
 from .patchcommercecollection import (
     PatchCommerceCollectionRequest,
     PatchCommerceCollectionRequestTypedDict,
@@ -1700,6 +1790,24 @@ from .removeatsscorecard import (
     RemoveAtsScorecardResponse,
     RemoveAtsScorecardResponseTypedDict,
 )
+from .removecalendarcalendar import (
+    RemoveCalendarCalendarRequest,
+    RemoveCalendarCalendarRequestTypedDict,
+    RemoveCalendarCalendarResponse,
+    RemoveCalendarCalendarResponseTypedDict,
+)
+from .removecalendarevent import (
+    RemoveCalendarEventRequest,
+    RemoveCalendarEventRequestTypedDict,
+    RemoveCalendarEventResponse,
+    RemoveCalendarEventResponseTypedDict,
+)
+from .removecalendarlink import (
+    RemoveCalendarLinkRequest,
+    RemoveCalendarLinkRequestTypedDict,
+    RemoveCalendarLinkResponse,
+    RemoveCalendarLinkResponseTypedDict,
+)
 from .removecommercecollection import (
     RemoveCommerceCollectionRequest,
     RemoveCommerceCollectionRequestTypedDict,
@@ -2060,6 +2168,24 @@ from .updateatsscorecard import (
     UpdateAtsScorecardResponse,
     UpdateAtsScorecardResponseTypedDict,
 )
+from .updatecalendarcalendar import (
+    UpdateCalendarCalendarRequest,
+    UpdateCalendarCalendarRequestTypedDict,
+    UpdateCalendarCalendarResponse,
+    UpdateCalendarCalendarResponseTypedDict,
+)
+from .updatecalendarevent import (
+    UpdateCalendarEventRequest,
+    UpdateCalendarEventRequestTypedDict,
+    UpdateCalendarEventResponse,
+    UpdateCalendarEventResponseTypedDict,
+)
+from .updatecalendarlink import (
+    UpdateCalendarLinkRequest,
+    UpdateCalendarLinkRequestTypedDict,
+    UpdateCalendarLinkResponse,
+    UpdateCalendarLinkResponseTypedDict,
+)
 from .updatecommercecollection import (
     UpdateCommerceCollectionRequest,
     UpdateCommerceCollectionRequestTypedDict,
@@ -2408,6 +2534,18 @@ __all__ = [
     "CreateAtsScorecardRequestTypedDict",
     "CreateAtsScorecardResponse",
     "CreateAtsScorecardResponseTypedDict",
+    "CreateCalendarCalendarRequest",
+    "CreateCalendarCalendarRequestTypedDict",
+    "CreateCalendarCalendarResponse",
+    "CreateCalendarCalendarResponseTypedDict",
+    "CreateCalendarEventRequest",
+    "CreateCalendarEventRequestTypedDict",
+    "CreateCalendarEventResponse",
+    "CreateCalendarEventResponseTypedDict",
+    "CreateCalendarLinkRequest",
+    "CreateCalendarLinkRequestTypedDict",
+    "CreateCalendarLinkResponse",
+    "CreateCalendarLinkResponseTypedDict",
     "CreateCommerceCollectionRequest",
     "CreateCommerceCollectionRequestTypedDict",
     "CreateCommerceCollectionResponse",
@@ -2662,6 +2800,22 @@ __all__ = [
     "GetAtsScorecardRequestTypedDict",
     "GetAtsScorecardResponse",
     "GetAtsScorecardResponseTypedDict",
+    "GetCalendarCalendarRequest",
+    "GetCalendarCalendarRequestTypedDict",
+    "GetCalendarCalendarResponse",
+    "GetCalendarCalendarResponseTypedDict",
+    "GetCalendarEventRequest",
+    "GetCalendarEventRequestTypedDict",
+    "GetCalendarEventResponse",
+    "GetCalendarEventResponseTypedDict",
+    "GetCalendarLinkRequest",
+    "GetCalendarLinkRequestTypedDict",
+    "GetCalendarLinkResponse",
+    "GetCalendarLinkResponseTypedDict",
+    "GetCalendarRecordingRequest",
+    "GetCalendarRecordingRequestTypedDict",
+    "GetCalendarRecordingResponse",
+    "GetCalendarRecordingResponseTypedDict",
     "GetCommerceCollectionRequest",
     "GetCommerceCollectionRequestTypedDict",
     "GetCommerceCollectionResponse",
@@ -2942,6 +3096,26 @@ __all__ = [
     "ListAtsScorecardsRequestTypedDict",
     "ListAtsScorecardsResponse",
     "ListAtsScorecardsResponseTypedDict",
+    "ListCalendarBusiesRequest",
+    "ListCalendarBusiesRequestTypedDict",
+    "ListCalendarBusiesResponse",
+    "ListCalendarBusiesResponseTypedDict",
+    "ListCalendarCalendarsRequest",
+    "ListCalendarCalendarsRequestTypedDict",
+    "ListCalendarCalendarsResponse",
+    "ListCalendarCalendarsResponseTypedDict",
+    "ListCalendarEventsRequest",
+    "ListCalendarEventsRequestTypedDict",
+    "ListCalendarEventsResponse",
+    "ListCalendarEventsResponseTypedDict",
+    "ListCalendarLinksRequest",
+    "ListCalendarLinksRequestTypedDict",
+    "ListCalendarLinksResponse",
+    "ListCalendarLinksResponseTypedDict",
+    "ListCalendarRecordingsRequest",
+    "ListCalendarRecordingsRequestTypedDict",
+    "ListCalendarRecordingsResponse",
+    "ListCalendarRecordingsResponseTypedDict",
     "ListCommerceCollectionsRequest",
     "ListCommerceCollectionsRequestTypedDict",
     "ListCommerceCollectionsResponse",
@@ -3235,6 +3409,18 @@ __all__ = [
     "PatchAtsScorecardRequestTypedDict",
     "PatchAtsScorecardResponse",
     "PatchAtsScorecardResponseTypedDict",
+    "PatchCalendarCalendarRequest",
+    "PatchCalendarCalendarRequestTypedDict",
+    "PatchCalendarCalendarResponse",
+    "PatchCalendarCalendarResponseTypedDict",
+    "PatchCalendarEventRequest",
+    "PatchCalendarEventRequestTypedDict",
+    "PatchCalendarEventResponse",
+    "PatchCalendarEventResponseTypedDict",
+    "PatchCalendarLinkRequest",
+    "PatchCalendarLinkRequestTypedDict",
+    "PatchCalendarLinkResponse",
+    "PatchCalendarLinkResponseTypedDict",
     "PatchCommerceCollectionRequest",
     "PatchCommerceCollectionRequestTypedDict",
     "PatchCommerceCollectionResponse",
@@ -3484,6 +3670,18 @@ __all__ = [
     "RemoveAtsScorecardRequestTypedDict",
     "RemoveAtsScorecardResponse",
     "RemoveAtsScorecardResponseTypedDict",
+    "RemoveCalendarCalendarRequest",
+    "RemoveCalendarCalendarRequestTypedDict",
+    "RemoveCalendarCalendarResponse",
+    "RemoveCalendarCalendarResponseTypedDict",
+    "RemoveCalendarEventRequest",
+    "RemoveCalendarEventRequestTypedDict",
+    "RemoveCalendarEventResponse",
+    "RemoveCalendarEventResponseTypedDict",
+    "RemoveCalendarLinkRequest",
+    "RemoveCalendarLinkRequestTypedDict",
+    "RemoveCalendarLinkResponse",
+    "RemoveCalendarLinkResponseTypedDict",
     "RemoveCommerceCollectionRequest",
     "RemoveCommerceCollectionRequestTypedDict",
     "RemoveCommerceCollectionResponse",
@@ -3725,6 +3923,18 @@ __all__ = [
     "UpdateAtsScorecardRequestTypedDict",
     "UpdateAtsScorecardResponse",
     "UpdateAtsScorecardResponseTypedDict",
+    "UpdateCalendarCalendarRequest",
+    "UpdateCalendarCalendarRequestTypedDict",
+    "UpdateCalendarCalendarResponse",
+    "UpdateCalendarCalendarResponseTypedDict",
+    "UpdateCalendarEventRequest",
+    "UpdateCalendarEventRequestTypedDict",
+    "UpdateCalendarEventResponse",
+    "UpdateCalendarEventResponseTypedDict",
+    "UpdateCalendarLinkRequest",
+    "UpdateCalendarLinkRequestTypedDict",
+    "UpdateCalendarLinkResponse",
+    "UpdateCalendarLinkResponseTypedDict",
     "UpdateCommerceCollectionRequest",
     "UpdateCommerceCollectionRequestTypedDict",
     "UpdateCommerceCollectionResponse",

@@ -18,6 +18,8 @@ from unified_python_sdk.applicationstatus import Applicationstatus
 from unified_python_sdk.ats import Ats
 from unified_python_sdk.auth import Auth
 from unified_python_sdk.branch import Branch
+from unified_python_sdk.busy import Busy
+from unified_python_sdk.calendar import Calendar
 from unified_python_sdk.call import Call
 from unified_python_sdk.candidate import Candidate
 from unified_python_sdk.channel import Channel
@@ -77,6 +79,7 @@ from unified_python_sdk.pipeline import Pipeline
 from unified_python_sdk.project import Project
 from unified_python_sdk.prompt import Prompt
 from unified_python_sdk.pullrequest import Pullrequest
+from unified_python_sdk.recording import Recording
 from unified_python_sdk.refund import Refund
 from unified_python_sdk.repo import Repo
 from unified_python_sdk.repository import Repository
@@ -121,6 +124,11 @@ class UnifiedTo(BaseSDK):
     interview: Interview
     job: Job
     scorecard: Scorecard
+    calendar: Calendar
+    busy: Busy
+    event: Event
+    link: Link
+    recording: Recording
     commerce: Commerce
     collection: Collection
     inventory: Inventory
@@ -128,7 +136,6 @@ class UnifiedTo(BaseSDK):
     location: Location
     crm: Crm
     deal: Deal
-    event: Event
     lead: Lead
     pipeline: Pipeline
     enrich: Enrich
@@ -159,7 +166,6 @@ class UnifiedTo(BaseSDK):
     metadata: Metadata
     passthrough: Passthrough
     payment: Payment
-    link: Link
     payout: Payout
     refund: Refund
     subscription: Subscription
@@ -281,6 +287,11 @@ class UnifiedTo(BaseSDK):
         self.interview = Interview(self.sdk_configuration)
         self.job = Job(self.sdk_configuration)
         self.scorecard = Scorecard(self.sdk_configuration)
+        self.calendar = Calendar(self.sdk_configuration)
+        self.busy = Busy(self.sdk_configuration)
+        self.event = Event(self.sdk_configuration)
+        self.link = Link(self.sdk_configuration)
+        self.recording = Recording(self.sdk_configuration)
         self.commerce = Commerce(self.sdk_configuration)
         self.collection = Collection(self.sdk_configuration)
         self.inventory = Inventory(self.sdk_configuration)
@@ -288,7 +299,6 @@ class UnifiedTo(BaseSDK):
         self.location = Location(self.sdk_configuration)
         self.crm = Crm(self.sdk_configuration)
         self.deal = Deal(self.sdk_configuration)
-        self.event = Event(self.sdk_configuration)
         self.lead = Lead(self.sdk_configuration)
         self.pipeline = Pipeline(self.sdk_configuration)
         self.enrich = Enrich(self.sdk_configuration)
@@ -319,7 +329,6 @@ class UnifiedTo(BaseSDK):
         self.metadata = Metadata(self.sdk_configuration)
         self.passthrough = Passthrough(self.sdk_configuration)
         self.payment = Payment(self.sdk_configuration)
-        self.link = Link(self.sdk_configuration)
         self.payout = Payout(self.sdk_configuration)
         self.refund = Refund(self.sdk_configuration)
         self.subscription = Subscription(self.sdk_configuration)

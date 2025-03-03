@@ -268,6 +268,34 @@ asyncio.run(main())
 * [remove_repo_branch](docs/sdks/branch/README.md#remove_repo_branch) - Remove a branch
 * [update_repo_branch](docs/sdks/branch/README.md#update_repo_branch) - Update a branch
 
+### [busy](docs/sdks/busy/README.md)
+
+* [list_calendar_busies](docs/sdks/busy/README.md#list_calendar_busies) - List all busies
+
+### [calendar](docs/sdks/calendar/README.md)
+
+* [create_calendar_calendar](docs/sdks/calendar/README.md#create_calendar_calendar) - Create a calendar
+* [create_calendar_event](docs/sdks/calendar/README.md#create_calendar_event) - Create an event
+* [create_calendar_link](docs/sdks/calendar/README.md#create_calendar_link) - Create a link
+* [get_calendar_calendar](docs/sdks/calendar/README.md#get_calendar_calendar) - Retrieve a calendar
+* [get_calendar_event](docs/sdks/calendar/README.md#get_calendar_event) - Retrieve an event
+* [get_calendar_link](docs/sdks/calendar/README.md#get_calendar_link) - Retrieve a link
+* [get_calendar_recording](docs/sdks/calendar/README.md#get_calendar_recording) - Retrieve a recording
+* [list_calendar_busies](docs/sdks/calendar/README.md#list_calendar_busies) - List all busies
+* [list_calendar_calendars](docs/sdks/calendar/README.md#list_calendar_calendars) - List all calendars
+* [list_calendar_events](docs/sdks/calendar/README.md#list_calendar_events) - List all events
+* [list_calendar_links](docs/sdks/calendar/README.md#list_calendar_links) - List all links
+* [list_calendar_recordings](docs/sdks/calendar/README.md#list_calendar_recordings) - List all recordings
+* [patch_calendar_calendar](docs/sdks/calendar/README.md#patch_calendar_calendar) - Update a calendar
+* [patch_calendar_event](docs/sdks/calendar/README.md#patch_calendar_event) - Update an event
+* [patch_calendar_link](docs/sdks/calendar/README.md#patch_calendar_link) - Update a link
+* [remove_calendar_calendar](docs/sdks/calendar/README.md#remove_calendar_calendar) - Remove a calendar
+* [remove_calendar_event](docs/sdks/calendar/README.md#remove_calendar_event) - Remove an event
+* [remove_calendar_link](docs/sdks/calendar/README.md#remove_calendar_link) - Remove a link
+* [update_calendar_calendar](docs/sdks/calendar/README.md#update_calendar_calendar) - Update a calendar
+* [update_calendar_event](docs/sdks/calendar/README.md#update_calendar_event) - Update an event
+* [update_calendar_link](docs/sdks/calendar/README.md#update_calendar_link) - Update a link
+
 ### [call](docs/sdks/call/README.md)
 
 * [list_uc_calls](docs/sdks/call/README.md#list_uc_calls) - List all calls
@@ -494,11 +522,17 @@ asyncio.run(main())
 
 ### [event](docs/sdks/event/README.md)
 
+* [create_calendar_event](docs/sdks/event/README.md#create_calendar_event) - Create an event
 * [create_crm_event](docs/sdks/event/README.md#create_crm_event) - Create an event
+* [get_calendar_event](docs/sdks/event/README.md#get_calendar_event) - Retrieve an event
 * [get_crm_event](docs/sdks/event/README.md#get_crm_event) - Retrieve an event
+* [list_calendar_events](docs/sdks/event/README.md#list_calendar_events) - List all events
 * [list_crm_events](docs/sdks/event/README.md#list_crm_events) - List all events
+* [patch_calendar_event](docs/sdks/event/README.md#patch_calendar_event) - Update an event
 * [patch_crm_event](docs/sdks/event/README.md#patch_crm_event) - Update an event
+* [remove_calendar_event](docs/sdks/event/README.md#remove_calendar_event) - Remove an event
 * [remove_crm_event](docs/sdks/event/README.md#remove_crm_event) - Remove an event
+* [update_calendar_event](docs/sdks/event/README.md#update_calendar_event) - Update an event
 * [update_crm_event](docs/sdks/event/README.md#update_crm_event) - Update an event
 
 ### [file](docs/sdks/file/README.md)
@@ -666,11 +700,17 @@ asyncio.run(main())
 
 ### [link](docs/sdks/link/README.md)
 
+* [create_calendar_link](docs/sdks/link/README.md#create_calendar_link) - Create a link
 * [create_payment_link](docs/sdks/link/README.md#create_payment_link) - Create a link
+* [get_calendar_link](docs/sdks/link/README.md#get_calendar_link) - Retrieve a link
 * [get_payment_link](docs/sdks/link/README.md#get_payment_link) - Retrieve a link
+* [list_calendar_links](docs/sdks/link/README.md#list_calendar_links) - List all links
 * [list_payment_links](docs/sdks/link/README.md#list_payment_links) - List all links
+* [patch_calendar_link](docs/sdks/link/README.md#patch_calendar_link) - Update a link
 * [patch_payment_link](docs/sdks/link/README.md#patch_payment_link) - Update a link
+* [remove_calendar_link](docs/sdks/link/README.md#remove_calendar_link) - Remove a link
 * [remove_payment_link](docs/sdks/link/README.md#remove_payment_link) - Remove a link
+* [update_calendar_link](docs/sdks/link/README.md#update_calendar_link) - Update a link
 * [update_payment_link](docs/sdks/link/README.md#update_payment_link) - Update a link
 
 ### [list](docs/sdks/list/README.md)
@@ -903,6 +943,11 @@ asyncio.run(main())
 * [patch_repo_pullrequest](docs/sdks/pullrequest/README.md#patch_repo_pullrequest) - Update a pullrequest
 * [remove_repo_pullrequest](docs/sdks/pullrequest/README.md#remove_repo_pullrequest) - Remove a pullrequest
 * [update_repo_pullrequest](docs/sdks/pullrequest/README.md#update_repo_pullrequest) - Update a pullrequest
+
+### [recording](docs/sdks/recording/README.md)
+
+* [get_calendar_recording](docs/sdks/recording/README.md#get_calendar_recording) - Retrieve a recording
+* [list_calendar_recordings](docs/sdks/recording/README.md#list_calendar_recordings) - List all recordings
 
 ### [refund](docs/sdks/refund/README.md)
 

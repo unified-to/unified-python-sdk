@@ -1,0 +1,13 @@
+# CalendarBusy
+
+
+## Fields
+
+| Field                                                                      | Type                                                                       | Required                                                                   | Description                                                                |
+| -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| `end_at`                                                                   | [date](https://docs.python.org/3/library/datetime.html#date-objects)       | :heavy_check_mark:                                                         | N/A                                                                        |
+| `start_at`                                                                 | [date](https://docs.python.org/3/library/datetime.html#date-objects)       | :heavy_check_mark:                                                         | N/A                                                                        |
+| `description`                                                              | *Optional[str]*                                                            | :heavy_minus_sign:                                                         | N/A                                                                        |
+| `id`                                                                       | *Optional[str]*                                                            | :heavy_minus_sign:                                                         | N/A                                                                        |
+| `raw`                                                                      | [Optional[shared.CalendarBusyRaw]](../../models/shared/calendarbusyraw.md) | :heavy_minus_sign:                                                         | N/A                                                                        |
+| `timezone`                                                                 | *Optional[str]*                                                            | :heavy_minus_sign:                                                         | N/A                                                                        |

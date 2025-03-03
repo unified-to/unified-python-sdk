@@ -42,6 +42,7 @@ class PropertyConnectionAuthTypedDict(TypedDict):
     state: NotRequired[str]
     token: NotRequired[str]
     token_url: NotRequired[str]
+    user_id: NotRequired[str]
 
 
 class PropertyConnectionAuth(BaseModel):
@@ -93,3 +94,5 @@ class PropertyConnectionAuth(BaseModel):
     token: Optional[str] = None
 
     token_url: Optional[str] = None
+
+    user_id: Optional[str] = None

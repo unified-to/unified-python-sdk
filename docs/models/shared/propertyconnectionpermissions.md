@@ -135,3 +135,13 @@
 | `REPO_PULLREQUEST_WRITE`       | repo_pullrequest_write         |
 | `METADATA_METADATA_READ`       | metadata_metadata_read         |
 | `METADATA_METADATA_WRITE`      | metadata_metadata_write        |
+| `CALENDAR_CALENDAR_READ`       | calendar_calendar_read         |
+| `CALENDAR_CALENDAR_WRITE`      | calendar_calendar_write        |
+| `CALENDAR_EVENT_READ`          | calendar_event_read            |
+| `CALENDAR_EVENT_WRITE`         | calendar_event_write           |
+| `CALENDAR_BUSY_READ`           | calendar_busy_read             |
+| `CALENDAR_BUSY_WRITE`          | calendar_busy_write            |
+| `CALENDAR_LINK_READ`           | calendar_link_read             |
+| `CALENDAR_LINK_WRITE`          | calendar_link_write            |
+| `CALENDAR_RECORDING_READ`      | calendar_recording_read        |
+| `CALENDAR_RECORDING_WRITE`     | calendar_recording_write       |

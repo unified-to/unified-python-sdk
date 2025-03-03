@@ -29,6 +29,12 @@ class ListApplicationID(str, Enum):
     NOT_SUPPORTED = "not-supported"
 
 
+class ListCalendarID(str, Enum):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
 class ListCandidateID(str, Enum):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
@@ -84,6 +90,12 @@ class ListDealID(str, Enum):
 
 
 class ListEndLe(str, Enum):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
+class ListEventID(str, Enum):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
     NOT_SUPPORTED = "not-supported"
@@ -388,6 +400,7 @@ class IntegrationSupportTypedDict(TypedDict):
     inbound_fields: NotRequired[Dict[str, Any]]
     list_account_id: NotRequired[ListAccountID]
     list_application_id: NotRequired[ListApplicationID]
+    list_calendar_id: NotRequired[ListCalendarID]
     list_candidate_id: NotRequired[ListCandidateID]
     list_channel_id: NotRequired[ListChannelID]
     list_class_id: NotRequired[ListClassID]
@@ -398,6 +411,7 @@ class IntegrationSupportTypedDict(TypedDict):
     list_customer_id: NotRequired[ListCustomerID]
     list_deal_id: NotRequired[ListDealID]
     list_end_le: NotRequired[ListEndLe]
+    list_event_id: NotRequired[ListEventID]
     list_instructor_id: NotRequired[ListInstructorID]
     list_interview_id: NotRequired[ListInterviewID]
     list_invoice_id: NotRequired[ListInvoiceID]
@@ -464,6 +478,8 @@ class IntegrationSupport(BaseModel):
 
     list_application_id: Optional[ListApplicationID] = None
 
+    list_calendar_id: Optional[ListCalendarID] = None
+
     list_candidate_id: Optional[ListCandidateID] = None
 
     list_channel_id: Optional[ListChannelID] = None
@@ -483,6 +499,8 @@ class IntegrationSupport(BaseModel):
     list_deal_id: Optional[ListDealID] = None
 
     list_end_le: Optional[ListEndLe] = None
+
+    list_event_id: Optional[ListEventID] = None
 
     list_instructor_id: Optional[ListInstructorID] = None
 

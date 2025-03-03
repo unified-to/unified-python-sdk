@@ -174,6 +174,50 @@ from .atsstatus import (
     AtsStatusTypedDict,
 )
 from .atstelephone import AtsTelephone, AtsTelephoneType, AtsTelephoneTypedDict
+from .calendarattendee import (
+    CalendarAttendee,
+    CalendarAttendeeStatus,
+    CalendarAttendeeTypedDict,
+)
+from .calendarbusy import (
+    CalendarBusy,
+    CalendarBusyRaw,
+    CalendarBusyRawTypedDict,
+    CalendarBusyTypedDict,
+)
+from .calendarcalendar import (
+    CalendarCalendar,
+    CalendarCalendarRaw,
+    CalendarCalendarRawTypedDict,
+    CalendarCalendarTypedDict,
+)
+from .calendarevent import (
+    CalendarEvent,
+    CalendarEventRaw,
+    CalendarEventRawTypedDict,
+    CalendarEventStatus,
+    CalendarEventTypedDict,
+)
+from .calendarlink import (
+    CalendarLink,
+    CalendarLinkRaw,
+    CalendarLinkRawTypedDict,
+    CalendarLinkTypedDict,
+)
+from .calendarrecording import (
+    CalendarRecording,
+    CalendarRecordingRaw,
+    CalendarRecordingRawTypedDict,
+    CalendarRecordingTypedDict,
+)
+from .calendarrecordingmedia import (
+    CalendarRecordingMedia,
+    CalendarRecordingMediaTypedDict,
+)
+from .calendarrecordingtranscript import (
+    CalendarRecordingTranscript,
+    CalendarRecordingTranscriptTypedDict,
+)
 from .commercecollection import (
     CommerceCollection,
     CommerceCollectionRaw,
@@ -336,6 +380,7 @@ from .integrationsupport import (
     IntegrationSupportTypedDict,
     ListAccountID,
     ListApplicationID,
+    ListCalendarID,
     ListCandidateID,
     ListChannelID,
     ListClassID,
@@ -346,6 +391,7 @@ from .integrationsupport import (
     ListCustomerID,
     ListDealID,
     ListEndLe,
+    ListEventID,
     ListInstructorID,
     ListInterviewID,
     ListInvoiceID,
@@ -469,6 +515,16 @@ from .property_atscompany_address import (
 from .property_atsjobposting_address import (
     PropertyAtsJobPostingAddress,
     PropertyAtsJobPostingAddressTypedDict,
+)
+from .property_calendarevent_organizer import (
+    PropertyCalendarEventOrganizer,
+    PropertyCalendarEventOrganizerStatus,
+    PropertyCalendarEventOrganizerTypedDict,
+)
+from .property_calendarrecordingtranscript_attendee import (
+    PropertyCalendarRecordingTranscriptAttendee,
+    PropertyCalendarRecordingTranscriptAttendeeStatus,
+    PropertyCalendarRecordingTranscriptAttendeeTypedDict,
 )
 from .property_commercelocation_address import (
     PropertyCommerceLocationAddress,
@@ -797,6 +853,34 @@ __all__ = [
     "AtsTelephone",
     "AtsTelephoneType",
     "AtsTelephoneTypedDict",
+    "CalendarAttendee",
+    "CalendarAttendeeStatus",
+    "CalendarAttendeeTypedDict",
+    "CalendarBusy",
+    "CalendarBusyRaw",
+    "CalendarBusyRawTypedDict",
+    "CalendarBusyTypedDict",
+    "CalendarCalendar",
+    "CalendarCalendarRaw",
+    "CalendarCalendarRawTypedDict",
+    "CalendarCalendarTypedDict",
+    "CalendarEvent",
+    "CalendarEventRaw",
+    "CalendarEventRawTypedDict",
+    "CalendarEventStatus",
+    "CalendarEventTypedDict",
+    "CalendarLink",
+    "CalendarLinkRaw",
+    "CalendarLinkRawTypedDict",
+    "CalendarLinkTypedDict",
+    "CalendarRecording",
+    "CalendarRecordingMedia",
+    "CalendarRecordingMediaTypedDict",
+    "CalendarRecordingRaw",
+    "CalendarRecordingRawTypedDict",
+    "CalendarRecordingTranscript",
+    "CalendarRecordingTranscriptTypedDict",
+    "CalendarRecordingTypedDict",
     "CommerceCollection",
     "CommerceCollectionRaw",
     "CommerceCollectionRawTypedDict",
@@ -957,6 +1041,7 @@ __all__ = [
     "KmsSpaceTypedDict",
     "ListAccountID",
     "ListApplicationID",
+    "ListCalendarID",
     "ListCandidateID",
     "ListChannelID",
     "ListClassID",
@@ -967,6 +1052,7 @@ __all__ = [
     "ListCustomerID",
     "ListDealID",
     "ListEndLe",
+    "ListEventID",
     "ListInstructorID",
     "ListInterviewID",
     "ListInvoiceID",
@@ -1078,6 +1164,12 @@ __all__ = [
     "PropertyAtsCompanyAddressTypedDict",
     "PropertyAtsJobPostingAddress",
     "PropertyAtsJobPostingAddressTypedDict",
+    "PropertyCalendarEventOrganizer",
+    "PropertyCalendarEventOrganizerStatus",
+    "PropertyCalendarEventOrganizerTypedDict",
+    "PropertyCalendarRecordingTranscriptAttendee",
+    "PropertyCalendarRecordingTranscriptAttendeeStatus",
+    "PropertyCalendarRecordingTranscriptAttendeeTypedDict",
     "PropertyCommerceLocationAddress",
     "PropertyCommerceLocationAddressTypedDict",
     "PropertyConnectionAuth",
