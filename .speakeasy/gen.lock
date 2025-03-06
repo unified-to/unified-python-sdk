@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: 03fb3687a9211f1c85a85fd634fa1c98
+  docChecksum: 469567133059289c1dda4dbb71768014
   docVersion: "1.0"
   speakeasyVersion: 1.468.6
   generationVersion: 2.493.13
-  releaseVersion: 0.38.1
-  configChecksum: 412d1a37bf39c78e100e49082cac25bf
+  releaseVersion: 0.39.1
+  configChecksum: aa50dbe3fc9746b4343d4a9b655711e4
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -729,7 +729,6 @@ generatedFiles:
   - docs/models/operations/removeunifiedconnectionresponse.md
   - docs/models/operations/removeunifiedwebhookrequest.md
   - docs/models/operations/removeunifiedwebhookresponse.md
-  - docs/models/operations/scopes.md
   - docs/models/operations/updateaccountingaccountrequest.md
   - docs/models/operations/updateaccountingaccountresponse.md
   - docs/models/operations/updateaccountingcontactrequest.md

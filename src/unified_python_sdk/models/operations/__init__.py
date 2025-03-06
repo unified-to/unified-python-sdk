@@ -813,7 +813,6 @@ from .getunifiedintegrationauth import (
     GetUnifiedIntegrationAuthRequestTypedDict,
     GetUnifiedIntegrationAuthResponse,
     GetUnifiedIntegrationAuthResponseTypedDict,
-    Scopes,
 )
 from .getunifiedintegrationlogin import (
     GetUnifiedIntegrationLoginRequest,
@@ -3866,7 +3865,6 @@ __all__ = [
     "RemoveUnifiedWebhookRequestTypedDict",
     "RemoveUnifiedWebhookResponse",
     "RemoveUnifiedWebhookResponseTypedDict",
-    "Scopes",
     "UpdateAccountingAccountRequest",
     "UpdateAccountingAccountRequestTypedDict",
     "UpdateAccountingAccountResponse",
