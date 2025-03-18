@@ -36,6 +36,8 @@ class Commerce(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
@@ -76,6 +78,7 @@ class Commerce(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="createCommerceCollection",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -94,7 +97,12 @@ class Commerce(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -136,6 +144,8 @@ class Commerce(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
@@ -176,6 +186,7 @@ class Commerce(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="createCommerceCollection",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -194,7 +205,12 @@ class Commerce(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -236,6 +252,8 @@ class Commerce(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
@@ -276,6 +294,7 @@ class Commerce(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="createCommerceInventory",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -294,7 +313,12 @@ class Commerce(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -336,6 +360,8 @@ class Commerce(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
@@ -376,6 +402,7 @@ class Commerce(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="createCommerceInventory",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -394,7 +421,12 @@ class Commerce(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -436,6 +468,8 @@ class Commerce(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.CreateCommerceItemRequest)
@@ -470,6 +504,7 @@ class Commerce(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="createCommerceItem",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -488,7 +523,12 @@ class Commerce(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -530,6 +570,8 @@ class Commerce(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.CreateCommerceItemRequest)
@@ -564,6 +606,7 @@ class Commerce(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="createCommerceItem",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -582,7 +625,12 @@ class Commerce(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -624,6 +672,8 @@ class Commerce(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.CreateCommerceLocationRequest)
@@ -658,6 +708,7 @@ class Commerce(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="createCommerceLocation",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -676,7 +727,12 @@ class Commerce(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -718,6 +774,8 @@ class Commerce(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.CreateCommerceLocationRequest)
@@ -752,6 +810,7 @@ class Commerce(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="createCommerceLocation",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -770,7 +829,12 @@ class Commerce(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -812,6 +876,8 @@ class Commerce(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.GetCommerceCollectionRequest)
@@ -843,6 +909,7 @@ class Commerce(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="getCommerceCollection",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -861,7 +928,12 @@ class Commerce(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -903,6 +975,8 @@ class Commerce(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.GetCommerceCollectionRequest)
@@ -934,6 +1008,7 @@ class Commerce(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="getCommerceCollection",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -952,7 +1027,12 @@ class Commerce(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -994,6 +1074,8 @@ class Commerce(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.GetCommerceInventoryRequest)
@@ -1025,6 +1107,7 @@ class Commerce(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="getCommerceInventory",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -1043,7 +1126,12 @@ class Commerce(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -1085,6 +1173,8 @@ class Commerce(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.GetCommerceInventoryRequest)
@@ -1116,6 +1206,7 @@ class Commerce(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="getCommerceInventory",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -1134,7 +1225,12 @@ class Commerce(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -1176,6 +1272,8 @@ class Commerce(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.GetCommerceItemRequest)
@@ -1207,6 +1305,7 @@ class Commerce(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="getCommerceItem",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -1225,7 +1324,12 @@ class Commerce(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -1267,6 +1371,8 @@ class Commerce(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.GetCommerceItemRequest)
@@ -1298,6 +1404,7 @@ class Commerce(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="getCommerceItem",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -1316,7 +1423,12 @@ class Commerce(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -1358,6 +1470,8 @@ class Commerce(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.GetCommerceLocationRequest)
@@ -1389,6 +1503,7 @@ class Commerce(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="getCommerceLocation",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -1407,7 +1522,12 @@ class Commerce(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -1449,6 +1569,8 @@ class Commerce(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.GetCommerceLocationRequest)
@@ -1480,6 +1602,7 @@ class Commerce(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="getCommerceLocation",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -1498,7 +1621,12 @@ class Commerce(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -1540,6 +1668,8 @@ class Commerce(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
@@ -1573,6 +1703,7 @@ class Commerce(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="listCommerceCollections",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -1591,7 +1722,12 @@ class Commerce(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -1633,6 +1769,8 @@ class Commerce(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
@@ -1666,6 +1804,7 @@ class Commerce(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="listCommerceCollections",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -1684,7 +1823,12 @@ class Commerce(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -1726,6 +1870,8 @@ class Commerce(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
@@ -1759,6 +1905,7 @@ class Commerce(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="listCommerceInventories",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -1777,7 +1924,12 @@ class Commerce(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -1819,6 +1971,8 @@ class Commerce(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
@@ -1852,6 +2006,7 @@ class Commerce(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="listCommerceInventories",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -1870,7 +2025,12 @@ class Commerce(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -1912,6 +2072,8 @@ class Commerce(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.ListCommerceItemsRequest)
@@ -1943,6 +2105,7 @@ class Commerce(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="listCommerceItems",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -1961,7 +2124,12 @@ class Commerce(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -2003,6 +2171,8 @@ class Commerce(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.ListCommerceItemsRequest)
@@ -2034,6 +2204,7 @@ class Commerce(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="listCommerceItems",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -2052,7 +2223,12 @@ class Commerce(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -2094,6 +2270,8 @@ class Commerce(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.ListCommerceLocationsRequest)
@@ -2125,6 +2303,7 @@ class Commerce(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="listCommerceLocations",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -2143,7 +2322,12 @@ class Commerce(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -2185,6 +2369,8 @@ class Commerce(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.ListCommerceLocationsRequest)
@@ -2216,6 +2402,7 @@ class Commerce(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="listCommerceLocations",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -2234,7 +2421,12 @@ class Commerce(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -2276,6 +2468,8 @@ class Commerce(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
@@ -2316,6 +2510,7 @@ class Commerce(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="patchCommerceCollection",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -2334,7 +2529,12 @@ class Commerce(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -2376,6 +2576,8 @@ class Commerce(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
@@ -2416,6 +2618,7 @@ class Commerce(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="patchCommerceCollection",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -2434,7 +2637,12 @@ class Commerce(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -2476,6 +2684,8 @@ class Commerce(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.PatchCommerceInventoryRequest)
@@ -2514,6 +2724,7 @@ class Commerce(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="patchCommerceInventory",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -2532,7 +2743,12 @@ class Commerce(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -2574,6 +2790,8 @@ class Commerce(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.PatchCommerceInventoryRequest)
@@ -2612,6 +2830,7 @@ class Commerce(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="patchCommerceInventory",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -2630,7 +2849,12 @@ class Commerce(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -2672,6 +2896,8 @@ class Commerce(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.PatchCommerceItemRequest)
@@ -2706,6 +2932,7 @@ class Commerce(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="patchCommerceItem",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -2724,7 +2951,12 @@ class Commerce(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -2766,6 +2998,8 @@ class Commerce(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.PatchCommerceItemRequest)
@@ -2800,6 +3034,7 @@ class Commerce(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="patchCommerceItem",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -2818,7 +3053,12 @@ class Commerce(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -2860,6 +3100,8 @@ class Commerce(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.PatchCommerceLocationRequest)
@@ -2894,6 +3136,7 @@ class Commerce(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="patchCommerceLocation",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -2912,7 +3155,12 @@ class Commerce(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -2954,6 +3202,8 @@ class Commerce(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.PatchCommerceLocationRequest)
@@ -2988,6 +3238,7 @@ class Commerce(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="patchCommerceLocation",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -3006,7 +3257,12 @@ class Commerce(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -3048,6 +3304,8 @@ class Commerce(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
@@ -3081,6 +3339,7 @@ class Commerce(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="removeCommerceCollection",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -3097,7 +3356,12 @@ class Commerce(BaseSDK):
                 raw_response=http_res,
                 headers={},
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -3146,6 +3410,8 @@ class Commerce(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
@@ -3179,6 +3445,7 @@ class Commerce(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="removeCommerceCollection",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -3195,7 +3462,12 @@ class Commerce(BaseSDK):
                 raw_response=http_res,
                 headers={},
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -3244,6 +3516,8 @@ class Commerce(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
@@ -3277,6 +3551,7 @@ class Commerce(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="removeCommerceInventory",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -3293,7 +3568,12 @@ class Commerce(BaseSDK):
                 raw_response=http_res,
                 headers={},
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -3342,6 +3622,8 @@ class Commerce(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
@@ -3375,6 +3657,7 @@ class Commerce(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="removeCommerceInventory",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -3391,7 +3674,12 @@ class Commerce(BaseSDK):
                 raw_response=http_res,
                 headers={},
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -3440,6 +3728,8 @@ class Commerce(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.RemoveCommerceItemRequest)
@@ -3471,6 +3761,7 @@ class Commerce(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="removeCommerceItem",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -3487,7 +3778,12 @@ class Commerce(BaseSDK):
                 raw_response=http_res,
                 headers={},
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -3536,6 +3832,8 @@ class Commerce(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.RemoveCommerceItemRequest)
@@ -3567,6 +3865,7 @@ class Commerce(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="removeCommerceItem",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -3583,7 +3882,12 @@ class Commerce(BaseSDK):
                 raw_response=http_res,
                 headers={},
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -3632,6 +3936,8 @@ class Commerce(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.RemoveCommerceLocationRequest)
@@ -3663,6 +3969,7 @@ class Commerce(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="removeCommerceLocation",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -3679,7 +3986,12 @@ class Commerce(BaseSDK):
                 raw_response=http_res,
                 headers={},
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -3728,6 +4040,8 @@ class Commerce(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.RemoveCommerceLocationRequest)
@@ -3759,6 +4073,7 @@ class Commerce(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="removeCommerceLocation",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -3775,7 +4090,12 @@ class Commerce(BaseSDK):
                 raw_response=http_res,
                 headers={},
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -3824,6 +4144,8 @@ class Commerce(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
@@ -3864,6 +4186,7 @@ class Commerce(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="updateCommerceCollection",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -3882,7 +4205,12 @@ class Commerce(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -3924,6 +4252,8 @@ class Commerce(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
@@ -3964,6 +4294,7 @@ class Commerce(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="updateCommerceCollection",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -3982,7 +4313,12 @@ class Commerce(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -4024,6 +4360,8 @@ class Commerce(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
@@ -4064,6 +4402,7 @@ class Commerce(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="updateCommerceInventory",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -4082,7 +4421,12 @@ class Commerce(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -4124,6 +4468,8 @@ class Commerce(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
@@ -4164,6 +4510,7 @@ class Commerce(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="updateCommerceInventory",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -4182,7 +4529,12 @@ class Commerce(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -4224,6 +4576,8 @@ class Commerce(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.UpdateCommerceItemRequest)
@@ -4258,6 +4612,7 @@ class Commerce(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="updateCommerceItem",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -4276,7 +4631,12 @@ class Commerce(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -4318,6 +4678,8 @@ class Commerce(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.UpdateCommerceItemRequest)
@@ -4352,6 +4714,7 @@ class Commerce(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="updateCommerceItem",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -4370,7 +4733,12 @@ class Commerce(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -4412,6 +4780,8 @@ class Commerce(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.UpdateCommerceLocationRequest)
@@ -4446,6 +4816,7 @@ class Commerce(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="updateCommerceLocation",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -4464,7 +4835,12 @@ class Commerce(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -4506,6 +4882,8 @@ class Commerce(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.UpdateCommerceLocationRequest)
@@ -4540,6 +4918,7 @@ class Commerce(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="updateCommerceLocation",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -4558,7 +4937,12 @@ class Commerce(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res

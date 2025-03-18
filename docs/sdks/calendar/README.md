@@ -37,6 +37,7 @@ Create a calendar
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -83,6 +84,7 @@ Create an event
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+
 
 with UnifiedTo(
     security=shared.Security(
@@ -133,6 +135,7 @@ Create a link
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -180,6 +183,7 @@ Retrieve a calendar
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -224,6 +228,7 @@ Retrieve an event
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+
 
 with UnifiedTo(
     security=shared.Security(
@@ -270,6 +275,7 @@ Retrieve a link
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -314,6 +320,7 @@ Retrieve a recording
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+
 
 with UnifiedTo(
     security=shared.Security(
@@ -360,6 +367,7 @@ List all busies
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -403,6 +411,7 @@ List all calendars
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+
 
 with UnifiedTo(
     security=shared.Security(
@@ -448,6 +457,7 @@ List all events
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -491,6 +501,7 @@ List all links
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+
 
 with UnifiedTo(
     security=shared.Security(
@@ -536,6 +547,7 @@ List all recordings
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -579,6 +591,7 @@ Update a calendar
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+
 
 with UnifiedTo(
     security=shared.Security(
@@ -627,6 +640,7 @@ Update an event
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+
 
 with UnifiedTo(
     security=shared.Security(
@@ -678,6 +692,7 @@ Update a link
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -726,6 +741,7 @@ Remove a calendar
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -770,6 +786,7 @@ Remove an event
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+
 
 with UnifiedTo(
     security=shared.Security(
@@ -816,6 +833,7 @@ Remove a link
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -860,6 +878,7 @@ Update a calendar
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+
 
 with UnifiedTo(
     security=shared.Security(
@@ -908,6 +927,7 @@ Update an event
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+
 
 with UnifiedTo(
     security=shared.Security(
@@ -958,6 +978,7 @@ Update a link
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+
 
 with UnifiedTo(
     security=shared.Security(

@@ -36,6 +36,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.CreateAtsActivityRequest)
@@ -70,6 +72,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="createAtsActivity",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -88,7 +91,12 @@ class Ats(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -130,6 +138,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.CreateAtsActivityRequest)
@@ -164,6 +174,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="createAtsActivity",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -182,7 +193,12 @@ class Ats(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -224,6 +240,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.CreateAtsApplicationRequest)
@@ -258,6 +276,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="createAtsApplication",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -276,7 +295,12 @@ class Ats(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -318,6 +342,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.CreateAtsApplicationRequest)
@@ -352,6 +378,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="createAtsApplication",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -370,7 +397,12 @@ class Ats(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -412,6 +444,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.CreateAtsCandidateRequest)
@@ -446,6 +480,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="createAtsCandidate",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -464,7 +499,12 @@ class Ats(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -506,6 +546,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.CreateAtsCandidateRequest)
@@ -540,6 +582,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="createAtsCandidate",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -558,7 +601,12 @@ class Ats(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -600,6 +648,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.CreateAtsDocumentRequest)
@@ -634,6 +684,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="createAtsDocument",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -652,7 +703,12 @@ class Ats(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -694,6 +750,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.CreateAtsDocumentRequest)
@@ -728,6 +786,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="createAtsDocument",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -746,7 +805,12 @@ class Ats(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -788,6 +852,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.CreateAtsInterviewRequest)
@@ -822,6 +888,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="createAtsInterview",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -840,7 +907,12 @@ class Ats(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -882,6 +954,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.CreateAtsInterviewRequest)
@@ -916,6 +990,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="createAtsInterview",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -934,7 +1009,12 @@ class Ats(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -975,6 +1055,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.CreateAtsJobRequest)
@@ -1009,6 +1091,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="createAtsJob",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -1025,7 +1108,12 @@ class Ats(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -1066,6 +1154,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.CreateAtsJobRequest)
@@ -1100,6 +1190,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="createAtsJob",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -1116,7 +1207,12 @@ class Ats(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -1158,6 +1254,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.CreateAtsScorecardRequest)
@@ -1192,6 +1290,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="createAtsScorecard",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -1210,7 +1309,12 @@ class Ats(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -1252,6 +1356,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.CreateAtsScorecardRequest)
@@ -1286,6 +1392,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="createAtsScorecard",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -1304,7 +1411,12 @@ class Ats(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -1345,6 +1457,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.GetAtsActivityRequest)
@@ -1376,6 +1490,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="getAtsActivity",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -1394,7 +1509,12 @@ class Ats(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -1435,6 +1555,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.GetAtsActivityRequest)
@@ -1466,6 +1588,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="getAtsActivity",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -1484,7 +1607,12 @@ class Ats(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -1526,6 +1654,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.GetAtsApplicationRequest)
@@ -1557,6 +1687,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="getAtsApplication",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -1575,7 +1706,12 @@ class Ats(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -1617,6 +1753,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.GetAtsApplicationRequest)
@@ -1648,6 +1786,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="getAtsApplication",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -1666,7 +1805,12 @@ class Ats(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -1708,6 +1852,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.GetAtsCandidateRequest)
@@ -1739,6 +1885,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="getAtsCandidate",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -1757,7 +1904,12 @@ class Ats(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -1799,6 +1951,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.GetAtsCandidateRequest)
@@ -1830,6 +1984,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="getAtsCandidate",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -1848,7 +2003,12 @@ class Ats(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -1889,6 +2049,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.GetAtsCompanyRequest)
@@ -1920,6 +2082,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="getAtsCompany",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -1938,7 +2101,12 @@ class Ats(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -1979,6 +2147,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.GetAtsCompanyRequest)
@@ -2010,6 +2180,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="getAtsCompany",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -2028,7 +2199,12 @@ class Ats(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -2069,6 +2245,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.GetAtsDocumentRequest)
@@ -2100,6 +2278,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="getAtsDocument",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -2118,7 +2297,12 @@ class Ats(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -2159,6 +2343,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.GetAtsDocumentRequest)
@@ -2190,6 +2376,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="getAtsDocument",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -2208,7 +2395,12 @@ class Ats(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -2250,6 +2442,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.GetAtsInterviewRequest)
@@ -2281,6 +2475,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="getAtsInterview",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -2299,7 +2494,12 @@ class Ats(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -2341,6 +2541,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.GetAtsInterviewRequest)
@@ -2372,6 +2574,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="getAtsInterview",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -2390,7 +2593,12 @@ class Ats(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -2431,6 +2639,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.GetAtsJobRequest)
@@ -2462,6 +2672,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="getAtsJob",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -2478,7 +2689,12 @@ class Ats(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -2519,6 +2735,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.GetAtsJobRequest)
@@ -2550,6 +2768,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="getAtsJob",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -2566,7 +2785,12 @@ class Ats(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -2608,6 +2832,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.GetAtsScorecardRequest)
@@ -2639,6 +2865,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="getAtsScorecard",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -2657,7 +2884,12 @@ class Ats(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -2699,6 +2931,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.GetAtsScorecardRequest)
@@ -2730,6 +2964,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="getAtsScorecard",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -2748,7 +2983,12 @@ class Ats(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -2790,6 +3030,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.ListAtsActivitiesRequest)
@@ -2821,6 +3063,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="listAtsActivities",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -2839,7 +3082,12 @@ class Ats(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -2881,6 +3129,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.ListAtsActivitiesRequest)
@@ -2912,6 +3162,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="listAtsActivities",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -2930,7 +3181,12 @@ class Ats(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -2972,6 +3228,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.ListAtsApplicationsRequest)
@@ -3003,6 +3261,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="listAtsApplications",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -3021,7 +3280,12 @@ class Ats(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -3063,6 +3327,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.ListAtsApplicationsRequest)
@@ -3094,6 +3360,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="listAtsApplications",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -3112,7 +3379,12 @@ class Ats(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -3154,6 +3426,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
@@ -3187,6 +3461,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="listAtsApplicationstatuses",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -3205,7 +3480,12 @@ class Ats(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -3247,6 +3527,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(
@@ -3280,6 +3562,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="listAtsApplicationstatuses",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -3298,7 +3581,12 @@ class Ats(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -3340,6 +3628,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.ListAtsCandidatesRequest)
@@ -3371,6 +3661,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="listAtsCandidates",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -3389,7 +3680,12 @@ class Ats(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -3431,6 +3727,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.ListAtsCandidatesRequest)
@@ -3462,6 +3760,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="listAtsCandidates",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -3480,7 +3779,12 @@ class Ats(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -3522,6 +3826,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.ListAtsCompaniesRequest)
@@ -3553,6 +3859,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="listAtsCompanies",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -3571,7 +3878,12 @@ class Ats(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -3613,6 +3925,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.ListAtsCompaniesRequest)
@@ -3644,6 +3958,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="listAtsCompanies",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -3662,7 +3977,12 @@ class Ats(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -3704,6 +4024,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.ListAtsDocumentsRequest)
@@ -3735,6 +4057,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="listAtsDocuments",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -3753,7 +4076,12 @@ class Ats(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -3795,6 +4123,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.ListAtsDocumentsRequest)
@@ -3826,6 +4156,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="listAtsDocuments",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -3844,7 +4175,12 @@ class Ats(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -3886,6 +4222,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.ListAtsInterviewsRequest)
@@ -3917,6 +4255,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="listAtsInterviews",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -3935,7 +4274,12 @@ class Ats(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -3977,6 +4321,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.ListAtsInterviewsRequest)
@@ -4008,6 +4354,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="listAtsInterviews",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -4026,7 +4373,12 @@ class Ats(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -4067,6 +4419,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.ListAtsJobsRequest)
@@ -4098,6 +4452,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="listAtsJobs",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -4116,7 +4471,12 @@ class Ats(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -4157,6 +4517,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.ListAtsJobsRequest)
@@ -4188,6 +4550,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="listAtsJobs",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -4206,7 +4569,12 @@ class Ats(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -4248,6 +4616,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.ListAtsScorecardsRequest)
@@ -4279,6 +4649,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="listAtsScorecards",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -4297,7 +4668,12 @@ class Ats(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -4339,6 +4715,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.ListAtsScorecardsRequest)
@@ -4370,6 +4748,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="listAtsScorecards",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -4388,7 +4767,12 @@ class Ats(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -4430,6 +4814,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.PatchAtsActivityRequest)
@@ -4464,6 +4850,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="patchAtsActivity",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -4482,7 +4869,12 @@ class Ats(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -4524,6 +4916,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.PatchAtsActivityRequest)
@@ -4558,6 +4952,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="patchAtsActivity",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -4576,7 +4971,12 @@ class Ats(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -4618,6 +5018,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.PatchAtsApplicationRequest)
@@ -4652,6 +5054,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="patchAtsApplication",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -4670,7 +5073,12 @@ class Ats(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -4712,6 +5120,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.PatchAtsApplicationRequest)
@@ -4746,6 +5156,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="patchAtsApplication",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -4764,7 +5175,12 @@ class Ats(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -4806,6 +5222,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.PatchAtsCandidateRequest)
@@ -4840,6 +5258,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="patchAtsCandidate",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -4858,7 +5277,12 @@ class Ats(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -4900,6 +5324,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.PatchAtsCandidateRequest)
@@ -4934,6 +5360,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="patchAtsCandidate",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -4952,7 +5379,12 @@ class Ats(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -4994,6 +5426,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.PatchAtsDocumentRequest)
@@ -5028,6 +5462,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="patchAtsDocument",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -5046,7 +5481,12 @@ class Ats(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -5088,6 +5528,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.PatchAtsDocumentRequest)
@@ -5122,6 +5564,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="patchAtsDocument",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -5140,7 +5583,12 @@ class Ats(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -5182,6 +5630,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.PatchAtsInterviewRequest)
@@ -5216,6 +5666,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="patchAtsInterview",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -5234,7 +5685,12 @@ class Ats(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -5276,6 +5732,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.PatchAtsInterviewRequest)
@@ -5310,6 +5768,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="patchAtsInterview",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -5328,7 +5787,12 @@ class Ats(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -5369,6 +5833,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.PatchAtsJobRequest)
@@ -5403,6 +5869,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="patchAtsJob",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -5419,7 +5886,12 @@ class Ats(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -5460,6 +5932,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.PatchAtsJobRequest)
@@ -5494,6 +5968,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="patchAtsJob",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -5510,7 +5985,12 @@ class Ats(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -5552,6 +6032,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.PatchAtsScorecardRequest)
@@ -5586,6 +6068,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="patchAtsScorecard",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -5604,7 +6087,12 @@ class Ats(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -5646,6 +6134,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.PatchAtsScorecardRequest)
@@ -5680,6 +6170,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="patchAtsScorecard",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -5698,7 +6189,12 @@ class Ats(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -5740,6 +6236,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.RemoveAtsActivityRequest)
@@ -5771,6 +6269,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="removeAtsActivity",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -5787,7 +6286,12 @@ class Ats(BaseSDK):
                 raw_response=http_res,
                 headers={},
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -5836,6 +6340,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.RemoveAtsActivityRequest)
@@ -5867,6 +6373,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="removeAtsActivity",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -5883,7 +6390,12 @@ class Ats(BaseSDK):
                 raw_response=http_res,
                 headers={},
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -5932,6 +6444,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.RemoveAtsApplicationRequest)
@@ -5963,6 +6477,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="removeAtsApplication",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -5979,7 +6494,12 @@ class Ats(BaseSDK):
                 raw_response=http_res,
                 headers={},
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -6028,6 +6548,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.RemoveAtsApplicationRequest)
@@ -6059,6 +6581,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="removeAtsApplication",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -6075,7 +6598,12 @@ class Ats(BaseSDK):
                 raw_response=http_res,
                 headers={},
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -6124,6 +6652,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.RemoveAtsCandidateRequest)
@@ -6155,6 +6685,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="removeAtsCandidate",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -6171,7 +6702,12 @@ class Ats(BaseSDK):
                 raw_response=http_res,
                 headers={},
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -6220,6 +6756,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.RemoveAtsCandidateRequest)
@@ -6251,6 +6789,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="removeAtsCandidate",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -6267,7 +6806,12 @@ class Ats(BaseSDK):
                 raw_response=http_res,
                 headers={},
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -6316,6 +6860,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.RemoveAtsDocumentRequest)
@@ -6347,6 +6893,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="removeAtsDocument",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -6363,7 +6910,12 @@ class Ats(BaseSDK):
                 raw_response=http_res,
                 headers={},
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -6412,6 +6964,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.RemoveAtsDocumentRequest)
@@ -6443,6 +6997,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="removeAtsDocument",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -6459,7 +7014,12 @@ class Ats(BaseSDK):
                 raw_response=http_res,
                 headers={},
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -6508,6 +7068,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.RemoveAtsInterviewRequest)
@@ -6539,6 +7101,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="removeAtsInterview",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -6555,7 +7118,12 @@ class Ats(BaseSDK):
                 raw_response=http_res,
                 headers={},
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -6604,6 +7172,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.RemoveAtsInterviewRequest)
@@ -6635,6 +7205,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="removeAtsInterview",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -6651,7 +7222,12 @@ class Ats(BaseSDK):
                 raw_response=http_res,
                 headers={},
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -6699,6 +7275,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.RemoveAtsJobRequest)
@@ -6730,6 +7308,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="removeAtsJob",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -6746,7 +7325,12 @@ class Ats(BaseSDK):
                 raw_response=http_res,
                 headers={},
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -6794,6 +7378,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.RemoveAtsJobRequest)
@@ -6825,6 +7411,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="removeAtsJob",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -6841,7 +7428,12 @@ class Ats(BaseSDK):
                 raw_response=http_res,
                 headers={},
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -6890,6 +7482,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.RemoveAtsScorecardRequest)
@@ -6921,6 +7515,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="removeAtsScorecard",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -6937,7 +7532,12 @@ class Ats(BaseSDK):
                 raw_response=http_res,
                 headers={},
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -6986,6 +7586,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.RemoveAtsScorecardRequest)
@@ -7017,6 +7619,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="removeAtsScorecard",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -7033,7 +7636,12 @@ class Ats(BaseSDK):
                 raw_response=http_res,
                 headers={},
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -7082,6 +7690,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.UpdateAtsActivityRequest)
@@ -7116,6 +7726,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="updateAtsActivity",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -7134,7 +7745,12 @@ class Ats(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -7176,6 +7792,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.UpdateAtsActivityRequest)
@@ -7210,6 +7828,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="updateAtsActivity",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -7228,7 +7847,12 @@ class Ats(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -7270,6 +7894,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.UpdateAtsApplicationRequest)
@@ -7304,6 +7930,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="updateAtsApplication",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -7322,7 +7949,12 @@ class Ats(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -7364,6 +7996,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.UpdateAtsApplicationRequest)
@@ -7398,6 +8032,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="updateAtsApplication",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -7416,7 +8051,12 @@ class Ats(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -7458,6 +8098,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.UpdateAtsCandidateRequest)
@@ -7492,6 +8134,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="updateAtsCandidate",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -7510,7 +8153,12 @@ class Ats(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -7552,6 +8200,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.UpdateAtsCandidateRequest)
@@ -7586,6 +8236,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="updateAtsCandidate",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -7604,7 +8255,12 @@ class Ats(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -7646,6 +8302,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.UpdateAtsDocumentRequest)
@@ -7680,6 +8338,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="updateAtsDocument",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -7698,7 +8357,12 @@ class Ats(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -7740,6 +8404,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.UpdateAtsDocumentRequest)
@@ -7774,6 +8440,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="updateAtsDocument",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -7792,7 +8459,12 @@ class Ats(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -7834,6 +8506,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.UpdateAtsInterviewRequest)
@@ -7868,6 +8542,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="updateAtsInterview",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -7886,7 +8561,12 @@ class Ats(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -7928,6 +8608,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.UpdateAtsInterviewRequest)
@@ -7962,6 +8644,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="updateAtsInterview",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -7980,7 +8663,12 @@ class Ats(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -8021,6 +8709,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.UpdateAtsJobRequest)
@@ -8055,6 +8745,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="updateAtsJob",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -8071,7 +8762,12 @@ class Ats(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -8112,6 +8808,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.UpdateAtsJobRequest)
@@ -8146,6 +8844,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="updateAtsJob",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -8162,7 +8861,12 @@ class Ats(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -8204,6 +8908,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.UpdateAtsScorecardRequest)
@@ -8238,6 +8944,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="updateAtsScorecard",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -8256,7 +8963,12 @@ class Ats(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -8298,6 +9010,8 @@ class Ats(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.UpdateAtsScorecardRequest)
@@ -8332,6 +9046,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="updateAtsScorecard",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -8350,7 +9065,12 @@ class Ats(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res

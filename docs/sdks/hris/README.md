@@ -44,6 +44,7 @@ Create a company
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -88,6 +89,7 @@ Create an employee
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+
 
 with UnifiedTo(
     security=shared.Security(
@@ -134,6 +136,7 @@ Create a group
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -178,6 +181,7 @@ Create a location
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+
 
 with UnifiedTo(
     security=shared.Security(
@@ -224,6 +228,7 @@ Retrieve a company
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -268,6 +273,7 @@ Retrieve an employee
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+
 
 with UnifiedTo(
     security=shared.Security(
@@ -314,6 +320,7 @@ Retrieve a group
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -358,6 +365,7 @@ Retrieve a location
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+
 
 with UnifiedTo(
     security=shared.Security(
@@ -404,6 +412,7 @@ Retrieve a payslip
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -448,6 +457,7 @@ Retrieve a timeoff
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+
 
 with UnifiedTo(
     security=shared.Security(
@@ -494,6 +504,7 @@ List all companies
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -537,6 +548,7 @@ List all employees
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+
 
 with UnifiedTo(
     security=shared.Security(
@@ -582,6 +594,7 @@ List all groups
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -625,6 +638,7 @@ List all locations
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+
 
 with UnifiedTo(
     security=shared.Security(
@@ -670,6 +684,7 @@ List all payslips
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -714,6 +729,7 @@ List all timeoffs
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -757,6 +773,7 @@ Update a company
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+
 
 with UnifiedTo(
     security=shared.Security(
@@ -804,6 +821,7 @@ Update an employee
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -849,6 +867,7 @@ Update a group
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+
 
 with UnifiedTo(
     security=shared.Security(
@@ -896,6 +915,7 @@ Update a location
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -942,6 +962,7 @@ Remove a company
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -986,6 +1007,7 @@ Remove an employee
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+
 
 with UnifiedTo(
     security=shared.Security(
@@ -1032,6 +1054,7 @@ Remove a group
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -1077,6 +1100,7 @@ Remove a location
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -1121,6 +1145,7 @@ Update a company
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+
 
 with UnifiedTo(
     security=shared.Security(
@@ -1168,6 +1193,7 @@ Update an employee
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -1214,6 +1240,7 @@ Update a group
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -1259,6 +1286,7 @@ Update a location
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+
 
 with UnifiedTo(
     security=shared.Security(

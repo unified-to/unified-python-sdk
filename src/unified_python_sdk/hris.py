@@ -36,6 +36,8 @@ class Hris(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.CreateHrisCompanyRequest)
@@ -70,6 +72,7 @@ class Hris(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="createHrisCompany",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -88,7 +91,12 @@ class Hris(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -130,6 +138,8 @@ class Hris(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.CreateHrisCompanyRequest)
@@ -164,6 +174,7 @@ class Hris(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="createHrisCompany",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -182,7 +193,12 @@ class Hris(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -224,6 +240,8 @@ class Hris(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.CreateHrisEmployeeRequest)
@@ -258,6 +276,7 @@ class Hris(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="createHrisEmployee",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -276,7 +295,12 @@ class Hris(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -318,6 +342,8 @@ class Hris(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.CreateHrisEmployeeRequest)
@@ -352,6 +378,7 @@ class Hris(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="createHrisEmployee",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -370,7 +397,12 @@ class Hris(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -412,6 +444,8 @@ class Hris(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.CreateHrisGroupRequest)
@@ -446,6 +480,7 @@ class Hris(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="createHrisGroup",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -464,7 +499,12 @@ class Hris(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -506,6 +546,8 @@ class Hris(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.CreateHrisGroupRequest)
@@ -540,6 +582,7 @@ class Hris(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="createHrisGroup",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -558,7 +601,12 @@ class Hris(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -600,6 +648,8 @@ class Hris(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.CreateHrisLocationRequest)
@@ -634,6 +684,7 @@ class Hris(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="createHrisLocation",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -652,7 +703,12 @@ class Hris(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -694,6 +750,8 @@ class Hris(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.CreateHrisLocationRequest)
@@ -728,6 +786,7 @@ class Hris(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="createHrisLocation",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -746,7 +805,12 @@ class Hris(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -787,6 +851,8 @@ class Hris(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.GetHrisCompanyRequest)
@@ -818,6 +884,7 @@ class Hris(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="getHrisCompany",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -836,7 +903,12 @@ class Hris(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -877,6 +949,8 @@ class Hris(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.GetHrisCompanyRequest)
@@ -908,6 +982,7 @@ class Hris(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="getHrisCompany",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -926,7 +1001,12 @@ class Hris(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -968,6 +1048,8 @@ class Hris(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.GetHrisEmployeeRequest)
@@ -999,6 +1081,7 @@ class Hris(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="getHrisEmployee",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -1017,7 +1100,12 @@ class Hris(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -1059,6 +1147,8 @@ class Hris(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.GetHrisEmployeeRequest)
@@ -1090,6 +1180,7 @@ class Hris(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="getHrisEmployee",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -1108,7 +1199,12 @@ class Hris(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -1149,6 +1245,8 @@ class Hris(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.GetHrisGroupRequest)
@@ -1180,6 +1278,7 @@ class Hris(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="getHrisGroup",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -1198,7 +1297,12 @@ class Hris(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -1239,6 +1343,8 @@ class Hris(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.GetHrisGroupRequest)
@@ -1270,6 +1376,7 @@ class Hris(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="getHrisGroup",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -1288,7 +1395,12 @@ class Hris(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -1330,6 +1442,8 @@ class Hris(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.GetHrisLocationRequest)
@@ -1361,6 +1475,7 @@ class Hris(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="getHrisLocation",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -1379,7 +1494,12 @@ class Hris(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -1421,6 +1541,8 @@ class Hris(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.GetHrisLocationRequest)
@@ -1452,6 +1574,7 @@ class Hris(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="getHrisLocation",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -1470,7 +1593,12 @@ class Hris(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -1511,6 +1639,8 @@ class Hris(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.GetHrisPayslipRequest)
@@ -1542,6 +1672,7 @@ class Hris(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="getHrisPayslip",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -1560,7 +1691,12 @@ class Hris(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -1601,6 +1737,8 @@ class Hris(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.GetHrisPayslipRequest)
@@ -1632,6 +1770,7 @@ class Hris(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="getHrisPayslip",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -1650,7 +1789,12 @@ class Hris(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -1691,6 +1835,8 @@ class Hris(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.GetHrisTimeoffRequest)
@@ -1722,6 +1868,7 @@ class Hris(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="getHrisTimeoff",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -1740,7 +1887,12 @@ class Hris(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -1781,6 +1933,8 @@ class Hris(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.GetHrisTimeoffRequest)
@@ -1812,6 +1966,7 @@ class Hris(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="getHrisTimeoff",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -1830,7 +1985,12 @@ class Hris(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -1872,6 +2032,8 @@ class Hris(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.ListHrisCompaniesRequest)
@@ -1903,6 +2065,7 @@ class Hris(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="listHrisCompanies",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -1921,7 +2084,12 @@ class Hris(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -1963,6 +2131,8 @@ class Hris(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.ListHrisCompaniesRequest)
@@ -1994,6 +2164,7 @@ class Hris(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="listHrisCompanies",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -2012,7 +2183,12 @@ class Hris(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -2054,6 +2230,8 @@ class Hris(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.ListHrisEmployeesRequest)
@@ -2085,6 +2263,7 @@ class Hris(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="listHrisEmployees",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -2103,7 +2282,12 @@ class Hris(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -2145,6 +2329,8 @@ class Hris(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.ListHrisEmployeesRequest)
@@ -2176,6 +2362,7 @@ class Hris(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="listHrisEmployees",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -2194,7 +2381,12 @@ class Hris(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -2235,6 +2427,8 @@ class Hris(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.ListHrisGroupsRequest)
@@ -2266,6 +2460,7 @@ class Hris(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="listHrisGroups",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -2284,7 +2479,12 @@ class Hris(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -2325,6 +2525,8 @@ class Hris(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.ListHrisGroupsRequest)
@@ -2356,6 +2558,7 @@ class Hris(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="listHrisGroups",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -2374,7 +2577,12 @@ class Hris(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -2416,6 +2624,8 @@ class Hris(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.ListHrisLocationsRequest)
@@ -2447,6 +2657,7 @@ class Hris(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="listHrisLocations",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -2465,7 +2676,12 @@ class Hris(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -2507,6 +2723,8 @@ class Hris(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.ListHrisLocationsRequest)
@@ -2538,6 +2756,7 @@ class Hris(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="listHrisLocations",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -2556,7 +2775,12 @@ class Hris(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -2598,6 +2822,8 @@ class Hris(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.ListHrisPayslipsRequest)
@@ -2629,6 +2855,7 @@ class Hris(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="listHrisPayslips",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -2647,7 +2874,12 @@ class Hris(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -2689,6 +2921,8 @@ class Hris(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.ListHrisPayslipsRequest)
@@ -2720,6 +2954,7 @@ class Hris(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="listHrisPayslips",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -2738,7 +2973,12 @@ class Hris(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -2780,6 +3020,8 @@ class Hris(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.ListHrisTimeoffsRequest)
@@ -2811,6 +3053,7 @@ class Hris(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="listHrisTimeoffs",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -2829,7 +3072,12 @@ class Hris(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -2871,6 +3119,8 @@ class Hris(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.ListHrisTimeoffsRequest)
@@ -2902,6 +3152,7 @@ class Hris(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="listHrisTimeoffs",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -2920,7 +3171,12 @@ class Hris(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -2962,6 +3218,8 @@ class Hris(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.PatchHrisCompanyRequest)
@@ -2996,6 +3254,7 @@ class Hris(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="patchHrisCompany",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -3014,7 +3273,12 @@ class Hris(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -3056,6 +3320,8 @@ class Hris(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.PatchHrisCompanyRequest)
@@ -3090,6 +3356,7 @@ class Hris(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="patchHrisCompany",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -3108,7 +3375,12 @@ class Hris(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -3150,6 +3422,8 @@ class Hris(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.PatchHrisEmployeeRequest)
@@ -3184,6 +3458,7 @@ class Hris(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="patchHrisEmployee",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -3202,7 +3477,12 @@ class Hris(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -3244,6 +3524,8 @@ class Hris(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.PatchHrisEmployeeRequest)
@@ -3278,6 +3560,7 @@ class Hris(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="patchHrisEmployee",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -3296,7 +3579,12 @@ class Hris(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -3337,6 +3625,8 @@ class Hris(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.PatchHrisGroupRequest)
@@ -3371,6 +3661,7 @@ class Hris(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="patchHrisGroup",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -3389,7 +3680,12 @@ class Hris(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -3430,6 +3726,8 @@ class Hris(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.PatchHrisGroupRequest)
@@ -3464,6 +3762,7 @@ class Hris(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="patchHrisGroup",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -3482,7 +3781,12 @@ class Hris(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -3524,6 +3828,8 @@ class Hris(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.PatchHrisLocationRequest)
@@ -3558,6 +3864,7 @@ class Hris(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="patchHrisLocation",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -3576,7 +3883,12 @@ class Hris(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -3618,6 +3930,8 @@ class Hris(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.PatchHrisLocationRequest)
@@ -3652,6 +3966,7 @@ class Hris(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="patchHrisLocation",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -3670,7 +3985,12 @@ class Hris(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -3712,6 +4032,8 @@ class Hris(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.RemoveHrisCompanyRequest)
@@ -3743,6 +4065,7 @@ class Hris(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="removeHrisCompany",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -3759,7 +4082,12 @@ class Hris(BaseSDK):
                 raw_response=http_res,
                 headers={},
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -3808,6 +4136,8 @@ class Hris(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.RemoveHrisCompanyRequest)
@@ -3839,6 +4169,7 @@ class Hris(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="removeHrisCompany",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -3855,7 +4186,12 @@ class Hris(BaseSDK):
                 raw_response=http_res,
                 headers={},
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -3904,6 +4240,8 @@ class Hris(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.RemoveHrisEmployeeRequest)
@@ -3935,6 +4273,7 @@ class Hris(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="removeHrisEmployee",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -3951,7 +4290,12 @@ class Hris(BaseSDK):
                 raw_response=http_res,
                 headers={},
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -4000,6 +4344,8 @@ class Hris(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.RemoveHrisEmployeeRequest)
@@ -4031,6 +4377,7 @@ class Hris(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="removeHrisEmployee",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -4047,7 +4394,12 @@ class Hris(BaseSDK):
                 raw_response=http_res,
                 headers={},
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -4096,6 +4448,8 @@ class Hris(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.RemoveHrisGroupRequest)
@@ -4127,6 +4481,7 @@ class Hris(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="removeHrisGroup",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -4143,7 +4498,12 @@ class Hris(BaseSDK):
                 raw_response=http_res,
                 headers={},
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -4192,6 +4552,8 @@ class Hris(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.RemoveHrisGroupRequest)
@@ -4223,6 +4585,7 @@ class Hris(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="removeHrisGroup",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -4239,7 +4602,12 @@ class Hris(BaseSDK):
                 raw_response=http_res,
                 headers={},
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -4288,6 +4656,8 @@ class Hris(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.RemoveHrisLocationRequest)
@@ -4319,6 +4689,7 @@ class Hris(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="removeHrisLocation",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -4335,7 +4706,12 @@ class Hris(BaseSDK):
                 raw_response=http_res,
                 headers={},
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -4384,6 +4760,8 @@ class Hris(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.RemoveHrisLocationRequest)
@@ -4415,6 +4793,7 @@ class Hris(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="removeHrisLocation",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -4431,7 +4810,12 @@ class Hris(BaseSDK):
                 raw_response=http_res,
                 headers={},
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -4480,6 +4864,8 @@ class Hris(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.UpdateHrisCompanyRequest)
@@ -4514,6 +4900,7 @@ class Hris(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="updateHrisCompany",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -4532,7 +4919,12 @@ class Hris(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -4574,6 +4966,8 @@ class Hris(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.UpdateHrisCompanyRequest)
@@ -4608,6 +5002,7 @@ class Hris(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="updateHrisCompany",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -4626,7 +5021,12 @@ class Hris(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -4668,6 +5068,8 @@ class Hris(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.UpdateHrisEmployeeRequest)
@@ -4702,6 +5104,7 @@ class Hris(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="updateHrisEmployee",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -4720,7 +5123,12 @@ class Hris(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -4762,6 +5170,8 @@ class Hris(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.UpdateHrisEmployeeRequest)
@@ -4796,6 +5206,7 @@ class Hris(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="updateHrisEmployee",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -4814,7 +5225,12 @@ class Hris(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -4856,6 +5272,8 @@ class Hris(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.UpdateHrisGroupRequest)
@@ -4890,6 +5308,7 @@ class Hris(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="updateHrisGroup",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -4908,7 +5327,12 @@ class Hris(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -4950,6 +5374,8 @@ class Hris(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.UpdateHrisGroupRequest)
@@ -4984,6 +5410,7 @@ class Hris(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="updateHrisGroup",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -5002,7 +5429,12 @@ class Hris(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -5044,6 +5476,8 @@ class Hris(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.UpdateHrisLocationRequest)
@@ -5078,6 +5512,7 @@ class Hris(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="updateHrisLocation",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -5096,7 +5531,12 @@ class Hris(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res
@@ -5138,6 +5578,8 @@ class Hris(BaseSDK):
 
         if server_url is not None:
             base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
 
         if not isinstance(request, BaseModel):
             request = utils.unmarshal(request, operations.UpdateHrisLocationRequest)
@@ -5172,6 +5614,7 @@ class Hris(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                base_url=base_url or "",
                 operation_id="updateHrisLocation",
                 oauth2_scopes=[],
                 security_source=self.sdk_configuration.security,
@@ -5190,7 +5633,12 @@ class Hris(BaseSDK):
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
             )
-        if utils.match_response(http_res, ["4XX", "5XX"], "*"):
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError(
+                "API error occurred", http_res.status_code, http_res_text, http_res
+            )
+        if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
             raise errors.SDKError(
                 "API error occurred", http_res.status_code, http_res_text, http_res

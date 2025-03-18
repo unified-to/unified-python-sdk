@@ -19,6 +19,7 @@ Returns an authorization URL for the specified integration.  Once a successful a
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -64,6 +65,7 @@ No authentication required as this is to be used by front-end interface
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -107,6 +109,7 @@ Returns all integrations
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+
 
 with UnifiedTo(
     security=shared.Security(

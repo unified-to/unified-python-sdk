@@ -137,6 +137,12 @@ class ListJobID(str, Enum):
     NOT_SUPPORTED = "not-supported"
 
 
+class ListLeadID(str, Enum):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
 class ListLimit(str, Enum):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
@@ -418,6 +424,7 @@ class IntegrationSupportTypedDict(TypedDict):
     list_item_id: NotRequired[ListItemID]
     list_item_variant_id: NotRequired[ListItemVariantID]
     list_job_id: NotRequired[ListJobID]
+    list_lead_id: NotRequired[ListLeadID]
     list_limit: NotRequired[ListLimit]
     list_link_id: NotRequired[ListLinkID]
     list_list_id: NotRequired[ListListID]
@@ -513,6 +520,8 @@ class IntegrationSupport(BaseModel):
     list_item_variant_id: Optional[ListItemVariantID] = None
 
     list_job_id: Optional[ListJobID] = None
+
+    list_lead_id: Optional[ListLeadID] = None
 
     list_limit: Optional[ListLimit] = None
 

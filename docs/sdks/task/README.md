@@ -34,6 +34,7 @@ Create a comment
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -82,6 +83,7 @@ Create a project
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -126,6 +128,7 @@ Create a task
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+
 
 with UnifiedTo(
     security=shared.Security(
@@ -172,6 +175,7 @@ Retrieve a comment
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -216,6 +220,7 @@ Retrieve a project
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+
 
 with UnifiedTo(
     security=shared.Security(
@@ -262,6 +267,7 @@ Retrieve a task
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -307,6 +313,7 @@ List all comments
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -350,6 +357,7 @@ List all projects
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+
 
 with UnifiedTo(
     security=shared.Security(
@@ -395,6 +403,7 @@ List all tasks
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -438,6 +447,7 @@ Update a comment
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+
 
 with UnifiedTo(
     security=shared.Security(
@@ -488,6 +498,7 @@ Update a project
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -533,6 +544,7 @@ Update a task
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+
 
 with UnifiedTo(
     security=shared.Security(
@@ -580,6 +592,7 @@ Remove a comment
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -624,6 +637,7 @@ Remove a project
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+
 
 with UnifiedTo(
     security=shared.Security(
@@ -670,6 +684,7 @@ Remove a task
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -714,6 +729,7 @@ Update a comment
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+
 
 with UnifiedTo(
     security=shared.Security(
@@ -764,6 +780,7 @@ Update a project
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -809,6 +826,7 @@ Update a task
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+
 
 with UnifiedTo(
     security=shared.Security(

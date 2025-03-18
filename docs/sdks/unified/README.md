@@ -36,6 +36,7 @@ Used only to import existing customer credentials; use "Create connection indire
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -53,7 +54,6 @@ with UnifiedTo(
             shared.PropertyConnectionPermissions.LMS_COURSE_READ,
             shared.PropertyConnectionPermissions.SCIM_USERS_READ,
         ],
-        "environment": "Production",
     })
 
     assert res.connection is not None
@@ -90,6 +90,7 @@ The data payload received by your server is described at https://docs.unified.to
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -101,7 +102,6 @@ with UnifiedTo(
             "connection_id": "<id>",
             "event": shared.Event.CREATED,
             "object_type": shared.ObjectType.HRIS_EMPLOYEE,
-            "environment": "Production",
         },
     })
 
@@ -138,6 +138,7 @@ Retrieve specific API Call by its ID
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+
 
 with UnifiedTo(
     security=shared.Security(
@@ -183,6 +184,7 @@ Retrieve connection
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -226,6 +228,7 @@ Returns an authorization URL for the specified integration.  Once a successful a
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+
 
 with UnifiedTo(
     security=shared.Security(
@@ -272,6 +275,7 @@ Retrieve webhook by its ID
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -316,6 +320,7 @@ Returns API Calls
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -358,6 +363,7 @@ List all connections
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -399,6 +405,7 @@ No authentication required as this is to be used by front-end interface
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+
 
 with UnifiedTo(
     security=shared.Security(
@@ -444,6 +451,7 @@ Returns all integrations
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -485,6 +493,7 @@ List support issues
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+
 
 with UnifiedTo(
     security=shared.Security(
@@ -528,6 +537,7 @@ Returns all registered webhooks
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -570,6 +580,7 @@ Update connection
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -586,7 +597,6 @@ with UnifiedTo(
             "permissions": [
 
             ],
-            "environment": "Production",
         },
         "id": "<id>",
     })
@@ -625,6 +635,7 @@ Update webhook subscription
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -636,7 +647,6 @@ with UnifiedTo(
             "connection_id": "<id>",
             "event": shared.Event.DELETED,
             "object_type": shared.ObjectType.CRM_DEAL,
-            "environment": "Production",
         },
         "id": "<id>",
     })
@@ -674,6 +684,7 @@ Trigger webhook
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+
 
 with UnifiedTo(
     security=shared.Security(
@@ -719,6 +730,7 @@ Remove connection
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -762,6 +774,7 @@ Remove webhook subscription
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+
 
 with UnifiedTo(
     security=shared.Security(
@@ -807,6 +820,7 @@ Update connection
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -824,7 +838,6 @@ with UnifiedTo(
             "permissions": [
 
             ],
-            "environment": "Production",
         },
         "id": "<id>",
     })
@@ -863,6 +876,7 @@ Update webhook subscription
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -874,7 +888,6 @@ with UnifiedTo(
             "connection_id": "<id>",
             "event": shared.Event.CREATED,
             "object_type": shared.ObjectType.PAYMENT_LINK,
-            "environment": "Production",
         },
         "id": "<id>",
     })
@@ -912,6 +925,7 @@ Trigger webhook
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+
 
 with UnifiedTo(
     security=shared.Security(

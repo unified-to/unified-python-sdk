@@ -38,6 +38,7 @@ Create a link
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -83,6 +84,7 @@ Create a payment
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -90,9 +92,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.payment.create_payment_payment(request={
-        "payment_payment": {
-            "currency": "USD",
-        },
+        "payment_payment": {},
         "connection_id": "<id>",
     })
 
@@ -129,6 +129,7 @@ Create a subscription
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+
 
 with UnifiedTo(
     security=shared.Security(
@@ -175,6 +176,7 @@ Retrieve a link
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -219,6 +221,7 @@ Retrieve a payment
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+
 
 with UnifiedTo(
     security=shared.Security(
@@ -265,6 +268,7 @@ Retrieve a payout
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -309,6 +313,7 @@ Retrieve a refund
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+
 
 with UnifiedTo(
     security=shared.Security(
@@ -355,6 +360,7 @@ Retrieve a subscription
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -400,6 +406,7 @@ List all links
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -443,6 +450,7 @@ List all payments
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+
 
 with UnifiedTo(
     security=shared.Security(
@@ -488,6 +496,7 @@ List all payouts
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -531,6 +540,7 @@ List all refunds
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+
 
 with UnifiedTo(
     security=shared.Security(
@@ -576,6 +586,7 @@ List all subscriptions
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -619,6 +630,7 @@ Update a link
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+
 
 with UnifiedTo(
     security=shared.Security(
@@ -666,6 +678,7 @@ Update a payment
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -673,9 +686,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.payment.patch_payment_payment(request={
-        "payment_payment": {
-            "currency": "USD",
-        },
+        "payment_payment": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -713,6 +724,7 @@ Update a subscription
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+
 
 with UnifiedTo(
     security=shared.Security(
@@ -760,6 +772,7 @@ Remove a link
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -804,6 +817,7 @@ Remove a payment
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+
 
 with UnifiedTo(
     security=shared.Security(
@@ -850,6 +864,7 @@ Remove a subscription
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -894,6 +909,7 @@ Update a link
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+
 
 with UnifiedTo(
     security=shared.Security(
@@ -941,6 +957,7 @@ Update a payment
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -948,9 +965,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.payment.update_payment_payment(request={
-        "payment_payment": {
-            "currency": "USD",
-        },
+        "payment_payment": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -988,6 +1003,7 @@ Update a subscription
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+
 
 with UnifiedTo(
     security=shared.Security(

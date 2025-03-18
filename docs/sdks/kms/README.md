@@ -34,6 +34,7 @@ Create a comment
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -80,6 +81,7 @@ Create a page
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+
 
 with UnifiedTo(
     security=shared.Security(
@@ -129,6 +131,7 @@ Create a space
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -138,7 +141,6 @@ with UnifiedTo(
     res = unified_to.kms.create_kms_space(request={
         "kms_space": {
             "name": "<value>",
-            "parent_space_id": "sp",
         },
         "connection_id": "<id>",
     })
@@ -176,6 +178,7 @@ Retrieve a comment
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+
 
 with UnifiedTo(
     security=shared.Security(
@@ -222,6 +225,7 @@ Retrieve a page
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -266,6 +270,7 @@ Retrieve a space
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+
 
 with UnifiedTo(
     security=shared.Security(
@@ -312,6 +317,7 @@ List all comments
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -355,6 +361,7 @@ List all pages
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+
 
 with UnifiedTo(
     security=shared.Security(
@@ -400,6 +407,7 @@ List all spaces
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -443,6 +451,7 @@ Update a comment
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+
 
 with UnifiedTo(
     security=shared.Security(
@@ -491,6 +500,7 @@ Update a page
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+
 
 with UnifiedTo(
     security=shared.Security(
@@ -541,6 +551,7 @@ Update a space
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -550,7 +561,6 @@ with UnifiedTo(
     res = unified_to.kms.patch_kms_space(request={
         "kms_space": {
             "name": "<value>",
-            "parent_space_id": "sp",
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -589,6 +599,7 @@ Remove a comment
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+
 
 with UnifiedTo(
     security=shared.Security(
@@ -635,6 +646,7 @@ Remove a page
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -680,6 +692,7 @@ Remove a space
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -724,6 +737,7 @@ Update a comment
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+
 
 with UnifiedTo(
     security=shared.Security(
@@ -772,6 +786,7 @@ Update a page
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+
 
 with UnifiedTo(
     security=shared.Security(
@@ -822,6 +837,7 @@ Update a space
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -831,7 +847,6 @@ with UnifiedTo(
     res = unified_to.kms.update_kms_space(request={
         "kms_space": {
             "name": "<value>",
-            "parent_space_id": "sp",
         },
         "connection_id": "<id>",
         "id": "<id>",

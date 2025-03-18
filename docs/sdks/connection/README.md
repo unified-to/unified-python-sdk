@@ -22,6 +22,7 @@ Used only to import existing customer credentials; use "Create connection indire
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -39,7 +40,6 @@ with UnifiedTo(
             shared.PropertyConnectionPermissions.LMS_COURSE_READ,
             shared.PropertyConnectionPermissions.SCIM_USERS_READ,
         ],
-        "environment": "Production",
     })
 
     assert res.connection is not None
@@ -75,6 +75,7 @@ Retrieve connection
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+
 
 with UnifiedTo(
     security=shared.Security(
@@ -120,6 +121,7 @@ List all connections
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -162,6 +164,7 @@ Update connection
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -178,7 +181,6 @@ with UnifiedTo(
             "permissions": [
 
             ],
-            "environment": "Production",
         },
         "id": "<id>",
     })
@@ -216,6 +218,7 @@ Remove connection
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+
 
 with UnifiedTo(
     security=shared.Security(
@@ -261,6 +264,7 @@ Update connection
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -278,7 +282,6 @@ with UnifiedTo(
             "permissions": [
 
             ],
-            "environment": "Production",
         },
         "id": "<id>",
     })

@@ -24,6 +24,7 @@ The data payload received by your server is described at https://docs.unified.to
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -35,7 +36,6 @@ with UnifiedTo(
             "connection_id": "<id>",
             "event": shared.Event.CREATED,
             "object_type": shared.ObjectType.HRIS_EMPLOYEE,
-            "environment": "Production",
         },
     })
 
@@ -72,6 +72,7 @@ Retrieve webhook by its ID
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+
 
 with UnifiedTo(
     security=shared.Security(
@@ -117,6 +118,7 @@ Returns all registered webhooks
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -159,6 +161,7 @@ Update webhook subscription
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -170,7 +173,6 @@ with UnifiedTo(
             "connection_id": "<id>",
             "event": shared.Event.DELETED,
             "object_type": shared.ObjectType.CRM_DEAL,
-            "environment": "Production",
         },
         "id": "<id>",
     })
@@ -208,6 +210,7 @@ Trigger webhook
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+
 
 with UnifiedTo(
     security=shared.Security(
@@ -253,6 +256,7 @@ Remove webhook subscription
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -297,6 +301,7 @@ Update webhook subscription
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -308,7 +313,6 @@ with UnifiedTo(
             "connection_id": "<id>",
             "event": shared.Event.CREATED,
             "object_type": shared.ObjectType.PAYMENT_LINK,
-            "environment": "Production",
         },
         "id": "<id>",
     })
@@ -346,6 +350,7 @@ Trigger webhook
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+
 
 with UnifiedTo(
     security=shared.Security(

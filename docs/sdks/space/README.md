@@ -22,6 +22,7 @@ Create a space
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -31,7 +32,6 @@ with UnifiedTo(
     res = unified_to.space.create_kms_space(request={
         "kms_space": {
             "name": "<value>",
-            "parent_space_id": "sp",
         },
         "connection_id": "<id>",
     })
@@ -69,6 +69,7 @@ Retrieve a space
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+
 
 with UnifiedTo(
     security=shared.Security(
@@ -115,6 +116,7 @@ List all spaces
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -159,6 +161,7 @@ Update a space
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -168,7 +171,6 @@ with UnifiedTo(
     res = unified_to.space.patch_kms_space(request={
         "kms_space": {
             "name": "<value>",
-            "parent_space_id": "sp",
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -207,6 +209,7 @@ Remove a space
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+
 
 with UnifiedTo(
     security=shared.Security(
@@ -253,6 +256,7 @@ Update a space
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -262,7 +266,6 @@ with UnifiedTo(
     res = unified_to.space.update_kms_space(request={
         "kms_space": {
             "name": "<value>",
-            "parent_space_id": "sp",
         },
         "connection_id": "<id>",
         "id": "<id>",

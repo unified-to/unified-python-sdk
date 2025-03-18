@@ -34,6 +34,7 @@ Create a contact
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -41,9 +42,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.contact.create_accounting_contact(request={
-        "accounting_contact": {
-            "currency": "USD",
-        },
+        "accounting_contact": {},
         "connection_id": "<id>",
     })
 
@@ -80,6 +79,7 @@ Create a contact
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+
 
 with UnifiedTo(
     security=shared.Security(
@@ -126,6 +126,7 @@ Create a contact
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -170,6 +171,7 @@ Retrieve a contact
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+
 
 with UnifiedTo(
     security=shared.Security(
@@ -216,6 +218,7 @@ Retrieve a contact
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -260,6 +263,7 @@ Retrieve a contact
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+
 
 with UnifiedTo(
     security=shared.Security(
@@ -306,6 +310,7 @@ List all contacts
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -349,6 +354,7 @@ List all contacts
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+
 
 with UnifiedTo(
     security=shared.Security(
@@ -394,6 +400,7 @@ List all contacts
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -438,6 +445,7 @@ Update a contact
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -445,9 +453,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.contact.patch_accounting_contact(request={
-        "accounting_contact": {
-            "currency": "USD",
-        },
+        "accounting_contact": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -485,6 +491,7 @@ Update a contact
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+
 
 with UnifiedTo(
     security=shared.Security(
@@ -532,6 +539,7 @@ Update a contact
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -578,6 +586,7 @@ Remove a contact
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -622,6 +631,7 @@ Remove a contact
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+
 
 with UnifiedTo(
     security=shared.Security(
@@ -668,6 +678,7 @@ Remove a contact
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -713,6 +724,7 @@ Update a contact
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -720,9 +732,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.contact.update_accounting_contact(request={
-        "accounting_contact": {
-            "currency": "USD",
-        },
+        "accounting_contact": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -760,6 +770,7 @@ Update a contact
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+
 
 with UnifiedTo(
     security=shared.Security(
@@ -806,6 +817,7 @@ Update a contact
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+
 
 with UnifiedTo(
     security=shared.Security(

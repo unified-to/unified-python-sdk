@@ -31,6 +31,11 @@ Unified.to API: One API to Rule Them All
 <!-- Start SDK Installation [installation] -->
 ## SDK Installation
 
+> [!NOTE]
+> **Python version upgrade policy**
+>
+> Once a Python version reaches its [official end of life date](https://devguide.python.org/versions/), a 3-month grace period is provided for users to upgrade. Following this grace period, the minimum python version supported in the SDK will be updated.
+
 The SDK can be installed with either *pip* or *poetry* package managers.
 
 ### PIP
@@ -48,6 +53,37 @@ pip install Unified-python-sdk
 ```bash
 poetry add Unified-python-sdk
 ```
+
+### Shell and script usage with `uv`
+
+You can use this SDK in a Python shell with [uv](https://docs.astral.sh/uv/) and the `uvx` command that comes with it like so:
+
+```shell
+uvx --from Unified-python-sdk python
+```
+
+It's also possible to write a standalone Python script without needing to set up a whole project like so:
+
+```python
+#!/usr/bin/env -S uv run --script
+# /// script
+# requires-python = ">=3.9"
+# dependencies = [
+#     "Unified-python-sdk",
+# ]
+# ///
+
+from unified_python_sdk import UnifiedTo
+
+sdk = UnifiedTo(
+  # SDK arguments
+)
+
+# Rest of script here...
+```
+
+Once that is saved to a file, you can run it with `uv run script.py` where
+`script.py` can be replaced with the actual file name.
 <!-- End SDK Installation [installation] -->
 
 <!-- Start IDE Support [idesupport] -->
@@ -69,6 +105,7 @@ Generally, the SDK will work well with most IDEs out of the box. However, when u
 # Synchronous Example
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+
 
 with UnifiedTo(
     security=shared.Security(
@@ -97,6 +134,7 @@ from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
 async def main():
+
     async with UnifiedTo(
         security=shared.Security(
             jwt="<YOUR_API_KEY_HERE>",
@@ -1207,6 +1245,7 @@ Certain SDK methods accept file objects as part of a request body or multi-part 
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -1237,6 +1276,7 @@ from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 from unified_python_sdk.utils import BackoffStrategy, RetryConfig
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -1261,6 +1301,7 @@ If you'd like to override the default retry strategy for all operations that sup
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 from unified_python_sdk.utils import BackoffStrategy, RetryConfig
+
 
 with UnifiedTo(
     retry_config=RetryConfig("backoff", BackoffStrategy(1, 50, 1.1, 100), False),
@@ -1308,6 +1349,7 @@ When custom error responses are specified for an operation, the SDK may also rai
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import errors, shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -1341,16 +1383,17 @@ with UnifiedTo(
 
 You can override the default server globally by passing a server index to the `server_idx: int` optional parameter when initializing the SDK client instance. The selected server will then be used as the default on the operations that use it. This table lists the indexes associated with the available servers:
 
-| #   | Server                      |
-| --- | --------------------------- |
-| 0   | `https://api.unified.to`    |
-| 1   | `https://api-eu.unified.to` |
+| #   | Server                      | Description                |
+| --- | --------------------------- | -------------------------- |
+| 0   | `https://api.unified.to`    | North American data region |
+| 1   | `https://api-eu.unified.to` | European data region       |
 
 #### Example
 
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+
 
 with UnifiedTo(
     server_idx=1,
@@ -1377,6 +1420,7 @@ The default server can also be overridden globally by passing a URL to the `serv
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+
 
 with UnifiedTo(
     server_url="https://api.unified.to",
@@ -1498,6 +1542,7 @@ You can set the security parameters through the `security` optional parameter wh
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
+
 
 with UnifiedTo(
     security=shared.Security(

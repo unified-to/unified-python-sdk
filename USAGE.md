@@ -4,6 +4,7 @@
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
+
 with UnifiedTo(
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
@@ -31,6 +32,7 @@ from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
 
 async def main():
+
     async with UnifiedTo(
         security=shared.Security(
             jwt="<YOUR_API_KEY_HERE>",

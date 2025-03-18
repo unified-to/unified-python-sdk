@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: 469567133059289c1dda4dbb71768014
+  docChecksum: fa3dba9630fbcda044134e4fb89d5cd7
   docVersion: "1.0"
-  speakeasyVersion: 1.468.6
-  generationVersion: 2.493.13
-  releaseVersion: 0.39.1
-  configChecksum: aa50dbe3fc9746b4343d4a9b655711e4
+  speakeasyVersion: 1.519.0
+  generationVersion: 2.552.1
+  releaseVersion: 0.40.0
+  configChecksum: a8665086ffc0420c104e1980c50044c2
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -16,17 +16,17 @@ features:
     acceptHeaders: 3.0.0
     additionalDependencies: 1.0.0
     constsAndDefaults: 1.0.5
-    core: 5.10.1
+    core: 5.12.4
     defaultEnabledRetries: 0.2.0
     downloadStreams: 1.0.1
     enumUnions: 0.1.0
     envVarSecurityUsage: 0.3.2
-    globalSecurity: 3.0.2
+    globalSecurity: 3.0.3
     globalSecurityCallbacks: 1.0.0
     globalServerURLs: 3.1.0
     responseFormat: 1.0.1
     retries: 3.0.2
-    sdkHooks: 1.0.0
+    sdkHooks: 1.0.1
     uploadStreams: 1.0.0
 generatedFiles:
   - .gitattributes
@@ -1063,6 +1063,7 @@ generatedFiles:
   - docs/models/shared/listitemid.md
   - docs/models/shared/listitemvariantid.md
   - docs/models/shared/listjobid.md
+  - docs/models/shared/listleadid.md
   - docs/models/shared/listlimit.md
   - docs/models/shared/listlinkid.md
   - docs/models/shared/listlistid.md
@@ -1359,7 +1360,7 @@ generatedFiles:
   - py.typed
   - pylintrc
   - pyproject.toml
-  - scripts/prepare-readme.py
+  - scripts/prepare_readme.py
   - scripts/publish.sh
   - src/unified_python_sdk/__init__.py
   - src/unified_python_sdk/_hooks/__init__.py
@@ -1424,6 +1425,7 @@ generatedFiles:
   - src/unified_python_sdk/messaging.py
   - src/unified_python_sdk/metadata.py
   - src/unified_python_sdk/model.py
+  - src/unified_python_sdk/models/__init__.py
   - src/unified_python_sdk/models/errors/__init__.py
   - src/unified_python_sdk/models/errors/sdkerror.py
   - src/unified_python_sdk/models/operations/__init__.py
@@ -6152,5 +6154,5 @@ examples:
       responses:
         "200":
           application/json: {"url": "https://standard-birth.info/"}
-generatedTests: {}
 examplesVersion: 1.0.0
+generatedTests: {}
