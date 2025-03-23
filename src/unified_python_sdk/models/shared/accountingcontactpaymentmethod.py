@@ -15,6 +15,8 @@ class AccountingContactPaymentMethodType(str, Enum):
     IDEAL = "IDEAL"
     OTHER = "OTHER"
     PAYPAL = "PAYPAL"
+    WIRE = "WIRE"
+    CHECK = "CHECK"
 
 
 class AccountingContactPaymentMethodTypedDict(TypedDict):
