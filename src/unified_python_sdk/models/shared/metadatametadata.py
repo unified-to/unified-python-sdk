@@ -4,7 +4,7 @@ from __future__ import annotations
 from datetime import datetime
 from enum import Enum
 import pydantic
-from typing import Dict, List, Optional
+from typing import Any, Dict, List, Optional
 from typing_extensions import Annotated, NotRequired, TypedDict
 from unified_python_sdk.types import BaseModel
 
@@ -39,7 +39,7 @@ class MetadataMetadataTypedDict(TypedDict):
     created_at: NotRequired[datetime]
     format_: NotRequired[Format]
     id: NotRequired[str]
-    objects: NotRequired[Dict[str, str]]
+    objects: NotRequired[Dict[str, Any]]
     options: NotRequired[List[str]]
     original_format: NotRequired[str]
     raw: NotRequired[MetadataMetadataRawTypedDict]
@@ -57,7 +57,7 @@ class MetadataMetadata(BaseModel):
 
     id: Optional[str] = None
 
-    objects: Optional[Dict[str, str]] = None
+    objects: Optional[Dict[str, Any]] = None
 
     options: Optional[List[str]] = None
 

@@ -151,6 +151,14 @@ from .atsjob import (
 )
 from .atsjobposting import AtsJobPosting, AtsJobPostingTypedDict
 from .atsjobquestion import AtsJobQuestion, AtsJobQuestionType, AtsJobQuestionTypedDict
+from .atsmetadata import (
+    AtsMetadata,
+    AtsMetadataTypedDict,
+    ExtraData,
+    ExtraDataTypedDict,
+    Value,
+    ValueTypedDict,
+)
 from .atsoffer import (
     AtsOffer,
     AtsOfferRaw,
@@ -244,11 +252,11 @@ from .commerceitemmedia import (
 )
 from .commerceitemmetadata import (
     CommerceItemMetadata,
+    CommerceItemMetadataExtraData,
+    CommerceItemMetadataExtraDataTypedDict,
     CommerceItemMetadataTypedDict,
-    ExtraData,
-    ExtraDataTypedDict,
-    Value,
-    ValueTypedDict,
+    CommerceItemMetadataValue,
+    CommerceItemMetadataValueTypedDict,
 )
 from .commerceitemoption import CommerceItemOption, CommerceItemOptionTypedDict
 from .commerceitemprice import CommerceItemPrice, CommerceItemPriceTypedDict
@@ -293,6 +301,14 @@ from .crmeventformfield import (
 )
 from .crmeventformoption import CrmEventFormOption, CrmEventFormOptionTypedDict
 from .crmlead import CrmLead, CrmLeadRaw, CrmLeadRawTypedDict, CrmLeadTypedDict
+from .crmmetadata import (
+    CrmMetadata,
+    CrmMetadataExtraData,
+    CrmMetadataExtraDataTypedDict,
+    CrmMetadataTypedDict,
+    CrmMetadataValue,
+    CrmMetadataValueTypedDict,
+)
 from .crmpipeline import (
     CrmPipeline,
     CrmPipelineRaw,
@@ -351,6 +367,14 @@ from .hrislocation import (
     HrisLocationRaw,
     HrisLocationRawTypedDict,
     HrisLocationTypedDict,
+)
+from .hrismetadata import (
+    HrisMetadata,
+    HrisMetadataExtraData,
+    HrisMetadataExtraDataTypedDict,
+    HrisMetadataTypedDict,
+    HrisMetadataValue,
+    HrisMetadataValueTypedDict,
 )
 from .hrispayslip import (
     HrisPayslip,
@@ -835,6 +859,8 @@ __all__ = [
     "AtsJobRawTypedDict",
     "AtsJobStatus",
     "AtsJobTypedDict",
+    "AtsMetadata",
+    "AtsMetadataTypedDict",
     "AtsOffer",
     "AtsOfferRaw",
     "AtsOfferRawTypedDict",
@@ -896,7 +922,11 @@ __all__ = [
     "CommerceItemMediaType",
     "CommerceItemMediaTypedDict",
     "CommerceItemMetadata",
+    "CommerceItemMetadataExtraData",
+    "CommerceItemMetadataExtraDataTypedDict",
     "CommerceItemMetadataTypedDict",
+    "CommerceItemMetadataValue",
+    "CommerceItemMetadataValueTypedDict",
     "CommerceItemOption",
     "CommerceItemOptionTypedDict",
     "CommerceItemPrice",
@@ -942,6 +972,12 @@ __all__ = [
     "CrmLeadRaw",
     "CrmLeadRawTypedDict",
     "CrmLeadTypedDict",
+    "CrmMetadata",
+    "CrmMetadataExtraData",
+    "CrmMetadataExtraDataTypedDict",
+    "CrmMetadataTypedDict",
+    "CrmMetadataValue",
+    "CrmMetadataValueTypedDict",
     "CrmPipeline",
     "CrmPipelineRaw",
     "CrmPipelineRawTypedDict",
@@ -1006,6 +1042,12 @@ __all__ = [
     "HrisLocationRaw",
     "HrisLocationRawTypedDict",
     "HrisLocationTypedDict",
+    "HrisMetadata",
+    "HrisMetadataExtraData",
+    "HrisMetadataExtraDataTypedDict",
+    "HrisMetadataTypedDict",
+    "HrisMetadataValue",
+    "HrisMetadataValueTypedDict",
     "HrisPayslip",
     "HrisPayslipDetail",
     "HrisPayslipDetailType",

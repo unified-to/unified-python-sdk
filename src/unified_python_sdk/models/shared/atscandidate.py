@@ -7,6 +7,7 @@ from .atscandidateexperience import (
     AtsCandidateExperienceTypedDict,
 )
 from .atsemail import AtsEmail, AtsEmailTypedDict
+from .atsmetadata import AtsMetadata, AtsMetadataTypedDict
 from .atstelephone import AtsTelephone, AtsTelephoneTypedDict
 from .property_atscandidate_address import (
     PropertyAtsCandidateAddress,
@@ -50,6 +51,7 @@ class AtsCandidateTypedDict(TypedDict):
     image_url: NotRequired[str]
     link_urls: NotRequired[List[str]]
     r"""URLs for web pages containing additional material about the candidate (LinkedIn, other social media, articles, etc.)"""
+    metadata: NotRequired[List[AtsMetadataTypedDict]]
     name: NotRequired[str]
     origin: NotRequired[Origin]
     raw: NotRequired[AtsCandidateRawTypedDict]
@@ -88,6 +90,8 @@ class AtsCandidate(BaseModel):
 
     link_urls: Optional[List[str]] = None
     r"""URLs for web pages containing additional material about the candidate (LinkedIn, other social media, articles, etc.)"""
+
+    metadata: Optional[List[AtsMetadata]] = None
 
     name: Optional[str] = None
 

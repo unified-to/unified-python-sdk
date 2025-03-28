@@ -54,6 +54,7 @@ class AccountingInvoiceTypedDict(TypedDict):
     paid_amount: NotRequired[float]
     paid_at: NotRequired[datetime]
     payment_collection_method: NotRequired[PaymentCollectionMethod]
+    posted_at: NotRequired[datetime]
     raw: NotRequired[AccountingInvoiceRawTypedDict]
     refund_amount: NotRequired[float]
     refund_reason: NotRequired[str]
@@ -96,6 +97,8 @@ class AccountingInvoice(BaseModel):
     paid_at: Optional[datetime] = None
 
     payment_collection_method: Optional[PaymentCollectionMethod] = None
+
+    posted_at: Optional[datetime] = None
 
     raw: Optional[AccountingInvoiceRaw] = None
 

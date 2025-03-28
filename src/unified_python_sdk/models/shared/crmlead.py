@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 from .crmemail import CrmEmail, CrmEmailTypedDict
+from .crmmetadata import CrmMetadata, CrmMetadataTypedDict
 from .crmtelephone import CrmTelephone, CrmTelephoneTypedDict
 from .property_crmlead_address import (
     PropertyCrmLeadAddress,
@@ -32,6 +33,7 @@ class CrmLeadTypedDict(TypedDict):
     id: NotRequired[str]
     is_active: NotRequired[bool]
     link_urls: NotRequired[List[str]]
+    metadata: NotRequired[List[CrmMetadataTypedDict]]
     name: NotRequired[str]
     raw: NotRequired[CrmLeadRawTypedDict]
     source: NotRequired[str]
@@ -61,6 +63,8 @@ class CrmLead(BaseModel):
     is_active: Optional[bool] = None
 
     link_urls: Optional[List[str]] = None
+
+    metadata: Optional[List[CrmMetadata]] = None
 
     name: Optional[str] = None
 

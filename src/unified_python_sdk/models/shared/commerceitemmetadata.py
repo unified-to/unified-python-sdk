@@ -6,35 +6,35 @@ from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk.types import BaseModel
 
 
-class ExtraDataTypedDict(TypedDict):
+class CommerceItemMetadataExtraDataTypedDict(TypedDict):
     pass
 
 
-class ExtraData(BaseModel):
+class CommerceItemMetadataExtraData(BaseModel):
     pass
 
 
-class ValueTypedDict(TypedDict):
+class CommerceItemMetadataValueTypedDict(TypedDict):
     pass
 
 
-class Value(BaseModel):
+class CommerceItemMetadataValue(BaseModel):
     pass
 
 
 class CommerceItemMetadataTypedDict(TypedDict):
     key: str
-    extra_data: NotRequired[ExtraDataTypedDict]
+    extra_data: NotRequired[CommerceItemMetadataExtraDataTypedDict]
     id: NotRequired[str]
     namespace: NotRequired[str]
     type: NotRequired[str]
-    value: NotRequired[ValueTypedDict]
+    value: NotRequired[CommerceItemMetadataValueTypedDict]
 
 
 class CommerceItemMetadata(BaseModel):
     key: str
 
-    extra_data: Optional[ExtraData] = None
+    extra_data: Optional[CommerceItemMetadataExtraData] = None
 
     id: Optional[str] = None
 
@@ -42,4 +42,4 @@ class CommerceItemMetadata(BaseModel):
 
     type: Optional[str] = None
 
-    value: Optional[Value] = None
+    value: Optional[CommerceItemMetadataValue] = None

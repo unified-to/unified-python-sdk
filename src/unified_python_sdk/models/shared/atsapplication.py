@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 from .atsapplicationanswer import AtsApplicationAnswer, AtsApplicationAnswerTypedDict
+from .atsmetadata import AtsMetadata, AtsMetadataTypedDict
 from .atsoffer import AtsOffer, AtsOfferTypedDict
 from datetime import datetime
 from enum import Enum
@@ -43,6 +44,7 @@ class AtsApplicationTypedDict(TypedDict):
     hired_at: NotRequired[datetime]
     id: NotRequired[str]
     job_id: NotRequired[str]
+    metadata: NotRequired[List[AtsMetadataTypedDict]]
     offers: NotRequired[List[AtsOfferTypedDict]]
     original_status: NotRequired[str]
     raw: NotRequired[AtsApplicationRawTypedDict]
@@ -67,6 +69,8 @@ class AtsApplication(BaseModel):
     id: Optional[str] = None
 
     job_id: Optional[str] = None
+
+    metadata: Optional[List[AtsMetadata]] = None
 
     offers: Optional[List[AtsOffer]] = None
 

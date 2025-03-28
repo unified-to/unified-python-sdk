@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 from .crmemail import CrmEmail, CrmEmailTypedDict
+from .crmmetadata import CrmMetadata, CrmMetadataTypedDict
 from .crmtelephone import CrmTelephone, CrmTelephoneTypedDict
 from .property_crmcontact_address import (
     PropertyCrmContactAddress,
@@ -36,6 +37,7 @@ class CrmContactTypedDict(TypedDict):
     id: NotRequired[str]
     link_urls: NotRequired[List[str]]
     r"""Additional URLs associated with the contact e.g., LinkedIn, website, etc"""
+    metadata: NotRequired[List[CrmMetadataTypedDict]]
     name: NotRequired[str]
     raw: NotRequired[CrmContactRawTypedDict]
     telephones: NotRequired[List[CrmTelephoneTypedDict]]
@@ -67,6 +69,8 @@ class CrmContact(BaseModel):
 
     link_urls: Optional[List[str]] = None
     r"""Additional URLs associated with the contact e.g., LinkedIn, website, etc"""
+
+    metadata: Optional[List[CrmMetadata]] = None
 
     name: Optional[str] = None
 

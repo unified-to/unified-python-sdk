@@ -5,6 +5,7 @@ from .hriscompensation import HrisCompensation, HrisCompensationTypedDict
 from .hrisemail import HrisEmail, HrisEmailTypedDict
 from .hrisgroup import HrisGroup, HrisGroupTypedDict
 from .hrislocation import HrisLocation, HrisLocationTypedDict
+from .hrismetadata import HrisMetadata, HrisMetadataTypedDict
 from .hristelephone import HrisTelephone, HrisTelephoneTypedDict
 from .property_hrisemployee_address import (
     PropertyHrisEmployeeAddress,
@@ -83,6 +84,7 @@ class HrisEmployeeTypedDict(TypedDict):
     locations: NotRequired[List[HrisLocationTypedDict]]
     manager_id: NotRequired[str]
     marital_status: NotRequired[MaritalStatus]
+    metadata: NotRequired[List[HrisMetadataTypedDict]]
     name: NotRequired[str]
     pronouns: NotRequired[str]
     raw: NotRequired[HrisEmployeeRawTypedDict]
@@ -144,6 +146,8 @@ class HrisEmployee(BaseModel):
     manager_id: Optional[str] = None
 
     marital_status: Optional[MaritalStatus] = None
+
+    metadata: Optional[List[HrisMetadata]] = None
 
     name: Optional[str] = None
 

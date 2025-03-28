@@ -6,6 +6,7 @@ from .atscompensation import AtsCompensation, AtsCompensationTypedDict
 from .atsgroup import AtsGroup, AtsGroupTypedDict
 from .atsjobposting import AtsJobPosting, AtsJobPostingTypedDict
 from .atsjobquestion import AtsJobQuestion, AtsJobQuestionTypedDict
+from .atsmetadata import AtsMetadata, AtsMetadataTypedDict
 from datetime import datetime
 from enum import Enum
 from typing import List, Optional
@@ -57,6 +58,7 @@ class AtsJobTypedDict(TypedDict):
     hiring_manager_ids: NotRequired[List[str]]
     id: NotRequired[str]
     language_locale: NotRequired[str]
+    metadata: NotRequired[List[AtsMetadataTypedDict]]
     name: NotRequired[str]
     number_of_openings: NotRequired[float]
     postings: NotRequired[List[AtsJobPostingTypedDict]]
@@ -97,6 +99,8 @@ class AtsJob(BaseModel):
     id: Optional[str] = None
 
     language_locale: Optional[str] = None
+
+    metadata: Optional[List[AtsMetadata]] = None
 
     name: Optional[str] = None
 
