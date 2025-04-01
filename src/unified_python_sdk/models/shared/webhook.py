@@ -3,7 +3,7 @@
 from __future__ import annotations
 from datetime import datetime
 from enum import Enum
-from typing import Dict, List, Optional
+from typing import Any, Dict, List, Optional
 from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk.types import BaseModel
 
@@ -20,14 +20,6 @@ class Event(str, Enum):
     UPDATED = "updated"
     CREATED = "created"
     DELETED = "deleted"
-
-
-class MetaTypedDict(TypedDict):
-    pass
-
-
-class Meta(BaseModel):
-    pass
 
 
 class ObjectType(str, Enum):
@@ -134,7 +126,7 @@ class WebhookTypedDict(TypedDict):
     interval: NotRequired[float]
     is_healthy: NotRequired[bool]
     is_paused: NotRequired[bool]
-    meta: NotRequired[MetaTypedDict]
+    meta: NotRequired[Dict[str, Any]]
     page_max_limit: NotRequired[float]
     runs: NotRequired[List[str]]
     r"""An array of the most revent virtual webhook runs"""
@@ -180,7 +172,7 @@ class Webhook(BaseModel):
 
     is_paused: Optional[bool] = None
 
-    meta: Optional[Meta] = None
+    meta: Optional[Dict[str, Any]] = None
 
     page_max_limit: Optional[float] = None
 

@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: 9857048e17c51b706f1f1755ce5dafdc
+  docChecksum: b86a0a7e009b89c881979b0459cdcf9b
   docVersion: "1.0"
-  speakeasyVersion: 1.526.0
-  generationVersion: 2.563.0
-  releaseVersion: 0.40.3
-  configChecksum: 046a56e6d40ba14399ceb4f3a4fc8793
+  speakeasyVersion: 1.526.6
+  generationVersion: 2.563.1
+  releaseVersion: 0.40.4
+  configChecksum: 46933bf56fd1907e779dfdafc6a8d0f8
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -1116,7 +1116,6 @@ generatedFiles:
   - docs/models/shared/messagingchannel.md
   - docs/models/shared/messagingmember.md
   - docs/models/shared/messagingmessage.md
-  - docs/models/shared/meta.md
   - docs/models/shared/metadatametadata.md
   - docs/models/shared/metadatametadataraw.md
   - docs/models/shared/nativewebhookparentid.md
@@ -1152,7 +1151,6 @@ generatedFiles:
   - docs/models/shared/propertycalendarrecordingtranscriptattendeestatus.md
   - docs/models/shared/propertycommercelocationaddress.md
   - docs/models/shared/propertyconnectionauth.md
-  - docs/models/shared/propertyconnectionauthmeta.md
   - docs/models/shared/propertyconnectioncategories.md
   - docs/models/shared/propertyconnectionpermissions.md
   - docs/models/shared/propertycrmcompanyaddress.md
