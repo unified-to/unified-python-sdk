@@ -82,6 +82,7 @@ from unified_python_sdk.pullrequest import Pullrequest
 from unified_python_sdk.recording import Recording
 from unified_python_sdk.refund import Refund
 from unified_python_sdk.repo import Repo
+from unified_python_sdk.report import Report
 from unified_python_sdk.repository import Repository
 from unified_python_sdk.scim import Scim
 from unified_python_sdk.scorecard import Scorecard
@@ -113,6 +114,7 @@ class UnifiedTo(BaseSDK):
     journal: Journal
     order: Order
     organization: Organization
+    report: Report
     taxrate: Taxrate
     transaction: Transaction
     ats: Ats
@@ -292,6 +294,7 @@ class UnifiedTo(BaseSDK):
         self.journal = Journal(self.sdk_configuration)
         self.order = Order(self.sdk_configuration)
         self.organization = Organization(self.sdk_configuration)
+        self.report = Report(self.sdk_configuration)
         self.taxrate = Taxrate(self.sdk_configuration)
         self.transaction = Transaction(self.sdk_configuration)
         self.ats = Ats(self.sdk_configuration)

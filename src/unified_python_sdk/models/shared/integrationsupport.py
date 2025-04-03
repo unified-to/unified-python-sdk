@@ -450,7 +450,7 @@ class IntegrationSupportTypedDict(TypedDict):
     list_type: NotRequired[ListType]
     list_updated_gte: NotRequired[ListUpdatedGte]
     list_user_id: NotRequired[ListUserID]
-    methods: NotRequired[Dict[str, bool]]
+    methods: NotRequired[Dict[str, Any]]
     native_webhook_parent_id: NotRequired[NativeWebhookParentID]
     native_webhook_project_id: NotRequired[NativeWebhookProjectID]
     outbound_fields: NotRequired[Dict[str, Any]]
@@ -573,7 +573,7 @@ class IntegrationSupport(BaseModel):
 
     list_user_id: Optional[ListUserID] = None
 
-    methods: Optional[Dict[str, bool]] = None
+    methods: Optional[Dict[str, Any]] = None
 
     native_webhook_parent_id: Optional[NativeWebhookParentID] = None
 

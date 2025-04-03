@@ -31,6 +31,7 @@ class ObjectType(str, Enum):
     ACCOUNTING_TAXRATE = "accounting_taxrate"
     ACCOUNTING_ORGANIZATION = "accounting_organization"
     ACCOUNTING_ORDER = "accounting_order"
+    ACCOUNTING_REPORT = "accounting_report"
     PAYMENT_PAYMENT = "payment_payment"
     PAYMENT_LINK = "payment_link"
     PAYMENT_PAYOUT = "payment_payout"
@@ -119,7 +120,7 @@ class WebhookTypedDict(TypedDict):
     db_url: NotRequired[str]
     environment: NotRequired[str]
     fields: NotRequired[str]
-    filters: NotRequired[Dict[str, str]]
+    filters: NotRequired[Dict[str, Any]]
     hook_url: NotRequired[str]
     id: NotRequired[str]
     integration_type: NotRequired[str]
@@ -158,7 +159,7 @@ class Webhook(BaseModel):
 
     fields: Optional[str] = None
 
-    filters: Optional[Dict[str, str]] = None
+    filters: Optional[Dict[str, Any]] = None
 
     hook_url: Optional[str] = None
 

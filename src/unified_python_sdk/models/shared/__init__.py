@@ -59,6 +59,13 @@ from .accountingorganization import (
     AccountingOrganizationRawTypedDict,
     AccountingOrganizationTypedDict,
 )
+from .accountingreport import (
+    AccountingReport,
+    AccountingReportRaw,
+    AccountingReportRawTypedDict,
+    AccountingReportType,
+    AccountingReportTypedDict,
+)
 from .accountingtaxrate import (
     AccountingTaxrate,
     AccountingTaxrateRaw,
@@ -778,6 +785,11 @@ __all__ = [
     "AccountingOrganizationRaw",
     "AccountingOrganizationRawTypedDict",
     "AccountingOrganizationTypedDict",
+    "AccountingReport",
+    "AccountingReportRaw",
+    "AccountingReportRawTypedDict",
+    "AccountingReportType",
+    "AccountingReportTypedDict",
     "AccountingTaxrate",
     "AccountingTaxrateRaw",
     "AccountingTaxrateRawTypedDict",

@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: b86a0a7e009b89c881979b0459cdcf9b
+  docChecksum: 17d655d886642d9b7380dfa9cd15cb96
   docVersion: "1.0"
-  speakeasyVersion: 1.526.6
-  generationVersion: 2.563.1
-  releaseVersion: 0.40.4
-  configChecksum: 46933bf56fd1907e779dfdafc6a8d0f8
+  speakeasyVersion: 1.528.1
+  generationVersion: 2.565.1
+  releaseVersion: 0.40.5
+  configChecksum: 93b07c5b5c9f3d1edb452a2bd33cca51
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -16,7 +16,7 @@ features:
     acceptHeaders: 3.0.0
     additionalDependencies: 1.0.0
     constsAndDefaults: 1.0.5
-    core: 5.12.4
+    core: 5.12.5
     defaultEnabledRetries: 0.2.0
     downloadStreams: 1.0.1
     enumUnions: 0.1.0
@@ -175,6 +175,8 @@ generatedFiles:
   - docs/models/operations/getaccountingorderresponse.md
   - docs/models/operations/getaccountingorganizationrequest.md
   - docs/models/operations/getaccountingorganizationresponse.md
+  - docs/models/operations/getaccountingreportrequest.md
+  - docs/models/operations/getaccountingreportresponse.md
   - docs/models/operations/getaccountingtaxraterequest.md
   - docs/models/operations/getaccountingtaxrateresponse.md
   - docs/models/operations/getaccountingtransactionrequest.md
@@ -321,6 +323,8 @@ generatedFiles:
   - docs/models/operations/listaccountingordersresponse.md
   - docs/models/operations/listaccountingorganizationsrequest.md
   - docs/models/operations/listaccountingorganizationsresponse.md
+  - docs/models/operations/listaccountingreportsrequest.md
+  - docs/models/operations/listaccountingreportsresponse.md
   - docs/models/operations/listaccountingtaxratesrequest.md
   - docs/models/operations/listaccountingtaxratesresponse.md
   - docs/models/operations/listaccountingtransactionsrequest.md
@@ -880,6 +884,9 @@ generatedFiles:
   - docs/models/shared/accountingordertype.md
   - docs/models/shared/accountingorganization.md
   - docs/models/shared/accountingorganizationraw.md
+  - docs/models/shared/accountingreport.md
+  - docs/models/shared/accountingreportraw.md
+  - docs/models/shared/accountingreporttype.md
   - docs/models/shared/accountingtaxrate.md
   - docs/models/shared/accountingtaxrateraw.md
   - docs/models/shared/accountingtelephone.md
@@ -1345,6 +1352,7 @@ generatedFiles:
   - docs/sdks/recording/README.md
   - docs/sdks/refund/README.md
   - docs/sdks/repo/README.md
+  - docs/sdks/report/README.md
   - docs/sdks/repository/README.md
   - docs/sdks/scim/README.md
   - docs/sdks/scorecard/README.md
@@ -1507,6 +1515,7 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/getaccountingjournal.py
   - src/unified_python_sdk/models/operations/getaccountingorder.py
   - src/unified_python_sdk/models/operations/getaccountingorganization.py
+  - src/unified_python_sdk/models/operations/getaccountingreport.py
   - src/unified_python_sdk/models/operations/getaccountingtaxrate.py
   - src/unified_python_sdk/models/operations/getaccountingtransaction.py
   - src/unified_python_sdk/models/operations/getatsactivity.py
@@ -1580,6 +1589,7 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/listaccountingjournals.py
   - src/unified_python_sdk/models/operations/listaccountingorders.py
   - src/unified_python_sdk/models/operations/listaccountingorganizations.py
+  - src/unified_python_sdk/models/operations/listaccountingreports.py
   - src/unified_python_sdk/models/operations/listaccountingtaxrates.py
   - src/unified_python_sdk/models/operations/listaccountingtransactions.py
   - src/unified_python_sdk/models/operations/listatsactivities.py
@@ -1859,6 +1869,7 @@ generatedFiles:
   - src/unified_python_sdk/models/shared/accountinglineitem.py
   - src/unified_python_sdk/models/shared/accountingorder.py
   - src/unified_python_sdk/models/shared/accountingorganization.py
+  - src/unified_python_sdk/models/shared/accountingreport.py
   - src/unified_python_sdk/models/shared/accountingtaxrate.py
   - src/unified_python_sdk/models/shared/accountingtelephone.py
   - src/unified_python_sdk/models/shared/accountingtransaction.py
@@ -2064,6 +2075,7 @@ generatedFiles:
   - src/unified_python_sdk/recording.py
   - src/unified_python_sdk/refund.py
   - src/unified_python_sdk/repo.py
+  - src/unified_python_sdk/report.py
   - src/unified_python_sdk/repository.py
   - src/unified_python_sdk/scim.py
   - src/unified_python_sdk/scorecard.py
@@ -6164,5 +6176,24 @@ examples:
       responses:
         "200":
           application/json: {"url": "https://standard-birth.info/"}
+  getAccountingReport:
+    speakeasy-default-get-accounting-report:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {}
+  listAccountingReports:
+    speakeasy-default-list-accounting-reports:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: [{}, {}, {}]
 examplesVersion: 1.0.0
 generatedTests: {}

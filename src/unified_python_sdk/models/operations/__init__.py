@@ -424,6 +424,12 @@ from .getaccountingorganization import (
     GetAccountingOrganizationResponse,
     GetAccountingOrganizationResponseTypedDict,
 )
+from .getaccountingreport import (
+    GetAccountingReportRequest,
+    GetAccountingReportRequestTypedDict,
+    GetAccountingReportResponse,
+    GetAccountingReportResponseTypedDict,
+)
 from .getaccountingtaxrate import (
     GetAccountingTaxrateRequest,
     GetAccountingTaxrateRequestTypedDict,
@@ -861,6 +867,12 @@ from .listaccountingorganizations import (
     ListAccountingOrganizationsRequestTypedDict,
     ListAccountingOrganizationsResponse,
     ListAccountingOrganizationsResponseTypedDict,
+)
+from .listaccountingreports import (
+    ListAccountingReportsRequest,
+    ListAccountingReportsRequestTypedDict,
+    ListAccountingReportsResponse,
+    ListAccountingReportsResponseTypedDict,
 )
 from .listaccountingtaxrates import (
     ListAccountingTaxratesRequest,
@@ -2759,6 +2771,10 @@ __all__ = [
     "GetAccountingOrganizationRequestTypedDict",
     "GetAccountingOrganizationResponse",
     "GetAccountingOrganizationResponseTypedDict",
+    "GetAccountingReportRequest",
+    "GetAccountingReportRequestTypedDict",
+    "GetAccountingReportResponse",
+    "GetAccountingReportResponseTypedDict",
     "GetAccountingTaxrateRequest",
     "GetAccountingTaxrateRequestTypedDict",
     "GetAccountingTaxrateResponse",
@@ -3051,6 +3067,10 @@ __all__ = [
     "ListAccountingOrganizationsRequestTypedDict",
     "ListAccountingOrganizationsResponse",
     "ListAccountingOrganizationsResponseTypedDict",
+    "ListAccountingReportsRequest",
+    "ListAccountingReportsRequestTypedDict",
+    "ListAccountingReportsResponse",
+    "ListAccountingReportsResponseTypedDict",
     "ListAccountingTaxratesRequest",
     "ListAccountingTaxratesRequestTypedDict",
     "ListAccountingTaxratesResponse",

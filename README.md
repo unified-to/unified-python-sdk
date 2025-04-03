@@ -185,6 +185,7 @@ asyncio.run(main())
 * [get_accounting_journal](docs/sdks/accounting/README.md#get_accounting_journal) - Retrieve a journal
 * [get_accounting_order](docs/sdks/accounting/README.md#get_accounting_order) - Retrieve an order
 * [get_accounting_organization](docs/sdks/accounting/README.md#get_accounting_organization) - Retrieve an organization
+* [get_accounting_report](docs/sdks/accounting/README.md#get_accounting_report) - Retrieve a report
 * [get_accounting_taxrate](docs/sdks/accounting/README.md#get_accounting_taxrate) - Retrieve a taxrate
 * [get_accounting_transaction](docs/sdks/accounting/README.md#get_accounting_transaction) - Retrieve a transaction
 * [list_accounting_accounts](docs/sdks/accounting/README.md#list_accounting_accounts) - List all accounts
@@ -193,6 +194,7 @@ asyncio.run(main())
 * [list_accounting_journals](docs/sdks/accounting/README.md#list_accounting_journals) - List all journals
 * [list_accounting_orders](docs/sdks/accounting/README.md#list_accounting_orders) - List all orders
 * [list_accounting_organizations](docs/sdks/accounting/README.md#list_accounting_organizations) - List all organizations
+* [list_accounting_reports](docs/sdks/accounting/README.md#list_accounting_reports) - List all reports
 * [list_accounting_taxrates](docs/sdks/accounting/README.md#list_accounting_taxrates) - List all taxrates
 * [list_accounting_transactions](docs/sdks/accounting/README.md#list_accounting_transactions) - List all transactions
 * [patch_accounting_account](docs/sdks/accounting/README.md#patch_accounting_account) - Update an account
@@ -1024,6 +1026,11 @@ asyncio.run(main())
 * [update_repo_organization](docs/sdks/repo/README.md#update_repo_organization) - Update an organization
 * [update_repo_pullrequest](docs/sdks/repo/README.md#update_repo_pullrequest) - Update a pullrequest
 * [update_repo_repository](docs/sdks/repo/README.md#update_repo_repository) - Update a repository
+
+### [report](docs/sdks/report/README.md)
+
+* [get_accounting_report](docs/sdks/report/README.md#get_accounting_report) - Retrieve a report
+* [list_accounting_reports](docs/sdks/report/README.md#list_accounting_reports) - List all reports
 
 ### [repository](docs/sdks/repository/README.md)
 

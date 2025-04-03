@@ -13,6 +13,7 @@
 | `ACCOUNTING_TAXRATE`      | accounting_taxrate        |
 | `ACCOUNTING_ORGANIZATION` | accounting_organization   |
 | `ACCOUNTING_ORDER`        | accounting_order          |
+| `ACCOUNTING_REPORT`       | accounting_report         |
 | `PAYMENT_PAYMENT`         | payment_payment           |
 | `PAYMENT_LINK`            | payment_link              |
 | `PAYMENT_PAYOUT`          | payment_payout            |

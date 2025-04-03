@@ -21,6 +21,8 @@
 | `ACCOUNTING_ORGANIZATION_READ` | accounting_organization_read   |
 | `ACCOUNTING_ORDER_READ`        | accounting_order_read          |
 | `ACCOUNTING_ORDER_WRITE`       | accounting_order_write         |
+| `ACCOUNTING_REPORT_READ`       | accounting_report_read         |
+| `ACCOUNTING_REPORT_WRITE`      | accounting_report_write        |
 | `PAYMENT_PAYMENT_READ`         | payment_payment_read           |
 | `PAYMENT_PAYMENT_WRITE`        | payment_payment_write          |
 | `PAYMENT_PAYOUT_READ`          | payment_payout_read            |
