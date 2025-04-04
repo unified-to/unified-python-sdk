@@ -90,6 +90,9 @@ class HrisEmployeeTypedDict(TypedDict):
     raw: NotRequired[HrisEmployeeRawTypedDict]
     salutation: NotRequired[str]
     ssn_sin: NotRequired[str]
+    storage_quota_allocated: NotRequired[float]
+    storage_quota_available: NotRequired[float]
+    storage_quota_used: NotRequired[float]
     telephones: NotRequired[List[HrisTelephoneTypedDict]]
     terminated_at: NotRequired[datetime]
     timezone: NotRequired[str]
@@ -158,6 +161,12 @@ class HrisEmployee(BaseModel):
     salutation: Optional[str] = None
 
     ssn_sin: Optional[str] = None
+
+    storage_quota_allocated: Optional[float] = None
+
+    storage_quota_available: Optional[float] = None
+
+    storage_quota_used: Optional[float] = None
 
     telephones: Optional[List[HrisTelephone]] = None
 

@@ -43,6 +43,7 @@ class MetadataMetadataTypedDict(TypedDict):
     options: NotRequired[List[str]]
     original_format: NotRequired[str]
     raw: NotRequired[MetadataMetadataRawTypedDict]
+    slug: NotRequired[str]
     updated_at: NotRequired[datetime]
 
 
@@ -64,5 +65,7 @@ class MetadataMetadata(BaseModel):
     original_format: Optional[str] = None
 
     raw: Optional[MetadataMetadataRaw] = None
+
+    slug: Optional[str] = None
 
     updated_at: Optional[datetime] = None
