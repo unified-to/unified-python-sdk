@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: 42d910eef72725a3f5543e98df07180d
+  docChecksum: 195b0ad57016e65ccde7dad384f78c7c
   docVersion: "1.0"
-  speakeasyVersion: 1.528.1
-  generationVersion: 2.565.1
-  releaseVersion: 0.40.6
-  configChecksum: 6b39723adfc13f176b0ba03b031f24b8
+  speakeasyVersion: 1.531.0
+  generationVersion: 2.568.2
+  releaseVersion: 0.40.7
+  configChecksum: 2c849d8f44c6c8df1b8184e1486910ea
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -16,7 +16,7 @@ features:
     acceptHeaders: 3.0.0
     additionalDependencies: 1.0.0
     constsAndDefaults: 1.0.5
-    core: 5.12.5
+    core: 5.12.6
     defaultEnabledRetries: 0.2.0
     downloadStreams: 1.0.1
     enumUnions: 0.1.0
@@ -964,15 +964,15 @@ generatedFiles:
   - docs/models/shared/commerceitem.md
   - docs/models/shared/commerceitemmedia.md
   - docs/models/shared/commerceitemmediatype.md
-  - docs/models/shared/commerceitemmetadata.md
-  - docs/models/shared/commerceitemmetadataextradata.md
-  - docs/models/shared/commerceitemmetadatavalue.md
   - docs/models/shared/commerceitemoption.md
   - docs/models/shared/commerceitemprice.md
   - docs/models/shared/commerceitemraw.md
   - docs/models/shared/commerceitemvariant.md
   - docs/models/shared/commercelocation.md
   - docs/models/shared/commercelocationraw.md
+  - docs/models/shared/commercemetadata.md
+  - docs/models/shared/commercemetadataextradata.md
+  - docs/models/shared/commercemetadatavalue.md
   - docs/models/shared/connection.md
   - docs/models/shared/contenttype.md
   - docs/models/shared/crmcompany.md
@@ -1910,11 +1910,11 @@ generatedFiles:
   - src/unified_python_sdk/models/shared/commerceinventory.py
   - src/unified_python_sdk/models/shared/commerceitem.py
   - src/unified_python_sdk/models/shared/commerceitemmedia.py
-  - src/unified_python_sdk/models/shared/commerceitemmetadata.py
   - src/unified_python_sdk/models/shared/commerceitemoption.py
   - src/unified_python_sdk/models/shared/commerceitemprice.py
   - src/unified_python_sdk/models/shared/commerceitemvariant.py
   - src/unified_python_sdk/models/shared/commercelocation.py
+  - src/unified_python_sdk/models/shared/commercemetadata.py
   - src/unified_python_sdk/models/shared/connection.py
   - src/unified_python_sdk/models/shared/crmcompany.py
   - src/unified_python_sdk/models/shared/crmcontact.py
@@ -2250,6 +2250,16 @@ examples:
       responses:
         "200":
           application/json: {"name": "<value>"}
+  getAccountingReport:
+    speakeasy-default-get-accounting-report:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {}
   getAccountingTaxrate:
     speakeasy-default-get-accounting-taxrate:
       parameters:
@@ -2324,6 +2334,15 @@ examples:
       responses:
         "200":
           application/json: [{"name": "<value>"}, {"name": "<value>"}]
+  listAccountingReports:
+    speakeasy-default-list-accounting-reports:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: [{}, {}, {}]
   listAccountingTaxrates:
     speakeasy-default-list-accounting-taxrates:
       parameters:
@@ -3309,6 +3328,334 @@ examples:
       responses:
         "200":
           application/json: {}
+  createCalendarCalendar:
+    speakeasy-default-create-calendar-calendar:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {"name": "<value>"}
+      responses:
+        "200":
+          application/json: {"name": "<value>"}
+  createCalendarEvent:
+    speakeasy-default-create-calendar-event:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {"end_at": "<value>", "start_at": "<value>", "subject": "<value>"}
+      responses:
+        "200":
+          application/json: {"end_at": "<value>", "start_at": "<value>", "subject": "<value>"}
+  createCalendarLink:
+    speakeasy-default-create-calendar-link:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {"url": "https://sturdy-begonia.biz/"}
+      responses:
+        "200":
+          application/json: {"url": "https://mealy-crest.com"}
+  getCalendarCalendar:
+    speakeasy-default-get-calendar-calendar:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {"name": "<value>"}
+  getCalendarEvent:
+    speakeasy-default-get-calendar-event:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {"end_at": "<value>", "start_at": "<value>", "subject": "<value>"}
+  getCalendarLink:
+    speakeasy-default-get-calendar-link:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {"url": "https://helpful-rule.com/"}
+  getCalendarRecording:
+    speakeasy-default-get-calendar-recording:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {}
+  listCalendarBusies:
+    speakeasy-default-list-calendar-busies:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: [{"end_at": "2024-10-27T10:02:59.053Z", "start_at": "2025-09-24T22:24:48.779Z"}, {"end_at": "2024-03-01T22:16:54.474Z", "start_at": "2025-05-11T06:32:32.457Z"}, {"end_at": "2023-06-10T22:37:04.573Z", "start_at": "2023-09-17T05:28:38.179Z"}]
+  listCalendarCalendars:
+    speakeasy-default-list-calendar-calendars:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: [{"name": "<value>"}, {"name": "<value>"}, {"name": "<value>"}]
+  listCalendarEvents:
+    speakeasy-default-list-calendar-events:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: [{"end_at": "<value>", "start_at": "<value>", "subject": "<value>"}, {"end_at": "<value>", "start_at": "<value>", "subject": "<value>"}, {"end_at": "<value>", "start_at": "<value>", "subject": "<value>"}]
+  listCalendarLinks:
+    speakeasy-default-list-calendar-links:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: [{"url": "https://unwritten-approach.info/"}, {"url": "https://innocent-ruin.biz/"}]
+  listCalendarRecordings:
+    speakeasy-default-list-calendar-recordings:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: [{}, {}, {}]
+  patchCalendarCalendar:
+    speakeasy-default-patch-calendar-calendar:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {"name": "<value>"}
+      responses:
+        "200":
+          application/json: {"name": "<value>"}
+  patchCalendarEvent:
+    speakeasy-default-patch-calendar-event:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {"end_at": "<value>", "start_at": "<value>", "subject": "<value>"}
+      responses:
+        "200":
+          application/json: {"end_at": "<value>", "start_at": "<value>", "subject": "<value>"}
+  patchCalendarLink:
+    speakeasy-default-patch-calendar-link:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {"url": "https://curly-skyline.biz/"}
+      responses:
+        "200":
+          application/json: {"url": "https://first-testimonial.biz/"}
+  removeCalendarCalendar:
+    speakeasy-default-remove-calendar-calendar:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  removeCalendarEvent:
+    speakeasy-default-remove-calendar-event:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  removeCalendarLink:
+    speakeasy-default-remove-calendar-link:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateCalendarCalendar:
+    speakeasy-default-update-calendar-calendar:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {"name": "<value>"}
+      responses:
+        "200":
+          application/json: {"name": "<value>"}
+  updateCalendarEvent:
+    speakeasy-default-update-calendar-event:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {"end_at": "<value>", "start_at": "<value>", "subject": "<value>"}
+      responses:
+        "200":
+          application/json: {"end_at": "<value>", "start_at": "<value>", "subject": "<value>"}
+  updateCalendarLink:
+    speakeasy-default-update-calendar-link:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {"url": "https://quiet-coordination.name"}
+      responses:
+        "200":
+          application/json: {"url": "https://standard-birth.info/"}
+  createCrmEvent:
+    speakeasy-default-create-crm-event:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  getCrmEvent:
+    speakeasy-default-get-crm-event:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {}
+  listCrmEvents:
+    speakeasy-default-list-crm-events:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: [{}, {}]
+  patchCrmEvent:
+    speakeasy-default-patch-crm-event:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  removeCrmEvent:
+    speakeasy-default-remove-crm-event:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateCrmEvent:
+    speakeasy-default-update-crm-event:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  createPaymentLink:
+    speakeasy-default-create-payment-link:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  getPaymentLink:
+    speakeasy-default-get-payment-link:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {}
+  listPaymentLinks:
+    speakeasy-default-list-payment-links:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: [{}, {}]
+  patchPaymentLink:
+    speakeasy-default-patch-payment-link:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  removePaymentLink:
+    speakeasy-default-remove-payment-link:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updatePaymentLink:
+    speakeasy-default-update-payment-link:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
   createCommerceCollection:
     speakeasy-default-create-commerce-collection:
       parameters:
@@ -3330,7 +3677,7 @@ examples:
         application/json: {"available": 5165.08}
       responses:
         "200":
-          application/json: {"available": 5165.08}
+          application/json: {"available": 1689.46}
   createCommerceItem:
     speakeasy-default-create-commerce-item:
       parameters:
@@ -3452,7 +3799,7 @@ examples:
         application/json: {"available": 615.23}
       responses:
         "200":
-          application/json: {"available": 615.23}
+          application/json: {"available": 4305.16}
   patchCommerceItem:
     speakeasy-default-patch-commerce-item:
       parameters:
@@ -3524,7 +3871,7 @@ examples:
         application/json: {"available": 9360.02}
       responses:
         "200":
-          application/json: {"available": 9360.02}
+          application/json: {"available": 9473.13}
   updateCommerceItem:
     speakeasy-default-update-commerce-item:
       parameters:
@@ -3620,17 +3967,6 @@ examples:
       responses:
         "200":
           application/json: {}
-  createCrmEvent:
-    speakeasy-default-create-crm-event:
-      parameters:
-        path:
-          connection_id: "<id>"
-        query: {}
-      requestBody:
-        application/json: {}
-      responses:
-        "200":
-          application/json: {}
   createCrmLead:
     speakeasy-default-create-crm-lead:
       parameters:
@@ -3655,16 +3991,6 @@ examples:
           application/json: {}
   getCrmDeal:
     speakeasy-default-get-crm-deal:
-      parameters:
-        path:
-          connection_id: "<id>"
-          id: "<id>"
-        query: {}
-      responses:
-        "200":
-          application/json: {}
-  getCrmEvent:
-    speakeasy-default-get-crm-event:
       parameters:
         path:
           connection_id: "<id>"
@@ -3702,15 +4028,6 @@ examples:
       responses:
         "200":
           application/json: [{}]
-  listCrmEvents:
-    speakeasy-default-list-crm-events:
-      parameters:
-        path:
-          connection_id: "<id>"
-        query: {}
-      responses:
-        "200":
-          application/json: [{}, {}]
   listCrmLeads:
     speakeasy-default-list-crm-leads:
       parameters:
@@ -3731,18 +4048,6 @@ examples:
           application/json: [{}]
   patchCrmDeal:
     speakeasy-default-patch-crm-deal:
-      parameters:
-        path:
-          connection_id: "<id>"
-          id: "<id>"
-        query: {}
-      requestBody:
-        application/json: {}
-      responses:
-        "200":
-          application/json: {}
-  patchCrmEvent:
-    speakeasy-default-patch-crm-event:
       parameters:
         path:
           connection_id: "<id>"
@@ -3783,12 +4088,6 @@ examples:
         path:
           connection_id: "<id>"
           id: "<id>"
-  removeCrmEvent:
-    speakeasy-default-remove-crm-event:
-      parameters:
-        path:
-          connection_id: "<id>"
-          id: "<id>"
   removeCrmLead:
     speakeasy-default-remove-crm-lead:
       parameters:
@@ -3803,18 +4102,6 @@ examples:
           id: "<id>"
   updateCrmDeal:
     speakeasy-default-update-crm-deal:
-      parameters:
-        path:
-          connection_id: "<id>"
-          id: "<id>"
-        query: {}
-      requestBody:
-        application/json: {}
-      responses:
-        "200":
-          application/json: {}
-  updateCrmEvent:
-    speakeasy-default-update-crm-event:
       parameters:
         path:
           connection_id: "<id>"
@@ -3929,7 +4216,7 @@ examples:
         query: {}
       responses:
         "200":
-          application/json: {"raw": {}, "user_id": "<id>"}
+          application/json: {"raw": {}}
   getHrisTimeoff:
     speakeasy-default-get-hris-timeoff:
       parameters:
@@ -3939,7 +4226,7 @@ examples:
         query: {}
       responses:
         "200":
-          application/json: {"start_at": "2024-07-19T21:47:06.045Z", "user_id": "<id>"}
+          application/json: {"start_at": "2024-07-19T21:47:06.045Z"}
   listHrisEmployees:
     speakeasy-default-list-hris-employees:
       parameters:
@@ -3966,7 +4253,7 @@ examples:
         query: {}
       responses:
         "200":
-          application/json: [{"raw": {}, "user_id": "<id>"}]
+          application/json: [{"raw": {}}]
   listHrisTimeoffs:
     speakeasy-default-list-hris-timeoffs:
       parameters:
@@ -3975,7 +4262,7 @@ examples:
         query: {}
       responses:
         "200":
-          application/json: [{"start_at": "2025-11-20T05:14:17.036Z", "user_id": "<id>"}]
+          application/json: [{"start_at": "2025-11-20T05:14:17.036Z"}]
   patchHrisEmployee:
     speakeasy-default-patch-hris-employee:
       parameters:
@@ -4045,7 +4332,7 @@ examples:
         application/json: {"displayName": "Bert89"}
       responses:
         "200":
-          application/json: {"displayName": "Bert89"}
+          application/json: {"displayName": "Nakia82"}
   getScimGroups:
     speakeasy-default-get-scim-groups:
       parameters:
@@ -4074,7 +4361,7 @@ examples:
         application/json: {"displayName": "Damon_Rutherford93"}
       responses:
         "200":
-          application/json: {"displayName": "Damon_Rutherford93"}
+          application/json: {"displayName": "Cody55"}
   removeScimGroups:
     speakeasy-default-remove-scim-groups:
       parameters:
@@ -4091,7 +4378,7 @@ examples:
         application/json: {"displayName": "Frederic.Reichel"}
       responses:
         "200":
-          application/json: {"displayName": "Frederic.Reichel"}
+          application/json: {"displayName": "Nicole.Altenwerth40"}
   createKmsComment:
     speakeasy-default-create-kms-comment:
       parameters:
@@ -4113,7 +4400,7 @@ examples:
         application/json: {"title": "<value>", "type": "HTML"}
       responses:
         "200":
-          application/json: {"download_url": "https://bitter-adult.biz/", "title": "<value>", "type": "HTML"}
+          application/json: {"title": "<value>", "type": "HTML"}
   createKmsSpace:
     speakeasy-default-create-kms-space:
       parameters:
@@ -4144,7 +4431,7 @@ examples:
         query: {}
       responses:
         "200":
-          application/json: {"download_url": "https://weird-fishery.net", "title": "<value>", "type": "MARKDOWN"}
+          application/json: {"title": "<value>", "type": "OTHER"}
   getKmsSpace:
     speakeasy-default-get-kms-space:
       parameters:
@@ -4172,7 +4459,7 @@ examples:
         query: {}
       responses:
         "200":
-          application/json: [{"download_url": "https://late-final.org", "title": "<value>", "type": "TEXT"}]
+          application/json: [{"title": "<value>", "type": "TEXT"}]
   listKmsSpaces:
     speakeasy-default-list-kms-spaces:
       parameters:
@@ -4205,7 +4492,7 @@ examples:
         application/json: {"title": "<value>", "type": "TEXT"}
       responses:
         "200":
-          application/json: {"download_url": "https://evil-tackle.info", "title": "<value>", "type": "MARKDOWN"}
+          application/json: {"title": "<value>", "type": "HTML"}
   patchKmsSpace:
     speakeasy-default-patch-kms-space:
       parameters:
@@ -4259,7 +4546,7 @@ examples:
         application/json: {"title": "<value>", "type": "OTHER"}
       responses:
         "200":
-          application/json: {"download_url": "https://salty-devil.com", "title": "<value>", "type": "TEXT"}
+          application/json: {"title": "<value>", "type": "TEXT"}
   updateKmsSpace:
     speakeasy-default-update-kms-space:
       parameters:
@@ -4932,17 +5219,6 @@ examples:
           text/csv: "<value>"
           text/plain: "<value>"
           '*/*': "x-file: example.file"
-  createPaymentLink:
-    speakeasy-default-create-payment-link:
-      parameters:
-        path:
-          connection_id: "<id>"
-        query: {}
-      requestBody:
-        application/json: {}
-      responses:
-        "200":
-          application/json: {}
   createPaymentPayment:
     speakeasy-default-create-payment-payment:
       parameters:
@@ -4962,16 +5238,6 @@ examples:
         query: {}
       requestBody:
         application/json: {}
-      responses:
-        "200":
-          application/json: {}
-  getPaymentLink:
-    speakeasy-default-get-payment-link:
-      parameters:
-        path:
-          connection_id: "<id>"
-          id: "<id>"
-        query: {}
       responses:
         "200":
           application/json: {}
@@ -5015,15 +5281,6 @@ examples:
       responses:
         "200":
           application/json: {}
-  listPaymentLinks:
-    speakeasy-default-list-payment-links:
-      parameters:
-        path:
-          connection_id: "<id>"
-        query: {}
-      responses:
-        "200":
-          application/json: [{}, {}]
   listPaymentPayments:
     speakeasy-default-list-payment-payments:
       parameters:
@@ -5060,18 +5317,6 @@ examples:
       responses:
         "200":
           application/json: [{}]
-  patchPaymentLink:
-    speakeasy-default-patch-payment-link:
-      parameters:
-        path:
-          connection_id: "<id>"
-          id: "<id>"
-        query: {}
-      requestBody:
-        application/json: {}
-      responses:
-        "200":
-          application/json: {}
   patchPaymentPayment:
     speakeasy-default-patch-payment-payment:
       parameters:
@@ -5096,12 +5341,6 @@ examples:
       responses:
         "200":
           application/json: {}
-  removePaymentLink:
-    speakeasy-default-remove-payment-link:
-      parameters:
-        path:
-          connection_id: "<id>"
-          id: "<id>"
   removePaymentPayment:
     speakeasy-default-remove-payment-payment:
       parameters:
@@ -5114,18 +5353,6 @@ examples:
         path:
           connection_id: "<id>"
           id: "<id>"
-  updatePaymentLink:
-    speakeasy-default-update-payment-link:
-      parameters:
-        path:
-          connection_id: "<id>"
-          id: "<id>"
-        query: {}
-      requestBody:
-        application/json: {}
-      responses:
-        "200":
-          application/json: {}
   updatePaymentPayment:
     speakeasy-default-update-payment-payment:
       parameters:
@@ -5819,17 +6046,17 @@ examples:
   createUnifiedConnection:
     speakeasy-default-create-unified-connection:
       requestBody:
-        application/json: {"categories": ["accounting", "martech", "martech"], "environment": "Production", "integration_type": "<value>", "permissions": ["lms_course_read", "scim_users_read"]}
+        application/json: {"categories": ["accounting", "martech", "martech"], "environment": "Production", "integration_type": "<value>", "permissions": ["repo_organization_read", "lms_class_write"]}
       responses:
         "200":
-          application/json: {"categories": ["accounting", "martech", "martech"], "environment": "Production", "integration_name": "<value>", "integration_type": "<value>", "permissions": ["lms_course_read", "scim_users_read"]}
+          application/json: {"categories": ["accounting"], "environment": "Production", "integration_type": "<value>", "permissions": ["storage_file_write"]}
   createUnifiedWebhook:
     speakeasy-default-create-unified-webhook:
       requestBody:
-        application/json: {"connection_id": "<id>", "environment": "Production", "event": "created", "object_type": "hris_employee"}
+        application/json: {"connection_id": "<id>", "environment": "Production", "event": "created", "object_type": "hris_payslip"}
       responses:
         "200":
-          application/json: {"connection_id": "<id>", "environment": "Production", "event": "created", "hook_url": "https://blind-platypus.org/", "object_type": "crm_deal"}
+          application/json: {"connection_id": "<id>", "environment": "Production", "event": "updated", "object_type": "messaging_message"}
   getUnifiedApicall:
     speakeasy-default-get-unified-apicall:
       parameters:
@@ -5845,7 +6072,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {"categories": ["storage"], "environment": "Production", "integration_name": "<value>", "integration_type": "<value>", "permissions": ["kms_page_read"]}
+          application/json: {"categories": ["commerce"], "environment": "Production", "integration_type": "<value>", "permissions": ["task_task_write"]}
   getUnifiedIntegrationAuth:
     speakeasy-default-get-unified-integration-auth:
       parameters:
@@ -5863,7 +6090,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {"connection_id": "<id>", "environment": "Production", "event": "deleted", "hook_url": "https://parched-gastropod.net", "object_type": "crm_lead"}
+          application/json: {"connection_id": "<id>", "environment": "Production", "event": "deleted", "object_type": "storage_file"}
   listUnifiedApicalls:
     speakeasy-default-list-unified-apicalls:
       responses:
@@ -5873,7 +6100,7 @@ examples:
     speakeasy-default-list-unified-connections:
       responses:
         "200":
-          application/json: [{"categories": [], "environment": "Production", "integration_name": "<value>", "integration_type": "<value>", "permissions": ["kms_comment_write", "kms_space_read"]}, {"categories": ["auth"], "environment": "Production", "integration_name": "<value>", "integration_type": "<value>", "permissions": ["crm_deal_write", "ats_interview_read", "repo_pullrequest_read"]}]
+          application/json: [{"categories": [], "environment": "Production", "integration_type": "<value>", "permissions": ["scim_users_read", "task_project_read"]}, {"categories": ["auth"], "environment": "Production", "integration_type": "<value>", "permissions": ["crm_lead_read", "ats_job_read", "calendar_busy_write"]}]
   listUnifiedIntegrationWorkspaces:
     speakeasy-default-list-unified-integration-workspaces:
       parameters:
@@ -5882,12 +6109,12 @@ examples:
         query: {}
       responses:
         "200":
-          application/json: [{"categories": ["uc", "commerce"], "name": "<value>", "type": "<value>"}, {"categories": ["repo", "enrich", "repo"], "name": "<value>", "type": "<value>"}, {"categories": ["uc"], "name": "<value>", "type": "<value>"}]
+          application/json: [{"categories": ["uc", "payment"], "name": "<value>", "type": "<value>"}, {"categories": ["metadata", "enrich", "metadata"], "name": "<value>", "type": "<value>"}, {"categories": ["uc"], "name": "<value>", "type": "<value>"}]
   listUnifiedIntegrations:
     speakeasy-default-list-unified-integrations:
       responses:
         "200":
-          application/json: [{"categories": [], "name": "<value>", "type": "<value>"}, {"categories": ["scim", "crm"], "name": "<value>", "type": "<value>"}]
+          application/json: [{"categories": [], "name": "<value>", "type": "<value>"}, {"categories": ["lms", "enrich"], "name": "<value>", "type": "<value>"}]
   listUnifiedIssues:
     speakeasy-default-list-unified-issues:
       responses:
@@ -5897,27 +6124,27 @@ examples:
     speakeasy-default-list-unified-webhooks:
       responses:
         "200":
-          application/json: [{"connection_id": "<id>", "environment": "Production", "event": "updated", "hook_url": "https://square-encouragement.biz", "object_type": "scim_users"}]
+          application/json: [{"connection_id": "<id>", "environment": "Production", "event": "updated", "object_type": "hris_location"}]
   patchUnifiedConnection:
     speakeasy-default-patch-unified-connection:
       parameters:
         path:
           id: "<id>"
       requestBody:
-        application/json: {"categories": ["metadata", "crm"], "environment": "Production", "integration_type": "<value>", "permissions": []}
+        application/json: {"categories": ["calendar", "enrich"], "environment": "Production", "integration_type": "<value>", "permissions": []}
       responses:
         "200":
-          application/json: {"categories": ["metadata", "crm"], "environment": "Production", "integration_name": "<value>", "integration_type": "<value>", "permissions": []}
+          application/json: {"categories": ["task"], "environment": "Production", "integration_type": "<value>", "permissions": ["commerce_collection_read"]}
   patchUnifiedWebhook:
     speakeasy-default-patch-unified-webhook:
       parameters:
         path:
           id: "<id>"
       requestBody:
-        application/json: {"connection_id": "<id>", "environment": "Production", "event": "deleted", "object_type": "crm_deal"}
+        application/json: {"connection_id": "<id>", "environment": "Production", "event": "deleted", "object_type": "crm_lead"}
       responses:
         "200":
-          application/json: {"connection_id": "<id>", "environment": "Production", "event": "deleted", "hook_url": "https://calculating-habit.name/", "object_type": "commerce_collection"}
+          application/json: {"connection_id": "<id>", "environment": "Production", "event": "updated", "object_type": "crm_lead"}
   patchUnifiedWebhookTrigger:
     speakeasy-default-patch-unified-webhook-trigger:
       parameters:
@@ -5939,10 +6166,10 @@ examples:
         path:
           id: "<id>"
       requestBody:
-        application/json: {"categories": ["metadata", "accounting", "metadata"], "environment": "Production", "integration_type": "<value>", "permissions": []}
+        application/json: {"categories": ["calendar", "storage", "calendar"], "environment": "Production", "integration_type": "<value>", "permissions": []}
       responses:
         "200":
-          application/json: {"categories": ["metadata", "accounting", "metadata"], "environment": "Production", "integration_name": "<value>", "integration_type": "<value>", "permissions": []}
+          application/json: {"categories": ["calendar"], "environment": "Production", "integration_type": "<value>", "permissions": ["repo_organization_read"]}
   updateUnifiedWebhook:
     speakeasy-default-update-unified-webhook:
       parameters:
@@ -5952,7 +6179,7 @@ examples:
         application/json: {"connection_id": "<id>", "environment": "Production", "event": "created", "object_type": "payment_link"}
       responses:
         "200":
-          application/json: {"connection_id": "<id>", "environment": "Production", "event": "created", "hook_url": "https://glaring-postbox.info/", "object_type": "lms_course"}
+          application/json: {"connection_id": "<id>", "environment": "Production", "event": "updated", "object_type": "messaging_channel"}
   updateUnifiedWebhookTrigger:
     speakeasy-default-update-unified-webhook-trigger:
       parameters:
@@ -5968,232 +6195,5 @@ examples:
       responses:
         "200":
           text/plain: "<value>"
-  createCalendarCalendar:
-    speakeasy-default-create-calendar-calendar:
-      parameters:
-        path:
-          connection_id: "<id>"
-        query: {}
-      requestBody:
-        application/json: {"name": "<value>"}
-      responses:
-        "200":
-          application/json: {"name": "<value>"}
-  createCalendarEvent:
-    speakeasy-default-create-calendar-event:
-      parameters:
-        path:
-          connection_id: "<id>"
-        query: {}
-      requestBody:
-        application/json: {"end_at": "<value>", "start_at": "<value>", "subject": "<value>"}
-      responses:
-        "200":
-          application/json: {"end_at": "<value>", "start_at": "<value>", "subject": "<value>"}
-  createCalendarLink:
-    speakeasy-default-create-calendar-link:
-      parameters:
-        path:
-          connection_id: "<id>"
-        query: {}
-      requestBody:
-        application/json: {"url": "https://sturdy-begonia.biz/"}
-      responses:
-        "200":
-          application/json: {"url": "https://mealy-crest.com"}
-  getCalendarCalendar:
-    speakeasy-default-get-calendar-calendar:
-      parameters:
-        path:
-          connection_id: "<id>"
-          id: "<id>"
-        query: {}
-      responses:
-        "200":
-          application/json: {"name": "<value>"}
-  getCalendarEvent:
-    speakeasy-default-get-calendar-event:
-      parameters:
-        path:
-          connection_id: "<id>"
-          id: "<id>"
-        query: {}
-      responses:
-        "200":
-          application/json: {"end_at": "<value>", "start_at": "<value>", "subject": "<value>"}
-  getCalendarLink:
-    speakeasy-default-get-calendar-link:
-      parameters:
-        path:
-          connection_id: "<id>"
-          id: "<id>"
-        query: {}
-      responses:
-        "200":
-          application/json: {"url": "https://helpful-rule.com/"}
-  getCalendarRecording:
-    speakeasy-default-get-calendar-recording:
-      parameters:
-        path:
-          connection_id: "<id>"
-          id: "<id>"
-        query: {}
-      responses:
-        "200":
-          application/json: {}
-  listCalendarBusies:
-    speakeasy-default-list-calendar-busies:
-      parameters:
-        path:
-          connection_id: "<id>"
-        query: {}
-      responses:
-        "200":
-          application/json: [{"end_at": "2024-10-27T10:02:59.053Z", "start_at": "2025-09-24T22:24:48.779Z"}, {"end_at": "2024-03-01T22:16:54.474Z", "start_at": "2025-05-11T06:32:32.457Z"}, {"end_at": "2023-06-10T22:37:04.573Z", "start_at": "2023-09-17T05:28:38.179Z"}]
-  listCalendarCalendars:
-    speakeasy-default-list-calendar-calendars:
-      parameters:
-        path:
-          connection_id: "<id>"
-        query: {}
-      responses:
-        "200":
-          application/json: [{"name": "<value>"}, {"name": "<value>"}, {"name": "<value>"}]
-  listCalendarEvents:
-    speakeasy-default-list-calendar-events:
-      parameters:
-        path:
-          connection_id: "<id>"
-        query: {}
-      responses:
-        "200":
-          application/json: [{"end_at": "<value>", "start_at": "<value>", "subject": "<value>"}, {"end_at": "<value>", "start_at": "<value>", "subject": "<value>"}, {"end_at": "<value>", "start_at": "<value>", "subject": "<value>"}]
-  listCalendarLinks:
-    speakeasy-default-list-calendar-links:
-      parameters:
-        path:
-          connection_id: "<id>"
-        query: {}
-      responses:
-        "200":
-          application/json: [{"url": "https://unwritten-approach.info/"}, {"url": "https://innocent-ruin.biz/"}]
-  listCalendarRecordings:
-    speakeasy-default-list-calendar-recordings:
-      parameters:
-        path:
-          connection_id: "<id>"
-        query: {}
-      responses:
-        "200":
-          application/json: [{}, {}, {}]
-  patchCalendarCalendar:
-    speakeasy-default-patch-calendar-calendar:
-      parameters:
-        path:
-          connection_id: "<id>"
-          id: "<id>"
-        query: {}
-      requestBody:
-        application/json: {"name": "<value>"}
-      responses:
-        "200":
-          application/json: {"name": "<value>"}
-  patchCalendarEvent:
-    speakeasy-default-patch-calendar-event:
-      parameters:
-        path:
-          connection_id: "<id>"
-          id: "<id>"
-        query: {}
-      requestBody:
-        application/json: {"end_at": "<value>", "start_at": "<value>", "subject": "<value>"}
-      responses:
-        "200":
-          application/json: {"end_at": "<value>", "start_at": "<value>", "subject": "<value>"}
-  patchCalendarLink:
-    speakeasy-default-patch-calendar-link:
-      parameters:
-        path:
-          connection_id: "<id>"
-          id: "<id>"
-        query: {}
-      requestBody:
-        application/json: {"url": "https://curly-skyline.biz/"}
-      responses:
-        "200":
-          application/json: {"url": "https://first-testimonial.biz/"}
-  removeCalendarCalendar:
-    speakeasy-default-remove-calendar-calendar:
-      parameters:
-        path:
-          connection_id: "<id>"
-          id: "<id>"
-  removeCalendarEvent:
-    speakeasy-default-remove-calendar-event:
-      parameters:
-        path:
-          connection_id: "<id>"
-          id: "<id>"
-  removeCalendarLink:
-    speakeasy-default-remove-calendar-link:
-      parameters:
-        path:
-          connection_id: "<id>"
-          id: "<id>"
-  updateCalendarCalendar:
-    speakeasy-default-update-calendar-calendar:
-      parameters:
-        path:
-          connection_id: "<id>"
-          id: "<id>"
-        query: {}
-      requestBody:
-        application/json: {"name": "<value>"}
-      responses:
-        "200":
-          application/json: {"name": "<value>"}
-  updateCalendarEvent:
-    speakeasy-default-update-calendar-event:
-      parameters:
-        path:
-          connection_id: "<id>"
-          id: "<id>"
-        query: {}
-      requestBody:
-        application/json: {"end_at": "<value>", "start_at": "<value>", "subject": "<value>"}
-      responses:
-        "200":
-          application/json: {"end_at": "<value>", "start_at": "<value>", "subject": "<value>"}
-  updateCalendarLink:
-    speakeasy-default-update-calendar-link:
-      parameters:
-        path:
-          connection_id: "<id>"
-          id: "<id>"
-        query: {}
-      requestBody:
-        application/json: {"url": "https://quiet-coordination.name"}
-      responses:
-        "200":
-          application/json: {"url": "https://standard-birth.info/"}
-  getAccountingReport:
-    speakeasy-default-get-accounting-report:
-      parameters:
-        path:
-          connection_id: "<id>"
-          id: "<id>"
-        query: {}
-      responses:
-        "200":
-          application/json: {}
-  listAccountingReports:
-    speakeasy-default-list-accounting-reports:
-      parameters:
-        path:
-          connection_id: "<id>"
-        query: {}
-      responses:
-        "200":
-          application/json: [{}, {}, {}]
-examplesVersion: 1.0.0
+examplesVersion: 1.0.1
 generatedTests: {}

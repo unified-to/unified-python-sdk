@@ -7,5 +7,5 @@
 | ------------------------------------------------ | ------------------------------------------------ | ------------------------------------------------ | ------------------------------------------------ |
 | `crm_lead`                                       | [shared.CrmLead](../../models/shared/crmlead.md) | :heavy_check_mark:                               | N/A                                              |
 | `connection_id`                                  | *str*                                            | :heavy_check_mark:                               | ID of the connection                             |
-| `id`                                             | *str*                                            | :heavy_check_mark:                               | ID of the Lead                                   |
 | `fields`                                         | List[*str*]                                      | :heavy_minus_sign:                               | Comma-delimited fields to return                 |
+| `id`                                             | *str*                                            | :heavy_check_mark:                               | ID of the Lead                                   |

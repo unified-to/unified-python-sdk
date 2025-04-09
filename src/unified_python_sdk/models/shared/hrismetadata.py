@@ -23,22 +23,25 @@ class HrisMetadataValue(BaseModel):
 
 
 class HrisMetadataTypedDict(TypedDict):
-    key: str
     extra_data: NotRequired[HrisMetadataExtraDataTypedDict]
     id: NotRequired[str]
+    key: NotRequired[str]
     namespace: NotRequired[str]
+    slug: NotRequired[str]
     type: NotRequired[str]
     value: NotRequired[HrisMetadataValueTypedDict]
 
 
 class HrisMetadata(BaseModel):
-    key: str
-
     extra_data: Optional[HrisMetadataExtraData] = None
 
     id: Optional[str] = None
 
+    key: Optional[str] = None
+
     namespace: Optional[str] = None
+
+    slug: Optional[str] = None
 
     type: Optional[str] = None
 

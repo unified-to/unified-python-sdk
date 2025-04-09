@@ -35,7 +35,7 @@ with UnifiedTo(
         "webhook": {
             "connection_id": "<id>",
             "event": shared.Event.CREATED,
-            "object_type": shared.ObjectType.HRIS_EMPLOYEE,
+            "object_type": shared.ObjectType.HRIS_PAYSLIP,
         },
     })
 
@@ -172,7 +172,7 @@ with UnifiedTo(
         "webhook": {
             "connection_id": "<id>",
             "event": shared.Event.DELETED,
-            "object_type": shared.ObjectType.CRM_DEAL,
+            "object_type": shared.ObjectType.CRM_LEAD,
         },
         "id": "<id>",
     })

@@ -2,9 +2,9 @@
 
 from __future__ import annotations
 from .commerceitemmedia import CommerceItemMedia, CommerceItemMediaTypedDict
-from .commerceitemmetadata import CommerceItemMetadata, CommerceItemMetadataTypedDict
 from .commerceitemoption import CommerceItemOption, CommerceItemOptionTypedDict
 from .commerceitemprice import CommerceItemPrice, CommerceItemPriceTypedDict
+from .commercemetadata import CommerceMetadata, CommerceMetadataTypedDict
 from datetime import datetime
 from enum import Enum
 from typing import List, Optional
@@ -35,7 +35,7 @@ class CommerceItemVariantTypedDict(TypedDict):
     is_visible: NotRequired[bool]
     length: NotRequired[float]
     media: NotRequired[List[CommerceItemMediaTypedDict]]
-    metadata: NotRequired[List[CommerceItemMetadataTypedDict]]
+    metadata: NotRequired[List[CommerceMetadataTypedDict]]
     name: NotRequired[str]
     options: NotRequired[List[CommerceItemOptionTypedDict]]
     prices: NotRequired[List[CommerceItemPriceTypedDict]]
@@ -72,7 +72,7 @@ class CommerceItemVariant(BaseModel):
 
     media: Optional[List[CommerceItemMedia]] = None
 
-    metadata: Optional[List[CommerceItemMetadata]] = None
+    metadata: Optional[List[CommerceMetadata]] = None
 
     name: Optional[str] = None
 

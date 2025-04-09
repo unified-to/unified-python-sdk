@@ -257,14 +257,6 @@ from .commerceitemmedia import (
     CommerceItemMediaType,
     CommerceItemMediaTypedDict,
 )
-from .commerceitemmetadata import (
-    CommerceItemMetadata,
-    CommerceItemMetadataExtraData,
-    CommerceItemMetadataExtraDataTypedDict,
-    CommerceItemMetadataTypedDict,
-    CommerceItemMetadataValue,
-    CommerceItemMetadataValueTypedDict,
-)
 from .commerceitemoption import CommerceItemOption, CommerceItemOptionTypedDict
 from .commerceitemprice import CommerceItemPrice, CommerceItemPriceTypedDict
 from .commerceitemvariant import (
@@ -278,6 +270,14 @@ from .commercelocation import (
     CommerceLocationRaw,
     CommerceLocationRawTypedDict,
     CommerceLocationTypedDict,
+)
+from .commercemetadata import (
+    CommerceMetadata,
+    CommerceMetadataExtraData,
+    CommerceMetadataExtraDataTypedDict,
+    CommerceMetadataTypedDict,
+    CommerceMetadataValue,
+    CommerceMetadataValueTypedDict,
 )
 from .connection import Connection, ConnectionTypedDict
 from .crmcompany import (
@@ -922,12 +922,6 @@ __all__ = [
     "CommerceItemMedia",
     "CommerceItemMediaType",
     "CommerceItemMediaTypedDict",
-    "CommerceItemMetadata",
-    "CommerceItemMetadataExtraData",
-    "CommerceItemMetadataExtraDataTypedDict",
-    "CommerceItemMetadataTypedDict",
-    "CommerceItemMetadataValue",
-    "CommerceItemMetadataValueTypedDict",
     "CommerceItemOption",
     "CommerceItemOptionTypedDict",
     "CommerceItemPrice",
@@ -941,6 +935,12 @@ __all__ = [
     "CommerceLocationRaw",
     "CommerceLocationRawTypedDict",
     "CommerceLocationTypedDict",
+    "CommerceMetadata",
+    "CommerceMetadataExtraData",
+    "CommerceMetadataExtraDataTypedDict",
+    "CommerceMetadataTypedDict",
+    "CommerceMetadataValue",
+    "CommerceMetadataValueTypedDict",
     "Connection",
     "ConnectionTypedDict",
     "ContentType",

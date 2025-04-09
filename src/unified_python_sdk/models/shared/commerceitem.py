@@ -2,8 +2,8 @@
 
 from __future__ import annotations
 from .commerceitemmedia import CommerceItemMedia, CommerceItemMediaTypedDict
-from .commerceitemmetadata import CommerceItemMetadata, CommerceItemMetadataTypedDict
 from .commerceitemvariant import CommerceItemVariant, CommerceItemVariantTypedDict
+from .commercemetadata import CommerceMetadata, CommerceMetadataTypedDict
 from datetime import datetime
 from typing import List, Optional
 from typing_extensions import NotRequired, TypedDict
@@ -27,7 +27,7 @@ class CommerceItemTypedDict(TypedDict):
     is_active: NotRequired[bool]
     is_taxable: NotRequired[bool]
     media: NotRequired[List[CommerceItemMediaTypedDict]]
-    metadata: NotRequired[List[CommerceItemMetadataTypedDict]]
+    metadata: NotRequired[List[CommerceMetadataTypedDict]]
     name: NotRequired[str]
     public_description: NotRequired[str]
     public_name: NotRequired[str]
@@ -58,7 +58,7 @@ class CommerceItem(BaseModel):
 
     media: Optional[List[CommerceItemMedia]] = None
 
-    metadata: Optional[List[CommerceItemMetadata]] = None
+    metadata: Optional[List[CommerceMetadata]] = None
 
     name: Optional[str] = None
 

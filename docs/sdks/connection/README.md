@@ -37,8 +37,8 @@ with UnifiedTo(
         ],
         "integration_type": "<value>",
         "permissions": [
-            shared.PropertyConnectionPermissions.LMS_COURSE_READ,
-            shared.PropertyConnectionPermissions.SCIM_USERS_READ,
+            shared.PropertyConnectionPermissions.REPO_ORGANIZATION_READ,
+            shared.PropertyConnectionPermissions.LMS_CLASS_WRITE,
         ],
     })
 
@@ -174,8 +174,8 @@ with UnifiedTo(
     res = unified_to.connection.patch_unified_connection(request={
         "connection": {
             "categories": [
-                shared.PropertyConnectionCategories.METADATA,
-                shared.PropertyConnectionCategories.CRM,
+                shared.PropertyConnectionCategories.CALENDAR,
+                shared.PropertyConnectionCategories.ENRICH,
             ],
             "integration_type": "<value>",
             "permissions": [
@@ -274,9 +274,9 @@ with UnifiedTo(
     res = unified_to.connection.update_unified_connection(request={
         "connection": {
             "categories": [
-                shared.PropertyConnectionCategories.METADATA,
-                shared.PropertyConnectionCategories.ACCOUNTING,
-                shared.PropertyConnectionCategories.METADATA,
+                shared.PropertyConnectionCategories.CALENDAR,
+                shared.PropertyConnectionCategories.STORAGE,
+                shared.PropertyConnectionCategories.CALENDAR,
             ],
             "integration_type": "<value>",
             "permissions": [

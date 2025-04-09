@@ -23,22 +23,25 @@ class CrmMetadataValue(BaseModel):
 
 
 class CrmMetadataTypedDict(TypedDict):
-    key: str
     extra_data: NotRequired[CrmMetadataExtraDataTypedDict]
     id: NotRequired[str]
+    key: NotRequired[str]
     namespace: NotRequired[str]
+    slug: NotRequired[str]
     type: NotRequired[str]
     value: NotRequired[CrmMetadataValueTypedDict]
 
 
 class CrmMetadata(BaseModel):
-    key: str
-
     extra_data: Optional[CrmMetadataExtraData] = None
 
     id: Optional[str] = None
 
+    key: Optional[str] = None
+
     namespace: Optional[str] = None
+
+    slug: Optional[str] = None
 
     type: Optional[str] = None
 

@@ -23,22 +23,25 @@ class Value(BaseModel):
 
 
 class AtsMetadataTypedDict(TypedDict):
-    key: str
     extra_data: NotRequired[ExtraDataTypedDict]
     id: NotRequired[str]
+    key: NotRequired[str]
     namespace: NotRequired[str]
+    slug: NotRequired[str]
     type: NotRequired[str]
     value: NotRequired[ValueTypedDict]
 
 
 class AtsMetadata(BaseModel):
-    key: str
-
     extra_data: Optional[ExtraData] = None
 
     id: Optional[str] = None
 
+    key: Optional[str] = None
+
     namespace: Optional[str] = None
+
+    slug: Optional[str] = None
 
     type: Optional[str] = None
 

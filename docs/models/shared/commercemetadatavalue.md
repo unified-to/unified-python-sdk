@@ -1,4 +1,4 @@
-# CommerceItemMetadataExtraData
+# CommerceMetadataValue
 
 
 ## Fields

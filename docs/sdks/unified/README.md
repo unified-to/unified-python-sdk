@@ -51,8 +51,8 @@ with UnifiedTo(
         ],
         "integration_type": "<value>",
         "permissions": [
-            shared.PropertyConnectionPermissions.LMS_COURSE_READ,
-            shared.PropertyConnectionPermissions.SCIM_USERS_READ,
+            shared.PropertyConnectionPermissions.REPO_ORGANIZATION_READ,
+            shared.PropertyConnectionPermissions.LMS_CLASS_WRITE,
         ],
     })
 
@@ -101,7 +101,7 @@ with UnifiedTo(
         "webhook": {
             "connection_id": "<id>",
             "event": shared.Event.CREATED,
-            "object_type": shared.ObjectType.HRIS_EMPLOYEE,
+            "object_type": shared.ObjectType.HRIS_PAYSLIP,
         },
     })
 
@@ -590,8 +590,8 @@ with UnifiedTo(
     res = unified_to.unified.patch_unified_connection(request={
         "connection": {
             "categories": [
-                shared.PropertyConnectionCategories.METADATA,
-                shared.PropertyConnectionCategories.CRM,
+                shared.PropertyConnectionCategories.CALENDAR,
+                shared.PropertyConnectionCategories.ENRICH,
             ],
             "integration_type": "<value>",
             "permissions": [
@@ -646,7 +646,7 @@ with UnifiedTo(
         "webhook": {
             "connection_id": "<id>",
             "event": shared.Event.DELETED,
-            "object_type": shared.ObjectType.CRM_DEAL,
+            "object_type": shared.ObjectType.CRM_LEAD,
         },
         "id": "<id>",
     })
@@ -830,9 +830,9 @@ with UnifiedTo(
     res = unified_to.unified.update_unified_connection(request={
         "connection": {
             "categories": [
-                shared.PropertyConnectionCategories.METADATA,
-                shared.PropertyConnectionCategories.ACCOUNTING,
-                shared.PropertyConnectionCategories.METADATA,
+                shared.PropertyConnectionCategories.CALENDAR,
+                shared.PropertyConnectionCategories.STORAGE,
+                shared.PropertyConnectionCategories.CALENDAR,
             ],
             "integration_type": "<value>",
             "permissions": [

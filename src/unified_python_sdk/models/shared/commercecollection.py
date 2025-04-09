@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 from .commerceitemmedia import CommerceItemMedia, CommerceItemMediaTypedDict
-from .commerceitemmetadata import CommerceItemMetadata, CommerceItemMetadataTypedDict
+from .commercemetadata import CommerceMetadata, CommerceMetadataTypedDict
 from datetime import datetime
 from enum import Enum
 from typing import List, Optional
@@ -35,7 +35,7 @@ class CommerceCollectionTypedDict(TypedDict):
     is_featured: NotRequired[bool]
     is_visible: NotRequired[bool]
     media: NotRequired[List[CommerceItemMediaTypedDict]]
-    metadata: NotRequired[List[CommerceItemMetadataTypedDict]]
+    metadata: NotRequired[List[CommerceMetadataTypedDict]]
     parent_id: NotRequired[str]
     public_description: NotRequired[str]
     public_name: NotRequired[str]
@@ -64,7 +64,7 @@ class CommerceCollection(BaseModel):
 
     media: Optional[List[CommerceItemMedia]] = None
 
-    metadata: Optional[List[CommerceItemMetadata]] = None
+    metadata: Optional[List[CommerceMetadata]] = None
 
     parent_id: Optional[str] = None
 
