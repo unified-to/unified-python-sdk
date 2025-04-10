@@ -147,3 +147,5 @@
 | `CALENDAR_LINK_WRITE`          | calendar_link_write            |
 | `CALENDAR_RECORDING_READ`      | calendar_recording_read        |
 | `CALENDAR_RECORDING_WRITE`     | calendar_recording_write       |
+| `ENRICH_PERSON_READ`           | enrich_person_read             |
+| `ENRICH_COMPANY_READ`          | enrich_company_read            |
