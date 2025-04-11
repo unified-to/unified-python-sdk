@@ -9,17 +9,9 @@ from .property_crmcontact_address import (
     PropertyCrmContactAddressTypedDict,
 )
 from datetime import datetime
-from typing import List, Optional
+from typing import Any, Dict, List, Optional
 from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk.types import BaseModel
-
-
-class CrmContactRawTypedDict(TypedDict):
-    pass
-
-
-class CrmContactRaw(BaseModel):
-    pass
 
 
 class CrmContactTypedDict(TypedDict):
@@ -39,7 +31,7 @@ class CrmContactTypedDict(TypedDict):
     r"""Additional URLs associated with the contact e.g., LinkedIn, website, etc"""
     metadata: NotRequired[List[CrmMetadataTypedDict]]
     name: NotRequired[str]
-    raw: NotRequired[CrmContactRawTypedDict]
+    raw: NotRequired[Dict[str, Any]]
     telephones: NotRequired[List[CrmTelephoneTypedDict]]
     r"""An array of telephones for this contact"""
     title: NotRequired[str]
@@ -74,7 +66,7 @@ class CrmContact(BaseModel):
 
     name: Optional[str] = None
 
-    raw: Optional[CrmContactRaw] = None
+    raw: Optional[Dict[str, Any]] = None
 
     telephones: Optional[List[CrmTelephone]] = None
     r"""An array of telephones for this contact"""

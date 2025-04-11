@@ -6,17 +6,9 @@ from .property_hriscompany_address import (
     PropertyHrisCompanyAddressTypedDict,
 )
 from datetime import datetime
-from typing import Optional
+from typing import Any, Dict, Optional
 from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk.types import BaseModel
-
-
-class HrisCompanyRawTypedDict(TypedDict):
-    pass
-
-
-class HrisCompanyRaw(BaseModel):
-    pass
 
 
 class HrisCompanyTypedDict(TypedDict):
@@ -25,7 +17,7 @@ class HrisCompanyTypedDict(TypedDict):
     id: NotRequired[str]
     legal_name: NotRequired[str]
     name: NotRequired[str]
-    raw: NotRequired[HrisCompanyRawTypedDict]
+    raw: NotRequired[Dict[str, Any]]
     updated_at: NotRequired[datetime]
 
 
@@ -40,6 +32,6 @@ class HrisCompany(BaseModel):
 
     name: Optional[str] = None
 
-    raw: Optional[HrisCompanyRaw] = None
+    raw: Optional[Dict[str, Any]] = None
 
     updated_at: Optional[datetime] = None

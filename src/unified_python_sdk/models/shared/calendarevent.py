@@ -7,17 +7,9 @@ from .property_calendarevent_organizer import (
     PropertyCalendarEventOrganizerTypedDict,
 )
 from enum import Enum
-from typing import List, Optional
+from typing import Any, Dict, List, Optional
 from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk.types import BaseModel
-
-
-class CalendarEventRawTypedDict(TypedDict):
-    pass
-
-
-class CalendarEventRaw(BaseModel):
-    pass
 
 
 class CalendarEventStatus(str, Enum):
@@ -40,7 +32,7 @@ class CalendarEventTypedDict(TypedDict):
     location: NotRequired[str]
     notes: NotRequired[str]
     organizer: NotRequired[PropertyCalendarEventOrganizerTypedDict]
-    raw: NotRequired[CalendarEventRawTypedDict]
+    raw: NotRequired[Dict[str, Any]]
     status: NotRequired[CalendarEventStatus]
     timezone: NotRequired[str]
     updated_at: NotRequired[str]
@@ -74,7 +66,7 @@ class CalendarEvent(BaseModel):
 
     organizer: Optional[PropertyCalendarEventOrganizer] = None
 
-    raw: Optional[CalendarEventRaw] = None
+    raw: Optional[Dict[str, Any]] = None
 
     status: Optional[CalendarEventStatus] = None
 

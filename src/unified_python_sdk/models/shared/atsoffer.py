@@ -4,17 +4,9 @@ from __future__ import annotations
 from .atscompensation import AtsCompensation, AtsCompensationTypedDict
 from datetime import datetime
 from enum import Enum
-from typing import List, Optional
+from typing import Any, Dict, List, Optional
 from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk.types import BaseModel
-
-
-class AtsOfferRawTypedDict(TypedDict):
-    pass
-
-
-class AtsOfferRaw(BaseModel):
-    pass
 
 
 class AtsOfferStatus(str, Enum):
@@ -32,7 +24,7 @@ class AtsOfferTypedDict(TypedDict):
     creator_user_id: NotRequired[str]
     employee_user_id: NotRequired[str]
     id: NotRequired[str]
-    raw: NotRequired[AtsOfferRawTypedDict]
+    raw: NotRequired[Dict[str, Any]]
     rejected_at: NotRequired[datetime]
     sent_at: NotRequired[datetime]
     start_at: NotRequired[datetime]
@@ -54,7 +46,7 @@ class AtsOffer(BaseModel):
 
     id: Optional[str] = None
 
-    raw: Optional[AtsOfferRaw] = None
+    raw: Optional[Dict[str, Any]] = None
 
     rejected_at: Optional[datetime] = None
 

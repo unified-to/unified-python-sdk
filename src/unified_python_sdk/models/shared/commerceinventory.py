@@ -2,17 +2,9 @@
 
 from __future__ import annotations
 from datetime import datetime
-from typing import Optional
+from typing import Any, Dict, Optional
 from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk.types import BaseModel
-
-
-class CommerceInventoryRawTypedDict(TypedDict):
-    pass
-
-
-class CommerceInventoryRaw(BaseModel):
-    pass
 
 
 class CommerceInventoryTypedDict(TypedDict):
@@ -22,7 +14,7 @@ class CommerceInventoryTypedDict(TypedDict):
     item_option_id: NotRequired[str]
     item_variant_id: NotRequired[str]
     location_id: NotRequired[str]
-    raw: NotRequired[CommerceInventoryRawTypedDict]
+    raw: NotRequired[Dict[str, Any]]
     updated_at: NotRequired[datetime]
 
 
@@ -39,6 +31,6 @@ class CommerceInventory(BaseModel):
 
     location_id: Optional[str] = None
 
-    raw: Optional[CommerceInventoryRaw] = None
+    raw: Optional[Dict[str, Any]] = None
 
     updated_at: Optional[datetime] = None

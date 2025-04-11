@@ -3,17 +3,9 @@
 from __future__ import annotations
 from .crmmetadata import CrmMetadata, CrmMetadataTypedDict
 from datetime import datetime
-from typing import List, Optional
+from typing import Any, Dict, List, Optional
 from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk.types import BaseModel
-
-
-class CrmDealRawTypedDict(TypedDict):
-    pass
-
-
-class CrmDealRaw(BaseModel):
-    pass
 
 
 class CrmDealTypedDict(TypedDict):
@@ -32,7 +24,7 @@ class CrmDealTypedDict(TypedDict):
     pipeline: NotRequired[str]
     pipeline_id: NotRequired[str]
     probability: NotRequired[float]
-    raw: NotRequired[CrmDealRawTypedDict]
+    raw: NotRequired[Dict[str, Any]]
     source: NotRequired[str]
     stage: NotRequired[str]
     stage_id: NotRequired[str]
@@ -71,7 +63,7 @@ class CrmDeal(BaseModel):
 
     probability: Optional[float] = None
 
-    raw: Optional[CrmDealRaw] = None
+    raw: Optional[Dict[str, Any]] = None
 
     source: Optional[str] = None
 

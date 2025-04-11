@@ -17,17 +17,9 @@ from .property_accountingcontact_shipping_address import (
 )
 from datetime import datetime
 from enum import Enum
-from typing import List, Optional
+from typing import Any, Dict, List, Optional
 from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk.types import BaseModel
-
-
-class AccountingContactRawTypedDict(TypedDict):
-    pass
-
-
-class AccountingContactRaw(BaseModel):
-    pass
 
 
 class TaxExemption(str, Enum):
@@ -58,7 +50,7 @@ class AccountingContactTypedDict(TypedDict):
     name: NotRequired[str]
     payment_methods: NotRequired[List[AccountingContactPaymentMethodTypedDict]]
     portal_url: NotRequired[str]
-    raw: NotRequired[AccountingContactRawTypedDict]
+    raw: NotRequired[Dict[str, Any]]
     shipping_address: NotRequired[PropertyAccountingContactShippingAddressTypedDict]
     tax_exemption: NotRequired[TaxExemption]
     tax_number: NotRequired[str]
@@ -93,7 +85,7 @@ class AccountingContact(BaseModel):
 
     portal_url: Optional[str] = None
 
-    raw: Optional[AccountingContactRaw] = None
+    raw: Optional[Dict[str, Any]] = None
 
     shipping_address: Optional[PropertyAccountingContactShippingAddress] = None
 

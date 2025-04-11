@@ -25,14 +25,6 @@ class Format(str, Enum):
     URL = "URL"
 
 
-class MetadataMetadataRawTypedDict(TypedDict):
-    pass
-
-
-class MetadataMetadataRaw(BaseModel):
-    pass
-
-
 class MetadataMetadataTypedDict(TypedDict):
     name: str
     object_type: str
@@ -42,7 +34,7 @@ class MetadataMetadataTypedDict(TypedDict):
     objects: NotRequired[Dict[str, Any]]
     options: NotRequired[List[str]]
     original_format: NotRequired[str]
-    raw: NotRequired[MetadataMetadataRawTypedDict]
+    raw: NotRequired[Dict[str, Any]]
     slug: NotRequired[str]
     updated_at: NotRequired[datetime]
 
@@ -64,7 +56,7 @@ class MetadataMetadata(BaseModel):
 
     original_format: Optional[str] = None
 
-    raw: Optional[MetadataMetadataRaw] = None
+    raw: Optional[Dict[str, Any]] = None
 
     slug: Optional[str] = None
 

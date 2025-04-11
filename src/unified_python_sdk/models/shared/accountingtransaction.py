@@ -10,17 +10,9 @@ from .accountingtransactionlineitem import (
     AccountingTransactionLineItemTypedDict,
 )
 from datetime import datetime
-from typing import List, Optional
+from typing import Any, Dict, List, Optional
 from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk.types import BaseModel
-
-
-class AccountingTransactionRawTypedDict(TypedDict):
-    pass
-
-
-class AccountingTransactionRaw(BaseModel):
-    pass
 
 
 class AccountingTransactionTypedDict(TypedDict):
@@ -35,7 +27,7 @@ class AccountingTransactionTypedDict(TypedDict):
     memo: NotRequired[str]
     payment_method: NotRequired[str]
     payment_terms: NotRequired[str]
-    raw: NotRequired[AccountingTransactionRawTypedDict]
+    raw: NotRequired[Dict[str, Any]]
     reference: NotRequired[str]
     split_account_id: NotRequired[str]
     sub_total_amount: NotRequired[float]
@@ -68,7 +60,7 @@ class AccountingTransaction(BaseModel):
 
     payment_terms: Optional[str] = None
 
-    raw: Optional[AccountingTransactionRaw] = None
+    raw: Optional[Dict[str, Any]] = None
 
     reference: Optional[str] = None
 

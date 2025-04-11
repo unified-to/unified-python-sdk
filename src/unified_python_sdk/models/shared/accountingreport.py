@@ -3,17 +3,9 @@
 from __future__ import annotations
 from datetime import datetime
 from enum import Enum
-from typing import Optional
+from typing import Any, Dict, Optional
 from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk.types import BaseModel
-
-
-class AccountingReportRawTypedDict(TypedDict):
-    pass
-
-
-class AccountingReportRaw(BaseModel):
-    pass
 
 
 class AccountingReportType(str, Enum):
@@ -29,7 +21,7 @@ class AccountingReportTypedDict(TypedDict):
     created_at: NotRequired[datetime]
     group: NotRequired[str]
     id: NotRequired[str]
-    raw: NotRequired[AccountingReportRawTypedDict]
+    raw: NotRequired[Dict[str, Any]]
     subgroup: NotRequired[str]
     type: NotRequired[AccountingReportType]
     updated_at: NotRequired[datetime]
@@ -48,7 +40,7 @@ class AccountingReport(BaseModel):
 
     id: Optional[str] = None
 
-    raw: Optional[AccountingReportRaw] = None
+    raw: Optional[Dict[str, Any]] = None
 
     subgroup: Optional[str] = None
 

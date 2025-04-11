@@ -2,17 +2,9 @@
 
 from __future__ import annotations
 from datetime import datetime
-from typing import Optional
+from typing import Any, Dict, Optional
 from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk.types import BaseModel
-
-
-class CalendarCalendarRawTypedDict(TypedDict):
-    pass
-
-
-class CalendarCalendarRaw(BaseModel):
-    pass
 
 
 class CalendarCalendarTypedDict(TypedDict):
@@ -21,7 +13,7 @@ class CalendarCalendarTypedDict(TypedDict):
     description: NotRequired[str]
     id: NotRequired[str]
     primary: NotRequired[bool]
-    raw: NotRequired[CalendarCalendarRawTypedDict]
+    raw: NotRequired[Dict[str, Any]]
     timezone: NotRequired[str]
     updated_at: NotRequired[datetime]
 
@@ -37,7 +29,7 @@ class CalendarCalendar(BaseModel):
 
     primary: Optional[bool] = None
 
-    raw: Optional[CalendarCalendarRaw] = None
+    raw: Optional[Dict[str, Any]] = None
 
     timezone: Optional[str] = None
 

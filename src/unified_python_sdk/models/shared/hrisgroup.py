@@ -3,17 +3,9 @@
 from __future__ import annotations
 from datetime import datetime
 from enum import Enum
-from typing import List, Optional
+from typing import Any, Dict, List, Optional
 from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk.types import BaseModel
-
-
-class HrisGroupRawTypedDict(TypedDict):
-    pass
-
-
-class HrisGroupRaw(BaseModel):
-    pass
 
 
 class HrisGroupType(str, Enum):
@@ -35,7 +27,7 @@ class HrisGroupTypedDict(TypedDict):
     manager_ids: NotRequired[List[str]]
     name: NotRequired[str]
     parent_id: NotRequired[str]
-    raw: NotRequired[HrisGroupRawTypedDict]
+    raw: NotRequired[Dict[str, Any]]
     type: NotRequired[HrisGroupType]
     updated_at: NotRequired[datetime]
     user_ids: NotRequired[List[str]]
@@ -58,7 +50,7 @@ class HrisGroup(BaseModel):
 
     parent_id: Optional[str] = None
 
-    raw: Optional[HrisGroupRaw] = None
+    raw: Optional[Dict[str, Any]] = None
 
     type: Optional[HrisGroupType] = None
 

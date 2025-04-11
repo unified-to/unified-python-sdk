@@ -6,17 +6,9 @@ from .calendarrecordingmedia import (
     CalendarRecordingMediaTypedDict,
 )
 from datetime import datetime
-from typing import List, Optional
+from typing import Any, Dict, List, Optional
 from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk.types import BaseModel
-
-
-class CalendarRecordingRawTypedDict(TypedDict):
-    pass
-
-
-class CalendarRecordingRaw(BaseModel):
-    pass
 
 
 class CalendarRecordingTypedDict(TypedDict):
@@ -26,7 +18,7 @@ class CalendarRecordingTypedDict(TypedDict):
     expires_at: NotRequired[datetime]
     id: NotRequired[str]
     media: NotRequired[List[CalendarRecordingMediaTypedDict]]
-    raw: NotRequired[CalendarRecordingRawTypedDict]
+    raw: NotRequired[Dict[str, Any]]
     start_at: NotRequired[datetime]
     updated_at: NotRequired[datetime]
     web_url: NotRequired[str]
@@ -45,7 +37,7 @@ class CalendarRecording(BaseModel):
 
     media: Optional[List[CalendarRecordingMedia]] = None
 
-    raw: Optional[CalendarRecordingRaw] = None
+    raw: Optional[Dict[str, Any]] = None
 
     start_at: Optional[datetime] = None
 

@@ -12,17 +12,9 @@ from .property_accountingorder_shipping_address import (
 )
 from datetime import datetime
 from enum import Enum
-from typing import List, Optional
+from typing import Any, Dict, List, Optional
 from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk.types import BaseModel
-
-
-class AccountingOrderRawTypedDict(TypedDict):
-    pass
-
-
-class AccountingOrderRaw(BaseModel):
-    pass
 
 
 class AccountingOrderStatus(str, Enum):
@@ -48,7 +40,7 @@ class AccountingOrderTypedDict(TypedDict):
     currency: NotRequired[str]
     id: NotRequired[str]
     lineitems: NotRequired[List[AccountingLineitemTypedDict]]
-    raw: NotRequired[AccountingOrderRawTypedDict]
+    raw: NotRequired[Dict[str, Any]]
     shipping_address: NotRequired[PropertyAccountingOrderShippingAddressTypedDict]
     status: NotRequired[AccountingOrderStatus]
     total_amount: NotRequired[float]
@@ -71,7 +63,7 @@ class AccountingOrder(BaseModel):
 
     lineitems: Optional[List[AccountingLineitem]] = None
 
-    raw: Optional[AccountingOrderRaw] = None
+    raw: Optional[Dict[str, Any]] = None
 
     shipping_address: Optional[PropertyAccountingOrderShippingAddress] = None
 

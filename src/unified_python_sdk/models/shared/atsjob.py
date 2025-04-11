@@ -9,7 +9,7 @@ from .atsjobquestion import AtsJobQuestion, AtsJobQuestionTypedDict
 from .atsmetadata import AtsMetadata, AtsMetadataTypedDict
 from datetime import datetime
 from enum import Enum
-from typing import List, Optional
+from typing import Any, Dict, List, Optional
 from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk.types import BaseModel
 
@@ -25,14 +25,6 @@ class EmploymentType(str, Enum):
     SEASONAL = "SEASONAL"
     FREELANCE = "FREELANCE"
     OTHER = "OTHER"
-
-
-class AtsJobRawTypedDict(TypedDict):
-    pass
-
-
-class AtsJobRaw(BaseModel):
-    pass
 
 
 class AtsJobStatus(str, Enum):
@@ -66,7 +58,7 @@ class AtsJobTypedDict(TypedDict):
     public_job_urls: NotRequired[List[str]]
     r"""URLs for pages containing public listings for the job"""
     questions: NotRequired[List[AtsJobQuestionTypedDict]]
-    raw: NotRequired[AtsJobRawTypedDict]
+    raw: NotRequired[Dict[str, Any]]
     recruiter_ids: NotRequired[List[str]]
     remote: NotRequired[bool]
     status: NotRequired[AtsJobStatus]
@@ -114,7 +106,7 @@ class AtsJob(BaseModel):
 
     questions: Optional[List[AtsJobQuestion]] = None
 
-    raw: Optional[AtsJobRaw] = None
+    raw: Optional[Dict[str, Any]] = None
 
     recruiter_ids: Optional[List[str]] = None
 

@@ -14,7 +14,7 @@ from .property_hrisemployee_address import (
 from .property_hrisemployee_employee_roles import PropertyHrisEmployeeEmployeeRoles
 from datetime import datetime
 from enum import Enum
-from typing import List, Optional
+from typing import Any, Dict, List, Optional
 from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk.types import BaseModel
 
@@ -50,14 +50,6 @@ class MaritalStatus(str, Enum):
     SINGLE = "SINGLE"
 
 
-class HrisEmployeeRawTypedDict(TypedDict):
-    pass
-
-
-class HrisEmployeeRaw(BaseModel):
-    pass
-
-
 class HrisEmployeeTypedDict(TypedDict):
     address: NotRequired[PropertyHrisEmployeeAddressTypedDict]
     bio: NotRequired[str]
@@ -87,7 +79,7 @@ class HrisEmployeeTypedDict(TypedDict):
     metadata: NotRequired[List[HrisMetadataTypedDict]]
     name: NotRequired[str]
     pronouns: NotRequired[str]
-    raw: NotRequired[HrisEmployeeRawTypedDict]
+    raw: NotRequired[Dict[str, Any]]
     salutation: NotRequired[str]
     ssn_sin: NotRequired[str]
     storage_quota_allocated: NotRequired[float]
@@ -156,7 +148,7 @@ class HrisEmployee(BaseModel):
 
     pronouns: Optional[str] = None
 
-    raw: Optional[HrisEmployeeRaw] = None
+    raw: Optional[Dict[str, Any]] = None
 
     salutation: Optional[str] = None
 

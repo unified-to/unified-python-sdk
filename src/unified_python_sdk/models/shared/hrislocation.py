@@ -7,17 +7,9 @@ from .property_hrislocation_address import (
     PropertyHrisLocationAddressTypedDict,
 )
 from datetime import datetime
-from typing import List, Optional
+from typing import Any, Dict, List, Optional
 from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk.types import BaseModel
-
-
-class HrisLocationRawTypedDict(TypedDict):
-    pass
-
-
-class HrisLocationRaw(BaseModel):
-    pass
 
 
 class HrisLocationTypedDict(TypedDict):
@@ -32,7 +24,7 @@ class HrisLocationTypedDict(TypedDict):
     language_locale: NotRequired[str]
     name: NotRequired[str]
     parent_id: NotRequired[str]
-    raw: NotRequired[HrisLocationRawTypedDict]
+    raw: NotRequired[Dict[str, Any]]
     telephones: NotRequired[List[HrisTelephoneTypedDict]]
     timezone: NotRequired[str]
     updated_at: NotRequired[datetime]
@@ -61,7 +53,7 @@ class HrisLocation(BaseModel):
 
     parent_id: Optional[str] = None
 
-    raw: Optional[HrisLocationRaw] = None
+    raw: Optional[Dict[str, Any]] = None
 
     telephones: Optional[List[HrisTelephone]] = None
 

@@ -15,7 +15,7 @@ from .property_atscandidate_address import (
 )
 from datetime import datetime
 from enum import Enum
-from typing import List, Optional
+from typing import Any, Dict, List, Optional
 from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk.types import BaseModel
 
@@ -27,14 +27,6 @@ class Origin(str, Enum):
     REFERRED = "REFERRED"
     SOURCED = "SOURCED"
     UNIVERSITY = "UNIVERSITY"
-
-
-class AtsCandidateRawTypedDict(TypedDict):
-    pass
-
-
-class AtsCandidateRaw(BaseModel):
-    pass
 
 
 class AtsCandidateTypedDict(TypedDict):
@@ -54,7 +46,7 @@ class AtsCandidateTypedDict(TypedDict):
     metadata: NotRequired[List[AtsMetadataTypedDict]]
     name: NotRequired[str]
     origin: NotRequired[Origin]
-    raw: NotRequired[AtsCandidateRawTypedDict]
+    raw: NotRequired[Dict[str, Any]]
     skills: NotRequired[List[str]]
     sources: NotRequired[List[str]]
     tags: NotRequired[List[str]]
@@ -97,7 +89,7 @@ class AtsCandidate(BaseModel):
 
     origin: Optional[Origin] = None
 
-    raw: Optional[AtsCandidateRaw] = None
+    raw: Optional[Dict[str, Any]] = None
 
     skills: Optional[List[str]] = None
 

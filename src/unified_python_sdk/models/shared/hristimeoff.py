@@ -3,17 +3,9 @@
 from __future__ import annotations
 from datetime import datetime
 from enum import Enum
-from typing import Optional
+from typing import Any, Dict, Optional
 from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk.types import BaseModel
-
-
-class HrisTimeoffRawTypedDict(TypedDict):
-    pass
-
-
-class HrisTimeoffRaw(BaseModel):
-    pass
 
 
 class HrisTimeoffStatus(str, Enum):
@@ -36,7 +28,7 @@ class HrisTimeoffTypedDict(TypedDict):
     created_at: NotRequired[datetime]
     end_at: NotRequired[datetime]
     id: NotRequired[str]
-    raw: NotRequired[HrisTimeoffRawTypedDict]
+    raw: NotRequired[Dict[str, Any]]
     status: NotRequired[HrisTimeoffStatus]
     type: NotRequired[HrisTimeoffType]
     updated_at: NotRequired[datetime]
@@ -60,7 +52,7 @@ class HrisTimeoff(BaseModel):
 
     id: Optional[str] = None
 
-    raw: Optional[HrisTimeoffRaw] = None
+    raw: Optional[Dict[str, Any]] = None
 
     status: Optional[HrisTimeoffStatus] = None
 
