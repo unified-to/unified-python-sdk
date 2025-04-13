@@ -21,6 +21,8 @@ SERVERS = [
     # North American data region
     "https://api-eu.unified.to",
     # European data region
+    "https://api-au.unified.to",
+    # Australian data region
 ]
 """Contains the list of servers available to the SDK"""
 

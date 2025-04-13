@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: 9177e6707710b56489da83a7c9cca16c
+  docChecksum: 0e5b1485303ee7a0584609fcc9074c1d
   docVersion: "1.0"
-  speakeasyVersion: 1.531.2
-  generationVersion: 2.570.0
-  releaseVersion: 0.40.9
-  configChecksum: 97b6dba8504d72c6e1f69f7471354492
+  speakeasyVersion: 1.531.4
+  generationVersion: 2.570.4
+  releaseVersion: 0.40.10
+  configChecksum: 8be47d8df796bf2d39b36d8e374f24dc
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -16,7 +16,7 @@ features:
     acceptHeaders: 3.0.0
     additionalDependencies: 1.0.0
     constsAndDefaults: 1.0.5
-    core: 5.12.6
+    core: 5.12.7
     defaultEnabledRetries: 0.2.0
     downloadStreams: 1.0.1
     enumUnions: 0.1.0

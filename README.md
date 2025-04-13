@@ -1394,6 +1394,7 @@ You can override the default server globally by passing a server index to the `s
 | --- | --------------------------- | -------------------------- |
 | 0   | `https://api.unified.to`    | North American data region |
 | 1   | `https://api-eu.unified.to` | European data region       |
+| 2   | `https://api-au.unified.to` | Australian data region     |
 
 #### Example
 
@@ -1403,7 +1404,7 @@ from unified_python_sdk.models import shared
 
 
 with UnifiedTo(
-    server_idx=1,
+    server_idx=2,
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
