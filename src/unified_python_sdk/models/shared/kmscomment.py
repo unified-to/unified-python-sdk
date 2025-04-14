@@ -16,7 +16,7 @@ class ContentType(str, Enum):
 
 
 class KmsCommentType(str, Enum):
-    PAGE_INLINE = "PAGE-INLINE"
+    PAGE_INLINE = "PAGE_INLINE"
     PAGE = "PAGE"
 
 
