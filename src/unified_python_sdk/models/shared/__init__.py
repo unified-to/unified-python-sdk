@@ -6,6 +6,7 @@ from .accountingaccount import (
     Status,
     Type,
 )
+from .accountingattachment import AccountingAttachment, AccountingAttachmentTypedDict
 from .accountingcontact import (
     AccountingContact,
     AccountingContactTypedDict,
@@ -572,6 +573,8 @@ __all__ = [
     "APICallTypedDict",
     "AccountingAccount",
     "AccountingAccountTypedDict",
+    "AccountingAttachment",
+    "AccountingAttachmentTypedDict",
     "AccountingContact",
     "AccountingContactPaymentMethod",
     "AccountingContactPaymentMethodType",

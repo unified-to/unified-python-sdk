@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: f8c33b302b35d5dce19e700a53e8ea50
+  docChecksum: ce6ebc30e4ad046db9275dc804220d8b
   docVersion: "1.0"
-  speakeasyVersion: 1.531.4
-  generationVersion: 2.570.4
-  releaseVersion: 0.40.11
-  configChecksum: 387e494942c9a76ae3169232adc8244d
+  speakeasyVersion: 1.533.0
+  generationVersion: 2.578.0
+  releaseVersion: 0.41.0
+  configChecksum: 30fe1fb49cbcb43eb4961af40928e000
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -16,7 +16,7 @@ features:
     acceptHeaders: 3.0.0
     additionalDependencies: 1.0.0
     constsAndDefaults: 1.0.5
-    core: 5.12.7
+    core: 5.14.0
     defaultEnabledRetries: 0.2.0
     downloadStreams: 1.0.1
     enumUnions: 0.1.0
@@ -864,6 +864,7 @@ generatedFiles:
   - docs/models/operations/updateunifiedwebhooktriggerrequest.md
   - docs/models/operations/updateunifiedwebhooktriggerresponse.md
   - docs/models/shared/accountingaccount.md
+  - docs/models/shared/accountingattachment.md
   - docs/models/shared/accountingcontact.md
   - docs/models/shared/accountingcontactpaymentmethod.md
   - docs/models/shared/accountingcontactpaymentmethodtype.md
@@ -1819,6 +1820,7 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/updateunifiedwebhooktrigger.py
   - src/unified_python_sdk/models/shared/__init__.py
   - src/unified_python_sdk/models/shared/accountingaccount.py
+  - src/unified_python_sdk/models/shared/accountingattachment.py
   - src/unified_python_sdk/models/shared/accountingcontact.py
   - src/unified_python_sdk/models/shared/accountingcontactpaymentmethod.py
   - src/unified_python_sdk/models/shared/accountingemail.py
