@@ -19,7 +19,6 @@ class ListAtsCandidatesRequestTypedDict(TypedDict):
     r"""ID of the connection"""
     fields: NotRequired[List[str]]
     r"""Comma-delimited fields to return"""
-    job_id: NotRequired[str]
     limit: NotRequired[float]
     offset: NotRequired[float]
     order: NotRequired[str]
@@ -41,11 +40,6 @@ class ListAtsCandidatesRequest(BaseModel):
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
     r"""Comma-delimited fields to return"""
-
-    job_id: Annotated[
-        Optional[str],
-        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
-    ] = None
 
     limit: Annotated[
         Optional[float],
