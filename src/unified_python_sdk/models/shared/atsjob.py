@@ -4,6 +4,7 @@ from __future__ import annotations
 from .atsaddress import AtsAddress, AtsAddressTypedDict
 from .atscompensation import AtsCompensation, AtsCompensationTypedDict
 from .atsgroup import AtsGroup, AtsGroupTypedDict
+from .atsjobopening import AtsJobOpening, AtsJobOpeningTypedDict
 from .atsjobposting import AtsJobPosting, AtsJobPostingTypedDict
 from .atsjobquestion import AtsJobQuestion, AtsJobQuestionTypedDict
 from .atsmetadata import AtsMetadata, AtsMetadataTypedDict
@@ -53,6 +54,7 @@ class AtsJobTypedDict(TypedDict):
     metadata: NotRequired[List[AtsMetadataTypedDict]]
     name: NotRequired[str]
     number_of_openings: NotRequired[float]
+    openings: NotRequired[List[AtsJobOpeningTypedDict]]
     postings: NotRequired[List[AtsJobPostingTypedDict]]
     r"""Public job postings"""
     public_job_urls: NotRequired[List[str]]
@@ -97,6 +99,8 @@ class AtsJob(BaseModel):
     name: Optional[str] = None
 
     number_of_openings: Optional[float] = None
+
+    openings: Optional[List[AtsJobOpening]] = None
 
     postings: Optional[List[AtsJobPosting]] = None
     r"""Public job postings"""

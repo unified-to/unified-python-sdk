@@ -537,6 +537,15 @@ asyncio.run(main())
 * [remove_crm_deal](docs/sdks/deal/README.md#remove_crm_deal) - Remove a deal
 * [update_crm_deal](docs/sdks/deal/README.md#update_crm_deal) - Update a deal
 
+### [device](docs/sdks/device/README.md)
+
+* [create_hris_device](docs/sdks/device/README.md#create_hris_device) - Create a device
+* [get_hris_device](docs/sdks/device/README.md#get_hris_device) - Retrieve a device
+* [list_hris_devices](docs/sdks/device/README.md#list_hris_devices) - List all devices
+* [patch_hris_device](docs/sdks/device/README.md#patch_hris_device) - Update a device
+* [remove_hris_device](docs/sdks/device/README.md#remove_hris_device) - Remove a device
+* [update_hris_device](docs/sdks/device/README.md#update_hris_device) - Update a device
+
 ### [document](docs/sdks/document/README.md)
 
 * [create_ats_document](docs/sdks/document/README.md#create_ats_document) - Create a document
@@ -607,30 +616,36 @@ asyncio.run(main())
 ### [hris](docs/sdks/hris/README.md)
 
 * [create_hris_company](docs/sdks/hris/README.md#create_hris_company) - Create a company
+* [create_hris_device](docs/sdks/hris/README.md#create_hris_device) - Create a device
 * [create_hris_employee](docs/sdks/hris/README.md#create_hris_employee) - Create an employee
 * [create_hris_group](docs/sdks/hris/README.md#create_hris_group) - Create a group
 * [create_hris_location](docs/sdks/hris/README.md#create_hris_location) - Create a location
 * [get_hris_company](docs/sdks/hris/README.md#get_hris_company) - Retrieve a company
+* [get_hris_device](docs/sdks/hris/README.md#get_hris_device) - Retrieve a device
 * [get_hris_employee](docs/sdks/hris/README.md#get_hris_employee) - Retrieve an employee
 * [get_hris_group](docs/sdks/hris/README.md#get_hris_group) - Retrieve a group
 * [get_hris_location](docs/sdks/hris/README.md#get_hris_location) - Retrieve a location
 * [get_hris_payslip](docs/sdks/hris/README.md#get_hris_payslip) - Retrieve a payslip
 * [get_hris_timeoff](docs/sdks/hris/README.md#get_hris_timeoff) - Retrieve a timeoff
 * [list_hris_companies](docs/sdks/hris/README.md#list_hris_companies) - List all companies
+* [list_hris_devices](docs/sdks/hris/README.md#list_hris_devices) - List all devices
 * [list_hris_employees](docs/sdks/hris/README.md#list_hris_employees) - List all employees
 * [list_hris_groups](docs/sdks/hris/README.md#list_hris_groups) - List all groups
 * [list_hris_locations](docs/sdks/hris/README.md#list_hris_locations) - List all locations
 * [list_hris_payslips](docs/sdks/hris/README.md#list_hris_payslips) - List all payslips
 * [list_hris_timeoffs](docs/sdks/hris/README.md#list_hris_timeoffs) - List all timeoffs
 * [patch_hris_company](docs/sdks/hris/README.md#patch_hris_company) - Update a company
+* [patch_hris_device](docs/sdks/hris/README.md#patch_hris_device) - Update a device
 * [patch_hris_employee](docs/sdks/hris/README.md#patch_hris_employee) - Update an employee
 * [patch_hris_group](docs/sdks/hris/README.md#patch_hris_group) - Update a group
 * [patch_hris_location](docs/sdks/hris/README.md#patch_hris_location) - Update a location
 * [remove_hris_company](docs/sdks/hris/README.md#remove_hris_company) - Remove a company
+* [remove_hris_device](docs/sdks/hris/README.md#remove_hris_device) - Remove a device
 * [remove_hris_employee](docs/sdks/hris/README.md#remove_hris_employee) - Remove an employee
 * [remove_hris_group](docs/sdks/hris/README.md#remove_hris_group) - Remove a group
 * [remove_hris_location](docs/sdks/hris/README.md#remove_hris_location) - Remove a location
 * [update_hris_company](docs/sdks/hris/README.md#update_hris_company) - Update a company
+* [update_hris_device](docs/sdks/hris/README.md#update_hris_device) - Update a device
 * [update_hris_employee](docs/sdks/hris/README.md#update_hris_employee) - Update an employee
 * [update_hris_group](docs/sdks/hris/README.md#update_hris_group) - Update a group
 * [update_hris_location](docs/sdks/hris/README.md#update_hris_location) - Update a location

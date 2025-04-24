@@ -174,6 +174,12 @@ from .createhriscompany import (
     CreateHrisCompanyResponse,
     CreateHrisCompanyResponseTypedDict,
 )
+from .createhrisdevice import (
+    CreateHrisDeviceRequest,
+    CreateHrisDeviceRequestTypedDict,
+    CreateHrisDeviceResponse,
+    CreateHrisDeviceResponseTypedDict,
+)
 from .createhrisemployee import (
     CreateHrisEmployeeRequest,
     CreateHrisEmployeeRequestTypedDict,
@@ -579,6 +585,12 @@ from .gethriscompany import (
     GetHrisCompanyRequestTypedDict,
     GetHrisCompanyResponse,
     GetHrisCompanyResponseTypedDict,
+)
+from .gethrisdevice import (
+    GetHrisDeviceRequest,
+    GetHrisDeviceRequestTypedDict,
+    GetHrisDeviceResponse,
+    GetHrisDeviceResponseTypedDict,
 )
 from .gethrisemployee import (
     GetHrisEmployeeRequest,
@@ -1054,6 +1066,12 @@ from .listhriscompanies import (
     ListHrisCompaniesResponse,
     ListHrisCompaniesResponseTypedDict,
 )
+from .listhrisdevices import (
+    ListHrisDevicesRequest,
+    ListHrisDevicesRequestTypedDict,
+    ListHrisDevicesResponse,
+    ListHrisDevicesResponseTypedDict,
+)
 from .listhrisemployees import (
     ListHrisEmployeesRequest,
     ListHrisEmployeesRequestTypedDict,
@@ -1495,6 +1513,12 @@ from .patchhriscompany import (
     PatchHrisCompanyResponse,
     PatchHrisCompanyResponseTypedDict,
 )
+from .patchhrisdevice import (
+    PatchHrisDeviceRequest,
+    PatchHrisDeviceRequestTypedDict,
+    PatchHrisDeviceResponse,
+    PatchHrisDeviceResponseTypedDict,
+)
 from .patchhrisemployee import (
     PatchHrisEmployeeRequest,
     PatchHrisEmployeeRequestTypedDict,
@@ -1885,6 +1909,12 @@ from .removehriscompany import (
     RemoveHrisCompanyResponse,
     RemoveHrisCompanyResponseTypedDict,
 )
+from .removehrisdevice import (
+    RemoveHrisDeviceRequest,
+    RemoveHrisDeviceRequestTypedDict,
+    RemoveHrisDeviceResponse,
+    RemoveHrisDeviceResponseTypedDict,
+)
 from .removehrisemployee import (
     RemoveHrisEmployeeRequest,
     RemoveHrisEmployeeRequestTypedDict,
@@ -2263,6 +2293,12 @@ from .updatehriscompany import (
     UpdateHrisCompanyResponse,
     UpdateHrisCompanyResponseTypedDict,
 )
+from .updatehrisdevice import (
+    UpdateHrisDeviceRequest,
+    UpdateHrisDeviceRequestTypedDict,
+    UpdateHrisDeviceResponse,
+    UpdateHrisDeviceResponseTypedDict,
+)
 from .updatehrisemployee import (
     UpdateHrisEmployeeRequest,
     UpdateHrisEmployeeRequestTypedDict,
@@ -2605,6 +2641,10 @@ __all__ = [
     "CreateHrisCompanyRequestTypedDict",
     "CreateHrisCompanyResponse",
     "CreateHrisCompanyResponseTypedDict",
+    "CreateHrisDeviceRequest",
+    "CreateHrisDeviceRequestTypedDict",
+    "CreateHrisDeviceResponse",
+    "CreateHrisDeviceResponseTypedDict",
     "CreateHrisEmployeeRequest",
     "CreateHrisEmployeeRequestTypedDict",
     "CreateHrisEmployeeResponse",
@@ -2875,6 +2915,10 @@ __all__ = [
     "GetHrisCompanyRequestTypedDict",
     "GetHrisCompanyResponse",
     "GetHrisCompanyResponseTypedDict",
+    "GetHrisDeviceRequest",
+    "GetHrisDeviceRequestTypedDict",
+    "GetHrisDeviceResponse",
+    "GetHrisDeviceResponseTypedDict",
     "GetHrisEmployeeRequest",
     "GetHrisEmployeeRequestTypedDict",
     "GetHrisEmployeeResponse",
@@ -3191,6 +3235,10 @@ __all__ = [
     "ListHrisCompaniesRequestTypedDict",
     "ListHrisCompaniesResponse",
     "ListHrisCompaniesResponseTypedDict",
+    "ListHrisDevicesRequest",
+    "ListHrisDevicesRequestTypedDict",
+    "ListHrisDevicesResponse",
+    "ListHrisDevicesResponseTypedDict",
     "ListHrisEmployeesRequest",
     "ListHrisEmployeesRequestTypedDict",
     "ListHrisEmployeesResponse",
@@ -3484,6 +3532,10 @@ __all__ = [
     "PatchHrisCompanyRequestTypedDict",
     "PatchHrisCompanyResponse",
     "PatchHrisCompanyResponseTypedDict",
+    "PatchHrisDeviceRequest",
+    "PatchHrisDeviceRequestTypedDict",
+    "PatchHrisDeviceResponse",
+    "PatchHrisDeviceResponseTypedDict",
     "PatchHrisEmployeeRequest",
     "PatchHrisEmployeeRequestTypedDict",
     "PatchHrisEmployeeResponse",
@@ -3745,6 +3797,10 @@ __all__ = [
     "RemoveHrisCompanyRequestTypedDict",
     "RemoveHrisCompanyResponse",
     "RemoveHrisCompanyResponseTypedDict",
+    "RemoveHrisDeviceRequest",
+    "RemoveHrisDeviceRequestTypedDict",
+    "RemoveHrisDeviceResponse",
+    "RemoveHrisDeviceResponseTypedDict",
     "RemoveHrisEmployeeRequest",
     "RemoveHrisEmployeeRequestTypedDict",
     "RemoveHrisEmployeeResponse",
@@ -3997,6 +4053,10 @@ __all__ = [
     "UpdateHrisCompanyRequestTypedDict",
     "UpdateHrisCompanyResponse",
     "UpdateHrisCompanyResponseTypedDict",
+    "UpdateHrisDeviceRequest",
+    "UpdateHrisDeviceRequestTypedDict",
+    "UpdateHrisDeviceResponse",
+    "UpdateHrisDeviceResponseTypedDict",
     "UpdateHrisEmployeeRequest",
     "UpdateHrisEmployeeRequestTypedDict",
     "UpdateHrisEmployeeResponse",

@@ -53,6 +53,7 @@ class AccountingInvoiceTypedDict(TypedDict):
     refund_amount: NotRequired[float]
     refund_reason: NotRequired[str]
     refunded_at: NotRequired[datetime]
+    send: NotRequired[bool]
     status: NotRequired[AccountingInvoiceStatus]
     tax_amount: NotRequired[float]
     total_amount: NotRequired[float]
@@ -103,6 +104,8 @@ class AccountingInvoice(BaseModel):
     refund_reason: Optional[str] = None
 
     refunded_at: Optional[datetime] = None
+
+    send: Optional[bool] = None
 
     status: Optional[AccountingInvoiceStatus] = None
 

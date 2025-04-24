@@ -594,9 +594,7 @@ with UnifiedTo(
                 shared.PropertyConnectionCategories.ENRICH,
             ],
             "integration_type": "<value>",
-            "permissions": [
-
-            ],
+            "permissions": [],
         },
         "id": "<id>",
     })
@@ -835,9 +833,7 @@ with UnifiedTo(
                 shared.PropertyConnectionCategories.CALENDAR,
             ],
             "integration_type": "<value>",
-            "permissions": [
-
-            ],
+            "permissions": [],
         },
         "id": "<id>",
     })

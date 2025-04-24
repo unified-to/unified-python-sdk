@@ -44,6 +44,7 @@
 | `HRIS_TIMEOFF`            | hris_timeoff              |
 | `HRIS_COMPANY`            | hris_company              |
 | `HRIS_LOCATION`           | hris_location             |
+| `HRIS_DEVICE`             | hris_device               |
 | `MARTECH_LIST`            | martech_list              |
 | `MARTECH_MEMBER`          | martech_member            |
 | `PASSTHROUGH`             | passthrough               |

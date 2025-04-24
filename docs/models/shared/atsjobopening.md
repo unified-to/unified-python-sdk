@@ -1,0 +1,12 @@
+# AtsJobOpening
+
+
+## Fields
+
+| Field                                                                              | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `application_id`                                                                   | *Optional[str]*                                                                    | :heavy_minus_sign:                                                                 | N/A                                                                                |
+| `close_reason`                                                                     | *Optional[str]*                                                                    | :heavy_minus_sign:                                                                 | N/A                                                                                |
+| `closed_at`                                                                        | [date](https://docs.python.org/3/library/datetime.html#date-objects)               | :heavy_minus_sign:                                                                 | N/A                                                                                |
+| `opened_at`                                                                        | [date](https://docs.python.org/3/library/datetime.html#date-objects)               | :heavy_minus_sign:                                                                 | N/A                                                                                |
+| `status`                                                                           | [Optional[shared.AtsJobOpeningStatus]](../../models/shared/atsjobopeningstatus.md) | :heavy_minus_sign:                                                                 | N/A                                                                                |

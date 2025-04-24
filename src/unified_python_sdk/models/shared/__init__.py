@@ -6,6 +6,10 @@ from .accountingaccount import (
     Status,
     Type,
 )
+from .accountingassociatedcontact import (
+    AccountingAssociatedContact,
+    AccountingAssociatedContactTypedDict,
+)
 from .accountingattachment import AccountingAttachment, AccountingAttachmentTypedDict
 from .accountingcontact import (
     AccountingContact,
@@ -92,6 +96,7 @@ from .atsemail import AtsEmail, AtsEmailType, AtsEmailTypedDict
 from .atsgroup import AtsGroup, AtsGroupType, AtsGroupTypedDict
 from .atsinterview import AtsInterview, AtsInterviewStatus, AtsInterviewTypedDict
 from .atsjob import AtsJob, AtsJobStatus, AtsJobTypedDict, EmploymentType
+from .atsjobopening import AtsJobOpening, AtsJobOpeningStatus, AtsJobOpeningTypedDict
 from .atsjobposting import AtsJobPosting, AtsJobPostingTypedDict
 from .atsjobquestion import AtsJobQuestion, AtsJobQuestionType, AtsJobQuestionTypedDict
 from .atsmetadata import (
@@ -200,6 +205,7 @@ from .hriscompensation import (
     HrisCompensationType,
     HrisCompensationTypedDict,
 )
+from .hrisdevice import HrisDevice, HrisDeviceTypedDict
 from .hrisemail import HrisEmail, HrisEmailType, HrisEmailTypedDict
 from .hrisemployee import (
     EmploymentStatus,
@@ -573,6 +579,8 @@ __all__ = [
     "APICallTypedDict",
     "AccountingAccount",
     "AccountingAccountTypedDict",
+    "AccountingAssociatedContact",
+    "AccountingAssociatedContactTypedDict",
     "AccountingAttachment",
     "AccountingAttachmentTypedDict",
     "AccountingContact",
@@ -647,6 +655,9 @@ __all__ = [
     "AtsInterviewStatus",
     "AtsInterviewTypedDict",
     "AtsJob",
+    "AtsJobOpening",
+    "AtsJobOpeningStatus",
+    "AtsJobOpeningTypedDict",
     "AtsJobPosting",
     "AtsJobPostingTypedDict",
     "AtsJobQuestion",
@@ -781,6 +792,8 @@ __all__ = [
     "HrisCompensationFrequency",
     "HrisCompensationType",
     "HrisCompensationTypedDict",
+    "HrisDevice",
+    "HrisDeviceTypedDict",
     "HrisEmail",
     "HrisEmailType",
     "HrisEmailTypedDict",

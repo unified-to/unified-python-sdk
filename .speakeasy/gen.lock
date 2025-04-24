@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: 55f4dd2a712f44154e41aa0daba1b8ca
+  docChecksum: 8813ee1f8602d4e03a2488861b978482
   docVersion: "1.0"
-  speakeasyVersion: 1.533.0
-  generationVersion: 2.578.0
-  releaseVersion: 0.41.1
-  configChecksum: 034484a9995b6eebc6bca62bf7edff28
+  speakeasyVersion: 1.538.0
+  generationVersion: 2.591.1
+  releaseVersion: 0.42.0
+  configChecksum: bbba4b761d0a10334521de43b102250f
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -16,7 +16,7 @@ features:
     acceptHeaders: 3.0.0
     additionalDependencies: 1.0.0
     constsAndDefaults: 1.0.5
-    core: 5.14.0
+    core: 5.16.0
     defaultEnabledRetries: 0.2.0
     downloadStreams: 1.0.1
     enumUnions: 0.1.0
@@ -92,6 +92,8 @@ generatedFiles:
   - docs/models/operations/creategenaipromptresponse.md
   - docs/models/operations/createhriscompanyrequest.md
   - docs/models/operations/createhriscompanyresponse.md
+  - docs/models/operations/createhrisdevicerequest.md
+  - docs/models/operations/createhrisdeviceresponse.md
   - docs/models/operations/createhrisemployeerequest.md
   - docs/models/operations/createhrisemployeeresponse.md
   - docs/models/operations/createhrisgrouprequest.md
@@ -227,6 +229,8 @@ generatedFiles:
   - docs/models/operations/getcrmpipelineresponse.md
   - docs/models/operations/gethriscompanyrequest.md
   - docs/models/operations/gethriscompanyresponse.md
+  - docs/models/operations/gethrisdevicerequest.md
+  - docs/models/operations/gethrisdeviceresponse.md
   - docs/models/operations/gethrisemployeerequest.md
   - docs/models/operations/gethrisemployeeresponse.md
   - docs/models/operations/gethrisgrouprequest.md
@@ -385,6 +389,8 @@ generatedFiles:
   - docs/models/operations/listgenaimodelsresponse.md
   - docs/models/operations/listhriscompaniesrequest.md
   - docs/models/operations/listhriscompaniesresponse.md
+  - docs/models/operations/listhrisdevicesrequest.md
+  - docs/models/operations/listhrisdevicesresponse.md
   - docs/models/operations/listhrisemployeesrequest.md
   - docs/models/operations/listhrisemployeesresponse.md
   - docs/models/operations/listhrisgroupsrequest.md
@@ -532,6 +538,8 @@ generatedFiles:
   - docs/models/operations/patchcrmpipelineresponse.md
   - docs/models/operations/patchhriscompanyrequest.md
   - docs/models/operations/patchhriscompanyresponse.md
+  - docs/models/operations/patchhrisdevicerequest.md
+  - docs/models/operations/patchhrisdeviceresponse.md
   - docs/models/operations/patchhrisemployeerequest.md
   - docs/models/operations/patchhrisemployeeresponse.md
   - docs/models/operations/patchhrisgrouprequest.md
@@ -663,6 +671,8 @@ generatedFiles:
   - docs/models/operations/removecrmpipelineresponse.md
   - docs/models/operations/removehriscompanyrequest.md
   - docs/models/operations/removehriscompanyresponse.md
+  - docs/models/operations/removehrisdevicerequest.md
+  - docs/models/operations/removehrisdeviceresponse.md
   - docs/models/operations/removehrisemployeerequest.md
   - docs/models/operations/removehrisemployeeresponse.md
   - docs/models/operations/removehrisgrouprequest.md
@@ -789,6 +799,8 @@ generatedFiles:
   - docs/models/operations/updatecrmpipelineresponse.md
   - docs/models/operations/updatehriscompanyrequest.md
   - docs/models/operations/updatehriscompanyresponse.md
+  - docs/models/operations/updatehrisdevicerequest.md
+  - docs/models/operations/updatehrisdeviceresponse.md
   - docs/models/operations/updatehrisemployeerequest.md
   - docs/models/operations/updatehrisemployeeresponse.md
   - docs/models/operations/updatehrisgrouprequest.md
@@ -864,6 +876,7 @@ generatedFiles:
   - docs/models/operations/updateunifiedwebhooktriggerrequest.md
   - docs/models/operations/updateunifiedwebhooktriggerresponse.md
   - docs/models/shared/accountingaccount.md
+  - docs/models/shared/accountingassociatedcontact.md
   - docs/models/shared/accountingattachment.md
   - docs/models/shared/accountingcontact.md
   - docs/models/shared/accountingcontactpaymentmethod.md
@@ -911,6 +924,8 @@ generatedFiles:
   - docs/models/shared/atsinterview.md
   - docs/models/shared/atsinterviewstatus.md
   - docs/models/shared/atsjob.md
+  - docs/models/shared/atsjobopening.md
+  - docs/models/shared/atsjobopeningstatus.md
   - docs/models/shared/atsjobposting.md
   - docs/models/shared/atsjobquestion.md
   - docs/models/shared/atsjobquestiontype.md
@@ -991,6 +1006,7 @@ generatedFiles:
   - docs/models/shared/hriscompensation.md
   - docs/models/shared/hriscompensationfrequency.md
   - docs/models/shared/hriscompensationtype.md
+  - docs/models/shared/hrisdevice.md
   - docs/models/shared/hrisemail.md
   - docs/models/shared/hrisemailtype.md
   - docs/models/shared/hrisemployee.md
@@ -1266,6 +1282,7 @@ generatedFiles:
   - docs/sdks/crm/README.md
   - docs/sdks/customer/README.md
   - docs/sdks/deal/README.md
+  - docs/sdks/device/README.md
   - docs/sdks/document/README.md
   - docs/sdks/employee/README.md
   - docs/sdks/enrich/README.md
@@ -1369,6 +1386,7 @@ generatedFiles:
   - src/unified_python_sdk/crm.py
   - src/unified_python_sdk/customer.py
   - src/unified_python_sdk/deal.py
+  - src/unified_python_sdk/device.py
   - src/unified_python_sdk/document.py
   - src/unified_python_sdk/employee.py
   - src/unified_python_sdk/enrich.py
@@ -1433,6 +1451,7 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/createcrmpipeline.py
   - src/unified_python_sdk/models/operations/creategenaiprompt.py
   - src/unified_python_sdk/models/operations/createhriscompany.py
+  - src/unified_python_sdk/models/operations/createhrisdevice.py
   - src/unified_python_sdk/models/operations/createhrisemployee.py
   - src/unified_python_sdk/models/operations/createhrisgroup.py
   - src/unified_python_sdk/models/operations/createhrislocation.py
@@ -1501,6 +1520,7 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/getcrmlead.py
   - src/unified_python_sdk/models/operations/getcrmpipeline.py
   - src/unified_python_sdk/models/operations/gethriscompany.py
+  - src/unified_python_sdk/models/operations/gethrisdevice.py
   - src/unified_python_sdk/models/operations/gethrisemployee.py
   - src/unified_python_sdk/models/operations/gethrisgroup.py
   - src/unified_python_sdk/models/operations/gethrislocation.py
@@ -1580,6 +1600,7 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/listenrichpeople.py
   - src/unified_python_sdk/models/operations/listgenaimodels.py
   - src/unified_python_sdk/models/operations/listhriscompanies.py
+  - src/unified_python_sdk/models/operations/listhrisdevices.py
   - src/unified_python_sdk/models/operations/listhrisemployees.py
   - src/unified_python_sdk/models/operations/listhrisgroups.py
   - src/unified_python_sdk/models/operations/listhrislocations.py
@@ -1653,6 +1674,7 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/patchcrmlead.py
   - src/unified_python_sdk/models/operations/patchcrmpipeline.py
   - src/unified_python_sdk/models/operations/patchhriscompany.py
+  - src/unified_python_sdk/models/operations/patchhrisdevice.py
   - src/unified_python_sdk/models/operations/patchhrisemployee.py
   - src/unified_python_sdk/models/operations/patchhrisgroup.py
   - src/unified_python_sdk/models/operations/patchhrislocation.py
@@ -1718,6 +1740,7 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/removecrmlead.py
   - src/unified_python_sdk/models/operations/removecrmpipeline.py
   - src/unified_python_sdk/models/operations/removehriscompany.py
+  - src/unified_python_sdk/models/operations/removehrisdevice.py
   - src/unified_python_sdk/models/operations/removehrisemployee.py
   - src/unified_python_sdk/models/operations/removehrisgroup.py
   - src/unified_python_sdk/models/operations/removehrislocation.py
@@ -1781,6 +1804,7 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/updatecrmlead.py
   - src/unified_python_sdk/models/operations/updatecrmpipeline.py
   - src/unified_python_sdk/models/operations/updatehriscompany.py
+  - src/unified_python_sdk/models/operations/updatehrisdevice.py
   - src/unified_python_sdk/models/operations/updatehrisemployee.py
   - src/unified_python_sdk/models/operations/updatehrisgroup.py
   - src/unified_python_sdk/models/operations/updatehrislocation.py
@@ -1820,6 +1844,7 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/updateunifiedwebhooktrigger.py
   - src/unified_python_sdk/models/shared/__init__.py
   - src/unified_python_sdk/models/shared/accountingaccount.py
+  - src/unified_python_sdk/models/shared/accountingassociatedcontact.py
   - src/unified_python_sdk/models/shared/accountingattachment.py
   - src/unified_python_sdk/models/shared/accountingcontact.py
   - src/unified_python_sdk/models/shared/accountingcontactpaymentmethod.py
@@ -1851,6 +1876,7 @@ generatedFiles:
   - src/unified_python_sdk/models/shared/atsgroup.py
   - src/unified_python_sdk/models/shared/atsinterview.py
   - src/unified_python_sdk/models/shared/atsjob.py
+  - src/unified_python_sdk/models/shared/atsjobopening.py
   - src/unified_python_sdk/models/shared/atsjobposting.py
   - src/unified_python_sdk/models/shared/atsjobquestion.py
   - src/unified_python_sdk/models/shared/atsmetadata.py
@@ -1899,6 +1925,7 @@ generatedFiles:
   - src/unified_python_sdk/models/shared/genaiprompt.py
   - src/unified_python_sdk/models/shared/hriscompany.py
   - src/unified_python_sdk/models/shared/hriscompensation.py
+  - src/unified_python_sdk/models/shared/hrisdevice.py
   - src/unified_python_sdk/models/shared/hrisemail.py
   - src/unified_python_sdk/models/shared/hrisemployee.py
   - src/unified_python_sdk/models/shared/hrisgroup.py
@@ -2059,6 +2086,7 @@ generatedFiles:
   - src/unified_python_sdk/user.py
   - src/unified_python_sdk/utils/__init__.py
   - src/unified_python_sdk/utils/annotations.py
+  - src/unified_python_sdk/utils/datetimes.py
   - src/unified_python_sdk/utils/enums.py
   - src/unified_python_sdk/utils/eventstreaming.py
   - src/unified_python_sdk/utils/forms.py
@@ -6156,5 +6184,65 @@ examples:
       responses:
         "200":
           text/plain: "<value>"
+  createHrisDevice:
+    speakeasy-default-create-hris-device:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {"name": "<value>"}
+      responses:
+        "200":
+          application/json: {"name": "<value>"}
+  getHrisDevice:
+    speakeasy-default-get-hris-device:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {"name": "<value>"}
+  listHrisDevices:
+    speakeasy-default-list-hris-devices:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: [{"name": "<value>"}, {"name": "<value>"}]
+  patchHrisDevice:
+    speakeasy-default-patch-hris-device:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {"name": "<value>"}
+      responses:
+        "200":
+          application/json: {"name": "<value>"}
+  removeHrisDevice:
+    speakeasy-default-remove-hris-device:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateHrisDevice:
+    speakeasy-default-update-hris-device:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {"name": "<value>"}
+      responses:
+        "200":
+          application/json: {"name": "<value>"}
 examplesVersion: 1.0.1
 generatedTests: {}

@@ -5,7 +5,7 @@ from datetime import datetime
 import httpx
 from typing import List, Optional
 from typing_extensions import Annotated, NotRequired, TypedDict
-from unified_python_sdk.models.shared import storagefile as shared_storagefile
+from unified_python_sdk.models.shared import hrisdevice as shared_hrisdevice
 from unified_python_sdk.types import BaseModel
 from unified_python_sdk.utils import (
     FieldMetadata,
@@ -14,7 +14,7 @@ from unified_python_sdk.utils import (
 )
 
 
-class ListStorageFilesRequestTypedDict(TypedDict):
+class ListHrisDevicesRequestTypedDict(TypedDict):
     connection_id: str
     r"""ID of the connection"""
     fields: NotRequired[List[str]]
@@ -22,16 +22,15 @@ class ListStorageFilesRequestTypedDict(TypedDict):
     limit: NotRequired[float]
     offset: NotRequired[float]
     order: NotRequired[str]
-    parent_id: NotRequired[str]
     query: NotRequired[str]
     r"""Query string to search. eg. email address or name"""
     sort: NotRequired[str]
-    type: NotRequired[str]
     updated_gte: NotRequired[datetime]
     r"""Return only results whose updated date is equal or greater to this value"""
+    user_id: NotRequired[str]
 
 
-class ListStorageFilesRequest(BaseModel):
+class ListHrisDevicesRequest(BaseModel):
     connection_id: Annotated[
         str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))
     ]
@@ -58,11 +57,6 @@ class ListStorageFilesRequest(BaseModel):
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
 
-    parent_id: Annotated[
-        Optional[str],
-        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
-    ] = None
-
     query: Annotated[
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
@@ -74,30 +68,30 @@ class ListStorageFilesRequest(BaseModel):
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
 
-    type: Annotated[
-        Optional[str],
-        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
-    ] = None
-
     updated_gte: Annotated[
         Optional[datetime],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
     r"""Return only results whose updated date is equal or greater to this value"""
 
+    user_id: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
 
-class ListStorageFilesResponseTypedDict(TypedDict):
+
+class ListHrisDevicesResponseTypedDict(TypedDict):
     content_type: str
     r"""HTTP response content type for this operation"""
     status_code: int
     r"""HTTP response status code for this operation"""
     raw_response: httpx.Response
     r"""Raw HTTP response; suitable for custom response parsing"""
-    storage_files: NotRequired[List[shared_storagefile.StorageFileTypedDict]]
+    hris_devices: NotRequired[List[shared_hrisdevice.HrisDeviceTypedDict]]
     r"""Successful"""
 
 
-class ListStorageFilesResponse(BaseModel):
+class ListHrisDevicesResponse(BaseModel):
     content_type: str
     r"""HTTP response content type for this operation"""
 
@@ -107,5 +101,5 @@ class ListStorageFilesResponse(BaseModel):
     raw_response: httpx.Response
     r"""Raw HTTP response; suitable for custom response parsing"""
 
-    storage_files: Optional[List[shared_storagefile.StorageFile]] = None
+    hris_devices: Optional[List[shared_hrisdevice.HrisDevice]] = None
     r"""Successful"""

@@ -35,6 +35,7 @@ from unified_python_sdk.course import Course
 from unified_python_sdk.crm import Crm
 from unified_python_sdk.customer import Customer
 from unified_python_sdk.deal import Deal
+from unified_python_sdk.device import Device
 from unified_python_sdk.document import Document
 from unified_python_sdk.employee import Employee
 from unified_python_sdk.enrich import Enrich
@@ -147,6 +148,7 @@ class UnifiedTo(BaseSDK):
     model: Model
     prompt: Prompt
     hris: Hris
+    device: Device
     employee: Employee
     group: Group
     payslip: Payslip
@@ -327,6 +329,7 @@ class UnifiedTo(BaseSDK):
         self.model = Model(self.sdk_configuration)
         self.prompt = Prompt(self.sdk_configuration)
         self.hris = Hris(self.sdk_configuration)
+        self.device = Device(self.sdk_configuration)
         self.employee = Employee(self.sdk_configuration)
         self.group = Group(self.sdk_configuration)
         self.payslip = Payslip(self.sdk_configuration)
