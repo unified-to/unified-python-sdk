@@ -11,6 +11,10 @@ from .accountingassociatedcontact import (
     AccountingAssociatedContactTypedDict,
 )
 from .accountingattachment import AccountingAttachment, AccountingAttachmentTypedDict
+from .accountingbalancesheetitem import (
+    AccountingBalanceSheetItem,
+    AccountingBalanceSheetItemTypedDict,
+)
 from .accountingcontact import (
     AccountingContact,
     AccountingContactTypedDict,
@@ -49,6 +53,14 @@ from .accountingorganization import (
     AccountingOrganization,
     AccountingOrganizationTypedDict,
 )
+from .accountingprofitandlosscategory import (
+    AccountingProfitAndLossCategory,
+    AccountingProfitAndLossCategoryTypedDict,
+)
+from .accountingprofitandlosssubcategory import (
+    AccountingProfitAndLossSubcategory,
+    AccountingProfitAndLossSubcategoryTypedDict,
+)
 from .accountingreport import (
     AccountingReport,
     AccountingReportType,
@@ -68,6 +80,10 @@ from .accountingtransactioncontact import (
 from .accountingtransactionlineitem import (
     AccountingTransactionLineItem,
     AccountingTransactionLineItemTypedDict,
+)
+from .accountingtrialbalancesubitem import (
+    AccountingTrialBalanceSubItem,
+    AccountingTrialBalanceSubItemTypedDict,
 )
 from .apicall import APICall, APICallType, APICallTypedDict
 from .atsactivity import AtsActivity, AtsActivityType, AtsActivityTypedDict
@@ -339,6 +355,10 @@ from .paymentsubscription import (
     PaymentSubscriptionStatus,
     PaymentSubscriptionTypedDict,
 )
+from .property_accountingbalancesheetitem_sub_items import (
+    PropertyAccountingBalanceSheetItemSubItems,
+    PropertyAccountingBalanceSheetItemSubItemsTypedDict,
+)
 from .property_accountingcontact_billing_address import (
     PropertyAccountingContactBillingAddress,
     PropertyAccountingContactBillingAddressTypedDict,
@@ -358,6 +378,18 @@ from .property_accountingorder_shipping_address import (
 from .property_accountingorganization_address import (
     PropertyAccountingOrganizationAddress,
     PropertyAccountingOrganizationAddressTypedDict,
+)
+from .property_accountingreport_balance_sheet import (
+    PropertyAccountingReportBalanceSheet,
+    PropertyAccountingReportBalanceSheetTypedDict,
+)
+from .property_accountingreport_profit_and_loss import (
+    PropertyAccountingReportProfitAndLoss,
+    PropertyAccountingReportProfitAndLossTypedDict,
+)
+from .property_accountingreport_trial_balance import (
+    PropertyAccountingReportTrialBalance,
+    PropertyAccountingReportTrialBalanceTypedDict,
 )
 from .property_atsactivity_from import (
     PropertyAtsActivityFrom,
@@ -583,6 +615,8 @@ __all__ = [
     "AccountingAssociatedContactTypedDict",
     "AccountingAttachment",
     "AccountingAttachmentTypedDict",
+    "AccountingBalanceSheetItem",
+    "AccountingBalanceSheetItemTypedDict",
     "AccountingContact",
     "AccountingContactPaymentMethod",
     "AccountingContactPaymentMethodType",
@@ -607,6 +641,10 @@ __all__ = [
     "AccountingOrderTypedDict",
     "AccountingOrganization",
     "AccountingOrganizationTypedDict",
+    "AccountingProfitAndLossCategory",
+    "AccountingProfitAndLossCategoryTypedDict",
+    "AccountingProfitAndLossSubcategory",
+    "AccountingProfitAndLossSubcategoryTypedDict",
     "AccountingReport",
     "AccountingReportType",
     "AccountingReportTypedDict",
@@ -621,6 +659,8 @@ __all__ = [
     "AccountingTransactionLineItem",
     "AccountingTransactionLineItemTypedDict",
     "AccountingTransactionTypedDict",
+    "AccountingTrialBalanceSubItem",
+    "AccountingTrialBalanceSubItemTypedDict",
     "AtsActivity",
     "AtsActivityType",
     "AtsActivityTypedDict",
@@ -945,6 +985,8 @@ __all__ = [
     "PaymentSubscriptionTypedDict",
     "PaymentType",
     "Priority",
+    "PropertyAccountingBalanceSheetItemSubItems",
+    "PropertyAccountingBalanceSheetItemSubItemsTypedDict",
     "PropertyAccountingContactBillingAddress",
     "PropertyAccountingContactBillingAddressTypedDict",
     "PropertyAccountingContactShippingAddress",
@@ -955,6 +997,12 @@ __all__ = [
     "PropertyAccountingOrderShippingAddressTypedDict",
     "PropertyAccountingOrganizationAddress",
     "PropertyAccountingOrganizationAddressTypedDict",
+    "PropertyAccountingReportBalanceSheet",
+    "PropertyAccountingReportBalanceSheetTypedDict",
+    "PropertyAccountingReportProfitAndLoss",
+    "PropertyAccountingReportProfitAndLossTypedDict",
+    "PropertyAccountingReportTrialBalance",
+    "PropertyAccountingReportTrialBalanceTypedDict",
     "PropertyAtsActivityFrom",
     "PropertyAtsActivityFromType",
     "PropertyAtsActivityFromTypedDict",

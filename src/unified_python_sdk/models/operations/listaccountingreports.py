@@ -17,6 +17,7 @@ from unified_python_sdk.utils import (
 class ListAccountingReportsRequestTypedDict(TypedDict):
     connection_id: str
     r"""ID of the connection"""
+    end_le: NotRequired[str]
     fields: NotRequired[List[str]]
     r"""Comma-delimited fields to return"""
     limit: NotRequired[float]
@@ -25,6 +26,7 @@ class ListAccountingReportsRequestTypedDict(TypedDict):
     query: NotRequired[str]
     r"""Query string to search. eg. email address or name"""
     sort: NotRequired[str]
+    start_gte: NotRequired[str]
     type: NotRequired[str]
     updated_gte: NotRequired[datetime]
     r"""Return only results whose updated date is equal or greater to this value"""
@@ -35,6 +37,11 @@ class ListAccountingReportsRequest(BaseModel):
         str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))
     ]
     r"""ID of the connection"""
+
+    end_le: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
 
     fields: Annotated[
         Optional[List[str]],
@@ -64,6 +71,11 @@ class ListAccountingReportsRequest(BaseModel):
     r"""Query string to search. eg. email address or name"""
 
     sort: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+
+    start_gte: Annotated[
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None

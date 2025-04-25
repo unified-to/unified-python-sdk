@@ -1,0 +1,10 @@
+# PropertyAccountingReportTrialBalance
+
+
+## Fields
+
+| Field                                                                                              | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `sub_items`                                                                                        | List[[shared.AccountingTrialBalanceSubItem](../../models/shared/accountingtrialbalancesubitem.md)] | :heavy_minus_sign:                                                                                 | N/A                                                                                                |
+| `total_credit_amount`                                                                              | *Optional[float]*                                                                                  | :heavy_minus_sign:                                                                                 | N/A                                                                                                |
+| `total_debit_amount`                                                                               | *Optional[float]*                                                                                  | :heavy_minus_sign:                                                                                 | N/A                                                                                                |

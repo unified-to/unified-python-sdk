@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: 8813ee1f8602d4e03a2488861b978482
+  docChecksum: 3cc7cb33432bf3a1c948159a8589fc49
   docVersion: "1.0"
-  speakeasyVersion: 1.538.0
+  speakeasyVersion: 1.539.2
   generationVersion: 2.591.1
-  releaseVersion: 0.42.0
-  configChecksum: bbba4b761d0a10334521de43b102250f
+  releaseVersion: 0.42.1
+  configChecksum: ad303fd24f385502a8d1d25e3c53423d
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -878,6 +878,7 @@ generatedFiles:
   - docs/models/shared/accountingaccount.md
   - docs/models/shared/accountingassociatedcontact.md
   - docs/models/shared/accountingattachment.md
+  - docs/models/shared/accountingbalancesheetitem.md
   - docs/models/shared/accountingcontact.md
   - docs/models/shared/accountingcontactpaymentmethod.md
   - docs/models/shared/accountingcontactpaymentmethodtype.md
@@ -893,6 +894,8 @@ generatedFiles:
   - docs/models/shared/accountingorderstatus.md
   - docs/models/shared/accountingordertype.md
   - docs/models/shared/accountingorganization.md
+  - docs/models/shared/accountingprofitandlosscategory.md
+  - docs/models/shared/accountingprofitandlosssubcategory.md
   - docs/models/shared/accountingreport.md
   - docs/models/shared/accountingreporttype.md
   - docs/models/shared/accountingtaxrate.md
@@ -901,6 +904,7 @@ generatedFiles:
   - docs/models/shared/accountingtransaction.md
   - docs/models/shared/accountingtransactioncontact.md
   - docs/models/shared/accountingtransactionlineitem.md
+  - docs/models/shared/accountingtrialbalancesubitem.md
   - docs/models/shared/apicall.md
   - docs/models/shared/apicalltype.md
   - docs/models/shared/atsactivity.md
@@ -1119,11 +1123,15 @@ generatedFiles:
   - docs/models/shared/paymentsubscriptionstatus.md
   - docs/models/shared/paymenttype.md
   - docs/models/shared/priority.md
+  - docs/models/shared/propertyaccountingbalancesheetitemsubitems.md
   - docs/models/shared/propertyaccountingcontactbillingaddress.md
   - docs/models/shared/propertyaccountingcontactshippingaddress.md
   - docs/models/shared/propertyaccountingorderbillingaddress.md
   - docs/models/shared/propertyaccountingordershippingaddress.md
   - docs/models/shared/propertyaccountingorganizationaddress.md
+  - docs/models/shared/propertyaccountingreportbalancesheet.md
+  - docs/models/shared/propertyaccountingreportprofitandloss.md
+  - docs/models/shared/propertyaccountingreporttrialbalance.md
   - docs/models/shared/propertyatsactivityfrom.md
   - docs/models/shared/propertyatsactivityfromtype.md
   - docs/models/shared/propertyatscandidateaddress.md
@@ -1846,6 +1854,7 @@ generatedFiles:
   - src/unified_python_sdk/models/shared/accountingaccount.py
   - src/unified_python_sdk/models/shared/accountingassociatedcontact.py
   - src/unified_python_sdk/models/shared/accountingattachment.py
+  - src/unified_python_sdk/models/shared/accountingbalancesheetitem.py
   - src/unified_python_sdk/models/shared/accountingcontact.py
   - src/unified_python_sdk/models/shared/accountingcontactpaymentmethod.py
   - src/unified_python_sdk/models/shared/accountingemail.py
@@ -1855,12 +1864,15 @@ generatedFiles:
   - src/unified_python_sdk/models/shared/accountinglineitem.py
   - src/unified_python_sdk/models/shared/accountingorder.py
   - src/unified_python_sdk/models/shared/accountingorganization.py
+  - src/unified_python_sdk/models/shared/accountingprofitandlosscategory.py
+  - src/unified_python_sdk/models/shared/accountingprofitandlosssubcategory.py
   - src/unified_python_sdk/models/shared/accountingreport.py
   - src/unified_python_sdk/models/shared/accountingtaxrate.py
   - src/unified_python_sdk/models/shared/accountingtelephone.py
   - src/unified_python_sdk/models/shared/accountingtransaction.py
   - src/unified_python_sdk/models/shared/accountingtransactioncontact.py
   - src/unified_python_sdk/models/shared/accountingtransactionlineitem.py
+  - src/unified_python_sdk/models/shared/accountingtrialbalancesubitem.py
   - src/unified_python_sdk/models/shared/apicall.py
   - src/unified_python_sdk/models/shared/atsactivity.py
   - src/unified_python_sdk/models/shared/atsaddress.py
@@ -1963,11 +1975,15 @@ generatedFiles:
   - src/unified_python_sdk/models/shared/paymentpayout.py
   - src/unified_python_sdk/models/shared/paymentrefund.py
   - src/unified_python_sdk/models/shared/paymentsubscription.py
+  - src/unified_python_sdk/models/shared/property_accountingbalancesheetitem_sub_items.py
   - src/unified_python_sdk/models/shared/property_accountingcontact_billing_address.py
   - src/unified_python_sdk/models/shared/property_accountingcontact_shipping_address.py
   - src/unified_python_sdk/models/shared/property_accountingorder_billing_address.py
   - src/unified_python_sdk/models/shared/property_accountingorder_shipping_address.py
   - src/unified_python_sdk/models/shared/property_accountingorganization_address.py
+  - src/unified_python_sdk/models/shared/property_accountingreport_balance_sheet.py
+  - src/unified_python_sdk/models/shared/property_accountingreport_profit_and_loss.py
+  - src/unified_python_sdk/models/shared/property_accountingreport_trial_balance.py
   - src/unified_python_sdk/models/shared/property_atsactivity_from.py
   - src/unified_python_sdk/models/shared/property_atscandidate_address.py
   - src/unified_python_sdk/models/shared/property_atscompany_address.py
