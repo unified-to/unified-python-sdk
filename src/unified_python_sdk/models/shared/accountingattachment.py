@@ -7,17 +7,17 @@ from unified_python_sdk.types import BaseModel
 
 
 class AccountingAttachmentTypedDict(TypedDict):
-    download_url: str
-    id: str
-    name: str
+    download_url: NotRequired[str]
+    id: NotRequired[str]
     mime_type: NotRequired[str]
+    name: NotRequired[str]
 
 
 class AccountingAttachment(BaseModel):
-    download_url: str
+    download_url: Optional[str] = None
 
-    id: str
-
-    name: str
+    id: Optional[str] = None
 
     mime_type: Optional[str] = None
+
+    name: Optional[str] = None

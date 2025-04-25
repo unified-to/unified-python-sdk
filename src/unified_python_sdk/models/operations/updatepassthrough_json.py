@@ -5,7 +5,12 @@ import httpx
 from typing import Any, Dict, List, Optional
 from typing_extensions import Annotated, NotRequired, TypedDict
 from unified_python_sdk.types import BaseModel
-from unified_python_sdk.utils import FieldMetadata, PathParamMetadata, RequestMetadata
+from unified_python_sdk.utils import (
+    FieldMetadata,
+    PathParamMetadata,
+    QueryParamMetadata,
+    RequestMetadata,
+)
 
 
 class UpdatePassthroughJSONRequestTypedDict(TypedDict):
@@ -14,6 +19,7 @@ class UpdatePassthroughJSONRequestTypedDict(TypedDict):
     path: str
     request_body: NotRequired[Any]
     r"""integration-specific payload"""
+    query: NotRequired[Dict[str, Any]]
 
 
 class UpdatePassthroughJSONRequest(BaseModel):
@@ -31,6 +37,11 @@ class UpdatePassthroughJSONRequest(BaseModel):
         FieldMetadata(request=RequestMetadata(media_type="application/json")),
     ] = None
     r"""integration-specific payload"""
+
+    query: Annotated[
+        Optional[Dict[str, Any]],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
 
 
 class UpdatePassthroughJSONResponseTypedDict(TypedDict):

@@ -6,7 +6,12 @@ import io
 from typing import Any, Dict, IO, List, Optional, Union
 from typing_extensions import Annotated, NotRequired, TypedDict
 from unified_python_sdk.types import BaseModel
-from unified_python_sdk.utils import FieldMetadata, PathParamMetadata, RequestMetadata
+from unified_python_sdk.utils import (
+    FieldMetadata,
+    PathParamMetadata,
+    QueryParamMetadata,
+    RequestMetadata,
+)
 
 
 class PatchPassthroughRawRequestTypedDict(TypedDict):
@@ -15,6 +20,7 @@ class PatchPassthroughRawRequestTypedDict(TypedDict):
     path: str
     request_body: NotRequired[Union[bytes, IO[bytes], io.BufferedReader]]
     r"""integration-specific payload"""
+    query: NotRequired[Dict[str, Any]]
 
 
 class PatchPassthroughRawRequest(BaseModel):
@@ -32,6 +38,11 @@ class PatchPassthroughRawRequest(BaseModel):
         FieldMetadata(request=RequestMetadata(media_type="text/plain")),
     ] = None
     r"""integration-specific payload"""
+
+    query: Annotated[
+        Optional[Dict[str, Any]],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
 
 
 class PatchPassthroughRawResponseTypedDict(TypedDict):

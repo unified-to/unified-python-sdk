@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: 3cc7cb33432bf3a1c948159a8589fc49
+  docChecksum: e9a3306b0ccb37711f56506365d94c94
   docVersion: "1.0"
   speakeasyVersion: 1.539.2
   generationVersion: 2.591.1
-  releaseVersion: 0.42.1
-  configChecksum: ad303fd24f385502a8d1d25e3c53423d
+  releaseVersion: 0.42.2
+  configChecksum: d07062d5582f16f01d74917978fa4943
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -5129,6 +5129,7 @@ examples:
         path:
           connection_id: "<id>"
           path: "/opt/lib"
+        query: {}
       responses:
         default:
           application/json: "<value>"
@@ -5141,6 +5142,7 @@ examples:
         path:
           connection_id: "<id>"
           path: "/etc/namedb"
+        query: {}
       responses:
         default:
           application/json: "<value>"
@@ -5154,6 +5156,7 @@ examples:
         path:
           connection_id: "<id>"
           path: "/selinux"
+        query: {}
       responses:
         default:
           application/json: "<value>"
@@ -5167,6 +5170,7 @@ examples:
         path:
           connection_id: "<id>"
           path: "/home/user"
+        query: {}
       responses:
         default:
           application/json: "<value>"
@@ -5179,6 +5183,7 @@ examples:
         path:
           connection_id: "<id>"
           path: "/etc/mail"
+        query: {}
       responses:
         default:
           application/json: "<value>"
@@ -5192,6 +5197,7 @@ examples:
         path:
           connection_id: "<id>"
           path: "/Applications"
+        query: {}
       responses:
         default:
           application/json: "<value>"
@@ -5205,6 +5211,7 @@ examples:
         path:
           connection_id: "<id>"
           path: "/etc/namedb"
+        query: {}
       responses:
         default:
           application/json: "<value>"
@@ -5217,6 +5224,7 @@ examples:
         path:
           connection_id: "<id>"
           path: "/System"
+        query: {}
       responses:
         default:
           application/json: "<value>"

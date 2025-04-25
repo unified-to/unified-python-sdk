@@ -5,13 +5,18 @@ import httpx
 from typing import Any, Dict, List, Optional
 from typing_extensions import Annotated, NotRequired, TypedDict
 from unified_python_sdk.types import BaseModel
-from unified_python_sdk.utils import FieldMetadata, PathParamMetadata
+from unified_python_sdk.utils import (
+    FieldMetadata,
+    PathParamMetadata,
+    QueryParamMetadata,
+)
 
 
 class ListPassthroughsRequestTypedDict(TypedDict):
     connection_id: str
     r"""ID of the connection"""
     path: str
+    query: NotRequired[Dict[str, Any]]
 
 
 class ListPassthroughsRequest(BaseModel):
@@ -23,6 +28,11 @@ class ListPassthroughsRequest(BaseModel):
     path: Annotated[
         str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))
     ]
+
+    query: Annotated[
+        Optional[Dict[str, Any]],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
 
 
 class ListPassthroughsResponseTypedDict(TypedDict):
