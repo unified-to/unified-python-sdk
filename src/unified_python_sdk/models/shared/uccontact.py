@@ -19,7 +19,6 @@ class UcContactTypedDict(TypedDict):
     id: NotRequired[str]
     name: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
-    r"""The raw data returned by the integration for this contact"""
     telephones: NotRequired[List[UcTelephoneTypedDict]]
     r"""An array of telephones for this contact"""
     title: NotRequired[str]
@@ -41,7 +40,6 @@ class UcContact(BaseModel):
     name: Optional[str] = None
 
     raw: Optional[Dict[str, Any]] = None
-    r"""The raw data returned by the integration for this contact"""
 
     telephones: Optional[List[UcTelephone]] = None
     r"""An array of telephones for this contact"""

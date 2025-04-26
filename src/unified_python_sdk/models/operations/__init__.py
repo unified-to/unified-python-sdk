@@ -378,11 +378,23 @@ from .createticketingticket import (
     CreateTicketingTicketResponse,
     CreateTicketingTicketResponseTypedDict,
 )
+from .createuccomment import (
+    CreateUcCommentRequest,
+    CreateUcCommentRequestTypedDict,
+    CreateUcCommentResponse,
+    CreateUcCommentResponseTypedDict,
+)
 from .createuccontact import (
     CreateUcContactRequest,
     CreateUcContactRequestTypedDict,
     CreateUcContactResponse,
     CreateUcContactResponseTypedDict,
+)
+from .createucrecording import (
+    CreateUcRecordingRequest,
+    CreateUcRecordingRequestTypedDict,
+    CreateUcRecordingResponse,
+    CreateUcRecordingResponseTypedDict,
 )
 from .createunifiedconnection import (
     CreateUnifiedConnectionResponse,
@@ -808,11 +820,23 @@ from .getticketingticket import (
     GetTicketingTicketResponse,
     GetTicketingTicketResponseTypedDict,
 )
+from .getuccomment import (
+    GetUcCommentRequest,
+    GetUcCommentRequestTypedDict,
+    GetUcCommentResponse,
+    GetUcCommentResponseTypedDict,
+)
 from .getuccontact import (
     GetUcContactRequest,
     GetUcContactRequestTypedDict,
     GetUcContactResponse,
     GetUcContactResponseTypedDict,
+)
+from .getucrecording import (
+    GetUcRecordingRequest,
+    GetUcRecordingRequestTypedDict,
+    GetUcRecordingResponse,
+    GetUcRecordingResponseTypedDict,
 )
 from .getunifiedapicall import (
     GetUnifiedApicallRequest,
@@ -1300,11 +1324,23 @@ from .listuccalls import (
     ListUcCallsResponse,
     ListUcCallsResponseTypedDict,
 )
+from .listuccomments import (
+    ListUcCommentsRequest,
+    ListUcCommentsRequestTypedDict,
+    ListUcCommentsResponse,
+    ListUcCommentsResponseTypedDict,
+)
 from .listuccontacts import (
     ListUcContactsRequest,
     ListUcContactsRequestTypedDict,
     ListUcContactsResponse,
     ListUcContactsResponseTypedDict,
+)
+from .listucrecordings import (
+    ListUcRecordingsRequest,
+    ListUcRecordingsRequestTypedDict,
+    ListUcRecordingsResponse,
+    ListUcRecordingsResponseTypedDict,
 )
 from .listunifiedapicalls import (
     ListUnifiedApicallsRequest,
@@ -1717,11 +1753,23 @@ from .patchticketingticket import (
     PatchTicketingTicketResponse,
     PatchTicketingTicketResponseTypedDict,
 )
+from .patchuccomment import (
+    PatchUcCommentRequest,
+    PatchUcCommentRequestTypedDict,
+    PatchUcCommentResponse,
+    PatchUcCommentResponseTypedDict,
+)
 from .patchuccontact import (
     PatchUcContactRequest,
     PatchUcContactRequestTypedDict,
     PatchUcContactResponse,
     PatchUcContactResponseTypedDict,
+)
+from .patchucrecording import (
+    PatchUcRecordingRequest,
+    PatchUcRecordingRequestTypedDict,
+    PatchUcRecordingResponse,
+    PatchUcRecordingResponseTypedDict,
 )
 from .patchunifiedconnection import (
     PatchUnifiedConnectionRequest,
@@ -2107,11 +2155,23 @@ from .removeticketingticket import (
     RemoveTicketingTicketResponse,
     RemoveTicketingTicketResponseTypedDict,
 )
+from .removeuccomment import (
+    RemoveUcCommentRequest,
+    RemoveUcCommentRequestTypedDict,
+    RemoveUcCommentResponse,
+    RemoveUcCommentResponseTypedDict,
+)
 from .removeuccontact import (
     RemoveUcContactRequest,
     RemoveUcContactRequestTypedDict,
     RemoveUcContactResponse,
     RemoveUcContactResponseTypedDict,
+)
+from .removeucrecording import (
+    RemoveUcRecordingRequest,
+    RemoveUcRecordingRequestTypedDict,
+    RemoveUcRecordingResponse,
+    RemoveUcRecordingResponseTypedDict,
 )
 from .removeunifiedconnection import (
     RemoveUnifiedConnectionRequest,
@@ -2497,11 +2557,23 @@ from .updateticketingticket import (
     UpdateTicketingTicketResponse,
     UpdateTicketingTicketResponseTypedDict,
 )
+from .updateuccomment import (
+    UpdateUcCommentRequest,
+    UpdateUcCommentRequestTypedDict,
+    UpdateUcCommentResponse,
+    UpdateUcCommentResponseTypedDict,
+)
 from .updateuccontact import (
     UpdateUcContactRequest,
     UpdateUcContactRequestTypedDict,
     UpdateUcContactResponse,
     UpdateUcContactResponseTypedDict,
+)
+from .updateucrecording import (
+    UpdateUcRecordingRequest,
+    UpdateUcRecordingRequestTypedDict,
+    UpdateUcRecordingResponse,
+    UpdateUcRecordingResponseTypedDict,
 )
 from .updateunifiedconnection import (
     UpdateUnifiedConnectionRequest,
@@ -2777,10 +2849,18 @@ __all__ = [
     "CreateTicketingTicketRequestTypedDict",
     "CreateTicketingTicketResponse",
     "CreateTicketingTicketResponseTypedDict",
+    "CreateUcCommentRequest",
+    "CreateUcCommentRequestTypedDict",
+    "CreateUcCommentResponse",
+    "CreateUcCommentResponseTypedDict",
     "CreateUcContactRequest",
     "CreateUcContactRequestTypedDict",
     "CreateUcContactResponse",
     "CreateUcContactResponseTypedDict",
+    "CreateUcRecordingRequest",
+    "CreateUcRecordingRequestTypedDict",
+    "CreateUcRecordingResponse",
+    "CreateUcRecordingResponseTypedDict",
     "CreateUnifiedConnectionResponse",
     "CreateUnifiedConnectionResponseTypedDict",
     "CreateUnifiedWebhookRequest",
@@ -3063,10 +3143,18 @@ __all__ = [
     "GetTicketingTicketRequestTypedDict",
     "GetTicketingTicketResponse",
     "GetTicketingTicketResponseTypedDict",
+    "GetUcCommentRequest",
+    "GetUcCommentRequestTypedDict",
+    "GetUcCommentResponse",
+    "GetUcCommentResponseTypedDict",
     "GetUcContactRequest",
     "GetUcContactRequestTypedDict",
     "GetUcContactResponse",
     "GetUcContactResponseTypedDict",
+    "GetUcRecordingRequest",
+    "GetUcRecordingRequestTypedDict",
+    "GetUcRecordingResponse",
+    "GetUcRecordingResponseTypedDict",
     "GetUnifiedApicallRequest",
     "GetUnifiedApicallRequestTypedDict",
     "GetUnifiedApicallResponse",
@@ -3391,10 +3479,18 @@ __all__ = [
     "ListUcCallsRequestTypedDict",
     "ListUcCallsResponse",
     "ListUcCallsResponseTypedDict",
+    "ListUcCommentsRequest",
+    "ListUcCommentsRequestTypedDict",
+    "ListUcCommentsResponse",
+    "ListUcCommentsResponseTypedDict",
     "ListUcContactsRequest",
     "ListUcContactsRequestTypedDict",
     "ListUcContactsResponse",
     "ListUcContactsResponseTypedDict",
+    "ListUcRecordingsRequest",
+    "ListUcRecordingsRequestTypedDict",
+    "ListUcRecordingsResponse",
+    "ListUcRecordingsResponseTypedDict",
     "ListUnifiedApicallsRequest",
     "ListUnifiedApicallsRequestTypedDict",
     "ListUnifiedApicallsResponse",
@@ -3668,10 +3764,18 @@ __all__ = [
     "PatchTicketingTicketRequestTypedDict",
     "PatchTicketingTicketResponse",
     "PatchTicketingTicketResponseTypedDict",
+    "PatchUcCommentRequest",
+    "PatchUcCommentRequestTypedDict",
+    "PatchUcCommentResponse",
+    "PatchUcCommentResponseTypedDict",
     "PatchUcContactRequest",
     "PatchUcContactRequestTypedDict",
     "PatchUcContactResponse",
     "PatchUcContactResponseTypedDict",
+    "PatchUcRecordingRequest",
+    "PatchUcRecordingRequestTypedDict",
+    "PatchUcRecordingResponse",
+    "PatchUcRecordingResponseTypedDict",
     "PatchUnifiedConnectionRequest",
     "PatchUnifiedConnectionRequestTypedDict",
     "PatchUnifiedConnectionResponse",
@@ -3929,10 +4033,18 @@ __all__ = [
     "RemoveTicketingTicketRequestTypedDict",
     "RemoveTicketingTicketResponse",
     "RemoveTicketingTicketResponseTypedDict",
+    "RemoveUcCommentRequest",
+    "RemoveUcCommentRequestTypedDict",
+    "RemoveUcCommentResponse",
+    "RemoveUcCommentResponseTypedDict",
     "RemoveUcContactRequest",
     "RemoveUcContactRequestTypedDict",
     "RemoveUcContactResponse",
     "RemoveUcContactResponseTypedDict",
+    "RemoveUcRecordingRequest",
+    "RemoveUcRecordingRequestTypedDict",
+    "RemoveUcRecordingResponse",
+    "RemoveUcRecordingResponseTypedDict",
     "RemoveUnifiedConnectionRequest",
     "RemoveUnifiedConnectionRequestTypedDict",
     "RemoveUnifiedConnectionResponse",
@@ -4189,10 +4301,18 @@ __all__ = [
     "UpdateTicketingTicketRequestTypedDict",
     "UpdateTicketingTicketResponse",
     "UpdateTicketingTicketResponseTypedDict",
+    "UpdateUcCommentRequest",
+    "UpdateUcCommentRequestTypedDict",
+    "UpdateUcCommentResponse",
+    "UpdateUcCommentResponseTypedDict",
     "UpdateUcContactRequest",
     "UpdateUcContactRequestTypedDict",
     "UpdateUcContactResponse",
     "UpdateUcContactResponseTypedDict",
+    "UpdateUcRecordingRequest",
+    "UpdateUcRecordingRequestTypedDict",
+    "UpdateUcRecordingResponse",
+    "UpdateUcRecordingResponseTypedDict",
     "UpdateUnifiedConnectionRequest",
     "UpdateUnifiedConnectionRequestTypedDict",
     "UpdateUnifiedConnectionResponse",

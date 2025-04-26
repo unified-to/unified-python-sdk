@@ -7,16 +7,22 @@
 
 * [create_kms_comment](#create_kms_comment) - Create a comment
 * [create_task_comment](#create_task_comment) - Create a comment
+* [create_uc_comment](#create_uc_comment) - Create a comment
 * [get_kms_comment](#get_kms_comment) - Retrieve a comment
 * [get_task_comment](#get_task_comment) - Retrieve a comment
+* [get_uc_comment](#get_uc_comment) - Retrieve a comment
 * [list_kms_comments](#list_kms_comments) - List all comments
 * [list_task_comments](#list_task_comments) - List all comments
+* [list_uc_comments](#list_uc_comments) - List all comments
 * [patch_kms_comment](#patch_kms_comment) - Update a comment
 * [patch_task_comment](#patch_task_comment) - Update a comment
+* [patch_uc_comment](#patch_uc_comment) - Update a comment
 * [remove_kms_comment](#remove_kms_comment) - Remove a comment
 * [remove_task_comment](#remove_task_comment) - Remove a comment
+* [remove_uc_comment](#remove_uc_comment) - Remove a comment
 * [update_kms_comment](#update_kms_comment) - Update a comment
 * [update_task_comment](#update_task_comment) - Update a comment
+* [update_uc_comment](#update_uc_comment) - Update a comment
 
 ## create_kms_comment
 
@@ -108,6 +114,54 @@ with UnifiedTo(
 ### Response
 
 **[operations.CreateTaskCommentResponse](../../models/operations/createtaskcommentresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## create_uc_comment
+
+Create a comment
+
+### Example Usage
+
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.comment.create_uc_comment(request={
+        "uc_comment": {
+            "content": "<value>",
+        },
+        "connection_id": "<id>",
+    })
+
+    assert res.uc_comment is not None
+
+    # Handle response
+    print(res.uc_comment)
+
+```
+
+### Parameters
+
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `request`                                                                              | [operations.CreateUcCommentRequest](../../models/operations/createuccommentrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `retries`                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                       | :heavy_minus_sign:                                                                     | Configuration to override the default retry behavior of the client.                    |
+
+### Response
+
+**[operations.CreateUcCommentResponse](../../models/operations/createuccommentresponse.md)**
 
 ### Errors
 
@@ -207,6 +261,52 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## get_uc_comment
+
+Retrieve a comment
+
+### Example Usage
+
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.comment.get_uc_comment(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.uc_comment is not None
+
+    # Handle response
+    print(res.uc_comment)
+
+```
+
+### Parameters
+
+| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `request`                                                                        | [operations.GetUcCommentRequest](../../models/operations/getuccommentrequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
+| `retries`                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                 | :heavy_minus_sign:                                                               | Configuration to override the default retry behavior of the client.              |
+
+### Response
+
+**[operations.GetUcCommentResponse](../../models/operations/getuccommentresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## list_kms_comments
 
 List all comments
@@ -290,6 +390,51 @@ with UnifiedTo(
 ### Response
 
 **[operations.ListTaskCommentsResponse](../../models/operations/listtaskcommentsresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## list_uc_comments
+
+List all comments
+
+### Example Usage
+
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.comment.list_uc_comments(request={
+        "connection_id": "<id>",
+    })
+
+    assert res.uc_comments is not None
+
+    # Handle response
+    print(res.uc_comments)
+
+```
+
+### Parameters
+
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [operations.ListUcCommentsRequest](../../models/operations/listuccommentsrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `retries`                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                     | :heavy_minus_sign:                                                                   | Configuration to override the default retry behavior of the client.                  |
+
+### Response
+
+**[operations.ListUcCommentsResponse](../../models/operations/listuccommentsresponse.md)**
 
 ### Errors
 
@@ -396,6 +541,55 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## patch_uc_comment
+
+Update a comment
+
+### Example Usage
+
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.comment.patch_uc_comment(request={
+        "uc_comment": {
+            "content": "<value>",
+        },
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.uc_comment is not None
+
+    # Handle response
+    print(res.uc_comment)
+
+```
+
+### Parameters
+
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [operations.PatchUcCommentRequest](../../models/operations/patchuccommentrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `retries`                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                     | :heavy_minus_sign:                                                                   | Configuration to override the default retry behavior of the client.                  |
+
+### Response
+
+**[operations.PatchUcCommentResponse](../../models/operations/patchuccommentresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## remove_kms_comment
 
 Remove a comment
@@ -481,6 +675,52 @@ with UnifiedTo(
 ### Response
 
 **[operations.RemoveTaskCommentResponse](../../models/operations/removetaskcommentresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## remove_uc_comment
+
+Remove a comment
+
+### Example Usage
+
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.comment.remove_uc_comment(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res is not None
+
+    # Handle response
+    print(res)
+
+```
+
+### Parameters
+
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `request`                                                                              | [operations.RemoveUcCommentRequest](../../models/operations/removeuccommentrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `retries`                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                       | :heavy_minus_sign:                                                                     | Configuration to override the default retry behavior of the client.                    |
+
+### Response
+
+**[operations.RemoveUcCommentResponse](../../models/operations/removeuccommentresponse.md)**
 
 ### Errors
 
@@ -580,6 +820,55 @@ with UnifiedTo(
 ### Response
 
 **[operations.UpdateTaskCommentResponse](../../models/operations/updatetaskcommentresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## update_uc_comment
+
+Update a comment
+
+### Example Usage
+
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.comment.update_uc_comment(request={
+        "uc_comment": {
+            "content": "<value>",
+        },
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.uc_comment is not None
+
+    # Handle response
+    print(res.uc_comment)
+
+```
+
+### Parameters
+
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `request`                                                                              | [operations.UpdateUcCommentRequest](../../models/operations/updateuccommentrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `retries`                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                       | :heavy_minus_sign:                                                                     | Configuration to override the default retry behavior of the client.                    |
+
+### Response
+
+**[operations.UpdateUcCommentResponse](../../models/operations/updateuccommentresponse.md)**
 
 ### Errors
 

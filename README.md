@@ -376,16 +376,22 @@ asyncio.run(main())
 
 * [create_kms_comment](docs/sdks/comment/README.md#create_kms_comment) - Create a comment
 * [create_task_comment](docs/sdks/comment/README.md#create_task_comment) - Create a comment
+* [create_uc_comment](docs/sdks/comment/README.md#create_uc_comment) - Create a comment
 * [get_kms_comment](docs/sdks/comment/README.md#get_kms_comment) - Retrieve a comment
 * [get_task_comment](docs/sdks/comment/README.md#get_task_comment) - Retrieve a comment
+* [get_uc_comment](docs/sdks/comment/README.md#get_uc_comment) - Retrieve a comment
 * [list_kms_comments](docs/sdks/comment/README.md#list_kms_comments) - List all comments
 * [list_task_comments](docs/sdks/comment/README.md#list_task_comments) - List all comments
+* [list_uc_comments](docs/sdks/comment/README.md#list_uc_comments) - List all comments
 * [patch_kms_comment](docs/sdks/comment/README.md#patch_kms_comment) - Update a comment
 * [patch_task_comment](docs/sdks/comment/README.md#patch_task_comment) - Update a comment
+* [patch_uc_comment](docs/sdks/comment/README.md#patch_uc_comment) - Update a comment
 * [remove_kms_comment](docs/sdks/comment/README.md#remove_kms_comment) - Remove a comment
 * [remove_task_comment](docs/sdks/comment/README.md#remove_task_comment) - Remove a comment
+* [remove_uc_comment](docs/sdks/comment/README.md#remove_uc_comment) - Remove a comment
 * [update_kms_comment](docs/sdks/comment/README.md#update_kms_comment) - Update a comment
 * [update_task_comment](docs/sdks/comment/README.md#update_task_comment) - Update a comment
+* [update_uc_comment](docs/sdks/comment/README.md#update_uc_comment) - Update a comment
 
 ### [commerce](docs/sdks/commerce/README.md)
 
@@ -1001,8 +1007,14 @@ asyncio.run(main())
 
 ### [recording](docs/sdks/recording/README.md)
 
+* [create_uc_recording](docs/sdks/recording/README.md#create_uc_recording) - Create a recording
 * [get_calendar_recording](docs/sdks/recording/README.md#get_calendar_recording) - Retrieve a recording
+* [get_uc_recording](docs/sdks/recording/README.md#get_uc_recording) - Retrieve a recording
 * [list_calendar_recordings](docs/sdks/recording/README.md#list_calendar_recordings) - List all recordings
+* [list_uc_recordings](docs/sdks/recording/README.md#list_uc_recordings) - List all recordings
+* [patch_uc_recording](docs/sdks/recording/README.md#patch_uc_recording) - Update a recording
+* [remove_uc_recording](docs/sdks/recording/README.md#remove_uc_recording) - Remove a recording
+* [update_uc_recording](docs/sdks/recording/README.md#update_uc_recording) - Update a recording
 
 ### [refund](docs/sdks/refund/README.md)
 
@@ -1192,13 +1204,25 @@ asyncio.run(main())
 
 ### [uc](docs/sdks/uc/README.md)
 
+* [create_uc_comment](docs/sdks/uc/README.md#create_uc_comment) - Create a comment
 * [create_uc_contact](docs/sdks/uc/README.md#create_uc_contact) - Create a contact
+* [create_uc_recording](docs/sdks/uc/README.md#create_uc_recording) - Create a recording
+* [get_uc_comment](docs/sdks/uc/README.md#get_uc_comment) - Retrieve a comment
 * [get_uc_contact](docs/sdks/uc/README.md#get_uc_contact) - Retrieve a contact
+* [get_uc_recording](docs/sdks/uc/README.md#get_uc_recording) - Retrieve a recording
 * [list_uc_calls](docs/sdks/uc/README.md#list_uc_calls) - List all calls
+* [list_uc_comments](docs/sdks/uc/README.md#list_uc_comments) - List all comments
 * [list_uc_contacts](docs/sdks/uc/README.md#list_uc_contacts) - List all contacts
+* [list_uc_recordings](docs/sdks/uc/README.md#list_uc_recordings) - List all recordings
+* [patch_uc_comment](docs/sdks/uc/README.md#patch_uc_comment) - Update a comment
 * [patch_uc_contact](docs/sdks/uc/README.md#patch_uc_contact) - Update a contact
+* [patch_uc_recording](docs/sdks/uc/README.md#patch_uc_recording) - Update a recording
+* [remove_uc_comment](docs/sdks/uc/README.md#remove_uc_comment) - Remove a comment
 * [remove_uc_contact](docs/sdks/uc/README.md#remove_uc_contact) - Remove a contact
+* [remove_uc_recording](docs/sdks/uc/README.md#remove_uc_recording) - Remove a recording
+* [update_uc_comment](docs/sdks/uc/README.md#update_uc_comment) - Update a comment
 * [update_uc_contact](docs/sdks/uc/README.md#update_uc_contact) - Update a contact
+* [update_uc_recording](docs/sdks/uc/README.md#update_uc_recording) - Update a recording
 
 ### [unified](docs/sdks/unified/README.md)
 

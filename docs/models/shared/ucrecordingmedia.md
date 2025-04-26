@@ -1,0 +1,13 @@
+# UcRecordingMedia
+
+
+## Fields
+
+| Field                                                                              | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `end_at`                                                                           | [date](https://docs.python.org/3/library/datetime.html#date-objects)               | :heavy_minus_sign:                                                                 | N/A                                                                                |
+| `language`                                                                         | *Optional[str]*                                                                    | :heavy_minus_sign:                                                                 | N/A                                                                                |
+| `recording_download_url`                                                           | *Optional[str]*                                                                    | :heavy_minus_sign:                                                                 | N/A                                                                                |
+| `start_at`                                                                         | [date](https://docs.python.org/3/library/datetime.html#date-objects)               | :heavy_minus_sign:                                                                 | N/A                                                                                |
+| `transcript_download_url`                                                          | *Optional[str]*                                                                    | :heavy_minus_sign:                                                                 | N/A                                                                                |
+| `transcripts`                                                                      | List[[shared.UcRecordingTranscript](../../models/shared/ucrecordingtranscript.md)] | :heavy_minus_sign:                                                                 | N/A                                                                                |

@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: e9a3306b0ccb37711f56506365d94c94
+  docChecksum: e254ae145e90e83e726dc49d774763d7
   docVersion: "1.0"
-  speakeasyVersion: 1.539.2
-  generationVersion: 2.591.1
-  releaseVersion: 0.42.2
-  configChecksum: d07062d5582f16f01d74917978fa4943
+  speakeasyVersion: 1.540.0
+  generationVersion: 2.593.3
+  releaseVersion: 0.42.3
+  configChecksum: 09d9abdb76d10c426c47390d8bb35cb3
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -160,8 +160,12 @@ generatedFiles:
   - docs/models/operations/createticketingnoteresponse.md
   - docs/models/operations/createticketingticketrequest.md
   - docs/models/operations/createticketingticketresponse.md
+  - docs/models/operations/createuccommentrequest.md
+  - docs/models/operations/createuccommentresponse.md
   - docs/models/operations/createuccontactrequest.md
   - docs/models/operations/createuccontactresponse.md
+  - docs/models/operations/createucrecordingrequest.md
+  - docs/models/operations/createucrecordingresponse.md
   - docs/models/operations/createunifiedconnectionresponse.md
   - docs/models/operations/createunifiedwebhookrequest.md
   - docs/models/operations/createunifiedwebhookresponse.md
@@ -303,8 +307,12 @@ generatedFiles:
   - docs/models/operations/getticketingnoteresponse.md
   - docs/models/operations/getticketingticketrequest.md
   - docs/models/operations/getticketingticketresponse.md
+  - docs/models/operations/getuccommentrequest.md
+  - docs/models/operations/getuccommentresponse.md
   - docs/models/operations/getuccontactrequest.md
   - docs/models/operations/getuccontactresponse.md
+  - docs/models/operations/getucrecordingrequest.md
+  - docs/models/operations/getucrecordingresponse.md
   - docs/models/operations/getunifiedapicallrequest.md
   - docs/models/operations/getunifiedapicallresponse.md
   - docs/models/operations/getunifiedconnectionrequest.md
@@ -467,8 +475,12 @@ generatedFiles:
   - docs/models/operations/listticketingticketsresponse.md
   - docs/models/operations/listuccallsrequest.md
   - docs/models/operations/listuccallsresponse.md
+  - docs/models/operations/listuccommentsrequest.md
+  - docs/models/operations/listuccommentsresponse.md
   - docs/models/operations/listuccontactsrequest.md
   - docs/models/operations/listuccontactsresponse.md
+  - docs/models/operations/listucrecordingsrequest.md
+  - docs/models/operations/listucrecordingsresponse.md
   - docs/models/operations/listunifiedapicallsrequest.md
   - docs/models/operations/listunifiedapicallsresponse.md
   - docs/models/operations/listunifiedconnectionsrequest.md
@@ -606,8 +618,12 @@ generatedFiles:
   - docs/models/operations/patchticketingnoteresponse.md
   - docs/models/operations/patchticketingticketrequest.md
   - docs/models/operations/patchticketingticketresponse.md
+  - docs/models/operations/patchuccommentrequest.md
+  - docs/models/operations/patchuccommentresponse.md
   - docs/models/operations/patchuccontactrequest.md
   - docs/models/operations/patchuccontactresponse.md
+  - docs/models/operations/patchucrecordingrequest.md
+  - docs/models/operations/patchucrecordingresponse.md
   - docs/models/operations/patchunifiedconnectionrequest.md
   - docs/models/operations/patchunifiedconnectionresponse.md
   - docs/models/operations/patchunifiedwebhookrequest.md
@@ -737,8 +753,12 @@ generatedFiles:
   - docs/models/operations/removeticketingnoteresponse.md
   - docs/models/operations/removeticketingticketrequest.md
   - docs/models/operations/removeticketingticketresponse.md
+  - docs/models/operations/removeuccommentrequest.md
+  - docs/models/operations/removeuccommentresponse.md
   - docs/models/operations/removeuccontactrequest.md
   - docs/models/operations/removeuccontactresponse.md
+  - docs/models/operations/removeucrecordingrequest.md
+  - docs/models/operations/removeucrecordingresponse.md
   - docs/models/operations/removeunifiedconnectionrequest.md
   - docs/models/operations/removeunifiedconnectionresponse.md
   - docs/models/operations/removeunifiedwebhookrequest.md
@@ -867,8 +887,12 @@ generatedFiles:
   - docs/models/operations/updateticketingnoteresponse.md
   - docs/models/operations/updateticketingticketrequest.md
   - docs/models/operations/updateticketingticketresponse.md
+  - docs/models/operations/updateuccommentrequest.md
+  - docs/models/operations/updateuccommentresponse.md
   - docs/models/operations/updateuccontactrequest.md
   - docs/models/operations/updateuccontactresponse.md
+  - docs/models/operations/updateucrecordingrequest.md
+  - docs/models/operations/updateucrecordingresponse.md
   - docs/models/operations/updateunifiedconnectionrequest.md
   - docs/models/operations/updateunifiedconnectionresponse.md
   - docs/models/operations/updateunifiedwebhookrequest.md
@@ -1044,6 +1068,7 @@ generatedFiles:
   - docs/models/shared/listaccountid.md
   - docs/models/shared/listapplicationid.md
   - docs/models/shared/listcalendarid.md
+  - docs/models/shared/listcallid.md
   - docs/models/shared/listcandidateid.md
   - docs/models/shared/listchannelid.md
   - docs/models/shared/listclassid.md
@@ -1243,9 +1268,13 @@ generatedFiles:
   - docs/models/shared/ticketingticketstatus.md
   - docs/models/shared/type.md
   - docs/models/shared/uccall.md
+  - docs/models/shared/uccomment.md
   - docs/models/shared/uccontact.md
   - docs/models/shared/ucemail.md
   - docs/models/shared/ucemailtype.md
+  - docs/models/shared/ucrecording.md
+  - docs/models/shared/ucrecordingmedia.md
+  - docs/models/shared/ucrecordingtranscript.md
   - docs/models/shared/uctelephone.md
   - docs/models/shared/uctelephonetype.md
   - docs/models/shared/value.md
@@ -1493,7 +1522,9 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/createticketingcustomer.py
   - src/unified_python_sdk/models/operations/createticketingnote.py
   - src/unified_python_sdk/models/operations/createticketingticket.py
+  - src/unified_python_sdk/models/operations/createuccomment.py
   - src/unified_python_sdk/models/operations/createuccontact.py
+  - src/unified_python_sdk/models/operations/createucrecording.py
   - src/unified_python_sdk/models/operations/createunifiedconnection.py
   - src/unified_python_sdk/models/operations/createunifiedwebhook.py
   - src/unified_python_sdk/models/operations/getaccountingaccount.py
@@ -1565,7 +1596,9 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/getticketingcustomer.py
   - src/unified_python_sdk/models/operations/getticketingnote.py
   - src/unified_python_sdk/models/operations/getticketingticket.py
+  - src/unified_python_sdk/models/operations/getuccomment.py
   - src/unified_python_sdk/models/operations/getuccontact.py
+  - src/unified_python_sdk/models/operations/getucrecording.py
   - src/unified_python_sdk/models/operations/getunifiedapicall.py
   - src/unified_python_sdk/models/operations/getunifiedconnection.py
   - src/unified_python_sdk/models/operations/getunifiedintegrationauth.py
@@ -1647,7 +1680,9 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/listticketingnotes.py
   - src/unified_python_sdk/models/operations/listticketingtickets.py
   - src/unified_python_sdk/models/operations/listuccalls.py
+  - src/unified_python_sdk/models/operations/listuccomments.py
   - src/unified_python_sdk/models/operations/listuccontacts.py
+  - src/unified_python_sdk/models/operations/listucrecordings.py
   - src/unified_python_sdk/models/operations/listunifiedapicalls.py
   - src/unified_python_sdk/models/operations/listunifiedconnections.py
   - src/unified_python_sdk/models/operations/listunifiedintegrations.py
@@ -1716,7 +1751,9 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/patchticketingcustomer.py
   - src/unified_python_sdk/models/operations/patchticketingnote.py
   - src/unified_python_sdk/models/operations/patchticketingticket.py
+  - src/unified_python_sdk/models/operations/patchuccomment.py
   - src/unified_python_sdk/models/operations/patchuccontact.py
+  - src/unified_python_sdk/models/operations/patchucrecording.py
   - src/unified_python_sdk/models/operations/patchunifiedconnection.py
   - src/unified_python_sdk/models/operations/patchunifiedwebhook.py
   - src/unified_python_sdk/models/operations/patchunifiedwebhooktrigger.py
@@ -1781,7 +1818,9 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/removeticketingcustomer.py
   - src/unified_python_sdk/models/operations/removeticketingnote.py
   - src/unified_python_sdk/models/operations/removeticketingticket.py
+  - src/unified_python_sdk/models/operations/removeuccomment.py
   - src/unified_python_sdk/models/operations/removeuccontact.py
+  - src/unified_python_sdk/models/operations/removeucrecording.py
   - src/unified_python_sdk/models/operations/removeunifiedconnection.py
   - src/unified_python_sdk/models/operations/removeunifiedwebhook.py
   - src/unified_python_sdk/models/operations/updateaccountingaccount.py
@@ -1846,7 +1885,9 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/updateticketingcustomer.py
   - src/unified_python_sdk/models/operations/updateticketingnote.py
   - src/unified_python_sdk/models/operations/updateticketingticket.py
+  - src/unified_python_sdk/models/operations/updateuccomment.py
   - src/unified_python_sdk/models/operations/updateuccontact.py
+  - src/unified_python_sdk/models/operations/updateucrecording.py
   - src/unified_python_sdk/models/operations/updateunifiedconnection.py
   - src/unified_python_sdk/models/operations/updateunifiedwebhook.py
   - src/unified_python_sdk/models/operations/updateunifiedwebhooktrigger.py
@@ -2058,8 +2099,12 @@ generatedFiles:
   - src/unified_python_sdk/models/shared/ticketingtelephone.py
   - src/unified_python_sdk/models/shared/ticketingticket.py
   - src/unified_python_sdk/models/shared/uccall.py
+  - src/unified_python_sdk/models/shared/uccomment.py
   - src/unified_python_sdk/models/shared/uccontact.py
   - src/unified_python_sdk/models/shared/ucemail.py
+  - src/unified_python_sdk/models/shared/ucrecording.py
+  - src/unified_python_sdk/models/shared/ucrecordingmedia.py
+  - src/unified_python_sdk/models/shared/ucrecordingtranscript.py
   - src/unified_python_sdk/models/shared/uctelephone.py
   - src/unified_python_sdk/models/shared/webhook.py
   - src/unified_python_sdk/note.py
@@ -6268,5 +6313,125 @@ examples:
       responses:
         "200":
           application/json: {"name": "<value>"}
+  createUcRecording:
+    speakeasy-default-create-uc-recording:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  getUcRecording:
+    speakeasy-default-get-uc-recording:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {}
+  listUcRecordings:
+    speakeasy-default-list-uc-recordings:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: [{}]
+  patchUcRecording:
+    speakeasy-default-patch-uc-recording:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  removeUcRecording:
+    speakeasy-default-remove-uc-recording:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateUcRecording:
+    speakeasy-default-update-uc-recording:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  createUcComment:
+    speakeasy-default-create-uc-comment:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {"content": "<value>"}
+      responses:
+        "200":
+          application/json: {"content": "<value>"}
+  getUcComment:
+    speakeasy-default-get-uc-comment:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: {"content": "<value>"}
+  listUcComments:
+    speakeasy-default-list-uc-comments:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: [{"content": "<value>"}, {"content": "<value>"}]
+  patchUcComment:
+    speakeasy-default-patch-uc-comment:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {"content": "<value>"}
+      responses:
+        "200":
+          application/json: {"content": "<value>"}
+  removeUcComment:
+    speakeasy-default-remove-uc-comment:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateUcComment:
+    speakeasy-default-update-uc-comment:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+        query: {}
+      requestBody:
+        application/json: {"content": "<value>"}
+      responses:
+        "200":
+          application/json: {"content": "<value>"}
 examplesVersion: 1.0.1
 generatedTests: {}

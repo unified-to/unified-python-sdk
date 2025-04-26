@@ -17,7 +17,6 @@ class UcCallTypedDict(TypedDict):
     end_at: NotRequired[datetime]
     id: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
-    r"""The raw data returned by the integration for this call"""
     start_at: NotRequired[datetime]
     telephone: NotRequired[PropertyUcCallTelephoneTypedDict]
     r"""The telephone number called"""
@@ -35,7 +34,6 @@ class UcCall(BaseModel):
     id: Optional[str] = None
 
     raw: Optional[Dict[str, Any]] = None
-    r"""The raw data returned by the integration for this call"""
 
     start_at: Optional[datetime] = None
 

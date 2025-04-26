@@ -262,6 +262,7 @@ from .integrationsupport import (
     ListAccountID,
     ListApplicationID,
     ListCalendarID,
+    ListCallID,
     ListCandidateID,
     ListChannelID,
     ListClassID,
@@ -599,8 +600,12 @@ from .ticketingticket import (
     TicketingTicketTypedDict,
 )
 from .uccall import UcCall, UcCallTypedDict
+from .uccomment import UcComment, UcCommentTypedDict
 from .uccontact import UcContact, UcContactTypedDict
 from .ucemail import UcEmail, UcEmailType, UcEmailTypedDict
+from .ucrecording import UcRecording, UcRecordingTypedDict
+from .ucrecordingmedia import UcRecordingMedia, UcRecordingMediaTypedDict
+from .ucrecordingtranscript import UcRecordingTranscript, UcRecordingTranscriptTypedDict
 from .uctelephone import UcTelephone, UcTelephoneType, UcTelephoneTypedDict
 from .webhook import DbType, Event, ObjectType, Webhook, WebhookType, WebhookTypedDict
 
@@ -885,6 +890,7 @@ __all__ = [
     "ListAccountID",
     "ListApplicationID",
     "ListCalendarID",
+    "ListCallID",
     "ListCandidateID",
     "ListChannelID",
     "ListClassID",
@@ -1178,11 +1184,19 @@ __all__ = [
     "Type",
     "UcCall",
     "UcCallTypedDict",
+    "UcComment",
+    "UcCommentTypedDict",
     "UcContact",
     "UcContactTypedDict",
     "UcEmail",
     "UcEmailType",
     "UcEmailTypedDict",
+    "UcRecording",
+    "UcRecordingMedia",
+    "UcRecordingMediaTypedDict",
+    "UcRecordingTranscript",
+    "UcRecordingTranscriptTypedDict",
+    "UcRecordingTypedDict",
     "UcTelephone",
     "UcTelephoneType",
     "UcTelephoneTypedDict",

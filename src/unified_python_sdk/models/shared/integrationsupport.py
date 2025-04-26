@@ -35,6 +35,12 @@ class ListCalendarID(str, Enum):
     NOT_SUPPORTED = "not-supported"
 
 
+class ListCallID(str, Enum):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
 class ListCandidateID(str, Enum):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
@@ -407,6 +413,7 @@ class IntegrationSupportTypedDict(TypedDict):
     list_account_id: NotRequired[ListAccountID]
     list_application_id: NotRequired[ListApplicationID]
     list_calendar_id: NotRequired[ListCalendarID]
+    list_call_id: NotRequired[ListCallID]
     list_candidate_id: NotRequired[ListCandidateID]
     list_channel_id: NotRequired[ListChannelID]
     list_class_id: NotRequired[ListClassID]
@@ -486,6 +493,8 @@ class IntegrationSupport(BaseModel):
     list_application_id: Optional[ListApplicationID] = None
 
     list_calendar_id: Optional[ListCalendarID] = None
+
+    list_call_id: Optional[ListCallID] = None
 
     list_candidate_id: Optional[ListCandidateID] = None
 
