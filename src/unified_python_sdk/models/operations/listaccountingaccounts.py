@@ -24,6 +24,7 @@ class ListAccountingAccountsRequestTypedDict(TypedDict):
     limit: NotRequired[float]
     offset: NotRequired[float]
     order: NotRequired[str]
+    org_id: NotRequired[str]
     query: NotRequired[str]
     r"""Query string to search. eg. email address or name"""
     sort: NotRequired[str]
@@ -54,6 +55,11 @@ class ListAccountingAccountsRequest(BaseModel):
     ] = None
 
     order: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+
+    org_id: Annotated[
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
