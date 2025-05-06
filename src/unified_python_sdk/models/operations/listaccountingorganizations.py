@@ -26,6 +26,8 @@ class ListAccountingOrganizationsRequestTypedDict(TypedDict):
     order: NotRequired[str]
     query: NotRequired[str]
     r"""Query string to search. eg. email address or name"""
+    raw: NotRequired[str]
+    r"""Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar"""
     sort: NotRequired[str]
     updated_gte: NotRequired[datetime]
     r"""Return only results whose updated date is equal or greater to this value"""
@@ -63,6 +65,12 @@ class ListAccountingOrganizationsRequest(BaseModel):
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
     r"""Query string to search. eg. email address or name"""
+
+    raw: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+    r"""Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar"""
 
     sort: Annotated[
         Optional[str],

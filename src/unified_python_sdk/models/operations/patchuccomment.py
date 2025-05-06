@@ -22,6 +22,8 @@ class PatchUcCommentRequestTypedDict(TypedDict):
     r"""ID of the Comment"""
     fields: NotRequired[List[str]]
     r"""Comma-delimited fields to return"""
+    raw: NotRequired[str]
+    r"""Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar"""
 
 
 class PatchUcCommentRequest(BaseModel):
@@ -45,6 +47,12 @@ class PatchUcCommentRequest(BaseModel):
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
     r"""Comma-delimited fields to return"""
+
+    raw: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+    r"""Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar"""
 
 
 class PatchUcCommentResponseTypedDict(TypedDict):

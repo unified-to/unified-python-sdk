@@ -24,6 +24,8 @@ class ListRepoBranchesRequestTypedDict(TypedDict):
     order: NotRequired[str]
     query: NotRequired[str]
     r"""Query string to search. eg. email address or name"""
+    raw: NotRequired[str]
+    r"""Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar"""
     repo_id: NotRequired[str]
     sort: NotRequired[str]
     updated_gte: NotRequired[datetime]
@@ -62,6 +64,12 @@ class ListRepoBranchesRequest(BaseModel):
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
     r"""Query string to search. eg. email address or name"""
+
+    raw: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+    r"""Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar"""
 
     repo_id: Annotated[
         Optional[str],
