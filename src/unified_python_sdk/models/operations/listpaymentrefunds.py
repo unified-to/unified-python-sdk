@@ -23,6 +23,7 @@ class ListPaymentRefundsRequestTypedDict(TypedDict):
     offset: NotRequired[float]
     order: NotRequired[str]
     payment_id: NotRequired[str]
+    r"""The payment ID to filter by"""
     query: NotRequired[str]
     r"""Query string to search. eg. email address or name"""
     raw: NotRequired[str]
@@ -63,6 +64,7 @@ class ListPaymentRefundsRequest(BaseModel):
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
+    r"""The payment ID to filter by"""
 
     query: Annotated[
         Optional[str],

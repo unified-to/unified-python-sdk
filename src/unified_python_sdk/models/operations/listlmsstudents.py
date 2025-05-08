@@ -18,18 +18,20 @@ class ListLmsStudentsRequestTypedDict(TypedDict):
     connection_id: str
     r"""ID of the connection"""
     class_id: NotRequired[str]
+    r"""The class ID to filter by"""
     course_id: NotRequired[str]
+    r"""The course ID to filter by"""
     fields: NotRequired[List[str]]
     r"""Comma-delimited fields to return"""
     limit: NotRequired[float]
     location_id: NotRequired[str]
+    r"""The location ID to filter by"""
     offset: NotRequired[float]
     order: NotRequired[str]
     query: NotRequired[str]
     r"""Query string to search. eg. email address or name"""
     raw: NotRequired[str]
     r"""Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar"""
-    session_id: NotRequired[str]
     sort: NotRequired[str]
     updated_gte: NotRequired[datetime]
     r"""Return only results whose updated date is equal or greater to this value"""
@@ -45,11 +47,13 @@ class ListLmsStudentsRequest(BaseModel):
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
+    r"""The class ID to filter by"""
 
     course_id: Annotated[
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
+    r"""The course ID to filter by"""
 
     fields: Annotated[
         Optional[List[str]],
@@ -66,6 +70,7 @@ class ListLmsStudentsRequest(BaseModel):
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
+    r"""The location ID to filter by"""
 
     offset: Annotated[
         Optional[float],
@@ -88,11 +93,6 @@ class ListLmsStudentsRequest(BaseModel):
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
     r"""Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar"""
-
-    session_id: Annotated[
-        Optional[str],
-        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
-    ] = None
 
     sort: Annotated[
         Optional[str],

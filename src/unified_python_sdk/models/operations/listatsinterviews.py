@@ -18,6 +18,7 @@ class ListAtsInterviewsRequestTypedDict(TypedDict):
     connection_id: str
     r"""ID of the connection"""
     application_id: NotRequired[str]
+    r"""The application ID to filter by"""
     fields: NotRequired[List[str]]
     r"""Comma-delimited fields to return"""
     limit: NotRequired[float]
@@ -42,6 +43,7 @@ class ListAtsInterviewsRequest(BaseModel):
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
+    r"""The application ID to filter by"""
 
     fields: Annotated[
         Optional[List[str]],

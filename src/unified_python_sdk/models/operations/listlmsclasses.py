@@ -18,10 +18,12 @@ class ListLmsClassesRequestTypedDict(TypedDict):
     connection_id: str
     r"""ID of the connection"""
     course_id: NotRequired[str]
+    r"""The course ID to filter by"""
     fields: NotRequired[List[str]]
     r"""Comma-delimited fields to return"""
     limit: NotRequired[float]
     location_id: NotRequired[str]
+    r"""The location ID to filter by"""
     offset: NotRequired[float]
     order: NotRequired[str]
     query: NotRequired[str]
@@ -43,6 +45,7 @@ class ListLmsClassesRequest(BaseModel):
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
+    r"""The course ID to filter by"""
 
     fields: Annotated[
         Optional[List[str]],
@@ -59,6 +62,7 @@ class ListLmsClassesRequest(BaseModel):
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
+    r"""The location ID to filter by"""
 
     offset: Annotated[
         Optional[float],

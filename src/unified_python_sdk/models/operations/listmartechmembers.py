@@ -21,6 +21,7 @@ class ListMartechMembersRequestTypedDict(TypedDict):
     r"""Comma-delimited fields to return"""
     limit: NotRequired[float]
     list_id: NotRequired[str]
+    r"""The list ID to filter by"""
     offset: NotRequired[float]
     order: NotRequired[str]
     query: NotRequired[str]
@@ -53,6 +54,7 @@ class ListMartechMembersRequest(BaseModel):
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
+    r"""The list ID to filter by"""
 
     offset: Annotated[
         Optional[float],

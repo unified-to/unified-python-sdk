@@ -18,6 +18,7 @@ class ListAccountingReportsRequestTypedDict(TypedDict):
     connection_id: str
     r"""ID of the connection"""
     end_le: NotRequired[str]
+    r"""The end date to filter by"""
     fields: NotRequired[List[str]]
     r"""Comma-delimited fields to return"""
     limit: NotRequired[float]
@@ -29,6 +30,7 @@ class ListAccountingReportsRequestTypedDict(TypedDict):
     r"""Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar"""
     sort: NotRequired[str]
     start_gte: NotRequired[str]
+    r"""The start date to filter by"""
     type: NotRequired[str]
     updated_gte: NotRequired[datetime]
     r"""Return only results whose updated date is equal or greater to this value"""
@@ -44,6 +46,7 @@ class ListAccountingReportsRequest(BaseModel):
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
+    r"""The end date to filter by"""
 
     fields: Annotated[
         Optional[List[str]],
@@ -87,6 +90,7 @@ class ListAccountingReportsRequest(BaseModel):
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
+    r"""The start date to filter by"""
 
     type: Annotated[
         Optional[str],

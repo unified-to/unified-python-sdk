@@ -18,6 +18,7 @@ class ListHrisEmployeesRequestTypedDict(TypedDict):
     connection_id: str
     r"""ID of the connection"""
     company_id: NotRequired[str]
+    r"""The company ID to filter by"""
     fields: NotRequired[List[str]]
     r"""Comma-delimited fields to return"""
     limit: NotRequired[float]
@@ -42,6 +43,7 @@ class ListHrisEmployeesRequest(BaseModel):
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
+    r"""The company ID to filter by"""
 
     fields: Annotated[
         Optional[List[str]],

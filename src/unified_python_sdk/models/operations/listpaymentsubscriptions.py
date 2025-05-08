@@ -20,6 +20,7 @@ class ListPaymentSubscriptionsRequestTypedDict(TypedDict):
     connection_id: str
     r"""ID of the connection"""
     contact_id: NotRequired[str]
+    r"""The contact ID to filter by"""
     fields: NotRequired[List[str]]
     r"""Comma-delimited fields to return"""
     limit: NotRequired[float]
@@ -44,6 +45,7 @@ class ListPaymentSubscriptionsRequest(BaseModel):
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
+    r"""The contact ID to filter by"""
 
     fields: Annotated[
         Optional[List[str]],

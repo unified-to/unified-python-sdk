@@ -18,11 +18,15 @@ class ListCrmEventsRequestTypedDict(TypedDict):
     connection_id: str
     r"""ID of the connection"""
     company_id: NotRequired[str]
+    r"""The company ID to filter by"""
     contact_id: NotRequired[str]
+    r"""The contact ID to filter by"""
     deal_id: NotRequired[str]
+    r"""The deal ID to filter by"""
     fields: NotRequired[List[str]]
     r"""Comma-delimited fields to return"""
     lead_id: NotRequired[str]
+    r"""The CRM lead ID to filter by"""
     limit: NotRequired[float]
     offset: NotRequired[float]
     order: NotRequired[str]
@@ -35,6 +39,7 @@ class ListCrmEventsRequestTypedDict(TypedDict):
     updated_gte: NotRequired[datetime]
     r"""Return only results whose updated date is equal or greater to this value"""
     user_id: NotRequired[str]
+    r"""The user/employee ID to filter by"""
 
 
 class ListCrmEventsRequest(BaseModel):
@@ -47,16 +52,19 @@ class ListCrmEventsRequest(BaseModel):
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
+    r"""The company ID to filter by"""
 
     contact_id: Annotated[
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
+    r"""The contact ID to filter by"""
 
     deal_id: Annotated[
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
+    r"""The deal ID to filter by"""
 
     fields: Annotated[
         Optional[List[str]],
@@ -68,6 +76,7 @@ class ListCrmEventsRequest(BaseModel):
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
+    r"""The CRM lead ID to filter by"""
 
     limit: Annotated[
         Optional[float],
@@ -116,6 +125,7 @@ class ListCrmEventsRequest(BaseModel):
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
+    r"""The user/employee ID to filter by"""
 
 
 class ListCrmEventsResponseTypedDict(TypedDict):

@@ -85,6 +85,7 @@ from unified_python_sdk.refund import Refund
 from unified_python_sdk.repo import Repo
 from unified_python_sdk.report import Report
 from unified_python_sdk.repository import Repository
+from unified_python_sdk.review import Review
 from unified_python_sdk.scim import Scim
 from unified_python_sdk.scorecard import Scorecard
 from unified_python_sdk.space import Space
@@ -138,6 +139,7 @@ class UnifiedTo(BaseSDK):
     inventory: Inventory
     item: Item
     location: Location
+    review: Review
     crm: Crm
     deal: Deal
     lead: Lead
@@ -319,6 +321,7 @@ class UnifiedTo(BaseSDK):
         self.inventory = Inventory(self.sdk_configuration)
         self.item = Item(self.sdk_configuration)
         self.location = Location(self.sdk_configuration)
+        self.review = Review(self.sdk_configuration)
         self.crm = Crm(self.sdk_configuration)
         self.deal = Deal(self.sdk_configuration)
         self.lead = Lead(self.sdk_configuration)

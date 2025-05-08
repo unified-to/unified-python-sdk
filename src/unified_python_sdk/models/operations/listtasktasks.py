@@ -23,7 +23,9 @@ class ListTaskTasksRequestTypedDict(TypedDict):
     offset: NotRequired[float]
     order: NotRequired[str]
     parent_id: NotRequired[str]
+    r"""The parent ID to filter by"""
     project_id: NotRequired[str]
+    r"""The project ID to filter by"""
     query: NotRequired[str]
     r"""Query string to search. eg. email address or name"""
     raw: NotRequired[str]
@@ -32,6 +34,7 @@ class ListTaskTasksRequestTypedDict(TypedDict):
     updated_gte: NotRequired[datetime]
     r"""Return only results whose updated date is equal or greater to this value"""
     user_id: NotRequired[str]
+    r"""The user/employee ID to filter by"""
 
 
 class ListTaskTasksRequest(BaseModel):
@@ -65,11 +68,13 @@ class ListTaskTasksRequest(BaseModel):
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
+    r"""The parent ID to filter by"""
 
     project_id: Annotated[
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
+    r"""The project ID to filter by"""
 
     query: Annotated[
         Optional[str],
@@ -98,6 +103,7 @@ class ListTaskTasksRequest(BaseModel):
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
+    r"""The user/employee ID to filter by"""
 
 
 class ListTaskTasksResponseTypedDict(TypedDict):

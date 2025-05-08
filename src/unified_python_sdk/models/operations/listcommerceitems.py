@@ -18,6 +18,7 @@ class ListCommerceItemsRequestTypedDict(TypedDict):
     connection_id: str
     r"""ID of the connection"""
     collection_id: NotRequired[str]
+    r"""The collection ID to filter by"""
     fields: NotRequired[List[str]]
     r"""Comma-delimited fields to return"""
     limit: NotRequired[float]
@@ -42,6 +43,7 @@ class ListCommerceItemsRequest(BaseModel):
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
+    r"""The collection ID to filter by"""
 
     fields: Annotated[
         Optional[List[str]],

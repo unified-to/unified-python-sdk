@@ -30,6 +30,7 @@ class ListHrisDevicesRequestTypedDict(TypedDict):
     updated_gte: NotRequired[datetime]
     r"""Return only results whose updated date is equal or greater to this value"""
     user_id: NotRequired[str]
+    r"""The user/employee ID to filter by"""
 
 
 class ListHrisDevicesRequest(BaseModel):
@@ -86,6 +87,7 @@ class ListHrisDevicesRequest(BaseModel):
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
+    r"""The user/employee ID to filter by"""
 
 
 class ListHrisDevicesResponseTypedDict(TypedDict):

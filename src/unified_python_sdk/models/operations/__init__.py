@@ -126,6 +126,12 @@ from .createcommercelocation import (
     CreateCommerceLocationResponse,
     CreateCommerceLocationResponseTypedDict,
 )
+from .createcommercereview import (
+    CreateCommerceReviewRequest,
+    CreateCommerceReviewRequestTypedDict,
+    CreateCommerceReviewResponse,
+    CreateCommerceReviewResponseTypedDict,
+)
 from .createcrmcompany import (
     CreateCrmCompanyRequest,
     CreateCrmCompanyRequestTypedDict,
@@ -555,6 +561,12 @@ from .getcommercelocation import (
     GetCommerceLocationRequestTypedDict,
     GetCommerceLocationResponse,
     GetCommerceLocationResponseTypedDict,
+)
+from .getcommercereview import (
+    GetCommerceReviewRequest,
+    GetCommerceReviewRequestTypedDict,
+    GetCommerceReviewResponse,
+    GetCommerceReviewResponseTypedDict,
 )
 from .getcrmcompany import (
     GetCrmCompanyRequest,
@@ -1029,6 +1041,12 @@ from .listcommercelocations import (
     ListCommerceLocationsRequestTypedDict,
     ListCommerceLocationsResponse,
     ListCommerceLocationsResponseTypedDict,
+)
+from .listcommercereviews import (
+    ListCommerceReviewsRequest,
+    ListCommerceReviewsRequestTypedDict,
+    ListCommerceReviewsResponse,
+    ListCommerceReviewsResponseTypedDict,
 )
 from .listcrmcompanies import (
     ListCrmCompaniesRequest,
@@ -1507,6 +1525,12 @@ from .patchcommercelocation import (
     PatchCommerceLocationResponse,
     PatchCommerceLocationResponseTypedDict,
 )
+from .patchcommercereview import (
+    PatchCommerceReviewRequest,
+    PatchCommerceReviewRequestTypedDict,
+    PatchCommerceReviewResponse,
+    PatchCommerceReviewResponseTypedDict,
+)
 from .patchcrmcompany import (
     PatchCrmCompanyRequest,
     PatchCrmCompanyRequestTypedDict,
@@ -1915,6 +1939,12 @@ from .removecommercelocation import (
     RemoveCommerceLocationResponse,
     RemoveCommerceLocationResponseTypedDict,
 )
+from .removecommercereview import (
+    RemoveCommerceReviewRequest,
+    RemoveCommerceReviewRequestTypedDict,
+    RemoveCommerceReviewResponse,
+    RemoveCommerceReviewResponseTypedDict,
+)
 from .removecrmcompany import (
     RemoveCrmCompanyRequest,
     RemoveCrmCompanyRequestTypedDict,
@@ -2311,6 +2341,12 @@ from .updatecommercelocation import (
     UpdateCommerceLocationResponse,
     UpdateCommerceLocationResponseTypedDict,
 )
+from .updatecommercereview import (
+    UpdateCommerceReviewRequest,
+    UpdateCommerceReviewRequestTypedDict,
+    UpdateCommerceReviewResponse,
+    UpdateCommerceReviewResponseTypedDict,
+)
 from .updatecrmcompany import (
     UpdateCrmCompanyRequest,
     UpdateCrmCompanyRequestTypedDict,
@@ -2681,6 +2717,10 @@ __all__ = [
     "CreateCommerceLocationRequestTypedDict",
     "CreateCommerceLocationResponse",
     "CreateCommerceLocationResponseTypedDict",
+    "CreateCommerceReviewRequest",
+    "CreateCommerceReviewRequestTypedDict",
+    "CreateCommerceReviewResponse",
+    "CreateCommerceReviewResponseTypedDict",
     "CreateCrmCompanyRequest",
     "CreateCrmCompanyRequestTypedDict",
     "CreateCrmCompanyResponse",
@@ -2967,6 +3007,10 @@ __all__ = [
     "GetCommerceLocationRequestTypedDict",
     "GetCommerceLocationResponse",
     "GetCommerceLocationResponseTypedDict",
+    "GetCommerceReviewRequest",
+    "GetCommerceReviewRequestTypedDict",
+    "GetCommerceReviewResponse",
+    "GetCommerceReviewResponseTypedDict",
     "GetCrmCompanyRequest",
     "GetCrmCompanyRequestTypedDict",
     "GetCrmCompanyResponse",
@@ -3283,6 +3327,10 @@ __all__ = [
     "ListCommerceLocationsRequestTypedDict",
     "ListCommerceLocationsResponse",
     "ListCommerceLocationsResponseTypedDict",
+    "ListCommerceReviewsRequest",
+    "ListCommerceReviewsRequestTypedDict",
+    "ListCommerceReviewsResponse",
+    "ListCommerceReviewsResponseTypedDict",
     "ListCrmCompaniesRequest",
     "ListCrmCompaniesRequestTypedDict",
     "ListCrmCompaniesResponse",
@@ -3600,6 +3648,10 @@ __all__ = [
     "PatchCommerceLocationRequestTypedDict",
     "PatchCommerceLocationResponse",
     "PatchCommerceLocationResponseTypedDict",
+    "PatchCommerceReviewRequest",
+    "PatchCommerceReviewRequestTypedDict",
+    "PatchCommerceReviewResponse",
+    "PatchCommerceReviewResponseTypedDict",
     "PatchCrmCompanyRequest",
     "PatchCrmCompanyRequestTypedDict",
     "PatchCrmCompanyResponse",
@@ -3873,6 +3925,10 @@ __all__ = [
     "RemoveCommerceLocationRequestTypedDict",
     "RemoveCommerceLocationResponse",
     "RemoveCommerceLocationResponseTypedDict",
+    "RemoveCommerceReviewRequest",
+    "RemoveCommerceReviewRequestTypedDict",
+    "RemoveCommerceReviewResponse",
+    "RemoveCommerceReviewResponseTypedDict",
     "RemoveCrmCompanyRequest",
     "RemoveCrmCompanyRequestTypedDict",
     "RemoveCrmCompanyResponse",
@@ -4137,6 +4193,10 @@ __all__ = [
     "UpdateCommerceLocationRequestTypedDict",
     "UpdateCommerceLocationResponse",
     "UpdateCommerceLocationResponseTypedDict",
+    "UpdateCommerceReviewRequest",
+    "UpdateCommerceReviewRequestTypedDict",
+    "UpdateCommerceReviewResponse",
+    "UpdateCommerceReviewResponseTypedDict",
     "UpdateCrmCompanyRequest",
     "UpdateCrmCompanyRequestTypedDict",
     "UpdateCrmCompanyResponse",

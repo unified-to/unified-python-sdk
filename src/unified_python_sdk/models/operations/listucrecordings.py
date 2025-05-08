@@ -18,7 +18,11 @@ class ListUcRecordingsRequestTypedDict(TypedDict):
     connection_id: str
     r"""ID of the connection"""
     call_id: NotRequired[str]
+    r"""The call ID to filter by"""
+    contact_id: NotRequired[str]
+    r"""The contact ID to filter by"""
     end_le: NotRequired[str]
+    r"""The end date to filter by"""
     fields: NotRequired[List[str]]
     r"""Comma-delimited fields to return"""
     limit: NotRequired[float]
@@ -30,9 +34,11 @@ class ListUcRecordingsRequestTypedDict(TypedDict):
     r"""Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar"""
     sort: NotRequired[str]
     start_gte: NotRequired[str]
+    r"""The start date to filter by"""
     updated_gte: NotRequired[datetime]
     r"""Return only results whose updated date is equal or greater to this value"""
     user_id: NotRequired[str]
+    r"""The user/employee ID to filter by"""
 
 
 class ListUcRecordingsRequest(BaseModel):
@@ -45,11 +51,19 @@ class ListUcRecordingsRequest(BaseModel):
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
+    r"""The call ID to filter by"""
+
+    contact_id: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+    r"""The contact ID to filter by"""
 
     end_le: Annotated[
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
+    r"""The end date to filter by"""
 
     fields: Annotated[
         Optional[List[str]],
@@ -93,6 +107,7 @@ class ListUcRecordingsRequest(BaseModel):
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
+    r"""The start date to filter by"""
 
     updated_gte: Annotated[
         Optional[datetime],
@@ -104,6 +119,7 @@ class ListUcRecordingsRequest(BaseModel):
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
+    r"""The user/employee ID to filter by"""
 
 
 class ListUcRecordingsResponseTypedDict(TypedDict):

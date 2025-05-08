@@ -1,6 +1,6 @@
 [project]
 name = "Unified-python-sdk"
-version = "0.44.0"
+version = "0.44.1"
 description = "Python Client SDK for Unified.to"
 authors = [{ name = "Unified API Inc." },]
 readme = "README-PYPI.md"

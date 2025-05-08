@@ -18,6 +18,7 @@ class ListRepoCommitsRequestTypedDict(TypedDict):
     connection_id: str
     r"""ID of the connection"""
     branch_id: NotRequired[str]
+    r"""The repo branch ID to filter by"""
     fields: NotRequired[List[str]]
     r"""Comma-delimited fields to return"""
     limit: NotRequired[float]
@@ -28,6 +29,7 @@ class ListRepoCommitsRequestTypedDict(TypedDict):
     raw: NotRequired[str]
     r"""Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar"""
     repo_id: NotRequired[str]
+    r"""The repo ID to filter by"""
     sort: NotRequired[str]
     updated_gte: NotRequired[datetime]
     r"""Return only results whose updated date is equal or greater to this value"""
@@ -43,6 +45,7 @@ class ListRepoCommitsRequest(BaseModel):
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
+    r"""The repo branch ID to filter by"""
 
     fields: Annotated[
         Optional[List[str]],
@@ -81,6 +84,7 @@ class ListRepoCommitsRequest(BaseModel):
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
+    r"""The repo ID to filter by"""
 
     sort: Annotated[
         Optional[str],

@@ -22,8 +22,10 @@ class ListCommerceInventoriesRequestTypedDict(TypedDict):
     fields: NotRequired[List[str]]
     r"""Comma-delimited fields to return"""
     item_variant_id: NotRequired[str]
+    r"""The item variant ID to filter by"""
     limit: NotRequired[float]
     location_id: NotRequired[str]
+    r"""The location ID to filter by"""
     offset: NotRequired[float]
     order: NotRequired[str]
     query: NotRequired[str]
@@ -51,6 +53,7 @@ class ListCommerceInventoriesRequest(BaseModel):
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
+    r"""The item variant ID to filter by"""
 
     limit: Annotated[
         Optional[float],
@@ -61,6 +64,7 @@ class ListCommerceInventoriesRequest(BaseModel):
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
+    r"""The location ID to filter by"""
 
     offset: Annotated[
         Optional[float],

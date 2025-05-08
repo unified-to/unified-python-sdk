@@ -18,11 +18,15 @@ class ListAtsScorecardsRequestTypedDict(TypedDict):
     connection_id: str
     r"""ID of the connection"""
     application_id: NotRequired[str]
+    r"""The application ID to filter by"""
     candidate_id: NotRequired[str]
+    r"""The candidate ID to filter by"""
     fields: NotRequired[List[str]]
     r"""Comma-delimited fields to return"""
     interview_id: NotRequired[str]
+    r"""The interview ID to filter by"""
     job_id: NotRequired[str]
+    r"""The job ID to filter by"""
     limit: NotRequired[float]
     offset: NotRequired[float]
     order: NotRequired[str]
@@ -45,11 +49,13 @@ class ListAtsScorecardsRequest(BaseModel):
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
+    r"""The application ID to filter by"""
 
     candidate_id: Annotated[
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
+    r"""The candidate ID to filter by"""
 
     fields: Annotated[
         Optional[List[str]],
@@ -61,11 +67,13 @@ class ListAtsScorecardsRequest(BaseModel):
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
+    r"""The interview ID to filter by"""
 
     job_id: Annotated[
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
+    r"""The job ID to filter by"""
 
     limit: Annotated[
         Optional[float],

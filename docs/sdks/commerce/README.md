@@ -9,26 +9,32 @@
 * [create_commerce_inventory](#create_commerce_inventory) - Create an inventory
 * [create_commerce_item](#create_commerce_item) - Create an item
 * [create_commerce_location](#create_commerce_location) - Create a location
+* [create_commerce_review](#create_commerce_review) - Create a review
 * [get_commerce_collection](#get_commerce_collection) - Retrieve a collection
 * [get_commerce_inventory](#get_commerce_inventory) - Retrieve an inventory
 * [get_commerce_item](#get_commerce_item) - Retrieve an item
 * [get_commerce_location](#get_commerce_location) - Retrieve a location
+* [get_commerce_review](#get_commerce_review) - Retrieve a review
 * [list_commerce_collections](#list_commerce_collections) - List all collections
 * [list_commerce_inventories](#list_commerce_inventories) - List all inventories
 * [list_commerce_items](#list_commerce_items) - List all items
 * [list_commerce_locations](#list_commerce_locations) - List all locations
+* [list_commerce_reviews](#list_commerce_reviews) - List all reviews
 * [patch_commerce_collection](#patch_commerce_collection) - Update a collection
 * [patch_commerce_inventory](#patch_commerce_inventory) - Update an inventory
 * [patch_commerce_item](#patch_commerce_item) - Update an item
 * [patch_commerce_location](#patch_commerce_location) - Update a location
+* [patch_commerce_review](#patch_commerce_review) - Update a review
 * [remove_commerce_collection](#remove_commerce_collection) - Remove a collection
 * [remove_commerce_inventory](#remove_commerce_inventory) - Remove an inventory
 * [remove_commerce_item](#remove_commerce_item) - Remove an item
 * [remove_commerce_location](#remove_commerce_location) - Remove a location
+* [remove_commerce_review](#remove_commerce_review) - Remove a review
 * [update_commerce_collection](#update_commerce_collection) - Update a collection
 * [update_commerce_inventory](#update_commerce_inventory) - Update an inventory
 * [update_commerce_item](#update_commerce_item) - Update an item
 * [update_commerce_location](#update_commerce_location) - Update a location
+* [update_commerce_review](#update_commerce_review) - Update a review
 
 ## create_commerce_collection
 
@@ -220,6 +226,54 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## create_commerce_review
+
+Create a review
+
+### Example Usage
+
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.commerce.create_commerce_review(request={
+        "commerce_review": {
+            "item_id": "<id>",
+        },
+        "connection_id": "<id>",
+    })
+
+    assert res.commerce_review is not None
+
+    # Handle response
+    print(res.commerce_review)
+
+```
+
+### Parameters
+
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `request`                                                                                        | [operations.CreateCommerceReviewRequest](../../models/operations/createcommercereviewrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `retries`                                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                 | :heavy_minus_sign:                                                                               | Configuration to override the default retry behavior of the client.                              |
+
+### Response
+
+**[operations.CreateCommerceReviewResponse](../../models/operations/createcommercereviewresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## get_commerce_collection
 
 Retrieve a collection
@@ -404,6 +458,52 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## get_commerce_review
+
+Retrieve a review
+
+### Example Usage
+
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.commerce.get_commerce_review(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.commerce_review is not None
+
+    # Handle response
+    print(res.commerce_review)
+
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.GetCommerceReviewRequest](../../models/operations/getcommercereviewrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
+
+### Response
+
+**[operations.GetCommerceReviewResponse](../../models/operations/getcommercereviewresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## list_commerce_collections
 
 List all collections
@@ -577,6 +677,51 @@ with UnifiedTo(
 ### Response
 
 **[operations.ListCommerceLocationsResponse](../../models/operations/listcommercelocationsresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## list_commerce_reviews
+
+List all reviews
+
+### Example Usage
+
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.commerce.list_commerce_reviews(request={
+        "connection_id": "<id>",
+    })
+
+    assert res.commerce_reviews is not None
+
+    # Handle response
+    print(res.commerce_reviews)
+
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `request`                                                                                      | [operations.ListCommerceReviewsRequest](../../models/operations/listcommercereviewsrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `retries`                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                               | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
+
+### Response
+
+**[operations.ListCommerceReviewsResponse](../../models/operations/listcommercereviewsresponse.md)**
 
 ### Errors
 
@@ -778,6 +923,55 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## patch_commerce_review
+
+Update a review
+
+### Example Usage
+
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.commerce.patch_commerce_review(request={
+        "commerce_review": {
+            "item_id": "<id>",
+        },
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.commerce_review is not None
+
+    # Handle response
+    print(res.commerce_review)
+
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `request`                                                                                      | [operations.PatchCommerceReviewRequest](../../models/operations/patchcommercereviewrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `retries`                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                               | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
+
+### Response
+
+**[operations.PatchCommerceReviewResponse](../../models/operations/patchcommercereviewresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## remove_commerce_collection
 
 Remove a collection
@@ -955,6 +1149,52 @@ with UnifiedTo(
 ### Response
 
 **[operations.RemoveCommerceLocationResponse](../../models/operations/removecommercelocationresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## remove_commerce_review
+
+Remove a review
+
+### Example Usage
+
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.commerce.remove_commerce_review(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res is not None
+
+    # Handle response
+    print(res)
+
+```
+
+### Parameters
+
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `request`                                                                                        | [operations.RemoveCommerceReviewRequest](../../models/operations/removecommercereviewrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `retries`                                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                 | :heavy_minus_sign:                                                                               | Configuration to override the default retry behavior of the client.                              |
+
+### Response
+
+**[operations.RemoveCommerceReviewResponse](../../models/operations/removecommercereviewresponse.md)**
 
 ### Errors
 
@@ -1149,6 +1389,55 @@ with UnifiedTo(
 ### Response
 
 **[operations.UpdateCommerceLocationResponse](../../models/operations/updatecommercelocationresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## update_commerce_review
+
+Update a review
+
+### Example Usage
+
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.commerce.update_commerce_review(request={
+        "commerce_review": {
+            "item_id": "<id>",
+        },
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.commerce_review is not None
+
+    # Handle response
+    print(res.commerce_review)
+
+```
+
+### Parameters
+
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `request`                                                                                        | [operations.UpdateCommerceReviewRequest](../../models/operations/updatecommercereviewrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `retries`                                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                 | :heavy_minus_sign:                                                                               | Configuration to override the default retry behavior of the client.                              |
+
+### Response
+
+**[operations.UpdateCommerceReviewResponse](../../models/operations/updatecommercereviewresponse.md)**
 
 ### Errors
 

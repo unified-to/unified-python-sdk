@@ -18,6 +18,7 @@ class ListTicketingNotesRequestTypedDict(TypedDict):
     connection_id: str
     r"""ID of the connection"""
     customer_id: NotRequired[str]
+    r"""The customer ID to filter by"""
     fields: NotRequired[List[str]]
     r"""Comma-delimited fields to return"""
     limit: NotRequired[float]
@@ -29,6 +30,7 @@ class ListTicketingNotesRequestTypedDict(TypedDict):
     r"""Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar"""
     sort: NotRequired[str]
     ticket_id: NotRequired[str]
+    r"""The ticket ID to filter by"""
     updated_gte: NotRequired[datetime]
     r"""Return only results whose updated date is equal or greater to this value"""
 
@@ -43,6 +45,7 @@ class ListTicketingNotesRequest(BaseModel):
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
+    r"""The customer ID to filter by"""
 
     fields: Annotated[
         Optional[List[str]],
@@ -86,6 +89,7 @@ class ListTicketingNotesRequest(BaseModel):
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
+    r"""The ticket ID to filter by"""
 
     updated_gte: Annotated[
         Optional[datetime],

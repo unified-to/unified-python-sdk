@@ -18,12 +18,14 @@ class ListPaymentLinksRequestTypedDict(TypedDict):
     connection_id: str
     r"""ID of the connection"""
     contact_id: NotRequired[str]
+    r"""The contact ID to filter by"""
     fields: NotRequired[List[str]]
     r"""Comma-delimited fields to return"""
     limit: NotRequired[float]
     offset: NotRequired[float]
     order: NotRequired[str]
     payment_id: NotRequired[str]
+    r"""The payment ID to filter by"""
     query: NotRequired[str]
     r"""Query string to search. eg. email address or name"""
     raw: NotRequired[str]
@@ -43,6 +45,7 @@ class ListPaymentLinksRequest(BaseModel):
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
+    r"""The contact ID to filter by"""
 
     fields: Annotated[
         Optional[List[str]],
@@ -69,6 +72,7 @@ class ListPaymentLinksRequest(BaseModel):
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
+    r"""The payment ID to filter by"""
 
     query: Annotated[
         Optional[str],

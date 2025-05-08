@@ -18,7 +18,9 @@ class ListCrmLeadsRequestTypedDict(TypedDict):
     connection_id: str
     r"""ID of the connection"""
     company_id: NotRequired[str]
+    r"""The company ID to filter by"""
     contact_id: NotRequired[str]
+    r"""The contact ID to filter by"""
     fields: NotRequired[List[str]]
     r"""Comma-delimited fields to return"""
     limit: NotRequired[float]
@@ -32,6 +34,7 @@ class ListCrmLeadsRequestTypedDict(TypedDict):
     updated_gte: NotRequired[datetime]
     r"""Return only results whose updated date is equal or greater to this value"""
     user_id: NotRequired[str]
+    r"""The user/employee ID to filter by"""
 
 
 class ListCrmLeadsRequest(BaseModel):
@@ -44,11 +47,13 @@ class ListCrmLeadsRequest(BaseModel):
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
+    r"""The company ID to filter by"""
 
     contact_id: Annotated[
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
+    r"""The contact ID to filter by"""
 
     fields: Annotated[
         Optional[List[str]],
@@ -98,6 +103,7 @@ class ListCrmLeadsRequest(BaseModel):
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
+    r"""The user/employee ID to filter by"""
 
 
 class ListCrmLeadsResponseTypedDict(TypedDict):

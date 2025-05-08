@@ -28,6 +28,7 @@ class ListMetadataMetadatasRequestTypedDict(TypedDict):
     r"""Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar"""
     sort: NotRequired[str]
     type: NotRequired[str]
+    r"""The type to filter by"""
     updated_gte: NotRequired[datetime]
     r"""Return only results whose updated date is equal or greater to this value"""
 
@@ -80,6 +81,7 @@ class ListMetadataMetadatasRequest(BaseModel):
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
+    r"""The type to filter by"""
 
     updated_gte: Annotated[
         Optional[datetime],

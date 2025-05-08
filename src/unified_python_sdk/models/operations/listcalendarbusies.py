@@ -18,7 +18,9 @@ class ListCalendarBusiesRequestTypedDict(TypedDict):
     connection_id: str
     r"""ID of the connection"""
     calendar_id: NotRequired[str]
+    r"""The calendar ID to filter by"""
     end_le: NotRequired[str]
+    r"""The end date to filter by"""
     fields: NotRequired[List[str]]
     r"""Comma-delimited fields to return"""
     limit: NotRequired[float]
@@ -30,6 +32,7 @@ class ListCalendarBusiesRequestTypedDict(TypedDict):
     r"""Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar"""
     sort: NotRequired[str]
     start_gte: NotRequired[str]
+    r"""The start date to filter by"""
     updated_gte: NotRequired[datetime]
     r"""Return only results whose updated date is equal or greater to this value"""
 
@@ -44,11 +47,13 @@ class ListCalendarBusiesRequest(BaseModel):
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
+    r"""The calendar ID to filter by"""
 
     end_le: Annotated[
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
+    r"""The end date to filter by"""
 
     fields: Annotated[
         Optional[List[str]],
@@ -92,6 +97,7 @@ class ListCalendarBusiesRequest(BaseModel):
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
+    r"""The start date to filter by"""
 
     updated_gte: Annotated[
         Optional[datetime],

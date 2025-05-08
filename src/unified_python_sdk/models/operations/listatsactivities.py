@@ -18,12 +18,17 @@ class ListAtsActivitiesRequestTypedDict(TypedDict):
     connection_id: str
     r"""ID of the connection"""
     application_id: NotRequired[str]
+    r"""The application ID to filter by"""
     candidate_id: NotRequired[str]
+    r"""The candidate ID to filter by"""
     document_id: NotRequired[str]
+    r"""The document ID to filter by"""
     fields: NotRequired[List[str]]
     r"""Comma-delimited fields to return"""
     interview_id: NotRequired[str]
+    r"""The interview ID to filter by"""
     job_id: NotRequired[str]
+    r"""The job ID to filter by"""
     limit: NotRequired[float]
     offset: NotRequired[float]
     order: NotRequired[str]
@@ -35,6 +40,7 @@ class ListAtsActivitiesRequestTypedDict(TypedDict):
     updated_gte: NotRequired[datetime]
     r"""Return only results whose updated date is equal or greater to this value"""
     user_id: NotRequired[str]
+    r"""The user/employee ID to filter by"""
 
 
 class ListAtsActivitiesRequest(BaseModel):
@@ -47,16 +53,19 @@ class ListAtsActivitiesRequest(BaseModel):
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
+    r"""The application ID to filter by"""
 
     candidate_id: Annotated[
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
+    r"""The candidate ID to filter by"""
 
     document_id: Annotated[
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
+    r"""The document ID to filter by"""
 
     fields: Annotated[
         Optional[List[str]],
@@ -68,11 +77,13 @@ class ListAtsActivitiesRequest(BaseModel):
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
+    r"""The interview ID to filter by"""
 
     job_id: Annotated[
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
+    r"""The job ID to filter by"""
 
     limit: Annotated[
         Optional[float],
@@ -116,6 +127,7 @@ class ListAtsActivitiesRequest(BaseModel):
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
+    r"""The user/employee ID to filter by"""
 
 
 class ListAtsActivitiesResponseTypedDict(TypedDict):

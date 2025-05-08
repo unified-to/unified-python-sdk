@@ -247,6 +247,16 @@ from .commercemetadata import (
     CommerceMetadataValue,
     CommerceMetadataValueTypedDict,
 )
+from .commercereview import (
+    CommerceReview,
+    CommerceReviewStatus,
+    CommerceReviewTypedDict,
+)
+from .commercereviewcomment import (
+    CommerceReviewComment,
+    CommerceReviewCommentStatus,
+    CommerceReviewCommentTypedDict,
+)
 from .connection import Connection, ConnectionTypedDict
 from .crmcompany import CrmCompany, CrmCompanyTypedDict
 from .crmcontact import CrmContact, CrmContactTypedDict
@@ -973,6 +983,12 @@ __all__ = [
     "CommerceMetadataTypedDict",
     "CommerceMetadataValue",
     "CommerceMetadataValueTypedDict",
+    "CommerceReview",
+    "CommerceReviewComment",
+    "CommerceReviewCommentStatus",
+    "CommerceReviewCommentTypedDict",
+    "CommerceReviewStatus",
+    "CommerceReviewTypedDict",
     "Connection",
     "ConnectionTypedDict",
     "ContentType",
