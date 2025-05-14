@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: 1cbf51aa4a732ad7a3160606fa7ef127
+  docChecksum: 384d22984f53ba58e35d8b7c45507e05
   docVersion: "1.0"
-  speakeasyVersion: 1.542.3
-  generationVersion: 2.597.9
-  releaseVersion: 0.44.1
-  configChecksum: 80d860b5563021643b22be9a561f132a
+  speakeasyVersion: 1.544.1
+  generationVersion: 2.599.0
+  releaseVersion: 0.45.0
+  configChecksum: 693ddfac5f1a1861ba81d3c10f497e08
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -16,14 +16,14 @@ features:
     acceptHeaders: 3.0.0
     additionalDependencies: 1.0.0
     constsAndDefaults: 1.0.5
-    core: 5.17.1
+    core: 5.18.0
     defaultEnabledRetries: 0.2.0
     downloadStreams: 1.0.1
     enumUnions: 0.1.0
     envVarSecurityUsage: 0.3.2
     globalSecurity: 3.0.3
     globalSecurityCallbacks: 1.0.0
-    globalServerURLs: 3.1.0
+    globalServerURLs: 3.1.1
     responseFormat: 1.0.1
     retries: 3.0.2
     sdkHooks: 1.0.1
@@ -942,6 +942,7 @@ generatedFiles:
   - docs/models/shared/accountingtransactioncontact.md
   - docs/models/shared/accountingtransactionlineitem.md
   - docs/models/shared/accountingtrialbalancesubitem.md
+  - docs/models/shared/api.md
   - docs/models/shared/apicall.md
   - docs/models/shared/apicalltype.md
   - docs/models/shared/atsactivity.md
@@ -1093,7 +1094,6 @@ generatedFiles:
   - docs/models/shared/format_.md
   - docs/models/shared/four.md
   - docs/models/shared/frequency.md
-  - docs/models/shared/fromwebhook.md
   - docs/models/shared/genaicontent.md
   - docs/models/shared/genaimodel.md
   - docs/models/shared/genaiprompt.md
@@ -1141,7 +1141,33 @@ generatedFiles:
   - docs/models/shared/hristimeoffstatus.md
   - docs/models/shared/hristimeofftype.md
   - docs/models/shared/integration.md
-  - docs/models/shared/integrationsupport.md
+  - docs/models/shared/integration1.md
+  - docs/models/shared/integration2.md
+  - docs/models/shared/integration3.md
+  - docs/models/shared/integration4.md
+  - docs/models/shared/integration5.md
+  - docs/models/shared/integrationschemas1.md
+  - docs/models/shared/integrationschemas2.md
+  - docs/models/shared/integrationschemas3.md
+  - docs/models/shared/integrationschemas4.md
+  - docs/models/shared/integrationschemas5.md
+  - docs/models/shared/integrationschemasapi2.md
+  - docs/models/shared/integrationschemasapi22.md
+  - docs/models/shared/integrationschemasapi32.md
+  - docs/models/shared/integrationschemasapi52.md
+  - docs/models/shared/integrationschemaspartnership2.md
+  - docs/models/shared/integrationschemaspartnership32.md
+  - docs/models/shared/integrationschemaspartnership42.md
+  - docs/models/shared/integrationschemaspartnership52.md
+  - docs/models/shared/integrationschemassandbox1.md
+  - docs/models/shared/integrationschemassandbox2.md
+  - docs/models/shared/integrationschemassandbox22.md
+  - docs/models/shared/integrationschemassandbox3.md
+  - docs/models/shared/integrationschemassandbox32.md
+  - docs/models/shared/integrationschemassandbox4.md
+  - docs/models/shared/integrationschemassandbox42.md
+  - docs/models/shared/integrationschemassandbox5.md
+  - docs/models/shared/integrationschemassandbox52.md
   - docs/models/shared/intervalunit.md
   - docs/models/shared/issue.md
   - docs/models/shared/issuestatus.md
@@ -1151,53 +1177,6 @@ generatedFiles:
   - docs/models/shared/kmspagemetadata.md
   - docs/models/shared/kmspagetype.md
   - docs/models/shared/kmsspace.md
-  - docs/models/shared/listaccountid.md
-  - docs/models/shared/listapplicationid.md
-  - docs/models/shared/listcalendarid.md
-  - docs/models/shared/listcallid.md
-  - docs/models/shared/listcandidateid.md
-  - docs/models/shared/listchannelid.md
-  - docs/models/shared/listclassid.md
-  - docs/models/shared/listcollectionid.md
-  - docs/models/shared/listcompanyid.md
-  - docs/models/shared/listcontactid.md
-  - docs/models/shared/listcourseid.md
-  - docs/models/shared/listcustomerid.md
-  - docs/models/shared/listdealid.md
-  - docs/models/shared/listendle.md
-  - docs/models/shared/listeventid.md
-  - docs/models/shared/listinstructorid.md
-  - docs/models/shared/listinterviewid.md
-  - docs/models/shared/listinvoiceid.md
-  - docs/models/shared/listitemid.md
-  - docs/models/shared/listitemvariantid.md
-  - docs/models/shared/listjobid.md
-  - docs/models/shared/listleadid.md
-  - docs/models/shared/listlimit.md
-  - docs/models/shared/listlinkid.md
-  - docs/models/shared/listlistid.md
-  - docs/models/shared/listlocationid.md
-  - docs/models/shared/listoffset.md
-  - docs/models/shared/listorder.md
-  - docs/models/shared/listorgid.md
-  - docs/models/shared/listpageid.md
-  - docs/models/shared/listparentid.md
-  - docs/models/shared/listprojectid.md
-  - docs/models/shared/listquery.md
-  - docs/models/shared/listrawfields.md
-  - docs/models/shared/listrepoid.md
-  - docs/models/shared/listrootid.md
-  - docs/models/shared/listsortbycreatedat.md
-  - docs/models/shared/listsortbyname.md
-  - docs/models/shared/listsortbyupdatedat.md
-  - docs/models/shared/listspaceid.md
-  - docs/models/shared/liststartgte.md
-  - docs/models/shared/liststudentid.md
-  - docs/models/shared/listtaskid.md
-  - docs/models/shared/listticketid.md
-  - docs/models/shared/listtype.md
-  - docs/models/shared/listupdatedgte.md
-  - docs/models/shared/listuserid.md
   - docs/models/shared/lmsclass.md
   - docs/models/shared/lmscourse.md
   - docs/models/shared/lmsemail.md
@@ -1217,12 +1196,11 @@ generatedFiles:
   - docs/models/shared/messagingmember.md
   - docs/models/shared/messagingmessage.md
   - docs/models/shared/metadatametadata.md
-  - docs/models/shared/nativewebhookparentid.md
-  - docs/models/shared/nativewebhookprojectid.md
   - docs/models/shared/objecttype.md
   - docs/models/shared/one.md
   - docs/models/shared/operation.md
   - docs/models/shared/origin.md
+  - docs/models/shared/partnership.md
   - docs/models/shared/paymentcollectionmethod.md
   - docs/models/shared/paymentlineitem.md
   - docs/models/shared/paymentlink.md
@@ -1276,10 +1254,6 @@ generatedFiles:
   - docs/models/shared/propertyhrisemployeeemployeeroles.md
   - docs/models/shared/propertyhrislocationaddress.md
   - docs/models/shared/propertyintegrationcategories.md
-  - docs/models/shared/propertyintegrationsupportwebhookevents.md
-  - docs/models/shared/propertyintegrationsupportwebhookeventscreated.md
-  - docs/models/shared/propertyintegrationsupportwebhookeventsdeleted.md
-  - docs/models/shared/propertyintegrationsupportwebhookeventsupdated.md
   - docs/models/shared/propertylmsstudentaddress.md
   - docs/models/shared/propertymessagingmessageauthormember.md
   - docs/models/shared/propertyscimgroupmeta.md
@@ -1308,6 +1282,7 @@ generatedFiles:
   - docs/models/shared/reporepository.md
   - docs/models/shared/resourcetype.md
   - docs/models/shared/role.md
+  - docs/models/shared/sandbox.md
   - docs/models/shared/scimaddress.md
   - docs/models/shared/scimaddresstype.md
   - docs/models/shared/scimemail.md
@@ -1328,11 +1303,6 @@ generatedFiles:
   - docs/models/shared/scimuser.md
   - docs/models/shared/scimusergroups.md
   - docs/models/shared/scimusergroupstype.md
-  - docs/models/shared/searchdomain.md
-  - docs/models/shared/searchemail.md
-  - docs/models/shared/searchlinkedinurl.md
-  - docs/models/shared/searchname.md
-  - docs/models/shared/searchtwitter.md
   - docs/models/shared/security.md
   - docs/models/shared/sexualorientation.md
   - docs/models/shared/sizeunit.md
@@ -1367,17 +1337,6 @@ generatedFiles:
   - docs/models/shared/uctelephone.md
   - docs/models/shared/uctelephonetype.md
   - docs/models/shared/value.md
-  - docs/models/shared/virtualwebhookchannelid.md
-  - docs/models/shared/virtualwebhookcompanyid.md
-  - docs/models/shared/virtualwebhookcontactid.md
-  - docs/models/shared/virtualwebhookdealid.md
-  - docs/models/shared/virtualwebhookjobid.md
-  - docs/models/shared/virtualwebhooklimit.md
-  - docs/models/shared/virtualwebhookparentid.md
-  - docs/models/shared/virtualwebhookticketid.md
-  - docs/models/shared/virtualwebhooktype.md
-  - docs/models/shared/virtualwebhookupdatedgte.md
-  - docs/models/shared/virtualwebhookuserid.md
   - docs/models/shared/webhook.md
   - docs/models/shared/webhooktype.md
   - docs/models/shared/weightunit.md
@@ -2087,7 +2046,6 @@ generatedFiles:
   - src/unified_python_sdk/models/shared/hristelephone.py
   - src/unified_python_sdk/models/shared/hristimeoff.py
   - src/unified_python_sdk/models/shared/integration.py
-  - src/unified_python_sdk/models/shared/integrationsupport.py
   - src/unified_python_sdk/models/shared/issue.py
   - src/unified_python_sdk/models/shared/kmscomment.py
   - src/unified_python_sdk/models/shared/kmspage.py
@@ -2151,10 +2109,6 @@ generatedFiles:
   - src/unified_python_sdk/models/shared/property_hrisemployee_employee_roles.py
   - src/unified_python_sdk/models/shared/property_hrislocation_address.py
   - src/unified_python_sdk/models/shared/property_integration_categories.py
-  - src/unified_python_sdk/models/shared/property_integrationsupport_webhook_events.py
-  - src/unified_python_sdk/models/shared/property_integrationsupport_webhook_events_created.py
-  - src/unified_python_sdk/models/shared/property_integrationsupport_webhook_events_deleted.py
-  - src/unified_python_sdk/models/shared/property_integrationsupport_webhook_events_updated.py
   - src/unified_python_sdk/models/shared/property_lmsstudent_address.py
   - src/unified_python_sdk/models/shared/property_messagingmessage_author_member.py
   - src/unified_python_sdk/models/shared/property_scimgroup_meta.py

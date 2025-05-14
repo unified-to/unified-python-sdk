@@ -1,10 +1,10 @@
 [project]
 name = "Unified-python-sdk"
-version = "0.44.1"
+version = "0.45.0"
 description = "Python Client SDK for Unified.to"
 authors = [{ name = "Unified API Inc." },]
 readme = "README-PYPI.md"
-requires-python = ">=3.9"
+requires-python = ">=3.9.2"
 dependencies = [
     "httpx >=0.28.1",
     "pydantic >=2.11.2",

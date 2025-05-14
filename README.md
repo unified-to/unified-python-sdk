@@ -1485,7 +1485,7 @@ from unified_python_sdk.models import shared
 
 
 with UnifiedTo(
-    server_url="https://api.unified.to",
+    server_url="https://api-au.unified.to",
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),
