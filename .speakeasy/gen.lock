@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: 384d22984f53ba58e35d8b7c45507e05
+  docChecksum: 896ad02cb1fe122b37a5db9ff432b9bf
   docVersion: "1.0"
-  speakeasyVersion: 1.544.1
+  speakeasyVersion: 1.545.0
   generationVersion: 2.599.0
-  releaseVersion: 0.45.0
-  configChecksum: 693ddfac5f1a1861ba81d3c10f497e08
+  releaseVersion: 0.45.1
+  configChecksum: 4b8d32e1e9e2fe3f6efe9b38457505f9
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -1254,6 +1254,7 @@ generatedFiles:
   - docs/models/shared/propertyhrisemployeeemployeeroles.md
   - docs/models/shared/propertyhrislocationaddress.md
   - docs/models/shared/propertyintegrationcategories.md
+  - docs/models/shared/propertyintegrationtokeninstructions.md
   - docs/models/shared/propertylmsstudentaddress.md
   - docs/models/shared/propertymessagingmessageauthormember.md
   - docs/models/shared/propertyscimgroupmeta.md
@@ -2109,6 +2110,7 @@ generatedFiles:
   - src/unified_python_sdk/models/shared/property_hrisemployee_employee_roles.py
   - src/unified_python_sdk/models/shared/property_hrislocation_address.py
   - src/unified_python_sdk/models/shared/property_integration_categories.py
+  - src/unified_python_sdk/models/shared/property_integration_token_instructions.py
   - src/unified_python_sdk/models/shared/property_lmsstudent_address.py
   - src/unified_python_sdk/models/shared/property_messagingmessage_author_member.py
   - src/unified_python_sdk/models/shared/property_scimgroup_meta.py

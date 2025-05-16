@@ -635,6 +635,9 @@ from .property_hrislocation_address import (
     PropertyHrisLocationAddressTypedDict,
 )
 from .property_integration_categories import PropertyIntegrationCategories
+from .property_integration_token_instructions import (
+    PropertyIntegrationTokenInstructions,
+)
 from .property_lmsstudent_address import (
     PropertyLmsStudentAddress,
     PropertyLmsStudentAddressTypedDict,
@@ -1351,6 +1354,7 @@ __all__ = [
     "PropertyHrisLocationAddress",
     "PropertyHrisLocationAddressTypedDict",
     "PropertyIntegrationCategories",
+    "PropertyIntegrationTokenInstructions",
     "PropertyLmsStudentAddress",
     "PropertyLmsStudentAddressTypedDict",
     "PropertyMessagingMessageAuthorMember",

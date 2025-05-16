@@ -22,6 +22,8 @@ class ListTaskProjectsRequestTypedDict(TypedDict):
     limit: NotRequired[float]
     offset: NotRequired[float]
     order: NotRequired[str]
+    org_id: NotRequired[str]
+    r"""The org ID to filter by"""
     parent_id: NotRequired[str]
     r"""The parent ID to filter by"""
     query: NotRequired[str]
@@ -59,6 +61,12 @@ class ListTaskProjectsRequest(BaseModel):
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
+
+    org_id: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+    r"""The org ID to filter by"""
 
     parent_id: Annotated[
         Optional[str],
