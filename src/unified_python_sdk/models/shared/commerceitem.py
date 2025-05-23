@@ -4,6 +4,7 @@ from __future__ import annotations
 from .commerceitemmedia import CommerceItemMedia, CommerceItemMediaTypedDict
 from .commerceitemvariant import CommerceItemVariant, CommerceItemVariantTypedDict
 from .commercemetadata import CommerceMetadata, CommerceMetadataTypedDict
+from .property_commerceitem_tags import PropertyCommerceItemTags
 from datetime import datetime
 from typing import Any, Dict, List, Optional
 from typing_extensions import NotRequired, TypedDict
@@ -25,7 +26,7 @@ class CommerceItemTypedDict(TypedDict):
     public_name: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
     slug: NotRequired[str]
-    tags: NotRequired[List[str]]
+    tags: NotRequired[List[PropertyCommerceItemTags]]
     type: NotRequired[str]
     updated_at: NotRequired[datetime]
     variants: NotRequired[List[CommerceItemVariantTypedDict]]
@@ -62,7 +63,7 @@ class CommerceItem(BaseModel):
 
     slug: Optional[str] = None
 
-    tags: Optional[List[str]] = None
+    tags: Optional[List[PropertyCommerceItemTags]] = None
 
     type: Optional[str] = None
 

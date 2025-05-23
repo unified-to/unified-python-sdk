@@ -2,6 +2,10 @@
 
 from __future__ import annotations
 from .calendarattendee import CalendarAttendee, CalendarAttendeeTypedDict
+from .calendareventrecurrence import (
+    CalendarEventRecurrence,
+    CalendarEventRecurrenceTypedDict,
+)
 from .property_calendarevent_organizer import (
     PropertyCalendarEventOrganizer,
     PropertyCalendarEventOrganizerTypedDict,
@@ -33,6 +37,8 @@ class CalendarEventTypedDict(TypedDict):
     notes: NotRequired[str]
     organizer: NotRequired[PropertyCalendarEventOrganizerTypedDict]
     raw: NotRequired[Dict[str, Any]]
+    recurrence: NotRequired[List[CalendarEventRecurrenceTypedDict]]
+    recurring_event_id: NotRequired[str]
     status: NotRequired[CalendarEventStatus]
     timezone: NotRequired[str]
     updated_at: NotRequired[str]
@@ -67,6 +73,10 @@ class CalendarEvent(BaseModel):
     organizer: Optional[PropertyCalendarEventOrganizer] = None
 
     raw: Optional[Dict[str, Any]] = None
+
+    recurrence: Optional[List[CalendarEventRecurrence]] = None
+
+    recurring_event_id: Optional[str] = None
 
     status: Optional[CalendarEventStatus] = None
 

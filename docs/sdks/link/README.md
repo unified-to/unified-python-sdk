@@ -37,7 +37,7 @@ with UnifiedTo(
 
     res = unified_to.link.create_calendar_link(request={
         "calendar_link": {
-            "url": "https://sturdy-begonia.biz/",
+            "url": "https://misguided-thongs.info",
         },
         "connection_id": "<id>",
     })
@@ -313,7 +313,7 @@ with UnifiedTo(
 
     res = unified_to.link.patch_calendar_link(request={
         "calendar_link": {
-            "url": "https://curly-skyline.biz/",
+            "url": "https://warm-hexagon.name/",
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -501,7 +501,7 @@ with UnifiedTo(
 
     res = unified_to.link.update_calendar_link(request={
         "calendar_link": {
-            "url": "https://quiet-coordination.name",
+            "url": "https://partial-hydrocarbon.info",
         },
         "connection_id": "<id>",
         "id": "<id>",

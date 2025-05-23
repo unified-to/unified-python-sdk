@@ -30,15 +30,10 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.connection.create_unified_connection(request={
-        "categories": [
-            shared.PropertyConnectionCategories.ACCOUNTING,
-            shared.PropertyConnectionCategories.MARTECH,
-            shared.PropertyConnectionCategories.MARTECH,
-        ],
+        "categories": [],
         "integration_type": "<value>",
         "permissions": [
-            shared.PropertyConnectionPermissions.REPO_ORGANIZATION_READ,
-            shared.PropertyConnectionPermissions.LMS_CLASS_WRITE,
+            shared.PropertyConnectionPermissions.ENRICH_COMPANY_READ,
         ],
     })
 
@@ -174,11 +169,12 @@ with UnifiedTo(
     res = unified_to.connection.patch_unified_connection(request={
         "connection": {
             "categories": [
-                shared.PropertyConnectionCategories.CALENDAR,
-                shared.PropertyConnectionCategories.ENRICH,
+                shared.PropertyConnectionCategories.STORAGE,
             ],
             "integration_type": "<value>",
-            "permissions": [],
+            "permissions": [
+                shared.PropertyConnectionPermissions.UC_CONTACT_WRITE,
+            ],
         },
         "id": "<id>",
     })
@@ -271,13 +267,12 @@ with UnifiedTo(
 
     res = unified_to.connection.update_unified_connection(request={
         "connection": {
-            "categories": [
-                shared.PropertyConnectionCategories.CALENDAR,
-                shared.PropertyConnectionCategories.STORAGE,
-                shared.PropertyConnectionCategories.CALENDAR,
-            ],
+            "categories": [],
             "integration_type": "<value>",
-            "permissions": [],
+            "permissions": [
+                shared.PropertyConnectionPermissions.COMMERCE_REVIEW_READ,
+                shared.PropertyConnectionPermissions.CALENDAR_CALENDAR_READ,
+            ],
         },
         "id": "<id>",
     })

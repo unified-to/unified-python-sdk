@@ -33,7 +33,7 @@ with UnifiedTo(
 
     res = unified_to.passthrough.create_passthrough_json(request={
         "connection_id": "<id>",
-        "path": "/opt/lib",
+        "path": "/var/log",
     })
 
     assert res is not None
@@ -79,7 +79,7 @@ with UnifiedTo(
 
     res = unified_to.passthrough.create_passthrough_raw(request={
         "connection_id": "<id>",
-        "path": "/opt/lib",
+        "path": "/var/log",
     })
 
     assert res is not None
@@ -125,7 +125,7 @@ with UnifiedTo(
 
     res = unified_to.passthrough.list_passthroughs(request={
         "connection_id": "<id>",
-        "path": "/selinux",
+        "path": "/System",
     })
 
     assert res is not None
@@ -171,7 +171,7 @@ with UnifiedTo(
 
     res = unified_to.passthrough.patch_passthrough_json(request={
         "connection_id": "<id>",
-        "path": "/home/user",
+        "path": "/System",
     })
 
     assert res is not None
@@ -217,7 +217,7 @@ with UnifiedTo(
 
     res = unified_to.passthrough.patch_passthrough_raw(request={
         "connection_id": "<id>",
-        "path": "/home/user",
+        "path": "/System",
     })
 
     assert res is not None
@@ -263,7 +263,7 @@ with UnifiedTo(
 
     res = unified_to.passthrough.remove_passthrough(request={
         "connection_id": "<id>",
-        "path": "/Applications",
+        "path": "/bin",
     })
 
     assert res is not None
@@ -309,7 +309,7 @@ with UnifiedTo(
 
     res = unified_to.passthrough.update_passthrough_json(request={
         "connection_id": "<id>",
-        "path": "/etc/namedb",
+        "path": "/var/tmp",
     })
 
     assert res is not None
@@ -355,7 +355,7 @@ with UnifiedTo(
 
     res = unified_to.passthrough.update_passthrough_raw(request={
         "connection_id": "<id>",
-        "path": "/etc/namedb",
+        "path": "/var/tmp",
     })
 
     assert res is not None

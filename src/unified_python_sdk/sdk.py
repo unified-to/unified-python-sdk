@@ -6,201 +6,301 @@ from .sdkconfiguration import SDKConfiguration
 from .utils.logger import Logger, get_default_logger
 from .utils.retries import RetryConfig
 import httpx
-from typing import Callable, Dict, Optional, Union, cast
+import importlib
+from typing import Callable, Dict, Optional, TYPE_CHECKING, Union, cast
 from unified_python_sdk import utils
 from unified_python_sdk._hooks import SDKHooks
-from unified_python_sdk.account import Account
-from unified_python_sdk.accounting import Accounting
-from unified_python_sdk.activity import Activity
-from unified_python_sdk.apicall import Apicall
-from unified_python_sdk.application import Application
-from unified_python_sdk.applicationstatus import Applicationstatus
-from unified_python_sdk.ats import Ats
-from unified_python_sdk.auth import Auth
-from unified_python_sdk.branch import Branch
-from unified_python_sdk.busy import Busy
-from unified_python_sdk.calendar import Calendar
-from unified_python_sdk.call import Call
-from unified_python_sdk.candidate import Candidate
-from unified_python_sdk.channel import Channel
-from unified_python_sdk.class_ import Class
-from unified_python_sdk.collection import Collection
-from unified_python_sdk.comment import Comment
-from unified_python_sdk.commerce import Commerce
-from unified_python_sdk.commit import Commit
-from unified_python_sdk.company import Company
-from unified_python_sdk.connection import Connection
-from unified_python_sdk.contact import Contact
-from unified_python_sdk.course import Course
-from unified_python_sdk.crm import Crm
-from unified_python_sdk.customer import Customer
-from unified_python_sdk.deal import Deal
-from unified_python_sdk.device import Device
-from unified_python_sdk.document import Document
-from unified_python_sdk.employee import Employee
-from unified_python_sdk.enrich import Enrich
-from unified_python_sdk.event import Event
-from unified_python_sdk.file import File
-from unified_python_sdk.genai import Genai
-from unified_python_sdk.group import Group
-from unified_python_sdk.hris import Hris
-from unified_python_sdk.instructor import Instructor
-from unified_python_sdk.integration import Integration
-from unified_python_sdk.interview import Interview
-from unified_python_sdk.inventory import Inventory
-from unified_python_sdk.invoice import Invoice
-from unified_python_sdk.issue import Issue
-from unified_python_sdk.item import Item
-from unified_python_sdk.job import Job
-from unified_python_sdk.journal import Journal
-from unified_python_sdk.kms import Kms
-from unified_python_sdk.lead import Lead
-from unified_python_sdk.link import Link
-from unified_python_sdk.list import ListT
-from unified_python_sdk.lms import Lms
-from unified_python_sdk.location import Location
-from unified_python_sdk.login import Login
-from unified_python_sdk.martech import Martech
-from unified_python_sdk.member import Member
-from unified_python_sdk.message import Message
-from unified_python_sdk.messaging import Messaging
-from unified_python_sdk.metadata import Metadata
-from unified_python_sdk.model import Model
 from unified_python_sdk.models import shared
-from unified_python_sdk.note import Note
-from unified_python_sdk.order import Order
-from unified_python_sdk.organization import Organization
-from unified_python_sdk.page import Page
-from unified_python_sdk.passthrough import Passthrough
-from unified_python_sdk.payment import Payment
-from unified_python_sdk.payout import Payout
-from unified_python_sdk.payslip import Payslip
-from unified_python_sdk.person import Person
-from unified_python_sdk.pipeline import Pipeline
-from unified_python_sdk.project import Project
-from unified_python_sdk.prompt import Prompt
-from unified_python_sdk.pullrequest import Pullrequest
-from unified_python_sdk.recording import Recording
-from unified_python_sdk.refund import Refund
-from unified_python_sdk.repo import Repo
-from unified_python_sdk.report import Report
-from unified_python_sdk.repository import Repository
-from unified_python_sdk.review import Review
-from unified_python_sdk.scim import Scim
-from unified_python_sdk.scorecard import Scorecard
-from unified_python_sdk.space import Space
-from unified_python_sdk.storage import Storage
-from unified_python_sdk.student import Student
-from unified_python_sdk.subscription import Subscription
-from unified_python_sdk.task import Task
-from unified_python_sdk.taxrate import Taxrate
-from unified_python_sdk.ticket import Ticket
-from unified_python_sdk.ticketing import Ticketing
-from unified_python_sdk.timeoff import Timeoff
-from unified_python_sdk.transaction import Transaction
 from unified_python_sdk.types import OptionalNullable, UNSET
-from unified_python_sdk.uc import Uc
-from unified_python_sdk.unified import Unified
-from unified_python_sdk.user import User
-from unified_python_sdk.webhook import Webhook
 import weakref
+
+if TYPE_CHECKING:
+    from unified_python_sdk.account import Account
+    from unified_python_sdk.accounting import Accounting
+    from unified_python_sdk.activity import Activity
+    from unified_python_sdk.apicall import Apicall
+    from unified_python_sdk.application import Application
+    from unified_python_sdk.applicationstatus import Applicationstatus
+    from unified_python_sdk.ats import Ats
+    from unified_python_sdk.auth import Auth
+    from unified_python_sdk.branch import Branch
+    from unified_python_sdk.busy import Busy
+    from unified_python_sdk.calendar import Calendar
+    from unified_python_sdk.call import Call
+    from unified_python_sdk.candidate import Candidate
+    from unified_python_sdk.channel import Channel
+    from unified_python_sdk.class_ import Class
+    from unified_python_sdk.collection import Collection
+    from unified_python_sdk.comment import Comment
+    from unified_python_sdk.commerce import Commerce
+    from unified_python_sdk.commit import Commit
+    from unified_python_sdk.company import Company
+    from unified_python_sdk.connection import Connection
+    from unified_python_sdk.contact import Contact
+    from unified_python_sdk.course import Course
+    from unified_python_sdk.crm import Crm
+    from unified_python_sdk.customer import Customer
+    from unified_python_sdk.deal import Deal
+    from unified_python_sdk.device import Device
+    from unified_python_sdk.document import Document
+    from unified_python_sdk.employee import Employee
+    from unified_python_sdk.enrich import Enrich
+    from unified_python_sdk.event import Event
+    from unified_python_sdk.file import File
+    from unified_python_sdk.genai import Genai
+    from unified_python_sdk.group import Group
+    from unified_python_sdk.hris import Hris
+    from unified_python_sdk.instructor import Instructor
+    from unified_python_sdk.integration import Integration
+    from unified_python_sdk.interview import Interview
+    from unified_python_sdk.inventory import Inventory
+    from unified_python_sdk.invoice import Invoice
+    from unified_python_sdk.issue import Issue
+    from unified_python_sdk.item import Item
+    from unified_python_sdk.job import Job
+    from unified_python_sdk.journal import Journal
+    from unified_python_sdk.kms import Kms
+    from unified_python_sdk.lead import Lead
+    from unified_python_sdk.link import Link
+    from unified_python_sdk.list import ListT
+    from unified_python_sdk.lms import Lms
+    from unified_python_sdk.location import Location
+    from unified_python_sdk.login import Login
+    from unified_python_sdk.martech import Martech
+    from unified_python_sdk.member import Member
+    from unified_python_sdk.message import Message
+    from unified_python_sdk.messaging import Messaging
+    from unified_python_sdk.metadata import Metadata
+    from unified_python_sdk.model import Model
+    from unified_python_sdk.note import Note
+    from unified_python_sdk.order import Order
+    from unified_python_sdk.organization import Organization
+    from unified_python_sdk.page import Page
+    from unified_python_sdk.passthrough import Passthrough
+    from unified_python_sdk.payment import Payment
+    from unified_python_sdk.payout import Payout
+    from unified_python_sdk.payslip import Payslip
+    from unified_python_sdk.person import Person
+    from unified_python_sdk.pipeline import Pipeline
+    from unified_python_sdk.project import Project
+    from unified_python_sdk.prompt import Prompt
+    from unified_python_sdk.pullrequest import Pullrequest
+    from unified_python_sdk.recording import Recording
+    from unified_python_sdk.refund import Refund
+    from unified_python_sdk.repo import Repo
+    from unified_python_sdk.report import Report
+    from unified_python_sdk.repository import Repository
+    from unified_python_sdk.review import Review
+    from unified_python_sdk.scim import Scim
+    from unified_python_sdk.scorecard import Scorecard
+    from unified_python_sdk.space import Space
+    from unified_python_sdk.storage import Storage
+    from unified_python_sdk.student import Student
+    from unified_python_sdk.subscription import Subscription
+    from unified_python_sdk.task import Task
+    from unified_python_sdk.taxrate import Taxrate
+    from unified_python_sdk.ticket import Ticket
+    from unified_python_sdk.ticketing import Ticketing
+    from unified_python_sdk.timeoff import Timeoff
+    from unified_python_sdk.transaction import Transaction
+    from unified_python_sdk.uc import Uc
+    from unified_python_sdk.unified import Unified
+    from unified_python_sdk.user import User
+    from unified_python_sdk.webhook import Webhook
 
 
 class UnifiedTo(BaseSDK):
     r"""Unified.to API: One API to Rule Them All"""
 
-    accounting: Accounting
-    account: Account
-    contact: Contact
-    invoice: Invoice
-    journal: Journal
-    order: Order
-    organization: Organization
-    report: Report
-    taxrate: Taxrate
-    transaction: Transaction
-    ats: Ats
-    activity: Activity
-    application: Application
-    applicationstatus: Applicationstatus
-    candidate: Candidate
-    company: Company
-    document: Document
-    interview: Interview
-    job: Job
-    scorecard: Scorecard
-    calendar: Calendar
-    busy: Busy
-    event: Event
-    link: Link
-    recording: Recording
-    commerce: Commerce
-    collection: Collection
-    inventory: Inventory
-    item: Item
-    location: Location
-    review: Review
-    crm: Crm
-    deal: Deal
-    lead: Lead
-    pipeline: Pipeline
-    enrich: Enrich
-    person: Person
-    genai: Genai
-    model: Model
-    prompt: Prompt
-    hris: Hris
-    device: Device
-    employee: Employee
-    group: Group
-    payslip: Payslip
-    timeoff: Timeoff
-    kms: Kms
-    comment: Comment
-    page: Page
-    space: Space
-    lms: Lms
-    class_: Class
-    course: Course
-    instructor: Instructor
-    student: Student
-    martech: Martech
-    list: ListT
-    member: Member
-    messaging: Messaging
-    channel: Channel
-    message: Message
-    metadata: Metadata
-    passthrough: Passthrough
-    payment: Payment
-    payout: Payout
-    refund: Refund
-    subscription: Subscription
-    repo: Repo
-    branch: Branch
-    commit: Commit
-    pullrequest: Pullrequest
-    repository: Repository
-    scim: Scim
-    user: User
-    storage: Storage
-    file: File
-    task: Task
-    project: Project
-    ticketing: Ticketing
-    customer: Customer
-    note: Note
-    ticket: Ticket
-    uc: Uc
-    call: Call
-    unified: Unified
-    apicall: Apicall
-    connection: Connection
-    integration: Integration
-    auth: Auth
-    login: Login
-    issue: Issue
-    webhook: Webhook
+    accounting: "Accounting"
+    account: "Account"
+    contact: "Contact"
+    invoice: "Invoice"
+    journal: "Journal"
+    order: "Order"
+    organization: "Organization"
+    report: "Report"
+    taxrate: "Taxrate"
+    transaction: "Transaction"
+    ats: "Ats"
+    activity: "Activity"
+    application: "Application"
+    applicationstatus: "Applicationstatus"
+    candidate: "Candidate"
+    company: "Company"
+    document: "Document"
+    interview: "Interview"
+    job: "Job"
+    scorecard: "Scorecard"
+    calendar: "Calendar"
+    busy: "Busy"
+    event: "Event"
+    link: "Link"
+    recording: "Recording"
+    commerce: "Commerce"
+    collection: "Collection"
+    inventory: "Inventory"
+    item: "Item"
+    location: "Location"
+    review: "Review"
+    crm: "Crm"
+    deal: "Deal"
+    lead: "Lead"
+    pipeline: "Pipeline"
+    enrich: "Enrich"
+    person: "Person"
+    genai: "Genai"
+    model: "Model"
+    prompt: "Prompt"
+    hris: "Hris"
+    device: "Device"
+    employee: "Employee"
+    group: "Group"
+    payslip: "Payslip"
+    timeoff: "Timeoff"
+    kms: "Kms"
+    comment: "Comment"
+    page: "Page"
+    space: "Space"
+    lms: "Lms"
+    class_: "Class"
+    course: "Course"
+    instructor: "Instructor"
+    student: "Student"
+    martech: "Martech"
+    list: "ListT"
+    member: "Member"
+    messaging: "Messaging"
+    channel: "Channel"
+    message: "Message"
+    metadata: "Metadata"
+    passthrough: "Passthrough"
+    payment: "Payment"
+    payout: "Payout"
+    refund: "Refund"
+    subscription: "Subscription"
+    repo: "Repo"
+    branch: "Branch"
+    commit: "Commit"
+    pullrequest: "Pullrequest"
+    repository: "Repository"
+    scim: "Scim"
+    user: "User"
+    storage: "Storage"
+    file: "File"
+    task: "Task"
+    project: "Project"
+    ticketing: "Ticketing"
+    customer: "Customer"
+    note: "Note"
+    ticket: "Ticket"
+    uc: "Uc"
+    call: "Call"
+    unified: "Unified"
+    apicall: "Apicall"
+    connection: "Connection"
+    integration: "Integration"
+    auth: "Auth"
+    login: "Login"
+    issue: "Issue"
+    webhook: "Webhook"
+    _sub_sdk_map = {
+        "accounting": ("unified_python_sdk.accounting", "Accounting"),
+        "account": ("unified_python_sdk.account", "Account"),
+        "contact": ("unified_python_sdk.contact", "Contact"),
+        "invoice": ("unified_python_sdk.invoice", "Invoice"),
+        "journal": ("unified_python_sdk.journal", "Journal"),
+        "order": ("unified_python_sdk.order", "Order"),
+        "organization": ("unified_python_sdk.organization", "Organization"),
+        "report": ("unified_python_sdk.report", "Report"),
+        "taxrate": ("unified_python_sdk.taxrate", "Taxrate"),
+        "transaction": ("unified_python_sdk.transaction", "Transaction"),
+        "ats": ("unified_python_sdk.ats", "Ats"),
+        "activity": ("unified_python_sdk.activity", "Activity"),
+        "application": ("unified_python_sdk.application", "Application"),
+        "applicationstatus": (
+            "unified_python_sdk.applicationstatus",
+            "Applicationstatus",
+        ),
+        "candidate": ("unified_python_sdk.candidate", "Candidate"),
+        "company": ("unified_python_sdk.company", "Company"),
+        "document": ("unified_python_sdk.document", "Document"),
+        "interview": ("unified_python_sdk.interview", "Interview"),
+        "job": ("unified_python_sdk.job", "Job"),
+        "scorecard": ("unified_python_sdk.scorecard", "Scorecard"),
+        "calendar": ("unified_python_sdk.calendar", "Calendar"),
+        "busy": ("unified_python_sdk.busy", "Busy"),
+        "event": ("unified_python_sdk.event", "Event"),
+        "link": ("unified_python_sdk.link", "Link"),
+        "recording": ("unified_python_sdk.recording", "Recording"),
+        "commerce": ("unified_python_sdk.commerce", "Commerce"),
+        "collection": ("unified_python_sdk.collection", "Collection"),
+        "inventory": ("unified_python_sdk.inventory", "Inventory"),
+        "item": ("unified_python_sdk.item", "Item"),
+        "location": ("unified_python_sdk.location", "Location"),
+        "review": ("unified_python_sdk.review", "Review"),
+        "crm": ("unified_python_sdk.crm", "Crm"),
+        "deal": ("unified_python_sdk.deal", "Deal"),
+        "lead": ("unified_python_sdk.lead", "Lead"),
+        "pipeline": ("unified_python_sdk.pipeline", "Pipeline"),
+        "enrich": ("unified_python_sdk.enrich", "Enrich"),
+        "person": ("unified_python_sdk.person", "Person"),
+        "genai": ("unified_python_sdk.genai", "Genai"),
+        "model": ("unified_python_sdk.model", "Model"),
+        "prompt": ("unified_python_sdk.prompt", "Prompt"),
+        "hris": ("unified_python_sdk.hris", "Hris"),
+        "device": ("unified_python_sdk.device", "Device"),
+        "employee": ("unified_python_sdk.employee", "Employee"),
+        "group": ("unified_python_sdk.group", "Group"),
+        "payslip": ("unified_python_sdk.payslip", "Payslip"),
+        "timeoff": ("unified_python_sdk.timeoff", "Timeoff"),
+        "kms": ("unified_python_sdk.kms", "Kms"),
+        "comment": ("unified_python_sdk.comment", "Comment"),
+        "page": ("unified_python_sdk.page", "Page"),
+        "space": ("unified_python_sdk.space", "Space"),
+        "lms": ("unified_python_sdk.lms", "Lms"),
+        "class_": ("unified_python_sdk.class_", "Class"),
+        "course": ("unified_python_sdk.course", "Course"),
+        "instructor": ("unified_python_sdk.instructor", "Instructor"),
+        "student": ("unified_python_sdk.student", "Student"),
+        "martech": ("unified_python_sdk.martech", "Martech"),
+        "list": ("unified_python_sdk.list", "ListT"),
+        "member": ("unified_python_sdk.member", "Member"),
+        "messaging": ("unified_python_sdk.messaging", "Messaging"),
+        "channel": ("unified_python_sdk.channel", "Channel"),
+        "message": ("unified_python_sdk.message", "Message"),
+        "metadata": ("unified_python_sdk.metadata", "Metadata"),
+        "passthrough": ("unified_python_sdk.passthrough", "Passthrough"),
+        "payment": ("unified_python_sdk.payment", "Payment"),
+        "payout": ("unified_python_sdk.payout", "Payout"),
+        "refund": ("unified_python_sdk.refund", "Refund"),
+        "subscription": ("unified_python_sdk.subscription", "Subscription"),
+        "repo": ("unified_python_sdk.repo", "Repo"),
+        "branch": ("unified_python_sdk.branch", "Branch"),
+        "commit": ("unified_python_sdk.commit", "Commit"),
+        "pullrequest": ("unified_python_sdk.pullrequest", "Pullrequest"),
+        "repository": ("unified_python_sdk.repository", "Repository"),
+        "scim": ("unified_python_sdk.scim", "Scim"),
+        "user": ("unified_python_sdk.user", "User"),
+        "storage": ("unified_python_sdk.storage", "Storage"),
+        "file": ("unified_python_sdk.file", "File"),
+        "task": ("unified_python_sdk.task", "Task"),
+        "project": ("unified_python_sdk.project", "Project"),
+        "ticketing": ("unified_python_sdk.ticketing", "Ticketing"),
+        "customer": ("unified_python_sdk.customer", "Customer"),
+        "note": ("unified_python_sdk.note", "Note"),
+        "ticket": ("unified_python_sdk.ticket", "Ticket"),
+        "uc": ("unified_python_sdk.uc", "Uc"),
+        "call": ("unified_python_sdk.call", "Call"),
+        "unified": ("unified_python_sdk.unified", "Unified"),
+        "apicall": ("unified_python_sdk.apicall", "Apicall"),
+        "connection": ("unified_python_sdk.connection", "Connection"),
+        "integration": ("unified_python_sdk.integration", "Integration"),
+        "auth": ("unified_python_sdk.auth", "Auth"),
+        "login": ("unified_python_sdk.login", "Login"),
+        "issue": ("unified_python_sdk.issue", "Issue"),
+        "webhook": ("unified_python_sdk.webhook", "Webhook"),
+    }
 
     def __init__(
         self,
@@ -288,101 +388,32 @@ class UnifiedTo(BaseSDK):
             self.sdk_configuration.async_client_supplied,
         )
 
-        self._init_sdks()
+    def __getattr__(self, name: str):
+        if name in self._sub_sdk_map:
+            module_path, class_name = self._sub_sdk_map[name]
+            try:
+                module = importlib.import_module(module_path)
+                klass = getattr(module, class_name)
+                instance = klass(self.sdk_configuration)
+                setattr(self, name, instance)
+                return instance
+            except ImportError as e:
+                raise AttributeError(
+                    f"Failed to import module {module_path} for attribute {name}: {e}"
+                ) from e
+            except AttributeError as e:
+                raise AttributeError(
+                    f"Failed to find class {class_name} in module {module_path} for attribute {name}: {e}"
+                ) from e
 
-    def _init_sdks(self):
-        self.accounting = Accounting(self.sdk_configuration)
-        self.account = Account(self.sdk_configuration)
-        self.contact = Contact(self.sdk_configuration)
-        self.invoice = Invoice(self.sdk_configuration)
-        self.journal = Journal(self.sdk_configuration)
-        self.order = Order(self.sdk_configuration)
-        self.organization = Organization(self.sdk_configuration)
-        self.report = Report(self.sdk_configuration)
-        self.taxrate = Taxrate(self.sdk_configuration)
-        self.transaction = Transaction(self.sdk_configuration)
-        self.ats = Ats(self.sdk_configuration)
-        self.activity = Activity(self.sdk_configuration)
-        self.application = Application(self.sdk_configuration)
-        self.applicationstatus = Applicationstatus(self.sdk_configuration)
-        self.candidate = Candidate(self.sdk_configuration)
-        self.company = Company(self.sdk_configuration)
-        self.document = Document(self.sdk_configuration)
-        self.interview = Interview(self.sdk_configuration)
-        self.job = Job(self.sdk_configuration)
-        self.scorecard = Scorecard(self.sdk_configuration)
-        self.calendar = Calendar(self.sdk_configuration)
-        self.busy = Busy(self.sdk_configuration)
-        self.event = Event(self.sdk_configuration)
-        self.link = Link(self.sdk_configuration)
-        self.recording = Recording(self.sdk_configuration)
-        self.commerce = Commerce(self.sdk_configuration)
-        self.collection = Collection(self.sdk_configuration)
-        self.inventory = Inventory(self.sdk_configuration)
-        self.item = Item(self.sdk_configuration)
-        self.location = Location(self.sdk_configuration)
-        self.review = Review(self.sdk_configuration)
-        self.crm = Crm(self.sdk_configuration)
-        self.deal = Deal(self.sdk_configuration)
-        self.lead = Lead(self.sdk_configuration)
-        self.pipeline = Pipeline(self.sdk_configuration)
-        self.enrich = Enrich(self.sdk_configuration)
-        self.person = Person(self.sdk_configuration)
-        self.genai = Genai(self.sdk_configuration)
-        self.model = Model(self.sdk_configuration)
-        self.prompt = Prompt(self.sdk_configuration)
-        self.hris = Hris(self.sdk_configuration)
-        self.device = Device(self.sdk_configuration)
-        self.employee = Employee(self.sdk_configuration)
-        self.group = Group(self.sdk_configuration)
-        self.payslip = Payslip(self.sdk_configuration)
-        self.timeoff = Timeoff(self.sdk_configuration)
-        self.kms = Kms(self.sdk_configuration)
-        self.comment = Comment(self.sdk_configuration)
-        self.page = Page(self.sdk_configuration)
-        self.space = Space(self.sdk_configuration)
-        self.lms = Lms(self.sdk_configuration)
-        self.class_ = Class(self.sdk_configuration)
-        self.course = Course(self.sdk_configuration)
-        self.instructor = Instructor(self.sdk_configuration)
-        self.student = Student(self.sdk_configuration)
-        self.martech = Martech(self.sdk_configuration)
-        self.list = ListT(self.sdk_configuration)
-        self.member = Member(self.sdk_configuration)
-        self.messaging = Messaging(self.sdk_configuration)
-        self.channel = Channel(self.sdk_configuration)
-        self.message = Message(self.sdk_configuration)
-        self.metadata = Metadata(self.sdk_configuration)
-        self.passthrough = Passthrough(self.sdk_configuration)
-        self.payment = Payment(self.sdk_configuration)
-        self.payout = Payout(self.sdk_configuration)
-        self.refund = Refund(self.sdk_configuration)
-        self.subscription = Subscription(self.sdk_configuration)
-        self.repo = Repo(self.sdk_configuration)
-        self.branch = Branch(self.sdk_configuration)
-        self.commit = Commit(self.sdk_configuration)
-        self.pullrequest = Pullrequest(self.sdk_configuration)
-        self.repository = Repository(self.sdk_configuration)
-        self.scim = Scim(self.sdk_configuration)
-        self.user = User(self.sdk_configuration)
-        self.storage = Storage(self.sdk_configuration)
-        self.file = File(self.sdk_configuration)
-        self.task = Task(self.sdk_configuration)
-        self.project = Project(self.sdk_configuration)
-        self.ticketing = Ticketing(self.sdk_configuration)
-        self.customer = Customer(self.sdk_configuration)
-        self.note = Note(self.sdk_configuration)
-        self.ticket = Ticket(self.sdk_configuration)
-        self.uc = Uc(self.sdk_configuration)
-        self.call = Call(self.sdk_configuration)
-        self.unified = Unified(self.sdk_configuration)
-        self.apicall = Apicall(self.sdk_configuration)
-        self.connection = Connection(self.sdk_configuration)
-        self.integration = Integration(self.sdk_configuration)
-        self.auth = Auth(self.sdk_configuration)
-        self.login = Login(self.sdk_configuration)
-        self.issue = Issue(self.sdk_configuration)
-        self.webhook = Webhook(self.sdk_configuration)
+        raise AttributeError(
+            f"'{type(self).__name__}' object has no attribute '{name}'"
+        )
+
+    def __dir__(self):
+        default_attrs = list(super().__dir__())
+        lazy_attrs = list(self._sub_sdk_map.keys())
+        return sorted(list(set(default_attrs + lazy_attrs)))
 
     def __enter__(self):
         return self

@@ -37,7 +37,7 @@ with UnifiedTo(
 
     res = unified_to.scim.create_scim_groups(request={
         "scim_group": {
-            "display_name": "Bert89",
+            "display_name": "Nina.Tremblay",
         },
         "connection_id": "<id>",
     })
@@ -313,7 +313,7 @@ with UnifiedTo(
 
     res = unified_to.scim.patch_scim_groups(request={
         "scim_group": {
-            "display_name": "Damon_Rutherford93",
+            "display_name": "Newell.Hoeger",
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -501,7 +501,7 @@ with UnifiedTo(
 
     res = unified_to.scim.update_scim_groups(request={
         "scim_group": {
-            "display_name": "Frederic.Reichel",
+            "display_name": "Reynold90",
         },
         "connection_id": "<id>",
         "id": "<id>",

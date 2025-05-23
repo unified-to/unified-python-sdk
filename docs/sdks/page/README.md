@@ -32,7 +32,7 @@ with UnifiedTo(
     res = unified_to.page.create_kms_page(request={
         "kms_page": {
             "title": "<value>",
-            "type": shared.KmsPageType.HTML,
+            "type": shared.KmsPageType.TEXT,
         },
         "connection_id": "<id>",
     })
@@ -172,7 +172,7 @@ with UnifiedTo(
     res = unified_to.page.patch_kms_page(request={
         "kms_page": {
             "title": "<value>",
-            "type": shared.KmsPageType.TEXT,
+            "type": shared.KmsPageType.OTHER,
         },
         "connection_id": "<id>",
         "id": "<id>",

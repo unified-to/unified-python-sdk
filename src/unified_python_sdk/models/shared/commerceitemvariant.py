@@ -5,6 +5,7 @@ from .commerceitemmedia import CommerceItemMedia, CommerceItemMediaTypedDict
 from .commerceitemoption import CommerceItemOption, CommerceItemOptionTypedDict
 from .commerceitemprice import CommerceItemPrice, CommerceItemPriceTypedDict
 from .commercemetadata import CommerceMetadata, CommerceMetadataTypedDict
+from .property_commerceitemvariant_tags import PropertyCommerceItemVariantTags
 from datetime import datetime
 from enum import Enum
 from typing import List, Optional
@@ -44,7 +45,7 @@ class CommerceItemVariantTypedDict(TypedDict):
     requires_shipping: NotRequired[bool]
     size_unit: NotRequired[SizeUnit]
     sku: NotRequired[str]
-    tags: NotRequired[List[str]]
+    tags: NotRequired[List[PropertyCommerceItemVariantTags]]
     total_stock: NotRequired[float]
     weight: NotRequired[float]
     weight_unit: NotRequired[WeightUnit]
@@ -90,7 +91,7 @@ class CommerceItemVariant(BaseModel):
 
     sku: Optional[str] = None
 
-    tags: Optional[List[str]] = None
+    tags: Optional[List[PropertyCommerceItemVariantTags]] = None
 
     total_stock: Optional[float] = None
 

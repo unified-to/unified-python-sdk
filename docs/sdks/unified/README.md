@@ -44,15 +44,10 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.unified.create_unified_connection(request={
-        "categories": [
-            shared.PropertyConnectionCategories.ACCOUNTING,
-            shared.PropertyConnectionCategories.MARTECH,
-            shared.PropertyConnectionCategories.MARTECH,
-        ],
+        "categories": [],
         "integration_type": "<value>",
         "permissions": [
-            shared.PropertyConnectionPermissions.REPO_ORGANIZATION_READ,
-            shared.PropertyConnectionPermissions.LMS_CLASS_WRITE,
+            shared.PropertyConnectionPermissions.ENRICH_COMPANY_READ,
         ],
     })
 
@@ -101,7 +96,7 @@ with UnifiedTo(
         "webhook": {
             "connection_id": "<id>",
             "event": shared.Event.CREATED,
-            "object_type": shared.ObjectType.HRIS_PAYSLIP,
+            "object_type": shared.ObjectType.ATS_SCORECARD,
         },
     })
 
@@ -590,11 +585,12 @@ with UnifiedTo(
     res = unified_to.unified.patch_unified_connection(request={
         "connection": {
             "categories": [
-                shared.PropertyConnectionCategories.CALENDAR,
-                shared.PropertyConnectionCategories.ENRICH,
+                shared.PropertyConnectionCategories.STORAGE,
             ],
             "integration_type": "<value>",
-            "permissions": [],
+            "permissions": [
+                shared.PropertyConnectionPermissions.UC_CONTACT_WRITE,
+            ],
         },
         "id": "<id>",
     })
@@ -643,8 +639,8 @@ with UnifiedTo(
     res = unified_to.unified.patch_unified_webhook(request={
         "webhook": {
             "connection_id": "<id>",
-            "event": shared.Event.DELETED,
-            "object_type": shared.ObjectType.CRM_LEAD,
+            "event": shared.Event.UPDATED,
+            "object_type": shared.ObjectType.TICKETING_CUSTOMER,
         },
         "id": "<id>",
     })
@@ -827,13 +823,12 @@ with UnifiedTo(
 
     res = unified_to.unified.update_unified_connection(request={
         "connection": {
-            "categories": [
-                shared.PropertyConnectionCategories.CALENDAR,
-                shared.PropertyConnectionCategories.STORAGE,
-                shared.PropertyConnectionCategories.CALENDAR,
-            ],
+            "categories": [],
             "integration_type": "<value>",
-            "permissions": [],
+            "permissions": [
+                shared.PropertyConnectionPermissions.COMMERCE_REVIEW_READ,
+                shared.PropertyConnectionPermissions.CALENDAR_CALENDAR_READ,
+            ],
         },
         "id": "<id>",
     })
@@ -882,8 +877,8 @@ with UnifiedTo(
     res = unified_to.unified.update_unified_webhook(request={
         "webhook": {
             "connection_id": "<id>",
-            "event": shared.Event.CREATED,
-            "object_type": shared.ObjectType.PAYMENT_LINK,
+            "event": shared.Event.DELETED,
+            "object_type": shared.ObjectType.MESSAGING_CHANNEL,
         },
         "id": "<id>",
     })

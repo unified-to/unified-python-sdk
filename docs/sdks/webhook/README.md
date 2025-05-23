@@ -35,7 +35,7 @@ with UnifiedTo(
         "webhook": {
             "connection_id": "<id>",
             "event": shared.Event.CREATED,
-            "object_type": shared.ObjectType.HRIS_PAYSLIP,
+            "object_type": shared.ObjectType.ATS_SCORECARD,
         },
     })
 
@@ -171,8 +171,8 @@ with UnifiedTo(
     res = unified_to.webhook.patch_unified_webhook(request={
         "webhook": {
             "connection_id": "<id>",
-            "event": shared.Event.DELETED,
-            "object_type": shared.ObjectType.CRM_LEAD,
+            "event": shared.Event.UPDATED,
+            "object_type": shared.ObjectType.TICKETING_CUSTOMER,
         },
         "id": "<id>",
     })
@@ -311,8 +311,8 @@ with UnifiedTo(
     res = unified_to.webhook.update_unified_webhook(request={
         "webhook": {
             "connection_id": "<id>",
-            "event": shared.Event.CREATED,
-            "object_type": shared.ObjectType.PAYMENT_LINK,
+            "event": shared.Event.DELETED,
+            "object_type": shared.ObjectType.MESSAGING_CHANNEL,
         },
         "id": "<id>",
     })

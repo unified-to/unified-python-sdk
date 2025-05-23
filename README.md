@@ -1315,7 +1315,7 @@ with UnifiedTo(
 
     res = unified_to.passthrough.create_passthrough_raw(request={
         "connection_id": "<id>",
-        "path": "/opt/lib",
+        "path": "/var/log",
     })
 
     assert res is not None
