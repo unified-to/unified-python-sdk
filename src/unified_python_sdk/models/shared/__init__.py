@@ -447,6 +447,7 @@ if TYPE_CHECKING:
         HrisTimeoffType,
         HrisTimeoffTypedDict,
     )
+    from .hristimeshift import HrisTimeshift, HrisTimeshiftTypedDict
     from .integration import (
         API,
         APITypedDict,
@@ -1302,6 +1303,8 @@ __all__ = [
     "HrisTimeoffStatus",
     "HrisTimeoffType",
     "HrisTimeoffTypedDict",
+    "HrisTimeshift",
+    "HrisTimeshiftTypedDict",
     "Integration",
     "Integration1",
     "Integration1TypedDict",
@@ -2123,6 +2126,8 @@ _dynamic_imports: dict[str, str] = {
     "HrisTimeoffStatus": ".hristimeoff",
     "HrisTimeoffType": ".hristimeoff",
     "HrisTimeoffTypedDict": ".hristimeoff",
+    "HrisTimeshift": ".hristimeshift",
+    "HrisTimeshiftTypedDict": ".hristimeshift",
     "API": ".integration",
     "APITypedDict": ".integration",
     "Integration": ".integration",

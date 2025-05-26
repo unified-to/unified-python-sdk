@@ -102,6 +102,7 @@ if TYPE_CHECKING:
     from unified_python_sdk.ticket import Ticket
     from unified_python_sdk.ticketing import Ticketing
     from unified_python_sdk.timeoff import Timeoff
+    from unified_python_sdk.timeshift import Timeshift
     from unified_python_sdk.transaction import Transaction
     from unified_python_sdk.uc import Uc
     from unified_python_sdk.unified import Unified
@@ -158,6 +159,7 @@ class UnifiedTo(BaseSDK):
     group: "Group"
     payslip: "Payslip"
     timeoff: "Timeoff"
+    timeshift: "Timeshift"
     kms: "Kms"
     comment: "Comment"
     page: "Page"
@@ -254,6 +256,7 @@ class UnifiedTo(BaseSDK):
         "group": ("unified_python_sdk.group", "Group"),
         "payslip": ("unified_python_sdk.payslip", "Payslip"),
         "timeoff": ("unified_python_sdk.timeoff", "Timeoff"),
+        "timeshift": ("unified_python_sdk.timeshift", "Timeshift"),
         "kms": ("unified_python_sdk.kms", "Kms"),
         "comment": ("unified_python_sdk.comment", "Comment"),
         "page": ("unified_python_sdk.page", "Page"),

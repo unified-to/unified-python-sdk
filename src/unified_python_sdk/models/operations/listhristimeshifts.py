@@ -4,7 +4,7 @@ from __future__ import annotations
 import httpx
 from typing import List, Optional
 from typing_extensions import Annotated, NotRequired, TypedDict
-from unified_python_sdk.models.shared import hristimeoff as shared_hristimeoff
+from unified_python_sdk.models.shared import hristimeshift as shared_hristimeshift
 from unified_python_sdk.types import BaseModel
 from unified_python_sdk.utils import (
     FieldMetadata,
@@ -13,7 +13,7 @@ from unified_python_sdk.utils import (
 )
 
 
-class ListHrisTimeoffsRequestTypedDict(TypedDict):
+class ListHrisTimeshiftsRequestTypedDict(TypedDict):
     connection_id: str
     r"""ID of the connection"""
     company_id: NotRequired[str]
@@ -23,6 +23,8 @@ class ListHrisTimeoffsRequestTypedDict(TypedDict):
     fields: NotRequired[List[str]]
     r"""Comma-delimited fields to return"""
     limit: NotRequired[float]
+    location_id: NotRequired[str]
+    r"""The location ID to filter by"""
     offset: NotRequired[float]
     order: NotRequired[str]
     query: NotRequired[str]
@@ -38,7 +40,7 @@ class ListHrisTimeoffsRequestTypedDict(TypedDict):
     r"""The user/employee ID to filter by"""
 
 
-class ListHrisTimeoffsRequest(BaseModel):
+class ListHrisTimeshiftsRequest(BaseModel):
     connection_id: Annotated[
         str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))
     ]
@@ -66,6 +68,12 @@ class ListHrisTimeoffsRequest(BaseModel):
         Optional[float],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
+
+    location_id: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+    r"""The location ID to filter by"""
 
     offset: Annotated[
         Optional[float],
@@ -113,18 +121,18 @@ class ListHrisTimeoffsRequest(BaseModel):
     r"""The user/employee ID to filter by"""
 
 
-class ListHrisTimeoffsResponseTypedDict(TypedDict):
+class ListHrisTimeshiftsResponseTypedDict(TypedDict):
     content_type: str
     r"""HTTP response content type for this operation"""
     status_code: int
     r"""HTTP response status code for this operation"""
     raw_response: httpx.Response
     r"""Raw HTTP response; suitable for custom response parsing"""
-    hris_timeoffs: NotRequired[List[shared_hristimeoff.HrisTimeoffTypedDict]]
+    hris_timeshifts: NotRequired[List[shared_hristimeshift.HrisTimeshiftTypedDict]]
     r"""Successful"""
 
 
-class ListHrisTimeoffsResponse(BaseModel):
+class ListHrisTimeshiftsResponse(BaseModel):
     content_type: str
     r"""HTTP response content type for this operation"""
 
@@ -134,5 +142,5 @@ class ListHrisTimeoffsResponse(BaseModel):
     raw_response: httpx.Response
     r"""Raw HTTP response; suitable for custom response parsing"""
 
-    hris_timeoffs: Optional[List[shared_hristimeoff.HrisTimeoff]] = None
+    hris_timeshifts: Optional[List[shared_hristimeshift.HrisTimeshift]] = None
     r"""Successful"""

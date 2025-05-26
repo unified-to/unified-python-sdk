@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: 0410d1777305583960db5f8722b2f00f
+  docChecksum: 22dac4e470df3ae38d82ad39b894304a
   docVersion: "1.0"
-  speakeasyVersion: 1.550.0
+  speakeasyVersion: 1.551.0
   generationVersion: 2.610.0
-  releaseVersion: 0.46.0
-  configChecksum: d53e3ec510ab8ed14986e9557a0337ff
+  releaseVersion: 0.46.1
+  configChecksum: 91cafcd75b8e6514b498ffbf19fd5eeb
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -103,6 +103,8 @@ generatedFiles:
   - docs/models/operations/createhrisgroupresponse.md
   - docs/models/operations/createhrislocationrequest.md
   - docs/models/operations/createhrislocationresponse.md
+  - docs/models/operations/createhristimeshiftrequest.md
+  - docs/models/operations/createhristimeshiftresponse.md
   - docs/models/operations/createkmscommentrequest.md
   - docs/models/operations/createkmscommentresponse.md
   - docs/models/operations/createkmspagerequest.md
@@ -250,6 +252,8 @@ generatedFiles:
   - docs/models/operations/gethrispayslipresponse.md
   - docs/models/operations/gethristimeoffrequest.md
   - docs/models/operations/gethristimeoffresponse.md
+  - docs/models/operations/gethristimeshiftrequest.md
+  - docs/models/operations/gethristimeshiftresponse.md
   - docs/models/operations/getkmscommentrequest.md
   - docs/models/operations/getkmscommentresponse.md
   - docs/models/operations/getkmspagerequest.md
@@ -416,6 +420,8 @@ generatedFiles:
   - docs/models/operations/listhrispayslipsresponse.md
   - docs/models/operations/listhristimeoffsrequest.md
   - docs/models/operations/listhristimeoffsresponse.md
+  - docs/models/operations/listhristimeshiftsrequest.md
+  - docs/models/operations/listhristimeshiftsresponse.md
   - docs/models/operations/listkmscommentsrequest.md
   - docs/models/operations/listkmscommentsresponse.md
   - docs/models/operations/listkmspagesrequest.md
@@ -567,6 +573,8 @@ generatedFiles:
   - docs/models/operations/patchhrisgroupresponse.md
   - docs/models/operations/patchhrislocationrequest.md
   - docs/models/operations/patchhrislocationresponse.md
+  - docs/models/operations/patchhristimeshiftrequest.md
+  - docs/models/operations/patchhristimeshiftresponse.md
   - docs/models/operations/patchkmscommentrequest.md
   - docs/models/operations/patchkmscommentresponse.md
   - docs/models/operations/patchkmspagerequest.md
@@ -706,6 +714,8 @@ generatedFiles:
   - docs/models/operations/removehrisgroupresponse.md
   - docs/models/operations/removehrislocationrequest.md
   - docs/models/operations/removehrislocationresponse.md
+  - docs/models/operations/removehristimeshiftrequest.md
+  - docs/models/operations/removehristimeshiftresponse.md
   - docs/models/operations/removekmscommentrequest.md
   - docs/models/operations/removekmscommentresponse.md
   - docs/models/operations/removekmspagerequest.md
@@ -840,6 +850,8 @@ generatedFiles:
   - docs/models/operations/updatehrisgroupresponse.md
   - docs/models/operations/updatehrislocationrequest.md
   - docs/models/operations/updatehrislocationresponse.md
+  - docs/models/operations/updatehristimeshiftrequest.md
+  - docs/models/operations/updatehristimeshiftresponse.md
   - docs/models/operations/updatekmscommentrequest.md
   - docs/models/operations/updatekmscommentresponse.md
   - docs/models/operations/updatekmspagerequest.md
@@ -1144,6 +1156,7 @@ generatedFiles:
   - docs/models/shared/hristimeoff.md
   - docs/models/shared/hristimeoffstatus.md
   - docs/models/shared/hristimeofftype.md
+  - docs/models/shared/hristimeshift.md
   - docs/models/shared/integration.md
   - docs/models/shared/integration1.md
   - docs/models/shared/integration2.md
@@ -1469,6 +1482,7 @@ generatedFiles:
   - docs/sdks/ticket/README.md
   - docs/sdks/ticketing/README.md
   - docs/sdks/timeoff/README.md
+  - docs/sdks/timeshift/README.md
   - docs/sdks/transaction/README.md
   - docs/sdks/uc/README.md
   - docs/sdks/unified/README.md
@@ -1583,6 +1597,7 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/createhrisemployee.py
   - src/unified_python_sdk/models/operations/createhrisgroup.py
   - src/unified_python_sdk/models/operations/createhrislocation.py
+  - src/unified_python_sdk/models/operations/createhristimeshift.py
   - src/unified_python_sdk/models/operations/createkmscomment.py
   - src/unified_python_sdk/models/operations/createkmspage.py
   - src/unified_python_sdk/models/operations/createkmsspace.py
@@ -1657,6 +1672,7 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/gethrislocation.py
   - src/unified_python_sdk/models/operations/gethrispayslip.py
   - src/unified_python_sdk/models/operations/gethristimeoff.py
+  - src/unified_python_sdk/models/operations/gethristimeshift.py
   - src/unified_python_sdk/models/operations/getkmscomment.py
   - src/unified_python_sdk/models/operations/getkmspage.py
   - src/unified_python_sdk/models/operations/getkmsspace.py
@@ -1740,6 +1756,7 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/listhrislocations.py
   - src/unified_python_sdk/models/operations/listhrispayslips.py
   - src/unified_python_sdk/models/operations/listhristimeoffs.py
+  - src/unified_python_sdk/models/operations/listhristimeshifts.py
   - src/unified_python_sdk/models/operations/listkmscomments.py
   - src/unified_python_sdk/models/operations/listkmspages.py
   - src/unified_python_sdk/models/operations/listkmsspaces.py
@@ -1815,6 +1832,7 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/patchhrisemployee.py
   - src/unified_python_sdk/models/operations/patchhrisgroup.py
   - src/unified_python_sdk/models/operations/patchhrislocation.py
+  - src/unified_python_sdk/models/operations/patchhristimeshift.py
   - src/unified_python_sdk/models/operations/patchkmscomment.py
   - src/unified_python_sdk/models/operations/patchkmspage.py
   - src/unified_python_sdk/models/operations/patchkmsspace.py
@@ -1884,6 +1902,7 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/removehrisemployee.py
   - src/unified_python_sdk/models/operations/removehrisgroup.py
   - src/unified_python_sdk/models/operations/removehrislocation.py
+  - src/unified_python_sdk/models/operations/removehristimeshift.py
   - src/unified_python_sdk/models/operations/removekmscomment.py
   - src/unified_python_sdk/models/operations/removekmspage.py
   - src/unified_python_sdk/models/operations/removekmsspace.py
@@ -1951,6 +1970,7 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/updatehrisemployee.py
   - src/unified_python_sdk/models/operations/updatehrisgroup.py
   - src/unified_python_sdk/models/operations/updatehrislocation.py
+  - src/unified_python_sdk/models/operations/updatehristimeshift.py
   - src/unified_python_sdk/models/operations/updatekmscomment.py
   - src/unified_python_sdk/models/operations/updatekmspage.py
   - src/unified_python_sdk/models/operations/updatekmsspace.py
@@ -2087,6 +2107,7 @@ generatedFiles:
   - src/unified_python_sdk/models/shared/hrispayslipdetail.py
   - src/unified_python_sdk/models/shared/hristelephone.py
   - src/unified_python_sdk/models/shared/hristimeoff.py
+  - src/unified_python_sdk/models/shared/hristimeshift.py
   - src/unified_python_sdk/models/shared/integration.py
   - src/unified_python_sdk/models/shared/issue.py
   - src/unified_python_sdk/models/shared/kmscomment.py
@@ -2249,6 +2270,7 @@ generatedFiles:
   - src/unified_python_sdk/ticket.py
   - src/unified_python_sdk/ticketing.py
   - src/unified_python_sdk/timeoff.py
+  - src/unified_python_sdk/timeshift.py
   - src/unified_python_sdk/transaction.py
   - src/unified_python_sdk/types/__init__.py
   - src/unified_python_sdk/types/basemodel.py
@@ -6254,5 +6276,60 @@ examples:
       responses:
         "200":
           text/plain: "<value>"
+  createHrisTimeshift:
+    speakeasy-default-create-hris-timeshift:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  getHrisTimeshift:
+    speakeasy-default-get-hris-timeshift:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  listHrisTimeshifts:
+    speakeasy-default-list-hris-timeshifts:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}, {}, {}]
+  patchHrisTimeshift:
+    speakeasy-default-patch-hris-timeshift:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  removeHrisTimeshift:
+    speakeasy-default-remove-hris-timeshift:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateHrisTimeshift:
+    speakeasy-default-update-hris-timeshift:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}

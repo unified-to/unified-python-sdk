@@ -208,6 +208,12 @@ if TYPE_CHECKING:
         CreateHrisLocationResponse,
         CreateHrisLocationResponseTypedDict,
     )
+    from .createhristimeshift import (
+        CreateHrisTimeshiftRequest,
+        CreateHrisTimeshiftRequestTypedDict,
+        CreateHrisTimeshiftResponse,
+        CreateHrisTimeshiftResponseTypedDict,
+    )
     from .createkmscomment import (
         CreateKmsCommentRequest,
         CreateKmsCommentRequestTypedDict,
@@ -649,6 +655,12 @@ if TYPE_CHECKING:
         GetHrisTimeoffRequestTypedDict,
         GetHrisTimeoffResponse,
         GetHrisTimeoffResponseTypedDict,
+    )
+    from .gethristimeshift import (
+        GetHrisTimeshiftRequest,
+        GetHrisTimeshiftRequestTypedDict,
+        GetHrisTimeshiftResponse,
+        GetHrisTimeshiftResponseTypedDict,
     )
     from .getkmscomment import (
         GetKmsCommentRequest,
@@ -1148,6 +1160,12 @@ if TYPE_CHECKING:
         ListHrisTimeoffsResponse,
         ListHrisTimeoffsResponseTypedDict,
     )
+    from .listhristimeshifts import (
+        ListHrisTimeshiftsRequest,
+        ListHrisTimeshiftsRequestTypedDict,
+        ListHrisTimeshiftsResponse,
+        ListHrisTimeshiftsResponseTypedDict,
+    )
     from .listkmscomments import (
         ListKmsCommentsRequest,
         ListKmsCommentsRequestTypedDict,
@@ -1601,6 +1619,12 @@ if TYPE_CHECKING:
         PatchHrisLocationResponse,
         PatchHrisLocationResponseTypedDict,
     )
+    from .patchhristimeshift import (
+        PatchHrisTimeshiftRequest,
+        PatchHrisTimeshiftRequestTypedDict,
+        PatchHrisTimeshiftResponse,
+        PatchHrisTimeshiftResponseTypedDict,
+    )
     from .patchkmscomment import (
         PatchKmsCommentRequest,
         PatchKmsCommentRequestTypedDict,
@@ -2015,6 +2039,12 @@ if TYPE_CHECKING:
         RemoveHrisLocationResponse,
         RemoveHrisLocationResponseTypedDict,
     )
+    from .removehristimeshift import (
+        RemoveHrisTimeshiftRequest,
+        RemoveHrisTimeshiftRequestTypedDict,
+        RemoveHrisTimeshiftResponse,
+        RemoveHrisTimeshiftResponseTypedDict,
+    )
     from .removekmscomment import (
         RemoveKmsCommentRequest,
         RemoveKmsCommentRequestTypedDict,
@@ -2417,6 +2447,12 @@ if TYPE_CHECKING:
         UpdateHrisLocationResponse,
         UpdateHrisLocationResponseTypedDict,
     )
+    from .updatehristimeshift import (
+        UpdateHrisTimeshiftRequest,
+        UpdateHrisTimeshiftRequestTypedDict,
+        UpdateHrisTimeshiftResponse,
+        UpdateHrisTimeshiftResponseTypedDict,
+    )
     from .updatekmscomment import (
         UpdateKmsCommentRequest,
         UpdateKmsCommentRequestTypedDict,
@@ -2772,6 +2808,10 @@ __all__ = [
     "CreateHrisLocationRequestTypedDict",
     "CreateHrisLocationResponse",
     "CreateHrisLocationResponseTypedDict",
+    "CreateHrisTimeshiftRequest",
+    "CreateHrisTimeshiftRequestTypedDict",
+    "CreateHrisTimeshiftResponse",
+    "CreateHrisTimeshiftResponseTypedDict",
     "CreateKmsCommentRequest",
     "CreateKmsCommentRequestTypedDict",
     "CreateKmsCommentResponse",
@@ -3066,6 +3106,10 @@ __all__ = [
     "GetHrisTimeoffRequestTypedDict",
     "GetHrisTimeoffResponse",
     "GetHrisTimeoffResponseTypedDict",
+    "GetHrisTimeshiftRequest",
+    "GetHrisTimeshiftRequestTypedDict",
+    "GetHrisTimeshiftResponse",
+    "GetHrisTimeshiftResponseTypedDict",
     "GetKmsCommentRequest",
     "GetKmsCommentRequestTypedDict",
     "GetKmsCommentResponse",
@@ -3398,6 +3442,10 @@ __all__ = [
     "ListHrisTimeoffsRequestTypedDict",
     "ListHrisTimeoffsResponse",
     "ListHrisTimeoffsResponseTypedDict",
+    "ListHrisTimeshiftsRequest",
+    "ListHrisTimeshiftsRequestTypedDict",
+    "ListHrisTimeshiftsResponse",
+    "ListHrisTimeshiftsResponseTypedDict",
     "ListKmsCommentsRequest",
     "ListKmsCommentsRequestTypedDict",
     "ListKmsCommentsResponse",
@@ -3699,6 +3747,10 @@ __all__ = [
     "PatchHrisLocationRequestTypedDict",
     "PatchHrisLocationResponse",
     "PatchHrisLocationResponseTypedDict",
+    "PatchHrisTimeshiftRequest",
+    "PatchHrisTimeshiftRequestTypedDict",
+    "PatchHrisTimeshiftResponse",
+    "PatchHrisTimeshiftResponseTypedDict",
     "PatchKmsCommentRequest",
     "PatchKmsCommentRequestTypedDict",
     "PatchKmsCommentResponse",
@@ -3976,6 +4028,10 @@ __all__ = [
     "RemoveHrisLocationRequestTypedDict",
     "RemoveHrisLocationResponse",
     "RemoveHrisLocationResponseTypedDict",
+    "RemoveHrisTimeshiftRequest",
+    "RemoveHrisTimeshiftRequestTypedDict",
+    "RemoveHrisTimeshiftResponse",
+    "RemoveHrisTimeshiftResponseTypedDict",
     "RemoveKmsCommentRequest",
     "RemoveKmsCommentRequestTypedDict",
     "RemoveKmsCommentResponse",
@@ -4244,6 +4300,10 @@ __all__ = [
     "UpdateHrisLocationRequestTypedDict",
     "UpdateHrisLocationResponse",
     "UpdateHrisLocationResponseTypedDict",
+    "UpdateHrisTimeshiftRequest",
+    "UpdateHrisTimeshiftRequestTypedDict",
+    "UpdateHrisTimeshiftResponse",
+    "UpdateHrisTimeshiftResponseTypedDict",
     "UpdateKmsCommentRequest",
     "UpdateKmsCommentRequestTypedDict",
     "UpdateKmsCommentResponse",
@@ -4527,6 +4587,10 @@ _dynamic_imports: dict[str, str] = {
     "CreateHrisLocationRequestTypedDict": ".createhrislocation",
     "CreateHrisLocationResponse": ".createhrislocation",
     "CreateHrisLocationResponseTypedDict": ".createhrislocation",
+    "CreateHrisTimeshiftRequest": ".createhristimeshift",
+    "CreateHrisTimeshiftRequestTypedDict": ".createhristimeshift",
+    "CreateHrisTimeshiftResponse": ".createhristimeshift",
+    "CreateHrisTimeshiftResponseTypedDict": ".createhristimeshift",
     "CreateKmsCommentRequest": ".createkmscomment",
     "CreateKmsCommentRequestTypedDict": ".createkmscomment",
     "CreateKmsCommentResponse": ".createkmscomment",
@@ -4821,6 +4885,10 @@ _dynamic_imports: dict[str, str] = {
     "GetHrisTimeoffRequestTypedDict": ".gethristimeoff",
     "GetHrisTimeoffResponse": ".gethristimeoff",
     "GetHrisTimeoffResponseTypedDict": ".gethristimeoff",
+    "GetHrisTimeshiftRequest": ".gethristimeshift",
+    "GetHrisTimeshiftRequestTypedDict": ".gethristimeshift",
+    "GetHrisTimeshiftResponse": ".gethristimeshift",
+    "GetHrisTimeshiftResponseTypedDict": ".gethristimeshift",
     "GetKmsCommentRequest": ".getkmscomment",
     "GetKmsCommentRequestTypedDict": ".getkmscomment",
     "GetKmsCommentResponse": ".getkmscomment",
@@ -5153,6 +5221,10 @@ _dynamic_imports: dict[str, str] = {
     "ListHrisTimeoffsRequestTypedDict": ".listhristimeoffs",
     "ListHrisTimeoffsResponse": ".listhristimeoffs",
     "ListHrisTimeoffsResponseTypedDict": ".listhristimeoffs",
+    "ListHrisTimeshiftsRequest": ".listhristimeshifts",
+    "ListHrisTimeshiftsRequestTypedDict": ".listhristimeshifts",
+    "ListHrisTimeshiftsResponse": ".listhristimeshifts",
+    "ListHrisTimeshiftsResponseTypedDict": ".listhristimeshifts",
     "ListKmsCommentsRequest": ".listkmscomments",
     "ListKmsCommentsRequestTypedDict": ".listkmscomments",
     "ListKmsCommentsResponse": ".listkmscomments",
@@ -5456,6 +5528,10 @@ _dynamic_imports: dict[str, str] = {
     "PatchHrisLocationRequestTypedDict": ".patchhrislocation",
     "PatchHrisLocationResponse": ".patchhrislocation",
     "PatchHrisLocationResponseTypedDict": ".patchhrislocation",
+    "PatchHrisTimeshiftRequest": ".patchhristimeshift",
+    "PatchHrisTimeshiftRequestTypedDict": ".patchhristimeshift",
+    "PatchHrisTimeshiftResponse": ".patchhristimeshift",
+    "PatchHrisTimeshiftResponseTypedDict": ".patchhristimeshift",
     "PatchKmsCommentRequest": ".patchkmscomment",
     "PatchKmsCommentRequestTypedDict": ".patchkmscomment",
     "PatchKmsCommentResponse": ".patchkmscomment",
@@ -5732,6 +5808,10 @@ _dynamic_imports: dict[str, str] = {
     "RemoveHrisLocationRequestTypedDict": ".removehrislocation",
     "RemoveHrisLocationResponse": ".removehrislocation",
     "RemoveHrisLocationResponseTypedDict": ".removehrislocation",
+    "RemoveHrisTimeshiftRequest": ".removehristimeshift",
+    "RemoveHrisTimeshiftRequestTypedDict": ".removehristimeshift",
+    "RemoveHrisTimeshiftResponse": ".removehristimeshift",
+    "RemoveHrisTimeshiftResponseTypedDict": ".removehristimeshift",
     "RemoveKmsCommentRequest": ".removekmscomment",
     "RemoveKmsCommentRequestTypedDict": ".removekmscomment",
     "RemoveKmsCommentResponse": ".removekmscomment",
@@ -6000,6 +6080,10 @@ _dynamic_imports: dict[str, str] = {
     "UpdateHrisLocationRequestTypedDict": ".updatehrislocation",
     "UpdateHrisLocationResponse": ".updatehrislocation",
     "UpdateHrisLocationResponseTypedDict": ".updatehrislocation",
+    "UpdateHrisTimeshiftRequest": ".updatehristimeshift",
+    "UpdateHrisTimeshiftRequestTypedDict": ".updatehristimeshift",
+    "UpdateHrisTimeshiftResponse": ".updatehristimeshift",
+    "UpdateHrisTimeshiftResponseTypedDict": ".updatehristimeshift",
     "UpdateKmsCommentRequest": ".updatekmscomment",
     "UpdateKmsCommentRequestTypedDict": ".updatekmscomment",
     "UpdateKmsCommentResponse": ".updatekmscomment",
