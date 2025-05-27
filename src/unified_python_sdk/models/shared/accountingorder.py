@@ -40,6 +40,7 @@ class AccountingOrderTypedDict(TypedDict):
     currency: NotRequired[str]
     id: NotRequired[str]
     lineitems: NotRequired[List[AccountingLineitemTypedDict]]
+    posted_at: NotRequired[datetime]
     raw: NotRequired[Dict[str, Any]]
     shipping_address: NotRequired[PropertyAccountingOrderShippingAddressTypedDict]
     status: NotRequired[AccountingOrderStatus]
@@ -62,6 +63,8 @@ class AccountingOrder(BaseModel):
     id: Optional[str] = None
 
     lineitems: Optional[List[AccountingLineitem]] = None
+
+    posted_at: Optional[datetime] = None
 
     raw: Optional[Dict[str, Any]] = None
 

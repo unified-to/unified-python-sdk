@@ -21,6 +21,7 @@ class MessagingMessageTypedDict(TypedDict):
     r"""Represents the IDs of all channels to which the message is sent. Identifies the channels where the message is posted."""
     created_at: NotRequired[datetime]
     destination_members: NotRequired[List[MessagingMemberTypedDict]]
+    has_children: NotRequired[bool]
     hidden_members: NotRequired[List[MessagingMemberTypedDict]]
     id: NotRequired[str]
     mentioned_members: NotRequired[List[MessagingMemberTypedDict]]
@@ -48,6 +49,8 @@ class MessagingMessage(BaseModel):
     created_at: Optional[datetime] = None
 
     destination_members: Optional[List[MessagingMember]] = None
+
+    has_children: Optional[bool] = None
 
     hidden_members: Optional[List[MessagingMember]] = None
 
