@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: 5d7224eae5351ceaef9292fed7b8c35a
+  docChecksum: d14d19d0a1732100e72235d3371aa316
   docVersion: "1.0"
-  speakeasyVersion: 1.551.0
+  speakeasyVersion: 1.552.0
   generationVersion: 2.610.0
-  releaseVersion: 0.46.2
-  configChecksum: 6184edda5f2a45750c7a187f13d1417d
+  releaseVersion: 0.46.3
+  configChecksum: 9f3469d7ddbeae84ddd7445900ccb244
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -1263,26 +1263,14 @@ generatedFiles:
   - docs/models/shared/propertyaccountingreporttrialbalance.md
   - docs/models/shared/propertyatsactivityfrom.md
   - docs/models/shared/propertyatsactivityfromtype.md
-  - docs/models/shared/propertyatsapplicationansweranswers.md
   - docs/models/shared/propertyatscandidateaddress.md
-  - docs/models/shared/propertyatscandidatelinkurls.md
-  - docs/models/shared/propertyatscandidateskills.md
-  - docs/models/shared/propertyatscandidatesources.md
-  - docs/models/shared/propertyatscandidatetags.md
   - docs/models/shared/propertyatscompanyaddress.md
-  - docs/models/shared/propertyatsjobdepartments.md
   - docs/models/shared/propertyatsjobpostingaddress.md
-  - docs/models/shared/propertyatsjobpublicjoburls.md
-  - docs/models/shared/propertyatsjobquestionoptions.md
   - docs/models/shared/propertycalendareventorganizer.md
   - docs/models/shared/propertycalendareventorganizerstatus.md
   - docs/models/shared/propertycalendareventrecurrenceondays.md
   - docs/models/shared/propertycalendarrecordingtranscriptattendee.md
   - docs/models/shared/propertycalendarrecordingtranscriptattendeestatus.md
-  - docs/models/shared/propertycommercecollectiontags.md
-  - docs/models/shared/propertycommerceitemoptionvalues.md
-  - docs/models/shared/propertycommerceitemtags.md
-  - docs/models/shared/propertycommerceitemvarianttags.md
   - docs/models/shared/propertycommercelocationaddress.md
   - docs/models/shared/propertyconnectionauth.md
   - docs/models/shared/propertyconnectioncategories.md
@@ -1306,10 +1294,8 @@ generatedFiles:
   - docs/models/shared/propertyhrisemployeeemployeeroles.md
   - docs/models/shared/propertyhrislocationaddress.md
   - docs/models/shared/propertyintegrationcategories.md
-  - docs/models/shared/propertyintegrationtokeninstructions.md
   - docs/models/shared/propertylmsstudentaddress.md
   - docs/models/shared/propertymessagingmessageauthormember.md
-  - docs/models/shared/propertymetadatametadataoptions.md
   - docs/models/shared/propertyscimgroupmeta.md
   - docs/models/shared/propertyscimgroupschemas.md
   - docs/models/shared/propertyscimusermeta.md
@@ -2145,24 +2131,12 @@ generatedFiles:
   - src/unified_python_sdk/models/shared/property_accountingreport_profit_and_loss.py
   - src/unified_python_sdk/models/shared/property_accountingreport_trial_balance.py
   - src/unified_python_sdk/models/shared/property_atsactivity_from.py
-  - src/unified_python_sdk/models/shared/property_atsapplicationanswer_answers.py
   - src/unified_python_sdk/models/shared/property_atscandidate_address.py
-  - src/unified_python_sdk/models/shared/property_atscandidate_link_urls.py
-  - src/unified_python_sdk/models/shared/property_atscandidate_skills.py
-  - src/unified_python_sdk/models/shared/property_atscandidate_sources.py
-  - src/unified_python_sdk/models/shared/property_atscandidate_tags.py
   - src/unified_python_sdk/models/shared/property_atscompany_address.py
-  - src/unified_python_sdk/models/shared/property_atsjob_departments.py
-  - src/unified_python_sdk/models/shared/property_atsjob_public_job_urls.py
   - src/unified_python_sdk/models/shared/property_atsjobposting_address.py
-  - src/unified_python_sdk/models/shared/property_atsjobquestion_options.py
   - src/unified_python_sdk/models/shared/property_calendarevent_organizer.py
   - src/unified_python_sdk/models/shared/property_calendareventrecurrence_on_days.py
   - src/unified_python_sdk/models/shared/property_calendarrecordingtranscript_attendee.py
-  - src/unified_python_sdk/models/shared/property_commercecollection_tags.py
-  - src/unified_python_sdk/models/shared/property_commerceitem_tags.py
-  - src/unified_python_sdk/models/shared/property_commerceitemoption_values.py
-  - src/unified_python_sdk/models/shared/property_commerceitemvariant_tags.py
   - src/unified_python_sdk/models/shared/property_commercelocation_address.py
   - src/unified_python_sdk/models/shared/property_connection_auth.py
   - src/unified_python_sdk/models/shared/property_connection_categories.py
@@ -2185,10 +2159,8 @@ generatedFiles:
   - src/unified_python_sdk/models/shared/property_hrisemployee_employee_roles.py
   - src/unified_python_sdk/models/shared/property_hrislocation_address.py
   - src/unified_python_sdk/models/shared/property_integration_categories.py
-  - src/unified_python_sdk/models/shared/property_integration_token_instructions.py
   - src/unified_python_sdk/models/shared/property_lmsstudent_address.py
   - src/unified_python_sdk/models/shared/property_messagingmessage_author_member.py
-  - src/unified_python_sdk/models/shared/property_metadatametadata_options.py
   - src/unified_python_sdk/models/shared/property_scimgroup_meta.py
   - src/unified_python_sdk/models/shared/property_scimgroup_schemas.py
   - src/unified_python_sdk/models/shared/property_scimuser_meta.py
@@ -3423,10 +3395,10 @@ examples:
         path:
           connection_id: "<id>"
       requestBody:
-        application/json: {"end_at": "<value>", "start_at": "<value>", "subject": "<value>"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"end_at": "<value>", "start_at": "<value>", "subject": "<value>"}
+          application/json: {}
   createCalendarLink:
     speakeasy-default-create-calendar-link:
       parameters:
@@ -3454,7 +3426,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {"end_at": "<value>", "start_at": "<value>", "subject": "<value>"}
+          application/json: {}
   getCalendarLink:
     speakeasy-default-get-calendar-link:
       parameters:
@@ -3531,10 +3503,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"end_at": "<value>", "start_at": "<value>", "subject": "<value>"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"end_at": "<value>", "start_at": "<value>", "subject": "<value>"}
+          application/json: {}
   patchCalendarLink:
     speakeasy-default-patch-calendar-link:
       parameters:
@@ -3582,10 +3554,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"end_at": "<value>", "start_at": "<value>", "subject": "<value>"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"end_at": "<value>", "start_at": "<value>", "subject": "<value>"}
+          application/json: {}
   updateCalendarLink:
     speakeasy-default-update-calendar-link:
       parameters:

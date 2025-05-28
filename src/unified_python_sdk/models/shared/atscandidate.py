@@ -13,10 +13,6 @@ from .property_atscandidate_address import (
     PropertyAtsCandidateAddress,
     PropertyAtsCandidateAddressTypedDict,
 )
-from .property_atscandidate_link_urls import PropertyAtsCandidateLinkUrls
-from .property_atscandidate_skills import PropertyAtsCandidateSkills
-from .property_atscandidate_sources import PropertyAtsCandidateSources
-from .property_atscandidate_tags import PropertyAtsCandidateTags
 from datetime import datetime
 from enum import Enum
 from typing import Any, Dict, List, Optional
@@ -45,15 +41,15 @@ class AtsCandidateTypedDict(TypedDict):
     external_identifier: NotRequired[str]
     id: NotRequired[str]
     image_url: NotRequired[str]
-    link_urls: NotRequired[List[PropertyAtsCandidateLinkUrls]]
+    link_urls: NotRequired[List[str]]
     r"""URLs for web pages containing additional material about the candidate (LinkedIn, other social media, articles, etc.)"""
     metadata: NotRequired[List[AtsMetadataTypedDict]]
     name: NotRequired[str]
     origin: NotRequired[Origin]
     raw: NotRequired[Dict[str, Any]]
-    skills: NotRequired[List[PropertyAtsCandidateSkills]]
-    sources: NotRequired[List[PropertyAtsCandidateSources]]
-    tags: NotRequired[List[PropertyAtsCandidateTags]]
+    skills: NotRequired[List[str]]
+    sources: NotRequired[List[str]]
+    tags: NotRequired[List[str]]
     telephones: NotRequired[List[AtsTelephoneTypedDict]]
     title: NotRequired[str]
     updated_at: NotRequired[datetime]
@@ -84,7 +80,7 @@ class AtsCandidate(BaseModel):
 
     image_url: Optional[str] = None
 
-    link_urls: Optional[List[PropertyAtsCandidateLinkUrls]] = None
+    link_urls: Optional[List[str]] = None
     r"""URLs for web pages containing additional material about the candidate (LinkedIn, other social media, articles, etc.)"""
 
     metadata: Optional[List[AtsMetadata]] = None
@@ -95,11 +91,11 @@ class AtsCandidate(BaseModel):
 
     raw: Optional[Dict[str, Any]] = None
 
-    skills: Optional[List[PropertyAtsCandidateSkills]] = None
+    skills: Optional[List[str]] = None
 
-    sources: Optional[List[PropertyAtsCandidateSources]] = None
+    sources: Optional[List[str]] = None
 
-    tags: Optional[List[PropertyAtsCandidateTags]] = None
+    tags: Optional[List[str]] = None
 
     telephones: Optional[List[AtsTelephone]] = None
 

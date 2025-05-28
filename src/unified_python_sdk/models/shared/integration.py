@@ -2,9 +2,6 @@
 
 from __future__ import annotations
 from .property_integration_categories import PropertyIntegrationCategories
-from .property_integration_token_instructions import (
-    PropertyIntegrationTokenInstructions,
-)
 from datetime import datetime
 from typing import Any, Dict, List, Optional, Union
 from typing_extensions import NotRequired, TypeAliasType, TypedDict
@@ -341,7 +338,7 @@ class IntegrationTypedDict(TypedDict):
     support: NotRequired[Dict[str, Any]]
     tested_at: NotRequired[datetime]
     text_color: NotRequired[str]
-    token_instructions: NotRequired[List[PropertyIntegrationTokenInstructions]]
+    token_instructions: NotRequired[List[str]]
     r"""instructions for the user on how to find the token/key"""
     token_names: NotRequired[List[str]]
     r"""if auth_types = 'token'"""
@@ -397,7 +394,7 @@ class Integration(BaseModel):
 
     text_color: Optional[str] = None
 
-    token_instructions: Optional[List[PropertyIntegrationTokenInstructions]] = None
+    token_instructions: Optional[List[str]] = None
     r"""instructions for the user on how to find the token/key"""
 
     token_names: Optional[List[str]] = None

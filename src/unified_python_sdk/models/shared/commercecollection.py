@@ -3,7 +3,6 @@
 from __future__ import annotations
 from .commerceitemmedia import CommerceItemMedia, CommerceItemMediaTypedDict
 from .commercemetadata import CommerceMetadata, CommerceMetadataTypedDict
-from .property_commercecollection_tags import PropertyCommerceCollectionTags
 from datetime import datetime
 from enum import Enum
 from typing import Any, Dict, List, Optional
@@ -33,7 +32,7 @@ class CommerceCollectionTypedDict(TypedDict):
     public_description: NotRequired[str]
     public_name: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
-    tags: NotRequired[List[PropertyCommerceCollectionTags]]
+    tags: NotRequired[List[str]]
     type: NotRequired[CommerceCollectionType]
     updated_at: NotRequired[datetime]
 
@@ -67,7 +66,7 @@ class CommerceCollection(BaseModel):
 
     raw: Optional[Dict[str, Any]] = None
 
-    tags: Optional[List[PropertyCommerceCollectionTags]] = None
+    tags: Optional[List[str]] = None
 
     type: Optional[CommerceCollectionType] = None
 

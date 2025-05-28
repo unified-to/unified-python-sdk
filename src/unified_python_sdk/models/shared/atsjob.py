@@ -8,8 +8,6 @@ from .atsjobopening import AtsJobOpening, AtsJobOpeningTypedDict
 from .atsjobposting import AtsJobPosting, AtsJobPostingTypedDict
 from .atsjobquestion import AtsJobQuestion, AtsJobQuestionTypedDict
 from .atsmetadata import AtsMetadata, AtsMetadataTypedDict
-from .property_atsjob_departments import PropertyAtsJobDepartments
-from .property_atsjob_public_job_urls import PropertyAtsJobPublicJobUrls
 from datetime import datetime
 from enum import Enum
 from typing import Any, Dict, List, Optional
@@ -44,7 +42,7 @@ class AtsJobTypedDict(TypedDict):
     company_id: NotRequired[str]
     compensation: NotRequired[List[AtsCompensationTypedDict]]
     created_at: NotRequired[datetime]
-    departments: NotRequired[List[PropertyAtsJobDepartments]]
+    departments: NotRequired[List[str]]
     r"""@deprecated Use `groups` instead"""
     description: NotRequired[str]
     employment_type: NotRequired[EmploymentType]
@@ -59,7 +57,7 @@ class AtsJobTypedDict(TypedDict):
     openings: NotRequired[List[AtsJobOpeningTypedDict]]
     postings: NotRequired[List[AtsJobPostingTypedDict]]
     r"""Public job postings"""
-    public_job_urls: NotRequired[List[PropertyAtsJobPublicJobUrls]]
+    public_job_urls: NotRequired[List[str]]
     r"""URLs for pages containing public listings for the job"""
     questions: NotRequired[List[AtsJobQuestionTypedDict]]
     raw: NotRequired[Dict[str, Any]]
@@ -80,7 +78,7 @@ class AtsJob(BaseModel):
 
     created_at: Optional[datetime] = None
 
-    departments: Optional[List[PropertyAtsJobDepartments]] = None
+    departments: Optional[List[str]] = None
     r"""@deprecated Use `groups` instead"""
 
     description: Optional[str] = None
@@ -107,7 +105,7 @@ class AtsJob(BaseModel):
     postings: Optional[List[AtsJobPosting]] = None
     r"""Public job postings"""
 
-    public_job_urls: Optional[List[PropertyAtsJobPublicJobUrls]] = None
+    public_job_urls: Optional[List[str]] = None
     r"""URLs for pages containing public listings for the job"""
 
     questions: Optional[List[AtsJobQuestion]] = None

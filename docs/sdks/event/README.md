@@ -36,11 +36,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.event.create_calendar_event(request={
-        "calendar_event": {
-            "end_at": "<value>",
-            "start_at": "<value>",
-            "subject": "<value>",
-        },
+        "calendar_event": {},
         "connection_id": "<id>",
     })
 
@@ -314,11 +310,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.event.patch_calendar_event(request={
-        "calendar_event": {
-            "end_at": "<value>",
-            "start_at": "<value>",
-            "subject": "<value>",
-        },
+        "calendar_event": {},
         "connection_id": "<id>",
         "id": "<id>",
     })
@@ -504,11 +496,7 @@ with UnifiedTo(
 ) as unified_to:
 
     res = unified_to.event.update_calendar_event(request={
-        "calendar_event": {
-            "end_at": "<value>",
-            "start_at": "<value>",
-            "subject": "<value>",
-        },
+        "calendar_event": {},
         "connection_id": "<id>",
         "id": "<id>",
     })

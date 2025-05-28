@@ -23,12 +23,10 @@ class CalendarEventStatus(str, Enum):
 
 
 class CalendarEventTypedDict(TypedDict):
-    end_at: str
-    start_at: str
-    subject: str
     attendees: NotRequired[List[CalendarAttendeeTypedDict]]
     calendar_id: NotRequired[str]
     created_at: NotRequired[str]
+    end_at: NotRequired[str]
     id: NotRequired[str]
     is_all_day: NotRequired[bool]
     is_free: NotRequired[bool]
@@ -39,24 +37,22 @@ class CalendarEventTypedDict(TypedDict):
     raw: NotRequired[Dict[str, Any]]
     recurrence: NotRequired[List[CalendarEventRecurrenceTypedDict]]
     recurring_event_id: NotRequired[str]
+    start_at: NotRequired[str]
     status: NotRequired[CalendarEventStatus]
+    subject: NotRequired[str]
     timezone: NotRequired[str]
     updated_at: NotRequired[str]
     web_url: NotRequired[str]
 
 
 class CalendarEvent(BaseModel):
-    end_at: str
-
-    start_at: str
-
-    subject: str
-
     attendees: Optional[List[CalendarAttendee]] = None
 
     calendar_id: Optional[str] = None
 
     created_at: Optional[str] = None
+
+    end_at: Optional[str] = None
 
     id: Optional[str] = None
 
@@ -78,7 +74,11 @@ class CalendarEvent(BaseModel):
 
     recurring_event_id: Optional[str] = None
 
+    start_at: Optional[str] = None
+
     status: Optional[CalendarEventStatus] = None
+
+    subject: Optional[str] = None
 
     timezone: Optional[str] = None
 

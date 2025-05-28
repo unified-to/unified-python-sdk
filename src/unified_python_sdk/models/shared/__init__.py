@@ -644,28 +644,18 @@ if TYPE_CHECKING:
         PropertyAtsActivityFromType,
         PropertyAtsActivityFromTypedDict,
     )
-    from .property_atsapplicationanswer_answers import (
-        PropertyAtsApplicationAnswerAnswers,
-    )
     from .property_atscandidate_address import (
         PropertyAtsCandidateAddress,
         PropertyAtsCandidateAddressTypedDict,
     )
-    from .property_atscandidate_link_urls import PropertyAtsCandidateLinkUrls
-    from .property_atscandidate_skills import PropertyAtsCandidateSkills
-    from .property_atscandidate_sources import PropertyAtsCandidateSources
-    from .property_atscandidate_tags import PropertyAtsCandidateTags
     from .property_atscompany_address import (
         PropertyAtsCompanyAddress,
         PropertyAtsCompanyAddressTypedDict,
     )
-    from .property_atsjob_departments import PropertyAtsJobDepartments
-    from .property_atsjob_public_job_urls import PropertyAtsJobPublicJobUrls
     from .property_atsjobposting_address import (
         PropertyAtsJobPostingAddress,
         PropertyAtsJobPostingAddressTypedDict,
     )
-    from .property_atsjobquestion_options import PropertyAtsJobQuestionOptions
     from .property_calendarevent_organizer import (
         PropertyCalendarEventOrganizer,
         PropertyCalendarEventOrganizerStatus,
@@ -679,10 +669,6 @@ if TYPE_CHECKING:
         PropertyCalendarRecordingTranscriptAttendeeStatus,
         PropertyCalendarRecordingTranscriptAttendeeTypedDict,
     )
-    from .property_commercecollection_tags import PropertyCommerceCollectionTags
-    from .property_commerceitem_tags import PropertyCommerceItemTags
-    from .property_commerceitemoption_values import PropertyCommerceItemOptionValues
-    from .property_commerceitemvariant_tags import PropertyCommerceItemVariantTags
     from .property_commercelocation_address import (
         PropertyCommerceLocationAddress,
         PropertyCommerceLocationAddressTypedDict,
@@ -761,9 +747,6 @@ if TYPE_CHECKING:
         PropertyHrisLocationAddressTypedDict,
     )
     from .property_integration_categories import PropertyIntegrationCategories
-    from .property_integration_token_instructions import (
-        PropertyIntegrationTokenInstructions,
-    )
     from .property_lmsstudent_address import (
         PropertyLmsStudentAddress,
         PropertyLmsStudentAddressTypedDict,
@@ -772,7 +755,6 @@ if TYPE_CHECKING:
         PropertyMessagingMessageAuthorMember,
         PropertyMessagingMessageAuthorMemberTypedDict,
     )
-    from .property_metadatametadata_options import PropertyMetadataMetadataOptions
     from .property_scimgroup_meta import (
         PropertyScimGroupMeta,
         PropertyScimGroupMetaTypedDict,
@@ -1497,20 +1479,12 @@ __all__ = [
     "PropertyAtsActivityFrom",
     "PropertyAtsActivityFromType",
     "PropertyAtsActivityFromTypedDict",
-    "PropertyAtsApplicationAnswerAnswers",
     "PropertyAtsCandidateAddress",
     "PropertyAtsCandidateAddressTypedDict",
-    "PropertyAtsCandidateLinkUrls",
-    "PropertyAtsCandidateSkills",
-    "PropertyAtsCandidateSources",
-    "PropertyAtsCandidateTags",
     "PropertyAtsCompanyAddress",
     "PropertyAtsCompanyAddressTypedDict",
-    "PropertyAtsJobDepartments",
     "PropertyAtsJobPostingAddress",
     "PropertyAtsJobPostingAddressTypedDict",
-    "PropertyAtsJobPublicJobUrls",
-    "PropertyAtsJobQuestionOptions",
     "PropertyCalendarEventOrganizer",
     "PropertyCalendarEventOrganizerStatus",
     "PropertyCalendarEventOrganizerTypedDict",
@@ -1518,10 +1492,6 @@ __all__ = [
     "PropertyCalendarRecordingTranscriptAttendee",
     "PropertyCalendarRecordingTranscriptAttendeeStatus",
     "PropertyCalendarRecordingTranscriptAttendeeTypedDict",
-    "PropertyCommerceCollectionTags",
-    "PropertyCommerceItemOptionValues",
-    "PropertyCommerceItemTags",
-    "PropertyCommerceItemVariantTags",
     "PropertyCommerceLocationAddress",
     "PropertyCommerceLocationAddressTypedDict",
     "PropertyConnectionAuth",
@@ -1563,12 +1533,10 @@ __all__ = [
     "PropertyHrisLocationAddress",
     "PropertyHrisLocationAddressTypedDict",
     "PropertyIntegrationCategories",
-    "PropertyIntegrationTokenInstructions",
     "PropertyLmsStudentAddress",
     "PropertyLmsStudentAddressTypedDict",
     "PropertyMessagingMessageAuthorMember",
     "PropertyMessagingMessageAuthorMemberTypedDict",
-    "PropertyMetadataMetadataOptions",
     "PropertyScimGroupMeta",
     "PropertyScimGroupMetaTypedDict",
     "PropertyScimGroupSchemas",
@@ -2316,20 +2284,12 @@ _dynamic_imports: dict[str, str] = {
     "PropertyAtsActivityFrom": ".property_atsactivity_from",
     "PropertyAtsActivityFromType": ".property_atsactivity_from",
     "PropertyAtsActivityFromTypedDict": ".property_atsactivity_from",
-    "PropertyAtsApplicationAnswerAnswers": ".property_atsapplicationanswer_answers",
     "PropertyAtsCandidateAddress": ".property_atscandidate_address",
     "PropertyAtsCandidateAddressTypedDict": ".property_atscandidate_address",
-    "PropertyAtsCandidateLinkUrls": ".property_atscandidate_link_urls",
-    "PropertyAtsCandidateSkills": ".property_atscandidate_skills",
-    "PropertyAtsCandidateSources": ".property_atscandidate_sources",
-    "PropertyAtsCandidateTags": ".property_atscandidate_tags",
     "PropertyAtsCompanyAddress": ".property_atscompany_address",
     "PropertyAtsCompanyAddressTypedDict": ".property_atscompany_address",
-    "PropertyAtsJobDepartments": ".property_atsjob_departments",
-    "PropertyAtsJobPublicJobUrls": ".property_atsjob_public_job_urls",
     "PropertyAtsJobPostingAddress": ".property_atsjobposting_address",
     "PropertyAtsJobPostingAddressTypedDict": ".property_atsjobposting_address",
-    "PropertyAtsJobQuestionOptions": ".property_atsjobquestion_options",
     "PropertyCalendarEventOrganizer": ".property_calendarevent_organizer",
     "PropertyCalendarEventOrganizerStatus": ".property_calendarevent_organizer",
     "PropertyCalendarEventOrganizerTypedDict": ".property_calendarevent_organizer",
@@ -2337,10 +2297,6 @@ _dynamic_imports: dict[str, str] = {
     "PropertyCalendarRecordingTranscriptAttendee": ".property_calendarrecordingtranscript_attendee",
     "PropertyCalendarRecordingTranscriptAttendeeStatus": ".property_calendarrecordingtranscript_attendee",
     "PropertyCalendarRecordingTranscriptAttendeeTypedDict": ".property_calendarrecordingtranscript_attendee",
-    "PropertyCommerceCollectionTags": ".property_commercecollection_tags",
-    "PropertyCommerceItemTags": ".property_commerceitem_tags",
-    "PropertyCommerceItemOptionValues": ".property_commerceitemoption_values",
-    "PropertyCommerceItemVariantTags": ".property_commerceitemvariant_tags",
     "PropertyCommerceLocationAddress": ".property_commercelocation_address",
     "PropertyCommerceLocationAddressTypedDict": ".property_commercelocation_address",
     "PropertyConnectionAuth": ".property_connection_auth",
@@ -2383,12 +2339,10 @@ _dynamic_imports: dict[str, str] = {
     "PropertyHrisLocationAddress": ".property_hrislocation_address",
     "PropertyHrisLocationAddressTypedDict": ".property_hrislocation_address",
     "PropertyIntegrationCategories": ".property_integration_categories",
-    "PropertyIntegrationTokenInstructions": ".property_integration_token_instructions",
     "PropertyLmsStudentAddress": ".property_lmsstudent_address",
     "PropertyLmsStudentAddressTypedDict": ".property_lmsstudent_address",
     "PropertyMessagingMessageAuthorMember": ".property_messagingmessage_author_member",
     "PropertyMessagingMessageAuthorMemberTypedDict": ".property_messagingmessage_author_member",
-    "PropertyMetadataMetadataOptions": ".property_metadatametadata_options",
     "PropertyScimGroupMeta": ".property_scimgroup_meta",
     "PropertyScimGroupMetaTypedDict": ".property_scimgroup_meta",
     "ResourceType": ".property_scimgroup_meta",
