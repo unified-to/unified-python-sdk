@@ -71,6 +71,7 @@ class Unified(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createUnifiedConnection",
                 oauth2_scopes=[],
@@ -172,6 +173,7 @@ class Unified(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createUnifiedConnection",
                 oauth2_scopes=[],
@@ -276,6 +278,7 @@ class Unified(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createUnifiedWebhook",
                 oauth2_scopes=[],
@@ -378,6 +381,7 @@ class Unified(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createUnifiedWebhook",
                 oauth2_scopes=[],
@@ -475,6 +479,7 @@ class Unified(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getUnifiedApicall",
                 oauth2_scopes=[],
@@ -572,6 +577,7 @@ class Unified(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getUnifiedApicall",
                 oauth2_scopes=[],
@@ -669,6 +675,7 @@ class Unified(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getUnifiedConnection",
                 oauth2_scopes=[],
@@ -768,6 +775,7 @@ class Unified(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getUnifiedConnection",
                 oauth2_scopes=[],
@@ -871,6 +879,7 @@ class Unified(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getUnifiedIntegrationAuth",
                 oauth2_scopes=[],
@@ -972,6 +981,7 @@ class Unified(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getUnifiedIntegrationAuth",
                 oauth2_scopes=[],
@@ -1069,6 +1079,7 @@ class Unified(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getUnifiedWebhook",
                 oauth2_scopes=[],
@@ -1166,6 +1177,7 @@ class Unified(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getUnifiedWebhook",
                 oauth2_scopes=[],
@@ -1263,6 +1275,7 @@ class Unified(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listUnifiedApicalls",
                 oauth2_scopes=[],
@@ -1362,6 +1375,7 @@ class Unified(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listUnifiedApicalls",
                 oauth2_scopes=[],
@@ -1461,6 +1475,7 @@ class Unified(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listUnifiedConnections",
                 oauth2_scopes=[],
@@ -1560,6 +1575,7 @@ class Unified(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listUnifiedConnections",
                 oauth2_scopes=[],
@@ -1663,6 +1679,7 @@ class Unified(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listUnifiedIntegrationWorkspaces",
                 oauth2_scopes=[],
@@ -1766,6 +1783,7 @@ class Unified(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listUnifiedIntegrationWorkspaces",
                 oauth2_scopes=[],
@@ -1867,6 +1885,7 @@ class Unified(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listUnifiedIntegrations",
                 oauth2_scopes=[],
@@ -1968,6 +1987,7 @@ class Unified(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listUnifiedIntegrations",
                 oauth2_scopes=[],
@@ -2067,6 +2087,7 @@ class Unified(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listUnifiedIssues",
                 oauth2_scopes=[],
@@ -2166,6 +2187,7 @@ class Unified(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listUnifiedIssues",
                 oauth2_scopes=[],
@@ -2265,6 +2287,7 @@ class Unified(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listUnifiedWebhooks",
                 oauth2_scopes=[],
@@ -2364,6 +2387,7 @@ class Unified(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listUnifiedWebhooks",
                 oauth2_scopes=[],
@@ -2466,6 +2490,7 @@ class Unified(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchUnifiedConnection",
                 oauth2_scopes=[],
@@ -2568,6 +2593,7 @@ class Unified(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchUnifiedConnection",
                 oauth2_scopes=[],
@@ -2670,6 +2696,7 @@ class Unified(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchUnifiedWebhook",
                 oauth2_scopes=[],
@@ -2770,6 +2797,7 @@ class Unified(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchUnifiedWebhook",
                 oauth2_scopes=[],
@@ -2869,6 +2897,7 @@ class Unified(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchUnifiedWebhookTrigger",
                 oauth2_scopes=[],
@@ -2975,6 +3004,7 @@ class Unified(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchUnifiedWebhookTrigger",
                 oauth2_scopes=[],
@@ -3081,6 +3111,7 @@ class Unified(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeUnifiedConnection",
                 oauth2_scopes=[],
@@ -3187,6 +3218,7 @@ class Unified(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeUnifiedConnection",
                 oauth2_scopes=[],
@@ -3291,6 +3323,7 @@ class Unified(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeUnifiedWebhook",
                 oauth2_scopes=[],
@@ -3395,6 +3428,7 @@ class Unified(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeUnifiedWebhook",
                 oauth2_scopes=[],
@@ -3504,6 +3538,7 @@ class Unified(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateUnifiedConnection",
                 oauth2_scopes=[],
@@ -3608,6 +3643,7 @@ class Unified(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateUnifiedConnection",
                 oauth2_scopes=[],
@@ -3710,6 +3746,7 @@ class Unified(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateUnifiedWebhook",
                 oauth2_scopes=[],
@@ -3810,6 +3847,7 @@ class Unified(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateUnifiedWebhook",
                 oauth2_scopes=[],
@@ -3909,6 +3947,7 @@ class Unified(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateUnifiedWebhookTrigger",
                 oauth2_scopes=[],
@@ -4015,6 +4054,7 @@ class Unified(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateUnifiedWebhookTrigger",
                 oauth2_scopes=[],

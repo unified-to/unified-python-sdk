@@ -78,6 +78,7 @@ class Accounting(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createAccountingAccount",
                 oauth2_scopes=[],
@@ -186,6 +187,7 @@ class Accounting(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createAccountingAccount",
                 oauth2_scopes=[],
@@ -294,6 +296,7 @@ class Accounting(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createAccountingContact",
                 oauth2_scopes=[],
@@ -402,6 +405,7 @@ class Accounting(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createAccountingContact",
                 oauth2_scopes=[],
@@ -510,6 +514,7 @@ class Accounting(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createAccountingInvoice",
                 oauth2_scopes=[],
@@ -618,6 +623,7 @@ class Accounting(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createAccountingInvoice",
                 oauth2_scopes=[],
@@ -726,6 +732,7 @@ class Accounting(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createAccountingJournal",
                 oauth2_scopes=[],
@@ -834,6 +841,7 @@ class Accounting(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createAccountingJournal",
                 oauth2_scopes=[],
@@ -936,6 +944,7 @@ class Accounting(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createAccountingOrder",
                 oauth2_scopes=[],
@@ -1038,6 +1047,7 @@ class Accounting(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createAccountingOrder",
                 oauth2_scopes=[],
@@ -1146,6 +1156,7 @@ class Accounting(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createAccountingTaxrate",
                 oauth2_scopes=[],
@@ -1254,6 +1265,7 @@ class Accounting(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createAccountingTaxrate",
                 oauth2_scopes=[],
@@ -1362,6 +1374,7 @@ class Accounting(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createAccountingTransaction",
                 oauth2_scopes=[],
@@ -1470,6 +1483,7 @@ class Accounting(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createAccountingTransaction",
                 oauth2_scopes=[],
@@ -1569,6 +1583,7 @@ class Accounting(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getAccountingAccount",
                 oauth2_scopes=[],
@@ -1668,6 +1683,7 @@ class Accounting(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getAccountingAccount",
                 oauth2_scopes=[],
@@ -1767,6 +1783,7 @@ class Accounting(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getAccountingContact",
                 oauth2_scopes=[],
@@ -1866,6 +1883,7 @@ class Accounting(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getAccountingContact",
                 oauth2_scopes=[],
@@ -1965,6 +1983,7 @@ class Accounting(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getAccountingInvoice",
                 oauth2_scopes=[],
@@ -2064,6 +2083,7 @@ class Accounting(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getAccountingInvoice",
                 oauth2_scopes=[],
@@ -2163,6 +2183,7 @@ class Accounting(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getAccountingJournal",
                 oauth2_scopes=[],
@@ -2262,6 +2283,7 @@ class Accounting(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getAccountingJournal",
                 oauth2_scopes=[],
@@ -2361,6 +2383,7 @@ class Accounting(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getAccountingOrder",
                 oauth2_scopes=[],
@@ -2460,6 +2483,7 @@ class Accounting(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getAccountingOrder",
                 oauth2_scopes=[],
@@ -2561,6 +2585,7 @@ class Accounting(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getAccountingOrganization",
                 oauth2_scopes=[],
@@ -2662,6 +2687,7 @@ class Accounting(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getAccountingOrganization",
                 oauth2_scopes=[],
@@ -2761,6 +2787,7 @@ class Accounting(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getAccountingReport",
                 oauth2_scopes=[],
@@ -2860,6 +2887,7 @@ class Accounting(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getAccountingReport",
                 oauth2_scopes=[],
@@ -2959,6 +2987,7 @@ class Accounting(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getAccountingTaxrate",
                 oauth2_scopes=[],
@@ -3058,6 +3087,7 @@ class Accounting(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getAccountingTaxrate",
                 oauth2_scopes=[],
@@ -3159,6 +3189,7 @@ class Accounting(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getAccountingTransaction",
                 oauth2_scopes=[],
@@ -3260,6 +3291,7 @@ class Accounting(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getAccountingTransaction",
                 oauth2_scopes=[],
@@ -3359,6 +3391,7 @@ class Accounting(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listAccountingAccounts",
                 oauth2_scopes=[],
@@ -3458,6 +3491,7 @@ class Accounting(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listAccountingAccounts",
                 oauth2_scopes=[],
@@ -3557,6 +3591,7 @@ class Accounting(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listAccountingContacts",
                 oauth2_scopes=[],
@@ -3656,6 +3691,7 @@ class Accounting(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listAccountingContacts",
                 oauth2_scopes=[],
@@ -3755,6 +3791,7 @@ class Accounting(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listAccountingInvoices",
                 oauth2_scopes=[],
@@ -3854,6 +3891,7 @@ class Accounting(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listAccountingInvoices",
                 oauth2_scopes=[],
@@ -3953,6 +3991,7 @@ class Accounting(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listAccountingJournals",
                 oauth2_scopes=[],
@@ -4052,6 +4091,7 @@ class Accounting(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listAccountingJournals",
                 oauth2_scopes=[],
@@ -4151,6 +4191,7 @@ class Accounting(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listAccountingOrders",
                 oauth2_scopes=[],
@@ -4250,6 +4291,7 @@ class Accounting(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listAccountingOrders",
                 oauth2_scopes=[],
@@ -4351,6 +4393,7 @@ class Accounting(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listAccountingOrganizations",
                 oauth2_scopes=[],
@@ -4452,6 +4495,7 @@ class Accounting(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listAccountingOrganizations",
                 oauth2_scopes=[],
@@ -4551,6 +4595,7 @@ class Accounting(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listAccountingReports",
                 oauth2_scopes=[],
@@ -4650,6 +4695,7 @@ class Accounting(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listAccountingReports",
                 oauth2_scopes=[],
@@ -4749,6 +4795,7 @@ class Accounting(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listAccountingTaxrates",
                 oauth2_scopes=[],
@@ -4848,6 +4895,7 @@ class Accounting(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listAccountingTaxrates",
                 oauth2_scopes=[],
@@ -4949,6 +4997,7 @@ class Accounting(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listAccountingTransactions",
                 oauth2_scopes=[],
@@ -5050,6 +5099,7 @@ class Accounting(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listAccountingTransactions",
                 oauth2_scopes=[],
@@ -5156,6 +5206,7 @@ class Accounting(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchAccountingAccount",
                 oauth2_scopes=[],
@@ -5262,6 +5313,7 @@ class Accounting(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchAccountingAccount",
                 oauth2_scopes=[],
@@ -5368,6 +5420,7 @@ class Accounting(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchAccountingContact",
                 oauth2_scopes=[],
@@ -5474,6 +5527,7 @@ class Accounting(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchAccountingContact",
                 oauth2_scopes=[],
@@ -5580,6 +5634,7 @@ class Accounting(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchAccountingInvoice",
                 oauth2_scopes=[],
@@ -5686,6 +5741,7 @@ class Accounting(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchAccountingInvoice",
                 oauth2_scopes=[],
@@ -5792,6 +5848,7 @@ class Accounting(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchAccountingJournal",
                 oauth2_scopes=[],
@@ -5898,6 +5955,7 @@ class Accounting(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchAccountingJournal",
                 oauth2_scopes=[],
@@ -6000,6 +6058,7 @@ class Accounting(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchAccountingOrder",
                 oauth2_scopes=[],
@@ -6102,6 +6161,7 @@ class Accounting(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchAccountingOrder",
                 oauth2_scopes=[],
@@ -6208,6 +6268,7 @@ class Accounting(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchAccountingTaxrate",
                 oauth2_scopes=[],
@@ -6314,6 +6375,7 @@ class Accounting(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchAccountingTaxrate",
                 oauth2_scopes=[],
@@ -6422,6 +6484,7 @@ class Accounting(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchAccountingTransaction",
                 oauth2_scopes=[],
@@ -6530,6 +6593,7 @@ class Accounting(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchAccountingTransaction",
                 oauth2_scopes=[],
@@ -6631,6 +6695,7 @@ class Accounting(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeAccountingAccount",
                 oauth2_scopes=[],
@@ -6737,6 +6802,7 @@ class Accounting(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeAccountingAccount",
                 oauth2_scopes=[],
@@ -6843,6 +6909,7 @@ class Accounting(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeAccountingContact",
                 oauth2_scopes=[],
@@ -6949,6 +7016,7 @@ class Accounting(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeAccountingContact",
                 oauth2_scopes=[],
@@ -7055,6 +7123,7 @@ class Accounting(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeAccountingInvoice",
                 oauth2_scopes=[],
@@ -7161,6 +7230,7 @@ class Accounting(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeAccountingInvoice",
                 oauth2_scopes=[],
@@ -7267,6 +7337,7 @@ class Accounting(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeAccountingJournal",
                 oauth2_scopes=[],
@@ -7373,6 +7444,7 @@ class Accounting(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeAccountingJournal",
                 oauth2_scopes=[],
@@ -7477,6 +7549,7 @@ class Accounting(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeAccountingOrder",
                 oauth2_scopes=[],
@@ -7581,6 +7654,7 @@ class Accounting(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeAccountingOrder",
                 oauth2_scopes=[],
@@ -7687,6 +7761,7 @@ class Accounting(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeAccountingTaxrate",
                 oauth2_scopes=[],
@@ -7793,6 +7868,7 @@ class Accounting(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeAccountingTaxrate",
                 oauth2_scopes=[],
@@ -7899,6 +7975,7 @@ class Accounting(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeAccountingTransaction",
                 oauth2_scopes=[],
@@ -8005,6 +8082,7 @@ class Accounting(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeAccountingTransaction",
                 oauth2_scopes=[],
@@ -8118,6 +8196,7 @@ class Accounting(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateAccountingAccount",
                 oauth2_scopes=[],
@@ -8226,6 +8305,7 @@ class Accounting(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateAccountingAccount",
                 oauth2_scopes=[],
@@ -8334,6 +8414,7 @@ class Accounting(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateAccountingContact",
                 oauth2_scopes=[],
@@ -8442,6 +8523,7 @@ class Accounting(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateAccountingContact",
                 oauth2_scopes=[],
@@ -8550,6 +8632,7 @@ class Accounting(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateAccountingInvoice",
                 oauth2_scopes=[],
@@ -8658,6 +8741,7 @@ class Accounting(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateAccountingInvoice",
                 oauth2_scopes=[],
@@ -8766,6 +8850,7 @@ class Accounting(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateAccountingJournal",
                 oauth2_scopes=[],
@@ -8874,6 +8959,7 @@ class Accounting(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateAccountingJournal",
                 oauth2_scopes=[],
@@ -8976,6 +9062,7 @@ class Accounting(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateAccountingOrder",
                 oauth2_scopes=[],
@@ -9078,6 +9165,7 @@ class Accounting(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateAccountingOrder",
                 oauth2_scopes=[],
@@ -9186,6 +9274,7 @@ class Accounting(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateAccountingTaxrate",
                 oauth2_scopes=[],
@@ -9294,6 +9383,7 @@ class Accounting(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateAccountingTaxrate",
                 oauth2_scopes=[],
@@ -9402,6 +9492,7 @@ class Accounting(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateAccountingTransaction",
                 oauth2_scopes=[],
@@ -9510,6 +9601,7 @@ class Accounting(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateAccountingTransaction",
                 oauth2_scopes=[],

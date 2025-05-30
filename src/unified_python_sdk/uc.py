@@ -72,6 +72,7 @@ class Uc(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createUcComment",
                 oauth2_scopes=[],
@@ -174,6 +175,7 @@ class Uc(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createUcComment",
                 oauth2_scopes=[],
@@ -276,6 +278,7 @@ class Uc(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createUcContact",
                 oauth2_scopes=[],
@@ -378,6 +381,7 @@ class Uc(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createUcContact",
                 oauth2_scopes=[],
@@ -480,6 +484,7 @@ class Uc(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createUcRecording",
                 oauth2_scopes=[],
@@ -582,6 +587,7 @@ class Uc(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createUcRecording",
                 oauth2_scopes=[],
@@ -680,6 +686,7 @@ class Uc(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getUcComment",
                 oauth2_scopes=[],
@@ -778,6 +785,7 @@ class Uc(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getUcComment",
                 oauth2_scopes=[],
@@ -876,6 +884,7 @@ class Uc(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getUcContact",
                 oauth2_scopes=[],
@@ -974,6 +983,7 @@ class Uc(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getUcContact",
                 oauth2_scopes=[],
@@ -1072,6 +1082,7 @@ class Uc(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getUcRecording",
                 oauth2_scopes=[],
@@ -1170,6 +1181,7 @@ class Uc(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getUcRecording",
                 oauth2_scopes=[],
@@ -1268,6 +1280,7 @@ class Uc(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listUcCalls",
                 oauth2_scopes=[],
@@ -1366,6 +1379,7 @@ class Uc(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listUcCalls",
                 oauth2_scopes=[],
@@ -1464,6 +1478,7 @@ class Uc(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listUcComments",
                 oauth2_scopes=[],
@@ -1562,6 +1577,7 @@ class Uc(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listUcComments",
                 oauth2_scopes=[],
@@ -1660,6 +1676,7 @@ class Uc(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listUcContacts",
                 oauth2_scopes=[],
@@ -1758,6 +1775,7 @@ class Uc(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listUcContacts",
                 oauth2_scopes=[],
@@ -1857,6 +1875,7 @@ class Uc(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listUcRecordings",
                 oauth2_scopes=[],
@@ -1956,6 +1975,7 @@ class Uc(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listUcRecordings",
                 oauth2_scopes=[],
@@ -2057,6 +2077,7 @@ class Uc(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchUcComment",
                 oauth2_scopes=[],
@@ -2158,6 +2179,7 @@ class Uc(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchUcComment",
                 oauth2_scopes=[],
@@ -2259,6 +2281,7 @@ class Uc(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchUcContact",
                 oauth2_scopes=[],
@@ -2360,6 +2383,7 @@ class Uc(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchUcContact",
                 oauth2_scopes=[],
@@ -2462,6 +2486,7 @@ class Uc(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchUcRecording",
                 oauth2_scopes=[],
@@ -2564,6 +2589,7 @@ class Uc(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchUcRecording",
                 oauth2_scopes=[],
@@ -2663,6 +2689,7 @@ class Uc(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeUcComment",
                 oauth2_scopes=[],
@@ -2767,6 +2794,7 @@ class Uc(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeUcComment",
                 oauth2_scopes=[],
@@ -2871,6 +2899,7 @@ class Uc(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeUcContact",
                 oauth2_scopes=[],
@@ -2975,6 +3004,7 @@ class Uc(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeUcContact",
                 oauth2_scopes=[],
@@ -3079,6 +3109,7 @@ class Uc(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeUcRecording",
                 oauth2_scopes=[],
@@ -3183,6 +3214,7 @@ class Uc(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeUcRecording",
                 oauth2_scopes=[],
@@ -3290,6 +3322,7 @@ class Uc(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateUcComment",
                 oauth2_scopes=[],
@@ -3392,6 +3425,7 @@ class Uc(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateUcComment",
                 oauth2_scopes=[],
@@ -3494,6 +3528,7 @@ class Uc(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateUcContact",
                 oauth2_scopes=[],
@@ -3596,6 +3631,7 @@ class Uc(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateUcContact",
                 oauth2_scopes=[],
@@ -3698,6 +3734,7 @@ class Uc(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateUcRecording",
                 oauth2_scopes=[],
@@ -3800,6 +3837,7 @@ class Uc(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateUcRecording",
                 oauth2_scopes=[],

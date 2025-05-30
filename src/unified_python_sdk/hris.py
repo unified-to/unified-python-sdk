@@ -72,6 +72,7 @@ class Hris(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createHrisCompany",
                 oauth2_scopes=[],
@@ -174,6 +175,7 @@ class Hris(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createHrisCompany",
                 oauth2_scopes=[],
@@ -276,6 +278,7 @@ class Hris(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createHrisDevice",
                 oauth2_scopes=[],
@@ -378,6 +381,7 @@ class Hris(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createHrisDevice",
                 oauth2_scopes=[],
@@ -480,6 +484,7 @@ class Hris(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createHrisEmployee",
                 oauth2_scopes=[],
@@ -582,6 +587,7 @@ class Hris(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createHrisEmployee",
                 oauth2_scopes=[],
@@ -684,6 +690,7 @@ class Hris(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createHrisGroup",
                 oauth2_scopes=[],
@@ -786,6 +793,7 @@ class Hris(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createHrisGroup",
                 oauth2_scopes=[],
@@ -888,6 +896,7 @@ class Hris(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createHrisLocation",
                 oauth2_scopes=[],
@@ -990,6 +999,7 @@ class Hris(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createHrisLocation",
                 oauth2_scopes=[],
@@ -1092,6 +1102,7 @@ class Hris(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createHrisTimeshift",
                 oauth2_scopes=[],
@@ -1194,6 +1205,7 @@ class Hris(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createHrisTimeshift",
                 oauth2_scopes=[],
@@ -1292,6 +1304,7 @@ class Hris(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getHrisCompany",
                 oauth2_scopes=[],
@@ -1390,6 +1403,7 @@ class Hris(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getHrisCompany",
                 oauth2_scopes=[],
@@ -1488,6 +1502,7 @@ class Hris(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getHrisDevice",
                 oauth2_scopes=[],
@@ -1586,6 +1601,7 @@ class Hris(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getHrisDevice",
                 oauth2_scopes=[],
@@ -1685,6 +1701,7 @@ class Hris(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getHrisEmployee",
                 oauth2_scopes=[],
@@ -1784,6 +1801,7 @@ class Hris(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getHrisEmployee",
                 oauth2_scopes=[],
@@ -1882,6 +1900,7 @@ class Hris(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getHrisGroup",
                 oauth2_scopes=[],
@@ -1980,6 +1999,7 @@ class Hris(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getHrisGroup",
                 oauth2_scopes=[],
@@ -2079,6 +2099,7 @@ class Hris(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getHrisLocation",
                 oauth2_scopes=[],
@@ -2178,6 +2199,7 @@ class Hris(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getHrisLocation",
                 oauth2_scopes=[],
@@ -2276,6 +2298,7 @@ class Hris(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getHrisPayslip",
                 oauth2_scopes=[],
@@ -2374,6 +2397,7 @@ class Hris(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getHrisPayslip",
                 oauth2_scopes=[],
@@ -2472,6 +2496,7 @@ class Hris(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getHrisTimeoff",
                 oauth2_scopes=[],
@@ -2570,6 +2595,7 @@ class Hris(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getHrisTimeoff",
                 oauth2_scopes=[],
@@ -2669,6 +2695,7 @@ class Hris(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getHrisTimeshift",
                 oauth2_scopes=[],
@@ -2768,6 +2795,7 @@ class Hris(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getHrisTimeshift",
                 oauth2_scopes=[],
@@ -2867,6 +2895,7 @@ class Hris(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listHrisCompanies",
                 oauth2_scopes=[],
@@ -2966,6 +2995,7 @@ class Hris(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listHrisCompanies",
                 oauth2_scopes=[],
@@ -3065,6 +3095,7 @@ class Hris(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listHrisDevices",
                 oauth2_scopes=[],
@@ -3164,6 +3195,7 @@ class Hris(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listHrisDevices",
                 oauth2_scopes=[],
@@ -3263,6 +3295,7 @@ class Hris(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listHrisEmployees",
                 oauth2_scopes=[],
@@ -3362,6 +3395,7 @@ class Hris(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listHrisEmployees",
                 oauth2_scopes=[],
@@ -3460,6 +3494,7 @@ class Hris(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listHrisGroups",
                 oauth2_scopes=[],
@@ -3558,6 +3593,7 @@ class Hris(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listHrisGroups",
                 oauth2_scopes=[],
@@ -3657,6 +3693,7 @@ class Hris(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listHrisLocations",
                 oauth2_scopes=[],
@@ -3756,6 +3793,7 @@ class Hris(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listHrisLocations",
                 oauth2_scopes=[],
@@ -3855,6 +3893,7 @@ class Hris(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listHrisPayslips",
                 oauth2_scopes=[],
@@ -3954,6 +3993,7 @@ class Hris(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listHrisPayslips",
                 oauth2_scopes=[],
@@ -4053,6 +4093,7 @@ class Hris(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listHrisTimeoffs",
                 oauth2_scopes=[],
@@ -4152,6 +4193,7 @@ class Hris(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listHrisTimeoffs",
                 oauth2_scopes=[],
@@ -4251,6 +4293,7 @@ class Hris(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listHrisTimeshifts",
                 oauth2_scopes=[],
@@ -4350,6 +4393,7 @@ class Hris(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listHrisTimeshifts",
                 oauth2_scopes=[],
@@ -4452,6 +4496,7 @@ class Hris(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchHrisCompany",
                 oauth2_scopes=[],
@@ -4554,6 +4599,7 @@ class Hris(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchHrisCompany",
                 oauth2_scopes=[],
@@ -4656,6 +4702,7 @@ class Hris(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchHrisDevice",
                 oauth2_scopes=[],
@@ -4758,6 +4805,7 @@ class Hris(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchHrisDevice",
                 oauth2_scopes=[],
@@ -4860,6 +4908,7 @@ class Hris(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchHrisEmployee",
                 oauth2_scopes=[],
@@ -4962,6 +5011,7 @@ class Hris(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchHrisEmployee",
                 oauth2_scopes=[],
@@ -5063,6 +5113,7 @@ class Hris(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchHrisGroup",
                 oauth2_scopes=[],
@@ -5164,6 +5215,7 @@ class Hris(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchHrisGroup",
                 oauth2_scopes=[],
@@ -5266,6 +5318,7 @@ class Hris(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchHrisLocation",
                 oauth2_scopes=[],
@@ -5368,6 +5421,7 @@ class Hris(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchHrisLocation",
                 oauth2_scopes=[],
@@ -5470,6 +5524,7 @@ class Hris(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchHrisTimeshift",
                 oauth2_scopes=[],
@@ -5572,6 +5627,7 @@ class Hris(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchHrisTimeshift",
                 oauth2_scopes=[],
@@ -5671,6 +5727,7 @@ class Hris(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeHrisCompany",
                 oauth2_scopes=[],
@@ -5775,6 +5832,7 @@ class Hris(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeHrisCompany",
                 oauth2_scopes=[],
@@ -5879,6 +5937,7 @@ class Hris(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeHrisDevice",
                 oauth2_scopes=[],
@@ -5983,6 +6042,7 @@ class Hris(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeHrisDevice",
                 oauth2_scopes=[],
@@ -6087,6 +6147,7 @@ class Hris(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeHrisEmployee",
                 oauth2_scopes=[],
@@ -6191,6 +6252,7 @@ class Hris(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeHrisEmployee",
                 oauth2_scopes=[],
@@ -6295,6 +6357,7 @@ class Hris(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeHrisGroup",
                 oauth2_scopes=[],
@@ -6399,6 +6462,7 @@ class Hris(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeHrisGroup",
                 oauth2_scopes=[],
@@ -6503,6 +6567,7 @@ class Hris(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeHrisLocation",
                 oauth2_scopes=[],
@@ -6607,6 +6672,7 @@ class Hris(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeHrisLocation",
                 oauth2_scopes=[],
@@ -6711,6 +6777,7 @@ class Hris(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeHrisTimeshift",
                 oauth2_scopes=[],
@@ -6815,6 +6882,7 @@ class Hris(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeHrisTimeshift",
                 oauth2_scopes=[],
@@ -6922,6 +6990,7 @@ class Hris(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateHrisCompany",
                 oauth2_scopes=[],
@@ -7024,6 +7093,7 @@ class Hris(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateHrisCompany",
                 oauth2_scopes=[],
@@ -7126,6 +7196,7 @@ class Hris(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateHrisDevice",
                 oauth2_scopes=[],
@@ -7228,6 +7299,7 @@ class Hris(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateHrisDevice",
                 oauth2_scopes=[],
@@ -7330,6 +7402,7 @@ class Hris(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateHrisEmployee",
                 oauth2_scopes=[],
@@ -7432,6 +7505,7 @@ class Hris(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateHrisEmployee",
                 oauth2_scopes=[],
@@ -7534,6 +7608,7 @@ class Hris(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateHrisGroup",
                 oauth2_scopes=[],
@@ -7636,6 +7711,7 @@ class Hris(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateHrisGroup",
                 oauth2_scopes=[],
@@ -7738,6 +7814,7 @@ class Hris(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateHrisLocation",
                 oauth2_scopes=[],
@@ -7840,6 +7917,7 @@ class Hris(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateHrisLocation",
                 oauth2_scopes=[],
@@ -7942,6 +8020,7 @@ class Hris(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateHrisTimeshift",
                 oauth2_scopes=[],
@@ -8044,6 +8123,7 @@ class Hris(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateHrisTimeshift",
                 oauth2_scopes=[],

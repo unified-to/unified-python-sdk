@@ -72,6 +72,7 @@ class Payment(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createPaymentLink",
                 oauth2_scopes=[],
@@ -174,6 +175,7 @@ class Payment(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createPaymentLink",
                 oauth2_scopes=[],
@@ -276,6 +278,7 @@ class Payment(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createPaymentPayment",
                 oauth2_scopes=[],
@@ -378,6 +381,7 @@ class Payment(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createPaymentPayment",
                 oauth2_scopes=[],
@@ -486,6 +490,7 @@ class Payment(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createPaymentSubscription",
                 oauth2_scopes=[],
@@ -594,6 +599,7 @@ class Payment(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createPaymentSubscription",
                 oauth2_scopes=[],
@@ -692,6 +698,7 @@ class Payment(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getPaymentLink",
                 oauth2_scopes=[],
@@ -790,6 +797,7 @@ class Payment(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getPaymentLink",
                 oauth2_scopes=[],
@@ -889,6 +897,7 @@ class Payment(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getPaymentPayment",
                 oauth2_scopes=[],
@@ -988,6 +997,7 @@ class Payment(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getPaymentPayment",
                 oauth2_scopes=[],
@@ -1087,6 +1097,7 @@ class Payment(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getPaymentPayout",
                 oauth2_scopes=[],
@@ -1186,6 +1197,7 @@ class Payment(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getPaymentPayout",
                 oauth2_scopes=[],
@@ -1285,6 +1297,7 @@ class Payment(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getPaymentRefund",
                 oauth2_scopes=[],
@@ -1384,6 +1397,7 @@ class Payment(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getPaymentRefund",
                 oauth2_scopes=[],
@@ -1483,6 +1497,7 @@ class Payment(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getPaymentSubscription",
                 oauth2_scopes=[],
@@ -1582,6 +1597,7 @@ class Payment(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getPaymentSubscription",
                 oauth2_scopes=[],
@@ -1681,6 +1697,7 @@ class Payment(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listPaymentLinks",
                 oauth2_scopes=[],
@@ -1780,6 +1797,7 @@ class Payment(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listPaymentLinks",
                 oauth2_scopes=[],
@@ -1879,6 +1897,7 @@ class Payment(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listPaymentPayments",
                 oauth2_scopes=[],
@@ -1978,6 +1997,7 @@ class Payment(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listPaymentPayments",
                 oauth2_scopes=[],
@@ -2077,6 +2097,7 @@ class Payment(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listPaymentPayouts",
                 oauth2_scopes=[],
@@ -2176,6 +2197,7 @@ class Payment(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listPaymentPayouts",
                 oauth2_scopes=[],
@@ -2275,6 +2297,7 @@ class Payment(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listPaymentRefunds",
                 oauth2_scopes=[],
@@ -2374,6 +2397,7 @@ class Payment(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listPaymentRefunds",
                 oauth2_scopes=[],
@@ -2475,6 +2499,7 @@ class Payment(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listPaymentSubscriptions",
                 oauth2_scopes=[],
@@ -2576,6 +2601,7 @@ class Payment(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listPaymentSubscriptions",
                 oauth2_scopes=[],
@@ -2678,6 +2704,7 @@ class Payment(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchPaymentLink",
                 oauth2_scopes=[],
@@ -2780,6 +2807,7 @@ class Payment(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchPaymentLink",
                 oauth2_scopes=[],
@@ -2882,6 +2910,7 @@ class Payment(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchPaymentPayment",
                 oauth2_scopes=[],
@@ -2984,6 +3013,7 @@ class Payment(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchPaymentPayment",
                 oauth2_scopes=[],
@@ -3092,6 +3122,7 @@ class Payment(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchPaymentSubscription",
                 oauth2_scopes=[],
@@ -3200,6 +3231,7 @@ class Payment(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchPaymentSubscription",
                 oauth2_scopes=[],
@@ -3299,6 +3331,7 @@ class Payment(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removePaymentLink",
                 oauth2_scopes=[],
@@ -3403,6 +3436,7 @@ class Payment(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removePaymentLink",
                 oauth2_scopes=[],
@@ -3507,6 +3541,7 @@ class Payment(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removePaymentPayment",
                 oauth2_scopes=[],
@@ -3611,6 +3646,7 @@ class Payment(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removePaymentPayment",
                 oauth2_scopes=[],
@@ -3717,6 +3753,7 @@ class Payment(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removePaymentSubscription",
                 oauth2_scopes=[],
@@ -3823,6 +3860,7 @@ class Payment(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removePaymentSubscription",
                 oauth2_scopes=[],
@@ -3930,6 +3968,7 @@ class Payment(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updatePaymentLink",
                 oauth2_scopes=[],
@@ -4032,6 +4071,7 @@ class Payment(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updatePaymentLink",
                 oauth2_scopes=[],
@@ -4134,6 +4174,7 @@ class Payment(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updatePaymentPayment",
                 oauth2_scopes=[],
@@ -4236,6 +4277,7 @@ class Payment(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updatePaymentPayment",
                 oauth2_scopes=[],
@@ -4344,6 +4386,7 @@ class Payment(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updatePaymentSubscription",
                 oauth2_scopes=[],
@@ -4452,6 +4495,7 @@ class Payment(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updatePaymentSubscription",
                 oauth2_scopes=[],

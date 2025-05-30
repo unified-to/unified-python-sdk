@@ -78,6 +78,7 @@ class Customer(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createTicketingCustomer",
                 oauth2_scopes=[],
@@ -186,6 +187,7 @@ class Customer(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createTicketingCustomer",
                 oauth2_scopes=[],
@@ -285,6 +287,7 @@ class Customer(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getTicketingCustomer",
                 oauth2_scopes=[],
@@ -384,6 +387,7 @@ class Customer(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getTicketingCustomer",
                 oauth2_scopes=[],
@@ -483,6 +487,7 @@ class Customer(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listTicketingCustomers",
                 oauth2_scopes=[],
@@ -582,6 +587,7 @@ class Customer(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listTicketingCustomers",
                 oauth2_scopes=[],
@@ -688,6 +694,7 @@ class Customer(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchTicketingCustomer",
                 oauth2_scopes=[],
@@ -794,6 +801,7 @@ class Customer(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchTicketingCustomer",
                 oauth2_scopes=[],
@@ -895,6 +903,7 @@ class Customer(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeTicketingCustomer",
                 oauth2_scopes=[],
@@ -1001,6 +1010,7 @@ class Customer(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeTicketingCustomer",
                 oauth2_scopes=[],
@@ -1114,6 +1124,7 @@ class Customer(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateTicketingCustomer",
                 oauth2_scopes=[],
@@ -1222,6 +1233,7 @@ class Customer(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateTicketingCustomer",
                 oauth2_scopes=[],

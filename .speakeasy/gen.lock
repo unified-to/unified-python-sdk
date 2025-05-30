@@ -3,10 +3,10 @@ id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
   docChecksum: d14d19d0a1732100e72235d3371aa316
   docVersion: "1.0"
-  speakeasyVersion: 1.552.0
-  generationVersion: 2.610.0
-  releaseVersion: 0.46.3
-  configChecksum: 9f3469d7ddbeae84ddd7445900ccb244
+  speakeasyVersion: 1.554.1
+  generationVersion: 2.616.1
+  releaseVersion: 0.47.0
+  configChecksum: 9f53d64418b255a69a3a7473031e61af
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -16,7 +16,7 @@ features:
     acceptHeaders: 3.0.0
     additionalDependencies: 1.0.0
     constsAndDefaults: 1.0.5
-    core: 5.19.0
+    core: 5.19.1
     defaultEnabledRetries: 0.2.0
     downloadStreams: 1.0.1
     enumUnions: 0.1.0
@@ -26,7 +26,7 @@ features:
     globalServerURLs: 3.1.1
     responseFormat: 1.0.1
     retries: 3.0.2
-    sdkHooks: 1.0.1
+    sdkHooks: 1.1.0
     unions: 3.0.4
     uploadStreams: 1.0.0
 generatedFiles:

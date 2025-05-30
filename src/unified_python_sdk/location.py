@@ -72,6 +72,7 @@ class Location(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createCommerceLocation",
                 oauth2_scopes=[],
@@ -174,6 +175,7 @@ class Location(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createCommerceLocation",
                 oauth2_scopes=[],
@@ -276,6 +278,7 @@ class Location(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createHrisLocation",
                 oauth2_scopes=[],
@@ -378,6 +381,7 @@ class Location(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createHrisLocation",
                 oauth2_scopes=[],
@@ -477,6 +481,7 @@ class Location(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getCommerceLocation",
                 oauth2_scopes=[],
@@ -576,6 +581,7 @@ class Location(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getCommerceLocation",
                 oauth2_scopes=[],
@@ -675,6 +681,7 @@ class Location(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getHrisLocation",
                 oauth2_scopes=[],
@@ -774,6 +781,7 @@ class Location(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getHrisLocation",
                 oauth2_scopes=[],
@@ -873,6 +881,7 @@ class Location(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listCommerceLocations",
                 oauth2_scopes=[],
@@ -972,6 +981,7 @@ class Location(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listCommerceLocations",
                 oauth2_scopes=[],
@@ -1071,6 +1081,7 @@ class Location(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listHrisLocations",
                 oauth2_scopes=[],
@@ -1170,6 +1181,7 @@ class Location(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listHrisLocations",
                 oauth2_scopes=[],
@@ -1272,6 +1284,7 @@ class Location(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchCommerceLocation",
                 oauth2_scopes=[],
@@ -1374,6 +1387,7 @@ class Location(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchCommerceLocation",
                 oauth2_scopes=[],
@@ -1476,6 +1490,7 @@ class Location(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchHrisLocation",
                 oauth2_scopes=[],
@@ -1578,6 +1593,7 @@ class Location(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchHrisLocation",
                 oauth2_scopes=[],
@@ -1677,6 +1693,7 @@ class Location(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeCommerceLocation",
                 oauth2_scopes=[],
@@ -1781,6 +1798,7 @@ class Location(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeCommerceLocation",
                 oauth2_scopes=[],
@@ -1885,6 +1903,7 @@ class Location(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeHrisLocation",
                 oauth2_scopes=[],
@@ -1989,6 +2008,7 @@ class Location(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeHrisLocation",
                 oauth2_scopes=[],
@@ -2096,6 +2116,7 @@ class Location(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateCommerceLocation",
                 oauth2_scopes=[],
@@ -2198,6 +2219,7 @@ class Location(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateCommerceLocation",
                 oauth2_scopes=[],
@@ -2300,6 +2322,7 @@ class Location(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateHrisLocation",
                 oauth2_scopes=[],
@@ -2402,6 +2425,7 @@ class Location(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateHrisLocation",
                 oauth2_scopes=[],

@@ -72,6 +72,7 @@ class Messaging(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createMessagingMessage",
                 oauth2_scopes=[],
@@ -174,6 +175,7 @@ class Messaging(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createMessagingMessage",
                 oauth2_scopes=[],
@@ -273,6 +275,7 @@ class Messaging(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getMessagingChannel",
                 oauth2_scopes=[],
@@ -372,6 +375,7 @@ class Messaging(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getMessagingChannel",
                 oauth2_scopes=[],
@@ -471,6 +475,7 @@ class Messaging(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getMessagingMessage",
                 oauth2_scopes=[],
@@ -570,6 +575,7 @@ class Messaging(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getMessagingMessage",
                 oauth2_scopes=[],
@@ -669,6 +675,7 @@ class Messaging(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listMessagingChannels",
                 oauth2_scopes=[],
@@ -768,6 +775,7 @@ class Messaging(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listMessagingChannels",
                 oauth2_scopes=[],
@@ -867,6 +875,7 @@ class Messaging(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listMessagingMessages",
                 oauth2_scopes=[],
@@ -966,6 +975,7 @@ class Messaging(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listMessagingMessages",
                 oauth2_scopes=[],
@@ -1068,6 +1078,7 @@ class Messaging(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchMessagingMessage",
                 oauth2_scopes=[],
@@ -1170,6 +1181,7 @@ class Messaging(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchMessagingMessage",
                 oauth2_scopes=[],
@@ -1269,6 +1281,7 @@ class Messaging(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeMessagingMessage",
                 oauth2_scopes=[],
@@ -1373,6 +1386,7 @@ class Messaging(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeMessagingMessage",
                 oauth2_scopes=[],
@@ -1480,6 +1494,7 @@ class Messaging(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateMessagingMessage",
                 oauth2_scopes=[],
@@ -1582,6 +1597,7 @@ class Messaging(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateMessagingMessage",
                 oauth2_scopes=[],

@@ -71,6 +71,7 @@ class Job(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createAtsJob",
                 oauth2_scopes=[],
@@ -170,6 +171,7 @@ class Job(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createAtsJob",
                 oauth2_scopes=[],
@@ -266,6 +268,7 @@ class Job(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getAtsJob",
                 oauth2_scopes=[],
@@ -362,6 +365,7 @@ class Job(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getAtsJob",
                 oauth2_scopes=[],
@@ -458,6 +462,7 @@ class Job(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listAtsJobs",
                 oauth2_scopes=[],
@@ -556,6 +561,7 @@ class Job(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listAtsJobs",
                 oauth2_scopes=[],
@@ -657,6 +663,7 @@ class Job(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchAtsJob",
                 oauth2_scopes=[],
@@ -756,6 +763,7 @@ class Job(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchAtsJob",
                 oauth2_scopes=[],
@@ -852,6 +860,7 @@ class Job(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeAtsJob",
                 oauth2_scopes=[],
@@ -955,6 +964,7 @@ class Job(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeAtsJob",
                 oauth2_scopes=[],
@@ -1061,6 +1071,7 @@ class Job(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateAtsJob",
                 oauth2_scopes=[],
@@ -1160,6 +1171,7 @@ class Job(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateAtsJob",
                 oauth2_scopes=[],

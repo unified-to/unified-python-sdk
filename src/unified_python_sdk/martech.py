@@ -72,6 +72,7 @@ class Martech(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createMartechList",
                 oauth2_scopes=[],
@@ -174,6 +175,7 @@ class Martech(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createMartechList",
                 oauth2_scopes=[],
@@ -276,6 +278,7 @@ class Martech(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createMartechMember",
                 oauth2_scopes=[],
@@ -378,6 +381,7 @@ class Martech(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createMartechMember",
                 oauth2_scopes=[],
@@ -476,6 +480,7 @@ class Martech(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getMartechList",
                 oauth2_scopes=[],
@@ -574,6 +579,7 @@ class Martech(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getMartechList",
                 oauth2_scopes=[],
@@ -673,6 +679,7 @@ class Martech(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getMartechMember",
                 oauth2_scopes=[],
@@ -772,6 +779,7 @@ class Martech(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getMartechMember",
                 oauth2_scopes=[],
@@ -871,6 +879,7 @@ class Martech(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listMartechLists",
                 oauth2_scopes=[],
@@ -970,6 +979,7 @@ class Martech(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listMartechLists",
                 oauth2_scopes=[],
@@ -1069,6 +1079,7 @@ class Martech(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listMartechMembers",
                 oauth2_scopes=[],
@@ -1168,6 +1179,7 @@ class Martech(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listMartechMembers",
                 oauth2_scopes=[],
@@ -1270,6 +1282,7 @@ class Martech(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchMartechList",
                 oauth2_scopes=[],
@@ -1372,6 +1385,7 @@ class Martech(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchMartechList",
                 oauth2_scopes=[],
@@ -1474,6 +1488,7 @@ class Martech(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchMartechMember",
                 oauth2_scopes=[],
@@ -1576,6 +1591,7 @@ class Martech(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchMartechMember",
                 oauth2_scopes=[],
@@ -1675,6 +1691,7 @@ class Martech(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeMartechList",
                 oauth2_scopes=[],
@@ -1779,6 +1796,7 @@ class Martech(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeMartechList",
                 oauth2_scopes=[],
@@ -1883,6 +1901,7 @@ class Martech(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeMartechMember",
                 oauth2_scopes=[],
@@ -1987,6 +2006,7 @@ class Martech(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeMartechMember",
                 oauth2_scopes=[],
@@ -2094,6 +2114,7 @@ class Martech(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateMartechList",
                 oauth2_scopes=[],
@@ -2196,6 +2217,7 @@ class Martech(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateMartechList",
                 oauth2_scopes=[],
@@ -2298,6 +2320,7 @@ class Martech(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateMartechMember",
                 oauth2_scopes=[],
@@ -2400,6 +2423,7 @@ class Martech(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateMartechMember",
                 oauth2_scopes=[],

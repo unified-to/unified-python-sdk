@@ -72,6 +72,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createAtsActivity",
                 oauth2_scopes=[],
@@ -174,6 +175,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createAtsActivity",
                 oauth2_scopes=[],
@@ -276,6 +278,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createAtsApplication",
                 oauth2_scopes=[],
@@ -378,6 +381,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createAtsApplication",
                 oauth2_scopes=[],
@@ -480,6 +484,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createAtsCandidate",
                 oauth2_scopes=[],
@@ -582,6 +587,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createAtsCandidate",
                 oauth2_scopes=[],
@@ -684,6 +690,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createAtsDocument",
                 oauth2_scopes=[],
@@ -786,6 +793,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createAtsDocument",
                 oauth2_scopes=[],
@@ -888,6 +896,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createAtsInterview",
                 oauth2_scopes=[],
@@ -990,6 +999,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createAtsInterview",
                 oauth2_scopes=[],
@@ -1091,6 +1101,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createAtsJob",
                 oauth2_scopes=[],
@@ -1190,6 +1201,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createAtsJob",
                 oauth2_scopes=[],
@@ -1290,6 +1302,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createAtsScorecard",
                 oauth2_scopes=[],
@@ -1392,6 +1405,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createAtsScorecard",
                 oauth2_scopes=[],
@@ -1490,6 +1504,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getAtsActivity",
                 oauth2_scopes=[],
@@ -1588,6 +1603,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getAtsActivity",
                 oauth2_scopes=[],
@@ -1687,6 +1703,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getAtsApplication",
                 oauth2_scopes=[],
@@ -1786,6 +1803,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getAtsApplication",
                 oauth2_scopes=[],
@@ -1885,6 +1903,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getAtsCandidate",
                 oauth2_scopes=[],
@@ -1984,6 +2003,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getAtsCandidate",
                 oauth2_scopes=[],
@@ -2082,6 +2102,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getAtsCompany",
                 oauth2_scopes=[],
@@ -2180,6 +2201,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getAtsCompany",
                 oauth2_scopes=[],
@@ -2278,6 +2300,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getAtsDocument",
                 oauth2_scopes=[],
@@ -2376,6 +2399,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getAtsDocument",
                 oauth2_scopes=[],
@@ -2475,6 +2499,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getAtsInterview",
                 oauth2_scopes=[],
@@ -2574,6 +2599,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getAtsInterview",
                 oauth2_scopes=[],
@@ -2672,6 +2698,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getAtsJob",
                 oauth2_scopes=[],
@@ -2768,6 +2795,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getAtsJob",
                 oauth2_scopes=[],
@@ -2865,6 +2893,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getAtsScorecard",
                 oauth2_scopes=[],
@@ -2964,6 +2993,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getAtsScorecard",
                 oauth2_scopes=[],
@@ -3063,6 +3093,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listAtsActivities",
                 oauth2_scopes=[],
@@ -3162,6 +3193,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listAtsActivities",
                 oauth2_scopes=[],
@@ -3261,6 +3293,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listAtsApplications",
                 oauth2_scopes=[],
@@ -3360,6 +3393,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listAtsApplications",
                 oauth2_scopes=[],
@@ -3461,6 +3495,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listAtsApplicationstatuses",
                 oauth2_scopes=[],
@@ -3562,6 +3597,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listAtsApplicationstatuses",
                 oauth2_scopes=[],
@@ -3661,6 +3697,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listAtsCandidates",
                 oauth2_scopes=[],
@@ -3760,6 +3797,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listAtsCandidates",
                 oauth2_scopes=[],
@@ -3859,6 +3897,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listAtsCompanies",
                 oauth2_scopes=[],
@@ -3958,6 +3997,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listAtsCompanies",
                 oauth2_scopes=[],
@@ -4057,6 +4097,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listAtsDocuments",
                 oauth2_scopes=[],
@@ -4156,6 +4197,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listAtsDocuments",
                 oauth2_scopes=[],
@@ -4255,6 +4297,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listAtsInterviews",
                 oauth2_scopes=[],
@@ -4354,6 +4397,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listAtsInterviews",
                 oauth2_scopes=[],
@@ -4452,6 +4496,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listAtsJobs",
                 oauth2_scopes=[],
@@ -4550,6 +4595,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listAtsJobs",
                 oauth2_scopes=[],
@@ -4649,6 +4695,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listAtsScorecards",
                 oauth2_scopes=[],
@@ -4748,6 +4795,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listAtsScorecards",
                 oauth2_scopes=[],
@@ -4850,6 +4898,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchAtsActivity",
                 oauth2_scopes=[],
@@ -4952,6 +5001,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchAtsActivity",
                 oauth2_scopes=[],
@@ -5054,6 +5104,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchAtsApplication",
                 oauth2_scopes=[],
@@ -5156,6 +5207,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchAtsApplication",
                 oauth2_scopes=[],
@@ -5258,6 +5310,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchAtsCandidate",
                 oauth2_scopes=[],
@@ -5360,6 +5413,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchAtsCandidate",
                 oauth2_scopes=[],
@@ -5462,6 +5516,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchAtsDocument",
                 oauth2_scopes=[],
@@ -5564,6 +5619,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchAtsDocument",
                 oauth2_scopes=[],
@@ -5666,6 +5722,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchAtsInterview",
                 oauth2_scopes=[],
@@ -5768,6 +5825,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchAtsInterview",
                 oauth2_scopes=[],
@@ -5869,6 +5927,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchAtsJob",
                 oauth2_scopes=[],
@@ -5968,6 +6027,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchAtsJob",
                 oauth2_scopes=[],
@@ -6068,6 +6128,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchAtsScorecard",
                 oauth2_scopes=[],
@@ -6170,6 +6231,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchAtsScorecard",
                 oauth2_scopes=[],
@@ -6269,6 +6331,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeAtsActivity",
                 oauth2_scopes=[],
@@ -6373,6 +6436,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeAtsActivity",
                 oauth2_scopes=[],
@@ -6477,6 +6541,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeAtsApplication",
                 oauth2_scopes=[],
@@ -6581,6 +6646,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeAtsApplication",
                 oauth2_scopes=[],
@@ -6685,6 +6751,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeAtsCandidate",
                 oauth2_scopes=[],
@@ -6789,6 +6856,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeAtsCandidate",
                 oauth2_scopes=[],
@@ -6893,6 +6961,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeAtsDocument",
                 oauth2_scopes=[],
@@ -6997,6 +7066,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeAtsDocument",
                 oauth2_scopes=[],
@@ -7101,6 +7171,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeAtsInterview",
                 oauth2_scopes=[],
@@ -7205,6 +7276,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeAtsInterview",
                 oauth2_scopes=[],
@@ -7308,6 +7380,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeAtsJob",
                 oauth2_scopes=[],
@@ -7411,6 +7484,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeAtsJob",
                 oauth2_scopes=[],
@@ -7515,6 +7589,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeAtsScorecard",
                 oauth2_scopes=[],
@@ -7619,6 +7694,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeAtsScorecard",
                 oauth2_scopes=[],
@@ -7726,6 +7802,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateAtsActivity",
                 oauth2_scopes=[],
@@ -7828,6 +7905,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateAtsActivity",
                 oauth2_scopes=[],
@@ -7930,6 +8008,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateAtsApplication",
                 oauth2_scopes=[],
@@ -8032,6 +8111,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateAtsApplication",
                 oauth2_scopes=[],
@@ -8134,6 +8214,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateAtsCandidate",
                 oauth2_scopes=[],
@@ -8236,6 +8317,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateAtsCandidate",
                 oauth2_scopes=[],
@@ -8338,6 +8420,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateAtsDocument",
                 oauth2_scopes=[],
@@ -8440,6 +8523,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateAtsDocument",
                 oauth2_scopes=[],
@@ -8542,6 +8626,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateAtsInterview",
                 oauth2_scopes=[],
@@ -8644,6 +8729,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateAtsInterview",
                 oauth2_scopes=[],
@@ -8745,6 +8831,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateAtsJob",
                 oauth2_scopes=[],
@@ -8844,6 +8931,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateAtsJob",
                 oauth2_scopes=[],
@@ -8944,6 +9032,7 @@ class Ats(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateAtsScorecard",
                 oauth2_scopes=[],
@@ -9046,6 +9135,7 @@ class Ats(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateAtsScorecard",
                 oauth2_scopes=[],

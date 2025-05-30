@@ -72,6 +72,7 @@ class Company(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createCrmCompany",
                 oauth2_scopes=[],
@@ -174,6 +175,7 @@ class Company(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createCrmCompany",
                 oauth2_scopes=[],
@@ -276,6 +278,7 @@ class Company(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createHrisCompany",
                 oauth2_scopes=[],
@@ -378,6 +381,7 @@ class Company(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createHrisCompany",
                 oauth2_scopes=[],
@@ -476,6 +480,7 @@ class Company(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getAtsCompany",
                 oauth2_scopes=[],
@@ -574,6 +579,7 @@ class Company(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getAtsCompany",
                 oauth2_scopes=[],
@@ -672,6 +678,7 @@ class Company(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getCrmCompany",
                 oauth2_scopes=[],
@@ -770,6 +777,7 @@ class Company(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getCrmCompany",
                 oauth2_scopes=[],
@@ -868,6 +876,7 @@ class Company(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getHrisCompany",
                 oauth2_scopes=[],
@@ -966,6 +975,7 @@ class Company(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getHrisCompany",
                 oauth2_scopes=[],
@@ -1065,6 +1075,7 @@ class Company(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listAtsCompanies",
                 oauth2_scopes=[],
@@ -1164,6 +1175,7 @@ class Company(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listAtsCompanies",
                 oauth2_scopes=[],
@@ -1263,6 +1275,7 @@ class Company(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listCrmCompanies",
                 oauth2_scopes=[],
@@ -1362,6 +1375,7 @@ class Company(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listCrmCompanies",
                 oauth2_scopes=[],
@@ -1461,6 +1475,7 @@ class Company(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listEnrichCompanies",
                 oauth2_scopes=[],
@@ -1560,6 +1575,7 @@ class Company(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listEnrichCompanies",
                 oauth2_scopes=[],
@@ -1659,6 +1675,7 @@ class Company(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listHrisCompanies",
                 oauth2_scopes=[],
@@ -1758,6 +1775,7 @@ class Company(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listHrisCompanies",
                 oauth2_scopes=[],
@@ -1860,6 +1878,7 @@ class Company(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchCrmCompany",
                 oauth2_scopes=[],
@@ -1962,6 +1981,7 @@ class Company(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchCrmCompany",
                 oauth2_scopes=[],
@@ -2064,6 +2084,7 @@ class Company(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchHrisCompany",
                 oauth2_scopes=[],
@@ -2166,6 +2187,7 @@ class Company(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchHrisCompany",
                 oauth2_scopes=[],
@@ -2265,6 +2287,7 @@ class Company(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeCrmCompany",
                 oauth2_scopes=[],
@@ -2369,6 +2392,7 @@ class Company(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeCrmCompany",
                 oauth2_scopes=[],
@@ -2473,6 +2497,7 @@ class Company(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeHrisCompany",
                 oauth2_scopes=[],
@@ -2577,6 +2602,7 @@ class Company(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeHrisCompany",
                 oauth2_scopes=[],
@@ -2684,6 +2710,7 @@ class Company(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateCrmCompany",
                 oauth2_scopes=[],
@@ -2786,6 +2813,7 @@ class Company(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateCrmCompany",
                 oauth2_scopes=[],
@@ -2888,6 +2916,7 @@ class Company(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateHrisCompany",
                 oauth2_scopes=[],
@@ -2990,6 +3019,7 @@ class Company(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateHrisCompany",
                 oauth2_scopes=[],

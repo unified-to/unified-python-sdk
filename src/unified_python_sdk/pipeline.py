@@ -72,6 +72,7 @@ class Pipeline(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createCrmPipeline",
                 oauth2_scopes=[],
@@ -174,6 +175,7 @@ class Pipeline(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createCrmPipeline",
                 oauth2_scopes=[],
@@ -272,6 +274,7 @@ class Pipeline(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getCrmPipeline",
                 oauth2_scopes=[],
@@ -370,6 +373,7 @@ class Pipeline(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getCrmPipeline",
                 oauth2_scopes=[],
@@ -469,6 +473,7 @@ class Pipeline(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listCrmPipelines",
                 oauth2_scopes=[],
@@ -568,6 +573,7 @@ class Pipeline(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listCrmPipelines",
                 oauth2_scopes=[],
@@ -670,6 +676,7 @@ class Pipeline(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchCrmPipeline",
                 oauth2_scopes=[],
@@ -772,6 +779,7 @@ class Pipeline(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchCrmPipeline",
                 oauth2_scopes=[],
@@ -871,6 +879,7 @@ class Pipeline(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeCrmPipeline",
                 oauth2_scopes=[],
@@ -975,6 +984,7 @@ class Pipeline(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeCrmPipeline",
                 oauth2_scopes=[],
@@ -1082,6 +1092,7 @@ class Pipeline(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateCrmPipeline",
                 oauth2_scopes=[],
@@ -1184,6 +1195,7 @@ class Pipeline(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateCrmPipeline",
                 oauth2_scopes=[],

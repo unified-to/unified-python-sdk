@@ -142,6 +142,7 @@ class Passthrough(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createPassthrough_json",
                 oauth2_scopes=[],
@@ -300,6 +301,7 @@ class Passthrough(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createPassthrough_json",
                 oauth2_scopes=[],
@@ -462,6 +464,7 @@ class Passthrough(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createPassthrough_raw",
                 oauth2_scopes=[],
@@ -624,6 +627,7 @@ class Passthrough(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createPassthrough_raw",
                 oauth2_scopes=[],
@@ -779,6 +783,7 @@ class Passthrough(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listPassthroughs",
                 oauth2_scopes=[],
@@ -934,6 +939,7 @@ class Passthrough(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listPassthroughs",
                 oauth2_scopes=[],
@@ -1092,6 +1098,7 @@ class Passthrough(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchPassthrough_json",
                 oauth2_scopes=[],
@@ -1250,6 +1257,7 @@ class Passthrough(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchPassthrough_json",
                 oauth2_scopes=[],
@@ -1412,6 +1420,7 @@ class Passthrough(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchPassthrough_raw",
                 oauth2_scopes=[],
@@ -1574,6 +1583,7 @@ class Passthrough(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchPassthrough_raw",
                 oauth2_scopes=[],
@@ -1729,6 +1739,7 @@ class Passthrough(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removePassthrough",
                 oauth2_scopes=[],
@@ -1884,6 +1895,7 @@ class Passthrough(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removePassthrough",
                 oauth2_scopes=[],
@@ -2042,6 +2054,7 @@ class Passthrough(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updatePassthrough_json",
                 oauth2_scopes=[],
@@ -2200,6 +2213,7 @@ class Passthrough(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updatePassthrough_json",
                 oauth2_scopes=[],
@@ -2362,6 +2376,7 @@ class Passthrough(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updatePassthrough_raw",
                 oauth2_scopes=[],
@@ -2524,6 +2539,7 @@ class Passthrough(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updatePassthrough_raw",
                 oauth2_scopes=[],

@@ -71,6 +71,7 @@ class Class(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createLmsClass",
                 oauth2_scopes=[],
@@ -172,6 +173,7 @@ class Class(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createLmsClass",
                 oauth2_scopes=[],
@@ -270,6 +272,7 @@ class Class(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getLmsClass",
                 oauth2_scopes=[],
@@ -368,6 +371,7 @@ class Class(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getLmsClass",
                 oauth2_scopes=[],
@@ -466,6 +470,7 @@ class Class(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listLmsClasses",
                 oauth2_scopes=[],
@@ -564,6 +569,7 @@ class Class(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listLmsClasses",
                 oauth2_scopes=[],
@@ -665,6 +671,7 @@ class Class(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchLmsClass",
                 oauth2_scopes=[],
@@ -766,6 +773,7 @@ class Class(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchLmsClass",
                 oauth2_scopes=[],
@@ -864,6 +872,7 @@ class Class(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeLmsClass",
                 oauth2_scopes=[],
@@ -967,6 +976,7 @@ class Class(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeLmsClass",
                 oauth2_scopes=[],
@@ -1073,6 +1083,7 @@ class Class(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateLmsClass",
                 oauth2_scopes=[],
@@ -1174,6 +1185,7 @@ class Class(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateLmsClass",
                 oauth2_scopes=[],

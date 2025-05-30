@@ -72,6 +72,7 @@ class Calendar(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createCalendarCalendar",
                 oauth2_scopes=[],
@@ -174,6 +175,7 @@ class Calendar(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createCalendarCalendar",
                 oauth2_scopes=[],
@@ -276,6 +278,7 @@ class Calendar(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createCalendarEvent",
                 oauth2_scopes=[],
@@ -378,6 +381,7 @@ class Calendar(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createCalendarEvent",
                 oauth2_scopes=[],
@@ -480,6 +484,7 @@ class Calendar(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createCalendarLink",
                 oauth2_scopes=[],
@@ -582,6 +587,7 @@ class Calendar(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createCalendarLink",
                 oauth2_scopes=[],
@@ -681,6 +687,7 @@ class Calendar(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getCalendarCalendar",
                 oauth2_scopes=[],
@@ -780,6 +787,7 @@ class Calendar(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getCalendarCalendar",
                 oauth2_scopes=[],
@@ -879,6 +887,7 @@ class Calendar(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getCalendarEvent",
                 oauth2_scopes=[],
@@ -978,6 +987,7 @@ class Calendar(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getCalendarEvent",
                 oauth2_scopes=[],
@@ -1077,6 +1087,7 @@ class Calendar(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getCalendarLink",
                 oauth2_scopes=[],
@@ -1176,6 +1187,7 @@ class Calendar(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getCalendarLink",
                 oauth2_scopes=[],
@@ -1275,6 +1287,7 @@ class Calendar(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getCalendarRecording",
                 oauth2_scopes=[],
@@ -1374,6 +1387,7 @@ class Calendar(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getCalendarRecording",
                 oauth2_scopes=[],
@@ -1473,6 +1487,7 @@ class Calendar(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listCalendarBusies",
                 oauth2_scopes=[],
@@ -1572,6 +1587,7 @@ class Calendar(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listCalendarBusies",
                 oauth2_scopes=[],
@@ -1671,6 +1687,7 @@ class Calendar(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listCalendarCalendars",
                 oauth2_scopes=[],
@@ -1770,6 +1787,7 @@ class Calendar(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listCalendarCalendars",
                 oauth2_scopes=[],
@@ -1869,6 +1887,7 @@ class Calendar(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listCalendarEvents",
                 oauth2_scopes=[],
@@ -1968,6 +1987,7 @@ class Calendar(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listCalendarEvents",
                 oauth2_scopes=[],
@@ -2067,6 +2087,7 @@ class Calendar(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listCalendarLinks",
                 oauth2_scopes=[],
@@ -2166,6 +2187,7 @@ class Calendar(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listCalendarLinks",
                 oauth2_scopes=[],
@@ -2265,6 +2287,7 @@ class Calendar(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listCalendarRecordings",
                 oauth2_scopes=[],
@@ -2364,6 +2387,7 @@ class Calendar(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listCalendarRecordings",
                 oauth2_scopes=[],
@@ -2466,6 +2490,7 @@ class Calendar(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchCalendarCalendar",
                 oauth2_scopes=[],
@@ -2568,6 +2593,7 @@ class Calendar(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchCalendarCalendar",
                 oauth2_scopes=[],
@@ -2670,6 +2696,7 @@ class Calendar(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchCalendarEvent",
                 oauth2_scopes=[],
@@ -2772,6 +2799,7 @@ class Calendar(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchCalendarEvent",
                 oauth2_scopes=[],
@@ -2874,6 +2902,7 @@ class Calendar(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchCalendarLink",
                 oauth2_scopes=[],
@@ -2976,6 +3005,7 @@ class Calendar(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchCalendarLink",
                 oauth2_scopes=[],
@@ -3075,6 +3105,7 @@ class Calendar(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeCalendarCalendar",
                 oauth2_scopes=[],
@@ -3179,6 +3210,7 @@ class Calendar(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeCalendarCalendar",
                 oauth2_scopes=[],
@@ -3283,6 +3315,7 @@ class Calendar(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeCalendarEvent",
                 oauth2_scopes=[],
@@ -3387,6 +3420,7 @@ class Calendar(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeCalendarEvent",
                 oauth2_scopes=[],
@@ -3491,6 +3525,7 @@ class Calendar(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeCalendarLink",
                 oauth2_scopes=[],
@@ -3595,6 +3630,7 @@ class Calendar(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeCalendarLink",
                 oauth2_scopes=[],
@@ -3702,6 +3738,7 @@ class Calendar(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateCalendarCalendar",
                 oauth2_scopes=[],
@@ -3804,6 +3841,7 @@ class Calendar(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateCalendarCalendar",
                 oauth2_scopes=[],
@@ -3906,6 +3944,7 @@ class Calendar(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateCalendarEvent",
                 oauth2_scopes=[],
@@ -4008,6 +4047,7 @@ class Calendar(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateCalendarEvent",
                 oauth2_scopes=[],
@@ -4110,6 +4150,7 @@ class Calendar(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateCalendarLink",
                 oauth2_scopes=[],
@@ -4212,6 +4253,7 @@ class Calendar(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateCalendarLink",
                 oauth2_scopes=[],

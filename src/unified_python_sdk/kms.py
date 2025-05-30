@@ -72,6 +72,7 @@ class Kms(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createKmsComment",
                 oauth2_scopes=[],
@@ -174,6 +175,7 @@ class Kms(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createKmsComment",
                 oauth2_scopes=[],
@@ -275,6 +277,7 @@ class Kms(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createKmsPage",
                 oauth2_scopes=[],
@@ -374,6 +377,7 @@ class Kms(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createKmsPage",
                 oauth2_scopes=[],
@@ -473,6 +477,7 @@ class Kms(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createKmsSpace",
                 oauth2_scopes=[],
@@ -574,6 +579,7 @@ class Kms(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createKmsSpace",
                 oauth2_scopes=[],
@@ -672,6 +678,7 @@ class Kms(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getKmsComment",
                 oauth2_scopes=[],
@@ -770,6 +777,7 @@ class Kms(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getKmsComment",
                 oauth2_scopes=[],
@@ -868,6 +876,7 @@ class Kms(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getKmsPage",
                 oauth2_scopes=[],
@@ -964,6 +973,7 @@ class Kms(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getKmsPage",
                 oauth2_scopes=[],
@@ -1060,6 +1070,7 @@ class Kms(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getKmsSpace",
                 oauth2_scopes=[],
@@ -1158,6 +1169,7 @@ class Kms(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getKmsSpace",
                 oauth2_scopes=[],
@@ -1257,6 +1269,7 @@ class Kms(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listKmsComments",
                 oauth2_scopes=[],
@@ -1356,6 +1369,7 @@ class Kms(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listKmsComments",
                 oauth2_scopes=[],
@@ -1454,6 +1468,7 @@ class Kms(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listKmsPages",
                 oauth2_scopes=[],
@@ -1552,6 +1567,7 @@ class Kms(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listKmsPages",
                 oauth2_scopes=[],
@@ -1650,6 +1666,7 @@ class Kms(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listKmsSpaces",
                 oauth2_scopes=[],
@@ -1748,6 +1765,7 @@ class Kms(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listKmsSpaces",
                 oauth2_scopes=[],
@@ -1850,6 +1868,7 @@ class Kms(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchKmsComment",
                 oauth2_scopes=[],
@@ -1952,6 +1971,7 @@ class Kms(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchKmsComment",
                 oauth2_scopes=[],
@@ -2053,6 +2073,7 @@ class Kms(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchKmsPage",
                 oauth2_scopes=[],
@@ -2152,6 +2173,7 @@ class Kms(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchKmsPage",
                 oauth2_scopes=[],
@@ -2251,6 +2273,7 @@ class Kms(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchKmsSpace",
                 oauth2_scopes=[],
@@ -2352,6 +2375,7 @@ class Kms(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchKmsSpace",
                 oauth2_scopes=[],
@@ -2451,6 +2475,7 @@ class Kms(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeKmsComment",
                 oauth2_scopes=[],
@@ -2555,6 +2580,7 @@ class Kms(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeKmsComment",
                 oauth2_scopes=[],
@@ -2658,6 +2684,7 @@ class Kms(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeKmsPage",
                 oauth2_scopes=[],
@@ -2761,6 +2788,7 @@ class Kms(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeKmsPage",
                 oauth2_scopes=[],
@@ -2864,6 +2892,7 @@ class Kms(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeKmsSpace",
                 oauth2_scopes=[],
@@ -2967,6 +2996,7 @@ class Kms(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeKmsSpace",
                 oauth2_scopes=[],
@@ -3074,6 +3104,7 @@ class Kms(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateKmsComment",
                 oauth2_scopes=[],
@@ -3176,6 +3207,7 @@ class Kms(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateKmsComment",
                 oauth2_scopes=[],
@@ -3277,6 +3309,7 @@ class Kms(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateKmsPage",
                 oauth2_scopes=[],
@@ -3376,6 +3409,7 @@ class Kms(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateKmsPage",
                 oauth2_scopes=[],
@@ -3475,6 +3509,7 @@ class Kms(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateKmsSpace",
                 oauth2_scopes=[],
@@ -3576,6 +3611,7 @@ class Kms(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateKmsSpace",
                 oauth2_scopes=[],

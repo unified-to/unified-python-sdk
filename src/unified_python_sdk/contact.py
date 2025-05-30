@@ -78,6 +78,7 @@ class Contact(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createAccountingContact",
                 oauth2_scopes=[],
@@ -186,6 +187,7 @@ class Contact(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createAccountingContact",
                 oauth2_scopes=[],
@@ -288,6 +290,7 @@ class Contact(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createCrmContact",
                 oauth2_scopes=[],
@@ -390,6 +393,7 @@ class Contact(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createCrmContact",
                 oauth2_scopes=[],
@@ -492,6 +496,7 @@ class Contact(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createUcContact",
                 oauth2_scopes=[],
@@ -594,6 +599,7 @@ class Contact(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createUcContact",
                 oauth2_scopes=[],
@@ -693,6 +699,7 @@ class Contact(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getAccountingContact",
                 oauth2_scopes=[],
@@ -792,6 +799,7 @@ class Contact(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getAccountingContact",
                 oauth2_scopes=[],
@@ -890,6 +898,7 @@ class Contact(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getCrmContact",
                 oauth2_scopes=[],
@@ -988,6 +997,7 @@ class Contact(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getCrmContact",
                 oauth2_scopes=[],
@@ -1086,6 +1096,7 @@ class Contact(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getUcContact",
                 oauth2_scopes=[],
@@ -1184,6 +1195,7 @@ class Contact(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getUcContact",
                 oauth2_scopes=[],
@@ -1283,6 +1295,7 @@ class Contact(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listAccountingContacts",
                 oauth2_scopes=[],
@@ -1382,6 +1395,7 @@ class Contact(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listAccountingContacts",
                 oauth2_scopes=[],
@@ -1481,6 +1495,7 @@ class Contact(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listCrmContacts",
                 oauth2_scopes=[],
@@ -1580,6 +1595,7 @@ class Contact(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listCrmContacts",
                 oauth2_scopes=[],
@@ -1678,6 +1694,7 @@ class Contact(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listUcContacts",
                 oauth2_scopes=[],
@@ -1776,6 +1793,7 @@ class Contact(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listUcContacts",
                 oauth2_scopes=[],
@@ -1882,6 +1900,7 @@ class Contact(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchAccountingContact",
                 oauth2_scopes=[],
@@ -1988,6 +2007,7 @@ class Contact(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchAccountingContact",
                 oauth2_scopes=[],
@@ -2090,6 +2110,7 @@ class Contact(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchCrmContact",
                 oauth2_scopes=[],
@@ -2192,6 +2213,7 @@ class Contact(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchCrmContact",
                 oauth2_scopes=[],
@@ -2293,6 +2315,7 @@ class Contact(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchUcContact",
                 oauth2_scopes=[],
@@ -2394,6 +2417,7 @@ class Contact(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchUcContact",
                 oauth2_scopes=[],
@@ -2495,6 +2519,7 @@ class Contact(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeAccountingContact",
                 oauth2_scopes=[],
@@ -2601,6 +2626,7 @@ class Contact(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeAccountingContact",
                 oauth2_scopes=[],
@@ -2705,6 +2731,7 @@ class Contact(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeCrmContact",
                 oauth2_scopes=[],
@@ -2809,6 +2836,7 @@ class Contact(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeCrmContact",
                 oauth2_scopes=[],
@@ -2913,6 +2941,7 @@ class Contact(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeUcContact",
                 oauth2_scopes=[],
@@ -3017,6 +3046,7 @@ class Contact(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeUcContact",
                 oauth2_scopes=[],
@@ -3130,6 +3160,7 @@ class Contact(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateAccountingContact",
                 oauth2_scopes=[],
@@ -3238,6 +3269,7 @@ class Contact(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateAccountingContact",
                 oauth2_scopes=[],
@@ -3340,6 +3372,7 @@ class Contact(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateCrmContact",
                 oauth2_scopes=[],
@@ -3442,6 +3475,7 @@ class Contact(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateCrmContact",
                 oauth2_scopes=[],
@@ -3544,6 +3578,7 @@ class Contact(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateUcContact",
                 oauth2_scopes=[],
@@ -3646,6 +3681,7 @@ class Contact(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateUcContact",
                 oauth2_scopes=[],

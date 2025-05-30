@@ -72,6 +72,7 @@ class Crm(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createCrmCompany",
                 oauth2_scopes=[],
@@ -174,6 +175,7 @@ class Crm(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createCrmCompany",
                 oauth2_scopes=[],
@@ -276,6 +278,7 @@ class Crm(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createCrmContact",
                 oauth2_scopes=[],
@@ -378,6 +381,7 @@ class Crm(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createCrmContact",
                 oauth2_scopes=[],
@@ -479,6 +483,7 @@ class Crm(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createCrmDeal",
                 oauth2_scopes=[],
@@ -578,6 +583,7 @@ class Crm(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createCrmDeal",
                 oauth2_scopes=[],
@@ -677,6 +683,7 @@ class Crm(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createCrmEvent",
                 oauth2_scopes=[],
@@ -778,6 +785,7 @@ class Crm(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createCrmEvent",
                 oauth2_scopes=[],
@@ -879,6 +887,7 @@ class Crm(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createCrmLead",
                 oauth2_scopes=[],
@@ -978,6 +987,7 @@ class Crm(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createCrmLead",
                 oauth2_scopes=[],
@@ -1078,6 +1088,7 @@ class Crm(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createCrmPipeline",
                 oauth2_scopes=[],
@@ -1180,6 +1191,7 @@ class Crm(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createCrmPipeline",
                 oauth2_scopes=[],
@@ -1278,6 +1290,7 @@ class Crm(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getCrmCompany",
                 oauth2_scopes=[],
@@ -1376,6 +1389,7 @@ class Crm(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getCrmCompany",
                 oauth2_scopes=[],
@@ -1474,6 +1488,7 @@ class Crm(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getCrmContact",
                 oauth2_scopes=[],
@@ -1572,6 +1587,7 @@ class Crm(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getCrmContact",
                 oauth2_scopes=[],
@@ -1670,6 +1686,7 @@ class Crm(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getCrmDeal",
                 oauth2_scopes=[],
@@ -1766,6 +1783,7 @@ class Crm(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getCrmDeal",
                 oauth2_scopes=[],
@@ -1862,6 +1880,7 @@ class Crm(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getCrmEvent",
                 oauth2_scopes=[],
@@ -1960,6 +1979,7 @@ class Crm(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getCrmEvent",
                 oauth2_scopes=[],
@@ -2058,6 +2078,7 @@ class Crm(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getCrmLead",
                 oauth2_scopes=[],
@@ -2154,6 +2175,7 @@ class Crm(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getCrmLead",
                 oauth2_scopes=[],
@@ -2250,6 +2272,7 @@ class Crm(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getCrmPipeline",
                 oauth2_scopes=[],
@@ -2348,6 +2371,7 @@ class Crm(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getCrmPipeline",
                 oauth2_scopes=[],
@@ -2447,6 +2471,7 @@ class Crm(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listCrmCompanies",
                 oauth2_scopes=[],
@@ -2546,6 +2571,7 @@ class Crm(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listCrmCompanies",
                 oauth2_scopes=[],
@@ -2645,6 +2671,7 @@ class Crm(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listCrmContacts",
                 oauth2_scopes=[],
@@ -2744,6 +2771,7 @@ class Crm(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listCrmContacts",
                 oauth2_scopes=[],
@@ -2842,6 +2870,7 @@ class Crm(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listCrmDeals",
                 oauth2_scopes=[],
@@ -2940,6 +2969,7 @@ class Crm(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listCrmDeals",
                 oauth2_scopes=[],
@@ -3038,6 +3068,7 @@ class Crm(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listCrmEvents",
                 oauth2_scopes=[],
@@ -3136,6 +3167,7 @@ class Crm(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listCrmEvents",
                 oauth2_scopes=[],
@@ -3234,6 +3266,7 @@ class Crm(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listCrmLeads",
                 oauth2_scopes=[],
@@ -3332,6 +3365,7 @@ class Crm(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listCrmLeads",
                 oauth2_scopes=[],
@@ -3431,6 +3465,7 @@ class Crm(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listCrmPipelines",
                 oauth2_scopes=[],
@@ -3530,6 +3565,7 @@ class Crm(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listCrmPipelines",
                 oauth2_scopes=[],
@@ -3632,6 +3668,7 @@ class Crm(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchCrmCompany",
                 oauth2_scopes=[],
@@ -3734,6 +3771,7 @@ class Crm(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchCrmCompany",
                 oauth2_scopes=[],
@@ -3836,6 +3874,7 @@ class Crm(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchCrmContact",
                 oauth2_scopes=[],
@@ -3938,6 +3977,7 @@ class Crm(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchCrmContact",
                 oauth2_scopes=[],
@@ -4039,6 +4079,7 @@ class Crm(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchCrmDeal",
                 oauth2_scopes=[],
@@ -4138,6 +4179,7 @@ class Crm(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchCrmDeal",
                 oauth2_scopes=[],
@@ -4237,6 +4279,7 @@ class Crm(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchCrmEvent",
                 oauth2_scopes=[],
@@ -4338,6 +4381,7 @@ class Crm(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchCrmEvent",
                 oauth2_scopes=[],
@@ -4439,6 +4483,7 @@ class Crm(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchCrmLead",
                 oauth2_scopes=[],
@@ -4538,6 +4583,7 @@ class Crm(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchCrmLead",
                 oauth2_scopes=[],
@@ -4638,6 +4684,7 @@ class Crm(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchCrmPipeline",
                 oauth2_scopes=[],
@@ -4740,6 +4787,7 @@ class Crm(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchCrmPipeline",
                 oauth2_scopes=[],
@@ -4839,6 +4887,7 @@ class Crm(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeCrmCompany",
                 oauth2_scopes=[],
@@ -4943,6 +4992,7 @@ class Crm(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeCrmCompany",
                 oauth2_scopes=[],
@@ -5047,6 +5097,7 @@ class Crm(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeCrmContact",
                 oauth2_scopes=[],
@@ -5151,6 +5202,7 @@ class Crm(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeCrmContact",
                 oauth2_scopes=[],
@@ -5254,6 +5306,7 @@ class Crm(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeCrmDeal",
                 oauth2_scopes=[],
@@ -5357,6 +5410,7 @@ class Crm(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeCrmDeal",
                 oauth2_scopes=[],
@@ -5460,6 +5514,7 @@ class Crm(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeCrmEvent",
                 oauth2_scopes=[],
@@ -5563,6 +5618,7 @@ class Crm(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeCrmEvent",
                 oauth2_scopes=[],
@@ -5666,6 +5722,7 @@ class Crm(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeCrmLead",
                 oauth2_scopes=[],
@@ -5769,6 +5826,7 @@ class Crm(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeCrmLead",
                 oauth2_scopes=[],
@@ -5873,6 +5931,7 @@ class Crm(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeCrmPipeline",
                 oauth2_scopes=[],
@@ -5977,6 +6036,7 @@ class Crm(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeCrmPipeline",
                 oauth2_scopes=[],
@@ -6084,6 +6144,7 @@ class Crm(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateCrmCompany",
                 oauth2_scopes=[],
@@ -6186,6 +6247,7 @@ class Crm(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateCrmCompany",
                 oauth2_scopes=[],
@@ -6288,6 +6350,7 @@ class Crm(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateCrmContact",
                 oauth2_scopes=[],
@@ -6390,6 +6453,7 @@ class Crm(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateCrmContact",
                 oauth2_scopes=[],
@@ -6491,6 +6555,7 @@ class Crm(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateCrmDeal",
                 oauth2_scopes=[],
@@ -6590,6 +6655,7 @@ class Crm(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateCrmDeal",
                 oauth2_scopes=[],
@@ -6689,6 +6755,7 @@ class Crm(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateCrmEvent",
                 oauth2_scopes=[],
@@ -6790,6 +6857,7 @@ class Crm(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateCrmEvent",
                 oauth2_scopes=[],
@@ -6891,6 +6959,7 @@ class Crm(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateCrmLead",
                 oauth2_scopes=[],
@@ -6990,6 +7059,7 @@ class Crm(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateCrmLead",
                 oauth2_scopes=[],
@@ -7090,6 +7160,7 @@ class Crm(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateCrmPipeline",
                 oauth2_scopes=[],
@@ -7192,6 +7263,7 @@ class Crm(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateCrmPipeline",
                 oauth2_scopes=[],

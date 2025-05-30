@@ -78,6 +78,7 @@ class Commerce(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createCommerceCollection",
                 oauth2_scopes=[],
@@ -186,6 +187,7 @@ class Commerce(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createCommerceCollection",
                 oauth2_scopes=[],
@@ -294,6 +296,7 @@ class Commerce(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createCommerceInventory",
                 oauth2_scopes=[],
@@ -402,6 +405,7 @@ class Commerce(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createCommerceInventory",
                 oauth2_scopes=[],
@@ -504,6 +508,7 @@ class Commerce(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createCommerceItem",
                 oauth2_scopes=[],
@@ -606,6 +611,7 @@ class Commerce(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createCommerceItem",
                 oauth2_scopes=[],
@@ -708,6 +714,7 @@ class Commerce(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createCommerceLocation",
                 oauth2_scopes=[],
@@ -810,6 +817,7 @@ class Commerce(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createCommerceLocation",
                 oauth2_scopes=[],
@@ -912,6 +920,7 @@ class Commerce(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createCommerceReview",
                 oauth2_scopes=[],
@@ -1014,6 +1023,7 @@ class Commerce(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createCommerceReview",
                 oauth2_scopes=[],
@@ -1113,6 +1123,7 @@ class Commerce(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getCommerceCollection",
                 oauth2_scopes=[],
@@ -1212,6 +1223,7 @@ class Commerce(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getCommerceCollection",
                 oauth2_scopes=[],
@@ -1311,6 +1323,7 @@ class Commerce(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getCommerceInventory",
                 oauth2_scopes=[],
@@ -1410,6 +1423,7 @@ class Commerce(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getCommerceInventory",
                 oauth2_scopes=[],
@@ -1509,6 +1523,7 @@ class Commerce(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getCommerceItem",
                 oauth2_scopes=[],
@@ -1608,6 +1623,7 @@ class Commerce(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getCommerceItem",
                 oauth2_scopes=[],
@@ -1707,6 +1723,7 @@ class Commerce(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getCommerceLocation",
                 oauth2_scopes=[],
@@ -1806,6 +1823,7 @@ class Commerce(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getCommerceLocation",
                 oauth2_scopes=[],
@@ -1905,6 +1923,7 @@ class Commerce(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getCommerceReview",
                 oauth2_scopes=[],
@@ -2004,6 +2023,7 @@ class Commerce(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getCommerceReview",
                 oauth2_scopes=[],
@@ -2105,6 +2125,7 @@ class Commerce(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listCommerceCollections",
                 oauth2_scopes=[],
@@ -2206,6 +2227,7 @@ class Commerce(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listCommerceCollections",
                 oauth2_scopes=[],
@@ -2307,6 +2329,7 @@ class Commerce(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listCommerceInventories",
                 oauth2_scopes=[],
@@ -2408,6 +2431,7 @@ class Commerce(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listCommerceInventories",
                 oauth2_scopes=[],
@@ -2507,6 +2531,7 @@ class Commerce(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listCommerceItems",
                 oauth2_scopes=[],
@@ -2606,6 +2631,7 @@ class Commerce(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listCommerceItems",
                 oauth2_scopes=[],
@@ -2705,6 +2731,7 @@ class Commerce(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listCommerceLocations",
                 oauth2_scopes=[],
@@ -2804,6 +2831,7 @@ class Commerce(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listCommerceLocations",
                 oauth2_scopes=[],
@@ -2903,6 +2931,7 @@ class Commerce(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listCommerceReviews",
                 oauth2_scopes=[],
@@ -3002,6 +3031,7 @@ class Commerce(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listCommerceReviews",
                 oauth2_scopes=[],
@@ -3110,6 +3140,7 @@ class Commerce(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchCommerceCollection",
                 oauth2_scopes=[],
@@ -3218,6 +3249,7 @@ class Commerce(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchCommerceCollection",
                 oauth2_scopes=[],
@@ -3324,6 +3356,7 @@ class Commerce(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchCommerceInventory",
                 oauth2_scopes=[],
@@ -3430,6 +3463,7 @@ class Commerce(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchCommerceInventory",
                 oauth2_scopes=[],
@@ -3532,6 +3566,7 @@ class Commerce(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchCommerceItem",
                 oauth2_scopes=[],
@@ -3634,6 +3669,7 @@ class Commerce(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchCommerceItem",
                 oauth2_scopes=[],
@@ -3736,6 +3772,7 @@ class Commerce(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchCommerceLocation",
                 oauth2_scopes=[],
@@ -3838,6 +3875,7 @@ class Commerce(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchCommerceLocation",
                 oauth2_scopes=[],
@@ -3940,6 +3978,7 @@ class Commerce(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchCommerceReview",
                 oauth2_scopes=[],
@@ -4042,6 +4081,7 @@ class Commerce(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchCommerceReview",
                 oauth2_scopes=[],
@@ -4143,6 +4183,7 @@ class Commerce(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeCommerceCollection",
                 oauth2_scopes=[],
@@ -4249,6 +4290,7 @@ class Commerce(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeCommerceCollection",
                 oauth2_scopes=[],
@@ -4355,6 +4397,7 @@ class Commerce(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeCommerceInventory",
                 oauth2_scopes=[],
@@ -4461,6 +4504,7 @@ class Commerce(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeCommerceInventory",
                 oauth2_scopes=[],
@@ -4565,6 +4609,7 @@ class Commerce(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeCommerceItem",
                 oauth2_scopes=[],
@@ -4669,6 +4714,7 @@ class Commerce(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeCommerceItem",
                 oauth2_scopes=[],
@@ -4773,6 +4819,7 @@ class Commerce(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeCommerceLocation",
                 oauth2_scopes=[],
@@ -4877,6 +4924,7 @@ class Commerce(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeCommerceLocation",
                 oauth2_scopes=[],
@@ -4981,6 +5029,7 @@ class Commerce(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeCommerceReview",
                 oauth2_scopes=[],
@@ -5085,6 +5134,7 @@ class Commerce(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeCommerceReview",
                 oauth2_scopes=[],
@@ -5198,6 +5248,7 @@ class Commerce(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateCommerceCollection",
                 oauth2_scopes=[],
@@ -5306,6 +5357,7 @@ class Commerce(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateCommerceCollection",
                 oauth2_scopes=[],
@@ -5414,6 +5466,7 @@ class Commerce(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateCommerceInventory",
                 oauth2_scopes=[],
@@ -5522,6 +5575,7 @@ class Commerce(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateCommerceInventory",
                 oauth2_scopes=[],
@@ -5624,6 +5678,7 @@ class Commerce(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateCommerceItem",
                 oauth2_scopes=[],
@@ -5726,6 +5781,7 @@ class Commerce(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateCommerceItem",
                 oauth2_scopes=[],
@@ -5828,6 +5884,7 @@ class Commerce(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateCommerceLocation",
                 oauth2_scopes=[],
@@ -5930,6 +5987,7 @@ class Commerce(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateCommerceLocation",
                 oauth2_scopes=[],
@@ -6032,6 +6090,7 @@ class Commerce(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateCommerceReview",
                 oauth2_scopes=[],
@@ -6134,6 +6193,7 @@ class Commerce(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateCommerceReview",
                 oauth2_scopes=[],

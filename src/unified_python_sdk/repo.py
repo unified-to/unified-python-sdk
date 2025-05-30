@@ -72,6 +72,7 @@ class Repo(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createRepoBranch",
                 oauth2_scopes=[],
@@ -174,6 +175,7 @@ class Repo(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createRepoBranch",
                 oauth2_scopes=[],
@@ -276,6 +278,7 @@ class Repo(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createRepoCommit",
                 oauth2_scopes=[],
@@ -378,6 +381,7 @@ class Repo(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createRepoCommit",
                 oauth2_scopes=[],
@@ -480,6 +484,7 @@ class Repo(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createRepoOrganization",
                 oauth2_scopes=[],
@@ -582,6 +587,7 @@ class Repo(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createRepoOrganization",
                 oauth2_scopes=[],
@@ -684,6 +690,7 @@ class Repo(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createRepoPullrequest",
                 oauth2_scopes=[],
@@ -786,6 +793,7 @@ class Repo(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createRepoPullrequest",
                 oauth2_scopes=[],
@@ -888,6 +896,7 @@ class Repo(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createRepoRepository",
                 oauth2_scopes=[],
@@ -990,6 +999,7 @@ class Repo(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createRepoRepository",
                 oauth2_scopes=[],
@@ -1088,6 +1098,7 @@ class Repo(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getRepoBranch",
                 oauth2_scopes=[],
@@ -1186,6 +1197,7 @@ class Repo(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getRepoBranch",
                 oauth2_scopes=[],
@@ -1284,6 +1296,7 @@ class Repo(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getRepoCommit",
                 oauth2_scopes=[],
@@ -1382,6 +1395,7 @@ class Repo(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getRepoCommit",
                 oauth2_scopes=[],
@@ -1481,6 +1495,7 @@ class Repo(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getRepoOrganization",
                 oauth2_scopes=[],
@@ -1580,6 +1595,7 @@ class Repo(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getRepoOrganization",
                 oauth2_scopes=[],
@@ -1679,6 +1695,7 @@ class Repo(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getRepoPullrequest",
                 oauth2_scopes=[],
@@ -1778,6 +1795,7 @@ class Repo(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getRepoPullrequest",
                 oauth2_scopes=[],
@@ -1877,6 +1895,7 @@ class Repo(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getRepoRepository",
                 oauth2_scopes=[],
@@ -1976,6 +1995,7 @@ class Repo(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getRepoRepository",
                 oauth2_scopes=[],
@@ -2075,6 +2095,7 @@ class Repo(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listRepoBranches",
                 oauth2_scopes=[],
@@ -2174,6 +2195,7 @@ class Repo(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listRepoBranches",
                 oauth2_scopes=[],
@@ -2273,6 +2295,7 @@ class Repo(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listRepoCommits",
                 oauth2_scopes=[],
@@ -2372,6 +2395,7 @@ class Repo(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listRepoCommits",
                 oauth2_scopes=[],
@@ -2471,6 +2495,7 @@ class Repo(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listRepoOrganizations",
                 oauth2_scopes=[],
@@ -2570,6 +2595,7 @@ class Repo(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listRepoOrganizations",
                 oauth2_scopes=[],
@@ -2669,6 +2695,7 @@ class Repo(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listRepoPullrequests",
                 oauth2_scopes=[],
@@ -2768,6 +2795,7 @@ class Repo(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listRepoPullrequests",
                 oauth2_scopes=[],
@@ -2867,6 +2895,7 @@ class Repo(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listRepoRepositories",
                 oauth2_scopes=[],
@@ -2966,6 +2995,7 @@ class Repo(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listRepoRepositories",
                 oauth2_scopes=[],
@@ -3068,6 +3098,7 @@ class Repo(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchRepoBranch",
                 oauth2_scopes=[],
@@ -3170,6 +3201,7 @@ class Repo(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchRepoBranch",
                 oauth2_scopes=[],
@@ -3272,6 +3304,7 @@ class Repo(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchRepoCommit",
                 oauth2_scopes=[],
@@ -3374,6 +3407,7 @@ class Repo(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchRepoCommit",
                 oauth2_scopes=[],
@@ -3476,6 +3510,7 @@ class Repo(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchRepoOrganization",
                 oauth2_scopes=[],
@@ -3578,6 +3613,7 @@ class Repo(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchRepoOrganization",
                 oauth2_scopes=[],
@@ -3680,6 +3716,7 @@ class Repo(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchRepoPullrequest",
                 oauth2_scopes=[],
@@ -3782,6 +3819,7 @@ class Repo(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchRepoPullrequest",
                 oauth2_scopes=[],
@@ -3884,6 +3922,7 @@ class Repo(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchRepoRepository",
                 oauth2_scopes=[],
@@ -3986,6 +4025,7 @@ class Repo(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchRepoRepository",
                 oauth2_scopes=[],
@@ -4085,6 +4125,7 @@ class Repo(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeRepoBranch",
                 oauth2_scopes=[],
@@ -4189,6 +4230,7 @@ class Repo(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeRepoBranch",
                 oauth2_scopes=[],
@@ -4293,6 +4335,7 @@ class Repo(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeRepoCommit",
                 oauth2_scopes=[],
@@ -4397,6 +4440,7 @@ class Repo(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeRepoCommit",
                 oauth2_scopes=[],
@@ -4501,6 +4545,7 @@ class Repo(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeRepoOrganization",
                 oauth2_scopes=[],
@@ -4605,6 +4650,7 @@ class Repo(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeRepoOrganization",
                 oauth2_scopes=[],
@@ -4709,6 +4755,7 @@ class Repo(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeRepoPullrequest",
                 oauth2_scopes=[],
@@ -4813,6 +4860,7 @@ class Repo(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeRepoPullrequest",
                 oauth2_scopes=[],
@@ -4917,6 +4965,7 @@ class Repo(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeRepoRepository",
                 oauth2_scopes=[],
@@ -5021,6 +5070,7 @@ class Repo(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeRepoRepository",
                 oauth2_scopes=[],
@@ -5128,6 +5178,7 @@ class Repo(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateRepoBranch",
                 oauth2_scopes=[],
@@ -5230,6 +5281,7 @@ class Repo(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateRepoBranch",
                 oauth2_scopes=[],
@@ -5332,6 +5384,7 @@ class Repo(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateRepoCommit",
                 oauth2_scopes=[],
@@ -5434,6 +5487,7 @@ class Repo(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateRepoCommit",
                 oauth2_scopes=[],
@@ -5536,6 +5590,7 @@ class Repo(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateRepoOrganization",
                 oauth2_scopes=[],
@@ -5638,6 +5693,7 @@ class Repo(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateRepoOrganization",
                 oauth2_scopes=[],
@@ -5740,6 +5796,7 @@ class Repo(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateRepoPullrequest",
                 oauth2_scopes=[],
@@ -5842,6 +5899,7 @@ class Repo(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateRepoPullrequest",
                 oauth2_scopes=[],
@@ -5944,6 +6002,7 @@ class Repo(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateRepoRepository",
                 oauth2_scopes=[],
@@ -6046,6 +6105,7 @@ class Repo(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateRepoRepository",
                 oauth2_scopes=[],

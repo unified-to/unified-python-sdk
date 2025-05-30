@@ -72,6 +72,7 @@ class Recording(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createUcRecording",
                 oauth2_scopes=[],
@@ -174,6 +175,7 @@ class Recording(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createUcRecording",
                 oauth2_scopes=[],
@@ -273,6 +275,7 @@ class Recording(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getCalendarRecording",
                 oauth2_scopes=[],
@@ -372,6 +375,7 @@ class Recording(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getCalendarRecording",
                 oauth2_scopes=[],
@@ -470,6 +474,7 @@ class Recording(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getUcRecording",
                 oauth2_scopes=[],
@@ -568,6 +573,7 @@ class Recording(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getUcRecording",
                 oauth2_scopes=[],
@@ -667,6 +673,7 @@ class Recording(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listCalendarRecordings",
                 oauth2_scopes=[],
@@ -766,6 +773,7 @@ class Recording(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listCalendarRecordings",
                 oauth2_scopes=[],
@@ -865,6 +873,7 @@ class Recording(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listUcRecordings",
                 oauth2_scopes=[],
@@ -964,6 +973,7 @@ class Recording(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listUcRecordings",
                 oauth2_scopes=[],
@@ -1066,6 +1076,7 @@ class Recording(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchUcRecording",
                 oauth2_scopes=[],
@@ -1168,6 +1179,7 @@ class Recording(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchUcRecording",
                 oauth2_scopes=[],
@@ -1267,6 +1279,7 @@ class Recording(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeUcRecording",
                 oauth2_scopes=[],
@@ -1371,6 +1384,7 @@ class Recording(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeUcRecording",
                 oauth2_scopes=[],
@@ -1478,6 +1492,7 @@ class Recording(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateUcRecording",
                 oauth2_scopes=[],
@@ -1580,6 +1595,7 @@ class Recording(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateUcRecording",
                 oauth2_scopes=[],

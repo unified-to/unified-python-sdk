@@ -72,6 +72,7 @@ class Task(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createTaskComment",
                 oauth2_scopes=[],
@@ -174,6 +175,7 @@ class Task(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createTaskComment",
                 oauth2_scopes=[],
@@ -276,6 +278,7 @@ class Task(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createTaskProject",
                 oauth2_scopes=[],
@@ -378,6 +381,7 @@ class Task(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createTaskProject",
                 oauth2_scopes=[],
@@ -479,6 +483,7 @@ class Task(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createTaskTask",
                 oauth2_scopes=[],
@@ -580,6 +585,7 @@ class Task(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createTaskTask",
                 oauth2_scopes=[],
@@ -678,6 +684,7 @@ class Task(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getTaskComment",
                 oauth2_scopes=[],
@@ -776,6 +783,7 @@ class Task(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getTaskComment",
                 oauth2_scopes=[],
@@ -874,6 +882,7 @@ class Task(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getTaskProject",
                 oauth2_scopes=[],
@@ -972,6 +981,7 @@ class Task(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getTaskProject",
                 oauth2_scopes=[],
@@ -1070,6 +1080,7 @@ class Task(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getTaskTask",
                 oauth2_scopes=[],
@@ -1168,6 +1179,7 @@ class Task(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getTaskTask",
                 oauth2_scopes=[],
@@ -1267,6 +1279,7 @@ class Task(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listTaskComments",
                 oauth2_scopes=[],
@@ -1366,6 +1379,7 @@ class Task(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listTaskComments",
                 oauth2_scopes=[],
@@ -1465,6 +1479,7 @@ class Task(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listTaskProjects",
                 oauth2_scopes=[],
@@ -1564,6 +1579,7 @@ class Task(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listTaskProjects",
                 oauth2_scopes=[],
@@ -1662,6 +1678,7 @@ class Task(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listTaskTasks",
                 oauth2_scopes=[],
@@ -1760,6 +1777,7 @@ class Task(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listTaskTasks",
                 oauth2_scopes=[],
@@ -1862,6 +1880,7 @@ class Task(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchTaskComment",
                 oauth2_scopes=[],
@@ -1964,6 +1983,7 @@ class Task(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchTaskComment",
                 oauth2_scopes=[],
@@ -2066,6 +2086,7 @@ class Task(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchTaskProject",
                 oauth2_scopes=[],
@@ -2168,6 +2189,7 @@ class Task(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchTaskProject",
                 oauth2_scopes=[],
@@ -2269,6 +2291,7 @@ class Task(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchTaskTask",
                 oauth2_scopes=[],
@@ -2370,6 +2393,7 @@ class Task(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchTaskTask",
                 oauth2_scopes=[],
@@ -2469,6 +2493,7 @@ class Task(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeTaskComment",
                 oauth2_scopes=[],
@@ -2573,6 +2598,7 @@ class Task(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeTaskComment",
                 oauth2_scopes=[],
@@ -2677,6 +2703,7 @@ class Task(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeTaskProject",
                 oauth2_scopes=[],
@@ -2781,6 +2808,7 @@ class Task(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeTaskProject",
                 oauth2_scopes=[],
@@ -2884,6 +2912,7 @@ class Task(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeTaskTask",
                 oauth2_scopes=[],
@@ -2987,6 +3016,7 @@ class Task(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeTaskTask",
                 oauth2_scopes=[],
@@ -3094,6 +3124,7 @@ class Task(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateTaskComment",
                 oauth2_scopes=[],
@@ -3196,6 +3227,7 @@ class Task(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateTaskComment",
                 oauth2_scopes=[],
@@ -3298,6 +3330,7 @@ class Task(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateTaskProject",
                 oauth2_scopes=[],
@@ -3400,6 +3433,7 @@ class Task(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateTaskProject",
                 oauth2_scopes=[],
@@ -3501,6 +3535,7 @@ class Task(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateTaskTask",
                 oauth2_scopes=[],
@@ -3602,6 +3637,7 @@ class Task(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateTaskTask",
                 oauth2_scopes=[],

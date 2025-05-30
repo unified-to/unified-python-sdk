@@ -78,6 +78,7 @@ class Inventory(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createCommerceInventory",
                 oauth2_scopes=[],
@@ -186,6 +187,7 @@ class Inventory(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createCommerceInventory",
                 oauth2_scopes=[],
@@ -285,6 +287,7 @@ class Inventory(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getCommerceInventory",
                 oauth2_scopes=[],
@@ -384,6 +387,7 @@ class Inventory(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getCommerceInventory",
                 oauth2_scopes=[],
@@ -485,6 +489,7 @@ class Inventory(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listCommerceInventories",
                 oauth2_scopes=[],
@@ -586,6 +591,7 @@ class Inventory(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listCommerceInventories",
                 oauth2_scopes=[],
@@ -692,6 +698,7 @@ class Inventory(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchCommerceInventory",
                 oauth2_scopes=[],
@@ -798,6 +805,7 @@ class Inventory(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchCommerceInventory",
                 oauth2_scopes=[],
@@ -899,6 +907,7 @@ class Inventory(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeCommerceInventory",
                 oauth2_scopes=[],
@@ -1005,6 +1014,7 @@ class Inventory(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeCommerceInventory",
                 oauth2_scopes=[],
@@ -1118,6 +1128,7 @@ class Inventory(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateCommerceInventory",
                 oauth2_scopes=[],
@@ -1226,6 +1237,7 @@ class Inventory(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateCommerceInventory",
                 oauth2_scopes=[],

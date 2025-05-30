@@ -78,6 +78,7 @@ class Ticketing(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createTicketingCustomer",
                 oauth2_scopes=[],
@@ -186,6 +187,7 @@ class Ticketing(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createTicketingCustomer",
                 oauth2_scopes=[],
@@ -288,6 +290,7 @@ class Ticketing(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createTicketingNote",
                 oauth2_scopes=[],
@@ -390,6 +393,7 @@ class Ticketing(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createTicketingNote",
                 oauth2_scopes=[],
@@ -492,6 +496,7 @@ class Ticketing(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createTicketingTicket",
                 oauth2_scopes=[],
@@ -594,6 +599,7 @@ class Ticketing(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="createTicketingTicket",
                 oauth2_scopes=[],
@@ -693,6 +699,7 @@ class Ticketing(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getTicketingCustomer",
                 oauth2_scopes=[],
@@ -792,6 +799,7 @@ class Ticketing(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getTicketingCustomer",
                 oauth2_scopes=[],
@@ -891,6 +899,7 @@ class Ticketing(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getTicketingNote",
                 oauth2_scopes=[],
@@ -990,6 +999,7 @@ class Ticketing(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getTicketingNote",
                 oauth2_scopes=[],
@@ -1089,6 +1099,7 @@ class Ticketing(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getTicketingTicket",
                 oauth2_scopes=[],
@@ -1188,6 +1199,7 @@ class Ticketing(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="getTicketingTicket",
                 oauth2_scopes=[],
@@ -1287,6 +1299,7 @@ class Ticketing(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listTicketingCustomers",
                 oauth2_scopes=[],
@@ -1386,6 +1399,7 @@ class Ticketing(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listTicketingCustomers",
                 oauth2_scopes=[],
@@ -1485,6 +1499,7 @@ class Ticketing(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listTicketingNotes",
                 oauth2_scopes=[],
@@ -1584,6 +1599,7 @@ class Ticketing(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listTicketingNotes",
                 oauth2_scopes=[],
@@ -1683,6 +1699,7 @@ class Ticketing(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listTicketingTickets",
                 oauth2_scopes=[],
@@ -1782,6 +1799,7 @@ class Ticketing(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="listTicketingTickets",
                 oauth2_scopes=[],
@@ -1888,6 +1906,7 @@ class Ticketing(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchTicketingCustomer",
                 oauth2_scopes=[],
@@ -1994,6 +2013,7 @@ class Ticketing(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchTicketingCustomer",
                 oauth2_scopes=[],
@@ -2096,6 +2116,7 @@ class Ticketing(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchTicketingNote",
                 oauth2_scopes=[],
@@ -2198,6 +2219,7 @@ class Ticketing(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchTicketingNote",
                 oauth2_scopes=[],
@@ -2300,6 +2322,7 @@ class Ticketing(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchTicketingTicket",
                 oauth2_scopes=[],
@@ -2402,6 +2425,7 @@ class Ticketing(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="patchTicketingTicket",
                 oauth2_scopes=[],
@@ -2503,6 +2527,7 @@ class Ticketing(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeTicketingCustomer",
                 oauth2_scopes=[],
@@ -2609,6 +2634,7 @@ class Ticketing(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeTicketingCustomer",
                 oauth2_scopes=[],
@@ -2713,6 +2739,7 @@ class Ticketing(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeTicketingNote",
                 oauth2_scopes=[],
@@ -2817,6 +2844,7 @@ class Ticketing(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeTicketingNote",
                 oauth2_scopes=[],
@@ -2921,6 +2949,7 @@ class Ticketing(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeTicketingTicket",
                 oauth2_scopes=[],
@@ -3025,6 +3054,7 @@ class Ticketing(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="removeTicketingTicket",
                 oauth2_scopes=[],
@@ -3138,6 +3168,7 @@ class Ticketing(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateTicketingCustomer",
                 oauth2_scopes=[],
@@ -3246,6 +3277,7 @@ class Ticketing(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateTicketingCustomer",
                 oauth2_scopes=[],
@@ -3348,6 +3380,7 @@ class Ticketing(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateTicketingNote",
                 oauth2_scopes=[],
@@ -3450,6 +3483,7 @@ class Ticketing(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateTicketingNote",
                 oauth2_scopes=[],
@@ -3552,6 +3586,7 @@ class Ticketing(BaseSDK):
 
         http_res = self.do_request(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateTicketingTicket",
                 oauth2_scopes=[],
@@ -3654,6 +3689,7 @@ class Ticketing(BaseSDK):
 
         http_res = await self.do_request_async(
             hook_ctx=HookContext(
+                config=self.sdk_configuration,
                 base_url=base_url or "",
                 operation_id="updateTicketingTicket",
                 oauth2_scopes=[],
