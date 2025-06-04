@@ -15,9 +15,12 @@ class CommerceLocationTypedDict(TypedDict):
     name: str
     address: NotRequired[PropertyCommerceLocationAddressTypedDict]
     created_at: NotRequired[datetime]
+    currency: NotRequired[str]
     description: NotRequired[str]
     id: NotRequired[str]
     is_active: NotRequired[bool]
+    language_locale: NotRequired[str]
+    parent_id: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
     updated_at: NotRequired[datetime]
 
@@ -29,11 +32,17 @@ class CommerceLocation(BaseModel):
 
     created_at: Optional[datetime] = None
 
+    currency: Optional[str] = None
+
     description: Optional[str] = None
 
     id: Optional[str] = None
 
     is_active: Optional[bool] = None
+
+    language_locale: Optional[str] = None
+
+    parent_id: Optional[str] = None
 
     raw: Optional[Dict[str, Any]] = None
 
