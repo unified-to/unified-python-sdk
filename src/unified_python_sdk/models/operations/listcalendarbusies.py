@@ -34,6 +34,8 @@ class ListCalendarBusiesRequestTypedDict(TypedDict):
     r"""The start date to filter by"""
     updated_gte: NotRequired[str]
     r"""Return only results whose updated date is equal or greater to this value"""
+    user_id: NotRequired[str]
+    r"""The user/employee ID to filter by"""
 
 
 class ListCalendarBusiesRequest(BaseModel):
@@ -103,6 +105,12 @@ class ListCalendarBusiesRequest(BaseModel):
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
     r"""Return only results whose updated date is equal or greater to this value"""
+
+    user_id: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+    r"""The user/employee ID to filter by"""
 
 
 class ListCalendarBusiesResponseTypedDict(TypedDict):

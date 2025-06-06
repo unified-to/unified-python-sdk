@@ -18,6 +18,8 @@ class ListAtsApplicationsRequestTypedDict(TypedDict):
     r"""ID of the connection"""
     candidate_id: NotRequired[str]
     r"""The candidate ID to filter by"""
+    company_id: NotRequired[str]
+    r"""The company ID to filter by"""
     fields: NotRequired[List[str]]
     r"""Comma-delimited fields to return"""
     job_id: NotRequired[str]
@@ -45,6 +47,12 @@ class ListAtsApplicationsRequest(BaseModel):
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
     r"""The candidate ID to filter by"""
+
+    company_id: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+    r"""The company ID to filter by"""
 
     fields: Annotated[
         Optional[List[str]],
