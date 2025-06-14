@@ -25,6 +25,8 @@ class ListCrmDealsRequestTypedDict(TypedDict):
     limit: NotRequired[float]
     offset: NotRequired[float]
     order: NotRequired[str]
+    pipeline_id: NotRequired[str]
+    r"""The pipeline ID to filter by"""
     query: NotRequired[str]
     r"""Query string to search. eg. email address or name"""
     raw: NotRequired[str]
@@ -74,6 +76,12 @@ class ListCrmDealsRequest(BaseModel):
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
+
+    pipeline_id: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+    r"""The pipeline ID to filter by"""
 
     query: Annotated[
         Optional[str],

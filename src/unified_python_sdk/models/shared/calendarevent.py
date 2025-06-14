@@ -27,6 +27,7 @@ class CalendarEventTypedDict(TypedDict):
     calendar_id: NotRequired[str]
     created_at: NotRequired[str]
     end_at: NotRequired[str]
+    has_conference: NotRequired[bool]
     id: NotRequired[str]
     is_all_day: NotRequired[bool]
     is_free: NotRequired[bool]
@@ -53,6 +54,8 @@ class CalendarEvent(BaseModel):
     created_at: Optional[str] = None
 
     end_at: Optional[str] = None
+
+    has_conference: Optional[bool] = None
 
     id: Optional[str] = None
 

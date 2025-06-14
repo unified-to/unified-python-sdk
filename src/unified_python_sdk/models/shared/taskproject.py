@@ -11,6 +11,7 @@ class TaskProjectTypedDict(TypedDict):
     created_at: NotRequired[datetime]
     description: NotRequired[str]
     group_ids: NotRequired[List[str]]
+    has_children: NotRequired[bool]
     has_tasks: NotRequired[bool]
     id: NotRequired[str]
     name: NotRequired[str]
@@ -26,6 +27,8 @@ class TaskProject(BaseModel):
     description: Optional[str] = None
 
     group_ids: Optional[List[str]] = None
+
+    has_children: Optional[bool] = None
 
     has_tasks: Optional[bool] = None
 
