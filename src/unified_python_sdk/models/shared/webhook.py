@@ -3,12 +3,15 @@
 from __future__ import annotations
 from datetime import datetime
 from enum import Enum
+from pydantic.functional_validators import PlainValidator
 from typing import Any, Dict, List, Optional
-from typing_extensions import NotRequired, TypedDict
+from typing_extensions import Annotated, NotRequired, TypedDict
+from unified_python_sdk import utils
 from unified_python_sdk.types import BaseModel
+from unified_python_sdk.utils import validate_open_enum
 
 
-class DbType(str, Enum):
+class DbType(str, Enum, metaclass=utils.OpenEnumMeta):
     MONGODB = "mongodb"
     MYSQL = "mysql"
     POSTGRES = "postgres"
@@ -16,13 +19,13 @@ class DbType(str, Enum):
     MARIADB = "mariadb"
 
 
-class Event(str, Enum):
+class Event(str, Enum, metaclass=utils.OpenEnumMeta):
     UPDATED = "updated"
     CREATED = "created"
     DELETED = "deleted"
 
 
-class ObjectType(str, Enum):
+class ObjectType(str, Enum, metaclass=utils.OpenEnumMeta):
     ACCOUNTING_ACCOUNT = "accounting_account"
     ACCOUNTING_TRANSACTION = "accounting_transaction"
     ACCOUNTING_JOURNAL = "accounting_journal"
@@ -107,7 +110,7 @@ class ObjectType(str, Enum):
     CALENDAR_RECORDING = "calendar_recording"
 
 
-class WebhookType(str, Enum):
+class WebhookType(str, Enum, metaclass=utils.OpenEnumMeta):
     VIRTUAL = "virtual"
     NATIVE = "native"
 
@@ -146,9 +149,9 @@ class Webhook(BaseModel):
 
     connection_id: str
 
-    event: Event
+    event: Annotated[Event, PlainValidator(validate_open_enum(False))]
 
-    object_type: ObjectType
+    object_type: Annotated[ObjectType, PlainValidator(validate_open_enum(False))]
 
     checked_at: Optional[datetime] = None
 
@@ -156,7 +159,9 @@ class Webhook(BaseModel):
 
     db_name_prefix: Optional[str] = None
 
-    db_type: Optional[DbType] = None
+    db_type: Annotated[Optional[DbType], PlainValidator(validate_open_enum(False))] = (
+        None
+    )
 
     db_url: Optional[str] = None
 
@@ -187,6 +192,8 @@ class Webhook(BaseModel):
 
     updated_at: Optional[datetime] = None
 
-    webhook_type: Optional[WebhookType] = None
+    webhook_type: Annotated[
+        Optional[WebhookType], PlainValidator(validate_open_enum(False))
+    ] = None
 
     workspace_id: Optional[str] = None

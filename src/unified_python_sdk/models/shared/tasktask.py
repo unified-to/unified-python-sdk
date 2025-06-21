@@ -3,12 +3,15 @@
 from __future__ import annotations
 from datetime import datetime
 from enum import Enum
+from pydantic.functional_validators import PlainValidator
 from typing import Any, Dict, List, Optional
-from typing_extensions import NotRequired, TypedDict
+from typing_extensions import Annotated, NotRequired, TypedDict
+from unified_python_sdk import utils
 from unified_python_sdk.types import BaseModel
+from unified_python_sdk.utils import validate_open_enum
 
 
-class TaskTaskStatus(str, Enum):
+class TaskTaskStatus(str, Enum, metaclass=utils.OpenEnumMeta):
     OPENED = "OPENED"
     IN_PROGRESS = "IN_PROGRESS"
     COMPLETED = "COMPLETED"
@@ -69,7 +72,9 @@ class TaskTask(BaseModel):
 
     raw: Optional[Dict[str, Any]] = None
 
-    status: Optional[TaskTaskStatus] = None
+    status: Annotated[
+        Optional[TaskTaskStatus], PlainValidator(validate_open_enum(False))
+    ] = None
 
     tags: Optional[List[str]] = None
 

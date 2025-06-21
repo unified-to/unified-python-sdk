@@ -2,9 +2,10 @@
 
 from __future__ import annotations
 from enum import Enum
+from unified_python_sdk import utils
 
 
-class PropertyHrisEmployeeEmployeeRoles(str, Enum):
+class PropertyHrisEmployeeEmployeeRoles(str, Enum, metaclass=utils.OpenEnumMeta):
     ADMIN = "ADMIN"
     MANAGER = "MANAGER"
     RECRUITER = "RECRUITER"

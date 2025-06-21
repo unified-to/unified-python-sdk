@@ -192,6 +192,7 @@ if TYPE_CHECKING:
     )
     from .atsstatus import AtsStatus, AtsStatusStatus, AtsStatusTypedDict
     from .atstelephone import AtsTelephone, AtsTelephoneType, AtsTelephoneTypedDict
+    from .calendarattachment import CalendarAttachment, CalendarAttachmentTypedDict
     from .calendarattendee import (
         CalendarAttendee,
         CalendarAttendeeStatus,
@@ -199,6 +200,7 @@ if TYPE_CHECKING:
     )
     from .calendarbusy import CalendarBusy, CalendarBusyTypedDict
     from .calendarcalendar import CalendarCalendar, CalendarCalendarTypedDict
+    from .calendarconference import CalendarConference, CalendarConferenceTypedDict
     from .calendarevent import (
         CalendarEvent,
         CalendarEventStatus,
@@ -1019,6 +1021,8 @@ __all__ = [
     "AtsTelephone",
     "AtsTelephoneType",
     "AtsTelephoneTypedDict",
+    "CalendarAttachment",
+    "CalendarAttachmentTypedDict",
     "CalendarAttendee",
     "CalendarAttendeeStatus",
     "CalendarAttendeeTypedDict",
@@ -1026,6 +1030,8 @@ __all__ = [
     "CalendarBusyTypedDict",
     "CalendarCalendar",
     "CalendarCalendarTypedDict",
+    "CalendarConference",
+    "CalendarConferenceTypedDict",
     "CalendarEvent",
     "CalendarEventRecurrence",
     "CalendarEventRecurrenceFrequency",
@@ -1836,6 +1842,8 @@ _dynamic_imports: dict[str, str] = {
     "AtsTelephone": ".atstelephone",
     "AtsTelephoneType": ".atstelephone",
     "AtsTelephoneTypedDict": ".atstelephone",
+    "CalendarAttachment": ".calendarattachment",
+    "CalendarAttachmentTypedDict": ".calendarattachment",
     "CalendarAttendee": ".calendarattendee",
     "CalendarAttendeeStatus": ".calendarattendee",
     "CalendarAttendeeTypedDict": ".calendarattendee",
@@ -1843,6 +1851,8 @@ _dynamic_imports: dict[str, str] = {
     "CalendarBusyTypedDict": ".calendarbusy",
     "CalendarCalendar": ".calendarcalendar",
     "CalendarCalendarTypedDict": ".calendarcalendar",
+    "CalendarConference": ".calendarconference",
+    "CalendarConferenceTypedDict": ".calendarconference",
     "CalendarEvent": ".calendarevent",
     "CalendarEventStatus": ".calendarevent",
     "CalendarEventTypedDict": ".calendarevent",

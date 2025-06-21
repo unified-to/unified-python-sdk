@@ -2,9 +2,11 @@
 
 from __future__ import annotations
 from .property_storagepermission_roles import PropertyStoragePermissionRoles
+from pydantic.functional_validators import PlainValidator
 from typing import List, Optional
-from typing_extensions import NotRequired, TypedDict
+from typing_extensions import Annotated, NotRequired, TypedDict
 from unified_python_sdk.types import BaseModel
+from unified_python_sdk.utils import validate_open_enum
 
 
 class StoragePermissionTypedDict(TypedDict):
@@ -16,7 +18,11 @@ class StoragePermissionTypedDict(TypedDict):
 
 
 class StoragePermission(BaseModel):
-    roles: List[PropertyStoragePermissionRoles]
+    roles: List[
+        Annotated[
+            PropertyStoragePermissionRoles, PlainValidator(validate_open_enum(False))
+        ]
+    ]
 
     group_id: Optional[str] = None
 

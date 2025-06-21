@@ -3,13 +3,16 @@
 from __future__ import annotations
 from enum import Enum
 import pydantic
+from pydantic.functional_validators import PlainValidator
 from typing import Optional
 from typing_extensions import Annotated, NotRequired, TypedDict
+from unified_python_sdk import utils
 from unified_python_sdk.types import BaseModel
+from unified_python_sdk.utils import validate_open_enum
 
 
 class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManagerType(
-    str, Enum
+    str, Enum, metaclass=utils.OpenEnumMeta
 ):
     DIRECT = "direct"
     INDIRECT = "indirect"
@@ -40,8 +43,11 @@ class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManager(
 
     manager_id: Annotated[Optional[str], pydantic.Field(alias="managerId")] = None
 
-    type: Optional[
-        PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManagerType
+    type: Annotated[
+        Optional[
+            PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManagerType
+        ],
+        PlainValidator(validate_open_enum(False)),
     ] = None
 
     value: Optional[str] = None

@@ -8,9 +8,11 @@ from .property_connection_auth import (
 from .property_connection_categories import PropertyConnectionCategories
 from .property_connection_permissions import PropertyConnectionPermissions
 from datetime import datetime
+from pydantic.functional_validators import PlainValidator
 from typing import List, Optional
-from typing_extensions import NotRequired, TypedDict
+from typing_extensions import Annotated, NotRequired, TypedDict
 from unified_python_sdk.types import BaseModel
+from unified_python_sdk.utils import validate_open_enum
 
 
 class ConnectionTypedDict(TypedDict):
@@ -38,12 +40,20 @@ class ConnectionTypedDict(TypedDict):
 class Connection(BaseModel):
     r"""A connection represents a specific authentication of an integration."""
 
-    categories: List[PropertyConnectionCategories]
+    categories: List[
+        Annotated[
+            PropertyConnectionCategories, PlainValidator(validate_open_enum(False))
+        ]
+    ]
     r"""The Integration categories that this connection supports"""
 
     integration_type: str
 
-    permissions: List[PropertyConnectionPermissions]
+    permissions: List[
+        Annotated[
+            PropertyConnectionPermissions, PlainValidator(validate_open_enum(False))
+        ]
+    ]
 
     auth: Optional[PropertyConnectionAuth] = None
     r"""An authentication object that represents a specific authorized user's connection to an integration."""

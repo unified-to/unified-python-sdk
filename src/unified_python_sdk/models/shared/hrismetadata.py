@@ -3,9 +3,12 @@
 from __future__ import annotations
 from enum import Enum
 import pydantic
+from pydantic.functional_validators import PlainValidator
 from typing import Any, List, Optional, Union
 from typing_extensions import Annotated, NotRequired, TypeAliasType, TypedDict
+from unified_python_sdk import utils
 from unified_python_sdk.types import BaseModel
+from unified_python_sdk.utils import validate_open_enum
 
 
 class HrisMetadataSchemasExtraData52TypedDict(TypedDict):
@@ -106,7 +109,7 @@ HrisMetadataExtraData = TypeAliasType(
 )
 
 
-class HrisMetadataFormat(str, Enum):
+class HrisMetadataFormat(str, Enum, metaclass=utils.OpenEnumMeta):
     TEXT = "TEXT"
     NUMBER = "NUMBER"
     DATE = "DATE"
@@ -241,9 +244,12 @@ class HrisMetadataTypedDict(TypedDict):
 class HrisMetadata(BaseModel):
     extra_data: Optional[HrisMetadataExtraData] = None
 
-    format_: Annotated[Optional[HrisMetadataFormat], pydantic.Field(alias="format")] = (
-        None
-    )
+    format_: Annotated[
+        Annotated[
+            Optional[HrisMetadataFormat], PlainValidator(validate_open_enum(False))
+        ],
+        pydantic.Field(alias="format"),
+    ] = None
 
     id: Optional[str] = None
 

@@ -4,12 +4,15 @@ from __future__ import annotations
 from .hrispayslipdetail import HrisPayslipDetail, HrisPayslipDetailTypedDict
 from datetime import datetime
 from enum import Enum
+from pydantic.functional_validators import PlainValidator
 from typing import Any, Dict, List, Optional
-from typing_extensions import NotRequired, TypedDict
+from typing_extensions import Annotated, NotRequired, TypedDict
+from unified_python_sdk import utils
 from unified_python_sdk.types import BaseModel
+from unified_python_sdk.utils import validate_open_enum
 
 
-class PaymentType(str, Enum):
+class PaymentType(str, Enum, metaclass=utils.OpenEnumMeta):
     DIRECT = "DIRECT"
     CHEQUE = "CHEQUE"
     CASH = "CASH"
@@ -53,7 +56,9 @@ class HrisPayslip(BaseModel):
 
     paid_at: Optional[datetime] = None
 
-    payment_type: Optional[PaymentType] = None
+    payment_type: Annotated[
+        Optional[PaymentType], PlainValidator(validate_open_enum(False))
+    ] = None
 
     start_at: Optional[datetime] = None
 

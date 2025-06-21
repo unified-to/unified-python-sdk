@@ -10,12 +10,15 @@ from .atsjobquestion import AtsJobQuestion, AtsJobQuestionTypedDict
 from .atsmetadata import AtsMetadata, AtsMetadataTypedDict
 from datetime import datetime
 from enum import Enum
+from pydantic.functional_validators import PlainValidator
 from typing import Any, Dict, List, Optional
-from typing_extensions import NotRequired, TypedDict
+from typing_extensions import Annotated, NotRequired, TypedDict
+from unified_python_sdk import utils
 from unified_python_sdk.types import BaseModel
+from unified_python_sdk.utils import validate_open_enum
 
 
-class EmploymentType(str, Enum):
+class EmploymentType(str, Enum, metaclass=utils.OpenEnumMeta):
     FULL_TIME = "FULL_TIME"
     PART_TIME = "PART_TIME"
     CONTRACTOR = "CONTRACTOR"
@@ -28,7 +31,7 @@ class EmploymentType(str, Enum):
     OTHER = "OTHER"
 
 
-class AtsJobStatus(str, Enum):
+class AtsJobStatus(str, Enum, metaclass=utils.OpenEnumMeta):
     ARCHIVED = "ARCHIVED"
     PENDING = "PENDING"
     DRAFT = "DRAFT"
@@ -83,7 +86,9 @@ class AtsJob(BaseModel):
 
     description: Optional[str] = None
 
-    employment_type: Optional[EmploymentType] = None
+    employment_type: Annotated[
+        Optional[EmploymentType], PlainValidator(validate_open_enum(False))
+    ] = None
 
     groups: Optional[List[AtsGroup]] = None
     r"""The departments/divisions/teams that this job belongs to"""
@@ -116,6 +121,8 @@ class AtsJob(BaseModel):
 
     remote: Optional[bool] = None
 
-    status: Optional[AtsJobStatus] = None
+    status: Annotated[
+        Optional[AtsJobStatus], PlainValidator(validate_open_enum(False))
+    ] = None
 
     updated_at: Optional[datetime] = None

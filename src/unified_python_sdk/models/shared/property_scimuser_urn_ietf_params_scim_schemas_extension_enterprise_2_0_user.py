@@ -9,13 +9,16 @@ from .scimmanager import ScimManager, ScimManagerTypedDict
 from datetime import datetime
 from enum import Enum
 import pydantic
+from pydantic.functional_validators import PlainValidator
 from typing import List, Optional
 from typing_extensions import Annotated, NotRequired, TypedDict
+from unified_python_sdk import utils
 from unified_python_sdk.types import BaseModel
+from unified_python_sdk.utils import validate_open_enum
 
 
 class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserGender(
-    str, Enum
+    str, Enum, metaclass=utils.OpenEnumMeta
 ):
     MALE = "male"
     FEMALE = "female"
@@ -67,8 +70,11 @@ class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User(BaseMode
 
     end_date: Annotated[Optional[datetime], pydantic.Field(alias="endDate")] = None
 
-    gender: Optional[
-        PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserGender
+    gender: Annotated[
+        Optional[
+            PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserGender
+        ],
+        PlainValidator(validate_open_enum(False)),
     ] = None
 
     level: Optional[str] = None

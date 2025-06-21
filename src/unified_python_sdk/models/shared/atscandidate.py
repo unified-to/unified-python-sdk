@@ -15,12 +15,15 @@ from .property_atscandidate_address import (
 )
 from datetime import datetime
 from enum import Enum
+from pydantic.functional_validators import PlainValidator
 from typing import Any, Dict, List, Optional
-from typing_extensions import NotRequired, TypedDict
+from typing_extensions import Annotated, NotRequired, TypedDict
+from unified_python_sdk import utils
 from unified_python_sdk.types import BaseModel
+from unified_python_sdk.utils import validate_open_enum
 
 
-class Origin(str, Enum):
+class Origin(str, Enum, metaclass=utils.OpenEnumMeta):
     AGENCY = "AGENCY"
     APPLIED = "APPLIED"
     INTERNAL = "INTERNAL"
@@ -87,7 +90,9 @@ class AtsCandidate(BaseModel):
 
     name: Optional[str] = None
 
-    origin: Optional[Origin] = None
+    origin: Annotated[Optional[Origin], PlainValidator(validate_open_enum(False))] = (
+        None
+    )
 
     raw: Optional[Dict[str, Any]] = None
 

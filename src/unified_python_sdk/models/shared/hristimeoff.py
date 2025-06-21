@@ -3,18 +3,21 @@
 from __future__ import annotations
 from datetime import datetime
 from enum import Enum
+from pydantic.functional_validators import PlainValidator
 from typing import Any, Dict, Optional
-from typing_extensions import NotRequired, TypedDict
+from typing_extensions import Annotated, NotRequired, TypedDict
+from unified_python_sdk import utils
 from unified_python_sdk.types import BaseModel
+from unified_python_sdk.utils import validate_open_enum
 
 
-class HrisTimeoffStatus(str, Enum):
+class HrisTimeoffStatus(str, Enum, metaclass=utils.OpenEnumMeta):
     APPROVED = "APPROVED"
     PENDING = "PENDING"
     DENIED = "DENIED"
 
 
-class HrisTimeoffType(str, Enum):
+class HrisTimeoffType(str, Enum, metaclass=utils.OpenEnumMeta):
     PAID = "PAID"
     UNPAID = "UNPAID"
 
@@ -54,9 +57,13 @@ class HrisTimeoff(BaseModel):
 
     raw: Optional[Dict[str, Any]] = None
 
-    status: Optional[HrisTimeoffStatus] = None
+    status: Annotated[
+        Optional[HrisTimeoffStatus], PlainValidator(validate_open_enum(False))
+    ] = None
 
-    type: Optional[HrisTimeoffType] = None
+    type: Annotated[
+        Optional[HrisTimeoffType], PlainValidator(validate_open_enum(False))
+    ] = None
 
     updated_at: Optional[datetime] = None
 

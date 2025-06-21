@@ -2,9 +2,10 @@
 
 from __future__ import annotations
 from enum import Enum
+from unified_python_sdk import utils
 
 
-class PropertyScimGroupSchemas(str, Enum):
+class PropertyScimGroupSchemas(str, Enum, metaclass=utils.OpenEnumMeta):
     URN_IETF_PARAMS_SCIM_SCHEMAS_CORE_2_0_GROUP = (
         "urn:ietf:params:scim:schemas:core:2.0:Group"
     )

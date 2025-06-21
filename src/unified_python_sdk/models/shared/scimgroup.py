@@ -8,9 +8,11 @@ from .property_scimgroup_meta import (
 from .property_scimgroup_schemas import PropertyScimGroupSchemas
 from .scimgroupmember import ScimGroupMember, ScimGroupMemberTypedDict
 import pydantic
+from pydantic.functional_validators import PlainValidator
 from typing import List, Optional
 from typing_extensions import Annotated, NotRequired, TypedDict
 from unified_python_sdk.types import BaseModel
+from unified_python_sdk.utils import validate_open_enum
 
 
 class ScimGroupTypedDict(TypedDict):
@@ -39,5 +41,11 @@ class ScimGroup(BaseModel):
 
     meta: Optional[PropertyScimGroupMeta] = None
 
-    schemas: Optional[List[PropertyScimGroupSchemas]] = None
+    schemas: Optional[
+        List[
+            Annotated[
+                PropertyScimGroupSchemas, PlainValidator(validate_open_enum(False))
+            ]
+        ]
+    ] = None
     r"""Array of schema URIs"""

@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: ee3cd61f0397ce8487b98d4e43c4a292
+  docChecksum: 9c22bf145f46a0257497cabc87445f51
   docVersion: "1.0"
-  speakeasyVersion: 1.563.0
-  generationVersion: 2.629.1
-  releaseVersion: 0.47.6
-  configChecksum: c72abec6dd96d9ddac1ce739f03f05af
+  speakeasyVersion: 1.568.0
+  generationVersion: 2.632.2
+  releaseVersion: 0.48.0
+  configChecksum: edfa511ab9c4ad29ec409ea4ac0db00b
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -24,6 +24,7 @@ features:
     globalSecurity: 3.0.3
     globalSecurityCallbacks: 1.0.0
     globalServerURLs: 3.1.1
+    openEnums: 1.0.1
     responseFormat: 1.0.1
     retries: 3.0.2
     sdkHooks: 1.1.0
@@ -1006,10 +1007,12 @@ generatedFiles:
   - docs/models/shared/atsstatusstatus.md
   - docs/models/shared/atstelephone.md
   - docs/models/shared/atstelephonetype.md
+  - docs/models/shared/calendarattachment.md
   - docs/models/shared/calendarattendee.md
   - docs/models/shared/calendarattendeestatus.md
   - docs/models/shared/calendarbusy.md
   - docs/models/shared/calendarcalendar.md
+  - docs/models/shared/calendarconference.md
   - docs/models/shared/calendarevent.md
   - docs/models/shared/calendareventrecurrence.md
   - docs/models/shared/calendareventrecurrencefrequency.md
@@ -2040,9 +2043,11 @@ generatedFiles:
   - src/unified_python_sdk/models/shared/atsscorecardquestion.py
   - src/unified_python_sdk/models/shared/atsstatus.py
   - src/unified_python_sdk/models/shared/atstelephone.py
+  - src/unified_python_sdk/models/shared/calendarattachment.py
   - src/unified_python_sdk/models/shared/calendarattendee.py
   - src/unified_python_sdk/models/shared/calendarbusy.py
   - src/unified_python_sdk/models/shared/calendarcalendar.py
+  - src/unified_python_sdk/models/shared/calendarconference.py
   - src/unified_python_sdk/models/shared/calendarevent.py
   - src/unified_python_sdk/models/shared/calendareventrecurrence.py
   - src/unified_python_sdk/models/shared/calendarlink.py

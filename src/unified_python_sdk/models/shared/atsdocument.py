@@ -3,12 +3,15 @@
 from __future__ import annotations
 from datetime import datetime
 from enum import Enum
+from pydantic.functional_validators import PlainValidator
 from typing import Any, Dict, Optional
-from typing_extensions import NotRequired, TypedDict
+from typing_extensions import Annotated, NotRequired, TypedDict
+from unified_python_sdk import utils
 from unified_python_sdk.types import BaseModel
+from unified_python_sdk.utils import validate_open_enum
 
 
-class AtsDocumentType(str, Enum):
+class AtsDocumentType(str, Enum, metaclass=utils.OpenEnumMeta):
     RESUME = "RESUME"
     COVER_LETTER = "COVER_LETTER"
     OFFER_PACKET = "OFFER_PACKET"
@@ -51,7 +54,9 @@ class AtsDocument(BaseModel):
 
     raw: Optional[Dict[str, Any]] = None
 
-    type: Optional[AtsDocumentType] = None
+    type: Annotated[
+        Optional[AtsDocumentType], PlainValidator(validate_open_enum(False))
+    ] = None
 
     updated_at: Optional[datetime] = None
 

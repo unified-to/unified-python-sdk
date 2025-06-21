@@ -2,12 +2,15 @@
 
 from __future__ import annotations
 from enum import Enum
+from pydantic.functional_validators import PlainValidator
 from typing import Optional
-from typing_extensions import NotRequired, TypedDict
+from typing_extensions import Annotated, NotRequired, TypedDict
+from unified_python_sdk import utils
 from unified_python_sdk.types import BaseModel
+from unified_python_sdk.utils import validate_open_enum
 
 
-class HrisCompensationFrequency(str, Enum):
+class HrisCompensationFrequency(str, Enum, metaclass=utils.OpenEnumMeta):
     ONE_TIME = "ONE_TIME"
     DAY = "DAY"
     QUARTER = "QUARTER"
@@ -17,7 +20,7 @@ class HrisCompensationFrequency(str, Enum):
     WEEK = "WEEK"
 
 
-class HrisCompensationType(str, Enum):
+class HrisCompensationType(str, Enum, metaclass=utils.OpenEnumMeta):
     SALARY = "SALARY"
     BONUS = "BONUS"
     STOCK_OPTIONS = "STOCK_OPTIONS"
@@ -37,6 +40,10 @@ class HrisCompensation(BaseModel):
 
     currency: Optional[str] = None
 
-    frequency: Optional[HrisCompensationFrequency] = None
+    frequency: Annotated[
+        Optional[HrisCompensationFrequency], PlainValidator(validate_open_enum(False))
+    ] = None
 
-    type: Optional[HrisCompensationType] = None
+    type: Annotated[
+        Optional[HrisCompensationType], PlainValidator(validate_open_enum(False))
+    ] = None

@@ -2,12 +2,15 @@
 
 from __future__ import annotations
 from enum import Enum
+from pydantic.functional_validators import PlainValidator
 from typing import Optional
-from typing_extensions import NotRequired, TypedDict
+from typing_extensions import Annotated, NotRequired, TypedDict
+from unified_python_sdk import utils
 from unified_python_sdk.types import BaseModel
+from unified_python_sdk.utils import validate_open_enum
 
 
-class HrisTelephoneType(str, Enum):
+class HrisTelephoneType(str, Enum, metaclass=utils.OpenEnumMeta):
     WORK = "WORK"
     HOME = "HOME"
     OTHER = "OTHER"
@@ -23,4 +26,6 @@ class HrisTelephoneTypedDict(TypedDict):
 class HrisTelephone(BaseModel):
     telephone: str
 
-    type: Optional[HrisTelephoneType] = None
+    type: Annotated[
+        Optional[HrisTelephoneType], PlainValidator(validate_open_enum(False))
+    ] = None

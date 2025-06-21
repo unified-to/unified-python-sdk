@@ -3,9 +3,12 @@
 from __future__ import annotations
 from enum import Enum
 import pydantic
+from pydantic.functional_validators import PlainValidator
 from typing import Any, List, Optional, Union
 from typing_extensions import Annotated, NotRequired, TypeAliasType, TypedDict
+from unified_python_sdk import utils
 from unified_python_sdk.types import BaseModel
+from unified_python_sdk.utils import validate_open_enum
 
 
 class AtsMetadataSchemasExtraData2TypedDict(TypedDict):
@@ -89,7 +92,7 @@ ExtraDataTypedDict = TypeAliasType(
 ExtraData = TypeAliasType("ExtraData", Union[One, Two, Three, Four, Five])
 
 
-class Format(str, Enum):
+class Format(str, Enum, metaclass=utils.OpenEnumMeta):
     TEXT = "TEXT"
     NUMBER = "NUMBER"
     DATE = "DATE"
@@ -210,7 +213,10 @@ class AtsMetadataTypedDict(TypedDict):
 class AtsMetadata(BaseModel):
     extra_data: Optional[ExtraData] = None
 
-    format_: Annotated[Optional[Format], pydantic.Field(alias="format")] = None
+    format_: Annotated[
+        Annotated[Optional[Format], PlainValidator(validate_open_enum(False))],
+        pydantic.Field(alias="format"),
+    ] = None
 
     id: Optional[str] = None
 

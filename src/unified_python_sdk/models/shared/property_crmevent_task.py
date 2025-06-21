@@ -3,18 +3,21 @@
 from __future__ import annotations
 from datetime import datetime
 from enum import Enum
+from pydantic.functional_validators import PlainValidator
 from typing import Optional
-from typing_extensions import NotRequired, TypedDict
+from typing_extensions import Annotated, NotRequired, TypedDict
+from unified_python_sdk import utils
 from unified_python_sdk.types import BaseModel
+from unified_python_sdk.utils import validate_open_enum
 
 
-class Priority(str, Enum):
+class Priority(str, Enum, metaclass=utils.OpenEnumMeta):
     HIGH = "HIGH"
     MEDIUM = "MEDIUM"
     LOW = "LOW"
 
 
-class PropertyCrmEventTaskStatus(str, Enum):
+class PropertyCrmEventTaskStatus(str, Enum, metaclass=utils.OpenEnumMeta):
     COMPLETED = "COMPLETED"
     NOT_STARTED = "NOT_STARTED"
     WORK_IN_PROGRESS = "WORK_IN_PROGRESS"
@@ -40,6 +43,10 @@ class PropertyCrmEventTask(BaseModel):
 
     name: Optional[str] = None
 
-    priority: Optional[Priority] = None
+    priority: Annotated[
+        Optional[Priority], PlainValidator(validate_open_enum(False))
+    ] = None
 
-    status: Optional[PropertyCrmEventTaskStatus] = None
+    status: Annotated[
+        Optional[PropertyCrmEventTaskStatus], PlainValidator(validate_open_enum(False))
+    ] = None

@@ -3,9 +3,11 @@
 from __future__ import annotations
 from .property_integration_categories import PropertyIntegrationCategories
 from datetime import datetime
+from pydantic.functional_validators import PlainValidator
 from typing import Any, Dict, List, Optional, Union
-from typing_extensions import NotRequired, TypeAliasType, TypedDict
+from typing_extensions import Annotated, NotRequired, TypeAliasType, TypedDict
 from unified_python_sdk.types import BaseModel
+from unified_python_sdk.utils import validate_open_enum
 
 
 class IntegrationSchemasAPI52TypedDict(TypedDict):
@@ -349,7 +351,11 @@ class IntegrationTypedDict(TypedDict):
 class Integration(BaseModel):
     r"""Informational object for supported integrations."""
 
-    categories: List[PropertyIntegrationCategories]
+    categories: List[
+        Annotated[
+            PropertyIntegrationCategories, PlainValidator(validate_open_enum(False))
+        ]
+    ]
     r"""The categories of support solutions that this integration has"""
 
     name: str

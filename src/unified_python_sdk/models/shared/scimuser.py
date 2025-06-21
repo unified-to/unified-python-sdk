@@ -25,9 +25,11 @@ from .scimphoto import ScimPhoto, ScimPhotoTypedDict
 from .scimrole import ScimRole, ScimRoleTypedDict
 from .scimusergroups import ScimUserGroups, ScimUserGroupsTypedDict
 import pydantic
+from pydantic.functional_validators import PlainValidator
 from typing import List, Optional
 from typing_extensions import Annotated, NotRequired, TypedDict
 from unified_python_sdk.types import BaseModel
+from unified_python_sdk.utils import validate_open_enum
 
 
 class ScimUserTypedDict(TypedDict):
@@ -113,7 +115,13 @@ class ScimUser(BaseModel):
     roles: Optional[List[ScimRole]] = None
     r"""Student, Faculty, ..."""
 
-    schemas: Optional[List[PropertyScimUserSchemas]] = None
+    schemas: Optional[
+        List[
+            Annotated[
+                PropertyScimUserSchemas, PlainValidator(validate_open_enum(False))
+            ]
+        ]
+    ] = None
 
     timezone: Optional[str] = None
 

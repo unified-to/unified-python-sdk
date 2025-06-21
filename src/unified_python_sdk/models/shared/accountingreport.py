@@ -15,12 +15,15 @@ from .property_accountingreport_trial_balance import (
 )
 from datetime import datetime
 from enum import Enum
+from pydantic.functional_validators import PlainValidator
 from typing import Any, Dict, Optional
-from typing_extensions import NotRequired, TypedDict
+from typing_extensions import Annotated, NotRequired, TypedDict
+from unified_python_sdk import utils
 from unified_python_sdk.types import BaseModel
+from unified_python_sdk.utils import validate_open_enum
 
 
-class AccountingReportType(str, Enum):
+class AccountingReportType(str, Enum, metaclass=utils.OpenEnumMeta):
     TRIAL_BALANCE = "TRIAL_BALANCE"
     BALANCE_SHEET = "BALANCE_SHEET"
     PROFIT_AND_LOSS = "PROFIT_AND_LOSS"
@@ -62,6 +65,8 @@ class AccountingReport(BaseModel):
 
     trial_balance: Optional[PropertyAccountingReportTrialBalance] = None
 
-    type: Optional[AccountingReportType] = None
+    type: Annotated[
+        Optional[AccountingReportType], PlainValidator(validate_open_enum(False))
+    ] = None
 
     updated_at: Optional[datetime] = None

@@ -2,12 +2,15 @@
 
 from __future__ import annotations
 from enum import Enum
+from pydantic.functional_validators import PlainValidator
 from typing import Optional
-from typing_extensions import NotRequired, TypedDict
+from typing_extensions import Annotated, NotRequired, TypedDict
+from unified_python_sdk import utils
 from unified_python_sdk.types import BaseModel
+from unified_python_sdk.utils import validate_open_enum
 
 
-class AtsGroupType(str, Enum):
+class AtsGroupType(str, Enum, metaclass=utils.OpenEnumMeta):
     TEAM = "TEAM"
     GROUP = "GROUP"
     DEPARTMENT = "DEPARTMENT"
@@ -28,4 +31,6 @@ class AtsGroup(BaseModel):
 
     name: Optional[str] = None
 
-    type: Optional[AtsGroupType] = None
+    type: Annotated[
+        Optional[AtsGroupType], PlainValidator(validate_open_enum(False))
+    ] = None

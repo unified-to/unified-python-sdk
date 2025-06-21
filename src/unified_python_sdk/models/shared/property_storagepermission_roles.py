@@ -2,9 +2,10 @@
 
 from __future__ import annotations
 from enum import Enum
+from unified_python_sdk import utils
 
 
-class PropertyStoragePermissionRoles(str, Enum):
+class PropertyStoragePermissionRoles(str, Enum, metaclass=utils.OpenEnumMeta):
     OWNER = "OWNER"
     READ = "READ"
     WRITE = "WRITE"

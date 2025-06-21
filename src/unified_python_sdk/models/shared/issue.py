@@ -2,12 +2,15 @@
 
 from __future__ import annotations
 from enum import Enum
+from pydantic.functional_validators import PlainValidator
 from typing import List, Optional
-from typing_extensions import NotRequired, TypedDict
+from typing_extensions import Annotated, NotRequired, TypedDict
+from unified_python_sdk import utils
 from unified_python_sdk.types import BaseModel
+from unified_python_sdk.utils import validate_open_enum
 
 
-class IssueStatus(str, Enum):
+class IssueStatus(str, Enum, metaclass=utils.OpenEnumMeta):
     COMPLETED = "COMPLETED"
     NEW = "NEW"
     ROADMAP = "ROADMAP"
@@ -34,7 +37,7 @@ class IssueTypedDict(TypedDict):
 
 
 class Issue(BaseModel):
-    status: IssueStatus
+    status: Annotated[IssueStatus, PlainValidator(validate_open_enum(False))]
 
     ticket_ref: str
 

@@ -7,17 +7,20 @@ from .commerceitemprice import CommerceItemPrice, CommerceItemPriceTypedDict
 from .commercemetadata import CommerceMetadata, CommerceMetadataTypedDict
 from datetime import datetime
 from enum import Enum
+from pydantic.functional_validators import PlainValidator
 from typing import List, Optional
-from typing_extensions import NotRequired, TypedDict
+from typing_extensions import Annotated, NotRequired, TypedDict
+from unified_python_sdk import utils
 from unified_python_sdk.types import BaseModel
+from unified_python_sdk.utils import validate_open_enum
 
 
-class SizeUnit(str, Enum):
+class SizeUnit(str, Enum, metaclass=utils.OpenEnumMeta):
     CM = "cm"
     INCH = "inch"
 
 
-class WeightUnit(str, Enum):
+class WeightUnit(str, Enum, metaclass=utils.OpenEnumMeta):
     G = "g"
     KG = "kg"
     OZ = "oz"
@@ -86,7 +89,9 @@ class CommerceItemVariant(BaseModel):
 
     requires_shipping: Optional[bool] = None
 
-    size_unit: Optional[SizeUnit] = None
+    size_unit: Annotated[
+        Optional[SizeUnit], PlainValidator(validate_open_enum(False))
+    ] = None
 
     sku: Optional[str] = None
 
@@ -96,6 +101,8 @@ class CommerceItemVariant(BaseModel):
 
     weight: Optional[float] = None
 
-    weight_unit: Optional[WeightUnit] = None
+    weight_unit: Annotated[
+        Optional[WeightUnit], PlainValidator(validate_open_enum(False))
+    ] = None
 
     width: Optional[float] = None

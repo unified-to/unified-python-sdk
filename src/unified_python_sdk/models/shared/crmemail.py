@@ -2,12 +2,15 @@
 
 from __future__ import annotations
 from enum import Enum
+from pydantic.functional_validators import PlainValidator
 from typing import Optional
-from typing_extensions import NotRequired, TypedDict
+from typing_extensions import Annotated, NotRequired, TypedDict
+from unified_python_sdk import utils
 from unified_python_sdk.types import BaseModel
+from unified_python_sdk.utils import validate_open_enum
 
 
-class CrmEmailType(str, Enum):
+class CrmEmailType(str, Enum, metaclass=utils.OpenEnumMeta):
     WORK = "WORK"
     HOME = "HOME"
     OTHER = "OTHER"
@@ -21,4 +24,6 @@ class CrmEmailTypedDict(TypedDict):
 class CrmEmail(BaseModel):
     email: Optional[str] = None
 
-    type: Optional[CrmEmailType] = None
+    type: Annotated[
+        Optional[CrmEmailType], PlainValidator(validate_open_enum(False))
+    ] = None

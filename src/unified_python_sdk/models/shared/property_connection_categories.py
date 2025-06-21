@@ -2,9 +2,10 @@
 
 from __future__ import annotations
 from enum import Enum
+from unified_python_sdk import utils
 
 
-class PropertyConnectionCategories(str, Enum):
+class PropertyConnectionCategories(str, Enum, metaclass=utils.OpenEnumMeta):
     PASSTHROUGH = "passthrough"
     HRIS = "hris"
     ATS = "ats"

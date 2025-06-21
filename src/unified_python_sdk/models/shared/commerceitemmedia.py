@@ -3,12 +3,15 @@
 from __future__ import annotations
 from .commercemetadata import CommerceMetadata, CommerceMetadataTypedDict
 from enum import Enum
+from pydantic.functional_validators import PlainValidator
 from typing import List, Optional
-from typing_extensions import NotRequired, TypedDict
+from typing_extensions import Annotated, NotRequired, TypedDict
+from unified_python_sdk import utils
 from unified_python_sdk.types import BaseModel
+from unified_python_sdk.utils import validate_open_enum
 
 
-class CommerceItemMediaType(str, Enum):
+class CommerceItemMediaType(str, Enum, metaclass=utils.OpenEnumMeta):
     IMAGE = "image"
     VIDEO = "video"
 
@@ -37,6 +40,8 @@ class CommerceItemMedia(BaseModel):
 
     position: Optional[float] = None
 
-    type: Optional[CommerceItemMediaType] = None
+    type: Annotated[
+        Optional[CommerceItemMediaType], PlainValidator(validate_open_enum(False))
+    ] = None
 
     width: Optional[float] = None

@@ -6,12 +6,15 @@ from .property_calendareventrecurrence_on_days import (
 )
 from datetime import datetime
 from enum import Enum
+from pydantic.functional_validators import PlainValidator
 from typing import List, Optional
-from typing_extensions import NotRequired, TypedDict
+from typing_extensions import Annotated, NotRequired, TypedDict
+from unified_python_sdk import utils
 from unified_python_sdk.types import BaseModel
+from unified_python_sdk.utils import validate_open_enum
 
 
-class CalendarEventRecurrenceFrequency(str, Enum):
+class CalendarEventRecurrenceFrequency(str, Enum, metaclass=utils.OpenEnumMeta):
     DAILY = "DAILY"
     WEEKLY = "WEEKLY"
     MONTHLY = "MONTHLY"
@@ -34,7 +37,9 @@ class CalendarEventRecurrenceTypedDict(TypedDict):
 
 
 class CalendarEventRecurrence(BaseModel):
-    frequency: CalendarEventRecurrenceFrequency
+    frequency: Annotated[
+        CalendarEventRecurrenceFrequency, PlainValidator(validate_open_enum(False))
+    ]
 
     count: Optional[float] = None
 
@@ -45,7 +50,14 @@ class CalendarEventRecurrence(BaseModel):
 
     interval: Optional[float] = None
 
-    on_days: Optional[List[PropertyCalendarEventRecurrenceOnDays]] = None
+    on_days: Optional[
+        List[
+            Annotated[
+                PropertyCalendarEventRecurrenceOnDays,
+                PlainValidator(validate_open_enum(False)),
+            ]
+        ]
+    ] = None
     r"""days of the week to repeat on, defaults to undefined (every day), only used if frequency is WEEKLY"""
 
     on_month_days: Optional[List[float]] = None

@@ -4,12 +4,15 @@ from __future__ import annotations
 from datetime import datetime
 from enum import Enum
 import pydantic
+from pydantic.functional_validators import PlainValidator
 from typing import Optional
 from typing_extensions import Annotated, NotRequired, TypedDict
+from unified_python_sdk import utils
 from unified_python_sdk.types import BaseModel
+from unified_python_sdk.utils import validate_open_enum
 
 
-class Ethnicity(str, Enum):
+class Ethnicity(str, Enum, metaclass=utils.OpenEnumMeta):
     CAUCASIAN = "Caucasian"
     EAST_ASIAN = "East Asian"
     MIDDLE_EASTERN = "Middle Eastern"
@@ -23,13 +26,13 @@ class Ethnicity(str, Enum):
 
 
 class PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10UserGender(
-    str, Enum
+    str, Enum, metaclass=utils.OpenEnumMeta
 ):
     MALE = "male"
     FEMALE = "female"
 
 
-class SexualOrientation(str, Enum):
+class SexualOrientation(str, Enum, metaclass=utils.OpenEnumMeta):
     QUEER = "Queer"
     HETEROSEXUAL = "Heterosexual"
     STRAIGHT = "Straight"
@@ -75,14 +78,22 @@ class PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User(
 
     birth_date: Annotated[Optional[datetime], pydantic.Field(alias="birthDate")] = None
 
-    ethnicity: Optional[Ethnicity] = None
+    ethnicity: Annotated[
+        Optional[Ethnicity], PlainValidator(validate_open_enum(False))
+    ] = None
 
-    gender: Optional[
-        PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10UserGender
+    gender: Annotated[
+        Optional[
+            PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10UserGender
+        ],
+        PlainValidator(validate_open_enum(False)),
     ] = None
 
     sexual_orientation: Annotated[
-        Optional[SexualOrientation], pydantic.Field(alias="sexualOrientation")
+        Annotated[
+            Optional[SexualOrientation], PlainValidator(validate_open_enum(False))
+        ],
+        pydantic.Field(alias="sexualOrientation"),
     ] = None
 
     start_date: Annotated[Optional[datetime], pydantic.Field(alias="startDate")] = None

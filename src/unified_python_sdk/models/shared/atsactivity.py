@@ -9,12 +9,15 @@ from .property_atsactivity_from import (
 from datetime import datetime
 from enum import Enum
 import pydantic
+from pydantic.functional_validators import PlainValidator
 from typing import Any, Dict, List, Optional
 from typing_extensions import Annotated, NotRequired, TypedDict
+from unified_python_sdk import utils
 from unified_python_sdk.types import BaseModel
+from unified_python_sdk.utils import validate_open_enum
 
 
-class AtsActivityType(str, Enum):
+class AtsActivityType(str, Enum, metaclass=utils.OpenEnumMeta):
     NOTE = "NOTE"
     TASK = "TASK"
     EMAIL = "EMAIL"
@@ -83,7 +86,9 @@ class AtsActivity(BaseModel):
 
     to: Optional[List[AtsEmail]] = None
 
-    type: Optional[AtsActivityType] = None
+    type: Annotated[
+        Optional[AtsActivityType], PlainValidator(validate_open_enum(False))
+    ] = None
 
     updated_at: Optional[datetime] = None
 

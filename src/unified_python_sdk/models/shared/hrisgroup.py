@@ -3,12 +3,15 @@
 from __future__ import annotations
 from datetime import datetime
 from enum import Enum
+from pydantic.functional_validators import PlainValidator
 from typing import Any, Dict, List, Optional
-from typing_extensions import NotRequired, TypedDict
+from typing_extensions import Annotated, NotRequired, TypedDict
+from unified_python_sdk import utils
 from unified_python_sdk.types import BaseModel
+from unified_python_sdk.utils import validate_open_enum
 
 
-class HrisGroupType(str, Enum):
+class HrisGroupType(str, Enum, metaclass=utils.OpenEnumMeta):
     TEAM = "TEAM"
     GROUP = "GROUP"
     DEPARTMENT = "DEPARTMENT"
@@ -52,7 +55,9 @@ class HrisGroup(BaseModel):
 
     raw: Optional[Dict[str, Any]] = None
 
-    type: Optional[HrisGroupType] = None
+    type: Annotated[
+        Optional[HrisGroupType], PlainValidator(validate_open_enum(False))
+    ] = None
 
     updated_at: Optional[datetime] = None
 

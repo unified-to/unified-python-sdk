@@ -2,12 +2,15 @@
 
 from __future__ import annotations
 from enum import Enum
+from pydantic.functional_validators import PlainValidator
 from typing import Optional
-from typing_extensions import NotRequired, TypedDict
+from typing_extensions import Annotated, NotRequired, TypedDict
+from unified_python_sdk import utils
 from unified_python_sdk.types import BaseModel
+from unified_python_sdk.utils import validate_open_enum
 
 
-class HrisPayslipDetailType(str, Enum):
+class HrisPayslipDetailType(str, Enum, metaclass=utils.OpenEnumMeta):
     EARNING_SALARY = "EARNING_SALARY"
     EARNING_OVERTIME = "EARNING_OVERTIME"
     EARNING_TIP = "EARNING_TIP"
@@ -47,4 +50,6 @@ class HrisPayslipDetail(BaseModel):
 
     name: Optional[str] = None
 
-    type: Optional[HrisPayslipDetailType] = None
+    type: Annotated[
+        Optional[HrisPayslipDetailType], PlainValidator(validate_open_enum(False))
+    ] = None

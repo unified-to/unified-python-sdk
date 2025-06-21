@@ -14,17 +14,20 @@ from .property_hrisemployee_address import (
 from .property_hrisemployee_employee_roles import PropertyHrisEmployeeEmployeeRoles
 from datetime import datetime
 from enum import Enum
+from pydantic.functional_validators import PlainValidator
 from typing import Any, Dict, List, Optional
-from typing_extensions import NotRequired, TypedDict
+from typing_extensions import Annotated, NotRequired, TypedDict
+from unified_python_sdk import utils
 from unified_python_sdk.types import BaseModel
+from unified_python_sdk.utils import validate_open_enum
 
 
-class EmploymentStatus(str, Enum):
+class EmploymentStatus(str, Enum, metaclass=utils.OpenEnumMeta):
     ACTIVE = "ACTIVE"
     INACTIVE = "INACTIVE"
 
 
-class HrisEmployeeEmploymentType(str, Enum):
+class HrisEmployeeEmploymentType(str, Enum, metaclass=utils.OpenEnumMeta):
     FULL_TIME = "FULL_TIME"
     PART_TIME = "PART_TIME"
     CONTRACTOR = "CONTRACTOR"
@@ -37,7 +40,7 @@ class HrisEmployeeEmploymentType(str, Enum):
     OTHER = "OTHER"
 
 
-class HrisEmployeeGender(str, Enum):
+class HrisEmployeeGender(str, Enum, metaclass=utils.OpenEnumMeta):
     MALE = "MALE"
     FEMALE = "FEMALE"
     INTERSEX = "INTERSEX"
@@ -45,7 +48,7 @@ class HrisEmployeeGender(str, Enum):
     NON_BINARY = "NON_BINARY"
 
 
-class MaritalStatus(str, Enum):
+class MaritalStatus(str, Enum, metaclass=utils.OpenEnumMeta):
     MARRIED = "MARRIED"
     SINGLE = "SINGLE"
 
@@ -115,13 +118,26 @@ class HrisEmployee(BaseModel):
 
     employee_number: Optional[str] = None
 
-    employee_roles: Optional[List[PropertyHrisEmployeeEmployeeRoles]] = None
+    employee_roles: Optional[
+        List[
+            Annotated[
+                PropertyHrisEmployeeEmployeeRoles,
+                PlainValidator(validate_open_enum(False)),
+            ]
+        ]
+    ] = None
 
-    employment_status: Optional[EmploymentStatus] = None
+    employment_status: Annotated[
+        Optional[EmploymentStatus], PlainValidator(validate_open_enum(False))
+    ] = None
 
-    employment_type: Optional[HrisEmployeeEmploymentType] = None
+    employment_type: Annotated[
+        Optional[HrisEmployeeEmploymentType], PlainValidator(validate_open_enum(False))
+    ] = None
 
-    gender: Optional[HrisEmployeeGender] = None
+    gender: Annotated[
+        Optional[HrisEmployeeGender], PlainValidator(validate_open_enum(False))
+    ] = None
 
     groups: Optional[List[HrisGroup]] = None
     r"""Which groups/teams/units that this employee/user belongs to.  May not have all of the Group fields present, but should have id, name, or email."""
@@ -140,7 +156,9 @@ class HrisEmployee(BaseModel):
 
     manager_id: Optional[str] = None
 
-    marital_status: Optional[MaritalStatus] = None
+    marital_status: Annotated[
+        Optional[MaritalStatus], PlainValidator(validate_open_enum(False))
+    ] = None
 
     metadata: Optional[List[HrisMetadata]] = None
 

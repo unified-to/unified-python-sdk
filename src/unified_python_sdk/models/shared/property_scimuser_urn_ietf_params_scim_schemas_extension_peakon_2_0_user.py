@@ -4,12 +4,17 @@ from __future__ import annotations
 from datetime import datetime
 from enum import Enum
 import pydantic
+from pydantic.functional_validators import PlainValidator
 from typing import Optional
 from typing_extensions import Annotated, NotRequired, TypedDict
+from unified_python_sdk import utils
 from unified_python_sdk.types import BaseModel
+from unified_python_sdk.utils import validate_open_enum
 
 
-class PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20UserGender(str, Enum):
+class PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20UserGender(
+    str, Enum, metaclass=utils.OpenEnumMeta
+):
     FEMALE = "Female"
     MALE = "Male"
 
@@ -29,7 +34,12 @@ class PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20User(BaseModel):
     ] = None
 
     gender: Annotated[
-        Optional[PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20UserGender],
+        Annotated[
+            Optional[
+                PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20UserGender
+            ],
+            PlainValidator(validate_open_enum(False)),
+        ],
         pydantic.Field(alias="Gender"),
     ] = None
 

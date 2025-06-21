@@ -2,12 +2,15 @@
 
 from __future__ import annotations
 from enum import Enum
+from pydantic.functional_validators import PlainValidator
 from typing import Optional
-from typing_extensions import NotRequired, TypedDict
+from typing_extensions import Annotated, NotRequired, TypedDict
+from unified_python_sdk import utils
 from unified_python_sdk.types import BaseModel
+from unified_python_sdk.utils import validate_open_enum
 
 
-class Frequency(str, Enum):
+class Frequency(str, Enum, metaclass=utils.OpenEnumMeta):
     ONE_TIME = "ONE_TIME"
     DAY = "DAY"
     QUARTER = "QUARTER"
@@ -17,7 +20,7 @@ class Frequency(str, Enum):
     WEEK = "WEEK"
 
 
-class AtsCompensationType(str, Enum):
+class AtsCompensationType(str, Enum, metaclass=utils.OpenEnumMeta):
     SALARY = "SALARY"
     BONUS = "BONUS"
     STOCK_OPTIONS = "STOCK_OPTIONS"
@@ -36,10 +39,14 @@ class AtsCompensationTypedDict(TypedDict):
 class AtsCompensation(BaseModel):
     currency: Optional[str] = None
 
-    frequency: Optional[Frequency] = None
+    frequency: Annotated[
+        Optional[Frequency], PlainValidator(validate_open_enum(False))
+    ] = None
 
     max: Optional[float] = None
 
     min: Optional[float] = None
 
-    type: Optional[AtsCompensationType] = None
+    type: Annotated[
+        Optional[AtsCompensationType], PlainValidator(validate_open_enum(False))
+    ] = None

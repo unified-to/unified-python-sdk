@@ -2,9 +2,10 @@
 
 from __future__ import annotations
 from enum import Enum
+from unified_python_sdk import utils
 
 
-class PropertyConnectionPermissions(str, Enum):
+class PropertyConnectionPermissions(str, Enum, metaclass=utils.OpenEnumMeta):
     AUTH_LOGIN = "auth_login"
     ACCOUNTING_ACCOUNT_READ = "accounting_account_read"
     ACCOUNTING_ACCOUNT_WRITE = "accounting_account_write"

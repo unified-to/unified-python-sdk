@@ -2,12 +2,17 @@
 
 from __future__ import annotations
 from enum import Enum
+from pydantic.functional_validators import PlainValidator
 from typing import Optional
-from typing_extensions import NotRequired, TypedDict
+from typing_extensions import Annotated, NotRequired, TypedDict
+from unified_python_sdk import utils
 from unified_python_sdk.types import BaseModel
+from unified_python_sdk.utils import validate_open_enum
 
 
-class PropertyCalendarRecordingTranscriptAttendeeStatus(str, Enum):
+class PropertyCalendarRecordingTranscriptAttendeeStatus(
+    str, Enum, metaclass=utils.OpenEnumMeta
+):
     ACCEPTED = "ACCEPTED"
     REJECTED = "REJECTED"
     TENTATIVE = "TENTATIVE"
@@ -28,6 +33,9 @@ class PropertyCalendarRecordingTranscriptAttendee(BaseModel):
 
     required: Optional[bool] = None
 
-    status: Optional[PropertyCalendarRecordingTranscriptAttendeeStatus] = None
+    status: Annotated[
+        Optional[PropertyCalendarRecordingTranscriptAttendeeStatus],
+        PlainValidator(validate_open_enum(False)),
+    ] = None
 
     user_id: Optional[str] = None

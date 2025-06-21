@@ -3,9 +3,12 @@
 from __future__ import annotations
 from enum import Enum
 import pydantic
+from pydantic.functional_validators import PlainValidator
 from typing import Any, List, Optional, Union
 from typing_extensions import Annotated, NotRequired, TypeAliasType, TypedDict
+from unified_python_sdk import utils
 from unified_python_sdk.types import BaseModel
+from unified_python_sdk.utils import validate_open_enum
 
 
 class KmsPageMetadataSchemasExtraData52TypedDict(TypedDict):
@@ -114,7 +117,7 @@ KmsPageMetadataExtraData = TypeAliasType(
 )
 
 
-class KmsPageMetadataFormat(str, Enum):
+class KmsPageMetadataFormat(str, Enum, metaclass=utils.OpenEnumMeta):
     TEXT = "TEXT"
     NUMBER = "NUMBER"
     DATE = "DATE"
@@ -253,7 +256,10 @@ class KmsPageMetadata(BaseModel):
     extra_data: Optional[KmsPageMetadataExtraData] = None
 
     format_: Annotated[
-        Optional[KmsPageMetadataFormat], pydantic.Field(alias="format")
+        Annotated[
+            Optional[KmsPageMetadataFormat], PlainValidator(validate_open_enum(False))
+        ],
+        pydantic.Field(alias="format"),
     ] = None
 
     id: Optional[str] = None
