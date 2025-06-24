@@ -18,6 +18,7 @@ class MessagingChannelTypedDict(TypedDict):
     is_private: NotRequired[bool]
     members: NotRequired[List[MessagingMemberTypedDict]]
     parent_channel_id: NotRequired[str]
+    parent_id: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
     updated_at: NotRequired[datetime]
     web_url: NotRequired[str]
@@ -41,6 +42,8 @@ class MessagingChannel(BaseModel):
     members: Optional[List[MessagingMember]] = None
 
     parent_channel_id: Optional[str] = None
+
+    parent_id: Optional[str] = None
 
     raw: Optional[Dict[str, Any]] = None
 
