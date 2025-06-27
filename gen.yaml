@@ -14,10 +14,14 @@ generation:
   auth:
     oAuth2ClientCredentialsEnabled: false
     oAuth2PasswordEnabled: false
+  tests:
+    generateTests: true
+    generateNewTests: false
+    skipResponseBodyAssertions: false
   baseServerURL: ""
   flattenGlobalSecurity: true
 python:
-  version: 0.48.1
+  version: 0.48.2
   additionalDependencies:
     dev: {}
     main: {}

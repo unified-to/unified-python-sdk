@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: eefce76fdb52f66af4668d4a91100b69
+  docChecksum: 1ed136fdd156254f45506d66d75335d4
   docVersion: "1.0"
-  speakeasyVersion: 1.568.1
-  generationVersion: 2.634.1
-  releaseVersion: 0.48.1
-  configChecksum: a0ef30f69614e51cf49eb9b5a6579e11
+  speakeasyVersion: 1.570.2
+  generationVersion: 2.638.5
+  releaseVersion: 0.48.2
+  configChecksum: e7571efa72f9fa6166c9f2f4bffbcb19
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -1354,6 +1354,28 @@ generatedFiles:
   - docs/models/shared/storagefiletype.md
   - docs/models/shared/storagepermission.md
   - docs/models/shared/taskcomment.md
+  - docs/models/shared/taskmetadata.md
+  - docs/models/shared/taskmetadata1.md
+  - docs/models/shared/taskmetadata2.md
+  - docs/models/shared/taskmetadata3.md
+  - docs/models/shared/taskmetadata4.md
+  - docs/models/shared/taskmetadata5.md
+  - docs/models/shared/taskmetadataextradata.md
+  - docs/models/shared/taskmetadataformat.md
+  - docs/models/shared/taskmetadataschemas1.md
+  - docs/models/shared/taskmetadataschemas2.md
+  - docs/models/shared/taskmetadataschemas3.md
+  - docs/models/shared/taskmetadataschemas4.md
+  - docs/models/shared/taskmetadataschemas5.md
+  - docs/models/shared/taskmetadataschemasextradata2.md
+  - docs/models/shared/taskmetadataschemasextradata22.md
+  - docs/models/shared/taskmetadataschemasextradata32.md
+  - docs/models/shared/taskmetadataschemasextradata52.md
+  - docs/models/shared/taskmetadataschemasvalue2.md
+  - docs/models/shared/taskmetadataschemasvalue32.md
+  - docs/models/shared/taskmetadataschemasvalue42.md
+  - docs/models/shared/taskmetadataschemasvalue52.md
+  - docs/models/shared/taskmetadatavalue.md
   - docs/models/shared/taskproject.md
   - docs/models/shared/tasktask.md
   - docs/models/shared/tasktaskstatus.md
@@ -2198,6 +2220,7 @@ generatedFiles:
   - src/unified_python_sdk/models/shared/storagefile.py
   - src/unified_python_sdk/models/shared/storagepermission.py
   - src/unified_python_sdk/models/shared/taskcomment.py
+  - src/unified_python_sdk/models/shared/taskmetadata.py
   - src/unified_python_sdk/models/shared/taskproject.py
   - src/unified_python_sdk/models/shared/tasktask.py
   - src/unified_python_sdk/models/shared/ticketingcustomer.py
