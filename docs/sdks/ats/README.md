@@ -8,6 +8,7 @@
 * [create_ats_activity](#create_ats_activity) - Create an activity
 * [create_ats_application](#create_ats_application) - Create an application
 * [create_ats_candidate](#create_ats_candidate) - Create a candidate
+* [create_ats_company](#create_ats_company) - Create a company
 * [create_ats_document](#create_ats_document) - Create a document
 * [create_ats_interview](#create_ats_interview) - Create an interview
 * [create_ats_job](#create_ats_job) - Create a job
@@ -32,6 +33,7 @@
 * [patch_ats_activity](#patch_ats_activity) - Update an activity
 * [patch_ats_application](#patch_ats_application) - Update an application
 * [patch_ats_candidate](#patch_ats_candidate) - Update a candidate
+* [patch_ats_company](#patch_ats_company) - Update a company
 * [patch_ats_document](#patch_ats_document) - Update a document
 * [patch_ats_interview](#patch_ats_interview) - Update an interview
 * [patch_ats_job](#patch_ats_job) - Update a job
@@ -39,6 +41,7 @@
 * [remove_ats_activity](#remove_ats_activity) - Remove an activity
 * [remove_ats_application](#remove_ats_application) - Remove an application
 * [remove_ats_candidate](#remove_ats_candidate) - Remove a candidate
+* [remove_ats_company](#remove_ats_company) - Remove a company
 * [remove_ats_document](#remove_ats_document) - Remove a document
 * [remove_ats_interview](#remove_ats_interview) - Remove an interview
 * [remove_ats_job](#remove_ats_job) - Remove a job
@@ -46,6 +49,7 @@
 * [update_ats_activity](#update_ats_activity) - Update an activity
 * [update_ats_application](#update_ats_application) - Update an application
 * [update_ats_candidate](#update_ats_candidate) - Update a candidate
+* [update_ats_company](#update_ats_company) - Update a company
 * [update_ats_document](#update_ats_document) - Update a document
 * [update_ats_interview](#update_ats_interview) - Update an interview
 * [update_ats_job](#update_ats_job) - Update a job
@@ -182,6 +186,54 @@ with UnifiedTo(
 ### Response
 
 **[operations.CreateAtsCandidateResponse](../../models/operations/createatscandidateresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## create_ats_company
+
+Create a company
+
+### Example Usage
+
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.ats.create_ats_company(request={
+        "ats_company": {
+            "name": "<value>",
+        },
+        "connection_id": "<id>",
+    })
+
+    assert res.ats_company is not None
+
+    # Handle response
+    print(res.ats_company)
+
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.CreateAtsCompanyRequest](../../models/operations/createatscompanyrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
+
+### Response
+
+**[operations.CreateAtsCompanyResponse](../../models/operations/createatscompanyresponse.md)**
 
 ### Errors
 
@@ -1287,6 +1339,55 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## patch_ats_company
+
+Update a company
+
+### Example Usage
+
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.ats.patch_ats_company(request={
+        "ats_company": {
+            "name": "<value>",
+        },
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.ats_company is not None
+
+    # Handle response
+    print(res.ats_company)
+
+```
+
+### Parameters
+
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `request`                                                                              | [operations.PatchAtsCompanyRequest](../../models/operations/patchatscompanyrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `retries`                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                       | :heavy_minus_sign:                                                                     | Configuration to override the default retry behavior of the client.                    |
+
+### Response
+
+**[operations.PatchAtsCompanyResponse](../../models/operations/patchatscompanyresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## patch_ats_document
 
 Update a document
@@ -1613,6 +1714,52 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## remove_ats_company
+
+Remove a company
+
+### Example Usage
+
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.ats.remove_ats_company(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res is not None
+
+    # Handle response
+    print(res)
+
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.RemoveAtsCompanyRequest](../../models/operations/removeatscompanyrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
+
+### Response
+
+**[operations.RemoveAtsCompanyResponse](../../models/operations/removeatscompanyresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## remove_ats_document
 
 Remove a document
@@ -1931,6 +2078,55 @@ with UnifiedTo(
 ### Response
 
 **[operations.UpdateAtsCandidateResponse](../../models/operations/updateatscandidateresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## update_ats_company
+
+Update a company
+
+### Example Usage
+
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.ats.update_ats_company(request={
+        "ats_company": {
+            "name": "<value>",
+        },
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.ats_company is not None
+
+    # Handle response
+    print(res.ats_company)
+
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.UpdateAtsCompanyRequest](../../models/operations/updateatscompanyrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
+
+### Response
+
+**[operations.UpdateAtsCompanyResponse](../../models/operations/updateatscompanyresponse.md)**
 
 ### Errors
 

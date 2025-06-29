@@ -64,6 +64,12 @@ if TYPE_CHECKING:
         CreateAtsCandidateResponse,
         CreateAtsCandidateResponseTypedDict,
     )
+    from .createatscompany import (
+        CreateAtsCompanyRequest,
+        CreateAtsCompanyRequestTypedDict,
+        CreateAtsCompanyResponse,
+        CreateAtsCompanyResponseTypedDict,
+    )
     from .createatsdocument import (
         CreateAtsDocumentRequest,
         CreateAtsDocumentRequestTypedDict,
@@ -1481,6 +1487,12 @@ if TYPE_CHECKING:
         PatchAtsCandidateResponse,
         PatchAtsCandidateResponseTypedDict,
     )
+    from .patchatscompany import (
+        PatchAtsCompanyRequest,
+        PatchAtsCompanyRequestTypedDict,
+        PatchAtsCompanyResponse,
+        PatchAtsCompanyResponseTypedDict,
+    )
     from .patchatsdocument import (
         PatchAtsDocumentRequest,
         PatchAtsDocumentRequestTypedDict,
@@ -1901,6 +1913,12 @@ if TYPE_CHECKING:
         RemoveAtsCandidateResponse,
         RemoveAtsCandidateResponseTypedDict,
     )
+    from .removeatscompany import (
+        RemoveAtsCompanyRequest,
+        RemoveAtsCompanyRequestTypedDict,
+        RemoveAtsCompanyResponse,
+        RemoveAtsCompanyResponseTypedDict,
+    )
     from .removeatsdocument import (
         RemoveAtsDocumentRequest,
         RemoveAtsDocumentRequestTypedDict,
@@ -2309,6 +2327,12 @@ if TYPE_CHECKING:
         UpdateAtsCandidateResponse,
         UpdateAtsCandidateResponseTypedDict,
     )
+    from .updateatscompany import (
+        UpdateAtsCompanyRequest,
+        UpdateAtsCompanyRequestTypedDict,
+        UpdateAtsCompanyResponse,
+        UpdateAtsCompanyResponseTypedDict,
+    )
     from .updateatsdocument import (
         UpdateAtsDocumentRequest,
         UpdateAtsDocumentRequestTypedDict,
@@ -2712,6 +2736,10 @@ __all__ = [
     "CreateAtsCandidateRequestTypedDict",
     "CreateAtsCandidateResponse",
     "CreateAtsCandidateResponseTypedDict",
+    "CreateAtsCompanyRequest",
+    "CreateAtsCompanyRequestTypedDict",
+    "CreateAtsCompanyResponse",
+    "CreateAtsCompanyResponseTypedDict",
     "CreateAtsDocumentRequest",
     "CreateAtsDocumentRequestTypedDict",
     "CreateAtsDocumentResponse",
@@ -3655,6 +3683,10 @@ __all__ = [
     "PatchAtsCandidateRequestTypedDict",
     "PatchAtsCandidateResponse",
     "PatchAtsCandidateResponseTypedDict",
+    "PatchAtsCompanyRequest",
+    "PatchAtsCompanyRequestTypedDict",
+    "PatchAtsCompanyResponse",
+    "PatchAtsCompanyResponseTypedDict",
     "PatchAtsDocumentRequest",
     "PatchAtsDocumentRequestTypedDict",
     "PatchAtsDocumentResponse",
@@ -3936,6 +3968,10 @@ __all__ = [
     "RemoveAtsCandidateRequestTypedDict",
     "RemoveAtsCandidateResponse",
     "RemoveAtsCandidateResponseTypedDict",
+    "RemoveAtsCompanyRequest",
+    "RemoveAtsCompanyRequestTypedDict",
+    "RemoveAtsCompanyResponse",
+    "RemoveAtsCompanyResponseTypedDict",
     "RemoveAtsDocumentRequest",
     "RemoveAtsDocumentRequestTypedDict",
     "RemoveAtsDocumentResponse",
@@ -4208,6 +4244,10 @@ __all__ = [
     "UpdateAtsCandidateRequestTypedDict",
     "UpdateAtsCandidateResponse",
     "UpdateAtsCandidateResponseTypedDict",
+    "UpdateAtsCompanyRequest",
+    "UpdateAtsCompanyRequestTypedDict",
+    "UpdateAtsCompanyResponse",
+    "UpdateAtsCompanyResponseTypedDict",
     "UpdateAtsDocumentRequest",
     "UpdateAtsDocumentRequestTypedDict",
     "UpdateAtsDocumentResponse",
@@ -4491,6 +4531,10 @@ _dynamic_imports: dict[str, str] = {
     "CreateAtsCandidateRequestTypedDict": ".createatscandidate",
     "CreateAtsCandidateResponse": ".createatscandidate",
     "CreateAtsCandidateResponseTypedDict": ".createatscandidate",
+    "CreateAtsCompanyRequest": ".createatscompany",
+    "CreateAtsCompanyRequestTypedDict": ".createatscompany",
+    "CreateAtsCompanyResponse": ".createatscompany",
+    "CreateAtsCompanyResponseTypedDict": ".createatscompany",
     "CreateAtsDocumentRequest": ".createatsdocument",
     "CreateAtsDocumentRequestTypedDict": ".createatsdocument",
     "CreateAtsDocumentResponse": ".createatsdocument",
@@ -5436,6 +5480,10 @@ _dynamic_imports: dict[str, str] = {
     "PatchAtsCandidateRequestTypedDict": ".patchatscandidate",
     "PatchAtsCandidateResponse": ".patchatscandidate",
     "PatchAtsCandidateResponseTypedDict": ".patchatscandidate",
+    "PatchAtsCompanyRequest": ".patchatscompany",
+    "PatchAtsCompanyRequestTypedDict": ".patchatscompany",
+    "PatchAtsCompanyResponse": ".patchatscompany",
+    "PatchAtsCompanyResponseTypedDict": ".patchatscompany",
     "PatchAtsDocumentRequest": ".patchatsdocument",
     "PatchAtsDocumentRequestTypedDict": ".patchatsdocument",
     "PatchAtsDocumentResponse": ".patchatsdocument",
@@ -5716,6 +5764,10 @@ _dynamic_imports: dict[str, str] = {
     "RemoveAtsCandidateRequestTypedDict": ".removeatscandidate",
     "RemoveAtsCandidateResponse": ".removeatscandidate",
     "RemoveAtsCandidateResponseTypedDict": ".removeatscandidate",
+    "RemoveAtsCompanyRequest": ".removeatscompany",
+    "RemoveAtsCompanyRequestTypedDict": ".removeatscompany",
+    "RemoveAtsCompanyResponse": ".removeatscompany",
+    "RemoveAtsCompanyResponseTypedDict": ".removeatscompany",
     "RemoveAtsDocumentRequest": ".removeatsdocument",
     "RemoveAtsDocumentRequestTypedDict": ".removeatsdocument",
     "RemoveAtsDocumentResponse": ".removeatsdocument",
@@ -5988,6 +6040,10 @@ _dynamic_imports: dict[str, str] = {
     "UpdateAtsCandidateRequestTypedDict": ".updateatscandidate",
     "UpdateAtsCandidateResponse": ".updateatscandidate",
     "UpdateAtsCandidateResponseTypedDict": ".updateatscandidate",
+    "UpdateAtsCompanyRequest": ".updateatscompany",
+    "UpdateAtsCompanyRequestTypedDict": ".updateatscompany",
+    "UpdateAtsCompanyResponse": ".updateatscompany",
+    "UpdateAtsCompanyResponseTypedDict": ".updateatscompany",
     "UpdateAtsDocumentRequest": ".updateatsdocument",
     "UpdateAtsDocumentRequestTypedDict": ".updateatsdocument",
     "UpdateAtsDocumentResponse": ".updateatsdocument",

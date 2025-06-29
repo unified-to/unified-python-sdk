@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: 1ed136fdd156254f45506d66d75335d4
+  docChecksum: 30f30cd0f1e19f64975bb2a6da82b7fc
   docVersion: "1.0"
-  speakeasyVersion: 1.570.2
-  generationVersion: 2.638.5
-  releaseVersion: 0.48.2
-  configChecksum: e7571efa72f9fa6166c9f2f4bffbcb19
+  speakeasyVersion: 1.571.1
+  generationVersion: 2.640.2
+  releaseVersion: 0.48.3
+  configChecksum: 6daa48b26ed4caf2c246e3266b848611
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -56,6 +56,8 @@ generatedFiles:
   - docs/models/operations/createatsapplicationresponse.md
   - docs/models/operations/createatscandidaterequest.md
   - docs/models/operations/createatscandidateresponse.md
+  - docs/models/operations/createatscompanyrequest.md
+  - docs/models/operations/createatscompanyresponse.md
   - docs/models/operations/createatsdocumentrequest.md
   - docs/models/operations/createatsdocumentresponse.md
   - docs/models/operations/createatsinterviewrequest.md
@@ -528,6 +530,8 @@ generatedFiles:
   - docs/models/operations/patchatsapplicationresponse.md
   - docs/models/operations/patchatscandidaterequest.md
   - docs/models/operations/patchatscandidateresponse.md
+  - docs/models/operations/patchatscompanyrequest.md
+  - docs/models/operations/patchatscompanyresponse.md
   - docs/models/operations/patchatsdocumentrequest.md
   - docs/models/operations/patchatsdocumentresponse.md
   - docs/models/operations/patchatsinterviewrequest.md
@@ -669,6 +673,8 @@ generatedFiles:
   - docs/models/operations/removeatsapplicationresponse.md
   - docs/models/operations/removeatscandidaterequest.md
   - docs/models/operations/removeatscandidateresponse.md
+  - docs/models/operations/removeatscompanyrequest.md
+  - docs/models/operations/removeatscompanyresponse.md
   - docs/models/operations/removeatsdocumentrequest.md
   - docs/models/operations/removeatsdocumentresponse.md
   - docs/models/operations/removeatsinterviewrequest.md
@@ -805,6 +811,8 @@ generatedFiles:
   - docs/models/operations/updateatsapplicationresponse.md
   - docs/models/operations/updateatscandidaterequest.md
   - docs/models/operations/updateatscandidateresponse.md
+  - docs/models/operations/updateatscompanyrequest.md
+  - docs/models/operations/updateatscompanyresponse.md
   - docs/models/operations/updateatsdocumentrequest.md
   - docs/models/operations/updateatsdocumentresponse.md
   - docs/models/operations/updateatsinterviewrequest.md
@@ -1584,6 +1592,7 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/createatsactivity.py
   - src/unified_python_sdk/models/operations/createatsapplication.py
   - src/unified_python_sdk/models/operations/createatscandidate.py
+  - src/unified_python_sdk/models/operations/createatscompany.py
   - src/unified_python_sdk/models/operations/createatsdocument.py
   - src/unified_python_sdk/models/operations/createatsinterview.py
   - src/unified_python_sdk/models/operations/createatsjob.py
@@ -1820,6 +1829,7 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/patchatsactivity.py
   - src/unified_python_sdk/models/operations/patchatsapplication.py
   - src/unified_python_sdk/models/operations/patchatscandidate.py
+  - src/unified_python_sdk/models/operations/patchatscompany.py
   - src/unified_python_sdk/models/operations/patchatsdocument.py
   - src/unified_python_sdk/models/operations/patchatsinterview.py
   - src/unified_python_sdk/models/operations/patchatsjob.py
@@ -1890,6 +1900,7 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/removeatsactivity.py
   - src/unified_python_sdk/models/operations/removeatsapplication.py
   - src/unified_python_sdk/models/operations/removeatscandidate.py
+  - src/unified_python_sdk/models/operations/removeatscompany.py
   - src/unified_python_sdk/models/operations/removeatsdocument.py
   - src/unified_python_sdk/models/operations/removeatsinterview.py
   - src/unified_python_sdk/models/operations/removeatsjob.py
@@ -1958,6 +1969,7 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/updateatsactivity.py
   - src/unified_python_sdk/models/operations/updateatsapplication.py
   - src/unified_python_sdk/models/operations/updateatscandidate.py
+  - src/unified_python_sdk/models/operations/updateatscompany.py
   - src/unified_python_sdk/models/operations/updateatsdocument.py
   - src/unified_python_sdk/models/operations/updateatsinterview.py
   - src/unified_python_sdk/models/operations/updateatsjob.py
@@ -6331,5 +6343,43 @@ examples:
       responses:
         "200":
           application/json: {}
+  createAtsCompany:
+    speakeasy-default-create-ats-company:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {"name": "<value>"}
+      responses:
+        "200":
+          application/json: {"name": "<value>"}
+  patchAtsCompany:
+    speakeasy-default-patch-ats-company:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {"name": "<value>"}
+      responses:
+        "200":
+          application/json: {"name": "<value>"}
+  removeAtsCompany:
+    speakeasy-default-remove-ats-company:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateAtsCompany:
+    speakeasy-default-update-ats-company:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {"name": "<value>"}
+      responses:
+        "200":
+          application/json: {"name": "<value>"}
 examplesVersion: 1.0.2
 generatedTests: {}
