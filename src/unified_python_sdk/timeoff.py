@@ -81,8 +81,8 @@ class Timeoff(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetHrisTimeoffResponse(
-                hris_timeoff=utils.unmarshal_json(
-                    http_res.text, Optional[shared.HrisTimeoff]
+                hris_timeoff=utils.unmarshal_json_response(
+                    Optional[shared.HrisTimeoff], http_res
                 ),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -90,23 +90,12 @@ class Timeoff(BaseSDK):
             )
         if utils.match_response(http_res, "4XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
-            raise errors.SDKError(
-                "API error occurred", http_res.status_code, http_res_text, http_res
-            )
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
-            raise errors.SDKError(
-                "API error occurred", http_res.status_code, http_res_text, http_res
-            )
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
 
-        content_type = http_res.headers.get("Content-Type")
-        http_res_text = utils.stream_to_text(http_res)
-        raise errors.SDKError(
-            f"Unexpected response received (code: {http_res.status_code}, type: {content_type})",
-            http_res.status_code,
-            http_res_text,
-            http_res,
-        )
+        raise errors.SDKError("Unexpected response received", http_res)
 
     async def get_hris_timeoff_async(
         self,
@@ -180,8 +169,8 @@ class Timeoff(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetHrisTimeoffResponse(
-                hris_timeoff=utils.unmarshal_json(
-                    http_res.text, Optional[shared.HrisTimeoff]
+                hris_timeoff=utils.unmarshal_json_response(
+                    Optional[shared.HrisTimeoff], http_res
                 ),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -189,23 +178,12 @@ class Timeoff(BaseSDK):
             )
         if utils.match_response(http_res, "4XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
-            raise errors.SDKError(
-                "API error occurred", http_res.status_code, http_res_text, http_res
-            )
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
-            raise errors.SDKError(
-                "API error occurred", http_res.status_code, http_res_text, http_res
-            )
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
 
-        content_type = http_res.headers.get("Content-Type")
-        http_res_text = await utils.stream_to_text_async(http_res)
-        raise errors.SDKError(
-            f"Unexpected response received (code: {http_res.status_code}, type: {content_type})",
-            http_res.status_code,
-            http_res_text,
-            http_res,
-        )
+        raise errors.SDKError("Unexpected response received", http_res)
 
     def list_hris_timeoffs(
         self,
@@ -280,8 +258,8 @@ class Timeoff(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListHrisTimeoffsResponse(
-                hris_timeoffs=utils.unmarshal_json(
-                    http_res.text, Optional[List[shared.HrisTimeoff]]
+                hris_timeoffs=utils.unmarshal_json_response(
+                    Optional[List[shared.HrisTimeoff]], http_res
                 ),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -289,23 +267,12 @@ class Timeoff(BaseSDK):
             )
         if utils.match_response(http_res, "4XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
-            raise errors.SDKError(
-                "API error occurred", http_res.status_code, http_res_text, http_res
-            )
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
-            raise errors.SDKError(
-                "API error occurred", http_res.status_code, http_res_text, http_res
-            )
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
 
-        content_type = http_res.headers.get("Content-Type")
-        http_res_text = utils.stream_to_text(http_res)
-        raise errors.SDKError(
-            f"Unexpected response received (code: {http_res.status_code}, type: {content_type})",
-            http_res.status_code,
-            http_res_text,
-            http_res,
-        )
+        raise errors.SDKError("Unexpected response received", http_res)
 
     async def list_hris_timeoffs_async(
         self,
@@ -380,8 +347,8 @@ class Timeoff(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListHrisTimeoffsResponse(
-                hris_timeoffs=utils.unmarshal_json(
-                    http_res.text, Optional[List[shared.HrisTimeoff]]
+                hris_timeoffs=utils.unmarshal_json_response(
+                    Optional[List[shared.HrisTimeoff]], http_res
                 ),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -389,20 +356,9 @@ class Timeoff(BaseSDK):
             )
         if utils.match_response(http_res, "4XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
-            raise errors.SDKError(
-                "API error occurred", http_res.status_code, http_res_text, http_res
-            )
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
-            raise errors.SDKError(
-                "API error occurred", http_res.status_code, http_res_text, http_res
-            )
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
 
-        content_type = http_res.headers.get("Content-Type")
-        http_res_text = await utils.stream_to_text_async(http_res)
-        raise errors.SDKError(
-            f"Unexpected response received (code: {http_res.status_code}, type: {content_type})",
-            http_res.status_code,
-            http_res_text,
-            http_res,
-        )
+        raise errors.SDKError("Unexpected response received", http_res)

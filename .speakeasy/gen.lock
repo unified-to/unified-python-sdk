@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: 30f30cd0f1e19f64975bb2a6da82b7fc
+  docChecksum: b9a9d44d0d49d0a08964e6f3ef075270
   docVersion: "1.0"
-  speakeasyVersion: 1.571.1
-  generationVersion: 2.640.2
-  releaseVersion: 0.48.3
-  configChecksum: 6daa48b26ed4caf2c246e3266b848611
+  speakeasyVersion: 1.575.1
+  generationVersion: 2.648.1
+  releaseVersion: 0.48.4
+  configChecksum: b191fd87352091bd943585879a577867
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -1244,6 +1244,7 @@ generatedFiles:
   - docs/models/shared/messagingchannel.md
   - docs/models/shared/messagingmember.md
   - docs/models/shared/messagingmessage.md
+  - docs/models/shared/messagingreaction.md
   - docs/models/shared/metadatametadata.md
   - docs/models/shared/metadatametadataformat.md
   - docs/models/shared/objecttype.md
@@ -1307,6 +1308,7 @@ generatedFiles:
   - docs/models/shared/propertyintegrationcategories.md
   - docs/models/shared/propertylmsstudentaddress.md
   - docs/models/shared/propertymessagingmessageauthormember.md
+  - docs/models/shared/propertymessagingreactionmember.md
   - docs/models/shared/propertyscimgroupmeta.md
   - docs/models/shared/propertyscimgroupschemas.md
   - docs/models/shared/propertyscimusermeta.md
@@ -1580,7 +1582,10 @@ generatedFiles:
   - src/unified_python_sdk/model.py
   - src/unified_python_sdk/models/__init__.py
   - src/unified_python_sdk/models/errors/__init__.py
+  - src/unified_python_sdk/models/errors/no_response_error.py
+  - src/unified_python_sdk/models/errors/responsevalidationerror.py
   - src/unified_python_sdk/models/errors/sdkerror.py
+  - src/unified_python_sdk/models/errors/unifiedtoerror.py
   - src/unified_python_sdk/models/operations/__init__.py
   - src/unified_python_sdk/models/operations/createaccountingaccount.py
   - src/unified_python_sdk/models/operations/createaccountingcontact.py
@@ -2153,6 +2158,7 @@ generatedFiles:
   - src/unified_python_sdk/models/shared/messagingchannel.py
   - src/unified_python_sdk/models/shared/messagingmember.py
   - src/unified_python_sdk/models/shared/messagingmessage.py
+  - src/unified_python_sdk/models/shared/messagingreaction.py
   - src/unified_python_sdk/models/shared/metadatametadata.py
   - src/unified_python_sdk/models/shared/paymentlineitem.py
   - src/unified_python_sdk/models/shared/paymentlink.py
@@ -2200,6 +2206,7 @@ generatedFiles:
   - src/unified_python_sdk/models/shared/property_integration_categories.py
   - src/unified_python_sdk/models/shared/property_lmsstudent_address.py
   - src/unified_python_sdk/models/shared/property_messagingmessage_author_member.py
+  - src/unified_python_sdk/models/shared/property_messagingreaction_member.py
   - src/unified_python_sdk/models/shared/property_scimgroup_meta.py
   - src/unified_python_sdk/models/shared/property_scimgroup_schemas.py
   - src/unified_python_sdk/models/shared/property_scimuser_meta.py

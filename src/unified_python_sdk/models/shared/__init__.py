@@ -581,6 +581,7 @@ if TYPE_CHECKING:
     from .messagingchannel import MessagingChannel, MessagingChannelTypedDict
     from .messagingmember import MessagingMember, MessagingMemberTypedDict
     from .messagingmessage import MessagingMessage, MessagingMessageTypedDict
+    from .messagingreaction import MessagingReaction, MessagingReactionTypedDict
     from .metadatametadata import (
         MetadataMetadata,
         MetadataMetadataFormat,
@@ -756,6 +757,10 @@ if TYPE_CHECKING:
     from .property_messagingmessage_author_member import (
         PropertyMessagingMessageAuthorMember,
         PropertyMessagingMessageAuthorMemberTypedDict,
+    )
+    from .property_messagingreaction_member import (
+        PropertyMessagingReactionMember,
+        PropertyMessagingReactionMemberTypedDict,
     )
     from .property_scimgroup_meta import (
         PropertyScimGroupMeta,
@@ -1481,6 +1486,8 @@ __all__ = [
     "MessagingMemberTypedDict",
     "MessagingMessage",
     "MessagingMessageTypedDict",
+    "MessagingReaction",
+    "MessagingReactionTypedDict",
     "MetadataMetadata",
     "MetadataMetadataFormat",
     "MetadataMetadataTypedDict",
@@ -1588,6 +1595,8 @@ __all__ = [
     "PropertyLmsStudentAddressTypedDict",
     "PropertyMessagingMessageAuthorMember",
     "PropertyMessagingMessageAuthorMemberTypedDict",
+    "PropertyMessagingReactionMember",
+    "PropertyMessagingReactionMemberTypedDict",
     "PropertyScimGroupMeta",
     "PropertyScimGroupMetaTypedDict",
     "PropertyScimGroupSchemas",
@@ -2342,6 +2351,8 @@ _dynamic_imports: dict[str, str] = {
     "MessagingMemberTypedDict": ".messagingmember",
     "MessagingMessage": ".messagingmessage",
     "MessagingMessageTypedDict": ".messagingmessage",
+    "MessagingReaction": ".messagingreaction",
+    "MessagingReactionTypedDict": ".messagingreaction",
     "MetadataMetadata": ".metadatametadata",
     "MetadataMetadataFormat": ".metadatametadata",
     "MetadataMetadataTypedDict": ".metadatametadata",
@@ -2441,6 +2452,8 @@ _dynamic_imports: dict[str, str] = {
     "PropertyLmsStudentAddressTypedDict": ".property_lmsstudent_address",
     "PropertyMessagingMessageAuthorMember": ".property_messagingmessage_author_member",
     "PropertyMessagingMessageAuthorMemberTypedDict": ".property_messagingmessage_author_member",
+    "PropertyMessagingReactionMember": ".property_messagingreaction_member",
+    "PropertyMessagingReactionMemberTypedDict": ".property_messagingreaction_member",
     "PropertyScimGroupMeta": ".property_scimgroup_meta",
     "PropertyScimGroupMetaTypedDict": ".property_scimgroup_meta",
     "ResourceType": ".property_scimgroup_meta",

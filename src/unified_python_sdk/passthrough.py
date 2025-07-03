@@ -170,19 +170,15 @@ class Passthrough(BaseSDK):
             )
         if utils.match_response(http_res, "4XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
-            raise errors.SDKError(
-                "API error occurred", http_res.status_code, http_res_text, http_res
-            )
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
-            raise errors.SDKError(
-                "API error occurred", http_res.status_code, http_res_text, http_res
-            )
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "application/json"):
-            http_response_text = utils.stream_to_text(http_res)
+            http_res_text = utils.stream_to_text(http_res)
             return operations.CreatePassthroughJSONResponse(
-                default_application_json_any=utils.unmarshal_json(
-                    http_response_text, Optional[Any]
+                default_application_json_any=utils.unmarshal_json_response(
+                    Optional[Any], http_res, http_res_text
                 ),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -225,14 +221,8 @@ class Passthrough(BaseSDK):
                 headers=utils.get_response_headers(http_res.headers),
             )
 
-        content_type = http_res.headers.get("Content-Type")
         http_res_text = utils.stream_to_text(http_res)
-        raise errors.SDKError(
-            f"Unexpected response received (code: {http_res.status_code}, type: {content_type})",
-            http_res.status_code,
-            http_res_text,
-            http_res,
-        )
+        raise errors.SDKError("Unexpected response received", http_res, http_res_text)
 
     async def create_passthrough_json_async(
         self,
@@ -329,19 +319,15 @@ class Passthrough(BaseSDK):
             )
         if utils.match_response(http_res, "4XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
-            raise errors.SDKError(
-                "API error occurred", http_res.status_code, http_res_text, http_res
-            )
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
-            raise errors.SDKError(
-                "API error occurred", http_res.status_code, http_res_text, http_res
-            )
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "application/json"):
-            http_response_text = await utils.stream_to_text_async(http_res)
+            http_res_text = await utils.stream_to_text_async(http_res)
             return operations.CreatePassthroughJSONResponse(
-                default_application_json_any=utils.unmarshal_json(
-                    http_response_text, Optional[Any]
+                default_application_json_any=utils.unmarshal_json_response(
+                    Optional[Any], http_res, http_res_text
                 ),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -384,14 +370,8 @@ class Passthrough(BaseSDK):
                 headers=utils.get_response_headers(http_res.headers),
             )
 
-        content_type = http_res.headers.get("Content-Type")
         http_res_text = await utils.stream_to_text_async(http_res)
-        raise errors.SDKError(
-            f"Unexpected response received (code: {http_res.status_code}, type: {content_type})",
-            http_res.status_code,
-            http_res_text,
-            http_res,
-        )
+        raise errors.SDKError("Unexpected response received", http_res, http_res_text)
 
     def create_passthrough_raw(
         self,
@@ -492,19 +472,15 @@ class Passthrough(BaseSDK):
             )
         if utils.match_response(http_res, "4XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
-            raise errors.SDKError(
-                "API error occurred", http_res.status_code, http_res_text, http_res
-            )
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
-            raise errors.SDKError(
-                "API error occurred", http_res.status_code, http_res_text, http_res
-            )
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "application/json"):
-            http_response_text = utils.stream_to_text(http_res)
+            http_res_text = utils.stream_to_text(http_res)
             return operations.CreatePassthroughRawResponse(
-                default_application_json_any=utils.unmarshal_json(
-                    http_response_text, Optional[Any]
+                default_application_json_any=utils.unmarshal_json_response(
+                    Optional[Any], http_res, http_res_text
                 ),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -547,14 +523,8 @@ class Passthrough(BaseSDK):
                 headers=utils.get_response_headers(http_res.headers),
             )
 
-        content_type = http_res.headers.get("Content-Type")
         http_res_text = utils.stream_to_text(http_res)
-        raise errors.SDKError(
-            f"Unexpected response received (code: {http_res.status_code}, type: {content_type})",
-            http_res.status_code,
-            http_res_text,
-            http_res,
-        )
+        raise errors.SDKError("Unexpected response received", http_res, http_res_text)
 
     async def create_passthrough_raw_async(
         self,
@@ -655,19 +625,15 @@ class Passthrough(BaseSDK):
             )
         if utils.match_response(http_res, "4XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
-            raise errors.SDKError(
-                "API error occurred", http_res.status_code, http_res_text, http_res
-            )
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
-            raise errors.SDKError(
-                "API error occurred", http_res.status_code, http_res_text, http_res
-            )
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "application/json"):
-            http_response_text = await utils.stream_to_text_async(http_res)
+            http_res_text = await utils.stream_to_text_async(http_res)
             return operations.CreatePassthroughRawResponse(
-                default_application_json_any=utils.unmarshal_json(
-                    http_response_text, Optional[Any]
+                default_application_json_any=utils.unmarshal_json_response(
+                    Optional[Any], http_res, http_res_text
                 ),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -710,14 +676,8 @@ class Passthrough(BaseSDK):
                 headers=utils.get_response_headers(http_res.headers),
             )
 
-        content_type = http_res.headers.get("Content-Type")
         http_res_text = await utils.stream_to_text_async(http_res)
-        raise errors.SDKError(
-            f"Unexpected response received (code: {http_res.status_code}, type: {content_type})",
-            http_res.status_code,
-            http_res_text,
-            http_res,
-        )
+        raise errors.SDKError("Unexpected response received", http_res, http_res_text)
 
     def list_passthroughs(
         self,
@@ -811,19 +771,15 @@ class Passthrough(BaseSDK):
             )
         if utils.match_response(http_res, "4XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
-            raise errors.SDKError(
-                "API error occurred", http_res.status_code, http_res_text, http_res
-            )
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
-            raise errors.SDKError(
-                "API error occurred", http_res.status_code, http_res_text, http_res
-            )
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "application/json"):
-            http_response_text = utils.stream_to_text(http_res)
+            http_res_text = utils.stream_to_text(http_res)
             return operations.ListPassthroughsResponse(
-                default_application_json_any=utils.unmarshal_json(
-                    http_response_text, Optional[Any]
+                default_application_json_any=utils.unmarshal_json_response(
+                    Optional[Any], http_res, http_res_text
                 ),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -866,14 +822,8 @@ class Passthrough(BaseSDK):
                 headers=utils.get_response_headers(http_res.headers),
             )
 
-        content_type = http_res.headers.get("Content-Type")
         http_res_text = utils.stream_to_text(http_res)
-        raise errors.SDKError(
-            f"Unexpected response received (code: {http_res.status_code}, type: {content_type})",
-            http_res.status_code,
-            http_res_text,
-            http_res,
-        )
+        raise errors.SDKError("Unexpected response received", http_res, http_res_text)
 
     async def list_passthroughs_async(
         self,
@@ -967,19 +917,15 @@ class Passthrough(BaseSDK):
             )
         if utils.match_response(http_res, "4XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
-            raise errors.SDKError(
-                "API error occurred", http_res.status_code, http_res_text, http_res
-            )
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
-            raise errors.SDKError(
-                "API error occurred", http_res.status_code, http_res_text, http_res
-            )
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "application/json"):
-            http_response_text = await utils.stream_to_text_async(http_res)
+            http_res_text = await utils.stream_to_text_async(http_res)
             return operations.ListPassthroughsResponse(
-                default_application_json_any=utils.unmarshal_json(
-                    http_response_text, Optional[Any]
+                default_application_json_any=utils.unmarshal_json_response(
+                    Optional[Any], http_res, http_res_text
                 ),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -1022,14 +968,8 @@ class Passthrough(BaseSDK):
                 headers=utils.get_response_headers(http_res.headers),
             )
 
-        content_type = http_res.headers.get("Content-Type")
         http_res_text = await utils.stream_to_text_async(http_res)
-        raise errors.SDKError(
-            f"Unexpected response received (code: {http_res.status_code}, type: {content_type})",
-            http_res.status_code,
-            http_res_text,
-            http_res,
-        )
+        raise errors.SDKError("Unexpected response received", http_res, http_res_text)
 
     def patch_passthrough_json(
         self,
@@ -1126,19 +1066,15 @@ class Passthrough(BaseSDK):
             )
         if utils.match_response(http_res, "4XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
-            raise errors.SDKError(
-                "API error occurred", http_res.status_code, http_res_text, http_res
-            )
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
-            raise errors.SDKError(
-                "API error occurred", http_res.status_code, http_res_text, http_res
-            )
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "application/json"):
-            http_response_text = utils.stream_to_text(http_res)
+            http_res_text = utils.stream_to_text(http_res)
             return operations.PatchPassthroughJSONResponse(
-                default_application_json_any=utils.unmarshal_json(
-                    http_response_text, Optional[Any]
+                default_application_json_any=utils.unmarshal_json_response(
+                    Optional[Any], http_res, http_res_text
                 ),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -1181,14 +1117,8 @@ class Passthrough(BaseSDK):
                 headers=utils.get_response_headers(http_res.headers),
             )
 
-        content_type = http_res.headers.get("Content-Type")
         http_res_text = utils.stream_to_text(http_res)
-        raise errors.SDKError(
-            f"Unexpected response received (code: {http_res.status_code}, type: {content_type})",
-            http_res.status_code,
-            http_res_text,
-            http_res,
-        )
+        raise errors.SDKError("Unexpected response received", http_res, http_res_text)
 
     async def patch_passthrough_json_async(
         self,
@@ -1285,19 +1215,15 @@ class Passthrough(BaseSDK):
             )
         if utils.match_response(http_res, "4XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
-            raise errors.SDKError(
-                "API error occurred", http_res.status_code, http_res_text, http_res
-            )
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
-            raise errors.SDKError(
-                "API error occurred", http_res.status_code, http_res_text, http_res
-            )
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "application/json"):
-            http_response_text = await utils.stream_to_text_async(http_res)
+            http_res_text = await utils.stream_to_text_async(http_res)
             return operations.PatchPassthroughJSONResponse(
-                default_application_json_any=utils.unmarshal_json(
-                    http_response_text, Optional[Any]
+                default_application_json_any=utils.unmarshal_json_response(
+                    Optional[Any], http_res, http_res_text
                 ),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -1340,14 +1266,8 @@ class Passthrough(BaseSDK):
                 headers=utils.get_response_headers(http_res.headers),
             )
 
-        content_type = http_res.headers.get("Content-Type")
         http_res_text = await utils.stream_to_text_async(http_res)
-        raise errors.SDKError(
-            f"Unexpected response received (code: {http_res.status_code}, type: {content_type})",
-            http_res.status_code,
-            http_res_text,
-            http_res,
-        )
+        raise errors.SDKError("Unexpected response received", http_res, http_res_text)
 
     def patch_passthrough_raw(
         self,
@@ -1448,19 +1368,15 @@ class Passthrough(BaseSDK):
             )
         if utils.match_response(http_res, "4XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
-            raise errors.SDKError(
-                "API error occurred", http_res.status_code, http_res_text, http_res
-            )
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
-            raise errors.SDKError(
-                "API error occurred", http_res.status_code, http_res_text, http_res
-            )
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "application/json"):
-            http_response_text = utils.stream_to_text(http_res)
+            http_res_text = utils.stream_to_text(http_res)
             return operations.PatchPassthroughRawResponse(
-                default_application_json_any=utils.unmarshal_json(
-                    http_response_text, Optional[Any]
+                default_application_json_any=utils.unmarshal_json_response(
+                    Optional[Any], http_res, http_res_text
                 ),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -1503,14 +1419,8 @@ class Passthrough(BaseSDK):
                 headers=utils.get_response_headers(http_res.headers),
             )
 
-        content_type = http_res.headers.get("Content-Type")
         http_res_text = utils.stream_to_text(http_res)
-        raise errors.SDKError(
-            f"Unexpected response received (code: {http_res.status_code}, type: {content_type})",
-            http_res.status_code,
-            http_res_text,
-            http_res,
-        )
+        raise errors.SDKError("Unexpected response received", http_res, http_res_text)
 
     async def patch_passthrough_raw_async(
         self,
@@ -1611,19 +1521,15 @@ class Passthrough(BaseSDK):
             )
         if utils.match_response(http_res, "4XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
-            raise errors.SDKError(
-                "API error occurred", http_res.status_code, http_res_text, http_res
-            )
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
-            raise errors.SDKError(
-                "API error occurred", http_res.status_code, http_res_text, http_res
-            )
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "application/json"):
-            http_response_text = await utils.stream_to_text_async(http_res)
+            http_res_text = await utils.stream_to_text_async(http_res)
             return operations.PatchPassthroughRawResponse(
-                default_application_json_any=utils.unmarshal_json(
-                    http_response_text, Optional[Any]
+                default_application_json_any=utils.unmarshal_json_response(
+                    Optional[Any], http_res, http_res_text
                 ),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -1666,14 +1572,8 @@ class Passthrough(BaseSDK):
                 headers=utils.get_response_headers(http_res.headers),
             )
 
-        content_type = http_res.headers.get("Content-Type")
         http_res_text = await utils.stream_to_text_async(http_res)
-        raise errors.SDKError(
-            f"Unexpected response received (code: {http_res.status_code}, type: {content_type})",
-            http_res.status_code,
-            http_res_text,
-            http_res,
-        )
+        raise errors.SDKError("Unexpected response received", http_res, http_res_text)
 
     def remove_passthrough(
         self,
@@ -1767,19 +1667,15 @@ class Passthrough(BaseSDK):
             )
         if utils.match_response(http_res, "4XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
-            raise errors.SDKError(
-                "API error occurred", http_res.status_code, http_res_text, http_res
-            )
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
-            raise errors.SDKError(
-                "API error occurred", http_res.status_code, http_res_text, http_res
-            )
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "application/json"):
-            http_response_text = utils.stream_to_text(http_res)
+            http_res_text = utils.stream_to_text(http_res)
             return operations.RemovePassthroughResponse(
-                default_application_json_any=utils.unmarshal_json(
-                    http_response_text, Optional[Any]
+                default_application_json_any=utils.unmarshal_json_response(
+                    Optional[Any], http_res, http_res_text
                 ),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -1822,14 +1718,8 @@ class Passthrough(BaseSDK):
                 headers=utils.get_response_headers(http_res.headers),
             )
 
-        content_type = http_res.headers.get("Content-Type")
         http_res_text = utils.stream_to_text(http_res)
-        raise errors.SDKError(
-            f"Unexpected response received (code: {http_res.status_code}, type: {content_type})",
-            http_res.status_code,
-            http_res_text,
-            http_res,
-        )
+        raise errors.SDKError("Unexpected response received", http_res, http_res_text)
 
     async def remove_passthrough_async(
         self,
@@ -1923,19 +1813,15 @@ class Passthrough(BaseSDK):
             )
         if utils.match_response(http_res, "4XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
-            raise errors.SDKError(
-                "API error occurred", http_res.status_code, http_res_text, http_res
-            )
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
-            raise errors.SDKError(
-                "API error occurred", http_res.status_code, http_res_text, http_res
-            )
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "application/json"):
-            http_response_text = await utils.stream_to_text_async(http_res)
+            http_res_text = await utils.stream_to_text_async(http_res)
             return operations.RemovePassthroughResponse(
-                default_application_json_any=utils.unmarshal_json(
-                    http_response_text, Optional[Any]
+                default_application_json_any=utils.unmarshal_json_response(
+                    Optional[Any], http_res, http_res_text
                 ),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -1978,14 +1864,8 @@ class Passthrough(BaseSDK):
                 headers=utils.get_response_headers(http_res.headers),
             )
 
-        content_type = http_res.headers.get("Content-Type")
         http_res_text = await utils.stream_to_text_async(http_res)
-        raise errors.SDKError(
-            f"Unexpected response received (code: {http_res.status_code}, type: {content_type})",
-            http_res.status_code,
-            http_res_text,
-            http_res,
-        )
+        raise errors.SDKError("Unexpected response received", http_res, http_res_text)
 
     def update_passthrough_json(
         self,
@@ -2082,19 +1962,15 @@ class Passthrough(BaseSDK):
             )
         if utils.match_response(http_res, "4XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
-            raise errors.SDKError(
-                "API error occurred", http_res.status_code, http_res_text, http_res
-            )
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
-            raise errors.SDKError(
-                "API error occurred", http_res.status_code, http_res_text, http_res
-            )
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "application/json"):
-            http_response_text = utils.stream_to_text(http_res)
+            http_res_text = utils.stream_to_text(http_res)
             return operations.UpdatePassthroughJSONResponse(
-                default_application_json_any=utils.unmarshal_json(
-                    http_response_text, Optional[Any]
+                default_application_json_any=utils.unmarshal_json_response(
+                    Optional[Any], http_res, http_res_text
                 ),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -2137,14 +2013,8 @@ class Passthrough(BaseSDK):
                 headers=utils.get_response_headers(http_res.headers),
             )
 
-        content_type = http_res.headers.get("Content-Type")
         http_res_text = utils.stream_to_text(http_res)
-        raise errors.SDKError(
-            f"Unexpected response received (code: {http_res.status_code}, type: {content_type})",
-            http_res.status_code,
-            http_res_text,
-            http_res,
-        )
+        raise errors.SDKError("Unexpected response received", http_res, http_res_text)
 
     async def update_passthrough_json_async(
         self,
@@ -2241,19 +2111,15 @@ class Passthrough(BaseSDK):
             )
         if utils.match_response(http_res, "4XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
-            raise errors.SDKError(
-                "API error occurred", http_res.status_code, http_res_text, http_res
-            )
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
-            raise errors.SDKError(
-                "API error occurred", http_res.status_code, http_res_text, http_res
-            )
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "application/json"):
-            http_response_text = await utils.stream_to_text_async(http_res)
+            http_res_text = await utils.stream_to_text_async(http_res)
             return operations.UpdatePassthroughJSONResponse(
-                default_application_json_any=utils.unmarshal_json(
-                    http_response_text, Optional[Any]
+                default_application_json_any=utils.unmarshal_json_response(
+                    Optional[Any], http_res, http_res_text
                 ),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -2296,14 +2162,8 @@ class Passthrough(BaseSDK):
                 headers=utils.get_response_headers(http_res.headers),
             )
 
-        content_type = http_res.headers.get("Content-Type")
         http_res_text = await utils.stream_to_text_async(http_res)
-        raise errors.SDKError(
-            f"Unexpected response received (code: {http_res.status_code}, type: {content_type})",
-            http_res.status_code,
-            http_res_text,
-            http_res,
-        )
+        raise errors.SDKError("Unexpected response received", http_res, http_res_text)
 
     def update_passthrough_raw(
         self,
@@ -2404,19 +2264,15 @@ class Passthrough(BaseSDK):
             )
         if utils.match_response(http_res, "4XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
-            raise errors.SDKError(
-                "API error occurred", http_res.status_code, http_res_text, http_res
-            )
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "5XX", "*"):
             http_res_text = utils.stream_to_text(http_res)
-            raise errors.SDKError(
-                "API error occurred", http_res.status_code, http_res_text, http_res
-            )
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "application/json"):
-            http_response_text = utils.stream_to_text(http_res)
+            http_res_text = utils.stream_to_text(http_res)
             return operations.UpdatePassthroughRawResponse(
-                default_application_json_any=utils.unmarshal_json(
-                    http_response_text, Optional[Any]
+                default_application_json_any=utils.unmarshal_json_response(
+                    Optional[Any], http_res, http_res_text
                 ),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -2459,14 +2315,8 @@ class Passthrough(BaseSDK):
                 headers=utils.get_response_headers(http_res.headers),
             )
 
-        content_type = http_res.headers.get("Content-Type")
         http_res_text = utils.stream_to_text(http_res)
-        raise errors.SDKError(
-            f"Unexpected response received (code: {http_res.status_code}, type: {content_type})",
-            http_res.status_code,
-            http_res_text,
-            http_res,
-        )
+        raise errors.SDKError("Unexpected response received", http_res, http_res_text)
 
     async def update_passthrough_raw_async(
         self,
@@ -2567,19 +2417,15 @@ class Passthrough(BaseSDK):
             )
         if utils.match_response(http_res, "4XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
-            raise errors.SDKError(
-                "API error occurred", http_res.status_code, http_res_text, http_res
-            )
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "5XX", "*"):
             http_res_text = await utils.stream_to_text_async(http_res)
-            raise errors.SDKError(
-                "API error occurred", http_res.status_code, http_res_text, http_res
-            )
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
         if utils.match_response(http_res, "default", "application/json"):
-            http_response_text = await utils.stream_to_text_async(http_res)
+            http_res_text = await utils.stream_to_text_async(http_res)
             return operations.UpdatePassthroughRawResponse(
-                default_application_json_any=utils.unmarshal_json(
-                    http_response_text, Optional[Any]
+                default_application_json_any=utils.unmarshal_json_response(
+                    Optional[Any], http_res, http_res_text
                 ),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -2622,11 +2468,5 @@ class Passthrough(BaseSDK):
                 headers=utils.get_response_headers(http_res.headers),
             )
 
-        content_type = http_res.headers.get("Content-Type")
         http_res_text = await utils.stream_to_text_async(http_res)
-        raise errors.SDKError(
-            f"Unexpected response received (code: {http_res.status_code}, type: {content_type})",
-            http_res.status_code,
-            http_res_text,
-            http_res,
-        )
+        raise errors.SDKError("Unexpected response received", http_res, http_res_text)

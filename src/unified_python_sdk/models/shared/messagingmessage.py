@@ -3,6 +3,7 @@
 from __future__ import annotations
 from .messagingattachment import MessagingAttachment, MessagingAttachmentTypedDict
 from .messagingmember import MessagingMember, MessagingMemberTypedDict
+from .messagingreaction import MessagingReaction, MessagingReactionTypedDict
 from .property_messagingmessage_author_member import (
     PropertyMessagingMessageAuthorMember,
     PropertyMessagingMessageAuthorMemberTypedDict,
@@ -30,6 +31,7 @@ class MessagingMessageTypedDict(TypedDict):
     message_markdown: NotRequired[str]
     parent_message_id: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
+    reactions: NotRequired[List[MessagingReactionTypedDict]]
     reference: NotRequired[str]
     root_message_id: NotRequired[str]
     subject: NotRequired[str]
@@ -68,6 +70,8 @@ class MessagingMessage(BaseModel):
     parent_message_id: Optional[str] = None
 
     raw: Optional[Dict[str, Any]] = None
+
+    reactions: Optional[List[MessagingReaction]] = None
 
     reference: Optional[str] = None
 
