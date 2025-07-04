@@ -6,19 +6,18 @@ from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk.types import BaseModel
 
 
-class AccountingProfitAndLossSubcategoryTypedDict(TypedDict):
-    r"""@deprecated"""
-
-    amount: NotRequired[float]
-    name: NotRequired[str]
+class AccountingProfitAndLossAccountTypedDict(TypedDict):
+    account_id: NotRequired[str]
+    account_name: NotRequired[str]
+    total_amount: NotRequired[float]
     transaction_ids: NotRequired[List[str]]
 
 
-class AccountingProfitAndLossSubcategory(BaseModel):
-    r"""@deprecated"""
+class AccountingProfitAndLossAccount(BaseModel):
+    account_id: Optional[str] = None
 
-    amount: Optional[float] = None
+    account_name: Optional[str] = None
 
-    name: Optional[str] = None
+    total_amount: Optional[float] = None
 
     transaction_ids: Optional[List[str]] = None

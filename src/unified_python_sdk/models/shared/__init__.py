@@ -60,9 +60,17 @@ if TYPE_CHECKING:
         AccountingOrganization,
         AccountingOrganizationTypedDict,
     )
+    from .accountingprofitandlossaccount import (
+        AccountingProfitAndLossAccount,
+        AccountingProfitAndLossAccountTypedDict,
+    )
     from .accountingprofitandlosscategory import (
         AccountingProfitAndLossCategory,
         AccountingProfitAndLossCategoryTypedDict,
+    )
+    from .accountingprofitandlosssection import (
+        AccountingProfitAndLossSection,
+        AccountingProfitAndLossSectionTypedDict,
     )
     from .accountingprofitandlosssubcategory import (
         AccountingProfitAndLossSubcategory,
@@ -966,8 +974,12 @@ __all__ = [
     "AccountingOrderTypedDict",
     "AccountingOrganization",
     "AccountingOrganizationTypedDict",
+    "AccountingProfitAndLossAccount",
+    "AccountingProfitAndLossAccountTypedDict",
     "AccountingProfitAndLossCategory",
     "AccountingProfitAndLossCategoryTypedDict",
+    "AccountingProfitAndLossSection",
+    "AccountingProfitAndLossSectionTypedDict",
     "AccountingProfitAndLossSubcategory",
     "AccountingProfitAndLossSubcategoryTypedDict",
     "AccountingReport",
@@ -1812,8 +1824,12 @@ _dynamic_imports: dict[str, str] = {
     "AccountingOrderTypedDict": ".accountingorder",
     "AccountingOrganization": ".accountingorganization",
     "AccountingOrganizationTypedDict": ".accountingorganization",
+    "AccountingProfitAndLossAccount": ".accountingprofitandlossaccount",
+    "AccountingProfitAndLossAccountTypedDict": ".accountingprofitandlossaccount",
     "AccountingProfitAndLossCategory": ".accountingprofitandlosscategory",
     "AccountingProfitAndLossCategoryTypedDict": ".accountingprofitandlosscategory",
+    "AccountingProfitAndLossSection": ".accountingprofitandlosssection",
+    "AccountingProfitAndLossSectionTypedDict": ".accountingprofitandlosssection",
     "AccountingProfitAndLossSubcategory": ".accountingprofitandlosssubcategory",
     "AccountingProfitAndLossSubcategoryTypedDict": ".accountingprofitandlosssubcategory",
     "AccountingReport": ".accountingreport",

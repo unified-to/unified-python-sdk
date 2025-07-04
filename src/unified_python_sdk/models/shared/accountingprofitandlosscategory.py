@@ -11,12 +11,16 @@ from unified_python_sdk.types import BaseModel
 
 
 class AccountingProfitAndLossCategoryTypedDict(TypedDict):
+    r"""@deprecated"""
+
     amount: NotRequired[float]
     name: NotRequired[str]
     sub_items: NotRequired[List[AccountingProfitAndLossSubcategoryTypedDict]]
 
 
 class AccountingProfitAndLossCategory(BaseModel):
+    r"""@deprecated"""
+
     amount: Optional[float] = None
 
     name: Optional[str] = None

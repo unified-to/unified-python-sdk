@@ -1,5 +1,7 @@
 # AccountingProfitAndLossSubcategory
 
+@deprecated
+
 
 ## Fields
 

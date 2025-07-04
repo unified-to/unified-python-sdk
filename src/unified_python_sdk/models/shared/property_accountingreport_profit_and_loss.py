@@ -5,6 +5,10 @@ from .accountingprofitandlosscategory import (
     AccountingProfitAndLossCategory,
     AccountingProfitAndLossCategoryTypedDict,
 )
+from .accountingprofitandlosssection import (
+    AccountingProfitAndLossSection,
+    AccountingProfitAndLossSectionTypedDict,
+)
 from typing import List, Optional
 from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk.types import BaseModel
@@ -12,19 +16,48 @@ from unified_python_sdk.types import BaseModel
 
 class PropertyAccountingReportProfitAndLossTypedDict(TypedDict):
     cost_of_goods_sold: NotRequired[List[AccountingProfitAndLossCategoryTypedDict]]
+    r"""@deprecated"""
+    cost_of_goods_sold_sections: NotRequired[
+        List[AccountingProfitAndLossSectionTypedDict]
+    ]
+    cost_of_goods_sold_total_amount: NotRequired[float]
     expenses: NotRequired[List[AccountingProfitAndLossCategoryTypedDict]]
+    r"""@deprecated"""
+    expenses_sections: NotRequired[List[AccountingProfitAndLossSectionTypedDict]]
+    expenses_total_amount: NotRequired[float]
     gross_profit_amount: NotRequired[float]
     income: NotRequired[List[AccountingProfitAndLossCategoryTypedDict]]
+    r"""@deprecated"""
+    income_sections: NotRequired[List[AccountingProfitAndLossSectionTypedDict]]
+    income_total_amount: NotRequired[float]
+    net_income_amount: NotRequired[float]
     net_profit_amount: NotRequired[float]
 
 
 class PropertyAccountingReportProfitAndLoss(BaseModel):
     cost_of_goods_sold: Optional[List[AccountingProfitAndLossCategory]] = None
+    r"""@deprecated"""
+
+    cost_of_goods_sold_sections: Optional[List[AccountingProfitAndLossSection]] = None
+
+    cost_of_goods_sold_total_amount: Optional[float] = None
 
     expenses: Optional[List[AccountingProfitAndLossCategory]] = None
+    r"""@deprecated"""
+
+    expenses_sections: Optional[List[AccountingProfitAndLossSection]] = None
+
+    expenses_total_amount: Optional[float] = None
 
     gross_profit_amount: Optional[float] = None
 
     income: Optional[List[AccountingProfitAndLossCategory]] = None
+    r"""@deprecated"""
+
+    income_sections: Optional[List[AccountingProfitAndLossSection]] = None
+
+    income_total_amount: Optional[float] = None
+
+    net_income_amount: Optional[float] = None
 
     net_profit_amount: Optional[float] = None

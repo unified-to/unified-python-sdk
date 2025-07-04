@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: b9a9d44d0d49d0a08964e6f3ef075270
+  docChecksum: cfcf5e019d822f732c2d765252728b21
   docVersion: "1.0"
-  speakeasyVersion: 1.575.1
-  generationVersion: 2.648.1
-  releaseVersion: 0.48.4
-  configChecksum: b191fd87352091bd943585879a577867
+  speakeasyVersion: 1.575.4
+  generationVersion: 2.648.7
+  releaseVersion: 0.48.5
+  configChecksum: fb1d9fbcc17a15846b21f133f1862525
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -16,7 +16,7 @@ features:
     acceptHeaders: 3.0.0
     additionalDependencies: 1.0.0
     constsAndDefaults: 1.0.5
-    core: 5.19.3
+    core: 5.19.4
     defaultEnabledRetries: 0.2.0
     downloadStreams: 1.0.1
     enumUnions: 0.1.0
@@ -952,7 +952,9 @@ generatedFiles:
   - docs/models/shared/accountingorderstatus.md
   - docs/models/shared/accountingordertype.md
   - docs/models/shared/accountingorganization.md
+  - docs/models/shared/accountingprofitandlossaccount.md
   - docs/models/shared/accountingprofitandlosscategory.md
+  - docs/models/shared/accountingprofitandlosssection.md
   - docs/models/shared/accountingprofitandlosssubcategory.md
   - docs/models/shared/accountingreport.md
   - docs/models/shared/accountingreporttype.md
@@ -2049,7 +2051,9 @@ generatedFiles:
   - src/unified_python_sdk/models/shared/accountinglineitem.py
   - src/unified_python_sdk/models/shared/accountingorder.py
   - src/unified_python_sdk/models/shared/accountingorganization.py
+  - src/unified_python_sdk/models/shared/accountingprofitandlossaccount.py
   - src/unified_python_sdk/models/shared/accountingprofitandlosscategory.py
+  - src/unified_python_sdk/models/shared/accountingprofitandlosssection.py
   - src/unified_python_sdk/models/shared/accountingprofitandlosssubcategory.py
   - src/unified_python_sdk/models/shared/accountingreport.py
   - src/unified_python_sdk/models/shared/accountingtaxrate.py
