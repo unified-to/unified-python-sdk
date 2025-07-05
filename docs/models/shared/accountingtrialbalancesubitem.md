@@ -1,4 +1,4 @@
-# AccountingTrialBalanceSubItem
+# AccountingTrialbalanceSubItem
 
 
 ## Fields

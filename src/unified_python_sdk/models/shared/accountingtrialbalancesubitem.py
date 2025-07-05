@@ -6,13 +6,13 @@ from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk.types import BaseModel
 
 
-class AccountingTrialBalanceSubItemTypedDict(TypedDict):
+class AccountingTrialbalanceSubItemTypedDict(TypedDict):
     account_id: NotRequired[str]
     account_name: NotRequired[str]
     amount: NotRequired[float]
 
 
-class AccountingTrialBalanceSubItem(BaseModel):
+class AccountingTrialbalanceSubItem(BaseModel):
     account_id: Optional[str] = None
 
     account_name: Optional[str] = None

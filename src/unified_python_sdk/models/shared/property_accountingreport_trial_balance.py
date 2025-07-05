@@ -2,23 +2,48 @@
 
 from __future__ import annotations
 from .accountingtrialbalancesubitem import (
-    AccountingTrialBalanceSubItem,
-    AccountingTrialBalanceSubItemTypedDict,
+    AccountingTrialbalanceSubItem,
+    AccountingTrialbalanceSubItemTypedDict,
 )
-from typing import List, Optional
+from datetime import datetime
+from typing import Any, Dict, List, Optional
 from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk.types import BaseModel
 
 
 class PropertyAccountingReportTrialBalanceTypedDict(TypedDict):
-    sub_items: NotRequired[List[AccountingTrialBalanceSubItemTypedDict]]
+    created_at: NotRequired[datetime]
+    currency: NotRequired[str]
+    end_at: NotRequired[datetime]
+    id: NotRequired[str]
+    name: NotRequired[str]
+    raw: NotRequired[Dict[str, Any]]
+    start_at: NotRequired[datetime]
+    sub_items: NotRequired[List[AccountingTrialbalanceSubItemTypedDict]]
     total_credit_amount: NotRequired[float]
     total_debit_amount: NotRequired[float]
+    updated_at: NotRequired[datetime]
 
 
 class PropertyAccountingReportTrialBalance(BaseModel):
-    sub_items: Optional[List[AccountingTrialBalanceSubItem]] = None
+    created_at: Optional[datetime] = None
+
+    currency: Optional[str] = None
+
+    end_at: Optional[datetime] = None
+
+    id: Optional[str] = None
+
+    name: Optional[str] = None
+
+    raw: Optional[Dict[str, Any]] = None
+
+    start_at: Optional[datetime] = None
+
+    sub_items: Optional[List[AccountingTrialbalanceSubItem]] = None
 
     total_credit_amount: Optional[float] = None
 
     total_debit_amount: Optional[float] = None
+
+    updated_at: Optional[datetime] = None

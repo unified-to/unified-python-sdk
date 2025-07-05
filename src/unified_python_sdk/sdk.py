@@ -23,6 +23,8 @@ if TYPE_CHECKING:
     from unified_python_sdk.applicationstatus import Applicationstatus
     from unified_python_sdk.ats import Ats
     from unified_python_sdk.auth import Auth
+    from unified_python_sdk.balancesheet import Balancesheet
+    from unified_python_sdk.bill import Bill
     from unified_python_sdk.branch import Branch
     from unified_python_sdk.busy import Busy
     from unified_python_sdk.calendar import Calendar
@@ -38,6 +40,7 @@ if TYPE_CHECKING:
     from unified_python_sdk.connection import Connection
     from unified_python_sdk.contact import Contact
     from unified_python_sdk.course import Course
+    from unified_python_sdk.creditmemo import Creditmemo
     from unified_python_sdk.crm import Crm
     from unified_python_sdk.customer import Customer
     from unified_python_sdk.deal import Deal
@@ -82,15 +85,18 @@ if TYPE_CHECKING:
     from unified_python_sdk.payslip import Payslip
     from unified_python_sdk.person import Person
     from unified_python_sdk.pipeline import Pipeline
+    from unified_python_sdk.profitloss import Profitloss
     from unified_python_sdk.project import Project
     from unified_python_sdk.prompt import Prompt
     from unified_python_sdk.pullrequest import Pullrequest
+    from unified_python_sdk.purchaseorder import Purchaseorder
     from unified_python_sdk.recording import Recording
     from unified_python_sdk.refund import Refund
     from unified_python_sdk.repo import Repo
     from unified_python_sdk.report import Report
     from unified_python_sdk.repository import Repository
     from unified_python_sdk.review import Review
+    from unified_python_sdk.salesorder import Salesorder
     from unified_python_sdk.scim import Scim
     from unified_python_sdk.scorecard import Scorecard
     from unified_python_sdk.space import Space
@@ -104,6 +110,7 @@ if TYPE_CHECKING:
     from unified_python_sdk.timeoff import Timeoff
     from unified_python_sdk.timeshift import Timeshift
     from unified_python_sdk.transaction import Transaction
+    from unified_python_sdk.trialbalance import Trialbalance
     from unified_python_sdk.uc import Uc
     from unified_python_sdk.unified import Unified
     from unified_python_sdk.user import User
@@ -115,14 +122,21 @@ class UnifiedTo(BaseSDK):
 
     accounting: "Accounting"
     account: "Account"
+    balancesheet: "Balancesheet"
+    bill: "Bill"
     contact: "Contact"
+    creditmemo: "Creditmemo"
     invoice: "Invoice"
     journal: "Journal"
     order: "Order"
     organization: "Organization"
+    profitloss: "Profitloss"
+    purchaseorder: "Purchaseorder"
     report: "Report"
+    salesorder: "Salesorder"
     taxrate: "Taxrate"
     transaction: "Transaction"
+    trialbalance: "Trialbalance"
     ats: "Ats"
     activity: "Activity"
     application: "Application"
@@ -209,14 +223,21 @@ class UnifiedTo(BaseSDK):
     _sub_sdk_map = {
         "accounting": ("unified_python_sdk.accounting", "Accounting"),
         "account": ("unified_python_sdk.account", "Account"),
+        "balancesheet": ("unified_python_sdk.balancesheet", "Balancesheet"),
+        "bill": ("unified_python_sdk.bill", "Bill"),
         "contact": ("unified_python_sdk.contact", "Contact"),
+        "creditmemo": ("unified_python_sdk.creditmemo", "Creditmemo"),
         "invoice": ("unified_python_sdk.invoice", "Invoice"),
         "journal": ("unified_python_sdk.journal", "Journal"),
         "order": ("unified_python_sdk.order", "Order"),
         "organization": ("unified_python_sdk.organization", "Organization"),
+        "profitloss": ("unified_python_sdk.profitloss", "Profitloss"),
+        "purchaseorder": ("unified_python_sdk.purchaseorder", "Purchaseorder"),
         "report": ("unified_python_sdk.report", "Report"),
+        "salesorder": ("unified_python_sdk.salesorder", "Salesorder"),
         "taxrate": ("unified_python_sdk.taxrate", "Taxrate"),
         "transaction": ("unified_python_sdk.transaction", "Transaction"),
+        "trialbalance": ("unified_python_sdk.trialbalance", "Trialbalance"),
         "ats": ("unified_python_sdk.ats", "Ats"),
         "activity": ("unified_python_sdk.activity", "Activity"),
         "application": ("unified_python_sdk.application", "Application"),

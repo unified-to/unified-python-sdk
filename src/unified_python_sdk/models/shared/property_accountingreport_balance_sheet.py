@@ -2,26 +2,51 @@
 
 from __future__ import annotations
 from .accountingbalancesheetitem import (
-    AccountingBalanceSheetItem,
-    AccountingBalanceSheetItemTypedDict,
+    AccountingBalancesheetItem,
+    AccountingBalancesheetItemTypedDict,
 )
-from typing import List, Optional
+from datetime import datetime
+from typing import Any, Dict, List, Optional
 from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk.types import BaseModel
 
 
 class PropertyAccountingReportBalanceSheetTypedDict(TypedDict):
-    assets: NotRequired[List[AccountingBalanceSheetItemTypedDict]]
-    equity: NotRequired[List[AccountingBalanceSheetItemTypedDict]]
-    liabilities: NotRequired[List[AccountingBalanceSheetItemTypedDict]]
+    assets: NotRequired[List[AccountingBalancesheetItemTypedDict]]
+    created_at: NotRequired[datetime]
+    currency: NotRequired[str]
+    end_at: NotRequired[datetime]
+    equity: NotRequired[List[AccountingBalancesheetItemTypedDict]]
+    id: NotRequired[str]
+    liabilities: NotRequired[List[AccountingBalancesheetItemTypedDict]]
+    name: NotRequired[str]
     net_assets_amount: NotRequired[float]
+    raw: NotRequired[Dict[str, Any]]
+    start_at: NotRequired[datetime]
+    updated_at: NotRequired[datetime]
 
 
 class PropertyAccountingReportBalanceSheet(BaseModel):
-    assets: Optional[List[AccountingBalanceSheetItem]] = None
+    assets: Optional[List[AccountingBalancesheetItem]] = None
 
-    equity: Optional[List[AccountingBalanceSheetItem]] = None
+    created_at: Optional[datetime] = None
 
-    liabilities: Optional[List[AccountingBalanceSheetItem]] = None
+    currency: Optional[str] = None
+
+    end_at: Optional[datetime] = None
+
+    equity: Optional[List[AccountingBalancesheetItem]] = None
+
+    id: Optional[str] = None
+
+    liabilities: Optional[List[AccountingBalancesheetItem]] = None
+
+    name: Optional[str] = None
 
     net_assets_amount: Optional[float] = None
+
+    raw: Optional[Dict[str, Any]] = None
+
+    start_at: Optional[datetime] = None
+
+    updated_at: Optional[datetime] = None

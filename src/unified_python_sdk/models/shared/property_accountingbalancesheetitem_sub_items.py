@@ -5,9 +5,9 @@ from typing_extensions import TypedDict
 from unified_python_sdk.types import BaseModel
 
 
-class PropertyAccountingBalanceSheetItemSubItemsTypedDict(TypedDict):
+class PropertyAccountingBalancesheetItemSubItemsTypedDict(TypedDict):
     pass
 
 
-class PropertyAccountingBalanceSheetItemSubItems(BaseModel):
+class PropertyAccountingBalancesheetItemSubItems(BaseModel):
     pass

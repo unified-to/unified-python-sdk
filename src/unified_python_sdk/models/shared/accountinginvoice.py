@@ -13,7 +13,7 @@ from unified_python_sdk.types import BaseModel
 from unified_python_sdk.utils import validate_open_enum
 
 
-class PaymentCollectionMethod(str, Enum, metaclass=utils.OpenEnumMeta):
+class AccountingInvoicePaymentCollectionMethod(str, Enum, metaclass=utils.OpenEnumMeta):
     SEND_INVOICE = "send_invoice"
     CHARGE_AUTOMATICALLY = "charge_automatically"
 
@@ -50,7 +50,7 @@ class AccountingInvoiceTypedDict(TypedDict):
     notes: NotRequired[str]
     paid_amount: NotRequired[float]
     paid_at: NotRequired[datetime]
-    payment_collection_method: NotRequired[PaymentCollectionMethod]
+    payment_collection_method: NotRequired[AccountingInvoicePaymentCollectionMethod]
     posted_at: NotRequired[datetime]
     raw: NotRequired[Dict[str, Any]]
     refund_amount: NotRequired[float]
@@ -97,7 +97,8 @@ class AccountingInvoice(BaseModel):
     paid_at: Optional[datetime] = None
 
     payment_collection_method: Annotated[
-        Optional[PaymentCollectionMethod], PlainValidator(validate_open_enum(False))
+        Optional[AccountingInvoicePaymentCollectionMethod],
+        PlainValidator(validate_open_enum(False)),
     ] = None
 
     posted_at: Optional[datetime] = None

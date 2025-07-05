@@ -18,9 +18,19 @@ if TYPE_CHECKING:
         AccountingAttachment,
         AccountingAttachmentTypedDict,
     )
+    from .accountingbalancesheet import (
+        AccountingBalancesheet,
+        AccountingBalancesheetTypedDict,
+    )
     from .accountingbalancesheetitem import (
-        AccountingBalanceSheetItem,
-        AccountingBalanceSheetItemTypedDict,
+        AccountingBalancesheetItem,
+        AccountingBalancesheetItemTypedDict,
+    )
+    from .accountingbill import (
+        AccountingBill,
+        AccountingBillStatus,
+        AccountingBillTypedDict,
+        PaymentCollectionMethod,
     )
     from .accountingcontact import (
         AccountingContact,
@@ -32,6 +42,12 @@ if TYPE_CHECKING:
         AccountingContactPaymentMethodType,
         AccountingContactPaymentMethodTypedDict,
     )
+    from .accountingcreditmemo import (
+        AccountingCreditmemo,
+        AccountingCreditmemoPaymentCollectionMethod,
+        AccountingCreditmemoStatus,
+        AccountingCreditmemoTypedDict,
+    )
     from .accountingemail import (
         AccountingEmail,
         AccountingEmailType,
@@ -39,10 +55,10 @@ if TYPE_CHECKING:
     )
     from .accountinginvoice import (
         AccountingInvoice,
+        AccountingInvoicePaymentCollectionMethod,
         AccountingInvoiceStatus,
         AccountingInvoiceType,
         AccountingInvoiceTypedDict,
-        PaymentCollectionMethod,
     )
     from .accountingjournal import AccountingJournal, AccountingJournalTypedDict
     from .accountingjournallineitem import (
@@ -60,26 +76,40 @@ if TYPE_CHECKING:
         AccountingOrganization,
         AccountingOrganizationTypedDict,
     )
-    from .accountingprofitandlossaccount import (
-        AccountingProfitAndLossAccount,
-        AccountingProfitAndLossAccountTypedDict,
+    from .accountingprofitloss import (
+        AccountingProfitloss,
+        AccountingProfitlossTypedDict,
     )
-    from .accountingprofitandlosscategory import (
-        AccountingProfitAndLossCategory,
-        AccountingProfitAndLossCategoryTypedDict,
+    from .accountingprofitlossaccount import (
+        AccountingProfitlossAccount,
+        AccountingProfitlossAccountTypedDict,
     )
-    from .accountingprofitandlosssection import (
-        AccountingProfitAndLossSection,
-        AccountingProfitAndLossSectionTypedDict,
+    from .accountingprofitlosscategory import (
+        AccountingProfitlossCategory,
+        AccountingProfitlossCategoryTypedDict,
     )
-    from .accountingprofitandlosssubcategory import (
-        AccountingProfitAndLossSubcategory,
-        AccountingProfitAndLossSubcategoryTypedDict,
+    from .accountingprofitlosssection import (
+        AccountingProfitlossSection,
+        AccountingProfitlossSectionTypedDict,
+    )
+    from .accountingprofitlosssubcategory import (
+        AccountingProfitlossSubcategory,
+        AccountingProfitlossSubcategoryTypedDict,
+    )
+    from .accountingpurchaseorder import (
+        AccountingPurchaseorder,
+        AccountingPurchaseorderStatus,
+        AccountingPurchaseorderTypedDict,
     )
     from .accountingreport import (
         AccountingReport,
         AccountingReportType,
         AccountingReportTypedDict,
+    )
+    from .accountingsalesorder import (
+        AccountingSalesorder,
+        AccountingSalesorderStatus,
+        AccountingSalesorderTypedDict,
     )
     from .accountingtaxrate import AccountingTaxrate, AccountingTaxrateTypedDict
     from .accountingtelephone import (
@@ -99,9 +129,13 @@ if TYPE_CHECKING:
         AccountingTransactionLineItem,
         AccountingTransactionLineItemTypedDict,
     )
+    from .accountingtrialbalance import (
+        AccountingTrialbalance,
+        AccountingTrialbalanceTypedDict,
+    )
     from .accountingtrialbalancesubitem import (
-        AccountingTrialBalanceSubItem,
-        AccountingTrialBalanceSubItemTypedDict,
+        AccountingTrialbalanceSubItem,
+        AccountingTrialbalanceSubItemTypedDict,
     )
     from .apicall import APICall, APICallType, APICallTypedDict
     from .atsactivity import AtsActivity, AtsActivityType, AtsActivityTypedDict
@@ -615,8 +649,8 @@ if TYPE_CHECKING:
         PaymentSubscriptionTypedDict,
     )
     from .property_accountingbalancesheetitem_sub_items import (
-        PropertyAccountingBalanceSheetItemSubItems,
-        PropertyAccountingBalanceSheetItemSubItemsTypedDict,
+        PropertyAccountingBalancesheetItemSubItems,
+        PropertyAccountingBalancesheetItemSubItemsTypedDict,
     )
     from .property_accountingcontact_billing_address import (
         PropertyAccountingContactBillingAddress,
@@ -638,6 +672,14 @@ if TYPE_CHECKING:
         PropertyAccountingOrganizationAddress,
         PropertyAccountingOrganizationAddressTypedDict,
     )
+    from .property_accountingpurchaseorder_billing_address import (
+        PropertyAccountingPurchaseorderBillingAddress,
+        PropertyAccountingPurchaseorderBillingAddressTypedDict,
+    )
+    from .property_accountingpurchaseorder_shipping_address import (
+        PropertyAccountingPurchaseorderShippingAddress,
+        PropertyAccountingPurchaseorderShippingAddressTypedDict,
+    )
     from .property_accountingreport_balance_sheet import (
         PropertyAccountingReportBalanceSheet,
         PropertyAccountingReportBalanceSheetTypedDict,
@@ -649,6 +691,14 @@ if TYPE_CHECKING:
     from .property_accountingreport_trial_balance import (
         PropertyAccountingReportTrialBalance,
         PropertyAccountingReportTrialBalanceTypedDict,
+    )
+    from .property_accountingsalesorder_billing_address import (
+        PropertyAccountingSalesorderBillingAddress,
+        PropertyAccountingSalesorderBillingAddressTypedDict,
+    )
+    from .property_accountingsalesorder_shipping_address import (
+        PropertyAccountingSalesorderShippingAddress,
+        PropertyAccountingSalesorderShippingAddressTypedDict,
     )
     from .property_atsactivity_from import (
         PropertyAtsActivityFrom,
@@ -948,17 +998,27 @@ __all__ = [
     "AccountingAssociatedContactTypedDict",
     "AccountingAttachment",
     "AccountingAttachmentTypedDict",
-    "AccountingBalanceSheetItem",
-    "AccountingBalanceSheetItemTypedDict",
+    "AccountingBalancesheet",
+    "AccountingBalancesheetItem",
+    "AccountingBalancesheetItemTypedDict",
+    "AccountingBalancesheetTypedDict",
+    "AccountingBill",
+    "AccountingBillStatus",
+    "AccountingBillTypedDict",
     "AccountingContact",
     "AccountingContactPaymentMethod",
     "AccountingContactPaymentMethodType",
     "AccountingContactPaymentMethodTypedDict",
     "AccountingContactTypedDict",
+    "AccountingCreditmemo",
+    "AccountingCreditmemoPaymentCollectionMethod",
+    "AccountingCreditmemoStatus",
+    "AccountingCreditmemoTypedDict",
     "AccountingEmail",
     "AccountingEmailType",
     "AccountingEmailTypedDict",
     "AccountingInvoice",
+    "AccountingInvoicePaymentCollectionMethod",
     "AccountingInvoiceStatus",
     "AccountingInvoiceType",
     "AccountingInvoiceTypedDict",
@@ -974,17 +1034,25 @@ __all__ = [
     "AccountingOrderTypedDict",
     "AccountingOrganization",
     "AccountingOrganizationTypedDict",
-    "AccountingProfitAndLossAccount",
-    "AccountingProfitAndLossAccountTypedDict",
-    "AccountingProfitAndLossCategory",
-    "AccountingProfitAndLossCategoryTypedDict",
-    "AccountingProfitAndLossSection",
-    "AccountingProfitAndLossSectionTypedDict",
-    "AccountingProfitAndLossSubcategory",
-    "AccountingProfitAndLossSubcategoryTypedDict",
+    "AccountingProfitloss",
+    "AccountingProfitlossAccount",
+    "AccountingProfitlossAccountTypedDict",
+    "AccountingProfitlossCategory",
+    "AccountingProfitlossCategoryTypedDict",
+    "AccountingProfitlossSection",
+    "AccountingProfitlossSectionTypedDict",
+    "AccountingProfitlossSubcategory",
+    "AccountingProfitlossSubcategoryTypedDict",
+    "AccountingProfitlossTypedDict",
+    "AccountingPurchaseorder",
+    "AccountingPurchaseorderStatus",
+    "AccountingPurchaseorderTypedDict",
     "AccountingReport",
     "AccountingReportType",
     "AccountingReportTypedDict",
+    "AccountingSalesorder",
+    "AccountingSalesorderStatus",
+    "AccountingSalesorderTypedDict",
     "AccountingTaxrate",
     "AccountingTaxrateTypedDict",
     "AccountingTelephone",
@@ -996,8 +1064,10 @@ __all__ = [
     "AccountingTransactionLineItem",
     "AccountingTransactionLineItemTypedDict",
     "AccountingTransactionTypedDict",
-    "AccountingTrialBalanceSubItem",
-    "AccountingTrialBalanceSubItemTypedDict",
+    "AccountingTrialbalance",
+    "AccountingTrialbalanceSubItem",
+    "AccountingTrialbalanceSubItemTypedDict",
+    "AccountingTrialbalanceTypedDict",
     "AtsActivity",
     "AtsActivityType",
     "AtsActivityTypedDict",
@@ -1528,8 +1598,8 @@ __all__ = [
     "PaymentSubscriptionTypedDict",
     "PaymentType",
     "Priority",
-    "PropertyAccountingBalanceSheetItemSubItems",
-    "PropertyAccountingBalanceSheetItemSubItemsTypedDict",
+    "PropertyAccountingBalancesheetItemSubItems",
+    "PropertyAccountingBalancesheetItemSubItemsTypedDict",
     "PropertyAccountingContactBillingAddress",
     "PropertyAccountingContactBillingAddressTypedDict",
     "PropertyAccountingContactShippingAddress",
@@ -1540,12 +1610,20 @@ __all__ = [
     "PropertyAccountingOrderShippingAddressTypedDict",
     "PropertyAccountingOrganizationAddress",
     "PropertyAccountingOrganizationAddressTypedDict",
+    "PropertyAccountingPurchaseorderBillingAddress",
+    "PropertyAccountingPurchaseorderBillingAddressTypedDict",
+    "PropertyAccountingPurchaseorderShippingAddress",
+    "PropertyAccountingPurchaseorderShippingAddressTypedDict",
     "PropertyAccountingReportBalanceSheet",
     "PropertyAccountingReportBalanceSheetTypedDict",
     "PropertyAccountingReportProfitAndLoss",
     "PropertyAccountingReportProfitAndLossTypedDict",
     "PropertyAccountingReportTrialBalance",
     "PropertyAccountingReportTrialBalanceTypedDict",
+    "PropertyAccountingSalesorderBillingAddress",
+    "PropertyAccountingSalesorderBillingAddressTypedDict",
+    "PropertyAccountingSalesorderShippingAddress",
+    "PropertyAccountingSalesorderShippingAddressTypedDict",
     "PropertyAtsActivityFrom",
     "PropertyAtsActivityFromType",
     "PropertyAtsActivityFromTypedDict",
@@ -1796,22 +1874,32 @@ _dynamic_imports: dict[str, str] = {
     "AccountingAssociatedContactTypedDict": ".accountingassociatedcontact",
     "AccountingAttachment": ".accountingattachment",
     "AccountingAttachmentTypedDict": ".accountingattachment",
-    "AccountingBalanceSheetItem": ".accountingbalancesheetitem",
-    "AccountingBalanceSheetItemTypedDict": ".accountingbalancesheetitem",
+    "AccountingBalancesheet": ".accountingbalancesheet",
+    "AccountingBalancesheetTypedDict": ".accountingbalancesheet",
+    "AccountingBalancesheetItem": ".accountingbalancesheetitem",
+    "AccountingBalancesheetItemTypedDict": ".accountingbalancesheetitem",
+    "AccountingBill": ".accountingbill",
+    "AccountingBillStatus": ".accountingbill",
+    "AccountingBillTypedDict": ".accountingbill",
+    "PaymentCollectionMethod": ".accountingbill",
     "AccountingContact": ".accountingcontact",
     "AccountingContactTypedDict": ".accountingcontact",
     "TaxExemption": ".accountingcontact",
     "AccountingContactPaymentMethod": ".accountingcontactpaymentmethod",
     "AccountingContactPaymentMethodType": ".accountingcontactpaymentmethod",
     "AccountingContactPaymentMethodTypedDict": ".accountingcontactpaymentmethod",
+    "AccountingCreditmemo": ".accountingcreditmemo",
+    "AccountingCreditmemoPaymentCollectionMethod": ".accountingcreditmemo",
+    "AccountingCreditmemoStatus": ".accountingcreditmemo",
+    "AccountingCreditmemoTypedDict": ".accountingcreditmemo",
     "AccountingEmail": ".accountingemail",
     "AccountingEmailType": ".accountingemail",
     "AccountingEmailTypedDict": ".accountingemail",
     "AccountingInvoice": ".accountinginvoice",
+    "AccountingInvoicePaymentCollectionMethod": ".accountinginvoice",
     "AccountingInvoiceStatus": ".accountinginvoice",
     "AccountingInvoiceType": ".accountinginvoice",
     "AccountingInvoiceTypedDict": ".accountinginvoice",
-    "PaymentCollectionMethod": ".accountinginvoice",
     "AccountingJournal": ".accountingjournal",
     "AccountingJournalTypedDict": ".accountingjournal",
     "AccountingJournalLineitem": ".accountingjournallineitem",
@@ -1824,17 +1912,25 @@ _dynamic_imports: dict[str, str] = {
     "AccountingOrderTypedDict": ".accountingorder",
     "AccountingOrganization": ".accountingorganization",
     "AccountingOrganizationTypedDict": ".accountingorganization",
-    "AccountingProfitAndLossAccount": ".accountingprofitandlossaccount",
-    "AccountingProfitAndLossAccountTypedDict": ".accountingprofitandlossaccount",
-    "AccountingProfitAndLossCategory": ".accountingprofitandlosscategory",
-    "AccountingProfitAndLossCategoryTypedDict": ".accountingprofitandlosscategory",
-    "AccountingProfitAndLossSection": ".accountingprofitandlosssection",
-    "AccountingProfitAndLossSectionTypedDict": ".accountingprofitandlosssection",
-    "AccountingProfitAndLossSubcategory": ".accountingprofitandlosssubcategory",
-    "AccountingProfitAndLossSubcategoryTypedDict": ".accountingprofitandlosssubcategory",
+    "AccountingProfitloss": ".accountingprofitloss",
+    "AccountingProfitlossTypedDict": ".accountingprofitloss",
+    "AccountingProfitlossAccount": ".accountingprofitlossaccount",
+    "AccountingProfitlossAccountTypedDict": ".accountingprofitlossaccount",
+    "AccountingProfitlossCategory": ".accountingprofitlosscategory",
+    "AccountingProfitlossCategoryTypedDict": ".accountingprofitlosscategory",
+    "AccountingProfitlossSection": ".accountingprofitlosssection",
+    "AccountingProfitlossSectionTypedDict": ".accountingprofitlosssection",
+    "AccountingProfitlossSubcategory": ".accountingprofitlosssubcategory",
+    "AccountingProfitlossSubcategoryTypedDict": ".accountingprofitlosssubcategory",
+    "AccountingPurchaseorder": ".accountingpurchaseorder",
+    "AccountingPurchaseorderStatus": ".accountingpurchaseorder",
+    "AccountingPurchaseorderTypedDict": ".accountingpurchaseorder",
     "AccountingReport": ".accountingreport",
     "AccountingReportType": ".accountingreport",
     "AccountingReportTypedDict": ".accountingreport",
+    "AccountingSalesorder": ".accountingsalesorder",
+    "AccountingSalesorderStatus": ".accountingsalesorder",
+    "AccountingSalesorderTypedDict": ".accountingsalesorder",
     "AccountingTaxrate": ".accountingtaxrate",
     "AccountingTaxrateTypedDict": ".accountingtaxrate",
     "AccountingTelephone": ".accountingtelephone",
@@ -1846,8 +1942,10 @@ _dynamic_imports: dict[str, str] = {
     "AccountingTransactionContactTypedDict": ".accountingtransactioncontact",
     "AccountingTransactionLineItem": ".accountingtransactionlineitem",
     "AccountingTransactionLineItemTypedDict": ".accountingtransactionlineitem",
-    "AccountingTrialBalanceSubItem": ".accountingtrialbalancesubitem",
-    "AccountingTrialBalanceSubItemTypedDict": ".accountingtrialbalancesubitem",
+    "AccountingTrialbalance": ".accountingtrialbalance",
+    "AccountingTrialbalanceTypedDict": ".accountingtrialbalance",
+    "AccountingTrialbalanceSubItem": ".accountingtrialbalancesubitem",
+    "AccountingTrialbalanceSubItemTypedDict": ".accountingtrialbalancesubitem",
     "APICall": ".apicall",
     "APICallType": ".apicall",
     "APICallTypedDict": ".apicall",
@@ -2388,8 +2486,8 @@ _dynamic_imports: dict[str, str] = {
     "PaymentSubscription": ".paymentsubscription",
     "PaymentSubscriptionStatus": ".paymentsubscription",
     "PaymentSubscriptionTypedDict": ".paymentsubscription",
-    "PropertyAccountingBalanceSheetItemSubItems": ".property_accountingbalancesheetitem_sub_items",
-    "PropertyAccountingBalanceSheetItemSubItemsTypedDict": ".property_accountingbalancesheetitem_sub_items",
+    "PropertyAccountingBalancesheetItemSubItems": ".property_accountingbalancesheetitem_sub_items",
+    "PropertyAccountingBalancesheetItemSubItemsTypedDict": ".property_accountingbalancesheetitem_sub_items",
     "PropertyAccountingContactBillingAddress": ".property_accountingcontact_billing_address",
     "PropertyAccountingContactBillingAddressTypedDict": ".property_accountingcontact_billing_address",
     "PropertyAccountingContactShippingAddress": ".property_accountingcontact_shipping_address",
@@ -2400,12 +2498,20 @@ _dynamic_imports: dict[str, str] = {
     "PropertyAccountingOrderShippingAddressTypedDict": ".property_accountingorder_shipping_address",
     "PropertyAccountingOrganizationAddress": ".property_accountingorganization_address",
     "PropertyAccountingOrganizationAddressTypedDict": ".property_accountingorganization_address",
+    "PropertyAccountingPurchaseorderBillingAddress": ".property_accountingpurchaseorder_billing_address",
+    "PropertyAccountingPurchaseorderBillingAddressTypedDict": ".property_accountingpurchaseorder_billing_address",
+    "PropertyAccountingPurchaseorderShippingAddress": ".property_accountingpurchaseorder_shipping_address",
+    "PropertyAccountingPurchaseorderShippingAddressTypedDict": ".property_accountingpurchaseorder_shipping_address",
     "PropertyAccountingReportBalanceSheet": ".property_accountingreport_balance_sheet",
     "PropertyAccountingReportBalanceSheetTypedDict": ".property_accountingreport_balance_sheet",
     "PropertyAccountingReportProfitAndLoss": ".property_accountingreport_profit_and_loss",
     "PropertyAccountingReportProfitAndLossTypedDict": ".property_accountingreport_profit_and_loss",
     "PropertyAccountingReportTrialBalance": ".property_accountingreport_trial_balance",
     "PropertyAccountingReportTrialBalanceTypedDict": ".property_accountingreport_trial_balance",
+    "PropertyAccountingSalesorderBillingAddress": ".property_accountingsalesorder_billing_address",
+    "PropertyAccountingSalesorderBillingAddressTypedDict": ".property_accountingsalesorder_billing_address",
+    "PropertyAccountingSalesorderShippingAddress": ".property_accountingsalesorder_shipping_address",
+    "PropertyAccountingSalesorderShippingAddressTypedDict": ".property_accountingsalesorder_shipping_address",
     "PropertyAtsActivityFrom": ".property_atsactivity_from",
     "PropertyAtsActivityFromType": ".property_atsactivity_from",
     "PropertyAtsActivityFromTypedDict": ".property_atsactivity_from",

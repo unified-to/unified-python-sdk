@@ -173,49 +173,79 @@ asyncio.run(main())
 ### [accounting](docs/sdks/accounting/README.md)
 
 * [create_accounting_account](docs/sdks/accounting/README.md#create_accounting_account) - Create an account
+* [create_accounting_bill](docs/sdks/accounting/README.md#create_accounting_bill) - Create a bill
 * [create_accounting_contact](docs/sdks/accounting/README.md#create_accounting_contact) - Create a contact
+* [create_accounting_creditmemo](docs/sdks/accounting/README.md#create_accounting_creditmemo) - Create a creditmemo
 * [create_accounting_invoice](docs/sdks/accounting/README.md#create_accounting_invoice) - Create an invoice
 * [create_accounting_journal](docs/sdks/accounting/README.md#create_accounting_journal) - Create a journal
 * [create_accounting_order](docs/sdks/accounting/README.md#create_accounting_order) - Create an order
+* [create_accounting_purchaseorder](docs/sdks/accounting/README.md#create_accounting_purchaseorder) - Create a purchaseorder
+* [create_accounting_salesorder](docs/sdks/accounting/README.md#create_accounting_salesorder) - Create a salesorder
 * [create_accounting_taxrate](docs/sdks/accounting/README.md#create_accounting_taxrate) - Create a taxrate
 * [create_accounting_transaction](docs/sdks/accounting/README.md#create_accounting_transaction) - Create a transaction
 * [get_accounting_account](docs/sdks/accounting/README.md#get_accounting_account) - Retrieve an account
+* [get_accounting_balancesheet](docs/sdks/accounting/README.md#get_accounting_balancesheet) - Retrieve a balancesheet
+* [get_accounting_bill](docs/sdks/accounting/README.md#get_accounting_bill) - Retrieve a bill
 * [get_accounting_contact](docs/sdks/accounting/README.md#get_accounting_contact) - Retrieve a contact
+* [get_accounting_creditmemo](docs/sdks/accounting/README.md#get_accounting_creditmemo) - Retrieve a creditmemo
 * [get_accounting_invoice](docs/sdks/accounting/README.md#get_accounting_invoice) - Retrieve an invoice
 * [get_accounting_journal](docs/sdks/accounting/README.md#get_accounting_journal) - Retrieve a journal
 * [get_accounting_order](docs/sdks/accounting/README.md#get_accounting_order) - Retrieve an order
 * [get_accounting_organization](docs/sdks/accounting/README.md#get_accounting_organization) - Retrieve an organization
+* [get_accounting_profitloss](docs/sdks/accounting/README.md#get_accounting_profitloss) - Retrieve a profitloss
+* [get_accounting_purchaseorder](docs/sdks/accounting/README.md#get_accounting_purchaseorder) - Retrieve a purchaseorder
 * [get_accounting_report](docs/sdks/accounting/README.md#get_accounting_report) - Retrieve a report
+* [get_accounting_salesorder](docs/sdks/accounting/README.md#get_accounting_salesorder) - Retrieve a salesorder
 * [get_accounting_taxrate](docs/sdks/accounting/README.md#get_accounting_taxrate) - Retrieve a taxrate
 * [get_accounting_transaction](docs/sdks/accounting/README.md#get_accounting_transaction) - Retrieve a transaction
+* [get_accounting_trialbalance](docs/sdks/accounting/README.md#get_accounting_trialbalance) - Retrieve a trialbalance
 * [list_accounting_accounts](docs/sdks/accounting/README.md#list_accounting_accounts) - List all accounts
+* [list_accounting_balancesheets](docs/sdks/accounting/README.md#list_accounting_balancesheets) - List all balancesheets
+* [list_accounting_bills](docs/sdks/accounting/README.md#list_accounting_bills) - List all bills
 * [list_accounting_contacts](docs/sdks/accounting/README.md#list_accounting_contacts) - List all contacts
+* [list_accounting_creditmemoes](docs/sdks/accounting/README.md#list_accounting_creditmemoes) - List all creditmemoes
 * [list_accounting_invoices](docs/sdks/accounting/README.md#list_accounting_invoices) - List all invoices
 * [list_accounting_journals](docs/sdks/accounting/README.md#list_accounting_journals) - List all journals
 * [list_accounting_orders](docs/sdks/accounting/README.md#list_accounting_orders) - List all orders
 * [list_accounting_organizations](docs/sdks/accounting/README.md#list_accounting_organizations) - List all organizations
+* [list_accounting_profitlosses](docs/sdks/accounting/README.md#list_accounting_profitlosses) - List all profitlosses
+* [list_accounting_purchaseorders](docs/sdks/accounting/README.md#list_accounting_purchaseorders) - List all purchaseorders
 * [list_accounting_reports](docs/sdks/accounting/README.md#list_accounting_reports) - List all reports
+* [list_accounting_salesorders](docs/sdks/accounting/README.md#list_accounting_salesorders) - List all salesorders
 * [list_accounting_taxrates](docs/sdks/accounting/README.md#list_accounting_taxrates) - List all taxrates
 * [list_accounting_transactions](docs/sdks/accounting/README.md#list_accounting_transactions) - List all transactions
+* [list_accounting_trialbalances](docs/sdks/accounting/README.md#list_accounting_trialbalances) - List all trialbalances
 * [patch_accounting_account](docs/sdks/accounting/README.md#patch_accounting_account) - Update an account
+* [patch_accounting_bill](docs/sdks/accounting/README.md#patch_accounting_bill) - Update a bill
 * [patch_accounting_contact](docs/sdks/accounting/README.md#patch_accounting_contact) - Update a contact
+* [patch_accounting_creditmemo](docs/sdks/accounting/README.md#patch_accounting_creditmemo) - Update a creditmemo
 * [patch_accounting_invoice](docs/sdks/accounting/README.md#patch_accounting_invoice) - Update an invoice
 * [patch_accounting_journal](docs/sdks/accounting/README.md#patch_accounting_journal) - Update a journal
 * [patch_accounting_order](docs/sdks/accounting/README.md#patch_accounting_order) - Update an order
+* [patch_accounting_purchaseorder](docs/sdks/accounting/README.md#patch_accounting_purchaseorder) - Update a purchaseorder
+* [patch_accounting_salesorder](docs/sdks/accounting/README.md#patch_accounting_salesorder) - Update a salesorder
 * [patch_accounting_taxrate](docs/sdks/accounting/README.md#patch_accounting_taxrate) - Update a taxrate
 * [patch_accounting_transaction](docs/sdks/accounting/README.md#patch_accounting_transaction) - Update a transaction
 * [remove_accounting_account](docs/sdks/accounting/README.md#remove_accounting_account) - Remove an account
+* [remove_accounting_bill](docs/sdks/accounting/README.md#remove_accounting_bill) - Remove a bill
 * [remove_accounting_contact](docs/sdks/accounting/README.md#remove_accounting_contact) - Remove a contact
+* [remove_accounting_creditmemo](docs/sdks/accounting/README.md#remove_accounting_creditmemo) - Remove a creditmemo
 * [remove_accounting_invoice](docs/sdks/accounting/README.md#remove_accounting_invoice) - Remove an invoice
 * [remove_accounting_journal](docs/sdks/accounting/README.md#remove_accounting_journal) - Remove a journal
 * [remove_accounting_order](docs/sdks/accounting/README.md#remove_accounting_order) - Remove an order
+* [remove_accounting_purchaseorder](docs/sdks/accounting/README.md#remove_accounting_purchaseorder) - Remove a purchaseorder
+* [remove_accounting_salesorder](docs/sdks/accounting/README.md#remove_accounting_salesorder) - Remove a salesorder
 * [remove_accounting_taxrate](docs/sdks/accounting/README.md#remove_accounting_taxrate) - Remove a taxrate
 * [remove_accounting_transaction](docs/sdks/accounting/README.md#remove_accounting_transaction) - Remove a transaction
 * [update_accounting_account](docs/sdks/accounting/README.md#update_accounting_account) - Update an account
+* [update_accounting_bill](docs/sdks/accounting/README.md#update_accounting_bill) - Update a bill
 * [update_accounting_contact](docs/sdks/accounting/README.md#update_accounting_contact) - Update a contact
+* [update_accounting_creditmemo](docs/sdks/accounting/README.md#update_accounting_creditmemo) - Update a creditmemo
 * [update_accounting_invoice](docs/sdks/accounting/README.md#update_accounting_invoice) - Update an invoice
 * [update_accounting_journal](docs/sdks/accounting/README.md#update_accounting_journal) - Update a journal
 * [update_accounting_order](docs/sdks/accounting/README.md#update_accounting_order) - Update an order
+* [update_accounting_purchaseorder](docs/sdks/accounting/README.md#update_accounting_purchaseorder) - Update a purchaseorder
+* [update_accounting_salesorder](docs/sdks/accounting/README.md#update_accounting_salesorder) - Update a salesorder
 * [update_accounting_taxrate](docs/sdks/accounting/README.md#update_accounting_taxrate) - Update a taxrate
 * [update_accounting_transaction](docs/sdks/accounting/README.md#update_accounting_transaction) - Update a transaction
 
@@ -302,6 +332,20 @@ asyncio.run(main())
 
 * [get_unified_integration_auth](docs/sdks/auth/README.md#get_unified_integration_auth) - Create connection indirectly
 * [get_unified_integration_login](docs/sdks/auth/README.md#get_unified_integration_login) - Sign in a user
+
+### [balancesheet](docs/sdks/balancesheet/README.md)
+
+* [get_accounting_balancesheet](docs/sdks/balancesheet/README.md#get_accounting_balancesheet) - Retrieve a balancesheet
+* [list_accounting_balancesheets](docs/sdks/balancesheet/README.md#list_accounting_balancesheets) - List all balancesheets
+
+### [bill](docs/sdks/bill/README.md)
+
+* [create_accounting_bill](docs/sdks/bill/README.md#create_accounting_bill) - Create a bill
+* [get_accounting_bill](docs/sdks/bill/README.md#get_accounting_bill) - Retrieve a bill
+* [list_accounting_bills](docs/sdks/bill/README.md#list_accounting_bills) - List all bills
+* [patch_accounting_bill](docs/sdks/bill/README.md#patch_accounting_bill) - Update a bill
+* [remove_accounting_bill](docs/sdks/bill/README.md#remove_accounting_bill) - Remove a bill
+* [update_accounting_bill](docs/sdks/bill/README.md#update_accounting_bill) - Update a bill
 
 ### [branch](docs/sdks/branch/README.md)
 
@@ -499,6 +543,15 @@ asyncio.run(main())
 * [patch_lms_course](docs/sdks/course/README.md#patch_lms_course) - Update a course
 * [remove_lms_course](docs/sdks/course/README.md#remove_lms_course) - Remove a course
 * [update_lms_course](docs/sdks/course/README.md#update_lms_course) - Update a course
+
+### [creditmemo](docs/sdks/creditmemo/README.md)
+
+* [create_accounting_creditmemo](docs/sdks/creditmemo/README.md#create_accounting_creditmemo) - Create a creditmemo
+* [get_accounting_creditmemo](docs/sdks/creditmemo/README.md#get_accounting_creditmemo) - Retrieve a creditmemo
+* [list_accounting_creditmemoes](docs/sdks/creditmemo/README.md#list_accounting_creditmemoes) - List all creditmemoes
+* [patch_accounting_creditmemo](docs/sdks/creditmemo/README.md#patch_accounting_creditmemo) - Update a creditmemo
+* [remove_accounting_creditmemo](docs/sdks/creditmemo/README.md#remove_accounting_creditmemo) - Remove a creditmemo
+* [update_accounting_creditmemo](docs/sdks/creditmemo/README.md#update_accounting_creditmemo) - Update a creditmemo
 
 ### [crm](docs/sdks/crm/README.md)
 
@@ -1003,6 +1056,11 @@ asyncio.run(main())
 * [remove_crm_pipeline](docs/sdks/pipeline/README.md#remove_crm_pipeline) - Remove a pipeline
 * [update_crm_pipeline](docs/sdks/pipeline/README.md#update_crm_pipeline) - Update a pipeline
 
+### [profitloss](docs/sdks/profitloss/README.md)
+
+* [get_accounting_profitloss](docs/sdks/profitloss/README.md#get_accounting_profitloss) - Retrieve a profitloss
+* [list_accounting_profitlosses](docs/sdks/profitloss/README.md#list_accounting_profitlosses) - List all profitlosses
+
 ### [project](docs/sdks/project/README.md)
 
 * [create_task_project](docs/sdks/project/README.md#create_task_project) - Create a project
@@ -1024,6 +1082,15 @@ asyncio.run(main())
 * [patch_repo_pullrequest](docs/sdks/pullrequest/README.md#patch_repo_pullrequest) - Update a pullrequest
 * [remove_repo_pullrequest](docs/sdks/pullrequest/README.md#remove_repo_pullrequest) - Remove a pullrequest
 * [update_repo_pullrequest](docs/sdks/pullrequest/README.md#update_repo_pullrequest) - Update a pullrequest
+
+### [purchaseorder](docs/sdks/purchaseorder/README.md)
+
+* [create_accounting_purchaseorder](docs/sdks/purchaseorder/README.md#create_accounting_purchaseorder) - Create a purchaseorder
+* [get_accounting_purchaseorder](docs/sdks/purchaseorder/README.md#get_accounting_purchaseorder) - Retrieve a purchaseorder
+* [list_accounting_purchaseorders](docs/sdks/purchaseorder/README.md#list_accounting_purchaseorders) - List all purchaseorders
+* [patch_accounting_purchaseorder](docs/sdks/purchaseorder/README.md#patch_accounting_purchaseorder) - Update a purchaseorder
+* [remove_accounting_purchaseorder](docs/sdks/purchaseorder/README.md#remove_accounting_purchaseorder) - Remove a purchaseorder
+* [update_accounting_purchaseorder](docs/sdks/purchaseorder/README.md#update_accounting_purchaseorder) - Update a purchaseorder
 
 ### [recording](docs/sdks/recording/README.md)
 
@@ -1096,6 +1163,15 @@ asyncio.run(main())
 * [patch_commerce_review](docs/sdks/review/README.md#patch_commerce_review) - Update a review
 * [remove_commerce_review](docs/sdks/review/README.md#remove_commerce_review) - Remove a review
 * [update_commerce_review](docs/sdks/review/README.md#update_commerce_review) - Update a review
+
+### [salesorder](docs/sdks/salesorder/README.md)
+
+* [create_accounting_salesorder](docs/sdks/salesorder/README.md#create_accounting_salesorder) - Create a salesorder
+* [get_accounting_salesorder](docs/sdks/salesorder/README.md#get_accounting_salesorder) - Retrieve a salesorder
+* [list_accounting_salesorders](docs/sdks/salesorder/README.md#list_accounting_salesorders) - List all salesorders
+* [patch_accounting_salesorder](docs/sdks/salesorder/README.md#patch_accounting_salesorder) - Update a salesorder
+* [remove_accounting_salesorder](docs/sdks/salesorder/README.md#remove_accounting_salesorder) - Remove a salesorder
+* [update_accounting_salesorder](docs/sdks/salesorder/README.md#update_accounting_salesorder) - Update a salesorder
 
 ### [scim](docs/sdks/scim/README.md)
 
@@ -1239,6 +1315,11 @@ asyncio.run(main())
 * [patch_accounting_transaction](docs/sdks/transaction/README.md#patch_accounting_transaction) - Update a transaction
 * [remove_accounting_transaction](docs/sdks/transaction/README.md#remove_accounting_transaction) - Remove a transaction
 * [update_accounting_transaction](docs/sdks/transaction/README.md#update_accounting_transaction) - Update a transaction
+
+### [trialbalance](docs/sdks/trialbalance/README.md)
+
+* [get_accounting_trialbalance](docs/sdks/trialbalance/README.md#get_accounting_trialbalance) - Retrieve a trialbalance
+* [list_accounting_trialbalances](docs/sdks/trialbalance/README.md#list_accounting_trialbalances) - List all trialbalances
 
 ### [uc](docs/sdks/uc/README.md)
 

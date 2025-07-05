@@ -2,26 +2,26 @@
 
 from __future__ import annotations
 from .property_accountingbalancesheetitem_sub_items import (
-    PropertyAccountingBalanceSheetItemSubItems,
-    PropertyAccountingBalanceSheetItemSubItemsTypedDict,
+    PropertyAccountingBalancesheetItemSubItems,
+    PropertyAccountingBalancesheetItemSubItemsTypedDict,
 )
 from typing import List, Optional
 from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk.types import BaseModel
 
 
-class AccountingBalanceSheetItemTypedDict(TypedDict):
+class AccountingBalancesheetItemTypedDict(TypedDict):
     account_id: NotRequired[str]
     amount: NotRequired[float]
     name: NotRequired[str]
-    sub_items: NotRequired[List[PropertyAccountingBalanceSheetItemSubItemsTypedDict]]
+    sub_items: NotRequired[List[PropertyAccountingBalancesheetItemSubItemsTypedDict]]
 
 
-class AccountingBalanceSheetItem(BaseModel):
+class AccountingBalancesheetItem(BaseModel):
     account_id: Optional[str] = None
 
     amount: Optional[float] = None
 
     name: Optional[str] = None
 
-    sub_items: Optional[List[PropertyAccountingBalanceSheetItemSubItems]] = None
+    sub_items: Optional[List[PropertyAccountingBalancesheetItemSubItems]] = None
