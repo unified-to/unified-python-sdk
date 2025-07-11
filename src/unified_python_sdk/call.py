@@ -6,6 +6,7 @@ from unified_python_sdk import utils
 from unified_python_sdk._hooks import HookContext
 from unified_python_sdk.models import errors, operations, shared
 from unified_python_sdk.types import BaseModel, OptionalNullable, UNSET
+from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_response
 
 
 class Call(BaseSDK):
@@ -81,7 +82,7 @@ class Call(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListUcCallsResponse(
-                uc_calls=utils.unmarshal_json_response(
+                uc_calls=unmarshal_json_response(
                     Optional[List[shared.UcCall]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -169,7 +170,7 @@ class Call(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListUcCallsResponse(
-                uc_calls=utils.unmarshal_json_response(
+                uc_calls=unmarshal_json_response(
                     Optional[List[shared.UcCall]], http_res
                 ),
                 status_code=http_res.status_code,

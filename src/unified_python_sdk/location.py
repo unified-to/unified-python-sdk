@@ -6,6 +6,7 @@ from unified_python_sdk import utils
 from unified_python_sdk._hooks import HookContext
 from unified_python_sdk.models import errors, operations, shared
 from unified_python_sdk.types import BaseModel, OptionalNullable, UNSET
+from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_response
 
 
 class Location(BaseSDK):
@@ -85,7 +86,7 @@ class Location(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateCommerceLocationResponse(
-                commerce_location=utils.unmarshal_json_response(
+                commerce_location=unmarshal_json_response(
                     Optional[shared.CommerceLocation], http_res
                 ),
                 status_code=http_res.status_code,
@@ -177,7 +178,7 @@ class Location(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateCommerceLocationResponse(
-                commerce_location=utils.unmarshal_json_response(
+                commerce_location=unmarshal_json_response(
                     Optional[shared.CommerceLocation], http_res
                 ),
                 status_code=http_res.status_code,
@@ -269,7 +270,7 @@ class Location(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateHrisLocationResponse(
-                hris_location=utils.unmarshal_json_response(
+                hris_location=unmarshal_json_response(
                     Optional[shared.HrisLocation], http_res
                 ),
                 status_code=http_res.status_code,
@@ -361,7 +362,7 @@ class Location(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateHrisLocationResponse(
-                hris_location=utils.unmarshal_json_response(
+                hris_location=unmarshal_json_response(
                     Optional[shared.HrisLocation], http_res
                 ),
                 status_code=http_res.status_code,
@@ -450,7 +451,7 @@ class Location(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetCommerceLocationResponse(
-                commerce_location=utils.unmarshal_json_response(
+                commerce_location=unmarshal_json_response(
                     Optional[shared.CommerceLocation], http_res
                 ),
                 status_code=http_res.status_code,
@@ -539,7 +540,7 @@ class Location(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetCommerceLocationResponse(
-                commerce_location=utils.unmarshal_json_response(
+                commerce_location=unmarshal_json_response(
                     Optional[shared.CommerceLocation], http_res
                 ),
                 status_code=http_res.status_code,
@@ -628,7 +629,7 @@ class Location(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetHrisLocationResponse(
-                hris_location=utils.unmarshal_json_response(
+                hris_location=unmarshal_json_response(
                     Optional[shared.HrisLocation], http_res
                 ),
                 status_code=http_res.status_code,
@@ -717,7 +718,7 @@ class Location(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetHrisLocationResponse(
-                hris_location=utils.unmarshal_json_response(
+                hris_location=unmarshal_json_response(
                     Optional[shared.HrisLocation], http_res
                 ),
                 status_code=http_res.status_code,
@@ -806,7 +807,7 @@ class Location(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListCommerceLocationsResponse(
-                commerce_locations=utils.unmarshal_json_response(
+                commerce_locations=unmarshal_json_response(
                     Optional[List[shared.CommerceLocation]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -895,7 +896,7 @@ class Location(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListCommerceLocationsResponse(
-                commerce_locations=utils.unmarshal_json_response(
+                commerce_locations=unmarshal_json_response(
                     Optional[List[shared.CommerceLocation]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -984,7 +985,7 @@ class Location(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListHrisLocationsResponse(
-                hris_locations=utils.unmarshal_json_response(
+                hris_locations=unmarshal_json_response(
                     Optional[List[shared.HrisLocation]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1073,7 +1074,7 @@ class Location(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListHrisLocationsResponse(
-                hris_locations=utils.unmarshal_json_response(
+                hris_locations=unmarshal_json_response(
                     Optional[List[shared.HrisLocation]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1165,7 +1166,7 @@ class Location(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchCommerceLocationResponse(
-                commerce_location=utils.unmarshal_json_response(
+                commerce_location=unmarshal_json_response(
                     Optional[shared.CommerceLocation], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1257,7 +1258,7 @@ class Location(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchCommerceLocationResponse(
-                commerce_location=utils.unmarshal_json_response(
+                commerce_location=unmarshal_json_response(
                     Optional[shared.CommerceLocation], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1349,7 +1350,7 @@ class Location(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchHrisLocationResponse(
-                hris_location=utils.unmarshal_json_response(
+                hris_location=unmarshal_json_response(
                     Optional[shared.HrisLocation], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1441,7 +1442,7 @@ class Location(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchHrisLocationResponse(
-                hris_location=utils.unmarshal_json_response(
+                hris_location=unmarshal_json_response(
                     Optional[shared.HrisLocation], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1909,7 +1910,7 @@ class Location(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateCommerceLocationResponse(
-                commerce_location=utils.unmarshal_json_response(
+                commerce_location=unmarshal_json_response(
                     Optional[shared.CommerceLocation], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2001,7 +2002,7 @@ class Location(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateCommerceLocationResponse(
-                commerce_location=utils.unmarshal_json_response(
+                commerce_location=unmarshal_json_response(
                     Optional[shared.CommerceLocation], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2093,7 +2094,7 @@ class Location(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateHrisLocationResponse(
-                hris_location=utils.unmarshal_json_response(
+                hris_location=unmarshal_json_response(
                     Optional[shared.HrisLocation], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2185,7 +2186,7 @@ class Location(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateHrisLocationResponse(
-                hris_location=utils.unmarshal_json_response(
+                hris_location=unmarshal_json_response(
                     Optional[shared.HrisLocation], http_res
                 ),
                 status_code=http_res.status_code,

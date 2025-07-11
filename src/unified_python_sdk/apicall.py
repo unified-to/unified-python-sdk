@@ -6,6 +6,7 @@ from unified_python_sdk import utils
 from unified_python_sdk._hooks import HookContext
 from unified_python_sdk.models import errors, operations, shared
 from unified_python_sdk.types import BaseModel, OptionalNullable, UNSET
+from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_response
 
 
 class Apicall(BaseSDK):
@@ -82,9 +83,7 @@ class Apicall(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetUnifiedApicallResponse(
-                api_call=utils.unmarshal_json_response(
-                    Optional[shared.APICall], http_res
-                ),
+                api_call=unmarshal_json_response(Optional[shared.APICall], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -171,9 +170,7 @@ class Apicall(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetUnifiedApicallResponse(
-                api_call=utils.unmarshal_json_response(
-                    Optional[shared.APICall], http_res
-                ),
+                api_call=unmarshal_json_response(Optional[shared.APICall], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -260,7 +257,7 @@ class Apicall(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListUnifiedApicallsResponse(
-                api_calls=utils.unmarshal_json_response(
+                api_calls=unmarshal_json_response(
                     Optional[List[shared.APICall]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -349,7 +346,7 @@ class Apicall(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListUnifiedApicallsResponse(
-                api_calls=utils.unmarshal_json_response(
+                api_calls=unmarshal_json_response(
                     Optional[List[shared.APICall]], http_res
                 ),
                 status_code=http_res.status_code,

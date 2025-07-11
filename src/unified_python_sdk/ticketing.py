@@ -6,6 +6,7 @@ from unified_python_sdk import utils
 from unified_python_sdk._hooks import HookContext
 from unified_python_sdk.models import errors, operations, shared
 from unified_python_sdk.types import BaseModel, OptionalNullable, UNSET
+from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_response
 
 
 class Ticketing(BaseSDK):
@@ -91,7 +92,7 @@ class Ticketing(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateTicketingCustomerResponse(
-                ticketing_customer=utils.unmarshal_json_response(
+                ticketing_customer=unmarshal_json_response(
                     Optional[shared.TicketingCustomer], http_res
                 ),
                 status_code=http_res.status_code,
@@ -189,7 +190,7 @@ class Ticketing(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateTicketingCustomerResponse(
-                ticketing_customer=utils.unmarshal_json_response(
+                ticketing_customer=unmarshal_json_response(
                     Optional[shared.TicketingCustomer], http_res
                 ),
                 status_code=http_res.status_code,
@@ -281,7 +282,7 @@ class Ticketing(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateTicketingNoteResponse(
-                ticketing_note=utils.unmarshal_json_response(
+                ticketing_note=unmarshal_json_response(
                     Optional[shared.TicketingNote], http_res
                 ),
                 status_code=http_res.status_code,
@@ -373,7 +374,7 @@ class Ticketing(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateTicketingNoteResponse(
-                ticketing_note=utils.unmarshal_json_response(
+                ticketing_note=unmarshal_json_response(
                     Optional[shared.TicketingNote], http_res
                 ),
                 status_code=http_res.status_code,
@@ -465,7 +466,7 @@ class Ticketing(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateTicketingTicketResponse(
-                ticketing_ticket=utils.unmarshal_json_response(
+                ticketing_ticket=unmarshal_json_response(
                     Optional[shared.TicketingTicket], http_res
                 ),
                 status_code=http_res.status_code,
@@ -557,7 +558,7 @@ class Ticketing(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateTicketingTicketResponse(
-                ticketing_ticket=utils.unmarshal_json_response(
+                ticketing_ticket=unmarshal_json_response(
                     Optional[shared.TicketingTicket], http_res
                 ),
                 status_code=http_res.status_code,
@@ -646,7 +647,7 @@ class Ticketing(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetTicketingCustomerResponse(
-                ticketing_customer=utils.unmarshal_json_response(
+                ticketing_customer=unmarshal_json_response(
                     Optional[shared.TicketingCustomer], http_res
                 ),
                 status_code=http_res.status_code,
@@ -735,7 +736,7 @@ class Ticketing(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetTicketingCustomerResponse(
-                ticketing_customer=utils.unmarshal_json_response(
+                ticketing_customer=unmarshal_json_response(
                     Optional[shared.TicketingCustomer], http_res
                 ),
                 status_code=http_res.status_code,
@@ -824,7 +825,7 @@ class Ticketing(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetTicketingNoteResponse(
-                ticketing_note=utils.unmarshal_json_response(
+                ticketing_note=unmarshal_json_response(
                     Optional[shared.TicketingNote], http_res
                 ),
                 status_code=http_res.status_code,
@@ -913,7 +914,7 @@ class Ticketing(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetTicketingNoteResponse(
-                ticketing_note=utils.unmarshal_json_response(
+                ticketing_note=unmarshal_json_response(
                     Optional[shared.TicketingNote], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1002,7 +1003,7 @@ class Ticketing(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetTicketingTicketResponse(
-                ticketing_ticket=utils.unmarshal_json_response(
+                ticketing_ticket=unmarshal_json_response(
                     Optional[shared.TicketingTicket], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1091,7 +1092,7 @@ class Ticketing(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetTicketingTicketResponse(
-                ticketing_ticket=utils.unmarshal_json_response(
+                ticketing_ticket=unmarshal_json_response(
                     Optional[shared.TicketingTicket], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1180,7 +1181,7 @@ class Ticketing(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListTicketingCustomersResponse(
-                ticketing_customers=utils.unmarshal_json_response(
+                ticketing_customers=unmarshal_json_response(
                     Optional[List[shared.TicketingCustomer]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1269,7 +1270,7 @@ class Ticketing(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListTicketingCustomersResponse(
-                ticketing_customers=utils.unmarshal_json_response(
+                ticketing_customers=unmarshal_json_response(
                     Optional[List[shared.TicketingCustomer]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1358,7 +1359,7 @@ class Ticketing(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListTicketingNotesResponse(
-                ticketing_notes=utils.unmarshal_json_response(
+                ticketing_notes=unmarshal_json_response(
                     Optional[List[shared.TicketingNote]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1447,7 +1448,7 @@ class Ticketing(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListTicketingNotesResponse(
-                ticketing_notes=utils.unmarshal_json_response(
+                ticketing_notes=unmarshal_json_response(
                     Optional[List[shared.TicketingNote]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1536,7 +1537,7 @@ class Ticketing(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListTicketingTicketsResponse(
-                ticketing_tickets=utils.unmarshal_json_response(
+                ticketing_tickets=unmarshal_json_response(
                     Optional[List[shared.TicketingTicket]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1625,7 +1626,7 @@ class Ticketing(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListTicketingTicketsResponse(
-                ticketing_tickets=utils.unmarshal_json_response(
+                ticketing_tickets=unmarshal_json_response(
                     Optional[List[shared.TicketingTicket]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1721,7 +1722,7 @@ class Ticketing(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchTicketingCustomerResponse(
-                ticketing_customer=utils.unmarshal_json_response(
+                ticketing_customer=unmarshal_json_response(
                     Optional[shared.TicketingCustomer], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1817,7 +1818,7 @@ class Ticketing(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchTicketingCustomerResponse(
-                ticketing_customer=utils.unmarshal_json_response(
+                ticketing_customer=unmarshal_json_response(
                     Optional[shared.TicketingCustomer], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1909,7 +1910,7 @@ class Ticketing(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchTicketingNoteResponse(
-                ticketing_note=utils.unmarshal_json_response(
+                ticketing_note=unmarshal_json_response(
                     Optional[shared.TicketingNote], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2001,7 +2002,7 @@ class Ticketing(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchTicketingNoteResponse(
-                ticketing_note=utils.unmarshal_json_response(
+                ticketing_note=unmarshal_json_response(
                     Optional[shared.TicketingNote], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2093,7 +2094,7 @@ class Ticketing(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchTicketingTicketResponse(
-                ticketing_ticket=utils.unmarshal_json_response(
+                ticketing_ticket=unmarshal_json_response(
                     Optional[shared.TicketingTicket], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2185,7 +2186,7 @@ class Ticketing(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchTicketingTicketResponse(
-                ticketing_ticket=utils.unmarshal_json_response(
+                ticketing_ticket=unmarshal_json_response(
                     Optional[shared.TicketingTicket], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2851,7 +2852,7 @@ class Ticketing(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateTicketingCustomerResponse(
-                ticketing_customer=utils.unmarshal_json_response(
+                ticketing_customer=unmarshal_json_response(
                     Optional[shared.TicketingCustomer], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2949,7 +2950,7 @@ class Ticketing(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateTicketingCustomerResponse(
-                ticketing_customer=utils.unmarshal_json_response(
+                ticketing_customer=unmarshal_json_response(
                     Optional[shared.TicketingCustomer], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3041,7 +3042,7 @@ class Ticketing(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateTicketingNoteResponse(
-                ticketing_note=utils.unmarshal_json_response(
+                ticketing_note=unmarshal_json_response(
                     Optional[shared.TicketingNote], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3133,7 +3134,7 @@ class Ticketing(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateTicketingNoteResponse(
-                ticketing_note=utils.unmarshal_json_response(
+                ticketing_note=unmarshal_json_response(
                     Optional[shared.TicketingNote], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3225,7 +3226,7 @@ class Ticketing(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateTicketingTicketResponse(
-                ticketing_ticket=utils.unmarshal_json_response(
+                ticketing_ticket=unmarshal_json_response(
                     Optional[shared.TicketingTicket], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3317,7 +3318,7 @@ class Ticketing(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateTicketingTicketResponse(
-                ticketing_ticket=utils.unmarshal_json_response(
+                ticketing_ticket=unmarshal_json_response(
                     Optional[shared.TicketingTicket], http_res
                 ),
                 status_code=http_res.status_code,

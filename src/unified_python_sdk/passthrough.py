@@ -8,6 +8,7 @@ from unified_python_sdk import utils
 from unified_python_sdk._hooks import HookContext
 from unified_python_sdk.models import errors, operations
 from unified_python_sdk.types import BaseModel, OptionalNullable, UNSET
+from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_response
 
 
 class CreatePassthroughJsonAcceptEnum(str, Enum):
@@ -177,7 +178,7 @@ class Passthrough(BaseSDK):
         if utils.match_response(http_res, "default", "application/json"):
             http_res_text = utils.stream_to_text(http_res)
             return operations.CreatePassthroughJSONResponse(
-                default_application_json_any=utils.unmarshal_json_response(
+                default_application_json_any=unmarshal_json_response(
                     Optional[Any], http_res, http_res_text
                 ),
                 status_code=http_res.status_code,
@@ -326,7 +327,7 @@ class Passthrough(BaseSDK):
         if utils.match_response(http_res, "default", "application/json"):
             http_res_text = await utils.stream_to_text_async(http_res)
             return operations.CreatePassthroughJSONResponse(
-                default_application_json_any=utils.unmarshal_json_response(
+                default_application_json_any=unmarshal_json_response(
                     Optional[Any], http_res, http_res_text
                 ),
                 status_code=http_res.status_code,
@@ -479,7 +480,7 @@ class Passthrough(BaseSDK):
         if utils.match_response(http_res, "default", "application/json"):
             http_res_text = utils.stream_to_text(http_res)
             return operations.CreatePassthroughRawResponse(
-                default_application_json_any=utils.unmarshal_json_response(
+                default_application_json_any=unmarshal_json_response(
                     Optional[Any], http_res, http_res_text
                 ),
                 status_code=http_res.status_code,
@@ -632,7 +633,7 @@ class Passthrough(BaseSDK):
         if utils.match_response(http_res, "default", "application/json"):
             http_res_text = await utils.stream_to_text_async(http_res)
             return operations.CreatePassthroughRawResponse(
-                default_application_json_any=utils.unmarshal_json_response(
+                default_application_json_any=unmarshal_json_response(
                     Optional[Any], http_res, http_res_text
                 ),
                 status_code=http_res.status_code,
@@ -778,7 +779,7 @@ class Passthrough(BaseSDK):
         if utils.match_response(http_res, "default", "application/json"):
             http_res_text = utils.stream_to_text(http_res)
             return operations.ListPassthroughsResponse(
-                default_application_json_any=utils.unmarshal_json_response(
+                default_application_json_any=unmarshal_json_response(
                     Optional[Any], http_res, http_res_text
                 ),
                 status_code=http_res.status_code,
@@ -924,7 +925,7 @@ class Passthrough(BaseSDK):
         if utils.match_response(http_res, "default", "application/json"):
             http_res_text = await utils.stream_to_text_async(http_res)
             return operations.ListPassthroughsResponse(
-                default_application_json_any=utils.unmarshal_json_response(
+                default_application_json_any=unmarshal_json_response(
                     Optional[Any], http_res, http_res_text
                 ),
                 status_code=http_res.status_code,
@@ -1073,7 +1074,7 @@ class Passthrough(BaseSDK):
         if utils.match_response(http_res, "default", "application/json"):
             http_res_text = utils.stream_to_text(http_res)
             return operations.PatchPassthroughJSONResponse(
-                default_application_json_any=utils.unmarshal_json_response(
+                default_application_json_any=unmarshal_json_response(
                     Optional[Any], http_res, http_res_text
                 ),
                 status_code=http_res.status_code,
@@ -1222,7 +1223,7 @@ class Passthrough(BaseSDK):
         if utils.match_response(http_res, "default", "application/json"):
             http_res_text = await utils.stream_to_text_async(http_res)
             return operations.PatchPassthroughJSONResponse(
-                default_application_json_any=utils.unmarshal_json_response(
+                default_application_json_any=unmarshal_json_response(
                     Optional[Any], http_res, http_res_text
                 ),
                 status_code=http_res.status_code,
@@ -1375,7 +1376,7 @@ class Passthrough(BaseSDK):
         if utils.match_response(http_res, "default", "application/json"):
             http_res_text = utils.stream_to_text(http_res)
             return operations.PatchPassthroughRawResponse(
-                default_application_json_any=utils.unmarshal_json_response(
+                default_application_json_any=unmarshal_json_response(
                     Optional[Any], http_res, http_res_text
                 ),
                 status_code=http_res.status_code,
@@ -1528,7 +1529,7 @@ class Passthrough(BaseSDK):
         if utils.match_response(http_res, "default", "application/json"):
             http_res_text = await utils.stream_to_text_async(http_res)
             return operations.PatchPassthroughRawResponse(
-                default_application_json_any=utils.unmarshal_json_response(
+                default_application_json_any=unmarshal_json_response(
                     Optional[Any], http_res, http_res_text
                 ),
                 status_code=http_res.status_code,
@@ -1674,7 +1675,7 @@ class Passthrough(BaseSDK):
         if utils.match_response(http_res, "default", "application/json"):
             http_res_text = utils.stream_to_text(http_res)
             return operations.RemovePassthroughResponse(
-                default_application_json_any=utils.unmarshal_json_response(
+                default_application_json_any=unmarshal_json_response(
                     Optional[Any], http_res, http_res_text
                 ),
                 status_code=http_res.status_code,
@@ -1820,7 +1821,7 @@ class Passthrough(BaseSDK):
         if utils.match_response(http_res, "default", "application/json"):
             http_res_text = await utils.stream_to_text_async(http_res)
             return operations.RemovePassthroughResponse(
-                default_application_json_any=utils.unmarshal_json_response(
+                default_application_json_any=unmarshal_json_response(
                     Optional[Any], http_res, http_res_text
                 ),
                 status_code=http_res.status_code,
@@ -1969,7 +1970,7 @@ class Passthrough(BaseSDK):
         if utils.match_response(http_res, "default", "application/json"):
             http_res_text = utils.stream_to_text(http_res)
             return operations.UpdatePassthroughJSONResponse(
-                default_application_json_any=utils.unmarshal_json_response(
+                default_application_json_any=unmarshal_json_response(
                     Optional[Any], http_res, http_res_text
                 ),
                 status_code=http_res.status_code,
@@ -2118,7 +2119,7 @@ class Passthrough(BaseSDK):
         if utils.match_response(http_res, "default", "application/json"):
             http_res_text = await utils.stream_to_text_async(http_res)
             return operations.UpdatePassthroughJSONResponse(
-                default_application_json_any=utils.unmarshal_json_response(
+                default_application_json_any=unmarshal_json_response(
                     Optional[Any], http_res, http_res_text
                 ),
                 status_code=http_res.status_code,
@@ -2271,7 +2272,7 @@ class Passthrough(BaseSDK):
         if utils.match_response(http_res, "default", "application/json"):
             http_res_text = utils.stream_to_text(http_res)
             return operations.UpdatePassthroughRawResponse(
-                default_application_json_any=utils.unmarshal_json_response(
+                default_application_json_any=unmarshal_json_response(
                     Optional[Any], http_res, http_res_text
                 ),
                 status_code=http_res.status_code,
@@ -2424,7 +2425,7 @@ class Passthrough(BaseSDK):
         if utils.match_response(http_res, "default", "application/json"):
             http_res_text = await utils.stream_to_text_async(http_res)
             return operations.UpdatePassthroughRawResponse(
-                default_application_json_any=utils.unmarshal_json_response(
+                default_application_json_any=unmarshal_json_response(
                     Optional[Any], http_res, http_res_text
                 ),
                 status_code=http_res.status_code,

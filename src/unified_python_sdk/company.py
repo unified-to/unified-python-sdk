@@ -6,6 +6,7 @@ from unified_python_sdk import utils
 from unified_python_sdk._hooks import HookContext
 from unified_python_sdk.models import errors, operations, shared
 from unified_python_sdk.types import BaseModel, OptionalNullable, UNSET
+from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_response
 
 
 class Company(BaseSDK):
@@ -85,7 +86,7 @@ class Company(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateAtsCompanyResponse(
-                ats_company=utils.unmarshal_json_response(
+                ats_company=unmarshal_json_response(
                     Optional[shared.AtsCompany], http_res
                 ),
                 status_code=http_res.status_code,
@@ -177,7 +178,7 @@ class Company(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateAtsCompanyResponse(
-                ats_company=utils.unmarshal_json_response(
+                ats_company=unmarshal_json_response(
                     Optional[shared.AtsCompany], http_res
                 ),
                 status_code=http_res.status_code,
@@ -269,7 +270,7 @@ class Company(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateCrmCompanyResponse(
-                crm_company=utils.unmarshal_json_response(
+                crm_company=unmarshal_json_response(
                     Optional[shared.CrmCompany], http_res
                 ),
                 status_code=http_res.status_code,
@@ -361,7 +362,7 @@ class Company(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateCrmCompanyResponse(
-                crm_company=utils.unmarshal_json_response(
+                crm_company=unmarshal_json_response(
                     Optional[shared.CrmCompany], http_res
                 ),
                 status_code=http_res.status_code,
@@ -453,7 +454,7 @@ class Company(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateHrisCompanyResponse(
-                hris_company=utils.unmarshal_json_response(
+                hris_company=unmarshal_json_response(
                     Optional[shared.HrisCompany], http_res
                 ),
                 status_code=http_res.status_code,
@@ -545,7 +546,7 @@ class Company(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateHrisCompanyResponse(
-                hris_company=utils.unmarshal_json_response(
+                hris_company=unmarshal_json_response(
                     Optional[shared.HrisCompany], http_res
                 ),
                 status_code=http_res.status_code,
@@ -633,7 +634,7 @@ class Company(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetAtsCompanyResponse(
-                ats_company=utils.unmarshal_json_response(
+                ats_company=unmarshal_json_response(
                     Optional[shared.AtsCompany], http_res
                 ),
                 status_code=http_res.status_code,
@@ -721,7 +722,7 @@ class Company(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetAtsCompanyResponse(
-                ats_company=utils.unmarshal_json_response(
+                ats_company=unmarshal_json_response(
                     Optional[shared.AtsCompany], http_res
                 ),
                 status_code=http_res.status_code,
@@ -809,7 +810,7 @@ class Company(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetCrmCompanyResponse(
-                crm_company=utils.unmarshal_json_response(
+                crm_company=unmarshal_json_response(
                     Optional[shared.CrmCompany], http_res
                 ),
                 status_code=http_res.status_code,
@@ -897,7 +898,7 @@ class Company(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetCrmCompanyResponse(
-                crm_company=utils.unmarshal_json_response(
+                crm_company=unmarshal_json_response(
                     Optional[shared.CrmCompany], http_res
                 ),
                 status_code=http_res.status_code,
@@ -985,7 +986,7 @@ class Company(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetHrisCompanyResponse(
-                hris_company=utils.unmarshal_json_response(
+                hris_company=unmarshal_json_response(
                     Optional[shared.HrisCompany], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1073,7 +1074,7 @@ class Company(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetHrisCompanyResponse(
-                hris_company=utils.unmarshal_json_response(
+                hris_company=unmarshal_json_response(
                     Optional[shared.HrisCompany], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1162,7 +1163,7 @@ class Company(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListAtsCompaniesResponse(
-                ats_companies=utils.unmarshal_json_response(
+                ats_companies=unmarshal_json_response(
                     Optional[List[shared.AtsCompany]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1251,7 +1252,7 @@ class Company(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListAtsCompaniesResponse(
-                ats_companies=utils.unmarshal_json_response(
+                ats_companies=unmarshal_json_response(
                     Optional[List[shared.AtsCompany]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1340,7 +1341,7 @@ class Company(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListCrmCompaniesResponse(
-                crm_companies=utils.unmarshal_json_response(
+                crm_companies=unmarshal_json_response(
                     Optional[List[shared.CrmCompany]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1429,7 +1430,7 @@ class Company(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListCrmCompaniesResponse(
-                crm_companies=utils.unmarshal_json_response(
+                crm_companies=unmarshal_json_response(
                     Optional[List[shared.CrmCompany]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1518,7 +1519,7 @@ class Company(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListEnrichCompaniesResponse(
-                enrich_company=utils.unmarshal_json_response(
+                enrich_company=unmarshal_json_response(
                     Optional[shared.EnrichCompany], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1607,7 +1608,7 @@ class Company(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListEnrichCompaniesResponse(
-                enrich_company=utils.unmarshal_json_response(
+                enrich_company=unmarshal_json_response(
                     Optional[shared.EnrichCompany], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1696,7 +1697,7 @@ class Company(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListHrisCompaniesResponse(
-                hris_companies=utils.unmarshal_json_response(
+                hris_companies=unmarshal_json_response(
                     Optional[List[shared.HrisCompany]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1785,7 +1786,7 @@ class Company(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListHrisCompaniesResponse(
-                hris_companies=utils.unmarshal_json_response(
+                hris_companies=unmarshal_json_response(
                     Optional[List[shared.HrisCompany]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1877,7 +1878,7 @@ class Company(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchAtsCompanyResponse(
-                ats_company=utils.unmarshal_json_response(
+                ats_company=unmarshal_json_response(
                     Optional[shared.AtsCompany], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1969,7 +1970,7 @@ class Company(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchAtsCompanyResponse(
-                ats_company=utils.unmarshal_json_response(
+                ats_company=unmarshal_json_response(
                     Optional[shared.AtsCompany], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2061,7 +2062,7 @@ class Company(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchCrmCompanyResponse(
-                crm_company=utils.unmarshal_json_response(
+                crm_company=unmarshal_json_response(
                     Optional[shared.CrmCompany], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2153,7 +2154,7 @@ class Company(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchCrmCompanyResponse(
-                crm_company=utils.unmarshal_json_response(
+                crm_company=unmarshal_json_response(
                     Optional[shared.CrmCompany], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2245,7 +2246,7 @@ class Company(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchHrisCompanyResponse(
-                hris_company=utils.unmarshal_json_response(
+                hris_company=unmarshal_json_response(
                     Optional[shared.HrisCompany], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2337,7 +2338,7 @@ class Company(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchHrisCompanyResponse(
-                hris_company=utils.unmarshal_json_response(
+                hris_company=unmarshal_json_response(
                     Optional[shared.HrisCompany], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2993,7 +2994,7 @@ class Company(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateAtsCompanyResponse(
-                ats_company=utils.unmarshal_json_response(
+                ats_company=unmarshal_json_response(
                     Optional[shared.AtsCompany], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3085,7 +3086,7 @@ class Company(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateAtsCompanyResponse(
-                ats_company=utils.unmarshal_json_response(
+                ats_company=unmarshal_json_response(
                     Optional[shared.AtsCompany], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3177,7 +3178,7 @@ class Company(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateCrmCompanyResponse(
-                crm_company=utils.unmarshal_json_response(
+                crm_company=unmarshal_json_response(
                     Optional[shared.CrmCompany], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3269,7 +3270,7 @@ class Company(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateCrmCompanyResponse(
-                crm_company=utils.unmarshal_json_response(
+                crm_company=unmarshal_json_response(
                     Optional[shared.CrmCompany], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3361,7 +3362,7 @@ class Company(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateHrisCompanyResponse(
-                hris_company=utils.unmarshal_json_response(
+                hris_company=unmarshal_json_response(
                     Optional[shared.HrisCompany], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3453,7 +3454,7 @@ class Company(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateHrisCompanyResponse(
-                hris_company=utils.unmarshal_json_response(
+                hris_company=unmarshal_json_response(
                     Optional[shared.HrisCompany], http_res
                 ),
                 status_code=http_res.status_code,

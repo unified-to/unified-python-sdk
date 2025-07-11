@@ -6,6 +6,7 @@ from unified_python_sdk import utils
 from unified_python_sdk._hooks import HookContext
 from unified_python_sdk.models import errors, operations, shared
 from unified_python_sdk.types import BaseModel, OptionalNullable, UNSET
+from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_response
 
 
 class Accounting(BaseSDK):
@@ -91,7 +92,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateAccountingAccountResponse(
-                accounting_account=utils.unmarshal_json_response(
+                accounting_account=unmarshal_json_response(
                     Optional[shared.AccountingAccount], http_res
                 ),
                 status_code=http_res.status_code,
@@ -189,7 +190,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateAccountingAccountResponse(
-                accounting_account=utils.unmarshal_json_response(
+                accounting_account=unmarshal_json_response(
                     Optional[shared.AccountingAccount], http_res
                 ),
                 status_code=http_res.status_code,
@@ -281,7 +282,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateAccountingBillResponse(
-                accounting_bill=utils.unmarshal_json_response(
+                accounting_bill=unmarshal_json_response(
                     Optional[shared.AccountingBill], http_res
                 ),
                 status_code=http_res.status_code,
@@ -373,7 +374,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateAccountingBillResponse(
-                accounting_bill=utils.unmarshal_json_response(
+                accounting_bill=unmarshal_json_response(
                     Optional[shared.AccountingBill], http_res
                 ),
                 status_code=http_res.status_code,
@@ -471,7 +472,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateAccountingContactResponse(
-                accounting_contact=utils.unmarshal_json_response(
+                accounting_contact=unmarshal_json_response(
                     Optional[shared.AccountingContact], http_res
                 ),
                 status_code=http_res.status_code,
@@ -569,7 +570,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateAccountingContactResponse(
-                accounting_contact=utils.unmarshal_json_response(
+                accounting_contact=unmarshal_json_response(
                     Optional[shared.AccountingContact], http_res
                 ),
                 status_code=http_res.status_code,
@@ -667,7 +668,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateAccountingCreditmemoResponse(
-                accounting_creditmemo=utils.unmarshal_json_response(
+                accounting_creditmemo=unmarshal_json_response(
                     Optional[shared.AccountingCreditmemo], http_res
                 ),
                 status_code=http_res.status_code,
@@ -765,7 +766,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateAccountingCreditmemoResponse(
-                accounting_creditmemo=utils.unmarshal_json_response(
+                accounting_creditmemo=unmarshal_json_response(
                     Optional[shared.AccountingCreditmemo], http_res
                 ),
                 status_code=http_res.status_code,
@@ -863,7 +864,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateAccountingInvoiceResponse(
-                accounting_invoice=utils.unmarshal_json_response(
+                accounting_invoice=unmarshal_json_response(
                     Optional[shared.AccountingInvoice], http_res
                 ),
                 status_code=http_res.status_code,
@@ -961,7 +962,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateAccountingInvoiceResponse(
-                accounting_invoice=utils.unmarshal_json_response(
+                accounting_invoice=unmarshal_json_response(
                     Optional[shared.AccountingInvoice], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1059,7 +1060,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateAccountingJournalResponse(
-                accounting_journal=utils.unmarshal_json_response(
+                accounting_journal=unmarshal_json_response(
                     Optional[shared.AccountingJournal], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1157,7 +1158,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateAccountingJournalResponse(
-                accounting_journal=utils.unmarshal_json_response(
+                accounting_journal=unmarshal_json_response(
                     Optional[shared.AccountingJournal], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1249,7 +1250,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateAccountingOrderResponse(
-                accounting_order=utils.unmarshal_json_response(
+                accounting_order=unmarshal_json_response(
                     Optional[shared.AccountingOrder], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1341,7 +1342,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateAccountingOrderResponse(
-                accounting_order=utils.unmarshal_json_response(
+                accounting_order=unmarshal_json_response(
                     Optional[shared.AccountingOrder], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1439,7 +1440,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateAccountingPurchaseorderResponse(
-                accounting_purchaseorder=utils.unmarshal_json_response(
+                accounting_purchaseorder=unmarshal_json_response(
                     Optional[shared.AccountingPurchaseorder], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1537,7 +1538,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateAccountingPurchaseorderResponse(
-                accounting_purchaseorder=utils.unmarshal_json_response(
+                accounting_purchaseorder=unmarshal_json_response(
                     Optional[shared.AccountingPurchaseorder], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1635,7 +1636,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateAccountingSalesorderResponse(
-                accounting_salesorder=utils.unmarshal_json_response(
+                accounting_salesorder=unmarshal_json_response(
                     Optional[shared.AccountingSalesorder], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1733,7 +1734,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateAccountingSalesorderResponse(
-                accounting_salesorder=utils.unmarshal_json_response(
+                accounting_salesorder=unmarshal_json_response(
                     Optional[shared.AccountingSalesorder], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1831,7 +1832,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateAccountingTaxrateResponse(
-                accounting_taxrate=utils.unmarshal_json_response(
+                accounting_taxrate=unmarshal_json_response(
                     Optional[shared.AccountingTaxrate], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1929,7 +1930,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateAccountingTaxrateResponse(
-                accounting_taxrate=utils.unmarshal_json_response(
+                accounting_taxrate=unmarshal_json_response(
                     Optional[shared.AccountingTaxrate], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2027,7 +2028,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateAccountingTransactionResponse(
-                accounting_transaction=utils.unmarshal_json_response(
+                accounting_transaction=unmarshal_json_response(
                     Optional[shared.AccountingTransaction], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2125,7 +2126,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateAccountingTransactionResponse(
-                accounting_transaction=utils.unmarshal_json_response(
+                accounting_transaction=unmarshal_json_response(
                     Optional[shared.AccountingTransaction], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2214,7 +2215,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetAccountingAccountResponse(
-                accounting_account=utils.unmarshal_json_response(
+                accounting_account=unmarshal_json_response(
                     Optional[shared.AccountingAccount], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2303,7 +2304,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetAccountingAccountResponse(
-                accounting_account=utils.unmarshal_json_response(
+                accounting_account=unmarshal_json_response(
                     Optional[shared.AccountingAccount], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2394,7 +2395,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetAccountingBalancesheetResponse(
-                accounting_balancesheet=utils.unmarshal_json_response(
+                accounting_balancesheet=unmarshal_json_response(
                     Optional[shared.AccountingBalancesheet], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2485,7 +2486,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetAccountingBalancesheetResponse(
-                accounting_balancesheet=utils.unmarshal_json_response(
+                accounting_balancesheet=unmarshal_json_response(
                     Optional[shared.AccountingBalancesheet], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2574,7 +2575,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetAccountingBillResponse(
-                accounting_bill=utils.unmarshal_json_response(
+                accounting_bill=unmarshal_json_response(
                     Optional[shared.AccountingBill], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2663,7 +2664,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetAccountingBillResponse(
-                accounting_bill=utils.unmarshal_json_response(
+                accounting_bill=unmarshal_json_response(
                     Optional[shared.AccountingBill], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2752,7 +2753,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetAccountingContactResponse(
-                accounting_contact=utils.unmarshal_json_response(
+                accounting_contact=unmarshal_json_response(
                     Optional[shared.AccountingContact], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2841,7 +2842,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetAccountingContactResponse(
-                accounting_contact=utils.unmarshal_json_response(
+                accounting_contact=unmarshal_json_response(
                     Optional[shared.AccountingContact], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2932,7 +2933,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetAccountingCreditmemoResponse(
-                accounting_creditmemo=utils.unmarshal_json_response(
+                accounting_creditmemo=unmarshal_json_response(
                     Optional[shared.AccountingCreditmemo], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3023,7 +3024,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetAccountingCreditmemoResponse(
-                accounting_creditmemo=utils.unmarshal_json_response(
+                accounting_creditmemo=unmarshal_json_response(
                     Optional[shared.AccountingCreditmemo], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3112,7 +3113,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetAccountingInvoiceResponse(
-                accounting_invoice=utils.unmarshal_json_response(
+                accounting_invoice=unmarshal_json_response(
                     Optional[shared.AccountingInvoice], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3201,7 +3202,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetAccountingInvoiceResponse(
-                accounting_invoice=utils.unmarshal_json_response(
+                accounting_invoice=unmarshal_json_response(
                     Optional[shared.AccountingInvoice], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3290,7 +3291,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetAccountingJournalResponse(
-                accounting_journal=utils.unmarshal_json_response(
+                accounting_journal=unmarshal_json_response(
                     Optional[shared.AccountingJournal], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3379,7 +3380,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetAccountingJournalResponse(
-                accounting_journal=utils.unmarshal_json_response(
+                accounting_journal=unmarshal_json_response(
                     Optional[shared.AccountingJournal], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3468,7 +3469,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetAccountingOrderResponse(
-                accounting_order=utils.unmarshal_json_response(
+                accounting_order=unmarshal_json_response(
                     Optional[shared.AccountingOrder], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3557,7 +3558,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetAccountingOrderResponse(
-                accounting_order=utils.unmarshal_json_response(
+                accounting_order=unmarshal_json_response(
                     Optional[shared.AccountingOrder], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3648,7 +3649,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetAccountingOrganizationResponse(
-                accounting_organization=utils.unmarshal_json_response(
+                accounting_organization=unmarshal_json_response(
                     Optional[shared.AccountingOrganization], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3739,7 +3740,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetAccountingOrganizationResponse(
-                accounting_organization=utils.unmarshal_json_response(
+                accounting_organization=unmarshal_json_response(
                     Optional[shared.AccountingOrganization], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3830,7 +3831,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetAccountingProfitlossResponse(
-                accounting_profitloss=utils.unmarshal_json_response(
+                accounting_profitloss=unmarshal_json_response(
                     Optional[shared.AccountingProfitloss], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3921,7 +3922,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetAccountingProfitlossResponse(
-                accounting_profitloss=utils.unmarshal_json_response(
+                accounting_profitloss=unmarshal_json_response(
                     Optional[shared.AccountingProfitloss], http_res
                 ),
                 status_code=http_res.status_code,
@@ -4012,7 +4013,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetAccountingPurchaseorderResponse(
-                accounting_purchaseorder=utils.unmarshal_json_response(
+                accounting_purchaseorder=unmarshal_json_response(
                     Optional[shared.AccountingPurchaseorder], http_res
                 ),
                 status_code=http_res.status_code,
@@ -4103,7 +4104,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetAccountingPurchaseorderResponse(
-                accounting_purchaseorder=utils.unmarshal_json_response(
+                accounting_purchaseorder=unmarshal_json_response(
                     Optional[shared.AccountingPurchaseorder], http_res
                 ),
                 status_code=http_res.status_code,
@@ -4192,7 +4193,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetAccountingReportResponse(
-                accounting_report=utils.unmarshal_json_response(
+                accounting_report=unmarshal_json_response(
                     Optional[shared.AccountingReport], http_res
                 ),
                 status_code=http_res.status_code,
@@ -4281,7 +4282,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetAccountingReportResponse(
-                accounting_report=utils.unmarshal_json_response(
+                accounting_report=unmarshal_json_response(
                     Optional[shared.AccountingReport], http_res
                 ),
                 status_code=http_res.status_code,
@@ -4372,7 +4373,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetAccountingSalesorderResponse(
-                accounting_salesorder=utils.unmarshal_json_response(
+                accounting_salesorder=unmarshal_json_response(
                     Optional[shared.AccountingSalesorder], http_res
                 ),
                 status_code=http_res.status_code,
@@ -4463,7 +4464,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetAccountingSalesorderResponse(
-                accounting_salesorder=utils.unmarshal_json_response(
+                accounting_salesorder=unmarshal_json_response(
                     Optional[shared.AccountingSalesorder], http_res
                 ),
                 status_code=http_res.status_code,
@@ -4552,7 +4553,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetAccountingTaxrateResponse(
-                accounting_taxrate=utils.unmarshal_json_response(
+                accounting_taxrate=unmarshal_json_response(
                     Optional[shared.AccountingTaxrate], http_res
                 ),
                 status_code=http_res.status_code,
@@ -4641,7 +4642,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetAccountingTaxrateResponse(
-                accounting_taxrate=utils.unmarshal_json_response(
+                accounting_taxrate=unmarshal_json_response(
                     Optional[shared.AccountingTaxrate], http_res
                 ),
                 status_code=http_res.status_code,
@@ -4732,7 +4733,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetAccountingTransactionResponse(
-                accounting_transaction=utils.unmarshal_json_response(
+                accounting_transaction=unmarshal_json_response(
                     Optional[shared.AccountingTransaction], http_res
                 ),
                 status_code=http_res.status_code,
@@ -4823,7 +4824,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetAccountingTransactionResponse(
-                accounting_transaction=utils.unmarshal_json_response(
+                accounting_transaction=unmarshal_json_response(
                     Optional[shared.AccountingTransaction], http_res
                 ),
                 status_code=http_res.status_code,
@@ -4914,7 +4915,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetAccountingTrialbalanceResponse(
-                accounting_trialbalance=utils.unmarshal_json_response(
+                accounting_trialbalance=unmarshal_json_response(
                     Optional[shared.AccountingTrialbalance], http_res
                 ),
                 status_code=http_res.status_code,
@@ -5005,7 +5006,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetAccountingTrialbalanceResponse(
-                accounting_trialbalance=utils.unmarshal_json_response(
+                accounting_trialbalance=unmarshal_json_response(
                     Optional[shared.AccountingTrialbalance], http_res
                 ),
                 status_code=http_res.status_code,
@@ -5094,7 +5095,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListAccountingAccountsResponse(
-                accounting_accounts=utils.unmarshal_json_response(
+                accounting_accounts=unmarshal_json_response(
                     Optional[List[shared.AccountingAccount]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -5183,7 +5184,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListAccountingAccountsResponse(
-                accounting_accounts=utils.unmarshal_json_response(
+                accounting_accounts=unmarshal_json_response(
                     Optional[List[shared.AccountingAccount]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -5274,7 +5275,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListAccountingBalancesheetsResponse(
-                accounting_balancesheets=utils.unmarshal_json_response(
+                accounting_balancesheets=unmarshal_json_response(
                     Optional[List[shared.AccountingBalancesheet]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -5365,7 +5366,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListAccountingBalancesheetsResponse(
-                accounting_balancesheets=utils.unmarshal_json_response(
+                accounting_balancesheets=unmarshal_json_response(
                     Optional[List[shared.AccountingBalancesheet]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -5454,7 +5455,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListAccountingBillsResponse(
-                accounting_bills=utils.unmarshal_json_response(
+                accounting_bills=unmarshal_json_response(
                     Optional[List[shared.AccountingBill]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -5543,7 +5544,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListAccountingBillsResponse(
-                accounting_bills=utils.unmarshal_json_response(
+                accounting_bills=unmarshal_json_response(
                     Optional[List[shared.AccountingBill]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -5632,7 +5633,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListAccountingContactsResponse(
-                accounting_contacts=utils.unmarshal_json_response(
+                accounting_contacts=unmarshal_json_response(
                     Optional[List[shared.AccountingContact]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -5721,7 +5722,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListAccountingContactsResponse(
-                accounting_contacts=utils.unmarshal_json_response(
+                accounting_contacts=unmarshal_json_response(
                     Optional[List[shared.AccountingContact]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -5812,7 +5813,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListAccountingCreditmemoesResponse(
-                accounting_creditmemoes=utils.unmarshal_json_response(
+                accounting_creditmemoes=unmarshal_json_response(
                     Optional[List[shared.AccountingCreditmemo]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -5903,7 +5904,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListAccountingCreditmemoesResponse(
-                accounting_creditmemoes=utils.unmarshal_json_response(
+                accounting_creditmemoes=unmarshal_json_response(
                     Optional[List[shared.AccountingCreditmemo]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -5992,7 +5993,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListAccountingInvoicesResponse(
-                accounting_invoices=utils.unmarshal_json_response(
+                accounting_invoices=unmarshal_json_response(
                     Optional[List[shared.AccountingInvoice]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -6081,7 +6082,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListAccountingInvoicesResponse(
-                accounting_invoices=utils.unmarshal_json_response(
+                accounting_invoices=unmarshal_json_response(
                     Optional[List[shared.AccountingInvoice]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -6170,7 +6171,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListAccountingJournalsResponse(
-                accounting_journals=utils.unmarshal_json_response(
+                accounting_journals=unmarshal_json_response(
                     Optional[List[shared.AccountingJournal]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -6259,7 +6260,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListAccountingJournalsResponse(
-                accounting_journals=utils.unmarshal_json_response(
+                accounting_journals=unmarshal_json_response(
                     Optional[List[shared.AccountingJournal]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -6348,7 +6349,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListAccountingOrdersResponse(
-                accounting_orders=utils.unmarshal_json_response(
+                accounting_orders=unmarshal_json_response(
                     Optional[List[shared.AccountingOrder]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -6437,7 +6438,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListAccountingOrdersResponse(
-                accounting_orders=utils.unmarshal_json_response(
+                accounting_orders=unmarshal_json_response(
                     Optional[List[shared.AccountingOrder]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -6528,7 +6529,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListAccountingOrganizationsResponse(
-                accounting_organizations=utils.unmarshal_json_response(
+                accounting_organizations=unmarshal_json_response(
                     Optional[List[shared.AccountingOrganization]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -6619,7 +6620,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListAccountingOrganizationsResponse(
-                accounting_organizations=utils.unmarshal_json_response(
+                accounting_organizations=unmarshal_json_response(
                     Optional[List[shared.AccountingOrganization]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -6710,7 +6711,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListAccountingProfitlossesResponse(
-                accounting_profitlosses=utils.unmarshal_json_response(
+                accounting_profitlosses=unmarshal_json_response(
                     Optional[List[shared.AccountingProfitloss]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -6801,7 +6802,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListAccountingProfitlossesResponse(
-                accounting_profitlosses=utils.unmarshal_json_response(
+                accounting_profitlosses=unmarshal_json_response(
                     Optional[List[shared.AccountingProfitloss]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -6892,7 +6893,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListAccountingPurchaseordersResponse(
-                accounting_purchaseorders=utils.unmarshal_json_response(
+                accounting_purchaseorders=unmarshal_json_response(
                     Optional[List[shared.AccountingPurchaseorder]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -6983,7 +6984,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListAccountingPurchaseordersResponse(
-                accounting_purchaseorders=utils.unmarshal_json_response(
+                accounting_purchaseorders=unmarshal_json_response(
                     Optional[List[shared.AccountingPurchaseorder]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -7072,7 +7073,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListAccountingReportsResponse(
-                accounting_reports=utils.unmarshal_json_response(
+                accounting_reports=unmarshal_json_response(
                     Optional[List[shared.AccountingReport]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -7161,7 +7162,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListAccountingReportsResponse(
-                accounting_reports=utils.unmarshal_json_response(
+                accounting_reports=unmarshal_json_response(
                     Optional[List[shared.AccountingReport]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -7252,7 +7253,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListAccountingSalesordersResponse(
-                accounting_salesorders=utils.unmarshal_json_response(
+                accounting_salesorders=unmarshal_json_response(
                     Optional[List[shared.AccountingSalesorder]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -7343,7 +7344,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListAccountingSalesordersResponse(
-                accounting_salesorders=utils.unmarshal_json_response(
+                accounting_salesorders=unmarshal_json_response(
                     Optional[List[shared.AccountingSalesorder]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -7432,7 +7433,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListAccountingTaxratesResponse(
-                accounting_taxrates=utils.unmarshal_json_response(
+                accounting_taxrates=unmarshal_json_response(
                     Optional[List[shared.AccountingTaxrate]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -7521,7 +7522,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListAccountingTaxratesResponse(
-                accounting_taxrates=utils.unmarshal_json_response(
+                accounting_taxrates=unmarshal_json_response(
                     Optional[List[shared.AccountingTaxrate]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -7612,7 +7613,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListAccountingTransactionsResponse(
-                accounting_transactions=utils.unmarshal_json_response(
+                accounting_transactions=unmarshal_json_response(
                     Optional[List[shared.AccountingTransaction]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -7703,7 +7704,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListAccountingTransactionsResponse(
-                accounting_transactions=utils.unmarshal_json_response(
+                accounting_transactions=unmarshal_json_response(
                     Optional[List[shared.AccountingTransaction]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -7794,7 +7795,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListAccountingTrialbalancesResponse(
-                accounting_trialbalances=utils.unmarshal_json_response(
+                accounting_trialbalances=unmarshal_json_response(
                     Optional[List[shared.AccountingTrialbalance]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -7885,7 +7886,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListAccountingTrialbalancesResponse(
-                accounting_trialbalances=utils.unmarshal_json_response(
+                accounting_trialbalances=unmarshal_json_response(
                     Optional[List[shared.AccountingTrialbalance]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -7981,7 +7982,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchAccountingAccountResponse(
-                accounting_account=utils.unmarshal_json_response(
+                accounting_account=unmarshal_json_response(
                     Optional[shared.AccountingAccount], http_res
                 ),
                 status_code=http_res.status_code,
@@ -8077,7 +8078,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchAccountingAccountResponse(
-                accounting_account=utils.unmarshal_json_response(
+                accounting_account=unmarshal_json_response(
                     Optional[shared.AccountingAccount], http_res
                 ),
                 status_code=http_res.status_code,
@@ -8169,7 +8170,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchAccountingBillResponse(
-                accounting_bill=utils.unmarshal_json_response(
+                accounting_bill=unmarshal_json_response(
                     Optional[shared.AccountingBill], http_res
                 ),
                 status_code=http_res.status_code,
@@ -8261,7 +8262,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchAccountingBillResponse(
-                accounting_bill=utils.unmarshal_json_response(
+                accounting_bill=unmarshal_json_response(
                     Optional[shared.AccountingBill], http_res
                 ),
                 status_code=http_res.status_code,
@@ -8357,7 +8358,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchAccountingContactResponse(
-                accounting_contact=utils.unmarshal_json_response(
+                accounting_contact=unmarshal_json_response(
                     Optional[shared.AccountingContact], http_res
                 ),
                 status_code=http_res.status_code,
@@ -8453,7 +8454,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchAccountingContactResponse(
-                accounting_contact=utils.unmarshal_json_response(
+                accounting_contact=unmarshal_json_response(
                     Optional[shared.AccountingContact], http_res
                 ),
                 status_code=http_res.status_code,
@@ -8551,7 +8552,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchAccountingCreditmemoResponse(
-                accounting_creditmemo=utils.unmarshal_json_response(
+                accounting_creditmemo=unmarshal_json_response(
                     Optional[shared.AccountingCreditmemo], http_res
                 ),
                 status_code=http_res.status_code,
@@ -8649,7 +8650,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchAccountingCreditmemoResponse(
-                accounting_creditmemo=utils.unmarshal_json_response(
+                accounting_creditmemo=unmarshal_json_response(
                     Optional[shared.AccountingCreditmemo], http_res
                 ),
                 status_code=http_res.status_code,
@@ -8745,7 +8746,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchAccountingInvoiceResponse(
-                accounting_invoice=utils.unmarshal_json_response(
+                accounting_invoice=unmarshal_json_response(
                     Optional[shared.AccountingInvoice], http_res
                 ),
                 status_code=http_res.status_code,
@@ -8841,7 +8842,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchAccountingInvoiceResponse(
-                accounting_invoice=utils.unmarshal_json_response(
+                accounting_invoice=unmarshal_json_response(
                     Optional[shared.AccountingInvoice], http_res
                 ),
                 status_code=http_res.status_code,
@@ -8937,7 +8938,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchAccountingJournalResponse(
-                accounting_journal=utils.unmarshal_json_response(
+                accounting_journal=unmarshal_json_response(
                     Optional[shared.AccountingJournal], http_res
                 ),
                 status_code=http_res.status_code,
@@ -9033,7 +9034,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchAccountingJournalResponse(
-                accounting_journal=utils.unmarshal_json_response(
+                accounting_journal=unmarshal_json_response(
                     Optional[shared.AccountingJournal], http_res
                 ),
                 status_code=http_res.status_code,
@@ -9125,7 +9126,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchAccountingOrderResponse(
-                accounting_order=utils.unmarshal_json_response(
+                accounting_order=unmarshal_json_response(
                     Optional[shared.AccountingOrder], http_res
                 ),
                 status_code=http_res.status_code,
@@ -9217,7 +9218,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchAccountingOrderResponse(
-                accounting_order=utils.unmarshal_json_response(
+                accounting_order=unmarshal_json_response(
                     Optional[shared.AccountingOrder], http_res
                 ),
                 status_code=http_res.status_code,
@@ -9315,7 +9316,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchAccountingPurchaseorderResponse(
-                accounting_purchaseorder=utils.unmarshal_json_response(
+                accounting_purchaseorder=unmarshal_json_response(
                     Optional[shared.AccountingPurchaseorder], http_res
                 ),
                 status_code=http_res.status_code,
@@ -9413,7 +9414,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchAccountingPurchaseorderResponse(
-                accounting_purchaseorder=utils.unmarshal_json_response(
+                accounting_purchaseorder=unmarshal_json_response(
                     Optional[shared.AccountingPurchaseorder], http_res
                 ),
                 status_code=http_res.status_code,
@@ -9511,7 +9512,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchAccountingSalesorderResponse(
-                accounting_salesorder=utils.unmarshal_json_response(
+                accounting_salesorder=unmarshal_json_response(
                     Optional[shared.AccountingSalesorder], http_res
                 ),
                 status_code=http_res.status_code,
@@ -9609,7 +9610,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchAccountingSalesorderResponse(
-                accounting_salesorder=utils.unmarshal_json_response(
+                accounting_salesorder=unmarshal_json_response(
                     Optional[shared.AccountingSalesorder], http_res
                 ),
                 status_code=http_res.status_code,
@@ -9705,7 +9706,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchAccountingTaxrateResponse(
-                accounting_taxrate=utils.unmarshal_json_response(
+                accounting_taxrate=unmarshal_json_response(
                     Optional[shared.AccountingTaxrate], http_res
                 ),
                 status_code=http_res.status_code,
@@ -9801,7 +9802,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchAccountingTaxrateResponse(
-                accounting_taxrate=utils.unmarshal_json_response(
+                accounting_taxrate=unmarshal_json_response(
                     Optional[shared.AccountingTaxrate], http_res
                 ),
                 status_code=http_res.status_code,
@@ -9899,7 +9900,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchAccountingTransactionResponse(
-                accounting_transaction=utils.unmarshal_json_response(
+                accounting_transaction=unmarshal_json_response(
                     Optional[shared.AccountingTransaction], http_res
                 ),
                 status_code=http_res.status_code,
@@ -9997,7 +9998,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchAccountingTransactionResponse(
-                accounting_transaction=utils.unmarshal_json_response(
+                accounting_transaction=unmarshal_json_response(
                     Optional[shared.AccountingTransaction], http_res
                 ),
                 status_code=http_res.status_code,
@@ -12199,7 +12200,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateAccountingAccountResponse(
-                accounting_account=utils.unmarshal_json_response(
+                accounting_account=unmarshal_json_response(
                     Optional[shared.AccountingAccount], http_res
                 ),
                 status_code=http_res.status_code,
@@ -12297,7 +12298,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateAccountingAccountResponse(
-                accounting_account=utils.unmarshal_json_response(
+                accounting_account=unmarshal_json_response(
                     Optional[shared.AccountingAccount], http_res
                 ),
                 status_code=http_res.status_code,
@@ -12389,7 +12390,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateAccountingBillResponse(
-                accounting_bill=utils.unmarshal_json_response(
+                accounting_bill=unmarshal_json_response(
                     Optional[shared.AccountingBill], http_res
                 ),
                 status_code=http_res.status_code,
@@ -12481,7 +12482,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateAccountingBillResponse(
-                accounting_bill=utils.unmarshal_json_response(
+                accounting_bill=unmarshal_json_response(
                     Optional[shared.AccountingBill], http_res
                 ),
                 status_code=http_res.status_code,
@@ -12579,7 +12580,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateAccountingContactResponse(
-                accounting_contact=utils.unmarshal_json_response(
+                accounting_contact=unmarshal_json_response(
                     Optional[shared.AccountingContact], http_res
                 ),
                 status_code=http_res.status_code,
@@ -12677,7 +12678,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateAccountingContactResponse(
-                accounting_contact=utils.unmarshal_json_response(
+                accounting_contact=unmarshal_json_response(
                     Optional[shared.AccountingContact], http_res
                 ),
                 status_code=http_res.status_code,
@@ -12775,7 +12776,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateAccountingCreditmemoResponse(
-                accounting_creditmemo=utils.unmarshal_json_response(
+                accounting_creditmemo=unmarshal_json_response(
                     Optional[shared.AccountingCreditmemo], http_res
                 ),
                 status_code=http_res.status_code,
@@ -12873,7 +12874,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateAccountingCreditmemoResponse(
-                accounting_creditmemo=utils.unmarshal_json_response(
+                accounting_creditmemo=unmarshal_json_response(
                     Optional[shared.AccountingCreditmemo], http_res
                 ),
                 status_code=http_res.status_code,
@@ -12971,7 +12972,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateAccountingInvoiceResponse(
-                accounting_invoice=utils.unmarshal_json_response(
+                accounting_invoice=unmarshal_json_response(
                     Optional[shared.AccountingInvoice], http_res
                 ),
                 status_code=http_res.status_code,
@@ -13069,7 +13070,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateAccountingInvoiceResponse(
-                accounting_invoice=utils.unmarshal_json_response(
+                accounting_invoice=unmarshal_json_response(
                     Optional[shared.AccountingInvoice], http_res
                 ),
                 status_code=http_res.status_code,
@@ -13167,7 +13168,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateAccountingJournalResponse(
-                accounting_journal=utils.unmarshal_json_response(
+                accounting_journal=unmarshal_json_response(
                     Optional[shared.AccountingJournal], http_res
                 ),
                 status_code=http_res.status_code,
@@ -13265,7 +13266,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateAccountingJournalResponse(
-                accounting_journal=utils.unmarshal_json_response(
+                accounting_journal=unmarshal_json_response(
                     Optional[shared.AccountingJournal], http_res
                 ),
                 status_code=http_res.status_code,
@@ -13357,7 +13358,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateAccountingOrderResponse(
-                accounting_order=utils.unmarshal_json_response(
+                accounting_order=unmarshal_json_response(
                     Optional[shared.AccountingOrder], http_res
                 ),
                 status_code=http_res.status_code,
@@ -13449,7 +13450,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateAccountingOrderResponse(
-                accounting_order=utils.unmarshal_json_response(
+                accounting_order=unmarshal_json_response(
                     Optional[shared.AccountingOrder], http_res
                 ),
                 status_code=http_res.status_code,
@@ -13547,7 +13548,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateAccountingPurchaseorderResponse(
-                accounting_purchaseorder=utils.unmarshal_json_response(
+                accounting_purchaseorder=unmarshal_json_response(
                     Optional[shared.AccountingPurchaseorder], http_res
                 ),
                 status_code=http_res.status_code,
@@ -13645,7 +13646,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateAccountingPurchaseorderResponse(
-                accounting_purchaseorder=utils.unmarshal_json_response(
+                accounting_purchaseorder=unmarshal_json_response(
                     Optional[shared.AccountingPurchaseorder], http_res
                 ),
                 status_code=http_res.status_code,
@@ -13743,7 +13744,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateAccountingSalesorderResponse(
-                accounting_salesorder=utils.unmarshal_json_response(
+                accounting_salesorder=unmarshal_json_response(
                     Optional[shared.AccountingSalesorder], http_res
                 ),
                 status_code=http_res.status_code,
@@ -13841,7 +13842,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateAccountingSalesorderResponse(
-                accounting_salesorder=utils.unmarshal_json_response(
+                accounting_salesorder=unmarshal_json_response(
                     Optional[shared.AccountingSalesorder], http_res
                 ),
                 status_code=http_res.status_code,
@@ -13939,7 +13940,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateAccountingTaxrateResponse(
-                accounting_taxrate=utils.unmarshal_json_response(
+                accounting_taxrate=unmarshal_json_response(
                     Optional[shared.AccountingTaxrate], http_res
                 ),
                 status_code=http_res.status_code,
@@ -14037,7 +14038,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateAccountingTaxrateResponse(
-                accounting_taxrate=utils.unmarshal_json_response(
+                accounting_taxrate=unmarshal_json_response(
                     Optional[shared.AccountingTaxrate], http_res
                 ),
                 status_code=http_res.status_code,
@@ -14135,7 +14136,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateAccountingTransactionResponse(
-                accounting_transaction=utils.unmarshal_json_response(
+                accounting_transaction=unmarshal_json_response(
                     Optional[shared.AccountingTransaction], http_res
                 ),
                 status_code=http_res.status_code,
@@ -14233,7 +14234,7 @@ class Accounting(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateAccountingTransactionResponse(
-                accounting_transaction=utils.unmarshal_json_response(
+                accounting_transaction=unmarshal_json_response(
                     Optional[shared.AccountingTransaction], http_res
                 ),
                 status_code=http_res.status_code,

@@ -6,6 +6,7 @@ from unified_python_sdk import utils
 from unified_python_sdk._hooks import HookContext
 from unified_python_sdk.models import errors, operations, shared
 from unified_python_sdk.types import BaseModel, OptionalNullable, UNSET
+from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_response
 
 
 class Martech(BaseSDK):
@@ -85,7 +86,7 @@ class Martech(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateMartechListResponse(
-                marketing_list=utils.unmarshal_json_response(
+                marketing_list=unmarshal_json_response(
                     Optional[shared.MarketingList], http_res
                 ),
                 status_code=http_res.status_code,
@@ -177,7 +178,7 @@ class Martech(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateMartechListResponse(
-                marketing_list=utils.unmarshal_json_response(
+                marketing_list=unmarshal_json_response(
                     Optional[shared.MarketingList], http_res
                 ),
                 status_code=http_res.status_code,
@@ -269,7 +270,7 @@ class Martech(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateMartechMemberResponse(
-                marketing_member=utils.unmarshal_json_response(
+                marketing_member=unmarshal_json_response(
                     Optional[shared.MarketingMember], http_res
                 ),
                 status_code=http_res.status_code,
@@ -361,7 +362,7 @@ class Martech(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateMartechMemberResponse(
-                marketing_member=utils.unmarshal_json_response(
+                marketing_member=unmarshal_json_response(
                     Optional[shared.MarketingMember], http_res
                 ),
                 status_code=http_res.status_code,
@@ -449,7 +450,7 @@ class Martech(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetMartechListResponse(
-                marketing_list=utils.unmarshal_json_response(
+                marketing_list=unmarshal_json_response(
                     Optional[shared.MarketingList], http_res
                 ),
                 status_code=http_res.status_code,
@@ -537,7 +538,7 @@ class Martech(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetMartechListResponse(
-                marketing_list=utils.unmarshal_json_response(
+                marketing_list=unmarshal_json_response(
                     Optional[shared.MarketingList], http_res
                 ),
                 status_code=http_res.status_code,
@@ -626,7 +627,7 @@ class Martech(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetMartechMemberResponse(
-                marketing_member=utils.unmarshal_json_response(
+                marketing_member=unmarshal_json_response(
                     Optional[shared.MarketingMember], http_res
                 ),
                 status_code=http_res.status_code,
@@ -715,7 +716,7 @@ class Martech(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetMartechMemberResponse(
-                marketing_member=utils.unmarshal_json_response(
+                marketing_member=unmarshal_json_response(
                     Optional[shared.MarketingMember], http_res
                 ),
                 status_code=http_res.status_code,
@@ -804,7 +805,7 @@ class Martech(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListMartechListsResponse(
-                marketing_lists=utils.unmarshal_json_response(
+                marketing_lists=unmarshal_json_response(
                     Optional[List[shared.MarketingList]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -893,7 +894,7 @@ class Martech(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListMartechListsResponse(
-                marketing_lists=utils.unmarshal_json_response(
+                marketing_lists=unmarshal_json_response(
                     Optional[List[shared.MarketingList]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -982,7 +983,7 @@ class Martech(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListMartechMembersResponse(
-                marketing_members=utils.unmarshal_json_response(
+                marketing_members=unmarshal_json_response(
                     Optional[List[shared.MarketingMember]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1071,7 +1072,7 @@ class Martech(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListMartechMembersResponse(
-                marketing_members=utils.unmarshal_json_response(
+                marketing_members=unmarshal_json_response(
                     Optional[List[shared.MarketingMember]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1163,7 +1164,7 @@ class Martech(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchMartechListResponse(
-                marketing_list=utils.unmarshal_json_response(
+                marketing_list=unmarshal_json_response(
                     Optional[shared.MarketingList], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1255,7 +1256,7 @@ class Martech(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchMartechListResponse(
-                marketing_list=utils.unmarshal_json_response(
+                marketing_list=unmarshal_json_response(
                     Optional[shared.MarketingList], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1347,7 +1348,7 @@ class Martech(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchMartechMemberResponse(
-                marketing_member=utils.unmarshal_json_response(
+                marketing_member=unmarshal_json_response(
                     Optional[shared.MarketingMember], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1439,7 +1440,7 @@ class Martech(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchMartechMemberResponse(
-                marketing_member=utils.unmarshal_json_response(
+                marketing_member=unmarshal_json_response(
                     Optional[shared.MarketingMember], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1907,7 +1908,7 @@ class Martech(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateMartechListResponse(
-                marketing_list=utils.unmarshal_json_response(
+                marketing_list=unmarshal_json_response(
                     Optional[shared.MarketingList], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1999,7 +2000,7 @@ class Martech(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateMartechListResponse(
-                marketing_list=utils.unmarshal_json_response(
+                marketing_list=unmarshal_json_response(
                     Optional[shared.MarketingList], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2091,7 +2092,7 @@ class Martech(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateMartechMemberResponse(
-                marketing_member=utils.unmarshal_json_response(
+                marketing_member=unmarshal_json_response(
                     Optional[shared.MarketingMember], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2183,7 +2184,7 @@ class Martech(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateMartechMemberResponse(
-                marketing_member=utils.unmarshal_json_response(
+                marketing_member=unmarshal_json_response(
                     Optional[shared.MarketingMember], http_res
                 ),
                 status_code=http_res.status_code,

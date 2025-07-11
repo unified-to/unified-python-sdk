@@ -6,6 +6,7 @@ from unified_python_sdk import utils
 from unified_python_sdk._hooks import HookContext
 from unified_python_sdk.models import errors, operations, shared
 from unified_python_sdk.types import BaseModel, OptionalNullable, UNSET
+from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_response
 
 
 class Link(BaseSDK):
@@ -85,7 +86,7 @@ class Link(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateCalendarLinkResponse(
-                calendar_link=utils.unmarshal_json_response(
+                calendar_link=unmarshal_json_response(
                     Optional[shared.CalendarLink], http_res
                 ),
                 status_code=http_res.status_code,
@@ -177,7 +178,7 @@ class Link(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateCalendarLinkResponse(
-                calendar_link=utils.unmarshal_json_response(
+                calendar_link=unmarshal_json_response(
                     Optional[shared.CalendarLink], http_res
                 ),
                 status_code=http_res.status_code,
@@ -269,7 +270,7 @@ class Link(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreatePaymentLinkResponse(
-                payment_link=utils.unmarshal_json_response(
+                payment_link=unmarshal_json_response(
                     Optional[shared.PaymentLink], http_res
                 ),
                 status_code=http_res.status_code,
@@ -361,7 +362,7 @@ class Link(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreatePaymentLinkResponse(
-                payment_link=utils.unmarshal_json_response(
+                payment_link=unmarshal_json_response(
                     Optional[shared.PaymentLink], http_res
                 ),
                 status_code=http_res.status_code,
@@ -450,7 +451,7 @@ class Link(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetCalendarLinkResponse(
-                calendar_link=utils.unmarshal_json_response(
+                calendar_link=unmarshal_json_response(
                     Optional[shared.CalendarLink], http_res
                 ),
                 status_code=http_res.status_code,
@@ -539,7 +540,7 @@ class Link(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetCalendarLinkResponse(
-                calendar_link=utils.unmarshal_json_response(
+                calendar_link=unmarshal_json_response(
                     Optional[shared.CalendarLink], http_res
                 ),
                 status_code=http_res.status_code,
@@ -627,7 +628,7 @@ class Link(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetPaymentLinkResponse(
-                payment_link=utils.unmarshal_json_response(
+                payment_link=unmarshal_json_response(
                     Optional[shared.PaymentLink], http_res
                 ),
                 status_code=http_res.status_code,
@@ -715,7 +716,7 @@ class Link(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetPaymentLinkResponse(
-                payment_link=utils.unmarshal_json_response(
+                payment_link=unmarshal_json_response(
                     Optional[shared.PaymentLink], http_res
                 ),
                 status_code=http_res.status_code,
@@ -804,7 +805,7 @@ class Link(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListCalendarLinksResponse(
-                calendar_links=utils.unmarshal_json_response(
+                calendar_links=unmarshal_json_response(
                     Optional[List[shared.CalendarLink]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -893,7 +894,7 @@ class Link(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListCalendarLinksResponse(
-                calendar_links=utils.unmarshal_json_response(
+                calendar_links=unmarshal_json_response(
                     Optional[List[shared.CalendarLink]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -982,7 +983,7 @@ class Link(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListPaymentLinksResponse(
-                payment_links=utils.unmarshal_json_response(
+                payment_links=unmarshal_json_response(
                     Optional[List[shared.PaymentLink]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1071,7 +1072,7 @@ class Link(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListPaymentLinksResponse(
-                payment_links=utils.unmarshal_json_response(
+                payment_links=unmarshal_json_response(
                     Optional[List[shared.PaymentLink]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1163,7 +1164,7 @@ class Link(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchCalendarLinkResponse(
-                calendar_link=utils.unmarshal_json_response(
+                calendar_link=unmarshal_json_response(
                     Optional[shared.CalendarLink], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1255,7 +1256,7 @@ class Link(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchCalendarLinkResponse(
-                calendar_link=utils.unmarshal_json_response(
+                calendar_link=unmarshal_json_response(
                     Optional[shared.CalendarLink], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1347,7 +1348,7 @@ class Link(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchPaymentLinkResponse(
-                payment_link=utils.unmarshal_json_response(
+                payment_link=unmarshal_json_response(
                     Optional[shared.PaymentLink], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1439,7 +1440,7 @@ class Link(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchPaymentLinkResponse(
-                payment_link=utils.unmarshal_json_response(
+                payment_link=unmarshal_json_response(
                     Optional[shared.PaymentLink], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1907,7 +1908,7 @@ class Link(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateCalendarLinkResponse(
-                calendar_link=utils.unmarshal_json_response(
+                calendar_link=unmarshal_json_response(
                     Optional[shared.CalendarLink], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1999,7 +2000,7 @@ class Link(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateCalendarLinkResponse(
-                calendar_link=utils.unmarshal_json_response(
+                calendar_link=unmarshal_json_response(
                     Optional[shared.CalendarLink], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2091,7 +2092,7 @@ class Link(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdatePaymentLinkResponse(
-                payment_link=utils.unmarshal_json_response(
+                payment_link=unmarshal_json_response(
                     Optional[shared.PaymentLink], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2183,7 +2184,7 @@ class Link(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdatePaymentLinkResponse(
-                payment_link=utils.unmarshal_json_response(
+                payment_link=unmarshal_json_response(
                     Optional[shared.PaymentLink], http_res
                 ),
                 status_code=http_res.status_code,

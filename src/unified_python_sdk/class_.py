@@ -6,6 +6,7 @@ from unified_python_sdk import utils
 from unified_python_sdk._hooks import HookContext
 from unified_python_sdk.models import errors, operations, shared
 from unified_python_sdk.types import BaseModel, OptionalNullable, UNSET
+from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_response
 
 
 class Class(BaseSDK):
@@ -84,9 +85,7 @@ class Class(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateLmsClassResponse(
-                lms_class=utils.unmarshal_json_response(
-                    Optional[shared.LmsClass], http_res
-                ),
+                lms_class=unmarshal_json_response(Optional[shared.LmsClass], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -175,9 +174,7 @@ class Class(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateLmsClassResponse(
-                lms_class=utils.unmarshal_json_response(
-                    Optional[shared.LmsClass], http_res
-                ),
+                lms_class=unmarshal_json_response(Optional[shared.LmsClass], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -263,9 +260,7 @@ class Class(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetLmsClassResponse(
-                lms_class=utils.unmarshal_json_response(
-                    Optional[shared.LmsClass], http_res
-                ),
+                lms_class=unmarshal_json_response(Optional[shared.LmsClass], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -351,9 +346,7 @@ class Class(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetLmsClassResponse(
-                lms_class=utils.unmarshal_json_response(
-                    Optional[shared.LmsClass], http_res
-                ),
+                lms_class=unmarshal_json_response(Optional[shared.LmsClass], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -439,7 +432,7 @@ class Class(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListLmsClassesResponse(
-                lms_classes=utils.unmarshal_json_response(
+                lms_classes=unmarshal_json_response(
                     Optional[List[shared.LmsClass]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -527,7 +520,7 @@ class Class(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListLmsClassesResponse(
-                lms_classes=utils.unmarshal_json_response(
+                lms_classes=unmarshal_json_response(
                     Optional[List[shared.LmsClass]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -618,9 +611,7 @@ class Class(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchLmsClassResponse(
-                lms_class=utils.unmarshal_json_response(
-                    Optional[shared.LmsClass], http_res
-                ),
+                lms_class=unmarshal_json_response(Optional[shared.LmsClass], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -709,9 +700,7 @@ class Class(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchLmsClassResponse(
-                lms_class=utils.unmarshal_json_response(
-                    Optional[shared.LmsClass], http_res
-                ),
+                lms_class=unmarshal_json_response(Optional[shared.LmsClass], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -986,9 +975,7 @@ class Class(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateLmsClassResponse(
-                lms_class=utils.unmarshal_json_response(
-                    Optional[shared.LmsClass], http_res
-                ),
+                lms_class=unmarshal_json_response(Optional[shared.LmsClass], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1077,9 +1064,7 @@ class Class(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateLmsClassResponse(
-                lms_class=utils.unmarshal_json_response(
-                    Optional[shared.LmsClass], http_res
-                ),
+                lms_class=unmarshal_json_response(Optional[shared.LmsClass], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,

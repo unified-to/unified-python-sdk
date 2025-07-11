@@ -6,6 +6,7 @@ from unified_python_sdk import utils
 from unified_python_sdk._hooks import HookContext
 from unified_python_sdk.models import errors, operations, shared
 from unified_python_sdk.types import BaseModel, OptionalNullable, UNSET
+from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_response
 
 
 class Ats(BaseSDK):
@@ -85,7 +86,7 @@ class Ats(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateAtsActivityResponse(
-                ats_activity=utils.unmarshal_json_response(
+                ats_activity=unmarshal_json_response(
                     Optional[shared.AtsActivity], http_res
                 ),
                 status_code=http_res.status_code,
@@ -177,7 +178,7 @@ class Ats(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateAtsActivityResponse(
-                ats_activity=utils.unmarshal_json_response(
+                ats_activity=unmarshal_json_response(
                     Optional[shared.AtsActivity], http_res
                 ),
                 status_code=http_res.status_code,
@@ -269,7 +270,7 @@ class Ats(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateAtsApplicationResponse(
-                ats_application=utils.unmarshal_json_response(
+                ats_application=unmarshal_json_response(
                     Optional[shared.AtsApplication], http_res
                 ),
                 status_code=http_res.status_code,
@@ -361,7 +362,7 @@ class Ats(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateAtsApplicationResponse(
-                ats_application=utils.unmarshal_json_response(
+                ats_application=unmarshal_json_response(
                     Optional[shared.AtsApplication], http_res
                 ),
                 status_code=http_res.status_code,
@@ -453,7 +454,7 @@ class Ats(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateAtsCandidateResponse(
-                ats_candidate=utils.unmarshal_json_response(
+                ats_candidate=unmarshal_json_response(
                     Optional[shared.AtsCandidate], http_res
                 ),
                 status_code=http_res.status_code,
@@ -545,7 +546,7 @@ class Ats(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateAtsCandidateResponse(
-                ats_candidate=utils.unmarshal_json_response(
+                ats_candidate=unmarshal_json_response(
                     Optional[shared.AtsCandidate], http_res
                 ),
                 status_code=http_res.status_code,
@@ -637,7 +638,7 @@ class Ats(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateAtsCompanyResponse(
-                ats_company=utils.unmarshal_json_response(
+                ats_company=unmarshal_json_response(
                     Optional[shared.AtsCompany], http_res
                 ),
                 status_code=http_res.status_code,
@@ -729,7 +730,7 @@ class Ats(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateAtsCompanyResponse(
-                ats_company=utils.unmarshal_json_response(
+                ats_company=unmarshal_json_response(
                     Optional[shared.AtsCompany], http_res
                 ),
                 status_code=http_res.status_code,
@@ -821,7 +822,7 @@ class Ats(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateAtsDocumentResponse(
-                ats_document=utils.unmarshal_json_response(
+                ats_document=unmarshal_json_response(
                     Optional[shared.AtsDocument], http_res
                 ),
                 status_code=http_res.status_code,
@@ -913,7 +914,7 @@ class Ats(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateAtsDocumentResponse(
-                ats_document=utils.unmarshal_json_response(
+                ats_document=unmarshal_json_response(
                     Optional[shared.AtsDocument], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1005,7 +1006,7 @@ class Ats(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateAtsInterviewResponse(
-                ats_interview=utils.unmarshal_json_response(
+                ats_interview=unmarshal_json_response(
                     Optional[shared.AtsInterview], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1097,7 +1098,7 @@ class Ats(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateAtsInterviewResponse(
-                ats_interview=utils.unmarshal_json_response(
+                ats_interview=unmarshal_json_response(
                     Optional[shared.AtsInterview], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1188,9 +1189,7 @@ class Ats(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateAtsJobResponse(
-                ats_job=utils.unmarshal_json_response(
-                    Optional[shared.AtsJob], http_res
-                ),
+                ats_job=unmarshal_json_response(Optional[shared.AtsJob], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1279,9 +1278,7 @@ class Ats(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateAtsJobResponse(
-                ats_job=utils.unmarshal_json_response(
-                    Optional[shared.AtsJob], http_res
-                ),
+                ats_job=unmarshal_json_response(Optional[shared.AtsJob], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1371,7 +1368,7 @@ class Ats(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateAtsScorecardResponse(
-                ats_scorecard=utils.unmarshal_json_response(
+                ats_scorecard=unmarshal_json_response(
                     Optional[shared.AtsScorecard], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1463,7 +1460,7 @@ class Ats(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateAtsScorecardResponse(
-                ats_scorecard=utils.unmarshal_json_response(
+                ats_scorecard=unmarshal_json_response(
                     Optional[shared.AtsScorecard], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1551,7 +1548,7 @@ class Ats(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetAtsActivityResponse(
-                ats_activity=utils.unmarshal_json_response(
+                ats_activity=unmarshal_json_response(
                     Optional[shared.AtsActivity], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1639,7 +1636,7 @@ class Ats(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetAtsActivityResponse(
-                ats_activity=utils.unmarshal_json_response(
+                ats_activity=unmarshal_json_response(
                     Optional[shared.AtsActivity], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1728,7 +1725,7 @@ class Ats(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetAtsApplicationResponse(
-                ats_application=utils.unmarshal_json_response(
+                ats_application=unmarshal_json_response(
                     Optional[shared.AtsApplication], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1817,7 +1814,7 @@ class Ats(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetAtsApplicationResponse(
-                ats_application=utils.unmarshal_json_response(
+                ats_application=unmarshal_json_response(
                     Optional[shared.AtsApplication], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1906,7 +1903,7 @@ class Ats(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetAtsCandidateResponse(
-                ats_candidate=utils.unmarshal_json_response(
+                ats_candidate=unmarshal_json_response(
                     Optional[shared.AtsCandidate], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1995,7 +1992,7 @@ class Ats(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetAtsCandidateResponse(
-                ats_candidate=utils.unmarshal_json_response(
+                ats_candidate=unmarshal_json_response(
                     Optional[shared.AtsCandidate], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2083,7 +2080,7 @@ class Ats(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetAtsCompanyResponse(
-                ats_company=utils.unmarshal_json_response(
+                ats_company=unmarshal_json_response(
                     Optional[shared.AtsCompany], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2171,7 +2168,7 @@ class Ats(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetAtsCompanyResponse(
-                ats_company=utils.unmarshal_json_response(
+                ats_company=unmarshal_json_response(
                     Optional[shared.AtsCompany], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2259,7 +2256,7 @@ class Ats(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetAtsDocumentResponse(
-                ats_document=utils.unmarshal_json_response(
+                ats_document=unmarshal_json_response(
                     Optional[shared.AtsDocument], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2347,7 +2344,7 @@ class Ats(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetAtsDocumentResponse(
-                ats_document=utils.unmarshal_json_response(
+                ats_document=unmarshal_json_response(
                     Optional[shared.AtsDocument], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2436,7 +2433,7 @@ class Ats(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetAtsInterviewResponse(
-                ats_interview=utils.unmarshal_json_response(
+                ats_interview=unmarshal_json_response(
                     Optional[shared.AtsInterview], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2525,7 +2522,7 @@ class Ats(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetAtsInterviewResponse(
-                ats_interview=utils.unmarshal_json_response(
+                ats_interview=unmarshal_json_response(
                     Optional[shared.AtsInterview], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2613,9 +2610,7 @@ class Ats(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetAtsJobResponse(
-                ats_job=utils.unmarshal_json_response(
-                    Optional[shared.AtsJob], http_res
-                ),
+                ats_job=unmarshal_json_response(Optional[shared.AtsJob], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2701,9 +2696,7 @@ class Ats(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetAtsJobResponse(
-                ats_job=utils.unmarshal_json_response(
-                    Optional[shared.AtsJob], http_res
-                ),
+                ats_job=unmarshal_json_response(Optional[shared.AtsJob], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2790,7 +2783,7 @@ class Ats(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetAtsScorecardResponse(
-                ats_scorecard=utils.unmarshal_json_response(
+                ats_scorecard=unmarshal_json_response(
                     Optional[shared.AtsScorecard], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2879,7 +2872,7 @@ class Ats(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetAtsScorecardResponse(
-                ats_scorecard=utils.unmarshal_json_response(
+                ats_scorecard=unmarshal_json_response(
                     Optional[shared.AtsScorecard], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2968,7 +2961,7 @@ class Ats(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListAtsActivitiesResponse(
-                ats_activities=utils.unmarshal_json_response(
+                ats_activities=unmarshal_json_response(
                     Optional[List[shared.AtsActivity]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3057,7 +3050,7 @@ class Ats(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListAtsActivitiesResponse(
-                ats_activities=utils.unmarshal_json_response(
+                ats_activities=unmarshal_json_response(
                     Optional[List[shared.AtsActivity]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3146,7 +3139,7 @@ class Ats(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListAtsApplicationsResponse(
-                ats_applications=utils.unmarshal_json_response(
+                ats_applications=unmarshal_json_response(
                     Optional[List[shared.AtsApplication]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3235,7 +3228,7 @@ class Ats(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListAtsApplicationsResponse(
-                ats_applications=utils.unmarshal_json_response(
+                ats_applications=unmarshal_json_response(
                     Optional[List[shared.AtsApplication]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3326,7 +3319,7 @@ class Ats(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListAtsApplicationstatusesResponse(
-                ats_statuses=utils.unmarshal_json_response(
+                ats_statuses=unmarshal_json_response(
                     Optional[List[shared.AtsStatus]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3417,7 +3410,7 @@ class Ats(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListAtsApplicationstatusesResponse(
-                ats_statuses=utils.unmarshal_json_response(
+                ats_statuses=unmarshal_json_response(
                     Optional[List[shared.AtsStatus]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3506,7 +3499,7 @@ class Ats(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListAtsCandidatesResponse(
-                ats_candidates=utils.unmarshal_json_response(
+                ats_candidates=unmarshal_json_response(
                     Optional[List[shared.AtsCandidate]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3595,7 +3588,7 @@ class Ats(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListAtsCandidatesResponse(
-                ats_candidates=utils.unmarshal_json_response(
+                ats_candidates=unmarshal_json_response(
                     Optional[List[shared.AtsCandidate]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3684,7 +3677,7 @@ class Ats(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListAtsCompaniesResponse(
-                ats_companies=utils.unmarshal_json_response(
+                ats_companies=unmarshal_json_response(
                     Optional[List[shared.AtsCompany]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3773,7 +3766,7 @@ class Ats(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListAtsCompaniesResponse(
-                ats_companies=utils.unmarshal_json_response(
+                ats_companies=unmarshal_json_response(
                     Optional[List[shared.AtsCompany]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3862,7 +3855,7 @@ class Ats(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListAtsDocumentsResponse(
-                ats_documents=utils.unmarshal_json_response(
+                ats_documents=unmarshal_json_response(
                     Optional[List[shared.AtsDocument]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3951,7 +3944,7 @@ class Ats(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListAtsDocumentsResponse(
-                ats_documents=utils.unmarshal_json_response(
+                ats_documents=unmarshal_json_response(
                     Optional[List[shared.AtsDocument]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -4040,7 +4033,7 @@ class Ats(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListAtsInterviewsResponse(
-                ats_interviews=utils.unmarshal_json_response(
+                ats_interviews=unmarshal_json_response(
                     Optional[List[shared.AtsInterview]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -4129,7 +4122,7 @@ class Ats(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListAtsInterviewsResponse(
-                ats_interviews=utils.unmarshal_json_response(
+                ats_interviews=unmarshal_json_response(
                     Optional[List[shared.AtsInterview]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -4217,7 +4210,7 @@ class Ats(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListAtsJobsResponse(
-                ats_jobs=utils.unmarshal_json_response(
+                ats_jobs=unmarshal_json_response(
                     Optional[List[shared.AtsJob]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -4305,7 +4298,7 @@ class Ats(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListAtsJobsResponse(
-                ats_jobs=utils.unmarshal_json_response(
+                ats_jobs=unmarshal_json_response(
                     Optional[List[shared.AtsJob]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -4394,7 +4387,7 @@ class Ats(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListAtsScorecardsResponse(
-                ats_scorecards=utils.unmarshal_json_response(
+                ats_scorecards=unmarshal_json_response(
                     Optional[List[shared.AtsScorecard]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -4483,7 +4476,7 @@ class Ats(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListAtsScorecardsResponse(
-                ats_scorecards=utils.unmarshal_json_response(
+                ats_scorecards=unmarshal_json_response(
                     Optional[List[shared.AtsScorecard]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -4575,7 +4568,7 @@ class Ats(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchAtsActivityResponse(
-                ats_activity=utils.unmarshal_json_response(
+                ats_activity=unmarshal_json_response(
                     Optional[shared.AtsActivity], http_res
                 ),
                 status_code=http_res.status_code,
@@ -4667,7 +4660,7 @@ class Ats(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchAtsActivityResponse(
-                ats_activity=utils.unmarshal_json_response(
+                ats_activity=unmarshal_json_response(
                     Optional[shared.AtsActivity], http_res
                 ),
                 status_code=http_res.status_code,
@@ -4759,7 +4752,7 @@ class Ats(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchAtsApplicationResponse(
-                ats_application=utils.unmarshal_json_response(
+                ats_application=unmarshal_json_response(
                     Optional[shared.AtsApplication], http_res
                 ),
                 status_code=http_res.status_code,
@@ -4851,7 +4844,7 @@ class Ats(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchAtsApplicationResponse(
-                ats_application=utils.unmarshal_json_response(
+                ats_application=unmarshal_json_response(
                     Optional[shared.AtsApplication], http_res
                 ),
                 status_code=http_res.status_code,
@@ -4943,7 +4936,7 @@ class Ats(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchAtsCandidateResponse(
-                ats_candidate=utils.unmarshal_json_response(
+                ats_candidate=unmarshal_json_response(
                     Optional[shared.AtsCandidate], http_res
                 ),
                 status_code=http_res.status_code,
@@ -5035,7 +5028,7 @@ class Ats(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchAtsCandidateResponse(
-                ats_candidate=utils.unmarshal_json_response(
+                ats_candidate=unmarshal_json_response(
                     Optional[shared.AtsCandidate], http_res
                 ),
                 status_code=http_res.status_code,
@@ -5127,7 +5120,7 @@ class Ats(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchAtsCompanyResponse(
-                ats_company=utils.unmarshal_json_response(
+                ats_company=unmarshal_json_response(
                     Optional[shared.AtsCompany], http_res
                 ),
                 status_code=http_res.status_code,
@@ -5219,7 +5212,7 @@ class Ats(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchAtsCompanyResponse(
-                ats_company=utils.unmarshal_json_response(
+                ats_company=unmarshal_json_response(
                     Optional[shared.AtsCompany], http_res
                 ),
                 status_code=http_res.status_code,
@@ -5311,7 +5304,7 @@ class Ats(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchAtsDocumentResponse(
-                ats_document=utils.unmarshal_json_response(
+                ats_document=unmarshal_json_response(
                     Optional[shared.AtsDocument], http_res
                 ),
                 status_code=http_res.status_code,
@@ -5403,7 +5396,7 @@ class Ats(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchAtsDocumentResponse(
-                ats_document=utils.unmarshal_json_response(
+                ats_document=unmarshal_json_response(
                     Optional[shared.AtsDocument], http_res
                 ),
                 status_code=http_res.status_code,
@@ -5495,7 +5488,7 @@ class Ats(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchAtsInterviewResponse(
-                ats_interview=utils.unmarshal_json_response(
+                ats_interview=unmarshal_json_response(
                     Optional[shared.AtsInterview], http_res
                 ),
                 status_code=http_res.status_code,
@@ -5587,7 +5580,7 @@ class Ats(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchAtsInterviewResponse(
-                ats_interview=utils.unmarshal_json_response(
+                ats_interview=unmarshal_json_response(
                     Optional[shared.AtsInterview], http_res
                 ),
                 status_code=http_res.status_code,
@@ -5678,9 +5671,7 @@ class Ats(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchAtsJobResponse(
-                ats_job=utils.unmarshal_json_response(
-                    Optional[shared.AtsJob], http_res
-                ),
+                ats_job=unmarshal_json_response(Optional[shared.AtsJob], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -5769,9 +5760,7 @@ class Ats(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchAtsJobResponse(
-                ats_job=utils.unmarshal_json_response(
-                    Optional[shared.AtsJob], http_res
-                ),
+                ats_job=unmarshal_json_response(Optional[shared.AtsJob], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -5861,7 +5850,7 @@ class Ats(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchAtsScorecardResponse(
-                ats_scorecard=utils.unmarshal_json_response(
+                ats_scorecard=unmarshal_json_response(
                     Optional[shared.AtsScorecard], http_res
                 ),
                 status_code=http_res.status_code,
@@ -5953,7 +5942,7 @@ class Ats(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchAtsScorecardResponse(
-                ats_scorecard=utils.unmarshal_json_response(
+                ats_scorecard=unmarshal_json_response(
                     Optional[shared.AtsScorecard], http_res
                 ),
                 status_code=http_res.status_code,
@@ -7547,7 +7536,7 @@ class Ats(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateAtsActivityResponse(
-                ats_activity=utils.unmarshal_json_response(
+                ats_activity=unmarshal_json_response(
                     Optional[shared.AtsActivity], http_res
                 ),
                 status_code=http_res.status_code,
@@ -7639,7 +7628,7 @@ class Ats(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateAtsActivityResponse(
-                ats_activity=utils.unmarshal_json_response(
+                ats_activity=unmarshal_json_response(
                     Optional[shared.AtsActivity], http_res
                 ),
                 status_code=http_res.status_code,
@@ -7731,7 +7720,7 @@ class Ats(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateAtsApplicationResponse(
-                ats_application=utils.unmarshal_json_response(
+                ats_application=unmarshal_json_response(
                     Optional[shared.AtsApplication], http_res
                 ),
                 status_code=http_res.status_code,
@@ -7823,7 +7812,7 @@ class Ats(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateAtsApplicationResponse(
-                ats_application=utils.unmarshal_json_response(
+                ats_application=unmarshal_json_response(
                     Optional[shared.AtsApplication], http_res
                 ),
                 status_code=http_res.status_code,
@@ -7915,7 +7904,7 @@ class Ats(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateAtsCandidateResponse(
-                ats_candidate=utils.unmarshal_json_response(
+                ats_candidate=unmarshal_json_response(
                     Optional[shared.AtsCandidate], http_res
                 ),
                 status_code=http_res.status_code,
@@ -8007,7 +7996,7 @@ class Ats(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateAtsCandidateResponse(
-                ats_candidate=utils.unmarshal_json_response(
+                ats_candidate=unmarshal_json_response(
                     Optional[shared.AtsCandidate], http_res
                 ),
                 status_code=http_res.status_code,
@@ -8099,7 +8088,7 @@ class Ats(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateAtsCompanyResponse(
-                ats_company=utils.unmarshal_json_response(
+                ats_company=unmarshal_json_response(
                     Optional[shared.AtsCompany], http_res
                 ),
                 status_code=http_res.status_code,
@@ -8191,7 +8180,7 @@ class Ats(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateAtsCompanyResponse(
-                ats_company=utils.unmarshal_json_response(
+                ats_company=unmarshal_json_response(
                     Optional[shared.AtsCompany], http_res
                 ),
                 status_code=http_res.status_code,
@@ -8283,7 +8272,7 @@ class Ats(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateAtsDocumentResponse(
-                ats_document=utils.unmarshal_json_response(
+                ats_document=unmarshal_json_response(
                     Optional[shared.AtsDocument], http_res
                 ),
                 status_code=http_res.status_code,
@@ -8375,7 +8364,7 @@ class Ats(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateAtsDocumentResponse(
-                ats_document=utils.unmarshal_json_response(
+                ats_document=unmarshal_json_response(
                     Optional[shared.AtsDocument], http_res
                 ),
                 status_code=http_res.status_code,
@@ -8467,7 +8456,7 @@ class Ats(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateAtsInterviewResponse(
-                ats_interview=utils.unmarshal_json_response(
+                ats_interview=unmarshal_json_response(
                     Optional[shared.AtsInterview], http_res
                 ),
                 status_code=http_res.status_code,
@@ -8559,7 +8548,7 @@ class Ats(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateAtsInterviewResponse(
-                ats_interview=utils.unmarshal_json_response(
+                ats_interview=unmarshal_json_response(
                     Optional[shared.AtsInterview], http_res
                 ),
                 status_code=http_res.status_code,
@@ -8650,9 +8639,7 @@ class Ats(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateAtsJobResponse(
-                ats_job=utils.unmarshal_json_response(
-                    Optional[shared.AtsJob], http_res
-                ),
+                ats_job=unmarshal_json_response(Optional[shared.AtsJob], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -8741,9 +8728,7 @@ class Ats(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateAtsJobResponse(
-                ats_job=utils.unmarshal_json_response(
-                    Optional[shared.AtsJob], http_res
-                ),
+                ats_job=unmarshal_json_response(Optional[shared.AtsJob], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -8833,7 +8818,7 @@ class Ats(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateAtsScorecardResponse(
-                ats_scorecard=utils.unmarshal_json_response(
+                ats_scorecard=unmarshal_json_response(
                     Optional[shared.AtsScorecard], http_res
                 ),
                 status_code=http_res.status_code,
@@ -8925,7 +8910,7 @@ class Ats(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateAtsScorecardResponse(
-                ats_scorecard=utils.unmarshal_json_response(
+                ats_scorecard=unmarshal_json_response(
                     Optional[shared.AtsScorecard], http_res
                 ),
                 status_code=http_res.status_code,

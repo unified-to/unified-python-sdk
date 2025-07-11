@@ -6,6 +6,7 @@ from unified_python_sdk import utils
 from unified_python_sdk._hooks import HookContext
 from unified_python_sdk.models import errors, operations, shared
 from unified_python_sdk.types import BaseModel, OptionalNullable, UNSET
+from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_response
 
 
 class Employee(BaseSDK):
@@ -85,7 +86,7 @@ class Employee(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateHrisEmployeeResponse(
-                hris_employee=utils.unmarshal_json_response(
+                hris_employee=unmarshal_json_response(
                     Optional[shared.HrisEmployee], http_res
                 ),
                 status_code=http_res.status_code,
@@ -177,7 +178,7 @@ class Employee(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateHrisEmployeeResponse(
-                hris_employee=utils.unmarshal_json_response(
+                hris_employee=unmarshal_json_response(
                     Optional[shared.HrisEmployee], http_res
                 ),
                 status_code=http_res.status_code,
@@ -266,7 +267,7 @@ class Employee(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetHrisEmployeeResponse(
-                hris_employee=utils.unmarshal_json_response(
+                hris_employee=unmarshal_json_response(
                     Optional[shared.HrisEmployee], http_res
                 ),
                 status_code=http_res.status_code,
@@ -355,7 +356,7 @@ class Employee(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetHrisEmployeeResponse(
-                hris_employee=utils.unmarshal_json_response(
+                hris_employee=unmarshal_json_response(
                     Optional[shared.HrisEmployee], http_res
                 ),
                 status_code=http_res.status_code,
@@ -444,7 +445,7 @@ class Employee(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListHrisEmployeesResponse(
-                hris_employees=utils.unmarshal_json_response(
+                hris_employees=unmarshal_json_response(
                     Optional[List[shared.HrisEmployee]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -533,7 +534,7 @@ class Employee(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListHrisEmployeesResponse(
-                hris_employees=utils.unmarshal_json_response(
+                hris_employees=unmarshal_json_response(
                     Optional[List[shared.HrisEmployee]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -625,7 +626,7 @@ class Employee(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchHrisEmployeeResponse(
-                hris_employee=utils.unmarshal_json_response(
+                hris_employee=unmarshal_json_response(
                     Optional[shared.HrisEmployee], http_res
                 ),
                 status_code=http_res.status_code,
@@ -717,7 +718,7 @@ class Employee(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchHrisEmployeeResponse(
-                hris_employee=utils.unmarshal_json_response(
+                hris_employee=unmarshal_json_response(
                     Optional[shared.HrisEmployee], http_res
                 ),
                 status_code=http_res.status_code,
@@ -997,7 +998,7 @@ class Employee(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateHrisEmployeeResponse(
-                hris_employee=utils.unmarshal_json_response(
+                hris_employee=unmarshal_json_response(
                     Optional[shared.HrisEmployee], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1089,7 +1090,7 @@ class Employee(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateHrisEmployeeResponse(
-                hris_employee=utils.unmarshal_json_response(
+                hris_employee=unmarshal_json_response(
                     Optional[shared.HrisEmployee], http_res
                 ),
                 status_code=http_res.status_code,

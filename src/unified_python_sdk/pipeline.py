@@ -6,6 +6,7 @@ from unified_python_sdk import utils
 from unified_python_sdk._hooks import HookContext
 from unified_python_sdk.models import errors, operations, shared
 from unified_python_sdk.types import BaseModel, OptionalNullable, UNSET
+from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_response
 
 
 class Pipeline(BaseSDK):
@@ -85,7 +86,7 @@ class Pipeline(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateCrmPipelineResponse(
-                crm_pipeline=utils.unmarshal_json_response(
+                crm_pipeline=unmarshal_json_response(
                     Optional[shared.CrmPipeline], http_res
                 ),
                 status_code=http_res.status_code,
@@ -177,7 +178,7 @@ class Pipeline(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateCrmPipelineResponse(
-                crm_pipeline=utils.unmarshal_json_response(
+                crm_pipeline=unmarshal_json_response(
                     Optional[shared.CrmPipeline], http_res
                 ),
                 status_code=http_res.status_code,
@@ -265,7 +266,7 @@ class Pipeline(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetCrmPipelineResponse(
-                crm_pipeline=utils.unmarshal_json_response(
+                crm_pipeline=unmarshal_json_response(
                     Optional[shared.CrmPipeline], http_res
                 ),
                 status_code=http_res.status_code,
@@ -353,7 +354,7 @@ class Pipeline(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetCrmPipelineResponse(
-                crm_pipeline=utils.unmarshal_json_response(
+                crm_pipeline=unmarshal_json_response(
                     Optional[shared.CrmPipeline], http_res
                 ),
                 status_code=http_res.status_code,
@@ -442,7 +443,7 @@ class Pipeline(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListCrmPipelinesResponse(
-                crm_pipelines=utils.unmarshal_json_response(
+                crm_pipelines=unmarshal_json_response(
                     Optional[List[shared.CrmPipeline]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -531,7 +532,7 @@ class Pipeline(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListCrmPipelinesResponse(
-                crm_pipelines=utils.unmarshal_json_response(
+                crm_pipelines=unmarshal_json_response(
                     Optional[List[shared.CrmPipeline]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -623,7 +624,7 @@ class Pipeline(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchCrmPipelineResponse(
-                crm_pipeline=utils.unmarshal_json_response(
+                crm_pipeline=unmarshal_json_response(
                     Optional[shared.CrmPipeline], http_res
                 ),
                 status_code=http_res.status_code,
@@ -715,7 +716,7 @@ class Pipeline(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchCrmPipelineResponse(
-                crm_pipeline=utils.unmarshal_json_response(
+                crm_pipeline=unmarshal_json_response(
                     Optional[shared.CrmPipeline], http_res
                 ),
                 status_code=http_res.status_code,
@@ -995,7 +996,7 @@ class Pipeline(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateCrmPipelineResponse(
-                crm_pipeline=utils.unmarshal_json_response(
+                crm_pipeline=unmarshal_json_response(
                     Optional[shared.CrmPipeline], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1087,7 +1088,7 @@ class Pipeline(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateCrmPipelineResponse(
-                crm_pipeline=utils.unmarshal_json_response(
+                crm_pipeline=unmarshal_json_response(
                     Optional[shared.CrmPipeline], http_res
                 ),
                 status_code=http_res.status_code,

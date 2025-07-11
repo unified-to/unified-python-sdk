@@ -6,6 +6,7 @@ from unified_python_sdk import utils
 from unified_python_sdk._hooks import HookContext
 from unified_python_sdk.models import errors, operations, shared
 from unified_python_sdk.types import BaseModel, OptionalNullable, UNSET
+from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_response
 
 
 class Uc(BaseSDK):
@@ -85,7 +86,7 @@ class Uc(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateUcCommentResponse(
-                uc_comment=utils.unmarshal_json_response(
+                uc_comment=unmarshal_json_response(
                     Optional[shared.UcComment], http_res
                 ),
                 status_code=http_res.status_code,
@@ -177,7 +178,7 @@ class Uc(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateUcCommentResponse(
-                uc_comment=utils.unmarshal_json_response(
+                uc_comment=unmarshal_json_response(
                     Optional[shared.UcComment], http_res
                 ),
                 status_code=http_res.status_code,
@@ -269,7 +270,7 @@ class Uc(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateUcContactResponse(
-                uc_contact=utils.unmarshal_json_response(
+                uc_contact=unmarshal_json_response(
                     Optional[shared.UcContact], http_res
                 ),
                 status_code=http_res.status_code,
@@ -361,7 +362,7 @@ class Uc(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateUcContactResponse(
-                uc_contact=utils.unmarshal_json_response(
+                uc_contact=unmarshal_json_response(
                     Optional[shared.UcContact], http_res
                 ),
                 status_code=http_res.status_code,
@@ -453,7 +454,7 @@ class Uc(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateUcRecordingResponse(
-                uc_recording=utils.unmarshal_json_response(
+                uc_recording=unmarshal_json_response(
                     Optional[shared.UcRecording], http_res
                 ),
                 status_code=http_res.status_code,
@@ -545,7 +546,7 @@ class Uc(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateUcRecordingResponse(
-                uc_recording=utils.unmarshal_json_response(
+                uc_recording=unmarshal_json_response(
                     Optional[shared.UcRecording], http_res
                 ),
                 status_code=http_res.status_code,
@@ -633,7 +634,7 @@ class Uc(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetUcCommentResponse(
-                uc_comment=utils.unmarshal_json_response(
+                uc_comment=unmarshal_json_response(
                     Optional[shared.UcComment], http_res
                 ),
                 status_code=http_res.status_code,
@@ -721,7 +722,7 @@ class Uc(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetUcCommentResponse(
-                uc_comment=utils.unmarshal_json_response(
+                uc_comment=unmarshal_json_response(
                     Optional[shared.UcComment], http_res
                 ),
                 status_code=http_res.status_code,
@@ -809,7 +810,7 @@ class Uc(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetUcContactResponse(
-                uc_contact=utils.unmarshal_json_response(
+                uc_contact=unmarshal_json_response(
                     Optional[shared.UcContact], http_res
                 ),
                 status_code=http_res.status_code,
@@ -897,7 +898,7 @@ class Uc(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetUcContactResponse(
-                uc_contact=utils.unmarshal_json_response(
+                uc_contact=unmarshal_json_response(
                     Optional[shared.UcContact], http_res
                 ),
                 status_code=http_res.status_code,
@@ -985,7 +986,7 @@ class Uc(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetUcRecordingResponse(
-                uc_recording=utils.unmarshal_json_response(
+                uc_recording=unmarshal_json_response(
                     Optional[shared.UcRecording], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1073,7 +1074,7 @@ class Uc(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetUcRecordingResponse(
-                uc_recording=utils.unmarshal_json_response(
+                uc_recording=unmarshal_json_response(
                     Optional[shared.UcRecording], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1161,7 +1162,7 @@ class Uc(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListUcCallsResponse(
-                uc_calls=utils.unmarshal_json_response(
+                uc_calls=unmarshal_json_response(
                     Optional[List[shared.UcCall]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1249,7 +1250,7 @@ class Uc(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListUcCallsResponse(
-                uc_calls=utils.unmarshal_json_response(
+                uc_calls=unmarshal_json_response(
                     Optional[List[shared.UcCall]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1337,7 +1338,7 @@ class Uc(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListUcCommentsResponse(
-                uc_comments=utils.unmarshal_json_response(
+                uc_comments=unmarshal_json_response(
                     Optional[List[shared.UcComment]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1425,7 +1426,7 @@ class Uc(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListUcCommentsResponse(
-                uc_comments=utils.unmarshal_json_response(
+                uc_comments=unmarshal_json_response(
                     Optional[List[shared.UcComment]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1513,7 +1514,7 @@ class Uc(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListUcContactsResponse(
-                uc_contacts=utils.unmarshal_json_response(
+                uc_contacts=unmarshal_json_response(
                     Optional[List[shared.UcContact]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1601,7 +1602,7 @@ class Uc(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListUcContactsResponse(
-                uc_contacts=utils.unmarshal_json_response(
+                uc_contacts=unmarshal_json_response(
                     Optional[List[shared.UcContact]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1690,7 +1691,7 @@ class Uc(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListUcRecordingsResponse(
-                uc_recordings=utils.unmarshal_json_response(
+                uc_recordings=unmarshal_json_response(
                     Optional[List[shared.UcRecording]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1779,7 +1780,7 @@ class Uc(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListUcRecordingsResponse(
-                uc_recordings=utils.unmarshal_json_response(
+                uc_recordings=unmarshal_json_response(
                     Optional[List[shared.UcRecording]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1870,7 +1871,7 @@ class Uc(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchUcCommentResponse(
-                uc_comment=utils.unmarshal_json_response(
+                uc_comment=unmarshal_json_response(
                     Optional[shared.UcComment], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1961,7 +1962,7 @@ class Uc(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchUcCommentResponse(
-                uc_comment=utils.unmarshal_json_response(
+                uc_comment=unmarshal_json_response(
                     Optional[shared.UcComment], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2052,7 +2053,7 @@ class Uc(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchUcContactResponse(
-                uc_contact=utils.unmarshal_json_response(
+                uc_contact=unmarshal_json_response(
                     Optional[shared.UcContact], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2143,7 +2144,7 @@ class Uc(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchUcContactResponse(
-                uc_contact=utils.unmarshal_json_response(
+                uc_contact=unmarshal_json_response(
                     Optional[shared.UcContact], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2235,7 +2236,7 @@ class Uc(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchUcRecordingResponse(
-                uc_recording=utils.unmarshal_json_response(
+                uc_recording=unmarshal_json_response(
                     Optional[shared.UcRecording], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2327,7 +2328,7 @@ class Uc(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchUcRecordingResponse(
-                uc_recording=utils.unmarshal_json_response(
+                uc_recording=unmarshal_json_response(
                     Optional[shared.UcRecording], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2983,7 +2984,7 @@ class Uc(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateUcCommentResponse(
-                uc_comment=utils.unmarshal_json_response(
+                uc_comment=unmarshal_json_response(
                     Optional[shared.UcComment], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3075,7 +3076,7 @@ class Uc(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateUcCommentResponse(
-                uc_comment=utils.unmarshal_json_response(
+                uc_comment=unmarshal_json_response(
                     Optional[shared.UcComment], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3167,7 +3168,7 @@ class Uc(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateUcContactResponse(
-                uc_contact=utils.unmarshal_json_response(
+                uc_contact=unmarshal_json_response(
                     Optional[shared.UcContact], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3259,7 +3260,7 @@ class Uc(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateUcContactResponse(
-                uc_contact=utils.unmarshal_json_response(
+                uc_contact=unmarshal_json_response(
                     Optional[shared.UcContact], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3351,7 +3352,7 @@ class Uc(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateUcRecordingResponse(
-                uc_recording=utils.unmarshal_json_response(
+                uc_recording=unmarshal_json_response(
                     Optional[shared.UcRecording], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3443,7 +3444,7 @@ class Uc(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateUcRecordingResponse(
-                uc_recording=utils.unmarshal_json_response(
+                uc_recording=unmarshal_json_response(
                     Optional[shared.UcRecording], http_res
                 ),
                 status_code=http_res.status_code,

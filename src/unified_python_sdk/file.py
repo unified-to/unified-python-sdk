@@ -6,6 +6,7 @@ from unified_python_sdk import utils
 from unified_python_sdk._hooks import HookContext
 from unified_python_sdk.models import errors, operations, shared
 from unified_python_sdk.types import BaseModel, OptionalNullable, UNSET
+from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_response
 
 
 class File(BaseSDK):
@@ -85,7 +86,7 @@ class File(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateStorageFileResponse(
-                storage_file=utils.unmarshal_json_response(
+                storage_file=unmarshal_json_response(
                     Optional[shared.StorageFile], http_res
                 ),
                 status_code=http_res.status_code,
@@ -177,7 +178,7 @@ class File(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateStorageFileResponse(
-                storage_file=utils.unmarshal_json_response(
+                storage_file=unmarshal_json_response(
                     Optional[shared.StorageFile], http_res
                 ),
                 status_code=http_res.status_code,
@@ -265,7 +266,7 @@ class File(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetStorageFileResponse(
-                storage_file=utils.unmarshal_json_response(
+                storage_file=unmarshal_json_response(
                     Optional[shared.StorageFile], http_res
                 ),
                 status_code=http_res.status_code,
@@ -353,7 +354,7 @@ class File(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetStorageFileResponse(
-                storage_file=utils.unmarshal_json_response(
+                storage_file=unmarshal_json_response(
                     Optional[shared.StorageFile], http_res
                 ),
                 status_code=http_res.status_code,
@@ -442,7 +443,7 @@ class File(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListStorageFilesResponse(
-                storage_files=utils.unmarshal_json_response(
+                storage_files=unmarshal_json_response(
                     Optional[List[shared.StorageFile]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -531,7 +532,7 @@ class File(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListStorageFilesResponse(
-                storage_files=utils.unmarshal_json_response(
+                storage_files=unmarshal_json_response(
                     Optional[List[shared.StorageFile]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -623,7 +624,7 @@ class File(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchStorageFileResponse(
-                storage_file=utils.unmarshal_json_response(
+                storage_file=unmarshal_json_response(
                     Optional[shared.StorageFile], http_res
                 ),
                 status_code=http_res.status_code,
@@ -715,7 +716,7 @@ class File(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchStorageFileResponse(
-                storage_file=utils.unmarshal_json_response(
+                storage_file=unmarshal_json_response(
                     Optional[shared.StorageFile], http_res
                 ),
                 status_code=http_res.status_code,
@@ -995,7 +996,7 @@ class File(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateStorageFileResponse(
-                storage_file=utils.unmarshal_json_response(
+                storage_file=unmarshal_json_response(
                     Optional[shared.StorageFile], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1087,7 +1088,7 @@ class File(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateStorageFileResponse(
-                storage_file=utils.unmarshal_json_response(
+                storage_file=unmarshal_json_response(
                     Optional[shared.StorageFile], http_res
                 ),
                 status_code=http_res.status_code,

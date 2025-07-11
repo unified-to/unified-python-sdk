@@ -6,6 +6,7 @@ from unified_python_sdk import utils
 from unified_python_sdk._hooks import HookContext
 from unified_python_sdk.models import errors, operations, shared
 from unified_python_sdk.types import BaseModel, OptionalNullable, UNSET
+from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_response
 
 
 class Invoice(BaseSDK):
@@ -91,7 +92,7 @@ class Invoice(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateAccountingInvoiceResponse(
-                accounting_invoice=utils.unmarshal_json_response(
+                accounting_invoice=unmarshal_json_response(
                     Optional[shared.AccountingInvoice], http_res
                 ),
                 status_code=http_res.status_code,
@@ -189,7 +190,7 @@ class Invoice(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateAccountingInvoiceResponse(
-                accounting_invoice=utils.unmarshal_json_response(
+                accounting_invoice=unmarshal_json_response(
                     Optional[shared.AccountingInvoice], http_res
                 ),
                 status_code=http_res.status_code,
@@ -278,7 +279,7 @@ class Invoice(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetAccountingInvoiceResponse(
-                accounting_invoice=utils.unmarshal_json_response(
+                accounting_invoice=unmarshal_json_response(
                     Optional[shared.AccountingInvoice], http_res
                 ),
                 status_code=http_res.status_code,
@@ -367,7 +368,7 @@ class Invoice(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetAccountingInvoiceResponse(
-                accounting_invoice=utils.unmarshal_json_response(
+                accounting_invoice=unmarshal_json_response(
                     Optional[shared.AccountingInvoice], http_res
                 ),
                 status_code=http_res.status_code,
@@ -456,7 +457,7 @@ class Invoice(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListAccountingInvoicesResponse(
-                accounting_invoices=utils.unmarshal_json_response(
+                accounting_invoices=unmarshal_json_response(
                     Optional[List[shared.AccountingInvoice]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -545,7 +546,7 @@ class Invoice(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListAccountingInvoicesResponse(
-                accounting_invoices=utils.unmarshal_json_response(
+                accounting_invoices=unmarshal_json_response(
                     Optional[List[shared.AccountingInvoice]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -641,7 +642,7 @@ class Invoice(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchAccountingInvoiceResponse(
-                accounting_invoice=utils.unmarshal_json_response(
+                accounting_invoice=unmarshal_json_response(
                     Optional[shared.AccountingInvoice], http_res
                 ),
                 status_code=http_res.status_code,
@@ -737,7 +738,7 @@ class Invoice(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchAccountingInvoiceResponse(
-                accounting_invoice=utils.unmarshal_json_response(
+                accounting_invoice=unmarshal_json_response(
                     Optional[shared.AccountingInvoice], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1027,7 +1028,7 @@ class Invoice(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateAccountingInvoiceResponse(
-                accounting_invoice=utils.unmarshal_json_response(
+                accounting_invoice=unmarshal_json_response(
                     Optional[shared.AccountingInvoice], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1125,7 +1126,7 @@ class Invoice(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateAccountingInvoiceResponse(
-                accounting_invoice=utils.unmarshal_json_response(
+                accounting_invoice=unmarshal_json_response(
                     Optional[shared.AccountingInvoice], http_res
                 ),
                 status_code=http_res.status_code,

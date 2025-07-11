@@ -6,6 +6,7 @@ from unified_python_sdk import utils
 from unified_python_sdk._hooks import HookContext
 from unified_python_sdk.models import errors, operations, shared
 from unified_python_sdk.types import BaseModel, OptionalNullable, UNSET
+from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_response
 
 
 class Journal(BaseSDK):
@@ -91,7 +92,7 @@ class Journal(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateAccountingJournalResponse(
-                accounting_journal=utils.unmarshal_json_response(
+                accounting_journal=unmarshal_json_response(
                     Optional[shared.AccountingJournal], http_res
                 ),
                 status_code=http_res.status_code,
@@ -189,7 +190,7 @@ class Journal(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateAccountingJournalResponse(
-                accounting_journal=utils.unmarshal_json_response(
+                accounting_journal=unmarshal_json_response(
                     Optional[shared.AccountingJournal], http_res
                 ),
                 status_code=http_res.status_code,
@@ -278,7 +279,7 @@ class Journal(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetAccountingJournalResponse(
-                accounting_journal=utils.unmarshal_json_response(
+                accounting_journal=unmarshal_json_response(
                     Optional[shared.AccountingJournal], http_res
                 ),
                 status_code=http_res.status_code,
@@ -367,7 +368,7 @@ class Journal(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetAccountingJournalResponse(
-                accounting_journal=utils.unmarshal_json_response(
+                accounting_journal=unmarshal_json_response(
                     Optional[shared.AccountingJournal], http_res
                 ),
                 status_code=http_res.status_code,
@@ -456,7 +457,7 @@ class Journal(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListAccountingJournalsResponse(
-                accounting_journals=utils.unmarshal_json_response(
+                accounting_journals=unmarshal_json_response(
                     Optional[List[shared.AccountingJournal]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -545,7 +546,7 @@ class Journal(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListAccountingJournalsResponse(
-                accounting_journals=utils.unmarshal_json_response(
+                accounting_journals=unmarshal_json_response(
                     Optional[List[shared.AccountingJournal]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -641,7 +642,7 @@ class Journal(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchAccountingJournalResponse(
-                accounting_journal=utils.unmarshal_json_response(
+                accounting_journal=unmarshal_json_response(
                     Optional[shared.AccountingJournal], http_res
                 ),
                 status_code=http_res.status_code,
@@ -737,7 +738,7 @@ class Journal(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchAccountingJournalResponse(
-                accounting_journal=utils.unmarshal_json_response(
+                accounting_journal=unmarshal_json_response(
                     Optional[shared.AccountingJournal], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1027,7 +1028,7 @@ class Journal(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateAccountingJournalResponse(
-                accounting_journal=utils.unmarshal_json_response(
+                accounting_journal=unmarshal_json_response(
                     Optional[shared.AccountingJournal], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1125,7 +1126,7 @@ class Journal(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateAccountingJournalResponse(
-                accounting_journal=utils.unmarshal_json_response(
+                accounting_journal=unmarshal_json_response(
                     Optional[shared.AccountingJournal], http_res
                 ),
                 status_code=http_res.status_code,

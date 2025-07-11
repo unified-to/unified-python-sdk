@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: df14941bc85aac484869c35ad39aa806
+  docChecksum: dc8b8b9132e8749ec8c7686b6384177f
   docVersion: "1.0"
-  speakeasyVersion: 1.575.5
-  generationVersion: 2.648.7
-  releaseVersion: 0.48.6
-  configChecksum: 543a4a8de00c5ce78191ed6a802ebe0a
+  speakeasyVersion: 1.580.2
+  generationVersion: 2.656.5
+  releaseVersion: 0.48.7
+  configChecksum: 7a07dea453faee6b48dd354e4416a012
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -32,7 +32,6 @@ features:
     uploadStreams: 1.0.0
 generatedFiles:
   - .gitattributes
-  - .python-version
   - .vscode/settings.json
   - USAGE.md
   - docs/models/operations/categories.md
@@ -2446,6 +2445,7 @@ generatedFiles:
   - src/unified_python_sdk/utils/retries.py
   - src/unified_python_sdk/utils/security.py
   - src/unified_python_sdk/utils/serializers.py
+  - src/unified_python_sdk/utils/unmarshal_json_response.py
   - src/unified_python_sdk/utils/url.py
   - src/unified_python_sdk/utils/values.py
   - src/unified_python_sdk/webhook.py

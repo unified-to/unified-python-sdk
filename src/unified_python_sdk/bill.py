@@ -6,6 +6,7 @@ from unified_python_sdk import utils
 from unified_python_sdk._hooks import HookContext
 from unified_python_sdk.models import errors, operations, shared
 from unified_python_sdk.types import BaseModel, OptionalNullable, UNSET
+from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_response
 
 
 class Bill(BaseSDK):
@@ -85,7 +86,7 @@ class Bill(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateAccountingBillResponse(
-                accounting_bill=utils.unmarshal_json_response(
+                accounting_bill=unmarshal_json_response(
                     Optional[shared.AccountingBill], http_res
                 ),
                 status_code=http_res.status_code,
@@ -177,7 +178,7 @@ class Bill(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateAccountingBillResponse(
-                accounting_bill=utils.unmarshal_json_response(
+                accounting_bill=unmarshal_json_response(
                     Optional[shared.AccountingBill], http_res
                 ),
                 status_code=http_res.status_code,
@@ -266,7 +267,7 @@ class Bill(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetAccountingBillResponse(
-                accounting_bill=utils.unmarshal_json_response(
+                accounting_bill=unmarshal_json_response(
                     Optional[shared.AccountingBill], http_res
                 ),
                 status_code=http_res.status_code,
@@ -355,7 +356,7 @@ class Bill(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetAccountingBillResponse(
-                accounting_bill=utils.unmarshal_json_response(
+                accounting_bill=unmarshal_json_response(
                     Optional[shared.AccountingBill], http_res
                 ),
                 status_code=http_res.status_code,
@@ -444,7 +445,7 @@ class Bill(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListAccountingBillsResponse(
-                accounting_bills=utils.unmarshal_json_response(
+                accounting_bills=unmarshal_json_response(
                     Optional[List[shared.AccountingBill]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -533,7 +534,7 @@ class Bill(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListAccountingBillsResponse(
-                accounting_bills=utils.unmarshal_json_response(
+                accounting_bills=unmarshal_json_response(
                     Optional[List[shared.AccountingBill]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -625,7 +626,7 @@ class Bill(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchAccountingBillResponse(
-                accounting_bill=utils.unmarshal_json_response(
+                accounting_bill=unmarshal_json_response(
                     Optional[shared.AccountingBill], http_res
                 ),
                 status_code=http_res.status_code,
@@ -717,7 +718,7 @@ class Bill(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchAccountingBillResponse(
-                accounting_bill=utils.unmarshal_json_response(
+                accounting_bill=unmarshal_json_response(
                     Optional[shared.AccountingBill], http_res
                 ),
                 status_code=http_res.status_code,
@@ -997,7 +998,7 @@ class Bill(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateAccountingBillResponse(
-                accounting_bill=utils.unmarshal_json_response(
+                accounting_bill=unmarshal_json_response(
                     Optional[shared.AccountingBill], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1089,7 +1090,7 @@ class Bill(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateAccountingBillResponse(
-                accounting_bill=utils.unmarshal_json_response(
+                accounting_bill=unmarshal_json_response(
                     Optional[shared.AccountingBill], http_res
                 ),
                 status_code=http_res.status_code,

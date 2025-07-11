@@ -6,6 +6,7 @@ from unified_python_sdk import utils
 from unified_python_sdk._hooks import HookContext
 from unified_python_sdk.models import errors, operations, shared
 from unified_python_sdk.types import BaseModel, OptionalNullable, UNSET
+from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_response
 
 
 class Balancesheet(BaseSDK):
@@ -84,7 +85,7 @@ class Balancesheet(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetAccountingBalancesheetResponse(
-                accounting_balancesheet=utils.unmarshal_json_response(
+                accounting_balancesheet=unmarshal_json_response(
                     Optional[shared.AccountingBalancesheet], http_res
                 ),
                 status_code=http_res.status_code,
@@ -175,7 +176,7 @@ class Balancesheet(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetAccountingBalancesheetResponse(
-                accounting_balancesheet=utils.unmarshal_json_response(
+                accounting_balancesheet=unmarshal_json_response(
                     Optional[shared.AccountingBalancesheet], http_res
                 ),
                 status_code=http_res.status_code,
@@ -266,7 +267,7 @@ class Balancesheet(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListAccountingBalancesheetsResponse(
-                accounting_balancesheets=utils.unmarshal_json_response(
+                accounting_balancesheets=unmarshal_json_response(
                     Optional[List[shared.AccountingBalancesheet]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -357,7 +358,7 @@ class Balancesheet(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListAccountingBalancesheetsResponse(
-                accounting_balancesheets=utils.unmarshal_json_response(
+                accounting_balancesheets=unmarshal_json_response(
                     Optional[List[shared.AccountingBalancesheet]], http_res
                 ),
                 status_code=http_res.status_code,

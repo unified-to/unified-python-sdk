@@ -6,6 +6,7 @@ from unified_python_sdk import utils
 from unified_python_sdk._hooks import HookContext
 from unified_python_sdk.models import errors, operations, shared
 from unified_python_sdk.types import BaseModel, OptionalNullable, UNSET
+from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_response
 
 
 class Comment(BaseSDK):
@@ -85,7 +86,7 @@ class Comment(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateKmsCommentResponse(
-                kms_comment=utils.unmarshal_json_response(
+                kms_comment=unmarshal_json_response(
                     Optional[shared.KmsComment], http_res
                 ),
                 status_code=http_res.status_code,
@@ -177,7 +178,7 @@ class Comment(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateKmsCommentResponse(
-                kms_comment=utils.unmarshal_json_response(
+                kms_comment=unmarshal_json_response(
                     Optional[shared.KmsComment], http_res
                 ),
                 status_code=http_res.status_code,
@@ -269,7 +270,7 @@ class Comment(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateTaskCommentResponse(
-                task_comment=utils.unmarshal_json_response(
+                task_comment=unmarshal_json_response(
                     Optional[shared.TaskComment], http_res
                 ),
                 status_code=http_res.status_code,
@@ -361,7 +362,7 @@ class Comment(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateTaskCommentResponse(
-                task_comment=utils.unmarshal_json_response(
+                task_comment=unmarshal_json_response(
                     Optional[shared.TaskComment], http_res
                 ),
                 status_code=http_res.status_code,
@@ -453,7 +454,7 @@ class Comment(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateUcCommentResponse(
-                uc_comment=utils.unmarshal_json_response(
+                uc_comment=unmarshal_json_response(
                     Optional[shared.UcComment], http_res
                 ),
                 status_code=http_res.status_code,
@@ -545,7 +546,7 @@ class Comment(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateUcCommentResponse(
-                uc_comment=utils.unmarshal_json_response(
+                uc_comment=unmarshal_json_response(
                     Optional[shared.UcComment], http_res
                 ),
                 status_code=http_res.status_code,
@@ -633,7 +634,7 @@ class Comment(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetKmsCommentResponse(
-                kms_comment=utils.unmarshal_json_response(
+                kms_comment=unmarshal_json_response(
                     Optional[shared.KmsComment], http_res
                 ),
                 status_code=http_res.status_code,
@@ -721,7 +722,7 @@ class Comment(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetKmsCommentResponse(
-                kms_comment=utils.unmarshal_json_response(
+                kms_comment=unmarshal_json_response(
                     Optional[shared.KmsComment], http_res
                 ),
                 status_code=http_res.status_code,
@@ -809,7 +810,7 @@ class Comment(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetTaskCommentResponse(
-                task_comment=utils.unmarshal_json_response(
+                task_comment=unmarshal_json_response(
                     Optional[shared.TaskComment], http_res
                 ),
                 status_code=http_res.status_code,
@@ -897,7 +898,7 @@ class Comment(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetTaskCommentResponse(
-                task_comment=utils.unmarshal_json_response(
+                task_comment=unmarshal_json_response(
                     Optional[shared.TaskComment], http_res
                 ),
                 status_code=http_res.status_code,
@@ -985,7 +986,7 @@ class Comment(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetUcCommentResponse(
-                uc_comment=utils.unmarshal_json_response(
+                uc_comment=unmarshal_json_response(
                     Optional[shared.UcComment], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1073,7 +1074,7 @@ class Comment(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetUcCommentResponse(
-                uc_comment=utils.unmarshal_json_response(
+                uc_comment=unmarshal_json_response(
                     Optional[shared.UcComment], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1162,7 +1163,7 @@ class Comment(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListKmsCommentsResponse(
-                kms_comments=utils.unmarshal_json_response(
+                kms_comments=unmarshal_json_response(
                     Optional[List[shared.KmsComment]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1251,7 +1252,7 @@ class Comment(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListKmsCommentsResponse(
-                kms_comments=utils.unmarshal_json_response(
+                kms_comments=unmarshal_json_response(
                     Optional[List[shared.KmsComment]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1340,7 +1341,7 @@ class Comment(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListTaskCommentsResponse(
-                task_comments=utils.unmarshal_json_response(
+                task_comments=unmarshal_json_response(
                     Optional[List[shared.TaskComment]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1429,7 +1430,7 @@ class Comment(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListTaskCommentsResponse(
-                task_comments=utils.unmarshal_json_response(
+                task_comments=unmarshal_json_response(
                     Optional[List[shared.TaskComment]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1517,7 +1518,7 @@ class Comment(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListUcCommentsResponse(
-                uc_comments=utils.unmarshal_json_response(
+                uc_comments=unmarshal_json_response(
                     Optional[List[shared.UcComment]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1605,7 +1606,7 @@ class Comment(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListUcCommentsResponse(
-                uc_comments=utils.unmarshal_json_response(
+                uc_comments=unmarshal_json_response(
                     Optional[List[shared.UcComment]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1697,7 +1698,7 @@ class Comment(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchKmsCommentResponse(
-                kms_comment=utils.unmarshal_json_response(
+                kms_comment=unmarshal_json_response(
                     Optional[shared.KmsComment], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1789,7 +1790,7 @@ class Comment(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchKmsCommentResponse(
-                kms_comment=utils.unmarshal_json_response(
+                kms_comment=unmarshal_json_response(
                     Optional[shared.KmsComment], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1881,7 +1882,7 @@ class Comment(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchTaskCommentResponse(
-                task_comment=utils.unmarshal_json_response(
+                task_comment=unmarshal_json_response(
                     Optional[shared.TaskComment], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1973,7 +1974,7 @@ class Comment(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchTaskCommentResponse(
-                task_comment=utils.unmarshal_json_response(
+                task_comment=unmarshal_json_response(
                     Optional[shared.TaskComment], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2064,7 +2065,7 @@ class Comment(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchUcCommentResponse(
-                uc_comment=utils.unmarshal_json_response(
+                uc_comment=unmarshal_json_response(
                     Optional[shared.UcComment], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2155,7 +2156,7 @@ class Comment(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchUcCommentResponse(
-                uc_comment=utils.unmarshal_json_response(
+                uc_comment=unmarshal_json_response(
                     Optional[shared.UcComment], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2811,7 +2812,7 @@ class Comment(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateKmsCommentResponse(
-                kms_comment=utils.unmarshal_json_response(
+                kms_comment=unmarshal_json_response(
                     Optional[shared.KmsComment], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2903,7 +2904,7 @@ class Comment(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateKmsCommentResponse(
-                kms_comment=utils.unmarshal_json_response(
+                kms_comment=unmarshal_json_response(
                     Optional[shared.KmsComment], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2995,7 +2996,7 @@ class Comment(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateTaskCommentResponse(
-                task_comment=utils.unmarshal_json_response(
+                task_comment=unmarshal_json_response(
                     Optional[shared.TaskComment], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3087,7 +3088,7 @@ class Comment(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateTaskCommentResponse(
-                task_comment=utils.unmarshal_json_response(
+                task_comment=unmarshal_json_response(
                     Optional[shared.TaskComment], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3179,7 +3180,7 @@ class Comment(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateUcCommentResponse(
-                uc_comment=utils.unmarshal_json_response(
+                uc_comment=unmarshal_json_response(
                     Optional[shared.UcComment], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3271,7 +3272,7 @@ class Comment(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateUcCommentResponse(
-                uc_comment=utils.unmarshal_json_response(
+                uc_comment=unmarshal_json_response(
                     Optional[shared.UcComment], http_res
                 ),
                 status_code=http_res.status_code,

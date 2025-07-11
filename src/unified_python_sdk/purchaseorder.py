@@ -6,6 +6,7 @@ from unified_python_sdk import utils
 from unified_python_sdk._hooks import HookContext
 from unified_python_sdk.models import errors, operations, shared
 from unified_python_sdk.types import BaseModel, OptionalNullable, UNSET
+from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_response
 
 
 class Purchaseorder(BaseSDK):
@@ -91,7 +92,7 @@ class Purchaseorder(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateAccountingPurchaseorderResponse(
-                accounting_purchaseorder=utils.unmarshal_json_response(
+                accounting_purchaseorder=unmarshal_json_response(
                     Optional[shared.AccountingPurchaseorder], http_res
                 ),
                 status_code=http_res.status_code,
@@ -189,7 +190,7 @@ class Purchaseorder(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateAccountingPurchaseorderResponse(
-                accounting_purchaseorder=utils.unmarshal_json_response(
+                accounting_purchaseorder=unmarshal_json_response(
                     Optional[shared.AccountingPurchaseorder], http_res
                 ),
                 status_code=http_res.status_code,
@@ -280,7 +281,7 @@ class Purchaseorder(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetAccountingPurchaseorderResponse(
-                accounting_purchaseorder=utils.unmarshal_json_response(
+                accounting_purchaseorder=unmarshal_json_response(
                     Optional[shared.AccountingPurchaseorder], http_res
                 ),
                 status_code=http_res.status_code,
@@ -371,7 +372,7 @@ class Purchaseorder(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetAccountingPurchaseorderResponse(
-                accounting_purchaseorder=utils.unmarshal_json_response(
+                accounting_purchaseorder=unmarshal_json_response(
                     Optional[shared.AccountingPurchaseorder], http_res
                 ),
                 status_code=http_res.status_code,
@@ -462,7 +463,7 @@ class Purchaseorder(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListAccountingPurchaseordersResponse(
-                accounting_purchaseorders=utils.unmarshal_json_response(
+                accounting_purchaseorders=unmarshal_json_response(
                     Optional[List[shared.AccountingPurchaseorder]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -553,7 +554,7 @@ class Purchaseorder(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListAccountingPurchaseordersResponse(
-                accounting_purchaseorders=utils.unmarshal_json_response(
+                accounting_purchaseorders=unmarshal_json_response(
                     Optional[List[shared.AccountingPurchaseorder]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -651,7 +652,7 @@ class Purchaseorder(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchAccountingPurchaseorderResponse(
-                accounting_purchaseorder=utils.unmarshal_json_response(
+                accounting_purchaseorder=unmarshal_json_response(
                     Optional[shared.AccountingPurchaseorder], http_res
                 ),
                 status_code=http_res.status_code,
@@ -749,7 +750,7 @@ class Purchaseorder(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchAccountingPurchaseorderResponse(
-                accounting_purchaseorder=utils.unmarshal_json_response(
+                accounting_purchaseorder=unmarshal_json_response(
                     Optional[shared.AccountingPurchaseorder], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1039,7 +1040,7 @@ class Purchaseorder(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateAccountingPurchaseorderResponse(
-                accounting_purchaseorder=utils.unmarshal_json_response(
+                accounting_purchaseorder=unmarshal_json_response(
                     Optional[shared.AccountingPurchaseorder], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1137,7 +1138,7 @@ class Purchaseorder(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateAccountingPurchaseorderResponse(
-                accounting_purchaseorder=utils.unmarshal_json_response(
+                accounting_purchaseorder=unmarshal_json_response(
                     Optional[shared.AccountingPurchaseorder], http_res
                 ),
                 status_code=http_res.status_code,

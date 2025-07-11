@@ -6,6 +6,7 @@ from unified_python_sdk import utils
 from unified_python_sdk._hooks import HookContext
 from unified_python_sdk.models import errors, operations, shared
 from unified_python_sdk.types import BaseModel, OptionalNullable, UNSET
+from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_response
 
 
 class Commerce(BaseSDK):
@@ -91,7 +92,7 @@ class Commerce(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateCommerceCollectionResponse(
-                commerce_collection=utils.unmarshal_json_response(
+                commerce_collection=unmarshal_json_response(
                     Optional[shared.CommerceCollection], http_res
                 ),
                 status_code=http_res.status_code,
@@ -189,7 +190,7 @@ class Commerce(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateCommerceCollectionResponse(
-                commerce_collection=utils.unmarshal_json_response(
+                commerce_collection=unmarshal_json_response(
                     Optional[shared.CommerceCollection], http_res
                 ),
                 status_code=http_res.status_code,
@@ -287,7 +288,7 @@ class Commerce(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateCommerceInventoryResponse(
-                commerce_inventory=utils.unmarshal_json_response(
+                commerce_inventory=unmarshal_json_response(
                     Optional[shared.CommerceInventory], http_res
                 ),
                 status_code=http_res.status_code,
@@ -385,7 +386,7 @@ class Commerce(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateCommerceInventoryResponse(
-                commerce_inventory=utils.unmarshal_json_response(
+                commerce_inventory=unmarshal_json_response(
                     Optional[shared.CommerceInventory], http_res
                 ),
                 status_code=http_res.status_code,
@@ -477,7 +478,7 @@ class Commerce(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateCommerceItemResponse(
-                commerce_item=utils.unmarshal_json_response(
+                commerce_item=unmarshal_json_response(
                     Optional[shared.CommerceItem], http_res
                 ),
                 status_code=http_res.status_code,
@@ -569,7 +570,7 @@ class Commerce(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateCommerceItemResponse(
-                commerce_item=utils.unmarshal_json_response(
+                commerce_item=unmarshal_json_response(
                     Optional[shared.CommerceItem], http_res
                 ),
                 status_code=http_res.status_code,
@@ -661,7 +662,7 @@ class Commerce(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateCommerceLocationResponse(
-                commerce_location=utils.unmarshal_json_response(
+                commerce_location=unmarshal_json_response(
                     Optional[shared.CommerceLocation], http_res
                 ),
                 status_code=http_res.status_code,
@@ -753,7 +754,7 @@ class Commerce(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateCommerceLocationResponse(
-                commerce_location=utils.unmarshal_json_response(
+                commerce_location=unmarshal_json_response(
                     Optional[shared.CommerceLocation], http_res
                 ),
                 status_code=http_res.status_code,
@@ -845,7 +846,7 @@ class Commerce(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateCommerceReviewResponse(
-                commerce_review=utils.unmarshal_json_response(
+                commerce_review=unmarshal_json_response(
                     Optional[shared.CommerceReview], http_res
                 ),
                 status_code=http_res.status_code,
@@ -937,7 +938,7 @@ class Commerce(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateCommerceReviewResponse(
-                commerce_review=utils.unmarshal_json_response(
+                commerce_review=unmarshal_json_response(
                     Optional[shared.CommerceReview], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1026,7 +1027,7 @@ class Commerce(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetCommerceCollectionResponse(
-                commerce_collection=utils.unmarshal_json_response(
+                commerce_collection=unmarshal_json_response(
                     Optional[shared.CommerceCollection], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1115,7 +1116,7 @@ class Commerce(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetCommerceCollectionResponse(
-                commerce_collection=utils.unmarshal_json_response(
+                commerce_collection=unmarshal_json_response(
                     Optional[shared.CommerceCollection], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1204,7 +1205,7 @@ class Commerce(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetCommerceInventoryResponse(
-                commerce_inventory=utils.unmarshal_json_response(
+                commerce_inventory=unmarshal_json_response(
                     Optional[shared.CommerceInventory], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1293,7 +1294,7 @@ class Commerce(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetCommerceInventoryResponse(
-                commerce_inventory=utils.unmarshal_json_response(
+                commerce_inventory=unmarshal_json_response(
                     Optional[shared.CommerceInventory], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1382,7 +1383,7 @@ class Commerce(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetCommerceItemResponse(
-                commerce_item=utils.unmarshal_json_response(
+                commerce_item=unmarshal_json_response(
                     Optional[shared.CommerceItem], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1471,7 +1472,7 @@ class Commerce(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetCommerceItemResponse(
-                commerce_item=utils.unmarshal_json_response(
+                commerce_item=unmarshal_json_response(
                     Optional[shared.CommerceItem], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1560,7 +1561,7 @@ class Commerce(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetCommerceLocationResponse(
-                commerce_location=utils.unmarshal_json_response(
+                commerce_location=unmarshal_json_response(
                     Optional[shared.CommerceLocation], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1649,7 +1650,7 @@ class Commerce(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetCommerceLocationResponse(
-                commerce_location=utils.unmarshal_json_response(
+                commerce_location=unmarshal_json_response(
                     Optional[shared.CommerceLocation], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1738,7 +1739,7 @@ class Commerce(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetCommerceReviewResponse(
-                commerce_review=utils.unmarshal_json_response(
+                commerce_review=unmarshal_json_response(
                     Optional[shared.CommerceReview], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1827,7 +1828,7 @@ class Commerce(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetCommerceReviewResponse(
-                commerce_review=utils.unmarshal_json_response(
+                commerce_review=unmarshal_json_response(
                     Optional[shared.CommerceReview], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1918,7 +1919,7 @@ class Commerce(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListCommerceCollectionsResponse(
-                commerce_collections=utils.unmarshal_json_response(
+                commerce_collections=unmarshal_json_response(
                     Optional[List[shared.CommerceCollection]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2009,7 +2010,7 @@ class Commerce(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListCommerceCollectionsResponse(
-                commerce_collections=utils.unmarshal_json_response(
+                commerce_collections=unmarshal_json_response(
                     Optional[List[shared.CommerceCollection]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2100,7 +2101,7 @@ class Commerce(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListCommerceInventoriesResponse(
-                commerce_inventories=utils.unmarshal_json_response(
+                commerce_inventories=unmarshal_json_response(
                     Optional[List[shared.CommerceInventory]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2191,7 +2192,7 @@ class Commerce(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListCommerceInventoriesResponse(
-                commerce_inventories=utils.unmarshal_json_response(
+                commerce_inventories=unmarshal_json_response(
                     Optional[List[shared.CommerceInventory]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2280,7 +2281,7 @@ class Commerce(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListCommerceItemsResponse(
-                commerce_items=utils.unmarshal_json_response(
+                commerce_items=unmarshal_json_response(
                     Optional[List[shared.CommerceItem]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2369,7 +2370,7 @@ class Commerce(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListCommerceItemsResponse(
-                commerce_items=utils.unmarshal_json_response(
+                commerce_items=unmarshal_json_response(
                     Optional[List[shared.CommerceItem]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2458,7 +2459,7 @@ class Commerce(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListCommerceLocationsResponse(
-                commerce_locations=utils.unmarshal_json_response(
+                commerce_locations=unmarshal_json_response(
                     Optional[List[shared.CommerceLocation]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2547,7 +2548,7 @@ class Commerce(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListCommerceLocationsResponse(
-                commerce_locations=utils.unmarshal_json_response(
+                commerce_locations=unmarshal_json_response(
                     Optional[List[shared.CommerceLocation]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2636,7 +2637,7 @@ class Commerce(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListCommerceReviewsResponse(
-                commerce_reviews=utils.unmarshal_json_response(
+                commerce_reviews=unmarshal_json_response(
                     Optional[List[shared.CommerceReview]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2725,7 +2726,7 @@ class Commerce(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListCommerceReviewsResponse(
-                commerce_reviews=utils.unmarshal_json_response(
+                commerce_reviews=unmarshal_json_response(
                     Optional[List[shared.CommerceReview]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2823,7 +2824,7 @@ class Commerce(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchCommerceCollectionResponse(
-                commerce_collection=utils.unmarshal_json_response(
+                commerce_collection=unmarshal_json_response(
                     Optional[shared.CommerceCollection], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2921,7 +2922,7 @@ class Commerce(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchCommerceCollectionResponse(
-                commerce_collection=utils.unmarshal_json_response(
+                commerce_collection=unmarshal_json_response(
                     Optional[shared.CommerceCollection], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3017,7 +3018,7 @@ class Commerce(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchCommerceInventoryResponse(
-                commerce_inventory=utils.unmarshal_json_response(
+                commerce_inventory=unmarshal_json_response(
                     Optional[shared.CommerceInventory], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3113,7 +3114,7 @@ class Commerce(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchCommerceInventoryResponse(
-                commerce_inventory=utils.unmarshal_json_response(
+                commerce_inventory=unmarshal_json_response(
                     Optional[shared.CommerceInventory], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3205,7 +3206,7 @@ class Commerce(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchCommerceItemResponse(
-                commerce_item=utils.unmarshal_json_response(
+                commerce_item=unmarshal_json_response(
                     Optional[shared.CommerceItem], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3297,7 +3298,7 @@ class Commerce(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchCommerceItemResponse(
-                commerce_item=utils.unmarshal_json_response(
+                commerce_item=unmarshal_json_response(
                     Optional[shared.CommerceItem], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3389,7 +3390,7 @@ class Commerce(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchCommerceLocationResponse(
-                commerce_location=utils.unmarshal_json_response(
+                commerce_location=unmarshal_json_response(
                     Optional[shared.CommerceLocation], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3481,7 +3482,7 @@ class Commerce(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchCommerceLocationResponse(
-                commerce_location=utils.unmarshal_json_response(
+                commerce_location=unmarshal_json_response(
                     Optional[shared.CommerceLocation], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3573,7 +3574,7 @@ class Commerce(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchCommerceReviewResponse(
-                commerce_review=utils.unmarshal_json_response(
+                commerce_review=unmarshal_json_response(
                     Optional[shared.CommerceReview], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3665,7 +3666,7 @@ class Commerce(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchCommerceReviewResponse(
-                commerce_review=utils.unmarshal_json_response(
+                commerce_review=unmarshal_json_response(
                     Optional[shared.CommerceReview], http_res
                 ),
                 status_code=http_res.status_code,
@@ -4711,7 +4712,7 @@ class Commerce(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateCommerceCollectionResponse(
-                commerce_collection=utils.unmarshal_json_response(
+                commerce_collection=unmarshal_json_response(
                     Optional[shared.CommerceCollection], http_res
                 ),
                 status_code=http_res.status_code,
@@ -4809,7 +4810,7 @@ class Commerce(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateCommerceCollectionResponse(
-                commerce_collection=utils.unmarshal_json_response(
+                commerce_collection=unmarshal_json_response(
                     Optional[shared.CommerceCollection], http_res
                 ),
                 status_code=http_res.status_code,
@@ -4907,7 +4908,7 @@ class Commerce(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateCommerceInventoryResponse(
-                commerce_inventory=utils.unmarshal_json_response(
+                commerce_inventory=unmarshal_json_response(
                     Optional[shared.CommerceInventory], http_res
                 ),
                 status_code=http_res.status_code,
@@ -5005,7 +5006,7 @@ class Commerce(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateCommerceInventoryResponse(
-                commerce_inventory=utils.unmarshal_json_response(
+                commerce_inventory=unmarshal_json_response(
                     Optional[shared.CommerceInventory], http_res
                 ),
                 status_code=http_res.status_code,
@@ -5097,7 +5098,7 @@ class Commerce(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateCommerceItemResponse(
-                commerce_item=utils.unmarshal_json_response(
+                commerce_item=unmarshal_json_response(
                     Optional[shared.CommerceItem], http_res
                 ),
                 status_code=http_res.status_code,
@@ -5189,7 +5190,7 @@ class Commerce(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateCommerceItemResponse(
-                commerce_item=utils.unmarshal_json_response(
+                commerce_item=unmarshal_json_response(
                     Optional[shared.CommerceItem], http_res
                 ),
                 status_code=http_res.status_code,
@@ -5281,7 +5282,7 @@ class Commerce(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateCommerceLocationResponse(
-                commerce_location=utils.unmarshal_json_response(
+                commerce_location=unmarshal_json_response(
                     Optional[shared.CommerceLocation], http_res
                 ),
                 status_code=http_res.status_code,
@@ -5373,7 +5374,7 @@ class Commerce(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateCommerceLocationResponse(
-                commerce_location=utils.unmarshal_json_response(
+                commerce_location=unmarshal_json_response(
                     Optional[shared.CommerceLocation], http_res
                 ),
                 status_code=http_res.status_code,
@@ -5465,7 +5466,7 @@ class Commerce(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateCommerceReviewResponse(
-                commerce_review=utils.unmarshal_json_response(
+                commerce_review=unmarshal_json_response(
                     Optional[shared.CommerceReview], http_res
                 ),
                 status_code=http_res.status_code,
@@ -5557,7 +5558,7 @@ class Commerce(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateCommerceReviewResponse(
-                commerce_review=utils.unmarshal_json_response(
+                commerce_review=unmarshal_json_response(
                     Optional[shared.CommerceReview], http_res
                 ),
                 status_code=http_res.status_code,

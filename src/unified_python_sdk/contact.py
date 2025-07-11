@@ -6,6 +6,7 @@ from unified_python_sdk import utils
 from unified_python_sdk._hooks import HookContext
 from unified_python_sdk.models import errors, operations, shared
 from unified_python_sdk.types import BaseModel, OptionalNullable, UNSET
+from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_response
 
 
 class Contact(BaseSDK):
@@ -91,7 +92,7 @@ class Contact(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateAccountingContactResponse(
-                accounting_contact=utils.unmarshal_json_response(
+                accounting_contact=unmarshal_json_response(
                     Optional[shared.AccountingContact], http_res
                 ),
                 status_code=http_res.status_code,
@@ -189,7 +190,7 @@ class Contact(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateAccountingContactResponse(
-                accounting_contact=utils.unmarshal_json_response(
+                accounting_contact=unmarshal_json_response(
                     Optional[shared.AccountingContact], http_res
                 ),
                 status_code=http_res.status_code,
@@ -281,7 +282,7 @@ class Contact(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateCrmContactResponse(
-                crm_contact=utils.unmarshal_json_response(
+                crm_contact=unmarshal_json_response(
                     Optional[shared.CrmContact], http_res
                 ),
                 status_code=http_res.status_code,
@@ -373,7 +374,7 @@ class Contact(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateCrmContactResponse(
-                crm_contact=utils.unmarshal_json_response(
+                crm_contact=unmarshal_json_response(
                     Optional[shared.CrmContact], http_res
                 ),
                 status_code=http_res.status_code,
@@ -465,7 +466,7 @@ class Contact(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateUcContactResponse(
-                uc_contact=utils.unmarshal_json_response(
+                uc_contact=unmarshal_json_response(
                     Optional[shared.UcContact], http_res
                 ),
                 status_code=http_res.status_code,
@@ -557,7 +558,7 @@ class Contact(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateUcContactResponse(
-                uc_contact=utils.unmarshal_json_response(
+                uc_contact=unmarshal_json_response(
                     Optional[shared.UcContact], http_res
                 ),
                 status_code=http_res.status_code,
@@ -646,7 +647,7 @@ class Contact(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetAccountingContactResponse(
-                accounting_contact=utils.unmarshal_json_response(
+                accounting_contact=unmarshal_json_response(
                     Optional[shared.AccountingContact], http_res
                 ),
                 status_code=http_res.status_code,
@@ -735,7 +736,7 @@ class Contact(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetAccountingContactResponse(
-                accounting_contact=utils.unmarshal_json_response(
+                accounting_contact=unmarshal_json_response(
                     Optional[shared.AccountingContact], http_res
                 ),
                 status_code=http_res.status_code,
@@ -823,7 +824,7 @@ class Contact(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetCrmContactResponse(
-                crm_contact=utils.unmarshal_json_response(
+                crm_contact=unmarshal_json_response(
                     Optional[shared.CrmContact], http_res
                 ),
                 status_code=http_res.status_code,
@@ -911,7 +912,7 @@ class Contact(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetCrmContactResponse(
-                crm_contact=utils.unmarshal_json_response(
+                crm_contact=unmarshal_json_response(
                     Optional[shared.CrmContact], http_res
                 ),
                 status_code=http_res.status_code,
@@ -999,7 +1000,7 @@ class Contact(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetUcContactResponse(
-                uc_contact=utils.unmarshal_json_response(
+                uc_contact=unmarshal_json_response(
                     Optional[shared.UcContact], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1087,7 +1088,7 @@ class Contact(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetUcContactResponse(
-                uc_contact=utils.unmarshal_json_response(
+                uc_contact=unmarshal_json_response(
                     Optional[shared.UcContact], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1176,7 +1177,7 @@ class Contact(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListAccountingContactsResponse(
-                accounting_contacts=utils.unmarshal_json_response(
+                accounting_contacts=unmarshal_json_response(
                     Optional[List[shared.AccountingContact]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1265,7 +1266,7 @@ class Contact(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListAccountingContactsResponse(
-                accounting_contacts=utils.unmarshal_json_response(
+                accounting_contacts=unmarshal_json_response(
                     Optional[List[shared.AccountingContact]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1354,7 +1355,7 @@ class Contact(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListCrmContactsResponse(
-                crm_contacts=utils.unmarshal_json_response(
+                crm_contacts=unmarshal_json_response(
                     Optional[List[shared.CrmContact]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1443,7 +1444,7 @@ class Contact(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListCrmContactsResponse(
-                crm_contacts=utils.unmarshal_json_response(
+                crm_contacts=unmarshal_json_response(
                     Optional[List[shared.CrmContact]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1531,7 +1532,7 @@ class Contact(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListUcContactsResponse(
-                uc_contacts=utils.unmarshal_json_response(
+                uc_contacts=unmarshal_json_response(
                     Optional[List[shared.UcContact]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1619,7 +1620,7 @@ class Contact(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListUcContactsResponse(
-                uc_contacts=utils.unmarshal_json_response(
+                uc_contacts=unmarshal_json_response(
                     Optional[List[shared.UcContact]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1715,7 +1716,7 @@ class Contact(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchAccountingContactResponse(
-                accounting_contact=utils.unmarshal_json_response(
+                accounting_contact=unmarshal_json_response(
                     Optional[shared.AccountingContact], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1811,7 +1812,7 @@ class Contact(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchAccountingContactResponse(
-                accounting_contact=utils.unmarshal_json_response(
+                accounting_contact=unmarshal_json_response(
                     Optional[shared.AccountingContact], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1903,7 +1904,7 @@ class Contact(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchCrmContactResponse(
-                crm_contact=utils.unmarshal_json_response(
+                crm_contact=unmarshal_json_response(
                     Optional[shared.CrmContact], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1995,7 +1996,7 @@ class Contact(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchCrmContactResponse(
-                crm_contact=utils.unmarshal_json_response(
+                crm_contact=unmarshal_json_response(
                     Optional[shared.CrmContact], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2086,7 +2087,7 @@ class Contact(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchUcContactResponse(
-                uc_contact=utils.unmarshal_json_response(
+                uc_contact=unmarshal_json_response(
                     Optional[shared.UcContact], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2177,7 +2178,7 @@ class Contact(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchUcContactResponse(
-                uc_contact=utils.unmarshal_json_response(
+                uc_contact=unmarshal_json_response(
                     Optional[shared.UcContact], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2843,7 +2844,7 @@ class Contact(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateAccountingContactResponse(
-                accounting_contact=utils.unmarshal_json_response(
+                accounting_contact=unmarshal_json_response(
                     Optional[shared.AccountingContact], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2941,7 +2942,7 @@ class Contact(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateAccountingContactResponse(
-                accounting_contact=utils.unmarshal_json_response(
+                accounting_contact=unmarshal_json_response(
                     Optional[shared.AccountingContact], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3033,7 +3034,7 @@ class Contact(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateCrmContactResponse(
-                crm_contact=utils.unmarshal_json_response(
+                crm_contact=unmarshal_json_response(
                     Optional[shared.CrmContact], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3125,7 +3126,7 @@ class Contact(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateCrmContactResponse(
-                crm_contact=utils.unmarshal_json_response(
+                crm_contact=unmarshal_json_response(
                     Optional[shared.CrmContact], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3217,7 +3218,7 @@ class Contact(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateUcContactResponse(
-                uc_contact=utils.unmarshal_json_response(
+                uc_contact=unmarshal_json_response(
                     Optional[shared.UcContact], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3309,7 +3310,7 @@ class Contact(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateUcContactResponse(
-                uc_contact=utils.unmarshal_json_response(
+                uc_contact=unmarshal_json_response(
                     Optional[shared.UcContact], http_res
                 ),
                 status_code=http_res.status_code,

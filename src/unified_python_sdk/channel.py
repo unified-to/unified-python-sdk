@@ -6,6 +6,7 @@ from unified_python_sdk import utils
 from unified_python_sdk._hooks import HookContext
 from unified_python_sdk.models import errors, operations, shared
 from unified_python_sdk.types import BaseModel, OptionalNullable, UNSET
+from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_response
 
 
 class Channel(BaseSDK):
@@ -82,7 +83,7 @@ class Channel(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetMessagingChannelResponse(
-                messaging_channel=utils.unmarshal_json_response(
+                messaging_channel=unmarshal_json_response(
                     Optional[shared.MessagingChannel], http_res
                 ),
                 status_code=http_res.status_code,
@@ -171,7 +172,7 @@ class Channel(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetMessagingChannelResponse(
-                messaging_channel=utils.unmarshal_json_response(
+                messaging_channel=unmarshal_json_response(
                     Optional[shared.MessagingChannel], http_res
                 ),
                 status_code=http_res.status_code,
@@ -260,7 +261,7 @@ class Channel(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListMessagingChannelsResponse(
-                messaging_channels=utils.unmarshal_json_response(
+                messaging_channels=unmarshal_json_response(
                     Optional[List[shared.MessagingChannel]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -349,7 +350,7 @@ class Channel(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListMessagingChannelsResponse(
-                messaging_channels=utils.unmarshal_json_response(
+                messaging_channels=unmarshal_json_response(
                     Optional[List[shared.MessagingChannel]], http_res
                 ),
                 status_code=http_res.status_code,

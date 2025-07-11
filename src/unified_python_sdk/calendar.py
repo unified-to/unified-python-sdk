@@ -6,6 +6,7 @@ from unified_python_sdk import utils
 from unified_python_sdk._hooks import HookContext
 from unified_python_sdk.models import errors, operations, shared
 from unified_python_sdk.types import BaseModel, OptionalNullable, UNSET
+from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_response
 
 
 class Calendar(BaseSDK):
@@ -85,7 +86,7 @@ class Calendar(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateCalendarCalendarResponse(
-                calendar_calendar=utils.unmarshal_json_response(
+                calendar_calendar=unmarshal_json_response(
                     Optional[shared.CalendarCalendar], http_res
                 ),
                 status_code=http_res.status_code,
@@ -177,7 +178,7 @@ class Calendar(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateCalendarCalendarResponse(
-                calendar_calendar=utils.unmarshal_json_response(
+                calendar_calendar=unmarshal_json_response(
                     Optional[shared.CalendarCalendar], http_res
                 ),
                 status_code=http_res.status_code,
@@ -269,7 +270,7 @@ class Calendar(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateCalendarEventResponse(
-                calendar_event=utils.unmarshal_json_response(
+                calendar_event=unmarshal_json_response(
                     Optional[shared.CalendarEvent], http_res
                 ),
                 status_code=http_res.status_code,
@@ -361,7 +362,7 @@ class Calendar(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateCalendarEventResponse(
-                calendar_event=utils.unmarshal_json_response(
+                calendar_event=unmarshal_json_response(
                     Optional[shared.CalendarEvent], http_res
                 ),
                 status_code=http_res.status_code,
@@ -453,7 +454,7 @@ class Calendar(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateCalendarLinkResponse(
-                calendar_link=utils.unmarshal_json_response(
+                calendar_link=unmarshal_json_response(
                     Optional[shared.CalendarLink], http_res
                 ),
                 status_code=http_res.status_code,
@@ -545,7 +546,7 @@ class Calendar(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateCalendarLinkResponse(
-                calendar_link=utils.unmarshal_json_response(
+                calendar_link=unmarshal_json_response(
                     Optional[shared.CalendarLink], http_res
                 ),
                 status_code=http_res.status_code,
@@ -634,7 +635,7 @@ class Calendar(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetCalendarCalendarResponse(
-                calendar_calendar=utils.unmarshal_json_response(
+                calendar_calendar=unmarshal_json_response(
                     Optional[shared.CalendarCalendar], http_res
                 ),
                 status_code=http_res.status_code,
@@ -723,7 +724,7 @@ class Calendar(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetCalendarCalendarResponse(
-                calendar_calendar=utils.unmarshal_json_response(
+                calendar_calendar=unmarshal_json_response(
                     Optional[shared.CalendarCalendar], http_res
                 ),
                 status_code=http_res.status_code,
@@ -812,7 +813,7 @@ class Calendar(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetCalendarEventResponse(
-                calendar_event=utils.unmarshal_json_response(
+                calendar_event=unmarshal_json_response(
                     Optional[shared.CalendarEvent], http_res
                 ),
                 status_code=http_res.status_code,
@@ -901,7 +902,7 @@ class Calendar(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetCalendarEventResponse(
-                calendar_event=utils.unmarshal_json_response(
+                calendar_event=unmarshal_json_response(
                     Optional[shared.CalendarEvent], http_res
                 ),
                 status_code=http_res.status_code,
@@ -990,7 +991,7 @@ class Calendar(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetCalendarLinkResponse(
-                calendar_link=utils.unmarshal_json_response(
+                calendar_link=unmarshal_json_response(
                     Optional[shared.CalendarLink], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1079,7 +1080,7 @@ class Calendar(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetCalendarLinkResponse(
-                calendar_link=utils.unmarshal_json_response(
+                calendar_link=unmarshal_json_response(
                     Optional[shared.CalendarLink], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1168,7 +1169,7 @@ class Calendar(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetCalendarRecordingResponse(
-                calendar_recording=utils.unmarshal_json_response(
+                calendar_recording=unmarshal_json_response(
                     Optional[shared.CalendarRecording], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1257,7 +1258,7 @@ class Calendar(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetCalendarRecordingResponse(
-                calendar_recording=utils.unmarshal_json_response(
+                calendar_recording=unmarshal_json_response(
                     Optional[shared.CalendarRecording], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1346,7 +1347,7 @@ class Calendar(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListCalendarBusiesResponse(
-                calendar_busies=utils.unmarshal_json_response(
+                calendar_busies=unmarshal_json_response(
                     Optional[List[shared.CalendarBusy]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1435,7 +1436,7 @@ class Calendar(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListCalendarBusiesResponse(
-                calendar_busies=utils.unmarshal_json_response(
+                calendar_busies=unmarshal_json_response(
                     Optional[List[shared.CalendarBusy]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1524,7 +1525,7 @@ class Calendar(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListCalendarCalendarsResponse(
-                calendar_calendars=utils.unmarshal_json_response(
+                calendar_calendars=unmarshal_json_response(
                     Optional[List[shared.CalendarCalendar]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1613,7 +1614,7 @@ class Calendar(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListCalendarCalendarsResponse(
-                calendar_calendars=utils.unmarshal_json_response(
+                calendar_calendars=unmarshal_json_response(
                     Optional[List[shared.CalendarCalendar]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1702,7 +1703,7 @@ class Calendar(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListCalendarEventsResponse(
-                calendar_events=utils.unmarshal_json_response(
+                calendar_events=unmarshal_json_response(
                     Optional[List[shared.CalendarEvent]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1791,7 +1792,7 @@ class Calendar(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListCalendarEventsResponse(
-                calendar_events=utils.unmarshal_json_response(
+                calendar_events=unmarshal_json_response(
                     Optional[List[shared.CalendarEvent]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1880,7 +1881,7 @@ class Calendar(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListCalendarLinksResponse(
-                calendar_links=utils.unmarshal_json_response(
+                calendar_links=unmarshal_json_response(
                     Optional[List[shared.CalendarLink]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1969,7 +1970,7 @@ class Calendar(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListCalendarLinksResponse(
-                calendar_links=utils.unmarshal_json_response(
+                calendar_links=unmarshal_json_response(
                     Optional[List[shared.CalendarLink]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2058,7 +2059,7 @@ class Calendar(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListCalendarRecordingsResponse(
-                calendar_recordings=utils.unmarshal_json_response(
+                calendar_recordings=unmarshal_json_response(
                     Optional[List[shared.CalendarRecording]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2147,7 +2148,7 @@ class Calendar(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListCalendarRecordingsResponse(
-                calendar_recordings=utils.unmarshal_json_response(
+                calendar_recordings=unmarshal_json_response(
                     Optional[List[shared.CalendarRecording]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2239,7 +2240,7 @@ class Calendar(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchCalendarCalendarResponse(
-                calendar_calendar=utils.unmarshal_json_response(
+                calendar_calendar=unmarshal_json_response(
                     Optional[shared.CalendarCalendar], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2331,7 +2332,7 @@ class Calendar(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchCalendarCalendarResponse(
-                calendar_calendar=utils.unmarshal_json_response(
+                calendar_calendar=unmarshal_json_response(
                     Optional[shared.CalendarCalendar], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2423,7 +2424,7 @@ class Calendar(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchCalendarEventResponse(
-                calendar_event=utils.unmarshal_json_response(
+                calendar_event=unmarshal_json_response(
                     Optional[shared.CalendarEvent], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2515,7 +2516,7 @@ class Calendar(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchCalendarEventResponse(
-                calendar_event=utils.unmarshal_json_response(
+                calendar_event=unmarshal_json_response(
                     Optional[shared.CalendarEvent], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2607,7 +2608,7 @@ class Calendar(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchCalendarLinkResponse(
-                calendar_link=utils.unmarshal_json_response(
+                calendar_link=unmarshal_json_response(
                     Optional[shared.CalendarLink], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2699,7 +2700,7 @@ class Calendar(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchCalendarLinkResponse(
-                calendar_link=utils.unmarshal_json_response(
+                calendar_link=unmarshal_json_response(
                     Optional[shared.CalendarLink], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3355,7 +3356,7 @@ class Calendar(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateCalendarCalendarResponse(
-                calendar_calendar=utils.unmarshal_json_response(
+                calendar_calendar=unmarshal_json_response(
                     Optional[shared.CalendarCalendar], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3447,7 +3448,7 @@ class Calendar(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateCalendarCalendarResponse(
-                calendar_calendar=utils.unmarshal_json_response(
+                calendar_calendar=unmarshal_json_response(
                     Optional[shared.CalendarCalendar], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3539,7 +3540,7 @@ class Calendar(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateCalendarEventResponse(
-                calendar_event=utils.unmarshal_json_response(
+                calendar_event=unmarshal_json_response(
                     Optional[shared.CalendarEvent], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3631,7 +3632,7 @@ class Calendar(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateCalendarEventResponse(
-                calendar_event=utils.unmarshal_json_response(
+                calendar_event=unmarshal_json_response(
                     Optional[shared.CalendarEvent], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3723,7 +3724,7 @@ class Calendar(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateCalendarLinkResponse(
-                calendar_link=utils.unmarshal_json_response(
+                calendar_link=unmarshal_json_response(
                     Optional[shared.CalendarLink], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3815,7 +3816,7 @@ class Calendar(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateCalendarLinkResponse(
-                calendar_link=utils.unmarshal_json_response(
+                calendar_link=unmarshal_json_response(
                     Optional[shared.CalendarLink], http_res
                 ),
                 status_code=http_res.status_code,

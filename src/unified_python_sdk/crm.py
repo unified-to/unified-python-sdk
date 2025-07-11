@@ -6,6 +6,7 @@ from unified_python_sdk import utils
 from unified_python_sdk._hooks import HookContext
 from unified_python_sdk.models import errors, operations, shared
 from unified_python_sdk.types import BaseModel, OptionalNullable, UNSET
+from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_response
 
 
 class Crm(BaseSDK):
@@ -85,7 +86,7 @@ class Crm(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateCrmCompanyResponse(
-                crm_company=utils.unmarshal_json_response(
+                crm_company=unmarshal_json_response(
                     Optional[shared.CrmCompany], http_res
                 ),
                 status_code=http_res.status_code,
@@ -177,7 +178,7 @@ class Crm(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateCrmCompanyResponse(
-                crm_company=utils.unmarshal_json_response(
+                crm_company=unmarshal_json_response(
                     Optional[shared.CrmCompany], http_res
                 ),
                 status_code=http_res.status_code,
@@ -269,7 +270,7 @@ class Crm(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateCrmContactResponse(
-                crm_contact=utils.unmarshal_json_response(
+                crm_contact=unmarshal_json_response(
                     Optional[shared.CrmContact], http_res
                 ),
                 status_code=http_res.status_code,
@@ -361,7 +362,7 @@ class Crm(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateCrmContactResponse(
-                crm_contact=utils.unmarshal_json_response(
+                crm_contact=unmarshal_json_response(
                     Optional[shared.CrmContact], http_res
                 ),
                 status_code=http_res.status_code,
@@ -452,9 +453,7 @@ class Crm(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateCrmDealResponse(
-                crm_deal=utils.unmarshal_json_response(
-                    Optional[shared.CrmDeal], http_res
-                ),
+                crm_deal=unmarshal_json_response(Optional[shared.CrmDeal], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -543,9 +542,7 @@ class Crm(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateCrmDealResponse(
-                crm_deal=utils.unmarshal_json_response(
-                    Optional[shared.CrmDeal], http_res
-                ),
+                crm_deal=unmarshal_json_response(Optional[shared.CrmDeal], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -634,9 +631,7 @@ class Crm(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateCrmEventResponse(
-                crm_event=utils.unmarshal_json_response(
-                    Optional[shared.CrmEvent], http_res
-                ),
+                crm_event=unmarshal_json_response(Optional[shared.CrmEvent], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -725,9 +720,7 @@ class Crm(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateCrmEventResponse(
-                crm_event=utils.unmarshal_json_response(
-                    Optional[shared.CrmEvent], http_res
-                ),
+                crm_event=unmarshal_json_response(Optional[shared.CrmEvent], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -816,9 +809,7 @@ class Crm(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateCrmLeadResponse(
-                crm_lead=utils.unmarshal_json_response(
-                    Optional[shared.CrmLead], http_res
-                ),
+                crm_lead=unmarshal_json_response(Optional[shared.CrmLead], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -907,9 +898,7 @@ class Crm(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateCrmLeadResponse(
-                crm_lead=utils.unmarshal_json_response(
-                    Optional[shared.CrmLead], http_res
-                ),
+                crm_lead=unmarshal_json_response(Optional[shared.CrmLead], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -999,7 +988,7 @@ class Crm(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateCrmPipelineResponse(
-                crm_pipeline=utils.unmarshal_json_response(
+                crm_pipeline=unmarshal_json_response(
                     Optional[shared.CrmPipeline], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1091,7 +1080,7 @@ class Crm(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateCrmPipelineResponse(
-                crm_pipeline=utils.unmarshal_json_response(
+                crm_pipeline=unmarshal_json_response(
                     Optional[shared.CrmPipeline], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1179,7 +1168,7 @@ class Crm(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetCrmCompanyResponse(
-                crm_company=utils.unmarshal_json_response(
+                crm_company=unmarshal_json_response(
                     Optional[shared.CrmCompany], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1267,7 +1256,7 @@ class Crm(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetCrmCompanyResponse(
-                crm_company=utils.unmarshal_json_response(
+                crm_company=unmarshal_json_response(
                     Optional[shared.CrmCompany], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1355,7 +1344,7 @@ class Crm(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetCrmContactResponse(
-                crm_contact=utils.unmarshal_json_response(
+                crm_contact=unmarshal_json_response(
                     Optional[shared.CrmContact], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1443,7 +1432,7 @@ class Crm(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetCrmContactResponse(
-                crm_contact=utils.unmarshal_json_response(
+                crm_contact=unmarshal_json_response(
                     Optional[shared.CrmContact], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1531,9 +1520,7 @@ class Crm(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetCrmDealResponse(
-                crm_deal=utils.unmarshal_json_response(
-                    Optional[shared.CrmDeal], http_res
-                ),
+                crm_deal=unmarshal_json_response(Optional[shared.CrmDeal], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1619,9 +1606,7 @@ class Crm(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetCrmDealResponse(
-                crm_deal=utils.unmarshal_json_response(
-                    Optional[shared.CrmDeal], http_res
-                ),
+                crm_deal=unmarshal_json_response(Optional[shared.CrmDeal], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1707,9 +1692,7 @@ class Crm(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetCrmEventResponse(
-                crm_event=utils.unmarshal_json_response(
-                    Optional[shared.CrmEvent], http_res
-                ),
+                crm_event=unmarshal_json_response(Optional[shared.CrmEvent], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1795,9 +1778,7 @@ class Crm(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetCrmEventResponse(
-                crm_event=utils.unmarshal_json_response(
-                    Optional[shared.CrmEvent], http_res
-                ),
+                crm_event=unmarshal_json_response(Optional[shared.CrmEvent], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1883,9 +1864,7 @@ class Crm(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetCrmLeadResponse(
-                crm_lead=utils.unmarshal_json_response(
-                    Optional[shared.CrmLead], http_res
-                ),
+                crm_lead=unmarshal_json_response(Optional[shared.CrmLead], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1971,9 +1950,7 @@ class Crm(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetCrmLeadResponse(
-                crm_lead=utils.unmarshal_json_response(
-                    Optional[shared.CrmLead], http_res
-                ),
+                crm_lead=unmarshal_json_response(Optional[shared.CrmLead], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2059,7 +2036,7 @@ class Crm(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetCrmPipelineResponse(
-                crm_pipeline=utils.unmarshal_json_response(
+                crm_pipeline=unmarshal_json_response(
                     Optional[shared.CrmPipeline], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2147,7 +2124,7 @@ class Crm(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetCrmPipelineResponse(
-                crm_pipeline=utils.unmarshal_json_response(
+                crm_pipeline=unmarshal_json_response(
                     Optional[shared.CrmPipeline], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2236,7 +2213,7 @@ class Crm(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListCrmCompaniesResponse(
-                crm_companies=utils.unmarshal_json_response(
+                crm_companies=unmarshal_json_response(
                     Optional[List[shared.CrmCompany]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2325,7 +2302,7 @@ class Crm(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListCrmCompaniesResponse(
-                crm_companies=utils.unmarshal_json_response(
+                crm_companies=unmarshal_json_response(
                     Optional[List[shared.CrmCompany]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2414,7 +2391,7 @@ class Crm(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListCrmContactsResponse(
-                crm_contacts=utils.unmarshal_json_response(
+                crm_contacts=unmarshal_json_response(
                     Optional[List[shared.CrmContact]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2503,7 +2480,7 @@ class Crm(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListCrmContactsResponse(
-                crm_contacts=utils.unmarshal_json_response(
+                crm_contacts=unmarshal_json_response(
                     Optional[List[shared.CrmContact]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2591,7 +2568,7 @@ class Crm(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListCrmDealsResponse(
-                crm_deals=utils.unmarshal_json_response(
+                crm_deals=unmarshal_json_response(
                     Optional[List[shared.CrmDeal]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2679,7 +2656,7 @@ class Crm(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListCrmDealsResponse(
-                crm_deals=utils.unmarshal_json_response(
+                crm_deals=unmarshal_json_response(
                     Optional[List[shared.CrmDeal]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2767,7 +2744,7 @@ class Crm(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListCrmEventsResponse(
-                crm_events=utils.unmarshal_json_response(
+                crm_events=unmarshal_json_response(
                     Optional[List[shared.CrmEvent]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2855,7 +2832,7 @@ class Crm(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListCrmEventsResponse(
-                crm_events=utils.unmarshal_json_response(
+                crm_events=unmarshal_json_response(
                     Optional[List[shared.CrmEvent]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2943,7 +2920,7 @@ class Crm(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListCrmLeadsResponse(
-                crm_leads=utils.unmarshal_json_response(
+                crm_leads=unmarshal_json_response(
                     Optional[List[shared.CrmLead]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3031,7 +3008,7 @@ class Crm(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListCrmLeadsResponse(
-                crm_leads=utils.unmarshal_json_response(
+                crm_leads=unmarshal_json_response(
                     Optional[List[shared.CrmLead]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3120,7 +3097,7 @@ class Crm(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListCrmPipelinesResponse(
-                crm_pipelines=utils.unmarshal_json_response(
+                crm_pipelines=unmarshal_json_response(
                     Optional[List[shared.CrmPipeline]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3209,7 +3186,7 @@ class Crm(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListCrmPipelinesResponse(
-                crm_pipelines=utils.unmarshal_json_response(
+                crm_pipelines=unmarshal_json_response(
                     Optional[List[shared.CrmPipeline]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3301,7 +3278,7 @@ class Crm(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchCrmCompanyResponse(
-                crm_company=utils.unmarshal_json_response(
+                crm_company=unmarshal_json_response(
                     Optional[shared.CrmCompany], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3393,7 +3370,7 @@ class Crm(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchCrmCompanyResponse(
-                crm_company=utils.unmarshal_json_response(
+                crm_company=unmarshal_json_response(
                     Optional[shared.CrmCompany], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3485,7 +3462,7 @@ class Crm(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchCrmContactResponse(
-                crm_contact=utils.unmarshal_json_response(
+                crm_contact=unmarshal_json_response(
                     Optional[shared.CrmContact], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3577,7 +3554,7 @@ class Crm(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchCrmContactResponse(
-                crm_contact=utils.unmarshal_json_response(
+                crm_contact=unmarshal_json_response(
                     Optional[shared.CrmContact], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3668,9 +3645,7 @@ class Crm(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchCrmDealResponse(
-                crm_deal=utils.unmarshal_json_response(
-                    Optional[shared.CrmDeal], http_res
-                ),
+                crm_deal=unmarshal_json_response(Optional[shared.CrmDeal], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -3759,9 +3734,7 @@ class Crm(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchCrmDealResponse(
-                crm_deal=utils.unmarshal_json_response(
-                    Optional[shared.CrmDeal], http_res
-                ),
+                crm_deal=unmarshal_json_response(Optional[shared.CrmDeal], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -3850,9 +3823,7 @@ class Crm(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchCrmEventResponse(
-                crm_event=utils.unmarshal_json_response(
-                    Optional[shared.CrmEvent], http_res
-                ),
+                crm_event=unmarshal_json_response(Optional[shared.CrmEvent], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -3941,9 +3912,7 @@ class Crm(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchCrmEventResponse(
-                crm_event=utils.unmarshal_json_response(
-                    Optional[shared.CrmEvent], http_res
-                ),
+                crm_event=unmarshal_json_response(Optional[shared.CrmEvent], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -4032,9 +4001,7 @@ class Crm(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchCrmLeadResponse(
-                crm_lead=utils.unmarshal_json_response(
-                    Optional[shared.CrmLead], http_res
-                ),
+                crm_lead=unmarshal_json_response(Optional[shared.CrmLead], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -4123,9 +4090,7 @@ class Crm(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchCrmLeadResponse(
-                crm_lead=utils.unmarshal_json_response(
-                    Optional[shared.CrmLead], http_res
-                ),
+                crm_lead=unmarshal_json_response(Optional[shared.CrmLead], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -4215,7 +4180,7 @@ class Crm(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchCrmPipelineResponse(
-                crm_pipeline=utils.unmarshal_json_response(
+                crm_pipeline=unmarshal_json_response(
                     Optional[shared.CrmPipeline], http_res
                 ),
                 status_code=http_res.status_code,
@@ -4307,7 +4272,7 @@ class Crm(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchCrmPipelineResponse(
-                crm_pipeline=utils.unmarshal_json_response(
+                crm_pipeline=unmarshal_json_response(
                     Optional[shared.CrmPipeline], http_res
                 ),
                 status_code=http_res.status_code,
@@ -5521,7 +5486,7 @@ class Crm(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateCrmCompanyResponse(
-                crm_company=utils.unmarshal_json_response(
+                crm_company=unmarshal_json_response(
                     Optional[shared.CrmCompany], http_res
                 ),
                 status_code=http_res.status_code,
@@ -5613,7 +5578,7 @@ class Crm(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateCrmCompanyResponse(
-                crm_company=utils.unmarshal_json_response(
+                crm_company=unmarshal_json_response(
                     Optional[shared.CrmCompany], http_res
                 ),
                 status_code=http_res.status_code,
@@ -5705,7 +5670,7 @@ class Crm(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateCrmContactResponse(
-                crm_contact=utils.unmarshal_json_response(
+                crm_contact=unmarshal_json_response(
                     Optional[shared.CrmContact], http_res
                 ),
                 status_code=http_res.status_code,
@@ -5797,7 +5762,7 @@ class Crm(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateCrmContactResponse(
-                crm_contact=utils.unmarshal_json_response(
+                crm_contact=unmarshal_json_response(
                     Optional[shared.CrmContact], http_res
                 ),
                 status_code=http_res.status_code,
@@ -5888,9 +5853,7 @@ class Crm(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateCrmDealResponse(
-                crm_deal=utils.unmarshal_json_response(
-                    Optional[shared.CrmDeal], http_res
-                ),
+                crm_deal=unmarshal_json_response(Optional[shared.CrmDeal], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -5979,9 +5942,7 @@ class Crm(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateCrmDealResponse(
-                crm_deal=utils.unmarshal_json_response(
-                    Optional[shared.CrmDeal], http_res
-                ),
+                crm_deal=unmarshal_json_response(Optional[shared.CrmDeal], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -6070,9 +6031,7 @@ class Crm(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateCrmEventResponse(
-                crm_event=utils.unmarshal_json_response(
-                    Optional[shared.CrmEvent], http_res
-                ),
+                crm_event=unmarshal_json_response(Optional[shared.CrmEvent], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -6161,9 +6120,7 @@ class Crm(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateCrmEventResponse(
-                crm_event=utils.unmarshal_json_response(
-                    Optional[shared.CrmEvent], http_res
-                ),
+                crm_event=unmarshal_json_response(Optional[shared.CrmEvent], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -6252,9 +6209,7 @@ class Crm(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateCrmLeadResponse(
-                crm_lead=utils.unmarshal_json_response(
-                    Optional[shared.CrmLead], http_res
-                ),
+                crm_lead=unmarshal_json_response(Optional[shared.CrmLead], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -6343,9 +6298,7 @@ class Crm(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateCrmLeadResponse(
-                crm_lead=utils.unmarshal_json_response(
-                    Optional[shared.CrmLead], http_res
-                ),
+                crm_lead=unmarshal_json_response(Optional[shared.CrmLead], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -6435,7 +6388,7 @@ class Crm(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateCrmPipelineResponse(
-                crm_pipeline=utils.unmarshal_json_response(
+                crm_pipeline=unmarshal_json_response(
                     Optional[shared.CrmPipeline], http_res
                 ),
                 status_code=http_res.status_code,
@@ -6527,7 +6480,7 @@ class Crm(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateCrmPipelineResponse(
-                crm_pipeline=utils.unmarshal_json_response(
+                crm_pipeline=unmarshal_json_response(
                     Optional[shared.CrmPipeline], http_res
                 ),
                 status_code=http_res.status_code,

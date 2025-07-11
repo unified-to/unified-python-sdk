@@ -6,6 +6,7 @@ from unified_python_sdk import utils
 from unified_python_sdk._hooks import HookContext
 from unified_python_sdk.models import errors, operations, shared
 from unified_python_sdk.types import BaseModel, OptionalNullable, UNSET
+from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_response
 
 
 class Subscription(BaseSDK):
@@ -91,7 +92,7 @@ class Subscription(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreatePaymentSubscriptionResponse(
-                payment_subscription=utils.unmarshal_json_response(
+                payment_subscription=unmarshal_json_response(
                     Optional[shared.PaymentSubscription], http_res
                 ),
                 status_code=http_res.status_code,
@@ -189,7 +190,7 @@ class Subscription(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreatePaymentSubscriptionResponse(
-                payment_subscription=utils.unmarshal_json_response(
+                payment_subscription=unmarshal_json_response(
                     Optional[shared.PaymentSubscription], http_res
                 ),
                 status_code=http_res.status_code,
@@ -278,7 +279,7 @@ class Subscription(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetPaymentSubscriptionResponse(
-                payment_subscription=utils.unmarshal_json_response(
+                payment_subscription=unmarshal_json_response(
                     Optional[shared.PaymentSubscription], http_res
                 ),
                 status_code=http_res.status_code,
@@ -367,7 +368,7 @@ class Subscription(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetPaymentSubscriptionResponse(
-                payment_subscription=utils.unmarshal_json_response(
+                payment_subscription=unmarshal_json_response(
                     Optional[shared.PaymentSubscription], http_res
                 ),
                 status_code=http_res.status_code,
@@ -458,7 +459,7 @@ class Subscription(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListPaymentSubscriptionsResponse(
-                payment_subscriptions=utils.unmarshal_json_response(
+                payment_subscriptions=unmarshal_json_response(
                     Optional[List[shared.PaymentSubscription]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -549,7 +550,7 @@ class Subscription(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListPaymentSubscriptionsResponse(
-                payment_subscriptions=utils.unmarshal_json_response(
+                payment_subscriptions=unmarshal_json_response(
                     Optional[List[shared.PaymentSubscription]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -647,7 +648,7 @@ class Subscription(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchPaymentSubscriptionResponse(
-                payment_subscription=utils.unmarshal_json_response(
+                payment_subscription=unmarshal_json_response(
                     Optional[shared.PaymentSubscription], http_res
                 ),
                 status_code=http_res.status_code,
@@ -745,7 +746,7 @@ class Subscription(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchPaymentSubscriptionResponse(
-                payment_subscription=utils.unmarshal_json_response(
+                payment_subscription=unmarshal_json_response(
                     Optional[shared.PaymentSubscription], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1035,7 +1036,7 @@ class Subscription(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdatePaymentSubscriptionResponse(
-                payment_subscription=utils.unmarshal_json_response(
+                payment_subscription=unmarshal_json_response(
                     Optional[shared.PaymentSubscription], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1133,7 +1134,7 @@ class Subscription(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdatePaymentSubscriptionResponse(
-                payment_subscription=utils.unmarshal_json_response(
+                payment_subscription=unmarshal_json_response(
                     Optional[shared.PaymentSubscription], http_res
                 ),
                 status_code=http_res.status_code,

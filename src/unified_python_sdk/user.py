@@ -6,6 +6,7 @@ from unified_python_sdk import utils
 from unified_python_sdk._hooks import HookContext
 from unified_python_sdk.models import errors, operations, shared
 from unified_python_sdk.types import BaseModel, OptionalNullable, UNSET
+from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_response
 
 
 class User(BaseSDK):
@@ -85,9 +86,7 @@ class User(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateScimUsersResponse(
-                scim_user=utils.unmarshal_json_response(
-                    Optional[shared.ScimUser], http_res
-                ),
+                scim_user=unmarshal_json_response(Optional[shared.ScimUser], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -177,9 +176,7 @@ class User(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateScimUsersResponse(
-                scim_user=utils.unmarshal_json_response(
-                    Optional[shared.ScimUser], http_res
-                ),
+                scim_user=unmarshal_json_response(Optional[shared.ScimUser], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -265,9 +262,7 @@ class User(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetScimUsersResponse(
-                scim_user=utils.unmarshal_json_response(
-                    Optional[shared.ScimUser], http_res
-                ),
+                scim_user=unmarshal_json_response(Optional[shared.ScimUser], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -353,9 +348,7 @@ class User(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetScimUsersResponse(
-                scim_user=utils.unmarshal_json_response(
-                    Optional[shared.ScimUser], http_res
-                ),
+                scim_user=unmarshal_json_response(Optional[shared.ScimUser], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -441,7 +434,7 @@ class User(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListScimUsersResponse(
-                scim_users=utils.unmarshal_json_response(
+                scim_users=unmarshal_json_response(
                     Optional[List[shared.ScimUser]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -529,7 +522,7 @@ class User(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListScimUsersResponse(
-                scim_users=utils.unmarshal_json_response(
+                scim_users=unmarshal_json_response(
                     Optional[List[shared.ScimUser]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -620,9 +613,7 @@ class User(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchScimUsersResponse(
-                scim_user=utils.unmarshal_json_response(
-                    Optional[shared.ScimUser], http_res
-                ),
+                scim_user=unmarshal_json_response(Optional[shared.ScimUser], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -711,9 +702,7 @@ class User(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchScimUsersResponse(
-                scim_user=utils.unmarshal_json_response(
-                    Optional[shared.ScimUser], http_res
-                ),
+                scim_user=unmarshal_json_response(Optional[shared.ScimUser], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -991,9 +980,7 @@ class User(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateScimUsersResponse(
-                scim_user=utils.unmarshal_json_response(
-                    Optional[shared.ScimUser], http_res
-                ),
+                scim_user=unmarshal_json_response(Optional[shared.ScimUser], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1083,9 +1070,7 @@ class User(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateScimUsersResponse(
-                scim_user=utils.unmarshal_json_response(
-                    Optional[shared.ScimUser], http_res
-                ),
+                scim_user=unmarshal_json_response(Optional[shared.ScimUser], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,

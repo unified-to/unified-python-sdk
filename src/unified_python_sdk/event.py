@@ -6,6 +6,7 @@ from unified_python_sdk import utils
 from unified_python_sdk._hooks import HookContext
 from unified_python_sdk.models import errors, operations, shared
 from unified_python_sdk.types import BaseModel, OptionalNullable, UNSET
+from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_response
 
 
 class Event(BaseSDK):
@@ -85,7 +86,7 @@ class Event(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateCalendarEventResponse(
-                calendar_event=utils.unmarshal_json_response(
+                calendar_event=unmarshal_json_response(
                     Optional[shared.CalendarEvent], http_res
                 ),
                 status_code=http_res.status_code,
@@ -177,7 +178,7 @@ class Event(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateCalendarEventResponse(
-                calendar_event=utils.unmarshal_json_response(
+                calendar_event=unmarshal_json_response(
                     Optional[shared.CalendarEvent], http_res
                 ),
                 status_code=http_res.status_code,
@@ -268,9 +269,7 @@ class Event(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateCrmEventResponse(
-                crm_event=utils.unmarshal_json_response(
-                    Optional[shared.CrmEvent], http_res
-                ),
+                crm_event=unmarshal_json_response(Optional[shared.CrmEvent], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -359,9 +358,7 @@ class Event(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateCrmEventResponse(
-                crm_event=utils.unmarshal_json_response(
-                    Optional[shared.CrmEvent], http_res
-                ),
+                crm_event=unmarshal_json_response(Optional[shared.CrmEvent], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -448,7 +445,7 @@ class Event(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetCalendarEventResponse(
-                calendar_event=utils.unmarshal_json_response(
+                calendar_event=unmarshal_json_response(
                     Optional[shared.CalendarEvent], http_res
                 ),
                 status_code=http_res.status_code,
@@ -537,7 +534,7 @@ class Event(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetCalendarEventResponse(
-                calendar_event=utils.unmarshal_json_response(
+                calendar_event=unmarshal_json_response(
                     Optional[shared.CalendarEvent], http_res
                 ),
                 status_code=http_res.status_code,
@@ -625,9 +622,7 @@ class Event(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetCrmEventResponse(
-                crm_event=utils.unmarshal_json_response(
-                    Optional[shared.CrmEvent], http_res
-                ),
+                crm_event=unmarshal_json_response(Optional[shared.CrmEvent], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -713,9 +708,7 @@ class Event(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetCrmEventResponse(
-                crm_event=utils.unmarshal_json_response(
-                    Optional[shared.CrmEvent], http_res
-                ),
+                crm_event=unmarshal_json_response(Optional[shared.CrmEvent], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -802,7 +795,7 @@ class Event(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListCalendarEventsResponse(
-                calendar_events=utils.unmarshal_json_response(
+                calendar_events=unmarshal_json_response(
                     Optional[List[shared.CalendarEvent]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -891,7 +884,7 @@ class Event(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListCalendarEventsResponse(
-                calendar_events=utils.unmarshal_json_response(
+                calendar_events=unmarshal_json_response(
                     Optional[List[shared.CalendarEvent]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -979,7 +972,7 @@ class Event(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListCrmEventsResponse(
-                crm_events=utils.unmarshal_json_response(
+                crm_events=unmarshal_json_response(
                     Optional[List[shared.CrmEvent]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1067,7 +1060,7 @@ class Event(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListCrmEventsResponse(
-                crm_events=utils.unmarshal_json_response(
+                crm_events=unmarshal_json_response(
                     Optional[List[shared.CrmEvent]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1159,7 +1152,7 @@ class Event(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchCalendarEventResponse(
-                calendar_event=utils.unmarshal_json_response(
+                calendar_event=unmarshal_json_response(
                     Optional[shared.CalendarEvent], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1251,7 +1244,7 @@ class Event(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchCalendarEventResponse(
-                calendar_event=utils.unmarshal_json_response(
+                calendar_event=unmarshal_json_response(
                     Optional[shared.CalendarEvent], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1342,9 +1335,7 @@ class Event(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchCrmEventResponse(
-                crm_event=utils.unmarshal_json_response(
-                    Optional[shared.CrmEvent], http_res
-                ),
+                crm_event=unmarshal_json_response(Optional[shared.CrmEvent], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1433,9 +1424,7 @@ class Event(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchCrmEventResponse(
-                crm_event=utils.unmarshal_json_response(
-                    Optional[shared.CrmEvent], http_res
-                ),
+                crm_event=unmarshal_json_response(Optional[shared.CrmEvent], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1899,7 +1888,7 @@ class Event(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateCalendarEventResponse(
-                calendar_event=utils.unmarshal_json_response(
+                calendar_event=unmarshal_json_response(
                     Optional[shared.CalendarEvent], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1991,7 +1980,7 @@ class Event(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateCalendarEventResponse(
-                calendar_event=utils.unmarshal_json_response(
+                calendar_event=unmarshal_json_response(
                     Optional[shared.CalendarEvent], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2082,9 +2071,7 @@ class Event(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateCrmEventResponse(
-                crm_event=utils.unmarshal_json_response(
-                    Optional[shared.CrmEvent], http_res
-                ),
+                crm_event=unmarshal_json_response(Optional[shared.CrmEvent], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2173,9 +2160,7 @@ class Event(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateCrmEventResponse(
-                crm_event=utils.unmarshal_json_response(
-                    Optional[shared.CrmEvent], http_res
-                ),
+                crm_event=unmarshal_json_response(Optional[shared.CrmEvent], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,

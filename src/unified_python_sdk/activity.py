@@ -6,6 +6,7 @@ from unified_python_sdk import utils
 from unified_python_sdk._hooks import HookContext
 from unified_python_sdk.models import errors, operations, shared
 from unified_python_sdk.types import BaseModel, OptionalNullable, UNSET
+from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_response
 
 
 class Activity(BaseSDK):
@@ -85,7 +86,7 @@ class Activity(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateAtsActivityResponse(
-                ats_activity=utils.unmarshal_json_response(
+                ats_activity=unmarshal_json_response(
                     Optional[shared.AtsActivity], http_res
                 ),
                 status_code=http_res.status_code,
@@ -177,7 +178,7 @@ class Activity(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateAtsActivityResponse(
-                ats_activity=utils.unmarshal_json_response(
+                ats_activity=unmarshal_json_response(
                     Optional[shared.AtsActivity], http_res
                 ),
                 status_code=http_res.status_code,
@@ -265,7 +266,7 @@ class Activity(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetAtsActivityResponse(
-                ats_activity=utils.unmarshal_json_response(
+                ats_activity=unmarshal_json_response(
                     Optional[shared.AtsActivity], http_res
                 ),
                 status_code=http_res.status_code,
@@ -353,7 +354,7 @@ class Activity(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetAtsActivityResponse(
-                ats_activity=utils.unmarshal_json_response(
+                ats_activity=unmarshal_json_response(
                     Optional[shared.AtsActivity], http_res
                 ),
                 status_code=http_res.status_code,
@@ -442,7 +443,7 @@ class Activity(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListAtsActivitiesResponse(
-                ats_activities=utils.unmarshal_json_response(
+                ats_activities=unmarshal_json_response(
                     Optional[List[shared.AtsActivity]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -531,7 +532,7 @@ class Activity(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListAtsActivitiesResponse(
-                ats_activities=utils.unmarshal_json_response(
+                ats_activities=unmarshal_json_response(
                     Optional[List[shared.AtsActivity]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -623,7 +624,7 @@ class Activity(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchAtsActivityResponse(
-                ats_activity=utils.unmarshal_json_response(
+                ats_activity=unmarshal_json_response(
                     Optional[shared.AtsActivity], http_res
                 ),
                 status_code=http_res.status_code,
@@ -715,7 +716,7 @@ class Activity(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchAtsActivityResponse(
-                ats_activity=utils.unmarshal_json_response(
+                ats_activity=unmarshal_json_response(
                     Optional[shared.AtsActivity], http_res
                 ),
                 status_code=http_res.status_code,
@@ -995,7 +996,7 @@ class Activity(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateAtsActivityResponse(
-                ats_activity=utils.unmarshal_json_response(
+                ats_activity=unmarshal_json_response(
                     Optional[shared.AtsActivity], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1087,7 +1088,7 @@ class Activity(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateAtsActivityResponse(
-                ats_activity=utils.unmarshal_json_response(
+                ats_activity=unmarshal_json_response(
                     Optional[shared.AtsActivity], http_res
                 ),
                 status_code=http_res.status_code,

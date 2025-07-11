@@ -6,6 +6,7 @@ from unified_python_sdk import utils
 from unified_python_sdk._hooks import HookContext
 from unified_python_sdk.models import errors, operations, shared
 from unified_python_sdk.types import BaseModel, OptionalNullable, UNSET
+from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_response
 
 
 class Trialbalance(BaseSDK):
@@ -84,7 +85,7 @@ class Trialbalance(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetAccountingTrialbalanceResponse(
-                accounting_trialbalance=utils.unmarshal_json_response(
+                accounting_trialbalance=unmarshal_json_response(
                     Optional[shared.AccountingTrialbalance], http_res
                 ),
                 status_code=http_res.status_code,
@@ -175,7 +176,7 @@ class Trialbalance(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetAccountingTrialbalanceResponse(
-                accounting_trialbalance=utils.unmarshal_json_response(
+                accounting_trialbalance=unmarshal_json_response(
                     Optional[shared.AccountingTrialbalance], http_res
                 ),
                 status_code=http_res.status_code,
@@ -266,7 +267,7 @@ class Trialbalance(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListAccountingTrialbalancesResponse(
-                accounting_trialbalances=utils.unmarshal_json_response(
+                accounting_trialbalances=unmarshal_json_response(
                     Optional[List[shared.AccountingTrialbalance]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -357,7 +358,7 @@ class Trialbalance(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListAccountingTrialbalancesResponse(
-                accounting_trialbalances=utils.unmarshal_json_response(
+                accounting_trialbalances=unmarshal_json_response(
                     Optional[List[shared.AccountingTrialbalance]], http_res
                 ),
                 status_code=http_res.status_code,

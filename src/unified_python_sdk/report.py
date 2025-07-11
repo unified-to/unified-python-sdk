@@ -6,6 +6,7 @@ from unified_python_sdk import utils
 from unified_python_sdk._hooks import HookContext
 from unified_python_sdk.models import errors, operations, shared
 from unified_python_sdk.types import BaseModel, OptionalNullable, UNSET
+from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_response
 
 
 class Report(BaseSDK):
@@ -82,7 +83,7 @@ class Report(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetAccountingReportResponse(
-                accounting_report=utils.unmarshal_json_response(
+                accounting_report=unmarshal_json_response(
                     Optional[shared.AccountingReport], http_res
                 ),
                 status_code=http_res.status_code,
@@ -171,7 +172,7 @@ class Report(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetAccountingReportResponse(
-                accounting_report=utils.unmarshal_json_response(
+                accounting_report=unmarshal_json_response(
                     Optional[shared.AccountingReport], http_res
                 ),
                 status_code=http_res.status_code,
@@ -260,7 +261,7 @@ class Report(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListAccountingReportsResponse(
-                accounting_reports=utils.unmarshal_json_response(
+                accounting_reports=unmarshal_json_response(
                     Optional[List[shared.AccountingReport]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -349,7 +350,7 @@ class Report(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListAccountingReportsResponse(
-                accounting_reports=utils.unmarshal_json_response(
+                accounting_reports=unmarshal_json_response(
                     Optional[List[shared.AccountingReport]], http_res
                 ),
                 status_code=http_res.status_code,

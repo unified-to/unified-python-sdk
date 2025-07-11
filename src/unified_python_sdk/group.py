@@ -6,6 +6,7 @@ from unified_python_sdk import utils
 from unified_python_sdk._hooks import HookContext
 from unified_python_sdk.models import errors, operations, shared
 from unified_python_sdk.types import BaseModel, OptionalNullable, UNSET
+from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_response
 
 
 class Group(BaseSDK):
@@ -85,7 +86,7 @@ class Group(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateHrisGroupResponse(
-                hris_group=utils.unmarshal_json_response(
+                hris_group=unmarshal_json_response(
                     Optional[shared.HrisGroup], http_res
                 ),
                 status_code=http_res.status_code,
@@ -177,7 +178,7 @@ class Group(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateHrisGroupResponse(
-                hris_group=utils.unmarshal_json_response(
+                hris_group=unmarshal_json_response(
                     Optional[shared.HrisGroup], http_res
                 ),
                 status_code=http_res.status_code,
@@ -269,7 +270,7 @@ class Group(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateScimGroupsResponse(
-                scim_group=utils.unmarshal_json_response(
+                scim_group=unmarshal_json_response(
                     Optional[shared.ScimGroup], http_res
                 ),
                 status_code=http_res.status_code,
@@ -361,7 +362,7 @@ class Group(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateScimGroupsResponse(
-                scim_group=utils.unmarshal_json_response(
+                scim_group=unmarshal_json_response(
                     Optional[shared.ScimGroup], http_res
                 ),
                 status_code=http_res.status_code,
@@ -449,7 +450,7 @@ class Group(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetHrisGroupResponse(
-                hris_group=utils.unmarshal_json_response(
+                hris_group=unmarshal_json_response(
                     Optional[shared.HrisGroup], http_res
                 ),
                 status_code=http_res.status_code,
@@ -537,7 +538,7 @@ class Group(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetHrisGroupResponse(
-                hris_group=utils.unmarshal_json_response(
+                hris_group=unmarshal_json_response(
                     Optional[shared.HrisGroup], http_res
                 ),
                 status_code=http_res.status_code,
@@ -625,7 +626,7 @@ class Group(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetScimGroupsResponse(
-                scim_group=utils.unmarshal_json_response(
+                scim_group=unmarshal_json_response(
                     Optional[shared.ScimGroup], http_res
                 ),
                 status_code=http_res.status_code,
@@ -713,7 +714,7 @@ class Group(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetScimGroupsResponse(
-                scim_group=utils.unmarshal_json_response(
+                scim_group=unmarshal_json_response(
                     Optional[shared.ScimGroup], http_res
                 ),
                 status_code=http_res.status_code,
@@ -801,7 +802,7 @@ class Group(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListHrisGroupsResponse(
-                hris_groups=utils.unmarshal_json_response(
+                hris_groups=unmarshal_json_response(
                     Optional[List[shared.HrisGroup]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -889,7 +890,7 @@ class Group(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListHrisGroupsResponse(
-                hris_groups=utils.unmarshal_json_response(
+                hris_groups=unmarshal_json_response(
                     Optional[List[shared.HrisGroup]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -977,7 +978,7 @@ class Group(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListScimGroupsResponse(
-                scim_groups=utils.unmarshal_json_response(
+                scim_groups=unmarshal_json_response(
                     Optional[List[shared.ScimGroup]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1065,7 +1066,7 @@ class Group(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListScimGroupsResponse(
-                scim_groups=utils.unmarshal_json_response(
+                scim_groups=unmarshal_json_response(
                     Optional[List[shared.ScimGroup]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1156,7 +1157,7 @@ class Group(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchHrisGroupResponse(
-                hris_group=utils.unmarshal_json_response(
+                hris_group=unmarshal_json_response(
                     Optional[shared.HrisGroup], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1247,7 +1248,7 @@ class Group(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchHrisGroupResponse(
-                hris_group=utils.unmarshal_json_response(
+                hris_group=unmarshal_json_response(
                     Optional[shared.HrisGroup], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1339,7 +1340,7 @@ class Group(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchScimGroupsResponse(
-                scim_group=utils.unmarshal_json_response(
+                scim_group=unmarshal_json_response(
                     Optional[shared.ScimGroup], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1431,7 +1432,7 @@ class Group(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchScimGroupsResponse(
-                scim_group=utils.unmarshal_json_response(
+                scim_group=unmarshal_json_response(
                     Optional[shared.ScimGroup], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1899,7 +1900,7 @@ class Group(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateHrisGroupResponse(
-                hris_group=utils.unmarshal_json_response(
+                hris_group=unmarshal_json_response(
                     Optional[shared.HrisGroup], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1991,7 +1992,7 @@ class Group(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateHrisGroupResponse(
-                hris_group=utils.unmarshal_json_response(
+                hris_group=unmarshal_json_response(
                     Optional[shared.HrisGroup], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2083,7 +2084,7 @@ class Group(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateScimGroupsResponse(
-                scim_group=utils.unmarshal_json_response(
+                scim_group=unmarshal_json_response(
                     Optional[shared.ScimGroup], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2175,7 +2176,7 @@ class Group(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateScimGroupsResponse(
-                scim_group=utils.unmarshal_json_response(
+                scim_group=unmarshal_json_response(
                     Optional[shared.ScimGroup], http_res
                 ),
                 status_code=http_res.status_code,

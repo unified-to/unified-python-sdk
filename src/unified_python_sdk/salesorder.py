@@ -6,6 +6,7 @@ from unified_python_sdk import utils
 from unified_python_sdk._hooks import HookContext
 from unified_python_sdk.models import errors, operations, shared
 from unified_python_sdk.types import BaseModel, OptionalNullable, UNSET
+from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_response
 
 
 class Salesorder(BaseSDK):
@@ -91,7 +92,7 @@ class Salesorder(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateAccountingSalesorderResponse(
-                accounting_salesorder=utils.unmarshal_json_response(
+                accounting_salesorder=unmarshal_json_response(
                     Optional[shared.AccountingSalesorder], http_res
                 ),
                 status_code=http_res.status_code,
@@ -189,7 +190,7 @@ class Salesorder(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateAccountingSalesorderResponse(
-                accounting_salesorder=utils.unmarshal_json_response(
+                accounting_salesorder=unmarshal_json_response(
                     Optional[shared.AccountingSalesorder], http_res
                 ),
                 status_code=http_res.status_code,
@@ -280,7 +281,7 @@ class Salesorder(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetAccountingSalesorderResponse(
-                accounting_salesorder=utils.unmarshal_json_response(
+                accounting_salesorder=unmarshal_json_response(
                     Optional[shared.AccountingSalesorder], http_res
                 ),
                 status_code=http_res.status_code,
@@ -371,7 +372,7 @@ class Salesorder(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetAccountingSalesorderResponse(
-                accounting_salesorder=utils.unmarshal_json_response(
+                accounting_salesorder=unmarshal_json_response(
                     Optional[shared.AccountingSalesorder], http_res
                 ),
                 status_code=http_res.status_code,
@@ -462,7 +463,7 @@ class Salesorder(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListAccountingSalesordersResponse(
-                accounting_salesorders=utils.unmarshal_json_response(
+                accounting_salesorders=unmarshal_json_response(
                     Optional[List[shared.AccountingSalesorder]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -553,7 +554,7 @@ class Salesorder(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListAccountingSalesordersResponse(
-                accounting_salesorders=utils.unmarshal_json_response(
+                accounting_salesorders=unmarshal_json_response(
                     Optional[List[shared.AccountingSalesorder]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -651,7 +652,7 @@ class Salesorder(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchAccountingSalesorderResponse(
-                accounting_salesorder=utils.unmarshal_json_response(
+                accounting_salesorder=unmarshal_json_response(
                     Optional[shared.AccountingSalesorder], http_res
                 ),
                 status_code=http_res.status_code,
@@ -749,7 +750,7 @@ class Salesorder(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchAccountingSalesorderResponse(
-                accounting_salesorder=utils.unmarshal_json_response(
+                accounting_salesorder=unmarshal_json_response(
                     Optional[shared.AccountingSalesorder], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1039,7 +1040,7 @@ class Salesorder(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateAccountingSalesorderResponse(
-                accounting_salesorder=utils.unmarshal_json_response(
+                accounting_salesorder=unmarshal_json_response(
                     Optional[shared.AccountingSalesorder], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1137,7 +1138,7 @@ class Salesorder(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateAccountingSalesorderResponse(
-                accounting_salesorder=utils.unmarshal_json_response(
+                accounting_salesorder=unmarshal_json_response(
                     Optional[shared.AccountingSalesorder], http_res
                 ),
                 status_code=http_res.status_code,

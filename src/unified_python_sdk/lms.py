@@ -6,6 +6,7 @@ from unified_python_sdk import utils
 from unified_python_sdk._hooks import HookContext
 from unified_python_sdk.models import errors, operations, shared
 from unified_python_sdk.types import BaseModel, OptionalNullable, UNSET
+from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_response
 
 
 class Lms(BaseSDK):
@@ -84,9 +85,7 @@ class Lms(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateLmsClassResponse(
-                lms_class=utils.unmarshal_json_response(
-                    Optional[shared.LmsClass], http_res
-                ),
+                lms_class=unmarshal_json_response(Optional[shared.LmsClass], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -175,9 +174,7 @@ class Lms(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateLmsClassResponse(
-                lms_class=utils.unmarshal_json_response(
-                    Optional[shared.LmsClass], http_res
-                ),
+                lms_class=unmarshal_json_response(Optional[shared.LmsClass], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -267,7 +264,7 @@ class Lms(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateLmsCourseResponse(
-                lms_course=utils.unmarshal_json_response(
+                lms_course=unmarshal_json_response(
                     Optional[shared.LmsCourse], http_res
                 ),
                 status_code=http_res.status_code,
@@ -359,7 +356,7 @@ class Lms(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateLmsCourseResponse(
-                lms_course=utils.unmarshal_json_response(
+                lms_course=unmarshal_json_response(
                     Optional[shared.LmsCourse], http_res
                 ),
                 status_code=http_res.status_code,
@@ -451,7 +448,7 @@ class Lms(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateLmsInstructorResponse(
-                lms_instructor=utils.unmarshal_json_response(
+                lms_instructor=unmarshal_json_response(
                     Optional[shared.LmsInstructor], http_res
                 ),
                 status_code=http_res.status_code,
@@ -543,7 +540,7 @@ class Lms(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateLmsInstructorResponse(
-                lms_instructor=utils.unmarshal_json_response(
+                lms_instructor=unmarshal_json_response(
                     Optional[shared.LmsInstructor], http_res
                 ),
                 status_code=http_res.status_code,
@@ -635,7 +632,7 @@ class Lms(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateLmsStudentResponse(
-                lms_student=utils.unmarshal_json_response(
+                lms_student=unmarshal_json_response(
                     Optional[shared.LmsStudent], http_res
                 ),
                 status_code=http_res.status_code,
@@ -727,7 +724,7 @@ class Lms(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateLmsStudentResponse(
-                lms_student=utils.unmarshal_json_response(
+                lms_student=unmarshal_json_response(
                     Optional[shared.LmsStudent], http_res
                 ),
                 status_code=http_res.status_code,
@@ -815,9 +812,7 @@ class Lms(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetLmsClassResponse(
-                lms_class=utils.unmarshal_json_response(
-                    Optional[shared.LmsClass], http_res
-                ),
+                lms_class=unmarshal_json_response(Optional[shared.LmsClass], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -903,9 +898,7 @@ class Lms(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetLmsClassResponse(
-                lms_class=utils.unmarshal_json_response(
-                    Optional[shared.LmsClass], http_res
-                ),
+                lms_class=unmarshal_json_response(Optional[shared.LmsClass], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -991,7 +984,7 @@ class Lms(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetLmsCourseResponse(
-                lms_course=utils.unmarshal_json_response(
+                lms_course=unmarshal_json_response(
                     Optional[shared.LmsCourse], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1079,7 +1072,7 @@ class Lms(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetLmsCourseResponse(
-                lms_course=utils.unmarshal_json_response(
+                lms_course=unmarshal_json_response(
                     Optional[shared.LmsCourse], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1168,7 +1161,7 @@ class Lms(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetLmsInstructorResponse(
-                lms_instructor=utils.unmarshal_json_response(
+                lms_instructor=unmarshal_json_response(
                     Optional[shared.LmsInstructor], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1257,7 +1250,7 @@ class Lms(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetLmsInstructorResponse(
-                lms_instructor=utils.unmarshal_json_response(
+                lms_instructor=unmarshal_json_response(
                     Optional[shared.LmsInstructor], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1345,7 +1338,7 @@ class Lms(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetLmsStudentResponse(
-                lms_student=utils.unmarshal_json_response(
+                lms_student=unmarshal_json_response(
                     Optional[shared.LmsStudent], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1433,7 +1426,7 @@ class Lms(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetLmsStudentResponse(
-                lms_student=utils.unmarshal_json_response(
+                lms_student=unmarshal_json_response(
                     Optional[shared.LmsStudent], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1521,7 +1514,7 @@ class Lms(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListLmsClassesResponse(
-                lms_classes=utils.unmarshal_json_response(
+                lms_classes=unmarshal_json_response(
                     Optional[List[shared.LmsClass]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1609,7 +1602,7 @@ class Lms(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListLmsClassesResponse(
-                lms_classes=utils.unmarshal_json_response(
+                lms_classes=unmarshal_json_response(
                     Optional[List[shared.LmsClass]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1697,7 +1690,7 @@ class Lms(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListLmsCoursesResponse(
-                lms_courses=utils.unmarshal_json_response(
+                lms_courses=unmarshal_json_response(
                     Optional[List[shared.LmsCourse]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1785,7 +1778,7 @@ class Lms(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListLmsCoursesResponse(
-                lms_courses=utils.unmarshal_json_response(
+                lms_courses=unmarshal_json_response(
                     Optional[List[shared.LmsCourse]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1874,7 +1867,7 @@ class Lms(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListLmsInstructorsResponse(
-                lms_instructors=utils.unmarshal_json_response(
+                lms_instructors=unmarshal_json_response(
                     Optional[List[shared.LmsInstructor]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1963,7 +1956,7 @@ class Lms(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListLmsInstructorsResponse(
-                lms_instructors=utils.unmarshal_json_response(
+                lms_instructors=unmarshal_json_response(
                     Optional[List[shared.LmsInstructor]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2052,7 +2045,7 @@ class Lms(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListLmsStudentsResponse(
-                lms_students=utils.unmarshal_json_response(
+                lms_students=unmarshal_json_response(
                     Optional[List[shared.LmsStudent]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2141,7 +2134,7 @@ class Lms(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListLmsStudentsResponse(
-                lms_students=utils.unmarshal_json_response(
+                lms_students=unmarshal_json_response(
                     Optional[List[shared.LmsStudent]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2232,9 +2225,7 @@ class Lms(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchLmsClassResponse(
-                lms_class=utils.unmarshal_json_response(
-                    Optional[shared.LmsClass], http_res
-                ),
+                lms_class=unmarshal_json_response(Optional[shared.LmsClass], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2323,9 +2314,7 @@ class Lms(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchLmsClassResponse(
-                lms_class=utils.unmarshal_json_response(
-                    Optional[shared.LmsClass], http_res
-                ),
+                lms_class=unmarshal_json_response(Optional[shared.LmsClass], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2414,7 +2403,7 @@ class Lms(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchLmsCourseResponse(
-                lms_course=utils.unmarshal_json_response(
+                lms_course=unmarshal_json_response(
                     Optional[shared.LmsCourse], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2505,7 +2494,7 @@ class Lms(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchLmsCourseResponse(
-                lms_course=utils.unmarshal_json_response(
+                lms_course=unmarshal_json_response(
                     Optional[shared.LmsCourse], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2597,7 +2586,7 @@ class Lms(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchLmsInstructorResponse(
-                lms_instructor=utils.unmarshal_json_response(
+                lms_instructor=unmarshal_json_response(
                     Optional[shared.LmsInstructor], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2689,7 +2678,7 @@ class Lms(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchLmsInstructorResponse(
-                lms_instructor=utils.unmarshal_json_response(
+                lms_instructor=unmarshal_json_response(
                     Optional[shared.LmsInstructor], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2781,7 +2770,7 @@ class Lms(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchLmsStudentResponse(
-                lms_student=utils.unmarshal_json_response(
+                lms_student=unmarshal_json_response(
                     Optional[shared.LmsStudent], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2873,7 +2862,7 @@ class Lms(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchLmsStudentResponse(
-                lms_student=utils.unmarshal_json_response(
+                lms_student=unmarshal_json_response(
                     Optional[shared.LmsStudent], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3714,9 +3703,7 @@ class Lms(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateLmsClassResponse(
-                lms_class=utils.unmarshal_json_response(
-                    Optional[shared.LmsClass], http_res
-                ),
+                lms_class=unmarshal_json_response(Optional[shared.LmsClass], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -3805,9 +3792,7 @@ class Lms(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateLmsClassResponse(
-                lms_class=utils.unmarshal_json_response(
-                    Optional[shared.LmsClass], http_res
-                ),
+                lms_class=unmarshal_json_response(Optional[shared.LmsClass], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -3897,7 +3882,7 @@ class Lms(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateLmsCourseResponse(
-                lms_course=utils.unmarshal_json_response(
+                lms_course=unmarshal_json_response(
                     Optional[shared.LmsCourse], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3989,7 +3974,7 @@ class Lms(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateLmsCourseResponse(
-                lms_course=utils.unmarshal_json_response(
+                lms_course=unmarshal_json_response(
                     Optional[shared.LmsCourse], http_res
                 ),
                 status_code=http_res.status_code,
@@ -4081,7 +4066,7 @@ class Lms(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateLmsInstructorResponse(
-                lms_instructor=utils.unmarshal_json_response(
+                lms_instructor=unmarshal_json_response(
                     Optional[shared.LmsInstructor], http_res
                 ),
                 status_code=http_res.status_code,
@@ -4173,7 +4158,7 @@ class Lms(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateLmsInstructorResponse(
-                lms_instructor=utils.unmarshal_json_response(
+                lms_instructor=unmarshal_json_response(
                     Optional[shared.LmsInstructor], http_res
                 ),
                 status_code=http_res.status_code,
@@ -4265,7 +4250,7 @@ class Lms(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateLmsStudentResponse(
-                lms_student=utils.unmarshal_json_response(
+                lms_student=unmarshal_json_response(
                     Optional[shared.LmsStudent], http_res
                 ),
                 status_code=http_res.status_code,
@@ -4357,7 +4342,7 @@ class Lms(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateLmsStudentResponse(
-                lms_student=utils.unmarshal_json_response(
+                lms_student=unmarshal_json_response(
                     Optional[shared.LmsStudent], http_res
                 ),
                 status_code=http_res.status_code,

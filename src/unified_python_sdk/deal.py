@@ -6,6 +6,7 @@ from unified_python_sdk import utils
 from unified_python_sdk._hooks import HookContext
 from unified_python_sdk.models import errors, operations, shared
 from unified_python_sdk.types import BaseModel, OptionalNullable, UNSET
+from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_response
 
 
 class Deal(BaseSDK):
@@ -84,9 +85,7 @@ class Deal(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateCrmDealResponse(
-                crm_deal=utils.unmarshal_json_response(
-                    Optional[shared.CrmDeal], http_res
-                ),
+                crm_deal=unmarshal_json_response(Optional[shared.CrmDeal], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -175,9 +174,7 @@ class Deal(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateCrmDealResponse(
-                crm_deal=utils.unmarshal_json_response(
-                    Optional[shared.CrmDeal], http_res
-                ),
+                crm_deal=unmarshal_json_response(Optional[shared.CrmDeal], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -263,9 +260,7 @@ class Deal(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetCrmDealResponse(
-                crm_deal=utils.unmarshal_json_response(
-                    Optional[shared.CrmDeal], http_res
-                ),
+                crm_deal=unmarshal_json_response(Optional[shared.CrmDeal], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -351,9 +346,7 @@ class Deal(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetCrmDealResponse(
-                crm_deal=utils.unmarshal_json_response(
-                    Optional[shared.CrmDeal], http_res
-                ),
+                crm_deal=unmarshal_json_response(Optional[shared.CrmDeal], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -439,7 +432,7 @@ class Deal(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListCrmDealsResponse(
-                crm_deals=utils.unmarshal_json_response(
+                crm_deals=unmarshal_json_response(
                     Optional[List[shared.CrmDeal]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -527,7 +520,7 @@ class Deal(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListCrmDealsResponse(
-                crm_deals=utils.unmarshal_json_response(
+                crm_deals=unmarshal_json_response(
                     Optional[List[shared.CrmDeal]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -618,9 +611,7 @@ class Deal(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchCrmDealResponse(
-                crm_deal=utils.unmarshal_json_response(
-                    Optional[shared.CrmDeal], http_res
-                ),
+                crm_deal=unmarshal_json_response(Optional[shared.CrmDeal], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -709,9 +700,7 @@ class Deal(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchCrmDealResponse(
-                crm_deal=utils.unmarshal_json_response(
-                    Optional[shared.CrmDeal], http_res
-                ),
+                crm_deal=unmarshal_json_response(Optional[shared.CrmDeal], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -986,9 +975,7 @@ class Deal(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateCrmDealResponse(
-                crm_deal=utils.unmarshal_json_response(
-                    Optional[shared.CrmDeal], http_res
-                ),
+                crm_deal=unmarshal_json_response(Optional[shared.CrmDeal], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1077,9 +1064,7 @@ class Deal(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateCrmDealResponse(
-                crm_deal=utils.unmarshal_json_response(
-                    Optional[shared.CrmDeal], http_res
-                ),
+                crm_deal=unmarshal_json_response(Optional[shared.CrmDeal], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,

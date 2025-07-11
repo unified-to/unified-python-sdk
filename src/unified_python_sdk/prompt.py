@@ -6,6 +6,7 @@ from unified_python_sdk import utils
 from unified_python_sdk._hooks import HookContext
 from unified_python_sdk.models import errors, operations, shared
 from unified_python_sdk.types import BaseModel, OptionalNullable, UNSET
+from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_response
 
 
 class Prompt(BaseSDK):
@@ -85,7 +86,7 @@ class Prompt(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateGenaiPromptResponse(
-                genai_prompt=utils.unmarshal_json_response(
+                genai_prompt=unmarshal_json_response(
                     Optional[shared.GenaiPrompt], http_res
                 ),
                 status_code=http_res.status_code,
@@ -177,7 +178,7 @@ class Prompt(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateGenaiPromptResponse(
-                genai_prompt=utils.unmarshal_json_response(
+                genai_prompt=unmarshal_json_response(
                     Optional[shared.GenaiPrompt], http_res
                 ),
                 status_code=http_res.status_code,

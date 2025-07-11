@@ -6,6 +6,7 @@ from unified_python_sdk import utils
 from unified_python_sdk._hooks import HookContext
 from unified_python_sdk.models import errors, operations, shared
 from unified_python_sdk.types import BaseModel, OptionalNullable, UNSET
+from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_response
 
 
 class Inventory(BaseSDK):
@@ -91,7 +92,7 @@ class Inventory(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateCommerceInventoryResponse(
-                commerce_inventory=utils.unmarshal_json_response(
+                commerce_inventory=unmarshal_json_response(
                     Optional[shared.CommerceInventory], http_res
                 ),
                 status_code=http_res.status_code,
@@ -189,7 +190,7 @@ class Inventory(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateCommerceInventoryResponse(
-                commerce_inventory=utils.unmarshal_json_response(
+                commerce_inventory=unmarshal_json_response(
                     Optional[shared.CommerceInventory], http_res
                 ),
                 status_code=http_res.status_code,
@@ -278,7 +279,7 @@ class Inventory(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetCommerceInventoryResponse(
-                commerce_inventory=utils.unmarshal_json_response(
+                commerce_inventory=unmarshal_json_response(
                     Optional[shared.CommerceInventory], http_res
                 ),
                 status_code=http_res.status_code,
@@ -367,7 +368,7 @@ class Inventory(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetCommerceInventoryResponse(
-                commerce_inventory=utils.unmarshal_json_response(
+                commerce_inventory=unmarshal_json_response(
                     Optional[shared.CommerceInventory], http_res
                 ),
                 status_code=http_res.status_code,
@@ -458,7 +459,7 @@ class Inventory(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListCommerceInventoriesResponse(
-                commerce_inventories=utils.unmarshal_json_response(
+                commerce_inventories=unmarshal_json_response(
                     Optional[List[shared.CommerceInventory]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -549,7 +550,7 @@ class Inventory(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListCommerceInventoriesResponse(
-                commerce_inventories=utils.unmarshal_json_response(
+                commerce_inventories=unmarshal_json_response(
                     Optional[List[shared.CommerceInventory]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -645,7 +646,7 @@ class Inventory(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchCommerceInventoryResponse(
-                commerce_inventory=utils.unmarshal_json_response(
+                commerce_inventory=unmarshal_json_response(
                     Optional[shared.CommerceInventory], http_res
                 ),
                 status_code=http_res.status_code,
@@ -741,7 +742,7 @@ class Inventory(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchCommerceInventoryResponse(
-                commerce_inventory=utils.unmarshal_json_response(
+                commerce_inventory=unmarshal_json_response(
                     Optional[shared.CommerceInventory], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1031,7 +1032,7 @@ class Inventory(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateCommerceInventoryResponse(
-                commerce_inventory=utils.unmarshal_json_response(
+                commerce_inventory=unmarshal_json_response(
                     Optional[shared.CommerceInventory], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1129,7 +1130,7 @@ class Inventory(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateCommerceInventoryResponse(
-                commerce_inventory=utils.unmarshal_json_response(
+                commerce_inventory=unmarshal_json_response(
                     Optional[shared.CommerceInventory], http_res
                 ),
                 status_code=http_res.status_code,

@@ -6,6 +6,7 @@ from unified_python_sdk import utils
 from unified_python_sdk._hooks import HookContext
 from unified_python_sdk.models import errors, operations, shared
 from unified_python_sdk.types import BaseModel, OptionalNullable, UNSET
+from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_response
 
 
 class Kms(BaseSDK):
@@ -85,7 +86,7 @@ class Kms(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateKmsCommentResponse(
-                kms_comment=utils.unmarshal_json_response(
+                kms_comment=unmarshal_json_response(
                     Optional[shared.KmsComment], http_res
                 ),
                 status_code=http_res.status_code,
@@ -177,7 +178,7 @@ class Kms(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateKmsCommentResponse(
-                kms_comment=utils.unmarshal_json_response(
+                kms_comment=unmarshal_json_response(
                     Optional[shared.KmsComment], http_res
                 ),
                 status_code=http_res.status_code,
@@ -268,9 +269,7 @@ class Kms(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateKmsPageResponse(
-                kms_page=utils.unmarshal_json_response(
-                    Optional[shared.KmsPage], http_res
-                ),
+                kms_page=unmarshal_json_response(Optional[shared.KmsPage], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -359,9 +358,7 @@ class Kms(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateKmsPageResponse(
-                kms_page=utils.unmarshal_json_response(
-                    Optional[shared.KmsPage], http_res
-                ),
+                kms_page=unmarshal_json_response(Optional[shared.KmsPage], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -450,9 +447,7 @@ class Kms(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateKmsSpaceResponse(
-                kms_space=utils.unmarshal_json_response(
-                    Optional[shared.KmsSpace], http_res
-                ),
+                kms_space=unmarshal_json_response(Optional[shared.KmsSpace], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -541,9 +536,7 @@ class Kms(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateKmsSpaceResponse(
-                kms_space=utils.unmarshal_json_response(
-                    Optional[shared.KmsSpace], http_res
-                ),
+                kms_space=unmarshal_json_response(Optional[shared.KmsSpace], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -629,7 +622,7 @@ class Kms(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetKmsCommentResponse(
-                kms_comment=utils.unmarshal_json_response(
+                kms_comment=unmarshal_json_response(
                     Optional[shared.KmsComment], http_res
                 ),
                 status_code=http_res.status_code,
@@ -717,7 +710,7 @@ class Kms(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetKmsCommentResponse(
-                kms_comment=utils.unmarshal_json_response(
+                kms_comment=unmarshal_json_response(
                     Optional[shared.KmsComment], http_res
                 ),
                 status_code=http_res.status_code,
@@ -805,9 +798,7 @@ class Kms(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetKmsPageResponse(
-                kms_page=utils.unmarshal_json_response(
-                    Optional[shared.KmsPage], http_res
-                ),
+                kms_page=unmarshal_json_response(Optional[shared.KmsPage], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -893,9 +884,7 @@ class Kms(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetKmsPageResponse(
-                kms_page=utils.unmarshal_json_response(
-                    Optional[shared.KmsPage], http_res
-                ),
+                kms_page=unmarshal_json_response(Optional[shared.KmsPage], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -981,9 +970,7 @@ class Kms(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetKmsSpaceResponse(
-                kms_space=utils.unmarshal_json_response(
-                    Optional[shared.KmsSpace], http_res
-                ),
+                kms_space=unmarshal_json_response(Optional[shared.KmsSpace], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1069,9 +1056,7 @@ class Kms(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetKmsSpaceResponse(
-                kms_space=utils.unmarshal_json_response(
-                    Optional[shared.KmsSpace], http_res
-                ),
+                kms_space=unmarshal_json_response(Optional[shared.KmsSpace], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1158,7 +1143,7 @@ class Kms(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListKmsCommentsResponse(
-                kms_comments=utils.unmarshal_json_response(
+                kms_comments=unmarshal_json_response(
                     Optional[List[shared.KmsComment]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1247,7 +1232,7 @@ class Kms(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListKmsCommentsResponse(
-                kms_comments=utils.unmarshal_json_response(
+                kms_comments=unmarshal_json_response(
                     Optional[List[shared.KmsComment]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1335,7 +1320,7 @@ class Kms(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListKmsPagesResponse(
-                kms_pages=utils.unmarshal_json_response(
+                kms_pages=unmarshal_json_response(
                     Optional[List[shared.KmsPage]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1423,7 +1408,7 @@ class Kms(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListKmsPagesResponse(
-                kms_pages=utils.unmarshal_json_response(
+                kms_pages=unmarshal_json_response(
                     Optional[List[shared.KmsPage]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1511,7 +1496,7 @@ class Kms(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListKmsSpacesResponse(
-                kms_spaces=utils.unmarshal_json_response(
+                kms_spaces=unmarshal_json_response(
                     Optional[List[shared.KmsSpace]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1599,7 +1584,7 @@ class Kms(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListKmsSpacesResponse(
-                kms_spaces=utils.unmarshal_json_response(
+                kms_spaces=unmarshal_json_response(
                     Optional[List[shared.KmsSpace]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1691,7 +1676,7 @@ class Kms(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchKmsCommentResponse(
-                kms_comment=utils.unmarshal_json_response(
+                kms_comment=unmarshal_json_response(
                     Optional[shared.KmsComment], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1783,7 +1768,7 @@ class Kms(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchKmsCommentResponse(
-                kms_comment=utils.unmarshal_json_response(
+                kms_comment=unmarshal_json_response(
                     Optional[shared.KmsComment], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1874,9 +1859,7 @@ class Kms(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchKmsPageResponse(
-                kms_page=utils.unmarshal_json_response(
-                    Optional[shared.KmsPage], http_res
-                ),
+                kms_page=unmarshal_json_response(Optional[shared.KmsPage], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1965,9 +1948,7 @@ class Kms(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchKmsPageResponse(
-                kms_page=utils.unmarshal_json_response(
-                    Optional[shared.KmsPage], http_res
-                ),
+                kms_page=unmarshal_json_response(Optional[shared.KmsPage], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2056,9 +2037,7 @@ class Kms(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchKmsSpaceResponse(
-                kms_space=utils.unmarshal_json_response(
-                    Optional[shared.KmsSpace], http_res
-                ),
+                kms_space=unmarshal_json_response(Optional[shared.KmsSpace], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2147,9 +2126,7 @@ class Kms(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchKmsSpaceResponse(
-                kms_space=utils.unmarshal_json_response(
-                    Optional[shared.KmsSpace], http_res
-                ),
+                kms_space=unmarshal_json_response(Optional[shared.KmsSpace], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2799,7 +2776,7 @@ class Kms(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateKmsCommentResponse(
-                kms_comment=utils.unmarshal_json_response(
+                kms_comment=unmarshal_json_response(
                     Optional[shared.KmsComment], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2891,7 +2868,7 @@ class Kms(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateKmsCommentResponse(
-                kms_comment=utils.unmarshal_json_response(
+                kms_comment=unmarshal_json_response(
                     Optional[shared.KmsComment], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2982,9 +2959,7 @@ class Kms(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateKmsPageResponse(
-                kms_page=utils.unmarshal_json_response(
-                    Optional[shared.KmsPage], http_res
-                ),
+                kms_page=unmarshal_json_response(Optional[shared.KmsPage], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -3073,9 +3048,7 @@ class Kms(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateKmsPageResponse(
-                kms_page=utils.unmarshal_json_response(
-                    Optional[shared.KmsPage], http_res
-                ),
+                kms_page=unmarshal_json_response(Optional[shared.KmsPage], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -3164,9 +3137,7 @@ class Kms(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateKmsSpaceResponse(
-                kms_space=utils.unmarshal_json_response(
-                    Optional[shared.KmsSpace], http_res
-                ),
+                kms_space=unmarshal_json_response(Optional[shared.KmsSpace], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -3255,9 +3226,7 @@ class Kms(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateKmsSpaceResponse(
-                kms_space=utils.unmarshal_json_response(
-                    Optional[shared.KmsSpace], http_res
-                ),
+                kms_space=unmarshal_json_response(Optional[shared.KmsSpace], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,

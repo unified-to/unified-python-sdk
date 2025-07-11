@@ -6,6 +6,7 @@ from unified_python_sdk import utils
 from unified_python_sdk._hooks import HookContext
 from unified_python_sdk.models import errors, operations, shared
 from unified_python_sdk.types import BaseModel, OptionalNullable, UNSET
+from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_response
 
 
 class Payout(BaseSDK):
@@ -82,7 +83,7 @@ class Payout(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetPaymentPayoutResponse(
-                payment_payout=utils.unmarshal_json_response(
+                payment_payout=unmarshal_json_response(
                     Optional[shared.PaymentPayout], http_res
                 ),
                 status_code=http_res.status_code,
@@ -171,7 +172,7 @@ class Payout(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetPaymentPayoutResponse(
-                payment_payout=utils.unmarshal_json_response(
+                payment_payout=unmarshal_json_response(
                     Optional[shared.PaymentPayout], http_res
                 ),
                 status_code=http_res.status_code,
@@ -260,7 +261,7 @@ class Payout(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListPaymentPayoutsResponse(
-                payment_payouts=utils.unmarshal_json_response(
+                payment_payouts=unmarshal_json_response(
                     Optional[List[shared.PaymentPayout]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -349,7 +350,7 @@ class Payout(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListPaymentPayoutsResponse(
-                payment_payouts=utils.unmarshal_json_response(
+                payment_payouts=unmarshal_json_response(
                     Optional[List[shared.PaymentPayout]], http_res
                 ),
                 status_code=http_res.status_code,

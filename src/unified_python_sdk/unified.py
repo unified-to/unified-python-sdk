@@ -6,6 +6,7 @@ from unified_python_sdk import utils
 from unified_python_sdk._hooks import HookContext
 from unified_python_sdk.models import errors, operations, shared
 from unified_python_sdk.types import BaseModel, OptionalNullable, UNSET
+from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_response
 
 
 class Unified(BaseSDK):
@@ -84,7 +85,7 @@ class Unified(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateUnifiedConnectionResponse(
-                connection=utils.unmarshal_json_response(
+                connection=unmarshal_json_response(
                     Optional[shared.Connection], http_res
                 ),
                 status_code=http_res.status_code,
@@ -175,7 +176,7 @@ class Unified(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateUnifiedConnectionResponse(
-                connection=utils.unmarshal_json_response(
+                connection=unmarshal_json_response(
                     Optional[shared.Connection], http_res
                 ),
                 status_code=http_res.status_code,
@@ -269,9 +270,7 @@ class Unified(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateUnifiedWebhookResponse(
-                webhook=utils.unmarshal_json_response(
-                    Optional[shared.Webhook], http_res
-                ),
+                webhook=unmarshal_json_response(Optional[shared.Webhook], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -363,9 +362,7 @@ class Unified(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateUnifiedWebhookResponse(
-                webhook=utils.unmarshal_json_response(
-                    Optional[shared.Webhook], http_res
-                ),
+                webhook=unmarshal_json_response(Optional[shared.Webhook], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -452,9 +449,7 @@ class Unified(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetUnifiedApicallResponse(
-                api_call=utils.unmarshal_json_response(
-                    Optional[shared.APICall], http_res
-                ),
+                api_call=unmarshal_json_response(Optional[shared.APICall], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -541,9 +536,7 @@ class Unified(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetUnifiedApicallResponse(
-                api_call=utils.unmarshal_json_response(
-                    Optional[shared.APICall], http_res
-                ),
+                api_call=unmarshal_json_response(Optional[shared.APICall], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -630,7 +623,7 @@ class Unified(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetUnifiedConnectionResponse(
-                connection=utils.unmarshal_json_response(
+                connection=unmarshal_json_response(
                     Optional[shared.Connection], http_res
                 ),
                 status_code=http_res.status_code,
@@ -719,7 +712,7 @@ class Unified(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetUnifiedConnectionResponse(
-                connection=utils.unmarshal_json_response(
+                connection=unmarshal_json_response(
                     Optional[shared.Connection], http_res
                 ),
                 status_code=http_res.status_code,
@@ -990,9 +983,7 @@ class Unified(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetUnifiedWebhookResponse(
-                webhook=utils.unmarshal_json_response(
-                    Optional[shared.Webhook], http_res
-                ),
+                webhook=unmarshal_json_response(Optional[shared.Webhook], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1079,9 +1070,7 @@ class Unified(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetUnifiedWebhookResponse(
-                webhook=utils.unmarshal_json_response(
-                    Optional[shared.Webhook], http_res
-                ),
+                webhook=unmarshal_json_response(Optional[shared.Webhook], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1168,7 +1157,7 @@ class Unified(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListUnifiedApicallsResponse(
-                api_calls=utils.unmarshal_json_response(
+                api_calls=unmarshal_json_response(
                     Optional[List[shared.APICall]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1257,7 +1246,7 @@ class Unified(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListUnifiedApicallsResponse(
-                api_calls=utils.unmarshal_json_response(
+                api_calls=unmarshal_json_response(
                     Optional[List[shared.APICall]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1346,7 +1335,7 @@ class Unified(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListUnifiedConnectionsResponse(
-                connections=utils.unmarshal_json_response(
+                connections=unmarshal_json_response(
                     Optional[List[shared.Connection]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1435,7 +1424,7 @@ class Unified(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListUnifiedConnectionsResponse(
-                connections=utils.unmarshal_json_response(
+                connections=unmarshal_json_response(
                     Optional[List[shared.Connection]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1528,7 +1517,7 @@ class Unified(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListUnifiedIntegrationWorkspacesResponse(
-                integrations=utils.unmarshal_json_response(
+                integrations=unmarshal_json_response(
                     Optional[List[shared.Integration]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1621,7 +1610,7 @@ class Unified(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListUnifiedIntegrationWorkspacesResponse(
-                integrations=utils.unmarshal_json_response(
+                integrations=unmarshal_json_response(
                     Optional[List[shared.Integration]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1712,7 +1701,7 @@ class Unified(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListUnifiedIntegrationsResponse(
-                integrations=utils.unmarshal_json_response(
+                integrations=unmarshal_json_response(
                     Optional[List[shared.Integration]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1803,7 +1792,7 @@ class Unified(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListUnifiedIntegrationsResponse(
-                integrations=utils.unmarshal_json_response(
+                integrations=unmarshal_json_response(
                     Optional[List[shared.Integration]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1892,9 +1881,7 @@ class Unified(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListUnifiedIssuesResponse(
-                issues=utils.unmarshal_json_response(
-                    Optional[List[shared.Issue]], http_res
-                ),
+                issues=unmarshal_json_response(Optional[List[shared.Issue]], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1981,9 +1968,7 @@ class Unified(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListUnifiedIssuesResponse(
-                issues=utils.unmarshal_json_response(
-                    Optional[List[shared.Issue]], http_res
-                ),
+                issues=unmarshal_json_response(Optional[List[shared.Issue]], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2070,7 +2055,7 @@ class Unified(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListUnifiedWebhooksResponse(
-                webhooks=utils.unmarshal_json_response(
+                webhooks=unmarshal_json_response(
                     Optional[List[shared.Webhook]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2159,7 +2144,7 @@ class Unified(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListUnifiedWebhooksResponse(
-                webhooks=utils.unmarshal_json_response(
+                webhooks=unmarshal_json_response(
                     Optional[List[shared.Webhook]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2251,7 +2236,7 @@ class Unified(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchUnifiedConnectionResponse(
-                connection=utils.unmarshal_json_response(
+                connection=unmarshal_json_response(
                     Optional[shared.Connection], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2343,7 +2328,7 @@ class Unified(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchUnifiedConnectionResponse(
-                connection=utils.unmarshal_json_response(
+                connection=unmarshal_json_response(
                     Optional[shared.Connection], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2435,9 +2420,7 @@ class Unified(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchUnifiedWebhookResponse(
-                webhook=utils.unmarshal_json_response(
-                    Optional[shared.Webhook], http_res
-                ),
+                webhook=unmarshal_json_response(Optional[shared.Webhook], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2527,9 +2510,7 @@ class Unified(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchUnifiedWebhookResponse(
-                webhook=utils.unmarshal_json_response(
-                    Optional[shared.Webhook], http_res
-                ),
+                webhook=unmarshal_json_response(Optional[shared.Webhook], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -3193,7 +3174,7 @@ class Unified(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateUnifiedConnectionResponse(
-                connection=utils.unmarshal_json_response(
+                connection=unmarshal_json_response(
                     Optional[shared.Connection], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3287,7 +3268,7 @@ class Unified(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateUnifiedConnectionResponse(
-                connection=utils.unmarshal_json_response(
+                connection=unmarshal_json_response(
                     Optional[shared.Connection], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3379,9 +3360,7 @@ class Unified(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateUnifiedWebhookResponse(
-                webhook=utils.unmarshal_json_response(
-                    Optional[shared.Webhook], http_res
-                ),
+                webhook=unmarshal_json_response(Optional[shared.Webhook], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -3471,9 +3450,7 @@ class Unified(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateUnifiedWebhookResponse(
-                webhook=utils.unmarshal_json_response(
-                    Optional[shared.Webhook], http_res
-                ),
+                webhook=unmarshal_json_response(Optional[shared.Webhook], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,

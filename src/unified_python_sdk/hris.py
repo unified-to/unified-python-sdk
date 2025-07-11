@@ -6,6 +6,7 @@ from unified_python_sdk import utils
 from unified_python_sdk._hooks import HookContext
 from unified_python_sdk.models import errors, operations, shared
 from unified_python_sdk.types import BaseModel, OptionalNullable, UNSET
+from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_response
 
 
 class Hris(BaseSDK):
@@ -85,7 +86,7 @@ class Hris(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateHrisCompanyResponse(
-                hris_company=utils.unmarshal_json_response(
+                hris_company=unmarshal_json_response(
                     Optional[shared.HrisCompany], http_res
                 ),
                 status_code=http_res.status_code,
@@ -177,7 +178,7 @@ class Hris(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateHrisCompanyResponse(
-                hris_company=utils.unmarshal_json_response(
+                hris_company=unmarshal_json_response(
                     Optional[shared.HrisCompany], http_res
                 ),
                 status_code=http_res.status_code,
@@ -269,7 +270,7 @@ class Hris(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateHrisDeviceResponse(
-                hris_device=utils.unmarshal_json_response(
+                hris_device=unmarshal_json_response(
                     Optional[shared.HrisDevice], http_res
                 ),
                 status_code=http_res.status_code,
@@ -361,7 +362,7 @@ class Hris(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateHrisDeviceResponse(
-                hris_device=utils.unmarshal_json_response(
+                hris_device=unmarshal_json_response(
                     Optional[shared.HrisDevice], http_res
                 ),
                 status_code=http_res.status_code,
@@ -453,7 +454,7 @@ class Hris(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateHrisEmployeeResponse(
-                hris_employee=utils.unmarshal_json_response(
+                hris_employee=unmarshal_json_response(
                     Optional[shared.HrisEmployee], http_res
                 ),
                 status_code=http_res.status_code,
@@ -545,7 +546,7 @@ class Hris(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateHrisEmployeeResponse(
-                hris_employee=utils.unmarshal_json_response(
+                hris_employee=unmarshal_json_response(
                     Optional[shared.HrisEmployee], http_res
                 ),
                 status_code=http_res.status_code,
@@ -637,7 +638,7 @@ class Hris(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateHrisGroupResponse(
-                hris_group=utils.unmarshal_json_response(
+                hris_group=unmarshal_json_response(
                     Optional[shared.HrisGroup], http_res
                 ),
                 status_code=http_res.status_code,
@@ -729,7 +730,7 @@ class Hris(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateHrisGroupResponse(
-                hris_group=utils.unmarshal_json_response(
+                hris_group=unmarshal_json_response(
                     Optional[shared.HrisGroup], http_res
                 ),
                 status_code=http_res.status_code,
@@ -821,7 +822,7 @@ class Hris(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateHrisLocationResponse(
-                hris_location=utils.unmarshal_json_response(
+                hris_location=unmarshal_json_response(
                     Optional[shared.HrisLocation], http_res
                 ),
                 status_code=http_res.status_code,
@@ -913,7 +914,7 @@ class Hris(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateHrisLocationResponse(
-                hris_location=utils.unmarshal_json_response(
+                hris_location=unmarshal_json_response(
                     Optional[shared.HrisLocation], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1005,7 +1006,7 @@ class Hris(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateHrisTimeshiftResponse(
-                hris_timeshift=utils.unmarshal_json_response(
+                hris_timeshift=unmarshal_json_response(
                     Optional[shared.HrisTimeshift], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1097,7 +1098,7 @@ class Hris(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateHrisTimeshiftResponse(
-                hris_timeshift=utils.unmarshal_json_response(
+                hris_timeshift=unmarshal_json_response(
                     Optional[shared.HrisTimeshift], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1185,7 +1186,7 @@ class Hris(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetHrisCompanyResponse(
-                hris_company=utils.unmarshal_json_response(
+                hris_company=unmarshal_json_response(
                     Optional[shared.HrisCompany], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1273,7 +1274,7 @@ class Hris(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetHrisCompanyResponse(
-                hris_company=utils.unmarshal_json_response(
+                hris_company=unmarshal_json_response(
                     Optional[shared.HrisCompany], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1361,7 +1362,7 @@ class Hris(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetHrisDeviceResponse(
-                hris_device=utils.unmarshal_json_response(
+                hris_device=unmarshal_json_response(
                     Optional[shared.HrisDevice], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1449,7 +1450,7 @@ class Hris(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetHrisDeviceResponse(
-                hris_device=utils.unmarshal_json_response(
+                hris_device=unmarshal_json_response(
                     Optional[shared.HrisDevice], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1538,7 +1539,7 @@ class Hris(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetHrisEmployeeResponse(
-                hris_employee=utils.unmarshal_json_response(
+                hris_employee=unmarshal_json_response(
                     Optional[shared.HrisEmployee], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1627,7 +1628,7 @@ class Hris(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetHrisEmployeeResponse(
-                hris_employee=utils.unmarshal_json_response(
+                hris_employee=unmarshal_json_response(
                     Optional[shared.HrisEmployee], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1715,7 +1716,7 @@ class Hris(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetHrisGroupResponse(
-                hris_group=utils.unmarshal_json_response(
+                hris_group=unmarshal_json_response(
                     Optional[shared.HrisGroup], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1803,7 +1804,7 @@ class Hris(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetHrisGroupResponse(
-                hris_group=utils.unmarshal_json_response(
+                hris_group=unmarshal_json_response(
                     Optional[shared.HrisGroup], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1892,7 +1893,7 @@ class Hris(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetHrisLocationResponse(
-                hris_location=utils.unmarshal_json_response(
+                hris_location=unmarshal_json_response(
                     Optional[shared.HrisLocation], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1981,7 +1982,7 @@ class Hris(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetHrisLocationResponse(
-                hris_location=utils.unmarshal_json_response(
+                hris_location=unmarshal_json_response(
                     Optional[shared.HrisLocation], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2069,7 +2070,7 @@ class Hris(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetHrisPayslipResponse(
-                hris_payslip=utils.unmarshal_json_response(
+                hris_payslip=unmarshal_json_response(
                     Optional[shared.HrisPayslip], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2157,7 +2158,7 @@ class Hris(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetHrisPayslipResponse(
-                hris_payslip=utils.unmarshal_json_response(
+                hris_payslip=unmarshal_json_response(
                     Optional[shared.HrisPayslip], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2245,7 +2246,7 @@ class Hris(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetHrisTimeoffResponse(
-                hris_timeoff=utils.unmarshal_json_response(
+                hris_timeoff=unmarshal_json_response(
                     Optional[shared.HrisTimeoff], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2333,7 +2334,7 @@ class Hris(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetHrisTimeoffResponse(
-                hris_timeoff=utils.unmarshal_json_response(
+                hris_timeoff=unmarshal_json_response(
                     Optional[shared.HrisTimeoff], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2422,7 +2423,7 @@ class Hris(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetHrisTimeshiftResponse(
-                hris_timeshift=utils.unmarshal_json_response(
+                hris_timeshift=unmarshal_json_response(
                     Optional[shared.HrisTimeshift], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2511,7 +2512,7 @@ class Hris(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetHrisTimeshiftResponse(
-                hris_timeshift=utils.unmarshal_json_response(
+                hris_timeshift=unmarshal_json_response(
                     Optional[shared.HrisTimeshift], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2600,7 +2601,7 @@ class Hris(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListHrisCompaniesResponse(
-                hris_companies=utils.unmarshal_json_response(
+                hris_companies=unmarshal_json_response(
                     Optional[List[shared.HrisCompany]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2689,7 +2690,7 @@ class Hris(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListHrisCompaniesResponse(
-                hris_companies=utils.unmarshal_json_response(
+                hris_companies=unmarshal_json_response(
                     Optional[List[shared.HrisCompany]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2778,7 +2779,7 @@ class Hris(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListHrisDevicesResponse(
-                hris_devices=utils.unmarshal_json_response(
+                hris_devices=unmarshal_json_response(
                     Optional[List[shared.HrisDevice]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2867,7 +2868,7 @@ class Hris(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListHrisDevicesResponse(
-                hris_devices=utils.unmarshal_json_response(
+                hris_devices=unmarshal_json_response(
                     Optional[List[shared.HrisDevice]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2956,7 +2957,7 @@ class Hris(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListHrisEmployeesResponse(
-                hris_employees=utils.unmarshal_json_response(
+                hris_employees=unmarshal_json_response(
                     Optional[List[shared.HrisEmployee]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3045,7 +3046,7 @@ class Hris(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListHrisEmployeesResponse(
-                hris_employees=utils.unmarshal_json_response(
+                hris_employees=unmarshal_json_response(
                     Optional[List[shared.HrisEmployee]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3133,7 +3134,7 @@ class Hris(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListHrisGroupsResponse(
-                hris_groups=utils.unmarshal_json_response(
+                hris_groups=unmarshal_json_response(
                     Optional[List[shared.HrisGroup]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3221,7 +3222,7 @@ class Hris(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListHrisGroupsResponse(
-                hris_groups=utils.unmarshal_json_response(
+                hris_groups=unmarshal_json_response(
                     Optional[List[shared.HrisGroup]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3310,7 +3311,7 @@ class Hris(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListHrisLocationsResponse(
-                hris_locations=utils.unmarshal_json_response(
+                hris_locations=unmarshal_json_response(
                     Optional[List[shared.HrisLocation]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3399,7 +3400,7 @@ class Hris(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListHrisLocationsResponse(
-                hris_locations=utils.unmarshal_json_response(
+                hris_locations=unmarshal_json_response(
                     Optional[List[shared.HrisLocation]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3488,7 +3489,7 @@ class Hris(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListHrisPayslipsResponse(
-                hris_payslips=utils.unmarshal_json_response(
+                hris_payslips=unmarshal_json_response(
                     Optional[List[shared.HrisPayslip]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3577,7 +3578,7 @@ class Hris(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListHrisPayslipsResponse(
-                hris_payslips=utils.unmarshal_json_response(
+                hris_payslips=unmarshal_json_response(
                     Optional[List[shared.HrisPayslip]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3666,7 +3667,7 @@ class Hris(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListHrisTimeoffsResponse(
-                hris_timeoffs=utils.unmarshal_json_response(
+                hris_timeoffs=unmarshal_json_response(
                     Optional[List[shared.HrisTimeoff]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3755,7 +3756,7 @@ class Hris(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListHrisTimeoffsResponse(
-                hris_timeoffs=utils.unmarshal_json_response(
+                hris_timeoffs=unmarshal_json_response(
                     Optional[List[shared.HrisTimeoff]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3844,7 +3845,7 @@ class Hris(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListHrisTimeshiftsResponse(
-                hris_timeshifts=utils.unmarshal_json_response(
+                hris_timeshifts=unmarshal_json_response(
                     Optional[List[shared.HrisTimeshift]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3933,7 +3934,7 @@ class Hris(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListHrisTimeshiftsResponse(
-                hris_timeshifts=utils.unmarshal_json_response(
+                hris_timeshifts=unmarshal_json_response(
                     Optional[List[shared.HrisTimeshift]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -4025,7 +4026,7 @@ class Hris(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchHrisCompanyResponse(
-                hris_company=utils.unmarshal_json_response(
+                hris_company=unmarshal_json_response(
                     Optional[shared.HrisCompany], http_res
                 ),
                 status_code=http_res.status_code,
@@ -4117,7 +4118,7 @@ class Hris(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchHrisCompanyResponse(
-                hris_company=utils.unmarshal_json_response(
+                hris_company=unmarshal_json_response(
                     Optional[shared.HrisCompany], http_res
                 ),
                 status_code=http_res.status_code,
@@ -4209,7 +4210,7 @@ class Hris(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchHrisDeviceResponse(
-                hris_device=utils.unmarshal_json_response(
+                hris_device=unmarshal_json_response(
                     Optional[shared.HrisDevice], http_res
                 ),
                 status_code=http_res.status_code,
@@ -4301,7 +4302,7 @@ class Hris(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchHrisDeviceResponse(
-                hris_device=utils.unmarshal_json_response(
+                hris_device=unmarshal_json_response(
                     Optional[shared.HrisDevice], http_res
                 ),
                 status_code=http_res.status_code,
@@ -4393,7 +4394,7 @@ class Hris(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchHrisEmployeeResponse(
-                hris_employee=utils.unmarshal_json_response(
+                hris_employee=unmarshal_json_response(
                     Optional[shared.HrisEmployee], http_res
                 ),
                 status_code=http_res.status_code,
@@ -4485,7 +4486,7 @@ class Hris(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchHrisEmployeeResponse(
-                hris_employee=utils.unmarshal_json_response(
+                hris_employee=unmarshal_json_response(
                     Optional[shared.HrisEmployee], http_res
                 ),
                 status_code=http_res.status_code,
@@ -4576,7 +4577,7 @@ class Hris(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchHrisGroupResponse(
-                hris_group=utils.unmarshal_json_response(
+                hris_group=unmarshal_json_response(
                     Optional[shared.HrisGroup], http_res
                 ),
                 status_code=http_res.status_code,
@@ -4667,7 +4668,7 @@ class Hris(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchHrisGroupResponse(
-                hris_group=utils.unmarshal_json_response(
+                hris_group=unmarshal_json_response(
                     Optional[shared.HrisGroup], http_res
                 ),
                 status_code=http_res.status_code,
@@ -4759,7 +4760,7 @@ class Hris(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchHrisLocationResponse(
-                hris_location=utils.unmarshal_json_response(
+                hris_location=unmarshal_json_response(
                     Optional[shared.HrisLocation], http_res
                 ),
                 status_code=http_res.status_code,
@@ -4851,7 +4852,7 @@ class Hris(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchHrisLocationResponse(
-                hris_location=utils.unmarshal_json_response(
+                hris_location=unmarshal_json_response(
                     Optional[shared.HrisLocation], http_res
                 ),
                 status_code=http_res.status_code,
@@ -4943,7 +4944,7 @@ class Hris(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchHrisTimeshiftResponse(
-                hris_timeshift=utils.unmarshal_json_response(
+                hris_timeshift=unmarshal_json_response(
                     Optional[shared.HrisTimeshift], http_res
                 ),
                 status_code=http_res.status_code,
@@ -5035,7 +5036,7 @@ class Hris(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchHrisTimeshiftResponse(
-                hris_timeshift=utils.unmarshal_json_response(
+                hris_timeshift=unmarshal_json_response(
                     Optional[shared.HrisTimeshift], http_res
                 ),
                 status_code=http_res.status_code,
@@ -6255,7 +6256,7 @@ class Hris(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateHrisCompanyResponse(
-                hris_company=utils.unmarshal_json_response(
+                hris_company=unmarshal_json_response(
                     Optional[shared.HrisCompany], http_res
                 ),
                 status_code=http_res.status_code,
@@ -6347,7 +6348,7 @@ class Hris(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateHrisCompanyResponse(
-                hris_company=utils.unmarshal_json_response(
+                hris_company=unmarshal_json_response(
                     Optional[shared.HrisCompany], http_res
                 ),
                 status_code=http_res.status_code,
@@ -6439,7 +6440,7 @@ class Hris(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateHrisDeviceResponse(
-                hris_device=utils.unmarshal_json_response(
+                hris_device=unmarshal_json_response(
                     Optional[shared.HrisDevice], http_res
                 ),
                 status_code=http_res.status_code,
@@ -6531,7 +6532,7 @@ class Hris(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateHrisDeviceResponse(
-                hris_device=utils.unmarshal_json_response(
+                hris_device=unmarshal_json_response(
                     Optional[shared.HrisDevice], http_res
                 ),
                 status_code=http_res.status_code,
@@ -6623,7 +6624,7 @@ class Hris(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateHrisEmployeeResponse(
-                hris_employee=utils.unmarshal_json_response(
+                hris_employee=unmarshal_json_response(
                     Optional[shared.HrisEmployee], http_res
                 ),
                 status_code=http_res.status_code,
@@ -6715,7 +6716,7 @@ class Hris(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateHrisEmployeeResponse(
-                hris_employee=utils.unmarshal_json_response(
+                hris_employee=unmarshal_json_response(
                     Optional[shared.HrisEmployee], http_res
                 ),
                 status_code=http_res.status_code,
@@ -6807,7 +6808,7 @@ class Hris(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateHrisGroupResponse(
-                hris_group=utils.unmarshal_json_response(
+                hris_group=unmarshal_json_response(
                     Optional[shared.HrisGroup], http_res
                 ),
                 status_code=http_res.status_code,
@@ -6899,7 +6900,7 @@ class Hris(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateHrisGroupResponse(
-                hris_group=utils.unmarshal_json_response(
+                hris_group=unmarshal_json_response(
                     Optional[shared.HrisGroup], http_res
                 ),
                 status_code=http_res.status_code,
@@ -6991,7 +6992,7 @@ class Hris(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateHrisLocationResponse(
-                hris_location=utils.unmarshal_json_response(
+                hris_location=unmarshal_json_response(
                     Optional[shared.HrisLocation], http_res
                 ),
                 status_code=http_res.status_code,
@@ -7083,7 +7084,7 @@ class Hris(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateHrisLocationResponse(
-                hris_location=utils.unmarshal_json_response(
+                hris_location=unmarshal_json_response(
                     Optional[shared.HrisLocation], http_res
                 ),
                 status_code=http_res.status_code,
@@ -7175,7 +7176,7 @@ class Hris(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateHrisTimeshiftResponse(
-                hris_timeshift=utils.unmarshal_json_response(
+                hris_timeshift=unmarshal_json_response(
                     Optional[shared.HrisTimeshift], http_res
                 ),
                 status_code=http_res.status_code,
@@ -7267,7 +7268,7 @@ class Hris(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateHrisTimeshiftResponse(
-                hris_timeshift=utils.unmarshal_json_response(
+                hris_timeshift=unmarshal_json_response(
                     Optional[shared.HrisTimeshift], http_res
                 ),
                 status_code=http_res.status_code,

@@ -6,6 +6,7 @@ from unified_python_sdk import utils
 from unified_python_sdk._hooks import HookContext
 from unified_python_sdk.models import errors, operations, shared
 from unified_python_sdk.types import BaseModel, OptionalNullable, UNSET
+from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_response
 
 
 class Task(BaseSDK):
@@ -85,7 +86,7 @@ class Task(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateTaskCommentResponse(
-                task_comment=utils.unmarshal_json_response(
+                task_comment=unmarshal_json_response(
                     Optional[shared.TaskComment], http_res
                 ),
                 status_code=http_res.status_code,
@@ -177,7 +178,7 @@ class Task(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateTaskCommentResponse(
-                task_comment=utils.unmarshal_json_response(
+                task_comment=unmarshal_json_response(
                     Optional[shared.TaskComment], http_res
                 ),
                 status_code=http_res.status_code,
@@ -269,7 +270,7 @@ class Task(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateTaskProjectResponse(
-                task_project=utils.unmarshal_json_response(
+                task_project=unmarshal_json_response(
                     Optional[shared.TaskProject], http_res
                 ),
                 status_code=http_res.status_code,
@@ -361,7 +362,7 @@ class Task(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateTaskProjectResponse(
-                task_project=utils.unmarshal_json_response(
+                task_project=unmarshal_json_response(
                     Optional[shared.TaskProject], http_res
                 ),
                 status_code=http_res.status_code,
@@ -452,9 +453,7 @@ class Task(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateTaskTaskResponse(
-                task_task=utils.unmarshal_json_response(
-                    Optional[shared.TaskTask], http_res
-                ),
+                task_task=unmarshal_json_response(Optional[shared.TaskTask], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -543,9 +542,7 @@ class Task(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateTaskTaskResponse(
-                task_task=utils.unmarshal_json_response(
-                    Optional[shared.TaskTask], http_res
-                ),
+                task_task=unmarshal_json_response(Optional[shared.TaskTask], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -631,7 +628,7 @@ class Task(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetTaskCommentResponse(
-                task_comment=utils.unmarshal_json_response(
+                task_comment=unmarshal_json_response(
                     Optional[shared.TaskComment], http_res
                 ),
                 status_code=http_res.status_code,
@@ -719,7 +716,7 @@ class Task(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetTaskCommentResponse(
-                task_comment=utils.unmarshal_json_response(
+                task_comment=unmarshal_json_response(
                     Optional[shared.TaskComment], http_res
                 ),
                 status_code=http_res.status_code,
@@ -807,7 +804,7 @@ class Task(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetTaskProjectResponse(
-                task_project=utils.unmarshal_json_response(
+                task_project=unmarshal_json_response(
                     Optional[shared.TaskProject], http_res
                 ),
                 status_code=http_res.status_code,
@@ -895,7 +892,7 @@ class Task(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetTaskProjectResponse(
-                task_project=utils.unmarshal_json_response(
+                task_project=unmarshal_json_response(
                     Optional[shared.TaskProject], http_res
                 ),
                 status_code=http_res.status_code,
@@ -983,9 +980,7 @@ class Task(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetTaskTaskResponse(
-                task_task=utils.unmarshal_json_response(
-                    Optional[shared.TaskTask], http_res
-                ),
+                task_task=unmarshal_json_response(Optional[shared.TaskTask], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1071,9 +1066,7 @@ class Task(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetTaskTaskResponse(
-                task_task=utils.unmarshal_json_response(
-                    Optional[shared.TaskTask], http_res
-                ),
+                task_task=unmarshal_json_response(Optional[shared.TaskTask], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -1160,7 +1153,7 @@ class Task(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListTaskCommentsResponse(
-                task_comments=utils.unmarshal_json_response(
+                task_comments=unmarshal_json_response(
                     Optional[List[shared.TaskComment]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1249,7 +1242,7 @@ class Task(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListTaskCommentsResponse(
-                task_comments=utils.unmarshal_json_response(
+                task_comments=unmarshal_json_response(
                     Optional[List[shared.TaskComment]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1338,7 +1331,7 @@ class Task(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListTaskProjectsResponse(
-                task_projects=utils.unmarshal_json_response(
+                task_projects=unmarshal_json_response(
                     Optional[List[shared.TaskProject]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1427,7 +1420,7 @@ class Task(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListTaskProjectsResponse(
-                task_projects=utils.unmarshal_json_response(
+                task_projects=unmarshal_json_response(
                     Optional[List[shared.TaskProject]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1515,7 +1508,7 @@ class Task(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListTaskTasksResponse(
-                task_tasks=utils.unmarshal_json_response(
+                task_tasks=unmarshal_json_response(
                     Optional[List[shared.TaskTask]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1603,7 +1596,7 @@ class Task(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListTaskTasksResponse(
-                task_tasks=utils.unmarshal_json_response(
+                task_tasks=unmarshal_json_response(
                     Optional[List[shared.TaskTask]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1695,7 +1688,7 @@ class Task(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchTaskCommentResponse(
-                task_comment=utils.unmarshal_json_response(
+                task_comment=unmarshal_json_response(
                     Optional[shared.TaskComment], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1787,7 +1780,7 @@ class Task(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchTaskCommentResponse(
-                task_comment=utils.unmarshal_json_response(
+                task_comment=unmarshal_json_response(
                     Optional[shared.TaskComment], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1879,7 +1872,7 @@ class Task(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchTaskProjectResponse(
-                task_project=utils.unmarshal_json_response(
+                task_project=unmarshal_json_response(
                     Optional[shared.TaskProject], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1971,7 +1964,7 @@ class Task(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchTaskProjectResponse(
-                task_project=utils.unmarshal_json_response(
+                task_project=unmarshal_json_response(
                     Optional[shared.TaskProject], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2062,9 +2055,7 @@ class Task(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchTaskTaskResponse(
-                task_task=utils.unmarshal_json_response(
-                    Optional[shared.TaskTask], http_res
-                ),
+                task_task=unmarshal_json_response(Optional[shared.TaskTask], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2153,9 +2144,7 @@ class Task(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchTaskTaskResponse(
-                task_task=utils.unmarshal_json_response(
-                    Optional[shared.TaskTask], http_res
-                ),
+                task_task=unmarshal_json_response(Optional[shared.TaskTask], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -2807,7 +2796,7 @@ class Task(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateTaskCommentResponse(
-                task_comment=utils.unmarshal_json_response(
+                task_comment=unmarshal_json_response(
                     Optional[shared.TaskComment], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2899,7 +2888,7 @@ class Task(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateTaskCommentResponse(
-                task_comment=utils.unmarshal_json_response(
+                task_comment=unmarshal_json_response(
                     Optional[shared.TaskComment], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2991,7 +2980,7 @@ class Task(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateTaskProjectResponse(
-                task_project=utils.unmarshal_json_response(
+                task_project=unmarshal_json_response(
                     Optional[shared.TaskProject], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3083,7 +3072,7 @@ class Task(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateTaskProjectResponse(
-                task_project=utils.unmarshal_json_response(
+                task_project=unmarshal_json_response(
                     Optional[shared.TaskProject], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3174,9 +3163,7 @@ class Task(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateTaskTaskResponse(
-                task_task=utils.unmarshal_json_response(
-                    Optional[shared.TaskTask], http_res
-                ),
+                task_task=unmarshal_json_response(Optional[shared.TaskTask], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -3265,9 +3252,7 @@ class Task(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateTaskTaskResponse(
-                task_task=utils.unmarshal_json_response(
-                    Optional[shared.TaskTask], http_res
-                ),
+                task_task=unmarshal_json_response(Optional[shared.TaskTask], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,

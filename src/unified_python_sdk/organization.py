@@ -6,6 +6,7 @@ from unified_python_sdk import utils
 from unified_python_sdk._hooks import HookContext
 from unified_python_sdk.models import errors, operations, shared
 from unified_python_sdk.types import BaseModel, OptionalNullable, UNSET
+from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_response
 
 
 class Organization(BaseSDK):
@@ -85,7 +86,7 @@ class Organization(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateRepoOrganizationResponse(
-                repo_organization=utils.unmarshal_json_response(
+                repo_organization=unmarshal_json_response(
                     Optional[shared.RepoOrganization], http_res
                 ),
                 status_code=http_res.status_code,
@@ -177,7 +178,7 @@ class Organization(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateRepoOrganizationResponse(
-                repo_organization=utils.unmarshal_json_response(
+                repo_organization=unmarshal_json_response(
                     Optional[shared.RepoOrganization], http_res
                 ),
                 status_code=http_res.status_code,
@@ -268,7 +269,7 @@ class Organization(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetAccountingOrganizationResponse(
-                accounting_organization=utils.unmarshal_json_response(
+                accounting_organization=unmarshal_json_response(
                     Optional[shared.AccountingOrganization], http_res
                 ),
                 status_code=http_res.status_code,
@@ -359,7 +360,7 @@ class Organization(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetAccountingOrganizationResponse(
-                accounting_organization=utils.unmarshal_json_response(
+                accounting_organization=unmarshal_json_response(
                     Optional[shared.AccountingOrganization], http_res
                 ),
                 status_code=http_res.status_code,
@@ -448,7 +449,7 @@ class Organization(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetRepoOrganizationResponse(
-                repo_organization=utils.unmarshal_json_response(
+                repo_organization=unmarshal_json_response(
                     Optional[shared.RepoOrganization], http_res
                 ),
                 status_code=http_res.status_code,
@@ -537,7 +538,7 @@ class Organization(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetRepoOrganizationResponse(
-                repo_organization=utils.unmarshal_json_response(
+                repo_organization=unmarshal_json_response(
                     Optional[shared.RepoOrganization], http_res
                 ),
                 status_code=http_res.status_code,
@@ -628,7 +629,7 @@ class Organization(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListAccountingOrganizationsResponse(
-                accounting_organizations=utils.unmarshal_json_response(
+                accounting_organizations=unmarshal_json_response(
                     Optional[List[shared.AccountingOrganization]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -719,7 +720,7 @@ class Organization(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListAccountingOrganizationsResponse(
-                accounting_organizations=utils.unmarshal_json_response(
+                accounting_organizations=unmarshal_json_response(
                     Optional[List[shared.AccountingOrganization]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -808,7 +809,7 @@ class Organization(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListRepoOrganizationsResponse(
-                repo_organizations=utils.unmarshal_json_response(
+                repo_organizations=unmarshal_json_response(
                     Optional[List[shared.RepoOrganization]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -897,7 +898,7 @@ class Organization(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListRepoOrganizationsResponse(
-                repo_organizations=utils.unmarshal_json_response(
+                repo_organizations=unmarshal_json_response(
                     Optional[List[shared.RepoOrganization]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -989,7 +990,7 @@ class Organization(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchRepoOrganizationResponse(
-                repo_organization=utils.unmarshal_json_response(
+                repo_organization=unmarshal_json_response(
                     Optional[shared.RepoOrganization], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1081,7 +1082,7 @@ class Organization(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchRepoOrganizationResponse(
-                repo_organization=utils.unmarshal_json_response(
+                repo_organization=unmarshal_json_response(
                     Optional[shared.RepoOrganization], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1361,7 +1362,7 @@ class Organization(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateRepoOrganizationResponse(
-                repo_organization=utils.unmarshal_json_response(
+                repo_organization=unmarshal_json_response(
                     Optional[shared.RepoOrganization], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1453,7 +1454,7 @@ class Organization(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateRepoOrganizationResponse(
-                repo_organization=utils.unmarshal_json_response(
+                repo_organization=unmarshal_json_response(
                     Optional[shared.RepoOrganization], http_res
                 ),
                 status_code=http_res.status_code,

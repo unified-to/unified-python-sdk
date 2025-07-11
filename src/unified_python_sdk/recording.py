@@ -6,6 +6,7 @@ from unified_python_sdk import utils
 from unified_python_sdk._hooks import HookContext
 from unified_python_sdk.models import errors, operations, shared
 from unified_python_sdk.types import BaseModel, OptionalNullable, UNSET
+from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_response
 
 
 class Recording(BaseSDK):
@@ -85,7 +86,7 @@ class Recording(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateUcRecordingResponse(
-                uc_recording=utils.unmarshal_json_response(
+                uc_recording=unmarshal_json_response(
                     Optional[shared.UcRecording], http_res
                 ),
                 status_code=http_res.status_code,
@@ -177,7 +178,7 @@ class Recording(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateUcRecordingResponse(
-                uc_recording=utils.unmarshal_json_response(
+                uc_recording=unmarshal_json_response(
                     Optional[shared.UcRecording], http_res
                 ),
                 status_code=http_res.status_code,
@@ -266,7 +267,7 @@ class Recording(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetCalendarRecordingResponse(
-                calendar_recording=utils.unmarshal_json_response(
+                calendar_recording=unmarshal_json_response(
                     Optional[shared.CalendarRecording], http_res
                 ),
                 status_code=http_res.status_code,
@@ -355,7 +356,7 @@ class Recording(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetCalendarRecordingResponse(
-                calendar_recording=utils.unmarshal_json_response(
+                calendar_recording=unmarshal_json_response(
                     Optional[shared.CalendarRecording], http_res
                 ),
                 status_code=http_res.status_code,
@@ -443,7 +444,7 @@ class Recording(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetUcRecordingResponse(
-                uc_recording=utils.unmarshal_json_response(
+                uc_recording=unmarshal_json_response(
                     Optional[shared.UcRecording], http_res
                 ),
                 status_code=http_res.status_code,
@@ -531,7 +532,7 @@ class Recording(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetUcRecordingResponse(
-                uc_recording=utils.unmarshal_json_response(
+                uc_recording=unmarshal_json_response(
                     Optional[shared.UcRecording], http_res
                 ),
                 status_code=http_res.status_code,
@@ -620,7 +621,7 @@ class Recording(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListCalendarRecordingsResponse(
-                calendar_recordings=utils.unmarshal_json_response(
+                calendar_recordings=unmarshal_json_response(
                     Optional[List[shared.CalendarRecording]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -709,7 +710,7 @@ class Recording(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListCalendarRecordingsResponse(
-                calendar_recordings=utils.unmarshal_json_response(
+                calendar_recordings=unmarshal_json_response(
                     Optional[List[shared.CalendarRecording]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -798,7 +799,7 @@ class Recording(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListUcRecordingsResponse(
-                uc_recordings=utils.unmarshal_json_response(
+                uc_recordings=unmarshal_json_response(
                     Optional[List[shared.UcRecording]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -887,7 +888,7 @@ class Recording(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListUcRecordingsResponse(
-                uc_recordings=utils.unmarshal_json_response(
+                uc_recordings=unmarshal_json_response(
                     Optional[List[shared.UcRecording]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -979,7 +980,7 @@ class Recording(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchUcRecordingResponse(
-                uc_recording=utils.unmarshal_json_response(
+                uc_recording=unmarshal_json_response(
                     Optional[shared.UcRecording], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1071,7 +1072,7 @@ class Recording(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchUcRecordingResponse(
-                uc_recording=utils.unmarshal_json_response(
+                uc_recording=unmarshal_json_response(
                     Optional[shared.UcRecording], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1351,7 +1352,7 @@ class Recording(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateUcRecordingResponse(
-                uc_recording=utils.unmarshal_json_response(
+                uc_recording=unmarshal_json_response(
                     Optional[shared.UcRecording], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1443,7 +1444,7 @@ class Recording(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateUcRecordingResponse(
-                uc_recording=utils.unmarshal_json_response(
+                uc_recording=unmarshal_json_response(
                     Optional[shared.UcRecording], http_res
                 ),
                 status_code=http_res.status_code,

@@ -6,6 +6,7 @@ from unified_python_sdk import utils
 from unified_python_sdk._hooks import HookContext
 from unified_python_sdk.models import errors, operations, shared
 from unified_python_sdk.types import BaseModel, OptionalNullable, UNSET
+from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_response
 
 
 class Payment(BaseSDK):
@@ -85,7 +86,7 @@ class Payment(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreatePaymentLinkResponse(
-                payment_link=utils.unmarshal_json_response(
+                payment_link=unmarshal_json_response(
                     Optional[shared.PaymentLink], http_res
                 ),
                 status_code=http_res.status_code,
@@ -177,7 +178,7 @@ class Payment(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreatePaymentLinkResponse(
-                payment_link=utils.unmarshal_json_response(
+                payment_link=unmarshal_json_response(
                     Optional[shared.PaymentLink], http_res
                 ),
                 status_code=http_res.status_code,
@@ -269,7 +270,7 @@ class Payment(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreatePaymentPaymentResponse(
-                payment_payment=utils.unmarshal_json_response(
+                payment_payment=unmarshal_json_response(
                     Optional[shared.PaymentPayment], http_res
                 ),
                 status_code=http_res.status_code,
@@ -361,7 +362,7 @@ class Payment(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreatePaymentPaymentResponse(
-                payment_payment=utils.unmarshal_json_response(
+                payment_payment=unmarshal_json_response(
                     Optional[shared.PaymentPayment], http_res
                 ),
                 status_code=http_res.status_code,
@@ -459,7 +460,7 @@ class Payment(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreatePaymentSubscriptionResponse(
-                payment_subscription=utils.unmarshal_json_response(
+                payment_subscription=unmarshal_json_response(
                     Optional[shared.PaymentSubscription], http_res
                 ),
                 status_code=http_res.status_code,
@@ -557,7 +558,7 @@ class Payment(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreatePaymentSubscriptionResponse(
-                payment_subscription=utils.unmarshal_json_response(
+                payment_subscription=unmarshal_json_response(
                     Optional[shared.PaymentSubscription], http_res
                 ),
                 status_code=http_res.status_code,
@@ -645,7 +646,7 @@ class Payment(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetPaymentLinkResponse(
-                payment_link=utils.unmarshal_json_response(
+                payment_link=unmarshal_json_response(
                     Optional[shared.PaymentLink], http_res
                 ),
                 status_code=http_res.status_code,
@@ -733,7 +734,7 @@ class Payment(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetPaymentLinkResponse(
-                payment_link=utils.unmarshal_json_response(
+                payment_link=unmarshal_json_response(
                     Optional[shared.PaymentLink], http_res
                 ),
                 status_code=http_res.status_code,
@@ -822,7 +823,7 @@ class Payment(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetPaymentPaymentResponse(
-                payment_payment=utils.unmarshal_json_response(
+                payment_payment=unmarshal_json_response(
                     Optional[shared.PaymentPayment], http_res
                 ),
                 status_code=http_res.status_code,
@@ -911,7 +912,7 @@ class Payment(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetPaymentPaymentResponse(
-                payment_payment=utils.unmarshal_json_response(
+                payment_payment=unmarshal_json_response(
                     Optional[shared.PaymentPayment], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1000,7 +1001,7 @@ class Payment(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetPaymentPayoutResponse(
-                payment_payout=utils.unmarshal_json_response(
+                payment_payout=unmarshal_json_response(
                     Optional[shared.PaymentPayout], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1089,7 +1090,7 @@ class Payment(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetPaymentPayoutResponse(
-                payment_payout=utils.unmarshal_json_response(
+                payment_payout=unmarshal_json_response(
                     Optional[shared.PaymentPayout], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1178,7 +1179,7 @@ class Payment(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetPaymentRefundResponse(
-                payment_refund=utils.unmarshal_json_response(
+                payment_refund=unmarshal_json_response(
                     Optional[shared.PaymentRefund], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1267,7 +1268,7 @@ class Payment(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetPaymentRefundResponse(
-                payment_refund=utils.unmarshal_json_response(
+                payment_refund=unmarshal_json_response(
                     Optional[shared.PaymentRefund], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1356,7 +1357,7 @@ class Payment(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetPaymentSubscriptionResponse(
-                payment_subscription=utils.unmarshal_json_response(
+                payment_subscription=unmarshal_json_response(
                     Optional[shared.PaymentSubscription], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1445,7 +1446,7 @@ class Payment(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetPaymentSubscriptionResponse(
-                payment_subscription=utils.unmarshal_json_response(
+                payment_subscription=unmarshal_json_response(
                     Optional[shared.PaymentSubscription], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1534,7 +1535,7 @@ class Payment(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListPaymentLinksResponse(
-                payment_links=utils.unmarshal_json_response(
+                payment_links=unmarshal_json_response(
                     Optional[List[shared.PaymentLink]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1623,7 +1624,7 @@ class Payment(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListPaymentLinksResponse(
-                payment_links=utils.unmarshal_json_response(
+                payment_links=unmarshal_json_response(
                     Optional[List[shared.PaymentLink]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1712,7 +1713,7 @@ class Payment(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListPaymentPaymentsResponse(
-                payment_payments=utils.unmarshal_json_response(
+                payment_payments=unmarshal_json_response(
                     Optional[List[shared.PaymentPayment]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1801,7 +1802,7 @@ class Payment(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListPaymentPaymentsResponse(
-                payment_payments=utils.unmarshal_json_response(
+                payment_payments=unmarshal_json_response(
                     Optional[List[shared.PaymentPayment]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1890,7 +1891,7 @@ class Payment(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListPaymentPayoutsResponse(
-                payment_payouts=utils.unmarshal_json_response(
+                payment_payouts=unmarshal_json_response(
                     Optional[List[shared.PaymentPayout]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1979,7 +1980,7 @@ class Payment(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListPaymentPayoutsResponse(
-                payment_payouts=utils.unmarshal_json_response(
+                payment_payouts=unmarshal_json_response(
                     Optional[List[shared.PaymentPayout]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2068,7 +2069,7 @@ class Payment(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListPaymentRefundsResponse(
-                payment_refunds=utils.unmarshal_json_response(
+                payment_refunds=unmarshal_json_response(
                     Optional[List[shared.PaymentRefund]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2157,7 +2158,7 @@ class Payment(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListPaymentRefundsResponse(
-                payment_refunds=utils.unmarshal_json_response(
+                payment_refunds=unmarshal_json_response(
                     Optional[List[shared.PaymentRefund]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2248,7 +2249,7 @@ class Payment(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListPaymentSubscriptionsResponse(
-                payment_subscriptions=utils.unmarshal_json_response(
+                payment_subscriptions=unmarshal_json_response(
                     Optional[List[shared.PaymentSubscription]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2339,7 +2340,7 @@ class Payment(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListPaymentSubscriptionsResponse(
-                payment_subscriptions=utils.unmarshal_json_response(
+                payment_subscriptions=unmarshal_json_response(
                     Optional[List[shared.PaymentSubscription]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2431,7 +2432,7 @@ class Payment(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchPaymentLinkResponse(
-                payment_link=utils.unmarshal_json_response(
+                payment_link=unmarshal_json_response(
                     Optional[shared.PaymentLink], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2523,7 +2524,7 @@ class Payment(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchPaymentLinkResponse(
-                payment_link=utils.unmarshal_json_response(
+                payment_link=unmarshal_json_response(
                     Optional[shared.PaymentLink], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2615,7 +2616,7 @@ class Payment(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchPaymentPaymentResponse(
-                payment_payment=utils.unmarshal_json_response(
+                payment_payment=unmarshal_json_response(
                     Optional[shared.PaymentPayment], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2707,7 +2708,7 @@ class Payment(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchPaymentPaymentResponse(
-                payment_payment=utils.unmarshal_json_response(
+                payment_payment=unmarshal_json_response(
                     Optional[shared.PaymentPayment], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2805,7 +2806,7 @@ class Payment(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchPaymentSubscriptionResponse(
-                payment_subscription=utils.unmarshal_json_response(
+                payment_subscription=unmarshal_json_response(
                     Optional[shared.PaymentSubscription], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2903,7 +2904,7 @@ class Payment(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchPaymentSubscriptionResponse(
-                payment_subscription=utils.unmarshal_json_response(
+                payment_subscription=unmarshal_json_response(
                     Optional[shared.PaymentSubscription], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3563,7 +3564,7 @@ class Payment(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdatePaymentLinkResponse(
-                payment_link=utils.unmarshal_json_response(
+                payment_link=unmarshal_json_response(
                     Optional[shared.PaymentLink], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3655,7 +3656,7 @@ class Payment(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdatePaymentLinkResponse(
-                payment_link=utils.unmarshal_json_response(
+                payment_link=unmarshal_json_response(
                     Optional[shared.PaymentLink], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3747,7 +3748,7 @@ class Payment(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdatePaymentPaymentResponse(
-                payment_payment=utils.unmarshal_json_response(
+                payment_payment=unmarshal_json_response(
                     Optional[shared.PaymentPayment], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3839,7 +3840,7 @@ class Payment(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdatePaymentPaymentResponse(
-                payment_payment=utils.unmarshal_json_response(
+                payment_payment=unmarshal_json_response(
                     Optional[shared.PaymentPayment], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3937,7 +3938,7 @@ class Payment(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdatePaymentSubscriptionResponse(
-                payment_subscription=utils.unmarshal_json_response(
+                payment_subscription=unmarshal_json_response(
                     Optional[shared.PaymentSubscription], http_res
                 ),
                 status_code=http_res.status_code,
@@ -4035,7 +4036,7 @@ class Payment(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdatePaymentSubscriptionResponse(
-                payment_subscription=utils.unmarshal_json_response(
+                payment_subscription=unmarshal_json_response(
                     Optional[shared.PaymentSubscription], http_res
                 ),
                 status_code=http_res.status_code,

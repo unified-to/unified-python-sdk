@@ -6,6 +6,7 @@ from unified_python_sdk import utils
 from unified_python_sdk._hooks import HookContext
 from unified_python_sdk.models import errors, operations, shared
 from unified_python_sdk.types import BaseModel, OptionalNullable, UNSET
+from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_response
 
 
 class Document(BaseSDK):
@@ -85,7 +86,7 @@ class Document(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateAtsDocumentResponse(
-                ats_document=utils.unmarshal_json_response(
+                ats_document=unmarshal_json_response(
                     Optional[shared.AtsDocument], http_res
                 ),
                 status_code=http_res.status_code,
@@ -177,7 +178,7 @@ class Document(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateAtsDocumentResponse(
-                ats_document=utils.unmarshal_json_response(
+                ats_document=unmarshal_json_response(
                     Optional[shared.AtsDocument], http_res
                 ),
                 status_code=http_res.status_code,
@@ -265,7 +266,7 @@ class Document(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetAtsDocumentResponse(
-                ats_document=utils.unmarshal_json_response(
+                ats_document=unmarshal_json_response(
                     Optional[shared.AtsDocument], http_res
                 ),
                 status_code=http_res.status_code,
@@ -353,7 +354,7 @@ class Document(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetAtsDocumentResponse(
-                ats_document=utils.unmarshal_json_response(
+                ats_document=unmarshal_json_response(
                     Optional[shared.AtsDocument], http_res
                 ),
                 status_code=http_res.status_code,
@@ -442,7 +443,7 @@ class Document(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListAtsDocumentsResponse(
-                ats_documents=utils.unmarshal_json_response(
+                ats_documents=unmarshal_json_response(
                     Optional[List[shared.AtsDocument]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -531,7 +532,7 @@ class Document(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListAtsDocumentsResponse(
-                ats_documents=utils.unmarshal_json_response(
+                ats_documents=unmarshal_json_response(
                     Optional[List[shared.AtsDocument]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -623,7 +624,7 @@ class Document(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchAtsDocumentResponse(
-                ats_document=utils.unmarshal_json_response(
+                ats_document=unmarshal_json_response(
                     Optional[shared.AtsDocument], http_res
                 ),
                 status_code=http_res.status_code,
@@ -715,7 +716,7 @@ class Document(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchAtsDocumentResponse(
-                ats_document=utils.unmarshal_json_response(
+                ats_document=unmarshal_json_response(
                     Optional[shared.AtsDocument], http_res
                 ),
                 status_code=http_res.status_code,
@@ -995,7 +996,7 @@ class Document(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateAtsDocumentResponse(
-                ats_document=utils.unmarshal_json_response(
+                ats_document=unmarshal_json_response(
                     Optional[shared.AtsDocument], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1087,7 +1088,7 @@ class Document(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateAtsDocumentResponse(
-                ats_document=utils.unmarshal_json_response(
+                ats_document=unmarshal_json_response(
                     Optional[shared.AtsDocument], http_res
                 ),
                 status_code=http_res.status_code,

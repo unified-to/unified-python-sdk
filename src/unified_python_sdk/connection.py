@@ -6,6 +6,7 @@ from unified_python_sdk import utils
 from unified_python_sdk._hooks import HookContext
 from unified_python_sdk.models import errors, operations, shared
 from unified_python_sdk.types import BaseModel, OptionalNullable, UNSET
+from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_response
 
 
 class Connection(BaseSDK):
@@ -84,7 +85,7 @@ class Connection(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateUnifiedConnectionResponse(
-                connection=utils.unmarshal_json_response(
+                connection=unmarshal_json_response(
                     Optional[shared.Connection], http_res
                 ),
                 status_code=http_res.status_code,
@@ -175,7 +176,7 @@ class Connection(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateUnifiedConnectionResponse(
-                connection=utils.unmarshal_json_response(
+                connection=unmarshal_json_response(
                     Optional[shared.Connection], http_res
                 ),
                 status_code=http_res.status_code,
@@ -264,7 +265,7 @@ class Connection(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetUnifiedConnectionResponse(
-                connection=utils.unmarshal_json_response(
+                connection=unmarshal_json_response(
                     Optional[shared.Connection], http_res
                 ),
                 status_code=http_res.status_code,
@@ -353,7 +354,7 @@ class Connection(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetUnifiedConnectionResponse(
-                connection=utils.unmarshal_json_response(
+                connection=unmarshal_json_response(
                     Optional[shared.Connection], http_res
                 ),
                 status_code=http_res.status_code,
@@ -442,7 +443,7 @@ class Connection(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListUnifiedConnectionsResponse(
-                connections=utils.unmarshal_json_response(
+                connections=unmarshal_json_response(
                     Optional[List[shared.Connection]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -531,7 +532,7 @@ class Connection(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListUnifiedConnectionsResponse(
-                connections=utils.unmarshal_json_response(
+                connections=unmarshal_json_response(
                     Optional[List[shared.Connection]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -623,7 +624,7 @@ class Connection(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchUnifiedConnectionResponse(
-                connection=utils.unmarshal_json_response(
+                connection=unmarshal_json_response(
                     Optional[shared.Connection], http_res
                 ),
                 status_code=http_res.status_code,
@@ -715,7 +716,7 @@ class Connection(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchUnifiedConnectionResponse(
-                connection=utils.unmarshal_json_response(
+                connection=unmarshal_json_response(
                     Optional[shared.Connection], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1001,7 +1002,7 @@ class Connection(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateUnifiedConnectionResponse(
-                connection=utils.unmarshal_json_response(
+                connection=unmarshal_json_response(
                     Optional[shared.Connection], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1095,7 +1096,7 @@ class Connection(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateUnifiedConnectionResponse(
-                connection=utils.unmarshal_json_response(
+                connection=unmarshal_json_response(
                     Optional[shared.Connection], http_res
                 ),
                 status_code=http_res.status_code,

@@ -6,6 +6,7 @@ from unified_python_sdk import utils
 from unified_python_sdk._hooks import HookContext
 from unified_python_sdk.models import errors, operations, shared
 from unified_python_sdk.types import BaseModel, OptionalNullable, UNSET
+from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_response
 
 
 class Repo(BaseSDK):
@@ -85,7 +86,7 @@ class Repo(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateRepoBranchResponse(
-                repo_branch=utils.unmarshal_json_response(
+                repo_branch=unmarshal_json_response(
                     Optional[shared.RepoBranch], http_res
                 ),
                 status_code=http_res.status_code,
@@ -177,7 +178,7 @@ class Repo(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateRepoBranchResponse(
-                repo_branch=utils.unmarshal_json_response(
+                repo_branch=unmarshal_json_response(
                     Optional[shared.RepoBranch], http_res
                 ),
                 status_code=http_res.status_code,
@@ -269,7 +270,7 @@ class Repo(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateRepoCommitResponse(
-                repo_commit=utils.unmarshal_json_response(
+                repo_commit=unmarshal_json_response(
                     Optional[shared.RepoCommit], http_res
                 ),
                 status_code=http_res.status_code,
@@ -361,7 +362,7 @@ class Repo(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateRepoCommitResponse(
-                repo_commit=utils.unmarshal_json_response(
+                repo_commit=unmarshal_json_response(
                     Optional[shared.RepoCommit], http_res
                 ),
                 status_code=http_res.status_code,
@@ -453,7 +454,7 @@ class Repo(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateRepoOrganizationResponse(
-                repo_organization=utils.unmarshal_json_response(
+                repo_organization=unmarshal_json_response(
                     Optional[shared.RepoOrganization], http_res
                 ),
                 status_code=http_res.status_code,
@@ -545,7 +546,7 @@ class Repo(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateRepoOrganizationResponse(
-                repo_organization=utils.unmarshal_json_response(
+                repo_organization=unmarshal_json_response(
                     Optional[shared.RepoOrganization], http_res
                 ),
                 status_code=http_res.status_code,
@@ -637,7 +638,7 @@ class Repo(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateRepoPullrequestResponse(
-                repo_pullrequest=utils.unmarshal_json_response(
+                repo_pullrequest=unmarshal_json_response(
                     Optional[shared.RepoPullrequest], http_res
                 ),
                 status_code=http_res.status_code,
@@ -729,7 +730,7 @@ class Repo(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateRepoPullrequestResponse(
-                repo_pullrequest=utils.unmarshal_json_response(
+                repo_pullrequest=unmarshal_json_response(
                     Optional[shared.RepoPullrequest], http_res
                 ),
                 status_code=http_res.status_code,
@@ -821,7 +822,7 @@ class Repo(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateRepoRepositoryResponse(
-                repo_repository=utils.unmarshal_json_response(
+                repo_repository=unmarshal_json_response(
                     Optional[shared.RepoRepository], http_res
                 ),
                 status_code=http_res.status_code,
@@ -913,7 +914,7 @@ class Repo(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateRepoRepositoryResponse(
-                repo_repository=utils.unmarshal_json_response(
+                repo_repository=unmarshal_json_response(
                     Optional[shared.RepoRepository], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1001,7 +1002,7 @@ class Repo(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetRepoBranchResponse(
-                repo_branch=utils.unmarshal_json_response(
+                repo_branch=unmarshal_json_response(
                     Optional[shared.RepoBranch], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1089,7 +1090,7 @@ class Repo(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetRepoBranchResponse(
-                repo_branch=utils.unmarshal_json_response(
+                repo_branch=unmarshal_json_response(
                     Optional[shared.RepoBranch], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1177,7 +1178,7 @@ class Repo(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetRepoCommitResponse(
-                repo_commit=utils.unmarshal_json_response(
+                repo_commit=unmarshal_json_response(
                     Optional[shared.RepoCommit], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1265,7 +1266,7 @@ class Repo(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetRepoCommitResponse(
-                repo_commit=utils.unmarshal_json_response(
+                repo_commit=unmarshal_json_response(
                     Optional[shared.RepoCommit], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1354,7 +1355,7 @@ class Repo(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetRepoOrganizationResponse(
-                repo_organization=utils.unmarshal_json_response(
+                repo_organization=unmarshal_json_response(
                     Optional[shared.RepoOrganization], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1443,7 +1444,7 @@ class Repo(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetRepoOrganizationResponse(
-                repo_organization=utils.unmarshal_json_response(
+                repo_organization=unmarshal_json_response(
                     Optional[shared.RepoOrganization], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1532,7 +1533,7 @@ class Repo(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetRepoPullrequestResponse(
-                repo_pullrequest=utils.unmarshal_json_response(
+                repo_pullrequest=unmarshal_json_response(
                     Optional[shared.RepoPullrequest], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1621,7 +1622,7 @@ class Repo(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetRepoPullrequestResponse(
-                repo_pullrequest=utils.unmarshal_json_response(
+                repo_pullrequest=unmarshal_json_response(
                     Optional[shared.RepoPullrequest], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1710,7 +1711,7 @@ class Repo(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetRepoRepositoryResponse(
-                repo_repository=utils.unmarshal_json_response(
+                repo_repository=unmarshal_json_response(
                     Optional[shared.RepoRepository], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1799,7 +1800,7 @@ class Repo(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.GetRepoRepositoryResponse(
-                repo_repository=utils.unmarshal_json_response(
+                repo_repository=unmarshal_json_response(
                     Optional[shared.RepoRepository], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1888,7 +1889,7 @@ class Repo(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListRepoBranchesResponse(
-                repo_branches=utils.unmarshal_json_response(
+                repo_branches=unmarshal_json_response(
                     Optional[List[shared.RepoBranch]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -1977,7 +1978,7 @@ class Repo(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListRepoBranchesResponse(
-                repo_branches=utils.unmarshal_json_response(
+                repo_branches=unmarshal_json_response(
                     Optional[List[shared.RepoBranch]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2066,7 +2067,7 @@ class Repo(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListRepoCommitsResponse(
-                repo_commits=utils.unmarshal_json_response(
+                repo_commits=unmarshal_json_response(
                     Optional[List[shared.RepoCommit]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2155,7 +2156,7 @@ class Repo(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListRepoCommitsResponse(
-                repo_commits=utils.unmarshal_json_response(
+                repo_commits=unmarshal_json_response(
                     Optional[List[shared.RepoCommit]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2244,7 +2245,7 @@ class Repo(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListRepoOrganizationsResponse(
-                repo_organizations=utils.unmarshal_json_response(
+                repo_organizations=unmarshal_json_response(
                     Optional[List[shared.RepoOrganization]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2333,7 +2334,7 @@ class Repo(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListRepoOrganizationsResponse(
-                repo_organizations=utils.unmarshal_json_response(
+                repo_organizations=unmarshal_json_response(
                     Optional[List[shared.RepoOrganization]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2422,7 +2423,7 @@ class Repo(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListRepoPullrequestsResponse(
-                repo_pullrequests=utils.unmarshal_json_response(
+                repo_pullrequests=unmarshal_json_response(
                     Optional[List[shared.RepoPullrequest]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2511,7 +2512,7 @@ class Repo(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListRepoPullrequestsResponse(
-                repo_pullrequests=utils.unmarshal_json_response(
+                repo_pullrequests=unmarshal_json_response(
                     Optional[List[shared.RepoPullrequest]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2600,7 +2601,7 @@ class Repo(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListRepoRepositoriesResponse(
-                repo_repositories=utils.unmarshal_json_response(
+                repo_repositories=unmarshal_json_response(
                     Optional[List[shared.RepoRepository]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2689,7 +2690,7 @@ class Repo(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListRepoRepositoriesResponse(
-                repo_repositories=utils.unmarshal_json_response(
+                repo_repositories=unmarshal_json_response(
                     Optional[List[shared.RepoRepository]], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2781,7 +2782,7 @@ class Repo(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchRepoBranchResponse(
-                repo_branch=utils.unmarshal_json_response(
+                repo_branch=unmarshal_json_response(
                     Optional[shared.RepoBranch], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2873,7 +2874,7 @@ class Repo(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchRepoBranchResponse(
-                repo_branch=utils.unmarshal_json_response(
+                repo_branch=unmarshal_json_response(
                     Optional[shared.RepoBranch], http_res
                 ),
                 status_code=http_res.status_code,
@@ -2965,7 +2966,7 @@ class Repo(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchRepoCommitResponse(
-                repo_commit=utils.unmarshal_json_response(
+                repo_commit=unmarshal_json_response(
                     Optional[shared.RepoCommit], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3057,7 +3058,7 @@ class Repo(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchRepoCommitResponse(
-                repo_commit=utils.unmarshal_json_response(
+                repo_commit=unmarshal_json_response(
                     Optional[shared.RepoCommit], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3149,7 +3150,7 @@ class Repo(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchRepoOrganizationResponse(
-                repo_organization=utils.unmarshal_json_response(
+                repo_organization=unmarshal_json_response(
                     Optional[shared.RepoOrganization], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3241,7 +3242,7 @@ class Repo(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchRepoOrganizationResponse(
-                repo_organization=utils.unmarshal_json_response(
+                repo_organization=unmarshal_json_response(
                     Optional[shared.RepoOrganization], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3333,7 +3334,7 @@ class Repo(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchRepoPullrequestResponse(
-                repo_pullrequest=utils.unmarshal_json_response(
+                repo_pullrequest=unmarshal_json_response(
                     Optional[shared.RepoPullrequest], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3425,7 +3426,7 @@ class Repo(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchRepoPullrequestResponse(
-                repo_pullrequest=utils.unmarshal_json_response(
+                repo_pullrequest=unmarshal_json_response(
                     Optional[shared.RepoPullrequest], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3517,7 +3518,7 @@ class Repo(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchRepoRepositoryResponse(
-                repo_repository=utils.unmarshal_json_response(
+                repo_repository=unmarshal_json_response(
                     Optional[shared.RepoRepository], http_res
                 ),
                 status_code=http_res.status_code,
@@ -3609,7 +3610,7 @@ class Repo(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.PatchRepoRepositoryResponse(
-                repo_repository=utils.unmarshal_json_response(
+                repo_repository=unmarshal_json_response(
                     Optional[shared.RepoRepository], http_res
                 ),
                 status_code=http_res.status_code,
@@ -4641,7 +4642,7 @@ class Repo(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateRepoBranchResponse(
-                repo_branch=utils.unmarshal_json_response(
+                repo_branch=unmarshal_json_response(
                     Optional[shared.RepoBranch], http_res
                 ),
                 status_code=http_res.status_code,
@@ -4733,7 +4734,7 @@ class Repo(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateRepoBranchResponse(
-                repo_branch=utils.unmarshal_json_response(
+                repo_branch=unmarshal_json_response(
                     Optional[shared.RepoBranch], http_res
                 ),
                 status_code=http_res.status_code,
@@ -4825,7 +4826,7 @@ class Repo(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateRepoCommitResponse(
-                repo_commit=utils.unmarshal_json_response(
+                repo_commit=unmarshal_json_response(
                     Optional[shared.RepoCommit], http_res
                 ),
                 status_code=http_res.status_code,
@@ -4917,7 +4918,7 @@ class Repo(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateRepoCommitResponse(
-                repo_commit=utils.unmarshal_json_response(
+                repo_commit=unmarshal_json_response(
                     Optional[shared.RepoCommit], http_res
                 ),
                 status_code=http_res.status_code,
@@ -5009,7 +5010,7 @@ class Repo(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateRepoOrganizationResponse(
-                repo_organization=utils.unmarshal_json_response(
+                repo_organization=unmarshal_json_response(
                     Optional[shared.RepoOrganization], http_res
                 ),
                 status_code=http_res.status_code,
@@ -5101,7 +5102,7 @@ class Repo(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateRepoOrganizationResponse(
-                repo_organization=utils.unmarshal_json_response(
+                repo_organization=unmarshal_json_response(
                     Optional[shared.RepoOrganization], http_res
                 ),
                 status_code=http_res.status_code,
@@ -5193,7 +5194,7 @@ class Repo(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateRepoPullrequestResponse(
-                repo_pullrequest=utils.unmarshal_json_response(
+                repo_pullrequest=unmarshal_json_response(
                     Optional[shared.RepoPullrequest], http_res
                 ),
                 status_code=http_res.status_code,
@@ -5285,7 +5286,7 @@ class Repo(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateRepoPullrequestResponse(
-                repo_pullrequest=utils.unmarshal_json_response(
+                repo_pullrequest=unmarshal_json_response(
                     Optional[shared.RepoPullrequest], http_res
                 ),
                 status_code=http_res.status_code,
@@ -5377,7 +5378,7 @@ class Repo(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateRepoRepositoryResponse(
-                repo_repository=utils.unmarshal_json_response(
+                repo_repository=unmarshal_json_response(
                     Optional[shared.RepoRepository], http_res
                 ),
                 status_code=http_res.status_code,
@@ -5469,7 +5470,7 @@ class Repo(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.UpdateRepoRepositoryResponse(
-                repo_repository=utils.unmarshal_json_response(
+                repo_repository=unmarshal_json_response(
                     Optional[shared.RepoRepository], http_res
                 ),
                 status_code=http_res.status_code,
