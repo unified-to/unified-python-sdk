@@ -28,6 +28,7 @@ class TaskTaskTypedDict(TypedDict):
     due_at: NotRequired[datetime]
     follower_user_ids: NotRequired[List[str]]
     group_ids: NotRequired[List[str]]
+    has_children: NotRequired[bool]
     id: NotRequired[str]
     metadata: NotRequired[List[TaskMetadataTypedDict]]
     name: NotRequired[str]
@@ -59,6 +60,8 @@ class TaskTask(BaseModel):
     follower_user_ids: Optional[List[str]] = None
 
     group_ids: Optional[List[str]] = None
+
+    has_children: Optional[bool] = None
 
     id: Optional[str] = None
 
