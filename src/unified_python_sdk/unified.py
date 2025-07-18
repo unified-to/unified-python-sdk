@@ -21,7 +21,7 @@ class Unified(BaseSDK):
     ) -> operations.CreateUnifiedConnectionResponse:
         r"""Create connection
 
-        Used only to import existing customer credentials; use \"Create connection indirectly\" instead
+        Used only to import existing customer credentials; use \"Authorize new connection\" instead
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -112,7 +112,7 @@ class Unified(BaseSDK):
     ) -> operations.CreateUnifiedConnectionResponse:
         r"""Create connection
 
-        Used only to import existing customer credentials; use \"Create connection indirectly\" instead
+        Used only to import existing customer credentials; use \"Authorize new connection\" instead
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -740,7 +740,7 @@ class Unified(BaseSDK):
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetUnifiedIntegrationAuthResponse:
-        r"""Create connection indirectly
+        r"""Authorize new connection
 
         Returns an authorization URL for the specified integration.  Once a successful authorization occurs, a new connection is created.
 
@@ -831,7 +831,7 @@ class Unified(BaseSDK):
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetUnifiedIntegrationAuthResponse:
-        r"""Create connection indirectly
+        r"""Authorize new connection
 
         Returns an authorization URL for the specified integration.  Once a successful authorization occurs, a new connection is created.
 

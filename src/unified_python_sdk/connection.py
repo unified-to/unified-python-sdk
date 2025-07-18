@@ -21,7 +21,7 @@ class Connection(BaseSDK):
     ) -> operations.CreateUnifiedConnectionResponse:
         r"""Create connection
 
-        Used only to import existing customer credentials; use \"Create connection indirectly\" instead
+        Used only to import existing customer credentials; use \"Authorize new connection\" instead
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -112,7 +112,7 @@ class Connection(BaseSDK):
     ) -> operations.CreateUnifiedConnectionResponse:
         r"""Create connection
 
-        Used only to import existing customer credentials; use \"Create connection indirectly\" instead
+        Used only to import existing customer credentials; use \"Authorize new connection\" instead
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method

@@ -21,6 +21,16 @@ class CalendarEventRecurrenceFrequency(str, Enum, metaclass=utils.OpenEnumMeta):
     YEARLY = "YEARLY"
 
 
+class WeekStart(str, Enum, metaclass=utils.OpenEnumMeta):
+    SU = "SU"
+    MO = "MO"
+    TU = "TU"
+    WE = "WE"
+    TH = "TH"
+    FR = "FR"
+    SA = "SA"
+
+
 class CalendarEventRecurrenceTypedDict(TypedDict):
     frequency: CalendarEventRecurrenceFrequency
     count: NotRequired[float]
@@ -34,6 +44,12 @@ class CalendarEventRecurrenceTypedDict(TypedDict):
     r"""days of the month to repeat on, defaults to undefined (every day), only used if frequency is MONTHLY"""
     on_months: NotRequired[List[float]]
     r"""months of the year to repeat on, defaults to undefined (every month), only used if frequency is YEARLY, January is 1"""
+    on_weeks: NotRequired[List[float]]
+    r"""week ordinals for BYDAY (e.g., -1 for last, -2 for second-to-last, 1 for first, 2 for second), only used with on_days. 0 is used for days without week ordinals."""
+    on_year_days: NotRequired[List[float]]
+    r"""days of the year to repeat on, defaults to undefined (every day), only used if frequency is YEARLY"""
+    timezone: NotRequired[str]
+    week_start: NotRequired[WeekStart]
 
 
 class CalendarEventRecurrence(BaseModel):
@@ -65,3 +81,15 @@ class CalendarEventRecurrence(BaseModel):
 
     on_months: Optional[List[float]] = None
     r"""months of the year to repeat on, defaults to undefined (every month), only used if frequency is YEARLY, January is 1"""
+
+    on_weeks: Optional[List[float]] = None
+    r"""week ordinals for BYDAY (e.g., -1 for last, -2 for second-to-last, 1 for first, 2 for second), only used with on_days. 0 is used for days without week ordinals."""
+
+    on_year_days: Optional[List[float]] = None
+    r"""days of the year to repeat on, defaults to undefined (every day), only used if frequency is YEARLY"""
+
+    timezone: Optional[str] = None
+
+    week_start: Annotated[
+        Optional[WeekStart], PlainValidator(validate_open_enum(False))
+    ] = None

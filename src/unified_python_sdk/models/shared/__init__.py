@@ -252,6 +252,7 @@ if TYPE_CHECKING:
         CalendarEventRecurrence,
         CalendarEventRecurrenceFrequency,
         CalendarEventRecurrenceTypedDict,
+        WeekStart,
     )
     from .calendarlink import CalendarLink, CalendarLinkTypedDict
     from .calendarrecording import CalendarRecording, CalendarRecordingTypedDict
@@ -1862,6 +1863,7 @@ __all__ = [
     "Webhook",
     "WebhookType",
     "WebhookTypedDict",
+    "WeekStart",
     "WeightUnit",
 ]
 
@@ -2070,6 +2072,7 @@ _dynamic_imports: dict[str, str] = {
     "CalendarEventRecurrence": ".calendareventrecurrence",
     "CalendarEventRecurrenceFrequency": ".calendareventrecurrence",
     "CalendarEventRecurrenceTypedDict": ".calendareventrecurrence",
+    "WeekStart": ".calendareventrecurrence",
     "CalendarLink": ".calendarlink",
     "CalendarLinkTypedDict": ".calendarlink",
     "CalendarRecording": ".calendarrecording",

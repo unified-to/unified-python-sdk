@@ -22,7 +22,7 @@ class Integration(BaseSDK):
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetUnifiedIntegrationAuthResponse:
-        r"""Create connection indirectly
+        r"""Authorize new connection
 
         Returns an authorization URL for the specified integration.  Once a successful authorization occurs, a new connection is created.
 
@@ -113,7 +113,7 @@ class Integration(BaseSDK):
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetUnifiedIntegrationAuthResponse:
-        r"""Create connection indirectly
+        r"""Authorize new connection
 
         Returns an authorization URL for the specified integration.  Once a successful authorization occurs, a new connection is created.
 

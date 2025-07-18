@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: a8fe650f09e411054ff20cdef36cc669
+  docChecksum: 34e9b060cccb99df9d62ad47f96d358d
   docVersion: "1.0"
   speakeasyVersion: 1.582.0
   generationVersion: 2.657.1
-  releaseVersion: 0.48.8
-  configChecksum: d486ba557d10d3a27c26fa69986883d2
+  releaseVersion: 0.48.9
+  configChecksum: fba0ee74f107c730cb1545e494cb37e6
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -1492,6 +1492,7 @@ generatedFiles:
   - docs/models/shared/value.md
   - docs/models/shared/webhook.md
   - docs/models/shared/webhooktype.md
+  - docs/models/shared/weekstart.md
   - docs/models/shared/weightunit.md
   - docs/models/utils/retryconfig.md
   - docs/sdks/account/README.md
