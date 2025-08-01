@@ -2,13 +2,14 @@
 
 from __future__ import annotations
 from datetime import datetime
-from typing import Optional
+from typing import List, Optional
 from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk.types import BaseModel
 
 
 class AccountingLineitemTypedDict(TypedDict):
     account_id: NotRequired[str]
+    category_ids: NotRequired[List[str]]
     created_at: NotRequired[datetime]
     discount_amount: NotRequired[float]
     id: NotRequired[str]
@@ -29,6 +30,8 @@ class AccountingLineitemTypedDict(TypedDict):
 
 class AccountingLineitem(BaseModel):
     account_id: Optional[str] = None
+
+    category_ids: Optional[List[str]] = None
 
     created_at: Optional[datetime] = None
 

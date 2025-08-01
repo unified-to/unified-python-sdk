@@ -174,6 +174,7 @@ asyncio.run(main())
 
 * [create_accounting_account](docs/sdks/accounting/README.md#create_accounting_account) - Create an account
 * [create_accounting_bill](docs/sdks/accounting/README.md#create_accounting_bill) - Create a bill
+* [create_accounting_category](docs/sdks/accounting/README.md#create_accounting_category) - Create a category
 * [create_accounting_contact](docs/sdks/accounting/README.md#create_accounting_contact) - Create a contact
 * [create_accounting_creditmemo](docs/sdks/accounting/README.md#create_accounting_creditmemo) - Create a creditmemo
 * [create_accounting_invoice](docs/sdks/accounting/README.md#create_accounting_invoice) - Create an invoice
@@ -186,6 +187,7 @@ asyncio.run(main())
 * [get_accounting_account](docs/sdks/accounting/README.md#get_accounting_account) - Retrieve an account
 * [get_accounting_balancesheet](docs/sdks/accounting/README.md#get_accounting_balancesheet) - Retrieve a balancesheet
 * [get_accounting_bill](docs/sdks/accounting/README.md#get_accounting_bill) - Retrieve a bill
+* [get_accounting_category](docs/sdks/accounting/README.md#get_accounting_category) - Retrieve a category
 * [get_accounting_contact](docs/sdks/accounting/README.md#get_accounting_contact) - Retrieve a contact
 * [get_accounting_creditmemo](docs/sdks/accounting/README.md#get_accounting_creditmemo) - Retrieve a creditmemo
 * [get_accounting_invoice](docs/sdks/accounting/README.md#get_accounting_invoice) - Retrieve an invoice
@@ -202,6 +204,7 @@ asyncio.run(main())
 * [list_accounting_accounts](docs/sdks/accounting/README.md#list_accounting_accounts) - List all accounts
 * [list_accounting_balancesheets](docs/sdks/accounting/README.md#list_accounting_balancesheets) - List all balancesheets
 * [list_accounting_bills](docs/sdks/accounting/README.md#list_accounting_bills) - List all bills
+* [list_accounting_categories](docs/sdks/accounting/README.md#list_accounting_categories) - List all categories
 * [list_accounting_contacts](docs/sdks/accounting/README.md#list_accounting_contacts) - List all contacts
 * [list_accounting_creditmemoes](docs/sdks/accounting/README.md#list_accounting_creditmemoes) - List all creditmemoes
 * [list_accounting_invoices](docs/sdks/accounting/README.md#list_accounting_invoices) - List all invoices
@@ -217,6 +220,7 @@ asyncio.run(main())
 * [list_accounting_trialbalances](docs/sdks/accounting/README.md#list_accounting_trialbalances) - List all trialbalances
 * [patch_accounting_account](docs/sdks/accounting/README.md#patch_accounting_account) - Update an account
 * [patch_accounting_bill](docs/sdks/accounting/README.md#patch_accounting_bill) - Update a bill
+* [patch_accounting_category](docs/sdks/accounting/README.md#patch_accounting_category) - Update a category
 * [patch_accounting_contact](docs/sdks/accounting/README.md#patch_accounting_contact) - Update a contact
 * [patch_accounting_creditmemo](docs/sdks/accounting/README.md#patch_accounting_creditmemo) - Update a creditmemo
 * [patch_accounting_invoice](docs/sdks/accounting/README.md#patch_accounting_invoice) - Update an invoice
@@ -228,6 +232,7 @@ asyncio.run(main())
 * [patch_accounting_transaction](docs/sdks/accounting/README.md#patch_accounting_transaction) - Update a transaction
 * [remove_accounting_account](docs/sdks/accounting/README.md#remove_accounting_account) - Remove an account
 * [remove_accounting_bill](docs/sdks/accounting/README.md#remove_accounting_bill) - Remove a bill
+* [remove_accounting_category](docs/sdks/accounting/README.md#remove_accounting_category) - Remove a category
 * [remove_accounting_contact](docs/sdks/accounting/README.md#remove_accounting_contact) - Remove a contact
 * [remove_accounting_creditmemo](docs/sdks/accounting/README.md#remove_accounting_creditmemo) - Remove a creditmemo
 * [remove_accounting_invoice](docs/sdks/accounting/README.md#remove_accounting_invoice) - Remove an invoice
@@ -239,6 +244,7 @@ asyncio.run(main())
 * [remove_accounting_transaction](docs/sdks/accounting/README.md#remove_accounting_transaction) - Remove a transaction
 * [update_accounting_account](docs/sdks/accounting/README.md#update_accounting_account) - Update an account
 * [update_accounting_bill](docs/sdks/accounting/README.md#update_accounting_bill) - Update a bill
+* [update_accounting_category](docs/sdks/accounting/README.md#update_accounting_category) - Update a category
 * [update_accounting_contact](docs/sdks/accounting/README.md#update_accounting_contact) - Update a contact
 * [update_accounting_creditmemo](docs/sdks/accounting/README.md#update_accounting_creditmemo) - Update a creditmemo
 * [update_accounting_invoice](docs/sdks/accounting/README.md#update_accounting_invoice) - Update an invoice
@@ -396,6 +402,15 @@ asyncio.run(main())
 * [patch_ats_candidate](docs/sdks/candidate/README.md#patch_ats_candidate) - Update a candidate
 * [remove_ats_candidate](docs/sdks/candidate/README.md#remove_ats_candidate) - Remove a candidate
 * [update_ats_candidate](docs/sdks/candidate/README.md#update_ats_candidate) - Update a candidate
+
+### [category](docs/sdks/category/README.md)
+
+* [create_accounting_category](docs/sdks/category/README.md#create_accounting_category) - Create a category
+* [get_accounting_category](docs/sdks/category/README.md#get_accounting_category) - Retrieve a category
+* [list_accounting_categories](docs/sdks/category/README.md#list_accounting_categories) - List all categories
+* [patch_accounting_category](docs/sdks/category/README.md#patch_accounting_category) - Update a category
+* [remove_accounting_category](docs/sdks/category/README.md#remove_accounting_category) - Remove a category
+* [update_accounting_category](docs/sdks/category/README.md#update_accounting_category) - Update a category
 
 ### [channel](docs/sdks/channel/README.md)
 

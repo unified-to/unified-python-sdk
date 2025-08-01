@@ -48,6 +48,7 @@ Create a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="createCrmCompany" method="post" path="/crm/{connection_id}/company" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -94,6 +95,7 @@ Create a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="createCrmContact" method="post" path="/crm/{connection_id}/contact" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -140,6 +142,7 @@ Create a deal
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="createCrmDeal" method="post" path="/crm/{connection_id}/deal" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -186,6 +189,7 @@ Create an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="createCrmEvent" method="post" path="/crm/{connection_id}/event" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -232,6 +236,7 @@ Create a lead
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="createCrmLead" method="post" path="/crm/{connection_id}/lead" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -278,6 +283,7 @@ Create a pipeline
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="createCrmPipeline" method="post" path="/crm/{connection_id}/pipeline" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -324,6 +330,7 @@ Retrieve a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getCrmCompany" method="get" path="/crm/{connection_id}/company/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -370,6 +377,7 @@ Retrieve a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getCrmContact" method="get" path="/crm/{connection_id}/contact/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -416,6 +424,7 @@ Retrieve a deal
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getCrmDeal" method="get" path="/crm/{connection_id}/deal/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -462,6 +471,7 @@ Retrieve an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getCrmEvent" method="get" path="/crm/{connection_id}/event/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -508,6 +518,7 @@ Retrieve a lead
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getCrmLead" method="get" path="/crm/{connection_id}/lead/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -554,6 +565,7 @@ Retrieve a pipeline
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getCrmPipeline" method="get" path="/crm/{connection_id}/pipeline/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -600,6 +612,7 @@ List all companies
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listCrmCompanies" method="get" path="/crm/{connection_id}/company" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -645,6 +658,7 @@ List all contacts
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listCrmContacts" method="get" path="/crm/{connection_id}/contact" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -690,6 +704,7 @@ List all deals
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listCrmDeals" method="get" path="/crm/{connection_id}/deal" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -735,6 +750,7 @@ List all events
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listCrmEvents" method="get" path="/crm/{connection_id}/event" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -780,6 +796,7 @@ List all leads
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listCrmLeads" method="get" path="/crm/{connection_id}/lead" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -825,6 +842,7 @@ List all pipelines
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listCrmPipelines" method="get" path="/crm/{connection_id}/pipeline" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -870,6 +888,7 @@ Update a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="patchCrmCompany" method="patch" path="/crm/{connection_id}/company/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -917,6 +936,7 @@ Update a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="patchCrmContact" method="patch" path="/crm/{connection_id}/contact/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -964,6 +984,7 @@ Update a deal
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="patchCrmDeal" method="patch" path="/crm/{connection_id}/deal/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1011,6 +1032,7 @@ Update an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="patchCrmEvent" method="patch" path="/crm/{connection_id}/event/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1058,6 +1080,7 @@ Update a lead
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="patchCrmLead" method="patch" path="/crm/{connection_id}/lead/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1105,6 +1128,7 @@ Update a pipeline
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="patchCrmPipeline" method="patch" path="/crm/{connection_id}/pipeline/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1152,6 +1176,7 @@ Remove a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="removeCrmCompany" method="delete" path="/crm/{connection_id}/company/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1198,6 +1223,7 @@ Remove a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="removeCrmContact" method="delete" path="/crm/{connection_id}/contact/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1244,6 +1270,7 @@ Remove a deal
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="removeCrmDeal" method="delete" path="/crm/{connection_id}/deal/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1290,6 +1317,7 @@ Remove an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="removeCrmEvent" method="delete" path="/crm/{connection_id}/event/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1336,6 +1364,7 @@ Remove a lead
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="removeCrmLead" method="delete" path="/crm/{connection_id}/lead/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1382,6 +1411,7 @@ Remove a pipeline
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="removeCrmPipeline" method="delete" path="/crm/{connection_id}/pipeline/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1428,6 +1458,7 @@ Update a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="updateCrmCompany" method="put" path="/crm/{connection_id}/company/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1475,6 +1506,7 @@ Update a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="updateCrmContact" method="put" path="/crm/{connection_id}/contact/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1522,6 +1554,7 @@ Update a deal
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="updateCrmDeal" method="put" path="/crm/{connection_id}/deal/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1569,6 +1602,7 @@ Update an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="updateCrmEvent" method="put" path="/crm/{connection_id}/event/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1616,6 +1650,7 @@ Update a lead
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="updateCrmLead" method="put" path="/crm/{connection_id}/lead/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1663,6 +1698,7 @@ Update a pipeline
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="updateCrmPipeline" method="put" path="/crm/{connection_id}/pipeline/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared

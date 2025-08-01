@@ -13,6 +13,7 @@ List all models
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listGenaiModels" method="get" path="/genai/{connection_id}/model" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared

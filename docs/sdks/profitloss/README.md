@@ -14,6 +14,7 @@ Retrieve a profitloss
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getAccountingProfitloss" method="get" path="/accounting/{connection_id}/profitloss/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -60,6 +61,7 @@ List all profitlosses
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listAccountingProfitlosses" method="get" path="/accounting/{connection_id}/profitloss" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared

@@ -18,6 +18,7 @@ Create a timeshift
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="createHrisTimeshift" method="post" path="/hris/{connection_id}/timeshift" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -64,6 +65,7 @@ Retrieve a timeshift
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getHrisTimeshift" method="get" path="/hris/{connection_id}/timeshift/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -110,6 +112,7 @@ List all timeshifts
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listHrisTimeshifts" method="get" path="/hris/{connection_id}/timeshift" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -155,6 +158,7 @@ Update a timeshift
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="patchHrisTimeshift" method="patch" path="/hris/{connection_id}/timeshift/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -202,6 +206,7 @@ Remove a timeshift
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="removeHrisTimeshift" method="delete" path="/hris/{connection_id}/timeshift/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -248,6 +253,7 @@ Update a timeshift
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="updateHrisTimeshift" method="put" path="/hris/{connection_id}/timeshift/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared

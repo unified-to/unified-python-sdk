@@ -18,6 +18,7 @@ Create a commit
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="createRepoCommit" method="post" path="/repo/{connection_id}/commit" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -67,6 +68,7 @@ Retrieve a commit
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getRepoCommit" method="get" path="/repo/{connection_id}/commit/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -113,6 +115,7 @@ List all commits
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listRepoCommits" method="get" path="/repo/{connection_id}/commit" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -158,6 +161,7 @@ Update a commit
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="patchRepoCommit" method="patch" path="/repo/{connection_id}/commit/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -208,6 +212,7 @@ Remove a commit
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="removeRepoCommit" method="delete" path="/repo/{connection_id}/commit/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -254,6 +259,7 @@ Update a commit
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="updateRepoCommit" method="put" path="/repo/{connection_id}/commit/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared

@@ -14,6 +14,7 @@ Retrieve a balancesheet
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getAccountingBalancesheet" method="get" path="/accounting/{connection_id}/balancesheet/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -60,6 +61,7 @@ List all balancesheets
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listAccountingBalancesheets" method="get" path="/accounting/{connection_id}/balancesheet" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared

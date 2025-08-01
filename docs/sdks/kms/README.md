@@ -30,6 +30,7 @@ Create a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="createKmsComment" method="post" path="/kms/{connection_id}/comment" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -78,6 +79,7 @@ Create a page
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="createKmsPage" method="post" path="/kms/{connection_id}/page" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -127,6 +129,7 @@ Create a space
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="createKmsSpace" method="post" path="/kms/{connection_id}/space" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -175,6 +178,7 @@ Retrieve a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getKmsComment" method="get" path="/kms/{connection_id}/comment/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -221,6 +225,7 @@ Retrieve a page
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getKmsPage" method="get" path="/kms/{connection_id}/page/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -267,6 +272,7 @@ Retrieve a space
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getKmsSpace" method="get" path="/kms/{connection_id}/space/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -313,6 +319,7 @@ List all comments
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listKmsComments" method="get" path="/kms/{connection_id}/comment" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -358,6 +365,7 @@ List all pages
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listKmsPages" method="get" path="/kms/{connection_id}/page" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -403,6 +411,7 @@ List all spaces
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listKmsSpaces" method="get" path="/kms/{connection_id}/space" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -448,6 +457,7 @@ Update a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="patchKmsComment" method="patch" path="/kms/{connection_id}/comment/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -497,6 +507,7 @@ Update a page
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="patchKmsPage" method="patch" path="/kms/{connection_id}/page/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -547,6 +558,7 @@ Update a space
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="patchKmsSpace" method="patch" path="/kms/{connection_id}/space/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -596,6 +608,7 @@ Remove a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="removeKmsComment" method="delete" path="/kms/{connection_id}/comment/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -642,6 +655,7 @@ Remove a page
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="removeKmsPage" method="delete" path="/kms/{connection_id}/page/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -688,6 +702,7 @@ Remove a space
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="removeKmsSpace" method="delete" path="/kms/{connection_id}/space/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -734,6 +749,7 @@ Update a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="updateKmsComment" method="put" path="/kms/{connection_id}/comment/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -783,6 +799,7 @@ Update a page
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="updateKmsPage" method="put" path="/kms/{connection_id}/page/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -833,6 +850,7 @@ Update a space
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="updateKmsSpace" method="put" path="/kms/{connection_id}/space/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared

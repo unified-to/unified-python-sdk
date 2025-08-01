@@ -18,6 +18,7 @@ Create a list
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="createMartechList" method="post" path="/martech/{connection_id}/list" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -64,6 +65,7 @@ Retrieve a list
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getMartechList" method="get" path="/martech/{connection_id}/list/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -110,6 +112,7 @@ List all lists
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listMartechLists" method="get" path="/martech/{connection_id}/list" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -155,6 +158,7 @@ Update a list
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="patchMartechList" method="patch" path="/martech/{connection_id}/list/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -202,6 +206,7 @@ Remove a list
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="removeMartechList" method="delete" path="/martech/{connection_id}/list/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -248,6 +253,7 @@ Update a list
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="updateMartechList" method="put" path="/martech/{connection_id}/list/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared

@@ -24,6 +24,7 @@ Create a group
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="createHrisGroup" method="post" path="/hris/{connection_id}/group" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -70,6 +71,7 @@ Create group
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="createScimGroups" method="post" path="/scim/{connection_id}/groups" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -118,6 +120,7 @@ Retrieve a group
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getHrisGroup" method="get" path="/hris/{connection_id}/group/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -164,6 +167,7 @@ Get group
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getScimGroups" method="get" path="/scim/{connection_id}/groups/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -210,6 +214,7 @@ List all groups
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listHrisGroups" method="get" path="/hris/{connection_id}/group" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -255,6 +260,7 @@ List groups
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listScimGroups" method="get" path="/scim/{connection_id}/groups" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -300,6 +306,7 @@ Update a group
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="patchHrisGroup" method="patch" path="/hris/{connection_id}/group/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -347,6 +354,7 @@ Update group
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="patchScimGroups" method="patch" path="/scim/{connection_id}/groups/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -396,6 +404,7 @@ Remove a group
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="removeHrisGroup" method="delete" path="/hris/{connection_id}/group/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -442,6 +451,7 @@ Delete group
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="removeScimGroups" method="delete" path="/scim/{connection_id}/groups/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -488,6 +498,7 @@ Update a group
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="updateHrisGroup" method="put" path="/hris/{connection_id}/group/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -535,6 +546,7 @@ Update group
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="updateScimGroups" method="put" path="/scim/{connection_id}/groups/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared

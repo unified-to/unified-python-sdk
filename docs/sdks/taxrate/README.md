@@ -18,6 +18,7 @@ Create a taxrate
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="createAccountingTaxrate" method="post" path="/accounting/{connection_id}/taxrate" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -64,6 +65,7 @@ Retrieve a taxrate
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getAccountingTaxrate" method="get" path="/accounting/{connection_id}/taxrate/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -110,6 +112,7 @@ List all taxrates
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listAccountingTaxrates" method="get" path="/accounting/{connection_id}/taxrate" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -155,6 +158,7 @@ Update a taxrate
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="patchAccountingTaxrate" method="patch" path="/accounting/{connection_id}/taxrate/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -202,6 +206,7 @@ Remove a taxrate
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="removeAccountingTaxrate" method="delete" path="/accounting/{connection_id}/taxrate/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -248,6 +253,7 @@ Update a taxrate
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="updateAccountingTaxrate" method="put" path="/accounting/{connection_id}/taxrate/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared

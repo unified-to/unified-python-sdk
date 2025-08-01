@@ -18,6 +18,7 @@ Create a member
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="createMartechMember" method="post" path="/martech/{connection_id}/member" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -64,6 +65,7 @@ Retrieve a member
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getMartechMember" method="get" path="/martech/{connection_id}/member/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -110,6 +112,7 @@ List all members
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listMartechMembers" method="get" path="/martech/{connection_id}/member" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -155,6 +158,7 @@ Update a member
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="patchMartechMember" method="patch" path="/martech/{connection_id}/member/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -202,6 +206,7 @@ Remove a member
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="removeMartechMember" method="delete" path="/martech/{connection_id}/member/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -248,6 +253,7 @@ Update a member
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="updateMartechMember" method="put" path="/martech/{connection_id}/member/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared

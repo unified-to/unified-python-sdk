@@ -18,6 +18,7 @@ Create a device
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="createHrisDevice" method="post" path="/hris/{connection_id}/device" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -66,6 +67,7 @@ Retrieve a device
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getHrisDevice" method="get" path="/hris/{connection_id}/device/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -112,6 +114,7 @@ List all devices
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listHrisDevices" method="get" path="/hris/{connection_id}/device" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -157,6 +160,7 @@ Update a device
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="patchHrisDevice" method="patch" path="/hris/{connection_id}/device/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -206,6 +210,7 @@ Remove a device
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="removeHrisDevice" method="delete" path="/hris/{connection_id}/device/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -252,6 +257,7 @@ Update a device
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="updateHrisDevice" method="put" path="/hris/{connection_id}/device/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared

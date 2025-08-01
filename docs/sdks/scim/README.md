@@ -24,6 +24,7 @@ Create group
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="createScimGroups" method="post" path="/scim/{connection_id}/groups" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -72,6 +73,7 @@ Create user
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="createScimUsers" method="post" path="/scim/{connection_id}/users" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -118,6 +120,7 @@ Get group
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getScimGroups" method="get" path="/scim/{connection_id}/groups/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -164,6 +167,7 @@ Get user
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getScimUsers" method="get" path="/scim/{connection_id}/users/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -210,6 +214,7 @@ List groups
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listScimGroups" method="get" path="/scim/{connection_id}/groups" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -255,6 +260,7 @@ List users
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listScimUsers" method="get" path="/scim/{connection_id}/users" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -300,6 +306,7 @@ Update group
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="patchScimGroups" method="patch" path="/scim/{connection_id}/groups/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -349,6 +356,7 @@ Update user
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="patchScimUsers" method="patch" path="/scim/{connection_id}/users/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -396,6 +404,7 @@ Delete group
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="removeScimGroups" method="delete" path="/scim/{connection_id}/groups/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -442,6 +451,7 @@ Delete user
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="removeScimUsers" method="delete" path="/scim/{connection_id}/users/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -488,6 +498,7 @@ Update group
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="updateScimGroups" method="put" path="/scim/{connection_id}/groups/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -537,6 +548,7 @@ Update user
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="updateScimUsers" method="put" path="/scim/{connection_id}/users/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared

@@ -18,6 +18,7 @@ Create an account
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="createAccountingAccount" method="post" path="/accounting/{connection_id}/account" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -64,6 +65,7 @@ Retrieve an account
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getAccountingAccount" method="get" path="/accounting/{connection_id}/account/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -110,6 +112,7 @@ List all accounts
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listAccountingAccounts" method="get" path="/accounting/{connection_id}/account" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -155,6 +158,7 @@ Update an account
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="patchAccountingAccount" method="patch" path="/accounting/{connection_id}/account/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -202,6 +206,7 @@ Remove an account
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="removeAccountingAccount" method="delete" path="/accounting/{connection_id}/account/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -248,6 +253,7 @@ Update an account
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="updateAccountingAccount" method="put" path="/accounting/{connection_id}/account/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared

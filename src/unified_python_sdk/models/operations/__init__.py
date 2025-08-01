@@ -16,6 +16,12 @@ if TYPE_CHECKING:
         CreateAccountingBillResponse,
         CreateAccountingBillResponseTypedDict,
     )
+    from .createaccountingcategory import (
+        CreateAccountingCategoryRequest,
+        CreateAccountingCategoryRequestTypedDict,
+        CreateAccountingCategoryResponse,
+        CreateAccountingCategoryResponseTypedDict,
+    )
     from .createaccountingcontact import (
         CreateAccountingContactRequest,
         CreateAccountingContactRequestTypedDict,
@@ -469,6 +475,12 @@ if TYPE_CHECKING:
         GetAccountingBillRequestTypedDict,
         GetAccountingBillResponse,
         GetAccountingBillResponseTypedDict,
+    )
+    from .getaccountingcategory import (
+        GetAccountingCategoryRequest,
+        GetAccountingCategoryRequestTypedDict,
+        GetAccountingCategoryResponse,
+        GetAccountingCategoryResponseTypedDict,
     )
     from .getaccountingcontact import (
         GetAccountingContactRequest,
@@ -985,6 +997,12 @@ if TYPE_CHECKING:
         ListAccountingBillsRequestTypedDict,
         ListAccountingBillsResponse,
         ListAccountingBillsResponseTypedDict,
+    )
+    from .listaccountingcategories import (
+        ListAccountingCategoriesRequest,
+        ListAccountingCategoriesRequestTypedDict,
+        ListAccountingCategoriesResponse,
+        ListAccountingCategoriesResponseTypedDict,
     )
     from .listaccountingcontacts import (
         ListAccountingContactsRequest,
@@ -1547,6 +1565,12 @@ if TYPE_CHECKING:
         PatchAccountingBillResponse,
         PatchAccountingBillResponseTypedDict,
     )
+    from .patchaccountingcategory import (
+        PatchAccountingCategoryRequest,
+        PatchAccountingCategoryRequestTypedDict,
+        PatchAccountingCategoryResponse,
+        PatchAccountingCategoryResponseTypedDict,
+    )
     from .patchaccountingcontact import (
         PatchAccountingContactRequest,
         PatchAccountingContactRequestTypedDict,
@@ -1997,6 +2021,12 @@ if TYPE_CHECKING:
         RemoveAccountingBillResponse,
         RemoveAccountingBillResponseTypedDict,
     )
+    from .removeaccountingcategory import (
+        RemoveAccountingCategoryRequest,
+        RemoveAccountingCategoryRequestTypedDict,
+        RemoveAccountingCategoryResponse,
+        RemoveAccountingCategoryResponseTypedDict,
+    )
     from .removeaccountingcontact import (
         RemoveAccountingContactRequest,
         RemoveAccountingContactRequestTypedDict,
@@ -2434,6 +2464,12 @@ if TYPE_CHECKING:
         UpdateAccountingBillRequestTypedDict,
         UpdateAccountingBillResponse,
         UpdateAccountingBillResponseTypedDict,
+    )
+    from .updateaccountingcategory import (
+        UpdateAccountingCategoryRequest,
+        UpdateAccountingCategoryRequestTypedDict,
+        UpdateAccountingCategoryResponse,
+        UpdateAccountingCategoryResponseTypedDict,
     )
     from .updateaccountingcontact import (
         UpdateAccountingContactRequest,
@@ -2884,6 +2920,10 @@ __all__ = [
     "CreateAccountingBillRequestTypedDict",
     "CreateAccountingBillResponse",
     "CreateAccountingBillResponseTypedDict",
+    "CreateAccountingCategoryRequest",
+    "CreateAccountingCategoryRequestTypedDict",
+    "CreateAccountingCategoryResponse",
+    "CreateAccountingCategoryResponseTypedDict",
     "CreateAccountingContactRequest",
     "CreateAccountingContactRequestTypedDict",
     "CreateAccountingContactResponse",
@@ -3186,6 +3226,10 @@ __all__ = [
     "GetAccountingBillRequestTypedDict",
     "GetAccountingBillResponse",
     "GetAccountingBillResponseTypedDict",
+    "GetAccountingCategoryRequest",
+    "GetAccountingCategoryRequestTypedDict",
+    "GetAccountingCategoryResponse",
+    "GetAccountingCategoryResponseTypedDict",
     "GetAccountingContactRequest",
     "GetAccountingContactRequestTypedDict",
     "GetAccountingContactResponse",
@@ -3530,6 +3574,10 @@ __all__ = [
     "ListAccountingBillsRequestTypedDict",
     "ListAccountingBillsResponse",
     "ListAccountingBillsResponseTypedDict",
+    "ListAccountingCategoriesRequest",
+    "ListAccountingCategoriesRequestTypedDict",
+    "ListAccountingCategoriesResponse",
+    "ListAccountingCategoriesResponseTypedDict",
     "ListAccountingContactsRequest",
     "ListAccountingContactsRequestTypedDict",
     "ListAccountingContactsResponse",
@@ -3903,6 +3951,10 @@ __all__ = [
     "PatchAccountingBillRequestTypedDict",
     "PatchAccountingBillResponse",
     "PatchAccountingBillResponseTypedDict",
+    "PatchAccountingCategoryRequest",
+    "PatchAccountingCategoryRequestTypedDict",
+    "PatchAccountingCategoryResponse",
+    "PatchAccountingCategoryResponseTypedDict",
     "PatchAccountingContactRequest",
     "PatchAccountingContactRequestTypedDict",
     "PatchAccountingContactResponse",
@@ -4204,6 +4256,10 @@ __all__ = [
     "RemoveAccountingBillRequestTypedDict",
     "RemoveAccountingBillResponse",
     "RemoveAccountingBillResponseTypedDict",
+    "RemoveAccountingCategoryRequest",
+    "RemoveAccountingCategoryRequestTypedDict",
+    "RemoveAccountingCategoryResponse",
+    "RemoveAccountingCategoryResponseTypedDict",
     "RemoveAccountingContactRequest",
     "RemoveAccountingContactRequestTypedDict",
     "RemoveAccountingContactResponse",
@@ -4496,6 +4552,10 @@ __all__ = [
     "UpdateAccountingBillRequestTypedDict",
     "UpdateAccountingBillResponse",
     "UpdateAccountingBillResponseTypedDict",
+    "UpdateAccountingCategoryRequest",
+    "UpdateAccountingCategoryRequestTypedDict",
+    "UpdateAccountingCategoryResponse",
+    "UpdateAccountingCategoryResponseTypedDict",
     "UpdateAccountingContactRequest",
     "UpdateAccountingContactRequestTypedDict",
     "UpdateAccountingContactResponse",
@@ -4799,6 +4859,10 @@ _dynamic_imports: dict[str, str] = {
     "CreateAccountingBillRequestTypedDict": ".createaccountingbill",
     "CreateAccountingBillResponse": ".createaccountingbill",
     "CreateAccountingBillResponseTypedDict": ".createaccountingbill",
+    "CreateAccountingCategoryRequest": ".createaccountingcategory",
+    "CreateAccountingCategoryRequestTypedDict": ".createaccountingcategory",
+    "CreateAccountingCategoryResponse": ".createaccountingcategory",
+    "CreateAccountingCategoryResponseTypedDict": ".createaccountingcategory",
     "CreateAccountingContactRequest": ".createaccountingcontact",
     "CreateAccountingContactRequestTypedDict": ".createaccountingcontact",
     "CreateAccountingContactResponse": ".createaccountingcontact",
@@ -5101,6 +5165,10 @@ _dynamic_imports: dict[str, str] = {
     "GetAccountingBillRequestTypedDict": ".getaccountingbill",
     "GetAccountingBillResponse": ".getaccountingbill",
     "GetAccountingBillResponseTypedDict": ".getaccountingbill",
+    "GetAccountingCategoryRequest": ".getaccountingcategory",
+    "GetAccountingCategoryRequestTypedDict": ".getaccountingcategory",
+    "GetAccountingCategoryResponse": ".getaccountingcategory",
+    "GetAccountingCategoryResponseTypedDict": ".getaccountingcategory",
     "GetAccountingContactRequest": ".getaccountingcontact",
     "GetAccountingContactRequestTypedDict": ".getaccountingcontact",
     "GetAccountingContactResponse": ".getaccountingcontact",
@@ -5445,6 +5513,10 @@ _dynamic_imports: dict[str, str] = {
     "ListAccountingBillsRequestTypedDict": ".listaccountingbills",
     "ListAccountingBillsResponse": ".listaccountingbills",
     "ListAccountingBillsResponseTypedDict": ".listaccountingbills",
+    "ListAccountingCategoriesRequest": ".listaccountingcategories",
+    "ListAccountingCategoriesRequestTypedDict": ".listaccountingcategories",
+    "ListAccountingCategoriesResponse": ".listaccountingcategories",
+    "ListAccountingCategoriesResponseTypedDict": ".listaccountingcategories",
     "ListAccountingContactsRequest": ".listaccountingcontacts",
     "ListAccountingContactsRequestTypedDict": ".listaccountingcontacts",
     "ListAccountingContactsResponse": ".listaccountingcontacts",
@@ -5820,6 +5892,10 @@ _dynamic_imports: dict[str, str] = {
     "PatchAccountingBillRequestTypedDict": ".patchaccountingbill",
     "PatchAccountingBillResponse": ".patchaccountingbill",
     "PatchAccountingBillResponseTypedDict": ".patchaccountingbill",
+    "PatchAccountingCategoryRequest": ".patchaccountingcategory",
+    "PatchAccountingCategoryRequestTypedDict": ".patchaccountingcategory",
+    "PatchAccountingCategoryResponse": ".patchaccountingcategory",
+    "PatchAccountingCategoryResponseTypedDict": ".patchaccountingcategory",
     "PatchAccountingContactRequest": ".patchaccountingcontact",
     "PatchAccountingContactRequestTypedDict": ".patchaccountingcontact",
     "PatchAccountingContactResponse": ".patchaccountingcontact",
@@ -6120,6 +6196,10 @@ _dynamic_imports: dict[str, str] = {
     "RemoveAccountingBillRequestTypedDict": ".removeaccountingbill",
     "RemoveAccountingBillResponse": ".removeaccountingbill",
     "RemoveAccountingBillResponseTypedDict": ".removeaccountingbill",
+    "RemoveAccountingCategoryRequest": ".removeaccountingcategory",
+    "RemoveAccountingCategoryRequestTypedDict": ".removeaccountingcategory",
+    "RemoveAccountingCategoryResponse": ".removeaccountingcategory",
+    "RemoveAccountingCategoryResponseTypedDict": ".removeaccountingcategory",
     "RemoveAccountingContactRequest": ".removeaccountingcontact",
     "RemoveAccountingContactRequestTypedDict": ".removeaccountingcontact",
     "RemoveAccountingContactResponse": ".removeaccountingcontact",
@@ -6412,6 +6492,10 @@ _dynamic_imports: dict[str, str] = {
     "UpdateAccountingBillRequestTypedDict": ".updateaccountingbill",
     "UpdateAccountingBillResponse": ".updateaccountingbill",
     "UpdateAccountingBillResponseTypedDict": ".updateaccountingbill",
+    "UpdateAccountingCategoryRequest": ".updateaccountingcategory",
+    "UpdateAccountingCategoryRequestTypedDict": ".updateaccountingcategory",
+    "UpdateAccountingCategoryResponse": ".updateaccountingcategory",
+    "UpdateAccountingCategoryResponseTypedDict": ".updateaccountingcategory",
     "UpdateAccountingContactRequest": ".updateaccountingcontact",
     "UpdateAccountingContactRequestTypedDict": ".updateaccountingcontact",
     "UpdateAccountingContactResponse": ".updateaccountingcontact",

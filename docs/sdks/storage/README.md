@@ -18,6 +18,7 @@ Create a file
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="createStorageFile" method="post" path="/storage/{connection_id}/file" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -64,6 +65,7 @@ Retrieve a file
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getStorageFile" method="get" path="/storage/{connection_id}/file/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -110,6 +112,7 @@ List all files
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listStorageFiles" method="get" path="/storage/{connection_id}/file" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -155,6 +158,7 @@ Update a file
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="patchStorageFile" method="patch" path="/storage/{connection_id}/file/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -202,6 +206,7 @@ Remove a file
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="removeStorageFile" method="delete" path="/storage/{connection_id}/file/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -248,6 +253,7 @@ Update a file
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="updateStorageFile" method="put" path="/storage/{connection_id}/file/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared

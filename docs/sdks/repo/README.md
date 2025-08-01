@@ -42,6 +42,7 @@ Create a branch
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="createRepoBranch" method="post" path="/repo/{connection_id}/branch" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -91,6 +92,7 @@ Create a commit
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="createRepoCommit" method="post" path="/repo/{connection_id}/commit" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -140,6 +142,7 @@ Create an organization
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="createRepoOrganization" method="post" path="/repo/{connection_id}/organization" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -186,6 +189,7 @@ Create a pullrequest
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="createRepoPullrequest" method="post" path="/repo/{connection_id}/pullrequest" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -232,6 +236,7 @@ Create a repository
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="createRepoRepository" method="post" path="/repo/{connection_id}/repository" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -280,6 +285,7 @@ Retrieve a branch
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getRepoBranch" method="get" path="/repo/{connection_id}/branch/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -326,6 +332,7 @@ Retrieve a commit
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getRepoCommit" method="get" path="/repo/{connection_id}/commit/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -372,6 +379,7 @@ Retrieve an organization
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getRepoOrganization" method="get" path="/repo/{connection_id}/organization/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -418,6 +426,7 @@ Retrieve a pullrequest
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getRepoPullrequest" method="get" path="/repo/{connection_id}/pullrequest/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -464,6 +473,7 @@ Retrieve a repository
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getRepoRepository" method="get" path="/repo/{connection_id}/repository/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -510,6 +520,7 @@ List all branches
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listRepoBranches" method="get" path="/repo/{connection_id}/branch" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -555,6 +566,7 @@ List all commits
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listRepoCommits" method="get" path="/repo/{connection_id}/commit" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -600,6 +612,7 @@ List all organizations
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listRepoOrganizations" method="get" path="/repo/{connection_id}/organization" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -645,6 +658,7 @@ List all pullrequests
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listRepoPullrequests" method="get" path="/repo/{connection_id}/pullrequest" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -690,6 +704,7 @@ List all repositories
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listRepoRepositories" method="get" path="/repo/{connection_id}/repository" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -735,6 +750,7 @@ Update a branch
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="patchRepoBranch" method="patch" path="/repo/{connection_id}/branch/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -785,6 +801,7 @@ Update a commit
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="patchRepoCommit" method="patch" path="/repo/{connection_id}/commit/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -835,6 +852,7 @@ Update an organization
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="patchRepoOrganization" method="patch" path="/repo/{connection_id}/organization/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -882,6 +900,7 @@ Update a pullrequest
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="patchRepoPullrequest" method="patch" path="/repo/{connection_id}/pullrequest/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -929,6 +948,7 @@ Update a repository
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="patchRepoRepository" method="patch" path="/repo/{connection_id}/repository/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -978,6 +998,7 @@ Remove a branch
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="removeRepoBranch" method="delete" path="/repo/{connection_id}/branch/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1024,6 +1045,7 @@ Remove a commit
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="removeRepoCommit" method="delete" path="/repo/{connection_id}/commit/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1070,6 +1092,7 @@ Remove an organization
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="removeRepoOrganization" method="delete" path="/repo/{connection_id}/organization/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1116,6 +1139,7 @@ Remove a pullrequest
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="removeRepoPullrequest" method="delete" path="/repo/{connection_id}/pullrequest/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1162,6 +1186,7 @@ Remove a repository
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="removeRepoRepository" method="delete" path="/repo/{connection_id}/repository/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1208,6 +1233,7 @@ Update a branch
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="updateRepoBranch" method="put" path="/repo/{connection_id}/branch/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1258,6 +1284,7 @@ Update a commit
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="updateRepoCommit" method="put" path="/repo/{connection_id}/commit/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1308,6 +1335,7 @@ Update an organization
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="updateRepoOrganization" method="put" path="/repo/{connection_id}/organization/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1355,6 +1383,7 @@ Update a pullrequest
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="updateRepoPullrequest" method="put" path="/repo/{connection_id}/pullrequest/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1402,6 +1431,7 @@ Update a repository
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="updateRepoRepository" method="put" path="/repo/{connection_id}/repository/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared

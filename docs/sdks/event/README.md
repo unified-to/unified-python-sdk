@@ -24,6 +24,7 @@ Create an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="createCalendarEvent" method="post" path="/calendar/{connection_id}/event" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -70,6 +71,7 @@ Create an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="createCrmEvent" method="post" path="/crm/{connection_id}/event" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -116,6 +118,7 @@ Retrieve an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getCalendarEvent" method="get" path="/calendar/{connection_id}/event/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -162,6 +165,7 @@ Retrieve an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getCrmEvent" method="get" path="/crm/{connection_id}/event/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -208,6 +212,7 @@ List all events
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listCalendarEvents" method="get" path="/calendar/{connection_id}/event" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -253,6 +258,7 @@ List all events
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listCrmEvents" method="get" path="/crm/{connection_id}/event" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -298,6 +304,7 @@ Update an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="patchCalendarEvent" method="patch" path="/calendar/{connection_id}/event/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -345,6 +352,7 @@ Update an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="patchCrmEvent" method="patch" path="/crm/{connection_id}/event/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -392,6 +400,7 @@ Remove an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="removeCalendarEvent" method="delete" path="/calendar/{connection_id}/event/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -438,6 +447,7 @@ Remove an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="removeCrmEvent" method="delete" path="/crm/{connection_id}/event/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -484,6 +494,7 @@ Update an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="updateCalendarEvent" method="put" path="/calendar/{connection_id}/event/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -531,6 +542,7 @@ Update an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="updateCrmEvent" method="put" path="/crm/{connection_id}/event/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared

@@ -18,6 +18,7 @@ Create a journal
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="createAccountingJournal" method="post" path="/accounting/{connection_id}/journal" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -64,6 +65,7 @@ Retrieve a journal
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getAccountingJournal" method="get" path="/accounting/{connection_id}/journal/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -110,6 +112,7 @@ List all journals
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listAccountingJournals" method="get" path="/accounting/{connection_id}/journal" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -155,6 +158,7 @@ Update a journal
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="patchAccountingJournal" method="patch" path="/accounting/{connection_id}/journal/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -202,6 +206,7 @@ Remove a journal
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="removeAccountingJournal" method="delete" path="/accounting/{connection_id}/journal/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -248,6 +253,7 @@ Update a journal
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="updateAccountingJournal" method="put" path="/accounting/{connection_id}/journal/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared

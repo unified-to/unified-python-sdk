@@ -7,6 +7,7 @@
 
 * [create_accounting_account](#create_accounting_account) - Create an account
 * [create_accounting_bill](#create_accounting_bill) - Create a bill
+* [create_accounting_category](#create_accounting_category) - Create a category
 * [create_accounting_contact](#create_accounting_contact) - Create a contact
 * [create_accounting_creditmemo](#create_accounting_creditmemo) - Create a creditmemo
 * [create_accounting_invoice](#create_accounting_invoice) - Create an invoice
@@ -19,6 +20,7 @@
 * [get_accounting_account](#get_accounting_account) - Retrieve an account
 * [get_accounting_balancesheet](#get_accounting_balancesheet) - Retrieve a balancesheet
 * [get_accounting_bill](#get_accounting_bill) - Retrieve a bill
+* [get_accounting_category](#get_accounting_category) - Retrieve a category
 * [get_accounting_contact](#get_accounting_contact) - Retrieve a contact
 * [get_accounting_creditmemo](#get_accounting_creditmemo) - Retrieve a creditmemo
 * [get_accounting_invoice](#get_accounting_invoice) - Retrieve an invoice
@@ -35,6 +37,7 @@
 * [list_accounting_accounts](#list_accounting_accounts) - List all accounts
 * [list_accounting_balancesheets](#list_accounting_balancesheets) - List all balancesheets
 * [list_accounting_bills](#list_accounting_bills) - List all bills
+* [list_accounting_categories](#list_accounting_categories) - List all categories
 * [list_accounting_contacts](#list_accounting_contacts) - List all contacts
 * [list_accounting_creditmemoes](#list_accounting_creditmemoes) - List all creditmemoes
 * [list_accounting_invoices](#list_accounting_invoices) - List all invoices
@@ -50,6 +53,7 @@
 * [list_accounting_trialbalances](#list_accounting_trialbalances) - List all trialbalances
 * [patch_accounting_account](#patch_accounting_account) - Update an account
 * [patch_accounting_bill](#patch_accounting_bill) - Update a bill
+* [patch_accounting_category](#patch_accounting_category) - Update a category
 * [patch_accounting_contact](#patch_accounting_contact) - Update a contact
 * [patch_accounting_creditmemo](#patch_accounting_creditmemo) - Update a creditmemo
 * [patch_accounting_invoice](#patch_accounting_invoice) - Update an invoice
@@ -61,6 +65,7 @@
 * [patch_accounting_transaction](#patch_accounting_transaction) - Update a transaction
 * [remove_accounting_account](#remove_accounting_account) - Remove an account
 * [remove_accounting_bill](#remove_accounting_bill) - Remove a bill
+* [remove_accounting_category](#remove_accounting_category) - Remove a category
 * [remove_accounting_contact](#remove_accounting_contact) - Remove a contact
 * [remove_accounting_creditmemo](#remove_accounting_creditmemo) - Remove a creditmemo
 * [remove_accounting_invoice](#remove_accounting_invoice) - Remove an invoice
@@ -72,6 +77,7 @@
 * [remove_accounting_transaction](#remove_accounting_transaction) - Remove a transaction
 * [update_accounting_account](#update_accounting_account) - Update an account
 * [update_accounting_bill](#update_accounting_bill) - Update a bill
+* [update_accounting_category](#update_accounting_category) - Update a category
 * [update_accounting_contact](#update_accounting_contact) - Update a contact
 * [update_accounting_creditmemo](#update_accounting_creditmemo) - Update a creditmemo
 * [update_accounting_invoice](#update_accounting_invoice) - Update an invoice
@@ -88,6 +94,7 @@ Create an account
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="createAccountingAccount" method="post" path="/accounting/{connection_id}/account" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -134,6 +141,7 @@ Create a bill
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="createAccountingBill" method="post" path="/accounting/{connection_id}/bill" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -174,12 +182,60 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## create_accounting_category
+
+Create a category
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="createAccountingCategory" method="post" path="/accounting/{connection_id}/category" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.accounting.create_accounting_category(request={
+        "accounting_category": {},
+        "connection_id": "<id>",
+    })
+
+    assert res.accounting_category is not None
+
+    # Handle response
+    print(res.accounting_category)
+
+```
+
+### Parameters
+
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                | [operations.CreateAccountingCategoryRequest](../../models/operations/createaccountingcategoryrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| `retries`                                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                         | :heavy_minus_sign:                                                                                       | Configuration to override the default retry behavior of the client.                                      |
+
+### Response
+
+**[operations.CreateAccountingCategoryResponse](../../models/operations/createaccountingcategoryresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## create_accounting_contact
 
 Create a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="createAccountingContact" method="post" path="/accounting/{connection_id}/contact" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -226,6 +282,7 @@ Create a creditmemo
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="createAccountingCreditmemo" method="post" path="/accounting/{connection_id}/creditmemo" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -272,6 +329,7 @@ Create an invoice
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="createAccountingInvoice" method="post" path="/accounting/{connection_id}/invoice" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -318,6 +376,7 @@ Create a journal
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="createAccountingJournal" method="post" path="/accounting/{connection_id}/journal" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -364,6 +423,7 @@ Create an order
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="createAccountingOrder" method="post" path="/accounting/{connection_id}/order" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -410,6 +470,7 @@ Create a purchaseorder
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="createAccountingPurchaseorder" method="post" path="/accounting/{connection_id}/purchaseorder" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -456,6 +517,7 @@ Create a salesorder
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="createAccountingSalesorder" method="post" path="/accounting/{connection_id}/salesorder" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -502,6 +564,7 @@ Create a taxrate
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="createAccountingTaxrate" method="post" path="/accounting/{connection_id}/taxrate" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -548,6 +611,7 @@ Create a transaction
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="createAccountingTransaction" method="post" path="/accounting/{connection_id}/transaction" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -594,6 +658,7 @@ Retrieve an account
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getAccountingAccount" method="get" path="/accounting/{connection_id}/account/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -640,6 +705,7 @@ Retrieve a balancesheet
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getAccountingBalancesheet" method="get" path="/accounting/{connection_id}/balancesheet/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -686,6 +752,7 @@ Retrieve a bill
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getAccountingBill" method="get" path="/accounting/{connection_id}/bill/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -726,12 +793,60 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## get_accounting_category
+
+Retrieve a category
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="getAccountingCategory" method="get" path="/accounting/{connection_id}/category/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.accounting.get_accounting_category(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.accounting_category is not None
+
+    # Handle response
+    print(res.accounting_category)
+
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `request`                                                                                          | [operations.GetAccountingCategoryRequest](../../models/operations/getaccountingcategoryrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `retries`                                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                   | :heavy_minus_sign:                                                                                 | Configuration to override the default retry behavior of the client.                                |
+
+### Response
+
+**[operations.GetAccountingCategoryResponse](../../models/operations/getaccountingcategoryresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## get_accounting_contact
 
 Retrieve a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getAccountingContact" method="get" path="/accounting/{connection_id}/contact/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -778,6 +893,7 @@ Retrieve a creditmemo
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getAccountingCreditmemo" method="get" path="/accounting/{connection_id}/creditmemo/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -824,6 +940,7 @@ Retrieve an invoice
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getAccountingInvoice" method="get" path="/accounting/{connection_id}/invoice/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -870,6 +987,7 @@ Retrieve a journal
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getAccountingJournal" method="get" path="/accounting/{connection_id}/journal/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -916,6 +1034,7 @@ Retrieve an order
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getAccountingOrder" method="get" path="/accounting/{connection_id}/order/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -962,6 +1081,7 @@ Retrieve an organization
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getAccountingOrganization" method="get" path="/accounting/{connection_id}/organization/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1008,6 +1128,7 @@ Retrieve a profitloss
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getAccountingProfitloss" method="get" path="/accounting/{connection_id}/profitloss/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1054,6 +1175,7 @@ Retrieve a purchaseorder
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getAccountingPurchaseorder" method="get" path="/accounting/{connection_id}/purchaseorder/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1100,6 +1222,7 @@ Retrieve a report
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getAccountingReport" method="get" path="/accounting/{connection_id}/report/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1146,6 +1269,7 @@ Retrieve a salesorder
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getAccountingSalesorder" method="get" path="/accounting/{connection_id}/salesorder/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1192,6 +1316,7 @@ Retrieve a taxrate
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getAccountingTaxrate" method="get" path="/accounting/{connection_id}/taxrate/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1238,6 +1363,7 @@ Retrieve a transaction
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getAccountingTransaction" method="get" path="/accounting/{connection_id}/transaction/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1284,6 +1410,7 @@ Retrieve a trialbalance
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getAccountingTrialbalance" method="get" path="/accounting/{connection_id}/trialbalance/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1330,6 +1457,7 @@ List all accounts
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listAccountingAccounts" method="get" path="/accounting/{connection_id}/account" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1375,6 +1503,7 @@ List all balancesheets
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listAccountingBalancesheets" method="get" path="/accounting/{connection_id}/balancesheet" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1420,6 +1549,7 @@ List all bills
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listAccountingBills" method="get" path="/accounting/{connection_id}/bill" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1459,12 +1589,59 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## list_accounting_categories
+
+List all categories
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="listAccountingCategories" method="get" path="/accounting/{connection_id}/category" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.accounting.list_accounting_categories(request={
+        "connection_id": "<id>",
+    })
+
+    assert res.accounting_categories is not None
+
+    # Handle response
+    print(res.accounting_categories)
+
+```
+
+### Parameters
+
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                | [operations.ListAccountingCategoriesRequest](../../models/operations/listaccountingcategoriesrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| `retries`                                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                         | :heavy_minus_sign:                                                                                       | Configuration to override the default retry behavior of the client.                                      |
+
+### Response
+
+**[operations.ListAccountingCategoriesResponse](../../models/operations/listaccountingcategoriesresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## list_accounting_contacts
 
 List all contacts
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listAccountingContacts" method="get" path="/accounting/{connection_id}/contact" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1510,6 +1687,7 @@ List all creditmemoes
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listAccountingCreditmemoes" method="get" path="/accounting/{connection_id}/creditmemo" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1555,6 +1733,7 @@ List all invoices
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listAccountingInvoices" method="get" path="/accounting/{connection_id}/invoice" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1600,6 +1779,7 @@ List all journals
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listAccountingJournals" method="get" path="/accounting/{connection_id}/journal" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1645,6 +1825,7 @@ List all orders
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listAccountingOrders" method="get" path="/accounting/{connection_id}/order" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1690,6 +1871,7 @@ List all organizations
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listAccountingOrganizations" method="get" path="/accounting/{connection_id}/organization" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1735,6 +1917,7 @@ List all profitlosses
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listAccountingProfitlosses" method="get" path="/accounting/{connection_id}/profitloss" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1780,6 +1963,7 @@ List all purchaseorders
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listAccountingPurchaseorders" method="get" path="/accounting/{connection_id}/purchaseorder" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1825,6 +2009,7 @@ List all reports
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listAccountingReports" method="get" path="/accounting/{connection_id}/report" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1870,6 +2055,7 @@ List all salesorders
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listAccountingSalesorders" method="get" path="/accounting/{connection_id}/salesorder" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1915,6 +2101,7 @@ List all taxrates
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listAccountingTaxrates" method="get" path="/accounting/{connection_id}/taxrate" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1960,6 +2147,7 @@ List all transactions
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listAccountingTransactions" method="get" path="/accounting/{connection_id}/transaction" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -2005,6 +2193,7 @@ List all trialbalances
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listAccountingTrialbalances" method="get" path="/accounting/{connection_id}/trialbalance" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -2050,6 +2239,7 @@ Update an account
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="patchAccountingAccount" method="patch" path="/accounting/{connection_id}/account/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -2097,6 +2287,7 @@ Update a bill
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="patchAccountingBill" method="patch" path="/accounting/{connection_id}/bill/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -2138,12 +2329,61 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## patch_accounting_category
+
+Update a category
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="patchAccountingCategory" method="patch" path="/accounting/{connection_id}/category/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.accounting.patch_accounting_category(request={
+        "accounting_category": {},
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.accounting_category is not None
+
+    # Handle response
+    print(res.accounting_category)
+
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                              | [operations.PatchAccountingCategoryRequest](../../models/operations/patchaccountingcategoryrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `retries`                                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                       | :heavy_minus_sign:                                                                                     | Configuration to override the default retry behavior of the client.                                    |
+
+### Response
+
+**[operations.PatchAccountingCategoryResponse](../../models/operations/patchaccountingcategoryresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## patch_accounting_contact
 
 Update a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="patchAccountingContact" method="patch" path="/accounting/{connection_id}/contact/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -2191,6 +2431,7 @@ Update a creditmemo
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="patchAccountingCreditmemo" method="patch" path="/accounting/{connection_id}/creditmemo/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -2238,6 +2479,7 @@ Update an invoice
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="patchAccountingInvoice" method="patch" path="/accounting/{connection_id}/invoice/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -2285,6 +2527,7 @@ Update a journal
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="patchAccountingJournal" method="patch" path="/accounting/{connection_id}/journal/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -2332,6 +2575,7 @@ Update an order
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="patchAccountingOrder" method="patch" path="/accounting/{connection_id}/order/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -2379,6 +2623,7 @@ Update a purchaseorder
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="patchAccountingPurchaseorder" method="patch" path="/accounting/{connection_id}/purchaseorder/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -2426,6 +2671,7 @@ Update a salesorder
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="patchAccountingSalesorder" method="patch" path="/accounting/{connection_id}/salesorder/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -2473,6 +2719,7 @@ Update a taxrate
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="patchAccountingTaxrate" method="patch" path="/accounting/{connection_id}/taxrate/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -2520,6 +2767,7 @@ Update a transaction
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="patchAccountingTransaction" method="patch" path="/accounting/{connection_id}/transaction/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -2567,6 +2815,7 @@ Remove an account
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="removeAccountingAccount" method="delete" path="/accounting/{connection_id}/account/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -2613,6 +2862,7 @@ Remove a bill
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="removeAccountingBill" method="delete" path="/accounting/{connection_id}/bill/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -2653,12 +2903,60 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## remove_accounting_category
+
+Remove a category
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="removeAccountingCategory" method="delete" path="/accounting/{connection_id}/category/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.accounting.remove_accounting_category(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res is not None
+
+    # Handle response
+    print(res)
+
+```
+
+### Parameters
+
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                | [operations.RemoveAccountingCategoryRequest](../../models/operations/removeaccountingcategoryrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| `retries`                                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                         | :heavy_minus_sign:                                                                                       | Configuration to override the default retry behavior of the client.                                      |
+
+### Response
+
+**[operations.RemoveAccountingCategoryResponse](../../models/operations/removeaccountingcategoryresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## remove_accounting_contact
 
 Remove a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="removeAccountingContact" method="delete" path="/accounting/{connection_id}/contact/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -2705,6 +3003,7 @@ Remove a creditmemo
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="removeAccountingCreditmemo" method="delete" path="/accounting/{connection_id}/creditmemo/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -2751,6 +3050,7 @@ Remove an invoice
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="removeAccountingInvoice" method="delete" path="/accounting/{connection_id}/invoice/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -2797,6 +3097,7 @@ Remove a journal
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="removeAccountingJournal" method="delete" path="/accounting/{connection_id}/journal/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -2843,6 +3144,7 @@ Remove an order
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="removeAccountingOrder" method="delete" path="/accounting/{connection_id}/order/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -2889,6 +3191,7 @@ Remove a purchaseorder
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="removeAccountingPurchaseorder" method="delete" path="/accounting/{connection_id}/purchaseorder/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -2935,6 +3238,7 @@ Remove a salesorder
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="removeAccountingSalesorder" method="delete" path="/accounting/{connection_id}/salesorder/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -2981,6 +3285,7 @@ Remove a taxrate
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="removeAccountingTaxrate" method="delete" path="/accounting/{connection_id}/taxrate/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -3027,6 +3332,7 @@ Remove a transaction
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="removeAccountingTransaction" method="delete" path="/accounting/{connection_id}/transaction/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -3073,6 +3379,7 @@ Update an account
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="updateAccountingAccount" method="put" path="/accounting/{connection_id}/account/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -3120,6 +3427,7 @@ Update a bill
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="updateAccountingBill" method="put" path="/accounting/{connection_id}/bill/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -3161,12 +3469,61 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## update_accounting_category
+
+Update a category
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="updateAccountingCategory" method="put" path="/accounting/{connection_id}/category/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.accounting.update_accounting_category(request={
+        "accounting_category": {},
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.accounting_category is not None
+
+    # Handle response
+    print(res.accounting_category)
+
+```
+
+### Parameters
+
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                | [operations.UpdateAccountingCategoryRequest](../../models/operations/updateaccountingcategoryrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| `retries`                                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                         | :heavy_minus_sign:                                                                                       | Configuration to override the default retry behavior of the client.                                      |
+
+### Response
+
+**[operations.UpdateAccountingCategoryResponse](../../models/operations/updateaccountingcategoryresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## update_accounting_contact
 
 Update a contact
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="updateAccountingContact" method="put" path="/accounting/{connection_id}/contact/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -3214,6 +3571,7 @@ Update a creditmemo
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="updateAccountingCreditmemo" method="put" path="/accounting/{connection_id}/creditmemo/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -3261,6 +3619,7 @@ Update an invoice
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="updateAccountingInvoice" method="put" path="/accounting/{connection_id}/invoice/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -3308,6 +3667,7 @@ Update a journal
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="updateAccountingJournal" method="put" path="/accounting/{connection_id}/journal/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -3355,6 +3715,7 @@ Update an order
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="updateAccountingOrder" method="put" path="/accounting/{connection_id}/order/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -3402,6 +3763,7 @@ Update a purchaseorder
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="updateAccountingPurchaseorder" method="put" path="/accounting/{connection_id}/purchaseorder/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -3449,6 +3811,7 @@ Update a salesorder
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="updateAccountingSalesorder" method="put" path="/accounting/{connection_id}/salesorder/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -3496,6 +3859,7 @@ Update a taxrate
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="updateAccountingTaxrate" method="put" path="/accounting/{connection_id}/taxrate/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -3543,6 +3907,7 @@ Update a transaction
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="updateAccountingTransaction" method="put" path="/accounting/{connection_id}/transaction/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared

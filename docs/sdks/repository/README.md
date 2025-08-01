@@ -18,6 +18,7 @@ Create a repository
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="createRepoRepository" method="post" path="/repo/{connection_id}/repository" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -66,6 +67,7 @@ Retrieve a repository
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getRepoRepository" method="get" path="/repo/{connection_id}/repository/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -112,6 +114,7 @@ List all repositories
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listRepoRepositories" method="get" path="/repo/{connection_id}/repository" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -157,6 +160,7 @@ Update a repository
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="patchRepoRepository" method="patch" path="/repo/{connection_id}/repository/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -206,6 +210,7 @@ Remove a repository
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="removeRepoRepository" method="delete" path="/repo/{connection_id}/repository/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -252,6 +257,7 @@ Update a repository
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="updateRepoRepository" method="put" path="/repo/{connection_id}/repository/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared

@@ -20,6 +20,7 @@ The data payload received by your server is described at https://docs.unified.to
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="createUnifiedWebhook" method="post" path="/unified/webhook" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -69,6 +70,7 @@ Retrieve webhook by its ID
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getUnifiedWebhook" method="get" path="/unified/webhook/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -114,6 +116,7 @@ Returns all registered webhooks
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listUnifiedWebhooks" method="get" path="/unified/webhook" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -157,6 +160,7 @@ Update webhook subscription
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="patchUnifiedWebhook" method="patch" path="/unified/webhook/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -207,6 +211,7 @@ Trigger webhook
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="patchUnifiedWebhookTrigger" method="patch" path="/unified/webhook/{id}/trigger" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -252,6 +257,7 @@ Remove webhook subscription
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="removeUnifiedWebhook" method="delete" path="/unified/webhook/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -297,6 +303,7 @@ Update webhook subscription
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="updateUnifiedWebhook" method="put" path="/unified/webhook/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -347,6 +354,7 @@ Trigger webhook
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="updateUnifiedWebhookTrigger" method="put" path="/unified/webhook/{id}/trigger" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared

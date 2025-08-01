@@ -30,6 +30,7 @@ Create a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="createKmsComment" method="post" path="/kms/{connection_id}/comment" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -78,6 +79,7 @@ Create a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="createTaskComment" method="post" path="/task/{connection_id}/comment" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -127,6 +129,7 @@ Create a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="createUcComment" method="post" path="/uc/{connection_id}/comment" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -175,6 +178,7 @@ Retrieve a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getKmsComment" method="get" path="/kms/{connection_id}/comment/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -221,6 +225,7 @@ Retrieve a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getTaskComment" method="get" path="/task/{connection_id}/comment/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -267,6 +272,7 @@ Retrieve a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getUcComment" method="get" path="/uc/{connection_id}/comment/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -313,6 +319,7 @@ List all comments
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listKmsComments" method="get" path="/kms/{connection_id}/comment" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -358,6 +365,7 @@ List all comments
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listTaskComments" method="get" path="/task/{connection_id}/comment" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -403,6 +411,7 @@ List all comments
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listUcComments" method="get" path="/uc/{connection_id}/comment" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -448,6 +457,7 @@ Update a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="patchKmsComment" method="patch" path="/kms/{connection_id}/comment/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -497,6 +507,7 @@ Update a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="patchTaskComment" method="patch" path="/task/{connection_id}/comment/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -547,6 +558,7 @@ Update a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="patchUcComment" method="patch" path="/uc/{connection_id}/comment/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -596,6 +608,7 @@ Remove a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="removeKmsComment" method="delete" path="/kms/{connection_id}/comment/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -642,6 +655,7 @@ Remove a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="removeTaskComment" method="delete" path="/task/{connection_id}/comment/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -688,6 +702,7 @@ Remove a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="removeUcComment" method="delete" path="/uc/{connection_id}/comment/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -734,6 +749,7 @@ Update a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="updateKmsComment" method="put" path="/kms/{connection_id}/comment/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -783,6 +799,7 @@ Update a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="updateTaskComment" method="put" path="/task/{connection_id}/comment/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -833,6 +850,7 @@ Update a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="updateUcComment" method="put" path="/uc/{connection_id}/comment/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared

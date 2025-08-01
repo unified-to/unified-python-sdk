@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: 34e9b060cccb99df9d62ad47f96d358d
+  docChecksum: 29f7859e9080ffea0b7fd7e4996b62ce
   docVersion: "1.0"
-  speakeasyVersion: 1.582.0
-  generationVersion: 2.657.1
-  releaseVersion: 0.48.9
-  configChecksum: fba0ee74f107c730cb1545e494cb37e6
+  speakeasyVersion: 1.595.0
+  generationVersion: 2.670.1
+  releaseVersion: 0.48.10
+  configChecksum: 40f74df248e11a605e07f2eb34e6c116
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -16,7 +16,7 @@ features:
     acceptHeaders: 3.0.0
     additionalDependencies: 1.0.0
     constsAndDefaults: 1.0.5
-    core: 5.19.4
+    core: 5.19.5
     defaultEnabledRetries: 0.2.0
     downloadStreams: 1.0.1
     enumUnions: 0.1.0
@@ -39,6 +39,8 @@ generatedFiles:
   - docs/models/operations/createaccountingaccountresponse.md
   - docs/models/operations/createaccountingbillrequest.md
   - docs/models/operations/createaccountingbillresponse.md
+  - docs/models/operations/createaccountingcategoryrequest.md
+  - docs/models/operations/createaccountingcategoryresponse.md
   - docs/models/operations/createaccountingcontactrequest.md
   - docs/models/operations/createaccountingcontactresponse.md
   - docs/models/operations/createaccountingcreditmemorequest.md
@@ -190,6 +192,8 @@ generatedFiles:
   - docs/models/operations/getaccountingbalancesheetresponse.md
   - docs/models/operations/getaccountingbillrequest.md
   - docs/models/operations/getaccountingbillresponse.md
+  - docs/models/operations/getaccountingcategoryrequest.md
+  - docs/models/operations/getaccountingcategoryresponse.md
   - docs/models/operations/getaccountingcontactrequest.md
   - docs/models/operations/getaccountingcontactresponse.md
   - docs/models/operations/getaccountingcreditmemorequest.md
@@ -362,6 +366,8 @@ generatedFiles:
   - docs/models/operations/listaccountingbalancesheetsresponse.md
   - docs/models/operations/listaccountingbillsrequest.md
   - docs/models/operations/listaccountingbillsresponse.md
+  - docs/models/operations/listaccountingcategoriesrequest.md
+  - docs/models/operations/listaccountingcategoriesresponse.md
   - docs/models/operations/listaccountingcontactsrequest.md
   - docs/models/operations/listaccountingcontactsresponse.md
   - docs/models/operations/listaccountingcreditmemoesrequest.md
@@ -549,6 +555,8 @@ generatedFiles:
   - docs/models/operations/patchaccountingaccountresponse.md
   - docs/models/operations/patchaccountingbillrequest.md
   - docs/models/operations/patchaccountingbillresponse.md
+  - docs/models/operations/patchaccountingcategoryrequest.md
+  - docs/models/operations/patchaccountingcategoryresponse.md
   - docs/models/operations/patchaccountingcontactrequest.md
   - docs/models/operations/patchaccountingcontactresponse.md
   - docs/models/operations/patchaccountingcreditmemorequest.md
@@ -700,6 +708,8 @@ generatedFiles:
   - docs/models/operations/removeaccountingaccountresponse.md
   - docs/models/operations/removeaccountingbillrequest.md
   - docs/models/operations/removeaccountingbillresponse.md
+  - docs/models/operations/removeaccountingcategoryrequest.md
+  - docs/models/operations/removeaccountingcategoryresponse.md
   - docs/models/operations/removeaccountingcontactrequest.md
   - docs/models/operations/removeaccountingcontactresponse.md
   - docs/models/operations/removeaccountingcreditmemorequest.md
@@ -846,6 +856,8 @@ generatedFiles:
   - docs/models/operations/updateaccountingaccountresponse.md
   - docs/models/operations/updateaccountingbillrequest.md
   - docs/models/operations/updateaccountingbillresponse.md
+  - docs/models/operations/updateaccountingcategoryrequest.md
+  - docs/models/operations/updateaccountingcategoryresponse.md
   - docs/models/operations/updateaccountingcontactrequest.md
   - docs/models/operations/updateaccountingcontactresponse.md
   - docs/models/operations/updateaccountingcreditmemorequest.md
@@ -999,6 +1011,7 @@ generatedFiles:
   - docs/models/shared/accountingbalancesheetitem.md
   - docs/models/shared/accountingbill.md
   - docs/models/shared/accountingbillstatus.md
+  - docs/models/shared/accountingcategory.md
   - docs/models/shared/accountingcontact.md
   - docs/models/shared/accountingcontactpaymentmethod.md
   - docs/models/shared/accountingcontactpaymentmethodtype.md
@@ -1510,6 +1523,7 @@ generatedFiles:
   - docs/sdks/calendar/README.md
   - docs/sdks/call/README.md
   - docs/sdks/candidate/README.md
+  - docs/sdks/category/README.md
   - docs/sdks/channel/README.md
   - docs/sdks/class/README.md
   - docs/sdks/collection/README.md
@@ -1623,6 +1637,7 @@ generatedFiles:
   - src/unified_python_sdk/calendar.py
   - src/unified_python_sdk/call.py
   - src/unified_python_sdk/candidate.py
+  - src/unified_python_sdk/category.py
   - src/unified_python_sdk/channel.py
   - src/unified_python_sdk/class_.py
   - src/unified_python_sdk/collection.py
@@ -1678,6 +1693,7 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/__init__.py
   - src/unified_python_sdk/models/operations/createaccountingaccount.py
   - src/unified_python_sdk/models/operations/createaccountingbill.py
+  - src/unified_python_sdk/models/operations/createaccountingcategory.py
   - src/unified_python_sdk/models/operations/createaccountingcontact.py
   - src/unified_python_sdk/models/operations/createaccountingcreditmemo.py
   - src/unified_python_sdk/models/operations/createaccountinginvoice.py
@@ -1754,6 +1770,7 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/getaccountingaccount.py
   - src/unified_python_sdk/models/operations/getaccountingbalancesheet.py
   - src/unified_python_sdk/models/operations/getaccountingbill.py
+  - src/unified_python_sdk/models/operations/getaccountingcategory.py
   - src/unified_python_sdk/models/operations/getaccountingcontact.py
   - src/unified_python_sdk/models/operations/getaccountingcreditmemo.py
   - src/unified_python_sdk/models/operations/getaccountinginvoice.py
@@ -1840,6 +1857,7 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/listaccountingaccounts.py
   - src/unified_python_sdk/models/operations/listaccountingbalancesheets.py
   - src/unified_python_sdk/models/operations/listaccountingbills.py
+  - src/unified_python_sdk/models/operations/listaccountingcategories.py
   - src/unified_python_sdk/models/operations/listaccountingcontacts.py
   - src/unified_python_sdk/models/operations/listaccountingcreditmemoes.py
   - src/unified_python_sdk/models/operations/listaccountinginvoices.py
@@ -1933,6 +1951,7 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/listunifiedwebhooks.py
   - src/unified_python_sdk/models/operations/patchaccountingaccount.py
   - src/unified_python_sdk/models/operations/patchaccountingbill.py
+  - src/unified_python_sdk/models/operations/patchaccountingcategory.py
   - src/unified_python_sdk/models/operations/patchaccountingcontact.py
   - src/unified_python_sdk/models/operations/patchaccountingcreditmemo.py
   - src/unified_python_sdk/models/operations/patchaccountinginvoice.py
@@ -2008,6 +2027,7 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/patchunifiedwebhooktrigger.py
   - src/unified_python_sdk/models/operations/removeaccountingaccount.py
   - src/unified_python_sdk/models/operations/removeaccountingbill.py
+  - src/unified_python_sdk/models/operations/removeaccountingcategory.py
   - src/unified_python_sdk/models/operations/removeaccountingcontact.py
   - src/unified_python_sdk/models/operations/removeaccountingcreditmemo.py
   - src/unified_python_sdk/models/operations/removeaccountinginvoice.py
@@ -2081,6 +2101,7 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/removeunifiedwebhook.py
   - src/unified_python_sdk/models/operations/updateaccountingaccount.py
   - src/unified_python_sdk/models/operations/updateaccountingbill.py
+  - src/unified_python_sdk/models/operations/updateaccountingcategory.py
   - src/unified_python_sdk/models/operations/updateaccountingcontact.py
   - src/unified_python_sdk/models/operations/updateaccountingcreditmemo.py
   - src/unified_python_sdk/models/operations/updateaccountinginvoice.py
@@ -2161,6 +2182,7 @@ generatedFiles:
   - src/unified_python_sdk/models/shared/accountingbalancesheet.py
   - src/unified_python_sdk/models/shared/accountingbalancesheetitem.py
   - src/unified_python_sdk/models/shared/accountingbill.py
+  - src/unified_python_sdk/models/shared/accountingcategory.py
   - src/unified_python_sdk/models/shared/accountingcontact.py
   - src/unified_python_sdk/models/shared/accountingcontactpaymentmethod.py
   - src/unified_python_sdk/models/shared/accountingcreditmemo.py
@@ -6787,6 +6809,61 @@ examples:
           application/json: {}
   updateAccountingSalesorder:
     speakeasy-default-update-accounting-salesorder:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  createAccountingCategory:
+    speakeasy-default-create-accounting-category:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  getAccountingCategory:
+    speakeasy-default-get-accounting-category:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  listAccountingCategories:
+    speakeasy-default-list-accounting-categories:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  patchAccountingCategory:
+    speakeasy-default-patch-accounting-category:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  removeAccountingCategory:
+    speakeasy-default-remove-accounting-category:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateAccountingCategory:
+    speakeasy-default-update-accounting-category:
       parameters:
         path:
           connection_id: "<id>"

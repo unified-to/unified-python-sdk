@@ -18,6 +18,7 @@ Create an instructor
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="createLmsInstructor" method="post" path="/lms/{connection_id}/instructor" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -64,6 +65,7 @@ Retrieve an instructor
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getLmsInstructor" method="get" path="/lms/{connection_id}/instructor/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -110,6 +112,7 @@ List all instructors
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listLmsInstructors" method="get" path="/lms/{connection_id}/instructor" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -155,6 +158,7 @@ Update an instructor
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="patchLmsInstructor" method="patch" path="/lms/{connection_id}/instructor/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -202,6 +206,7 @@ Remove an instructor
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="removeLmsInstructor" method="delete" path="/lms/{connection_id}/instructor/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -248,6 +253,7 @@ Update an instructor
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="updateLmsInstructor" method="put" path="/lms/{connection_id}/instructor/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared

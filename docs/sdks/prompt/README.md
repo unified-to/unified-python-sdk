@@ -13,6 +13,7 @@ Create a prompt
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="createGenaiPrompt" method="post" path="/genai/{connection_id}/prompt" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared

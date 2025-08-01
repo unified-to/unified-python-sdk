@@ -14,6 +14,7 @@ Retrieve a timeoff
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getHrisTimeoff" method="get" path="/hris/{connection_id}/timeoff/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -60,6 +61,7 @@ List all timeoffs
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listHrisTimeoffs" method="get" path="/hris/{connection_id}/timeoff" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared

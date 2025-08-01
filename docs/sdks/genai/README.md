@@ -14,6 +14,7 @@ Create a prompt
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="createGenaiPrompt" method="post" path="/genai/{connection_id}/prompt" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -60,6 +61,7 @@ List all models
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listGenaiModels" method="get" path="/genai/{connection_id}/model" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared

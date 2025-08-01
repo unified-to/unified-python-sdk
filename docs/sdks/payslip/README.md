@@ -14,6 +14,7 @@ Retrieve a payslip
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getHrisPayslip" method="get" path="/hris/{connection_id}/payslip/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -60,6 +61,7 @@ List all payslips
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listHrisPayslips" method="get" path="/hris/{connection_id}/payslip" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared

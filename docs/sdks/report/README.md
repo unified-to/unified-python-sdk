@@ -14,6 +14,7 @@ Retrieve a report
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getAccountingReport" method="get" path="/accounting/{connection_id}/report/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -60,6 +61,7 @@ List all reports
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listAccountingReports" method="get" path="/accounting/{connection_id}/report" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared

@@ -24,6 +24,7 @@ Create a location
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="createCommerceLocation" method="post" path="/commerce/{connection_id}/location" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -72,6 +73,7 @@ Create a location
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="createHrisLocation" method="post" path="/hris/{connection_id}/location" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -118,6 +120,7 @@ Retrieve a location
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getCommerceLocation" method="get" path="/commerce/{connection_id}/location/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -164,6 +167,7 @@ Retrieve a location
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getHrisLocation" method="get" path="/hris/{connection_id}/location/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -210,6 +214,7 @@ List all locations
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listCommerceLocations" method="get" path="/commerce/{connection_id}/location" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -255,6 +260,7 @@ List all locations
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listHrisLocations" method="get" path="/hris/{connection_id}/location" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -300,6 +306,7 @@ Update a location
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="patchCommerceLocation" method="patch" path="/commerce/{connection_id}/location/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -349,6 +356,7 @@ Update a location
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="patchHrisLocation" method="patch" path="/hris/{connection_id}/location/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -396,6 +404,7 @@ Remove a location
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="removeCommerceLocation" method="delete" path="/commerce/{connection_id}/location/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -442,6 +451,7 @@ Remove a location
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="removeHrisLocation" method="delete" path="/hris/{connection_id}/location/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -488,6 +498,7 @@ Update a location
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="updateCommerceLocation" method="put" path="/commerce/{connection_id}/location/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -537,6 +548,7 @@ Update a location
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="updateHrisLocation" method="put" path="/hris/{connection_id}/location/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared

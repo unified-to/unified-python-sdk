@@ -18,6 +18,7 @@ Create a note
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="createTicketingNote" method="post" path="/ticketing/{connection_id}/note" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -64,6 +65,7 @@ Retrieve a note
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getTicketingNote" method="get" path="/ticketing/{connection_id}/note/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -110,6 +112,7 @@ List all notes
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listTicketingNotes" method="get" path="/ticketing/{connection_id}/note" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -155,6 +158,7 @@ Update a note
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="patchTicketingNote" method="patch" path="/ticketing/{connection_id}/note/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -202,6 +206,7 @@ Remove a note
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="removeTicketingNote" method="delete" path="/ticketing/{connection_id}/note/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -248,6 +253,7 @@ Update a note
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="updateTicketingNote" method="put" path="/ticketing/{connection_id}/note/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared

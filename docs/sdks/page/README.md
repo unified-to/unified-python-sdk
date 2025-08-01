@@ -18,6 +18,7 @@ Create a page
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="createKmsPage" method="post" path="/kms/{connection_id}/page" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -67,6 +68,7 @@ Retrieve a page
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getKmsPage" method="get" path="/kms/{connection_id}/page/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -113,6 +115,7 @@ List all pages
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listKmsPages" method="get" path="/kms/{connection_id}/page" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -158,6 +161,7 @@ Update a page
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="patchKmsPage" method="patch" path="/kms/{connection_id}/page/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -208,6 +212,7 @@ Remove a page
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="removeKmsPage" method="delete" path="/kms/{connection_id}/page/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -254,6 +259,7 @@ Update a page
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="updateKmsPage" method="put" path="/kms/{connection_id}/page/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared

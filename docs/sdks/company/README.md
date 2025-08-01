@@ -31,6 +31,7 @@ Create a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="createAtsCompany" method="post" path="/ats/{connection_id}/company" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -79,6 +80,7 @@ Create a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="createCrmCompany" method="post" path="/crm/{connection_id}/company" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -125,6 +127,7 @@ Create a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="createHrisCompany" method="post" path="/hris/{connection_id}/company" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -171,6 +174,7 @@ Retrieve a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getAtsCompany" method="get" path="/ats/{connection_id}/company/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -217,6 +221,7 @@ Retrieve a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getCrmCompany" method="get" path="/crm/{connection_id}/company/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -263,6 +268,7 @@ Retrieve a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getHrisCompany" method="get" path="/hris/{connection_id}/company/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -309,6 +315,7 @@ List all companies
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listAtsCompanies" method="get" path="/ats/{connection_id}/company" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -354,6 +361,7 @@ List all companies
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listCrmCompanies" method="get" path="/crm/{connection_id}/company" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -399,6 +407,7 @@ Retrieve enrichment information for a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listEnrichCompanies" method="get" path="/enrich/{connection_id}/company" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -444,6 +453,7 @@ List all companies
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listHrisCompanies" method="get" path="/hris/{connection_id}/company" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -489,6 +499,7 @@ Update a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="patchAtsCompany" method="patch" path="/ats/{connection_id}/company/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -538,6 +549,7 @@ Update a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="patchCrmCompany" method="patch" path="/crm/{connection_id}/company/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -585,6 +597,7 @@ Update a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="patchHrisCompany" method="patch" path="/hris/{connection_id}/company/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -632,6 +645,7 @@ Remove a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="removeAtsCompany" method="delete" path="/ats/{connection_id}/company/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -678,6 +692,7 @@ Remove a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="removeCrmCompany" method="delete" path="/crm/{connection_id}/company/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -724,6 +739,7 @@ Remove a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="removeHrisCompany" method="delete" path="/hris/{connection_id}/company/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -770,6 +786,7 @@ Update a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="updateAtsCompany" method="put" path="/ats/{connection_id}/company/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -819,6 +836,7 @@ Update a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="updateCrmCompany" method="put" path="/crm/{connection_id}/company/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -866,6 +884,7 @@ Update a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="updateHrisCompany" method="put" path="/hris/{connection_id}/company/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared

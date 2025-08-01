@@ -14,6 +14,7 @@ Retrieve a refund
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getPaymentRefund" method="get" path="/payment/{connection_id}/refund/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -60,6 +61,7 @@ List all refunds
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listPaymentRefunds" method="get" path="/payment/{connection_id}/refund" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared

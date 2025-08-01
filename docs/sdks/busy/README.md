@@ -13,6 +13,7 @@ List all busies
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listCalendarBusies" method="get" path="/calendar/{connection_id}/busy" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared

@@ -18,6 +18,7 @@ Create a branch
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="createRepoBranch" method="post" path="/repo/{connection_id}/branch" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -67,6 +68,7 @@ Retrieve a branch
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getRepoBranch" method="get" path="/repo/{connection_id}/branch/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -113,6 +115,7 @@ List all branches
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listRepoBranches" method="get" path="/repo/{connection_id}/branch" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -158,6 +161,7 @@ Update a branch
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="patchRepoBranch" method="patch" path="/repo/{connection_id}/branch/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -208,6 +212,7 @@ Remove a branch
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="removeRepoBranch" method="delete" path="/repo/{connection_id}/branch/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -254,6 +259,7 @@ Update a branch
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="updateRepoBranch" method="put" path="/repo/{connection_id}/branch/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared

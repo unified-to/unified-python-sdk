@@ -13,6 +13,7 @@ Retrieve enrichment information for a person
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listEnrichPeople" method="get" path="/enrich/{connection_id}/person" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared

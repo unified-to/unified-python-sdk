@@ -33,6 +33,7 @@ Create a calendar
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="createCalendarCalendar" method="post" path="/calendar/{connection_id}/calendar" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -81,6 +82,7 @@ Create an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="createCalendarEvent" method="post" path="/calendar/{connection_id}/event" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -127,6 +129,7 @@ Create a link
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="createCalendarLink" method="post" path="/calendar/{connection_id}/link" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -175,6 +178,7 @@ Retrieve a calendar
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getCalendarCalendar" method="get" path="/calendar/{connection_id}/calendar/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -221,6 +225,7 @@ Retrieve an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getCalendarEvent" method="get" path="/calendar/{connection_id}/event/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -267,6 +272,7 @@ Retrieve a link
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getCalendarLink" method="get" path="/calendar/{connection_id}/link/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -313,6 +319,7 @@ Retrieve a recording
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getCalendarRecording" method="get" path="/calendar/{connection_id}/recording/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -359,6 +366,7 @@ List all busies
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listCalendarBusies" method="get" path="/calendar/{connection_id}/busy" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -404,6 +412,7 @@ List all calendars
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listCalendarCalendars" method="get" path="/calendar/{connection_id}/calendar" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -449,6 +458,7 @@ List all events
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listCalendarEvents" method="get" path="/calendar/{connection_id}/event" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -494,6 +504,7 @@ List all links
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listCalendarLinks" method="get" path="/calendar/{connection_id}/link" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -539,6 +550,7 @@ List all recordings
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listCalendarRecordings" method="get" path="/calendar/{connection_id}/recording" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -584,6 +596,7 @@ Update a calendar
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="patchCalendarCalendar" method="patch" path="/calendar/{connection_id}/calendar/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -633,6 +646,7 @@ Update an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="patchCalendarEvent" method="patch" path="/calendar/{connection_id}/event/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -680,6 +694,7 @@ Update a link
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="patchCalendarLink" method="patch" path="/calendar/{connection_id}/link/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -729,6 +744,7 @@ Remove a calendar
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="removeCalendarCalendar" method="delete" path="/calendar/{connection_id}/calendar/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -775,6 +791,7 @@ Remove an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="removeCalendarEvent" method="delete" path="/calendar/{connection_id}/event/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -821,6 +838,7 @@ Remove a link
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="removeCalendarLink" method="delete" path="/calendar/{connection_id}/link/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -867,6 +885,7 @@ Update a calendar
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="updateCalendarCalendar" method="put" path="/calendar/{connection_id}/calendar/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -916,6 +935,7 @@ Update an event
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="updateCalendarEvent" method="put" path="/calendar/{connection_id}/event/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -963,6 +983,7 @@ Update a link
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="updateCalendarLink" method="put" path="/calendar/{connection_id}/link/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared

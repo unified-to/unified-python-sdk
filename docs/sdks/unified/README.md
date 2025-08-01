@@ -32,6 +32,7 @@ Used only to import existing customer credentials; use "Authorize new connection
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="createUnifiedConnection" method="post" path="/unified/connection" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -81,6 +82,7 @@ The data payload received by your server is described at https://docs.unified.to
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="createUnifiedWebhook" method="post" path="/unified/webhook" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -130,6 +132,7 @@ Retrieve specific API Call by its ID
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getUnifiedApicall" method="get" path="/unified/apicall/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -175,6 +178,7 @@ Retrieve connection
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getUnifiedConnection" method="get" path="/unified/connection/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -220,6 +224,7 @@ Returns an authorization URL for the specified integration.  Once a successful a
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getUnifiedIntegrationAuth" method="get" path="/unified/integration/auth/{workspace_id}/{integration_type}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -266,6 +271,7 @@ Retrieve webhook by its ID
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getUnifiedWebhook" method="get" path="/unified/webhook/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -311,6 +317,7 @@ Returns API Calls
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listUnifiedApicalls" method="get" path="/unified/apicall" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -354,6 +361,7 @@ List all connections
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listUnifiedConnections" method="get" path="/unified/connection" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -397,6 +405,7 @@ No authentication required as this is to be used by front-end interface
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listUnifiedIntegrationWorkspaces" method="get" path="/unified/integration/workspace/{workspace_id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -442,6 +451,7 @@ Returns all integrations
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listUnifiedIntegrations" method="get" path="/unified/integration" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -485,6 +495,7 @@ List support issues
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listUnifiedIssues" method="get" path="/unified/issue" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -528,6 +539,7 @@ Returns all registered webhooks
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listUnifiedWebhooks" method="get" path="/unified/webhook" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -571,6 +583,7 @@ Update connection
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="patchUnifiedConnection" method="patch" path="/unified/connection/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -625,6 +638,7 @@ Update webhook subscription
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="patchUnifiedWebhook" method="patch" path="/unified/webhook/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -675,6 +689,7 @@ Trigger webhook
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="patchUnifiedWebhookTrigger" method="patch" path="/unified/webhook/{id}/trigger" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -720,6 +735,7 @@ Remove connection
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="removeUnifiedConnection" method="delete" path="/unified/connection/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -765,6 +781,7 @@ Remove webhook subscription
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="removeUnifiedWebhook" method="delete" path="/unified/webhook/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -810,6 +827,7 @@ Update connection
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="updateUnifiedConnection" method="put" path="/unified/connection/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -863,6 +881,7 @@ Update webhook subscription
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="updateUnifiedWebhook" method="put" path="/unified/webhook/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -913,6 +932,7 @@ Trigger webhook
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="updateUnifiedWebhookTrigger" method="put" path="/unified/webhook/{id}/trigger" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared

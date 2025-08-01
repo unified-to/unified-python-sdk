@@ -30,6 +30,7 @@ Create a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="createTaskComment" method="post" path="/task/{connection_id}/comment" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -79,6 +80,7 @@ Create a project
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="createTaskProject" method="post" path="/task/{connection_id}/project" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -125,6 +127,7 @@ Create a task
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="createTaskTask" method="post" path="/task/{connection_id}/task" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -171,6 +174,7 @@ Retrieve a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getTaskComment" method="get" path="/task/{connection_id}/comment/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -217,6 +221,7 @@ Retrieve a project
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getTaskProject" method="get" path="/task/{connection_id}/project/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -263,6 +268,7 @@ Retrieve a task
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getTaskTask" method="get" path="/task/{connection_id}/task/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -309,6 +315,7 @@ List all comments
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listTaskComments" method="get" path="/task/{connection_id}/comment" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -354,6 +361,7 @@ List all projects
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listTaskProjects" method="get" path="/task/{connection_id}/project" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -399,6 +407,7 @@ List all tasks
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listTaskTasks" method="get" path="/task/{connection_id}/task" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -444,6 +453,7 @@ Update a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="patchTaskComment" method="patch" path="/task/{connection_id}/comment/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -494,6 +504,7 @@ Update a project
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="patchTaskProject" method="patch" path="/task/{connection_id}/project/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -541,6 +552,7 @@ Update a task
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="patchTaskTask" method="patch" path="/task/{connection_id}/task/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -588,6 +600,7 @@ Remove a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="removeTaskComment" method="delete" path="/task/{connection_id}/comment/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -634,6 +647,7 @@ Remove a project
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="removeTaskProject" method="delete" path="/task/{connection_id}/project/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -680,6 +694,7 @@ Remove a task
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="removeTaskTask" method="delete" path="/task/{connection_id}/task/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -726,6 +741,7 @@ Update a comment
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="updateTaskComment" method="put" path="/task/{connection_id}/comment/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -776,6 +792,7 @@ Update a project
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="updateTaskProject" method="put" path="/task/{connection_id}/project/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -823,6 +840,7 @@ Update a task
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="updateTaskTask" method="put" path="/task/{connection_id}/task/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared

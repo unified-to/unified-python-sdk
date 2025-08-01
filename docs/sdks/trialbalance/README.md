@@ -14,6 +14,7 @@ Retrieve a trialbalance
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getAccountingTrialbalance" method="get" path="/accounting/{connection_id}/trialbalance/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -60,6 +61,7 @@ List all trialbalances
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listAccountingTrialbalances" method="get" path="/accounting/{connection_id}/trialbalance" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared

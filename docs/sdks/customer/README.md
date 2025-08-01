@@ -18,6 +18,7 @@ Create a customer
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="createTicketingCustomer" method="post" path="/ticketing/{connection_id}/customer" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -64,6 +65,7 @@ Retrieve a customer
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getTicketingCustomer" method="get" path="/ticketing/{connection_id}/customer/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -110,6 +112,7 @@ List all customers
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listTicketingCustomers" method="get" path="/ticketing/{connection_id}/customer" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -155,6 +158,7 @@ Update a customer
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="patchTicketingCustomer" method="patch" path="/ticketing/{connection_id}/customer/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -202,6 +206,7 @@ Remove a customer
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="removeTicketingCustomer" method="delete" path="/ticketing/{connection_id}/customer/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -248,6 +253,7 @@ Update a customer
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="updateTicketingCustomer" method="put" path="/ticketing/{connection_id}/customer/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared

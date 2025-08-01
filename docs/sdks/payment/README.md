@@ -34,6 +34,7 @@ Create a link
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="createPaymentLink" method="post" path="/payment/{connection_id}/link" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -80,6 +81,7 @@ Create a payment
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="createPaymentPayment" method="post" path="/payment/{connection_id}/payment" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -126,6 +128,7 @@ Create a subscription
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="createPaymentSubscription" method="post" path="/payment/{connection_id}/subscription" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -172,6 +175,7 @@ Retrieve a link
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getPaymentLink" method="get" path="/payment/{connection_id}/link/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -218,6 +222,7 @@ Retrieve a payment
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getPaymentPayment" method="get" path="/payment/{connection_id}/payment/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -264,6 +269,7 @@ Retrieve a payout
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getPaymentPayout" method="get" path="/payment/{connection_id}/payout/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -310,6 +316,7 @@ Retrieve a refund
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getPaymentRefund" method="get" path="/payment/{connection_id}/refund/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -356,6 +363,7 @@ Retrieve a subscription
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getPaymentSubscription" method="get" path="/payment/{connection_id}/subscription/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -402,6 +410,7 @@ List all links
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listPaymentLinks" method="get" path="/payment/{connection_id}/link" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -447,6 +456,7 @@ List all payments
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listPaymentPayments" method="get" path="/payment/{connection_id}/payment" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -492,6 +502,7 @@ List all payouts
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listPaymentPayouts" method="get" path="/payment/{connection_id}/payout" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -537,6 +548,7 @@ List all refunds
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listPaymentRefunds" method="get" path="/payment/{connection_id}/refund" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -582,6 +594,7 @@ List all subscriptions
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listPaymentSubscriptions" method="get" path="/payment/{connection_id}/subscription" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -627,6 +640,7 @@ Update a link
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="patchPaymentLink" method="patch" path="/payment/{connection_id}/link/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -674,6 +688,7 @@ Update a payment
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="patchPaymentPayment" method="patch" path="/payment/{connection_id}/payment/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -721,6 +736,7 @@ Update a subscription
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="patchPaymentSubscription" method="patch" path="/payment/{connection_id}/subscription/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -768,6 +784,7 @@ Remove a link
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="removePaymentLink" method="delete" path="/payment/{connection_id}/link/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -814,6 +831,7 @@ Remove a payment
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="removePaymentPayment" method="delete" path="/payment/{connection_id}/payment/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -860,6 +878,7 @@ Remove a subscription
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="removePaymentSubscription" method="delete" path="/payment/{connection_id}/subscription/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -906,6 +925,7 @@ Update a link
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="updatePaymentLink" method="put" path="/payment/{connection_id}/link/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -953,6 +973,7 @@ Update a payment
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="updatePaymentPayment" method="put" path="/payment/{connection_id}/payment/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1000,6 +1021,7 @@ Update a subscription
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="updatePaymentSubscription" method="put" path="/payment/{connection_id}/subscription/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared

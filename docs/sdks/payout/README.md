@@ -14,6 +14,7 @@ Retrieve a payout
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getPaymentPayout" method="get" path="/payment/{connection_id}/payout/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -60,6 +61,7 @@ List all payouts
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listPaymentPayouts" method="get" path="/payment/{connection_id}/payout" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared

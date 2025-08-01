@@ -32,6 +32,7 @@ if TYPE_CHECKING:
         AccountingBillTypedDict,
         PaymentCollectionMethod,
     )
+    from .accountingcategory import AccountingCategory, AccountingCategoryTypedDict
     from .accountingcontact import (
         AccountingContact,
         AccountingContactTypedDict,
@@ -1006,6 +1007,8 @@ __all__ = [
     "AccountingBill",
     "AccountingBillStatus",
     "AccountingBillTypedDict",
+    "AccountingCategory",
+    "AccountingCategoryTypedDict",
     "AccountingContact",
     "AccountingContactPaymentMethod",
     "AccountingContactPaymentMethodType",
@@ -1884,6 +1887,8 @@ _dynamic_imports: dict[str, str] = {
     "AccountingBillStatus": ".accountingbill",
     "AccountingBillTypedDict": ".accountingbill",
     "PaymentCollectionMethod": ".accountingbill",
+    "AccountingCategory": ".accountingcategory",
+    "AccountingCategoryTypedDict": ".accountingcategory",
     "AccountingContact": ".accountingcontact",
     "AccountingContactTypedDict": ".accountingcontact",
     "TaxExemption": ".accountingcontact",

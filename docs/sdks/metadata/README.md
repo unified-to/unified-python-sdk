@@ -18,6 +18,7 @@ Create a metadata
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="createMetadataMetadata" method="post" path="/metadata/{connection_id}/metadata" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -67,6 +68,7 @@ Retrieve a metadata
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getMetadataMetadata" method="get" path="/metadata/{connection_id}/metadata/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -113,6 +115,7 @@ List all metadatas
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listMetadataMetadatas" method="get" path="/metadata/{connection_id}/metadata" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -158,6 +161,7 @@ Update a metadata
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="patchMetadataMetadata" method="patch" path="/metadata/{connection_id}/metadata/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -208,6 +212,7 @@ Remove a metadata
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="removeMetadataMetadata" method="delete" path="/metadata/{connection_id}/metadata/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -254,6 +259,7 @@ Update a metadata
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="updateMetadataMetadata" method="put" path="/metadata/{connection_id}/metadata/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared

@@ -18,6 +18,7 @@ Used only to import existing customer credentials; use "Authorize new connection
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="createUnifiedConnection" method="post" path="/unified/connection" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -67,6 +68,7 @@ Retrieve connection
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getUnifiedConnection" method="get" path="/unified/connection/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -112,6 +114,7 @@ List all connections
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listUnifiedConnections" method="get" path="/unified/connection" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -155,6 +158,7 @@ Update connection
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="patchUnifiedConnection" method="patch" path="/unified/connection/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -209,6 +213,7 @@ Remove connection
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="removeUnifiedConnection" method="delete" path="/unified/connection/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -254,6 +259,7 @@ Update connection
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="updateUnifiedConnection" method="put" path="/unified/connection/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared

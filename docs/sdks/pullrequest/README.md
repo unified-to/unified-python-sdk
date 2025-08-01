@@ -18,6 +18,7 @@ Create a pullrequest
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="createRepoPullrequest" method="post" path="/repo/{connection_id}/pullrequest" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -64,6 +65,7 @@ Retrieve a pullrequest
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getRepoPullrequest" method="get" path="/repo/{connection_id}/pullrequest/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -110,6 +112,7 @@ List all pullrequests
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listRepoPullrequests" method="get" path="/repo/{connection_id}/pullrequest" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -155,6 +158,7 @@ Update a pullrequest
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="patchRepoPullrequest" method="patch" path="/repo/{connection_id}/pullrequest/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -202,6 +206,7 @@ Remove a pullrequest
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="removeRepoPullrequest" method="delete" path="/repo/{connection_id}/pullrequest/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -248,6 +253,7 @@ Update a pullrequest
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="updateRepoPullrequest" method="put" path="/repo/{connection_id}/pullrequest/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared

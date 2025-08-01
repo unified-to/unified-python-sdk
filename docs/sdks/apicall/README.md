@@ -14,6 +14,7 @@ Retrieve specific API Call by its ID
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getUnifiedApicall" method="get" path="/unified/apicall/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -59,6 +60,7 @@ Returns API Calls
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listUnifiedApicalls" method="get" path="/unified/apicall" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared

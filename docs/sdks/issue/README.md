@@ -13,6 +13,7 @@ List support issues
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listUnifiedIssues" method="get" path="/unified/issue" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared

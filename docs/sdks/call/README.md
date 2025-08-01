@@ -13,6 +13,7 @@ List all calls
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listUcCalls" method="get" path="/uc/{connection_id}/call" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared

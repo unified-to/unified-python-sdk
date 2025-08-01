@@ -20,6 +20,7 @@ Passthrough POST
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="createPassthrough_json" method="post" path="/passthrough/{connection_id}/{path}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -66,6 +67,7 @@ Passthrough POST
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="createPassthrough_raw" method="post" path="/passthrough/{connection_id}/{path}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -112,6 +114,7 @@ Passthrough GET
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listPassthroughs" method="get" path="/passthrough/{connection_id}/{path}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -158,6 +161,7 @@ Passthrough PUT
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="patchPassthrough_json" method="patch" path="/passthrough/{connection_id}/{path}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -204,6 +208,7 @@ Passthrough PUT
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="patchPassthrough_raw" method="patch" path="/passthrough/{connection_id}/{path}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -250,6 +255,7 @@ Passthrough DELETE
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="removePassthrough" method="delete" path="/passthrough/{connection_id}/{path}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -296,6 +302,7 @@ Passthrough PUT
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="updatePassthrough_json" method="put" path="/passthrough/{connection_id}/{path}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -342,6 +349,7 @@ Passthrough PUT
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="updatePassthrough_raw" method="put" path="/passthrough/{connection_id}/{path}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared

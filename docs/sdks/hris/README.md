@@ -52,6 +52,7 @@ Create a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="createHrisCompany" method="post" path="/hris/{connection_id}/company" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -98,6 +99,7 @@ Create a device
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="createHrisDevice" method="post" path="/hris/{connection_id}/device" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -146,6 +148,7 @@ Create an employee
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="createHrisEmployee" method="post" path="/hris/{connection_id}/employee" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -192,6 +195,7 @@ Create a group
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="createHrisGroup" method="post" path="/hris/{connection_id}/group" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -238,6 +242,7 @@ Create a location
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="createHrisLocation" method="post" path="/hris/{connection_id}/location" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -284,6 +289,7 @@ Create a timeshift
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="createHrisTimeshift" method="post" path="/hris/{connection_id}/timeshift" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -330,6 +336,7 @@ Retrieve a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getHrisCompany" method="get" path="/hris/{connection_id}/company/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -376,6 +383,7 @@ Retrieve a device
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getHrisDevice" method="get" path="/hris/{connection_id}/device/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -422,6 +430,7 @@ Retrieve an employee
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getHrisEmployee" method="get" path="/hris/{connection_id}/employee/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -468,6 +477,7 @@ Retrieve a group
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getHrisGroup" method="get" path="/hris/{connection_id}/group/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -514,6 +524,7 @@ Retrieve a location
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getHrisLocation" method="get" path="/hris/{connection_id}/location/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -560,6 +571,7 @@ Retrieve a payslip
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getHrisPayslip" method="get" path="/hris/{connection_id}/payslip/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -606,6 +618,7 @@ Retrieve a timeoff
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getHrisTimeoff" method="get" path="/hris/{connection_id}/timeoff/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -652,6 +665,7 @@ Retrieve a timeshift
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getHrisTimeshift" method="get" path="/hris/{connection_id}/timeshift/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -698,6 +712,7 @@ List all companies
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listHrisCompanies" method="get" path="/hris/{connection_id}/company" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -743,6 +758,7 @@ List all devices
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listHrisDevices" method="get" path="/hris/{connection_id}/device" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -788,6 +804,7 @@ List all employees
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listHrisEmployees" method="get" path="/hris/{connection_id}/employee" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -833,6 +850,7 @@ List all groups
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listHrisGroups" method="get" path="/hris/{connection_id}/group" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -878,6 +896,7 @@ List all locations
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listHrisLocations" method="get" path="/hris/{connection_id}/location" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -923,6 +942,7 @@ List all payslips
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listHrisPayslips" method="get" path="/hris/{connection_id}/payslip" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -968,6 +988,7 @@ List all timeoffs
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listHrisTimeoffs" method="get" path="/hris/{connection_id}/timeoff" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1013,6 +1034,7 @@ List all timeshifts
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listHrisTimeshifts" method="get" path="/hris/{connection_id}/timeshift" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1058,6 +1080,7 @@ Update a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="patchHrisCompany" method="patch" path="/hris/{connection_id}/company/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1105,6 +1128,7 @@ Update a device
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="patchHrisDevice" method="patch" path="/hris/{connection_id}/device/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1154,6 +1178,7 @@ Update an employee
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="patchHrisEmployee" method="patch" path="/hris/{connection_id}/employee/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1201,6 +1226,7 @@ Update a group
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="patchHrisGroup" method="patch" path="/hris/{connection_id}/group/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1248,6 +1274,7 @@ Update a location
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="patchHrisLocation" method="patch" path="/hris/{connection_id}/location/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1295,6 +1322,7 @@ Update a timeshift
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="patchHrisTimeshift" method="patch" path="/hris/{connection_id}/timeshift/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1342,6 +1370,7 @@ Remove a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="removeHrisCompany" method="delete" path="/hris/{connection_id}/company/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1388,6 +1417,7 @@ Remove a device
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="removeHrisDevice" method="delete" path="/hris/{connection_id}/device/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1434,6 +1464,7 @@ Remove an employee
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="removeHrisEmployee" method="delete" path="/hris/{connection_id}/employee/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1480,6 +1511,7 @@ Remove a group
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="removeHrisGroup" method="delete" path="/hris/{connection_id}/group/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1526,6 +1558,7 @@ Remove a location
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="removeHrisLocation" method="delete" path="/hris/{connection_id}/location/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1572,6 +1605,7 @@ Remove a timeshift
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="removeHrisTimeshift" method="delete" path="/hris/{connection_id}/timeshift/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1618,6 +1652,7 @@ Update a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="updateHrisCompany" method="put" path="/hris/{connection_id}/company/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1665,6 +1700,7 @@ Update a device
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="updateHrisDevice" method="put" path="/hris/{connection_id}/device/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1714,6 +1750,7 @@ Update an employee
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="updateHrisEmployee" method="put" path="/hris/{connection_id}/employee/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1761,6 +1798,7 @@ Update a group
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="updateHrisGroup" method="put" path="/hris/{connection_id}/group/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1808,6 +1846,7 @@ Update a location
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="updateHrisLocation" method="put" path="/hris/{connection_id}/location/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1855,6 +1894,7 @@ Update a timeshift
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="updateHrisTimeshift" method="put" path="/hris/{connection_id}/timeshift/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared

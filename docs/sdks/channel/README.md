@@ -14,6 +14,7 @@ Retrieve a channel
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getMessagingChannel" method="get" path="/messaging/{connection_id}/channel/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -60,6 +61,7 @@ List all channels
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listMessagingChannels" method="get" path="/messaging/{connection_id}/channel" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared

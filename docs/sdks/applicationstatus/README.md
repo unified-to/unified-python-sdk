@@ -13,6 +13,7 @@ List all applicationstatuses
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listAtsApplicationstatuses" method="get" path="/ats/{connection_id}/applicationstatus" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared

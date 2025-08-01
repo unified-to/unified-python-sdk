@@ -36,6 +36,7 @@ Create a class
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="createLmsClass" method="post" path="/lms/{connection_id}/class" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -85,6 +86,7 @@ Create a course
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="createLmsCourse" method="post" path="/lms/{connection_id}/course" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -133,6 +135,7 @@ Create an instructor
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="createLmsInstructor" method="post" path="/lms/{connection_id}/instructor" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -179,6 +182,7 @@ Create a student
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="createLmsStudent" method="post" path="/lms/{connection_id}/student" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -225,6 +229,7 @@ Retrieve a class
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getLmsClass" method="get" path="/lms/{connection_id}/class/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -271,6 +276,7 @@ Retrieve a course
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getLmsCourse" method="get" path="/lms/{connection_id}/course/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -317,6 +323,7 @@ Retrieve an instructor
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getLmsInstructor" method="get" path="/lms/{connection_id}/instructor/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -363,6 +370,7 @@ Retrieve a student
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getLmsStudent" method="get" path="/lms/{connection_id}/student/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -409,6 +417,7 @@ List all classes
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listLmsClasses" method="get" path="/lms/{connection_id}/class" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -454,6 +463,7 @@ List all courses
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listLmsCourses" method="get" path="/lms/{connection_id}/course" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -499,6 +509,7 @@ List all instructors
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listLmsInstructors" method="get" path="/lms/{connection_id}/instructor" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -544,6 +555,7 @@ List all students
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listLmsStudents" method="get" path="/lms/{connection_id}/student" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -589,6 +601,7 @@ Update a class
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="patchLmsClass" method="patch" path="/lms/{connection_id}/class/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -639,6 +652,7 @@ Update a course
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="patchLmsCourse" method="patch" path="/lms/{connection_id}/course/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -688,6 +702,7 @@ Update an instructor
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="patchLmsInstructor" method="patch" path="/lms/{connection_id}/instructor/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -735,6 +750,7 @@ Update a student
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="patchLmsStudent" method="patch" path="/lms/{connection_id}/student/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -782,6 +798,7 @@ Remove a class
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="removeLmsClass" method="delete" path="/lms/{connection_id}/class/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -828,6 +845,7 @@ Remove a course
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="removeLmsCourse" method="delete" path="/lms/{connection_id}/course/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -874,6 +892,7 @@ Remove an instructor
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="removeLmsInstructor" method="delete" path="/lms/{connection_id}/instructor/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -920,6 +939,7 @@ Remove a student
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="removeLmsStudent" method="delete" path="/lms/{connection_id}/student/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -966,6 +986,7 @@ Update a class
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="updateLmsClass" method="put" path="/lms/{connection_id}/class/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1016,6 +1037,7 @@ Update a course
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="updateLmsCourse" method="put" path="/lms/{connection_id}/course/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1065,6 +1087,7 @@ Update an instructor
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="updateLmsInstructor" method="put" path="/lms/{connection_id}/instructor/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -1112,6 +1135,7 @@ Update a student
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="updateLmsStudent" method="put" path="/lms/{connection_id}/student/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared

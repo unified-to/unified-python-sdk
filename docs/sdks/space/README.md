@@ -18,6 +18,7 @@ Create a space
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="createKmsSpace" method="post" path="/kms/{connection_id}/space" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -66,6 +67,7 @@ Retrieve a space
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getKmsSpace" method="get" path="/kms/{connection_id}/space/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -112,6 +114,7 @@ List all spaces
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listKmsSpaces" method="get" path="/kms/{connection_id}/space" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -157,6 +160,7 @@ Update a space
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="patchKmsSpace" method="patch" path="/kms/{connection_id}/space/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -206,6 +210,7 @@ Remove a space
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="removeKmsSpace" method="delete" path="/kms/{connection_id}/space/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -252,6 +257,7 @@ Update a space
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="updateKmsSpace" method="put" path="/kms/{connection_id}/space/{id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared

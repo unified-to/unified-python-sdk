@@ -14,6 +14,7 @@ Retrieve enrichment information for a company
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listEnrichCompanies" method="get" path="/enrich/{connection_id}/company" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -59,6 +60,7 @@ Retrieve enrichment information for a person
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listEnrichPeople" method="get" path="/enrich/{connection_id}/person" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared

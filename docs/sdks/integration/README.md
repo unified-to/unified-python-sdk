@@ -15,6 +15,7 @@ Returns an authorization URL for the specified integration.  Once a successful a
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="getUnifiedIntegrationAuth" method="get" path="/unified/integration/auth/{workspace_id}/{integration_type}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -61,6 +62,7 @@ No authentication required as this is to be used by front-end interface
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listUnifiedIntegrationWorkspaces" method="get" path="/unified/integration/workspace/{workspace_id}" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
@@ -106,6 +108,7 @@ Returns all integrations
 
 ### Example Usage
 
+<!-- UsageSnippet language="python" operationID="listUnifiedIntegrations" method="get" path="/unified/integration" -->
 ```python
 from unified_python_sdk import UnifiedTo
 from unified_python_sdk.models import shared
