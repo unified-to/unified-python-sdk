@@ -37,6 +37,8 @@
 | `ACCOUNTING_PROFITLOSS_WRITE`    | accounting_profitloss_write      |
 | `ACCOUNTING_BALANCESHEET_READ`   | accounting_balancesheet_read     |
 | `ACCOUNTING_BALANCESHEET_WRITE`  | accounting_balancesheet_write    |
+| `ACCOUNTING_CATEGORY_READ`       | accounting_category_read         |
+| `ACCOUNTING_CATEGORY_WRITE`      | accounting_category_write        |
 | `PAYMENT_PAYMENT_READ`           | payment_payment_read             |
 | `PAYMENT_PAYMENT_WRITE`          | payment_payment_write            |
 | `PAYMENT_PAYOUT_READ`            | payment_payout_read              |

@@ -17,20 +17,20 @@ from unified_python_sdk.types import BaseModel
 
 class AccountingProfitlossTypedDict(TypedDict):
     cost_of_goods_sold: NotRequired[List[AccountingProfitlossCategoryTypedDict]]
-    r"""@deprecated"""
+    r"""@deprecated – use cost_of_goods_sold_sections instead"""
     cost_of_goods_sold_sections: NotRequired[List[AccountingProfitlossSectionTypedDict]]
     cost_of_goods_sold_total_amount: NotRequired[float]
     created_at: NotRequired[datetime]
     currency: NotRequired[str]
     end_at: NotRequired[datetime]
     expenses: NotRequired[List[AccountingProfitlossCategoryTypedDict]]
-    r"""@deprecated"""
+    r"""@deprecated – use expenses_sections instead"""
     expenses_sections: NotRequired[List[AccountingProfitlossSectionTypedDict]]
     expenses_total_amount: NotRequired[float]
     gross_profit_amount: NotRequired[float]
     id: NotRequired[str]
     income: NotRequired[List[AccountingProfitlossCategoryTypedDict]]
-    r"""@deprecated"""
+    r"""@deprecated – use income_sections instead"""
     income_sections: NotRequired[List[AccountingProfitlossSectionTypedDict]]
     income_total_amount: NotRequired[float]
     name: NotRequired[str]
@@ -43,7 +43,7 @@ class AccountingProfitlossTypedDict(TypedDict):
 
 class AccountingProfitloss(BaseModel):
     cost_of_goods_sold: Optional[List[AccountingProfitlossCategory]] = None
-    r"""@deprecated"""
+    r"""@deprecated – use cost_of_goods_sold_sections instead"""
 
     cost_of_goods_sold_sections: Optional[List[AccountingProfitlossSection]] = None
 
@@ -56,7 +56,7 @@ class AccountingProfitloss(BaseModel):
     end_at: Optional[datetime] = None
 
     expenses: Optional[List[AccountingProfitlossCategory]] = None
-    r"""@deprecated"""
+    r"""@deprecated – use expenses_sections instead"""
 
     expenses_sections: Optional[List[AccountingProfitlossSection]] = None
 
@@ -67,7 +67,7 @@ class AccountingProfitloss(BaseModel):
     id: Optional[str] = None
 
     income: Optional[List[AccountingProfitlossCategory]] = None
-    r"""@deprecated"""
+    r"""@deprecated – use income_sections instead"""
 
     income_sections: Optional[List[AccountingProfitlossSection]] = None
 
