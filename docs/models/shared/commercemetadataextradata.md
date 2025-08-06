@@ -3,33 +3,33 @@
 
 ## Supported Types
 
-### `shared.CommerceMetadata1`
+### `Dict[str, Any]`
 
 ```python
-value: shared.CommerceMetadata1 = /* values here */
+value: Dict[str, Any] = /* values here */
 ```
 
-### `shared.CommerceMetadata2`
+### `str`
 
 ```python
-value: shared.CommerceMetadata2 = /* values here */
+value: str = /* values here */
 ```
 
-### `shared.CommerceMetadata3`
+### `float`
 
 ```python
-value: shared.CommerceMetadata3 = /* values here */
+value: float = /* values here */
 ```
 
-### `shared.CommerceMetadata4`
+### `bool`
 
 ```python
-value: shared.CommerceMetadata4 = /* values here */
+value: bool = /* values here */
 ```
 
-### `shared.CommerceMetadata5`
+### `List[shared.CommerceMetadata5]`
 
 ```python
-value: shared.CommerceMetadata5 = /* values here */
+value: List[shared.CommerceMetadata5] = /* values here */
 ```
 

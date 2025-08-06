@@ -10,70 +10,6 @@ from unified_python_sdk.types import BaseModel
 from unified_python_sdk.utils import validate_open_enum
 
 
-class IntegrationSchemasAPI52TypedDict(TypedDict):
-    pass
-
-
-class IntegrationSchemasAPI52(BaseModel):
-    pass
-
-
-Integration5TypedDict = TypeAliasType(
-    "Integration5TypedDict", Union[IntegrationSchemasAPI52TypedDict, List[Any]]
-)
-
-
-Integration5 = TypeAliasType("Integration5", Union[IntegrationSchemasAPI52, List[Any]])
-
-
-class IntegrationSchemasAPI2TypedDict(TypedDict):
-    pass
-
-
-class IntegrationSchemasAPI2(BaseModel):
-    pass
-
-
-Integration4TypedDict = TypeAliasType(
-    "Integration4TypedDict", Union[IntegrationSchemasAPI2TypedDict, bool]
-)
-
-
-Integration4 = TypeAliasType("Integration4", Union[IntegrationSchemasAPI2, bool])
-
-
-class IntegrationSchemasAPI32TypedDict(TypedDict):
-    pass
-
-
-class IntegrationSchemasAPI32(BaseModel):
-    pass
-
-
-Integration3TypedDict = TypeAliasType(
-    "Integration3TypedDict", Union[IntegrationSchemasAPI32TypedDict, float]
-)
-
-
-Integration3 = TypeAliasType("Integration3", Union[IntegrationSchemasAPI32, float])
-
-
-class IntegrationSchemasAPI22TypedDict(TypedDict):
-    pass
-
-
-class IntegrationSchemasAPI22(BaseModel):
-    pass
-
-
-Integration2TypedDict = TypeAliasType(
-    "Integration2TypedDict", Union[IntegrationSchemasAPI22TypedDict, str]
-)
-
-
-Integration2 = TypeAliasType("Integration2", Union[IntegrationSchemasAPI22, str])
-
-
 class Integration1TypedDict(TypedDict):
     pass
 
@@ -82,96 +18,20 @@ class Integration1(BaseModel):
     pass
 
 
+Integration5TypedDict = TypeAliasType(
+    "Integration5TypedDict", Union[Integration1TypedDict, str, float, bool]
+)
+
+
+Integration5 = TypeAliasType("Integration5", Union[Integration1, str, float, bool])
+
+
 APITypedDict = TypeAliasType(
-    "APITypedDict",
-    Union[
-        Integration1TypedDict,
-        Integration2TypedDict,
-        Integration3TypedDict,
-        Integration4TypedDict,
-        Integration5TypedDict,
-    ],
+    "APITypedDict", Union[Dict[str, Any], str, float, bool, List[Integration5TypedDict]]
 )
 
 
-API = TypeAliasType(
-    "API", Union[Integration1, Integration2, Integration3, Integration4, Integration5]
-)
-
-
-class IntegrationSchemasPartnership52TypedDict(TypedDict):
-    pass
-
-
-class IntegrationSchemasPartnership52(BaseModel):
-    pass
-
-
-IntegrationSchemas5TypedDict = TypeAliasType(
-    "IntegrationSchemas5TypedDict",
-    Union[IntegrationSchemasPartnership52TypedDict, List[Any]],
-)
-
-
-IntegrationSchemas5 = TypeAliasType(
-    "IntegrationSchemas5", Union[IntegrationSchemasPartnership52, List[Any]]
-)
-
-
-class IntegrationSchemasPartnership42TypedDict(TypedDict):
-    pass
-
-
-class IntegrationSchemasPartnership42(BaseModel):
-    pass
-
-
-IntegrationSchemas4TypedDict = TypeAliasType(
-    "IntegrationSchemas4TypedDict",
-    Union[IntegrationSchemasPartnership42TypedDict, bool],
-)
-
-
-IntegrationSchemas4 = TypeAliasType(
-    "IntegrationSchemas4", Union[IntegrationSchemasPartnership42, bool]
-)
-
-
-class IntegrationSchemasPartnership32TypedDict(TypedDict):
-    pass
-
-
-class IntegrationSchemasPartnership32(BaseModel):
-    pass
-
-
-IntegrationSchemas3TypedDict = TypeAliasType(
-    "IntegrationSchemas3TypedDict",
-    Union[IntegrationSchemasPartnership32TypedDict, float],
-)
-
-
-IntegrationSchemas3 = TypeAliasType(
-    "IntegrationSchemas3", Union[IntegrationSchemasPartnership32, float]
-)
-
-
-class IntegrationSchemasPartnership2TypedDict(TypedDict):
-    pass
-
-
-class IntegrationSchemasPartnership2(BaseModel):
-    pass
-
-
-IntegrationSchemas2TypedDict = TypeAliasType(
-    "IntegrationSchemas2TypedDict", Union[IntegrationSchemasPartnership2TypedDict, str]
-)
-
-
-IntegrationSchemas2 = TypeAliasType(
-    "IntegrationSchemas2", Union[IntegrationSchemasPartnership2, str]
-)
+API = TypeAliasType("API", Union[Dict[str, Any], str, float, bool, List[Integration5]])
 
 
 class IntegrationSchemas1TypedDict(TypedDict):
@@ -182,103 +42,25 @@ class IntegrationSchemas1(BaseModel):
     pass
 
 
+IntegrationSchemas5TypedDict = TypeAliasType(
+    "IntegrationSchemas5TypedDict",
+    Union[IntegrationSchemas1TypedDict, str, float, bool],
+)
+
+
+IntegrationSchemas5 = TypeAliasType(
+    "IntegrationSchemas5", Union[IntegrationSchemas1, str, float, bool]
+)
+
+
 PartnershipTypedDict = TypeAliasType(
     "PartnershipTypedDict",
-    Union[
-        IntegrationSchemas1TypedDict,
-        IntegrationSchemas2TypedDict,
-        IntegrationSchemas3TypedDict,
-        IntegrationSchemas4TypedDict,
-        IntegrationSchemas5TypedDict,
-    ],
+    Union[Dict[str, Any], str, float, bool, List[IntegrationSchemas5TypedDict]],
 )
 
 
 Partnership = TypeAliasType(
-    "Partnership",
-    Union[
-        IntegrationSchemas1,
-        IntegrationSchemas2,
-        IntegrationSchemas3,
-        IntegrationSchemas4,
-        IntegrationSchemas5,
-    ],
-)
-
-
-class IntegrationSchemasSandbox52TypedDict(TypedDict):
-    pass
-
-
-class IntegrationSchemasSandbox52(BaseModel):
-    pass
-
-
-IntegrationSchemasSandbox5TypedDict = TypeAliasType(
-    "IntegrationSchemasSandbox5TypedDict",
-    Union[IntegrationSchemasSandbox52TypedDict, List[Any]],
-)
-
-
-IntegrationSchemasSandbox5 = TypeAliasType(
-    "IntegrationSchemasSandbox5", Union[IntegrationSchemasSandbox52, List[Any]]
-)
-
-
-class IntegrationSchemasSandbox42TypedDict(TypedDict):
-    pass
-
-
-class IntegrationSchemasSandbox42(BaseModel):
-    pass
-
-
-IntegrationSchemasSandbox4TypedDict = TypeAliasType(
-    "IntegrationSchemasSandbox4TypedDict",
-    Union[IntegrationSchemasSandbox42TypedDict, bool],
-)
-
-
-IntegrationSchemasSandbox4 = TypeAliasType(
-    "IntegrationSchemasSandbox4", Union[IntegrationSchemasSandbox42, bool]
-)
-
-
-class IntegrationSchemasSandbox32TypedDict(TypedDict):
-    pass
-
-
-class IntegrationSchemasSandbox32(BaseModel):
-    pass
-
-
-IntegrationSchemasSandbox3TypedDict = TypeAliasType(
-    "IntegrationSchemasSandbox3TypedDict",
-    Union[IntegrationSchemasSandbox32TypedDict, float],
-)
-
-
-IntegrationSchemasSandbox3 = TypeAliasType(
-    "IntegrationSchemasSandbox3", Union[IntegrationSchemasSandbox32, float]
-)
-
-
-class IntegrationSchemasSandbox22TypedDict(TypedDict):
-    pass
-
-
-class IntegrationSchemasSandbox22(BaseModel):
-    pass
-
-
-IntegrationSchemasSandbox2TypedDict = TypeAliasType(
-    "IntegrationSchemasSandbox2TypedDict",
-    Union[IntegrationSchemasSandbox22TypedDict, str],
-)
-
-
-IntegrationSchemasSandbox2 = TypeAliasType(
-    "IntegrationSchemasSandbox2", Union[IntegrationSchemasSandbox22, str]
+    "Partnership", Union[Dict[str, Any], str, float, bool, List[IntegrationSchemas5]]
 )
 
 
@@ -290,27 +72,25 @@ class IntegrationSchemasSandbox1(BaseModel):
     pass
 
 
+IntegrationSchemasSandbox5TypedDict = TypeAliasType(
+    "IntegrationSchemasSandbox5TypedDict",
+    Union[IntegrationSchemasSandbox1TypedDict, str, float, bool],
+)
+
+
+IntegrationSchemasSandbox5 = TypeAliasType(
+    "IntegrationSchemasSandbox5", Union[IntegrationSchemasSandbox1, str, float, bool]
+)
+
+
 SandboxTypedDict = TypeAliasType(
     "SandboxTypedDict",
-    Union[
-        IntegrationSchemasSandbox1TypedDict,
-        IntegrationSchemasSandbox2TypedDict,
-        IntegrationSchemasSandbox3TypedDict,
-        IntegrationSchemasSandbox4TypedDict,
-        IntegrationSchemasSandbox5TypedDict,
-    ],
+    Union[Dict[str, Any], str, float, bool, List[IntegrationSchemasSandbox5TypedDict]],
 )
 
 
 Sandbox = TypeAliasType(
-    "Sandbox",
-    Union[
-        IntegrationSchemasSandbox1,
-        IntegrationSchemasSandbox2,
-        IntegrationSchemasSandbox3,
-        IntegrationSchemasSandbox4,
-        IntegrationSchemasSandbox5,
-    ],
+    "Sandbox", Union[Dict[str, Any], str, float, bool, List[IntegrationSchemasSandbox5]]
 )
 
 

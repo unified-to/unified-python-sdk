@@ -3,15 +3,27 @@
 
 ## Supported Types
 
-### `List[Any]`
+### `shared.TaskMetadata1`
 
 ```python
-value: List[Any] = /* values here */
+value: shared.TaskMetadata1 = /* values here */
 ```
 
-### `shared.TaskMetadataSchemasExtraData52`
+### `str`
 
 ```python
-value: shared.TaskMetadataSchemasExtraData52 = /* values here */
+value: str = /* values here */
+```
+
+### `float`
+
+```python
+value: float = /* values here */
+```
+
+### `bool`
+
+```python
+value: bool = /* values here */
 ```
 

@@ -3,33 +3,33 @@
 
 ## Supported Types
 
-### `shared.HrisMetadataSchemas1`
+### `Dict[str, Any]`
 
 ```python
-value: shared.HrisMetadataSchemas1 = /* values here */
+value: Dict[str, Any] = /* values here */
 ```
 
-### `shared.HrisMetadataSchemas2`
+### `str`
 
 ```python
-value: shared.HrisMetadataSchemas2 = /* values here */
+value: str = /* values here */
 ```
 
-### `shared.HrisMetadataSchemas3`
+### `float`
 
 ```python
-value: shared.HrisMetadataSchemas3 = /* values here */
+value: float = /* values here */
 ```
 
-### `shared.HrisMetadataSchemas4`
+### `bool`
 
 ```python
-value: shared.HrisMetadataSchemas4 = /* values here */
+value: bool = /* values here */
 ```
 
-### `shared.HrisMetadataSchemas5`
+### `List[shared.HrisMetadataSchemas5]`
 
 ```python
-value: shared.HrisMetadataSchemas5 = /* values here */
+value: List[shared.HrisMetadataSchemas5] = /* values here */
 ```
 

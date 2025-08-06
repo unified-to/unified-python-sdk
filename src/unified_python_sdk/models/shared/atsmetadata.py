@@ -4,75 +4,11 @@ from __future__ import annotations
 from enum import Enum
 import pydantic
 from pydantic.functional_validators import PlainValidator
-from typing import Any, List, Optional, Union
+from typing import Any, Dict, List, Optional, Union
 from typing_extensions import Annotated, NotRequired, TypeAliasType, TypedDict
 from unified_python_sdk import utils
 from unified_python_sdk.types import BaseModel
 from unified_python_sdk.utils import validate_open_enum
-
-
-class AtsMetadataSchemasExtraData2TypedDict(TypedDict):
-    pass
-
-
-class AtsMetadataSchemasExtraData2(BaseModel):
-    pass
-
-
-FiveTypedDict = TypeAliasType(
-    "FiveTypedDict", Union[AtsMetadataSchemasExtraData2TypedDict, List[Any]]
-)
-
-
-Five = TypeAliasType("Five", Union[AtsMetadataSchemasExtraData2, List[Any]])
-
-
-class AtsMetadataSchemas2TypedDict(TypedDict):
-    pass
-
-
-class AtsMetadataSchemas2(BaseModel):
-    pass
-
-
-FourTypedDict = TypeAliasType(
-    "FourTypedDict", Union[AtsMetadataSchemas2TypedDict, bool]
-)
-
-
-Four = TypeAliasType("Four", Union[AtsMetadataSchemas2, bool])
-
-
-class AtsMetadataSchemasExtraData32TypedDict(TypedDict):
-    pass
-
-
-class AtsMetadataSchemasExtraData32(BaseModel):
-    pass
-
-
-ThreeTypedDict = TypeAliasType(
-    "ThreeTypedDict", Union[AtsMetadataSchemasExtraData32TypedDict, float]
-)
-
-
-Three = TypeAliasType("Three", Union[AtsMetadataSchemasExtraData32, float])
-
-
-class AtsMetadataSchemasExtraData22TypedDict(TypedDict):
-    pass
-
-
-class AtsMetadataSchemasExtraData22(BaseModel):
-    pass
-
-
-TwoTypedDict = TypeAliasType(
-    "TwoTypedDict", Union[AtsMetadataSchemasExtraData22TypedDict, str]
-)
-
-
-Two = TypeAliasType("Two", Union[AtsMetadataSchemasExtraData22, str])
 
 
 class OneTypedDict(TypedDict):
@@ -83,13 +19,20 @@ class One(BaseModel):
     pass
 
 
+FiveTypedDict = TypeAliasType("FiveTypedDict", Union[OneTypedDict, str, float, bool])
+
+
+Five = TypeAliasType("Five", Union[One, str, float, bool])
+
+
 ExtraDataTypedDict = TypeAliasType(
-    "ExtraDataTypedDict",
-    Union[OneTypedDict, TwoTypedDict, ThreeTypedDict, FourTypedDict, FiveTypedDict],
+    "ExtraDataTypedDict", Union[Dict[str, Any], str, float, bool, List[FiveTypedDict]]
 )
 
 
-ExtraData = TypeAliasType("ExtraData", Union[One, Two, Three, Four, Five])
+ExtraData = TypeAliasType(
+    "ExtraData", Union[Dict[str, Any], str, float, bool, List[Five]]
+)
 
 
 class Format(str, Enum, metaclass=utils.OpenEnumMeta):
@@ -108,72 +51,6 @@ class Format(str, Enum, metaclass=utils.OpenEnumMeta):
     URL = "URL"
 
 
-class AtsMetadataSchemasValue52TypedDict(TypedDict):
-    pass
-
-
-class AtsMetadataSchemasValue52(BaseModel):
-    pass
-
-
-AtsMetadata5TypedDict = TypeAliasType(
-    "AtsMetadata5TypedDict", Union[AtsMetadataSchemasValue52TypedDict, List[Any]]
-)
-
-
-AtsMetadata5 = TypeAliasType(
-    "AtsMetadata5", Union[AtsMetadataSchemasValue52, List[Any]]
-)
-
-
-class AtsMetadataSchemasValue42TypedDict(TypedDict):
-    pass
-
-
-class AtsMetadataSchemasValue42(BaseModel):
-    pass
-
-
-AtsMetadata4TypedDict = TypeAliasType(
-    "AtsMetadata4TypedDict", Union[AtsMetadataSchemasValue42TypedDict, bool]
-)
-
-
-AtsMetadata4 = TypeAliasType("AtsMetadata4", Union[AtsMetadataSchemasValue42, bool])
-
-
-class AtsMetadataSchemasValue32TypedDict(TypedDict):
-    pass
-
-
-class AtsMetadataSchemasValue32(BaseModel):
-    pass
-
-
-AtsMetadata3TypedDict = TypeAliasType(
-    "AtsMetadata3TypedDict", Union[AtsMetadataSchemasValue32TypedDict, float]
-)
-
-
-AtsMetadata3 = TypeAliasType("AtsMetadata3", Union[AtsMetadataSchemasValue32, float])
-
-
-class AtsMetadataSchemasValue2TypedDict(TypedDict):
-    pass
-
-
-class AtsMetadataSchemasValue2(BaseModel):
-    pass
-
-
-AtsMetadata2TypedDict = TypeAliasType(
-    "AtsMetadata2TypedDict", Union[AtsMetadataSchemasValue2TypedDict, str]
-)
-
-
-AtsMetadata2 = TypeAliasType("AtsMetadata2", Union[AtsMetadataSchemasValue2, str])
-
-
 class AtsMetadata1TypedDict(TypedDict):
     pass
 
@@ -182,20 +59,22 @@ class AtsMetadata1(BaseModel):
     pass
 
 
+AtsMetadata5TypedDict = TypeAliasType(
+    "AtsMetadata5TypedDict", Union[AtsMetadata1TypedDict, str, float, bool]
+)
+
+
+AtsMetadata5 = TypeAliasType("AtsMetadata5", Union[AtsMetadata1, str, float, bool])
+
+
 ValueTypedDict = TypeAliasType(
     "ValueTypedDict",
-    Union[
-        AtsMetadata1TypedDict,
-        AtsMetadata2TypedDict,
-        AtsMetadata3TypedDict,
-        AtsMetadata4TypedDict,
-        AtsMetadata5TypedDict,
-    ],
+    Union[Dict[str, Any], str, float, bool, List[AtsMetadata5TypedDict]],
 )
 
 
 Value = TypeAliasType(
-    "Value", Union[AtsMetadata1, AtsMetadata2, AtsMetadata3, AtsMetadata4, AtsMetadata5]
+    "Value", Union[Dict[str, Any], str, float, bool, List[AtsMetadata5]]
 )
 
 

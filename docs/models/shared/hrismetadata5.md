@@ -3,15 +3,27 @@
 
 ## Supported Types
 
-### `List[Any]`
+### `shared.HrisMetadata1`
 
 ```python
-value: List[Any] = /* values here */
+value: shared.HrisMetadata1 = /* values here */
 ```
 
-### `shared.HrisMetadataSchemasExtraData52`
+### `str`
 
 ```python
-value: shared.HrisMetadataSchemasExtraData52 = /* values here */
+value: str = /* values here */
+```
+
+### `float`
+
+```python
+value: float = /* values here */
+```
+
+### `bool`
+
+```python
+value: bool = /* values here */
 ```
 

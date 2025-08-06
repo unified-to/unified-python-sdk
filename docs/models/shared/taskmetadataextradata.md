@@ -3,33 +3,33 @@
 
 ## Supported Types
 
-### `shared.TaskMetadata1`
+### `Dict[str, Any]`
 
 ```python
-value: shared.TaskMetadata1 = /* values here */
+value: Dict[str, Any] = /* values here */
 ```
 
-### `shared.TaskMetadata2`
+### `str`
 
 ```python
-value: shared.TaskMetadata2 = /* values here */
+value: str = /* values here */
 ```
 
-### `shared.TaskMetadata3`
+### `float`
 
 ```python
-value: shared.TaskMetadata3 = /* values here */
+value: float = /* values here */
 ```
 
-### `shared.TaskMetadata4`
+### `bool`
 
 ```python
-value: shared.TaskMetadata4 = /* values here */
+value: bool = /* values here */
 ```
 
-### `shared.TaskMetadata5`
+### `List[shared.TaskMetadata5]`
 
 ```python
-value: shared.TaskMetadata5 = /* values here */
+value: List[shared.TaskMetadata5] = /* values here */
 ```
 

@@ -3,15 +3,27 @@
 
 ## Supported Types
 
-### `List[Any]`
+### `shared.Integration1`
 
 ```python
-value: List[Any] = /* values here */
+value: shared.Integration1 = /* values here */
 ```
 
-### `shared.IntegrationSchemasAPI52`
+### `str`
 
 ```python
-value: shared.IntegrationSchemasAPI52 = /* values here */
+value: str = /* values here */
+```
+
+### `float`
+
+```python
+value: float = /* values here */
+```
+
+### `bool`
+
+```python
+value: bool = /* values here */
 ```
 

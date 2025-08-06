@@ -4,85 +4,11 @@ from __future__ import annotations
 from enum import Enum
 import pydantic
 from pydantic.functional_validators import PlainValidator
-from typing import Any, List, Optional, Union
+from typing import Any, Dict, List, Optional, Union
 from typing_extensions import Annotated, NotRequired, TypeAliasType, TypedDict
 from unified_python_sdk import utils
 from unified_python_sdk.types import BaseModel
 from unified_python_sdk.utils import validate_open_enum
-
-
-class KmsPageMetadataSchemasExtraData52TypedDict(TypedDict):
-    pass
-
-
-class KmsPageMetadataSchemasExtraData52(BaseModel):
-    pass
-
-
-KmsPageMetadata5TypedDict = TypeAliasType(
-    "KmsPageMetadata5TypedDict",
-    Union[KmsPageMetadataSchemasExtraData52TypedDict, List[Any]],
-)
-
-
-KmsPageMetadata5 = TypeAliasType(
-    "KmsPageMetadata5", Union[KmsPageMetadataSchemasExtraData52, List[Any]]
-)
-
-
-class KmsPageMetadataSchemasExtraData2TypedDict(TypedDict):
-    pass
-
-
-class KmsPageMetadataSchemasExtraData2(BaseModel):
-    pass
-
-
-KmsPageMetadata4TypedDict = TypeAliasType(
-    "KmsPageMetadata4TypedDict", Union[KmsPageMetadataSchemasExtraData2TypedDict, bool]
-)
-
-
-KmsPageMetadata4 = TypeAliasType(
-    "KmsPageMetadata4", Union[KmsPageMetadataSchemasExtraData2, bool]
-)
-
-
-class KmsPageMetadataSchemasExtraData32TypedDict(TypedDict):
-    pass
-
-
-class KmsPageMetadataSchemasExtraData32(BaseModel):
-    pass
-
-
-KmsPageMetadata3TypedDict = TypeAliasType(
-    "KmsPageMetadata3TypedDict",
-    Union[KmsPageMetadataSchemasExtraData32TypedDict, float],
-)
-
-
-KmsPageMetadata3 = TypeAliasType(
-    "KmsPageMetadata3", Union[KmsPageMetadataSchemasExtraData32, float]
-)
-
-
-class KmsPageMetadataSchemasExtraData22TypedDict(TypedDict):
-    pass
-
-
-class KmsPageMetadataSchemasExtraData22(BaseModel):
-    pass
-
-
-KmsPageMetadata2TypedDict = TypeAliasType(
-    "KmsPageMetadata2TypedDict", Union[KmsPageMetadataSchemasExtraData22TypedDict, str]
-)
-
-
-KmsPageMetadata2 = TypeAliasType(
-    "KmsPageMetadata2", Union[KmsPageMetadataSchemasExtraData22, str]
-)
 
 
 class KmsPageMetadata1TypedDict(TypedDict):
@@ -93,27 +19,25 @@ class KmsPageMetadata1(BaseModel):
     pass
 
 
+KmsPageMetadata5TypedDict = TypeAliasType(
+    "KmsPageMetadata5TypedDict", Union[KmsPageMetadata1TypedDict, str, float, bool]
+)
+
+
+KmsPageMetadata5 = TypeAliasType(
+    "KmsPageMetadata5", Union[KmsPageMetadata1, str, float, bool]
+)
+
+
 KmsPageMetadataExtraDataTypedDict = TypeAliasType(
     "KmsPageMetadataExtraDataTypedDict",
-    Union[
-        KmsPageMetadata1TypedDict,
-        KmsPageMetadata2TypedDict,
-        KmsPageMetadata3TypedDict,
-        KmsPageMetadata4TypedDict,
-        KmsPageMetadata5TypedDict,
-    ],
+    Union[Dict[str, Any], str, float, bool, List[KmsPageMetadata5TypedDict]],
 )
 
 
 KmsPageMetadataExtraData = TypeAliasType(
     "KmsPageMetadataExtraData",
-    Union[
-        KmsPageMetadata1,
-        KmsPageMetadata2,
-        KmsPageMetadata3,
-        KmsPageMetadata4,
-        KmsPageMetadata5,
-    ],
+    Union[Dict[str, Any], str, float, bool, List[KmsPageMetadata5]],
 )
 
 
@@ -133,82 +57,6 @@ class KmsPageMetadataFormat(str, Enum, metaclass=utils.OpenEnumMeta):
     URL = "URL"
 
 
-class KmsPageMetadataSchemasValue52TypedDict(TypedDict):
-    pass
-
-
-class KmsPageMetadataSchemasValue52(BaseModel):
-    pass
-
-
-KmsPageMetadataSchemas5TypedDict = TypeAliasType(
-    "KmsPageMetadataSchemas5TypedDict",
-    Union[KmsPageMetadataSchemasValue52TypedDict, List[Any]],
-)
-
-
-KmsPageMetadataSchemas5 = TypeAliasType(
-    "KmsPageMetadataSchemas5", Union[KmsPageMetadataSchemasValue52, List[Any]]
-)
-
-
-class KmsPageMetadataSchemasValue42TypedDict(TypedDict):
-    pass
-
-
-class KmsPageMetadataSchemasValue42(BaseModel):
-    pass
-
-
-KmsPageMetadataSchemas4TypedDict = TypeAliasType(
-    "KmsPageMetadataSchemas4TypedDict",
-    Union[KmsPageMetadataSchemasValue42TypedDict, bool],
-)
-
-
-KmsPageMetadataSchemas4 = TypeAliasType(
-    "KmsPageMetadataSchemas4", Union[KmsPageMetadataSchemasValue42, bool]
-)
-
-
-class KmsPageMetadataSchemasValue32TypedDict(TypedDict):
-    pass
-
-
-class KmsPageMetadataSchemasValue32(BaseModel):
-    pass
-
-
-KmsPageMetadataSchemas3TypedDict = TypeAliasType(
-    "KmsPageMetadataSchemas3TypedDict",
-    Union[KmsPageMetadataSchemasValue32TypedDict, float],
-)
-
-
-KmsPageMetadataSchemas3 = TypeAliasType(
-    "KmsPageMetadataSchemas3", Union[KmsPageMetadataSchemasValue32, float]
-)
-
-
-class KmsPageMetadataSchemasValue2TypedDict(TypedDict):
-    pass
-
-
-class KmsPageMetadataSchemasValue2(BaseModel):
-    pass
-
-
-KmsPageMetadataSchemas2TypedDict = TypeAliasType(
-    "KmsPageMetadataSchemas2TypedDict",
-    Union[KmsPageMetadataSchemasValue2TypedDict, str],
-)
-
-
-KmsPageMetadataSchemas2 = TypeAliasType(
-    "KmsPageMetadataSchemas2", Union[KmsPageMetadataSchemasValue2, str]
-)
-
-
 class KmsPageMetadataSchemas1TypedDict(TypedDict):
     pass
 
@@ -217,27 +65,26 @@ class KmsPageMetadataSchemas1(BaseModel):
     pass
 
 
+KmsPageMetadataSchemas5TypedDict = TypeAliasType(
+    "KmsPageMetadataSchemas5TypedDict",
+    Union[KmsPageMetadataSchemas1TypedDict, str, float, bool],
+)
+
+
+KmsPageMetadataSchemas5 = TypeAliasType(
+    "KmsPageMetadataSchemas5", Union[KmsPageMetadataSchemas1, str, float, bool]
+)
+
+
 KmsPageMetadataValueTypedDict = TypeAliasType(
     "KmsPageMetadataValueTypedDict",
-    Union[
-        KmsPageMetadataSchemas1TypedDict,
-        KmsPageMetadataSchemas2TypedDict,
-        KmsPageMetadataSchemas3TypedDict,
-        KmsPageMetadataSchemas4TypedDict,
-        KmsPageMetadataSchemas5TypedDict,
-    ],
+    Union[Dict[str, Any], str, float, bool, List[KmsPageMetadataSchemas5TypedDict]],
 )
 
 
 KmsPageMetadataValue = TypeAliasType(
     "KmsPageMetadataValue",
-    Union[
-        KmsPageMetadataSchemas1,
-        KmsPageMetadataSchemas2,
-        KmsPageMetadataSchemas3,
-        KmsPageMetadataSchemas4,
-        KmsPageMetadataSchemas5,
-    ],
+    Union[Dict[str, Any], str, float, bool, List[KmsPageMetadataSchemas5]],
 )
 
 

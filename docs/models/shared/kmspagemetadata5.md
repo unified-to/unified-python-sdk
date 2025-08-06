@@ -3,15 +3,27 @@
 
 ## Supported Types
 
-### `List[Any]`
+### `shared.KmsPageMetadata1`
 
 ```python
-value: List[Any] = /* values here */
+value: shared.KmsPageMetadata1 = /* values here */
 ```
 
-### `shared.KmsPageMetadataSchemasExtraData52`
+### `str`
 
 ```python
-value: shared.KmsPageMetadataSchemasExtraData52 = /* values here */
+value: str = /* values here */
+```
+
+### `float`
+
+```python
+value: float = /* values here */
+```
+
+### `bool`
+
+```python
+value: bool = /* values here */
 ```
 

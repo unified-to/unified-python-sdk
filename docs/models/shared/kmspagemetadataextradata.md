@@ -3,33 +3,33 @@
 
 ## Supported Types
 
-### `shared.KmsPageMetadata1`
+### `Dict[str, Any]`
 
 ```python
-value: shared.KmsPageMetadata1 = /* values here */
+value: Dict[str, Any] = /* values here */
 ```
 
-### `shared.KmsPageMetadata2`
+### `str`
 
 ```python
-value: shared.KmsPageMetadata2 = /* values here */
+value: str = /* values here */
 ```
 
-### `shared.KmsPageMetadata3`
+### `float`
 
 ```python
-value: shared.KmsPageMetadata3 = /* values here */
+value: float = /* values here */
 ```
 
-### `shared.KmsPageMetadata4`
+### `bool`
 
 ```python
-value: shared.KmsPageMetadata4 = /* values here */
+value: bool = /* values here */
 ```
 
-### `shared.KmsPageMetadata5`
+### `List[shared.KmsPageMetadata5]`
 
 ```python
-value: shared.KmsPageMetadata5 = /* values here */
+value: List[shared.KmsPageMetadata5] = /* values here */
 ```
 

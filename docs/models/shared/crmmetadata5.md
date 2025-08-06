@@ -3,15 +3,27 @@
 
 ## Supported Types
 
-### `List[Any]`
+### `shared.CrmMetadata1`
 
 ```python
-value: List[Any] = /* values here */
+value: shared.CrmMetadata1 = /* values here */
 ```
 
-### `shared.CrmMetadataSchemasExtraData52`
+### `str`
 
 ```python
-value: shared.CrmMetadataSchemasExtraData52 = /* values here */
+value: str = /* values here */
+```
+
+### `float`
+
+```python
+value: float = /* values here */
+```
+
+### `bool`
+
+```python
+value: bool = /* values here */
 ```
 

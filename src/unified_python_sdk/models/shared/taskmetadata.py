@@ -4,83 +4,11 @@ from __future__ import annotations
 from enum import Enum
 import pydantic
 from pydantic.functional_validators import PlainValidator
-from typing import Any, List, Optional, Union
+from typing import Any, Dict, List, Optional, Union
 from typing_extensions import Annotated, NotRequired, TypeAliasType, TypedDict
 from unified_python_sdk import utils
 from unified_python_sdk.types import BaseModel
 from unified_python_sdk.utils import validate_open_enum
-
-
-class TaskMetadataSchemasExtraData52TypedDict(TypedDict):
-    pass
-
-
-class TaskMetadataSchemasExtraData52(BaseModel):
-    pass
-
-
-TaskMetadata5TypedDict = TypeAliasType(
-    "TaskMetadata5TypedDict", Union[TaskMetadataSchemasExtraData52TypedDict, List[Any]]
-)
-
-
-TaskMetadata5 = TypeAliasType(
-    "TaskMetadata5", Union[TaskMetadataSchemasExtraData52, List[Any]]
-)
-
-
-class TaskMetadataSchemasExtraData2TypedDict(TypedDict):
-    pass
-
-
-class TaskMetadataSchemasExtraData2(BaseModel):
-    pass
-
-
-TaskMetadata4TypedDict = TypeAliasType(
-    "TaskMetadata4TypedDict", Union[TaskMetadataSchemasExtraData2TypedDict, bool]
-)
-
-
-TaskMetadata4 = TypeAliasType(
-    "TaskMetadata4", Union[TaskMetadataSchemasExtraData2, bool]
-)
-
-
-class TaskMetadataSchemasExtraData32TypedDict(TypedDict):
-    pass
-
-
-class TaskMetadataSchemasExtraData32(BaseModel):
-    pass
-
-
-TaskMetadata3TypedDict = TypeAliasType(
-    "TaskMetadata3TypedDict", Union[TaskMetadataSchemasExtraData32TypedDict, float]
-)
-
-
-TaskMetadata3 = TypeAliasType(
-    "TaskMetadata3", Union[TaskMetadataSchemasExtraData32, float]
-)
-
-
-class TaskMetadataSchemasExtraData22TypedDict(TypedDict):
-    pass
-
-
-class TaskMetadataSchemasExtraData22(BaseModel):
-    pass
-
-
-TaskMetadata2TypedDict = TypeAliasType(
-    "TaskMetadata2TypedDict", Union[TaskMetadataSchemasExtraData22TypedDict, str]
-)
-
-
-TaskMetadata2 = TypeAliasType(
-    "TaskMetadata2", Union[TaskMetadataSchemasExtraData22, str]
-)
 
 
 class TaskMetadata1TypedDict(TypedDict):
@@ -91,21 +19,23 @@ class TaskMetadata1(BaseModel):
     pass
 
 
+TaskMetadata5TypedDict = TypeAliasType(
+    "TaskMetadata5TypedDict", Union[TaskMetadata1TypedDict, str, float, bool]
+)
+
+
+TaskMetadata5 = TypeAliasType("TaskMetadata5", Union[TaskMetadata1, str, float, bool])
+
+
 TaskMetadataExtraDataTypedDict = TypeAliasType(
     "TaskMetadataExtraDataTypedDict",
-    Union[
-        TaskMetadata1TypedDict,
-        TaskMetadata2TypedDict,
-        TaskMetadata3TypedDict,
-        TaskMetadata4TypedDict,
-        TaskMetadata5TypedDict,
-    ],
+    Union[Dict[str, Any], str, float, bool, List[TaskMetadata5TypedDict]],
 )
 
 
 TaskMetadataExtraData = TypeAliasType(
     "TaskMetadataExtraData",
-    Union[TaskMetadata1, TaskMetadata2, TaskMetadata3, TaskMetadata4, TaskMetadata5],
+    Union[Dict[str, Any], str, float, bool, List[TaskMetadata5]],
 )
 
 
@@ -125,79 +55,6 @@ class TaskMetadataFormat(str, Enum, metaclass=utils.OpenEnumMeta):
     URL = "URL"
 
 
-class TaskMetadataSchemasValue52TypedDict(TypedDict):
-    pass
-
-
-class TaskMetadataSchemasValue52(BaseModel):
-    pass
-
-
-TaskMetadataSchemas5TypedDict = TypeAliasType(
-    "TaskMetadataSchemas5TypedDict",
-    Union[TaskMetadataSchemasValue52TypedDict, List[Any]],
-)
-
-
-TaskMetadataSchemas5 = TypeAliasType(
-    "TaskMetadataSchemas5", Union[TaskMetadataSchemasValue52, List[Any]]
-)
-
-
-class TaskMetadataSchemasValue42TypedDict(TypedDict):
-    pass
-
-
-class TaskMetadataSchemasValue42(BaseModel):
-    pass
-
-
-TaskMetadataSchemas4TypedDict = TypeAliasType(
-    "TaskMetadataSchemas4TypedDict", Union[TaskMetadataSchemasValue42TypedDict, bool]
-)
-
-
-TaskMetadataSchemas4 = TypeAliasType(
-    "TaskMetadataSchemas4", Union[TaskMetadataSchemasValue42, bool]
-)
-
-
-class TaskMetadataSchemasValue32TypedDict(TypedDict):
-    pass
-
-
-class TaskMetadataSchemasValue32(BaseModel):
-    pass
-
-
-TaskMetadataSchemas3TypedDict = TypeAliasType(
-    "TaskMetadataSchemas3TypedDict", Union[TaskMetadataSchemasValue32TypedDict, float]
-)
-
-
-TaskMetadataSchemas3 = TypeAliasType(
-    "TaskMetadataSchemas3", Union[TaskMetadataSchemasValue32, float]
-)
-
-
-class TaskMetadataSchemasValue2TypedDict(TypedDict):
-    pass
-
-
-class TaskMetadataSchemasValue2(BaseModel):
-    pass
-
-
-TaskMetadataSchemas2TypedDict = TypeAliasType(
-    "TaskMetadataSchemas2TypedDict", Union[TaskMetadataSchemasValue2TypedDict, str]
-)
-
-
-TaskMetadataSchemas2 = TypeAliasType(
-    "TaskMetadataSchemas2", Union[TaskMetadataSchemasValue2, str]
-)
-
-
 class TaskMetadataSchemas1TypedDict(TypedDict):
     pass
 
@@ -206,27 +63,26 @@ class TaskMetadataSchemas1(BaseModel):
     pass
 
 
+TaskMetadataSchemas5TypedDict = TypeAliasType(
+    "TaskMetadataSchemas5TypedDict",
+    Union[TaskMetadataSchemas1TypedDict, str, float, bool],
+)
+
+
+TaskMetadataSchemas5 = TypeAliasType(
+    "TaskMetadataSchemas5", Union[TaskMetadataSchemas1, str, float, bool]
+)
+
+
 TaskMetadataValueTypedDict = TypeAliasType(
     "TaskMetadataValueTypedDict",
-    Union[
-        TaskMetadataSchemas1TypedDict,
-        TaskMetadataSchemas2TypedDict,
-        TaskMetadataSchemas3TypedDict,
-        TaskMetadataSchemas4TypedDict,
-        TaskMetadataSchemas5TypedDict,
-    ],
+    Union[Dict[str, Any], str, float, bool, List[TaskMetadataSchemas5TypedDict]],
 )
 
 
 TaskMetadataValue = TypeAliasType(
     "TaskMetadataValue",
-    Union[
-        TaskMetadataSchemas1,
-        TaskMetadataSchemas2,
-        TaskMetadataSchemas3,
-        TaskMetadataSchemas4,
-        TaskMetadataSchemas5,
-    ],
+    Union[Dict[str, Any], str, float, bool, List[TaskMetadataSchemas5]],
 )
 
 

@@ -4,87 +4,11 @@ from __future__ import annotations
 from enum import Enum
 import pydantic
 from pydantic.functional_validators import PlainValidator
-from typing import Any, List, Optional, Union
+from typing import Any, Dict, List, Optional, Union
 from typing_extensions import Annotated, NotRequired, TypeAliasType, TypedDict
 from unified_python_sdk import utils
 from unified_python_sdk.types import BaseModel
 from unified_python_sdk.utils import validate_open_enum
-
-
-class CommerceMetadataSchemasExtraData52TypedDict(TypedDict):
-    pass
-
-
-class CommerceMetadataSchemasExtraData52(BaseModel):
-    pass
-
-
-CommerceMetadata5TypedDict = TypeAliasType(
-    "CommerceMetadata5TypedDict",
-    Union[CommerceMetadataSchemasExtraData52TypedDict, List[Any]],
-)
-
-
-CommerceMetadata5 = TypeAliasType(
-    "CommerceMetadata5", Union[CommerceMetadataSchemasExtraData52, List[Any]]
-)
-
-
-class CommerceMetadataSchemasExtraData2TypedDict(TypedDict):
-    pass
-
-
-class CommerceMetadataSchemasExtraData2(BaseModel):
-    pass
-
-
-CommerceMetadata4TypedDict = TypeAliasType(
-    "CommerceMetadata4TypedDict",
-    Union[CommerceMetadataSchemasExtraData2TypedDict, bool],
-)
-
-
-CommerceMetadata4 = TypeAliasType(
-    "CommerceMetadata4", Union[CommerceMetadataSchemasExtraData2, bool]
-)
-
-
-class CommerceMetadataSchemasExtraData32TypedDict(TypedDict):
-    pass
-
-
-class CommerceMetadataSchemasExtraData32(BaseModel):
-    pass
-
-
-CommerceMetadata3TypedDict = TypeAliasType(
-    "CommerceMetadata3TypedDict",
-    Union[CommerceMetadataSchemasExtraData32TypedDict, float],
-)
-
-
-CommerceMetadata3 = TypeAliasType(
-    "CommerceMetadata3", Union[CommerceMetadataSchemasExtraData32, float]
-)
-
-
-class CommerceMetadataSchemasExtraData22TypedDict(TypedDict):
-    pass
-
-
-class CommerceMetadataSchemasExtraData22(BaseModel):
-    pass
-
-
-CommerceMetadata2TypedDict = TypeAliasType(
-    "CommerceMetadata2TypedDict",
-    Union[CommerceMetadataSchemasExtraData22TypedDict, str],
-)
-
-
-CommerceMetadata2 = TypeAliasType(
-    "CommerceMetadata2", Union[CommerceMetadataSchemasExtraData22, str]
-)
 
 
 class CommerceMetadata1TypedDict(TypedDict):
@@ -95,27 +19,25 @@ class CommerceMetadata1(BaseModel):
     pass
 
 
+CommerceMetadata5TypedDict = TypeAliasType(
+    "CommerceMetadata5TypedDict", Union[CommerceMetadata1TypedDict, str, float, bool]
+)
+
+
+CommerceMetadata5 = TypeAliasType(
+    "CommerceMetadata5", Union[CommerceMetadata1, str, float, bool]
+)
+
+
 CommerceMetadataExtraDataTypedDict = TypeAliasType(
     "CommerceMetadataExtraDataTypedDict",
-    Union[
-        CommerceMetadata1TypedDict,
-        CommerceMetadata2TypedDict,
-        CommerceMetadata3TypedDict,
-        CommerceMetadata4TypedDict,
-        CommerceMetadata5TypedDict,
-    ],
+    Union[Dict[str, Any], str, float, bool, List[CommerceMetadata5TypedDict]],
 )
 
 
 CommerceMetadataExtraData = TypeAliasType(
     "CommerceMetadataExtraData",
-    Union[
-        CommerceMetadata1,
-        CommerceMetadata2,
-        CommerceMetadata3,
-        CommerceMetadata4,
-        CommerceMetadata5,
-    ],
+    Union[Dict[str, Any], str, float, bool, List[CommerceMetadata5]],
 )
 
 
@@ -135,82 +57,6 @@ class CommerceMetadataFormat(str, Enum, metaclass=utils.OpenEnumMeta):
     URL = "URL"
 
 
-class CommerceMetadataSchemasValue52TypedDict(TypedDict):
-    pass
-
-
-class CommerceMetadataSchemasValue52(BaseModel):
-    pass
-
-
-CommerceMetadataSchemas5TypedDict = TypeAliasType(
-    "CommerceMetadataSchemas5TypedDict",
-    Union[CommerceMetadataSchemasValue52TypedDict, List[Any]],
-)
-
-
-CommerceMetadataSchemas5 = TypeAliasType(
-    "CommerceMetadataSchemas5", Union[CommerceMetadataSchemasValue52, List[Any]]
-)
-
-
-class CommerceMetadataSchemasValue42TypedDict(TypedDict):
-    pass
-
-
-class CommerceMetadataSchemasValue42(BaseModel):
-    pass
-
-
-CommerceMetadataSchemas4TypedDict = TypeAliasType(
-    "CommerceMetadataSchemas4TypedDict",
-    Union[CommerceMetadataSchemasValue42TypedDict, bool],
-)
-
-
-CommerceMetadataSchemas4 = TypeAliasType(
-    "CommerceMetadataSchemas4", Union[CommerceMetadataSchemasValue42, bool]
-)
-
-
-class CommerceMetadataSchemasValue32TypedDict(TypedDict):
-    pass
-
-
-class CommerceMetadataSchemasValue32(BaseModel):
-    pass
-
-
-CommerceMetadataSchemas3TypedDict = TypeAliasType(
-    "CommerceMetadataSchemas3TypedDict",
-    Union[CommerceMetadataSchemasValue32TypedDict, float],
-)
-
-
-CommerceMetadataSchemas3 = TypeAliasType(
-    "CommerceMetadataSchemas3", Union[CommerceMetadataSchemasValue32, float]
-)
-
-
-class CommerceMetadataSchemasValue2TypedDict(TypedDict):
-    pass
-
-
-class CommerceMetadataSchemasValue2(BaseModel):
-    pass
-
-
-CommerceMetadataSchemas2TypedDict = TypeAliasType(
-    "CommerceMetadataSchemas2TypedDict",
-    Union[CommerceMetadataSchemasValue2TypedDict, str],
-)
-
-
-CommerceMetadataSchemas2 = TypeAliasType(
-    "CommerceMetadataSchemas2", Union[CommerceMetadataSchemasValue2, str]
-)
-
-
 class CommerceMetadataSchemas1TypedDict(TypedDict):
     pass
 
@@ -219,27 +65,26 @@ class CommerceMetadataSchemas1(BaseModel):
     pass
 
 
+CommerceMetadataSchemas5TypedDict = TypeAliasType(
+    "CommerceMetadataSchemas5TypedDict",
+    Union[CommerceMetadataSchemas1TypedDict, str, float, bool],
+)
+
+
+CommerceMetadataSchemas5 = TypeAliasType(
+    "CommerceMetadataSchemas5", Union[CommerceMetadataSchemas1, str, float, bool]
+)
+
+
 CommerceMetadataValueTypedDict = TypeAliasType(
     "CommerceMetadataValueTypedDict",
-    Union[
-        CommerceMetadataSchemas1TypedDict,
-        CommerceMetadataSchemas2TypedDict,
-        CommerceMetadataSchemas3TypedDict,
-        CommerceMetadataSchemas4TypedDict,
-        CommerceMetadataSchemas5TypedDict,
-    ],
+    Union[Dict[str, Any], str, float, bool, List[CommerceMetadataSchemas5TypedDict]],
 )
 
 
 CommerceMetadataValue = TypeAliasType(
     "CommerceMetadataValue",
-    Union[
-        CommerceMetadataSchemas1,
-        CommerceMetadataSchemas2,
-        CommerceMetadataSchemas3,
-        CommerceMetadataSchemas4,
-        CommerceMetadataSchemas5,
-    ],
+    Union[Dict[str, Any], str, float, bool, List[CommerceMetadataSchemas5]],
 )
 
 

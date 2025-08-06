@@ -3,33 +3,33 @@
 
 ## Supported Types
 
-### `shared.One`
+### `Dict[str, Any]`
 
 ```python
-value: shared.One = /* values here */
+value: Dict[str, Any] = /* values here */
 ```
 
-### `shared.Two`
+### `str`
 
 ```python
-value: shared.Two = /* values here */
+value: str = /* values here */
 ```
 
-### `shared.Three`
+### `float`
 
 ```python
-value: shared.Three = /* values here */
+value: float = /* values here */
 ```
 
-### `shared.Four`
+### `bool`
 
 ```python
-value: shared.Four = /* values here */
+value: bool = /* values here */
 ```
 
-### `shared.Five`
+### `List[shared.Five]`
 
 ```python
-value: shared.Five = /* values here */
+value: List[shared.Five] = /* values here */
 ```
 

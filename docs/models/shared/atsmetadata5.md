@@ -3,15 +3,27 @@
 
 ## Supported Types
 
-### `List[Any]`
+### `shared.AtsMetadata1`
 
 ```python
-value: List[Any] = /* values here */
+value: shared.AtsMetadata1 = /* values here */
 ```
 
-### `shared.AtsMetadataSchemasValue52`
+### `str`
 
 ```python
-value: shared.AtsMetadataSchemasValue52 = /* values here */
+value: str = /* values here */
+```
+
+### `float`
+
+```python
+value: float = /* values here */
+```
+
+### `bool`
+
+```python
+value: bool = /* values here */
 ```
 

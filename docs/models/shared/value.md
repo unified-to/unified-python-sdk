@@ -3,33 +3,33 @@
 
 ## Supported Types
 
-### `shared.AtsMetadata1`
+### `Dict[str, Any]`
 
 ```python
-value: shared.AtsMetadata1 = /* values here */
+value: Dict[str, Any] = /* values here */
 ```
 
-### `shared.AtsMetadata2`
+### `str`
 
 ```python
-value: shared.AtsMetadata2 = /* values here */
+value: str = /* values here */
 ```
 
-### `shared.AtsMetadata3`
+### `float`
 
 ```python
-value: shared.AtsMetadata3 = /* values here */
+value: float = /* values here */
 ```
 
-### `shared.AtsMetadata4`
+### `bool`
 
 ```python
-value: shared.AtsMetadata4 = /* values here */
+value: bool = /* values here */
 ```
 
-### `shared.AtsMetadata5`
+### `List[shared.AtsMetadata5]`
 
 ```python
-value: shared.AtsMetadata5 = /* values here */
+value: List[shared.AtsMetadata5] = /* values here */
 ```
 

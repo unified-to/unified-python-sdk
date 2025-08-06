@@ -3,15 +3,27 @@
 
 ## Supported Types
 
-### `List[Any]`
+### `shared.CommerceMetadataSchemas1`
 
 ```python
-value: List[Any] = /* values here */
+value: shared.CommerceMetadataSchemas1 = /* values here */
 ```
 
-### `shared.CommerceMetadataSchemasValue52`
+### `str`
 
 ```python
-value: shared.CommerceMetadataSchemasValue52 = /* values here */
+value: str = /* values here */
+```
+
+### `float`
+
+```python
+value: float = /* values here */
+```
+
+### `bool`
+
+```python
+value: bool = /* values here */
 ```
 

@@ -3,33 +3,33 @@
 
 ## Supported Types
 
-### `shared.IntegrationSchemas1`
+### `Dict[str, Any]`
 
 ```python
-value: shared.IntegrationSchemas1 = /* values here */
+value: Dict[str, Any] = /* values here */
 ```
 
-### `shared.IntegrationSchemas2`
+### `str`
 
 ```python
-value: shared.IntegrationSchemas2 = /* values here */
+value: str = /* values here */
 ```
 
-### `shared.IntegrationSchemas3`
+### `float`
 
 ```python
-value: shared.IntegrationSchemas3 = /* values here */
+value: float = /* values here */
 ```
 
-### `shared.IntegrationSchemas4`
+### `bool`
 
 ```python
-value: shared.IntegrationSchemas4 = /* values here */
+value: bool = /* values here */
 ```
 
-### `shared.IntegrationSchemas5`
+### `List[shared.IntegrationSchemas5]`
 
 ```python
-value: shared.IntegrationSchemas5 = /* values here */
+value: List[shared.IntegrationSchemas5] = /* values here */
 ```
 

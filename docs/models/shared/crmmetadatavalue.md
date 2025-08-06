@@ -3,33 +3,33 @@
 
 ## Supported Types
 
-### `shared.CrmMetadataSchemas1`
+### `Dict[str, Any]`
 
 ```python
-value: shared.CrmMetadataSchemas1 = /* values here */
+value: Dict[str, Any] = /* values here */
 ```
 
-### `shared.CrmMetadataSchemas2`
+### `str`
 
 ```python
-value: shared.CrmMetadataSchemas2 = /* values here */
+value: str = /* values here */
 ```
 
-### `shared.CrmMetadataSchemas3`
+### `float`
 
 ```python
-value: shared.CrmMetadataSchemas3 = /* values here */
+value: float = /* values here */
 ```
 
-### `shared.CrmMetadataSchemas4`
+### `bool`
 
 ```python
-value: shared.CrmMetadataSchemas4 = /* values here */
+value: bool = /* values here */
 ```
 
-### `shared.CrmMetadataSchemas5`
+### `List[shared.CrmMetadataSchemas5]`
 
 ```python
-value: shared.CrmMetadataSchemas5 = /* values here */
+value: List[shared.CrmMetadataSchemas5] = /* values here */
 ```
 

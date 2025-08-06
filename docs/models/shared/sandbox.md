@@ -3,33 +3,33 @@
 
 ## Supported Types
 
-### `shared.IntegrationSchemasSandbox1`
+### `Dict[str, Any]`
 
 ```python
-value: shared.IntegrationSchemasSandbox1 = /* values here */
+value: Dict[str, Any] = /* values here */
 ```
 
-### `shared.IntegrationSchemasSandbox2`
+### `str`
 
 ```python
-value: shared.IntegrationSchemasSandbox2 = /* values here */
+value: str = /* values here */
 ```
 
-### `shared.IntegrationSchemasSandbox3`
+### `float`
 
 ```python
-value: shared.IntegrationSchemasSandbox3 = /* values here */
+value: float = /* values here */
 ```
 
-### `shared.IntegrationSchemasSandbox4`
+### `bool`
 
 ```python
-value: shared.IntegrationSchemasSandbox4 = /* values here */
+value: bool = /* values here */
 ```
 
-### `shared.IntegrationSchemasSandbox5`
+### `List[shared.IntegrationSchemasSandbox5]`
 
 ```python
-value: shared.IntegrationSchemasSandbox5 = /* values here */
+value: List[shared.IntegrationSchemasSandbox5] = /* values here */
 ```
 

@@ -4,83 +4,11 @@ from __future__ import annotations
 from enum import Enum
 import pydantic
 from pydantic.functional_validators import PlainValidator
-from typing import Any, List, Optional, Union
+from typing import Any, Dict, List, Optional, Union
 from typing_extensions import Annotated, NotRequired, TypeAliasType, TypedDict
 from unified_python_sdk import utils
 from unified_python_sdk.types import BaseModel
 from unified_python_sdk.utils import validate_open_enum
-
-
-class HrisMetadataSchemasExtraData52TypedDict(TypedDict):
-    pass
-
-
-class HrisMetadataSchemasExtraData52(BaseModel):
-    pass
-
-
-HrisMetadata5TypedDict = TypeAliasType(
-    "HrisMetadata5TypedDict", Union[HrisMetadataSchemasExtraData52TypedDict, List[Any]]
-)
-
-
-HrisMetadata5 = TypeAliasType(
-    "HrisMetadata5", Union[HrisMetadataSchemasExtraData52, List[Any]]
-)
-
-
-class HrisMetadataSchemasExtraData2TypedDict(TypedDict):
-    pass
-
-
-class HrisMetadataSchemasExtraData2(BaseModel):
-    pass
-
-
-HrisMetadata4TypedDict = TypeAliasType(
-    "HrisMetadata4TypedDict", Union[HrisMetadataSchemasExtraData2TypedDict, bool]
-)
-
-
-HrisMetadata4 = TypeAliasType(
-    "HrisMetadata4", Union[HrisMetadataSchemasExtraData2, bool]
-)
-
-
-class HrisMetadataSchemasExtraData32TypedDict(TypedDict):
-    pass
-
-
-class HrisMetadataSchemasExtraData32(BaseModel):
-    pass
-
-
-HrisMetadata3TypedDict = TypeAliasType(
-    "HrisMetadata3TypedDict", Union[HrisMetadataSchemasExtraData32TypedDict, float]
-)
-
-
-HrisMetadata3 = TypeAliasType(
-    "HrisMetadata3", Union[HrisMetadataSchemasExtraData32, float]
-)
-
-
-class HrisMetadataSchemasExtraData22TypedDict(TypedDict):
-    pass
-
-
-class HrisMetadataSchemasExtraData22(BaseModel):
-    pass
-
-
-HrisMetadata2TypedDict = TypeAliasType(
-    "HrisMetadata2TypedDict", Union[HrisMetadataSchemasExtraData22TypedDict, str]
-)
-
-
-HrisMetadata2 = TypeAliasType(
-    "HrisMetadata2", Union[HrisMetadataSchemasExtraData22, str]
-)
 
 
 class HrisMetadata1TypedDict(TypedDict):
@@ -91,21 +19,23 @@ class HrisMetadata1(BaseModel):
     pass
 
 
+HrisMetadata5TypedDict = TypeAliasType(
+    "HrisMetadata5TypedDict", Union[HrisMetadata1TypedDict, str, float, bool]
+)
+
+
+HrisMetadata5 = TypeAliasType("HrisMetadata5", Union[HrisMetadata1, str, float, bool])
+
+
 HrisMetadataExtraDataTypedDict = TypeAliasType(
     "HrisMetadataExtraDataTypedDict",
-    Union[
-        HrisMetadata1TypedDict,
-        HrisMetadata2TypedDict,
-        HrisMetadata3TypedDict,
-        HrisMetadata4TypedDict,
-        HrisMetadata5TypedDict,
-    ],
+    Union[Dict[str, Any], str, float, bool, List[HrisMetadata5TypedDict]],
 )
 
 
 HrisMetadataExtraData = TypeAliasType(
     "HrisMetadataExtraData",
-    Union[HrisMetadata1, HrisMetadata2, HrisMetadata3, HrisMetadata4, HrisMetadata5],
+    Union[Dict[str, Any], str, float, bool, List[HrisMetadata5]],
 )
 
 
@@ -125,79 +55,6 @@ class HrisMetadataFormat(str, Enum, metaclass=utils.OpenEnumMeta):
     URL = "URL"
 
 
-class HrisMetadataSchemasValue52TypedDict(TypedDict):
-    pass
-
-
-class HrisMetadataSchemasValue52(BaseModel):
-    pass
-
-
-HrisMetadataSchemas5TypedDict = TypeAliasType(
-    "HrisMetadataSchemas5TypedDict",
-    Union[HrisMetadataSchemasValue52TypedDict, List[Any]],
-)
-
-
-HrisMetadataSchemas5 = TypeAliasType(
-    "HrisMetadataSchemas5", Union[HrisMetadataSchemasValue52, List[Any]]
-)
-
-
-class HrisMetadataSchemasValue42TypedDict(TypedDict):
-    pass
-
-
-class HrisMetadataSchemasValue42(BaseModel):
-    pass
-
-
-HrisMetadataSchemas4TypedDict = TypeAliasType(
-    "HrisMetadataSchemas4TypedDict", Union[HrisMetadataSchemasValue42TypedDict, bool]
-)
-
-
-HrisMetadataSchemas4 = TypeAliasType(
-    "HrisMetadataSchemas4", Union[HrisMetadataSchemasValue42, bool]
-)
-
-
-class HrisMetadataSchemasValue32TypedDict(TypedDict):
-    pass
-
-
-class HrisMetadataSchemasValue32(BaseModel):
-    pass
-
-
-HrisMetadataSchemas3TypedDict = TypeAliasType(
-    "HrisMetadataSchemas3TypedDict", Union[HrisMetadataSchemasValue32TypedDict, float]
-)
-
-
-HrisMetadataSchemas3 = TypeAliasType(
-    "HrisMetadataSchemas3", Union[HrisMetadataSchemasValue32, float]
-)
-
-
-class HrisMetadataSchemasValue2TypedDict(TypedDict):
-    pass
-
-
-class HrisMetadataSchemasValue2(BaseModel):
-    pass
-
-
-HrisMetadataSchemas2TypedDict = TypeAliasType(
-    "HrisMetadataSchemas2TypedDict", Union[HrisMetadataSchemasValue2TypedDict, str]
-)
-
-
-HrisMetadataSchemas2 = TypeAliasType(
-    "HrisMetadataSchemas2", Union[HrisMetadataSchemasValue2, str]
-)
-
-
 class HrisMetadataSchemas1TypedDict(TypedDict):
     pass
 
@@ -206,27 +63,26 @@ class HrisMetadataSchemas1(BaseModel):
     pass
 
 
+HrisMetadataSchemas5TypedDict = TypeAliasType(
+    "HrisMetadataSchemas5TypedDict",
+    Union[HrisMetadataSchemas1TypedDict, str, float, bool],
+)
+
+
+HrisMetadataSchemas5 = TypeAliasType(
+    "HrisMetadataSchemas5", Union[HrisMetadataSchemas1, str, float, bool]
+)
+
+
 HrisMetadataValueTypedDict = TypeAliasType(
     "HrisMetadataValueTypedDict",
-    Union[
-        HrisMetadataSchemas1TypedDict,
-        HrisMetadataSchemas2TypedDict,
-        HrisMetadataSchemas3TypedDict,
-        HrisMetadataSchemas4TypedDict,
-        HrisMetadataSchemas5TypedDict,
-    ],
+    Union[Dict[str, Any], str, float, bool, List[HrisMetadataSchemas5TypedDict]],
 )
 
 
 HrisMetadataValue = TypeAliasType(
     "HrisMetadataValue",
-    Union[
-        HrisMetadataSchemas1,
-        HrisMetadataSchemas2,
-        HrisMetadataSchemas3,
-        HrisMetadataSchemas4,
-        HrisMetadataSchemas5,
-    ],
+    Union[Dict[str, Any], str, float, bool, List[HrisMetadataSchemas5]],
 )
 
 
