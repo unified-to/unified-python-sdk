@@ -21,7 +21,7 @@ generation:
   baseServerURL: ""
   flattenGlobalSecurity: true
 python:
-  version: 0.48.12
+  version: 0.48.13
   additionalDependencies:
     dev: {}
     main: {}

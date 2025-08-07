@@ -15,6 +15,7 @@ class CommerceItemTypedDict(TypedDict):
     collection_ids: NotRequired[List[str]]
     created_at: NotRequired[datetime]
     description: NotRequired[str]
+    global_code: NotRequired[str]
     id: NotRequired[str]
     is_active: NotRequired[bool]
     is_taxable: NotRequired[bool]
@@ -41,6 +42,8 @@ class CommerceItem(BaseModel):
     created_at: Optional[datetime] = None
 
     description: Optional[str] = None
+
+    global_code: Optional[str] = None
 
     id: Optional[str] = None
 
