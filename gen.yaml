@@ -21,7 +21,7 @@ generation:
   baseServerURL: ""
   flattenGlobalSecurity: true
 python:
-  version: 0.48.13
+  version: 0.48.14
   additionalDependencies:
     dev: {}
     main: {}
@@ -51,6 +51,7 @@ python:
   methodArguments: require-security-and-request
   moduleName: ""
   outputModelSuffix: output
+  packageManager: poetry
   packageName: Unified-python-sdk
   projectUrls: {}
   pytestFilterWarnings: []

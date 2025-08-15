@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: 585a933222a93cac4e23b48d062c4a0c
+  docChecksum: 3a5734f3a7c4cfbbb830e6e58476de9b
   docVersion: "1.0"
-  speakeasyVersion: 1.598.3
-  generationVersion: 2.674.3
-  releaseVersion: 0.48.13
-  configChecksum: 5b68bb1eb74b48fc8e901477a718b2a8
+  speakeasyVersion: 1.604.1
+  generationVersion: 2.683.1
+  releaseVersion: 0.48.14
+  configChecksum: a22dc412c457a929d68a82c22269e52a
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -16,7 +16,7 @@ features:
     acceptHeaders: 3.0.0
     additionalDependencies: 1.0.0
     constsAndDefaults: 1.0.5
-    core: 5.19.7
+    core: 5.19.9
     defaultEnabledRetries: 0.2.0
     downloadStreams: 1.0.1
     enumUnions: 0.1.0
@@ -6229,7 +6229,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {"categories": ["auth"], "environment": "Production", "integration_type": "<value>", "permissions": ["scim_groups_read", "auth_login"]}
+          application/json: {"categories": ["auth"], "environment": "Production", "integration_type": "<value>", "permissions": ["scim_groups_read", "crm_pipeline_write"]}
   getUnifiedIntegrationAuth:
     speakeasy-default-get-unified-integration-auth:
       parameters:
