@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: 3a5734f3a7c4cfbbb830e6e58476de9b
+  docChecksum: 190c325c2a6a2949d578db67163791d8
   docVersion: "1.0"
-  speakeasyVersion: 1.604.1
-  generationVersion: 2.683.1
-  releaseVersion: 0.48.14
-  configChecksum: a22dc412c457a929d68a82c22269e52a
+  speakeasyVersion: 1.605.0
+  generationVersion: 2.684.0
+  releaseVersion: 0.48.15
+  configChecksum: 5095bfda6359135a08c7074d754b445e
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -332,6 +332,8 @@ generatedFiles:
   - docs/models/operations/getscimusersresponse.md
   - docs/models/operations/getstoragefilerequest.md
   - docs/models/operations/getstoragefileresponse.md
+  - docs/models/operations/gettaskchangerequest.md
+  - docs/models/operations/gettaskchangeresponse.md
   - docs/models/operations/gettaskcommentrequest.md
   - docs/models/operations/gettaskcommentresponse.md
   - docs/models/operations/gettaskprojectrequest.md
@@ -518,6 +520,8 @@ generatedFiles:
   - docs/models/operations/listscimusersresponse.md
   - docs/models/operations/liststoragefilesrequest.md
   - docs/models/operations/liststoragefilesresponse.md
+  - docs/models/operations/listtaskchangesrequest.md
+  - docs/models/operations/listtaskchangesresponse.md
   - docs/models/operations/listtaskcommentsrequest.md
   - docs/models/operations/listtaskcommentsresponse.md
   - docs/models/operations/listtaskprojectsrequest.md
@@ -1365,6 +1369,8 @@ generatedFiles:
   - docs/models/shared/storagefile.md
   - docs/models/shared/storagefiletype.md
   - docs/models/shared/storagepermission.md
+  - docs/models/shared/taskchange.md
+  - docs/models/shared/taskchangeitem.md
   - docs/models/shared/taskcomment.md
   - docs/models/shared/taskmetadata.md
   - docs/models/shared/taskmetadata1.md
@@ -1419,6 +1425,7 @@ generatedFiles:
   - docs/sdks/call/README.md
   - docs/sdks/candidate/README.md
   - docs/sdks/category/README.md
+  - docs/sdks/change/README.md
   - docs/sdks/channel/README.md
   - docs/sdks/class/README.md
   - docs/sdks/collection/README.md
@@ -1533,6 +1540,7 @@ generatedFiles:
   - src/unified_python_sdk/call.py
   - src/unified_python_sdk/candidate.py
   - src/unified_python_sdk/category.py
+  - src/unified_python_sdk/change.py
   - src/unified_python_sdk/channel.py
   - src/unified_python_sdk/class_.py
   - src/unified_python_sdk/collection.py
@@ -1735,6 +1743,7 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/getscimgroups.py
   - src/unified_python_sdk/models/operations/getscimusers.py
   - src/unified_python_sdk/models/operations/getstoragefile.py
+  - src/unified_python_sdk/models/operations/gettaskchange.py
   - src/unified_python_sdk/models/operations/gettaskcomment.py
   - src/unified_python_sdk/models/operations/gettaskproject.py
   - src/unified_python_sdk/models/operations/gettasktask.py
@@ -1828,6 +1837,7 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/listscimgroups.py
   - src/unified_python_sdk/models/operations/listscimusers.py
   - src/unified_python_sdk/models/operations/liststoragefiles.py
+  - src/unified_python_sdk/models/operations/listtaskchanges.py
   - src/unified_python_sdk/models/operations/listtaskcomments.py
   - src/unified_python_sdk/models/operations/listtaskprojects.py
   - src/unified_python_sdk/models/operations/listtasktasks.py
@@ -2287,6 +2297,8 @@ generatedFiles:
   - src/unified_python_sdk/models/shared/security.py
   - src/unified_python_sdk/models/shared/storagefile.py
   - src/unified_python_sdk/models/shared/storagepermission.py
+  - src/unified_python_sdk/models/shared/taskchange.py
+  - src/unified_python_sdk/models/shared/taskchangeitem.py
   - src/unified_python_sdk/models/shared/taskcomment.py
   - src/unified_python_sdk/models/shared/taskmetadata.py
   - src/unified_python_sdk/models/shared/taskproject.py
@@ -6768,5 +6780,28 @@ examples:
       responses:
         "200":
           application/json: {}
+  getTaskChange:
+    speakeasy-default-get-task-change:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  listTaskChanges:
+    speakeasy-default-list-task-changes:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
 examplesVersion: 1.0.2
 generatedTests: {}
+releaseNotes: |
+  ## SDK Changes Detected:
+  * `unified_to.task.get_task_change()`: **Added**
+  * `unified_to.task.list_task_changes()`: **Added**
+  * `unified_to.change.get_task_change()`: **Added**
+  * `unified_to.change.list_task_changes()`: **Added**

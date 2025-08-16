@@ -31,6 +31,7 @@ if TYPE_CHECKING:
     from unified_python_sdk.call import Call
     from unified_python_sdk.candidate import Candidate
     from unified_python_sdk.category import Category
+    from unified_python_sdk.change import Change
     from unified_python_sdk.channel import Channel
     from unified_python_sdk.class_ import Class
     from unified_python_sdk.collection import Collection
@@ -207,6 +208,7 @@ class UnifiedTo(BaseSDK):
     storage: "Storage"
     file: "File"
     task: "Task"
+    change: "Change"
     project: "Project"
     ticketing: "Ticketing"
     customer: "Customer"
@@ -312,6 +314,7 @@ class UnifiedTo(BaseSDK):
         "storage": ("unified_python_sdk.storage", "Storage"),
         "file": ("unified_python_sdk.file", "File"),
         "task": ("unified_python_sdk.task", "Task"),
+        "change": ("unified_python_sdk.change", "Change"),
         "project": ("unified_python_sdk.project", "Project"),
         "ticketing": ("unified_python_sdk.ticketing", "Ticketing"),
         "customer": ("unified_python_sdk.customer", "Customer"),

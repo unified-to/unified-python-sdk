@@ -420,6 +420,11 @@ asyncio.run(main())
 * [remove_accounting_category](docs/sdks/category/README.md#remove_accounting_category) - Remove a category
 * [update_accounting_category](docs/sdks/category/README.md#update_accounting_category) - Update a category
 
+### [change](docs/sdks/change/README.md)
+
+* [get_task_change](docs/sdks/change/README.md#get_task_change) - Retrieve a change
+* [list_task_changes](docs/sdks/change/README.md#list_task_changes) - List all changes
+
 ### [channel](docs/sdks/channel/README.md)
 
 * [get_messaging_channel](docs/sdks/channel/README.md#get_messaging_channel) - Retrieve a channel
@@ -1261,9 +1266,11 @@ asyncio.run(main())
 * [create_task_comment](docs/sdks/task/README.md#create_task_comment) - Create a comment
 * [create_task_project](docs/sdks/task/README.md#create_task_project) - Create a project
 * [create_task_task](docs/sdks/task/README.md#create_task_task) - Create a task
+* [get_task_change](docs/sdks/task/README.md#get_task_change) - Retrieve a change
 * [get_task_comment](docs/sdks/task/README.md#get_task_comment) - Retrieve a comment
 * [get_task_project](docs/sdks/task/README.md#get_task_project) - Retrieve a project
 * [get_task_task](docs/sdks/task/README.md#get_task_task) - Retrieve a task
+* [list_task_changes](docs/sdks/task/README.md#list_task_changes) - List all changes
 * [list_task_comments](docs/sdks/task/README.md#list_task_comments) - List all comments
 * [list_task_projects](docs/sdks/task/README.md#list_task_projects) - List all projects
 * [list_task_tasks](docs/sdks/task/README.md#list_task_tasks) - List all tasks

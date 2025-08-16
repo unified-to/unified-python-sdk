@@ -722,6 +722,8 @@ if TYPE_CHECKING:
     from .security import Security, SecurityTypedDict
     from .storagefile import StorageFile, StorageFileType, StorageFileTypedDict
     from .storagepermission import StoragePermission, StoragePermissionTypedDict
+    from .taskchange import TaskChange, TaskChangeTypedDict
+    from .taskchangeitem import TaskChangeItem, TaskChangeItemTypedDict
     from .taskcomment import TaskComment, TaskCommentTypedDict
     from .taskmetadata import (
         TaskMetadata,
@@ -1387,6 +1389,10 @@ __all__ = [
     "StorageFileTypedDict",
     "StoragePermission",
     "StoragePermissionTypedDict",
+    "TaskChange",
+    "TaskChangeItem",
+    "TaskChangeItemTypedDict",
+    "TaskChangeTypedDict",
     "TaskComment",
     "TaskCommentTypedDict",
     "TaskMetadata",
@@ -2062,6 +2068,10 @@ _dynamic_imports: dict[str, str] = {
     "StorageFileTypedDict": ".storagefile",
     "StoragePermission": ".storagepermission",
     "StoragePermissionTypedDict": ".storagepermission",
+    "TaskChange": ".taskchange",
+    "TaskChangeTypedDict": ".taskchange",
+    "TaskChangeItem": ".taskchangeitem",
+    "TaskChangeItemTypedDict": ".taskchangeitem",
     "TaskComment": ".taskcomment",
     "TaskCommentTypedDict": ".taskcomment",
     "TaskMetadata": ".taskmetadata",

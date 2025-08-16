@@ -897,6 +897,12 @@ if TYPE_CHECKING:
         GetStorageFileResponse,
         GetStorageFileResponseTypedDict,
     )
+    from .gettaskchange import (
+        GetTaskChangeRequest,
+        GetTaskChangeRequestTypedDict,
+        GetTaskChangeResponse,
+        GetTaskChangeResponseTypedDict,
+    )
     from .gettaskcomment import (
         GetTaskCommentRequest,
         GetTaskCommentRequestTypedDict,
@@ -1454,6 +1460,12 @@ if TYPE_CHECKING:
         ListStorageFilesRequestTypedDict,
         ListStorageFilesResponse,
         ListStorageFilesResponseTypedDict,
+    )
+    from .listtaskchanges import (
+        ListTaskChangesRequest,
+        ListTaskChangesRequestTypedDict,
+        ListTaskChangesResponse,
+        ListTaskChangesResponseTypedDict,
     )
     from .listtaskcomments import (
         ListTaskCommentsRequest,
@@ -3507,6 +3519,10 @@ __all__ = [
     "GetStorageFileRequestTypedDict",
     "GetStorageFileResponse",
     "GetStorageFileResponseTypedDict",
+    "GetTaskChangeRequest",
+    "GetTaskChangeRequestTypedDict",
+    "GetTaskChangeResponse",
+    "GetTaskChangeResponseTypedDict",
     "GetTaskCommentRequest",
     "GetTaskCommentRequestTypedDict",
     "GetTaskCommentResponse",
@@ -3879,6 +3895,10 @@ __all__ = [
     "ListStorageFilesRequestTypedDict",
     "ListStorageFilesResponse",
     "ListStorageFilesResponseTypedDict",
+    "ListTaskChangesRequest",
+    "ListTaskChangesRequestTypedDict",
+    "ListTaskChangesResponse",
+    "ListTaskChangesResponseTypedDict",
     "ListTaskCommentsRequest",
     "ListTaskCommentsRequestTypedDict",
     "ListTaskCommentsResponse",
@@ -5446,6 +5466,10 @@ _dynamic_imports: dict[str, str] = {
     "GetStorageFileRequestTypedDict": ".getstoragefile",
     "GetStorageFileResponse": ".getstoragefile",
     "GetStorageFileResponseTypedDict": ".getstoragefile",
+    "GetTaskChangeRequest": ".gettaskchange",
+    "GetTaskChangeRequestTypedDict": ".gettaskchange",
+    "GetTaskChangeResponse": ".gettaskchange",
+    "GetTaskChangeResponseTypedDict": ".gettaskchange",
     "GetTaskCommentRequest": ".gettaskcomment",
     "GetTaskCommentRequestTypedDict": ".gettaskcomment",
     "GetTaskCommentResponse": ".gettaskcomment",
@@ -5818,6 +5842,10 @@ _dynamic_imports: dict[str, str] = {
     "ListStorageFilesRequestTypedDict": ".liststoragefiles",
     "ListStorageFilesResponse": ".liststoragefiles",
     "ListStorageFilesResponseTypedDict": ".liststoragefiles",
+    "ListTaskChangesRequest": ".listtaskchanges",
+    "ListTaskChangesRequestTypedDict": ".listtaskchanges",
+    "ListTaskChangesResponse": ".listtaskchanges",
+    "ListTaskChangesResponseTypedDict": ".listtaskchanges",
     "ListTaskCommentsRequest": ".listtaskcomments",
     "ListTaskCommentsRequestTypedDict": ".listtaskcomments",
     "ListTaskCommentsResponse": ".listtaskcomments",

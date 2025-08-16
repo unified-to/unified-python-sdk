@@ -8,9 +8,11 @@
 * [create_task_comment](#create_task_comment) - Create a comment
 * [create_task_project](#create_task_project) - Create a project
 * [create_task_task](#create_task_task) - Create a task
+* [get_task_change](#get_task_change) - Retrieve a change
 * [get_task_comment](#get_task_comment) - Retrieve a comment
 * [get_task_project](#get_task_project) - Retrieve a project
 * [get_task_task](#get_task_task) - Retrieve a task
+* [list_task_changes](#list_task_changes) - List all changes
 * [list_task_comments](#list_task_comments) - List all comments
 * [list_task_projects](#list_task_projects) - List all projects
 * [list_task_tasks](#list_task_tasks) - List all tasks
@@ -168,6 +170,53 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## get_task_change
+
+Retrieve a change
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="getTaskChange" method="get" path="/task/{connection_id}/change/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.task.get_task_change(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.task_change is not None
+
+    # Handle response
+    print(res.task_change)
+
+```
+
+### Parameters
+
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `request`                                                                          | [operations.GetTaskChangeRequest](../../models/operations/gettaskchangerequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| `retries`                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                   | :heavy_minus_sign:                                                                 | Configuration to override the default retry behavior of the client.                |
+
+### Response
+
+**[operations.GetTaskChangeResponse](../../models/operations/gettaskchangeresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## get_task_comment
 
 Retrieve a comment
@@ -302,6 +351,52 @@ with UnifiedTo(
 ### Response
 
 **[operations.GetTaskTaskResponse](../../models/operations/gettasktaskresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## list_task_changes
+
+List all changes
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="listTaskChanges" method="get" path="/task/{connection_id}/change" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.task.list_task_changes(request={
+        "connection_id": "<id>",
+    })
+
+    assert res.task_changes is not None
+
+    # Handle response
+    print(res.task_changes)
+
+```
+
+### Parameters
+
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `request`                                                                              | [operations.ListTaskChangesRequest](../../models/operations/listtaskchangesrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `retries`                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                       | :heavy_minus_sign:                                                                     | Configuration to override the default retry behavior of the client.                    |
+
+### Response
+
+**[operations.ListTaskChangesResponse](../../models/operations/listtaskchangesresponse.md)**
 
 ### Errors
 

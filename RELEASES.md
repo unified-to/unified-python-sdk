@@ -2869,3 +2869,13 @@ Based on:
 - [python v0.48.14] .
 ### Releases
 - [PyPI v0.48.14] https://pypi.org/project/Unified-python-sdk/0.48.14 - .
+
+## 2025-08-16 00:34:27
+### Changes
+Based on:
+- OpenAPI Doc  
+- Speakeasy CLI 1.605.0 (2.684.0) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [python v0.48.15] .
+### Releases
+- [PyPI v0.48.15] https://pypi.org/project/Unified-python-sdk/0.48.15 - .
