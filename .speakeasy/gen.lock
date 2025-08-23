@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: 190c325c2a6a2949d578db67163791d8
+  docChecksum: 4f3132855d15c32adf7ca6526ca7469f
   docVersion: "1.0"
-  speakeasyVersion: 1.605.0
-  generationVersion: 2.684.0
-  releaseVersion: 0.48.15
-  configChecksum: 5095bfda6359135a08c7074d754b445e
+  speakeasyVersion: 1.606.3
+  generationVersion: 2.687.1
+  releaseVersion: 0.48.16
+  configChecksum: 4577fb85012f2da58eb9fc9277123206
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -6799,9 +6799,4 @@ examples:
           application/json: [{}]
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: |
-  ## SDK Changes Detected:
-  * `unified_to.task.get_task_change()`: **Added**
-  * `unified_to.task.list_task_changes()`: **Added**
-  * `unified_to.change.get_task_change()`: **Added**
-  * `unified_to.change.list_task_changes()`: **Added**
+releaseNotes: "## SDK Changes Detected:\n* `unified_to.unified.create_unified_connection()`: \n  *  `request.auth.refresh_url` **Added**\n  *  `response.auth.refresh_url` **Added**\n* `unified_to.unified.create_unified_webhook()`: \n  *  `request.webhook.db_schema` **Added**\n  *  `response.db_schema` **Added**\n* `unified_to.unified.get_unified_connection()`:  `response.auth.refresh_url` **Added**\n* `unified_to.unified.get_unified_webhook()`:  `response.db_schema` **Added**\n* `unified_to.unified.list_unified_connections()`:  `response.[].auth.refresh_url` **Added**\n* `unified_to.unified.list_unified_webhooks()`:  `response.[].db_schema` **Added**\n* `unified_to.unified.patch_unified_connection()`: \n  *  `request.connection.auth.refresh_url` **Added**\n  *  `response.auth.refresh_url` **Added**\n* `unified_to.unified.patch_unified_webhook()`: \n  *  `request.webhook.db_schema` **Added**\n  *  `response.db_schema` **Added**\n* `unified_to.unified.update_unified_connection()`: \n  *  `request.connection.auth.refresh_url` **Added**\n  *  `response.auth.refresh_url` **Added**\n* `unified_to.unified.update_unified_webhook()`: \n  *  `request.webhook.db_schema` **Added**\n  *  `response.db_schema` **Added**\n* `unified_to.connection.create_unified_connection()`: \n  *  `request.auth.refresh_url` **Added**\n  *  `response.auth.refresh_url` **Added**\n* `unified_to.connection.get_unified_connection()`:  `response.auth.refresh_url` **Added**\n* `unified_to.connection.list_unified_connections()`:  `response.[].auth.refresh_url` **Added**\n* `unified_to.connection.patch_unified_connection()`: \n  *  `request.connection.auth.refresh_url` **Added**\n  *  `response.auth.refresh_url` **Added**\n* `unified_to.connection.update_unified_connection()`: \n  *  `request.connection.auth.refresh_url` **Added**\n  *  `response.auth.refresh_url` **Added**\n* `unified_to.webhook.create_unified_webhook()`: \n  *  `request.webhook.db_schema` **Added**\n  *  `response.db_schema` **Added**\n* `unified_to.webhook.get_unified_webhook()`:  `response.db_schema` **Added**\n* `unified_to.webhook.list_unified_webhooks()`:  `response.[].db_schema` **Added**\n* `unified_to.webhook.patch_unified_webhook()`: \n  *  `request.webhook.db_schema` **Added**\n  *  `response.db_schema` **Added**\n* `unified_to.webhook.update_unified_webhook()`: \n  *  `request.webhook.db_schema` **Added**\n  *  `response.db_schema` **Added**\n"

@@ -133,6 +133,7 @@ class WebhookTypedDict(TypedDict):
     checked_at: NotRequired[datetime]
     created_at: NotRequired[datetime]
     db_name_prefix: NotRequired[str]
+    db_schema: NotRequired[str]
     db_type: NotRequired[DbType]
     db_url: NotRequired[str]
     environment: NotRequired[str]
@@ -167,6 +168,8 @@ class Webhook(BaseModel):
     created_at: Optional[datetime] = None
 
     db_name_prefix: Optional[str] = None
+
+    db_schema: Optional[str] = None
 
     db_type: Annotated[Optional[DbType], PlainValidator(validate_open_enum(False))] = (
         None

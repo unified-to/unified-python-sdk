@@ -31,6 +31,7 @@ class PropertyConnectionAuthTypedDict(TypedDict):
     refresh_token: NotRequired[str]
     refresh_token_expires_date: NotRequired[datetime]
     refresh_token_expires_in: NotRequired[float]
+    refresh_url: NotRequired[str]
     state: NotRequired[str]
     token: NotRequired[str]
     token_url: NotRequired[str]
@@ -80,6 +81,8 @@ class PropertyConnectionAuth(BaseModel):
     refresh_token_expires_date: Optional[datetime] = None
 
     refresh_token_expires_in: Optional[float] = None
+
+    refresh_url: Optional[str] = None
 
     state: Optional[str] = None
 
