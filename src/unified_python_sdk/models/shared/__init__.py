@@ -3,6 +3,7 @@
 from typing import TYPE_CHECKING
 from importlib import import_module
 import builtins
+import sys
 
 if TYPE_CHECKING:
     from .accountingaccount import (
@@ -772,6 +773,32 @@ if TYPE_CHECKING:
         UcRecordingTranscriptTypedDict,
     )
     from .uctelephone import UcTelephone, UcTelephoneType, UcTelephoneTypedDict
+    from .verificationaddress import VerificationAddress, VerificationAddressTypedDict
+    from .verificationpackage import (
+        VerificationPackage,
+        VerificationPackageType,
+        VerificationPackageTypedDict,
+    )
+    from .verificationparameter import (
+        VerificationParameter,
+        VerificationParameterType,
+        VerificationParameterTypedDict,
+    )
+    from .verificationparameterinput import (
+        VerificationParameterInput,
+        VerificationParameterInputTypedDict,
+    )
+    from .verificationrequest import (
+        ProfileGender,
+        ResponseStatus,
+        VerificationRequest,
+        VerificationRequestTypedDict,
+    )
+    from .verificationresponsedetail import (
+        VerificationResponseDetail,
+        VerificationResponseDetailTypedDict,
+    )
+    from .verificationtime import VerificationTime, VerificationTimeTypedDict
     from .webhook import (
         DbType,
         Event,
@@ -1217,6 +1244,7 @@ __all__ = [
     "PaymentSubscriptionTypedDict",
     "PaymentType",
     "Priority",
+    "ProfileGender",
     "PropertyAccountingBalancesheetItemSubItems",
     "PropertyAccountingBalancesheetItemSubItemsTypedDict",
     "PropertyAccountingContactBillingAddress",
@@ -1344,6 +1372,7 @@ __all__ = [
     "RepoRepository",
     "RepoRepositoryTypedDict",
     "ResourceType",
+    "ResponseStatus",
     "Role",
     "Sandbox",
     "SandboxTypedDict",
@@ -1450,6 +1479,22 @@ __all__ = [
     "UcTelephoneTypedDict",
     "Value",
     "ValueTypedDict",
+    "VerificationAddress",
+    "VerificationAddressTypedDict",
+    "VerificationPackage",
+    "VerificationPackageType",
+    "VerificationPackageTypedDict",
+    "VerificationParameter",
+    "VerificationParameterInput",
+    "VerificationParameterInputTypedDict",
+    "VerificationParameterType",
+    "VerificationParameterTypedDict",
+    "VerificationRequest",
+    "VerificationRequestTypedDict",
+    "VerificationResponseDetail",
+    "VerificationResponseDetailTypedDict",
+    "VerificationTime",
+    "VerificationTimeTypedDict",
     "Webhook",
     "WebhookType",
     "WebhookTypedDict",
@@ -2125,6 +2170,24 @@ _dynamic_imports: dict[str, str] = {
     "UcTelephone": ".uctelephone",
     "UcTelephoneType": ".uctelephone",
     "UcTelephoneTypedDict": ".uctelephone",
+    "VerificationAddress": ".verificationaddress",
+    "VerificationAddressTypedDict": ".verificationaddress",
+    "VerificationPackage": ".verificationpackage",
+    "VerificationPackageType": ".verificationpackage",
+    "VerificationPackageTypedDict": ".verificationpackage",
+    "VerificationParameter": ".verificationparameter",
+    "VerificationParameterType": ".verificationparameter",
+    "VerificationParameterTypedDict": ".verificationparameter",
+    "VerificationParameterInput": ".verificationparameterinput",
+    "VerificationParameterInputTypedDict": ".verificationparameterinput",
+    "ProfileGender": ".verificationrequest",
+    "ResponseStatus": ".verificationrequest",
+    "VerificationRequest": ".verificationrequest",
+    "VerificationRequestTypedDict": ".verificationrequest",
+    "VerificationResponseDetail": ".verificationresponsedetail",
+    "VerificationResponseDetailTypedDict": ".verificationresponsedetail",
+    "VerificationTime": ".verificationtime",
+    "VerificationTimeTypedDict": ".verificationtime",
     "DbType": ".webhook",
     "Event": ".webhook",
     "ObjectType": ".webhook",
@@ -2132,6 +2195,18 @@ _dynamic_imports: dict[str, str] = {
     "WebhookType": ".webhook",
     "WebhookTypedDict": ".webhook",
 }
+
+
+def dynamic_import(modname, retries=3):
+    for attempt in range(retries):
+        try:
+            return import_module(modname, __package__)
+        except KeyError:
+            # Clear any half-initialized module and retry
+            sys.modules.pop(modname, None)
+            if attempt == retries - 1:
+                break
+    raise KeyError(f"Failed to import module '{modname}' after {retries} attempts")
 
 
 def __getattr__(attr_name: str) -> object:
@@ -2142,7 +2217,7 @@ def __getattr__(attr_name: str) -> object:
         )
 
     try:
-        module = import_module(module_name, __package__)
+        module = dynamic_import(module_name)
         result = getattr(module, attr_name)
         return result
     except ImportError as e:

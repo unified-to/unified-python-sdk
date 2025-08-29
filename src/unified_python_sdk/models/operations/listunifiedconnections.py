@@ -33,6 +33,7 @@ class Categories(str, Enum):
     REPO = "repo"
     METADATA = "metadata"
     CALENDAR = "calendar"
+    VERIFICATION = "verification"
 
 
 class ListUnifiedConnectionsRequestTypedDict(TypedDict):

@@ -7,6 +7,7 @@ from .utils.logger import Logger, get_default_logger
 from .utils.retries import RetryConfig
 import httpx
 import importlib
+import sys
 from typing import Callable, Dict, Optional, TYPE_CHECKING, Union, cast
 from unified_python_sdk import utils
 from unified_python_sdk._hooks import SDKHooks
@@ -80,6 +81,7 @@ if TYPE_CHECKING:
     from unified_python_sdk.note import Note
     from unified_python_sdk.order import Order
     from unified_python_sdk.organization import Organization
+    from unified_python_sdk.package import Package
     from unified_python_sdk.page import Page
     from unified_python_sdk.passthrough import Passthrough
     from unified_python_sdk.payment import Payment
@@ -97,6 +99,7 @@ if TYPE_CHECKING:
     from unified_python_sdk.repo import Repo
     from unified_python_sdk.report import Report
     from unified_python_sdk.repository import Repository
+    from unified_python_sdk.request import Request
     from unified_python_sdk.review import Review
     from unified_python_sdk.salesorder import Salesorder
     from unified_python_sdk.scim import Scim
@@ -116,6 +119,7 @@ if TYPE_CHECKING:
     from unified_python_sdk.uc import Uc
     from unified_python_sdk.unified import Unified
     from unified_python_sdk.user import User
+    from unified_python_sdk.verification import Verification
     from unified_python_sdk.webhook import Webhook
 
 
@@ -224,6 +228,9 @@ class UnifiedTo(BaseSDK):
     login: "Login"
     issue: "Issue"
     webhook: "Webhook"
+    verification: "Verification"
+    package: "Package"
+    request: "Request"
     _sub_sdk_map = {
         "accounting": ("unified_python_sdk.accounting", "Accounting"),
         "account": ("unified_python_sdk.account", "Account"),
@@ -330,6 +337,9 @@ class UnifiedTo(BaseSDK):
         "login": ("unified_python_sdk.login", "Login"),
         "issue": ("unified_python_sdk.issue", "Issue"),
         "webhook": ("unified_python_sdk.webhook", "Webhook"),
+        "verification": ("unified_python_sdk.verification", "Verification"),
+        "package": ("unified_python_sdk.package", "Package"),
+        "request": ("unified_python_sdk.request", "Request"),
     }
 
     def __init__(
@@ -394,6 +404,7 @@ class UnifiedTo(BaseSDK):
                 timeout_ms=timeout_ms,
                 debug_logger=debug_logger,
             ),
+            parent_ref=self,
         )
 
         hooks = SDKHooks()
@@ -418,13 +429,24 @@ class UnifiedTo(BaseSDK):
             self.sdk_configuration.async_client_supplied,
         )
 
+    def dynamic_import(self, modname, retries=3):
+        for attempt in range(retries):
+            try:
+                return importlib.import_module(modname)
+            except KeyError:
+                # Clear any half-initialized module and retry
+                sys.modules.pop(modname, None)
+                if attempt == retries - 1:
+                    break
+        raise KeyError(f"Failed to import module '{modname}' after {retries} attempts")
+
     def __getattr__(self, name: str):
         if name in self._sub_sdk_map:
             module_path, class_name = self._sub_sdk_map[name]
             try:
-                module = importlib.import_module(module_path)
+                module = self.dynamic_import(module_path)
                 klass = getattr(module, class_name)
-                instance = klass(self.sdk_configuration)
+                instance = klass(self.sdk_configuration, parent_ref=self)
                 setattr(self, name, instance)
                 return instance
             except ImportError as e:

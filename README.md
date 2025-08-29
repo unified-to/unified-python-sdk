@@ -1016,6 +1016,11 @@ asyncio.run(main())
 * [remove_repo_organization](docs/sdks/organization/README.md#remove_repo_organization) - Remove an organization
 * [update_repo_organization](docs/sdks/organization/README.md#update_repo_organization) - Update an organization
 
+### [package](docs/sdks/package/README.md)
+
+* [get_verification_package](docs/sdks/package/README.md#get_verification_package) - Retrieve a package
+* [list_verification_packages](docs/sdks/package/README.md#list_verification_packages) - List all packages
+
 ### [page](docs/sdks/page/README.md)
 
 * [create_kms_page](docs/sdks/page/README.md#create_kms_page) - Create a page
@@ -1182,6 +1187,15 @@ asyncio.run(main())
 * [patch_repo_repository](docs/sdks/repository/README.md#patch_repo_repository) - Update a repository
 * [remove_repo_repository](docs/sdks/repository/README.md#remove_repo_repository) - Remove a repository
 * [update_repo_repository](docs/sdks/repository/README.md#update_repo_repository) - Update a repository
+
+### [request](docs/sdks/request/README.md)
+
+* [create_verification_request](docs/sdks/request/README.md#create_verification_request) - Create a request
+* [get_verification_request](docs/sdks/request/README.md#get_verification_request) - Retrieve a request
+* [list_verification_requests](docs/sdks/request/README.md#list_verification_requests) - List all requests
+* [patch_verification_request](docs/sdks/request/README.md#patch_verification_request) - Update a request
+* [remove_verification_request](docs/sdks/request/README.md#remove_verification_request) - Remove a request
+* [update_verification_request](docs/sdks/request/README.md#update_verification_request) - Update a request
 
 ### [review](docs/sdks/review/README.md)
 
@@ -1405,6 +1419,17 @@ asyncio.run(main())
 * [patch_scim_users](docs/sdks/user/README.md#patch_scim_users) - Update user
 * [remove_scim_users](docs/sdks/user/README.md#remove_scim_users) - Delete user
 * [update_scim_users](docs/sdks/user/README.md#update_scim_users) - Update user
+
+### [verification](docs/sdks/verification/README.md)
+
+* [create_verification_request](docs/sdks/verification/README.md#create_verification_request) - Create a request
+* [get_verification_package](docs/sdks/verification/README.md#get_verification_package) - Retrieve a package
+* [get_verification_request](docs/sdks/verification/README.md#get_verification_request) - Retrieve a request
+* [list_verification_packages](docs/sdks/verification/README.md#list_verification_packages) - List all packages
+* [list_verification_requests](docs/sdks/verification/README.md#list_verification_requests) - List all requests
+* [patch_verification_request](docs/sdks/verification/README.md#patch_verification_request) - Update a request
+* [remove_verification_request](docs/sdks/verification/README.md#remove_verification_request) - Remove a request
+* [update_verification_request](docs/sdks/verification/README.md#update_verification_request) - Update a request
 
 ### [webhook](docs/sdks/webhook/README.md)
 

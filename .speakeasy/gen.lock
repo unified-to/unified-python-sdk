@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: 4f3132855d15c32adf7ca6526ca7469f
+  docChecksum: b7b8f3e6ae3a4420539b46d5e0a59d99
   docVersion: "1.0"
-  speakeasyVersion: 1.606.3
-  generationVersion: 2.687.1
-  releaseVersion: 0.48.16
-  configChecksum: 4577fb85012f2da58eb9fc9277123206
+  speakeasyVersion: 1.606.8
+  generationVersion: 2.687.13
+  releaseVersion: 0.49.0
+  configChecksum: 96aaebec974001a7f3bd215bccecd25d
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -16,7 +16,7 @@ features:
     acceptHeaders: 3.0.0
     additionalDependencies: 1.0.0
     constsAndDefaults: 1.0.5
-    core: 5.19.9
+    core: 5.20.1
     defaultEnabledRetries: 0.2.0
     downloadStreams: 1.0.1
     enumUnions: 0.1.0
@@ -186,6 +186,8 @@ generatedFiles:
   - docs/models/operations/createunifiedconnectionresponse.md
   - docs/models/operations/createunifiedwebhookrequest.md
   - docs/models/operations/createunifiedwebhookresponse.md
+  - docs/models/operations/createverificationrequestrequest.md
+  - docs/models/operations/createverificationrequestresponse.md
   - docs/models/operations/getaccountingaccountrequest.md
   - docs/models/operations/getaccountingaccountresponse.md
   - docs/models/operations/getaccountingbalancesheetrequest.md
@@ -362,6 +364,10 @@ generatedFiles:
   - docs/models/operations/getunifiedintegrationloginresponse.md
   - docs/models/operations/getunifiedwebhookrequest.md
   - docs/models/operations/getunifiedwebhookresponse.md
+  - docs/models/operations/getverificationpackagerequest.md
+  - docs/models/operations/getverificationpackageresponse.md
+  - docs/models/operations/getverificationrequestrequest.md
+  - docs/models/operations/getverificationrequestresponse.md
   - docs/models/operations/listaccountingaccountsrequest.md
   - docs/models/operations/listaccountingaccountsresponse.md
   - docs/models/operations/listaccountingbalancesheetsrequest.md
@@ -555,6 +561,10 @@ generatedFiles:
   - docs/models/operations/listunifiedissuesresponse.md
   - docs/models/operations/listunifiedwebhooksrequest.md
   - docs/models/operations/listunifiedwebhooksresponse.md
+  - docs/models/operations/listverificationpackagesrequest.md
+  - docs/models/operations/listverificationpackagesresponse.md
+  - docs/models/operations/listverificationrequestsrequest.md
+  - docs/models/operations/listverificationrequestsresponse.md
   - docs/models/operations/patchaccountingaccountrequest.md
   - docs/models/operations/patchaccountingaccountresponse.md
   - docs/models/operations/patchaccountingbillrequest.md
@@ -707,6 +717,8 @@ generatedFiles:
   - docs/models/operations/patchunifiedwebhookresponse.md
   - docs/models/operations/patchunifiedwebhooktriggerrequest.md
   - docs/models/operations/patchunifiedwebhooktriggerresponse.md
+  - docs/models/operations/patchverificationrequestrequest.md
+  - docs/models/operations/patchverificationrequestresponse.md
   - docs/models/operations/queryparamcategories.md
   - docs/models/operations/removeaccountingaccountrequest.md
   - docs/models/operations/removeaccountingaccountresponse.md
@@ -856,6 +868,8 @@ generatedFiles:
   - docs/models/operations/removeunifiedconnectionresponse.md
   - docs/models/operations/removeunifiedwebhookrequest.md
   - docs/models/operations/removeunifiedwebhookresponse.md
+  - docs/models/operations/removeverificationrequestrequest.md
+  - docs/models/operations/removeverificationrequestresponse.md
   - docs/models/operations/updateaccountingaccountrequest.md
   - docs/models/operations/updateaccountingaccountresponse.md
   - docs/models/operations/updateaccountingbillrequest.md
@@ -1008,6 +1022,8 @@ generatedFiles:
   - docs/models/operations/updateunifiedwebhookresponse.md
   - docs/models/operations/updateunifiedwebhooktriggerrequest.md
   - docs/models/operations/updateunifiedwebhooktriggerresponse.md
+  - docs/models/operations/updateverificationrequestrequest.md
+  - docs/models/operations/updateverificationrequestresponse.md
   - docs/models/shared/accountingaccount.md
   - docs/models/shared/accountingassociatedcontact.md
   - docs/models/shared/accountingattachment.md
@@ -1266,6 +1282,7 @@ generatedFiles:
   - docs/models/shared/paymentsubscriptionstatus.md
   - docs/models/shared/paymenttype.md
   - docs/models/shared/priority.md
+  - docs/models/shared/profilegender.md
   - docs/models/shared/propertyaccountingbalancesheetitemsubitems.md
   - docs/models/shared/propertyaccountingcontactbillingaddress.md
   - docs/models/shared/propertyaccountingcontactshippingaddress.md
@@ -1340,6 +1357,7 @@ generatedFiles:
   - docs/models/shared/repopullrequeststatus.md
   - docs/models/shared/reporepository.md
   - docs/models/shared/resourcetype.md
+  - docs/models/shared/responsestatus.md
   - docs/models/shared/role.md
   - docs/models/shared/sandbox.md
   - docs/models/shared/scimaddress.md
@@ -1404,6 +1422,15 @@ generatedFiles:
   - docs/models/shared/uctelephone.md
   - docs/models/shared/uctelephonetype.md
   - docs/models/shared/value.md
+  - docs/models/shared/verificationaddress.md
+  - docs/models/shared/verificationpackage.md
+  - docs/models/shared/verificationpackagetype.md
+  - docs/models/shared/verificationparameter.md
+  - docs/models/shared/verificationparameterinput.md
+  - docs/models/shared/verificationparametertype.md
+  - docs/models/shared/verificationrequest.md
+  - docs/models/shared/verificationresponsedetail.md
+  - docs/models/shared/verificationtime.md
   - docs/models/shared/webhook.md
   - docs/models/shared/webhooktype.md
   - docs/models/shared/weekstart.md
@@ -1474,6 +1501,7 @@ generatedFiles:
   - docs/sdks/note/README.md
   - docs/sdks/order/README.md
   - docs/sdks/organization/README.md
+  - docs/sdks/package/README.md
   - docs/sdks/page/README.md
   - docs/sdks/passthrough/README.md
   - docs/sdks/payment/README.md
@@ -1491,6 +1519,7 @@ generatedFiles:
   - docs/sdks/repo/README.md
   - docs/sdks/report/README.md
   - docs/sdks/repository/README.md
+  - docs/sdks/request/README.md
   - docs/sdks/review/README.md
   - docs/sdks/salesorder/README.md
   - docs/sdks/scim/README.md
@@ -1511,6 +1540,7 @@ generatedFiles:
   - docs/sdks/unified/README.md
   - docs/sdks/unifiedto/README.md
   - docs/sdks/user/README.md
+  - docs/sdks/verification/README.md
   - docs/sdks/webhook/README.md
   - poetry.toml
   - py.typed
@@ -1670,6 +1700,7 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/createucrecording.py
   - src/unified_python_sdk/models/operations/createunifiedconnection.py
   - src/unified_python_sdk/models/operations/createunifiedwebhook.py
+  - src/unified_python_sdk/models/operations/createverificationrequest.py
   - src/unified_python_sdk/models/operations/getaccountingaccount.py
   - src/unified_python_sdk/models/operations/getaccountingbalancesheet.py
   - src/unified_python_sdk/models/operations/getaccountingbill.py
@@ -1758,6 +1789,8 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/getunifiedintegrationauth.py
   - src/unified_python_sdk/models/operations/getunifiedintegrationlogin.py
   - src/unified_python_sdk/models/operations/getunifiedwebhook.py
+  - src/unified_python_sdk/models/operations/getverificationpackage.py
+  - src/unified_python_sdk/models/operations/getverificationrequest.py
   - src/unified_python_sdk/models/operations/listaccountingaccounts.py
   - src/unified_python_sdk/models/operations/listaccountingbalancesheets.py
   - src/unified_python_sdk/models/operations/listaccountingbills.py
@@ -1854,6 +1887,8 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/listunifiedintegrationworkspaces.py
   - src/unified_python_sdk/models/operations/listunifiedissues.py
   - src/unified_python_sdk/models/operations/listunifiedwebhooks.py
+  - src/unified_python_sdk/models/operations/listverificationpackages.py
+  - src/unified_python_sdk/models/operations/listverificationrequests.py
   - src/unified_python_sdk/models/operations/patchaccountingaccount.py
   - src/unified_python_sdk/models/operations/patchaccountingbill.py
   - src/unified_python_sdk/models/operations/patchaccountingcategory.py
@@ -1930,6 +1965,7 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/patchunifiedconnection.py
   - src/unified_python_sdk/models/operations/patchunifiedwebhook.py
   - src/unified_python_sdk/models/operations/patchunifiedwebhooktrigger.py
+  - src/unified_python_sdk/models/operations/patchverificationrequest.py
   - src/unified_python_sdk/models/operations/removeaccountingaccount.py
   - src/unified_python_sdk/models/operations/removeaccountingbill.py
   - src/unified_python_sdk/models/operations/removeaccountingcategory.py
@@ -2004,6 +2040,7 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/removeucrecording.py
   - src/unified_python_sdk/models/operations/removeunifiedconnection.py
   - src/unified_python_sdk/models/operations/removeunifiedwebhook.py
+  - src/unified_python_sdk/models/operations/removeverificationrequest.py
   - src/unified_python_sdk/models/operations/updateaccountingaccount.py
   - src/unified_python_sdk/models/operations/updateaccountingbill.py
   - src/unified_python_sdk/models/operations/updateaccountingcategory.py
@@ -2080,6 +2117,7 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/updateunifiedconnection.py
   - src/unified_python_sdk/models/operations/updateunifiedwebhook.py
   - src/unified_python_sdk/models/operations/updateunifiedwebhooktrigger.py
+  - src/unified_python_sdk/models/operations/updateverificationrequest.py
   - src/unified_python_sdk/models/shared/__init__.py
   - src/unified_python_sdk/models/shared/accountingaccount.py
   - src/unified_python_sdk/models/shared/accountingassociatedcontact.py
@@ -2316,10 +2354,18 @@ generatedFiles:
   - src/unified_python_sdk/models/shared/ucrecordingmedia.py
   - src/unified_python_sdk/models/shared/ucrecordingtranscript.py
   - src/unified_python_sdk/models/shared/uctelephone.py
+  - src/unified_python_sdk/models/shared/verificationaddress.py
+  - src/unified_python_sdk/models/shared/verificationpackage.py
+  - src/unified_python_sdk/models/shared/verificationparameter.py
+  - src/unified_python_sdk/models/shared/verificationparameterinput.py
+  - src/unified_python_sdk/models/shared/verificationrequest.py
+  - src/unified_python_sdk/models/shared/verificationresponsedetail.py
+  - src/unified_python_sdk/models/shared/verificationtime.py
   - src/unified_python_sdk/models/shared/webhook.py
   - src/unified_python_sdk/note.py
   - src/unified_python_sdk/order.py
   - src/unified_python_sdk/organization.py
+  - src/unified_python_sdk/package.py
   - src/unified_python_sdk/page.py
   - src/unified_python_sdk/passthrough.py
   - src/unified_python_sdk/payment.py
@@ -2338,6 +2384,7 @@ generatedFiles:
   - src/unified_python_sdk/repo.py
   - src/unified_python_sdk/report.py
   - src/unified_python_sdk/repository.py
+  - src/unified_python_sdk/request.py
   - src/unified_python_sdk/review.py
   - src/unified_python_sdk/salesorder.py
   - src/unified_python_sdk/scim.py
@@ -2378,6 +2425,7 @@ generatedFiles:
   - src/unified_python_sdk/utils/unmarshal_json_response.py
   - src/unified_python_sdk/utils/url.py
   - src/unified_python_sdk/utils/values.py
+  - src/unified_python_sdk/verification.py
   - src/unified_python_sdk/webhook.py
 examples:
   createAccountingAccount:
@@ -6797,6 +6845,78 @@ examples:
       responses:
         "200":
           application/json: [{}]
+  createVerificationRequest:
+    speakeasy-default-create-verification-request:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  getVerificationPackage:
+    speakeasy-default-get-verification-package:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {"id": "<id>", "name": "<value>", "type": "EMPLOYMENT_VERIFICATION"}
+  getVerificationRequest:
+    speakeasy-default-get-verification-request:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  listVerificationPackages:
+    speakeasy-default-list-verification-packages:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{"id": "<id>", "name": "<value>", "type": "FRAUD_PREVENTION"}]
+  listVerificationRequests:
+    speakeasy-default-list-verification-requests:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  patchVerificationRequest:
+    speakeasy-default-patch-verification-request:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  removeVerificationRequest:
+    speakeasy-default-remove-verification-request:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateVerificationRequest:
+    speakeasy-default-update-verification-request:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## SDK Changes Detected:\n* `unified_to.unified.create_unified_connection()`: \n  *  `request.auth.refresh_url` **Added**\n  *  `response.auth.refresh_url` **Added**\n* `unified_to.unified.create_unified_webhook()`: \n  *  `request.webhook.db_schema` **Added**\n  *  `response.db_schema` **Added**\n* `unified_to.unified.get_unified_connection()`:  `response.auth.refresh_url` **Added**\n* `unified_to.unified.get_unified_webhook()`:  `response.db_schema` **Added**\n* `unified_to.unified.list_unified_connections()`:  `response.[].auth.refresh_url` **Added**\n* `unified_to.unified.list_unified_webhooks()`:  `response.[].db_schema` **Added**\n* `unified_to.unified.patch_unified_connection()`: \n  *  `request.connection.auth.refresh_url` **Added**\n  *  `response.auth.refresh_url` **Added**\n* `unified_to.unified.patch_unified_webhook()`: \n  *  `request.webhook.db_schema` **Added**\n  *  `response.db_schema` **Added**\n* `unified_to.unified.update_unified_connection()`: \n  *  `request.connection.auth.refresh_url` **Added**\n  *  `response.auth.refresh_url` **Added**\n* `unified_to.unified.update_unified_webhook()`: \n  *  `request.webhook.db_schema` **Added**\n  *  `response.db_schema` **Added**\n* `unified_to.connection.create_unified_connection()`: \n  *  `request.auth.refresh_url` **Added**\n  *  `response.auth.refresh_url` **Added**\n* `unified_to.connection.get_unified_connection()`:  `response.auth.refresh_url` **Added**\n* `unified_to.connection.list_unified_connections()`:  `response.[].auth.refresh_url` **Added**\n* `unified_to.connection.patch_unified_connection()`: \n  *  `request.connection.auth.refresh_url` **Added**\n  *  `response.auth.refresh_url` **Added**\n* `unified_to.connection.update_unified_connection()`: \n  *  `request.connection.auth.refresh_url` **Added**\n  *  `response.auth.refresh_url` **Added**\n* `unified_to.webhook.create_unified_webhook()`: \n  *  `request.webhook.db_schema` **Added**\n  *  `response.db_schema` **Added**\n* `unified_to.webhook.get_unified_webhook()`:  `response.db_schema` **Added**\n* `unified_to.webhook.list_unified_webhooks()`:  `response.[].db_schema` **Added**\n* `unified_to.webhook.patch_unified_webhook()`: \n  *  `request.webhook.db_schema` **Added**\n  *  `response.db_schema` **Added**\n* `unified_to.webhook.update_unified_webhook()`: \n  *  `request.webhook.db_schema` **Added**\n  *  `response.db_schema` **Added**\n"
+releaseNotes: "## SDK Changes Detected:\n* `unified_to.verification.create_verification_request()`: **Added**\n* `unified_to.verification.get_verification_package()`: **Added**\n* `unified_to.verification.get_verification_request()`: **Added**\n* `unified_to.verification.list_verification_packages()`: **Added**\n* `unified_to.verification.list_verification_requests()`: **Added**\n* `unified_to.verification.patch_verification_request()`: **Added**\n* `unified_to.verification.remove_verification_request()`: **Added**\n* `unified_to.verification.update_verification_request()`: **Added**\n* `unified_to.package.get_verification_package()`: **Added**\n* `unified_to.package.list_verification_packages()`: **Added**\n* `unified_to.request.create_verification_request()`: **Added**\n* `unified_to.request.get_verification_request()`: **Added**\n* `unified_to.request.list_verification_requests()`: **Added**\n* `unified_to.request.patch_verification_request()`: **Added**\n* `unified_to.request.remove_verification_request()`: **Added**\n* `unified_to.request.update_verification_request()`: **Added**\n* `unified_to.accounting.list_accounting_balancesheets()`:  `request` **Changed**\n* `unified_to.accounting.list_accounting_profitlosses()`:  `request` **Changed**\n* `unified_to.balancesheet.list_accounting_balancesheets()`:  `request` **Changed**\n* `unified_to.profitloss.list_accounting_profitlosses()`:  `request` **Changed**\n* `unified_to.unified.list_unified_connections()`: \n  *  `request.categories` **Changed**\n* `unified_to.unified.list_unified_integration_workspaces()`: \n  *  `request.categories` **Changed**\n* `unified_to.unified.list_unified_integrations()`: \n  *  `request.categories` **Changed**\n* `unified_to.connection.list_unified_connections()`: \n  *  `request.categories` **Changed**\n* `unified_to.integration.list_unified_integration_workspaces()`: \n  *  `request.categories` **Changed**\n* `unified_to.integration.list_unified_integrations()`: \n  *  `request.categories` **Changed**\n"

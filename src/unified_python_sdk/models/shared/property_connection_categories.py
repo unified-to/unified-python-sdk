@@ -28,3 +28,4 @@ class PropertyConnectionCategories(str, Enum, metaclass=utils.OpenEnumMeta):
     REPO = "repo"
     METADATA = "metadata"
     CALENDAR = "calendar"
+    VERIFICATION = "verification"

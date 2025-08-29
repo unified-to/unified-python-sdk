@@ -3,6 +3,7 @@
 from typing import TYPE_CHECKING
 from importlib import import_module
 import builtins
+import sys
 
 if TYPE_CHECKING:
     from .createaccountingaccount import (
@@ -458,6 +459,12 @@ if TYPE_CHECKING:
         CreateUnifiedWebhookRequestTypedDict,
         CreateUnifiedWebhookResponse,
         CreateUnifiedWebhookResponseTypedDict,
+    )
+    from .createverificationrequest import (
+        CreateVerificationRequestRequest,
+        CreateVerificationRequestRequestTypedDict,
+        CreateVerificationRequestResponse,
+        CreateVerificationRequestResponseTypedDict,
     )
     from .getaccountingaccount import (
         GetAccountingAccountRequest,
@@ -986,6 +993,18 @@ if TYPE_CHECKING:
         GetUnifiedWebhookRequestTypedDict,
         GetUnifiedWebhookResponse,
         GetUnifiedWebhookResponseTypedDict,
+    )
+    from .getverificationpackage import (
+        GetVerificationPackageRequest,
+        GetVerificationPackageRequestTypedDict,
+        GetVerificationPackageResponse,
+        GetVerificationPackageResponseTypedDict,
+    )
+    from .getverificationrequest import (
+        GetVerificationRequestRequest,
+        GetVerificationRequestRequestTypedDict,
+        GetVerificationRequestResponse,
+        GetVerificationRequestResponseTypedDict,
     )
     from .listaccountingaccounts import (
         ListAccountingAccountsRequest,
@@ -1566,6 +1585,18 @@ if TYPE_CHECKING:
         ListUnifiedWebhooksResponse,
         ListUnifiedWebhooksResponseTypedDict,
     )
+    from .listverificationpackages import (
+        ListVerificationPackagesRequest,
+        ListVerificationPackagesRequestTypedDict,
+        ListVerificationPackagesResponse,
+        ListVerificationPackagesResponseTypedDict,
+    )
+    from .listverificationrequests import (
+        ListVerificationRequestsRequest,
+        ListVerificationRequestsRequestTypedDict,
+        ListVerificationRequestsResponse,
+        ListVerificationRequestsResponseTypedDict,
+    )
     from .patchaccountingaccount import (
         PatchAccountingAccountRequest,
         PatchAccountingAccountRequestTypedDict,
@@ -2022,6 +2053,12 @@ if TYPE_CHECKING:
         PatchUnifiedWebhookTriggerResponse,
         PatchUnifiedWebhookTriggerResponseTypedDict,
     )
+    from .patchverificationrequest import (
+        PatchVerificationRequestRequest,
+        PatchVerificationRequestRequestTypedDict,
+        PatchVerificationRequestResponse,
+        PatchVerificationRequestResponseTypedDict,
+    )
     from .removeaccountingaccount import (
         RemoveAccountingAccountRequest,
         RemoveAccountingAccountRequestTypedDict,
@@ -2465,6 +2502,12 @@ if TYPE_CHECKING:
         RemoveUnifiedWebhookRequestTypedDict,
         RemoveUnifiedWebhookResponse,
         RemoveUnifiedWebhookResponseTypedDict,
+    )
+    from .removeverificationrequest import (
+        RemoveVerificationRequestRequest,
+        RemoveVerificationRequestRequestTypedDict,
+        RemoveVerificationRequestResponse,
+        RemoveVerificationRequestResponseTypedDict,
     )
     from .updateaccountingaccount import (
         UpdateAccountingAccountRequest,
@@ -2922,6 +2965,12 @@ if TYPE_CHECKING:
         UpdateUnifiedWebhookTriggerResponse,
         UpdateUnifiedWebhookTriggerResponseTypedDict,
     )
+    from .updateverificationrequest import (
+        UpdateVerificationRequestRequest,
+        UpdateVerificationRequestRequestTypedDict,
+        UpdateVerificationRequestResponse,
+        UpdateVerificationRequestResponseTypedDict,
+    )
 
 __all__ = [
     "Categories",
@@ -3227,6 +3276,10 @@ __all__ = [
     "CreateUnifiedWebhookRequestTypedDict",
     "CreateUnifiedWebhookResponse",
     "CreateUnifiedWebhookResponseTypedDict",
+    "CreateVerificationRequestRequest",
+    "CreateVerificationRequestRequestTypedDict",
+    "CreateVerificationRequestResponse",
+    "CreateVerificationRequestResponseTypedDict",
     "GetAccountingAccountRequest",
     "GetAccountingAccountRequestTypedDict",
     "GetAccountingAccountResponse",
@@ -3579,6 +3632,14 @@ __all__ = [
     "GetUnifiedWebhookRequestTypedDict",
     "GetUnifiedWebhookResponse",
     "GetUnifiedWebhookResponseTypedDict",
+    "GetVerificationPackageRequest",
+    "GetVerificationPackageRequestTypedDict",
+    "GetVerificationPackageResponse",
+    "GetVerificationPackageResponseTypedDict",
+    "GetVerificationRequestRequest",
+    "GetVerificationRequestRequestTypedDict",
+    "GetVerificationRequestResponse",
+    "GetVerificationRequestResponseTypedDict",
     "ListAccountingAccountsRequest",
     "ListAccountingAccountsRequestTypedDict",
     "ListAccountingAccountsResponse",
@@ -3964,6 +4025,14 @@ __all__ = [
     "ListUnifiedWebhooksRequestTypedDict",
     "ListUnifiedWebhooksResponse",
     "ListUnifiedWebhooksResponseTypedDict",
+    "ListVerificationPackagesRequest",
+    "ListVerificationPackagesRequestTypedDict",
+    "ListVerificationPackagesResponse",
+    "ListVerificationPackagesResponseTypedDict",
+    "ListVerificationRequestsRequest",
+    "ListVerificationRequestsRequestTypedDict",
+    "ListVerificationRequestsResponse",
+    "ListVerificationRequestsResponseTypedDict",
     "PatchAccountingAccountRequest",
     "PatchAccountingAccountRequestTypedDict",
     "PatchAccountingAccountResponse",
@@ -4268,6 +4337,10 @@ __all__ = [
     "PatchUnifiedWebhookTriggerRequestTypedDict",
     "PatchUnifiedWebhookTriggerResponse",
     "PatchUnifiedWebhookTriggerResponseTypedDict",
+    "PatchVerificationRequestRequest",
+    "PatchVerificationRequestRequestTypedDict",
+    "PatchVerificationRequestResponse",
+    "PatchVerificationRequestResponseTypedDict",
     "QueryParamCategories",
     "RemoveAccountingAccountRequest",
     "RemoveAccountingAccountRequestTypedDict",
@@ -4565,6 +4638,10 @@ __all__ = [
     "RemoveUnifiedWebhookRequestTypedDict",
     "RemoveUnifiedWebhookResponse",
     "RemoveUnifiedWebhookResponseTypedDict",
+    "RemoveVerificationRequestRequest",
+    "RemoveVerificationRequestRequestTypedDict",
+    "RemoveVerificationRequestResponse",
+    "RemoveVerificationRequestResponseTypedDict",
     "UpdateAccountingAccountRequest",
     "UpdateAccountingAccountRequestTypedDict",
     "UpdateAccountingAccountResponse",
@@ -4869,6 +4946,10 @@ __all__ = [
     "UpdateUnifiedWebhookTriggerRequestTypedDict",
     "UpdateUnifiedWebhookTriggerResponse",
     "UpdateUnifiedWebhookTriggerResponseTypedDict",
+    "UpdateVerificationRequestRequest",
+    "UpdateVerificationRequestRequestTypedDict",
+    "UpdateVerificationRequestResponse",
+    "UpdateVerificationRequestResponseTypedDict",
 ]
 
 _dynamic_imports: dict[str, str] = {
@@ -5174,6 +5255,10 @@ _dynamic_imports: dict[str, str] = {
     "CreateUnifiedWebhookRequestTypedDict": ".createunifiedwebhook",
     "CreateUnifiedWebhookResponse": ".createunifiedwebhook",
     "CreateUnifiedWebhookResponseTypedDict": ".createunifiedwebhook",
+    "CreateVerificationRequestRequest": ".createverificationrequest",
+    "CreateVerificationRequestRequestTypedDict": ".createverificationrequest",
+    "CreateVerificationRequestResponse": ".createverificationrequest",
+    "CreateVerificationRequestResponseTypedDict": ".createverificationrequest",
     "GetAccountingAccountRequest": ".getaccountingaccount",
     "GetAccountingAccountRequestTypedDict": ".getaccountingaccount",
     "GetAccountingAccountResponse": ".getaccountingaccount",
@@ -5526,6 +5611,14 @@ _dynamic_imports: dict[str, str] = {
     "GetUnifiedWebhookRequestTypedDict": ".getunifiedwebhook",
     "GetUnifiedWebhookResponse": ".getunifiedwebhook",
     "GetUnifiedWebhookResponseTypedDict": ".getunifiedwebhook",
+    "GetVerificationPackageRequest": ".getverificationpackage",
+    "GetVerificationPackageRequestTypedDict": ".getverificationpackage",
+    "GetVerificationPackageResponse": ".getverificationpackage",
+    "GetVerificationPackageResponseTypedDict": ".getverificationpackage",
+    "GetVerificationRequestRequest": ".getverificationrequest",
+    "GetVerificationRequestRequestTypedDict": ".getverificationrequest",
+    "GetVerificationRequestResponse": ".getverificationrequest",
+    "GetVerificationRequestResponseTypedDict": ".getverificationrequest",
     "ListAccountingAccountsRequest": ".listaccountingaccounts",
     "ListAccountingAccountsRequestTypedDict": ".listaccountingaccounts",
     "ListAccountingAccountsResponse": ".listaccountingaccounts",
@@ -5913,6 +6006,14 @@ _dynamic_imports: dict[str, str] = {
     "ListUnifiedWebhooksRequestTypedDict": ".listunifiedwebhooks",
     "ListUnifiedWebhooksResponse": ".listunifiedwebhooks",
     "ListUnifiedWebhooksResponseTypedDict": ".listunifiedwebhooks",
+    "ListVerificationPackagesRequest": ".listverificationpackages",
+    "ListVerificationPackagesRequestTypedDict": ".listverificationpackages",
+    "ListVerificationPackagesResponse": ".listverificationpackages",
+    "ListVerificationPackagesResponseTypedDict": ".listverificationpackages",
+    "ListVerificationRequestsRequest": ".listverificationrequests",
+    "ListVerificationRequestsRequestTypedDict": ".listverificationrequests",
+    "ListVerificationRequestsResponse": ".listverificationrequests",
+    "ListVerificationRequestsResponseTypedDict": ".listverificationrequests",
     "PatchAccountingAccountRequest": ".patchaccountingaccount",
     "PatchAccountingAccountRequestTypedDict": ".patchaccountingaccount",
     "PatchAccountingAccountResponse": ".patchaccountingaccount",
@@ -6217,6 +6318,10 @@ _dynamic_imports: dict[str, str] = {
     "PatchUnifiedWebhookTriggerRequestTypedDict": ".patchunifiedwebhooktrigger",
     "PatchUnifiedWebhookTriggerResponse": ".patchunifiedwebhooktrigger",
     "PatchUnifiedWebhookTriggerResponseTypedDict": ".patchunifiedwebhooktrigger",
+    "PatchVerificationRequestRequest": ".patchverificationrequest",
+    "PatchVerificationRequestRequestTypedDict": ".patchverificationrequest",
+    "PatchVerificationRequestResponse": ".patchverificationrequest",
+    "PatchVerificationRequestResponseTypedDict": ".patchverificationrequest",
     "RemoveAccountingAccountRequest": ".removeaccountingaccount",
     "RemoveAccountingAccountRequestTypedDict": ".removeaccountingaccount",
     "RemoveAccountingAccountResponse": ".removeaccountingaccount",
@@ -6513,6 +6618,10 @@ _dynamic_imports: dict[str, str] = {
     "RemoveUnifiedWebhookRequestTypedDict": ".removeunifiedwebhook",
     "RemoveUnifiedWebhookResponse": ".removeunifiedwebhook",
     "RemoveUnifiedWebhookResponseTypedDict": ".removeunifiedwebhook",
+    "RemoveVerificationRequestRequest": ".removeverificationrequest",
+    "RemoveVerificationRequestRequestTypedDict": ".removeverificationrequest",
+    "RemoveVerificationRequestResponse": ".removeverificationrequest",
+    "RemoveVerificationRequestResponseTypedDict": ".removeverificationrequest",
     "UpdateAccountingAccountRequest": ".updateaccountingaccount",
     "UpdateAccountingAccountRequestTypedDict": ".updateaccountingaccount",
     "UpdateAccountingAccountResponse": ".updateaccountingaccount",
@@ -6817,7 +6926,23 @@ _dynamic_imports: dict[str, str] = {
     "UpdateUnifiedWebhookTriggerRequestTypedDict": ".updateunifiedwebhooktrigger",
     "UpdateUnifiedWebhookTriggerResponse": ".updateunifiedwebhooktrigger",
     "UpdateUnifiedWebhookTriggerResponseTypedDict": ".updateunifiedwebhooktrigger",
+    "UpdateVerificationRequestRequest": ".updateverificationrequest",
+    "UpdateVerificationRequestRequestTypedDict": ".updateverificationrequest",
+    "UpdateVerificationRequestResponse": ".updateverificationrequest",
+    "UpdateVerificationRequestResponseTypedDict": ".updateverificationrequest",
 }
+
+
+def dynamic_import(modname, retries=3):
+    for attempt in range(retries):
+        try:
+            return import_module(modname, __package__)
+        except KeyError:
+            # Clear any half-initialized module and retry
+            sys.modules.pop(modname, None)
+            if attempt == retries - 1:
+                break
+    raise KeyError(f"Failed to import module '{modname}' after {retries} attempts")
 
 
 def __getattr__(attr_name: str) -> object:
@@ -6828,7 +6953,7 @@ def __getattr__(attr_name: str) -> object:
         )
 
     try:
-        module = import_module(module_name, __package__)
+        module = dynamic_import(module_name)
         result = getattr(module, attr_name)
         return result
     except ImportError as e:

@@ -1,7 +1,7 @@
 
 [project]
 name = "Unified-python-sdk"
-version = "0.48.16"
+version = "0.49.0"
 description = "Python Client SDK for Unified.to"
 authors = [{ name = "Unified API Inc." },]
 readme = "README-PYPI.md"
@@ -35,6 +35,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.pytest.ini_options]
 asyncio_default_fixture_loop_scope = "function"
+asyncio_mode = "auto"
 pythonpath = ["src"]
 
 [tool.mypy]

@@ -18,6 +18,10 @@ from unified_python_sdk.utils import (
 class ListAccountingProfitlossesRequestTypedDict(TypedDict):
     connection_id: str
     r"""ID of the connection"""
+    category_id: NotRequired[str]
+    r"""The category ID to filter by"""
+    contact_id: NotRequired[str]
+    r"""The contact ID to filter by"""
     end_le: NotRequired[str]
     r"""The end date to filter by"""
     fields: NotRequired[List[str]]
@@ -41,6 +45,18 @@ class ListAccountingProfitlossesRequest(BaseModel):
         str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))
     ]
     r"""ID of the connection"""
+
+    category_id: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+    r"""The category ID to filter by"""
+
+    contact_id: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+    r"""The contact ID to filter by"""
 
     end_le: Annotated[
         Optional[str],
