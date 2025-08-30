@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: b7b8f3e6ae3a4420539b46d5e0a59d99
+  docChecksum: 422074ec49c609508b54a0d217c0ad82
   docVersion: "1.0"
-  speakeasyVersion: 1.606.8
+  speakeasyVersion: 1.606.9
   generationVersion: 2.687.13
-  releaseVersion: 0.49.0
-  configChecksum: 96aaebec974001a7f3bd215bccecd25d
+  releaseVersion: 0.49.1
+  configChecksum: 2daeb0d3db33977e795df85c11f27f94
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -6919,4 +6919,4 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## SDK Changes Detected:\n* `unified_to.verification.create_verification_request()`: **Added**\n* `unified_to.verification.get_verification_package()`: **Added**\n* `unified_to.verification.get_verification_request()`: **Added**\n* `unified_to.verification.list_verification_packages()`: **Added**\n* `unified_to.verification.list_verification_requests()`: **Added**\n* `unified_to.verification.patch_verification_request()`: **Added**\n* `unified_to.verification.remove_verification_request()`: **Added**\n* `unified_to.verification.update_verification_request()`: **Added**\n* `unified_to.package.get_verification_package()`: **Added**\n* `unified_to.package.list_verification_packages()`: **Added**\n* `unified_to.request.create_verification_request()`: **Added**\n* `unified_to.request.get_verification_request()`: **Added**\n* `unified_to.request.list_verification_requests()`: **Added**\n* `unified_to.request.patch_verification_request()`: **Added**\n* `unified_to.request.remove_verification_request()`: **Added**\n* `unified_to.request.update_verification_request()`: **Added**\n* `unified_to.accounting.list_accounting_balancesheets()`:  `request` **Changed**\n* `unified_to.accounting.list_accounting_profitlosses()`:  `request` **Changed**\n* `unified_to.balancesheet.list_accounting_balancesheets()`:  `request` **Changed**\n* `unified_to.profitloss.list_accounting_profitlosses()`:  `request` **Changed**\n* `unified_to.unified.list_unified_connections()`: \n  *  `request.categories` **Changed**\n* `unified_to.unified.list_unified_integration_workspaces()`: \n  *  `request.categories` **Changed**\n* `unified_to.unified.list_unified_integrations()`: \n  *  `request.categories` **Changed**\n* `unified_to.connection.list_unified_connections()`: \n  *  `request.categories` **Changed**\n* `unified_to.integration.list_unified_integration_workspaces()`: \n  *  `request.categories` **Changed**\n* `unified_to.integration.list_unified_integrations()`: \n  *  `request.categories` **Changed**\n"
+releaseNotes: "## SDK Changes Detected:\n* `unified_to.genai.create_genai_prompt()`: \n  *  `request.genai_prompt.mcp_url` **Added**\n  *  `response.mcp_url` **Added**\n* `unified_to.prompt.create_genai_prompt()`: \n  *  `request.genai_prompt.mcp_url` **Added**\n  *  `response.mcp_url` **Added**\n"
