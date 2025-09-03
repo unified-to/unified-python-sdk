@@ -5,24 +5,77 @@
 
 ### Available Operations
 
+* [create_ticketing_category](#create_ticketing_category) - Create a category
 * [create_ticketing_customer](#create_ticketing_customer) - Create a customer
 * [create_ticketing_note](#create_ticketing_note) - Create a note
 * [create_ticketing_ticket](#create_ticketing_ticket) - Create a ticket
+* [get_ticketing_category](#get_ticketing_category) - Retrieve a category
 * [get_ticketing_customer](#get_ticketing_customer) - Retrieve a customer
 * [get_ticketing_note](#get_ticketing_note) - Retrieve a note
 * [get_ticketing_ticket](#get_ticketing_ticket) - Retrieve a ticket
+* [list_ticketing_categories](#list_ticketing_categories) - List all categories
 * [list_ticketing_customers](#list_ticketing_customers) - List all customers
 * [list_ticketing_notes](#list_ticketing_notes) - List all notes
 * [list_ticketing_tickets](#list_ticketing_tickets) - List all tickets
+* [patch_ticketing_category](#patch_ticketing_category) - Update a category
 * [patch_ticketing_customer](#patch_ticketing_customer) - Update a customer
 * [patch_ticketing_note](#patch_ticketing_note) - Update a note
 * [patch_ticketing_ticket](#patch_ticketing_ticket) - Update a ticket
+* [remove_ticketing_category](#remove_ticketing_category) - Remove a category
 * [remove_ticketing_customer](#remove_ticketing_customer) - Remove a customer
 * [remove_ticketing_note](#remove_ticketing_note) - Remove a note
 * [remove_ticketing_ticket](#remove_ticketing_ticket) - Remove a ticket
+* [update_ticketing_category](#update_ticketing_category) - Update a category
 * [update_ticketing_customer](#update_ticketing_customer) - Update a customer
 * [update_ticketing_note](#update_ticketing_note) - Update a note
 * [update_ticketing_ticket](#update_ticketing_ticket) - Update a ticket
+
+## create_ticketing_category
+
+Create a category
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="createTicketingCategory" method="post" path="/ticketing/{connection_id}/category" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.ticketing.create_ticketing_category(request={
+        "ticketing_category": {},
+        "connection_id": "<id>",
+    })
+
+    assert res.ticketing_category is not None
+
+    # Handle response
+    print(res.ticketing_category)
+
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                              | [operations.CreateTicketingCategoryRequest](../../models/operations/createticketingcategoryrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `retries`                                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                       | :heavy_minus_sign:                                                                                     | Configuration to override the default retry behavior of the client.                                    |
+
+### Response
+
+**[operations.CreateTicketingCategoryResponse](../../models/operations/createticketingcategoryresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## create_ticketing_customer
 
@@ -158,6 +211,53 @@ with UnifiedTo(
 ### Response
 
 **[operations.CreateTicketingTicketResponse](../../models/operations/createticketingticketresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## get_ticketing_category
+
+Retrieve a category
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="getTicketingCategory" method="get" path="/ticketing/{connection_id}/category/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.ticketing.get_ticketing_category(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.ticketing_category is not None
+
+    # Handle response
+    print(res.ticketing_category)
+
+```
+
+### Parameters
+
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `request`                                                                                        | [operations.GetTicketingCategoryRequest](../../models/operations/getticketingcategoryrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `retries`                                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                 | :heavy_minus_sign:                                                                               | Configuration to override the default retry behavior of the client.                              |
+
+### Response
+
+**[operations.GetTicketingCategoryResponse](../../models/operations/getticketingcategoryresponse.md)**
 
 ### Errors
 
@@ -306,6 +406,52 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## list_ticketing_categories
+
+List all categories
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="listTicketingCategories" method="get" path="/ticketing/{connection_id}/category" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.ticketing.list_ticketing_categories(request={
+        "connection_id": "<id>",
+    })
+
+    assert res.ticketing_categories is not None
+
+    # Handle response
+    print(res.ticketing_categories)
+
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                              | [operations.ListTicketingCategoriesRequest](../../models/operations/listticketingcategoriesrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `retries`                                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                       | :heavy_minus_sign:                                                                                     | Configuration to override the default retry behavior of the client.                                    |
+
+### Response
+
+**[operations.ListTicketingCategoriesResponse](../../models/operations/listticketingcategoriesresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## list_ticketing_customers
 
 List all customers
@@ -437,6 +583,54 @@ with UnifiedTo(
 ### Response
 
 **[operations.ListTicketingTicketsResponse](../../models/operations/listticketingticketsresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## patch_ticketing_category
+
+Update a category
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="patchTicketingCategory" method="patch" path="/ticketing/{connection_id}/category/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.ticketing.patch_ticketing_category(request={
+        "ticketing_category": {},
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.ticketing_category is not None
+
+    # Handle response
+    print(res.ticketing_category)
+
+```
+
+### Parameters
+
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `request`                                                                                            | [operations.PatchTicketingCategoryRequest](../../models/operations/patchticketingcategoryrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `retries`                                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                     | :heavy_minus_sign:                                                                                   | Configuration to override the default retry behavior of the client.                                  |
+
+### Response
+
+**[operations.PatchTicketingCategoryResponse](../../models/operations/patchticketingcategoryresponse.md)**
 
 ### Errors
 
@@ -588,6 +782,53 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## remove_ticketing_category
+
+Remove a category
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="removeTicketingCategory" method="delete" path="/ticketing/{connection_id}/category/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.ticketing.remove_ticketing_category(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res is not None
+
+    # Handle response
+    print(res)
+
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                              | [operations.RemoveTicketingCategoryRequest](../../models/operations/removeticketingcategoryrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `retries`                                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                       | :heavy_minus_sign:                                                                                     | Configuration to override the default retry behavior of the client.                                    |
+
+### Response
+
+**[operations.RemoveTicketingCategoryResponse](../../models/operations/removeticketingcategoryresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## remove_ticketing_customer
 
 Remove a customer
@@ -722,6 +963,54 @@ with UnifiedTo(
 ### Response
 
 **[operations.RemoveTicketingTicketResponse](../../models/operations/removeticketingticketresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## update_ticketing_category
+
+Update a category
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="updateTicketingCategory" method="put" path="/ticketing/{connection_id}/category/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.ticketing.update_ticketing_category(request={
+        "ticketing_category": {},
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.ticketing_category is not None
+
+    # Handle response
+    print(res.ticketing_category)
+
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                              | [operations.UpdateTicketingCategoryRequest](../../models/operations/updateticketingcategoryrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `retries`                                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                       | :heavy_minus_sign:                                                                                     | Configuration to override the default retry behavior of the client.                                    |
+
+### Response
+
+**[operations.UpdateTicketingCategoryResponse](../../models/operations/updateticketingcategoryresponse.md)**
 
 ### Errors
 

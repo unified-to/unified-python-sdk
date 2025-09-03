@@ -332,6 +332,11 @@ if TYPE_CHECKING:
         EnrichTelephoneTypedDict,
     )
     from .genaicontent import GenaiContent, GenaiContentTypedDict, Role
+    from .genaiembedding import EncondingFormat, GenaiEmbedding, GenaiEmbeddingTypedDict
+    from .genaiembeddingcontent import (
+        GenaiEmbeddingContent,
+        GenaiEmbeddingContentTypedDict,
+    )
     from .genaimodel import GenaiModel, GenaiModelTypedDict
     from .genaiprompt import GenaiPrompt, GenaiPromptTypedDict
     from .hriscompany import HrisCompany, HrisCompanyTypedDict
@@ -745,6 +750,7 @@ if TYPE_CHECKING:
     )
     from .taskproject import TaskProject, TaskProjectTypedDict
     from .tasktask import TaskTask, TaskTaskStatus, TaskTaskTypedDict
+    from .ticketingcategory import TicketingCategory, TicketingCategoryTypedDict
     from .ticketingcustomer import TicketingCustomer, TicketingCustomerTypedDict
     from .ticketingemail import (
         TicketingEmail,
@@ -1065,6 +1071,7 @@ __all__ = [
     "DbType",
     "EmploymentStatus",
     "EmploymentType",
+    "EncondingFormat",
     "EnrichCompany",
     "EnrichCompanyTypedDict",
     "EnrichEmail",
@@ -1087,6 +1094,10 @@ __all__ = [
     "Frequency",
     "GenaiContent",
     "GenaiContentTypedDict",
+    "GenaiEmbedding",
+    "GenaiEmbeddingContent",
+    "GenaiEmbeddingContentTypedDict",
+    "GenaiEmbeddingTypedDict",
     "GenaiModel",
     "GenaiModelTypedDict",
     "GenaiPrompt",
@@ -1445,6 +1456,8 @@ __all__ = [
     "TaskTaskStatus",
     "TaskTaskTypedDict",
     "TaxExemption",
+    "TicketingCategory",
+    "TicketingCategoryTypedDict",
     "TicketingCustomer",
     "TicketingCustomerTypedDict",
     "TicketingEmail",
@@ -1789,6 +1802,11 @@ _dynamic_imports: dict[str, str] = {
     "GenaiContent": ".genaicontent",
     "GenaiContentTypedDict": ".genaicontent",
     "Role": ".genaicontent",
+    "EncondingFormat": ".genaiembedding",
+    "GenaiEmbedding": ".genaiembedding",
+    "GenaiEmbeddingTypedDict": ".genaiembedding",
+    "GenaiEmbeddingContent": ".genaiembeddingcontent",
+    "GenaiEmbeddingContentTypedDict": ".genaiembeddingcontent",
     "GenaiModel": ".genaimodel",
     "GenaiModelTypedDict": ".genaimodel",
     "GenaiPrompt": ".genaiprompt",
@@ -2139,6 +2157,8 @@ _dynamic_imports: dict[str, str] = {
     "TaskTask": ".tasktask",
     "TaskTaskStatus": ".tasktask",
     "TaskTaskTypedDict": ".tasktask",
+    "TicketingCategory": ".ticketingcategory",
+    "TicketingCategoryTypedDict": ".ticketingcategory",
     "TicketingCustomer": ".ticketingcustomer",
     "TicketingCustomerTypedDict": ".ticketingcustomer",
     "TicketingEmail": ".ticketingemail",

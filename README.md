@@ -414,11 +414,17 @@ asyncio.run(main())
 ### [category](docs/sdks/category/README.md)
 
 * [create_accounting_category](docs/sdks/category/README.md#create_accounting_category) - Create a category
+* [create_ticketing_category](docs/sdks/category/README.md#create_ticketing_category) - Create a category
 * [get_accounting_category](docs/sdks/category/README.md#get_accounting_category) - Retrieve a category
+* [get_ticketing_category](docs/sdks/category/README.md#get_ticketing_category) - Retrieve a category
 * [list_accounting_categories](docs/sdks/category/README.md#list_accounting_categories) - List all categories
+* [list_ticketing_categories](docs/sdks/category/README.md#list_ticketing_categories) - List all categories
 * [patch_accounting_category](docs/sdks/category/README.md#patch_accounting_category) - Update a category
+* [patch_ticketing_category](docs/sdks/category/README.md#patch_ticketing_category) - Update a category
 * [remove_accounting_category](docs/sdks/category/README.md#remove_accounting_category) - Remove a category
+* [remove_ticketing_category](docs/sdks/category/README.md#remove_ticketing_category) - Remove a category
 * [update_accounting_category](docs/sdks/category/README.md#update_accounting_category) - Update a category
+* [update_ticketing_category](docs/sdks/category/README.md#update_ticketing_category) - Update a category
 
 ### [change](docs/sdks/change/README.md)
 
@@ -656,6 +662,10 @@ asyncio.run(main())
 * [remove_ats_document](docs/sdks/document/README.md#remove_ats_document) - Remove a document
 * [update_ats_document](docs/sdks/document/README.md#update_ats_document) - Update a document
 
+### [embedding](docs/sdks/embedding/README.md)
+
+* [create_genai_embedding](docs/sdks/embedding/README.md#create_genai_embedding) - Create an embedding
+
 ### [employee](docs/sdks/employee/README.md)
 
 * [create_hris_employee](docs/sdks/employee/README.md#create_hris_employee) - Create an employee
@@ -696,7 +706,9 @@ asyncio.run(main())
 
 ### [genai](docs/sdks/genai/README.md)
 
+* [create_genai_embedding](docs/sdks/genai/README.md#create_genai_embedding) - Create an embedding
 * [create_genai_prompt](docs/sdks/genai/README.md#create_genai_prompt) - Create a prompt
+* [get_genai_model](docs/sdks/genai/README.md#get_genai_model) - Retrieve a model
 * [list_genai_models](docs/sdks/genai/README.md#list_genai_models) - List all models
 
 ### [group](docs/sdks/group/README.md)
@@ -985,6 +997,7 @@ asyncio.run(main())
 
 ### [model](docs/sdks/model/README.md)
 
+* [get_genai_model](docs/sdks/model/README.md#get_genai_model) - Retrieve a model
 * [list_genai_models](docs/sdks/model/README.md#list_genai_models) - List all models
 
 ### [note](docs/sdks/note/README.md)
@@ -1318,21 +1331,27 @@ asyncio.run(main())
 
 ### [ticketing](docs/sdks/ticketing/README.md)
 
+* [create_ticketing_category](docs/sdks/ticketing/README.md#create_ticketing_category) - Create a category
 * [create_ticketing_customer](docs/sdks/ticketing/README.md#create_ticketing_customer) - Create a customer
 * [create_ticketing_note](docs/sdks/ticketing/README.md#create_ticketing_note) - Create a note
 * [create_ticketing_ticket](docs/sdks/ticketing/README.md#create_ticketing_ticket) - Create a ticket
+* [get_ticketing_category](docs/sdks/ticketing/README.md#get_ticketing_category) - Retrieve a category
 * [get_ticketing_customer](docs/sdks/ticketing/README.md#get_ticketing_customer) - Retrieve a customer
 * [get_ticketing_note](docs/sdks/ticketing/README.md#get_ticketing_note) - Retrieve a note
 * [get_ticketing_ticket](docs/sdks/ticketing/README.md#get_ticketing_ticket) - Retrieve a ticket
+* [list_ticketing_categories](docs/sdks/ticketing/README.md#list_ticketing_categories) - List all categories
 * [list_ticketing_customers](docs/sdks/ticketing/README.md#list_ticketing_customers) - List all customers
 * [list_ticketing_notes](docs/sdks/ticketing/README.md#list_ticketing_notes) - List all notes
 * [list_ticketing_tickets](docs/sdks/ticketing/README.md#list_ticketing_tickets) - List all tickets
+* [patch_ticketing_category](docs/sdks/ticketing/README.md#patch_ticketing_category) - Update a category
 * [patch_ticketing_customer](docs/sdks/ticketing/README.md#patch_ticketing_customer) - Update a customer
 * [patch_ticketing_note](docs/sdks/ticketing/README.md#patch_ticketing_note) - Update a note
 * [patch_ticketing_ticket](docs/sdks/ticketing/README.md#patch_ticketing_ticket) - Update a ticket
+* [remove_ticketing_category](docs/sdks/ticketing/README.md#remove_ticketing_category) - Remove a category
 * [remove_ticketing_customer](docs/sdks/ticketing/README.md#remove_ticketing_customer) - Remove a customer
 * [remove_ticketing_note](docs/sdks/ticketing/README.md#remove_ticketing_note) - Remove a note
 * [remove_ticketing_ticket](docs/sdks/ticketing/README.md#remove_ticketing_ticket) - Remove a ticket
+* [update_ticketing_category](docs/sdks/ticketing/README.md#update_ticketing_category) - Update a category
 * [update_ticketing_customer](docs/sdks/ticketing/README.md#update_ticketing_customer) - Update a customer
 * [update_ticketing_note](docs/sdks/ticketing/README.md#update_ticketing_note) - Update a note
 * [update_ticketing_ticket](docs/sdks/ticketing/README.md#update_ticketing_ticket) - Update a ticket

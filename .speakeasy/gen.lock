@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: 422074ec49c609508b54a0d217c0ad82
+  docChecksum: a9003bf9eba5cb988acee2ba39aeae6f
   docVersion: "1.0"
-  speakeasyVersion: 1.606.9
-  generationVersion: 2.687.13
-  releaseVersion: 0.49.1
-  configChecksum: 2daeb0d3db33977e795df85c11f27f94
+  speakeasyVersion: 1.607.0
+  generationVersion: 2.690.1
+  releaseVersion: 0.49.2
+  configChecksum: ddd516763a8c13cda565fb09c3c72cb3
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -16,7 +16,7 @@ features:
     acceptHeaders: 3.0.0
     additionalDependencies: 1.0.0
     constsAndDefaults: 1.0.5
-    core: 5.20.1
+    core: 5.20.2
     defaultEnabledRetries: 0.2.0
     downloadStreams: 1.0.1
     enumUnions: 0.1.0
@@ -103,6 +103,8 @@ generatedFiles:
   - docs/models/operations/createcrmleadresponse.md
   - docs/models/operations/createcrmpipelinerequest.md
   - docs/models/operations/createcrmpipelineresponse.md
+  - docs/models/operations/creategenaiembeddingrequest.md
+  - docs/models/operations/creategenaiembeddingresponse.md
   - docs/models/operations/creategenaipromptrequest.md
   - docs/models/operations/creategenaipromptresponse.md
   - docs/models/operations/createhriscompanyrequest.md
@@ -171,6 +173,8 @@ generatedFiles:
   - docs/models/operations/createtaskprojectresponse.md
   - docs/models/operations/createtasktaskrequest.md
   - docs/models/operations/createtasktaskresponse.md
+  - docs/models/operations/createticketingcategoryrequest.md
+  - docs/models/operations/createticketingcategoryresponse.md
   - docs/models/operations/createticketingcustomerrequest.md
   - docs/models/operations/createticketingcustomerresponse.md
   - docs/models/operations/createticketingnoterequest.md
@@ -268,6 +272,8 @@ generatedFiles:
   - docs/models/operations/getcrmleadresponse.md
   - docs/models/operations/getcrmpipelinerequest.md
   - docs/models/operations/getcrmpipelineresponse.md
+  - docs/models/operations/getgenaimodelrequest.md
+  - docs/models/operations/getgenaimodelresponse.md
   - docs/models/operations/gethriscompanyrequest.md
   - docs/models/operations/gethriscompanyresponse.md
   - docs/models/operations/gethrisdevicerequest.md
@@ -342,6 +348,8 @@ generatedFiles:
   - docs/models/operations/gettaskprojectresponse.md
   - docs/models/operations/gettasktaskrequest.md
   - docs/models/operations/gettasktaskresponse.md
+  - docs/models/operations/getticketingcategoryrequest.md
+  - docs/models/operations/getticketingcategoryresponse.md
   - docs/models/operations/getticketingcustomerrequest.md
   - docs/models/operations/getticketingcustomerresponse.md
   - docs/models/operations/getticketingnoterequest.md
@@ -534,6 +542,8 @@ generatedFiles:
   - docs/models/operations/listtaskprojectsresponse.md
   - docs/models/operations/listtasktasksrequest.md
   - docs/models/operations/listtasktasksresponse.md
+  - docs/models/operations/listticketingcategoriesrequest.md
+  - docs/models/operations/listticketingcategoriesresponse.md
   - docs/models/operations/listticketingcustomersrequest.md
   - docs/models/operations/listticketingcustomersresponse.md
   - docs/models/operations/listticketingnotesrequest.md
@@ -699,6 +709,8 @@ generatedFiles:
   - docs/models/operations/patchtaskprojectresponse.md
   - docs/models/operations/patchtasktaskrequest.md
   - docs/models/operations/patchtasktaskresponse.md
+  - docs/models/operations/patchticketingcategoryrequest.md
+  - docs/models/operations/patchticketingcategoryresponse.md
   - docs/models/operations/patchticketingcustomerrequest.md
   - docs/models/operations/patchticketingcustomerresponse.md
   - docs/models/operations/patchticketingnoterequest.md
@@ -852,6 +864,8 @@ generatedFiles:
   - docs/models/operations/removetaskprojectresponse.md
   - docs/models/operations/removetasktaskrequest.md
   - docs/models/operations/removetasktaskresponse.md
+  - docs/models/operations/removeticketingcategoryrequest.md
+  - docs/models/operations/removeticketingcategoryresponse.md
   - docs/models/operations/removeticketingcustomerrequest.md
   - docs/models/operations/removeticketingcustomerresponse.md
   - docs/models/operations/removeticketingnoterequest.md
@@ -1004,6 +1018,8 @@ generatedFiles:
   - docs/models/operations/updatetaskprojectresponse.md
   - docs/models/operations/updatetasktaskrequest.md
   - docs/models/operations/updatetasktaskresponse.md
+  - docs/models/operations/updateticketingcategoryrequest.md
+  - docs/models/operations/updateticketingcategoryresponse.md
   - docs/models/operations/updateticketingcustomerrequest.md
   - docs/models/operations/updateticketingcustomerresponse.md
   - docs/models/operations/updateticketingnoterequest.md
@@ -1174,6 +1190,7 @@ generatedFiles:
   - docs/models/shared/dbtype.md
   - docs/models/shared/employmentstatus.md
   - docs/models/shared/employmenttype.md
+  - docs/models/shared/encondingformat.md
   - docs/models/shared/enrichcompany.md
   - docs/models/shared/enrichemail.md
   - docs/models/shared/enrichemailtype.md
@@ -1188,6 +1205,8 @@ generatedFiles:
   - docs/models/shared/format_.md
   - docs/models/shared/frequency.md
   - docs/models/shared/genaicontent.md
+  - docs/models/shared/genaiembedding.md
+  - docs/models/shared/genaiembeddingcontent.md
   - docs/models/shared/genaimodel.md
   - docs/models/shared/genaiprompt.md
   - docs/models/shared/gender.md
@@ -1402,6 +1421,7 @@ generatedFiles:
   - docs/models/shared/tasktask.md
   - docs/models/shared/tasktaskstatus.md
   - docs/models/shared/taxexemption.md
+  - docs/models/shared/ticketingcategory.md
   - docs/models/shared/ticketingcustomer.md
   - docs/models/shared/ticketingemail.md
   - docs/models/shared/ticketingemailtype.md
@@ -1469,6 +1489,7 @@ generatedFiles:
   - docs/sdks/deal/README.md
   - docs/sdks/device/README.md
   - docs/sdks/document/README.md
+  - docs/sdks/embedding/README.md
   - docs/sdks/employee/README.md
   - docs/sdks/enrich/README.md
   - docs/sdks/event/README.md
@@ -1587,6 +1608,7 @@ generatedFiles:
   - src/unified_python_sdk/deal.py
   - src/unified_python_sdk/device.py
   - src/unified_python_sdk/document.py
+  - src/unified_python_sdk/embedding.py
   - src/unified_python_sdk/employee.py
   - src/unified_python_sdk/enrich.py
   - src/unified_python_sdk/event.py
@@ -1658,6 +1680,7 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/createcrmevent.py
   - src/unified_python_sdk/models/operations/createcrmlead.py
   - src/unified_python_sdk/models/operations/createcrmpipeline.py
+  - src/unified_python_sdk/models/operations/creategenaiembedding.py
   - src/unified_python_sdk/models/operations/creategenaiprompt.py
   - src/unified_python_sdk/models/operations/createhriscompany.py
   - src/unified_python_sdk/models/operations/createhrisdevice.py
@@ -1692,6 +1715,7 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/createtaskcomment.py
   - src/unified_python_sdk/models/operations/createtaskproject.py
   - src/unified_python_sdk/models/operations/createtasktask.py
+  - src/unified_python_sdk/models/operations/createticketingcategory.py
   - src/unified_python_sdk/models/operations/createticketingcustomer.py
   - src/unified_python_sdk/models/operations/createticketingnote.py
   - src/unified_python_sdk/models/operations/createticketingticket.py
@@ -1741,6 +1765,7 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/getcrmevent.py
   - src/unified_python_sdk/models/operations/getcrmlead.py
   - src/unified_python_sdk/models/operations/getcrmpipeline.py
+  - src/unified_python_sdk/models/operations/getgenaimodel.py
   - src/unified_python_sdk/models/operations/gethriscompany.py
   - src/unified_python_sdk/models/operations/gethrisdevice.py
   - src/unified_python_sdk/models/operations/gethrisemployee.py
@@ -1778,6 +1803,7 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/gettaskcomment.py
   - src/unified_python_sdk/models/operations/gettaskproject.py
   - src/unified_python_sdk/models/operations/gettasktask.py
+  - src/unified_python_sdk/models/operations/getticketingcategory.py
   - src/unified_python_sdk/models/operations/getticketingcustomer.py
   - src/unified_python_sdk/models/operations/getticketingnote.py
   - src/unified_python_sdk/models/operations/getticketingticket.py
@@ -1874,6 +1900,7 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/listtaskcomments.py
   - src/unified_python_sdk/models/operations/listtaskprojects.py
   - src/unified_python_sdk/models/operations/listtasktasks.py
+  - src/unified_python_sdk/models/operations/listticketingcategories.py
   - src/unified_python_sdk/models/operations/listticketingcustomers.py
   - src/unified_python_sdk/models/operations/listticketingnotes.py
   - src/unified_python_sdk/models/operations/listticketingtickets.py
@@ -1956,6 +1983,7 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/patchtaskcomment.py
   - src/unified_python_sdk/models/operations/patchtaskproject.py
   - src/unified_python_sdk/models/operations/patchtasktask.py
+  - src/unified_python_sdk/models/operations/patchticketingcategory.py
   - src/unified_python_sdk/models/operations/patchticketingcustomer.py
   - src/unified_python_sdk/models/operations/patchticketingnote.py
   - src/unified_python_sdk/models/operations/patchticketingticket.py
@@ -2032,6 +2060,7 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/removetaskcomment.py
   - src/unified_python_sdk/models/operations/removetaskproject.py
   - src/unified_python_sdk/models/operations/removetasktask.py
+  - src/unified_python_sdk/models/operations/removeticketingcategory.py
   - src/unified_python_sdk/models/operations/removeticketingcustomer.py
   - src/unified_python_sdk/models/operations/removeticketingnote.py
   - src/unified_python_sdk/models/operations/removeticketingticket.py
@@ -2108,6 +2137,7 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/updatetaskcomment.py
   - src/unified_python_sdk/models/operations/updatetaskproject.py
   - src/unified_python_sdk/models/operations/updatetasktask.py
+  - src/unified_python_sdk/models/operations/updateticketingcategory.py
   - src/unified_python_sdk/models/operations/updateticketingcustomer.py
   - src/unified_python_sdk/models/operations/updateticketingnote.py
   - src/unified_python_sdk/models/operations/updateticketingticket.py
@@ -2216,6 +2246,8 @@ generatedFiles:
   - src/unified_python_sdk/models/shared/enrichpersonworkhistory.py
   - src/unified_python_sdk/models/shared/enrichtelephone.py
   - src/unified_python_sdk/models/shared/genaicontent.py
+  - src/unified_python_sdk/models/shared/genaiembedding.py
+  - src/unified_python_sdk/models/shared/genaiembeddingcontent.py
   - src/unified_python_sdk/models/shared/genaimodel.py
   - src/unified_python_sdk/models/shared/genaiprompt.py
   - src/unified_python_sdk/models/shared/hriscompany.py
@@ -2341,6 +2373,7 @@ generatedFiles:
   - src/unified_python_sdk/models/shared/taskmetadata.py
   - src/unified_python_sdk/models/shared/taskproject.py
   - src/unified_python_sdk/models/shared/tasktask.py
+  - src/unified_python_sdk/models/shared/ticketingcategory.py
   - src/unified_python_sdk/models/shared/ticketingcustomer.py
   - src/unified_python_sdk/models/shared/ticketingemail.py
   - src/unified_python_sdk/models/shared/ticketingnote.py
@@ -6917,6 +6950,80 @@ examples:
       responses:
         "200":
           application/json: {}
+  createTicketingCategory:
+    speakeasy-default-create-ticketing-category:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  getTicketingCategory:
+    speakeasy-default-get-ticketing-category:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  listTicketingCategories:
+    speakeasy-default-list-ticketing-categories:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  patchTicketingCategory:
+    speakeasy-default-patch-ticketing-category:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  removeTicketingCategory:
+    speakeasy-default-remove-ticketing-category:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateTicketingCategory:
+    speakeasy-default-update-ticketing-category:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  createGenaiEmbedding:
+    speakeasy-default-create-genai-embedding:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  getGenaiModel:
+    speakeasy-default-get-genai-model:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## SDK Changes Detected:\n* `unified_to.genai.create_genai_prompt()`: \n  *  `request.genai_prompt.mcp_url` **Added**\n  *  `response.mcp_url` **Added**\n* `unified_to.prompt.create_genai_prompt()`: \n  *  `request.genai_prompt.mcp_url` **Added**\n  *  `response.mcp_url` **Added**\n"
+releaseNotes: "## Python SDK Changes Detected:\n* `unified_to.category.create_ticketing_category()`: **Added**\n* `unified_to.category.get_ticketing_category()`: **Added**\n* `unified_to.category.list_ticketing_categories()`: **Added**\n* `unified_to.category.patch_ticketing_category()`: **Added**\n* `unified_to.category.remove_ticketing_category()`: **Added**\n* `unified_to.category.update_ticketing_category()`: **Added**\n* `unified_to.genai.create_genai_embedding()`: **Added**\n* `unified_to.genai.get_genai_model()`: **Added**\n* `unified_to.embedding.create_genai_embedding()`: **Added**\n* `unified_to.model.get_genai_model()`: **Added**\n* `unified_to.ticketing.create_ticketing_category()`: **Added**\n* `unified_to.ticketing.get_ticketing_category()`: **Added**\n* `unified_to.ticketing.list_ticketing_categories()`: **Added**\n* `unified_to.ticketing.patch_ticketing_category()`: **Added**\n* `unified_to.ticketing.remove_ticketing_category()`: **Added**\n* `unified_to.ticketing.update_ticketing_category()`: **Added**\n* `unified_to.ticketing.create_ticketing_ticket()`: \n  *  `request.ticketing_ticket.category_id` **Added**\n  *  `response.category_id` **Added**\n* `unified_to.ticketing.get_ticketing_ticket()`:  `response.category_id` **Added**\n* `unified_to.ticketing.list_ticketing_tickets()`:  `response.[].category_id` **Added**\n* `unified_to.ticketing.patch_ticketing_ticket()`: \n  *  `request.ticketing_ticket.category_id` **Added**\n  *  `response.category_id` **Added**\n* `unified_to.ticketing.update_ticketing_ticket()`: \n  *  `request.ticketing_ticket.category_id` **Added**\n  *  `response.category_id` **Added**\n* `unified_to.ticket.create_ticketing_ticket()`: \n  *  `request.ticketing_ticket.category_id` **Added**\n  *  `response.category_id` **Added**\n* `unified_to.ticket.get_ticketing_ticket()`:  `response.category_id` **Added**\n* `unified_to.ticket.list_ticketing_tickets()`:  `response.[].category_id` **Added**\n* `unified_to.ticket.patch_ticketing_ticket()`: \n  *  `request.ticketing_ticket.category_id` **Added**\n  *  `response.category_id` **Added**\n* `unified_to.ticket.update_ticketing_ticket()`: \n  *  `request.ticketing_ticket.category_id` **Added**\n  *  `response.category_id` **Added**\n"

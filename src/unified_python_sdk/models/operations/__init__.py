@@ -210,6 +210,12 @@ if TYPE_CHECKING:
         CreateCrmPipelineResponse,
         CreateCrmPipelineResponseTypedDict,
     )
+    from .creategenaiembedding import (
+        CreateGenaiEmbeddingRequest,
+        CreateGenaiEmbeddingRequestTypedDict,
+        CreateGenaiEmbeddingResponse,
+        CreateGenaiEmbeddingResponseTypedDict,
+    )
     from .creategenaiprompt import (
         CreateGenaiPromptRequest,
         CreateGenaiPromptRequestTypedDict,
@@ -413,6 +419,12 @@ if TYPE_CHECKING:
         CreateTaskTaskRequestTypedDict,
         CreateTaskTaskResponse,
         CreateTaskTaskResponseTypedDict,
+    )
+    from .createticketingcategory import (
+        CreateTicketingCategoryRequest,
+        CreateTicketingCategoryRequestTypedDict,
+        CreateTicketingCategoryResponse,
+        CreateTicketingCategoryResponseTypedDict,
     )
     from .createticketingcustomer import (
         CreateTicketingCustomerRequest,
@@ -706,6 +718,12 @@ if TYPE_CHECKING:
         GetCrmPipelineResponse,
         GetCrmPipelineResponseTypedDict,
     )
+    from .getgenaimodel import (
+        GetGenaiModelRequest,
+        GetGenaiModelRequestTypedDict,
+        GetGenaiModelResponse,
+        GetGenaiModelResponseTypedDict,
+    )
     from .gethriscompany import (
         GetHrisCompanyRequest,
         GetHrisCompanyRequestTypedDict,
@@ -927,6 +945,12 @@ if TYPE_CHECKING:
         GetTaskTaskRequestTypedDict,
         GetTaskTaskResponse,
         GetTaskTaskResponseTypedDict,
+    )
+    from .getticketingcategory import (
+        GetTicketingCategoryRequest,
+        GetTicketingCategoryRequestTypedDict,
+        GetTicketingCategoryResponse,
+        GetTicketingCategoryResponseTypedDict,
     )
     from .getticketingcustomer import (
         GetTicketingCustomerRequest,
@@ -1504,6 +1528,12 @@ if TYPE_CHECKING:
         ListTaskTasksResponse,
         ListTaskTasksResponseTypedDict,
     )
+    from .listticketingcategories import (
+        ListTicketingCategoriesRequest,
+        ListTicketingCategoriesRequestTypedDict,
+        ListTicketingCategoriesResponse,
+        ListTicketingCategoriesResponseTypedDict,
+    )
     from .listticketingcustomers import (
         ListTicketingCustomersRequest,
         ListTicketingCustomersRequestTypedDict,
@@ -1999,6 +2029,12 @@ if TYPE_CHECKING:
         PatchTaskTaskResponse,
         PatchTaskTaskResponseTypedDict,
     )
+    from .patchticketingcategory import (
+        PatchTicketingCategoryRequest,
+        PatchTicketingCategoryRequestTypedDict,
+        PatchTicketingCategoryResponse,
+        PatchTicketingCategoryResponseTypedDict,
+    )
     from .patchticketingcustomer import (
         PatchTicketingCustomerRequest,
         PatchTicketingCustomerRequestTypedDict,
@@ -2454,6 +2490,12 @@ if TYPE_CHECKING:
         RemoveTaskTaskRequestTypedDict,
         RemoveTaskTaskResponse,
         RemoveTaskTaskResponseTypedDict,
+    )
+    from .removeticketingcategory import (
+        RemoveTicketingCategoryRequest,
+        RemoveTicketingCategoryRequestTypedDict,
+        RemoveTicketingCategoryResponse,
+        RemoveTicketingCategoryResponseTypedDict,
     )
     from .removeticketingcustomer import (
         RemoveTicketingCustomerRequest,
@@ -2911,6 +2953,12 @@ if TYPE_CHECKING:
         UpdateTaskTaskResponse,
         UpdateTaskTaskResponseTypedDict,
     )
+    from .updateticketingcategory import (
+        UpdateTicketingCategoryRequest,
+        UpdateTicketingCategoryRequestTypedDict,
+        UpdateTicketingCategoryResponse,
+        UpdateTicketingCategoryResponseTypedDict,
+    )
     from .updateticketingcustomer import (
         UpdateTicketingCustomerRequest,
         UpdateTicketingCustomerRequestTypedDict,
@@ -3110,6 +3158,10 @@ __all__ = [
     "CreateCrmPipelineRequestTypedDict",
     "CreateCrmPipelineResponse",
     "CreateCrmPipelineResponseTypedDict",
+    "CreateGenaiEmbeddingRequest",
+    "CreateGenaiEmbeddingRequestTypedDict",
+    "CreateGenaiEmbeddingResponse",
+    "CreateGenaiEmbeddingResponseTypedDict",
     "CreateGenaiPromptRequest",
     "CreateGenaiPromptRequestTypedDict",
     "CreateGenaiPromptResponse",
@@ -3246,6 +3298,10 @@ __all__ = [
     "CreateTaskTaskRequestTypedDict",
     "CreateTaskTaskResponse",
     "CreateTaskTaskResponseTypedDict",
+    "CreateTicketingCategoryRequest",
+    "CreateTicketingCategoryRequestTypedDict",
+    "CreateTicketingCategoryResponse",
+    "CreateTicketingCategoryResponseTypedDict",
     "CreateTicketingCustomerRequest",
     "CreateTicketingCustomerRequestTypedDict",
     "CreateTicketingCustomerResponse",
@@ -3440,6 +3496,10 @@ __all__ = [
     "GetCrmPipelineRequestTypedDict",
     "GetCrmPipelineResponse",
     "GetCrmPipelineResponseTypedDict",
+    "GetGenaiModelRequest",
+    "GetGenaiModelRequestTypedDict",
+    "GetGenaiModelResponse",
+    "GetGenaiModelResponseTypedDict",
     "GetHrisCompanyRequest",
     "GetHrisCompanyRequestTypedDict",
     "GetHrisCompanyResponse",
@@ -3588,6 +3648,10 @@ __all__ = [
     "GetTaskTaskRequestTypedDict",
     "GetTaskTaskResponse",
     "GetTaskTaskResponseTypedDict",
+    "GetTicketingCategoryRequest",
+    "GetTicketingCategoryRequestTypedDict",
+    "GetTicketingCategoryResponse",
+    "GetTicketingCategoryResponseTypedDict",
     "GetTicketingCustomerRequest",
     "GetTicketingCustomerRequestTypedDict",
     "GetTicketingCustomerResponse",
@@ -3972,6 +4036,10 @@ __all__ = [
     "ListTaskTasksRequestTypedDict",
     "ListTaskTasksResponse",
     "ListTaskTasksResponseTypedDict",
+    "ListTicketingCategoriesRequest",
+    "ListTicketingCategoriesRequestTypedDict",
+    "ListTicketingCategoriesResponse",
+    "ListTicketingCategoriesResponseTypedDict",
     "ListTicketingCustomersRequest",
     "ListTicketingCustomersRequestTypedDict",
     "ListTicketingCustomersResponse",
@@ -4301,6 +4369,10 @@ __all__ = [
     "PatchTaskTaskRequestTypedDict",
     "PatchTaskTaskResponse",
     "PatchTaskTaskResponseTypedDict",
+    "PatchTicketingCategoryRequest",
+    "PatchTicketingCategoryRequestTypedDict",
+    "PatchTicketingCategoryResponse",
+    "PatchTicketingCategoryResponseTypedDict",
     "PatchTicketingCustomerRequest",
     "PatchTicketingCustomerRequestTypedDict",
     "PatchTicketingCustomerResponse",
@@ -4606,6 +4678,10 @@ __all__ = [
     "RemoveTaskTaskRequestTypedDict",
     "RemoveTaskTaskResponse",
     "RemoveTaskTaskResponseTypedDict",
+    "RemoveTicketingCategoryRequest",
+    "RemoveTicketingCategoryRequestTypedDict",
+    "RemoveTicketingCategoryResponse",
+    "RemoveTicketingCategoryResponseTypedDict",
     "RemoveTicketingCustomerRequest",
     "RemoveTicketingCustomerRequestTypedDict",
     "RemoveTicketingCustomerResponse",
@@ -4910,6 +4986,10 @@ __all__ = [
     "UpdateTaskTaskRequestTypedDict",
     "UpdateTaskTaskResponse",
     "UpdateTaskTaskResponseTypedDict",
+    "UpdateTicketingCategoryRequest",
+    "UpdateTicketingCategoryRequestTypedDict",
+    "UpdateTicketingCategoryResponse",
+    "UpdateTicketingCategoryResponseTypedDict",
     "UpdateTicketingCustomerRequest",
     "UpdateTicketingCustomerRequestTypedDict",
     "UpdateTicketingCustomerResponse",
@@ -5089,6 +5169,10 @@ _dynamic_imports: dict[str, str] = {
     "CreateCrmPipelineRequestTypedDict": ".createcrmpipeline",
     "CreateCrmPipelineResponse": ".createcrmpipeline",
     "CreateCrmPipelineResponseTypedDict": ".createcrmpipeline",
+    "CreateGenaiEmbeddingRequest": ".creategenaiembedding",
+    "CreateGenaiEmbeddingRequestTypedDict": ".creategenaiembedding",
+    "CreateGenaiEmbeddingResponse": ".creategenaiembedding",
+    "CreateGenaiEmbeddingResponseTypedDict": ".creategenaiembedding",
     "CreateGenaiPromptRequest": ".creategenaiprompt",
     "CreateGenaiPromptRequestTypedDict": ".creategenaiprompt",
     "CreateGenaiPromptResponse": ".creategenaiprompt",
@@ -5225,6 +5309,10 @@ _dynamic_imports: dict[str, str] = {
     "CreateTaskTaskRequestTypedDict": ".createtasktask",
     "CreateTaskTaskResponse": ".createtasktask",
     "CreateTaskTaskResponseTypedDict": ".createtasktask",
+    "CreateTicketingCategoryRequest": ".createticketingcategory",
+    "CreateTicketingCategoryRequestTypedDict": ".createticketingcategory",
+    "CreateTicketingCategoryResponse": ".createticketingcategory",
+    "CreateTicketingCategoryResponseTypedDict": ".createticketingcategory",
     "CreateTicketingCustomerRequest": ".createticketingcustomer",
     "CreateTicketingCustomerRequestTypedDict": ".createticketingcustomer",
     "CreateTicketingCustomerResponse": ".createticketingcustomer",
@@ -5419,6 +5507,10 @@ _dynamic_imports: dict[str, str] = {
     "GetCrmPipelineRequestTypedDict": ".getcrmpipeline",
     "GetCrmPipelineResponse": ".getcrmpipeline",
     "GetCrmPipelineResponseTypedDict": ".getcrmpipeline",
+    "GetGenaiModelRequest": ".getgenaimodel",
+    "GetGenaiModelRequestTypedDict": ".getgenaimodel",
+    "GetGenaiModelResponse": ".getgenaimodel",
+    "GetGenaiModelResponseTypedDict": ".getgenaimodel",
     "GetHrisCompanyRequest": ".gethriscompany",
     "GetHrisCompanyRequestTypedDict": ".gethriscompany",
     "GetHrisCompanyResponse": ".gethriscompany",
@@ -5567,6 +5659,10 @@ _dynamic_imports: dict[str, str] = {
     "GetTaskTaskRequestTypedDict": ".gettasktask",
     "GetTaskTaskResponse": ".gettasktask",
     "GetTaskTaskResponseTypedDict": ".gettasktask",
+    "GetTicketingCategoryRequest": ".getticketingcategory",
+    "GetTicketingCategoryRequestTypedDict": ".getticketingcategory",
+    "GetTicketingCategoryResponse": ".getticketingcategory",
+    "GetTicketingCategoryResponseTypedDict": ".getticketingcategory",
     "GetTicketingCustomerRequest": ".getticketingcustomer",
     "GetTicketingCustomerRequestTypedDict": ".getticketingcustomer",
     "GetTicketingCustomerResponse": ".getticketingcustomer",
@@ -5951,6 +6047,10 @@ _dynamic_imports: dict[str, str] = {
     "ListTaskTasksRequestTypedDict": ".listtasktasks",
     "ListTaskTasksResponse": ".listtasktasks",
     "ListTaskTasksResponseTypedDict": ".listtasktasks",
+    "ListTicketingCategoriesRequest": ".listticketingcategories",
+    "ListTicketingCategoriesRequestTypedDict": ".listticketingcategories",
+    "ListTicketingCategoriesResponse": ".listticketingcategories",
+    "ListTicketingCategoriesResponseTypedDict": ".listticketingcategories",
     "ListTicketingCustomersRequest": ".listticketingcustomers",
     "ListTicketingCustomersRequestTypedDict": ".listticketingcustomers",
     "ListTicketingCustomersResponse": ".listticketingcustomers",
@@ -6282,6 +6382,10 @@ _dynamic_imports: dict[str, str] = {
     "PatchTaskTaskRequestTypedDict": ".patchtasktask",
     "PatchTaskTaskResponse": ".patchtasktask",
     "PatchTaskTaskResponseTypedDict": ".patchtasktask",
+    "PatchTicketingCategoryRequest": ".patchticketingcategory",
+    "PatchTicketingCategoryRequestTypedDict": ".patchticketingcategory",
+    "PatchTicketingCategoryResponse": ".patchticketingcategory",
+    "PatchTicketingCategoryResponseTypedDict": ".patchticketingcategory",
     "PatchTicketingCustomerRequest": ".patchticketingcustomer",
     "PatchTicketingCustomerRequestTypedDict": ".patchticketingcustomer",
     "PatchTicketingCustomerResponse": ".patchticketingcustomer",
@@ -6586,6 +6690,10 @@ _dynamic_imports: dict[str, str] = {
     "RemoveTaskTaskRequestTypedDict": ".removetasktask",
     "RemoveTaskTaskResponse": ".removetasktask",
     "RemoveTaskTaskResponseTypedDict": ".removetasktask",
+    "RemoveTicketingCategoryRequest": ".removeticketingcategory",
+    "RemoveTicketingCategoryRequestTypedDict": ".removeticketingcategory",
+    "RemoveTicketingCategoryResponse": ".removeticketingcategory",
+    "RemoveTicketingCategoryResponseTypedDict": ".removeticketingcategory",
     "RemoveTicketingCustomerRequest": ".removeticketingcustomer",
     "RemoveTicketingCustomerRequestTypedDict": ".removeticketingcustomer",
     "RemoveTicketingCustomerResponse": ".removeticketingcustomer",
@@ -6890,6 +6998,10 @@ _dynamic_imports: dict[str, str] = {
     "UpdateTaskTaskRequestTypedDict": ".updatetasktask",
     "UpdateTaskTaskResponse": ".updatetasktask",
     "UpdateTaskTaskResponseTypedDict": ".updatetasktask",
+    "UpdateTicketingCategoryRequest": ".updateticketingcategory",
+    "UpdateTicketingCategoryRequestTypedDict": ".updateticketingcategory",
+    "UpdateTicketingCategoryResponse": ".updateticketingcategory",
+    "UpdateTicketingCategoryResponseTypedDict": ".updateticketingcategory",
     "UpdateTicketingCustomerRequest": ".updateticketingcustomer",
     "UpdateTicketingCustomerRequestTypedDict": ".updateticketingcustomer",
     "UpdateTicketingCustomerResponse": ".updateticketingcustomer",

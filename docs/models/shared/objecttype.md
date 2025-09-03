@@ -63,6 +63,7 @@
 | `TICKETING_NOTE`           | ticketing_note             |
 | `TICKETING_TICKET`         | ticketing_ticket           |
 | `TICKETING_CUSTOMER`       | ticketing_customer         |
+| `TICKETING_CATEGORY`       | ticketing_category         |
 | `UC_CONTACT`               | uc_contact                 |
 | `UC_CALL`                  | uc_call                    |
 | `UC_COMMENT`               | uc_comment                 |
@@ -72,6 +73,7 @@
 | `STORAGE_FILE`             | storage_file               |
 | `GENAI_MODEL`              | genai_model                |
 | `GENAI_PROMPT`             | genai_prompt               |
+| `GENAI_EMBEDDING`          | genai_embedding            |
 | `MESSAGING_MESSAGE`        | messaging_message          |
 | `MESSAGING_CHANNEL`        | messaging_channel          |
 | `KMS_SPACE`                | kms_space                  |

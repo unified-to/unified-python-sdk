@@ -49,6 +49,7 @@ if TYPE_CHECKING:
     from unified_python_sdk.deal import Deal
     from unified_python_sdk.device import Device
     from unified_python_sdk.document import Document
+    from unified_python_sdk.embedding import Embedding
     from unified_python_sdk.employee import Employee
     from unified_python_sdk.enrich import Enrich
     from unified_python_sdk.event import Event
@@ -172,6 +173,7 @@ class UnifiedTo(BaseSDK):
     enrich: "Enrich"
     person: "Person"
     genai: "Genai"
+    embedding: "Embedding"
     model: "Model"
     prompt: "Prompt"
     hris: "Hris"
@@ -281,6 +283,7 @@ class UnifiedTo(BaseSDK):
         "enrich": ("unified_python_sdk.enrich", "Enrich"),
         "person": ("unified_python_sdk.person", "Person"),
         "genai": ("unified_python_sdk.genai", "Genai"),
+        "embedding": ("unified_python_sdk.embedding", "Embedding"),
         "model": ("unified_python_sdk.model", "Model"),
         "prompt": ("unified_python_sdk.prompt", "Prompt"),
         "hris": ("unified_python_sdk.hris", "Hris"),

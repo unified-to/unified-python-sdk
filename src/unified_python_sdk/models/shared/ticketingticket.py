@@ -18,6 +18,7 @@ class TicketingTicketStatus(str, Enum, metaclass=utils.OpenEnumMeta):
 
 class TicketingTicketTypedDict(TypedDict):
     category: NotRequired[str]
+    category_id: NotRequired[str]
     closed_at: NotRequired[datetime]
     created_at: NotRequired[datetime]
     customer_id: NotRequired[str]
@@ -37,6 +38,8 @@ class TicketingTicketTypedDict(TypedDict):
 
 class TicketingTicket(BaseModel):
     category: Optional[str] = None
+
+    category_id: Optional[str] = None
 
     closed_at: Optional[datetime] = None
 
