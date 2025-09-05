@@ -32,6 +32,7 @@ class HrisCompensationTypedDict(TypedDict):
     amount: NotRequired[float]
     currency: NotRequired[str]
     frequency: NotRequired[HrisCompensationFrequency]
+    group_id: NotRequired[str]
     type: NotRequired[HrisCompensationType]
 
 
@@ -43,6 +44,8 @@ class HrisCompensation(BaseModel):
     frequency: Annotated[
         Optional[HrisCompensationFrequency], PlainValidator(validate_open_enum(False))
     ] = None
+
+    group_id: Optional[str] = None
 
     type: Annotated[
         Optional[HrisCompensationType], PlainValidator(validate_open_enum(False))

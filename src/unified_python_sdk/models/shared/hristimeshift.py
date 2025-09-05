@@ -9,24 +9,30 @@ from unified_python_sdk.types import BaseModel
 
 
 class HrisTimeshiftTypedDict(TypedDict):
+    employee_user_id: str
+    end_at: datetime
+    start_at: datetime
     approved_at: NotRequired[datetime]
     approver_user_id: NotRequired[str]
     company_id: NotRequired[str]
     compensation: NotRequired[List[HrisCompensationTypedDict]]
     created_at: NotRequired[datetime]
-    employee_user_id: NotRequired[str]
-    end_at: NotRequired[datetime]
     group_id: NotRequired[str]
     hours: NotRequired[float]
     id: NotRequired[str]
     is_approved: NotRequired[bool]
     location_id: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
-    start_at: NotRequired[datetime]
     updated_at: NotRequired[datetime]
 
 
 class HrisTimeshift(BaseModel):
+    employee_user_id: str
+
+    end_at: datetime
+
+    start_at: datetime
+
     approved_at: Optional[datetime] = None
 
     approver_user_id: Optional[str] = None
@@ -36,10 +42,6 @@ class HrisTimeshift(BaseModel):
     compensation: Optional[List[HrisCompensation]] = None
 
     created_at: Optional[datetime] = None
-
-    employee_user_id: Optional[str] = None
-
-    end_at: Optional[datetime] = None
 
     group_id: Optional[str] = None
 
@@ -52,7 +54,5 @@ class HrisTimeshift(BaseModel):
     location_id: Optional[str] = None
 
     raw: Optional[Dict[str, Any]] = None
-
-    start_at: Optional[datetime] = None
 
     updated_at: Optional[datetime] = None
