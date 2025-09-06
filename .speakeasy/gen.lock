@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: 815d3eb3e63fd66f5050d707713e3c46
+  docChecksum: 8ed442c273cdb35b6056af069e0583c0
   docVersion: "1.0"
-  speakeasyVersion: 1.609.0
-  generationVersion: 2.692.0
-  releaseVersion: 0.49.3
-  configChecksum: 88f70f928d1409825bdda841a603f63d
+  speakeasyVersion: 1.611.0
+  generationVersion: 2.694.1
+  releaseVersion: 0.49.4
+  configChecksum: 40bf7afc6127660c043feff30fd7af57
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -1238,7 +1238,6 @@ generatedFiles:
   - docs/models/shared/hristelephonetype.md
   - docs/models/shared/hristimeoff.md
   - docs/models/shared/hristimeoffstatus.md
-  - docs/models/shared/hristimeofftype.md
   - docs/models/shared/hristimeshift.md
   - docs/models/shared/integration.md
   - docs/models/shared/integration1.md
@@ -7026,4 +7025,9 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Python SDK Changes Detected:\n* `unified_to.hris.patch_hris_timeshift()`: \n  *  `request.hris_timeshift` **Changed** **Breaking** :warning:\n  *  `response` **Changed**\n* `unified_to.hris.create_hris_timeshift()`: \n  *  `request.hris_timeshift` **Changed** **Breaking** :warning:\n  *  `response` **Changed**\n* `unified_to.timeshift.update_hris_timeshift()`: \n  *  `request.hris_timeshift` **Changed** **Breaking** :warning:\n  *  `response` **Changed**\n* `unified_to.timeshift.patch_hris_timeshift()`: \n  *  `request.hris_timeshift` **Changed** **Breaking** :warning:\n  *  `response` **Changed**\n* `unified_to.timeshift.create_hris_timeshift()`: \n  *  `request.hris_timeshift` **Changed** **Breaking** :warning:\n  *  `response` **Changed**\n* `unified_to.hris.update_hris_timeshift()`: \n  *  `request.hris_timeshift` **Changed** **Breaking** :warning:\n  *  `response` **Changed**\n* `unified_to.hris.list_hris_timeshifts()`:  `response.[]` **Changed**\n* `unified_to.employee.patch_hris_employee()`: \n  *  `request.hris_employee.compensation.[].group_id` **Added**\n  *  `response.compensation.[].group_id` **Added**\n* `unified_to.hris.update_hris_employee()`: \n  *  `request.hris_employee.compensation.[].group_id` **Added**\n  *  `response.compensation.[].group_id` **Added**\n* `unified_to.hris.create_hris_employee()`: \n  *  `request.hris_employee.compensation.[].group_id` **Added**\n  *  `response.compensation.[].group_id` **Added**\n* `unified_to.employee.create_hris_employee()`: \n  *  `request.hris_employee.compensation.[].group_id` **Added**\n  *  `response.compensation.[].group_id` **Added**\n* `unified_to.employee.get_hris_employee()`:  `response.compensation.[].group_id` **Added**\n* `unified_to.employee.list_hris_employees()`:  `response.[].compensation.[].group_id` **Added**\n* `unified_to.hris.patch_hris_employee()`: \n  *  `request.hris_employee.compensation.[].group_id` **Added**\n  *  `response.compensation.[].group_id` **Added**\n* `unified_to.employee.update_hris_employee()`: \n  *  `request.hris_employee.compensation.[].group_id` **Added**\n  *  `response.compensation.[].group_id` **Added**\n* `unified_to.hris.list_hris_employees()`:  `response.[].compensation.[].group_id` **Added**\n* `unified_to.timeshift.get_hris_timeshift()`:  `response` **Changed**\n* `unified_to.timeshift.list_hris_timeshifts()`:  `response.[]` **Changed**\n* `unified_to.hris.get_hris_timeshift()`:  `response` **Changed**\n* `unified_to.hris.get_hris_employee()`:  `response.compensation.[].group_id` **Added**\n"
+releaseNotes: |
+  ## Python SDK Changes Detected:
+  * `unified_to.hris.get_hris_timeoff()`:  `response` **Changed** **Breaking** :warning:
+  * `unified_to.hris.list_hris_timeoffs()`:  `response.[]` **Changed** **Breaking** :warning:
+  * `unified_to.timeoff.get_hris_timeoff()`:  `response` **Changed** **Breaking** :warning:
+  * `unified_to.timeoff.list_hris_timeoffs()`:  `response.[]` **Changed** **Breaking** :warning:
