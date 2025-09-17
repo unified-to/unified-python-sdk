@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: 8ed442c273cdb35b6056af069e0583c0
+  docChecksum: ff3e18b39b0a3be1adfdaeecd26778b0
   docVersion: "1.0"
-  speakeasyVersion: 1.611.0
-  generationVersion: 2.694.1
-  releaseVersion: 0.49.4
-  configChecksum: 40bf7afc6127660c043feff30fd7af57
+  speakeasyVersion: 1.617.1
+  generationVersion: 2.701.8
+  releaseVersion: 0.49.5
+  configChecksum: b671635606c8cd375039eb1a79ad34d7
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -16,12 +16,12 @@ features:
     acceptHeaders: 3.0.0
     additionalDependencies: 1.0.0
     constsAndDefaults: 1.0.5
-    core: 5.20.3
+    core: 5.20.4
     defaultEnabledRetries: 0.2.0
     downloadStreams: 1.0.1
     enumUnions: 0.1.0
     envVarSecurityUsage: 0.3.2
-    globalSecurity: 3.0.3
+    globalSecurity: 3.0.4
     globalSecurityCallbacks: 1.0.0
     globalServerURLs: 3.1.1
     openEnums: 1.0.1
@@ -7025,9 +7025,4 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: |
-  ## Python SDK Changes Detected:
-  * `unified_to.hris.get_hris_timeoff()`:  `response` **Changed** **Breaking** :warning:
-  * `unified_to.hris.list_hris_timeoffs()`:  `response.[]` **Changed** **Breaking** :warning:
-  * `unified_to.timeoff.get_hris_timeoff()`:  `response` **Changed** **Breaking** :warning:
-  * `unified_to.timeoff.list_hris_timeoffs()`:  `response.[]` **Changed** **Breaking** :warning:
+releaseNotes: "## Python SDK Changes Detected:\n* `unified_to.kms.create_kms_space()`: \n  *  `request.kms_space.parent_id` **Added**\n  *  `response.parent_id` **Added**\n* `unified_to.kms.get_kms_space()`:  `response.parent_id` **Added**\n* `unified_to.kms.list_kms_spaces()`:  `response.[].parent_id` **Added**\n* `unified_to.kms.patch_kms_space()`: \n  *  `request.kms_space.parent_id` **Added**\n  *  `response.parent_id` **Added**\n* `unified_to.kms.update_kms_space()`: \n  *  `request.kms_space.parent_id` **Added**\n  *  `response.parent_id` **Added**\n* `unified_to.comment.create_uc_comment()`: \n  *  `request.uc_comment.call_id` **Added**\n  *  `response.call_id` **Added**\n* `unified_to.comment.get_uc_comment()`:  `response.call_id` **Added**\n* `unified_to.comment.list_uc_comments()`:  `response.[].call_id` **Added**\n* `unified_to.comment.patch_uc_comment()`: \n  *  `request.uc_comment.call_id` **Added**\n  *  `response.call_id` **Added**\n* `unified_to.comment.update_uc_comment()`: \n  *  `request.uc_comment.call_id` **Added**\n  *  `response.call_id` **Added**\n* `unified_to.space.create_kms_space()`: \n  *  `request.kms_space.parent_id` **Added**\n  *  `response.parent_id` **Added**\n* `unified_to.space.get_kms_space()`:  `response.parent_id` **Added**\n* `unified_to.space.list_kms_spaces()`:  `response.[].parent_id` **Added**\n* `unified_to.space.patch_kms_space()`: \n  *  `request.kms_space.parent_id` **Added**\n  *  `response.parent_id` **Added**\n* `unified_to.space.update_kms_space()`: \n  *  `request.kms_space.parent_id` **Added**\n  *  `response.parent_id` **Added**\n* `unified_to.uc.create_uc_comment()`: \n  *  `request.uc_comment.call_id` **Added**\n  *  `response.call_id` **Added**\n* `unified_to.uc.get_uc_comment()`:  `response.call_id` **Added**\n* `unified_to.uc.list_uc_comments()`:  `response.[].call_id` **Added**\n* `unified_to.uc.patch_uc_comment()`: \n  *  `request.uc_comment.call_id` **Added**\n  *  `response.call_id` **Added**\n* `unified_to.uc.update_uc_comment()`: \n  *  `request.uc_comment.call_id` **Added**\n  *  `response.call_id` **Added**\n"

@@ -8,6 +8,7 @@ from unified_python_sdk.types import BaseModel
 
 class UcCommentTypedDict(TypedDict):
     content: str
+    call_id: NotRequired[str]
     created_at: NotRequired[str]
     id: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
@@ -17,6 +18,8 @@ class UcCommentTypedDict(TypedDict):
 
 class UcComment(BaseModel):
     content: str
+
+    call_id: Optional[str] = None
 
     created_at: Optional[str] = None
 
