@@ -16,6 +16,7 @@ from unified_python_sdk.types import BaseModel
 
 
 class PropertyAccountingReportProfitAndLossTypedDict(TypedDict):
+    category_ids: NotRequired[List[str]]
     cost_of_goods_sold: NotRequired[List[AccountingProfitlossCategoryTypedDict]]
     r"""@deprecated – use cost_of_goods_sold_sections instead"""
     cost_of_goods_sold_sections: NotRequired[List[AccountingProfitlossSectionTypedDict]]
@@ -42,6 +43,8 @@ class PropertyAccountingReportProfitAndLossTypedDict(TypedDict):
 
 
 class PropertyAccountingReportProfitAndLoss(BaseModel):
+    category_ids: Optional[List[str]] = None
+
     cost_of_goods_sold: Optional[List[AccountingProfitlossCategory]] = None
     r"""@deprecated – use cost_of_goods_sold_sections instead"""
 

@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: ff3e18b39b0a3be1adfdaeecd26778b0
+  docChecksum: 8eb07aa570ffe05397d47efd8d0eb6b7
   docVersion: "1.0"
-  speakeasyVersion: 1.617.1
-  generationVersion: 2.701.8
-  releaseVersion: 0.49.5
-  configChecksum: b671635606c8cd375039eb1a79ad34d7
+  speakeasyVersion: 1.618.1
+  generationVersion: 2.702.0
+  releaseVersion: 0.49.6
+  configChecksum: f9614623338ace3881ef9e2bf8b1cd69
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -7025,4 +7025,13 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Python SDK Changes Detected:\n* `unified_to.kms.create_kms_space()`: \n  *  `request.kms_space.parent_id` **Added**\n  *  `response.parent_id` **Added**\n* `unified_to.kms.get_kms_space()`:  `response.parent_id` **Added**\n* `unified_to.kms.list_kms_spaces()`:  `response.[].parent_id` **Added**\n* `unified_to.kms.patch_kms_space()`: \n  *  `request.kms_space.parent_id` **Added**\n  *  `response.parent_id` **Added**\n* `unified_to.kms.update_kms_space()`: \n  *  `request.kms_space.parent_id` **Added**\n  *  `response.parent_id` **Added**\n* `unified_to.comment.create_uc_comment()`: \n  *  `request.uc_comment.call_id` **Added**\n  *  `response.call_id` **Added**\n* `unified_to.comment.get_uc_comment()`:  `response.call_id` **Added**\n* `unified_to.comment.list_uc_comments()`:  `response.[].call_id` **Added**\n* `unified_to.comment.patch_uc_comment()`: \n  *  `request.uc_comment.call_id` **Added**\n  *  `response.call_id` **Added**\n* `unified_to.comment.update_uc_comment()`: \n  *  `request.uc_comment.call_id` **Added**\n  *  `response.call_id` **Added**\n* `unified_to.space.create_kms_space()`: \n  *  `request.kms_space.parent_id` **Added**\n  *  `response.parent_id` **Added**\n* `unified_to.space.get_kms_space()`:  `response.parent_id` **Added**\n* `unified_to.space.list_kms_spaces()`:  `response.[].parent_id` **Added**\n* `unified_to.space.patch_kms_space()`: \n  *  `request.kms_space.parent_id` **Added**\n  *  `response.parent_id` **Added**\n* `unified_to.space.update_kms_space()`: \n  *  `request.kms_space.parent_id` **Added**\n  *  `response.parent_id` **Added**\n* `unified_to.uc.create_uc_comment()`: \n  *  `request.uc_comment.call_id` **Added**\n  *  `response.call_id` **Added**\n* `unified_to.uc.get_uc_comment()`:  `response.call_id` **Added**\n* `unified_to.uc.list_uc_comments()`:  `response.[].call_id` **Added**\n* `unified_to.uc.patch_uc_comment()`: \n  *  `request.uc_comment.call_id` **Added**\n  *  `response.call_id` **Added**\n* `unified_to.uc.update_uc_comment()`: \n  *  `request.uc_comment.call_id` **Added**\n  *  `response.call_id` **Added**\n"
+releaseNotes: |
+  ## Python SDK Changes Detected:
+  * `unified_to.accounting.get_accounting_profitloss()`:  `response.category_ids` **Added**
+  * `unified_to.accounting.get_accounting_report()`:  `response.profit_and_loss.category_ids` **Added**
+  * `unified_to.accounting.list_accounting_profitlosses()`:  `response.[].category_ids` **Added**
+  * `unified_to.accounting.list_accounting_reports()`:  `response.[].profit_and_loss.category_ids` **Added**
+  * `unified_to.profitloss.get_accounting_profitloss()`:  `response.category_ids` **Added**
+  * `unified_to.profitloss.list_accounting_profitlosses()`:  `response.[].category_ids` **Added**
+  * `unified_to.report.get_accounting_report()`:  `response.profit_and_loss.category_ids` **Added**
+  * `unified_to.report.list_accounting_reports()`:  `response.[].profit_and_loss.category_ids` **Added**
