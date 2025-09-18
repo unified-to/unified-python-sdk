@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: 8eb07aa570ffe05397d47efd8d0eb6b7
+  docChecksum: 6ba38662f570a477a5eacdaf583b3b85
   docVersion: "1.0"
-  speakeasyVersion: 1.618.1
-  generationVersion: 2.702.0
-  releaseVersion: 0.49.6
-  configChecksum: f9614623338ace3881ef9e2bf8b1cd69
+  speakeasyVersion: 1.620.0
+  generationVersion: 2.706.1
+  releaseVersion: 0.49.7
+  configChecksum: da9d7f191e48ae36062881240887c405
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -7025,13 +7025,4 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: |
-  ## Python SDK Changes Detected:
-  * `unified_to.accounting.get_accounting_profitloss()`:  `response.category_ids` **Added**
-  * `unified_to.accounting.get_accounting_report()`:  `response.profit_and_loss.category_ids` **Added**
-  * `unified_to.accounting.list_accounting_profitlosses()`:  `response.[].category_ids` **Added**
-  * `unified_to.accounting.list_accounting_reports()`:  `response.[].profit_and_loss.category_ids` **Added**
-  * `unified_to.profitloss.get_accounting_profitloss()`:  `response.category_ids` **Added**
-  * `unified_to.profitloss.list_accounting_profitlosses()`:  `response.[].category_ids` **Added**
-  * `unified_to.report.get_accounting_report()`:  `response.profit_and_loss.category_ids` **Added**
-  * `unified_to.report.list_accounting_reports()`:  `response.[].profit_and_loss.category_ids` **Added**
+releaseNotes: "## Python SDK Changes Detected:\n* `unified_to.calendar.list_calendar_events()`: \n  *  `request.expand` **Added**\n* `unified_to.event.list_calendar_events()`: \n  *  `request.expand` **Added**\n* `unified_to.messaging.list_messaging_messages()`: \n  *  `request.expand` **Added**\n* `unified_to.message.list_messaging_messages()`: \n  *  `request.expand` **Added**\n"

@@ -20,6 +20,7 @@ class ListCalendarEventsRequestTypedDict(TypedDict):
     r"""The calendar ID to filter by"""
     end_le: NotRequired[str]
     r"""The end date to filter by"""
+    expand: NotRequired[str]
     expand_recurring_events: NotRequired[str]
     r"""Whether to expand recurring calendar events"""
     fields: NotRequired[List[str]]
@@ -55,6 +56,11 @@ class ListCalendarEventsRequest(BaseModel):
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
     r"""The end date to filter by"""
+
+    expand: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
 
     expand_recurring_events: Annotated[
         Optional[str],
