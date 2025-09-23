@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: 6ba38662f570a477a5eacdaf583b3b85
+  docChecksum: 3a2b9f42726c5dfd24761ce463b8da0d
   docVersion: "1.0"
-  speakeasyVersion: 1.620.0
-  generationVersion: 2.706.1
-  releaseVersion: 0.49.7
-  configChecksum: da9d7f191e48ae36062881240887c405
+  speakeasyVersion: 1.622.1
+  generationVersion: 2.709.0
+  releaseVersion: 0.49.8
+  configChecksum: ca51fbb94bb39e411145a13d6adf4241
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -7025,4 +7025,4 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Python SDK Changes Detected:\n* `unified_to.calendar.list_calendar_events()`: \n  *  `request.expand` **Added**\n* `unified_to.event.list_calendar_events()`: \n  *  `request.expand` **Added**\n* `unified_to.messaging.list_messaging_messages()`: \n  *  `request.expand` **Added**\n* `unified_to.message.list_messaging_messages()`: \n  *  `request.expand` **Added**\n"
+releaseNotes: "## Python SDK Changes Detected:\n* `unified_to.calendar.list_calendar_events()`:  `request` **Changed** **Breaking** :warning:\n* `unified_to.event.list_calendar_events()`:  `request` **Changed** **Breaking** :warning:\n* `unified_to.messaging.list_messaging_messages()`: \n  *  `request.expand` **Changed** **Breaking** :warning:\n* `unified_to.message.list_messaging_messages()`: \n  *  `request.expand` **Changed** **Breaking** :warning:\n"

@@ -20,8 +20,9 @@ class ListCalendarEventsRequestTypedDict(TypedDict):
     r"""The calendar ID to filter by"""
     end_le: NotRequired[str]
     r"""The end date to filter by"""
-    expand: NotRequired[str]
-    expand_recurring_events: NotRequired[str]
+    expand: NotRequired[bool]
+    r"""Whether to flatten grouped or recurring items into individual entries."""
+    expand_recurring_events: NotRequired[bool]
     r"""Whether to expand recurring calendar events"""
     fields: NotRequired[List[str]]
     r"""Comma-delimited fields to return"""
@@ -58,12 +59,13 @@ class ListCalendarEventsRequest(BaseModel):
     r"""The end date to filter by"""
 
     expand: Annotated[
-        Optional[str],
+        Optional[bool],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
+    r"""Whether to flatten grouped or recurring items into individual entries."""
 
     expand_recurring_events: Annotated[
-        Optional[str],
+        Optional[bool],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
     r"""Whether to expand recurring calendar events"""
