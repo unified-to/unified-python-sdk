@@ -29,6 +29,7 @@ class MessagingMessageTypedDict(TypedDict):
     message: NotRequired[str]
     message_html: NotRequired[str]
     message_markdown: NotRequired[str]
+    parent_id: NotRequired[str]
     parent_message_id: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
     reactions: NotRequired[List[MessagingReactionTypedDict]]
@@ -66,6 +67,8 @@ class MessagingMessage(BaseModel):
     message_html: Optional[str] = None
 
     message_markdown: Optional[str] = None
+
+    parent_id: Optional[str] = None
 
     parent_message_id: Optional[str] = None
 

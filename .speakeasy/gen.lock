@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: 3a2b9f42726c5dfd24761ce463b8da0d
+  docChecksum: c7b234a89c45d96ea050dc7c9d6d4030
   docVersion: "1.0"
-  speakeasyVersion: 1.622.1
-  generationVersion: 2.709.0
-  releaseVersion: 0.49.8
-  configChecksum: ca51fbb94bb39e411145a13d6adf4241
+  speakeasyVersion: 1.623.0
+  generationVersion: 2.713.0
+  releaseVersion: 0.50.0
+  configChecksum: a162912d70aee3d1c6f7b1000ad615cc
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -16,7 +16,7 @@ features:
     acceptHeaders: 3.0.0
     additionalDependencies: 1.0.0
     constsAndDefaults: 1.0.5
-    core: 5.20.4
+    core: 5.21.1
     defaultEnabledRetries: 0.2.0
     downloadStreams: 1.0.1
     enumUnions: 0.1.0
@@ -7025,4 +7025,4 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Python SDK Changes Detected:\n* `unified_to.calendar.list_calendar_events()`:  `request` **Changed** **Breaking** :warning:\n* `unified_to.event.list_calendar_events()`:  `request` **Changed** **Breaking** :warning:\n* `unified_to.messaging.list_messaging_messages()`: \n  *  `request.expand` **Changed** **Breaking** :warning:\n* `unified_to.message.list_messaging_messages()`: \n  *  `request.expand` **Changed** **Breaking** :warning:\n"
+releaseNotes: "## Python SDK Changes Detected:\n* `unified_to.messaging.create_messaging_message()`: \n  *  `request.messaging_message.parent_id` **Added**\n  *  `response.parent_id` **Added**\n* `unified_to.messaging.get_messaging_message()`:  `response.parent_id` **Added**\n* `unified_to.messaging.list_messaging_messages()`:  `response.[].parent_id` **Added**\n* `unified_to.messaging.patch_messaging_message()`: \n  *  `request.messaging_message.parent_id` **Added**\n  *  `response.parent_id` **Added**\n* `unified_to.messaging.update_messaging_message()`: \n  *  `request.messaging_message.parent_id` **Added**\n  *  `response.parent_id` **Added**\n* `unified_to.message.create_messaging_message()`: \n  *  `request.messaging_message.parent_id` **Added**\n  *  `response.parent_id` **Added**\n* `unified_to.message.get_messaging_message()`:  `response.parent_id` **Added**\n* `unified_to.message.list_messaging_messages()`:  `response.[].parent_id` **Added**\n* `unified_to.message.patch_messaging_message()`: \n  *  `request.messaging_message.parent_id` **Added**\n  *  `response.parent_id` **Added**\n* `unified_to.message.update_messaging_message()`: \n  *  `request.messaging_message.parent_id` **Added**\n  *  `response.parent_id` **Added**\n"

@@ -37,10 +37,10 @@ with UnifiedTo(
         "path": "/var/log",
     })
 
-    assert res is not None
+    assert res.default_application_json_any is not None
 
     # Handle response
-    print(res)
+    print(res.default_application_json_any)
 
 ```
 
@@ -84,10 +84,10 @@ with UnifiedTo(
         "path": "/var/log",
     })
 
-    assert res is not None
+    assert res.default_application_json_any is not None
 
     # Handle response
-    print(res)
+    print(res.default_application_json_any)
 
 ```
 
@@ -131,10 +131,10 @@ with UnifiedTo(
         "path": "/System",
     })
 
-    assert res is not None
+    assert res.default_application_json_any is not None
 
     # Handle response
-    print(res)
+    print(res.default_application_json_any)
 
 ```
 
@@ -178,10 +178,10 @@ with UnifiedTo(
         "path": "/System",
     })
 
-    assert res is not None
+    assert res.default_application_json_any is not None
 
     # Handle response
-    print(res)
+    print(res.default_application_json_any)
 
 ```
 
@@ -225,10 +225,10 @@ with UnifiedTo(
         "path": "/System",
     })
 
-    assert res is not None
+    assert res.default_application_json_any is not None
 
     # Handle response
-    print(res)
+    print(res.default_application_json_any)
 
 ```
 
@@ -272,10 +272,10 @@ with UnifiedTo(
         "path": "/bin",
     })
 
-    assert res is not None
+    assert res.default_application_json_any is not None
 
     # Handle response
-    print(res)
+    print(res.default_application_json_any)
 
 ```
 
@@ -319,10 +319,10 @@ with UnifiedTo(
         "path": "/var/tmp",
     })
 
-    assert res is not None
+    assert res.default_application_json_any is not None
 
     # Handle response
-    print(res)
+    print(res.default_application_json_any)
 
 ```
 
@@ -366,10 +366,10 @@ with UnifiedTo(
         "path": "/var/tmp",
     })
 
-    assert res is not None
+    assert res.default_application_json_any is not None
 
     # Handle response
-    print(res)
+    print(res.default_application_json_any)
 
 ```
 
