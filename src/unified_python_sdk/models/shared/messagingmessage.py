@@ -25,6 +25,7 @@ class MessagingMessageTypedDict(TypedDict):
     has_children: NotRequired[bool]
     hidden_members: NotRequired[List[MessagingMemberTypedDict]]
     id: NotRequired[str]
+    is_unread: NotRequired[bool]
     mentioned_members: NotRequired[List[MessagingMemberTypedDict]]
     message: NotRequired[str]
     message_html: NotRequired[str]
@@ -59,6 +60,8 @@ class MessagingMessage(BaseModel):
     hidden_members: Optional[List[MessagingMember]] = None
 
     id: Optional[str] = None
+
+    is_unread: Optional[bool] = None
 
     mentioned_members: Optional[List[MessagingMember]] = None
 

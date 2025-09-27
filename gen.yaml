@@ -22,13 +22,14 @@ generation:
   baseServerURL: ""
   flattenGlobalSecurity: true
 python:
-  version: 0.50.0
+  version: 0.51.0
   additionalDependencies:
     dev: {}
     main: {}
   allowedRedefinedBuiltins:
     - id
     - object
+  asyncMode: both
   authors:
     - Unified API Inc.
   baseErrorName: UnifiedToError
@@ -51,6 +52,7 @@ python:
       shared: models/shared
       webhooks: models/webhooks
   inputModelSuffix: input
+  legacyPyright: true
   maxMethodParams: 0
   methodArguments: require-security-and-request
   moduleName: ""
