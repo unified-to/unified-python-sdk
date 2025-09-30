@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: e9e9a75ee0b8df9aa855f2c91936efbd
+  docChecksum: 877b52162b06392093c3efbd89172e36
   docVersion: "1.0"
-  speakeasyVersion: 1.631.0
-  generationVersion: 2.716.10
-  releaseVersion: 0.51.0
-  configChecksum: 8c564ef8b57bc63fb973a7cb7b3dd4fe
+  speakeasyVersion: 1.631.5
+  generationVersion: 2.716.16
+  releaseVersion: 0.51.1
+  configChecksum: 13a654acf8b792f1c44ee7daa1c5d51c
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -1244,6 +1244,8 @@ generatedFiles:
   - docs/models/shared/integration5.md
   - docs/models/shared/integrationschemas1.md
   - docs/models/shared/integrationschemas5.md
+  - docs/models/shared/integrationschemassaml1.md
+  - docs/models/shared/integrationschemassaml5.md
   - docs/models/shared/integrationschemassandbox1.md
   - docs/models/shared/integrationschemassandbox5.md
   - docs/models/shared/intervalunit.md
@@ -1377,6 +1379,7 @@ generatedFiles:
   - docs/models/shared/resourcetype.md
   - docs/models/shared/responsestatus.md
   - docs/models/shared/role.md
+  - docs/models/shared/saml.md
   - docs/models/shared/sandbox.md
   - docs/models/shared/scimaddress.md
   - docs/models/shared/scimaddresstype.md
@@ -7025,4 +7028,9 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Python SDK Changes Detected:\n* `unified_to.messaging.create_messaging_message()`: \n  *  `request.messaging_message.is_unread` **Added**\n  *  `response.is_unread` **Added**\n* `unified_to.messaging.get_messaging_message()`:  `response.is_unread` **Added**\n* `unified_to.messaging.list_messaging_messages()`:  `response.[].is_unread` **Added**\n* `unified_to.messaging.patch_messaging_message()`: \n  *  `request.messaging_message.is_unread` **Added**\n  *  `response.is_unread` **Added**\n* `unified_to.messaging.update_messaging_message()`: \n  *  `request.messaging_message.is_unread` **Added**\n  *  `response.is_unread` **Added**\n* `unified_to.message.create_messaging_message()`: \n  *  `request.messaging_message.is_unread` **Added**\n  *  `response.is_unread` **Added**\n* `unified_to.message.get_messaging_message()`:  `response.is_unread` **Added**\n* `unified_to.message.list_messaging_messages()`:  `response.[].is_unread` **Added**\n* `unified_to.message.patch_messaging_message()`: \n  *  `request.messaging_message.is_unread` **Added**\n  *  `response.is_unread` **Added**\n* `unified_to.message.update_messaging_message()`: \n  *  `request.messaging_message.is_unread` **Added**\n  *  `response.is_unread` **Added**\n"
+releaseNotes: |
+  ## Python SDK Changes Detected:
+  * `unified_to.unified.list_unified_integration_workspaces()`:  `response.[].saml` **Added**
+  * `unified_to.unified.list_unified_integrations()`:  `response.[].saml` **Added**
+  * `unified_to.integration.list_unified_integration_workspaces()`:  `response.[].saml` **Added**
+  * `unified_to.integration.list_unified_integrations()`:  `response.[].saml` **Added**

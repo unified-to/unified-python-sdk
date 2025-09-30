@@ -64,6 +64,36 @@ Partnership = TypeAliasType(
 )
 
 
+class IntegrationSchemasSaml1TypedDict(TypedDict):
+    pass
+
+
+class IntegrationSchemasSaml1(BaseModel):
+    pass
+
+
+IntegrationSchemasSaml5TypedDict = TypeAliasType(
+    "IntegrationSchemasSaml5TypedDict",
+    Union[IntegrationSchemasSaml1TypedDict, str, float, bool],
+)
+
+
+IntegrationSchemasSaml5 = TypeAliasType(
+    "IntegrationSchemasSaml5", Union[IntegrationSchemasSaml1, str, float, bool]
+)
+
+
+SamlTypedDict = TypeAliasType(
+    "SamlTypedDict",
+    Union[Dict[str, Any], str, float, bool, List[IntegrationSchemasSaml5TypedDict]],
+)
+
+
+Saml = TypeAliasType(
+    "Saml", Union[Dict[str, Any], str, float, bool, List[IntegrationSchemasSaml5]]
+)
+
+
 class IntegrationSchemasSandbox1TypedDict(TypedDict):
     pass
 
@@ -116,6 +146,7 @@ class IntegrationTypedDict(TypedDict):
     partnership: NotRequired[PartnershipTypedDict]
     popularity: NotRequired[float]
     rate_limit_description: NotRequired[str]
+    saml: NotRequired[SamlTypedDict]
     sandbox: NotRequired[SandboxTypedDict]
     support: NotRequired[Dict[str, Any]]
     tested_at: NotRequired[datetime]
@@ -171,6 +202,8 @@ class Integration(BaseModel):
     popularity: Optional[float] = None
 
     rate_limit_description: Optional[str] = None
+
+    saml: Optional[Saml] = None
 
     sandbox: Optional[Sandbox] = None
 
