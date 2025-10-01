@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: 877b52162b06392093c3efbd89172e36
+  docChecksum: 93627d104d7b0fff5c900b54ba7421e8
   docVersion: "1.0"
   speakeasyVersion: 1.631.5
   generationVersion: 2.716.16
-  releaseVersion: 0.51.1
-  configChecksum: 13a654acf8b792f1c44ee7daa1c5d51c
+  releaseVersion: 0.51.2
+  configChecksum: d4597b49e71fe619358d6957ad18a120
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -370,6 +370,8 @@ generatedFiles:
   - docs/models/operations/getunifiedintegrationauthresponse.md
   - docs/models/operations/getunifiedintegrationloginrequest.md
   - docs/models/operations/getunifiedintegrationloginresponse.md
+  - docs/models/operations/getunifiedissuerequest.md
+  - docs/models/operations/getunifiedissueresponse.md
   - docs/models/operations/getunifiedwebhookrequest.md
   - docs/models/operations/getunifiedwebhookresponse.md
   - docs/models/operations/getverificationpackagerequest.md
@@ -1816,6 +1818,7 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/getunifiedconnection.py
   - src/unified_python_sdk/models/operations/getunifiedintegrationauth.py
   - src/unified_python_sdk/models/operations/getunifiedintegrationlogin.py
+  - src/unified_python_sdk/models/operations/getunifiedissue.py
   - src/unified_python_sdk/models/operations/getunifiedwebhook.py
   - src/unified_python_sdk/models/operations/getverificationpackage.py
   - src/unified_python_sdk/models/operations/getverificationrequest.py
@@ -7026,11 +7029,17 @@ examples:
       responses:
         "200":
           application/json: {}
+  getUnifiedIssue:
+    speakeasy-default-get-unified-issue:
+      parameters:
+        path:
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {"status": "ON_HOLD", "ticket_ref": "<value>", "title": "<value>", "workspace_id": "<id>"}
 examplesVersion: 1.0.2
 generatedTests: {}
 releaseNotes: |
   ## Python SDK Changes Detected:
-  * `unified_to.unified.list_unified_integration_workspaces()`:  `response.[].saml` **Added**
-  * `unified_to.unified.list_unified_integrations()`:  `response.[].saml` **Added**
-  * `unified_to.integration.list_unified_integration_workspaces()`:  `response.[].saml` **Added**
-  * `unified_to.integration.list_unified_integrations()`:  `response.[].saml` **Added**
+  * `unified_to.unified.get_unified_issue()`: **Added**
+  * `unified_to.issue.get_unified_issue()`: **Added**

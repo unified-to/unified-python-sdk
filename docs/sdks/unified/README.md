@@ -10,6 +10,7 @@
 * [get_unified_apicall](#get_unified_apicall) - Retrieve specific API Call by its ID
 * [get_unified_connection](#get_unified_connection) - Retrieve connection
 * [get_unified_integration_auth](#get_unified_integration_auth) - Authorize new connection
+* [get_unified_issue](#get_unified_issue) - Retrieve support issue
 * [get_unified_webhook](#get_unified_webhook) - Retrieve webhook by its ID
 * [list_unified_apicalls](#list_unified_apicalls) - Returns API Calls
 * [list_unified_connections](#list_unified_connections) - List all connections
@@ -258,6 +259,52 @@ with UnifiedTo(
 ### Response
 
 **[operations.GetUnifiedIntegrationAuthResponse](../../models/operations/getunifiedintegrationauthresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## get_unified_issue
+
+Retrieve support issue
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="getUnifiedIssue" method="get" path="/unified/issue/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.unified.get_unified_issue(request={
+        "id": "<id>",
+    })
+
+    assert res.issue is not None
+
+    # Handle response
+    print(res.issue)
+
+```
+
+### Parameters
+
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `request`                                                                              | [operations.GetUnifiedIssueRequest](../../models/operations/getunifiedissuerequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `retries`                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                       | :heavy_minus_sign:                                                                     | Configuration to override the default retry behavior of the client.                    |
+
+### Response
+
+**[operations.GetUnifiedIssueResponse](../../models/operations/getunifiedissueresponse.md)**
 
 ### Errors
 

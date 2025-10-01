@@ -814,6 +814,7 @@ asyncio.run(main())
 
 ### [issue](docs/sdks/issue/README.md)
 
+* [get_unified_issue](docs/sdks/issue/README.md#get_unified_issue) - Retrieve support issue
 * [list_unified_issues](docs/sdks/issue/README.md#list_unified_issues) - List support issues
 
 ### [item](docs/sdks/item/README.md)
@@ -1414,6 +1415,7 @@ asyncio.run(main())
 * [get_unified_apicall](docs/sdks/unified/README.md#get_unified_apicall) - Retrieve specific API Call by its ID
 * [get_unified_connection](docs/sdks/unified/README.md#get_unified_connection) - Retrieve connection
 * [get_unified_integration_auth](docs/sdks/unified/README.md#get_unified_integration_auth) - Authorize new connection
+* [get_unified_issue](docs/sdks/unified/README.md#get_unified_issue) - Retrieve support issue
 * [get_unified_webhook](docs/sdks/unified/README.md#get_unified_webhook) - Retrieve webhook by its ID
 * [list_unified_apicalls](docs/sdks/unified/README.md#list_unified_apicalls) - Returns API Calls
 * [list_unified_connections](docs/sdks/unified/README.md#list_unified_connections) - List all connections

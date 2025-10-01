@@ -1012,6 +1012,12 @@ if TYPE_CHECKING:
         GetUnifiedIntegrationLoginResponse,
         GetUnifiedIntegrationLoginResponseTypedDict,
     )
+    from .getunifiedissue import (
+        GetUnifiedIssueRequest,
+        GetUnifiedIssueRequestTypedDict,
+        GetUnifiedIssueResponse,
+        GetUnifiedIssueResponseTypedDict,
+    )
     from .getunifiedwebhook import (
         GetUnifiedWebhookRequest,
         GetUnifiedWebhookRequestTypedDict,
@@ -3692,6 +3698,10 @@ __all__ = [
     "GetUnifiedIntegrationLoginRequestTypedDict",
     "GetUnifiedIntegrationLoginResponse",
     "GetUnifiedIntegrationLoginResponseTypedDict",
+    "GetUnifiedIssueRequest",
+    "GetUnifiedIssueRequestTypedDict",
+    "GetUnifiedIssueResponse",
+    "GetUnifiedIssueResponseTypedDict",
     "GetUnifiedWebhookRequest",
     "GetUnifiedWebhookRequestTypedDict",
     "GetUnifiedWebhookResponse",
@@ -5703,6 +5713,10 @@ _dynamic_imports: dict[str, str] = {
     "GetUnifiedIntegrationLoginRequestTypedDict": ".getunifiedintegrationlogin",
     "GetUnifiedIntegrationLoginResponse": ".getunifiedintegrationlogin",
     "GetUnifiedIntegrationLoginResponseTypedDict": ".getunifiedintegrationlogin",
+    "GetUnifiedIssueRequest": ".getunifiedissue",
+    "GetUnifiedIssueRequestTypedDict": ".getunifiedissue",
+    "GetUnifiedIssueResponse": ".getunifiedissue",
+    "GetUnifiedIssueResponseTypedDict": ".getunifiedissue",
     "GetUnifiedWebhookRequest": ".getunifiedwebhook",
     "GetUnifiedWebhookRequestTypedDict": ".getunifiedwebhook",
     "GetUnifiedWebhookResponse": ".getunifiedwebhook",
