@@ -71,6 +71,7 @@
 | `ATS_JOB_READ`                   | ats_job_read                     |
 | `ATS_JOB_WRITE`                  | ats_job_write                    |
 | `ATS_COMPANY_READ`               | ats_company_read                 |
+| `ATS_COMPANY_WRITE`              | ats_company_write                |
 | `ATS_DOCUMENT_READ`              | ats_document_read                |
 | `ATS_DOCUMENT_WRITE`             | ats_document_write               |
 | `ATS_SCORECARD_READ`             | ats_scorecard_read               |
