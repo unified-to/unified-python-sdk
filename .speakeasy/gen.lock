@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: 0b33a55547cf2ac860e6a35542823995
+  docChecksum: dc91eeac96415353b77e357c69ab74d6
   docVersion: "1.0"
-  speakeasyVersion: 1.634.2
-  generationVersion: 2.721.3
-  releaseVersion: 0.52.0
-  configChecksum: 37637329b67e589c241d69cde76719dc
+  speakeasyVersion: 1.636.2
+  generationVersion: 2.723.8
+  releaseVersion: 0.52.1
+  configChecksum: a89e8886b8da4ffe1bb650201e9553d1
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -1282,6 +1282,7 @@ generatedFiles:
   - docs/models/shared/marketingmember.md
   - docs/models/shared/messagingattachment.md
   - docs/models/shared/messagingchannel.md
+  - docs/models/shared/messagingchannelmessage.md
   - docs/models/shared/messagingmember.md
   - docs/models/shared/messagingmessage.md
   - docs/models/shared/messagingreaction.md
@@ -1563,7 +1564,6 @@ generatedFiles:
   - docs/sdks/trialbalance/README.md
   - docs/sdks/uc/README.md
   - docs/sdks/unified/README.md
-  - docs/sdks/unifiedto/README.md
   - docs/sdks/user/README.md
   - docs/sdks/verification/README.md
   - docs/sdks/webhook/README.md
@@ -2286,6 +2286,7 @@ generatedFiles:
   - src/unified_python_sdk/models/shared/marketingmember.py
   - src/unified_python_sdk/models/shared/messagingattachment.py
   - src/unified_python_sdk/models/shared/messagingchannel.py
+  - src/unified_python_sdk/models/shared/messagingchannelmessage.py
   - src/unified_python_sdk/models/shared/messagingmember.py
   - src/unified_python_sdk/models/shared/messagingmessage.py
   - src/unified_python_sdk/models/shared/messagingreaction.py
@@ -7039,3 +7040,4 @@ examples:
           application/json: {"status": "ON_HOLD", "ticket_ref": "<value>", "title": "<value>", "workspace_id": "<id>"}
 examplesVersion: 1.0.2
 generatedTests: {}
+releaseNotes: "## Python SDK Changes Detected:\n* `unified_to.accounting.create_accounting_salesorder()`: \n  *  `request.accounting_salesorder.sales_channel` **Added**\n  *  `response.sales_channel` **Added**\n* `unified_to.accounting.get_accounting_salesorder()`:  `response.sales_channel` **Added**\n* `unified_to.accounting.list_accounting_salesorders()`:  `response.[].sales_channel` **Added**\n* `unified_to.accounting.patch_accounting_salesorder()`: \n  *  `request.accounting_salesorder.sales_channel` **Added**\n  *  `response.sales_channel` **Added**\n* `unified_to.accounting.update_accounting_salesorder()`: \n  *  `request.accounting_salesorder.sales_channel` **Added**\n  *  `response.sales_channel` **Added**\n* `unified_to.salesorder.create_accounting_salesorder()`: \n  *  `request.accounting_salesorder.sales_channel` **Added**\n  *  `response.sales_channel` **Added**\n* `unified_to.salesorder.get_accounting_salesorder()`:  `response.sales_channel` **Added**\n* `unified_to.salesorder.list_accounting_salesorders()`:  `response.[].sales_channel` **Added**\n* `unified_to.salesorder.patch_accounting_salesorder()`: \n  *  `request.accounting_salesorder.sales_channel` **Added**\n  *  `response.sales_channel` **Added**\n* `unified_to.salesorder.update_accounting_salesorder()`: \n  *  `request.accounting_salesorder.sales_channel` **Added**\n  *  `response.sales_channel` **Added**\n* `unified_to.messaging.create_messaging_message()`: \n  *  `request.messaging_message` **Changed**\n  *  `response` **Changed**\n* `unified_to.messaging.get_messaging_channel()`:  `response.members.[].image_url` **Added**\n* `unified_to.messaging.get_messaging_message()`:  `response` **Changed**\n* `unified_to.messaging.list_messaging_channels()`:  `response.[].members.[].image_url` **Added**\n* `unified_to.messaging.list_messaging_messages()`:  `response.[]` **Changed**\n* `unified_to.messaging.patch_messaging_message()`: \n  *  `request.messaging_message` **Changed**\n  *  `response` **Changed**\n* `unified_to.messaging.update_messaging_message()`: \n  *  `request.messaging_message` **Changed**\n  *  `response` **Changed**\n* `unified_to.channel.get_messaging_channel()`:  `response.members.[].image_url` **Added**\n* `unified_to.channel.list_messaging_channels()`:  `response.[].members.[].image_url` **Added**\n* `unified_to.message.create_messaging_message()`: \n  *  `request.messaging_message` **Changed**\n  *  `response` **Changed**\n* `unified_to.message.get_messaging_message()`:  `response` **Changed**\n* `unified_to.message.list_messaging_messages()`:  `response.[]` **Changed**\n* `unified_to.message.patch_messaging_message()`: \n  *  `request.messaging_message` **Changed**\n  *  `response` **Changed**\n* `unified_to.message.update_messaging_message()`: \n  *  `request.messaging_message` **Changed**\n  *  `response` **Changed**\n"

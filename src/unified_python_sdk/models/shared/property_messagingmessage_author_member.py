@@ -8,12 +8,15 @@ from unified_python_sdk.types import BaseModel
 
 class PropertyMessagingMessageAuthorMemberTypedDict(TypedDict):
     email: NotRequired[str]
+    image_url: NotRequired[str]
     name: NotRequired[str]
     user_id: NotRequired[str]
 
 
 class PropertyMessagingMessageAuthorMember(BaseModel):
     email: Optional[str] = None
+
+    image_url: Optional[str] = None
 
     name: Optional[str] = None
 

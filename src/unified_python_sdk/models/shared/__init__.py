@@ -449,6 +449,10 @@ if TYPE_CHECKING:
     from .marketingmember import MarketingMember, MarketingMemberTypedDict
     from .messagingattachment import MessagingAttachment, MessagingAttachmentTypedDict
     from .messagingchannel import MessagingChannel, MessagingChannelTypedDict
+    from .messagingchannelmessage import (
+        MessagingChannelMessage,
+        MessagingChannelMessageTypedDict,
+    )
     from .messagingmember import MessagingMember, MessagingMemberTypedDict
     from .messagingmessage import MessagingMessage, MessagingMessageTypedDict
     from .messagingreaction import MessagingReaction, MessagingReactionTypedDict
@@ -1224,6 +1228,8 @@ __all__ = [
     "MessagingAttachment",
     "MessagingAttachmentTypedDict",
     "MessagingChannel",
+    "MessagingChannelMessage",
+    "MessagingChannelMessageTypedDict",
     "MessagingChannelTypedDict",
     "MessagingMember",
     "MessagingMemberTypedDict",
@@ -1948,6 +1954,8 @@ _dynamic_imports: dict[str, str] = {
     "MessagingAttachmentTypedDict": ".messagingattachment",
     "MessagingChannel": ".messagingchannel",
     "MessagingChannelTypedDict": ".messagingchannel",
+    "MessagingChannelMessage": ".messagingchannelmessage",
+    "MessagingChannelMessageTypedDict": ".messagingchannelmessage",
     "MessagingMember": ".messagingmember",
     "MessagingMemberTypedDict": ".messagingmember",
     "MessagingMessage": ".messagingmessage",

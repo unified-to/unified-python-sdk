@@ -6,18 +6,12 @@ from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk.types import BaseModel
 
 
-class MessagingMemberTypedDict(TypedDict):
-    email: NotRequired[str]
-    image_url: NotRequired[str]
+class MessagingChannelMessageTypedDict(TypedDict):
+    id: NotRequired[str]
     name: NotRequired[str]
-    user_id: NotRequired[str]
 
 
-class MessagingMember(BaseModel):
-    email: Optional[str] = None
-
-    image_url: Optional[str] = None
+class MessagingChannelMessage(BaseModel):
+    id: Optional[str] = None
 
     name: Optional[str] = None
-
-    user_id: Optional[str] = None

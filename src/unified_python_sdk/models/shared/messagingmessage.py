@@ -2,6 +2,10 @@
 
 from __future__ import annotations
 from .messagingattachment import MessagingAttachment, MessagingAttachmentTypedDict
+from .messagingchannelmessage import (
+    MessagingChannelMessage,
+    MessagingChannelMessageTypedDict,
+)
 from .messagingmember import MessagingMember, MessagingMemberTypedDict
 from .messagingreaction import MessagingReaction, MessagingReactionTypedDict
 from .property_messagingmessage_author_member import (
@@ -19,7 +23,9 @@ class MessagingMessageTypedDict(TypedDict):
     author_member: NotRequired[PropertyMessagingMessageAuthorMemberTypedDict]
     channel_id: NotRequired[str]
     channel_ids: NotRequired[List[str]]
-    r"""Represents the IDs of all channels to which the message is sent. Identifies the channels where the message is posted."""
+    r"""@deprecated; use channels instead"""
+    channels: NotRequired[List[MessagingChannelMessageTypedDict]]
+    r"""Represents the names of all channels to which the message is sent. Identifies the channels where the message is posted."""
     created_at: NotRequired[datetime]
     destination_members: NotRequired[List[MessagingMemberTypedDict]]
     has_children: NotRequired[bool]
@@ -49,7 +55,10 @@ class MessagingMessage(BaseModel):
     channel_id: Optional[str] = None
 
     channel_ids: Optional[List[str]] = None
-    r"""Represents the IDs of all channels to which the message is sent. Identifies the channels where the message is posted."""
+    r"""@deprecated; use channels instead"""
+
+    channels: Optional[List[MessagingChannelMessage]] = None
+    r"""Represents the names of all channels to which the message is sent. Identifies the channels where the message is posted."""
 
     created_at: Optional[datetime] = None
 

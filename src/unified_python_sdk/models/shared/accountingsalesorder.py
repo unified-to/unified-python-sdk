@@ -40,6 +40,7 @@ class AccountingSalesorderTypedDict(TypedDict):
     lineitems: NotRequired[List[AccountingLineitemTypedDict]]
     posted_at: NotRequired[datetime]
     raw: NotRequired[Dict[str, Any]]
+    sales_channel: NotRequired[str]
     shipping_address: NotRequired[PropertyAccountingSalesorderShippingAddressTypedDict]
     status: NotRequired[AccountingSalesorderStatus]
     total_amount: NotRequired[float]
@@ -64,6 +65,8 @@ class AccountingSalesorder(BaseModel):
     posted_at: Optional[datetime] = None
 
     raw: Optional[Dict[str, Any]] = None
+
+    sales_channel: Optional[str] = None
 
     shipping_address: Optional[PropertyAccountingSalesorderShippingAddress] = None
 
