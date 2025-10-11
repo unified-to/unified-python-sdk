@@ -24,9 +24,11 @@ class CrmContactTypedDict(TypedDict):
     created_at: NotRequired[datetime]
     deal_ids: NotRequired[List[str]]
     r"""An array of deal IDs associated with this contact"""
+    department: NotRequired[str]
     emails: NotRequired[List[CrmEmailTypedDict]]
     r"""An array of email addresses for this contact"""
     id: NotRequired[str]
+    image_url: NotRequired[str]
     link_urls: NotRequired[List[str]]
     r"""Additional URLs associated with the contact e.g., LinkedIn, website, etc"""
     metadata: NotRequired[List[CrmMetadataTypedDict]]
@@ -54,10 +56,14 @@ class CrmContact(BaseModel):
     deal_ids: Optional[List[str]] = None
     r"""An array of deal IDs associated with this contact"""
 
+    department: Optional[str] = None
+
     emails: Optional[List[CrmEmail]] = None
     r"""An array of email addresses for this contact"""
 
     id: Optional[str] = None
+
+    image_url: Optional[str] = None
 
     link_urls: Optional[List[str]] = None
     r"""Additional URLs associated with the contact e.g., LinkedIn, website, etc"""

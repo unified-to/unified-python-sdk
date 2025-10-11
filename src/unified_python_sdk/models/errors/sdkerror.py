@@ -9,7 +9,7 @@ from unified_python_sdk.models.errors import UnifiedToError
 MAX_MESSAGE_LEN = 10_000
 
 
-@dataclass(frozen=True)
+@dataclass(unsafe_hash=True)
 class SDKError(UnifiedToError):
     """The fallback error class if no more specific error class is matched."""
 

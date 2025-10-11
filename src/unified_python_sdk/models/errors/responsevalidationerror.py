@@ -7,7 +7,7 @@ from dataclasses import dataclass
 from unified_python_sdk.models.errors import UnifiedToError
 
 
-@dataclass(frozen=True)
+@dataclass(unsafe_hash=True)
 class ResponseValidationError(UnifiedToError):
     """Error raised when there is a type mismatch between the response data and the expected Pydantic model."""
 
