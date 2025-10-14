@@ -3049,3 +3049,13 @@ Based on:
 - [python v0.52.2] .
 ### Releases
 - [PyPI v0.52.2] https://pypi.org/project/Unified-python-sdk/0.52.2 - .
+
+## 2025-10-14 00:32:30
+### Changes
+Based on:
+- OpenAPI Doc  
+- Speakeasy CLI 1.636.3 (2.723.11) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [python v0.52.3] .
+### Releases
+- [PyPI v0.52.3] https://pypi.org/project/Unified-python-sdk/0.52.3 - .

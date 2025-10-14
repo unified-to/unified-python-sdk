@@ -55,6 +55,8 @@ class AtsJobTypedDict(TypedDict):
     id: NotRequired[str]
     language_locale: NotRequired[str]
     metadata: NotRequired[List[AtsMetadataTypedDict]]
+    minimum_degree: NotRequired[str]
+    minimum_experience_years: NotRequired[float]
     name: NotRequired[str]
     number_of_openings: NotRequired[float]
     openings: NotRequired[List[AtsJobOpeningTypedDict]]
@@ -100,6 +102,10 @@ class AtsJob(BaseModel):
     language_locale: Optional[str] = None
 
     metadata: Optional[List[AtsMetadata]] = None
+
+    minimum_degree: Optional[str] = None
+
+    minimum_experience_years: Optional[float] = None
 
     name: Optional[str] = None
 
