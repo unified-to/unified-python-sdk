@@ -36,6 +36,12 @@ if TYPE_CHECKING:
         CreateAccountingCreditmemoResponse,
         CreateAccountingCreditmemoResponseTypedDict,
     )
+    from .createaccountingexpense import (
+        CreateAccountingExpenseRequest,
+        CreateAccountingExpenseRequestTypedDict,
+        CreateAccountingExpenseResponse,
+        CreateAccountingExpenseResponseTypedDict,
+    )
     from .createaccountinginvoice import (
         CreateAccountingInvoiceRequest,
         CreateAccountingInvoiceRequestTypedDict,
@@ -513,6 +519,12 @@ if TYPE_CHECKING:
         GetAccountingCreditmemoRequestTypedDict,
         GetAccountingCreditmemoResponse,
         GetAccountingCreditmemoResponseTypedDict,
+    )
+    from .getaccountingexpense import (
+        GetAccountingExpenseRequest,
+        GetAccountingExpenseRequestTypedDict,
+        GetAccountingExpenseResponse,
+        GetAccountingExpenseResponseTypedDict,
     )
     from .getaccountinginvoice import (
         GetAccountingInvoiceRequest,
@@ -1071,6 +1083,12 @@ if TYPE_CHECKING:
         ListAccountingCreditmemoesRequestTypedDict,
         ListAccountingCreditmemoesResponse,
         ListAccountingCreditmemoesResponseTypedDict,
+    )
+    from .listaccountingexpenses import (
+        ListAccountingExpensesRequest,
+        ListAccountingExpensesRequestTypedDict,
+        ListAccountingExpensesResponse,
+        ListAccountingExpensesResponseTypedDict,
     )
     from .listaccountinginvoices import (
         ListAccountingInvoicesRequest,
@@ -1663,6 +1681,12 @@ if TYPE_CHECKING:
         PatchAccountingCreditmemoResponse,
         PatchAccountingCreditmemoResponseTypedDict,
     )
+    from .patchaccountingexpense import (
+        PatchAccountingExpenseRequest,
+        PatchAccountingExpenseRequestTypedDict,
+        PatchAccountingExpenseResponse,
+        PatchAccountingExpenseResponseTypedDict,
+    )
     from .patchaccountinginvoice import (
         PatchAccountingInvoiceRequest,
         PatchAccountingInvoiceRequestTypedDict,
@@ -2131,6 +2155,12 @@ if TYPE_CHECKING:
         RemoveAccountingCreditmemoResponse,
         RemoveAccountingCreditmemoResponseTypedDict,
     )
+    from .removeaccountingexpense import (
+        RemoveAccountingExpenseRequest,
+        RemoveAccountingExpenseRequestTypedDict,
+        RemoveAccountingExpenseResponse,
+        RemoveAccountingExpenseResponseTypedDict,
+    )
     from .removeaccountinginvoice import (
         RemoveAccountingInvoiceRequest,
         RemoveAccountingInvoiceRequestTypedDict,
@@ -2586,6 +2616,12 @@ if TYPE_CHECKING:
         UpdateAccountingCreditmemoRequestTypedDict,
         UpdateAccountingCreditmemoResponse,
         UpdateAccountingCreditmemoResponseTypedDict,
+    )
+    from .updateaccountingexpense import (
+        UpdateAccountingExpenseRequest,
+        UpdateAccountingExpenseRequestTypedDict,
+        UpdateAccountingExpenseResponse,
+        UpdateAccountingExpenseResponseTypedDict,
     )
     from .updateaccountinginvoice import (
         UpdateAccountingInvoiceRequest,
@@ -3048,6 +3084,10 @@ __all__ = [
     "CreateAccountingCreditmemoRequestTypedDict",
     "CreateAccountingCreditmemoResponse",
     "CreateAccountingCreditmemoResponseTypedDict",
+    "CreateAccountingExpenseRequest",
+    "CreateAccountingExpenseRequestTypedDict",
+    "CreateAccountingExpenseResponse",
+    "CreateAccountingExpenseResponseTypedDict",
     "CreateAccountingInvoiceRequest",
     "CreateAccountingInvoiceRequestTypedDict",
     "CreateAccountingInvoiceResponse",
@@ -3366,6 +3406,10 @@ __all__ = [
     "GetAccountingCreditmemoRequestTypedDict",
     "GetAccountingCreditmemoResponse",
     "GetAccountingCreditmemoResponseTypedDict",
+    "GetAccountingExpenseRequest",
+    "GetAccountingExpenseRequestTypedDict",
+    "GetAccountingExpenseResponse",
+    "GetAccountingExpenseResponseTypedDict",
     "GetAccountingInvoiceRequest",
     "GetAccountingInvoiceRequestTypedDict",
     "GetAccountingInvoiceResponse",
@@ -3738,6 +3782,10 @@ __all__ = [
     "ListAccountingCreditmemoesRequestTypedDict",
     "ListAccountingCreditmemoesResponse",
     "ListAccountingCreditmemoesResponseTypedDict",
+    "ListAccountingExpensesRequest",
+    "ListAccountingExpensesRequestTypedDict",
+    "ListAccountingExpensesResponse",
+    "ListAccountingExpensesResponseTypedDict",
     "ListAccountingInvoicesRequest",
     "ListAccountingInvoicesRequestTypedDict",
     "ListAccountingInvoicesResponse",
@@ -4131,6 +4179,10 @@ __all__ = [
     "PatchAccountingCreditmemoRequestTypedDict",
     "PatchAccountingCreditmemoResponse",
     "PatchAccountingCreditmemoResponseTypedDict",
+    "PatchAccountingExpenseRequest",
+    "PatchAccountingExpenseRequestTypedDict",
+    "PatchAccountingExpenseResponse",
+    "PatchAccountingExpenseResponseTypedDict",
     "PatchAccountingInvoiceRequest",
     "PatchAccountingInvoiceRequestTypedDict",
     "PatchAccountingInvoiceResponse",
@@ -4444,6 +4496,10 @@ __all__ = [
     "RemoveAccountingCreditmemoRequestTypedDict",
     "RemoveAccountingCreditmemoResponse",
     "RemoveAccountingCreditmemoResponseTypedDict",
+    "RemoveAccountingExpenseRequest",
+    "RemoveAccountingExpenseRequestTypedDict",
+    "RemoveAccountingExpenseResponse",
+    "RemoveAccountingExpenseResponseTypedDict",
     "RemoveAccountingInvoiceRequest",
     "RemoveAccountingInvoiceRequestTypedDict",
     "RemoveAccountingInvoiceResponse",
@@ -4748,6 +4804,10 @@ __all__ = [
     "UpdateAccountingCreditmemoRequestTypedDict",
     "UpdateAccountingCreditmemoResponse",
     "UpdateAccountingCreditmemoResponseTypedDict",
+    "UpdateAccountingExpenseRequest",
+    "UpdateAccountingExpenseRequestTypedDict",
+    "UpdateAccountingExpenseResponse",
+    "UpdateAccountingExpenseResponseTypedDict",
     "UpdateAccountingInvoiceRequest",
     "UpdateAccountingInvoiceRequestTypedDict",
     "UpdateAccountingInvoiceResponse",
@@ -5063,6 +5123,10 @@ _dynamic_imports: dict[str, str] = {
     "CreateAccountingCreditmemoRequestTypedDict": ".createaccountingcreditmemo",
     "CreateAccountingCreditmemoResponse": ".createaccountingcreditmemo",
     "CreateAccountingCreditmemoResponseTypedDict": ".createaccountingcreditmemo",
+    "CreateAccountingExpenseRequest": ".createaccountingexpense",
+    "CreateAccountingExpenseRequestTypedDict": ".createaccountingexpense",
+    "CreateAccountingExpenseResponse": ".createaccountingexpense",
+    "CreateAccountingExpenseResponseTypedDict": ".createaccountingexpense",
     "CreateAccountingInvoiceRequest": ".createaccountinginvoice",
     "CreateAccountingInvoiceRequestTypedDict": ".createaccountinginvoice",
     "CreateAccountingInvoiceResponse": ".createaccountinginvoice",
@@ -5381,6 +5445,10 @@ _dynamic_imports: dict[str, str] = {
     "GetAccountingCreditmemoRequestTypedDict": ".getaccountingcreditmemo",
     "GetAccountingCreditmemoResponse": ".getaccountingcreditmemo",
     "GetAccountingCreditmemoResponseTypedDict": ".getaccountingcreditmemo",
+    "GetAccountingExpenseRequest": ".getaccountingexpense",
+    "GetAccountingExpenseRequestTypedDict": ".getaccountingexpense",
+    "GetAccountingExpenseResponse": ".getaccountingexpense",
+    "GetAccountingExpenseResponseTypedDict": ".getaccountingexpense",
     "GetAccountingInvoiceRequest": ".getaccountinginvoice",
     "GetAccountingInvoiceRequestTypedDict": ".getaccountinginvoice",
     "GetAccountingInvoiceResponse": ".getaccountinginvoice",
@@ -5753,6 +5821,10 @@ _dynamic_imports: dict[str, str] = {
     "ListAccountingCreditmemoesRequestTypedDict": ".listaccountingcreditmemoes",
     "ListAccountingCreditmemoesResponse": ".listaccountingcreditmemoes",
     "ListAccountingCreditmemoesResponseTypedDict": ".listaccountingcreditmemoes",
+    "ListAccountingExpensesRequest": ".listaccountingexpenses",
+    "ListAccountingExpensesRequestTypedDict": ".listaccountingexpenses",
+    "ListAccountingExpensesResponse": ".listaccountingexpenses",
+    "ListAccountingExpensesResponseTypedDict": ".listaccountingexpenses",
     "ListAccountingInvoicesRequest": ".listaccountinginvoices",
     "ListAccountingInvoicesRequestTypedDict": ".listaccountinginvoices",
     "ListAccountingInvoicesResponse": ".listaccountinginvoices",
@@ -6148,6 +6220,10 @@ _dynamic_imports: dict[str, str] = {
     "PatchAccountingCreditmemoRequestTypedDict": ".patchaccountingcreditmemo",
     "PatchAccountingCreditmemoResponse": ".patchaccountingcreditmemo",
     "PatchAccountingCreditmemoResponseTypedDict": ".patchaccountingcreditmemo",
+    "PatchAccountingExpenseRequest": ".patchaccountingexpense",
+    "PatchAccountingExpenseRequestTypedDict": ".patchaccountingexpense",
+    "PatchAccountingExpenseResponse": ".patchaccountingexpense",
+    "PatchAccountingExpenseResponseTypedDict": ".patchaccountingexpense",
     "PatchAccountingInvoiceRequest": ".patchaccountinginvoice",
     "PatchAccountingInvoiceRequestTypedDict": ".patchaccountinginvoice",
     "PatchAccountingInvoiceResponse": ".patchaccountinginvoice",
@@ -6460,6 +6536,10 @@ _dynamic_imports: dict[str, str] = {
     "RemoveAccountingCreditmemoRequestTypedDict": ".removeaccountingcreditmemo",
     "RemoveAccountingCreditmemoResponse": ".removeaccountingcreditmemo",
     "RemoveAccountingCreditmemoResponseTypedDict": ".removeaccountingcreditmemo",
+    "RemoveAccountingExpenseRequest": ".removeaccountingexpense",
+    "RemoveAccountingExpenseRequestTypedDict": ".removeaccountingexpense",
+    "RemoveAccountingExpenseResponse": ".removeaccountingexpense",
+    "RemoveAccountingExpenseResponseTypedDict": ".removeaccountingexpense",
     "RemoveAccountingInvoiceRequest": ".removeaccountinginvoice",
     "RemoveAccountingInvoiceRequestTypedDict": ".removeaccountinginvoice",
     "RemoveAccountingInvoiceResponse": ".removeaccountinginvoice",
@@ -6764,6 +6844,10 @@ _dynamic_imports: dict[str, str] = {
     "UpdateAccountingCreditmemoRequestTypedDict": ".updateaccountingcreditmemo",
     "UpdateAccountingCreditmemoResponse": ".updateaccountingcreditmemo",
     "UpdateAccountingCreditmemoResponseTypedDict": ".updateaccountingcreditmemo",
+    "UpdateAccountingExpenseRequest": ".updateaccountingexpense",
+    "UpdateAccountingExpenseRequestTypedDict": ".updateaccountingexpense",
+    "UpdateAccountingExpenseResponse": ".updateaccountingexpense",
+    "UpdateAccountingExpenseResponseTypedDict": ".updateaccountingexpense",
     "UpdateAccountingInvoiceRequest": ".updateaccountinginvoice",
     "UpdateAccountingInvoiceRequestTypedDict": ".updateaccountinginvoice",
     "UpdateAccountingInvoiceResponse": ".updateaccountinginvoice",

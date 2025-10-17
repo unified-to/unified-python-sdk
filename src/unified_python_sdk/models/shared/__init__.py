@@ -56,6 +56,7 @@ if TYPE_CHECKING:
         AccountingEmailType,
         AccountingEmailTypedDict,
     )
+    from .accountingexpense import AccountingExpense, AccountingExpenseTypedDict
     from .accountinginvoice import (
         AccountingInvoice,
         AccountingInvoicePaymentCollectionMethod,
@@ -853,6 +854,8 @@ __all__ = [
     "AccountingEmail",
     "AccountingEmailType",
     "AccountingEmailTypedDict",
+    "AccountingExpense",
+    "AccountingExpenseTypedDict",
     "AccountingInvoice",
     "AccountingInvoicePaymentCollectionMethod",
     "AccountingInvoiceStatus",
@@ -1561,6 +1564,8 @@ _dynamic_imports: dict[str, str] = {
     "AccountingEmail": ".accountingemail",
     "AccountingEmailType": ".accountingemail",
     "AccountingEmailTypedDict": ".accountingemail",
+    "AccountingExpense": ".accountingexpense",
+    "AccountingExpenseTypedDict": ".accountingexpense",
     "AccountingInvoice": ".accountinginvoice",
     "AccountingInvoicePaymentCollectionMethod": ".accountinginvoice",
     "AccountingInvoiceStatus": ".accountinginvoice",

@@ -10,6 +10,7 @@
 * [create_accounting_category](#create_accounting_category) - Create a category
 * [create_accounting_contact](#create_accounting_contact) - Create a contact
 * [create_accounting_creditmemo](#create_accounting_creditmemo) - Create a creditmemo
+* [create_accounting_expense](#create_accounting_expense) - Create an expense
 * [create_accounting_invoice](#create_accounting_invoice) - Create an invoice
 * [create_accounting_journal](#create_accounting_journal) - Create a journal
 * [create_accounting_order](#create_accounting_order) - Create an order
@@ -23,6 +24,7 @@
 * [get_accounting_category](#get_accounting_category) - Retrieve a category
 * [get_accounting_contact](#get_accounting_contact) - Retrieve a contact
 * [get_accounting_creditmemo](#get_accounting_creditmemo) - Retrieve a creditmemo
+* [get_accounting_expense](#get_accounting_expense) - Retrieve an expense
 * [get_accounting_invoice](#get_accounting_invoice) - Retrieve an invoice
 * [get_accounting_journal](#get_accounting_journal) - Retrieve a journal
 * [get_accounting_order](#get_accounting_order) - Retrieve an order
@@ -40,6 +42,7 @@
 * [list_accounting_categories](#list_accounting_categories) - List all categories
 * [list_accounting_contacts](#list_accounting_contacts) - List all contacts
 * [list_accounting_creditmemoes](#list_accounting_creditmemoes) - List all creditmemoes
+* [list_accounting_expenses](#list_accounting_expenses) - List all expenses
 * [list_accounting_invoices](#list_accounting_invoices) - List all invoices
 * [list_accounting_journals](#list_accounting_journals) - List all journals
 * [list_accounting_orders](#list_accounting_orders) - List all orders
@@ -56,6 +59,7 @@
 * [patch_accounting_category](#patch_accounting_category) - Update a category
 * [patch_accounting_contact](#patch_accounting_contact) - Update a contact
 * [patch_accounting_creditmemo](#patch_accounting_creditmemo) - Update a creditmemo
+* [patch_accounting_expense](#patch_accounting_expense) - Update an expense
 * [patch_accounting_invoice](#patch_accounting_invoice) - Update an invoice
 * [patch_accounting_journal](#patch_accounting_journal) - Update a journal
 * [patch_accounting_order](#patch_accounting_order) - Update an order
@@ -68,6 +72,7 @@
 * [remove_accounting_category](#remove_accounting_category) - Remove a category
 * [remove_accounting_contact](#remove_accounting_contact) - Remove a contact
 * [remove_accounting_creditmemo](#remove_accounting_creditmemo) - Remove a creditmemo
+* [remove_accounting_expense](#remove_accounting_expense) - Remove an expense
 * [remove_accounting_invoice](#remove_accounting_invoice) - Remove an invoice
 * [remove_accounting_journal](#remove_accounting_journal) - Remove a journal
 * [remove_accounting_order](#remove_accounting_order) - Remove an order
@@ -80,6 +85,7 @@
 * [update_accounting_category](#update_accounting_category) - Update a category
 * [update_accounting_contact](#update_accounting_contact) - Update a contact
 * [update_accounting_creditmemo](#update_accounting_creditmemo) - Update a creditmemo
+* [update_accounting_expense](#update_accounting_expense) - Update an expense
 * [update_accounting_invoice](#update_accounting_invoice) - Update an invoice
 * [update_accounting_journal](#update_accounting_journal) - Update a journal
 * [update_accounting_order](#update_accounting_order) - Update an order
@@ -316,6 +322,53 @@ with UnifiedTo(
 ### Response
 
 **[operations.CreateAccountingCreditmemoResponse](../../models/operations/createaccountingcreditmemoresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## create_accounting_expense
+
+Create an expense
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="createAccountingExpense" method="post" path="/accounting/{connection_id}/expense" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.accounting.create_accounting_expense(request={
+        "accounting_expense": {},
+        "connection_id": "<id>",
+    })
+
+    assert res.accounting_expense is not None
+
+    # Handle response
+    print(res.accounting_expense)
+
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                              | [operations.CreateAccountingExpenseRequest](../../models/operations/createaccountingexpenserequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `retries`                                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                       | :heavy_minus_sign:                                                                                     | Configuration to override the default retry behavior of the client.                                    |
+
+### Response
+
+**[operations.CreateAccountingExpenseResponse](../../models/operations/createaccountingexpenseresponse.md)**
 
 ### Errors
 
@@ -927,6 +980,53 @@ with UnifiedTo(
 ### Response
 
 **[operations.GetAccountingCreditmemoResponse](../../models/operations/getaccountingcreditmemoresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## get_accounting_expense
+
+Retrieve an expense
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="getAccountingExpense" method="get" path="/accounting/{connection_id}/expense/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.accounting.get_accounting_expense(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.accounting_expense is not None
+
+    # Handle response
+    print(res.accounting_expense)
+
+```
+
+### Parameters
+
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `request`                                                                                        | [operations.GetAccountingExpenseRequest](../../models/operations/getaccountingexpenserequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `retries`                                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                 | :heavy_minus_sign:                                                                               | Configuration to override the default retry behavior of the client.                              |
+
+### Response
+
+**[operations.GetAccountingExpenseResponse](../../models/operations/getaccountingexpenseresponse.md)**
 
 ### Errors
 
@@ -1727,6 +1827,52 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## list_accounting_expenses
+
+List all expenses
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="listAccountingExpenses" method="get" path="/accounting/{connection_id}/expense" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.accounting.list_accounting_expenses(request={
+        "connection_id": "<id>",
+    })
+
+    assert res.accounting_expenses is not None
+
+    # Handle response
+    print(res.accounting_expenses)
+
+```
+
+### Parameters
+
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `request`                                                                                            | [operations.ListAccountingExpensesRequest](../../models/operations/listaccountingexpensesrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `retries`                                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                     | :heavy_minus_sign:                                                                                   | Configuration to override the default retry behavior of the client.                                  |
+
+### Response
+
+**[operations.ListAccountingExpensesResponse](../../models/operations/listaccountingexpensesresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## list_accounting_invoices
 
 List all invoices
@@ -2473,6 +2619,54 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## patch_accounting_expense
+
+Update an expense
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="patchAccountingExpense" method="patch" path="/accounting/{connection_id}/expense/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.accounting.patch_accounting_expense(request={
+        "accounting_expense": {},
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.accounting_expense is not None
+
+    # Handle response
+    print(res.accounting_expense)
+
+```
+
+### Parameters
+
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `request`                                                                                            | [operations.PatchAccountingExpenseRequest](../../models/operations/patchaccountingexpenserequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `retries`                                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                     | :heavy_minus_sign:                                                                                   | Configuration to override the default retry behavior of the client.                                  |
+
+### Response
+
+**[operations.PatchAccountingExpenseResponse](../../models/operations/patchaccountingexpenseresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## patch_accounting_invoice
 
 Update an invoice
@@ -3044,6 +3238,53 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## remove_accounting_expense
+
+Remove an expense
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="removeAccountingExpense" method="delete" path="/accounting/{connection_id}/expense/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.accounting.remove_accounting_expense(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res is not None
+
+    # Handle response
+    print(res)
+
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                              | [operations.RemoveAccountingExpenseRequest](../../models/operations/removeaccountingexpenserequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `retries`                                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                       | :heavy_minus_sign:                                                                                     | Configuration to override the default retry behavior of the client.                                    |
+
+### Response
+
+**[operations.RemoveAccountingExpenseResponse](../../models/operations/removeaccountingexpenseresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## remove_accounting_invoice
 
 Remove an invoice
@@ -3606,6 +3847,54 @@ with UnifiedTo(
 ### Response
 
 **[operations.UpdateAccountingCreditmemoResponse](../../models/operations/updateaccountingcreditmemoresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## update_accounting_expense
+
+Update an expense
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="updateAccountingExpense" method="put" path="/accounting/{connection_id}/expense/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.accounting.update_accounting_expense(request={
+        "accounting_expense": {},
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.accounting_expense is not None
+
+    # Handle response
+    print(res.accounting_expense)
+
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                              | [operations.UpdateAccountingExpenseRequest](../../models/operations/updateaccountingexpenserequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `retries`                                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                       | :heavy_minus_sign:                                                                                     | Configuration to override the default retry behavior of the client.                                    |
+
+### Response
+
+**[operations.UpdateAccountingExpenseResponse](../../models/operations/updateaccountingexpenseresponse.md)**
 
 ### Errors
 

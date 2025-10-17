@@ -19,6 +19,8 @@
 | `ACCOUNTING_CREDITMEMO_WRITE`    | accounting_creditmemo_write      |
 | `ACCOUNTING_CONTACT_READ`        | accounting_contact_read          |
 | `ACCOUNTING_CONTACT_WRITE`       | accounting_contact_write         |
+| `ACCOUNTING_EXPENSE_READ`        | accounting_expense_read          |
+| `ACCOUNTING_EXPENSE_WRITE`       | accounting_expense_write         |
 | `ACCOUNTING_TAXRATE_READ`        | accounting_taxrate_read          |
 | `ACCOUNTING_TAXRATE_WRITE`       | accounting_taxrate_write         |
 | `ACCOUNTING_ORGANIZATION_READ`   | accounting_organization_read     |

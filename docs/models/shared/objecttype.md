@@ -22,6 +22,7 @@
 | `ACCOUNTING_PROFITLOSS`    | accounting_profitloss      |
 | `ACCOUNTING_TRIALBALANCE`  | accounting_trialbalance    |
 | `ACCOUNTING_CATEGORY`      | accounting_category        |
+| `ACCOUNTING_EXPENSE`       | accounting_expense         |
 | `PAYMENT_PAYMENT`          | payment_payment            |
 | `PAYMENT_LINK`             | payment_link               |
 | `PAYMENT_PAYOUT`           | payment_payout             |

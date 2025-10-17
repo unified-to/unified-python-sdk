@@ -4,7 +4,9 @@ from __future__ import annotations
 import httpx
 from typing import List, Optional
 from typing_extensions import Annotated, NotRequired, TypedDict
-from unified_python_sdk.models.shared import messagingmessage as shared_messagingmessage
+from unified_python_sdk.models.shared import (
+    accountingexpense as shared_accountingexpense,
+)
 from unified_python_sdk.types import BaseModel
 from unified_python_sdk.utils import (
     FieldMetadata,
@@ -13,58 +15,30 @@ from unified_python_sdk.utils import (
 )
 
 
-class ListMessagingMessagesRequestTypedDict(TypedDict):
+class ListAccountingExpensesRequestTypedDict(TypedDict):
     connection_id: str
     r"""ID of the connection"""
-    channel_id: NotRequired[str]
-    r"""The channel ID to filter by"""
-    end_le: NotRequired[str]
-    r"""The end date to filter by"""
-    expand: NotRequired[bool]
-    r"""Whether to flatten grouped or recurring items into individual entries."""
     fields: NotRequired[List[str]]
     r"""Comma-delimited fields to return"""
     limit: NotRequired[float]
     offset: NotRequired[float]
     order: NotRequired[str]
-    parent_id: NotRequired[str]
-    r"""The parent ID to filter by"""
     query: NotRequired[str]
     r"""Query string to search. eg. email address or name"""
     raw: NotRequired[str]
     r"""Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar"""
     sort: NotRequired[str]
-    start_gte: NotRequired[str]
-    r"""The start date to filter by"""
     updated_gte: NotRequired[str]
     r"""Return only results whose updated date is equal or greater to this value"""
     user_id: NotRequired[str]
     r"""The user/employee ID to filter by"""
 
 
-class ListMessagingMessagesRequest(BaseModel):
+class ListAccountingExpensesRequest(BaseModel):
     connection_id: Annotated[
         str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))
     ]
     r"""ID of the connection"""
-
-    channel_id: Annotated[
-        Optional[str],
-        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
-    ] = None
-    r"""The channel ID to filter by"""
-
-    end_le: Annotated[
-        Optional[str],
-        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
-    ] = None
-    r"""The end date to filter by"""
-
-    expand: Annotated[
-        Optional[bool],
-        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
-    ] = None
-    r"""Whether to flatten grouped or recurring items into individual entries."""
 
     fields: Annotated[
         Optional[List[str]],
@@ -87,12 +61,6 @@ class ListMessagingMessagesRequest(BaseModel):
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
 
-    parent_id: Annotated[
-        Optional[str],
-        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
-    ] = None
-    r"""The parent ID to filter by"""
-
     query: Annotated[
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
@@ -110,12 +78,6 @@ class ListMessagingMessagesRequest(BaseModel):
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
 
-    start_gte: Annotated[
-        Optional[str],
-        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
-    ] = None
-    r"""The start date to filter by"""
-
     updated_gte: Annotated[
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
@@ -129,20 +91,20 @@ class ListMessagingMessagesRequest(BaseModel):
     r"""The user/employee ID to filter by"""
 
 
-class ListMessagingMessagesResponseTypedDict(TypedDict):
+class ListAccountingExpensesResponseTypedDict(TypedDict):
     content_type: str
     r"""HTTP response content type for this operation"""
     status_code: int
     r"""HTTP response status code for this operation"""
     raw_response: httpx.Response
     r"""Raw HTTP response; suitable for custom response parsing"""
-    messaging_messages: NotRequired[
-        List[shared_messagingmessage.MessagingMessageTypedDict]
+    accounting_expenses: NotRequired[
+        List[shared_accountingexpense.AccountingExpenseTypedDict]
     ]
     r"""Successful"""
 
 
-class ListMessagingMessagesResponse(BaseModel):
+class ListAccountingExpensesResponse(BaseModel):
     content_type: str
     r"""HTTP response content type for this operation"""
 
@@ -152,5 +114,7 @@ class ListMessagingMessagesResponse(BaseModel):
     raw_response: httpx.Response
     r"""Raw HTTP response; suitable for custom response parsing"""
 
-    messaging_messages: Optional[List[shared_messagingmessage.MessagingMessage]] = None
+    accounting_expenses: Optional[List[shared_accountingexpense.AccountingExpense]] = (
+        None
+    )
     r"""Successful"""

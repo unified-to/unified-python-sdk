@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: a340dff9ff9a611e83b0ac8c9df95754
+  docChecksum: 5e991f57774a394989eb351c469cc219
   docVersion: "1.0"
-  speakeasyVersion: 1.636.3
-  generationVersion: 2.723.11
-  releaseVersion: 0.52.3
-  configChecksum: 4b9158820a991a64c9f4fea78837f51d
+  speakeasyVersion: 1.637.0
+  generationVersion: 2.727.4
+  releaseVersion: 0.53.0
+  configChecksum: 789ff3db15c92953f64aaa454b42c345
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -16,7 +16,7 @@ features:
     acceptHeaders: 3.0.0
     additionalDependencies: 1.0.0
     constsAndDefaults: 1.0.5
-    core: 5.22.1
+    core: 5.23.0
     defaultEnabledRetries: 0.2.0
     downloadStreams: 1.0.1
     enumUnions: 0.1.0
@@ -45,6 +45,8 @@ generatedFiles:
   - docs/models/operations/createaccountingcontactresponse.md
   - docs/models/operations/createaccountingcreditmemorequest.md
   - docs/models/operations/createaccountingcreditmemoresponse.md
+  - docs/models/operations/createaccountingexpenserequest.md
+  - docs/models/operations/createaccountingexpenseresponse.md
   - docs/models/operations/createaccountinginvoicerequest.md
   - docs/models/operations/createaccountinginvoiceresponse.md
   - docs/models/operations/createaccountingjournalrequest.md
@@ -204,6 +206,8 @@ generatedFiles:
   - docs/models/operations/getaccountingcontactresponse.md
   - docs/models/operations/getaccountingcreditmemorequest.md
   - docs/models/operations/getaccountingcreditmemoresponse.md
+  - docs/models/operations/getaccountingexpenserequest.md
+  - docs/models/operations/getaccountingexpenseresponse.md
   - docs/models/operations/getaccountinginvoicerequest.md
   - docs/models/operations/getaccountinginvoiceresponse.md
   - docs/models/operations/getaccountingjournalrequest.md
@@ -390,6 +394,8 @@ generatedFiles:
   - docs/models/operations/listaccountingcontactsresponse.md
   - docs/models/operations/listaccountingcreditmemoesrequest.md
   - docs/models/operations/listaccountingcreditmemoesresponse.md
+  - docs/models/operations/listaccountingexpensesrequest.md
+  - docs/models/operations/listaccountingexpensesresponse.md
   - docs/models/operations/listaccountinginvoicesrequest.md
   - docs/models/operations/listaccountinginvoicesresponse.md
   - docs/models/operations/listaccountingjournalsrequest.md
@@ -587,6 +593,8 @@ generatedFiles:
   - docs/models/operations/patchaccountingcontactresponse.md
   - docs/models/operations/patchaccountingcreditmemorequest.md
   - docs/models/operations/patchaccountingcreditmemoresponse.md
+  - docs/models/operations/patchaccountingexpenserequest.md
+  - docs/models/operations/patchaccountingexpenseresponse.md
   - docs/models/operations/patchaccountinginvoicerequest.md
   - docs/models/operations/patchaccountinginvoiceresponse.md
   - docs/models/operations/patchaccountingjournalrequest.md
@@ -744,6 +752,8 @@ generatedFiles:
   - docs/models/operations/removeaccountingcontactresponse.md
   - docs/models/operations/removeaccountingcreditmemorequest.md
   - docs/models/operations/removeaccountingcreditmemoresponse.md
+  - docs/models/operations/removeaccountingexpenserequest.md
+  - docs/models/operations/removeaccountingexpenseresponse.md
   - docs/models/operations/removeaccountinginvoicerequest.md
   - docs/models/operations/removeaccountinginvoiceresponse.md
   - docs/models/operations/removeaccountingjournalrequest.md
@@ -896,6 +906,8 @@ generatedFiles:
   - docs/models/operations/updateaccountingcontactresponse.md
   - docs/models/operations/updateaccountingcreditmemorequest.md
   - docs/models/operations/updateaccountingcreditmemoresponse.md
+  - docs/models/operations/updateaccountingexpenserequest.md
+  - docs/models/operations/updateaccountingexpenseresponse.md
   - docs/models/operations/updateaccountinginvoicerequest.md
   - docs/models/operations/updateaccountinginvoiceresponse.md
   - docs/models/operations/updateaccountingjournalrequest.md
@@ -1058,6 +1070,7 @@ generatedFiles:
   - docs/models/shared/accountingcreditmemostatus.md
   - docs/models/shared/accountingemail.md
   - docs/models/shared/accountingemailtype.md
+  - docs/models/shared/accountingexpense.md
   - docs/models/shared/accountinginvoice.md
   - docs/models/shared/accountinginvoicepaymentcollectionmethod.md
   - docs/models/shared/accountinginvoicestatus.md
@@ -1499,6 +1512,7 @@ generatedFiles:
   - docs/sdks/employee/README.md
   - docs/sdks/enrich/README.md
   - docs/sdks/event/README.md
+  - docs/sdks/expense/README.md
   - docs/sdks/file/README.md
   - docs/sdks/genai/README.md
   - docs/sdks/group/README.md
@@ -1617,6 +1631,7 @@ generatedFiles:
   - src/unified_python_sdk/employee.py
   - src/unified_python_sdk/enrich.py
   - src/unified_python_sdk/event.py
+  - src/unified_python_sdk/expense.py
   - src/unified_python_sdk/file.py
   - src/unified_python_sdk/genai.py
   - src/unified_python_sdk/group.py
@@ -1656,6 +1671,7 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/createaccountingcategory.py
   - src/unified_python_sdk/models/operations/createaccountingcontact.py
   - src/unified_python_sdk/models/operations/createaccountingcreditmemo.py
+  - src/unified_python_sdk/models/operations/createaccountingexpense.py
   - src/unified_python_sdk/models/operations/createaccountinginvoice.py
   - src/unified_python_sdk/models/operations/createaccountingjournal.py
   - src/unified_python_sdk/models/operations/createaccountingorder.py
@@ -1736,6 +1752,7 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/getaccountingcategory.py
   - src/unified_python_sdk/models/operations/getaccountingcontact.py
   - src/unified_python_sdk/models/operations/getaccountingcreditmemo.py
+  - src/unified_python_sdk/models/operations/getaccountingexpense.py
   - src/unified_python_sdk/models/operations/getaccountinginvoice.py
   - src/unified_python_sdk/models/operations/getaccountingjournal.py
   - src/unified_python_sdk/models/operations/getaccountingorder.py
@@ -1829,6 +1846,7 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/listaccountingcategories.py
   - src/unified_python_sdk/models/operations/listaccountingcontacts.py
   - src/unified_python_sdk/models/operations/listaccountingcreditmemoes.py
+  - src/unified_python_sdk/models/operations/listaccountingexpenses.py
   - src/unified_python_sdk/models/operations/listaccountinginvoices.py
   - src/unified_python_sdk/models/operations/listaccountingjournals.py
   - src/unified_python_sdk/models/operations/listaccountingorders.py
@@ -1927,6 +1945,7 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/patchaccountingcategory.py
   - src/unified_python_sdk/models/operations/patchaccountingcontact.py
   - src/unified_python_sdk/models/operations/patchaccountingcreditmemo.py
+  - src/unified_python_sdk/models/operations/patchaccountingexpense.py
   - src/unified_python_sdk/models/operations/patchaccountinginvoice.py
   - src/unified_python_sdk/models/operations/patchaccountingjournal.py
   - src/unified_python_sdk/models/operations/patchaccountingorder.py
@@ -2005,6 +2024,7 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/removeaccountingcategory.py
   - src/unified_python_sdk/models/operations/removeaccountingcontact.py
   - src/unified_python_sdk/models/operations/removeaccountingcreditmemo.py
+  - src/unified_python_sdk/models/operations/removeaccountingexpense.py
   - src/unified_python_sdk/models/operations/removeaccountinginvoice.py
   - src/unified_python_sdk/models/operations/removeaccountingjournal.py
   - src/unified_python_sdk/models/operations/removeaccountingorder.py
@@ -2081,6 +2101,7 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/updateaccountingcategory.py
   - src/unified_python_sdk/models/operations/updateaccountingcontact.py
   - src/unified_python_sdk/models/operations/updateaccountingcreditmemo.py
+  - src/unified_python_sdk/models/operations/updateaccountingexpense.py
   - src/unified_python_sdk/models/operations/updateaccountinginvoice.py
   - src/unified_python_sdk/models/operations/updateaccountingjournal.py
   - src/unified_python_sdk/models/operations/updateaccountingorder.py
@@ -2166,6 +2187,7 @@ generatedFiles:
   - src/unified_python_sdk/models/shared/accountingcontactpaymentmethod.py
   - src/unified_python_sdk/models/shared/accountingcreditmemo.py
   - src/unified_python_sdk/models/shared/accountingemail.py
+  - src/unified_python_sdk/models/shared/accountingexpense.py
   - src/unified_python_sdk/models/shared/accountinginvoice.py
   - src/unified_python_sdk/models/shared/accountingjournal.py
   - src/unified_python_sdk/models/shared/accountingjournallineitem.py
@@ -7039,6 +7061,61 @@ examples:
       responses:
         "200":
           application/json: {"status": "ON_HOLD", "ticket_ref": "<value>", "title": "<value>", "workspace_id": "<id>"}
+  createAccountingExpense:
+    speakeasy-default-create-accounting-expense:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  getAccountingExpense:
+    speakeasy-default-get-accounting-expense:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  listAccountingExpenses:
+    speakeasy-default-list-accounting-expenses:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  patchAccountingExpense:
+    speakeasy-default-patch-accounting-expense:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  removeAccountingExpense:
+    speakeasy-default-remove-accounting-expense:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateAccountingExpense:
+    speakeasy-default-update-accounting-expense:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Python SDK Changes Detected:\n* `unified_to.ats.create_ats_job()`: \n  *  `request.ats_job` **Changed**\n  *  `response` **Changed**\n* `unified_to.ats.get_ats_job()`:  `response` **Changed**\n* `unified_to.ats.list_ats_jobs()`:  `response.[]` **Changed**\n* `unified_to.ats.patch_ats_job()`: \n  *  `request.ats_job` **Changed**\n  *  `response` **Changed**\n* `unified_to.ats.update_ats_job()`: \n  *  `request.ats_job` **Changed**\n  *  `response` **Changed**\n* `unified_to.job.create_ats_job()`: \n  *  `request.ats_job` **Changed**\n  *  `response` **Changed**\n* `unified_to.job.get_ats_job()`:  `response` **Changed**\n* `unified_to.job.list_ats_jobs()`:  `response.[]` **Changed**\n* `unified_to.job.patch_ats_job()`: \n  *  `request.ats_job` **Changed**\n  *  `response` **Changed**\n* `unified_to.job.update_ats_job()`: \n  *  `request.ats_job` **Changed**\n  *  `response` **Changed**\n"
+releaseNotes: "## Python SDK Changes Detected:\n* `unified_to.accounting.create_accounting_expense()`: **Added**\n* `unified_to.accounting.get_accounting_expense()`: **Added**\n* `unified_to.accounting.list_accounting_expenses()`: **Added**\n* `unified_to.accounting.patch_accounting_expense()`: **Added**\n* `unified_to.accounting.remove_accounting_expense()`: **Added**\n* `unified_to.accounting.update_accounting_expense()`: **Added**\n* `unified_to.expense.create_accounting_expense()`: **Added**\n* `unified_to.expense.get_accounting_expense()`: **Added**\n* `unified_to.expense.list_accounting_expenses()`: **Added**\n* `unified_to.expense.patch_accounting_expense()`: **Added**\n* `unified_to.expense.remove_accounting_expense()`: **Added**\n* `unified_to.expense.update_accounting_expense()`: **Added**\n* `unified_to.messaging.list_messaging_messages()`: \n  *  `request.user_id` **Added**\n* `unified_to.message.list_messaging_messages()`: \n  *  `request.user_id` **Added**\n"

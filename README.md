@@ -186,6 +186,7 @@ asyncio.run(main())
 * [create_accounting_category](docs/sdks/accounting/README.md#create_accounting_category) - Create a category
 * [create_accounting_contact](docs/sdks/accounting/README.md#create_accounting_contact) - Create a contact
 * [create_accounting_creditmemo](docs/sdks/accounting/README.md#create_accounting_creditmemo) - Create a creditmemo
+* [create_accounting_expense](docs/sdks/accounting/README.md#create_accounting_expense) - Create an expense
 * [create_accounting_invoice](docs/sdks/accounting/README.md#create_accounting_invoice) - Create an invoice
 * [create_accounting_journal](docs/sdks/accounting/README.md#create_accounting_journal) - Create a journal
 * [create_accounting_order](docs/sdks/accounting/README.md#create_accounting_order) - Create an order
@@ -199,6 +200,7 @@ asyncio.run(main())
 * [get_accounting_category](docs/sdks/accounting/README.md#get_accounting_category) - Retrieve a category
 * [get_accounting_contact](docs/sdks/accounting/README.md#get_accounting_contact) - Retrieve a contact
 * [get_accounting_creditmemo](docs/sdks/accounting/README.md#get_accounting_creditmemo) - Retrieve a creditmemo
+* [get_accounting_expense](docs/sdks/accounting/README.md#get_accounting_expense) - Retrieve an expense
 * [get_accounting_invoice](docs/sdks/accounting/README.md#get_accounting_invoice) - Retrieve an invoice
 * [get_accounting_journal](docs/sdks/accounting/README.md#get_accounting_journal) - Retrieve a journal
 * [get_accounting_order](docs/sdks/accounting/README.md#get_accounting_order) - Retrieve an order
@@ -216,6 +218,7 @@ asyncio.run(main())
 * [list_accounting_categories](docs/sdks/accounting/README.md#list_accounting_categories) - List all categories
 * [list_accounting_contacts](docs/sdks/accounting/README.md#list_accounting_contacts) - List all contacts
 * [list_accounting_creditmemoes](docs/sdks/accounting/README.md#list_accounting_creditmemoes) - List all creditmemoes
+* [list_accounting_expenses](docs/sdks/accounting/README.md#list_accounting_expenses) - List all expenses
 * [list_accounting_invoices](docs/sdks/accounting/README.md#list_accounting_invoices) - List all invoices
 * [list_accounting_journals](docs/sdks/accounting/README.md#list_accounting_journals) - List all journals
 * [list_accounting_orders](docs/sdks/accounting/README.md#list_accounting_orders) - List all orders
@@ -232,6 +235,7 @@ asyncio.run(main())
 * [patch_accounting_category](docs/sdks/accounting/README.md#patch_accounting_category) - Update a category
 * [patch_accounting_contact](docs/sdks/accounting/README.md#patch_accounting_contact) - Update a contact
 * [patch_accounting_creditmemo](docs/sdks/accounting/README.md#patch_accounting_creditmemo) - Update a creditmemo
+* [patch_accounting_expense](docs/sdks/accounting/README.md#patch_accounting_expense) - Update an expense
 * [patch_accounting_invoice](docs/sdks/accounting/README.md#patch_accounting_invoice) - Update an invoice
 * [patch_accounting_journal](docs/sdks/accounting/README.md#patch_accounting_journal) - Update a journal
 * [patch_accounting_order](docs/sdks/accounting/README.md#patch_accounting_order) - Update an order
@@ -244,6 +248,7 @@ asyncio.run(main())
 * [remove_accounting_category](docs/sdks/accounting/README.md#remove_accounting_category) - Remove a category
 * [remove_accounting_contact](docs/sdks/accounting/README.md#remove_accounting_contact) - Remove a contact
 * [remove_accounting_creditmemo](docs/sdks/accounting/README.md#remove_accounting_creditmemo) - Remove a creditmemo
+* [remove_accounting_expense](docs/sdks/accounting/README.md#remove_accounting_expense) - Remove an expense
 * [remove_accounting_invoice](docs/sdks/accounting/README.md#remove_accounting_invoice) - Remove an invoice
 * [remove_accounting_journal](docs/sdks/accounting/README.md#remove_accounting_journal) - Remove a journal
 * [remove_accounting_order](docs/sdks/accounting/README.md#remove_accounting_order) - Remove an order
@@ -256,6 +261,7 @@ asyncio.run(main())
 * [update_accounting_category](docs/sdks/accounting/README.md#update_accounting_category) - Update a category
 * [update_accounting_contact](docs/sdks/accounting/README.md#update_accounting_contact) - Update a contact
 * [update_accounting_creditmemo](docs/sdks/accounting/README.md#update_accounting_creditmemo) - Update a creditmemo
+* [update_accounting_expense](docs/sdks/accounting/README.md#update_accounting_expense) - Update an expense
 * [update_accounting_invoice](docs/sdks/accounting/README.md#update_accounting_invoice) - Update an invoice
 * [update_accounting_journal](docs/sdks/accounting/README.md#update_accounting_journal) - Update a journal
 * [update_accounting_order](docs/sdks/accounting/README.md#update_accounting_order) - Update an order
@@ -695,6 +701,15 @@ asyncio.run(main())
 * [remove_crm_event](docs/sdks/event/README.md#remove_crm_event) - Remove an event
 * [update_calendar_event](docs/sdks/event/README.md#update_calendar_event) - Update an event
 * [update_crm_event](docs/sdks/event/README.md#update_crm_event) - Update an event
+
+### [expense](docs/sdks/expense/README.md)
+
+* [create_accounting_expense](docs/sdks/expense/README.md#create_accounting_expense) - Create an expense
+* [get_accounting_expense](docs/sdks/expense/README.md#get_accounting_expense) - Retrieve an expense
+* [list_accounting_expenses](docs/sdks/expense/README.md#list_accounting_expenses) - List all expenses
+* [patch_accounting_expense](docs/sdks/expense/README.md#patch_accounting_expense) - Update an expense
+* [remove_accounting_expense](docs/sdks/expense/README.md#remove_accounting_expense) - Remove an expense
+* [update_accounting_expense](docs/sdks/expense/README.md#update_accounting_expense) - Update an expense
 
 ### [file](docs/sdks/file/README.md)
 

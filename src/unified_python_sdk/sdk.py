@@ -53,6 +53,7 @@ if TYPE_CHECKING:
     from unified_python_sdk.employee import Employee
     from unified_python_sdk.enrich import Enrich
     from unified_python_sdk.event import Event
+    from unified_python_sdk.expense import Expense
     from unified_python_sdk.file import File
     from unified_python_sdk.genai import Genai
     from unified_python_sdk.group import Group
@@ -134,6 +135,7 @@ class UnifiedTo(BaseSDK):
     category: "Category"
     contact: "Contact"
     creditmemo: "Creditmemo"
+    expense: "Expense"
     invoice: "Invoice"
     journal: "Journal"
     order: "Order"
@@ -241,6 +243,7 @@ class UnifiedTo(BaseSDK):
         "category": ("unified_python_sdk.category", "Category"),
         "contact": ("unified_python_sdk.contact", "Contact"),
         "creditmemo": ("unified_python_sdk.creditmemo", "Creditmemo"),
+        "expense": ("unified_python_sdk.expense", "Expense"),
         "invoice": ("unified_python_sdk.invoice", "Invoice"),
         "journal": ("unified_python_sdk.journal", "Journal"),
         "order": ("unified_python_sdk.order", "Order"),
