@@ -33,7 +33,6 @@ class EnrichCompanyTypedDict(TypedDict):
     naics_code: NotRequired[float]
     name: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
-    r"""The raw data returned by the integration for this company"""
     revenue: NotRequired[str]
     sic_code: NotRequired[float]
     stock: NotRequired[str]
@@ -84,7 +83,6 @@ class EnrichCompany(BaseModel):
     name: Optional[str] = None
 
     raw: Optional[Dict[str, Any]] = None
-    r"""The raw data returned by the integration for this company"""
 
     revenue: Optional[str] = None
 

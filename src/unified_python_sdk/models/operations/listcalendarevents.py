@@ -19,6 +19,8 @@ class ListCalendarEventsRequestTypedDict(TypedDict):
     calendar_id: NotRequired[str]
     r"""The calendar ID to filter by"""
     end_le: NotRequired[str]
+    r"""The end date to filter by (deprecated)"""
+    end_lt: NotRequired[str]
     r"""The end date to filter by"""
     expand: NotRequired[bool]
     r"""Whether to flatten grouped or recurring items into individual entries."""
@@ -53,6 +55,12 @@ class ListCalendarEventsRequest(BaseModel):
     r"""The calendar ID to filter by"""
 
     end_le: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+    r"""The end date to filter by (deprecated)"""
+
+    end_lt: Annotated[
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None

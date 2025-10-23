@@ -39,15 +39,16 @@ class EnrichPersonTypedDict(TypedDict):
     emails: NotRequired[List[EnrichEmailTypedDict]]
     r"""An array of email addresses for this person"""
     facebook_url: NotRequired[str]
+    first_name: NotRequired[str]
     gender: NotRequired[Gender]
     github_url: NotRequired[str]
     github_username: NotRequired[str]
     id: NotRequired[str]
     image_url: NotRequired[str]
+    last_name: NotRequired[str]
     linkedin_url: NotRequired[str]
     name: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
-    r"""The raw data returned by the integration for this person"""
     telephones: NotRequired[List[EnrichTelephoneTypedDict]]
     r"""An array of telephones for this person"""
     timezone: NotRequired[str]
@@ -80,6 +81,8 @@ class EnrichPerson(BaseModel):
 
     facebook_url: Optional[str] = None
 
+    first_name: Optional[str] = None
+
     gender: Annotated[Optional[Gender], PlainValidator(validate_open_enum(False))] = (
         None
     )
@@ -92,12 +95,13 @@ class EnrichPerson(BaseModel):
 
     image_url: Optional[str] = None
 
+    last_name: Optional[str] = None
+
     linkedin_url: Optional[str] = None
 
     name: Optional[str] = None
 
     raw: Optional[Dict[str, Any]] = None
-    r"""The raw data returned by the integration for this person"""
 
     telephones: Optional[List[EnrichTelephone]] = None
     r"""An array of telephones for this person"""

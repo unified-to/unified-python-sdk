@@ -16,7 +16,9 @@ class UcContactTypedDict(TypedDict):
     created_at: NotRequired[datetime]
     emails: NotRequired[List[UcEmailTypedDict]]
     r"""An array of email addresses for this contact"""
+    first_name: NotRequired[str]
     id: NotRequired[str]
+    last_name: NotRequired[str]
     name: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
     telephones: NotRequired[List[UcTelephoneTypedDict]]
@@ -35,7 +37,11 @@ class UcContact(BaseModel):
     emails: Optional[List[UcEmail]] = None
     r"""An array of email addresses for this contact"""
 
+    first_name: Optional[str] = None
+
     id: Optional[str] = None
+
+    last_name: Optional[str] = None
 
     name: Optional[str] = None
 

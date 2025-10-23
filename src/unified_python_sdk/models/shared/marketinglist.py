@@ -17,7 +17,6 @@ class MarketingListTypedDict(TypedDict):
     is_active: NotRequired[bool]
     name: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
-    r"""The raw data returned by the integration for this list"""
     start_at: NotRequired[datetime]
     updated_at: NotRequired[datetime]
     user_id: NotRequired[str]
@@ -39,7 +38,6 @@ class MarketingList(BaseModel):
     name: Optional[str] = None
 
     raw: Optional[Dict[str, Any]] = None
-    r"""The raw data returned by the integration for this list"""
 
     start_at: Optional[datetime] = None
 

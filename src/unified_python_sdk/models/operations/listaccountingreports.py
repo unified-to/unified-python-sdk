@@ -17,6 +17,8 @@ class ListAccountingReportsRequestTypedDict(TypedDict):
     connection_id: str
     r"""ID of the connection"""
     end_le: NotRequired[str]
+    r"""The end date to filter by (deprecated)"""
+    end_lt: NotRequired[str]
     r"""The end date to filter by"""
     fields: NotRequired[List[str]]
     r"""Comma-delimited fields to return"""
@@ -42,6 +44,12 @@ class ListAccountingReportsRequest(BaseModel):
     r"""ID of the connection"""
 
     end_le: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+    r"""The end date to filter by (deprecated)"""
+
+    end_lt: Annotated[
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None

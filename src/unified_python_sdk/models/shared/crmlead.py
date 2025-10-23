@@ -22,8 +22,10 @@ class CrmLeadTypedDict(TypedDict):
     created_at: NotRequired[datetime]
     creator_user_id: NotRequired[str]
     emails: NotRequired[List[CrmEmailTypedDict]]
+    first_name: NotRequired[str]
     id: NotRequired[str]
     is_active: NotRequired[bool]
+    last_name: NotRequired[str]
     link_urls: NotRequired[List[str]]
     metadata: NotRequired[List[CrmMetadataTypedDict]]
     name: NotRequired[str]
@@ -50,9 +52,13 @@ class CrmLead(BaseModel):
 
     emails: Optional[List[CrmEmail]] = None
 
+    first_name: Optional[str] = None
+
     id: Optional[str] = None
 
     is_active: Optional[bool] = None
+
+    last_name: Optional[str] = None
 
     link_urls: Optional[List[str]] = None
 

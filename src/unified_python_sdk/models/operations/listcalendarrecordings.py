@@ -19,6 +19,8 @@ class ListCalendarRecordingsRequestTypedDict(TypedDict):
     connection_id: str
     r"""ID of the connection"""
     end_le: NotRequired[str]
+    r"""The end date to filter by (deprecated)"""
+    end_lt: NotRequired[str]
     r"""The end date to filter by"""
     event_id: NotRequired[str]
     r"""The event ID to filter by"""
@@ -45,6 +47,12 @@ class ListCalendarRecordingsRequest(BaseModel):
     r"""ID of the connection"""
 
     end_le: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+    r"""The end date to filter by (deprecated)"""
+
+    end_lt: Annotated[
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None

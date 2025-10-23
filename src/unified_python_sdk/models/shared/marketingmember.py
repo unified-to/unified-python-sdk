@@ -14,12 +14,13 @@ class MarketingMemberTypedDict(TypedDict):
     created_at: NotRequired[datetime]
     emails: NotRequired[List[MarketingEmailTypedDict]]
     r"""An array of email addresses for this member"""
+    first_name: NotRequired[str]
     id: NotRequired[str]
+    last_name: NotRequired[str]
     list_ids: NotRequired[List[str]]
     r"""An array of list IDs associated with this member"""
     name: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
-    r"""The raw data returned by the integration for this member"""
     tags: NotRequired[List[str]]
     r"""An array of tags associated with this member"""
     updated_at: NotRequired[datetime]
@@ -33,7 +34,11 @@ class MarketingMember(BaseModel):
     emails: Optional[List[MarketingEmail]] = None
     r"""An array of email addresses for this member"""
 
+    first_name: Optional[str] = None
+
     id: Optional[str] = None
+
+    last_name: Optional[str] = None
 
     list_ids: Optional[List[str]] = None
     r"""An array of list IDs associated with this member"""
@@ -41,7 +46,6 @@ class MarketingMember(BaseModel):
     name: Optional[str] = None
 
     raw: Optional[Dict[str, Any]] = None
-    r"""The raw data returned by the integration for this member"""
 
     tags: Optional[List[str]] = None
     r"""An array of tags associated with this member"""

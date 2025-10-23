@@ -21,6 +21,8 @@ class ListUcRecordingsRequestTypedDict(TypedDict):
     contact_id: NotRequired[str]
     r"""The contact ID to filter by"""
     end_le: NotRequired[str]
+    r"""The end date to filter by (deprecated)"""
+    end_lt: NotRequired[str]
     r"""The end date to filter by"""
     fields: NotRequired[List[str]]
     r"""Comma-delimited fields to return"""
@@ -59,6 +61,12 @@ class ListUcRecordingsRequest(BaseModel):
     r"""The contact ID to filter by"""
 
     end_le: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+    r"""The end date to filter by (deprecated)"""
+
+    end_lt: Annotated[
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None

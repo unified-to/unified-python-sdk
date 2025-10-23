@@ -150,7 +150,6 @@ class WebhookTypedDict(TypedDict):
     interval: NotRequired[float]
     is_healthy: NotRequired[bool]
     is_paused: NotRequired[bool]
-    meta: NotRequired[Dict[str, Any]]
     page_max_limit: NotRequired[float]
     runs: NotRequired[List[str]]
     r"""An array of the most revent virtual webhook runs"""
@@ -199,8 +198,6 @@ class Webhook(BaseModel):
     is_healthy: Optional[bool] = None
 
     is_paused: Optional[bool] = None
-
-    meta: Optional[Dict[str, Any]] = None
 
     page_max_limit: Optional[float] = None
 

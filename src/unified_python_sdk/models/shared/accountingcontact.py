@@ -50,11 +50,13 @@ class AccountingContactTypedDict(TypedDict):
     created_at: NotRequired[datetime]
     currency: NotRequired[str]
     emails: NotRequired[List[AccountingEmailTypedDict]]
+    first_name: NotRequired[str]
     id: NotRequired[str]
     identification: NotRequired[str]
     is_active: NotRequired[bool]
     is_customer: NotRequired[bool]
     is_supplier: NotRequired[bool]
+    last_name: NotRequired[str]
     name: NotRequired[str]
     payment_methods: NotRequired[List[AccountingContactPaymentMethodTypedDict]]
     portal_url: NotRequired[str]
@@ -79,6 +81,8 @@ class AccountingContact(BaseModel):
 
     emails: Optional[List[AccountingEmail]] = None
 
+    first_name: Optional[str] = None
+
     id: Optional[str] = None
 
     identification: Optional[str] = None
@@ -88,6 +92,8 @@ class AccountingContact(BaseModel):
     is_customer: Optional[bool] = None
 
     is_supplier: Optional[bool] = None
+
+    last_name: Optional[str] = None
 
     name: Optional[str] = None
 

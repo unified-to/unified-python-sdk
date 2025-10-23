@@ -68,6 +68,7 @@ class HrisEmployeeTypedDict(TypedDict):
     employee_roles: NotRequired[List[PropertyHrisEmployeeEmployeeRoles]]
     employment_status: NotRequired[EmploymentStatus]
     employment_type: NotRequired[HrisEmployeeEmploymentType]
+    first_name: NotRequired[str]
     gender: NotRequired[HrisEmployeeGender]
     groups: NotRequired[List[HrisGroupTypedDict]]
     r"""Which groups/teams/units that this employee/user belongs to.  May not have all of the Group fields present, but should have id, name, or email."""
@@ -75,6 +76,7 @@ class HrisEmployeeTypedDict(TypedDict):
     id: NotRequired[str]
     image_url: NotRequired[str]
     language_locale: NotRequired[str]
+    last_name: NotRequired[str]
     location: NotRequired[str]
     locations: NotRequired[List[HrisLocationTypedDict]]
     manager_id: NotRequired[str]
@@ -135,6 +137,8 @@ class HrisEmployee(BaseModel):
         Optional[HrisEmployeeEmploymentType], PlainValidator(validate_open_enum(False))
     ] = None
 
+    first_name: Optional[str] = None
+
     gender: Annotated[
         Optional[HrisEmployeeGender], PlainValidator(validate_open_enum(False))
     ] = None
@@ -149,6 +153,8 @@ class HrisEmployee(BaseModel):
     image_url: Optional[str] = None
 
     language_locale: Optional[str] = None
+
+    last_name: Optional[str] = None
 
     location: Optional[str] = None
 

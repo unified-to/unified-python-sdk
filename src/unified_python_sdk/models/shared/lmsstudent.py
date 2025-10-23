@@ -17,8 +17,10 @@ class LmsStudentTypedDict(TypedDict):
     address: NotRequired[PropertyLmsStudentAddressTypedDict]
     created_at: NotRequired[datetime]
     emails: NotRequired[List[LmsEmailTypedDict]]
+    first_name: NotRequired[str]
     id: NotRequired[str]
     image_url: NotRequired[str]
+    last_name: NotRequired[str]
     name: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
     telephones: NotRequired[List[LmsTelephoneTypedDict]]
@@ -32,9 +34,13 @@ class LmsStudent(BaseModel):
 
     emails: Optional[List[LmsEmail]] = None
 
+    first_name: Optional[str] = None
+
     id: Optional[str] = None
 
     image_url: Optional[str] = None
+
+    last_name: Optional[str] = None
 
     name: Optional[str] = None
 

@@ -19,6 +19,8 @@ class ListMessagingMessagesRequestTypedDict(TypedDict):
     channel_id: NotRequired[str]
     r"""The channel ID to filter by"""
     end_le: NotRequired[str]
+    r"""The end date to filter by (deprecated)"""
+    end_lt: NotRequired[str]
     r"""The end date to filter by"""
     expand: NotRequired[bool]
     r"""Whether to flatten grouped or recurring items into individual entries."""
@@ -55,6 +57,12 @@ class ListMessagingMessagesRequest(BaseModel):
     r"""The channel ID to filter by"""
 
     end_le: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+    r"""The end date to filter by (deprecated)"""
+
+    end_lt: Annotated[
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
