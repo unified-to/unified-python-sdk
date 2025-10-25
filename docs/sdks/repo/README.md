@@ -107,7 +107,6 @@ with UnifiedTo(
     res = unified_to.repo.create_repo_commit(request={
         "repo_commit": {
             "repo_id": "<id>",
-            "user_id": "<id>",
         },
         "connection_id": "<id>",
     })
@@ -816,7 +815,6 @@ with UnifiedTo(
     res = unified_to.repo.patch_repo_commit(request={
         "repo_commit": {
             "repo_id": "<id>",
-            "user_id": "<id>",
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1299,7 +1297,6 @@ with UnifiedTo(
     res = unified_to.repo.update_repo_commit(request={
         "repo_commit": {
             "repo_id": "<id>",
-            "user_id": "<id>",
         },
         "connection_id": "<id>",
         "id": "<id>",

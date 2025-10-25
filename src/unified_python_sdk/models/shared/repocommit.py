@@ -9,19 +9,17 @@ from unified_python_sdk.types import BaseModel
 
 class RepoCommitTypedDict(TypedDict):
     repo_id: str
-    user_id: str
     branch_id: NotRequired[str]
     created_at: NotRequired[datetime]
     id: NotRequired[str]
     message: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
     updated_at: NotRequired[datetime]
+    user_id: NotRequired[str]
 
 
 class RepoCommit(BaseModel):
     repo_id: str
-
-    user_id: str
 
     branch_id: Optional[str] = None
 
@@ -34,3 +32,5 @@ class RepoCommit(BaseModel):
     raw: Optional[Dict[str, Any]] = None
 
     updated_at: Optional[datetime] = None
+
+    user_id: Optional[str] = None
