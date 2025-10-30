@@ -42,6 +42,8 @@
 | `ACCOUNTING_CATEGORY_WRITE`      | accounting_category_write        |
 | `PAYMENT_PAYMENT_READ`           | payment_payment_read             |
 | `PAYMENT_PAYMENT_WRITE`          | payment_payment_write            |
+| `ACCOUNTING_CASHFLOW_READ`       | accounting_cashflow_read         |
+| `ACCOUNTING_CASHFLOW_WRITE`      | accounting_cashflow_write        |
 | `PAYMENT_PAYOUT_READ`            | payment_payout_read              |
 | `PAYMENT_REFUND_READ`            | payment_refund_read              |
 | `PAYMENT_LINK_READ`              | payment_link_read                |

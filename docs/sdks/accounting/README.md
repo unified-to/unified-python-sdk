@@ -21,6 +21,7 @@
 * [get_accounting_account](#get_accounting_account) - Retrieve an account
 * [get_accounting_balancesheet](#get_accounting_balancesheet) - Retrieve a balancesheet
 * [get_accounting_bill](#get_accounting_bill) - Retrieve a bill
+* [get_accounting_cashflow](#get_accounting_cashflow) - Retrieve a cashflow
 * [get_accounting_category](#get_accounting_category) - Retrieve a category
 * [get_accounting_contact](#get_accounting_contact) - Retrieve a contact
 * [get_accounting_creditmemo](#get_accounting_creditmemo) - Retrieve a creditmemo
@@ -39,6 +40,7 @@
 * [list_accounting_accounts](#list_accounting_accounts) - List all accounts
 * [list_accounting_balancesheets](#list_accounting_balancesheets) - List all balancesheets
 * [list_accounting_bills](#list_accounting_bills) - List all bills
+* [list_accounting_cashflows](#list_accounting_cashflows) - List all cashflows
 * [list_accounting_categories](#list_accounting_categories) - List all categories
 * [list_accounting_contacts](#list_accounting_contacts) - List all contacts
 * [list_accounting_creditmemoes](#list_accounting_creditmemoes) - List all creditmemoes
@@ -839,6 +841,53 @@ with UnifiedTo(
 ### Response
 
 **[operations.GetAccountingBillResponse](../../models/operations/getaccountingbillresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## get_accounting_cashflow
+
+Retrieve a cashflow
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="getAccountingCashflow" method="get" path="/accounting/{connection_id}/cashflow/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.accounting.get_accounting_cashflow(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.accounting_cashflow is not None
+
+    # Handle response
+    print(res.accounting_cashflow)
+
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `request`                                                                                          | [operations.GetAccountingCashflowRequest](../../models/operations/getaccountingcashflowrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `retries`                                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                   | :heavy_minus_sign:                                                                                 | Configuration to override the default retry behavior of the client.                                |
+
+### Response
+
+**[operations.GetAccountingCashflowResponse](../../models/operations/getaccountingcashflowresponse.md)**
 
 ### Errors
 
@@ -1682,6 +1731,52 @@ with UnifiedTo(
 ### Response
 
 **[operations.ListAccountingBillsResponse](../../models/operations/listaccountingbillsresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## list_accounting_cashflows
+
+List all cashflows
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="listAccountingCashflows" method="get" path="/accounting/{connection_id}/cashflow" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.accounting.list_accounting_cashflows(request={
+        "connection_id": "<id>",
+    })
+
+    assert res.accounting_cashflows is not None
+
+    # Handle response
+    print(res.accounting_cashflows)
+
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                              | [operations.ListAccountingCashflowsRequest](../../models/operations/listaccountingcashflowsrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `retries`                                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                       | :heavy_minus_sign:                                                                                     | Configuration to override the default retry behavior of the client.                                    |
+
+### Response
+
+**[operations.ListAccountingCashflowsResponse](../../models/operations/listaccountingcashflowsresponse.md)**
 
 ### Errors
 

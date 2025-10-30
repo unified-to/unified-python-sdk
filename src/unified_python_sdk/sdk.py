@@ -31,6 +31,7 @@ if TYPE_CHECKING:
     from unified_python_sdk.calendar import Calendar
     from unified_python_sdk.call import Call
     from unified_python_sdk.candidate import Candidate
+    from unified_python_sdk.cashflow import Cashflow
     from unified_python_sdk.category import Category
     from unified_python_sdk.change import Change
     from unified_python_sdk.channel import Channel
@@ -132,6 +133,7 @@ class UnifiedTo(BaseSDK):
     account: "Account"
     balancesheet: "Balancesheet"
     bill: "Bill"
+    cashflow: "Cashflow"
     category: "Category"
     contact: "Contact"
     creditmemo: "Creditmemo"
@@ -240,6 +242,7 @@ class UnifiedTo(BaseSDK):
         "account": ("unified_python_sdk.account", "Account"),
         "balancesheet": ("unified_python_sdk.balancesheet", "Balancesheet"),
         "bill": ("unified_python_sdk.bill", "Bill"),
+        "cashflow": ("unified_python_sdk.cashflow", "Cashflow"),
         "category": ("unified_python_sdk.category", "Category"),
         "contact": ("unified_python_sdk.contact", "Contact"),
         "creditmemo": ("unified_python_sdk.creditmemo", "Creditmemo"),

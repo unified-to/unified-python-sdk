@@ -44,6 +44,7 @@ class ObjectType(str, Enum, metaclass=utils.OpenEnumMeta):
     ACCOUNTING_TRIALBALANCE = "accounting_trialbalance"
     ACCOUNTING_CATEGORY = "accounting_category"
     ACCOUNTING_EXPENSE = "accounting_expense"
+    ACCOUNTING_CASHFLOW = "accounting_cashflow"
     PAYMENT_PAYMENT = "payment_payment"
     PAYMENT_LINK = "payment_link"
     PAYMENT_PAYOUT = "payment_payout"

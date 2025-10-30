@@ -502,6 +502,12 @@ if TYPE_CHECKING:
         GetAccountingBillResponse,
         GetAccountingBillResponseTypedDict,
     )
+    from .getaccountingcashflow import (
+        GetAccountingCashflowRequest,
+        GetAccountingCashflowRequestTypedDict,
+        GetAccountingCashflowResponse,
+        GetAccountingCashflowResponseTypedDict,
+    )
     from .getaccountingcategory import (
         GetAccountingCategoryRequest,
         GetAccountingCategoryRequestTypedDict,
@@ -1065,6 +1071,12 @@ if TYPE_CHECKING:
         ListAccountingBillsRequestTypedDict,
         ListAccountingBillsResponse,
         ListAccountingBillsResponseTypedDict,
+    )
+    from .listaccountingcashflows import (
+        ListAccountingCashflowsRequest,
+        ListAccountingCashflowsRequestTypedDict,
+        ListAccountingCashflowsResponse,
+        ListAccountingCashflowsResponseTypedDict,
     )
     from .listaccountingcategories import (
         ListAccountingCategoriesRequest,
@@ -3394,6 +3406,10 @@ __all__ = [
     "GetAccountingBillRequestTypedDict",
     "GetAccountingBillResponse",
     "GetAccountingBillResponseTypedDict",
+    "GetAccountingCashflowRequest",
+    "GetAccountingCashflowRequestTypedDict",
+    "GetAccountingCashflowResponse",
+    "GetAccountingCashflowResponseTypedDict",
     "GetAccountingCategoryRequest",
     "GetAccountingCategoryRequestTypedDict",
     "GetAccountingCategoryResponse",
@@ -3770,6 +3786,10 @@ __all__ = [
     "ListAccountingBillsRequestTypedDict",
     "ListAccountingBillsResponse",
     "ListAccountingBillsResponseTypedDict",
+    "ListAccountingCashflowsRequest",
+    "ListAccountingCashflowsRequestTypedDict",
+    "ListAccountingCashflowsResponse",
+    "ListAccountingCashflowsResponseTypedDict",
     "ListAccountingCategoriesRequest",
     "ListAccountingCategoriesRequestTypedDict",
     "ListAccountingCategoriesResponse",
@@ -5433,6 +5453,10 @@ _dynamic_imports: dict[str, str] = {
     "GetAccountingBillRequestTypedDict": ".getaccountingbill",
     "GetAccountingBillResponse": ".getaccountingbill",
     "GetAccountingBillResponseTypedDict": ".getaccountingbill",
+    "GetAccountingCashflowRequest": ".getaccountingcashflow",
+    "GetAccountingCashflowRequestTypedDict": ".getaccountingcashflow",
+    "GetAccountingCashflowResponse": ".getaccountingcashflow",
+    "GetAccountingCashflowResponseTypedDict": ".getaccountingcashflow",
     "GetAccountingCategoryRequest": ".getaccountingcategory",
     "GetAccountingCategoryRequestTypedDict": ".getaccountingcategory",
     "GetAccountingCategoryResponse": ".getaccountingcategory",
@@ -5809,6 +5833,10 @@ _dynamic_imports: dict[str, str] = {
     "ListAccountingBillsRequestTypedDict": ".listaccountingbills",
     "ListAccountingBillsResponse": ".listaccountingbills",
     "ListAccountingBillsResponseTypedDict": ".listaccountingbills",
+    "ListAccountingCashflowsRequest": ".listaccountingcashflows",
+    "ListAccountingCashflowsRequestTypedDict": ".listaccountingcashflows",
+    "ListAccountingCashflowsResponse": ".listaccountingcashflows",
+    "ListAccountingCashflowsResponseTypedDict": ".listaccountingcashflows",
     "ListAccountingCategoriesRequest": ".listaccountingcategories",
     "ListAccountingCategoriesRequestTypedDict": ".listaccountingcategories",
     "ListAccountingCategoriesResponse": ".listaccountingcategories",

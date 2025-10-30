@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: 018de8bfc3ab59a73a1c069f241e60a4
+  docChecksum: 488263b38991bc1af62a3a84968ffb52
   docVersion: "1.0"
-  speakeasyVersion: 1.639.3
-  generationVersion: 2.730.5
-  releaseVersion: 0.53.2
-  configChecksum: d5ca391054c58fe71049893eb4cc6bb5
+  speakeasyVersion: 1.642.2
+  generationVersion: 2.731.6
+  releaseVersion: 0.53.3
+  configChecksum: 46b59044cb8d6af574d367d487421119
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -200,6 +200,8 @@ generatedFiles:
   - docs/models/operations/getaccountingbalancesheetresponse.md
   - docs/models/operations/getaccountingbillrequest.md
   - docs/models/operations/getaccountingbillresponse.md
+  - docs/models/operations/getaccountingcashflowrequest.md
+  - docs/models/operations/getaccountingcashflowresponse.md
   - docs/models/operations/getaccountingcategoryrequest.md
   - docs/models/operations/getaccountingcategoryresponse.md
   - docs/models/operations/getaccountingcontactrequest.md
@@ -388,6 +390,8 @@ generatedFiles:
   - docs/models/operations/listaccountingbalancesheetsresponse.md
   - docs/models/operations/listaccountingbillsrequest.md
   - docs/models/operations/listaccountingbillsresponse.md
+  - docs/models/operations/listaccountingcashflowsrequest.md
+  - docs/models/operations/listaccountingcashflowsresponse.md
   - docs/models/operations/listaccountingcategoriesrequest.md
   - docs/models/operations/listaccountingcategoriesresponse.md
   - docs/models/operations/listaccountingcontactsrequest.md
@@ -1061,6 +1065,9 @@ generatedFiles:
   - docs/models/shared/accountingbalancesheetitem.md
   - docs/models/shared/accountingbill.md
   - docs/models/shared/accountingbillstatus.md
+  - docs/models/shared/accountingcashflow.md
+  - docs/models/shared/accountingcashflowitem.md
+  - docs/models/shared/accountingcashflowsection.md
   - docs/models/shared/accountingcategory.md
   - docs/models/shared/accountingcontact.md
   - docs/models/shared/accountingcontactpaymentmethod.md
@@ -1321,6 +1328,7 @@ generatedFiles:
   - docs/models/shared/priority.md
   - docs/models/shared/profilegender.md
   - docs/models/shared/propertyaccountingbalancesheetitemsubitems.md
+  - docs/models/shared/propertyaccountingcashflowitemsubitems.md
   - docs/models/shared/propertyaccountingcontactbillingaddress.md
   - docs/models/shared/propertyaccountingcontactshippingaddress.md
   - docs/models/shared/propertyaccountingorderbillingaddress.md
@@ -1490,6 +1498,7 @@ generatedFiles:
   - docs/sdks/calendar/README.md
   - docs/sdks/call/README.md
   - docs/sdks/candidate/README.md
+  - docs/sdks/cashflow/README.md
   - docs/sdks/category/README.md
   - docs/sdks/change/README.md
   - docs/sdks/channel/README.md
@@ -1609,6 +1618,7 @@ generatedFiles:
   - src/unified_python_sdk/calendar.py
   - src/unified_python_sdk/call.py
   - src/unified_python_sdk/candidate.py
+  - src/unified_python_sdk/cashflow.py
   - src/unified_python_sdk/category.py
   - src/unified_python_sdk/change.py
   - src/unified_python_sdk/channel.py
@@ -1749,6 +1759,7 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/getaccountingaccount.py
   - src/unified_python_sdk/models/operations/getaccountingbalancesheet.py
   - src/unified_python_sdk/models/operations/getaccountingbill.py
+  - src/unified_python_sdk/models/operations/getaccountingcashflow.py
   - src/unified_python_sdk/models/operations/getaccountingcategory.py
   - src/unified_python_sdk/models/operations/getaccountingcontact.py
   - src/unified_python_sdk/models/operations/getaccountingcreditmemo.py
@@ -1843,6 +1854,7 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/listaccountingaccounts.py
   - src/unified_python_sdk/models/operations/listaccountingbalancesheets.py
   - src/unified_python_sdk/models/operations/listaccountingbills.py
+  - src/unified_python_sdk/models/operations/listaccountingcashflows.py
   - src/unified_python_sdk/models/operations/listaccountingcategories.py
   - src/unified_python_sdk/models/operations/listaccountingcontacts.py
   - src/unified_python_sdk/models/operations/listaccountingcreditmemoes.py
@@ -2182,6 +2194,9 @@ generatedFiles:
   - src/unified_python_sdk/models/shared/accountingbalancesheet.py
   - src/unified_python_sdk/models/shared/accountingbalancesheetitem.py
   - src/unified_python_sdk/models/shared/accountingbill.py
+  - src/unified_python_sdk/models/shared/accountingcashflow.py
+  - src/unified_python_sdk/models/shared/accountingcashflowitem.py
+  - src/unified_python_sdk/models/shared/accountingcashflowsection.py
   - src/unified_python_sdk/models/shared/accountingcategory.py
   - src/unified_python_sdk/models/shared/accountingcontact.py
   - src/unified_python_sdk/models/shared/accountingcontactpaymentmethod.py
@@ -2321,6 +2336,7 @@ generatedFiles:
   - src/unified_python_sdk/models/shared/paymentrefund.py
   - src/unified_python_sdk/models/shared/paymentsubscription.py
   - src/unified_python_sdk/models/shared/property_accountingbalancesheetitem_sub_items.py
+  - src/unified_python_sdk/models/shared/property_accountingcashflowitem_sub_items.py
   - src/unified_python_sdk/models/shared/property_accountingcontact_billing_address.py
   - src/unified_python_sdk/models/shared/property_accountingcontact_shipping_address.py
   - src/unified_python_sdk/models/shared/property_accountingorder_billing_address.py
@@ -7116,6 +7132,28 @@ examples:
       responses:
         "200":
           application/json: {}
+  getAccountingCashflow:
+    speakeasy-default-get-accounting-cashflow:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  listAccountingCashflows:
+    speakeasy-default-list-accounting-cashflows:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Python SDK Changes Detected:\n* `unified_to.accounting.create_accounting_journal()`: \n  *  `request.accounting_journal.lineitems.[]` **Changed**\n  *  `response.lineitems.[]` **Changed**\n* `unified_to.accounting.get_accounting_journal()`:  `response.lineitems.[]` **Changed**\n* `unified_to.accounting.list_accounting_journals()`:  `response.[].lineitems.[]` **Changed**\n* `unified_to.accounting.patch_accounting_journal()`: \n  *  `request.accounting_journal.lineitems.[]` **Changed**\n  *  `response.lineitems.[]` **Changed**\n* `unified_to.accounting.update_accounting_journal()`: \n  *  `request.accounting_journal.lineitems.[]` **Changed**\n  *  `response.lineitems.[]` **Changed**\n* `unified_to.journal.create_accounting_journal()`: \n  *  `request.accounting_journal.lineitems.[]` **Changed**\n  *  `response.lineitems.[]` **Changed**\n* `unified_to.journal.get_accounting_journal()`:  `response.lineitems.[]` **Changed**\n* `unified_to.journal.list_accounting_journals()`:  `response.[].lineitems.[]` **Changed**\n* `unified_to.journal.patch_accounting_journal()`: \n  *  `request.accounting_journal.lineitems.[]` **Changed**\n  *  `response.lineitems.[]` **Changed**\n* `unified_to.journal.update_accounting_journal()`: \n  *  `request.accounting_journal.lineitems.[]` **Changed**\n  *  `response.lineitems.[]` **Changed**\n* `unified_to.repo.create_repo_commit()`: \n  *  `request.repo_commit.user_id` **Changed**\n  *  `response.user_id` **Changed**\n* `unified_to.repo.get_repo_commit()`:  `response.user_id` **Changed**\n* `unified_to.repo.list_repo_commits()`:  `response.[].user_id` **Changed**\n* `unified_to.repo.patch_repo_commit()`: \n  *  `request.repo_commit.user_id` **Changed**\n  *  `response.user_id` **Changed**\n* `unified_to.repo.update_repo_commit()`: \n  *  `request.repo_commit.user_id` **Changed**\n  *  `response.user_id` **Changed**\n* `unified_to.commit.create_repo_commit()`: \n  *  `request.repo_commit.user_id` **Changed**\n  *  `response.user_id` **Changed**\n* `unified_to.commit.get_repo_commit()`:  `response.user_id` **Changed**\n* `unified_to.commit.list_repo_commits()`:  `response.[].user_id` **Changed**\n* `unified_to.commit.patch_repo_commit()`: \n  *  `request.repo_commit.user_id` **Changed**\n  *  `response.user_id` **Changed**\n* `unified_to.commit.update_repo_commit()`: \n  *  `request.repo_commit.user_id` **Changed**\n  *  `response.user_id` **Changed**\n"
+releaseNotes: |
+  ## Python SDK Changes Detected:
+  * `unified_to.accounting.get_accounting_cashflow()`: **Added**
+  * `unified_to.accounting.list_accounting_cashflows()`: **Added**
+  * `unified_to.cashflow.get_accounting_cashflow()`: **Added**
+  * `unified_to.cashflow.list_accounting_cashflows()`: **Added**
