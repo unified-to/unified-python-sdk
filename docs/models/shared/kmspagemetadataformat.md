@@ -18,3 +18,8 @@
 | `YES_NO`          | YES_NO            |
 | `CURRENCY`        | CURRENCY          |
 | `URL`             | URL               |
+| `PERCENT`         | PERCENT           |
+| `EMAIL`           | EMAIL             |
+| `PHONE`           | PHONE             |
+| `REFERENCE`       | REFERENCE         |
+| `TIME`            | TIME              |

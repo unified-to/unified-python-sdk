@@ -1677,7 +1677,7 @@ from unified_python_sdk.models import shared
 
 
 with UnifiedTo(
-    server_idx=2,
+    server_idx=0,
     security=shared.Security(
         jwt="<YOUR_API_KEY_HERE>",
     ),

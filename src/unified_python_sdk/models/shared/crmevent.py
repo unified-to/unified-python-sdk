@@ -23,10 +23,12 @@ from .property_crmevent_page_view import (
 from .property_crmevent_task import PropertyCrmEventTask, PropertyCrmEventTaskTypedDict
 from datetime import datetime
 from enum import Enum
+from pydantic import field_serializer
 from pydantic.functional_validators import PlainValidator
 from typing import Any, Dict, List, Optional
 from typing_extensions import Annotated, NotRequired, TypedDict
 from unified_python_sdk import utils
+from unified_python_sdk.models import shared
 from unified_python_sdk.types import BaseModel
 from unified_python_sdk.utils import validate_open_enum
 
@@ -121,3 +123,12 @@ class CrmEvent(BaseModel):
     updated_at: Optional[datetime] = None
 
     user_id: Optional[str] = None
+
+    @field_serializer("type")
+    def serialize_type(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.CrmEventType(value)
+            except ValueError:
+                return value
+        return value

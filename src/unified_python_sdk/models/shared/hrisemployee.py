@@ -14,10 +14,12 @@ from .property_hrisemployee_address import (
 from .property_hrisemployee_employee_roles import PropertyHrisEmployeeEmployeeRoles
 from datetime import datetime
 from enum import Enum
+from pydantic import field_serializer
 from pydantic.functional_validators import PlainValidator
 from typing import Any, Dict, List, Optional
 from typing_extensions import Annotated, NotRequired, TypedDict
 from unified_python_sdk import utils
+from unified_python_sdk.models import shared
 from unified_python_sdk.types import BaseModel
 from unified_python_sdk.utils import validate_open_enum
 
@@ -193,3 +195,39 @@ class HrisEmployee(BaseModel):
     title: Optional[str] = None
 
     updated_at: Optional[datetime] = None
+
+    @field_serializer("employment_status")
+    def serialize_employment_status(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.EmploymentStatus(value)
+            except ValueError:
+                return value
+        return value
+
+    @field_serializer("employment_type")
+    def serialize_employment_type(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.HrisEmployeeEmploymentType(value)
+            except ValueError:
+                return value
+        return value
+
+    @field_serializer("gender")
+    def serialize_gender(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.HrisEmployeeGender(value)
+            except ValueError:
+                return value
+        return value
+
+    @field_serializer("marital_status")
+    def serialize_marital_status(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.MaritalStatus(value)
+            except ValueError:
+                return value
+        return value

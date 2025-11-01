@@ -9,10 +9,12 @@ from .scimmanager import ScimManager, ScimManagerTypedDict
 from datetime import datetime
 from enum import Enum
 import pydantic
+from pydantic import field_serializer
 from pydantic.functional_validators import PlainValidator
 from typing import List, Optional
 from typing_extensions import Annotated, NotRequired, TypedDict
 from unified_python_sdk import utils
+from unified_python_sdk.models import shared
 from unified_python_sdk.types import BaseModel
 from unified_python_sdk.utils import validate_open_enum
 
@@ -89,3 +91,14 @@ class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User(BaseMode
     organization: Optional[str] = None
 
     start_date: Annotated[Optional[datetime], pydantic.Field(alias="startDate")] = None
+
+    @field_serializer("gender")
+    def serialize_gender(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserGender(
+                    value
+                )
+            except ValueError:
+                return value
+        return value

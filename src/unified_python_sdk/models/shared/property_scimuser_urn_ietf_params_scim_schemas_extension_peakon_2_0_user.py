@@ -4,10 +4,12 @@ from __future__ import annotations
 from datetime import datetime
 from enum import Enum
 import pydantic
+from pydantic import field_serializer
 from pydantic.functional_validators import PlainValidator
 from typing import Optional
 from typing_extensions import Annotated, NotRequired, TypedDict
 from unified_python_sdk import utils
+from unified_python_sdk.models import shared
 from unified_python_sdk.types import BaseModel
 from unified_python_sdk.utils import validate_open_enum
 
@@ -46,3 +48,14 @@ class PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20User(BaseModel):
     manager: Annotated[Optional[str], pydantic.Field(alias="Manager")] = None
 
     team: Annotated[Optional[str], pydantic.Field(alias="Team")] = None
+
+    @field_serializer("gender")
+    def serialize_gender(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20UserGender(
+                    value
+                )
+            except ValueError:
+                return value
+        return value

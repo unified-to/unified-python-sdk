@@ -21,10 +21,12 @@ from .property_accountingcontact_shipping_address import (
 )
 from datetime import datetime
 from enum import Enum
+from pydantic import field_serializer
 from pydantic.functional_validators import PlainValidator
 from typing import Any, Dict, List, Optional
 from typing_extensions import Annotated, NotRequired, TypedDict
 from unified_python_sdk import utils
+from unified_python_sdk.models import shared
 from unified_python_sdk.types import BaseModel
 from unified_python_sdk.utils import validate_open_enum
 
@@ -114,3 +116,12 @@ class AccountingContact(BaseModel):
     telephones: Optional[List[AccountingTelephone]] = None
 
     updated_at: Optional[datetime] = None
+
+    @field_serializer("tax_exemption")
+    def serialize_tax_exemption(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.TaxExemption(value)
+            except ValueError:
+                return value
+        return value

@@ -10,10 +10,12 @@ from .atsjobquestion import AtsJobQuestion, AtsJobQuestionTypedDict
 from .atsmetadata import AtsMetadata, AtsMetadataTypedDict
 from datetime import datetime
 from enum import Enum
+from pydantic import field_serializer
 from pydantic.functional_validators import PlainValidator
 from typing import Any, Dict, List, Optional
 from typing_extensions import Annotated, NotRequired, TypedDict
 from unified_python_sdk import utils
+from unified_python_sdk.models import shared
 from unified_python_sdk.types import BaseModel
 from unified_python_sdk.utils import validate_open_enum
 
@@ -132,3 +134,21 @@ class AtsJob(BaseModel):
     ] = None
 
     updated_at: Optional[datetime] = None
+
+    @field_serializer("employment_type")
+    def serialize_employment_type(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.EmploymentType(value)
+            except ValueError:
+                return value
+        return value
+
+    @field_serializer("status")
+    def serialize_status(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.AtsJobStatus(value)
+            except ValueError:
+                return value
+        return value

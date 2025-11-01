@@ -15,10 +15,12 @@ from .property_atscandidate_address import (
 )
 from datetime import datetime
 from enum import Enum
+from pydantic import field_serializer
 from pydantic.functional_validators import PlainValidator
 from typing import Any, Dict, List, Optional
 from typing_extensions import Annotated, NotRequired, TypedDict
 from unified_python_sdk import utils
+from unified_python_sdk.models import shared
 from unified_python_sdk.types import BaseModel
 from unified_python_sdk.utils import validate_open_enum
 
@@ -117,3 +119,12 @@ class AtsCandidate(BaseModel):
     user_id: Optional[str] = None
 
     web_url: Optional[str] = None
+
+    @field_serializer("origin")
+    def serialize_origin(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.Origin(value)
+            except ValueError:
+                return value
+        return value

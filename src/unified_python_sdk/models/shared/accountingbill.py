@@ -5,10 +5,12 @@ from .accountingattachment import AccountingAttachment, AccountingAttachmentType
 from .accountinglineitem import AccountingLineitem, AccountingLineitemTypedDict
 from datetime import datetime
 from enum import Enum
+from pydantic import field_serializer
 from pydantic.functional_validators import PlainValidator
 from typing import Any, Dict, List, Optional
 from typing_extensions import Annotated, NotRequired, TypedDict
 from unified_python_sdk import utils
+from unified_python_sdk.models import shared
 from unified_python_sdk.types import BaseModel
 from unified_python_sdk.utils import validate_open_enum
 
@@ -113,3 +115,21 @@ class AccountingBill(BaseModel):
     updated_at: Optional[datetime] = None
 
     url: Optional[str] = None
+
+    @field_serializer("payment_collection_method")
+    def serialize_payment_collection_method(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.PaymentCollectionMethod(value)
+            except ValueError:
+                return value
+        return value
+
+    @field_serializer("status")
+    def serialize_status(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.AccountingBillStatus(value)
+            except ValueError:
+                return value
+        return value

@@ -6,10 +6,12 @@ from .property_calendareventrecurrence_on_days import (
 )
 from datetime import datetime
 from enum import Enum
+from pydantic import field_serializer
 from pydantic.functional_validators import PlainValidator
 from typing import List, Optional
 from typing_extensions import Annotated, NotRequired, TypedDict
 from unified_python_sdk import utils
+from unified_python_sdk.models import shared
 from unified_python_sdk.types import BaseModel
 from unified_python_sdk.utils import validate_open_enum
 
@@ -32,11 +34,13 @@ class WeekStart(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class CalendarEventRecurrenceTypedDict(TypedDict):
-    frequency: CalendarEventRecurrenceFrequency
     count: NotRequired[float]
     end_at: NotRequired[datetime]
     excluded_dates: NotRequired[List[str]]
     r"""dates to exclude from the recurrence, defaults to undefined (no exclusions)"""
+    frequency: NotRequired[CalendarEventRecurrenceFrequency]
+    included_dates: NotRequired[List[str]]
+    r"""dates to include in the recurrence, defaults to undefined (no inclusions)"""
     interval: NotRequired[float]
     on_days: NotRequired[List[PropertyCalendarEventRecurrenceOnDays]]
     r"""days of the week to repeat on, defaults to undefined (every day), only used if frequency is WEEKLY"""
@@ -48,21 +52,26 @@ class CalendarEventRecurrenceTypedDict(TypedDict):
     r"""week ordinals for BYDAY (e.g., -1 for last, -2 for second-to-last, 1 for first, 2 for second), only used with on_days. 0 is used for days without week ordinals."""
     on_year_days: NotRequired[List[float]]
     r"""days of the year to repeat on, defaults to undefined (every day), only used if frequency is YEARLY"""
-    timezone: NotRequired[str]
+    timezone: NotRequired[List[str]]
+    r"""timezone, defaults to undefined (no timezone)"""
     week_start: NotRequired[WeekStart]
 
 
 class CalendarEventRecurrence(BaseModel):
-    frequency: Annotated[
-        CalendarEventRecurrenceFrequency, PlainValidator(validate_open_enum(False))
-    ]
-
     count: Optional[float] = None
 
     end_at: Optional[datetime] = None
 
     excluded_dates: Optional[List[str]] = None
     r"""dates to exclude from the recurrence, defaults to undefined (no exclusions)"""
+
+    frequency: Annotated[
+        Optional[CalendarEventRecurrenceFrequency],
+        PlainValidator(validate_open_enum(False)),
+    ] = None
+
+    included_dates: Optional[List[str]] = None
+    r"""dates to include in the recurrence, defaults to undefined (no inclusions)"""
 
     interval: Optional[float] = None
 
@@ -88,8 +97,27 @@ class CalendarEventRecurrence(BaseModel):
     on_year_days: Optional[List[float]] = None
     r"""days of the year to repeat on, defaults to undefined (every day), only used if frequency is YEARLY"""
 
-    timezone: Optional[str] = None
+    timezone: Optional[List[str]] = None
+    r"""timezone, defaults to undefined (no timezone)"""
 
     week_start: Annotated[
         Optional[WeekStart], PlainValidator(validate_open_enum(False))
     ] = None
+
+    @field_serializer("frequency")
+    def serialize_frequency(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.CalendarEventRecurrenceFrequency(value)
+            except ValueError:
+                return value
+        return value
+
+    @field_serializer("week_start")
+    def serialize_week_start(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.WeekStart(value)
+            except ValueError:
+                return value
+        return value

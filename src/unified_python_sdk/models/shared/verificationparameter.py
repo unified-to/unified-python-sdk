@@ -2,10 +2,12 @@
 
 from __future__ import annotations
 from enum import Enum
+from pydantic import field_serializer
 from pydantic.functional_validators import PlainValidator
 from typing import List, Optional
 from typing_extensions import Annotated, NotRequired, TypedDict
 from unified_python_sdk import utils
+from unified_python_sdk.models import shared
 from unified_python_sdk.types import BaseModel
 from unified_python_sdk.utils import validate_open_enum
 
@@ -54,3 +56,12 @@ class VerificationParameter(BaseModel):
 
     valid_regions: Optional[List[str]] = None
     r"""{country}-{stateprovince/territory} or just {country} 2-digit ISO codes"""
+
+    @field_serializer("type")
+    def serialize_type(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.VerificationParameterType(value)
+            except ValueError:
+                return value
+        return value

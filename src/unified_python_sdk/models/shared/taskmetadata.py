@@ -3,10 +3,12 @@
 from __future__ import annotations
 from enum import Enum
 import pydantic
+from pydantic import field_serializer
 from pydantic.functional_validators import PlainValidator
 from typing import Any, Dict, List, Optional, Union
 from typing_extensions import Annotated, NotRequired, TypeAliasType, TypedDict
 from unified_python_sdk import utils
+from unified_python_sdk.models import shared
 from unified_python_sdk.types import BaseModel
 from unified_python_sdk.utils import validate_open_enum
 
@@ -118,3 +120,12 @@ class TaskMetadata(BaseModel):
     type: Optional[str] = None
 
     value: Optional[TaskMetadataValue] = None
+
+    @field_serializer("format_")
+    def serialize_format_(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.TaskMetadataFormat(value)
+            except ValueError:
+                return value
+        return value
