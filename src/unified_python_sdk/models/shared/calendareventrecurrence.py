@@ -52,8 +52,7 @@ class CalendarEventRecurrenceTypedDict(TypedDict):
     r"""week ordinals for BYDAY (e.g., -1 for last, -2 for second-to-last, 1 for first, 2 for second), only used with on_days. 0 is used for days without week ordinals."""
     on_year_days: NotRequired[List[float]]
     r"""days of the year to repeat on, defaults to undefined (every day), only used if frequency is YEARLY"""
-    timezone: NotRequired[List[str]]
-    r"""timezone, defaults to undefined (no timezone)"""
+    timezone: NotRequired[str]
     week_start: NotRequired[WeekStart]
 
 
@@ -97,8 +96,7 @@ class CalendarEventRecurrence(BaseModel):
     on_year_days: Optional[List[float]] = None
     r"""days of the year to repeat on, defaults to undefined (every day), only used if frequency is YEARLY"""
 
-    timezone: Optional[List[str]] = None
-    r"""timezone, defaults to undefined (no timezone)"""
+    timezone: Optional[str] = None
 
     week_start: Annotated[
         Optional[WeekStart], PlainValidator(validate_open_enum(False))

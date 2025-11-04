@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: 2cae2cbd3b5100db6145386c7734d017
+  docChecksum: 05e6e4d2a4d7ca37f46c06db114a0eac
   docVersion: "1.0"
-  speakeasyVersion: 1.645.1
-  generationVersion: 2.735.1
-  releaseVersion: 0.54.0
-  configChecksum: 7effc01d99f6b446055efb28e6ff9281
+  speakeasyVersion: 1.648.0
+  generationVersion: 2.737.0
+  releaseVersion: 0.54.1
+  configChecksum: c81a40e86d4db719d4870b7487a0fd74
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -16,7 +16,7 @@ features:
     acceptHeaders: 3.0.0
     additionalDependencies: 1.0.0
     constsAndDefaults: 1.0.5
-    core: 5.23.2
+    core: 5.23.4
     defaultEnabledRetries: 0.2.0
     downloadStreams: 1.0.1
     enumUnions: 0.1.0
@@ -1227,6 +1227,7 @@ generatedFiles:
   - docs/models/shared/five.md
   - docs/models/shared/format_.md
   - docs/models/shared/frequency.md
+  - docs/models/shared/fromwebhook.md
   - docs/models/shared/genaicontent.md
   - docs/models/shared/genaiembedding.md
   - docs/models/shared/genaiembeddingcontent.md
@@ -1271,6 +1272,7 @@ generatedFiles:
   - docs/models/shared/integrationschemassaml5.md
   - docs/models/shared/integrationschemassandbox1.md
   - docs/models/shared/integrationschemassandbox5.md
+  - docs/models/shared/integrationsupport.md
   - docs/models/shared/intervalunit.md
   - docs/models/shared/issue.md
   - docs/models/shared/issuestatus.md
@@ -1287,6 +1289,64 @@ generatedFiles:
   - docs/models/shared/kmspagemetadatavalue.md
   - docs/models/shared/kmspagetype.md
   - docs/models/shared/kmsspace.md
+  - docs/models/shared/listaccountid.md
+  - docs/models/shared/listapplicationid.md
+  - docs/models/shared/listbranchid.md
+  - docs/models/shared/listcalendarid.md
+  - docs/models/shared/listcallid.md
+  - docs/models/shared/listcandidateid.md
+  - docs/models/shared/listcategoryid.md
+  - docs/models/shared/listchannelid.md
+  - docs/models/shared/listclassid.md
+  - docs/models/shared/listcollectionid.md
+  - docs/models/shared/listcompanyid.md
+  - docs/models/shared/listcontactid.md
+  - docs/models/shared/listcourseid.md
+  - docs/models/shared/listcustomerid.md
+  - docs/models/shared/listdealid.md
+  - docs/models/shared/listdocumentid.md
+  - docs/models/shared/listendle.md
+  - docs/models/shared/listendlt.md
+  - docs/models/shared/listeventid.md
+  - docs/models/shared/listexpand.md
+  - docs/models/shared/listexpandrecurringevents.md
+  - docs/models/shared/listinstructorid.md
+  - docs/models/shared/listinterviewid.md
+  - docs/models/shared/listinvoiceid.md
+  - docs/models/shared/listitemid.md
+  - docs/models/shared/listitemvariantid.md
+  - docs/models/shared/listjobid.md
+  - docs/models/shared/listleadid.md
+  - docs/models/shared/listlimit.md
+  - docs/models/shared/listlinkid.md
+  - docs/models/shared/listlistid.md
+  - docs/models/shared/listlocationid.md
+  - docs/models/shared/listoffset.md
+  - docs/models/shared/listorder.md
+  - docs/models/shared/listorgid.md
+  - docs/models/shared/listpackageid.md
+  - docs/models/shared/listpageid.md
+  - docs/models/shared/listparentid.md
+  - docs/models/shared/listpaymentid.md
+  - docs/models/shared/listpipelineid.md
+  - docs/models/shared/listprojectid.md
+  - docs/models/shared/listquery.md
+  - docs/models/shared/listrawfields.md
+  - docs/models/shared/listrepoid.md
+  - docs/models/shared/listrootid.md
+  - docs/models/shared/listsortbycreatedat.md
+  - docs/models/shared/listsortbyname.md
+  - docs/models/shared/listsortbyupdatedat.md
+  - docs/models/shared/listspaceid.md
+  - docs/models/shared/liststartgte.md
+  - docs/models/shared/liststatus.md
+  - docs/models/shared/liststudentid.md
+  - docs/models/shared/listtaskid.md
+  - docs/models/shared/listteacherid.md
+  - docs/models/shared/listticketid.md
+  - docs/models/shared/listtype.md
+  - docs/models/shared/listupdatedgte.md
+  - docs/models/shared/listuserid.md
   - docs/models/shared/lmsclass.md
   - docs/models/shared/lmscourse.md
   - docs/models/shared/lmsemail.md
@@ -1309,6 +1369,13 @@ generatedFiles:
   - docs/models/shared/messagingreaction.md
   - docs/models/shared/metadatametadata.md
   - docs/models/shared/metadatametadataformat.md
+  - docs/models/shared/nativewebhookcalendarid.md
+  - docs/models/shared/nativewebhookchannelid.md
+  - docs/models/shared/nativewebhookcompanyid.md
+  - docs/models/shared/nativewebhookeventid.md
+  - docs/models/shared/nativewebhookparentid.md
+  - docs/models/shared/nativewebhookprojectid.md
+  - docs/models/shared/nativewebhooktaskid.md
   - docs/models/shared/objecttype.md
   - docs/models/shared/one.md
   - docs/models/shared/operation.md
@@ -1374,6 +1441,10 @@ generatedFiles:
   - docs/models/shared/propertyhrisemployeeemployeeroles.md
   - docs/models/shared/propertyhrislocationaddress.md
   - docs/models/shared/propertyintegrationcategories.md
+  - docs/models/shared/propertyintegrationsupportwebhookevents.md
+  - docs/models/shared/propertyintegrationsupportwebhookeventscreated.md
+  - docs/models/shared/propertyintegrationsupportwebhookeventsdeleted.md
+  - docs/models/shared/propertyintegrationsupportwebhookeventsupdated.md
   - docs/models/shared/propertylmsstudentaddress.md
   - docs/models/shared/propertymessagingmessageauthormember.md
   - docs/models/shared/propertymessagingreactionmember.md
@@ -1426,6 +1497,11 @@ generatedFiles:
   - docs/models/shared/scimuser.md
   - docs/models/shared/scimusergroups.md
   - docs/models/shared/scimusergroupstype.md
+  - docs/models/shared/searchdomain.md
+  - docs/models/shared/searchemail.md
+  - docs/models/shared/searchlinkedinurl.md
+  - docs/models/shared/searchname.md
+  - docs/models/shared/searchtwitter.md
   - docs/models/shared/security.md
   - docs/models/shared/sexualorientation.md
   - docs/models/shared/sizeunit.md
@@ -1478,6 +1554,42 @@ generatedFiles:
   - docs/models/shared/verificationrequest.md
   - docs/models/shared/verificationresponsedetail.md
   - docs/models/shared/verificationtime.md
+  - docs/models/shared/virtualwebhookapplicationid.md
+  - docs/models/shared/virtualwebhookbranchid.md
+  - docs/models/shared/virtualwebhookcalendarid.md
+  - docs/models/shared/virtualwebhookcallid.md
+  - docs/models/shared/virtualwebhookcandidateid.md
+  - docs/models/shared/virtualwebhookchannelid.md
+  - docs/models/shared/virtualwebhookcollectionid.md
+  - docs/models/shared/virtualwebhookcompanyid.md
+  - docs/models/shared/virtualwebhookcontactid.md
+  - docs/models/shared/virtualwebhookcustomerid.md
+  - docs/models/shared/virtualwebhookdealid.md
+  - docs/models/shared/virtualwebhookendle.md
+  - docs/models/shared/virtualwebhookendlt.md
+  - docs/models/shared/virtualwebhookeventid.md
+  - docs/models/shared/virtualwebhookexpand.md
+  - docs/models/shared/virtualwebhookfields.md
+  - docs/models/shared/virtualwebhookitemid.md
+  - docs/models/shared/virtualwebhookitemvariantid.md
+  - docs/models/shared/virtualwebhookjobid.md
+  - docs/models/shared/virtualwebhooklimit.md
+  - docs/models/shared/virtualwebhooklistid.md
+  - docs/models/shared/virtualwebhooklocationid.md
+  - docs/models/shared/virtualwebhookorgid.md
+  - docs/models/shared/virtualwebhookpageid.md
+  - docs/models/shared/virtualwebhookparentid.md
+  - docs/models/shared/virtualwebhookpipelineid.md
+  - docs/models/shared/virtualwebhookprojectid.md
+  - docs/models/shared/virtualwebhookrepoid.md
+  - docs/models/shared/virtualwebhookspaceid.md
+  - docs/models/shared/virtualwebhookstartgte.md
+  - docs/models/shared/virtualwebhookstatus.md
+  - docs/models/shared/virtualwebhooktaskid.md
+  - docs/models/shared/virtualwebhookticketid.md
+  - docs/models/shared/virtualwebhooktype.md
+  - docs/models/shared/virtualwebhookupdatedgte.md
+  - docs/models/shared/virtualwebhookuserid.md
   - docs/models/shared/webhook.md
   - docs/models/shared/webhooktype.md
   - docs/models/shared/weekstart.md
@@ -2307,6 +2419,7 @@ generatedFiles:
   - src/unified_python_sdk/models/shared/hristimeoff.py
   - src/unified_python_sdk/models/shared/hristimeshift.py
   - src/unified_python_sdk/models/shared/integration.py
+  - src/unified_python_sdk/models/shared/integrationsupport.py
   - src/unified_python_sdk/models/shared/issue.py
   - src/unified_python_sdk/models/shared/kmscomment.py
   - src/unified_python_sdk/models/shared/kmspage.py
@@ -2378,6 +2491,10 @@ generatedFiles:
   - src/unified_python_sdk/models/shared/property_hrisemployee_employee_roles.py
   - src/unified_python_sdk/models/shared/property_hrislocation_address.py
   - src/unified_python_sdk/models/shared/property_integration_categories.py
+  - src/unified_python_sdk/models/shared/property_integrationsupport_webhook_events.py
+  - src/unified_python_sdk/models/shared/property_integrationsupport_webhook_events_created.py
+  - src/unified_python_sdk/models/shared/property_integrationsupport_webhook_events_deleted.py
+  - src/unified_python_sdk/models/shared/property_integrationsupport_webhook_events_updated.py
   - src/unified_python_sdk/models/shared/property_lmsstudent_address.py
   - src/unified_python_sdk/models/shared/property_messagingmessage_author_member.py
   - src/unified_python_sdk/models/shared/property_messagingreaction_member.py
@@ -7151,4 +7268,4 @@ examples:
           application/json: [{}]
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Python SDK Changes Detected:\n* `unified_to.calendar.create_calendar_event()`: \n  *  `request.calendar_event.recurrence.[]` **Changed** **Breaking** :warning:\n  *  `response.recurrence.[]` **Changed** **Breaking** :warning:\n* `unified_to.calendar.get_calendar_event()`:  `response.recurrence.[]` **Changed** **Breaking** :warning:\n* `unified_to.calendar.list_calendar_events()`:  `response.[].recurrence.[]` **Changed** **Breaking** :warning:\n* `unified_to.calendar.patch_calendar_event()`: \n  *  `request.calendar_event.recurrence.[]` **Changed** **Breaking** :warning:\n  *  `response.recurrence.[]` **Changed** **Breaking** :warning:\n* `unified_to.calendar.update_calendar_event()`: \n  *  `request.calendar_event.recurrence.[]` **Changed** **Breaking** :warning:\n  *  `response.recurrence.[]` **Changed** **Breaking** :warning:\n* `unified_to.event.create_calendar_event()`: \n  *  `request.calendar_event.recurrence.[]` **Changed** **Breaking** :warning:\n  *  `response.recurrence.[]` **Changed** **Breaking** :warning:\n* `unified_to.event.get_calendar_event()`:  `response.recurrence.[]` **Changed** **Breaking** :warning:\n* `unified_to.event.list_calendar_events()`:  `response.[].recurrence.[]` **Changed** **Breaking** :warning:\n* `unified_to.event.patch_calendar_event()`: \n  *  `request.calendar_event.recurrence.[]` **Changed** **Breaking** :warning:\n  *  `response.recurrence.[]` **Changed** **Breaking** :warning:\n* `unified_to.event.update_calendar_event()`: \n  *  `request.calendar_event.recurrence.[]` **Changed** **Breaking** :warning:\n  *  `response.recurrence.[]` **Changed** **Breaking** :warning:\n"
+releaseNotes: "## Python SDK Changes Detected:\n* `unified_to.calendar.create_calendar_event()`: \n  *  `request.calendar_event.recurrence.[].timezone` **Changed** **Breaking** :warning:\n  *  `response.recurrence.[].timezone` **Changed** **Breaking** :warning:\n* `unified_to.calendar.get_calendar_event()`:  `response.recurrence.[].timezone` **Changed** **Breaking** :warning:\n* `unified_to.calendar.list_calendar_events()`:  `response.[].recurrence.[].timezone` **Changed** **Breaking** :warning:\n* `unified_to.calendar.patch_calendar_event()`: \n  *  `request.calendar_event.recurrence.[].timezone` **Changed** **Breaking** :warning:\n  *  `response.recurrence.[].timezone` **Changed** **Breaking** :warning:\n* `unified_to.calendar.update_calendar_event()`: \n  *  `request.calendar_event.recurrence.[].timezone` **Changed** **Breaking** :warning:\n  *  `response.recurrence.[].timezone` **Changed** **Breaking** :warning:\n* `unified_to.event.create_calendar_event()`: \n  *  `request.calendar_event.recurrence.[].timezone` **Changed** **Breaking** :warning:\n  *  `response.recurrence.[].timezone` **Changed** **Breaking** :warning:\n* `unified_to.event.get_calendar_event()`:  `response.recurrence.[].timezone` **Changed** **Breaking** :warning:\n* `unified_to.event.list_calendar_events()`:  `response.[].recurrence.[].timezone` **Changed** **Breaking** :warning:\n* `unified_to.event.patch_calendar_event()`: \n  *  `request.calendar_event.recurrence.[].timezone` **Changed** **Breaking** :warning:\n  *  `response.recurrence.[].timezone` **Changed** **Breaking** :warning:\n* `unified_to.event.update_calendar_event()`: \n  *  `request.calendar_event.recurrence.[].timezone` **Changed** **Breaking** :warning:\n  *  `response.recurrence.[].timezone` **Changed** **Breaking** :warning:\n* `unified_to.unified.create_unified_webhook()`: \n  *  `request.webhook.filters.{}` **Changed** **Breaking** :warning:\n  *  `response.filters.{}` **Changed** **Breaking** :warning:\n* `unified_to.unified.get_unified_webhook()`:  `response.filters.{}` **Changed** **Breaking** :warning:\n* `unified_to.unified.list_unified_integration_workspaces()`:  `response.[].support.{}` **Changed** **Breaking** :warning:\n* `unified_to.unified.list_unified_integrations()`:  `response.[].support.{}` **Changed** **Breaking** :warning:\n* `unified_to.unified.list_unified_webhooks()`:  `response.[].filters.{}` **Changed** **Breaking** :warning:\n* `unified_to.unified.patch_unified_webhook()`: \n  *  `request.webhook.filters.{}` **Changed** **Breaking** :warning:\n  *  `response.filters.{}` **Changed** **Breaking** :warning:\n* `unified_to.unified.update_unified_webhook()`: \n  *  `request.webhook.filters.{}` **Changed** **Breaking** :warning:\n  *  `response.filters.{}` **Changed** **Breaking** :warning:\n* `unified_to.integration.list_unified_integration_workspaces()`:  `response.[].support.{}` **Changed** **Breaking** :warning:\n* `unified_to.integration.list_unified_integrations()`:  `response.[].support.{}` **Changed** **Breaking** :warning:\n* `unified_to.webhook.create_unified_webhook()`: \n  *  `request.webhook.filters.{}` **Changed** **Breaking** :warning:\n  *  `response.filters.{}` **Changed** **Breaking** :warning:\n* `unified_to.webhook.get_unified_webhook()`:  `response.filters.{}` **Changed** **Breaking** :warning:\n* `unified_to.webhook.list_unified_webhooks()`:  `response.[].filters.{}` **Changed** **Breaking** :warning:\n* `unified_to.webhook.patch_unified_webhook()`: \n  *  `request.webhook.filters.{}` **Changed** **Breaking** :warning:\n  *  `response.filters.{}` **Changed** **Breaking** :warning:\n* `unified_to.webhook.update_unified_webhook()`: \n  *  `request.webhook.filters.{}` **Changed** **Breaking** :warning:\n  *  `response.filters.{}` **Changed** **Breaking** :warning:\n"

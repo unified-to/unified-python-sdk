@@ -5,7 +5,7 @@ from datetime import datetime
 from enum import Enum
 from pydantic import field_serializer
 from pydantic.functional_validators import PlainValidator
-from typing import Any, Dict, List, Optional
+from typing import Dict, List, Optional
 from typing_extensions import Annotated, NotRequired, TypedDict
 from unified_python_sdk import utils
 from unified_python_sdk.models import shared
@@ -146,7 +146,7 @@ class WebhookTypedDict(TypedDict):
     db_url: NotRequired[str]
     environment: NotRequired[str]
     fields: NotRequired[str]
-    filters: NotRequired[Dict[str, Any]]
+    filters: NotRequired[Dict[str, str]]
     hook_url: NotRequired[str]
     id: NotRequired[str]
     integration_type: NotRequired[str]
@@ -188,7 +188,7 @@ class Webhook(BaseModel):
 
     fields: Optional[str] = None
 
-    filters: Optional[Dict[str, Any]] = None
+    filters: Optional[Dict[str, str]] = None
 
     hook_url: Optional[str] = None
 
