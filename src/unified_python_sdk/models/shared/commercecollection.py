@@ -31,6 +31,8 @@ class CommerceCollectionTypedDict(TypedDict):
     is_active: NotRequired[bool]
     is_featured: NotRequired[bool]
     is_visible: NotRequired[bool]
+    item_metadata: NotRequired[List[CommerceMetadataTypedDict]]
+    r"""includes the list of metadata_metadata required to create a commerce_item under the respective commerce_collection"""
     media: NotRequired[List[CommerceItemMediaTypedDict]]
     metadata: NotRequired[List[CommerceMetadataTypedDict]]
     parent_id: NotRequired[str]
@@ -58,6 +60,9 @@ class CommerceCollection(BaseModel):
     is_featured: Optional[bool] = None
 
     is_visible: Optional[bool] = None
+
+    item_metadata: Optional[List[CommerceMetadata]] = None
+    r"""includes the list of metadata_metadata required to create a commerce_item under the respective commerce_collection"""
 
     media: Optional[List[CommerceItemMedia]] = None
 

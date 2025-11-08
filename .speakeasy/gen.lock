@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: 3503d47f9b485c988fefca96c2736548
+  docChecksum: 44e3c827bc1f0ba4a6b13ebfe4c949dc
   docVersion: "1.0"
-  speakeasyVersion: 1.649.0
-  generationVersion: 2.739.1
-  releaseVersion: 0.54.2
-  configChecksum: f26d9cc7c332f06ff12b1bee5348d52f
+  speakeasyVersion: 1.651.0
+  generationVersion: 2.745.2
+  releaseVersion: 0.54.3
+  configChecksum: 28c13452c9ee9094376e33fe90c3ce06
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -16,7 +16,7 @@ features:
     acceptHeaders: 3.0.0
     additionalDependencies: 1.0.0
     constsAndDefaults: 1.0.5
-    core: 5.23.4
+    core: 5.23.5
     defaultEnabledRetries: 0.2.0
     downloadStreams: 1.0.1
     enumUnions: 0.1.0
@@ -7268,4 +7268,4 @@ examples:
           application/json: [{}]
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Python SDK Changes Detected:\n* `unified_to.kms.create_kms_page()`: \n  *  `request.kms_page.parent_id` **Added**\n  *  `response.parent_id` **Added**\n* `unified_to.kms.get_kms_page()`:  `response.parent_id` **Added**\n* `unified_to.kms.list_kms_pages()`:  `response.[].parent_id` **Added**\n* `unified_to.kms.patch_kms_page()`: \n  *  `request.kms_page.parent_id` **Added**\n  *  `response.parent_id` **Added**\n* `unified_to.kms.update_kms_page()`: \n  *  `request.kms_page.parent_id` **Added**\n  *  `response.parent_id` **Added**\n* `unified_to.page.create_kms_page()`: \n  *  `request.kms_page.parent_id` **Added**\n  *  `response.parent_id` **Added**\n* `unified_to.page.get_kms_page()`:  `response.parent_id` **Added**\n* `unified_to.page.list_kms_pages()`:  `response.[].parent_id` **Added**\n* `unified_to.page.patch_kms_page()`: \n  *  `request.kms_page.parent_id` **Added**\n  *  `response.parent_id` **Added**\n* `unified_to.page.update_kms_page()`: \n  *  `request.kms_page.parent_id` **Added**\n  *  `response.parent_id` **Added**\n"
+releaseNotes: "## Python SDK Changes Detected:\n* `unified_to.commerce.create_commerce_collection()`: \n  *  `request.commerce_collection` **Changed**\n  *  `response` **Changed**\n* `unified_to.commerce.create_commerce_item()`: \n  *  `request.commerce_item.media.[].metadata.[]` **Changed**\n  *  `response.media.[].metadata.[]` **Changed**\n* `unified_to.commerce.create_commerce_review()`: \n  *  `request.commerce_review.comments.[].metadata.[]` **Changed**\n  *  `response.comments.[].metadata.[]` **Changed**\n* `unified_to.commerce.get_commerce_collection()`:  `response` **Changed**\n* `unified_to.commerce.get_commerce_item()`:  `response.media.[].metadata.[]` **Changed**\n* `unified_to.commerce.get_commerce_review()`:  `response.comments.[].metadata.[]` **Changed**\n* `unified_to.commerce.list_commerce_collections()`:  `response.[]` **Changed**\n* `unified_to.commerce.list_commerce_items()`:  `response.[].media.[].metadata.[]` **Changed**\n* `unified_to.commerce.list_commerce_reviews()`:  `response.[].comments.[].metadata.[]` **Changed**\n* `unified_to.commerce.patch_commerce_collection()`: \n  *  `request.commerce_collection` **Changed**\n  *  `response` **Changed**\n* `unified_to.commerce.patch_commerce_item()`: \n  *  `request.commerce_item.media.[].metadata.[]` **Changed**\n  *  `response.media.[].metadata.[]` **Changed**\n* `unified_to.commerce.patch_commerce_review()`: \n  *  `request.commerce_review.comments.[].metadata.[]` **Changed**\n  *  `response.comments.[].metadata.[]` **Changed**\n* `unified_to.commerce.update_commerce_collection()`: \n  *  `request.commerce_collection` **Changed**\n  *  `response` **Changed**\n* `unified_to.commerce.update_commerce_item()`: \n  *  `request.commerce_item.media.[].metadata.[]` **Changed**\n  *  `response.media.[].metadata.[]` **Changed**\n* `unified_to.commerce.update_commerce_review()`: \n  *  `request.commerce_review.comments.[].metadata.[]` **Changed**\n  *  `response.comments.[].metadata.[]` **Changed**\n* `unified_to.collection.create_commerce_collection()`: \n  *  `request.commerce_collection` **Changed**\n  *  `response` **Changed**\n* `unified_to.collection.get_commerce_collection()`:  `response` **Changed**\n* `unified_to.collection.list_commerce_collections()`:  `response.[]` **Changed**\n* `unified_to.collection.patch_commerce_collection()`: \n  *  `request.commerce_collection` **Changed**\n  *  `response` **Changed**\n* `unified_to.collection.update_commerce_collection()`: \n  *  `request.commerce_collection` **Changed**\n  *  `response` **Changed**\n* `unified_to.item.create_commerce_item()`: \n  *  `request.commerce_item.media.[].metadata.[]` **Changed**\n  *  `response.media.[].metadata.[]` **Changed**\n* `unified_to.item.get_commerce_item()`:  `response.media.[].metadata.[]` **Changed**\n* `unified_to.item.list_commerce_items()`:  `response.[].media.[].metadata.[]` **Changed**\n* `unified_to.item.patch_commerce_item()`: \n  *  `request.commerce_item.media.[].metadata.[]` **Changed**\n  *  `response.media.[].metadata.[]` **Changed**\n* `unified_to.item.update_commerce_item()`: \n  *  `request.commerce_item.media.[].metadata.[]` **Changed**\n  *  `response.media.[].metadata.[]` **Changed**\n* `unified_to.review.create_commerce_review()`: \n  *  `request.commerce_review.comments.[].metadata.[]` **Changed**\n  *  `response.comments.[].metadata.[]` **Changed**\n* `unified_to.review.get_commerce_review()`:  `response.comments.[].metadata.[]` **Changed**\n* `unified_to.review.list_commerce_reviews()`:  `response.[].comments.[].metadata.[]` **Changed**\n* `unified_to.review.patch_commerce_review()`: \n  *  `request.commerce_review.comments.[].metadata.[]` **Changed**\n  *  `response.comments.[].metadata.[]` **Changed**\n* `unified_to.review.update_commerce_review()`: \n  *  `request.commerce_review.comments.[].metadata.[]` **Changed**\n  *  `response.comments.[].metadata.[]` **Changed**\n"
