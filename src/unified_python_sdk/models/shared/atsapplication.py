@@ -50,6 +50,7 @@ class AtsApplicationTypedDict(TypedDict):
     source: NotRequired[str]
     status: NotRequired[AtsApplicationStatus]
     updated_at: NotRequired[datetime]
+    user_id: NotRequired[str]
 
 
 class AtsApplication(BaseModel):
@@ -86,6 +87,8 @@ class AtsApplication(BaseModel):
     ] = None
 
     updated_at: Optional[datetime] = None
+
+    user_id: Optional[str] = None
 
     @field_serializer("status")
     def serialize_status(self, value):
