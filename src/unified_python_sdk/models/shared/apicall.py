@@ -17,6 +17,7 @@ class APICallType(str, Enum, metaclass=utils.OpenEnumMeta):
     LOGIN = "login"
     WEBHOOK = "webhook"
     INBOUND = "inbound"
+    MCP = "mcp"
 
 
 class APICallTypedDict(TypedDict):

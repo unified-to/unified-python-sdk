@@ -32,6 +32,8 @@ class AccountingReportType(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class AccountingReportTypedDict(TypedDict):
+    r"""@deprecated; use either AccountingProfitandloss, AccountingTrialbalance, AccountingBalancesheet, or AccountingCashflow instead"""
+
     balance_sheet: NotRequired[PropertyAccountingReportBalanceSheetTypedDict]
     created_at: NotRequired[datetime]
     currency: NotRequired[str]
@@ -47,6 +49,8 @@ class AccountingReportTypedDict(TypedDict):
 
 
 class AccountingReport(BaseModel):
+    r"""@deprecated; use either AccountingProfitandloss, AccountingTrialbalance, AccountingBalancesheet, or AccountingCashflow instead"""
+
     balance_sheet: Optional[PropertyAccountingReportBalanceSheet] = None
 
     created_at: Optional[datetime] = None

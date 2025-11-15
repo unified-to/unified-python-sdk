@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: 5c2a3f40eea3f879043c36a4d45e9686
+  docChecksum: 8e0da3e048dab0529dab732bc1eb6105
   docVersion: "1.0"
   speakeasyVersion: 1.651.0
   generationVersion: 2.745.2
-  releaseVersion: 0.54.5
-  configChecksum: 8323510c037cd1943402fb5ef6f92742
+  releaseVersion: 0.54.7
+  configChecksum: 1860f5ff76704f2bb53583c10126729c
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -1573,6 +1573,7 @@ generatedFiles:
   - docs/models/shared/virtualwebhookitemid.md
   - docs/models/shared/virtualwebhookitemvariantid.md
   - docs/models/shared/virtualwebhookjobid.md
+  - docs/models/shared/virtualwebhookleadid.md
   - docs/models/shared/virtualwebhooklimit.md
   - docs/models/shared/virtualwebhooklistid.md
   - docs/models/shared/virtualwebhooklocationid.md
@@ -7268,4 +7269,4 @@ examples:
           application/json: [{}]
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Python SDK Changes Detected:\n* `unified_to.ats.create_ats_application()`: \n  *  `request.ats_application.user_id` **Added**\n  *  `response.user_id` **Added**\n* `unified_to.ats.get_ats_application()`:  `response.user_id` **Added**\n* `unified_to.ats.list_ats_applications()`:  `response.[].user_id` **Added**\n* `unified_to.ats.patch_ats_application()`: \n  *  `request.ats_application.user_id` **Added**\n  *  `response.user_id` **Added**\n* `unified_to.ats.update_ats_application()`: \n  *  `request.ats_application.user_id` **Added**\n  *  `response.user_id` **Added**\n* `unified_to.application.create_ats_application()`: \n  *  `request.ats_application.user_id` **Added**\n  *  `response.user_id` **Added**\n* `unified_to.application.get_ats_application()`:  `response.user_id` **Added**\n* `unified_to.application.list_ats_applications()`:  `response.[].user_id` **Added**\n* `unified_to.application.patch_ats_application()`: \n  *  `request.ats_application.user_id` **Added**\n  *  `response.user_id` **Added**\n* `unified_to.application.update_ats_application()`: \n  *  `request.ats_application.user_id` **Added**\n  *  `response.user_id` **Added**\n"
+releaseNotes: "## Python SDK Changes Detected:\n* `unified_to.ats.create_ats_job()`: \n  *  `request.ats_job.skills` **Added**\n  *  `response.skills` **Added**\n* `unified_to.ats.get_ats_job()`:  `response.skills` **Added**\n* `unified_to.ats.list_ats_jobs()`:  `response.[].skills` **Added**\n* `unified_to.ats.patch_ats_job()`: \n  *  `request.ats_job.skills` **Added**\n  *  `response.skills` **Added**\n* `unified_to.ats.update_ats_job()`: \n  *  `request.ats_job.skills` **Added**\n  *  `response.skills` **Added**\n* `unified_to.job.create_ats_job()`: \n  *  `request.ats_job.skills` **Added**\n  *  `response.skills` **Added**\n* `unified_to.job.get_ats_job()`:  `response.skills` **Added**\n* `unified_to.job.list_ats_jobs()`:  `response.[].skills` **Added**\n* `unified_to.job.patch_ats_job()`: \n  *  `request.ats_job.skills` **Added**\n  *  `response.skills` **Added**\n* `unified_to.job.update_ats_job()`: \n  *  `request.ats_job.skills` **Added**\n  *  `response.skills` **Added**\n* `unified_to.calendar.create_calendar_calendar()`: \n  *  `request.calendar_calendar.is_primary` **Added**\n  *  `response.is_primary` **Added**\n* `unified_to.calendar.get_calendar_calendar()`:  `response.is_primary` **Added**\n* `unified_to.calendar.list_calendar_calendars()`:  `response.[].is_primary` **Added**\n* `unified_to.calendar.patch_calendar_calendar()`: \n  *  `request.calendar_calendar.is_primary` **Added**\n  *  `response.is_primary` **Added**\n* `unified_to.calendar.update_calendar_calendar()`: \n  *  `request.calendar_calendar.is_primary` **Added**\n  *  `response.is_primary` **Added**\n* `unified_to.unified.list_unified_integration_workspaces()`:  `response.[].support.{}.virtual_webhook_lead_id` **Added**\n* `unified_to.unified.list_unified_integrations()`:  `response.[].support.{}.virtual_webhook_lead_id` **Added**\n* `unified_to.integration.list_unified_integration_workspaces()`:  `response.[].support.{}.virtual_webhook_lead_id` **Added**\n* `unified_to.integration.list_unified_integrations()`:  `response.[].support.{}.virtual_webhook_lead_id` **Added**\n"

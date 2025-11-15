@@ -556,6 +556,12 @@ class VirtualWebhookJobID(str, Enum, metaclass=utils.OpenEnumMeta):
     NOT_SUPPORTED = "not-supported"
 
 
+class VirtualWebhookLeadID(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
 class VirtualWebhookLimit(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
@@ -755,6 +761,7 @@ class IntegrationSupportTypedDict(TypedDict):
     virtual_webhook_item_id: NotRequired[VirtualWebhookItemID]
     virtual_webhook_item_variant_id: NotRequired[VirtualWebhookItemVariantID]
     virtual_webhook_job_id: NotRequired[VirtualWebhookJobID]
+    virtual_webhook_lead_id: NotRequired[VirtualWebhookLeadID]
     virtual_webhook_limit: NotRequired[VirtualWebhookLimit]
     virtual_webhook_list_id: NotRequired[VirtualWebhookListID]
     virtual_webhook_location_id: NotRequired[VirtualWebhookLocationID]
@@ -1145,6 +1152,10 @@ class IntegrationSupport(BaseModel):
 
     virtual_webhook_job_id: Annotated[
         Optional[VirtualWebhookJobID], PlainValidator(validate_open_enum(False))
+    ] = None
+
+    virtual_webhook_lead_id: Annotated[
+        Optional[VirtualWebhookLeadID], PlainValidator(validate_open_enum(False))
     ] = None
 
     virtual_webhook_limit: Annotated[
@@ -2023,6 +2034,15 @@ class IntegrationSupport(BaseModel):
         if isinstance(value, str):
             try:
                 return shared.VirtualWebhookJobID(value)
+            except ValueError:
+                return value
+        return value
+
+    @field_serializer("virtual_webhook_lead_id")
+    def serialize_virtual_webhook_lead_id(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.VirtualWebhookLeadID(value)
             except ValueError:
                 return value
         return value

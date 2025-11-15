@@ -70,6 +70,7 @@ class AtsJobTypedDict(TypedDict):
     raw: NotRequired[Dict[str, Any]]
     recruiter_ids: NotRequired[List[str]]
     remote: NotRequired[bool]
+    skills: NotRequired[List[str]]
     status: NotRequired[AtsJobStatus]
     updated_at: NotRequired[datetime]
 
@@ -128,6 +129,8 @@ class AtsJob(BaseModel):
     recruiter_ids: Optional[List[str]] = None
 
     remote: Optional[bool] = None
+
+    skills: Optional[List[str]] = None
 
     status: Annotated[
         Optional[AtsJobStatus], PlainValidator(validate_open_enum(False))

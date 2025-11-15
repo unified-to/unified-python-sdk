@@ -12,6 +12,7 @@ class CalendarCalendarTypedDict(TypedDict):
     created_at: NotRequired[datetime]
     description: NotRequired[str]
     id: NotRequired[str]
+    is_primary: NotRequired[bool]
     primary: NotRequired[bool]
     raw: NotRequired[Dict[str, Any]]
     timezone: NotRequired[str]
@@ -26,6 +27,8 @@ class CalendarCalendar(BaseModel):
     description: Optional[str] = None
 
     id: Optional[str] = None
+
+    is_primary: Optional[bool] = None
 
     primary: Optional[bool] = None
 

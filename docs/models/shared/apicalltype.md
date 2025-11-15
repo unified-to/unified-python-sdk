@@ -8,3 +8,4 @@
 | `LOGIN`   | login     |
 | `WEBHOOK` | webhook   |
 | `INBOUND` | inbound   |
+| `MCP`     | mcp       |
