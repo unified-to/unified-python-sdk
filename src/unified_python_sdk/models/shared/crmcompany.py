@@ -24,6 +24,7 @@ class CrmCompanyTypedDict(TypedDict):
     deal_ids: NotRequired[List[str]]
     r"""An array of deal IDs associated with this contact"""
     description: NotRequired[str]
+    domains: NotRequired[List[str]]
     emails: NotRequired[List[CrmEmailTypedDict]]
     employees: NotRequired[float]
     id: NotRequired[str]
@@ -56,6 +57,8 @@ class CrmCompany(BaseModel):
     r"""An array of deal IDs associated with this contact"""
 
     description: Optional[str] = None
+
+    domains: Optional[List[str]] = None
 
     emails: Optional[List[CrmEmail]] = None
 
