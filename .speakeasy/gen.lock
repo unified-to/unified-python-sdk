@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: fa8f7d5197bb46b9818ca5a0bf429fe1
+  docChecksum: d3236800ede7509df7bab0e934cc59f0
   docVersion: "1.0"
   speakeasyVersion: 1.658.2
   generationVersion: 2.755.9
-  releaseVersion: 0.54.12
-  configChecksum: 617b2dc8cac6875022442b305e946abb
+  releaseVersion: 0.54.13
+  configChecksum: 51fc67728a6ae2962db13a5192ce8969
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -362,6 +362,8 @@ generatedFiles:
   - docs/models/operations/getticketingnoteresponse.md
   - docs/models/operations/getticketingticketrequest.md
   - docs/models/operations/getticketingticketresponse.md
+  - docs/models/operations/getuccallrequest.md
+  - docs/models/operations/getuccallresponse.md
   - docs/models/operations/getuccommentrequest.md
   - docs/models/operations/getuccommentresponse.md
   - docs/models/operations/getuccontactrequest.md
@@ -1953,6 +1955,7 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/getticketingcustomer.py
   - src/unified_python_sdk/models/operations/getticketingnote.py
   - src/unified_python_sdk/models/operations/getticketingticket.py
+  - src/unified_python_sdk/models/operations/getuccall.py
   - src/unified_python_sdk/models/operations/getuccomment.py
   - src/unified_python_sdk/models/operations/getuccontact.py
   - src/unified_python_sdk/models/operations/getucrecording.py
@@ -7267,6 +7270,18 @@ examples:
       responses:
         "200":
           application/json: [{}]
+  getUcCall:
+    speakeasy-default-get-uc-call:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Python SDK Changes Detected:\n* `unified_to.company.create_crm_company()`: \n  *  `request.crm_company.domains` **Added**\n  *  `response.domains` **Added**\n* `unified_to.company.get_crm_company()`:  `response.domains` **Added**\n* `unified_to.company.list_crm_companies()`:  `response.[].domains` **Added**\n* `unified_to.company.patch_crm_company()`: \n  *  `request.crm_company.domains` **Added**\n  *  `response.domains` **Added**\n* `unified_to.company.update_crm_company()`: \n  *  `request.crm_company.domains` **Added**\n  *  `response.domains` **Added**\n* `unified_to.crm.create_crm_company()`: \n  *  `request.crm_company.domains` **Added**\n  *  `response.domains` **Added**\n* `unified_to.crm.get_crm_company()`:  `response.domains` **Added**\n* `unified_to.crm.list_crm_companies()`:  `response.[].domains` **Added**\n* `unified_to.crm.patch_crm_company()`: \n  *  `request.crm_company.domains` **Added**\n  *  `response.domains` **Added**\n* `unified_to.crm.update_crm_company()`: \n  *  `request.crm_company.domains` **Added**\n  *  `response.domains` **Added**\n"
+releaseNotes: |
+  ## Python SDK Changes Detected:
+  * `unified_to.uc.get_uc_call()`: **Added**
+  * `unified_to.call.get_uc_call()`: **Added**

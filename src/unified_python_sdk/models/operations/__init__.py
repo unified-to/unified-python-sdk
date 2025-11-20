@@ -988,6 +988,12 @@ if TYPE_CHECKING:
         GetTicketingTicketResponse,
         GetTicketingTicketResponseTypedDict,
     )
+    from .getuccall import (
+        GetUcCallRequest,
+        GetUcCallRequestTypedDict,
+        GetUcCallResponse,
+        GetUcCallResponseTypedDict,
+    )
     from .getuccomment import (
         GetUcCommentRequest,
         GetUcCommentRequestTypedDict,
@@ -3730,6 +3736,10 @@ __all__ = [
     "GetTicketingTicketRequestTypedDict",
     "GetTicketingTicketResponse",
     "GetTicketingTicketResponseTypedDict",
+    "GetUcCallRequest",
+    "GetUcCallRequestTypedDict",
+    "GetUcCallResponse",
+    "GetUcCallResponseTypedDict",
     "GetUcCommentRequest",
     "GetUcCommentRequestTypedDict",
     "GetUcCommentResponse",
@@ -5777,6 +5787,10 @@ _dynamic_imports: dict[str, str] = {
     "GetTicketingTicketRequestTypedDict": ".getticketingticket",
     "GetTicketingTicketResponse": ".getticketingticket",
     "GetTicketingTicketResponseTypedDict": ".getticketingticket",
+    "GetUcCallRequest": ".getuccall",
+    "GetUcCallRequestTypedDict": ".getuccall",
+    "GetUcCallResponse": ".getuccall",
+    "GetUcCallResponseTypedDict": ".getuccall",
     "GetUcCommentRequest": ".getuccomment",
     "GetUcCommentRequestTypedDict": ".getuccomment",
     "GetUcCommentResponse": ".getuccomment",

@@ -409,6 +409,7 @@ asyncio.run(main())
 
 ### [call](docs/sdks/call/README.md)
 
+* [get_uc_call](docs/sdks/call/README.md#get_uc_call) - Retrieve a call
 * [list_uc_calls](docs/sdks/call/README.md#list_uc_calls) - List all calls
 
 ### [candidate](docs/sdks/candidate/README.md)
@@ -1413,6 +1414,7 @@ asyncio.run(main())
 * [create_uc_comment](docs/sdks/uc/README.md#create_uc_comment) - Create a comment
 * [create_uc_contact](docs/sdks/uc/README.md#create_uc_contact) - Create a contact
 * [create_uc_recording](docs/sdks/uc/README.md#create_uc_recording) - Create a recording
+* [get_uc_call](docs/sdks/uc/README.md#get_uc_call) - Retrieve a call
 * [get_uc_comment](docs/sdks/uc/README.md#get_uc_comment) - Retrieve a comment
 * [get_uc_contact](docs/sdks/uc/README.md#get_uc_contact) - Retrieve a contact
 * [get_uc_recording](docs/sdks/uc/README.md#get_uc_recording) - Retrieve a recording

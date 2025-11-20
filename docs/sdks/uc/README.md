@@ -8,6 +8,7 @@
 * [create_uc_comment](#create_uc_comment) - Create a comment
 * [create_uc_contact](#create_uc_contact) - Create a contact
 * [create_uc_recording](#create_uc_recording) - Create a recording
+* [get_uc_call](#get_uc_call) - Retrieve a call
 * [get_uc_comment](#get_uc_comment) - Retrieve a comment
 * [get_uc_contact](#get_uc_contact) - Retrieve a contact
 * [get_uc_recording](#get_uc_recording) - Retrieve a recording
@@ -161,6 +162,53 @@ with UnifiedTo(
 ### Response
 
 **[operations.CreateUcRecordingResponse](../../models/operations/createucrecordingresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## get_uc_call
+
+Retrieve a call
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="getUcCall" method="get" path="/uc/{connection_id}/call/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.uc.get_uc_call(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.uc_call is not None
+
+    # Handle response
+    print(res.uc_call)
+
+```
+
+### Parameters
+
+| Parameter                                                                  | Type                                                                       | Required                                                                   | Description                                                                |
+| -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| `request`                                                                  | [operations.GetUcCallRequest](../../models/operations/getuccallrequest.md) | :heavy_check_mark:                                                         | The request object to use for the request.                                 |
+| `retries`                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)           | :heavy_minus_sign:                                                         | Configuration to override the default retry behavior of the client.        |
+
+### Response
+
+**[operations.GetUcCallResponse](../../models/operations/getuccallresponse.md)**
 
 ### Errors
 
