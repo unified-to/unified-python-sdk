@@ -25,6 +25,7 @@ if TYPE_CHECKING:
     from unified_python_sdk.ats import Ats
     from unified_python_sdk.auth import Auth
     from unified_python_sdk.balancesheet import Balancesheet
+    from unified_python_sdk.benefit import Benefit
     from unified_python_sdk.bill import Bill
     from unified_python_sdk.branch import Branch
     from unified_python_sdk.busy import Busy
@@ -48,6 +49,7 @@ if TYPE_CHECKING:
     from unified_python_sdk.crm import Crm
     from unified_python_sdk.customer import Customer
     from unified_python_sdk.deal import Deal
+    from unified_python_sdk.deduction import Deduction
     from unified_python_sdk.device import Device
     from unified_python_sdk.document import Document
     from unified_python_sdk.embedding import Embedding
@@ -181,6 +183,8 @@ class UnifiedTo(BaseSDK):
     model: "Model"
     prompt: "Prompt"
     hris: "Hris"
+    benefit: "Benefit"
+    deduction: "Deduction"
     device: "Device"
     employee: "Employee"
     group: "Group"
@@ -293,6 +297,8 @@ class UnifiedTo(BaseSDK):
         "model": ("unified_python_sdk.model", "Model"),
         "prompt": ("unified_python_sdk.prompt", "Prompt"),
         "hris": ("unified_python_sdk.hris", "Hris"),
+        "benefit": ("unified_python_sdk.benefit", "Benefit"),
+        "deduction": ("unified_python_sdk.deduction", "Deduction"),
         "device": ("unified_python_sdk.device", "Device"),
         "employee": ("unified_python_sdk.employee", "Employee"),
         "group": ("unified_python_sdk.group", "Group"),

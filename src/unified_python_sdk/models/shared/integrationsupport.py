@@ -256,6 +256,12 @@ class ListPaymentID(str, Enum, metaclass=utils.OpenEnumMeta):
     NOT_SUPPORTED = "not-supported"
 
 
+class ListPayslipID(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
 class ListPipelineID(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
@@ -365,6 +371,12 @@ class ListUpdatedGte(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class ListUserID(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
+class ListUserMentionedID(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
     NOT_SUPPORTED = "not-supported"
@@ -664,6 +676,12 @@ class VirtualWebhookUserID(str, Enum, metaclass=utils.OpenEnumMeta):
     NOT_SUPPORTED = "not-supported"
 
 
+class VirtualWebhookUserMentionedID(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
 class IntegrationSupportTypedDict(TypedDict):
     from_webhook: NotRequired[FromWebhook]
     inbound_fields: NotRequired[Dict[str, str]]
@@ -706,6 +724,7 @@ class IntegrationSupportTypedDict(TypedDict):
     list_page_id: NotRequired[ListPageID]
     list_parent_id: NotRequired[ListParentID]
     list_payment_id: NotRequired[ListPaymentID]
+    list_payslip_id: NotRequired[ListPayslipID]
     list_pipeline_id: NotRequired[ListPipelineID]
     list_project_id: NotRequired[ListProjectID]
     list_query: NotRequired[ListQuery]
@@ -725,6 +744,7 @@ class IntegrationSupportTypedDict(TypedDict):
     list_type: NotRequired[ListType]
     list_updated_gte: NotRequired[ListUpdatedGte]
     list_user_id: NotRequired[ListUserID]
+    list_user_mentioned_id: NotRequired[ListUserMentionedID]
     methods: NotRequired[Dict[str, bool]]
     native_webhook_calendar_id: NotRequired[NativeWebhookCalendarID]
     native_webhook_channel_id: NotRequired[NativeWebhookChannelID]
@@ -779,6 +799,7 @@ class IntegrationSupportTypedDict(TypedDict):
     virtual_webhook_type: NotRequired[VirtualWebhookType]
     virtual_webhook_updated_gte: NotRequired[VirtualWebhookUpdatedGte]
     virtual_webhook_user_id: NotRequired[VirtualWebhookUserID]
+    virtual_webhook_user_mentioned_id: NotRequired[VirtualWebhookUserMentionedID]
     webhook_events: NotRequired[PropertyIntegrationSupportWebhookEventsTypedDict]
 
 
@@ -945,6 +966,10 @@ class IntegrationSupport(BaseModel):
         Optional[ListPaymentID], PlainValidator(validate_open_enum(False))
     ] = None
 
+    list_payslip_id: Annotated[
+        Optional[ListPayslipID], PlainValidator(validate_open_enum(False))
+    ] = None
+
     list_pipeline_id: Annotated[
         Optional[ListPipelineID], PlainValidator(validate_open_enum(False))
     ] = None
@@ -1019,6 +1044,10 @@ class IntegrationSupport(BaseModel):
 
     list_user_id: Annotated[
         Optional[ListUserID], PlainValidator(validate_open_enum(False))
+    ] = None
+
+    list_user_mentioned_id: Annotated[
+        Optional[ListUserMentionedID], PlainValidator(validate_open_enum(False))
     ] = None
 
     methods: Optional[Dict[str, bool]] = None
@@ -1224,6 +1253,11 @@ class IntegrationSupport(BaseModel):
 
     virtual_webhook_user_id: Annotated[
         Optional[VirtualWebhookUserID], PlainValidator(validate_open_enum(False))
+    ] = None
+
+    virtual_webhook_user_mentioned_id: Annotated[
+        Optional[VirtualWebhookUserMentionedID],
+        PlainValidator(validate_open_enum(False)),
     ] = None
 
     webhook_events: Optional[PropertyIntegrationSupportWebhookEvents] = None
@@ -1588,6 +1622,15 @@ class IntegrationSupport(BaseModel):
                 return value
         return value
 
+    @field_serializer("list_payslip_id")
+    def serialize_list_payslip_id(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.ListPayslipID(value)
+            except ValueError:
+                return value
+        return value
+
     @field_serializer("list_pipeline_id")
     def serialize_list_pipeline_id(self, value):
         if isinstance(value, str):
@@ -1755,6 +1798,15 @@ class IntegrationSupport(BaseModel):
         if isinstance(value, str):
             try:
                 return shared.ListUserID(value)
+            except ValueError:
+                return value
+        return value
+
+    @field_serializer("list_user_mentioned_id")
+    def serialize_list_user_mentioned_id(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.ListUserMentionedID(value)
             except ValueError:
                 return value
         return value
@@ -2196,6 +2248,15 @@ class IntegrationSupport(BaseModel):
         if isinstance(value, str):
             try:
                 return shared.VirtualWebhookUserID(value)
+            except ValueError:
+                return value
+        return value
+
+    @field_serializer("virtual_webhook_user_mentioned_id")
+    def serialize_virtual_webhook_user_mentioned_id(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.VirtualWebhookUserMentionedID(value)
             except ValueError:
                 return value
         return value

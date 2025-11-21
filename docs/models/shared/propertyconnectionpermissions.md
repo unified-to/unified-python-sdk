@@ -120,6 +120,10 @@
 | `HRIS_LOCATION_WRITE`            | hris_location_write              |
 | `HRIS_DEVICE_READ`               | hris_device_read                 |
 | `HRIS_DEVICE_WRITE`              | hris_device_write                |
+| `HRIS_DEDUCTION_READ`            | hris_deduction_read              |
+| `HRIS_DEDUCTION_WRITE`           | hris_deduction_write             |
+| `HRIS_BENEFIT_READ`              | hris_benefit_read                |
+| `HRIS_BENEFIT_WRITE`             | hris_benefit_write               |
 | `UC_CALL_READ`                   | uc_call_read                     |
 | `UC_CONTACT_READ`                | uc_contact_read                  |
 | `UC_CONTACT_WRITE`               | uc_contact_write                 |

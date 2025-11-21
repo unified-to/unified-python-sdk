@@ -5,17 +5,20 @@ from .property_uccall_telephone import (
     PropertyUcCallTelephone,
     PropertyUcCallTelephoneTypedDict,
 )
+from .uccontact import UcContact, UcContactTypedDict
 from datetime import datetime
-from typing import Any, Dict, Optional
+from typing import Any, Dict, List, Optional
 from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk.types import BaseModel
 
 
 class UcCallTypedDict(TypedDict):
     contact_id: NotRequired[str]
+    contacts: NotRequired[List[UcContactTypedDict]]
     created_at: NotRequired[datetime]
     end_at: NotRequired[datetime]
     id: NotRequired[str]
+    is_private: NotRequired[bool]
     raw: NotRequired[Dict[str, Any]]
     start_at: NotRequired[datetime]
     telephone: NotRequired[PropertyUcCallTelephoneTypedDict]
@@ -27,11 +30,15 @@ class UcCallTypedDict(TypedDict):
 class UcCall(BaseModel):
     contact_id: Optional[str] = None
 
+    contacts: Optional[List[UcContact]] = None
+
     created_at: Optional[datetime] = None
 
     end_at: Optional[datetime] = None
 
     id: Optional[str] = None
+
+    is_private: Optional[bool] = None
 
     raw: Optional[Dict[str, Any]] = None
 

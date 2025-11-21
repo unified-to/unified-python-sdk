@@ -59,6 +59,8 @@
 | `HRIS_LOCATION`            | hris_location              |
 | `HRIS_DEVICE`              | hris_device                |
 | `HRIS_TIMESHIFT`           | hris_timeshift             |
+| `HRIS_DEDUCTION`           | hris_deduction             |
+| `HRIS_BENEFIT`             | hris_benefit               |
 | `MARTECH_LIST`             | martech_list               |
 | `MARTECH_MEMBER`           | martech_member             |
 | `PASSTHROUGH`              | passthrough                |

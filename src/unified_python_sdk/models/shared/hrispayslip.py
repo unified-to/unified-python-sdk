@@ -2,6 +2,10 @@
 
 from __future__ import annotations
 from .hrispayslipdetail import HrisPayslipDetail, HrisPayslipDetailTypedDict
+from .property_hrispayslip_deduction import (
+    PropertyHrisPayslipDeduction,
+    PropertyHrisPayslipDeductionTypedDict,
+)
 from datetime import datetime
 from enum import Enum
 from pydantic import field_serializer
@@ -25,6 +29,8 @@ class HrisPayslipTypedDict(TypedDict):
     company_id: NotRequired[str]
     created_at: NotRequired[datetime]
     currency: NotRequired[str]
+    deduction: NotRequired[PropertyHrisPayslipDeductionTypedDict]
+    r"""// The ID (and optionally name) of the employee deduction (if this detail represents a deduction)"""
     details: NotRequired[List[HrisPayslipDetailTypedDict]]
     end_at: NotRequired[datetime]
     gross_amount: NotRequired[float]
@@ -45,6 +51,9 @@ class HrisPayslip(BaseModel):
     created_at: Optional[datetime] = None
 
     currency: Optional[str] = None
+
+    deduction: Optional[PropertyHrisPayslipDeduction] = None
+    r"""// The ID (and optionally name) of the employee deduction (if this detail represents a deduction)"""
 
     details: Optional[List[HrisPayslipDetail]] = None
 

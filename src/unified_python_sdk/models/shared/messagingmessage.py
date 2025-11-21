@@ -36,6 +36,7 @@ class MessagingMessageTypedDict(TypedDict):
     message: NotRequired[str]
     message_html: NotRequired[str]
     message_markdown: NotRequired[str]
+    message_thread_identifier: NotRequired[str]
     parent_id: NotRequired[str]
     parent_message_id: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
@@ -79,6 +80,8 @@ class MessagingMessage(BaseModel):
     message_html: Optional[str] = None
 
     message_markdown: Optional[str] = None
+
+    message_thread_identifier: Optional[str] = None
 
     parent_id: Optional[str] = None
 

@@ -361,6 +361,15 @@ asyncio.run(main())
 * [get_accounting_balancesheet](docs/sdks/balancesheet/README.md#get_accounting_balancesheet) - Retrieve a balancesheet
 * [list_accounting_balancesheets](docs/sdks/balancesheet/README.md#list_accounting_balancesheets) - List all balancesheets
 
+### [benefit](docs/sdks/benefit/README.md)
+
+* [create_hris_benefit](docs/sdks/benefit/README.md#create_hris_benefit) - Create a benefit
+* [get_hris_benefit](docs/sdks/benefit/README.md#get_hris_benefit) - Retrieve a benefit
+* [list_hris_benefits](docs/sdks/benefit/README.md#list_hris_benefits) - List all benefits
+* [patch_hris_benefit](docs/sdks/benefit/README.md#patch_hris_benefit) - Update a benefit
+* [remove_hris_benefit](docs/sdks/benefit/README.md#remove_hris_benefit) - Remove a benefit
+* [update_hris_benefit](docs/sdks/benefit/README.md#update_hris_benefit) - Update a benefit
+
 ### [bill](docs/sdks/bill/README.md)
 
 * [create_accounting_bill](docs/sdks/bill/README.md#create_accounting_bill) - Create a bill
@@ -659,6 +668,15 @@ asyncio.run(main())
 * [remove_crm_deal](docs/sdks/deal/README.md#remove_crm_deal) - Remove a deal
 * [update_crm_deal](docs/sdks/deal/README.md#update_crm_deal) - Update a deal
 
+### [deduction](docs/sdks/deduction/README.md)
+
+* [create_hris_deduction](docs/sdks/deduction/README.md#create_hris_deduction) - Create a deduction
+* [get_hris_deduction](docs/sdks/deduction/README.md#get_hris_deduction) - Retrieve a deduction
+* [list_hris_deductions](docs/sdks/deduction/README.md#list_hris_deductions) - List all deductions
+* [patch_hris_deduction](docs/sdks/deduction/README.md#patch_hris_deduction) - Update a deduction
+* [remove_hris_deduction](docs/sdks/deduction/README.md#remove_hris_deduction) - Remove a deduction
+* [update_hris_deduction](docs/sdks/deduction/README.md#update_hris_deduction) - Update a deduction
+
 ### [device](docs/sdks/device/README.md)
 
 * [create_hris_device](docs/sdks/device/README.md#create_hris_device) - Create a device
@@ -752,13 +770,17 @@ asyncio.run(main())
 
 ### [hris](docs/sdks/hris/README.md)
 
+* [create_hris_benefit](docs/sdks/hris/README.md#create_hris_benefit) - Create a benefit
 * [create_hris_company](docs/sdks/hris/README.md#create_hris_company) - Create a company
+* [create_hris_deduction](docs/sdks/hris/README.md#create_hris_deduction) - Create a deduction
 * [create_hris_device](docs/sdks/hris/README.md#create_hris_device) - Create a device
 * [create_hris_employee](docs/sdks/hris/README.md#create_hris_employee) - Create an employee
 * [create_hris_group](docs/sdks/hris/README.md#create_hris_group) - Create a group
 * [create_hris_location](docs/sdks/hris/README.md#create_hris_location) - Create a location
 * [create_hris_timeshift](docs/sdks/hris/README.md#create_hris_timeshift) - Create a timeshift
+* [get_hris_benefit](docs/sdks/hris/README.md#get_hris_benefit) - Retrieve a benefit
 * [get_hris_company](docs/sdks/hris/README.md#get_hris_company) - Retrieve a company
+* [get_hris_deduction](docs/sdks/hris/README.md#get_hris_deduction) - Retrieve a deduction
 * [get_hris_device](docs/sdks/hris/README.md#get_hris_device) - Retrieve a device
 * [get_hris_employee](docs/sdks/hris/README.md#get_hris_employee) - Retrieve an employee
 * [get_hris_group](docs/sdks/hris/README.md#get_hris_group) - Retrieve a group
@@ -766,7 +788,9 @@ asyncio.run(main())
 * [get_hris_payslip](docs/sdks/hris/README.md#get_hris_payslip) - Retrieve a payslip
 * [get_hris_timeoff](docs/sdks/hris/README.md#get_hris_timeoff) - Retrieve a timeoff
 * [get_hris_timeshift](docs/sdks/hris/README.md#get_hris_timeshift) - Retrieve a timeshift
+* [list_hris_benefits](docs/sdks/hris/README.md#list_hris_benefits) - List all benefits
 * [list_hris_companies](docs/sdks/hris/README.md#list_hris_companies) - List all companies
+* [list_hris_deductions](docs/sdks/hris/README.md#list_hris_deductions) - List all deductions
 * [list_hris_devices](docs/sdks/hris/README.md#list_hris_devices) - List all devices
 * [list_hris_employees](docs/sdks/hris/README.md#list_hris_employees) - List all employees
 * [list_hris_groups](docs/sdks/hris/README.md#list_hris_groups) - List all groups
@@ -774,19 +798,25 @@ asyncio.run(main())
 * [list_hris_payslips](docs/sdks/hris/README.md#list_hris_payslips) - List all payslips
 * [list_hris_timeoffs](docs/sdks/hris/README.md#list_hris_timeoffs) - List all timeoffs
 * [list_hris_timeshifts](docs/sdks/hris/README.md#list_hris_timeshifts) - List all timeshifts
+* [patch_hris_benefit](docs/sdks/hris/README.md#patch_hris_benefit) - Update a benefit
 * [patch_hris_company](docs/sdks/hris/README.md#patch_hris_company) - Update a company
+* [patch_hris_deduction](docs/sdks/hris/README.md#patch_hris_deduction) - Update a deduction
 * [patch_hris_device](docs/sdks/hris/README.md#patch_hris_device) - Update a device
 * [patch_hris_employee](docs/sdks/hris/README.md#patch_hris_employee) - Update an employee
 * [patch_hris_group](docs/sdks/hris/README.md#patch_hris_group) - Update a group
 * [patch_hris_location](docs/sdks/hris/README.md#patch_hris_location) - Update a location
 * [patch_hris_timeshift](docs/sdks/hris/README.md#patch_hris_timeshift) - Update a timeshift
+* [remove_hris_benefit](docs/sdks/hris/README.md#remove_hris_benefit) - Remove a benefit
 * [remove_hris_company](docs/sdks/hris/README.md#remove_hris_company) - Remove a company
+* [remove_hris_deduction](docs/sdks/hris/README.md#remove_hris_deduction) - Remove a deduction
 * [remove_hris_device](docs/sdks/hris/README.md#remove_hris_device) - Remove a device
 * [remove_hris_employee](docs/sdks/hris/README.md#remove_hris_employee) - Remove an employee
 * [remove_hris_group](docs/sdks/hris/README.md#remove_hris_group) - Remove a group
 * [remove_hris_location](docs/sdks/hris/README.md#remove_hris_location) - Remove a location
 * [remove_hris_timeshift](docs/sdks/hris/README.md#remove_hris_timeshift) - Remove a timeshift
+* [update_hris_benefit](docs/sdks/hris/README.md#update_hris_benefit) - Update a benefit
 * [update_hris_company](docs/sdks/hris/README.md#update_hris_company) - Update a company
+* [update_hris_deduction](docs/sdks/hris/README.md#update_hris_deduction) - Update a deduction
 * [update_hris_device](docs/sdks/hris/README.md#update_hris_device) - Update a device
 * [update_hris_employee](docs/sdks/hris/README.md#update_hris_employee) - Update an employee
 * [update_hris_group](docs/sdks/hris/README.md#update_hris_group) - Update a group

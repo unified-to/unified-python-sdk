@@ -17,7 +17,7 @@ class ListMessagingMessagesRequestTypedDict(TypedDict):
     connection_id: str
     r"""ID of the connection"""
     channel_id: NotRequired[str]
-    r"""The channel ID to filter by"""
+    r"""The channel ID to filter by. You can also use these aliases; INBOX, SENT or DRAFT"""
     end_le: NotRequired[str]
     r"""The end date to filter by (deprecated)"""
     end_lt: NotRequired[str]
@@ -42,6 +42,8 @@ class ListMessagingMessagesRequestTypedDict(TypedDict):
     r"""Return only results whose updated date is equal or greater to this value"""
     user_id: NotRequired[str]
     r"""The user/employee ID to filter by"""
+    user_mentioned_id: NotRequired[str]
+    r"""The user/employee ID to filter by"""
 
 
 class ListMessagingMessagesRequest(BaseModel):
@@ -54,7 +56,7 @@ class ListMessagingMessagesRequest(BaseModel):
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
-    r"""The channel ID to filter by"""
+    r"""The channel ID to filter by. You can also use these aliases; INBOX, SENT or DRAFT"""
 
     end_le: Annotated[
         Optional[str],
@@ -131,6 +133,12 @@ class ListMessagingMessagesRequest(BaseModel):
     r"""Return only results whose updated date is equal or greater to this value"""
 
     user_id: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+    r"""The user/employee ID to filter by"""
+
+    user_mentioned_id: Annotated[
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
