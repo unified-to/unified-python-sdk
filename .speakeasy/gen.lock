@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: 67f7d6d0c66da74ba7cdc2b88db1c97d
+  docChecksum: 0cbfedd6f5ab2e89dc21eefa192c619d
   docVersion: "1.0"
-  speakeasyVersion: 1.659.0
-  generationVersion: 2.755.9
-  releaseVersion: 0.54.14
-  configChecksum: 84064ccbc5decc5e5250e9efb5dcb877
+  speakeasyVersion: 1.660.0
+  generationVersion: 2.760.2
+  releaseVersion: 0.54.15
+  configChecksum: 7ff40d5a578118b9cbe4a5ae7799d502
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -16,7 +16,7 @@ features:
     acceptHeaders: 3.0.0
     additionalDependencies: 1.0.0
     constsAndDefaults: 1.0.5
-    core: 5.23.9
+    core: 5.23.10
     defaultEnabledRetries: 0.2.0
     downloadStreams: 1.0.1
     enumUnions: 0.1.0
@@ -93,6 +93,8 @@ generatedFiles:
   - docs/models/operations/createcommercelocationresponse.md
   - docs/models/operations/createcommercereviewrequest.md
   - docs/models/operations/createcommercereviewresponse.md
+  - docs/models/operations/createcommercesaleschannelrequest.md
+  - docs/models/operations/createcommercesaleschannelresponse.md
   - docs/models/operations/createcrmcompanyrequest.md
   - docs/models/operations/createcrmcompanyresponse.md
   - docs/models/operations/createcrmcontactrequest.md
@@ -270,6 +272,8 @@ generatedFiles:
   - docs/models/operations/getcommercelocationresponse.md
   - docs/models/operations/getcommercereviewrequest.md
   - docs/models/operations/getcommercereviewresponse.md
+  - docs/models/operations/getcommercesaleschannelrequest.md
+  - docs/models/operations/getcommercesaleschannelresponse.md
   - docs/models/operations/getcrmcompanyrequest.md
   - docs/models/operations/getcrmcompanyresponse.md
   - docs/models/operations/getcrmcontactrequest.md
@@ -470,6 +474,8 @@ generatedFiles:
   - docs/models/operations/listcommercelocationsresponse.md
   - docs/models/operations/listcommercereviewsrequest.md
   - docs/models/operations/listcommercereviewsresponse.md
+  - docs/models/operations/listcommercesaleschannelsrequest.md
+  - docs/models/operations/listcommercesaleschannelsresponse.md
   - docs/models/operations/listcrmcompaniesrequest.md
   - docs/models/operations/listcrmcompaniesresponse.md
   - docs/models/operations/listcrmcontactsrequest.md
@@ -659,6 +665,8 @@ generatedFiles:
   - docs/models/operations/patchcommercelocationresponse.md
   - docs/models/operations/patchcommercereviewrequest.md
   - docs/models/operations/patchcommercereviewresponse.md
+  - docs/models/operations/patchcommercesaleschannelrequest.md
+  - docs/models/operations/patchcommercesaleschannelresponse.md
   - docs/models/operations/patchcrmcompanyrequest.md
   - docs/models/operations/patchcrmcompanyresponse.md
   - docs/models/operations/patchcrmcontactrequest.md
@@ -822,6 +830,8 @@ generatedFiles:
   - docs/models/operations/removecommercelocationresponse.md
   - docs/models/operations/removecommercereviewrequest.md
   - docs/models/operations/removecommercereviewresponse.md
+  - docs/models/operations/removecommercesaleschannelrequest.md
+  - docs/models/operations/removecommercesaleschannelresponse.md
   - docs/models/operations/removecrmcompanyrequest.md
   - docs/models/operations/removecrmcompanyresponse.md
   - docs/models/operations/removecrmcontactrequest.md
@@ -980,6 +990,8 @@ generatedFiles:
   - docs/models/operations/updatecommercelocationresponse.md
   - docs/models/operations/updatecommercereviewrequest.md
   - docs/models/operations/updatecommercereviewresponse.md
+  - docs/models/operations/updatecommercesaleschannelrequest.md
+  - docs/models/operations/updatecommercesaleschannelresponse.md
   - docs/models/operations/updatecrmcompanyrequest.md
   - docs/models/operations/updatecrmcompanyresponse.md
   - docs/models/operations/updatecrmcontactrequest.md
@@ -1208,10 +1220,12 @@ generatedFiles:
   - docs/models/shared/commercemetadataschemas1.md
   - docs/models/shared/commercemetadataschemas5.md
   - docs/models/shared/commercemetadatavalue.md
+  - docs/models/shared/commercereference.md
   - docs/models/shared/commercereview.md
   - docs/models/shared/commercereviewcomment.md
   - docs/models/shared/commercereviewcommentstatus.md
   - docs/models/shared/commercereviewstatus.md
+  - docs/models/shared/commercesaleschannel.md
   - docs/models/shared/connection.md
   - docs/models/shared/contenttype.md
   - docs/models/shared/coveragelevel.md
@@ -1327,6 +1341,7 @@ generatedFiles:
   - docs/models/shared/kmsspace.md
   - docs/models/shared/listaccountid.md
   - docs/models/shared/listapplicationid.md
+  - docs/models/shared/listbenefitid.md
   - docs/models/shared/listbranchid.md
   - docs/models/shared/listcalendarid.md
   - docs/models/shared/listcallid.md
@@ -1371,6 +1386,7 @@ generatedFiles:
   - docs/models/shared/listrawfields.md
   - docs/models/shared/listrepoid.md
   - docs/models/shared/listrootid.md
+  - docs/models/shared/listsaleschannelid.md
   - docs/models/shared/listsortbycreatedat.md
   - docs/models/shared/listsortbyname.md
   - docs/models/shared/listsortbyupdatedat.md
@@ -1626,6 +1642,7 @@ generatedFiles:
   - docs/models/shared/virtualwebhookpipelineid.md
   - docs/models/shared/virtualwebhookprojectid.md
   - docs/models/shared/virtualwebhookrepoid.md
+  - docs/models/shared/virtualwebhooksaleschannelid.md
   - docs/models/shared/virtualwebhookspaceid.md
   - docs/models/shared/virtualwebhookstartgte.md
   - docs/models/shared/virtualwebhookstatus.md
@@ -1730,6 +1747,7 @@ generatedFiles:
   - docs/sdks/repository/README.md
   - docs/sdks/request/README.md
   - docs/sdks/review/README.md
+  - docs/sdks/saleschannel/README.md
   - docs/sdks/salesorder/README.md
   - docs/sdks/scim/README.md
   - docs/sdks/scorecard/README.md
@@ -1866,6 +1884,7 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/createcommerceitem.py
   - src/unified_python_sdk/models/operations/createcommercelocation.py
   - src/unified_python_sdk/models/operations/createcommercereview.py
+  - src/unified_python_sdk/models/operations/createcommercesaleschannel.py
   - src/unified_python_sdk/models/operations/createcrmcompany.py
   - src/unified_python_sdk/models/operations/createcrmcontact.py
   - src/unified_python_sdk/models/operations/createcrmdeal.py
@@ -1955,6 +1974,7 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/getcommerceitem.py
   - src/unified_python_sdk/models/operations/getcommercelocation.py
   - src/unified_python_sdk/models/operations/getcommercereview.py
+  - src/unified_python_sdk/models/operations/getcommercesaleschannel.py
   - src/unified_python_sdk/models/operations/getcrmcompany.py
   - src/unified_python_sdk/models/operations/getcrmcontact.py
   - src/unified_python_sdk/models/operations/getcrmdeal.py
@@ -2055,6 +2075,7 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/listcommerceitems.py
   - src/unified_python_sdk/models/operations/listcommercelocations.py
   - src/unified_python_sdk/models/operations/listcommercereviews.py
+  - src/unified_python_sdk/models/operations/listcommercesaleschannels.py
   - src/unified_python_sdk/models/operations/listcrmcompanies.py
   - src/unified_python_sdk/models/operations/listcrmcontacts.py
   - src/unified_python_sdk/models/operations/listcrmdeals.py
@@ -2149,6 +2170,7 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/patchcommerceitem.py
   - src/unified_python_sdk/models/operations/patchcommercelocation.py
   - src/unified_python_sdk/models/operations/patchcommercereview.py
+  - src/unified_python_sdk/models/operations/patchcommercesaleschannel.py
   - src/unified_python_sdk/models/operations/patchcrmcompany.py
   - src/unified_python_sdk/models/operations/patchcrmcontact.py
   - src/unified_python_sdk/models/operations/patchcrmdeal.py
@@ -2230,6 +2252,7 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/removecommerceitem.py
   - src/unified_python_sdk/models/operations/removecommercelocation.py
   - src/unified_python_sdk/models/operations/removecommercereview.py
+  - src/unified_python_sdk/models/operations/removecommercesaleschannel.py
   - src/unified_python_sdk/models/operations/removecrmcompany.py
   - src/unified_python_sdk/models/operations/removecrmcontact.py
   - src/unified_python_sdk/models/operations/removecrmdeal.py
@@ -2309,6 +2332,7 @@ generatedFiles:
   - src/unified_python_sdk/models/operations/updatecommerceitem.py
   - src/unified_python_sdk/models/operations/updatecommercelocation.py
   - src/unified_python_sdk/models/operations/updatecommercereview.py
+  - src/unified_python_sdk/models/operations/updatecommercesaleschannel.py
   - src/unified_python_sdk/models/operations/updatecrmcompany.py
   - src/unified_python_sdk/models/operations/updatecrmcontact.py
   - src/unified_python_sdk/models/operations/updatecrmdeal.py
@@ -2443,8 +2467,10 @@ generatedFiles:
   - src/unified_python_sdk/models/shared/commerceitemvariant.py
   - src/unified_python_sdk/models/shared/commercelocation.py
   - src/unified_python_sdk/models/shared/commercemetadata.py
+  - src/unified_python_sdk/models/shared/commercereference.py
   - src/unified_python_sdk/models/shared/commercereview.py
   - src/unified_python_sdk/models/shared/commercereviewcomment.py
+  - src/unified_python_sdk/models/shared/commercesaleschannel.py
   - src/unified_python_sdk/models/shared/connection.py
   - src/unified_python_sdk/models/shared/crmcompany.py
   - src/unified_python_sdk/models/shared/crmcontact.py
@@ -2647,6 +2673,7 @@ generatedFiles:
   - src/unified_python_sdk/repository.py
   - src/unified_python_sdk/request.py
   - src/unified_python_sdk/review.py
+  - src/unified_python_sdk/saleschannel.py
   - src/unified_python_sdk/salesorder.py
   - src/unified_python_sdk/scim.py
   - src/unified_python_sdk/scorecard.py
@@ -7451,6 +7478,61 @@ examples:
       responses:
         "200":
           application/json: {}
+  createCommerceSaleschannel:
+    speakeasy-default-create-commerce-saleschannel:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  getCommerceSaleschannel:
+    speakeasy-default-get-commerce-saleschannel:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  listCommerceSaleschannels:
+    speakeasy-default-list-commerce-saleschannels:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  patchCommerceSaleschannel:
+    speakeasy-default-patch-commerce-saleschannel:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  removeCommerceSaleschannel:
+    speakeasy-default-remove-commerce-saleschannel:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateCommerceSaleschannel:
+    speakeasy-default-update-commerce-saleschannel:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Python SDK Changes Detected:\n* `unified_to.hris.create_hris_benefit()`: **Added**\n* `unified_to.hris.create_hris_deduction()`: **Added**\n* `unified_to.hris.get_hris_benefit()`: **Added**\n* `unified_to.hris.get_hris_deduction()`: **Added**\n* `unified_to.hris.list_hris_benefits()`: **Added**\n* `unified_to.hris.list_hris_deductions()`: **Added**\n* `unified_to.hris.patch_hris_benefit()`: **Added**\n* `unified_to.hris.patch_hris_deduction()`: **Added**\n* `unified_to.hris.remove_hris_benefit()`: **Added**\n* `unified_to.hris.remove_hris_deduction()`: **Added**\n* `unified_to.hris.update_hris_benefit()`: **Added**\n* `unified_to.hris.update_hris_deduction()`: **Added**\n* `unified_to.benefit.create_hris_benefit()`: **Added**\n* `unified_to.benefit.get_hris_benefit()`: **Added**\n* `unified_to.benefit.list_hris_benefits()`: **Added**\n* `unified_to.benefit.patch_hris_benefit()`: **Added**\n* `unified_to.benefit.remove_hris_benefit()`: **Added**\n* `unified_to.benefit.update_hris_benefit()`: **Added**\n* `unified_to.deduction.create_hris_deduction()`: **Added**\n* `unified_to.deduction.get_hris_deduction()`: **Added**\n* `unified_to.deduction.list_hris_deductions()`: **Added**\n* `unified_to.deduction.patch_hris_deduction()`: **Added**\n* `unified_to.deduction.remove_hris_deduction()`: **Added**\n* `unified_to.deduction.update_hris_deduction()`: **Added**\n* `unified_to.accounting.create_accounting_bill()`: \n  *  `request.accounting_bill.lineitems.[].locations` **Added**\n  *  `response.lineitems.[].locations` **Added**\n* `unified_to.accounting.create_accounting_creditmemo()`: \n  *  `request.accounting_creditmemo.lineitems.[].locations` **Added**\n  *  `response.lineitems.[].locations` **Added**\n* `unified_to.accounting.create_accounting_expense()`: \n  *  `request.accounting_expense.lineitems.[].locations` **Added**\n  *  `response.lineitems.[].locations` **Added**\n* `unified_to.accounting.create_accounting_invoice()`: \n  *  `request.accounting_invoice.lineitems.[].locations` **Added**\n  *  `response.lineitems.[].locations` **Added**\n* `unified_to.accounting.create_accounting_order()`: \n  *  `request.accounting_order.lineitems.[].locations` **Added**\n  *  `response.lineitems.[].locations` **Added**\n* `unified_to.accounting.create_accounting_purchaseorder()`: \n  *  `request.accounting_purchaseorder.lineitems.[].locations` **Added**\n  *  `response.lineitems.[].locations` **Added**\n* `unified_to.accounting.create_accounting_salesorder()`: \n  *  `request.accounting_salesorder.lineitems.[].locations` **Added**\n  *  `response.lineitems.[].locations` **Added**\n* `unified_to.accounting.get_accounting_bill()`:  `response.lineitems.[].locations` **Added**\n* `unified_to.accounting.get_accounting_creditmemo()`:  `response.lineitems.[].locations` **Added**\n* `unified_to.accounting.get_accounting_expense()`:  `response.lineitems.[].locations` **Added**\n* `unified_to.accounting.get_accounting_invoice()`:  `response.lineitems.[].locations` **Added**\n* `unified_to.accounting.get_accounting_order()`:  `response.lineitems.[].locations` **Added**\n* `unified_to.accounting.get_accounting_purchaseorder()`:  `response.lineitems.[].locations` **Added**\n* `unified_to.accounting.get_accounting_salesorder()`:  `response.lineitems.[].locations` **Added**\n* `unified_to.accounting.list_accounting_bills()`:  `response.[].lineitems.[].locations` **Added**\n* `unified_to.accounting.list_accounting_creditmemoes()`:  `response.[].lineitems.[].locations` **Added**\n* `unified_to.accounting.list_accounting_expenses()`:  `response.[].lineitems.[].locations` **Added**\n* `unified_to.accounting.list_accounting_invoices()`:  `response.[].lineitems.[].locations` **Added**\n* `unified_to.accounting.list_accounting_orders()`:  `response.[].lineitems.[].locations` **Added**\n* `unified_to.accounting.list_accounting_purchaseorders()`:  `response.[].lineitems.[].locations` **Added**\n* `unified_to.accounting.list_accounting_salesorders()`:  `response.[].lineitems.[].locations` **Added**\n* `unified_to.accounting.patch_accounting_bill()`: \n  *  `request.accounting_bill.lineitems.[].locations` **Added**\n  *  `response.lineitems.[].locations` **Added**\n* `unified_to.accounting.patch_accounting_creditmemo()`: \n  *  `request.accounting_creditmemo.lineitems.[].locations` **Added**\n  *  `response.lineitems.[].locations` **Added**\n* `unified_to.accounting.patch_accounting_expense()`: \n  *  `request.accounting_expense.lineitems.[].locations` **Added**\n  *  `response.lineitems.[].locations` **Added**\n* `unified_to.accounting.patch_accounting_invoice()`: \n  *  `request.accounting_invoice.lineitems.[].locations` **Added**\n  *  `response.lineitems.[].locations` **Added**\n* `unified_to.accounting.patch_accounting_order()`: \n  *  `request.accounting_order.lineitems.[].locations` **Added**\n  *  `response.lineitems.[].locations` **Added**\n* `unified_to.accounting.patch_accounting_purchaseorder()`: \n  *  `request.accounting_purchaseorder.lineitems.[].locations` **Added**\n  *  `response.lineitems.[].locations` **Added**\n* `unified_to.accounting.patch_accounting_salesorder()`: \n  *  `request.accounting_salesorder.lineitems.[].locations` **Added**\n  *  `response.lineitems.[].locations` **Added**\n* `unified_to.accounting.update_accounting_bill()`: \n  *  `request.accounting_bill.lineitems.[].locations` **Added**\n  *  `response.lineitems.[].locations` **Added**\n* `unified_to.accounting.update_accounting_creditmemo()`: \n  *  `request.accounting_creditmemo.lineitems.[].locations` **Added**\n  *  `response.lineitems.[].locations` **Added**\n* `unified_to.accounting.update_accounting_expense()`: \n  *  `request.accounting_expense.lineitems.[].locations` **Added**\n  *  `response.lineitems.[].locations` **Added**\n* `unified_to.accounting.update_accounting_invoice()`: \n  *  `request.accounting_invoice.lineitems.[].locations` **Added**\n  *  `response.lineitems.[].locations` **Added**\n* `unified_to.accounting.update_accounting_order()`: \n  *  `request.accounting_order.lineitems.[].locations` **Added**\n  *  `response.lineitems.[].locations` **Added**\n* `unified_to.accounting.update_accounting_purchaseorder()`: \n  *  `request.accounting_purchaseorder.lineitems.[].locations` **Added**\n  *  `response.lineitems.[].locations` **Added**\n* `unified_to.accounting.update_accounting_salesorder()`: \n  *  `request.accounting_salesorder.lineitems.[].locations` **Added**\n  *  `response.lineitems.[].locations` **Added**\n* `unified_to.bill.create_accounting_bill()`: \n  *  `request.accounting_bill.lineitems.[].locations` **Added**\n  *  `response.lineitems.[].locations` **Added**\n* `unified_to.bill.get_accounting_bill()`:  `response.lineitems.[].locations` **Added**\n* `unified_to.bill.list_accounting_bills()`:  `response.[].lineitems.[].locations` **Added**\n* `unified_to.bill.patch_accounting_bill()`: \n  *  `request.accounting_bill.lineitems.[].locations` **Added**\n  *  `response.lineitems.[].locations` **Added**\n* `unified_to.bill.update_accounting_bill()`: \n  *  `request.accounting_bill.lineitems.[].locations` **Added**\n  *  `response.lineitems.[].locations` **Added**\n* `unified_to.creditmemo.create_accounting_creditmemo()`: \n  *  `request.accounting_creditmemo.lineitems.[].locations` **Added**\n  *  `response.lineitems.[].locations` **Added**\n* `unified_to.creditmemo.get_accounting_creditmemo()`:  `response.lineitems.[].locations` **Added**\n* `unified_to.creditmemo.list_accounting_creditmemoes()`:  `response.[].lineitems.[].locations` **Added**\n* `unified_to.creditmemo.patch_accounting_creditmemo()`: \n  *  `request.accounting_creditmemo.lineitems.[].locations` **Added**\n  *  `response.lineitems.[].locations` **Added**\n* `unified_to.creditmemo.update_accounting_creditmemo()`: \n  *  `request.accounting_creditmemo.lineitems.[].locations` **Added**\n  *  `response.lineitems.[].locations` **Added**\n* `unified_to.expense.create_accounting_expense()`: \n  *  `request.accounting_expense.lineitems.[].locations` **Added**\n  *  `response.lineitems.[].locations` **Added**\n* `unified_to.expense.get_accounting_expense()`:  `response.lineitems.[].locations` **Added**\n* `unified_to.expense.list_accounting_expenses()`:  `response.[].lineitems.[].locations` **Added**\n* `unified_to.expense.patch_accounting_expense()`: \n  *  `request.accounting_expense.lineitems.[].locations` **Added**\n  *  `response.lineitems.[].locations` **Added**\n* `unified_to.expense.update_accounting_expense()`: \n  *  `request.accounting_expense.lineitems.[].locations` **Added**\n  *  `response.lineitems.[].locations` **Added**\n* `unified_to.invoice.create_accounting_invoice()`: \n  *  `request.accounting_invoice.lineitems.[].locations` **Added**\n  *  `response.lineitems.[].locations` **Added**\n* `unified_to.invoice.get_accounting_invoice()`:  `response.lineitems.[].locations` **Added**\n* `unified_to.invoice.list_accounting_invoices()`:  `response.[].lineitems.[].locations` **Added**\n* `unified_to.invoice.patch_accounting_invoice()`: \n  *  `request.accounting_invoice.lineitems.[].locations` **Added**\n  *  `response.lineitems.[].locations` **Added**\n* `unified_to.invoice.update_accounting_invoice()`: \n  *  `request.accounting_invoice.lineitems.[].locations` **Added**\n  *  `response.lineitems.[].locations` **Added**\n* `unified_to.order.create_accounting_order()`: \n  *  `request.accounting_order.lineitems.[].locations` **Added**\n  *  `response.lineitems.[].locations` **Added**\n* `unified_to.order.get_accounting_order()`:  `response.lineitems.[].locations` **Added**\n* `unified_to.order.list_accounting_orders()`:  `response.[].lineitems.[].locations` **Added**\n* `unified_to.order.patch_accounting_order()`: \n  *  `request.accounting_order.lineitems.[].locations` **Added**\n  *  `response.lineitems.[].locations` **Added**\n* `unified_to.order.update_accounting_order()`: \n  *  `request.accounting_order.lineitems.[].locations` **Added**\n  *  `response.lineitems.[].locations` **Added**\n* `unified_to.purchaseorder.create_accounting_purchaseorder()`: \n  *  `request.accounting_purchaseorder.lineitems.[].locations` **Added**\n  *  `response.lineitems.[].locations` **Added**\n* `unified_to.purchaseorder.get_accounting_purchaseorder()`:  `response.lineitems.[].locations` **Added**\n* `unified_to.purchaseorder.list_accounting_purchaseorders()`:  `response.[].lineitems.[].locations` **Added**\n* `unified_to.purchaseorder.patch_accounting_purchaseorder()`: \n  *  `request.accounting_purchaseorder.lineitems.[].locations` **Added**\n  *  `response.lineitems.[].locations` **Added**\n* `unified_to.purchaseorder.update_accounting_purchaseorder()`: \n  *  `request.accounting_purchaseorder.lineitems.[].locations` **Added**\n  *  `response.lineitems.[].locations` **Added**\n* `unified_to.salesorder.create_accounting_salesorder()`: \n  *  `request.accounting_salesorder.lineitems.[].locations` **Added**\n  *  `response.lineitems.[].locations` **Added**\n* `unified_to.salesorder.get_accounting_salesorder()`:  `response.lineitems.[].locations` **Added**\n* `unified_to.salesorder.list_accounting_salesorders()`:  `response.[].lineitems.[].locations` **Added**\n* `unified_to.salesorder.patch_accounting_salesorder()`: \n  *  `request.accounting_salesorder.lineitems.[].locations` **Added**\n  *  `response.lineitems.[].locations` **Added**\n* `unified_to.salesorder.update_accounting_salesorder()`: \n  *  `request.accounting_salesorder.lineitems.[].locations` **Added**\n  *  `response.lineitems.[].locations` **Added**\n* `unified_to.hris.get_hris_payslip()`:  `response.deduction` **Added**\n* `unified_to.hris.list_hris_payslips()`:  `response.[].deduction` **Added**\n* `unified_to.payslip.get_hris_payslip()`:  `response.deduction` **Added**\n* `unified_to.payslip.list_hris_payslips()`:  `response.[].deduction` **Added**\n* `unified_to.messaging.create_messaging_message()`: \n  *  `request.messaging_message.message_thread_identifier` **Added**\n  *  `response.message_thread_identifier` **Added**\n* `unified_to.messaging.get_messaging_message()`:  `response.message_thread_identifier` **Added**\n* `unified_to.messaging.list_messaging_messages()`: \n  *  `request.user_mentioned_id` **Added**\n  *  `response.[].message_thread_identifier` **Added**\n* `unified_to.messaging.patch_messaging_message()`: \n  *  `request.messaging_message.message_thread_identifier` **Added**\n  *  `response.message_thread_identifier` **Added**\n* `unified_to.messaging.update_messaging_message()`: \n  *  `request.messaging_message.message_thread_identifier` **Added**\n  *  `response.message_thread_identifier` **Added**\n* `unified_to.message.create_messaging_message()`: \n  *  `request.messaging_message.message_thread_identifier` **Added**\n  *  `response.message_thread_identifier` **Added**\n* `unified_to.message.get_messaging_message()`:  `response.message_thread_identifier` **Added**\n* `unified_to.message.list_messaging_messages()`: \n  *  `request.user_mentioned_id` **Added**\n  *  `response.[].message_thread_identifier` **Added**\n* `unified_to.message.patch_messaging_message()`: \n  *  `request.messaging_message.message_thread_identifier` **Added**\n  *  `response.message_thread_identifier` **Added**\n* `unified_to.message.update_messaging_message()`: \n  *  `request.messaging_message.message_thread_identifier` **Added**\n  *  `response.message_thread_identifier` **Added**\n* `unified_to.uc.get_uc_call()`:  `response` **Changed**\n* `unified_to.uc.list_uc_calls()`:  `response.[]` **Changed**\n* `unified_to.call.get_uc_call()`:  `response` **Changed**\n* `unified_to.call.list_uc_calls()`:  `response.[]` **Changed**\n* `unified_to.unified.list_unified_integration_workspaces()`:  `response.[].support.{}` **Changed**\n* `unified_to.unified.list_unified_integrations()`:  `response.[].support.{}` **Changed**\n* `unified_to.integration.list_unified_integration_workspaces()`:  `response.[].support.{}` **Changed**\n* `unified_to.integration.list_unified_integrations()`:  `response.[].support.{}` **Changed**\n"
+releaseNotes: "## Python SDK Changes Detected:\n* `unified_to.commerce.create_commerce_collection()`: \n  *  `request.commerce_collection` **Changed** **Breaking** :warning:\n  *  `response` **Changed** **Breaking** :warning:\n* `unified_to.review.update_commerce_review()`: \n  *  `request.commerce_review.comments.[].metadata.[]` **Changed** **Breaking** :warning:\n  *  `response.comments.[].metadata.[]` **Changed** **Breaking** :warning:\n* `unified_to.review.patch_commerce_review()`: \n  *  `request.commerce_review.comments.[].metadata.[]` **Changed** **Breaking** :warning:\n  *  `response.comments.[].metadata.[]` **Changed** **Breaking** :warning:\n* `unified_to.review.list_commerce_reviews()`:  `response.[].comments.[].metadata.[]` **Changed** **Breaking** :warning:\n* `unified_to.review.get_commerce_review()`:  `response.comments.[].metadata.[]` **Changed** **Breaking** :warning:\n* `unified_to.review.create_commerce_review()`: \n  *  `request.commerce_review.comments.[].metadata.[]` **Changed** **Breaking** :warning:\n  *  `response.comments.[].metadata.[]` **Changed** **Breaking** :warning:\n* `unified_to.item.update_commerce_item()`: \n  *  `request.commerce_item.media.[].metadata.[]` **Changed** **Breaking** :warning:\n  *  `response.media.[].metadata.[]` **Changed** **Breaking** :warning:\n* `unified_to.item.patch_commerce_item()`: \n  *  `request.commerce_item.media.[].metadata.[]` **Changed** **Breaking** :warning:\n  *  `response.media.[].metadata.[]` **Changed** **Breaking** :warning:\n* `unified_to.item.list_commerce_items()`:  `response.[].media.[].metadata.[]` **Changed** **Breaking** :warning:\n* `unified_to.item.get_commerce_item()`:  `response.media.[].metadata.[]` **Changed** **Breaking** :warning:\n* `unified_to.item.create_commerce_item()`: \n  *  `request.commerce_item.media.[].metadata.[]` **Changed** **Breaking** :warning:\n  *  `response.media.[].metadata.[]` **Changed** **Breaking** :warning:\n* `unified_to.collection.update_commerce_collection()`: \n  *  `request.commerce_collection` **Changed** **Breaking** :warning:\n  *  `response` **Changed** **Breaking** :warning:\n* `unified_to.collection.patch_commerce_collection()`: \n  *  `request.commerce_collection` **Changed** **Breaking** :warning:\n  *  `response` **Changed** **Breaking** :warning:\n* `unified_to.collection.list_commerce_collections()`: \n  *  `request.saleschannel_id` **Added**\n  *  `response.[]` **Changed** **Breaking** :warning:\n* `unified_to.collection.get_commerce_collection()`:  `response` **Changed** **Breaking** :warning:\n* `unified_to.collection.create_commerce_collection()`: \n  *  `request.commerce_collection` **Changed** **Breaking** :warning:\n  *  `response` **Changed** **Breaking** :warning:\n* `unified_to.commerce.update_commerce_review()`: \n  *  `request.commerce_review.comments.[].metadata.[]` **Changed** **Breaking** :warning:\n  *  `response.comments.[].metadata.[]` **Changed** **Breaking** :warning:\n* `unified_to.commerce.update_commerce_item()`: \n  *  `request.commerce_item.media.[].metadata.[]` **Changed** **Breaking** :warning:\n  *  `response.media.[].metadata.[]` **Changed** **Breaking** :warning:\n* `unified_to.commerce.update_commerce_collection()`: \n  *  `request.commerce_collection` **Changed** **Breaking** :warning:\n  *  `response` **Changed** **Breaking** :warning:\n* `unified_to.commerce.patch_commerce_review()`: \n  *  `request.commerce_review.comments.[].metadata.[]` **Changed** **Breaking** :warning:\n  *  `response.comments.[].metadata.[]` **Changed** **Breaking** :warning:\n* `unified_to.commerce.patch_commerce_item()`: \n  *  `request.commerce_item.media.[].metadata.[]` **Changed** **Breaking** :warning:\n  *  `response.media.[].metadata.[]` **Changed** **Breaking** :warning:\n* `unified_to.commerce.patch_commerce_collection()`: \n  *  `request.commerce_collection` **Changed** **Breaking** :warning:\n  *  `response` **Changed** **Breaking** :warning:\n* `unified_to.commerce.list_commerce_reviews()`:  `response.[].comments.[].metadata.[]` **Changed** **Breaking** :warning:\n* `unified_to.commerce.list_commerce_items()`:  `response.[].media.[].metadata.[]` **Changed** **Breaking** :warning:\n* `unified_to.commerce.list_commerce_collections()`: \n  *  `request.saleschannel_id` **Added**\n  *  `response.[]` **Changed** **Breaking** :warning:\n* `unified_to.commerce.get_commerce_review()`:  `response.comments.[].metadata.[]` **Changed** **Breaking** :warning:\n* `unified_to.commerce.get_commerce_item()`:  `response.media.[].metadata.[]` **Changed** **Breaking** :warning:\n* `unified_to.commerce.get_commerce_collection()`:  `response` **Changed** **Breaking** :warning:\n* `unified_to.commerce.create_commerce_review()`: \n  *  `request.commerce_review.comments.[].metadata.[]` **Changed** **Breaking** :warning:\n  *  `response.comments.[].metadata.[]` **Changed** **Breaking** :warning:\n* `unified_to.commerce.create_commerce_item()`: \n  *  `request.commerce_item.media.[].metadata.[]` **Changed** **Breaking** :warning:\n  *  `response.media.[].metadata.[]` **Changed** **Breaking** :warning:\n* `unified_to.accounting.list_accounting_invoices()`:  `response.[].lineitems.[].item_variants` **Added**\n* `unified_to.purchaseorder.get_accounting_purchaseorder()`:  `response.lineitems.[].item_variants` **Added**\n* `unified_to.accounting.list_accounting_salesorders()`:  `response.[].lineitems.[].item_variants` **Added**\n* `unified_to.accounting.patch_accounting_bill()`: \n  *  `request.accounting_bill.lineitems.[].item_variants` **Added**\n  *  `response.lineitems.[].item_variants` **Added**\n* `unified_to.accounting.patch_accounting_creditmemo()`: \n  *  `request.accounting_creditmemo.lineitems.[].item_variants` **Added**\n  *  `response.lineitems.[].item_variants` **Added**\n* `unified_to.accounting.patch_accounting_expense()`: \n  *  `request.accounting_expense.lineitems.[].item_variants` **Added**\n  *  `response.lineitems.[].item_variants` **Added**\n* `unified_to.accounting.patch_accounting_invoice()`: \n  *  `request.accounting_invoice.lineitems.[].item_variants` **Added**\n  *  `response.lineitems.[].item_variants` **Added**\n* `unified_to.accounting.patch_accounting_order()`: \n  *  `request.accounting_order.lineitems.[].item_variants` **Added**\n  *  `response.lineitems.[].item_variants` **Added**\n* `unified_to.accounting.patch_accounting_purchaseorder()`: \n  *  `request.accounting_purchaseorder.lineitems.[].item_variants` **Added**\n  *  `response.lineitems.[].item_variants` **Added**\n* `unified_to.accounting.patch_accounting_salesorder()`: \n  *  `request.accounting_salesorder.lineitems.[].item_variants` **Added**\n  *  `response.lineitems.[].item_variants` **Added**\n* `unified_to.accounting.update_accounting_bill()`: \n  *  `request.accounting_bill.lineitems.[].item_variants` **Added**\n  *  `response.lineitems.[].item_variants` **Added**\n* `unified_to.accounting.update_accounting_creditmemo()`: \n  *  `request.accounting_creditmemo.lineitems.[].item_variants` **Added**\n  *  `response.lineitems.[].item_variants` **Added**\n* `unified_to.accounting.update_accounting_expense()`: \n  *  `request.accounting_expense.lineitems.[].item_variants` **Added**\n  *  `response.lineitems.[].item_variants` **Added**\n* `unified_to.accounting.update_accounting_invoice()`: \n  *  `request.accounting_invoice.lineitems.[].item_variants` **Added**\n  *  `response.lineitems.[].item_variants` **Added**\n* `unified_to.accounting.update_accounting_order()`: \n  *  `request.accounting_order.lineitems.[].item_variants` **Added**\n  *  `response.lineitems.[].item_variants` **Added**\n* `unified_to.accounting.update_accounting_purchaseorder()`: \n  *  `request.accounting_purchaseorder.lineitems.[].item_variants` **Added**\n  *  `response.lineitems.[].item_variants` **Added**\n* `unified_to.accounting.update_accounting_salesorder()`: \n  *  `request.accounting_salesorder.lineitems.[].item_variants` **Added**\n  *  `response.lineitems.[].item_variants` **Added**\n* `unified_to.bill.create_accounting_bill()`: \n  *  `request.accounting_bill.lineitems.[].item_variants` **Added**\n  *  `response.lineitems.[].item_variants` **Added**\n* `unified_to.bill.get_accounting_bill()`:  `response.lineitems.[].item_variants` **Added**\n* `unified_to.bill.list_accounting_bills()`:  `response.[].lineitems.[].item_variants` **Added**\n* `unified_to.bill.patch_accounting_bill()`: \n  *  `request.accounting_bill.lineitems.[].item_variants` **Added**\n  *  `response.lineitems.[].item_variants` **Added**\n* `unified_to.bill.update_accounting_bill()`: \n  *  `request.accounting_bill.lineitems.[].item_variants` **Added**\n  *  `response.lineitems.[].item_variants` **Added**\n* `unified_to.creditmemo.create_accounting_creditmemo()`: \n  *  `request.accounting_creditmemo.lineitems.[].item_variants` **Added**\n  *  `response.lineitems.[].item_variants` **Added**\n* `unified_to.creditmemo.get_accounting_creditmemo()`:  `response.lineitems.[].item_variants` **Added**\n* `unified_to.creditmemo.list_accounting_creditmemoes()`:  `response.[].lineitems.[].item_variants` **Added**\n* `unified_to.creditmemo.patch_accounting_creditmemo()`: \n  *  `request.accounting_creditmemo.lineitems.[].item_variants` **Added**\n  *  `response.lineitems.[].item_variants` **Added**\n* `unified_to.creditmemo.update_accounting_creditmemo()`: \n  *  `request.accounting_creditmemo.lineitems.[].item_variants` **Added**\n  *  `response.lineitems.[].item_variants` **Added**\n* `unified_to.expense.create_accounting_expense()`: \n  *  `request.accounting_expense.lineitems.[].item_variants` **Added**\n  *  `response.lineitems.[].item_variants` **Added**\n* `unified_to.expense.get_accounting_expense()`:  `response.lineitems.[].item_variants` **Added**\n* `unified_to.expense.list_accounting_expenses()`:  `response.[].lineitems.[].item_variants` **Added**\n* `unified_to.expense.patch_accounting_expense()`: \n  *  `request.accounting_expense.lineitems.[].item_variants` **Added**\n  *  `response.lineitems.[].item_variants` **Added**\n* `unified_to.expense.update_accounting_expense()`: \n  *  `request.accounting_expense.lineitems.[].item_variants` **Added**\n  *  `response.lineitems.[].item_variants` **Added**\n* `unified_to.invoice.create_accounting_invoice()`: \n  *  `request.accounting_invoice.lineitems.[].item_variants` **Added**\n  *  `response.lineitems.[].item_variants` **Added**\n* `unified_to.invoice.get_accounting_invoice()`:  `response.lineitems.[].item_variants` **Added**\n* `unified_to.invoice.list_accounting_invoices()`:  `response.[].lineitems.[].item_variants` **Added**\n* `unified_to.invoice.patch_accounting_invoice()`: \n  *  `request.accounting_invoice.lineitems.[].item_variants` **Added**\n  *  `response.lineitems.[].item_variants` **Added**\n* `unified_to.invoice.update_accounting_invoice()`: \n  *  `request.accounting_invoice.lineitems.[].item_variants` **Added**\n  *  `response.lineitems.[].item_variants` **Added**\n* `unified_to.order.create_accounting_order()`: \n  *  `request.accounting_order.lineitems.[].item_variants` **Added**\n  *  `response.lineitems.[].item_variants` **Added**\n* `unified_to.order.get_accounting_order()`:  `response.lineitems.[].item_variants` **Added**\n* `unified_to.order.list_accounting_orders()`:  `response.[].lineitems.[].item_variants` **Added**\n* `unified_to.order.patch_accounting_order()`: \n  *  `request.accounting_order.lineitems.[].item_variants` **Added**\n  *  `response.lineitems.[].item_variants` **Added**\n* `unified_to.order.update_accounting_order()`: \n  *  `request.accounting_order.lineitems.[].item_variants` **Added**\n  *  `response.lineitems.[].item_variants` **Added**\n* `unified_to.purchaseorder.create_accounting_purchaseorder()`: \n  *  `request.accounting_purchaseorder.lineitems.[].item_variants` **Added**\n  *  `response.lineitems.[].item_variants` **Added**\n* `unified_to.accounting.list_accounting_purchaseorders()`:  `response.[].lineitems.[].item_variants` **Added**\n* `unified_to.purchaseorder.list_accounting_purchaseorders()`:  `response.[].lineitems.[].item_variants` **Added**\n* `unified_to.purchaseorder.patch_accounting_purchaseorder()`: \n  *  `request.accounting_purchaseorder.lineitems.[].item_variants` **Added**\n  *  `response.lineitems.[].item_variants` **Added**\n* `unified_to.purchaseorder.update_accounting_purchaseorder()`: \n  *  `request.accounting_purchaseorder.lineitems.[].item_variants` **Added**\n  *  `response.lineitems.[].item_variants` **Added**\n* `unified_to.salesorder.create_accounting_salesorder()`: \n  *  `request.accounting_salesorder.lineitems.[].item_variants` **Added**\n  *  `response.lineitems.[].item_variants` **Added**\n* `unified_to.salesorder.get_accounting_salesorder()`:  `response.lineitems.[].item_variants` **Added**\n* `unified_to.salesorder.list_accounting_salesorders()`:  `response.[].lineitems.[].item_variants` **Added**\n* `unified_to.salesorder.patch_accounting_salesorder()`: \n  *  `request.accounting_salesorder.lineitems.[].item_variants` **Added**\n  *  `response.lineitems.[].item_variants` **Added**\n* `unified_to.salesorder.update_accounting_salesorder()`: \n  *  `request.accounting_salesorder.lineitems.[].item_variants` **Added**\n  *  `response.lineitems.[].item_variants` **Added**\n* `unified_to.accounting.list_accounting_orders()`:  `response.[].lineitems.[].item_variants` **Added**\n* `unified_to.commerce.create_commerce_saleschannel()`: **Added**\n* `unified_to.accounting.list_accounting_expenses()`:  `response.[].lineitems.[].item_variants` **Added**\n* `unified_to.accounting.list_accounting_creditmemoes()`:  `response.[].lineitems.[].item_variants` **Added**\n* `unified_to.accounting.list_accounting_bills()`:  `response.[].lineitems.[].item_variants` **Added**\n* `unified_to.accounting.get_accounting_salesorder()`:  `response.lineitems.[].item_variants` **Added**\n* `unified_to.accounting.get_accounting_purchaseorder()`:  `response.lineitems.[].item_variants` **Added**\n* `unified_to.accounting.get_accounting_order()`:  `response.lineitems.[].item_variants` **Added**\n* `unified_to.accounting.get_accounting_invoice()`:  `response.lineitems.[].item_variants` **Added**\n* `unified_to.accounting.get_accounting_expense()`:  `response.lineitems.[].item_variants` **Added**\n* `unified_to.accounting.get_accounting_creditmemo()`:  `response.lineitems.[].item_variants` **Added**\n* `unified_to.accounting.get_accounting_bill()`:  `response.lineitems.[].item_variants` **Added**\n* `unified_to.accounting.create_accounting_salesorder()`: \n  *  `request.accounting_salesorder.lineitems.[].item_variants` **Added**\n  *  `response.lineitems.[].item_variants` **Added**\n* `unified_to.accounting.create_accounting_purchaseorder()`: \n  *  `request.accounting_purchaseorder.lineitems.[].item_variants` **Added**\n  *  `response.lineitems.[].item_variants` **Added**\n* `unified_to.accounting.create_accounting_order()`: \n  *  `request.accounting_order.lineitems.[].item_variants` **Added**\n  *  `response.lineitems.[].item_variants` **Added**\n* `unified_to.accounting.create_accounting_invoice()`: \n  *  `request.accounting_invoice.lineitems.[].item_variants` **Added**\n  *  `response.lineitems.[].item_variants` **Added**\n* `unified_to.accounting.create_accounting_expense()`: \n  *  `request.accounting_expense.lineitems.[].item_variants` **Added**\n  *  `response.lineitems.[].item_variants` **Added**\n* `unified_to.accounting.create_accounting_creditmemo()`: \n  *  `request.accounting_creditmemo.lineitems.[].item_variants` **Added**\n  *  `response.lineitems.[].item_variants` **Added**\n* `unified_to.accounting.create_accounting_bill()`: \n  *  `request.accounting_bill.lineitems.[].item_variants` **Added**\n  *  `response.lineitems.[].item_variants` **Added**\n* `unified_to.saleschannel.update_commerce_saleschannel()`: **Added**\n* `unified_to.saleschannel.remove_commerce_saleschannel()`: **Added**\n* `unified_to.saleschannel.patch_commerce_saleschannel()`: **Added**\n* `unified_to.saleschannel.list_commerce_saleschannels()`: **Added**\n* `unified_to.saleschannel.get_commerce_saleschannel()`: **Added**\n* `unified_to.saleschannel.create_commerce_saleschannel()`: **Added**\n* `unified_to.commerce.update_commerce_saleschannel()`: **Added**\n* `unified_to.commerce.remove_commerce_saleschannel()`: **Added**\n* `unified_to.commerce.patch_commerce_saleschannel()`: **Added**\n* `unified_to.commerce.list_commerce_saleschannels()`: **Added**\n* `unified_to.commerce.get_commerce_saleschannel()`: **Added**\n* `unified_to.unified.list_unified_integration_workspaces()`:  `response.[].support.{}` **Changed**\n* `unified_to.unified.list_unified_integrations()`:  `response.[].support.{}` **Changed**\n* `unified_to.integration.list_unified_integration_workspaces()`:  `response.[].support.{}` **Changed**\n* `unified_to.integration.list_unified_integrations()`:  `response.[].support.{}` **Changed**\n"

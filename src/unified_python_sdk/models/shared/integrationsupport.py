@@ -34,6 +34,12 @@ class ListApplicationID(str, Enum, metaclass=utils.OpenEnumMeta):
     NOT_SUPPORTED = "not-supported"
 
 
+class ListBenefitID(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
 class ListBranchID(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
@@ -293,6 +299,12 @@ class ListRepoID(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class ListRootID(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
+class ListSaleschannelID(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
     NOT_SUPPORTED = "not-supported"
@@ -628,6 +640,12 @@ class VirtualWebhookRepoID(str, Enum, metaclass=utils.OpenEnumMeta):
     NOT_SUPPORTED = "not-supported"
 
 
+class VirtualWebhookSaleschannelID(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
 class VirtualWebhookSpaceID(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
@@ -687,6 +705,7 @@ class IntegrationSupportTypedDict(TypedDict):
     inbound_fields: NotRequired[Dict[str, str]]
     list_account_id: NotRequired[ListAccountID]
     list_application_id: NotRequired[ListApplicationID]
+    list_benefit_id: NotRequired[ListBenefitID]
     list_branch_id: NotRequired[ListBranchID]
     list_calendar_id: NotRequired[ListCalendarID]
     list_call_id: NotRequired[ListCallID]
@@ -731,6 +750,7 @@ class IntegrationSupportTypedDict(TypedDict):
     list_raw_fields: NotRequired[ListRawFields]
     list_repo_id: NotRequired[ListRepoID]
     list_root_id: NotRequired[ListRootID]
+    list_saleschannel_id: NotRequired[ListSaleschannelID]
     list_sort_by_created_at: NotRequired[ListSortByCreatedAt]
     list_sort_by_name: NotRequired[ListSortByName]
     list_sort_by_updated_at: NotRequired[ListSortByUpdatedAt]
@@ -791,6 +811,7 @@ class IntegrationSupportTypedDict(TypedDict):
     virtual_webhook_pipeline_id: NotRequired[VirtualWebhookPipelineID]
     virtual_webhook_project_id: NotRequired[VirtualWebhookProjectID]
     virtual_webhook_repo_id: NotRequired[VirtualWebhookRepoID]
+    virtual_webhook_saleschannel_id: NotRequired[VirtualWebhookSaleschannelID]
     virtual_webhook_space_id: NotRequired[VirtualWebhookSpaceID]
     virtual_webhook_start_gte: NotRequired[VirtualWebhookStartGte]
     virtual_webhook_status: NotRequired[VirtualWebhookStatus]
@@ -816,6 +837,10 @@ class IntegrationSupport(BaseModel):
 
     list_application_id: Annotated[
         Optional[ListApplicationID], PlainValidator(validate_open_enum(False))
+    ] = None
+
+    list_benefit_id: Annotated[
+        Optional[ListBenefitID], PlainValidator(validate_open_enum(False))
     ] = None
 
     list_branch_id: Annotated[
@@ -992,6 +1017,10 @@ class IntegrationSupport(BaseModel):
 
     list_root_id: Annotated[
         Optional[ListRootID], PlainValidator(validate_open_enum(False))
+    ] = None
+
+    list_saleschannel_id: Annotated[
+        Optional[ListSaleschannelID], PlainValidator(validate_open_enum(False))
     ] = None
 
     list_sort_by_created_at: Annotated[
@@ -1223,6 +1252,11 @@ class IntegrationSupport(BaseModel):
         Optional[VirtualWebhookRepoID], PlainValidator(validate_open_enum(False))
     ] = None
 
+    virtual_webhook_saleschannel_id: Annotated[
+        Optional[VirtualWebhookSaleschannelID],
+        PlainValidator(validate_open_enum(False)),
+    ] = None
+
     virtual_webhook_space_id: Annotated[
         Optional[VirtualWebhookSpaceID], PlainValidator(validate_open_enum(False))
     ] = None
@@ -1285,6 +1319,15 @@ class IntegrationSupport(BaseModel):
         if isinstance(value, str):
             try:
                 return shared.ListApplicationID(value)
+            except ValueError:
+                return value
+        return value
+
+    @field_serializer("list_benefit_id")
+    def serialize_list_benefit_id(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.ListBenefitID(value)
             except ValueError:
                 return value
         return value
@@ -1681,6 +1724,15 @@ class IntegrationSupport(BaseModel):
         if isinstance(value, str):
             try:
                 return shared.ListRootID(value)
+            except ValueError:
+                return value
+        return value
+
+    @field_serializer("list_saleschannel_id")
+    def serialize_list_saleschannel_id(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.ListSaleschannelID(value)
             except ValueError:
                 return value
         return value
@@ -2176,6 +2228,15 @@ class IntegrationSupport(BaseModel):
         if isinstance(value, str):
             try:
                 return shared.VirtualWebhookRepoID(value)
+            except ValueError:
+                return value
+        return value
+
+    @field_serializer("virtual_webhook_saleschannel_id")
+    def serialize_virtual_webhook_saleschannel_id(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.VirtualWebhookSaleschannelID(value)
             except ValueError:
                 return value
         return value

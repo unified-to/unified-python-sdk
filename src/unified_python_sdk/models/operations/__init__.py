@@ -180,6 +180,12 @@ if TYPE_CHECKING:
         CreateCommerceReviewResponse,
         CreateCommerceReviewResponseTypedDict,
     )
+    from .createcommercesaleschannel import (
+        CreateCommerceSaleschannelRequest,
+        CreateCommerceSaleschannelRequestTypedDict,
+        CreateCommerceSaleschannelResponse,
+        CreateCommerceSaleschannelResponseTypedDict,
+    )
     from .createcrmcompany import (
         CreateCrmCompanyRequest,
         CreateCrmCompanyRequestTypedDict,
@@ -711,6 +717,12 @@ if TYPE_CHECKING:
         GetCommerceReviewRequestTypedDict,
         GetCommerceReviewResponse,
         GetCommerceReviewResponseTypedDict,
+    )
+    from .getcommercesaleschannel import (
+        GetCommerceSaleschannelRequest,
+        GetCommerceSaleschannelRequestTypedDict,
+        GetCommerceSaleschannelResponse,
+        GetCommerceSaleschannelResponseTypedDict,
     )
     from .getcrmcompany import (
         GetCrmCompanyRequest,
@@ -1312,6 +1324,12 @@ if TYPE_CHECKING:
         ListCommerceReviewsResponse,
         ListCommerceReviewsResponseTypedDict,
     )
+    from .listcommercesaleschannels import (
+        ListCommerceSaleschannelsRequest,
+        ListCommerceSaleschannelsRequestTypedDict,
+        ListCommerceSaleschannelsResponse,
+        ListCommerceSaleschannelsResponseTypedDict,
+    )
     from .listcrmcompanies import (
         ListCrmCompaniesRequest,
         ListCrmCompaniesRequestTypedDict,
@@ -1879,6 +1897,12 @@ if TYPE_CHECKING:
         PatchCommerceReviewResponse,
         PatchCommerceReviewResponseTypedDict,
     )
+    from .patchcommercesaleschannel import (
+        PatchCommerceSaleschannelRequest,
+        PatchCommerceSaleschannelRequestTypedDict,
+        PatchCommerceSaleschannelResponse,
+        PatchCommerceSaleschannelResponseTypedDict,
+    )
     from .patchcrmcompany import (
         PatchCrmCompanyRequest,
         PatchCrmCompanyRequestTypedDict,
@@ -2365,6 +2389,12 @@ if TYPE_CHECKING:
         RemoveCommerceReviewResponse,
         RemoveCommerceReviewResponseTypedDict,
     )
+    from .removecommercesaleschannel import (
+        RemoveCommerceSaleschannelRequest,
+        RemoveCommerceSaleschannelRequestTypedDict,
+        RemoveCommerceSaleschannelResponse,
+        RemoveCommerceSaleschannelResponseTypedDict,
+    )
     from .removecrmcompany import (
         RemoveCrmCompanyRequest,
         RemoveCrmCompanyRequestTypedDict,
@@ -2839,6 +2869,12 @@ if TYPE_CHECKING:
         UpdateCommerceReviewResponse,
         UpdateCommerceReviewResponseTypedDict,
     )
+    from .updatecommercesaleschannel import (
+        UpdateCommerceSaleschannelRequest,
+        UpdateCommerceSaleschannelRequestTypedDict,
+        UpdateCommerceSaleschannelResponse,
+        UpdateCommerceSaleschannelResponseTypedDict,
+    )
     from .updatecrmcompany import (
         UpdateCrmCompanyRequest,
         UpdateCrmCompanyRequestTypedDict,
@@ -3270,6 +3306,10 @@ __all__ = [
     "CreateCommerceReviewRequestTypedDict",
     "CreateCommerceReviewResponse",
     "CreateCommerceReviewResponseTypedDict",
+    "CreateCommerceSaleschannelRequest",
+    "CreateCommerceSaleschannelRequestTypedDict",
+    "CreateCommerceSaleschannelResponse",
+    "CreateCommerceSaleschannelResponseTypedDict",
     "CreateCrmCompanyRequest",
     "CreateCrmCompanyRequestTypedDict",
     "CreateCrmCompanyResponse",
@@ -3624,6 +3664,10 @@ __all__ = [
     "GetCommerceReviewRequestTypedDict",
     "GetCommerceReviewResponse",
     "GetCommerceReviewResponseTypedDict",
+    "GetCommerceSaleschannelRequest",
+    "GetCommerceSaleschannelRequestTypedDict",
+    "GetCommerceSaleschannelResponse",
+    "GetCommerceSaleschannelResponseTypedDict",
     "GetCrmCompanyRequest",
     "GetCrmCompanyRequestTypedDict",
     "GetCrmCompanyResponse",
@@ -4024,6 +4068,10 @@ __all__ = [
     "ListCommerceReviewsRequestTypedDict",
     "ListCommerceReviewsResponse",
     "ListCommerceReviewsResponseTypedDict",
+    "ListCommerceSaleschannelsRequest",
+    "ListCommerceSaleschannelsRequestTypedDict",
+    "ListCommerceSaleschannelsResponse",
+    "ListCommerceSaleschannelsResponseTypedDict",
     "ListCrmCompaniesRequest",
     "ListCrmCompaniesRequestTypedDict",
     "ListCrmCompaniesResponse",
@@ -4401,6 +4449,10 @@ __all__ = [
     "PatchCommerceReviewRequestTypedDict",
     "PatchCommerceReviewResponse",
     "PatchCommerceReviewResponseTypedDict",
+    "PatchCommerceSaleschannelRequest",
+    "PatchCommerceSaleschannelRequestTypedDict",
+    "PatchCommerceSaleschannelResponse",
+    "PatchCommerceSaleschannelResponseTypedDict",
     "PatchCrmCompanyRequest",
     "PatchCrmCompanyRequestTypedDict",
     "PatchCrmCompanyResponse",
@@ -4726,6 +4778,10 @@ __all__ = [
     "RemoveCommerceReviewRequestTypedDict",
     "RemoveCommerceReviewResponse",
     "RemoveCommerceReviewResponseTypedDict",
+    "RemoveCommerceSaleschannelRequest",
+    "RemoveCommerceSaleschannelRequestTypedDict",
+    "RemoveCommerceSaleschannelResponse",
+    "RemoveCommerceSaleschannelResponseTypedDict",
     "RemoveCrmCompanyRequest",
     "RemoveCrmCompanyRequestTypedDict",
     "RemoveCrmCompanyResponse",
@@ -5042,6 +5098,10 @@ __all__ = [
     "UpdateCommerceReviewRequestTypedDict",
     "UpdateCommerceReviewResponse",
     "UpdateCommerceReviewResponseTypedDict",
+    "UpdateCommerceSaleschannelRequest",
+    "UpdateCommerceSaleschannelRequestTypedDict",
+    "UpdateCommerceSaleschannelResponse",
+    "UpdateCommerceSaleschannelResponseTypedDict",
     "UpdateCrmCompanyRequest",
     "UpdateCrmCompanyRequestTypedDict",
     "UpdateCrmCompanyResponse",
@@ -5369,6 +5429,10 @@ _dynamic_imports: dict[str, str] = {
     "CreateCommerceReviewRequestTypedDict": ".createcommercereview",
     "CreateCommerceReviewResponse": ".createcommercereview",
     "CreateCommerceReviewResponseTypedDict": ".createcommercereview",
+    "CreateCommerceSaleschannelRequest": ".createcommercesaleschannel",
+    "CreateCommerceSaleschannelRequestTypedDict": ".createcommercesaleschannel",
+    "CreateCommerceSaleschannelResponse": ".createcommercesaleschannel",
+    "CreateCommerceSaleschannelResponseTypedDict": ".createcommercesaleschannel",
     "CreateCrmCompanyRequest": ".createcrmcompany",
     "CreateCrmCompanyRequestTypedDict": ".createcrmcompany",
     "CreateCrmCompanyResponse": ".createcrmcompany",
@@ -5723,6 +5787,10 @@ _dynamic_imports: dict[str, str] = {
     "GetCommerceReviewRequestTypedDict": ".getcommercereview",
     "GetCommerceReviewResponse": ".getcommercereview",
     "GetCommerceReviewResponseTypedDict": ".getcommercereview",
+    "GetCommerceSaleschannelRequest": ".getcommercesaleschannel",
+    "GetCommerceSaleschannelRequestTypedDict": ".getcommercesaleschannel",
+    "GetCommerceSaleschannelResponse": ".getcommercesaleschannel",
+    "GetCommerceSaleschannelResponseTypedDict": ".getcommercesaleschannel",
     "GetCrmCompanyRequest": ".getcrmcompany",
     "GetCrmCompanyRequestTypedDict": ".getcrmcompany",
     "GetCrmCompanyResponse": ".getcrmcompany",
@@ -6123,6 +6191,10 @@ _dynamic_imports: dict[str, str] = {
     "ListCommerceReviewsRequestTypedDict": ".listcommercereviews",
     "ListCommerceReviewsResponse": ".listcommercereviews",
     "ListCommerceReviewsResponseTypedDict": ".listcommercereviews",
+    "ListCommerceSaleschannelsRequest": ".listcommercesaleschannels",
+    "ListCommerceSaleschannelsRequestTypedDict": ".listcommercesaleschannels",
+    "ListCommerceSaleschannelsResponse": ".listcommercesaleschannels",
+    "ListCommerceSaleschannelsResponseTypedDict": ".listcommercesaleschannels",
     "ListCrmCompaniesRequest": ".listcrmcompanies",
     "ListCrmCompaniesRequestTypedDict": ".listcrmcompanies",
     "ListCrmCompaniesResponse": ".listcrmcompanies",
@@ -6502,6 +6574,10 @@ _dynamic_imports: dict[str, str] = {
     "PatchCommerceReviewRequestTypedDict": ".patchcommercereview",
     "PatchCommerceReviewResponse": ".patchcommercereview",
     "PatchCommerceReviewResponseTypedDict": ".patchcommercereview",
+    "PatchCommerceSaleschannelRequest": ".patchcommercesaleschannel",
+    "PatchCommerceSaleschannelRequestTypedDict": ".patchcommercesaleschannel",
+    "PatchCommerceSaleschannelResponse": ".patchcommercesaleschannel",
+    "PatchCommerceSaleschannelResponseTypedDict": ".patchcommercesaleschannel",
     "PatchCrmCompanyRequest": ".patchcrmcompany",
     "PatchCrmCompanyRequestTypedDict": ".patchcrmcompany",
     "PatchCrmCompanyResponse": ".patchcrmcompany",
@@ -6826,6 +6902,10 @@ _dynamic_imports: dict[str, str] = {
     "RemoveCommerceReviewRequestTypedDict": ".removecommercereview",
     "RemoveCommerceReviewResponse": ".removecommercereview",
     "RemoveCommerceReviewResponseTypedDict": ".removecommercereview",
+    "RemoveCommerceSaleschannelRequest": ".removecommercesaleschannel",
+    "RemoveCommerceSaleschannelRequestTypedDict": ".removecommercesaleschannel",
+    "RemoveCommerceSaleschannelResponse": ".removecommercesaleschannel",
+    "RemoveCommerceSaleschannelResponseTypedDict": ".removecommercesaleschannel",
     "RemoveCrmCompanyRequest": ".removecrmcompany",
     "RemoveCrmCompanyRequestTypedDict": ".removecrmcompany",
     "RemoveCrmCompanyResponse": ".removecrmcompany",
@@ -7142,6 +7222,10 @@ _dynamic_imports: dict[str, str] = {
     "UpdateCommerceReviewRequestTypedDict": ".updatecommercereview",
     "UpdateCommerceReviewResponse": ".updatecommercereview",
     "UpdateCommerceReviewResponseTypedDict": ".updatecommercereview",
+    "UpdateCommerceSaleschannelRequest": ".updatecommercesaleschannel",
+    "UpdateCommerceSaleschannelRequestTypedDict": ".updatecommercesaleschannel",
+    "UpdateCommerceSaleschannelResponse": ".updatecommercesaleschannel",
+    "UpdateCommerceSaleschannelResponseTypedDict": ".updatecommercesaleschannel",
     "UpdateCrmCompanyRequest": ".updatecrmcompany",
     "UpdateCrmCompanyRequestTypedDict": ".updatecrmcompany",
     "UpdateCrmCompanyResponse": ".updatecrmcompany",

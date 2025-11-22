@@ -60,6 +60,8 @@
 | `COMMERCE_LOCATION_WRITE`        | commerce_location_write          |
 | `COMMERCE_REVIEW_READ`           | commerce_review_read             |
 | `COMMERCE_REVIEW_WRITE`          | commerce_review_write            |
+| `COMMERCE_SALESCHANNEL_READ`     | commerce_saleschannel_read       |
+| `COMMERCE_SALESCHANNEL_WRITE`    | commerce_saleschannel_write      |
 | `VERIFICATION_PACKAGE_READ`      | verification_package_read        |
 | `VERIFICATION_REQUEST_READ`      | verification_request_read        |
 | `VERIFICATION_REQUEST_WRITE`     | verification_request_write       |

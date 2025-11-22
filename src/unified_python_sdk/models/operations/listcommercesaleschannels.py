@@ -5,7 +5,7 @@ import httpx
 from typing import List, Optional
 from typing_extensions import Annotated, NotRequired, TypedDict
 from unified_python_sdk.models.shared import (
-    commercecollection as shared_commercecollection,
+    commercesaleschannel as shared_commercesaleschannel,
 )
 from unified_python_sdk.types import BaseModel
 from unified_python_sdk.utils import (
@@ -15,7 +15,7 @@ from unified_python_sdk.utils import (
 )
 
 
-class ListCommerceCollectionsRequestTypedDict(TypedDict):
+class ListCommerceSaleschannelsRequestTypedDict(TypedDict):
     connection_id: str
     r"""ID of the connection"""
     fields: NotRequired[List[str]]
@@ -23,21 +23,16 @@ class ListCommerceCollectionsRequestTypedDict(TypedDict):
     limit: NotRequired[float]
     offset: NotRequired[float]
     order: NotRequired[str]
-    parent_id: NotRequired[str]
-    r"""The parent ID to filter by"""
     query: NotRequired[str]
     r"""Query string to search. eg. email address or name"""
     raw: NotRequired[str]
     r"""Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar"""
-    saleschannel_id: NotRequired[str]
-    r"""The saleschannel ID to filter by"""
     sort: NotRequired[str]
-    type: NotRequired[str]
     updated_gte: NotRequired[str]
     r"""Return only results whose updated date is equal or greater to this value"""
 
 
-class ListCommerceCollectionsRequest(BaseModel):
+class ListCommerceSaleschannelsRequest(BaseModel):
     connection_id: Annotated[
         str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))
     ]
@@ -64,12 +59,6 @@ class ListCommerceCollectionsRequest(BaseModel):
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
 
-    parent_id: Annotated[
-        Optional[str],
-        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
-    ] = None
-    r"""The parent ID to filter by"""
-
     query: Annotated[
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
@@ -82,18 +71,7 @@ class ListCommerceCollectionsRequest(BaseModel):
     ] = None
     r"""Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar"""
 
-    saleschannel_id: Annotated[
-        Optional[str],
-        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
-    ] = None
-    r"""The saleschannel ID to filter by"""
-
     sort: Annotated[
-        Optional[str],
-        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
-    ] = None
-
-    type: Annotated[
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
@@ -105,20 +83,20 @@ class ListCommerceCollectionsRequest(BaseModel):
     r"""Return only results whose updated date is equal or greater to this value"""
 
 
-class ListCommerceCollectionsResponseTypedDict(TypedDict):
+class ListCommerceSaleschannelsResponseTypedDict(TypedDict):
     content_type: str
     r"""HTTP response content type for this operation"""
     status_code: int
     r"""HTTP response status code for this operation"""
     raw_response: httpx.Response
     r"""Raw HTTP response; suitable for custom response parsing"""
-    commerce_collections: NotRequired[
-        List[shared_commercecollection.CommerceCollectionTypedDict]
+    commerce_saleschannels: NotRequired[
+        List[shared_commercesaleschannel.CommerceSaleschannelTypedDict]
     ]
     r"""Successful"""
 
 
-class ListCommerceCollectionsResponse(BaseModel):
+class ListCommerceSaleschannelsResponse(BaseModel):
     content_type: str
     r"""HTTP response content type for this operation"""
 
@@ -128,7 +106,7 @@ class ListCommerceCollectionsResponse(BaseModel):
     raw_response: httpx.Response
     r"""Raw HTTP response; suitable for custom response parsing"""
 
-    commerce_collections: Optional[
-        List[shared_commercecollection.CommerceCollection]
+    commerce_saleschannels: Optional[
+        List[shared_commercesaleschannel.CommerceSaleschannel]
     ] = None
     r"""Successful"""

@@ -34,6 +34,7 @@
 | `COMMERCE_INVENTORY`       | commerce_inventory         |
 | `COMMERCE_LOCATION`        | commerce_location          |
 | `COMMERCE_REVIEW`          | commerce_review            |
+| `COMMERCE_SALESCHANNEL`    | commerce_saleschannel      |
 | `VERIFICATION_PACKAGE`     | verification_package       |
 | `VERIFICATION_REQUEST`     | verification_request       |
 | `ATS_ACTIVITY`             | ats_activity               |

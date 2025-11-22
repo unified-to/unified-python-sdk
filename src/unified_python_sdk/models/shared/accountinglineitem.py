@@ -18,6 +18,7 @@ class AccountingLineitemTypedDict(TypedDict):
     item_id: NotRequired[str]
     item_name: NotRequired[str]
     item_sku: NotRequired[str]
+    item_variants: NotRequired[List[AccountingReferenceTypedDict]]
     locations: NotRequired[List[AccountingReferenceTypedDict]]
     notes: NotRequired[str]
     refund_amount: NotRequired[float]
@@ -48,6 +49,8 @@ class AccountingLineitem(BaseModel):
     item_name: Optional[str] = None
 
     item_sku: Optional[str] = None
+
+    item_variants: Optional[List[AccountingReference]] = None
 
     locations: Optional[List[AccountingReference]] = None
 

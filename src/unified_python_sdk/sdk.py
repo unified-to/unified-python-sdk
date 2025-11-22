@@ -106,6 +106,7 @@ if TYPE_CHECKING:
     from unified_python_sdk.repository import Repository
     from unified_python_sdk.request import Request
     from unified_python_sdk.review import Review
+    from unified_python_sdk.saleschannel import Saleschannel
     from unified_python_sdk.salesorder import Salesorder
     from unified_python_sdk.scim import Scim
     from unified_python_sdk.scorecard import Scorecard
@@ -172,6 +173,7 @@ class UnifiedTo(BaseSDK):
     item: "Item"
     location: "Location"
     review: "Review"
+    saleschannel: "Saleschannel"
     crm: "Crm"
     deal: "Deal"
     lead: "Lead"
@@ -286,6 +288,7 @@ class UnifiedTo(BaseSDK):
         "item": ("unified_python_sdk.item", "Item"),
         "location": ("unified_python_sdk.location", "Location"),
         "review": ("unified_python_sdk.review", "Review"),
+        "saleschannel": ("unified_python_sdk.saleschannel", "Saleschannel"),
         "crm": ("unified_python_sdk.crm", "Crm"),
         "deal": ("unified_python_sdk.deal", "Deal"),
         "lead": ("unified_python_sdk.lead", "Lead"),

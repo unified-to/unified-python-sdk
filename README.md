@@ -506,31 +506,37 @@ asyncio.run(main())
 * [create_commerce_item](docs/sdks/commerce/README.md#create_commerce_item) - Create an item
 * [create_commerce_location](docs/sdks/commerce/README.md#create_commerce_location) - Create a location
 * [create_commerce_review](docs/sdks/commerce/README.md#create_commerce_review) - Create a review
+* [create_commerce_saleschannel](docs/sdks/commerce/README.md#create_commerce_saleschannel) - Create a saleschannel
 * [get_commerce_collection](docs/sdks/commerce/README.md#get_commerce_collection) - Retrieve a collection
 * [get_commerce_inventory](docs/sdks/commerce/README.md#get_commerce_inventory) - Retrieve an inventory
 * [get_commerce_item](docs/sdks/commerce/README.md#get_commerce_item) - Retrieve an item
 * [get_commerce_location](docs/sdks/commerce/README.md#get_commerce_location) - Retrieve a location
 * [get_commerce_review](docs/sdks/commerce/README.md#get_commerce_review) - Retrieve a review
+* [get_commerce_saleschannel](docs/sdks/commerce/README.md#get_commerce_saleschannel) - Retrieve a saleschannel
 * [list_commerce_collections](docs/sdks/commerce/README.md#list_commerce_collections) - List all collections
 * [list_commerce_inventories](docs/sdks/commerce/README.md#list_commerce_inventories) - List all inventories
 * [list_commerce_items](docs/sdks/commerce/README.md#list_commerce_items) - List all items
 * [list_commerce_locations](docs/sdks/commerce/README.md#list_commerce_locations) - List all locations
 * [list_commerce_reviews](docs/sdks/commerce/README.md#list_commerce_reviews) - List all reviews
+* [list_commerce_saleschannels](docs/sdks/commerce/README.md#list_commerce_saleschannels) - List all saleschannels
 * [patch_commerce_collection](docs/sdks/commerce/README.md#patch_commerce_collection) - Update a collection
 * [patch_commerce_inventory](docs/sdks/commerce/README.md#patch_commerce_inventory) - Update an inventory
 * [patch_commerce_item](docs/sdks/commerce/README.md#patch_commerce_item) - Update an item
 * [patch_commerce_location](docs/sdks/commerce/README.md#patch_commerce_location) - Update a location
 * [patch_commerce_review](docs/sdks/commerce/README.md#patch_commerce_review) - Update a review
+* [patch_commerce_saleschannel](docs/sdks/commerce/README.md#patch_commerce_saleschannel) - Update a saleschannel
 * [remove_commerce_collection](docs/sdks/commerce/README.md#remove_commerce_collection) - Remove a collection
 * [remove_commerce_inventory](docs/sdks/commerce/README.md#remove_commerce_inventory) - Remove an inventory
 * [remove_commerce_item](docs/sdks/commerce/README.md#remove_commerce_item) - Remove an item
 * [remove_commerce_location](docs/sdks/commerce/README.md#remove_commerce_location) - Remove a location
 * [remove_commerce_review](docs/sdks/commerce/README.md#remove_commerce_review) - Remove a review
+* [remove_commerce_saleschannel](docs/sdks/commerce/README.md#remove_commerce_saleschannel) - Remove a saleschannel
 * [update_commerce_collection](docs/sdks/commerce/README.md#update_commerce_collection) - Update a collection
 * [update_commerce_inventory](docs/sdks/commerce/README.md#update_commerce_inventory) - Update an inventory
 * [update_commerce_item](docs/sdks/commerce/README.md#update_commerce_item) - Update an item
 * [update_commerce_location](docs/sdks/commerce/README.md#update_commerce_location) - Update a location
 * [update_commerce_review](docs/sdks/commerce/README.md#update_commerce_review) - Update a review
+* [update_commerce_saleschannel](docs/sdks/commerce/README.md#update_commerce_saleschannel) - Update a saleschannel
 
 ### [commit](docs/sdks/commit/README.md)
 
@@ -1273,6 +1279,15 @@ asyncio.run(main())
 * [patch_commerce_review](docs/sdks/review/README.md#patch_commerce_review) - Update a review
 * [remove_commerce_review](docs/sdks/review/README.md#remove_commerce_review) - Remove a review
 * [update_commerce_review](docs/sdks/review/README.md#update_commerce_review) - Update a review
+
+### [saleschannel](docs/sdks/saleschannel/README.md)
+
+* [create_commerce_saleschannel](docs/sdks/saleschannel/README.md#create_commerce_saleschannel) - Create a saleschannel
+* [get_commerce_saleschannel](docs/sdks/saleschannel/README.md#get_commerce_saleschannel) - Retrieve a saleschannel
+* [list_commerce_saleschannels](docs/sdks/saleschannel/README.md#list_commerce_saleschannels) - List all saleschannels
+* [patch_commerce_saleschannel](docs/sdks/saleschannel/README.md#patch_commerce_saleschannel) - Update a saleschannel
+* [remove_commerce_saleschannel](docs/sdks/saleschannel/README.md#remove_commerce_saleschannel) - Remove a saleschannel
+* [update_commerce_saleschannel](docs/sdks/saleschannel/README.md#update_commerce_saleschannel) - Update a saleschannel
 
 ### [salesorder](docs/sdks/salesorder/README.md)
 
