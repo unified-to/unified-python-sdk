@@ -91,9 +91,11 @@ CommerceMetadataValue = TypeAliasType(
 
 
 class CommerceMetadataTypedDict(TypedDict):
+    description: NotRequired[str]
     extra_data: NotRequired[CommerceMetadataExtraDataTypedDict]
     format_: NotRequired[CommerceMetadataFormat]
     id: NotRequired[str]
+    is_required: NotRequired[bool]
     key: NotRequired[str]
     namespace: NotRequired[str]
     slug: NotRequired[str]
@@ -102,6 +104,8 @@ class CommerceMetadataTypedDict(TypedDict):
 
 
 class CommerceMetadata(BaseModel):
+    description: Optional[str] = None
+
     extra_data: Optional[CommerceMetadataExtraData] = None
 
     format_: Annotated[
@@ -112,6 +116,8 @@ class CommerceMetadata(BaseModel):
     ] = None
 
     id: Optional[str] = None
+
+    is_required: Optional[bool] = None
 
     key: Optional[str] = None
 

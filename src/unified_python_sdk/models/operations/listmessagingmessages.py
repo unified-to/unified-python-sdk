@@ -38,6 +38,7 @@ class ListMessagingMessagesRequestTypedDict(TypedDict):
     sort: NotRequired[str]
     start_gte: NotRequired[str]
     r"""The start date to filter by"""
+    type: NotRequired[str]
     updated_gte: NotRequired[str]
     r"""Return only results whose updated date is equal or greater to this value"""
     user_id: NotRequired[str]
@@ -125,6 +126,11 @@ class ListMessagingMessagesRequest(BaseModel):
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
     r"""The start date to filter by"""
+
+    type: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
 
     updated_gte: Annotated[
         Optional[str],
