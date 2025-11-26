@@ -55,6 +55,7 @@ if TYPE_CHECKING:
     from unified_python_sdk.embedding import Embedding
     from unified_python_sdk.employee import Employee
     from unified_python_sdk.enrich import Enrich
+    from unified_python_sdk.environment import Environment
     from unified_python_sdk.event import Event
     from unified_python_sdk.expense import Expense
     from unified_python_sdk.file import File
@@ -235,6 +236,7 @@ class UnifiedTo(BaseSDK):
     unified: "Unified"
     apicall: "Apicall"
     connection: "Connection"
+    environment: "Environment"
     integration: "Integration"
     auth: "Auth"
     login: "Login"
@@ -350,6 +352,7 @@ class UnifiedTo(BaseSDK):
         "unified": ("unified_python_sdk.unified", "Unified"),
         "apicall": ("unified_python_sdk.apicall", "Apicall"),
         "connection": ("unified_python_sdk.connection", "Connection"),
+        "environment": ("unified_python_sdk.environment", "Environment"),
         "integration": ("unified_python_sdk.integration", "Integration"),
         "auth": ("unified_python_sdk.auth", "Auth"),
         "login": ("unified_python_sdk.login", "Login"),

@@ -490,6 +490,10 @@ if TYPE_CHECKING:
         CreateUnifiedConnectionResponse,
         CreateUnifiedConnectionResponseTypedDict,
     )
+    from .createunifiedenvironment import (
+        CreateUnifiedEnvironmentResponse,
+        CreateUnifiedEnvironmentResponseTypedDict,
+    )
     from .createunifiedwebhook import (
         CreateUnifiedWebhookRequest,
         CreateUnifiedWebhookRequestTypedDict,
@@ -1685,6 +1689,10 @@ if TYPE_CHECKING:
         ListUnifiedConnectionsResponse,
         ListUnifiedConnectionsResponseTypedDict,
     )
+    from .listunifiedenvironments import (
+        ListUnifiedEnvironmentsResponse,
+        ListUnifiedEnvironmentsResponseTypedDict,
+    )
     from .listunifiedintegrations import (
         ListUnifiedIntegrationsQueryParamCategories,
         ListUnifiedIntegrationsRequest,
@@ -2683,6 +2691,12 @@ if TYPE_CHECKING:
         RemoveUnifiedConnectionResponse,
         RemoveUnifiedConnectionResponseTypedDict,
     )
+    from .removeunifiedenvironment import (
+        RemoveUnifiedEnvironmentRequest,
+        RemoveUnifiedEnvironmentRequestTypedDict,
+        RemoveUnifiedEnvironmentResponse,
+        RemoveUnifiedEnvironmentResponseTypedDict,
+    )
     from .removeunifiedwebhook import (
         RemoveUnifiedWebhookRequest,
         RemoveUnifiedWebhookRequestTypedDict,
@@ -3512,6 +3526,8 @@ __all__ = [
     "CreateUcRecordingResponseTypedDict",
     "CreateUnifiedConnectionResponse",
     "CreateUnifiedConnectionResponseTypedDict",
+    "CreateUnifiedEnvironmentResponse",
+    "CreateUnifiedEnvironmentResponseTypedDict",
     "CreateUnifiedWebhookRequest",
     "CreateUnifiedWebhookRequestTypedDict",
     "CreateUnifiedWebhookResponse",
@@ -4308,6 +4324,8 @@ __all__ = [
     "ListUnifiedConnectionsRequestTypedDict",
     "ListUnifiedConnectionsResponse",
     "ListUnifiedConnectionsResponseTypedDict",
+    "ListUnifiedEnvironmentsResponse",
+    "ListUnifiedEnvironmentsResponseTypedDict",
     "ListUnifiedIntegrationWorkspacesRequest",
     "ListUnifiedIntegrationWorkspacesRequestTypedDict",
     "ListUnifiedIntegrationWorkspacesResponse",
@@ -4974,6 +4992,10 @@ __all__ = [
     "RemoveUnifiedConnectionRequestTypedDict",
     "RemoveUnifiedConnectionResponse",
     "RemoveUnifiedConnectionResponseTypedDict",
+    "RemoveUnifiedEnvironmentRequest",
+    "RemoveUnifiedEnvironmentRequestTypedDict",
+    "RemoveUnifiedEnvironmentResponse",
+    "RemoveUnifiedEnvironmentResponseTypedDict",
     "RemoveUnifiedWebhookRequest",
     "RemoveUnifiedWebhookRequestTypedDict",
     "RemoveUnifiedWebhookResponse",
@@ -5635,6 +5657,8 @@ _dynamic_imports: dict[str, str] = {
     "CreateUcRecordingResponseTypedDict": ".createucrecording",
     "CreateUnifiedConnectionResponse": ".createunifiedconnection",
     "CreateUnifiedConnectionResponseTypedDict": ".createunifiedconnection",
+    "CreateUnifiedEnvironmentResponse": ".createunifiedenvironment",
+    "CreateUnifiedEnvironmentResponseTypedDict": ".createunifiedenvironment",
     "CreateUnifiedWebhookRequest": ".createunifiedwebhook",
     "CreateUnifiedWebhookRequestTypedDict": ".createunifiedwebhook",
     "CreateUnifiedWebhookResponse": ".createunifiedwebhook",
@@ -6432,6 +6456,8 @@ _dynamic_imports: dict[str, str] = {
     "ListUnifiedConnectionsRequestTypedDict": ".listunifiedconnections",
     "ListUnifiedConnectionsResponse": ".listunifiedconnections",
     "ListUnifiedConnectionsResponseTypedDict": ".listunifiedconnections",
+    "ListUnifiedEnvironmentsResponse": ".listunifiedenvironments",
+    "ListUnifiedEnvironmentsResponseTypedDict": ".listunifiedenvironments",
     "ListUnifiedIntegrationsQueryParamCategories": ".listunifiedintegrations",
     "ListUnifiedIntegrationsRequest": ".listunifiedintegrations",
     "ListUnifiedIntegrationsRequestTypedDict": ".listunifiedintegrations",
@@ -7098,6 +7124,10 @@ _dynamic_imports: dict[str, str] = {
     "RemoveUnifiedConnectionRequestTypedDict": ".removeunifiedconnection",
     "RemoveUnifiedConnectionResponse": ".removeunifiedconnection",
     "RemoveUnifiedConnectionResponseTypedDict": ".removeunifiedconnection",
+    "RemoveUnifiedEnvironmentRequest": ".removeunifiedenvironment",
+    "RemoveUnifiedEnvironmentRequestTypedDict": ".removeunifiedenvironment",
+    "RemoveUnifiedEnvironmentResponse": ".removeunifiedenvironment",
+    "RemoveUnifiedEnvironmentResponseTypedDict": ".removeunifiedenvironment",
     "RemoveUnifiedWebhookRequest": ".removeunifiedwebhook",
     "RemoveUnifiedWebhookRequestTypedDict": ".removeunifiedwebhook",
     "RemoveUnifiedWebhookResponse": ".removeunifiedwebhook",
