@@ -47,6 +47,7 @@ class CalendarEventTypedDict(TypedDict):
     raw: NotRequired[Dict[str, Any]]
     recurrence: NotRequired[List[CalendarEventRecurrenceTypedDict]]
     recurring_event_id: NotRequired[str]
+    send_notifications: NotRequired[bool]
     start_at: NotRequired[str]
     status: NotRequired[CalendarEventStatus]
     subject: NotRequired[str]
@@ -89,6 +90,8 @@ class CalendarEvent(BaseModel):
     recurrence: Optional[List[CalendarEventRecurrence]] = None
 
     recurring_event_id: Optional[str] = None
+
+    send_notifications: Optional[bool] = None
 
     start_at: Optional[str] = None
 
