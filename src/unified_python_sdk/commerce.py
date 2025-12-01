@@ -66,6 +66,7 @@ class Commerce(BaseSDK):
                 "json",
                 shared.CommerceCollection,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -164,6 +165,7 @@ class Commerce(BaseSDK):
                 "json",
                 shared.CommerceCollection,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -262,6 +264,7 @@ class Commerce(BaseSDK):
                 "json",
                 shared.CommerceInventory,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -360,6 +363,7 @@ class Commerce(BaseSDK):
                 "json",
                 shared.CommerceInventory,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -452,6 +456,7 @@ class Commerce(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.commerce_item, False, False, "json", shared.CommerceItem
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -544,6 +549,7 @@ class Commerce(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.commerce_item, False, False, "json", shared.CommerceItem
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -636,6 +642,7 @@ class Commerce(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.commerce_location, False, False, "json", shared.CommerceLocation
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -728,6 +735,7 @@ class Commerce(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.commerce_location, False, False, "json", shared.CommerceLocation
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -820,6 +828,7 @@ class Commerce(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.commerce_review, False, False, "json", shared.CommerceReview
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -912,6 +921,7 @@ class Commerce(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.commerce_review, False, False, "json", shared.CommerceReview
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1010,6 +1020,7 @@ class Commerce(BaseSDK):
                 "json",
                 shared.CommerceSaleschannel,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1108,6 +1119,7 @@ class Commerce(BaseSDK):
                 "json",
                 shared.CommerceSaleschannel,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1197,6 +1209,7 @@ class Commerce(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1286,6 +1299,7 @@ class Commerce(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1375,6 +1389,7 @@ class Commerce(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1464,6 +1479,7 @@ class Commerce(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1553,6 +1569,7 @@ class Commerce(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1642,6 +1659,7 @@ class Commerce(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1731,6 +1749,7 @@ class Commerce(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1820,6 +1839,7 @@ class Commerce(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1909,6 +1929,7 @@ class Commerce(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1998,6 +2019,7 @@ class Commerce(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2089,6 +2111,7 @@ class Commerce(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2180,6 +2203,7 @@ class Commerce(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2271,6 +2295,7 @@ class Commerce(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2362,6 +2387,7 @@ class Commerce(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2453,6 +2479,7 @@ class Commerce(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2544,6 +2571,7 @@ class Commerce(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2633,6 +2661,7 @@ class Commerce(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2722,6 +2751,7 @@ class Commerce(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2811,6 +2841,7 @@ class Commerce(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2900,6 +2931,7 @@ class Commerce(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2989,6 +3021,7 @@ class Commerce(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3078,6 +3111,7 @@ class Commerce(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3169,6 +3203,7 @@ class Commerce(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3260,6 +3295,7 @@ class Commerce(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3358,6 +3394,7 @@ class Commerce(BaseSDK):
                 "json",
                 shared.CommerceCollection,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3456,6 +3493,7 @@ class Commerce(BaseSDK):
                 "json",
                 shared.CommerceCollection,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3552,6 +3590,7 @@ class Commerce(BaseSDK):
                 "json",
                 shared.CommerceInventory,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3648,6 +3687,7 @@ class Commerce(BaseSDK):
                 "json",
                 shared.CommerceInventory,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3740,6 +3780,7 @@ class Commerce(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.commerce_item, False, False, "json", shared.CommerceItem
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3832,6 +3873,7 @@ class Commerce(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.commerce_item, False, False, "json", shared.CommerceItem
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3924,6 +3966,7 @@ class Commerce(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.commerce_location, False, False, "json", shared.CommerceLocation
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -4016,6 +4059,7 @@ class Commerce(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.commerce_location, False, False, "json", shared.CommerceLocation
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -4108,6 +4152,7 @@ class Commerce(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.commerce_review, False, False, "json", shared.CommerceReview
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -4200,6 +4245,7 @@ class Commerce(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.commerce_review, False, False, "json", shared.CommerceReview
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -4298,6 +4344,7 @@ class Commerce(BaseSDK):
                 "json",
                 shared.CommerceSaleschannel,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -4396,6 +4443,7 @@ class Commerce(BaseSDK):
                 "json",
                 shared.CommerceSaleschannel,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -4487,6 +4535,7 @@ class Commerce(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -4583,6 +4632,7 @@ class Commerce(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -4679,6 +4729,7 @@ class Commerce(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -4775,6 +4826,7 @@ class Commerce(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -4869,6 +4921,7 @@ class Commerce(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -4963,6 +5016,7 @@ class Commerce(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -5057,6 +5111,7 @@ class Commerce(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -5151,6 +5206,7 @@ class Commerce(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -5245,6 +5301,7 @@ class Commerce(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -5339,6 +5396,7 @@ class Commerce(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -5435,6 +5493,7 @@ class Commerce(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -5531,6 +5590,7 @@ class Commerce(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -5634,6 +5694,7 @@ class Commerce(BaseSDK):
                 "json",
                 shared.CommerceCollection,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -5732,6 +5793,7 @@ class Commerce(BaseSDK):
                 "json",
                 shared.CommerceCollection,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -5830,6 +5892,7 @@ class Commerce(BaseSDK):
                 "json",
                 shared.CommerceInventory,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -5928,6 +5991,7 @@ class Commerce(BaseSDK):
                 "json",
                 shared.CommerceInventory,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -6020,6 +6084,7 @@ class Commerce(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.commerce_item, False, False, "json", shared.CommerceItem
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -6112,6 +6177,7 @@ class Commerce(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.commerce_item, False, False, "json", shared.CommerceItem
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -6204,6 +6270,7 @@ class Commerce(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.commerce_location, False, False, "json", shared.CommerceLocation
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -6296,6 +6363,7 @@ class Commerce(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.commerce_location, False, False, "json", shared.CommerceLocation
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -6388,6 +6456,7 @@ class Commerce(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.commerce_review, False, False, "json", shared.CommerceReview
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -6480,6 +6549,7 @@ class Commerce(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.commerce_review, False, False, "json", shared.CommerceReview
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -6578,6 +6648,7 @@ class Commerce(BaseSDK):
                 "json",
                 shared.CommerceSaleschannel,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -6676,6 +6747,7 @@ class Commerce(BaseSDK):
                 "json",
                 shared.CommerceSaleschannel,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 

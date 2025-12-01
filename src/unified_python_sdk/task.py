@@ -60,6 +60,7 @@ class Task(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.task_comment, False, False, "json", shared.TaskComment
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -152,6 +153,7 @@ class Task(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.task_comment, False, False, "json", shared.TaskComment
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -244,6 +246,7 @@ class Task(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.task_project, False, False, "json", shared.TaskProject
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -336,6 +339,7 @@ class Task(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.task_project, False, False, "json", shared.TaskProject
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -427,6 +431,7 @@ class Task(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.task_task, False, False, "json", shared.TaskTask
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -516,6 +521,7 @@ class Task(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.task_task, False, False, "json", shared.TaskTask
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -602,6 +608,7 @@ class Task(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -690,6 +697,7 @@ class Task(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -778,6 +786,7 @@ class Task(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -866,6 +875,7 @@ class Task(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -954,6 +964,7 @@ class Task(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1042,6 +1053,7 @@ class Task(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1130,6 +1142,7 @@ class Task(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1216,6 +1229,7 @@ class Task(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1303,6 +1317,7 @@ class Task(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1392,6 +1407,7 @@ class Task(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1481,6 +1497,7 @@ class Task(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1570,6 +1587,7 @@ class Task(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1659,6 +1677,7 @@ class Task(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1748,6 +1767,7 @@ class Task(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1836,6 +1856,7 @@ class Task(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1924,6 +1945,7 @@ class Task(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2016,6 +2038,7 @@ class Task(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.task_comment, False, False, "json", shared.TaskComment
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2108,6 +2131,7 @@ class Task(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.task_comment, False, False, "json", shared.TaskComment
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2200,6 +2224,7 @@ class Task(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.task_project, False, False, "json", shared.TaskProject
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2292,6 +2317,7 @@ class Task(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.task_project, False, False, "json", shared.TaskProject
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2383,6 +2409,7 @@ class Task(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.task_task, False, False, "json", shared.TaskTask
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2472,6 +2499,7 @@ class Task(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.task_task, False, False, "json", shared.TaskTask
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2559,6 +2587,7 @@ class Task(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2653,6 +2682,7 @@ class Task(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2747,6 +2777,7 @@ class Task(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2841,6 +2872,7 @@ class Task(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2934,6 +2966,7 @@ class Task(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3027,6 +3060,7 @@ class Task(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3124,6 +3158,7 @@ class Task(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.task_comment, False, False, "json", shared.TaskComment
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3216,6 +3251,7 @@ class Task(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.task_comment, False, False, "json", shared.TaskComment
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3308,6 +3344,7 @@ class Task(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.task_project, False, False, "json", shared.TaskProject
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3400,6 +3437,7 @@ class Task(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.task_project, False, False, "json", shared.TaskProject
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3491,6 +3529,7 @@ class Task(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.task_task, False, False, "json", shared.TaskTask
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3580,6 +3619,7 @@ class Task(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.task_task, False, False, "json", shared.TaskTask
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 

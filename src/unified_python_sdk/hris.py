@@ -60,6 +60,7 @@ class Hris(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.hris_benefit, False, False, "json", shared.HrisBenefit
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -152,6 +153,7 @@ class Hris(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.hris_benefit, False, False, "json", shared.HrisBenefit
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -244,6 +246,7 @@ class Hris(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.hris_company, False, False, "json", shared.HrisCompany
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -336,6 +339,7 @@ class Hris(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.hris_company, False, False, "json", shared.HrisCompany
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -428,6 +432,7 @@ class Hris(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.hris_deduction, False, False, "json", shared.HrisDeduction
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -520,6 +525,7 @@ class Hris(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.hris_deduction, False, False, "json", shared.HrisDeduction
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -612,6 +618,7 @@ class Hris(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.hris_device, False, False, "json", shared.HrisDevice
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -704,6 +711,7 @@ class Hris(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.hris_device, False, False, "json", shared.HrisDevice
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -796,6 +804,7 @@ class Hris(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.hris_employee, False, False, "json", shared.HrisEmployee
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -888,6 +897,7 @@ class Hris(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.hris_employee, False, False, "json", shared.HrisEmployee
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -980,6 +990,7 @@ class Hris(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.hris_group, False, False, "json", shared.HrisGroup
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1072,6 +1083,7 @@ class Hris(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.hris_group, False, False, "json", shared.HrisGroup
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1164,6 +1176,7 @@ class Hris(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.hris_location, False, False, "json", shared.HrisLocation
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1256,6 +1269,7 @@ class Hris(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.hris_location, False, False, "json", shared.HrisLocation
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1348,6 +1362,7 @@ class Hris(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.hris_timeshift, False, False, "json", shared.HrisTimeshift
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1440,6 +1455,7 @@ class Hris(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.hris_timeshift, False, False, "json", shared.HrisTimeshift
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1528,6 +1544,7 @@ class Hris(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1616,6 +1633,7 @@ class Hris(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1704,6 +1722,7 @@ class Hris(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1792,6 +1811,7 @@ class Hris(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1881,6 +1901,7 @@ class Hris(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1970,6 +1991,7 @@ class Hris(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2058,6 +2080,7 @@ class Hris(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2146,6 +2169,7 @@ class Hris(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2235,6 +2259,7 @@ class Hris(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2324,6 +2349,7 @@ class Hris(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2412,6 +2438,7 @@ class Hris(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2500,6 +2527,7 @@ class Hris(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2589,6 +2617,7 @@ class Hris(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2678,6 +2707,7 @@ class Hris(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2766,6 +2796,7 @@ class Hris(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2854,6 +2885,7 @@ class Hris(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2942,6 +2974,7 @@ class Hris(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3030,6 +3063,7 @@ class Hris(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3119,6 +3153,7 @@ class Hris(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3208,6 +3243,7 @@ class Hris(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3297,6 +3333,7 @@ class Hris(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3386,6 +3423,7 @@ class Hris(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3475,6 +3513,7 @@ class Hris(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3564,6 +3603,7 @@ class Hris(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3653,6 +3693,7 @@ class Hris(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3742,6 +3783,7 @@ class Hris(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3831,6 +3873,7 @@ class Hris(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3920,6 +3963,7 @@ class Hris(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -4009,6 +4053,7 @@ class Hris(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -4098,6 +4143,7 @@ class Hris(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -4186,6 +4232,7 @@ class Hris(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -4274,6 +4321,7 @@ class Hris(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -4363,6 +4411,7 @@ class Hris(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -4452,6 +4501,7 @@ class Hris(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -4541,6 +4591,7 @@ class Hris(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -4630,6 +4681,7 @@ class Hris(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -4719,6 +4771,7 @@ class Hris(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -4808,6 +4861,7 @@ class Hris(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -4897,6 +4951,7 @@ class Hris(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -4986,6 +5041,7 @@ class Hris(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -5078,6 +5134,7 @@ class Hris(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.hris_benefit, False, False, "json", shared.HrisBenefit
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -5170,6 +5227,7 @@ class Hris(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.hris_benefit, False, False, "json", shared.HrisBenefit
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -5262,6 +5320,7 @@ class Hris(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.hris_company, False, False, "json", shared.HrisCompany
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -5354,6 +5413,7 @@ class Hris(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.hris_company, False, False, "json", shared.HrisCompany
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -5446,6 +5506,7 @@ class Hris(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.hris_deduction, False, False, "json", shared.HrisDeduction
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -5538,6 +5599,7 @@ class Hris(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.hris_deduction, False, False, "json", shared.HrisDeduction
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -5630,6 +5692,7 @@ class Hris(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.hris_device, False, False, "json", shared.HrisDevice
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -5722,6 +5785,7 @@ class Hris(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.hris_device, False, False, "json", shared.HrisDevice
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -5814,6 +5878,7 @@ class Hris(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.hris_employee, False, False, "json", shared.HrisEmployee
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -5906,6 +5971,7 @@ class Hris(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.hris_employee, False, False, "json", shared.HrisEmployee
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -5997,6 +6063,7 @@ class Hris(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.hris_group, False, False, "json", shared.HrisGroup
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -6088,6 +6155,7 @@ class Hris(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.hris_group, False, False, "json", shared.HrisGroup
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -6180,6 +6248,7 @@ class Hris(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.hris_location, False, False, "json", shared.HrisLocation
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -6272,6 +6341,7 @@ class Hris(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.hris_location, False, False, "json", shared.HrisLocation
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -6364,6 +6434,7 @@ class Hris(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.hris_timeshift, False, False, "json", shared.HrisTimeshift
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -6456,6 +6527,7 @@ class Hris(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.hris_timeshift, False, False, "json", shared.HrisTimeshift
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -6545,6 +6617,7 @@ class Hris(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -6639,6 +6712,7 @@ class Hris(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -6733,6 +6807,7 @@ class Hris(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -6827,6 +6902,7 @@ class Hris(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -6921,6 +6997,7 @@ class Hris(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -7015,6 +7092,7 @@ class Hris(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -7109,6 +7187,7 @@ class Hris(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -7203,6 +7282,7 @@ class Hris(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -7297,6 +7377,7 @@ class Hris(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -7391,6 +7472,7 @@ class Hris(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -7485,6 +7567,7 @@ class Hris(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -7579,6 +7662,7 @@ class Hris(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -7673,6 +7757,7 @@ class Hris(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -7767,6 +7852,7 @@ class Hris(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -7861,6 +7947,7 @@ class Hris(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -7955,6 +8042,7 @@ class Hris(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -8052,6 +8140,7 @@ class Hris(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.hris_benefit, False, False, "json", shared.HrisBenefit
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -8144,6 +8233,7 @@ class Hris(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.hris_benefit, False, False, "json", shared.HrisBenefit
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -8236,6 +8326,7 @@ class Hris(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.hris_company, False, False, "json", shared.HrisCompany
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -8328,6 +8419,7 @@ class Hris(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.hris_company, False, False, "json", shared.HrisCompany
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -8420,6 +8512,7 @@ class Hris(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.hris_deduction, False, False, "json", shared.HrisDeduction
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -8512,6 +8605,7 @@ class Hris(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.hris_deduction, False, False, "json", shared.HrisDeduction
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -8604,6 +8698,7 @@ class Hris(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.hris_device, False, False, "json", shared.HrisDevice
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -8696,6 +8791,7 @@ class Hris(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.hris_device, False, False, "json", shared.HrisDevice
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -8788,6 +8884,7 @@ class Hris(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.hris_employee, False, False, "json", shared.HrisEmployee
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -8880,6 +8977,7 @@ class Hris(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.hris_employee, False, False, "json", shared.HrisEmployee
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -8972,6 +9070,7 @@ class Hris(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.hris_group, False, False, "json", shared.HrisGroup
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -9064,6 +9163,7 @@ class Hris(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.hris_group, False, False, "json", shared.HrisGroup
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -9156,6 +9256,7 @@ class Hris(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.hris_location, False, False, "json", shared.HrisLocation
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -9248,6 +9349,7 @@ class Hris(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.hris_location, False, False, "json", shared.HrisLocation
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -9340,6 +9442,7 @@ class Hris(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.hris_timeshift, False, False, "json", shared.HrisTimeshift
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -9432,6 +9535,7 @@ class Hris(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.hris_timeshift, False, False, "json", shared.HrisTimeshift
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 

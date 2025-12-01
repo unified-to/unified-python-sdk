@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: 312aee283a626a1a256d39c734a429ac
+  docChecksum: 0b28d8593f165fb3de853a45b8c6ab17
   docVersion: "1.0"
-  speakeasyVersion: 1.662.0
-  generationVersion: 2.763.3
-  releaseVersion: 0.54.18
-  configChecksum: 3d954ae838f44d754f7cc50cde1bf57f
+  speakeasyVersion: 1.665.0
+  generationVersion: 2.767.2
+  releaseVersion: 0.55.0
+  configChecksum: 22e68e11c9ee5397dc5e81567f659ee4
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -16,7 +16,7 @@ features:
     acceptHeaders: 3.0.0
     additionalDependencies: 1.0.0
     constsAndDefaults: 1.0.5
-    core: 5.23.11
+    core: 5.23.13
     defaultEnabledRetries: 0.2.0
     downloadStreams: 1.0.1
     enumUnions: 0.1.0
@@ -27,7 +27,7 @@ features:
     openEnums: 1.0.1
     responseFormat: 1.0.1
     retries: 3.0.3
-    sdkHooks: 1.1.0
+    sdkHooks: 1.2.0
     unions: 3.1.0
     uploadStreams: 1.0.0
 generatedFiles:
@@ -7564,4 +7564,3 @@ examples:
           application/json: ["<value 1>", "<value 2>", "<value 3>"]
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Python SDK Changes Detected:\n* `unified_to.calendar.create_calendar_event()`: \n  *  `request.calendar_event.send_notifications` **Added**\n  *  `response.send_notifications` **Added**\n* `unified_to.calendar.get_calendar_event()`:  `response.send_notifications` **Added**\n* `unified_to.calendar.list_calendar_events()`:  `response.[].send_notifications` **Added**\n* `unified_to.calendar.patch_calendar_event()`: \n  *  `request.calendar_event.send_notifications` **Added**\n  *  `response.send_notifications` **Added**\n* `unified_to.calendar.update_calendar_event()`: \n  *  `request.calendar_event.send_notifications` **Added**\n  *  `response.send_notifications` **Added**\n* `unified_to.event.create_calendar_event()`: \n  *  `request.calendar_event.send_notifications` **Added**\n  *  `response.send_notifications` **Added**\n* `unified_to.event.get_calendar_event()`:  `response.send_notifications` **Added**\n* `unified_to.event.list_calendar_events()`:  `response.[].send_notifications` **Added**\n* `unified_to.event.patch_calendar_event()`: \n  *  `request.calendar_event.send_notifications` **Added**\n  *  `response.send_notifications` **Added**\n* `unified_to.event.update_calendar_event()`: \n  *  `request.calendar_event.send_notifications` **Added**\n  *  `response.send_notifications` **Added**\n"

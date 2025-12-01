@@ -60,6 +60,7 @@ class Ats(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.ats_activity, False, False, "json", shared.AtsActivity
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -152,6 +153,7 @@ class Ats(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.ats_activity, False, False, "json", shared.AtsActivity
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -244,6 +246,7 @@ class Ats(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.ats_application, False, False, "json", shared.AtsApplication
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -336,6 +339,7 @@ class Ats(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.ats_application, False, False, "json", shared.AtsApplication
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -428,6 +432,7 @@ class Ats(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.ats_candidate, False, False, "json", shared.AtsCandidate
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -520,6 +525,7 @@ class Ats(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.ats_candidate, False, False, "json", shared.AtsCandidate
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -612,6 +618,7 @@ class Ats(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.ats_company, False, False, "json", shared.AtsCompany
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -704,6 +711,7 @@ class Ats(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.ats_company, False, False, "json", shared.AtsCompany
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -796,6 +804,7 @@ class Ats(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.ats_document, False, False, "json", shared.AtsDocument
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -888,6 +897,7 @@ class Ats(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.ats_document, False, False, "json", shared.AtsDocument
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -980,6 +990,7 @@ class Ats(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.ats_interview, False, False, "json", shared.AtsInterview
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1072,6 +1083,7 @@ class Ats(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.ats_interview, False, False, "json", shared.AtsInterview
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1163,6 +1175,7 @@ class Ats(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.ats_job, False, False, "json", shared.AtsJob
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1252,6 +1265,7 @@ class Ats(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.ats_job, False, False, "json", shared.AtsJob
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1342,6 +1356,7 @@ class Ats(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.ats_scorecard, False, False, "json", shared.AtsScorecard
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1434,6 +1449,7 @@ class Ats(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.ats_scorecard, False, False, "json", shared.AtsScorecard
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1522,6 +1538,7 @@ class Ats(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1610,6 +1627,7 @@ class Ats(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1699,6 +1717,7 @@ class Ats(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1788,6 +1807,7 @@ class Ats(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1877,6 +1897,7 @@ class Ats(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1966,6 +1987,7 @@ class Ats(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2054,6 +2076,7 @@ class Ats(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2142,6 +2165,7 @@ class Ats(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2230,6 +2254,7 @@ class Ats(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2318,6 +2343,7 @@ class Ats(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2407,6 +2433,7 @@ class Ats(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2496,6 +2523,7 @@ class Ats(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2584,6 +2612,7 @@ class Ats(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2670,6 +2699,7 @@ class Ats(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2757,6 +2787,7 @@ class Ats(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2846,6 +2877,7 @@ class Ats(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2935,6 +2967,7 @@ class Ats(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3024,6 +3057,7 @@ class Ats(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3113,6 +3147,7 @@ class Ats(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3202,6 +3237,7 @@ class Ats(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3293,6 +3329,7 @@ class Ats(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3384,6 +3421,7 @@ class Ats(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3473,6 +3511,7 @@ class Ats(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3562,6 +3601,7 @@ class Ats(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3651,6 +3691,7 @@ class Ats(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3740,6 +3781,7 @@ class Ats(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3829,6 +3871,7 @@ class Ats(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3918,6 +3961,7 @@ class Ats(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -4007,6 +4051,7 @@ class Ats(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -4096,6 +4141,7 @@ class Ats(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -4184,6 +4230,7 @@ class Ats(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -4272,6 +4319,7 @@ class Ats(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -4361,6 +4409,7 @@ class Ats(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -4450,6 +4499,7 @@ class Ats(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -4542,6 +4592,7 @@ class Ats(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.ats_activity, False, False, "json", shared.AtsActivity
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -4634,6 +4685,7 @@ class Ats(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.ats_activity, False, False, "json", shared.AtsActivity
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -4726,6 +4778,7 @@ class Ats(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.ats_application, False, False, "json", shared.AtsApplication
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -4818,6 +4871,7 @@ class Ats(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.ats_application, False, False, "json", shared.AtsApplication
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -4910,6 +4964,7 @@ class Ats(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.ats_candidate, False, False, "json", shared.AtsCandidate
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -5002,6 +5057,7 @@ class Ats(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.ats_candidate, False, False, "json", shared.AtsCandidate
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -5094,6 +5150,7 @@ class Ats(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.ats_company, False, False, "json", shared.AtsCompany
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -5186,6 +5243,7 @@ class Ats(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.ats_company, False, False, "json", shared.AtsCompany
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -5278,6 +5336,7 @@ class Ats(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.ats_document, False, False, "json", shared.AtsDocument
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -5370,6 +5429,7 @@ class Ats(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.ats_document, False, False, "json", shared.AtsDocument
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -5462,6 +5522,7 @@ class Ats(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.ats_interview, False, False, "json", shared.AtsInterview
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -5554,6 +5615,7 @@ class Ats(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.ats_interview, False, False, "json", shared.AtsInterview
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -5645,6 +5707,7 @@ class Ats(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.ats_job, False, False, "json", shared.AtsJob
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -5734,6 +5797,7 @@ class Ats(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.ats_job, False, False, "json", shared.AtsJob
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -5824,6 +5888,7 @@ class Ats(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.ats_scorecard, False, False, "json", shared.AtsScorecard
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -5916,6 +5981,7 @@ class Ats(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.ats_scorecard, False, False, "json", shared.AtsScorecard
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -6005,6 +6071,7 @@ class Ats(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -6099,6 +6166,7 @@ class Ats(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -6193,6 +6261,7 @@ class Ats(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -6287,6 +6356,7 @@ class Ats(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -6381,6 +6451,7 @@ class Ats(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -6475,6 +6546,7 @@ class Ats(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -6569,6 +6641,7 @@ class Ats(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -6663,6 +6736,7 @@ class Ats(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -6757,6 +6831,7 @@ class Ats(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -6851,6 +6926,7 @@ class Ats(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -6945,6 +7021,7 @@ class Ats(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -7039,6 +7116,7 @@ class Ats(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -7132,6 +7210,7 @@ class Ats(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -7225,6 +7304,7 @@ class Ats(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -7319,6 +7399,7 @@ class Ats(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -7413,6 +7494,7 @@ class Ats(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -7510,6 +7592,7 @@ class Ats(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.ats_activity, False, False, "json", shared.AtsActivity
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -7602,6 +7685,7 @@ class Ats(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.ats_activity, False, False, "json", shared.AtsActivity
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -7694,6 +7778,7 @@ class Ats(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.ats_application, False, False, "json", shared.AtsApplication
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -7786,6 +7871,7 @@ class Ats(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.ats_application, False, False, "json", shared.AtsApplication
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -7878,6 +7964,7 @@ class Ats(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.ats_candidate, False, False, "json", shared.AtsCandidate
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -7970,6 +8057,7 @@ class Ats(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.ats_candidate, False, False, "json", shared.AtsCandidate
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -8062,6 +8150,7 @@ class Ats(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.ats_company, False, False, "json", shared.AtsCompany
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -8154,6 +8243,7 @@ class Ats(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.ats_company, False, False, "json", shared.AtsCompany
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -8246,6 +8336,7 @@ class Ats(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.ats_document, False, False, "json", shared.AtsDocument
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -8338,6 +8429,7 @@ class Ats(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.ats_document, False, False, "json", shared.AtsDocument
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -8430,6 +8522,7 @@ class Ats(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.ats_interview, False, False, "json", shared.AtsInterview
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -8522,6 +8615,7 @@ class Ats(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.ats_interview, False, False, "json", shared.AtsInterview
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -8613,6 +8707,7 @@ class Ats(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.ats_job, False, False, "json", shared.AtsJob
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -8702,6 +8797,7 @@ class Ats(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.ats_job, False, False, "json", shared.AtsJob
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -8792,6 +8888,7 @@ class Ats(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.ats_scorecard, False, False, "json", shared.AtsScorecard
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -8884,6 +8981,7 @@ class Ats(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.ats_scorecard, False, False, "json", shared.AtsScorecard
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 

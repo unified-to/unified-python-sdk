@@ -60,6 +60,7 @@ class Crm(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.crm_company, False, False, "json", shared.CrmCompany
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -152,6 +153,7 @@ class Crm(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.crm_company, False, False, "json", shared.CrmCompany
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -244,6 +246,7 @@ class Crm(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.crm_contact, False, False, "json", shared.CrmContact
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -336,6 +339,7 @@ class Crm(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.crm_contact, False, False, "json", shared.CrmContact
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -427,6 +431,7 @@ class Crm(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.crm_deal, False, False, "json", shared.CrmDeal
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -516,6 +521,7 @@ class Crm(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.crm_deal, False, False, "json", shared.CrmDeal
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -605,6 +611,7 @@ class Crm(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.crm_event, False, False, "json", shared.CrmEvent
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -694,6 +701,7 @@ class Crm(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.crm_event, False, False, "json", shared.CrmEvent
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -783,6 +791,7 @@ class Crm(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.crm_lead, False, False, "json", shared.CrmLead
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -872,6 +881,7 @@ class Crm(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.crm_lead, False, False, "json", shared.CrmLead
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -962,6 +972,7 @@ class Crm(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.crm_pipeline, False, False, "json", shared.CrmPipeline
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1054,6 +1065,7 @@ class Crm(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.crm_pipeline, False, False, "json", shared.CrmPipeline
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1142,6 +1154,7 @@ class Crm(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1230,6 +1243,7 @@ class Crm(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1318,6 +1332,7 @@ class Crm(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1406,6 +1421,7 @@ class Crm(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1494,6 +1510,7 @@ class Crm(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1580,6 +1597,7 @@ class Crm(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1666,6 +1684,7 @@ class Crm(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1752,6 +1771,7 @@ class Crm(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1838,6 +1858,7 @@ class Crm(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1924,6 +1945,7 @@ class Crm(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2010,6 +2032,7 @@ class Crm(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2098,6 +2121,7 @@ class Crm(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2187,6 +2211,7 @@ class Crm(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2276,6 +2301,7 @@ class Crm(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2365,6 +2391,7 @@ class Crm(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2454,6 +2481,7 @@ class Crm(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2542,6 +2570,7 @@ class Crm(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2630,6 +2659,7 @@ class Crm(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2718,6 +2748,7 @@ class Crm(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2806,6 +2837,7 @@ class Crm(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2894,6 +2926,7 @@ class Crm(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2982,6 +3015,7 @@ class Crm(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3071,6 +3105,7 @@ class Crm(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3160,6 +3195,7 @@ class Crm(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3252,6 +3288,7 @@ class Crm(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.crm_company, False, False, "json", shared.CrmCompany
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3344,6 +3381,7 @@ class Crm(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.crm_company, False, False, "json", shared.CrmCompany
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3436,6 +3474,7 @@ class Crm(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.crm_contact, False, False, "json", shared.CrmContact
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3528,6 +3567,7 @@ class Crm(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.crm_contact, False, False, "json", shared.CrmContact
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3619,6 +3659,7 @@ class Crm(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.crm_deal, False, False, "json", shared.CrmDeal
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3708,6 +3749,7 @@ class Crm(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.crm_deal, False, False, "json", shared.CrmDeal
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3797,6 +3839,7 @@ class Crm(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.crm_event, False, False, "json", shared.CrmEvent
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3886,6 +3929,7 @@ class Crm(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.crm_event, False, False, "json", shared.CrmEvent
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3975,6 +4019,7 @@ class Crm(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.crm_lead, False, False, "json", shared.CrmLead
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -4064,6 +4109,7 @@ class Crm(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.crm_lead, False, False, "json", shared.CrmLead
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -4154,6 +4200,7 @@ class Crm(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.crm_pipeline, False, False, "json", shared.CrmPipeline
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -4246,6 +4293,7 @@ class Crm(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.crm_pipeline, False, False, "json", shared.CrmPipeline
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -4335,6 +4383,7 @@ class Crm(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -4429,6 +4478,7 @@ class Crm(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -4523,6 +4573,7 @@ class Crm(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -4617,6 +4668,7 @@ class Crm(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -4710,6 +4762,7 @@ class Crm(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -4803,6 +4856,7 @@ class Crm(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -4896,6 +4950,7 @@ class Crm(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -4989,6 +5044,7 @@ class Crm(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -5082,6 +5138,7 @@ class Crm(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -5175,6 +5232,7 @@ class Crm(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -5269,6 +5327,7 @@ class Crm(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -5363,6 +5422,7 @@ class Crm(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -5460,6 +5520,7 @@ class Crm(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.crm_company, False, False, "json", shared.CrmCompany
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -5552,6 +5613,7 @@ class Crm(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.crm_company, False, False, "json", shared.CrmCompany
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -5644,6 +5706,7 @@ class Crm(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.crm_contact, False, False, "json", shared.CrmContact
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -5736,6 +5799,7 @@ class Crm(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.crm_contact, False, False, "json", shared.CrmContact
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -5827,6 +5891,7 @@ class Crm(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.crm_deal, False, False, "json", shared.CrmDeal
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -5916,6 +5981,7 @@ class Crm(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.crm_deal, False, False, "json", shared.CrmDeal
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -6005,6 +6071,7 @@ class Crm(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.crm_event, False, False, "json", shared.CrmEvent
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -6094,6 +6161,7 @@ class Crm(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.crm_event, False, False, "json", shared.CrmEvent
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -6183,6 +6251,7 @@ class Crm(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.crm_lead, False, False, "json", shared.CrmLead
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -6272,6 +6341,7 @@ class Crm(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.crm_lead, False, False, "json", shared.CrmLead
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -6362,6 +6432,7 @@ class Crm(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.crm_pipeline, False, False, "json", shared.CrmPipeline
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -6454,6 +6525,7 @@ class Crm(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.crm_pipeline, False, False, "json", shared.CrmPipeline
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 

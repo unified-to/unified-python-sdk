@@ -131,7 +131,9 @@ if TYPE_CHECKING:
 
 
 class UnifiedTo(BaseSDK):
-    r"""Unified.to API: One API to Rule Them All"""
+    r"""Unified.to  API: One API to Rule Them All
+    https://docs.unified.to - API Documentation
+    """
 
     accounting: "Accounting"
     account: "Account"

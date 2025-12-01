@@ -25,7 +25,7 @@ generation:
   baseServerURL: ""
   flattenGlobalSecurity: true
 python:
-  version: 0.54.18
+  version: 0.55.0
   additionalDependencies:
     dev: {}
     main: {}
@@ -61,6 +61,7 @@ python:
   maxMethodParams: 0
   methodArguments: require-security-and-request
   moduleName: ""
+  multipartArrayFormat: legacy
   outputModelSuffix: output
   packageManager: poetry
   packageName: Unified-python-sdk

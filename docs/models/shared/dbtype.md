@@ -10,3 +10,4 @@
 | `POSTGRES` | postgres   |
 | `MSSQL`    | mssql      |
 | `MARIADB`  | mariadb    |
+| `SUPABASE` | supabase   |

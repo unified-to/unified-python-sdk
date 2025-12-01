@@ -59,6 +59,7 @@ class Lms(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.lms_class, False, False, "json", shared.LmsClass
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -148,6 +149,7 @@ class Lms(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.lms_class, False, False, "json", shared.LmsClass
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -238,6 +240,7 @@ class Lms(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.lms_course, False, False, "json", shared.LmsCourse
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -330,6 +333,7 @@ class Lms(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.lms_course, False, False, "json", shared.LmsCourse
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -422,6 +426,7 @@ class Lms(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.lms_instructor, False, False, "json", shared.LmsInstructor
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -514,6 +519,7 @@ class Lms(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.lms_instructor, False, False, "json", shared.LmsInstructor
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -606,6 +612,7 @@ class Lms(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.lms_student, False, False, "json", shared.LmsStudent
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -698,6 +705,7 @@ class Lms(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.lms_student, False, False, "json", shared.LmsStudent
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -786,6 +794,7 @@ class Lms(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -872,6 +881,7 @@ class Lms(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -958,6 +968,7 @@ class Lms(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1046,6 +1057,7 @@ class Lms(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1135,6 +1147,7 @@ class Lms(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1224,6 +1237,7 @@ class Lms(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1312,6 +1326,7 @@ class Lms(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1400,6 +1415,7 @@ class Lms(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1488,6 +1504,7 @@ class Lms(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1576,6 +1593,7 @@ class Lms(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1664,6 +1682,7 @@ class Lms(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1752,6 +1771,7 @@ class Lms(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1841,6 +1861,7 @@ class Lms(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1930,6 +1951,7 @@ class Lms(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2019,6 +2041,7 @@ class Lms(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2108,6 +2131,7 @@ class Lms(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2199,6 +2223,7 @@ class Lms(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.lms_class, False, False, "json", shared.LmsClass
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2288,6 +2313,7 @@ class Lms(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.lms_class, False, False, "json", shared.LmsClass
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2377,6 +2403,7 @@ class Lms(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.lms_course, False, False, "json", shared.LmsCourse
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2468,6 +2495,7 @@ class Lms(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.lms_course, False, False, "json", shared.LmsCourse
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2560,6 +2588,7 @@ class Lms(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.lms_instructor, False, False, "json", shared.LmsInstructor
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2652,6 +2681,7 @@ class Lms(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.lms_instructor, False, False, "json", shared.LmsInstructor
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2744,6 +2774,7 @@ class Lms(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.lms_student, False, False, "json", shared.LmsStudent
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2836,6 +2867,7 @@ class Lms(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.lms_student, False, False, "json", shared.LmsStudent
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2924,6 +2956,7 @@ class Lms(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3017,6 +3050,7 @@ class Lms(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3111,6 +3145,7 @@ class Lms(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3205,6 +3240,7 @@ class Lms(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3299,6 +3335,7 @@ class Lms(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3393,6 +3430,7 @@ class Lms(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3487,6 +3525,7 @@ class Lms(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3581,6 +3620,7 @@ class Lms(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3677,6 +3717,7 @@ class Lms(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.lms_class, False, False, "json", shared.LmsClass
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3766,6 +3807,7 @@ class Lms(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.lms_class, False, False, "json", shared.LmsClass
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3856,6 +3898,7 @@ class Lms(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.lms_course, False, False, "json", shared.LmsCourse
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3948,6 +3991,7 @@ class Lms(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.lms_course, False, False, "json", shared.LmsCourse
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -4040,6 +4084,7 @@ class Lms(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.lms_instructor, False, False, "json", shared.LmsInstructor
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -4132,6 +4177,7 @@ class Lms(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.lms_instructor, False, False, "json", shared.LmsInstructor
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -4224,6 +4270,7 @@ class Lms(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.lms_student, False, False, "json", shared.LmsStudent
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -4316,6 +4363,7 @@ class Lms(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.lms_student, False, False, "json", shared.LmsStudent
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 

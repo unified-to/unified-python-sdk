@@ -60,6 +60,7 @@ class Repo(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.repo_branch, False, False, "json", shared.RepoBranch
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -152,6 +153,7 @@ class Repo(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.repo_branch, False, False, "json", shared.RepoBranch
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -244,6 +246,7 @@ class Repo(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.repo_commit, False, False, "json", shared.RepoCommit
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -336,6 +339,7 @@ class Repo(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.repo_commit, False, False, "json", shared.RepoCommit
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -428,6 +432,7 @@ class Repo(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.repo_organization, False, False, "json", shared.RepoOrganization
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -520,6 +525,7 @@ class Repo(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.repo_organization, False, False, "json", shared.RepoOrganization
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -612,6 +618,7 @@ class Repo(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.repo_pullrequest, False, False, "json", shared.RepoPullrequest
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -704,6 +711,7 @@ class Repo(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.repo_pullrequest, False, False, "json", shared.RepoPullrequest
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -796,6 +804,7 @@ class Repo(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.repo_repository, False, False, "json", shared.RepoRepository
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -888,6 +897,7 @@ class Repo(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.repo_repository, False, False, "json", shared.RepoRepository
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -976,6 +986,7 @@ class Repo(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1064,6 +1075,7 @@ class Repo(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1152,6 +1164,7 @@ class Repo(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1240,6 +1253,7 @@ class Repo(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1329,6 +1343,7 @@ class Repo(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1418,6 +1433,7 @@ class Repo(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1507,6 +1523,7 @@ class Repo(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1596,6 +1613,7 @@ class Repo(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1685,6 +1703,7 @@ class Repo(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1774,6 +1793,7 @@ class Repo(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1863,6 +1883,7 @@ class Repo(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1952,6 +1973,7 @@ class Repo(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2041,6 +2063,7 @@ class Repo(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2130,6 +2153,7 @@ class Repo(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2219,6 +2243,7 @@ class Repo(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2308,6 +2333,7 @@ class Repo(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2397,6 +2423,7 @@ class Repo(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2486,6 +2513,7 @@ class Repo(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2575,6 +2603,7 @@ class Repo(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2664,6 +2693,7 @@ class Repo(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2756,6 +2786,7 @@ class Repo(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.repo_branch, False, False, "json", shared.RepoBranch
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2848,6 +2879,7 @@ class Repo(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.repo_branch, False, False, "json", shared.RepoBranch
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2940,6 +2972,7 @@ class Repo(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.repo_commit, False, False, "json", shared.RepoCommit
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3032,6 +3065,7 @@ class Repo(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.repo_commit, False, False, "json", shared.RepoCommit
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3124,6 +3158,7 @@ class Repo(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.repo_organization, False, False, "json", shared.RepoOrganization
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3216,6 +3251,7 @@ class Repo(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.repo_organization, False, False, "json", shared.RepoOrganization
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3308,6 +3344,7 @@ class Repo(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.repo_pullrequest, False, False, "json", shared.RepoPullrequest
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3400,6 +3437,7 @@ class Repo(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.repo_pullrequest, False, False, "json", shared.RepoPullrequest
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3492,6 +3530,7 @@ class Repo(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.repo_repository, False, False, "json", shared.RepoRepository
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3584,6 +3623,7 @@ class Repo(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.repo_repository, False, False, "json", shared.RepoRepository
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3673,6 +3713,7 @@ class Repo(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3767,6 +3808,7 @@ class Repo(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3861,6 +3903,7 @@ class Repo(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3955,6 +3998,7 @@ class Repo(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -4049,6 +4093,7 @@ class Repo(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -4143,6 +4188,7 @@ class Repo(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -4237,6 +4283,7 @@ class Repo(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -4331,6 +4378,7 @@ class Repo(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -4425,6 +4473,7 @@ class Repo(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -4519,6 +4568,7 @@ class Repo(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -4616,6 +4666,7 @@ class Repo(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.repo_branch, False, False, "json", shared.RepoBranch
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -4708,6 +4759,7 @@ class Repo(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.repo_branch, False, False, "json", shared.RepoBranch
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -4800,6 +4852,7 @@ class Repo(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.repo_commit, False, False, "json", shared.RepoCommit
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -4892,6 +4945,7 @@ class Repo(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.repo_commit, False, False, "json", shared.RepoCommit
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -4984,6 +5038,7 @@ class Repo(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.repo_organization, False, False, "json", shared.RepoOrganization
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -5076,6 +5131,7 @@ class Repo(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.repo_organization, False, False, "json", shared.RepoOrganization
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -5168,6 +5224,7 @@ class Repo(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.repo_pullrequest, False, False, "json", shared.RepoPullrequest
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -5260,6 +5317,7 @@ class Repo(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.repo_pullrequest, False, False, "json", shared.RepoPullrequest
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -5352,6 +5410,7 @@ class Repo(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.repo_repository, False, False, "json", shared.RepoRepository
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -5444,6 +5503,7 @@ class Repo(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.repo_repository, False, False, "json", shared.RepoRepository
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 

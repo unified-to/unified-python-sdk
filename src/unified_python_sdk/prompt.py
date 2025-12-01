@@ -60,6 +60,7 @@ class Prompt(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.genai_prompt, False, False, "json", shared.GenaiPrompt
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -152,6 +153,7 @@ class Prompt(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.genai_prompt, False, False, "json", shared.GenaiPrompt
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 

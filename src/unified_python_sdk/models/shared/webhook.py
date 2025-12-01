@@ -19,6 +19,7 @@ class DbType(str, Enum, metaclass=utils.OpenEnumMeta):
     POSTGRES = "postgres"
     MSSQL = "mssql"
     MARIADB = "mariadb"
+    SUPABASE = "supabase"
 
 
 class Event(str, Enum, metaclass=utils.OpenEnumMeta):

@@ -60,6 +60,7 @@ class Payment(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.payment_link, False, False, "json", shared.PaymentLink
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -152,6 +153,7 @@ class Payment(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.payment_link, False, False, "json", shared.PaymentLink
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -244,6 +246,7 @@ class Payment(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.payment_payment, False, False, "json", shared.PaymentPayment
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -336,6 +339,7 @@ class Payment(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.payment_payment, False, False, "json", shared.PaymentPayment
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -434,6 +438,7 @@ class Payment(BaseSDK):
                 "json",
                 shared.PaymentSubscription,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -532,6 +537,7 @@ class Payment(BaseSDK):
                 "json",
                 shared.PaymentSubscription,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -620,6 +626,7 @@ class Payment(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -708,6 +715,7 @@ class Payment(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -797,6 +805,7 @@ class Payment(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -886,6 +895,7 @@ class Payment(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -975,6 +985,7 @@ class Payment(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1064,6 +1075,7 @@ class Payment(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1153,6 +1165,7 @@ class Payment(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1242,6 +1255,7 @@ class Payment(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1331,6 +1345,7 @@ class Payment(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1420,6 +1435,7 @@ class Payment(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1509,6 +1525,7 @@ class Payment(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1598,6 +1615,7 @@ class Payment(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1687,6 +1705,7 @@ class Payment(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1776,6 +1795,7 @@ class Payment(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1865,6 +1885,7 @@ class Payment(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1954,6 +1975,7 @@ class Payment(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2043,6 +2065,7 @@ class Payment(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2132,6 +2155,7 @@ class Payment(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2223,6 +2247,7 @@ class Payment(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2314,6 +2339,7 @@ class Payment(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2406,6 +2432,7 @@ class Payment(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.payment_link, False, False, "json", shared.PaymentLink
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2498,6 +2525,7 @@ class Payment(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.payment_link, False, False, "json", shared.PaymentLink
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2590,6 +2618,7 @@ class Payment(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.payment_payment, False, False, "json", shared.PaymentPayment
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2682,6 +2711,7 @@ class Payment(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.payment_payment, False, False, "json", shared.PaymentPayment
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2780,6 +2810,7 @@ class Payment(BaseSDK):
                 "json",
                 shared.PaymentSubscription,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2878,6 +2909,7 @@ class Payment(BaseSDK):
                 "json",
                 shared.PaymentSubscription,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2967,6 +2999,7 @@ class Payment(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3061,6 +3094,7 @@ class Payment(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3155,6 +3189,7 @@ class Payment(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3249,6 +3284,7 @@ class Payment(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3345,6 +3381,7 @@ class Payment(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3441,6 +3478,7 @@ class Payment(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3538,6 +3576,7 @@ class Payment(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.payment_link, False, False, "json", shared.PaymentLink
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3630,6 +3669,7 @@ class Payment(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.payment_link, False, False, "json", shared.PaymentLink
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3722,6 +3762,7 @@ class Payment(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.payment_payment, False, False, "json", shared.PaymentPayment
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3814,6 +3855,7 @@ class Payment(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.payment_payment, False, False, "json", shared.PaymentPayment
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3912,6 +3954,7 @@ class Payment(BaseSDK):
                 "json",
                 shared.PaymentSubscription,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -4010,6 +4053,7 @@ class Payment(BaseSDK):
                 "json",
                 shared.PaymentSubscription,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 

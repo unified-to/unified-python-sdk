@@ -66,6 +66,7 @@ class Accounting(BaseSDK):
                 "json",
                 shared.AccountingAccount,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -164,6 +165,7 @@ class Accounting(BaseSDK):
                 "json",
                 shared.AccountingAccount,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -256,6 +258,7 @@ class Accounting(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.accounting_bill, False, False, "json", shared.AccountingBill
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -348,6 +351,7 @@ class Accounting(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.accounting_bill, False, False, "json", shared.AccountingBill
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -446,6 +450,7 @@ class Accounting(BaseSDK):
                 "json",
                 shared.AccountingCategory,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -544,6 +549,7 @@ class Accounting(BaseSDK):
                 "json",
                 shared.AccountingCategory,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -642,6 +648,7 @@ class Accounting(BaseSDK):
                 "json",
                 shared.AccountingContact,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -740,6 +747,7 @@ class Accounting(BaseSDK):
                 "json",
                 shared.AccountingContact,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -838,6 +846,7 @@ class Accounting(BaseSDK):
                 "json",
                 shared.AccountingCreditmemo,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -936,6 +945,7 @@ class Accounting(BaseSDK):
                 "json",
                 shared.AccountingCreditmemo,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1034,6 +1044,7 @@ class Accounting(BaseSDK):
                 "json",
                 shared.AccountingExpense,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1132,6 +1143,7 @@ class Accounting(BaseSDK):
                 "json",
                 shared.AccountingExpense,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1230,6 +1242,7 @@ class Accounting(BaseSDK):
                 "json",
                 shared.AccountingInvoice,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1328,6 +1341,7 @@ class Accounting(BaseSDK):
                 "json",
                 shared.AccountingInvoice,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1426,6 +1440,7 @@ class Accounting(BaseSDK):
                 "json",
                 shared.AccountingJournal,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1524,6 +1539,7 @@ class Accounting(BaseSDK):
                 "json",
                 shared.AccountingJournal,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1616,6 +1632,7 @@ class Accounting(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.accounting_order, False, False, "json", shared.AccountingOrder
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1708,6 +1725,7 @@ class Accounting(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.accounting_order, False, False, "json", shared.AccountingOrder
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1806,6 +1824,7 @@ class Accounting(BaseSDK):
                 "json",
                 shared.AccountingPurchaseorder,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -1904,6 +1923,7 @@ class Accounting(BaseSDK):
                 "json",
                 shared.AccountingPurchaseorder,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2002,6 +2022,7 @@ class Accounting(BaseSDK):
                 "json",
                 shared.AccountingSalesorder,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2100,6 +2121,7 @@ class Accounting(BaseSDK):
                 "json",
                 shared.AccountingSalesorder,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2198,6 +2220,7 @@ class Accounting(BaseSDK):
                 "json",
                 shared.AccountingTaxrate,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2296,6 +2319,7 @@ class Accounting(BaseSDK):
                 "json",
                 shared.AccountingTaxrate,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2394,6 +2418,7 @@ class Accounting(BaseSDK):
                 "json",
                 shared.AccountingTransaction,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2492,6 +2517,7 @@ class Accounting(BaseSDK):
                 "json",
                 shared.AccountingTransaction,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2581,6 +2607,7 @@ class Accounting(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2670,6 +2697,7 @@ class Accounting(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2761,6 +2789,7 @@ class Accounting(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2852,6 +2881,7 @@ class Accounting(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -2941,6 +2971,7 @@ class Accounting(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3030,6 +3061,7 @@ class Accounting(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3119,6 +3151,7 @@ class Accounting(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3208,6 +3241,7 @@ class Accounting(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3297,6 +3331,7 @@ class Accounting(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3386,6 +3421,7 @@ class Accounting(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3475,6 +3511,7 @@ class Accounting(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3564,6 +3601,7 @@ class Accounting(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3655,6 +3693,7 @@ class Accounting(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3746,6 +3785,7 @@ class Accounting(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3835,6 +3875,7 @@ class Accounting(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -3924,6 +3965,7 @@ class Accounting(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -4013,6 +4055,7 @@ class Accounting(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -4102,6 +4145,7 @@ class Accounting(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -4191,6 +4235,7 @@ class Accounting(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -4280,6 +4325,7 @@ class Accounting(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -4369,6 +4415,7 @@ class Accounting(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -4458,6 +4505,7 @@ class Accounting(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -4549,6 +4597,7 @@ class Accounting(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -4640,6 +4689,7 @@ class Accounting(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -4731,6 +4781,7 @@ class Accounting(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -4822,6 +4873,7 @@ class Accounting(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -4913,6 +4965,7 @@ class Accounting(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -5004,6 +5057,7 @@ class Accounting(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -5093,6 +5147,7 @@ class Accounting(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -5182,6 +5237,7 @@ class Accounting(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -5273,6 +5329,7 @@ class Accounting(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -5364,6 +5421,7 @@ class Accounting(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -5453,6 +5511,7 @@ class Accounting(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -5542,6 +5601,7 @@ class Accounting(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -5633,6 +5693,7 @@ class Accounting(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -5724,6 +5785,7 @@ class Accounting(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -5815,6 +5877,7 @@ class Accounting(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -5906,6 +5969,7 @@ class Accounting(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -5995,6 +6059,7 @@ class Accounting(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -6084,6 +6149,7 @@ class Accounting(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -6175,6 +6241,7 @@ class Accounting(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -6266,6 +6333,7 @@ class Accounting(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -6355,6 +6423,7 @@ class Accounting(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -6444,6 +6513,7 @@ class Accounting(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -6535,6 +6605,7 @@ class Accounting(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -6626,6 +6697,7 @@ class Accounting(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -6717,6 +6789,7 @@ class Accounting(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -6808,6 +6881,7 @@ class Accounting(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -6897,6 +6971,7 @@ class Accounting(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -6986,6 +7061,7 @@ class Accounting(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -7077,6 +7153,7 @@ class Accounting(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -7168,6 +7245,7 @@ class Accounting(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -7257,6 +7335,7 @@ class Accounting(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -7346,6 +7425,7 @@ class Accounting(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -7435,6 +7515,7 @@ class Accounting(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -7524,6 +7605,7 @@ class Accounting(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -7613,6 +7695,7 @@ class Accounting(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -7702,6 +7785,7 @@ class Accounting(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -7791,6 +7875,7 @@ class Accounting(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -7880,6 +7965,7 @@ class Accounting(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -7971,6 +8057,7 @@ class Accounting(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -8062,6 +8149,7 @@ class Accounting(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -8153,6 +8241,7 @@ class Accounting(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -8244,6 +8333,7 @@ class Accounting(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -8335,6 +8425,7 @@ class Accounting(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -8426,6 +8517,7 @@ class Accounting(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -8515,6 +8607,7 @@ class Accounting(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -8604,6 +8697,7 @@ class Accounting(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -8695,6 +8789,7 @@ class Accounting(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -8786,6 +8881,7 @@ class Accounting(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -8875,6 +8971,7 @@ class Accounting(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -8964,6 +9061,7 @@ class Accounting(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -9055,6 +9153,7 @@ class Accounting(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -9146,6 +9245,7 @@ class Accounting(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -9237,6 +9337,7 @@ class Accounting(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -9328,6 +9429,7 @@ class Accounting(BaseSDK):
             accept_header_value="application/json",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -9424,6 +9526,7 @@ class Accounting(BaseSDK):
                 "json",
                 shared.AccountingAccount,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -9520,6 +9623,7 @@ class Accounting(BaseSDK):
                 "json",
                 shared.AccountingAccount,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -9612,6 +9716,7 @@ class Accounting(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.accounting_bill, False, False, "json", shared.AccountingBill
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -9704,6 +9809,7 @@ class Accounting(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.accounting_bill, False, False, "json", shared.AccountingBill
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -9802,6 +9908,7 @@ class Accounting(BaseSDK):
                 "json",
                 shared.AccountingCategory,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -9900,6 +10007,7 @@ class Accounting(BaseSDK):
                 "json",
                 shared.AccountingCategory,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -9996,6 +10104,7 @@ class Accounting(BaseSDK):
                 "json",
                 shared.AccountingContact,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -10092,6 +10201,7 @@ class Accounting(BaseSDK):
                 "json",
                 shared.AccountingContact,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -10190,6 +10300,7 @@ class Accounting(BaseSDK):
                 "json",
                 shared.AccountingCreditmemo,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -10288,6 +10399,7 @@ class Accounting(BaseSDK):
                 "json",
                 shared.AccountingCreditmemo,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -10384,6 +10496,7 @@ class Accounting(BaseSDK):
                 "json",
                 shared.AccountingExpense,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -10480,6 +10593,7 @@ class Accounting(BaseSDK):
                 "json",
                 shared.AccountingExpense,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -10576,6 +10690,7 @@ class Accounting(BaseSDK):
                 "json",
                 shared.AccountingInvoice,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -10672,6 +10787,7 @@ class Accounting(BaseSDK):
                 "json",
                 shared.AccountingInvoice,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -10768,6 +10884,7 @@ class Accounting(BaseSDK):
                 "json",
                 shared.AccountingJournal,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -10864,6 +10981,7 @@ class Accounting(BaseSDK):
                 "json",
                 shared.AccountingJournal,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -10956,6 +11074,7 @@ class Accounting(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.accounting_order, False, False, "json", shared.AccountingOrder
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -11048,6 +11167,7 @@ class Accounting(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.accounting_order, False, False, "json", shared.AccountingOrder
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -11146,6 +11266,7 @@ class Accounting(BaseSDK):
                 "json",
                 shared.AccountingPurchaseorder,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -11244,6 +11365,7 @@ class Accounting(BaseSDK):
                 "json",
                 shared.AccountingPurchaseorder,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -11342,6 +11464,7 @@ class Accounting(BaseSDK):
                 "json",
                 shared.AccountingSalesorder,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -11440,6 +11563,7 @@ class Accounting(BaseSDK):
                 "json",
                 shared.AccountingSalesorder,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -11536,6 +11660,7 @@ class Accounting(BaseSDK):
                 "json",
                 shared.AccountingTaxrate,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -11632,6 +11757,7 @@ class Accounting(BaseSDK):
                 "json",
                 shared.AccountingTaxrate,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -11730,6 +11856,7 @@ class Accounting(BaseSDK):
                 "json",
                 shared.AccountingTransaction,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -11828,6 +11955,7 @@ class Accounting(BaseSDK):
                 "json",
                 shared.AccountingTransaction,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -11919,6 +12047,7 @@ class Accounting(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -12015,6 +12144,7 @@ class Accounting(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -12109,6 +12239,7 @@ class Accounting(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -12203,6 +12334,7 @@ class Accounting(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -12299,6 +12431,7 @@ class Accounting(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -12395,6 +12528,7 @@ class Accounting(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -12491,6 +12625,7 @@ class Accounting(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -12587,6 +12722,7 @@ class Accounting(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -12683,6 +12819,7 @@ class Accounting(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -12779,6 +12916,7 @@ class Accounting(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -12875,6 +13013,7 @@ class Accounting(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -12971,6 +13110,7 @@ class Accounting(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -13067,6 +13207,7 @@ class Accounting(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -13163,6 +13304,7 @@ class Accounting(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -13259,6 +13401,7 @@ class Accounting(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -13355,6 +13498,7 @@ class Accounting(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -13449,6 +13593,7 @@ class Accounting(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -13543,6 +13688,7 @@ class Accounting(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -13639,6 +13785,7 @@ class Accounting(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -13735,6 +13882,7 @@ class Accounting(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -13831,6 +13979,7 @@ class Accounting(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -13927,6 +14076,7 @@ class Accounting(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -14023,6 +14173,7 @@ class Accounting(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -14119,6 +14270,7 @@ class Accounting(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -14215,6 +14367,7 @@ class Accounting(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -14311,6 +14464,7 @@ class Accounting(BaseSDK):
             accept_header_value="*/*",
             http_headers=http_headers,
             security=self.sdk_configuration.security,
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -14414,6 +14568,7 @@ class Accounting(BaseSDK):
                 "json",
                 shared.AccountingAccount,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -14512,6 +14667,7 @@ class Accounting(BaseSDK):
                 "json",
                 shared.AccountingAccount,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -14604,6 +14760,7 @@ class Accounting(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.accounting_bill, False, False, "json", shared.AccountingBill
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -14696,6 +14853,7 @@ class Accounting(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.accounting_bill, False, False, "json", shared.AccountingBill
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -14794,6 +14952,7 @@ class Accounting(BaseSDK):
                 "json",
                 shared.AccountingCategory,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -14892,6 +15051,7 @@ class Accounting(BaseSDK):
                 "json",
                 shared.AccountingCategory,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -14990,6 +15150,7 @@ class Accounting(BaseSDK):
                 "json",
                 shared.AccountingContact,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -15088,6 +15249,7 @@ class Accounting(BaseSDK):
                 "json",
                 shared.AccountingContact,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -15186,6 +15348,7 @@ class Accounting(BaseSDK):
                 "json",
                 shared.AccountingCreditmemo,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -15284,6 +15447,7 @@ class Accounting(BaseSDK):
                 "json",
                 shared.AccountingCreditmemo,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -15382,6 +15546,7 @@ class Accounting(BaseSDK):
                 "json",
                 shared.AccountingExpense,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -15480,6 +15645,7 @@ class Accounting(BaseSDK):
                 "json",
                 shared.AccountingExpense,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -15578,6 +15744,7 @@ class Accounting(BaseSDK):
                 "json",
                 shared.AccountingInvoice,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -15676,6 +15843,7 @@ class Accounting(BaseSDK):
                 "json",
                 shared.AccountingInvoice,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -15774,6 +15942,7 @@ class Accounting(BaseSDK):
                 "json",
                 shared.AccountingJournal,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -15872,6 +16041,7 @@ class Accounting(BaseSDK):
                 "json",
                 shared.AccountingJournal,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -15964,6 +16134,7 @@ class Accounting(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.accounting_order, False, False, "json", shared.AccountingOrder
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -16056,6 +16227,7 @@ class Accounting(BaseSDK):
             get_serialized_body=lambda: utils.serialize_request_body(
                 request.accounting_order, False, False, "json", shared.AccountingOrder
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -16154,6 +16326,7 @@ class Accounting(BaseSDK):
                 "json",
                 shared.AccountingPurchaseorder,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -16252,6 +16425,7 @@ class Accounting(BaseSDK):
                 "json",
                 shared.AccountingPurchaseorder,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -16350,6 +16524,7 @@ class Accounting(BaseSDK):
                 "json",
                 shared.AccountingSalesorder,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -16448,6 +16623,7 @@ class Accounting(BaseSDK):
                 "json",
                 shared.AccountingSalesorder,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -16546,6 +16722,7 @@ class Accounting(BaseSDK):
                 "json",
                 shared.AccountingTaxrate,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -16644,6 +16821,7 @@ class Accounting(BaseSDK):
                 "json",
                 shared.AccountingTaxrate,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -16742,6 +16920,7 @@ class Accounting(BaseSDK):
                 "json",
                 shared.AccountingTransaction,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
@@ -16840,6 +17019,7 @@ class Accounting(BaseSDK):
                 "json",
                 shared.AccountingTransaction,
             ),
+            allow_empty_value=None,
             timeout_ms=timeout_ms,
         )
 
