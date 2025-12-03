@@ -9,9 +9,12 @@ from unified_python_sdk.types import BaseModel
 class CommerceReferenceTypedDict(TypedDict):
     id: NotRequired[str]
     name: NotRequired[str]
+    type: NotRequired[str]
 
 
 class CommerceReference(BaseModel):
     id: Optional[str] = None
 
     name: Optional[str] = None
+
+    type: Optional[str] = None

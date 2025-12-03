@@ -4,6 +4,7 @@ from __future__ import annotations
 from .commerceitemmedia import CommerceItemMedia, CommerceItemMediaTypedDict
 from .commerceitemvariant import CommerceItemVariant, CommerceItemVariantTypedDict
 from .commercemetadata import CommerceMetadata, CommerceMetadataTypedDict
+from .commercereference import CommerceReference, CommerceReferenceTypedDict
 from datetime import datetime
 from typing import Any, Dict, List, Optional
 from typing_extensions import NotRequired, TypedDict
@@ -13,6 +14,9 @@ from unified_python_sdk.types import BaseModel
 class CommerceItemTypedDict(TypedDict):
     account_id: NotRequired[str]
     collection_ids: NotRequired[List[str]]
+    r"""@deprecated; use collections instead"""
+    collections: NotRequired[List[CommerceReferenceTypedDict]]
+    r"""points to Collection with id, name, and type fields"""
     created_at: NotRequired[datetime]
     description: NotRequired[str]
     global_code: NotRequired[str]
@@ -38,6 +42,10 @@ class CommerceItem(BaseModel):
     account_id: Optional[str] = None
 
     collection_ids: Optional[List[str]] = None
+    r"""@deprecated; use collections instead"""
+
+    collections: Optional[List[CommerceReference]] = None
+    r"""points to Collection with id, name, and type fields"""
 
     created_at: Optional[datetime] = None
 

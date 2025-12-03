@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: 0b28d8593f165fb3de853a45b8c6ab17
+  docChecksum: 5cc9bd003a02a42d13a2683d5b08bc71
   docVersion: "1.0"
-  speakeasyVersion: 1.665.0
-  generationVersion: 2.767.2
-  releaseVersion: 0.55.0
-  configChecksum: 22e68e11c9ee5397dc5e81567f659ee4
+  speakeasyVersion: 1.666.2
+  generationVersion: 2.768.1
+  releaseVersion: 0.55.1
+  configChecksum: 8f0329594ae1a19558410ee92523fd06
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
@@ -7564,3 +7564,4 @@ examples:
           application/json: ["<value 1>", "<value 2>", "<value 3>"]
 examplesVersion: 1.0.2
 generatedTests: {}
+releaseNotes: "## Python SDK Changes:\n* `unified_to.commerce.create_commerce_item()`: \n  *  `request.commerce_item.collections` **Added**\n  *  `response.collections` **Added**\n* `unified_to.commerce.create_commerce_saleschannel()`: \n  *  `request.commerce_saleschannel.collections.[].type` **Added**\n  *  `response.collections.[].type` **Added**\n* `unified_to.commerce.get_commerce_item()`:  `response.collections` **Added**\n* `unified_to.commerce.get_commerce_saleschannel()`:  `response.collections.[].type` **Added**\n* `unified_to.commerce.list_commerce_items()`:  `response.[].collections` **Added**\n* `unified_to.commerce.list_commerce_saleschannels()`:  `response.[].collections.[].type` **Added**\n* `unified_to.commerce.patch_commerce_item()`: \n  *  `request.commerce_item.collections` **Added**\n  *  `response.collections` **Added**\n* `unified_to.commerce.patch_commerce_saleschannel()`: \n  *  `request.commerce_saleschannel.collections.[].type` **Added**\n  *  `response.collections.[].type` **Added**\n* `unified_to.commerce.update_commerce_item()`: \n  *  `request.commerce_item.collections` **Added**\n  *  `response.collections` **Added**\n* `unified_to.commerce.update_commerce_saleschannel()`: \n  *  `request.commerce_saleschannel.collections.[].type` **Added**\n  *  `response.collections.[].type` **Added**\n* `unified_to.item.create_commerce_item()`: \n  *  `request.commerce_item.collections` **Added**\n  *  `response.collections` **Added**\n* `unified_to.item.get_commerce_item()`:  `response.collections` **Added**\n* `unified_to.item.list_commerce_items()`:  `response.[].collections` **Added**\n* `unified_to.item.patch_commerce_item()`: \n  *  `request.commerce_item.collections` **Added**\n  *  `response.collections` **Added**\n* `unified_to.item.update_commerce_item()`: \n  *  `request.commerce_item.collections` **Added**\n  *  `response.collections` **Added**\n* `unified_to.saleschannel.create_commerce_saleschannel()`: \n  *  `request.commerce_saleschannel.collections.[].type` **Added**\n  *  `response.collections.[].type` **Added**\n* `unified_to.saleschannel.get_commerce_saleschannel()`:  `response.collections.[].type` **Added**\n* `unified_to.saleschannel.list_commerce_saleschannels()`:  `response.[].collections.[].type` **Added**\n* `unified_to.saleschannel.patch_commerce_saleschannel()`: \n  *  `request.commerce_saleschannel.collections.[].type` **Added**\n  *  `response.collections.[].type` **Added**\n* `unified_to.saleschannel.update_commerce_saleschannel()`: \n  *  `request.commerce_saleschannel.collections.[].type` **Added**\n  *  `response.collections.[].type` **Added**\n"
