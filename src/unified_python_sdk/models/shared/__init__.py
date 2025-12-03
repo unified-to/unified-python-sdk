@@ -631,14 +631,6 @@ if TYPE_CHECKING:
         PaymentSubscriptionStatus,
         PaymentSubscriptionTypedDict,
     )
-    from .property_accountingbalancesheetitem_sub_items import (
-        PropertyAccountingBalancesheetItemSubItems,
-        PropertyAccountingBalancesheetItemSubItemsTypedDict,
-    )
-    from .property_accountingcashflowitem_sub_items import (
-        PropertyAccountingCashflowItemSubItems,
-        PropertyAccountingCashflowItemSubItemsTypedDict,
-    )
     from .property_accountingcontact_billing_address import (
         PropertyAccountingContactBillingAddress,
         PropertyAccountingContactBillingAddressTypedDict,
@@ -1539,10 +1531,6 @@ __all__ = [
     "PaymentType",
     "Priority",
     "ProfileGender",
-    "PropertyAccountingBalancesheetItemSubItems",
-    "PropertyAccountingBalancesheetItemSubItemsTypedDict",
-    "PropertyAccountingCashflowItemSubItems",
-    "PropertyAccountingCashflowItemSubItemsTypedDict",
     "PropertyAccountingContactBillingAddress",
     "PropertyAccountingContactBillingAddressTypedDict",
     "PropertyAccountingContactShippingAddress",
@@ -2454,10 +2442,6 @@ _dynamic_imports: dict[str, str] = {
     "PaymentSubscription": ".paymentsubscription",
     "PaymentSubscriptionStatus": ".paymentsubscription",
     "PaymentSubscriptionTypedDict": ".paymentsubscription",
-    "PropertyAccountingBalancesheetItemSubItems": ".property_accountingbalancesheetitem_sub_items",
-    "PropertyAccountingBalancesheetItemSubItemsTypedDict": ".property_accountingbalancesheetitem_sub_items",
-    "PropertyAccountingCashflowItemSubItems": ".property_accountingcashflowitem_sub_items",
-    "PropertyAccountingCashflowItemSubItemsTypedDict": ".property_accountingcashflowitem_sub_items",
     "PropertyAccountingContactBillingAddress": ".property_accountingcontact_billing_address",
     "PropertyAccountingContactBillingAddressTypedDict": ".property_accountingcontact_billing_address",
     "PropertyAccountingContactShippingAddress": ".property_accountingcontact_shipping_address",
