@@ -1,5 +1,4 @@
-# ListT
-(*list*)
+# List
 
 ## Overview
 

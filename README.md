@@ -172,7 +172,7 @@ asyncio.run(main())
 <details open>
 <summary>Available methods</summary>
 
-### [account](docs/sdks/account/README.md)
+### [Account](docs/sdks/account/README.md)
 
 * [create_accounting_account](docs/sdks/account/README.md#create_accounting_account) - Create an account
 * [get_accounting_account](docs/sdks/account/README.md#get_accounting_account) - Retrieve an account
@@ -181,7 +181,7 @@ asyncio.run(main())
 * [remove_accounting_account](docs/sdks/account/README.md#remove_accounting_account) - Remove an account
 * [update_accounting_account](docs/sdks/account/README.md#update_accounting_account) - Update an account
 
-### [accounting](docs/sdks/accounting/README.md)
+### [Accounting](docs/sdks/accounting/README.md)
 
 * [create_accounting_account](docs/sdks/accounting/README.md#create_accounting_account) - Create an account
 * [create_accounting_bill](docs/sdks/accounting/README.md#create_accounting_bill) - Create a bill
@@ -274,7 +274,7 @@ asyncio.run(main())
 * [update_accounting_taxrate](docs/sdks/accounting/README.md#update_accounting_taxrate) - Update a taxrate
 * [update_accounting_transaction](docs/sdks/accounting/README.md#update_accounting_transaction) - Update a transaction
 
-### [activity](docs/sdks/activity/README.md)
+### [Activity](docs/sdks/activity/README.md)
 
 * [create_ats_activity](docs/sdks/activity/README.md#create_ats_activity) - Create an activity
 * [get_ats_activity](docs/sdks/activity/README.md#get_ats_activity) - Retrieve an activity
@@ -283,12 +283,12 @@ asyncio.run(main())
 * [remove_ats_activity](docs/sdks/activity/README.md#remove_ats_activity) - Remove an activity
 * [update_ats_activity](docs/sdks/activity/README.md#update_ats_activity) - Update an activity
 
-### [apicall](docs/sdks/apicall/README.md)
+### [Apicall](docs/sdks/apicall/README.md)
 
 * [get_unified_apicall](docs/sdks/apicall/README.md#get_unified_apicall) - Retrieve specific API Call by its ID
 * [list_unified_apicalls](docs/sdks/apicall/README.md#list_unified_apicalls) - Returns API Calls
 
-### [application](docs/sdks/application/README.md)
+### [Application](docs/sdks/application/README.md)
 
 * [create_ats_application](docs/sdks/application/README.md#create_ats_application) - Create an application
 * [get_ats_application](docs/sdks/application/README.md#get_ats_application) - Retrieve an application
@@ -297,11 +297,11 @@ asyncio.run(main())
 * [remove_ats_application](docs/sdks/application/README.md#remove_ats_application) - Remove an application
 * [update_ats_application](docs/sdks/application/README.md#update_ats_application) - Update an application
 
-### [applicationstatus](docs/sdks/applicationstatus/README.md)
+### [Applicationstatus](docs/sdks/applicationstatus/README.md)
 
 * [list_ats_applicationstatuses](docs/sdks/applicationstatus/README.md#list_ats_applicationstatuses) - List all applicationstatuses
 
-### [ats](docs/sdks/ats/README.md)
+### [Ats](docs/sdks/ats/README.md)
 
 * [create_ats_activity](docs/sdks/ats/README.md#create_ats_activity) - Create an activity
 * [create_ats_application](docs/sdks/ats/README.md#create_ats_application) - Create an application
@@ -353,17 +353,17 @@ asyncio.run(main())
 * [update_ats_job](docs/sdks/ats/README.md#update_ats_job) - Update a job
 * [update_ats_scorecard](docs/sdks/ats/README.md#update_ats_scorecard) - Update a scorecard
 
-### [auth](docs/sdks/auth/README.md)
+### [Auth](docs/sdks/auth/README.md)
 
 * [get_unified_integration_auth](docs/sdks/auth/README.md#get_unified_integration_auth) - Authorize new connection
 * [get_unified_integration_login](docs/sdks/auth/README.md#get_unified_integration_login) - Sign in a user
 
-### [balancesheet](docs/sdks/balancesheet/README.md)
+### [Balancesheet](docs/sdks/balancesheet/README.md)
 
 * [get_accounting_balancesheet](docs/sdks/balancesheet/README.md#get_accounting_balancesheet) - Retrieve a balancesheet
 * [list_accounting_balancesheets](docs/sdks/balancesheet/README.md#list_accounting_balancesheets) - List all balancesheets
 
-### [benefit](docs/sdks/benefit/README.md)
+### [Benefit](docs/sdks/benefit/README.md)
 
 * [create_hris_benefit](docs/sdks/benefit/README.md#create_hris_benefit) - Create a benefit
 * [get_hris_benefit](docs/sdks/benefit/README.md#get_hris_benefit) - Retrieve a benefit
@@ -372,7 +372,7 @@ asyncio.run(main())
 * [remove_hris_benefit](docs/sdks/benefit/README.md#remove_hris_benefit) - Remove a benefit
 * [update_hris_benefit](docs/sdks/benefit/README.md#update_hris_benefit) - Update a benefit
 
-### [bill](docs/sdks/bill/README.md)
+### [Bill](docs/sdks/bill/README.md)
 
 * [create_accounting_bill](docs/sdks/bill/README.md#create_accounting_bill) - Create a bill
 * [get_accounting_bill](docs/sdks/bill/README.md#get_accounting_bill) - Retrieve a bill
@@ -381,7 +381,7 @@ asyncio.run(main())
 * [remove_accounting_bill](docs/sdks/bill/README.md#remove_accounting_bill) - Remove a bill
 * [update_accounting_bill](docs/sdks/bill/README.md#update_accounting_bill) - Update a bill
 
-### [branch](docs/sdks/branch/README.md)
+### [Branch](docs/sdks/branch/README.md)
 
 * [create_repo_branch](docs/sdks/branch/README.md#create_repo_branch) - Create a branch
 * [get_repo_branch](docs/sdks/branch/README.md#get_repo_branch) - Retrieve a branch
@@ -390,11 +390,11 @@ asyncio.run(main())
 * [remove_repo_branch](docs/sdks/branch/README.md#remove_repo_branch) - Remove a branch
 * [update_repo_branch](docs/sdks/branch/README.md#update_repo_branch) - Update a branch
 
-### [busy](docs/sdks/busy/README.md)
+### [Busy](docs/sdks/busy/README.md)
 
 * [list_calendar_busies](docs/sdks/busy/README.md#list_calendar_busies) - List all busies
 
-### [calendar](docs/sdks/calendar/README.md)
+### [Calendar](docs/sdks/calendar/README.md)
 
 * [create_calendar_calendar](docs/sdks/calendar/README.md#create_calendar_calendar) - Create a calendar
 * [create_calendar_event](docs/sdks/calendar/README.md#create_calendar_event) - Create an event
@@ -418,12 +418,12 @@ asyncio.run(main())
 * [update_calendar_event](docs/sdks/calendar/README.md#update_calendar_event) - Update an event
 * [update_calendar_link](docs/sdks/calendar/README.md#update_calendar_link) - Update a link
 
-### [call](docs/sdks/call/README.md)
+### [Call](docs/sdks/call/README.md)
 
 * [get_uc_call](docs/sdks/call/README.md#get_uc_call) - Retrieve a call
 * [list_uc_calls](docs/sdks/call/README.md#list_uc_calls) - List all calls
 
-### [candidate](docs/sdks/candidate/README.md)
+### [Candidate](docs/sdks/candidate/README.md)
 
 * [create_ats_candidate](docs/sdks/candidate/README.md#create_ats_candidate) - Create a candidate
 * [get_ats_candidate](docs/sdks/candidate/README.md#get_ats_candidate) - Retrieve a candidate
@@ -432,12 +432,12 @@ asyncio.run(main())
 * [remove_ats_candidate](docs/sdks/candidate/README.md#remove_ats_candidate) - Remove a candidate
 * [update_ats_candidate](docs/sdks/candidate/README.md#update_ats_candidate) - Update a candidate
 
-### [cashflow](docs/sdks/cashflow/README.md)
+### [Cashflow](docs/sdks/cashflow/README.md)
 
 * [get_accounting_cashflow](docs/sdks/cashflow/README.md#get_accounting_cashflow) - Retrieve a cashflow
 * [list_accounting_cashflows](docs/sdks/cashflow/README.md#list_accounting_cashflows) - List all cashflows
 
-### [category](docs/sdks/category/README.md)
+### [Category](docs/sdks/category/README.md)
 
 * [create_accounting_category](docs/sdks/category/README.md#create_accounting_category) - Create a category
 * [create_ticketing_category](docs/sdks/category/README.md#create_ticketing_category) - Create a category
@@ -452,17 +452,17 @@ asyncio.run(main())
 * [update_accounting_category](docs/sdks/category/README.md#update_accounting_category) - Update a category
 * [update_ticketing_category](docs/sdks/category/README.md#update_ticketing_category) - Update a category
 
-### [change](docs/sdks/change/README.md)
+### [Change](docs/sdks/change/README.md)
 
 * [get_task_change](docs/sdks/change/README.md#get_task_change) - Retrieve a change
 * [list_task_changes](docs/sdks/change/README.md#list_task_changes) - List all changes
 
-### [channel](docs/sdks/channel/README.md)
+### [Channel](docs/sdks/channel/README.md)
 
 * [get_messaging_channel](docs/sdks/channel/README.md#get_messaging_channel) - Retrieve a channel
 * [list_messaging_channels](docs/sdks/channel/README.md#list_messaging_channels) - List all channels
 
-### [class_](docs/sdks/class/README.md)
+### [Class](docs/sdks/class/README.md)
 
 * [create_lms_class](docs/sdks/class/README.md#create_lms_class) - Create a class
 * [get_lms_class](docs/sdks/class/README.md#get_lms_class) - Retrieve a class
@@ -471,7 +471,7 @@ asyncio.run(main())
 * [remove_lms_class](docs/sdks/class/README.md#remove_lms_class) - Remove a class
 * [update_lms_class](docs/sdks/class/README.md#update_lms_class) - Update a class
 
-### [collection](docs/sdks/collection/README.md)
+### [Collection](docs/sdks/collection/README.md)
 
 * [create_commerce_collection](docs/sdks/collection/README.md#create_commerce_collection) - Create a collection
 * [get_commerce_collection](docs/sdks/collection/README.md#get_commerce_collection) - Retrieve a collection
@@ -480,7 +480,7 @@ asyncio.run(main())
 * [remove_commerce_collection](docs/sdks/collection/README.md#remove_commerce_collection) - Remove a collection
 * [update_commerce_collection](docs/sdks/collection/README.md#update_commerce_collection) - Update a collection
 
-### [comment](docs/sdks/comment/README.md)
+### [Comment](docs/sdks/comment/README.md)
 
 * [create_kms_comment](docs/sdks/comment/README.md#create_kms_comment) - Create a comment
 * [create_task_comment](docs/sdks/comment/README.md#create_task_comment) - Create a comment
@@ -501,7 +501,7 @@ asyncio.run(main())
 * [update_task_comment](docs/sdks/comment/README.md#update_task_comment) - Update a comment
 * [update_uc_comment](docs/sdks/comment/README.md#update_uc_comment) - Update a comment
 
-### [commerce](docs/sdks/commerce/README.md)
+### [Commerce](docs/sdks/commerce/README.md)
 
 * [create_commerce_collection](docs/sdks/commerce/README.md#create_commerce_collection) - Create a collection
 * [create_commerce_inventory](docs/sdks/commerce/README.md#create_commerce_inventory) - Create an inventory
@@ -540,7 +540,7 @@ asyncio.run(main())
 * [update_commerce_review](docs/sdks/commerce/README.md#update_commerce_review) - Update a review
 * [update_commerce_saleschannel](docs/sdks/commerce/README.md#update_commerce_saleschannel) - Update a saleschannel
 
-### [commit](docs/sdks/commit/README.md)
+### [Commit](docs/sdks/commit/README.md)
 
 * [create_repo_commit](docs/sdks/commit/README.md#create_repo_commit) - Create a commit
 * [get_repo_commit](docs/sdks/commit/README.md#get_repo_commit) - Retrieve a commit
@@ -549,7 +549,7 @@ asyncio.run(main())
 * [remove_repo_commit](docs/sdks/commit/README.md#remove_repo_commit) - Remove a commit
 * [update_repo_commit](docs/sdks/commit/README.md#update_repo_commit) - Update a commit
 
-### [company](docs/sdks/company/README.md)
+### [Company](docs/sdks/company/README.md)
 
 * [create_ats_company](docs/sdks/company/README.md#create_ats_company) - Create a company
 * [create_crm_company](docs/sdks/company/README.md#create_crm_company) - Create a company
@@ -571,7 +571,7 @@ asyncio.run(main())
 * [update_crm_company](docs/sdks/company/README.md#update_crm_company) - Update a company
 * [update_hris_company](docs/sdks/company/README.md#update_hris_company) - Update a company
 
-### [connection](docs/sdks/connection/README.md)
+### [Connection](docs/sdks/connection/README.md)
 
 * [create_unified_connection](docs/sdks/connection/README.md#create_unified_connection) - Create connection
 * [get_unified_connection](docs/sdks/connection/README.md#get_unified_connection) - Retrieve connection
@@ -580,7 +580,7 @@ asyncio.run(main())
 * [remove_unified_connection](docs/sdks/connection/README.md#remove_unified_connection) - Remove connection
 * [update_unified_connection](docs/sdks/connection/README.md#update_unified_connection) - Update connection
 
-### [contact](docs/sdks/contact/README.md)
+### [Contact](docs/sdks/contact/README.md)
 
 * [create_accounting_contact](docs/sdks/contact/README.md#create_accounting_contact) - Create a contact
 * [create_crm_contact](docs/sdks/contact/README.md#create_crm_contact) - Create a contact
@@ -601,7 +601,7 @@ asyncio.run(main())
 * [update_crm_contact](docs/sdks/contact/README.md#update_crm_contact) - Update a contact
 * [update_uc_contact](docs/sdks/contact/README.md#update_uc_contact) - Update a contact
 
-### [course](docs/sdks/course/README.md)
+### [Course](docs/sdks/course/README.md)
 
 * [create_lms_course](docs/sdks/course/README.md#create_lms_course) - Create a course
 * [get_lms_course](docs/sdks/course/README.md#get_lms_course) - Retrieve a course
@@ -610,7 +610,7 @@ asyncio.run(main())
 * [remove_lms_course](docs/sdks/course/README.md#remove_lms_course) - Remove a course
 * [update_lms_course](docs/sdks/course/README.md#update_lms_course) - Update a course
 
-### [creditmemo](docs/sdks/creditmemo/README.md)
+### [Creditmemo](docs/sdks/creditmemo/README.md)
 
 * [create_accounting_creditmemo](docs/sdks/creditmemo/README.md#create_accounting_creditmemo) - Create a creditmemo
 * [get_accounting_creditmemo](docs/sdks/creditmemo/README.md#get_accounting_creditmemo) - Retrieve a creditmemo
@@ -619,7 +619,7 @@ asyncio.run(main())
 * [remove_accounting_creditmemo](docs/sdks/creditmemo/README.md#remove_accounting_creditmemo) - Remove a creditmemo
 * [update_accounting_creditmemo](docs/sdks/creditmemo/README.md#update_accounting_creditmemo) - Update a creditmemo
 
-### [crm](docs/sdks/crm/README.md)
+### [Crm](docs/sdks/crm/README.md)
 
 * [create_crm_company](docs/sdks/crm/README.md#create_crm_company) - Create a company
 * [create_crm_contact](docs/sdks/crm/README.md#create_crm_contact) - Create a contact
@@ -658,7 +658,7 @@ asyncio.run(main())
 * [update_crm_lead](docs/sdks/crm/README.md#update_crm_lead) - Update a lead
 * [update_crm_pipeline](docs/sdks/crm/README.md#update_crm_pipeline) - Update a pipeline
 
-### [customer](docs/sdks/customer/README.md)
+### [Customer](docs/sdks/customer/README.md)
 
 * [create_ticketing_customer](docs/sdks/customer/README.md#create_ticketing_customer) - Create a customer
 * [get_ticketing_customer](docs/sdks/customer/README.md#get_ticketing_customer) - Retrieve a customer
@@ -667,7 +667,7 @@ asyncio.run(main())
 * [remove_ticketing_customer](docs/sdks/customer/README.md#remove_ticketing_customer) - Remove a customer
 * [update_ticketing_customer](docs/sdks/customer/README.md#update_ticketing_customer) - Update a customer
 
-### [deal](docs/sdks/deal/README.md)
+### [Deal](docs/sdks/deal/README.md)
 
 * [create_crm_deal](docs/sdks/deal/README.md#create_crm_deal) - Create a deal
 * [get_crm_deal](docs/sdks/deal/README.md#get_crm_deal) - Retrieve a deal
@@ -676,7 +676,7 @@ asyncio.run(main())
 * [remove_crm_deal](docs/sdks/deal/README.md#remove_crm_deal) - Remove a deal
 * [update_crm_deal](docs/sdks/deal/README.md#update_crm_deal) - Update a deal
 
-### [deduction](docs/sdks/deduction/README.md)
+### [Deduction](docs/sdks/deduction/README.md)
 
 * [create_hris_deduction](docs/sdks/deduction/README.md#create_hris_deduction) - Create a deduction
 * [get_hris_deduction](docs/sdks/deduction/README.md#get_hris_deduction) - Retrieve a deduction
@@ -685,7 +685,7 @@ asyncio.run(main())
 * [remove_hris_deduction](docs/sdks/deduction/README.md#remove_hris_deduction) - Remove a deduction
 * [update_hris_deduction](docs/sdks/deduction/README.md#update_hris_deduction) - Update a deduction
 
-### [device](docs/sdks/device/README.md)
+### [Device](docs/sdks/device/README.md)
 
 * [create_hris_device](docs/sdks/device/README.md#create_hris_device) - Create a device
 * [get_hris_device](docs/sdks/device/README.md#get_hris_device) - Retrieve a device
@@ -694,7 +694,7 @@ asyncio.run(main())
 * [remove_hris_device](docs/sdks/device/README.md#remove_hris_device) - Remove a device
 * [update_hris_device](docs/sdks/device/README.md#update_hris_device) - Update a device
 
-### [document](docs/sdks/document/README.md)
+### [Document](docs/sdks/document/README.md)
 
 * [create_ats_document](docs/sdks/document/README.md#create_ats_document) - Create a document
 * [get_ats_document](docs/sdks/document/README.md#get_ats_document) - Retrieve a document
@@ -703,11 +703,11 @@ asyncio.run(main())
 * [remove_ats_document](docs/sdks/document/README.md#remove_ats_document) - Remove a document
 * [update_ats_document](docs/sdks/document/README.md#update_ats_document) - Update a document
 
-### [embedding](docs/sdks/embedding/README.md)
+### [Embedding](docs/sdks/embedding/README.md)
 
 * [create_genai_embedding](docs/sdks/embedding/README.md#create_genai_embedding) - Create an embedding
 
-### [employee](docs/sdks/employee/README.md)
+### [Employee](docs/sdks/employee/README.md)
 
 * [create_hris_employee](docs/sdks/employee/README.md#create_hris_employee) - Create an employee
 * [get_hris_employee](docs/sdks/employee/README.md#get_hris_employee) - Retrieve an employee
@@ -716,18 +716,18 @@ asyncio.run(main())
 * [remove_hris_employee](docs/sdks/employee/README.md#remove_hris_employee) - Remove an employee
 * [update_hris_employee](docs/sdks/employee/README.md#update_hris_employee) - Update an employee
 
-### [enrich](docs/sdks/enrich/README.md)
+### [Enrich](docs/sdks/enrich/README.md)
 
 * [list_enrich_companies](docs/sdks/enrich/README.md#list_enrich_companies) - Retrieve enrichment information for a company
 * [list_enrich_people](docs/sdks/enrich/README.md#list_enrich_people) - Retrieve enrichment information for a person
 
-### [environment](docs/sdks/environment/README.md)
+### [Environment](docs/sdks/environment/README.md)
 
 * [create_unified_environment](docs/sdks/environment/README.md#create_unified_environment)
 * [list_unified_environments](docs/sdks/environment/README.md#list_unified_environments)
 * [remove_unified_environment](docs/sdks/environment/README.md#remove_unified_environment)
 
-### [event](docs/sdks/event/README.md)
+### [Event](docs/sdks/event/README.md)
 
 * [create_calendar_event](docs/sdks/event/README.md#create_calendar_event) - Create an event
 * [create_crm_event](docs/sdks/event/README.md#create_crm_event) - Create an event
@@ -742,7 +742,7 @@ asyncio.run(main())
 * [update_calendar_event](docs/sdks/event/README.md#update_calendar_event) - Update an event
 * [update_crm_event](docs/sdks/event/README.md#update_crm_event) - Update an event
 
-### [expense](docs/sdks/expense/README.md)
+### [Expense](docs/sdks/expense/README.md)
 
 * [create_accounting_expense](docs/sdks/expense/README.md#create_accounting_expense) - Create an expense
 * [get_accounting_expense](docs/sdks/expense/README.md#get_accounting_expense) - Retrieve an expense
@@ -751,7 +751,7 @@ asyncio.run(main())
 * [remove_accounting_expense](docs/sdks/expense/README.md#remove_accounting_expense) - Remove an expense
 * [update_accounting_expense](docs/sdks/expense/README.md#update_accounting_expense) - Update an expense
 
-### [file](docs/sdks/file/README.md)
+### [File](docs/sdks/file/README.md)
 
 * [create_storage_file](docs/sdks/file/README.md#create_storage_file) - Create a file
 * [get_storage_file](docs/sdks/file/README.md#get_storage_file) - Retrieve a file
@@ -760,14 +760,14 @@ asyncio.run(main())
 * [remove_storage_file](docs/sdks/file/README.md#remove_storage_file) - Remove a file
 * [update_storage_file](docs/sdks/file/README.md#update_storage_file) - Update a file
 
-### [genai](docs/sdks/genai/README.md)
+### [Genai](docs/sdks/genai/README.md)
 
 * [create_genai_embedding](docs/sdks/genai/README.md#create_genai_embedding) - Create an embedding
 * [create_genai_prompt](docs/sdks/genai/README.md#create_genai_prompt) - Create a prompt
 * [get_genai_model](docs/sdks/genai/README.md#get_genai_model) - Retrieve a model
 * [list_genai_models](docs/sdks/genai/README.md#list_genai_models) - List all models
 
-### [group](docs/sdks/group/README.md)
+### [Group](docs/sdks/group/README.md)
 
 * [create_hris_group](docs/sdks/group/README.md#create_hris_group) - Create a group
 * [create_scim_groups](docs/sdks/group/README.md#create_scim_groups) - Create group
@@ -782,7 +782,7 @@ asyncio.run(main())
 * [update_hris_group](docs/sdks/group/README.md#update_hris_group) - Update a group
 * [update_scim_groups](docs/sdks/group/README.md#update_scim_groups) - Update group
 
-### [hris](docs/sdks/hris/README.md)
+### [Hris](docs/sdks/hris/README.md)
 
 * [create_hris_benefit](docs/sdks/hris/README.md#create_hris_benefit) - Create a benefit
 * [create_hris_company](docs/sdks/hris/README.md#create_hris_company) - Create a company
@@ -837,7 +837,7 @@ asyncio.run(main())
 * [update_hris_location](docs/sdks/hris/README.md#update_hris_location) - Update a location
 * [update_hris_timeshift](docs/sdks/hris/README.md#update_hris_timeshift) - Update a timeshift
 
-### [instructor](docs/sdks/instructor/README.md)
+### [Instructor](docs/sdks/instructor/README.md)
 
 * [create_lms_instructor](docs/sdks/instructor/README.md#create_lms_instructor) - Create an instructor
 * [get_lms_instructor](docs/sdks/instructor/README.md#get_lms_instructor) - Retrieve an instructor
@@ -846,13 +846,13 @@ asyncio.run(main())
 * [remove_lms_instructor](docs/sdks/instructor/README.md#remove_lms_instructor) - Remove an instructor
 * [update_lms_instructor](docs/sdks/instructor/README.md#update_lms_instructor) - Update an instructor
 
-### [integration](docs/sdks/integration/README.md)
+### [Integration](docs/sdks/integration/README.md)
 
 * [get_unified_integration_auth](docs/sdks/integration/README.md#get_unified_integration_auth) - Authorize new connection
 * [list_unified_integration_workspaces](docs/sdks/integration/README.md#list_unified_integration_workspaces) - Returns all activated integrations in a workspace
 * [list_unified_integrations](docs/sdks/integration/README.md#list_unified_integrations) - Returns all integrations
 
-### [interview](docs/sdks/interview/README.md)
+### [Interview](docs/sdks/interview/README.md)
 
 * [create_ats_interview](docs/sdks/interview/README.md#create_ats_interview) - Create an interview
 * [get_ats_interview](docs/sdks/interview/README.md#get_ats_interview) - Retrieve an interview
@@ -861,7 +861,7 @@ asyncio.run(main())
 * [remove_ats_interview](docs/sdks/interview/README.md#remove_ats_interview) - Remove an interview
 * [update_ats_interview](docs/sdks/interview/README.md#update_ats_interview) - Update an interview
 
-### [inventory](docs/sdks/inventory/README.md)
+### [Inventory](docs/sdks/inventory/README.md)
 
 * [create_commerce_inventory](docs/sdks/inventory/README.md#create_commerce_inventory) - Create an inventory
 * [get_commerce_inventory](docs/sdks/inventory/README.md#get_commerce_inventory) - Retrieve an inventory
@@ -870,7 +870,7 @@ asyncio.run(main())
 * [remove_commerce_inventory](docs/sdks/inventory/README.md#remove_commerce_inventory) - Remove an inventory
 * [update_commerce_inventory](docs/sdks/inventory/README.md#update_commerce_inventory) - Update an inventory
 
-### [invoice](docs/sdks/invoice/README.md)
+### [Invoice](docs/sdks/invoice/README.md)
 
 * [create_accounting_invoice](docs/sdks/invoice/README.md#create_accounting_invoice) - Create an invoice
 * [get_accounting_invoice](docs/sdks/invoice/README.md#get_accounting_invoice) - Retrieve an invoice
@@ -879,12 +879,12 @@ asyncio.run(main())
 * [remove_accounting_invoice](docs/sdks/invoice/README.md#remove_accounting_invoice) - Remove an invoice
 * [update_accounting_invoice](docs/sdks/invoice/README.md#update_accounting_invoice) - Update an invoice
 
-### [issue](docs/sdks/issue/README.md)
+### [Issue](docs/sdks/issue/README.md)
 
 * [get_unified_issue](docs/sdks/issue/README.md#get_unified_issue) - Retrieve support issue
 * [list_unified_issues](docs/sdks/issue/README.md#list_unified_issues) - List support issues
 
-### [item](docs/sdks/item/README.md)
+### [Item](docs/sdks/item/README.md)
 
 * [create_commerce_item](docs/sdks/item/README.md#create_commerce_item) - Create an item
 * [get_commerce_item](docs/sdks/item/README.md#get_commerce_item) - Retrieve an item
@@ -893,7 +893,7 @@ asyncio.run(main())
 * [remove_commerce_item](docs/sdks/item/README.md#remove_commerce_item) - Remove an item
 * [update_commerce_item](docs/sdks/item/README.md#update_commerce_item) - Update an item
 
-### [job](docs/sdks/job/README.md)
+### [Job](docs/sdks/job/README.md)
 
 * [create_ats_job](docs/sdks/job/README.md#create_ats_job) - Create a job
 * [get_ats_job](docs/sdks/job/README.md#get_ats_job) - Retrieve a job
@@ -902,7 +902,7 @@ asyncio.run(main())
 * [remove_ats_job](docs/sdks/job/README.md#remove_ats_job) - Remove a job
 * [update_ats_job](docs/sdks/job/README.md#update_ats_job) - Update a job
 
-### [journal](docs/sdks/journal/README.md)
+### [Journal](docs/sdks/journal/README.md)
 
 * [create_accounting_journal](docs/sdks/journal/README.md#create_accounting_journal) - Create a journal
 * [get_accounting_journal](docs/sdks/journal/README.md#get_accounting_journal) - Retrieve a journal
@@ -911,7 +911,7 @@ asyncio.run(main())
 * [remove_accounting_journal](docs/sdks/journal/README.md#remove_accounting_journal) - Remove a journal
 * [update_accounting_journal](docs/sdks/journal/README.md#update_accounting_journal) - Update a journal
 
-### [kms](docs/sdks/kms/README.md)
+### [Kms](docs/sdks/kms/README.md)
 
 * [create_kms_comment](docs/sdks/kms/README.md#create_kms_comment) - Create a comment
 * [create_kms_page](docs/sdks/kms/README.md#create_kms_page) - Create a page
@@ -932,7 +932,7 @@ asyncio.run(main())
 * [update_kms_page](docs/sdks/kms/README.md#update_kms_page) - Update a page
 * [update_kms_space](docs/sdks/kms/README.md#update_kms_space) - Update a space
 
-### [lead](docs/sdks/lead/README.md)
+### [Lead](docs/sdks/lead/README.md)
 
 * [create_crm_lead](docs/sdks/lead/README.md#create_crm_lead) - Create a lead
 * [get_crm_lead](docs/sdks/lead/README.md#get_crm_lead) - Retrieve a lead
@@ -941,7 +941,7 @@ asyncio.run(main())
 * [remove_crm_lead](docs/sdks/lead/README.md#remove_crm_lead) - Remove a lead
 * [update_crm_lead](docs/sdks/lead/README.md#update_crm_lead) - Update a lead
 
-### [link](docs/sdks/link/README.md)
+### [Link](docs/sdks/link/README.md)
 
 * [create_calendar_link](docs/sdks/link/README.md#create_calendar_link) - Create a link
 * [create_payment_link](docs/sdks/link/README.md#create_payment_link) - Create a link
@@ -956,7 +956,7 @@ asyncio.run(main())
 * [update_calendar_link](docs/sdks/link/README.md#update_calendar_link) - Update a link
 * [update_payment_link](docs/sdks/link/README.md#update_payment_link) - Update a link
 
-### [list](docs/sdks/list/README.md)
+### [List](docs/sdks/list/README.md)
 
 * [create_martech_list](docs/sdks/list/README.md#create_martech_list) - Create a list
 * [get_martech_list](docs/sdks/list/README.md#get_martech_list) - Retrieve a list
@@ -965,7 +965,7 @@ asyncio.run(main())
 * [remove_martech_list](docs/sdks/list/README.md#remove_martech_list) - Remove a list
 * [update_martech_list](docs/sdks/list/README.md#update_martech_list) - Update a list
 
-### [lms](docs/sdks/lms/README.md)
+### [Lms](docs/sdks/lms/README.md)
 
 * [create_lms_class](docs/sdks/lms/README.md#create_lms_class) - Create a class
 * [create_lms_course](docs/sdks/lms/README.md#create_lms_course) - Create a course
@@ -992,7 +992,7 @@ asyncio.run(main())
 * [update_lms_instructor](docs/sdks/lms/README.md#update_lms_instructor) - Update an instructor
 * [update_lms_student](docs/sdks/lms/README.md#update_lms_student) - Update a student
 
-### [location](docs/sdks/location/README.md)
+### [Location](docs/sdks/location/README.md)
 
 * [create_commerce_location](docs/sdks/location/README.md#create_commerce_location) - Create a location
 * [create_hris_location](docs/sdks/location/README.md#create_hris_location) - Create a location
@@ -1007,11 +1007,11 @@ asyncio.run(main())
 * [update_commerce_location](docs/sdks/location/README.md#update_commerce_location) - Update a location
 * [update_hris_location](docs/sdks/location/README.md#update_hris_location) - Update a location
 
-### [login](docs/sdks/login/README.md)
+### [Login](docs/sdks/login/README.md)
 
 * [get_unified_integration_login](docs/sdks/login/README.md#get_unified_integration_login) - Sign in a user
 
-### [martech](docs/sdks/martech/README.md)
+### [Martech](docs/sdks/martech/README.md)
 
 * [create_martech_list](docs/sdks/martech/README.md#create_martech_list) - Create a list
 * [create_martech_member](docs/sdks/martech/README.md#create_martech_member) - Create a member
@@ -1026,7 +1026,7 @@ asyncio.run(main())
 * [update_martech_list](docs/sdks/martech/README.md#update_martech_list) - Update a list
 * [update_martech_member](docs/sdks/martech/README.md#update_martech_member) - Update a member
 
-### [member](docs/sdks/member/README.md)
+### [Member](docs/sdks/member/README.md)
 
 * [create_martech_member](docs/sdks/member/README.md#create_martech_member) - Create a member
 * [get_martech_member](docs/sdks/member/README.md#get_martech_member) - Retrieve a member
@@ -1035,7 +1035,7 @@ asyncio.run(main())
 * [remove_martech_member](docs/sdks/member/README.md#remove_martech_member) - Remove a member
 * [update_martech_member](docs/sdks/member/README.md#update_martech_member) - Update a member
 
-### [message](docs/sdks/message/README.md)
+### [Message](docs/sdks/message/README.md)
 
 * [create_messaging_message](docs/sdks/message/README.md#create_messaging_message) - Create a message
 * [get_messaging_message](docs/sdks/message/README.md#get_messaging_message) - Retrieve a message
@@ -1044,7 +1044,7 @@ asyncio.run(main())
 * [remove_messaging_message](docs/sdks/message/README.md#remove_messaging_message) - Remove a message
 * [update_messaging_message](docs/sdks/message/README.md#update_messaging_message) - Update a message
 
-### [messaging](docs/sdks/messaging/README.md)
+### [Messaging](docs/sdks/messaging/README.md)
 
 * [create_messaging_message](docs/sdks/messaging/README.md#create_messaging_message) - Create a message
 * [get_messaging_channel](docs/sdks/messaging/README.md#get_messaging_channel) - Retrieve a channel
@@ -1055,7 +1055,7 @@ asyncio.run(main())
 * [remove_messaging_message](docs/sdks/messaging/README.md#remove_messaging_message) - Remove a message
 * [update_messaging_message](docs/sdks/messaging/README.md#update_messaging_message) - Update a message
 
-### [metadata](docs/sdks/metadata/README.md)
+### [Metadata](docs/sdks/metadata/README.md)
 
 * [create_metadata_metadata](docs/sdks/metadata/README.md#create_metadata_metadata) - Create a metadata
 * [get_metadata_metadata](docs/sdks/metadata/README.md#get_metadata_metadata) - Retrieve a metadata
@@ -1064,12 +1064,12 @@ asyncio.run(main())
 * [remove_metadata_metadata](docs/sdks/metadata/README.md#remove_metadata_metadata) - Remove a metadata
 * [update_metadata_metadata](docs/sdks/metadata/README.md#update_metadata_metadata) - Update a metadata
 
-### [model](docs/sdks/model/README.md)
+### [Model](docs/sdks/model/README.md)
 
 * [get_genai_model](docs/sdks/model/README.md#get_genai_model) - Retrieve a model
 * [list_genai_models](docs/sdks/model/README.md#list_genai_models) - List all models
 
-### [note](docs/sdks/note/README.md)
+### [Note](docs/sdks/note/README.md)
 
 * [create_ticketing_note](docs/sdks/note/README.md#create_ticketing_note) - Create a note
 * [get_ticketing_note](docs/sdks/note/README.md#get_ticketing_note) - Retrieve a note
@@ -1078,7 +1078,7 @@ asyncio.run(main())
 * [remove_ticketing_note](docs/sdks/note/README.md#remove_ticketing_note) - Remove a note
 * [update_ticketing_note](docs/sdks/note/README.md#update_ticketing_note) - Update a note
 
-### [order](docs/sdks/order/README.md)
+### [Order](docs/sdks/order/README.md)
 
 * [create_accounting_order](docs/sdks/order/README.md#create_accounting_order) - Create an order
 * [get_accounting_order](docs/sdks/order/README.md#get_accounting_order) - Retrieve an order
@@ -1087,7 +1087,7 @@ asyncio.run(main())
 * [remove_accounting_order](docs/sdks/order/README.md#remove_accounting_order) - Remove an order
 * [update_accounting_order](docs/sdks/order/README.md#update_accounting_order) - Update an order
 
-### [organization](docs/sdks/organization/README.md)
+### [Organization](docs/sdks/organization/README.md)
 
 * [create_repo_organization](docs/sdks/organization/README.md#create_repo_organization) - Create an organization
 * [get_accounting_organization](docs/sdks/organization/README.md#get_accounting_organization) - Retrieve an organization
@@ -1098,12 +1098,12 @@ asyncio.run(main())
 * [remove_repo_organization](docs/sdks/organization/README.md#remove_repo_organization) - Remove an organization
 * [update_repo_organization](docs/sdks/organization/README.md#update_repo_organization) - Update an organization
 
-### [package](docs/sdks/package/README.md)
+### [Package](docs/sdks/package/README.md)
 
 * [get_verification_package](docs/sdks/package/README.md#get_verification_package) - Retrieve a package
 * [list_verification_packages](docs/sdks/package/README.md#list_verification_packages) - List all packages
 
-### [page](docs/sdks/page/README.md)
+### [Page](docs/sdks/page/README.md)
 
 * [create_kms_page](docs/sdks/page/README.md#create_kms_page) - Create a page
 * [get_kms_page](docs/sdks/page/README.md#get_kms_page) - Retrieve a page
@@ -1112,7 +1112,7 @@ asyncio.run(main())
 * [remove_kms_page](docs/sdks/page/README.md#remove_kms_page) - Remove a page
 * [update_kms_page](docs/sdks/page/README.md#update_kms_page) - Update a page
 
-### [passthrough](docs/sdks/passthrough/README.md)
+### [Passthrough](docs/sdks/passthrough/README.md)
 
 * [create_passthrough_json](docs/sdks/passthrough/README.md#create_passthrough_json) - Passthrough POST
 * [create_passthrough_raw](docs/sdks/passthrough/README.md#create_passthrough_raw) - Passthrough POST
@@ -1123,7 +1123,7 @@ asyncio.run(main())
 * [update_passthrough_json](docs/sdks/passthrough/README.md#update_passthrough_json) - Passthrough PUT
 * [update_passthrough_raw](docs/sdks/passthrough/README.md#update_passthrough_raw) - Passthrough PUT
 
-### [payment](docs/sdks/payment/README.md)
+### [Payment](docs/sdks/payment/README.md)
 
 * [create_payment_link](docs/sdks/payment/README.md#create_payment_link) - Create a link
 * [create_payment_payment](docs/sdks/payment/README.md#create_payment_payment) - Create a payment
@@ -1148,21 +1148,21 @@ asyncio.run(main())
 * [update_payment_payment](docs/sdks/payment/README.md#update_payment_payment) - Update a payment
 * [update_payment_subscription](docs/sdks/payment/README.md#update_payment_subscription) - Update a subscription
 
-### [payout](docs/sdks/payout/README.md)
+### [Payout](docs/sdks/payout/README.md)
 
 * [get_payment_payout](docs/sdks/payout/README.md#get_payment_payout) - Retrieve a payout
 * [list_payment_payouts](docs/sdks/payout/README.md#list_payment_payouts) - List all payouts
 
-### [payslip](docs/sdks/payslip/README.md)
+### [Payslip](docs/sdks/payslip/README.md)
 
 * [get_hris_payslip](docs/sdks/payslip/README.md#get_hris_payslip) - Retrieve a payslip
 * [list_hris_payslips](docs/sdks/payslip/README.md#list_hris_payslips) - List all payslips
 
-### [person](docs/sdks/person/README.md)
+### [Person](docs/sdks/person/README.md)
 
 * [list_enrich_people](docs/sdks/person/README.md#list_enrich_people) - Retrieve enrichment information for a person
 
-### [pipeline](docs/sdks/pipeline/README.md)
+### [Pipeline](docs/sdks/pipeline/README.md)
 
 * [create_crm_pipeline](docs/sdks/pipeline/README.md#create_crm_pipeline) - Create a pipeline
 * [get_crm_pipeline](docs/sdks/pipeline/README.md#get_crm_pipeline) - Retrieve a pipeline
@@ -1171,12 +1171,12 @@ asyncio.run(main())
 * [remove_crm_pipeline](docs/sdks/pipeline/README.md#remove_crm_pipeline) - Remove a pipeline
 * [update_crm_pipeline](docs/sdks/pipeline/README.md#update_crm_pipeline) - Update a pipeline
 
-### [profitloss](docs/sdks/profitloss/README.md)
+### [Profitloss](docs/sdks/profitloss/README.md)
 
 * [get_accounting_profitloss](docs/sdks/profitloss/README.md#get_accounting_profitloss) - Retrieve a profitloss
 * [list_accounting_profitlosses](docs/sdks/profitloss/README.md#list_accounting_profitlosses) - List all profitlosses
 
-### [project](docs/sdks/project/README.md)
+### [Project](docs/sdks/project/README.md)
 
 * [create_task_project](docs/sdks/project/README.md#create_task_project) - Create a project
 * [get_task_project](docs/sdks/project/README.md#get_task_project) - Retrieve a project
@@ -1185,11 +1185,11 @@ asyncio.run(main())
 * [remove_task_project](docs/sdks/project/README.md#remove_task_project) - Remove a project
 * [update_task_project](docs/sdks/project/README.md#update_task_project) - Update a project
 
-### [prompt](docs/sdks/prompt/README.md)
+### [Prompt](docs/sdks/prompt/README.md)
 
 * [create_genai_prompt](docs/sdks/prompt/README.md#create_genai_prompt) - Create a prompt
 
-### [pullrequest](docs/sdks/pullrequest/README.md)
+### [Pullrequest](docs/sdks/pullrequest/README.md)
 
 * [create_repo_pullrequest](docs/sdks/pullrequest/README.md#create_repo_pullrequest) - Create a pullrequest
 * [get_repo_pullrequest](docs/sdks/pullrequest/README.md#get_repo_pullrequest) - Retrieve a pullrequest
@@ -1198,7 +1198,7 @@ asyncio.run(main())
 * [remove_repo_pullrequest](docs/sdks/pullrequest/README.md#remove_repo_pullrequest) - Remove a pullrequest
 * [update_repo_pullrequest](docs/sdks/pullrequest/README.md#update_repo_pullrequest) - Update a pullrequest
 
-### [purchaseorder](docs/sdks/purchaseorder/README.md)
+### [Purchaseorder](docs/sdks/purchaseorder/README.md)
 
 * [create_accounting_purchaseorder](docs/sdks/purchaseorder/README.md#create_accounting_purchaseorder) - Create a purchaseorder
 * [get_accounting_purchaseorder](docs/sdks/purchaseorder/README.md#get_accounting_purchaseorder) - Retrieve a purchaseorder
@@ -1207,7 +1207,7 @@ asyncio.run(main())
 * [remove_accounting_purchaseorder](docs/sdks/purchaseorder/README.md#remove_accounting_purchaseorder) - Remove a purchaseorder
 * [update_accounting_purchaseorder](docs/sdks/purchaseorder/README.md#update_accounting_purchaseorder) - Update a purchaseorder
 
-### [recording](docs/sdks/recording/README.md)
+### [Recording](docs/sdks/recording/README.md)
 
 * [create_uc_recording](docs/sdks/recording/README.md#create_uc_recording) - Create a recording
 * [get_calendar_recording](docs/sdks/recording/README.md#get_calendar_recording) - Retrieve a recording
@@ -1218,12 +1218,12 @@ asyncio.run(main())
 * [remove_uc_recording](docs/sdks/recording/README.md#remove_uc_recording) - Remove a recording
 * [update_uc_recording](docs/sdks/recording/README.md#update_uc_recording) - Update a recording
 
-### [refund](docs/sdks/refund/README.md)
+### [Refund](docs/sdks/refund/README.md)
 
 * [get_payment_refund](docs/sdks/refund/README.md#get_payment_refund) - Retrieve a refund
 * [list_payment_refunds](docs/sdks/refund/README.md#list_payment_refunds) - List all refunds
 
-### [repo](docs/sdks/repo/README.md)
+### [Repo](docs/sdks/repo/README.md)
 
 * [create_repo_branch](docs/sdks/repo/README.md#create_repo_branch) - Create a branch
 * [create_repo_commit](docs/sdks/repo/README.md#create_repo_commit) - Create a commit
@@ -1256,12 +1256,12 @@ asyncio.run(main())
 * [update_repo_pullrequest](docs/sdks/repo/README.md#update_repo_pullrequest) - Update a pullrequest
 * [update_repo_repository](docs/sdks/repo/README.md#update_repo_repository) - Update a repository
 
-### [report](docs/sdks/report/README.md)
+### [Report](docs/sdks/report/README.md)
 
 * [get_accounting_report](docs/sdks/report/README.md#get_accounting_report) - Retrieve a report
 * [list_accounting_reports](docs/sdks/report/README.md#list_accounting_reports) - List all reports
 
-### [repository](docs/sdks/repository/README.md)
+### [Repository](docs/sdks/repository/README.md)
 
 * [create_repo_repository](docs/sdks/repository/README.md#create_repo_repository) - Create a repository
 * [get_repo_repository](docs/sdks/repository/README.md#get_repo_repository) - Retrieve a repository
@@ -1270,7 +1270,7 @@ asyncio.run(main())
 * [remove_repo_repository](docs/sdks/repository/README.md#remove_repo_repository) - Remove a repository
 * [update_repo_repository](docs/sdks/repository/README.md#update_repo_repository) - Update a repository
 
-### [request](docs/sdks/request/README.md)
+### [Request](docs/sdks/request/README.md)
 
 * [create_verification_request](docs/sdks/request/README.md#create_verification_request) - Create a request
 * [get_verification_request](docs/sdks/request/README.md#get_verification_request) - Retrieve a request
@@ -1279,7 +1279,7 @@ asyncio.run(main())
 * [remove_verification_request](docs/sdks/request/README.md#remove_verification_request) - Remove a request
 * [update_verification_request](docs/sdks/request/README.md#update_verification_request) - Update a request
 
-### [review](docs/sdks/review/README.md)
+### [Review](docs/sdks/review/README.md)
 
 * [create_commerce_review](docs/sdks/review/README.md#create_commerce_review) - Create a review
 * [get_commerce_review](docs/sdks/review/README.md#get_commerce_review) - Retrieve a review
@@ -1288,7 +1288,7 @@ asyncio.run(main())
 * [remove_commerce_review](docs/sdks/review/README.md#remove_commerce_review) - Remove a review
 * [update_commerce_review](docs/sdks/review/README.md#update_commerce_review) - Update a review
 
-### [saleschannel](docs/sdks/saleschannel/README.md)
+### [Saleschannel](docs/sdks/saleschannel/README.md)
 
 * [create_commerce_saleschannel](docs/sdks/saleschannel/README.md#create_commerce_saleschannel) - Create a saleschannel
 * [get_commerce_saleschannel](docs/sdks/saleschannel/README.md#get_commerce_saleschannel) - Retrieve a saleschannel
@@ -1297,7 +1297,7 @@ asyncio.run(main())
 * [remove_commerce_saleschannel](docs/sdks/saleschannel/README.md#remove_commerce_saleschannel) - Remove a saleschannel
 * [update_commerce_saleschannel](docs/sdks/saleschannel/README.md#update_commerce_saleschannel) - Update a saleschannel
 
-### [salesorder](docs/sdks/salesorder/README.md)
+### [Salesorder](docs/sdks/salesorder/README.md)
 
 * [create_accounting_salesorder](docs/sdks/salesorder/README.md#create_accounting_salesorder) - Create a salesorder
 * [get_accounting_salesorder](docs/sdks/salesorder/README.md#get_accounting_salesorder) - Retrieve a salesorder
@@ -1306,7 +1306,7 @@ asyncio.run(main())
 * [remove_accounting_salesorder](docs/sdks/salesorder/README.md#remove_accounting_salesorder) - Remove a salesorder
 * [update_accounting_salesorder](docs/sdks/salesorder/README.md#update_accounting_salesorder) - Update a salesorder
 
-### [scim](docs/sdks/scim/README.md)
+### [Scim](docs/sdks/scim/README.md)
 
 * [create_scim_groups](docs/sdks/scim/README.md#create_scim_groups) - Create group
 * [create_scim_users](docs/sdks/scim/README.md#create_scim_users) - Create user
@@ -1321,7 +1321,7 @@ asyncio.run(main())
 * [update_scim_groups](docs/sdks/scim/README.md#update_scim_groups) - Update group
 * [update_scim_users](docs/sdks/scim/README.md#update_scim_users) - Update user
 
-### [scorecard](docs/sdks/scorecard/README.md)
+### [Scorecard](docs/sdks/scorecard/README.md)
 
 * [create_ats_scorecard](docs/sdks/scorecard/README.md#create_ats_scorecard) - Create a scorecard
 * [get_ats_scorecard](docs/sdks/scorecard/README.md#get_ats_scorecard) - Retrieve a scorecard
@@ -1330,7 +1330,7 @@ asyncio.run(main())
 * [remove_ats_scorecard](docs/sdks/scorecard/README.md#remove_ats_scorecard) - Remove a scorecard
 * [update_ats_scorecard](docs/sdks/scorecard/README.md#update_ats_scorecard) - Update a scorecard
 
-### [space](docs/sdks/space/README.md)
+### [Space](docs/sdks/space/README.md)
 
 * [create_kms_space](docs/sdks/space/README.md#create_kms_space) - Create a space
 * [get_kms_space](docs/sdks/space/README.md#get_kms_space) - Retrieve a space
@@ -1339,7 +1339,7 @@ asyncio.run(main())
 * [remove_kms_space](docs/sdks/space/README.md#remove_kms_space) - Remove a space
 * [update_kms_space](docs/sdks/space/README.md#update_kms_space) - Update a space
 
-### [storage](docs/sdks/storage/README.md)
+### [Storage](docs/sdks/storage/README.md)
 
 * [create_storage_file](docs/sdks/storage/README.md#create_storage_file) - Create a file
 * [get_storage_file](docs/sdks/storage/README.md#get_storage_file) - Retrieve a file
@@ -1348,7 +1348,7 @@ asyncio.run(main())
 * [remove_storage_file](docs/sdks/storage/README.md#remove_storage_file) - Remove a file
 * [update_storage_file](docs/sdks/storage/README.md#update_storage_file) - Update a file
 
-### [student](docs/sdks/student/README.md)
+### [Student](docs/sdks/student/README.md)
 
 * [create_lms_student](docs/sdks/student/README.md#create_lms_student) - Create a student
 * [get_lms_student](docs/sdks/student/README.md#get_lms_student) - Retrieve a student
@@ -1357,7 +1357,7 @@ asyncio.run(main())
 * [remove_lms_student](docs/sdks/student/README.md#remove_lms_student) - Remove a student
 * [update_lms_student](docs/sdks/student/README.md#update_lms_student) - Update a student
 
-### [subscription](docs/sdks/subscription/README.md)
+### [Subscription](docs/sdks/subscription/README.md)
 
 * [create_payment_subscription](docs/sdks/subscription/README.md#create_payment_subscription) - Create a subscription
 * [get_payment_subscription](docs/sdks/subscription/README.md#get_payment_subscription) - Retrieve a subscription
@@ -1366,7 +1366,7 @@ asyncio.run(main())
 * [remove_payment_subscription](docs/sdks/subscription/README.md#remove_payment_subscription) - Remove a subscription
 * [update_payment_subscription](docs/sdks/subscription/README.md#update_payment_subscription) - Update a subscription
 
-### [task](docs/sdks/task/README.md)
+### [Task](docs/sdks/task/README.md)
 
 * [create_task_comment](docs/sdks/task/README.md#create_task_comment) - Create a comment
 * [create_task_project](docs/sdks/task/README.md#create_task_project) - Create a project
@@ -1389,7 +1389,7 @@ asyncio.run(main())
 * [update_task_project](docs/sdks/task/README.md#update_task_project) - Update a project
 * [update_task_task](docs/sdks/task/README.md#update_task_task) - Update a task
 
-### [taxrate](docs/sdks/taxrate/README.md)
+### [Taxrate](docs/sdks/taxrate/README.md)
 
 * [create_accounting_taxrate](docs/sdks/taxrate/README.md#create_accounting_taxrate) - Create a taxrate
 * [get_accounting_taxrate](docs/sdks/taxrate/README.md#get_accounting_taxrate) - Retrieve a taxrate
@@ -1398,7 +1398,7 @@ asyncio.run(main())
 * [remove_accounting_taxrate](docs/sdks/taxrate/README.md#remove_accounting_taxrate) - Remove a taxrate
 * [update_accounting_taxrate](docs/sdks/taxrate/README.md#update_accounting_taxrate) - Update a taxrate
 
-### [ticket](docs/sdks/ticket/README.md)
+### [Ticket](docs/sdks/ticket/README.md)
 
 * [create_ticketing_ticket](docs/sdks/ticket/README.md#create_ticketing_ticket) - Create a ticket
 * [get_ticketing_ticket](docs/sdks/ticket/README.md#get_ticketing_ticket) - Retrieve a ticket
@@ -1407,7 +1407,7 @@ asyncio.run(main())
 * [remove_ticketing_ticket](docs/sdks/ticket/README.md#remove_ticketing_ticket) - Remove a ticket
 * [update_ticketing_ticket](docs/sdks/ticket/README.md#update_ticketing_ticket) - Update a ticket
 
-### [ticketing](docs/sdks/ticketing/README.md)
+### [Ticketing](docs/sdks/ticketing/README.md)
 
 * [create_ticketing_category](docs/sdks/ticketing/README.md#create_ticketing_category) - Create a category
 * [create_ticketing_customer](docs/sdks/ticketing/README.md#create_ticketing_customer) - Create a customer
@@ -1434,12 +1434,12 @@ asyncio.run(main())
 * [update_ticketing_note](docs/sdks/ticketing/README.md#update_ticketing_note) - Update a note
 * [update_ticketing_ticket](docs/sdks/ticketing/README.md#update_ticketing_ticket) - Update a ticket
 
-### [timeoff](docs/sdks/timeoff/README.md)
+### [Timeoff](docs/sdks/timeoff/README.md)
 
 * [get_hris_timeoff](docs/sdks/timeoff/README.md#get_hris_timeoff) - Retrieve a timeoff
 * [list_hris_timeoffs](docs/sdks/timeoff/README.md#list_hris_timeoffs) - List all timeoffs
 
-### [timeshift](docs/sdks/timeshift/README.md)
+### [Timeshift](docs/sdks/timeshift/README.md)
 
 * [create_hris_timeshift](docs/sdks/timeshift/README.md#create_hris_timeshift) - Create a timeshift
 * [get_hris_timeshift](docs/sdks/timeshift/README.md#get_hris_timeshift) - Retrieve a timeshift
@@ -1448,7 +1448,7 @@ asyncio.run(main())
 * [remove_hris_timeshift](docs/sdks/timeshift/README.md#remove_hris_timeshift) - Remove a timeshift
 * [update_hris_timeshift](docs/sdks/timeshift/README.md#update_hris_timeshift) - Update a timeshift
 
-### [transaction](docs/sdks/transaction/README.md)
+### [Transaction](docs/sdks/transaction/README.md)
 
 * [create_accounting_transaction](docs/sdks/transaction/README.md#create_accounting_transaction) - Create a transaction
 * [get_accounting_transaction](docs/sdks/transaction/README.md#get_accounting_transaction) - Retrieve a transaction
@@ -1457,12 +1457,12 @@ asyncio.run(main())
 * [remove_accounting_transaction](docs/sdks/transaction/README.md#remove_accounting_transaction) - Remove a transaction
 * [update_accounting_transaction](docs/sdks/transaction/README.md#update_accounting_transaction) - Update a transaction
 
-### [trialbalance](docs/sdks/trialbalance/README.md)
+### [Trialbalance](docs/sdks/trialbalance/README.md)
 
 * [get_accounting_trialbalance](docs/sdks/trialbalance/README.md#get_accounting_trialbalance) - Retrieve a trialbalance
 * [list_accounting_trialbalances](docs/sdks/trialbalance/README.md#list_accounting_trialbalances) - List all trialbalances
 
-### [uc](docs/sdks/uc/README.md)
+### [Uc](docs/sdks/uc/README.md)
 
 * [create_uc_comment](docs/sdks/uc/README.md#create_uc_comment) - Create a comment
 * [create_uc_contact](docs/sdks/uc/README.md#create_uc_contact) - Create a contact
@@ -1485,7 +1485,7 @@ asyncio.run(main())
 * [update_uc_contact](docs/sdks/uc/README.md#update_uc_contact) - Update a contact
 * [update_uc_recording](docs/sdks/uc/README.md#update_uc_recording) - Update a recording
 
-### [unified](docs/sdks/unified/README.md)
+### [Unified](docs/sdks/unified/README.md)
 
 * [create_unified_connection](docs/sdks/unified/README.md#create_unified_connection) - Create connection
 * [create_unified_environment](docs/sdks/unified/README.md#create_unified_environment)
@@ -1512,7 +1512,7 @@ asyncio.run(main())
 * [update_unified_webhook](docs/sdks/unified/README.md#update_unified_webhook) - Update webhook subscription
 * [update_unified_webhook_trigger](docs/sdks/unified/README.md#update_unified_webhook_trigger) - Trigger webhook
 
-### [user](docs/sdks/user/README.md)
+### [User](docs/sdks/user/README.md)
 
 * [create_scim_users](docs/sdks/user/README.md#create_scim_users) - Create user
 * [get_scim_users](docs/sdks/user/README.md#get_scim_users) - Get user
@@ -1521,7 +1521,7 @@ asyncio.run(main())
 * [remove_scim_users](docs/sdks/user/README.md#remove_scim_users) - Delete user
 * [update_scim_users](docs/sdks/user/README.md#update_scim_users) - Update user
 
-### [verification](docs/sdks/verification/README.md)
+### [Verification](docs/sdks/verification/README.md)
 
 * [create_verification_request](docs/sdks/verification/README.md#create_verification_request) - Create a request
 * [get_verification_package](docs/sdks/verification/README.md#get_verification_package) - Retrieve a package
@@ -1532,7 +1532,7 @@ asyncio.run(main())
 * [remove_verification_request](docs/sdks/verification/README.md#remove_verification_request) - Remove a request
 * [update_verification_request](docs/sdks/verification/README.md#update_verification_request) - Update a request
 
-### [webhook](docs/sdks/webhook/README.md)
+### [Webhook](docs/sdks/webhook/README.md)
 
 * [create_unified_webhook](docs/sdks/webhook/README.md#create_unified_webhook) - Create webhook subscription
 * [get_unified_webhook](docs/sdks/webhook/README.md#get_unified_webhook) - Retrieve webhook by its ID

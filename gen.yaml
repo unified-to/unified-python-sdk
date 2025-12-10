@@ -18,6 +18,7 @@ generation:
   schemas:
     allOfMergeStrategy: shallowMerge
   requestBodyFieldName: ""
+  persistentEdits: {}
   tests:
     generateTests: true
     generateNewTests: false
@@ -25,7 +26,7 @@ generation:
   baseServerURL: ""
   flattenGlobalSecurity: true
 python:
-  version: 0.56.0
+  version: 0.56.1
   additionalDependencies:
     dev: {}
     main: {}
@@ -65,6 +66,7 @@ python:
   outputModelSuffix: output
   packageManager: poetry
   packageName: Unified-python-sdk
+  preApplyUnionDiscriminators: false
   projectUrls: {}
   pytestFilterWarnings: []
   pytestTimeout: 0

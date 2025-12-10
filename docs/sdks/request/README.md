@@ -1,5 +1,4 @@
 # Request
-(*request*)
 
 ## Overview
 
