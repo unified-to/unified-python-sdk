@@ -1,26 +1,26 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: 7ef3d1caec75891711e5e81373e284c3
+  docChecksum: dbaf8b38742d89e3249fbd4c5a4e2a74
   docVersion: "1.0"
-  speakeasyVersion: 1.674.0
-  generationVersion: 2.778.0
-  releaseVersion: 0.56.1
-  configChecksum: bc3bbd906a027f8948e857d59ce700dd
+  speakeasyVersion: 1.676.1
+  generationVersion: 2.781.2
+  releaseVersion: 0.56.2
+  configChecksum: 3d03bb7499e96c4f3706d45eaac85cb1
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
   published: true
 persistentEdits:
-  generation_id: 721921af-6717-4f53-b155-0cccfb29c215
-  pristine_commit_hash: ed247943c593ab3454e7656d5f7f280e3ac3b141
-  pristine_tree_hash: a398a8a7dbb94162eb0e2677fcfbc09dac3a604b
+  generation_id: 53ad17f1-b9a0-41d4-be9e-1db49ae380df
+  pristine_commit_hash: 1d2f0f5611357a1953f2a3b14e78fdf75f01f932
+  pristine_tree_hash: b67af97853b0a4d2b9736f326287df1ec2c84045
 features:
   python:
     acceptHeaders: 3.0.0
     additionalDependencies: 1.0.0
     constsAndDefaults: 1.0.5
-    core: 5.23.13
+    core: 5.23.14
     defaultEnabledRetries: 0.2.0
     downloadStreams: 1.0.1
     enumUnions: 0.1.0
@@ -4926,8 +4926,8 @@ trackedFiles:
     pristine_git_object: 7b0a962f97289743c6f7b3fd76d3e9fbbd48afdc
   docs/models/shared/crmstage.md:
     id: 999865054de8
-    last_write_checksum: sha1:a3dbe358684b6e93ee613a70ac2a317a6dc8e559
-    pristine_git_object: 96742a63ec02dc0f44685897a1e338c6f32b28d3
+    last_write_checksum: sha1:40c64d79ee65bec5e690a491d77772137c7d76a5
+    pristine_git_object: 8217cc5248332883448eb9633bae192ba908fa79
   docs/models/shared/crmtelephone.md:
     id: 781ac0a7baf0
     last_write_checksum: sha1:5395b2749bcd8b0d096e09c694eb219bef55fbb6
@@ -7010,8 +7010,8 @@ trackedFiles:
     pristine_git_object: 2cc45ce653cbcac61ce0564ce800e33c37e3c2ab
   pyproject.toml:
     id: 5d07e7d72637
-    last_write_checksum: sha1:e6826cf01076f8ddbc55fddf08766662fe42a315
-    pristine_git_object: a419885080c7148d78eb8489fa772b0848fc1665
+    last_write_checksum: sha1:e1ee701e9cf21b078702178c5588392bcc1dcffb
+    pristine_git_object: 39cbcc5174ce47cf51a0d426d559f78aa46ec246
   scripts/prepare_readme.py:
     id: e0c5957a6035
     last_write_checksum: sha1:dc5909a4bb9bb80be82679e1fb30cc5e749b2a96
@@ -7038,8 +7038,8 @@ trackedFiles:
     pristine_git_object: c68594b47b7cc67a5fe0b48892d7774ba2376fc8
   src/unified_python_sdk/_version.py:
     id: c87ca15cab1b
-    last_write_checksum: sha1:f85296cd65c7425f66586af550a304c46e46e793
-    pristine_git_object: b1a2bf155ee2c5fc879e89da14aced6b9ad7485c
+    last_write_checksum: sha1:85f2442da7d0ca6a10b05aba44cdef7177bbed7f
+    pristine_git_object: b1b8ec785f522e42d7339c74648e7302ff5f0f85
   src/unified_python_sdk/account.py:
     id: 85b44a7c768c
     last_write_checksum: sha1:0e2594eba875e2aec32c26ec5e6d1d18e173840e
@@ -9870,8 +9870,8 @@ trackedFiles:
     pristine_git_object: 2c55185eab1cd887264904f8290111ef21c04400
   src/unified_python_sdk/models/shared/crmstage.py:
     id: 26a8947417c0
-    last_write_checksum: sha1:848a36079fa4401b82a5e3f95aa3442669caed9c
-    pristine_git_object: 2d1e4eb2024e9ef0b7b3dac16b261a3373197195
+    last_write_checksum: sha1:a115ec055979a10295f14291c20db86a8b2fc801
+    pristine_git_object: a74082904b0161384020e573189c345c0bffbb9d
   src/unified_python_sdk/models/shared/crmtelephone.py:
     id: e062eb6bcee6
     last_write_checksum: sha1:bca3b5ac61125e1cc8af6ae121cf5929f15b9b28
@@ -15632,7 +15632,7 @@ examples:
           application/json: ["<value 1>", "<value 2>", "<value 3>"]
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Python SDK Changes:\n* `unified_to.accounting.create_accounting_invoice()`: \n  *  `request.accounting_invoice.reference` **Added**\n  *  `response.reference` **Added**\n* `unified_to.accounting.get_accounting_invoice()`:  `response.reference` **Added**\n* `unified_to.accounting.list_accounting_invoices()`:  `response.[].reference` **Added**\n* `unified_to.accounting.patch_accounting_invoice()`: \n  *  `request.accounting_invoice.reference` **Added**\n  *  `response.reference` **Added**\n* `unified_to.accounting.update_accounting_invoice()`: \n  *  `request.accounting_invoice.reference` **Added**\n  *  `response.reference` **Added**\n* `unified_to.invoice.create_accounting_invoice()`: \n  *  `request.accounting_invoice.reference` **Added**\n  *  `response.reference` **Added**\n* `unified_to.invoice.get_accounting_invoice()`:  `response.reference` **Added**\n* `unified_to.invoice.list_accounting_invoices()`:  `response.[].reference` **Added**\n* `unified_to.invoice.patch_accounting_invoice()`: \n  *  `request.accounting_invoice.reference` **Added**\n  *  `response.reference` **Added**\n* `unified_to.invoice.update_accounting_invoice()`: \n  *  `request.accounting_invoice.reference` **Added**\n  *  `response.reference` **Added**\n"
+releaseNotes: "## Python SDK Changes:\n* `unified_to.crm.create_crm_pipeline()`: \n  *  `request.crm_pipeline.stages.[].is_closed` **Added**\n  *  `response.stages.[].is_closed` **Added**\n* `unified_to.crm.get_crm_pipeline()`:  `response.stages.[].is_closed` **Added**\n* `unified_to.crm.list_crm_pipelines()`:  `response.[].stages.[].is_closed` **Added**\n* `unified_to.crm.patch_crm_pipeline()`: \n  *  `request.crm_pipeline.stages.[].is_closed` **Added**\n  *  `response.stages.[].is_closed` **Added**\n* `unified_to.crm.update_crm_pipeline()`: \n  *  `request.crm_pipeline.stages.[].is_closed` **Added**\n  *  `response.stages.[].is_closed` **Added**\n* `unified_to.pipeline.create_crm_pipeline()`: \n  *  `request.crm_pipeline.stages.[].is_closed` **Added**\n  *  `response.stages.[].is_closed` **Added**\n* `unified_to.pipeline.get_crm_pipeline()`:  `response.stages.[].is_closed` **Added**\n* `unified_to.pipeline.list_crm_pipelines()`:  `response.[].stages.[].is_closed` **Added**\n* `unified_to.pipeline.patch_crm_pipeline()`: \n  *  `request.crm_pipeline.stages.[].is_closed` **Added**\n  *  `response.stages.[].is_closed` **Added**\n* `unified_to.pipeline.update_crm_pipeline()`: \n  *  `request.crm_pipeline.stages.[].is_closed` **Added**\n  *  `response.stages.[].is_closed` **Added**\n"
 generatedFiles:
   - .gitattributes
   - .vscode/settings.json

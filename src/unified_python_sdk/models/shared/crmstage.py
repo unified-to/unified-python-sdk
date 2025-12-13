@@ -13,6 +13,7 @@ class CrmStageTypedDict(TypedDict):
     deal_probability: NotRequired[float]
     display_order: NotRequired[float]
     id: NotRequired[str]
+    is_closed: NotRequired[bool]
     name: NotRequired[str]
     updated_at: NotRequired[datetime]
 
@@ -27,6 +28,8 @@ class CrmStage(BaseModel):
     display_order: Optional[float] = None
 
     id: Optional[str] = None
+
+    is_closed: Optional[bool] = None
 
     name: Optional[str] = None
 

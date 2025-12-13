@@ -26,7 +26,7 @@ generation:
   baseServerURL: ""
   flattenGlobalSecurity: true
 python:
-  version: 0.56.1
+  version: 0.56.2
   additionalDependencies:
     dev: {}
     main: {}
@@ -38,6 +38,7 @@ python:
     - Unified API Inc.
   baseErrorName: UnifiedToError
   clientServerStatusCodesAsErrors: true
+  constFieldCasing: upper
   defaultErrorName: SDKError
   description: Python Client SDK for Unified.to
   enableCustomCodeRegions: false
