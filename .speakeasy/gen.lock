@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: dbaf8b38742d89e3249fbd4c5a4e2a74
+  docChecksum: 4b755486531295c10ba7a2e07a4c42c1
   docVersion: "1.0"
   speakeasyVersion: 1.676.1
   generationVersion: 2.781.2
-  releaseVersion: 0.56.2
-  configChecksum: 3d03bb7499e96c4f3706d45eaac85cb1
+  releaseVersion: 0.56.3
+  configChecksum: 8c1cac9b975af2a36e128a4b974ba4c2
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
   published: true
 persistentEdits:
-  generation_id: 53ad17f1-b9a0-41d4-be9e-1db49ae380df
-  pristine_commit_hash: 1d2f0f5611357a1953f2a3b14e78fdf75f01f932
-  pristine_tree_hash: b67af97853b0a4d2b9736f326287df1ec2c84045
+  generation_id: e911c094-1519-4f68-a285-8878f381792d
+  pristine_commit_hash: 827e9c8b6f7e1ccb079e34c194887a5f227332b9
+  pristine_tree_hash: d479ef9ded04f74292a1449c9afbb9c8fac44da8
 features:
   python:
     acceptHeaders: 3.0.0
@@ -5094,8 +5094,8 @@ trackedFiles:
     pristine_git_object: b5947ba4d357ecf5d43b781936c478b3b755c333
   docs/models/shared/hrisemployee.md:
     id: 117d39f9dd59
-    last_write_checksum: sha1:a50b12e8fd345c1edbf43f7e5bf73c030a2d5b2b
-    pristine_git_object: 763a924bd3a518d0e49de506fda4a4c2ef239bab
+    last_write_checksum: sha1:5048dcbe6b4b3406ed09a8225e9f9e0162f8e8a6
+    pristine_git_object: 1e6867f38ee75c763a47828a3ba1e930ea0e76bc
   docs/models/shared/hrisemployeeemploymenttype.md:
     id: e33f3e920a05
     last_write_checksum: sha1:da6f8ef27b96ffec05483dc041b95a4f208eacb7
@@ -5104,6 +5104,14 @@ trackedFiles:
     id: a82fc4e317e7
     last_write_checksum: sha1:f48e1e9d9b32b46d2c80d64cbfd6a588cc595644
     pristine_git_object: 0f3ca824b752fca681de6de3c7bced6a6ded29e4
+  docs/models/shared/hrisemployeerelationship.md:
+    id: ee8e4d5ae731
+    last_write_checksum: sha1:b9d05d0b368570dd57f7976ddc86d585b8d09ba5
+    pristine_git_object: d4f3a1ff2958b47fd1f6209109cf853e00748874
+  docs/models/shared/hrisemployeerelationshiptype.md:
+    id: b13f0ea77c4a
+    last_write_checksum: sha1:7972d244fa0bd76e97a648539fbf6c222aab5ee8
+    pristine_git_object: b02069976bd4a3cc7181b7c91b12fd4dc989c355
   docs/models/shared/hrisgroup.md:
     id: 3904bea01710
     last_write_checksum: sha1:8355968a21a0880a7d017a75b3c1946fcdeee787
@@ -5892,6 +5900,10 @@ trackedFiles:
     id: 82b440774a82
     last_write_checksum: sha1:75748fc40220b3dcd727f8d71af91d67a37b9323
     pristine_git_object: a936d93030f6d2e7d156c004ce4024cae7d69afb
+  docs/models/shared/propertyhrisemployeerelationshipaddress.md:
+    id: 42047da32997
+    last_write_checksum: sha1:b0af48e38d2ec972fe4b986dac0299282882aa48
+    pristine_git_object: cdbb670c20eea6335477a0fe19bbb7c8d5d520e1
   docs/models/shared/propertyhrislocationaddress.md:
     id: 52f434b9d5ea
     last_write_checksum: sha1:3b513a63cd2c817b87694d6757905750615ff0db
@@ -7010,8 +7022,8 @@ trackedFiles:
     pristine_git_object: 2cc45ce653cbcac61ce0564ce800e33c37e3c2ab
   pyproject.toml:
     id: 5d07e7d72637
-    last_write_checksum: sha1:e1ee701e9cf21b078702178c5588392bcc1dcffb
-    pristine_git_object: 39cbcc5174ce47cf51a0d426d559f78aa46ec246
+    last_write_checksum: sha1:a134f76f3d3ba0306569ef623a3935804153e2e8
+    pristine_git_object: cab6edb5a4a58ff923994e4332cd662b1096cf31
   scripts/prepare_readme.py:
     id: e0c5957a6035
     last_write_checksum: sha1:dc5909a4bb9bb80be82679e1fb30cc5e749b2a96
@@ -7038,8 +7050,8 @@ trackedFiles:
     pristine_git_object: c68594b47b7cc67a5fe0b48892d7774ba2376fc8
   src/unified_python_sdk/_version.py:
     id: c87ca15cab1b
-    last_write_checksum: sha1:85f2442da7d0ca6a10b05aba44cdef7177bbed7f
-    pristine_git_object: b1b8ec785f522e42d7339c74648e7302ff5f0f85
+    last_write_checksum: sha1:d6b07e172f685b9938b87240dc2cd33302e37ac7
+    pristine_git_object: 3529000d89eb659021f1b7d8e512bb96019f6f52
   src/unified_python_sdk/account.py:
     id: 85b44a7c768c
     last_write_checksum: sha1:0e2594eba875e2aec32c26ec5e6d1d18e173840e
@@ -9482,8 +9494,8 @@ trackedFiles:
     pristine_git_object: b48d0f598c3c666cad9336b31bafa9d26d33303a
   src/unified_python_sdk/models/shared/__init__.py:
     id: 8825f2c566be
-    last_write_checksum: sha1:ecb52ed664d2fa81ca3d41b82ca4e4e4728b4d1f
-    pristine_git_object: 95cc5d52525afbd4854d1310ef7642ca53d25d32
+    last_write_checksum: sha1:c70b3beebcf999e79f565cc518bd608431442ae1
+    pristine_git_object: 01ec55506d54fa769a3d36e673be10e22ffd0dfc
   src/unified_python_sdk/models/shared/accountingaccount.py:
     id: b8ab638302ba
     last_write_checksum: sha1:dd98fa266494a727f6f86b15104306ab9901723f
@@ -9942,8 +9954,12 @@ trackedFiles:
     pristine_git_object: 4ba24054f691fdb13090ae5a9278ee158fa82dc3
   src/unified_python_sdk/models/shared/hrisemployee.py:
     id: e39fcf07b08d
-    last_write_checksum: sha1:c07491ffc5cb781baf4ecb1313ff8deae0158d1a
-    pristine_git_object: 5fdd586f9ed92bb023f8d43e47c22787e9fe568e
+    last_write_checksum: sha1:fbc9fe9dd635b555bb155a1bba91c3d08438d6f1
+    pristine_git_object: e97f609e505a936dedbcc1958fe65b0e86704e03
+  src/unified_python_sdk/models/shared/hrisemployeerelationship.py:
+    id: 2e085e84d340
+    last_write_checksum: sha1:ab105c5c68fbcc24c62c8568c4bf9c8050e5e814
+    pristine_git_object: 206ce95e2f6a414e8c3412ed70ace44d36faf1a2
   src/unified_python_sdk/models/shared/hrisgroup.py:
     id: 61a142c33d82
     last_write_checksum: sha1:83e8eec17472105edb13f6dd76f26ea26a15585b
@@ -10252,6 +10268,10 @@ trackedFiles:
     id: 162d35ec1d7a
     last_write_checksum: sha1:fab606797529703fbddade5c150fc9befbe4cd7e
     pristine_git_object: 2df1ab32f1aea33e6b9c23ffb3843d02a3dced73
+  src/unified_python_sdk/models/shared/property_hrisemployeerelationship_address.py:
+    id: cc0709420e64
+    last_write_checksum: sha1:593891fbde14c4005ba5714de95b852b18ebe8db
+    pristine_git_object: 8a1dcbcbeb02dbee548ead072895bd8fc85128d4
   src/unified_python_sdk/models/shared/property_hrislocation_address.py:
     id: 5cfad6af91e1
     last_write_checksum: sha1:ea0a332b3131dd330fa877aa99be1e2ca5ee72a7
@@ -15632,7 +15652,7 @@ examples:
           application/json: ["<value 1>", "<value 2>", "<value 3>"]
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Python SDK Changes:\n* `unified_to.crm.create_crm_pipeline()`: \n  *  `request.crm_pipeline.stages.[].is_closed` **Added**\n  *  `response.stages.[].is_closed` **Added**\n* `unified_to.crm.get_crm_pipeline()`:  `response.stages.[].is_closed` **Added**\n* `unified_to.crm.list_crm_pipelines()`:  `response.[].stages.[].is_closed` **Added**\n* `unified_to.crm.patch_crm_pipeline()`: \n  *  `request.crm_pipeline.stages.[].is_closed` **Added**\n  *  `response.stages.[].is_closed` **Added**\n* `unified_to.crm.update_crm_pipeline()`: \n  *  `request.crm_pipeline.stages.[].is_closed` **Added**\n  *  `response.stages.[].is_closed` **Added**\n* `unified_to.pipeline.create_crm_pipeline()`: \n  *  `request.crm_pipeline.stages.[].is_closed` **Added**\n  *  `response.stages.[].is_closed` **Added**\n* `unified_to.pipeline.get_crm_pipeline()`:  `response.stages.[].is_closed` **Added**\n* `unified_to.pipeline.list_crm_pipelines()`:  `response.[].stages.[].is_closed` **Added**\n* `unified_to.pipeline.patch_crm_pipeline()`: \n  *  `request.crm_pipeline.stages.[].is_closed` **Added**\n  *  `response.stages.[].is_closed` **Added**\n* `unified_to.pipeline.update_crm_pipeline()`: \n  *  `request.crm_pipeline.stages.[].is_closed` **Added**\n  *  `response.stages.[].is_closed` **Added**\n"
+releaseNotes: "## Python SDK Changes:\n* `unified_to.hris.create_hris_employee()`: \n  *  `request.hris_employee.relationships` **Added**\n  *  `response.relationships` **Added**\n* `unified_to.hris.get_hris_employee()`:  `response.relationships` **Added**\n* `unified_to.hris.list_hris_employees()`:  `response.[].relationships` **Added**\n* `unified_to.hris.patch_hris_employee()`: \n  *  `request.hris_employee.relationships` **Added**\n  *  `response.relationships` **Added**\n* `unified_to.hris.update_hris_employee()`: \n  *  `request.hris_employee.relationships` **Added**\n  *  `response.relationships` **Added**\n* `unified_to.employee.create_hris_employee()`: \n  *  `request.hris_employee.relationships` **Added**\n  *  `response.relationships` **Added**\n* `unified_to.employee.get_hris_employee()`:  `response.relationships` **Added**\n* `unified_to.employee.list_hris_employees()`:  `response.[].relationships` **Added**\n* `unified_to.employee.patch_hris_employee()`: \n  *  `request.hris_employee.relationships` **Added**\n  *  `response.relationships` **Added**\n* `unified_to.employee.update_hris_employee()`: \n  *  `request.hris_employee.relationships` **Added**\n  *  `response.relationships` **Added**\n"
 generatedFiles:
   - .gitattributes
   - .vscode/settings.json

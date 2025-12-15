@@ -389,6 +389,11 @@ if TYPE_CHECKING:
         HrisEmployeeTypedDict,
         MaritalStatus,
     )
+    from .hrisemployeerelationship import (
+        HrisEmployeerelationship,
+        HrisEmployeerelationshipType,
+        HrisEmployeerelationshipTypedDict,
+    )
     from .hrisgroup import HrisGroup, HrisGroupType, HrisGroupTypedDict
     from .hrislocation import HrisLocation, HrisLocationTypedDict
     from .hrismetadata import (
@@ -782,6 +787,10 @@ if TYPE_CHECKING:
         PropertyHrisEmployeeAddressTypedDict,
     )
     from .property_hrisemployee_employee_roles import PropertyHrisEmployeeEmployeeRoles
+    from .property_hrisemployeerelationship_address import (
+        PropertyHrisEmployeerelationshipAddress,
+        PropertyHrisEmployeerelationshipAddressTypedDict,
+    )
     from .property_hrislocation_address import (
         PropertyHrisLocationAddress,
         PropertyHrisLocationAddressTypedDict,
@@ -1317,6 +1326,9 @@ __all__ = [
     "HrisEmployeeEmploymentType",
     "HrisEmployeeGender",
     "HrisEmployeeTypedDict",
+    "HrisEmployeerelationship",
+    "HrisEmployeerelationshipType",
+    "HrisEmployeerelationshipTypedDict",
     "HrisGroup",
     "HrisGroupType",
     "HrisGroupTypedDict",
@@ -1609,6 +1621,8 @@ __all__ = [
     "PropertyHrisEmployeeAddress",
     "PropertyHrisEmployeeAddressTypedDict",
     "PropertyHrisEmployeeEmployeeRoles",
+    "PropertyHrisEmployeerelationshipAddress",
+    "PropertyHrisEmployeerelationshipAddressTypedDict",
     "PropertyHrisLocationAddress",
     "PropertyHrisLocationAddressTypedDict",
     "PropertyHrisPayslipDeduction",
@@ -2185,6 +2199,9 @@ _dynamic_imports: dict[str, str] = {
     "HrisEmployeeGender": ".hrisemployee",
     "HrisEmployeeTypedDict": ".hrisemployee",
     "MaritalStatus": ".hrisemployee",
+    "HrisEmployeerelationship": ".hrisemployeerelationship",
+    "HrisEmployeerelationshipType": ".hrisemployeerelationship",
+    "HrisEmployeerelationshipTypedDict": ".hrisemployeerelationship",
     "HrisGroup": ".hrisgroup",
     "HrisGroupType": ".hrisgroup",
     "HrisGroupTypedDict": ".hrisgroup",
@@ -2521,6 +2538,8 @@ _dynamic_imports: dict[str, str] = {
     "PropertyHrisEmployeeAddress": ".property_hrisemployee_address",
     "PropertyHrisEmployeeAddressTypedDict": ".property_hrisemployee_address",
     "PropertyHrisEmployeeEmployeeRoles": ".property_hrisemployee_employee_roles",
+    "PropertyHrisEmployeerelationshipAddress": ".property_hrisemployeerelationship_address",
+    "PropertyHrisEmployeerelationshipAddressTypedDict": ".property_hrisemployeerelationship_address",
     "PropertyHrisLocationAddress": ".property_hrislocation_address",
     "PropertyHrisLocationAddressTypedDict": ".property_hrislocation_address",
     "PropertyHrisPayslipDeduction": ".property_hrispayslip_deduction",

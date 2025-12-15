@@ -3,6 +3,10 @@
 from __future__ import annotations
 from .hriscompensation import HrisCompensation, HrisCompensationTypedDict
 from .hrisemail import HrisEmail, HrisEmailTypedDict
+from .hrisemployeerelationship import (
+    HrisEmployeerelationship,
+    HrisEmployeerelationshipTypedDict,
+)
 from .hrisgroup import HrisGroup, HrisGroupTypedDict
 from .hrislocation import HrisLocation, HrisLocationTypedDict
 from .hrismetadata import HrisMetadata, HrisMetadataTypedDict
@@ -87,6 +91,8 @@ class HrisEmployeeTypedDict(TypedDict):
     name: NotRequired[str]
     pronouns: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
+    relationships: NotRequired[List[HrisEmployeerelationshipTypedDict]]
+    r"""the employee's personal relationships (eg. emergency contacts, spouse, dependants, ...)"""
     salutation: NotRequired[str]
     ssn_sin: NotRequired[str]
     storage_quota_allocated: NotRequired[float]
@@ -175,6 +181,9 @@ class HrisEmployee(BaseModel):
     pronouns: Optional[str] = None
 
     raw: Optional[Dict[str, Any]] = None
+
+    relationships: Optional[List[HrisEmployeerelationship]] = None
+    r"""the employee's personal relationships (eg. emergency contacts, spouse, dependants, ...)"""
 
     salutation: Optional[str] = None
 
