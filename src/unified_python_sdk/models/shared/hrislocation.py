@@ -14,6 +14,7 @@ from unified_python_sdk.types import BaseModel
 
 class HrisLocationTypedDict(TypedDict):
     address: NotRequired[PropertyHrisLocationAddressTypedDict]
+    company_id: NotRequired[str]
     created_at: NotRequired[datetime]
     currency: NotRequired[str]
     description: NotRequired[str]
@@ -32,6 +33,8 @@ class HrisLocationTypedDict(TypedDict):
 
 class HrisLocation(BaseModel):
     address: Optional[PropertyHrisLocationAddress] = None
+
+    company_id: Optional[str] = None
 
     created_at: Optional[datetime] = None
 

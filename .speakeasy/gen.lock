@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: 4b755486531295c10ba7a2e07a4c42c1
+  docChecksum: 72dca536fc3e4387cdd9f33a075cc801
   docVersion: "1.0"
   speakeasyVersion: 1.676.1
   generationVersion: 2.781.2
-  releaseVersion: 0.56.3
-  configChecksum: 8c1cac9b975af2a36e128a4b974ba4c2
+  releaseVersion: 0.56.4
+  configChecksum: ff88aad660d19f6be9c81c908a19530e
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
   published: true
 persistentEdits:
-  generation_id: e911c094-1519-4f68-a285-8878f381792d
-  pristine_commit_hash: 827e9c8b6f7e1ccb079e34c194887a5f227332b9
-  pristine_tree_hash: d479ef9ded04f74292a1449c9afbb9c8fac44da8
+  generation_id: 0661783e-c514-44d6-b723-05fcc85b9271
+  pristine_commit_hash: c78aec951eda30708bae026761bf7676d4665308
+  pristine_tree_hash: a9c47955866218366e8681736fafff090a5f236d
 features:
   python:
     acceptHeaders: 3.0.0
@@ -5122,8 +5122,8 @@ trackedFiles:
     pristine_git_object: c51ec462cca6628bb0ae312faf1e7fa0abcdc2df
   docs/models/shared/hrislocation.md:
     id: 5d4eb75f532f
-    last_write_checksum: sha1:1fb4f83d156a5bd694087adc7e804d33bc2f9656
-    pristine_git_object: 7856851e02c9f9010999da9a48111fcf83e67c4b
+    last_write_checksum: sha1:a276b212ddc128ff1a766eabd4a19237a11ec7f8
+    pristine_git_object: 3f4446829b063c8e5d09d6e2264a485a214f5c6c
   docs/models/shared/hrismetadata.md:
     id: 082af478c1c3
     last_write_checksum: sha1:17c2760595fa84e464945f9234eadec5053e4952
@@ -7022,8 +7022,8 @@ trackedFiles:
     pristine_git_object: 2cc45ce653cbcac61ce0564ce800e33c37e3c2ab
   pyproject.toml:
     id: 5d07e7d72637
-    last_write_checksum: sha1:a134f76f3d3ba0306569ef623a3935804153e2e8
-    pristine_git_object: cab6edb5a4a58ff923994e4332cd662b1096cf31
+    last_write_checksum: sha1:3d4a55f8ab05a7d9d82a0871d61fe136670ddee0
+    pristine_git_object: 56ee32036569d142352f9244c4da4e0dc34768d5
   scripts/prepare_readme.py:
     id: e0c5957a6035
     last_write_checksum: sha1:dc5909a4bb9bb80be82679e1fb30cc5e749b2a96
@@ -7050,8 +7050,8 @@ trackedFiles:
     pristine_git_object: c68594b47b7cc67a5fe0b48892d7774ba2376fc8
   src/unified_python_sdk/_version.py:
     id: c87ca15cab1b
-    last_write_checksum: sha1:d6b07e172f685b9938b87240dc2cd33302e37ac7
-    pristine_git_object: 3529000d89eb659021f1b7d8e512bb96019f6f52
+    last_write_checksum: sha1:2bd9af62248c84befd39fc8e05e2019348a0b097
+    pristine_git_object: 687333158c6783017a098a7c3621c6660df31c70
   src/unified_python_sdk/account.py:
     id: 85b44a7c768c
     last_write_checksum: sha1:0e2594eba875e2aec32c26ec5e6d1d18e173840e
@@ -9966,8 +9966,8 @@ trackedFiles:
     pristine_git_object: e4ab5b5bc73e917a66542a07a0a7f20e2758eb41
   src/unified_python_sdk/models/shared/hrislocation.py:
     id: 2886c957c08b
-    last_write_checksum: sha1:e32fdd9e6e0abbdc7728d810db4b367ec2efd9e1
-    pristine_git_object: 3d4da77e4a5e48b0fb930af9d462aa389aa4e259
+    last_write_checksum: sha1:db0a03fc399d77c528fb03ba3b9e3664709a64c8
+    pristine_git_object: 0cfed7cc5bafd37ba2e87165788b6f3646443d50
   src/unified_python_sdk/models/shared/hrismetadata.py:
     id: 8072fbbc086f
     last_write_checksum: sha1:4b5d92759616e0923501a8b3f07ac6d11f7bb486
@@ -15652,7 +15652,7 @@ examples:
           application/json: ["<value 1>", "<value 2>", "<value 3>"]
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Python SDK Changes:\n* `unified_to.hris.create_hris_employee()`: \n  *  `request.hris_employee.relationships` **Added**\n  *  `response.relationships` **Added**\n* `unified_to.hris.get_hris_employee()`:  `response.relationships` **Added**\n* `unified_to.hris.list_hris_employees()`:  `response.[].relationships` **Added**\n* `unified_to.hris.patch_hris_employee()`: \n  *  `request.hris_employee.relationships` **Added**\n  *  `response.relationships` **Added**\n* `unified_to.hris.update_hris_employee()`: \n  *  `request.hris_employee.relationships` **Added**\n  *  `response.relationships` **Added**\n* `unified_to.employee.create_hris_employee()`: \n  *  `request.hris_employee.relationships` **Added**\n  *  `response.relationships` **Added**\n* `unified_to.employee.get_hris_employee()`:  `response.relationships` **Added**\n* `unified_to.employee.list_hris_employees()`:  `response.[].relationships` **Added**\n* `unified_to.employee.patch_hris_employee()`: \n  *  `request.hris_employee.relationships` **Added**\n  *  `response.relationships` **Added**\n* `unified_to.employee.update_hris_employee()`: \n  *  `request.hris_employee.relationships` **Added**\n  *  `response.relationships` **Added**\n"
+releaseNotes: "## Python SDK Changes:\n* `unified_to.location.create_hris_location()`: \n  *  `request.hris_location.company_id` **Added**\n  *  `response.company_id` **Added**\n* `unified_to.location.get_hris_location()`:  `response.company_id` **Added**\n* `unified_to.location.list_hris_locations()`:  `response.[].company_id` **Added**\n* `unified_to.location.patch_hris_location()`: \n  *  `request.hris_location.company_id` **Added**\n  *  `response.company_id` **Added**\n* `unified_to.location.update_hris_location()`: \n  *  `request.hris_location.company_id` **Added**\n  *  `response.company_id` **Added**\n* `unified_to.hris.create_hris_employee()`: \n  *  `request.hris_employee.locations.[].company_id` **Added**\n  *  `response.locations.[].company_id` **Added**\n* `unified_to.hris.create_hris_location()`: \n  *  `request.hris_location.company_id` **Added**\n  *  `response.company_id` **Added**\n* `unified_to.hris.get_hris_employee()`:  `response.locations.[].company_id` **Added**\n* `unified_to.hris.get_hris_location()`:  `response.company_id` **Added**\n* `unified_to.hris.list_hris_employees()`:  `response.[].locations.[].company_id` **Added**\n* `unified_to.hris.list_hris_locations()`:  `response.[].company_id` **Added**\n* `unified_to.hris.patch_hris_employee()`: \n  *  `request.hris_employee.locations.[].company_id` **Added**\n  *  `response.locations.[].company_id` **Added**\n* `unified_to.hris.patch_hris_location()`: \n  *  `request.hris_location.company_id` **Added**\n  *  `response.company_id` **Added**\n* `unified_to.hris.update_hris_employee()`: \n  *  `request.hris_employee.locations.[].company_id` **Added**\n  *  `response.locations.[].company_id` **Added**\n* `unified_to.hris.update_hris_location()`: \n  *  `request.hris_location.company_id` **Added**\n  *  `response.company_id` **Added**\n* `unified_to.employee.create_hris_employee()`: \n  *  `request.hris_employee.locations.[].company_id` **Added**\n  *  `response.locations.[].company_id` **Added**\n* `unified_to.employee.get_hris_employee()`:  `response.locations.[].company_id` **Added**\n* `unified_to.employee.list_hris_employees()`:  `response.[].locations.[].company_id` **Added**\n* `unified_to.employee.patch_hris_employee()`: \n  *  `request.hris_employee.locations.[].company_id` **Added**\n  *  `response.locations.[].company_id` **Added**\n* `unified_to.employee.update_hris_employee()`: \n  *  `request.hris_employee.locations.[].company_id` **Added**\n  *  `response.locations.[].company_id` **Added**\n"
 generatedFiles:
   - .gitattributes
   - .vscode/settings.json
