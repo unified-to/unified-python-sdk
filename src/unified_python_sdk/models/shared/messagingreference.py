@@ -6,12 +6,12 @@ from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk.types import BaseModel
 
 
-class MessagingChannelMessageTypedDict(TypedDict):
+class MessagingReferenceTypedDict(TypedDict):
     id: NotRequired[str]
     name: NotRequired[str]
 
 
-class MessagingChannelMessage(BaseModel):
+class MessagingReference(BaseModel):
     id: Optional[str] = None
 
     name: Optional[str] = None

@@ -737,10 +737,12 @@ asyncio.run(main())
 * [list_crm_events](docs/sdks/event/README.md#list_crm_events) - List all events
 * [patch_calendar_event](docs/sdks/event/README.md#patch_calendar_event) - Update an event
 * [patch_crm_event](docs/sdks/event/README.md#patch_crm_event) - Update an event
+* [patch_messaging_event](docs/sdks/event/README.md#patch_messaging_event) - Update an event
 * [remove_calendar_event](docs/sdks/event/README.md#remove_calendar_event) - Remove an event
 * [remove_crm_event](docs/sdks/event/README.md#remove_crm_event) - Remove an event
 * [update_calendar_event](docs/sdks/event/README.md#update_calendar_event) - Update an event
 * [update_crm_event](docs/sdks/event/README.md#update_crm_event) - Update an event
+* [update_messaging_event](docs/sdks/event/README.md#update_messaging_event) - Update an event
 
 ### [Expense](docs/sdks/expense/README.md)
 
@@ -1051,8 +1053,10 @@ asyncio.run(main())
 * [get_messaging_message](docs/sdks/messaging/README.md#get_messaging_message) - Retrieve a message
 * [list_messaging_channels](docs/sdks/messaging/README.md#list_messaging_channels) - List all channels
 * [list_messaging_messages](docs/sdks/messaging/README.md#list_messaging_messages) - List all messages
+* [patch_messaging_event](docs/sdks/messaging/README.md#patch_messaging_event) - Update an event
 * [patch_messaging_message](docs/sdks/messaging/README.md#patch_messaging_message) - Update a message
 * [remove_messaging_message](docs/sdks/messaging/README.md#remove_messaging_message) - Remove a message
+* [update_messaging_event](docs/sdks/messaging/README.md#update_messaging_event) - Update an event
 * [update_messaging_message](docs/sdks/messaging/README.md#update_messaging_message) - Update a message
 
 ### [Metadata](docs/sdks/metadata/README.md)

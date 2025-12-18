@@ -2049,6 +2049,12 @@ if TYPE_CHECKING:
         PatchMartechMemberResponse,
         PatchMartechMemberResponseTypedDict,
     )
+    from .patchmessagingevent import (
+        PatchMessagingEventRequest,
+        PatchMessagingEventRequestTypedDict,
+        PatchMessagingEventResponse,
+        PatchMessagingEventResponseTypedDict,
+    )
     from .patchmessagingmessage import (
         PatchMessagingMessageRequest,
         PatchMessagingMessageRequestTypedDict,
@@ -3026,6 +3032,12 @@ if TYPE_CHECKING:
         UpdateMartechMemberRequestTypedDict,
         UpdateMartechMemberResponse,
         UpdateMartechMemberResponseTypedDict,
+    )
+    from .updatemessagingevent import (
+        UpdateMessagingEventRequest,
+        UpdateMessagingEventRequestTypedDict,
+        UpdateMessagingEventResponse,
+        UpdateMessagingEventResponseTypedDict,
     )
     from .updatemessagingmessage import (
         UpdateMessagingMessageRequest,
@@ -4563,6 +4575,10 @@ __all__ = [
     "PatchMartechMemberRequestTypedDict",
     "PatchMartechMemberResponse",
     "PatchMartechMemberResponseTypedDict",
+    "PatchMessagingEventRequest",
+    "PatchMessagingEventRequestTypedDict",
+    "PatchMessagingEventResponse",
+    "PatchMessagingEventResponseTypedDict",
     "PatchMessagingMessageRequest",
     "PatchMessagingMessageRequestTypedDict",
     "PatchMessagingMessageResponse",
@@ -5216,6 +5232,10 @@ __all__ = [
     "UpdateMartechMemberRequestTypedDict",
     "UpdateMartechMemberResponse",
     "UpdateMartechMemberResponseTypedDict",
+    "UpdateMessagingEventRequest",
+    "UpdateMessagingEventRequestTypedDict",
+    "UpdateMessagingEventResponse",
+    "UpdateMessagingEventResponseTypedDict",
     "UpdateMessagingMessageRequest",
     "UpdateMessagingMessageRequestTypedDict",
     "UpdateMessagingMessageResponse",
@@ -6696,6 +6716,10 @@ _dynamic_imports: dict[str, str] = {
     "PatchMartechMemberRequestTypedDict": ".patchmartechmember",
     "PatchMartechMemberResponse": ".patchmartechmember",
     "PatchMartechMemberResponseTypedDict": ".patchmartechmember",
+    "PatchMessagingEventRequest": ".patchmessagingevent",
+    "PatchMessagingEventRequestTypedDict": ".patchmessagingevent",
+    "PatchMessagingEventResponse": ".patchmessagingevent",
+    "PatchMessagingEventResponseTypedDict": ".patchmessagingevent",
     "PatchMessagingMessageRequest": ".patchmessagingmessage",
     "PatchMessagingMessageRequestTypedDict": ".patchmessagingmessage",
     "PatchMessagingMessageResponse": ".patchmessagingmessage",
@@ -7348,6 +7372,10 @@ _dynamic_imports: dict[str, str] = {
     "UpdateMartechMemberRequestTypedDict": ".updatemartechmember",
     "UpdateMartechMemberResponse": ".updatemartechmember",
     "UpdateMartechMemberResponseTypedDict": ".updatemartechmember",
+    "UpdateMessagingEventRequest": ".updatemessagingevent",
+    "UpdateMessagingEventRequestTypedDict": ".updatemessagingevent",
+    "UpdateMessagingEventResponse": ".updatemessagingevent",
+    "UpdateMessagingEventResponseTypedDict": ".updatemessagingevent",
     "UpdateMessagingMessageRequest": ".updatemessagingmessage",
     "UpdateMessagingMessageRequestTypedDict": ".updatemessagingmessage",
     "UpdateMessagingMessageResponse": ".updatemessagingmessage",

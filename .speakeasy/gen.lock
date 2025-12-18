@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: 72dca536fc3e4387cdd9f33a075cc801
+  docChecksum: 1a896c50bc225151e4415d9bcea95f29
   docVersion: "1.0"
-  speakeasyVersion: 1.676.1
-  generationVersion: 2.781.2
-  releaseVersion: 0.56.4
-  configChecksum: ff88aad660d19f6be9c81c908a19530e
+  speakeasyVersion: 1.680.0
+  generationVersion: 2.788.4
+  releaseVersion: 0.56.5
+  configChecksum: 982ee41a970b5beceb3fd45c497f55dd
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
   published: true
 persistentEdits:
-  generation_id: 0661783e-c514-44d6-b723-05fcc85b9271
-  pristine_commit_hash: c78aec951eda30708bae026761bf7676d4665308
-  pristine_tree_hash: a9c47955866218366e8681736fafff090a5f236d
+  generation_id: 8d0e05cc-fba2-4a94-ab5d-179905bf6b05
+  pristine_commit_hash: 1baa32c3bf1eed446c6e4b626b8bb74eca997d77
+  pristine_tree_hash: 1bc618ea117073f1384e2832fd1d0644a4a031fa
 features:
   python:
     acceptHeaders: 3.0.0
@@ -2772,6 +2772,14 @@ trackedFiles:
     id: 5f22932b3e2e
     last_write_checksum: sha1:3c1dbaeff8feee784d6c82a3b69c52cb64421775
     pristine_git_object: 919fe3b9a0d0993cad0e9f908df81ab1bed75008
+  docs/models/operations/patchmessagingeventrequest.md:
+    id: 5ddb58cb16ce
+    last_write_checksum: sha1:39057d924c0997830da398382e741007020cb4ce
+    pristine_git_object: 688ecacfc0e39d01a7f4b8fe940359112965fed0
+  docs/models/operations/patchmessagingeventresponse.md:
+    id: bde34ecd8f13
+    last_write_checksum: sha1:e5e81d01f491fc4d049d25cd7ff9e074ba53f2c7
+    pristine_git_object: 17d5051177bb4fb893ec0c8e7c88822de0877cf8
   docs/models/operations/patchmessagingmessagerequest.md:
     id: d0365f2ae673
     last_write_checksum: sha1:8bb7baf57495d7a55854ed2330410acaf7da7404
@@ -4080,6 +4088,14 @@ trackedFiles:
     id: 2981e26f8a92
     last_write_checksum: sha1:73862269056370e463800e9b521ba40113b90981
     pristine_git_object: 7c910ec4e72fb5bb4fc6eb34d8615c94597aadf2
+  docs/models/operations/updatemessagingeventrequest.md:
+    id: 8a9a106bb285
+    last_write_checksum: sha1:0a84da121f47347e8309b0992ce25f0c60e232b4
+    pristine_git_object: 97403061399085b179bab36780abb62eab5d2e9e
+  docs/models/operations/updatemessagingeventresponse.md:
+    id: 3a1142438793
+    last_write_checksum: sha1:ace6afecee44e70b6ab1137bcfd6a493c1b27230
+    pristine_git_object: 968980a8db6b08edbda81335d8eef99531fb1676
   docs/models/operations/updatemessagingmessagerequest.md:
     id: 562cb9b2e9db
     last_write_checksum: sha1:e199a08854377af9c82ba94c5f4e456c248e1872
@@ -5600,26 +5616,38 @@ trackedFiles:
     id: 4ee772661348
     last_write_checksum: sha1:5c9c9a78f059eb40fc496ca601d4dd957933331f
     pristine_git_object: 4a2c75d6f12e847eb69811a50ae822fbcf91cafa
+  docs/models/shared/messagingbutton.md:
+    id: c34ec2293652
+    last_write_checksum: sha1:05a43ece0253ccb27e81afa4af1829ff1d6a738d
+    pristine_git_object: c5b455f721df0bc0e5201c29f7df7de177453027
   docs/models/shared/messagingchannel.md:
     id: 1bb1ef52bde0
     last_write_checksum: sha1:9edce4d6267c9caeef2f035288ef88a46e2894be
     pristine_git_object: bee1090424b9ca85adcb71ba80e91d977729b417
-  docs/models/shared/messagingchannelmessage.md:
-    id: 1b6c31ac76cc
-    last_write_checksum: sha1:ecdd7678cae3263816871695f371f29ffe9c34d7
-    pristine_git_object: 1b0f494e71495c76b493c4439aab9f7ed39329b3
+  docs/models/shared/messagingevent.md:
+    id: 4da72fb4d6d4
+    last_write_checksum: sha1:2fdf528a32b4ffbab8c6816f9ad1520957c9cc57
+    pristine_git_object: 5b50d73b852866b3ec7330522535c5e434a54a54
+  docs/models/shared/messagingeventtype.md:
+    id: 316f78864269
+    last_write_checksum: sha1:7daf1e42724dbf33c0245c28a5a6c2cff099c9e8
+    pristine_git_object: 91610b9f7ede4b35954656d252345a76fc7e0dd1
   docs/models/shared/messagingmember.md:
     id: 3e99f112e693
     last_write_checksum: sha1:2970ea4bd2ed683494757d99b84f0b75280957d4
     pristine_git_object: f1a3af089b9b9977db8ea9a2fba919c7c2c8c57d
   docs/models/shared/messagingmessage.md:
     id: 3592b43c9620
-    last_write_checksum: sha1:084f9ce8dba280813ab29040f340f148d95cb54f
-    pristine_git_object: cfd16e356725acb749b92e76830dbe291ebdbd71
+    last_write_checksum: sha1:4aa5ba40d3180548819abec2957013dc75212ffe
+    pristine_git_object: 9801dec73a8945d003fe8181c18605f058acf78c
   docs/models/shared/messagingreaction.md:
     id: c928bc0d2536
     last_write_checksum: sha1:14af6405dde872e42c46aca99fa23a6418f1de97
     pristine_git_object: 4fb84426959c66c61c564f4f1f42d1e2de0c55d3
+  docs/models/shared/messagingreference.md:
+    id: 674df66ca6c3
+    last_write_checksum: sha1:fd55cb5ae3bd99489fa4e78125059e87689c2d8c
+    pristine_git_object: c9046f5a7d679806886f8bc501e536189e68c19d
   docs/models/shared/metadatametadata.md:
     id: c3887603502e
     last_write_checksum: sha1:ef99a3a731bd5cef3b0469dac19a28aef8c51915
@@ -5948,6 +5976,26 @@ trackedFiles:
     id: 2b8eb453adae
     last_write_checksum: sha1:e71c126f087fa0d492d18d7fd9199cb1a579ecdd
     pristine_git_object: 6da17794dea32ee52f083b2c553edd38c7e54caf
+  docs/models/shared/propertymessagingeventbutton.md:
+    id: b2b684f40043
+    last_write_checksum: sha1:f3f7bef58481372dc2e338a91ec631998177100e
+    pristine_git_object: 8d424a27a6caf56f6534683fac585d5a99fe07e4
+  docs/models/shared/propertymessagingeventchannel.md:
+    id: e5871b0acbcc
+    last_write_checksum: sha1:1c37551b980b0cefe28fb68134f3ac8e56cbd235
+    pristine_git_object: 6d009cbc012df8442fd42527f3c12cefce94c85e
+  docs/models/shared/propertymessagingeventmessage.md:
+    id: 9f2535695009
+    last_write_checksum: sha1:20018644adfd2acbc39b243934fefeb86d2d9e56
+    pristine_git_object: fb15f08ac5d43093ce34f43cfa92a55fd0d62748
+  docs/models/shared/propertymessagingeventmessageauthormember.md:
+    id: fb67a87ee1d9
+    last_write_checksum: sha1:48d21ff7f195607ed9dbb751717086345898b8a6
+    pristine_git_object: 8be76199833e7bd37ae547802cf76bc79ddd3816
+  docs/models/shared/propertymessagingeventuser.md:
+    id: a89be58493e4
+    last_write_checksum: sha1:807d42a705d6dd263d277099b12a95b171f92a0f
+    pristine_git_object: c843737cc273a02467062ca51629a5db16fa66ad
   docs/models/shared/propertymessagingmessageauthormember.md:
     id: 2f84a29fc16a
     last_write_checksum: sha1:87c7957c77f60a0dd1fbe34a02b406c0d789d9ed
@@ -6722,8 +6770,8 @@ trackedFiles:
     pristine_git_object: 0d51f42572f99c7b37c77adc8fb93a4342ba72bc
   docs/sdks/event/README.md:
     id: 38354de266eb
-    last_write_checksum: sha1:89e9236b215b20038e63da7018a9e95da6de2c95
-    pristine_git_object: 1321c14d57f89f22463697df1e97c9092f4e62a6
+    last_write_checksum: sha1:5690a78bb57045747c0ce3f0e4b24614970eff44
+    pristine_git_object: 2d870f5c97d7e7319c33709d2183960dae1c2cf1
   docs/sdks/expense/README.md:
     id: 8bba157370c0
     last_write_checksum: sha1:eca43683b08e13c0b9e6bd9734f93d73295eabc7
@@ -6822,8 +6870,8 @@ trackedFiles:
     pristine_git_object: b5d324526596a8e7b4002207f46577973288f34b
   docs/sdks/messaging/README.md:
     id: 827f9d81a390
-    last_write_checksum: sha1:099d6e6a1e932797ae0baca96ea393c334cea23c
-    pristine_git_object: 15601eb6d40bfd1bf538f26553adc91485c7aa88
+    last_write_checksum: sha1:fbc93ed1fca7f56fca682197a63ad0dbd5897b19
+    pristine_git_object: 17866d61e8087dc3ecbcb9253d5a5271ba014e52
   docs/sdks/metadata/README.md:
     id: de871ca7dbeb
     last_write_checksum: sha1:7b95517d44ad6b9d8f5124665176161a33f0cb86
@@ -7022,8 +7070,8 @@ trackedFiles:
     pristine_git_object: 2cc45ce653cbcac61ce0564ce800e33c37e3c2ab
   pyproject.toml:
     id: 5d07e7d72637
-    last_write_checksum: sha1:3d4a55f8ab05a7d9d82a0871d61fe136670ddee0
-    pristine_git_object: 56ee32036569d142352f9244c4da4e0dc34768d5
+    last_write_checksum: sha1:1ae2a6336d589a9b00adf7b0295f0aba4875a40f
+    pristine_git_object: 5b92d158e82b2ced6544e54e92f11f47e846cd7d
   scripts/prepare_readme.py:
     id: e0c5957a6035
     last_write_checksum: sha1:dc5909a4bb9bb80be82679e1fb30cc5e749b2a96
@@ -7050,8 +7098,8 @@ trackedFiles:
     pristine_git_object: c68594b47b7cc67a5fe0b48892d7774ba2376fc8
   src/unified_python_sdk/_version.py:
     id: c87ca15cab1b
-    last_write_checksum: sha1:2bd9af62248c84befd39fc8e05e2019348a0b097
-    pristine_git_object: 687333158c6783017a098a7c3621c6660df31c70
+    last_write_checksum: sha1:4b571970d486ad74240d978b3ed7148b5d53f8a0
+    pristine_git_object: 8426591fbd4c62f61191e3509514eebd5cb2a63e
   src/unified_python_sdk/account.py:
     id: 85b44a7c768c
     last_write_checksum: sha1:0e2594eba875e2aec32c26ec5e6d1d18e173840e
@@ -7218,8 +7266,8 @@ trackedFiles:
     pristine_git_object: 5f41af1aa19f058e6e0285f336dc8df77b2b5195
   src/unified_python_sdk/event.py:
     id: d8c3233eb306
-    last_write_checksum: sha1:dfa88749a2d62bc78c1c9c013b20f0d3cb9730fe
-    pristine_git_object: 2953d6ee1356f7fc6f95bee6e5146d3c19580e87
+    last_write_checksum: sha1:90a751401d88509084293b0c044cbc80e833b469
+    pristine_git_object: 75b39b03715d82d936dc6da2830604c650083e26
   src/unified_python_sdk/expense.py:
     id: ab02123b0e39
     last_write_checksum: sha1:22b560c88a19736c9fcdfe3cdec8ea1bfa744c41
@@ -7322,8 +7370,8 @@ trackedFiles:
     pristine_git_object: f8838267edc6b3c205e7696411461a946499636e
   src/unified_python_sdk/messaging.py:
     id: 992e626b4c8d
-    last_write_checksum: sha1:14f0540694a773a7f3d7197110f8de7aa718c227
-    pristine_git_object: c9be97dc636d2058635a492ebe57a80a6a588e00
+    last_write_checksum: sha1:56ee34b9fb3aa861c34418e6f2b6c659c3b5aa24
+    pristine_git_object: df14ab31b4b97a1d53d453da468ed49d87762b95
   src/unified_python_sdk/metadata.py:
     id: 15da1cb2196e
     last_write_checksum: sha1:238155642e971e91be75db63f7709ea5d63dc25f
@@ -7358,8 +7406,8 @@ trackedFiles:
     pristine_git_object: 01a716a03809ab4f4d1f089ae11e04e8392ba5e8
   src/unified_python_sdk/models/operations/__init__.py:
     id: 486383712deb
-    last_write_checksum: sha1:3b8e76c26cfd4b9c7b5ea822c7b2f5d6025cc123
-    pristine_git_object: 87b69127ae6cd3efdd5c214bd7d1f8181a0f8eed
+    last_write_checksum: sha1:a03de79e98b895f05f133a26fe1655db5d1ebcb9
+    pristine_git_object: 0de50f2620ea1274d97a12ed5b036b68bc73f94a
   src/unified_python_sdk/models/operations/createaccountingaccount.py:
     id: 52d116750aa5
     last_write_checksum: sha1:823b7009b4748dd6180ec176788bea886e519180
@@ -8724,6 +8772,10 @@ trackedFiles:
     id: 8a1073bcdd58
     last_write_checksum: sha1:fdc3deb620a87d3b7dbe628a4ddf804a844c9f36
     pristine_git_object: bb60a08db87e71590653e5ef3361b6880656ebae
+  src/unified_python_sdk/models/operations/patchmessagingevent.py:
+    id: c4552b88f825
+    last_write_checksum: sha1:abff16776e1b0f22e528901aceb838e05b3cf156
+    pristine_git_object: dd7d77c1cc76f998b66684b26a91433344d7ab16
   src/unified_python_sdk/models/operations/patchmessagingmessage.py:
     id: 421deccf52bc
     last_write_checksum: sha1:bd13a660a4748764c6ecaaaf43db22dd179e6825
@@ -9376,6 +9428,10 @@ trackedFiles:
     id: fc17472e06bf
     last_write_checksum: sha1:ac279a5ef39e2c490a16f5d69d19ba01cf547582
     pristine_git_object: 13d21baaada30eb7d2a5917b666347242ff6c40c
+  src/unified_python_sdk/models/operations/updatemessagingevent.py:
+    id: 9eddcc028d1b
+    last_write_checksum: sha1:17575e75529c4531de128cf3d58f5b817faaa14e
+    pristine_git_object: c2aeceee012d070d6c2e6d15135e61d863ced14d
   src/unified_python_sdk/models/operations/updatemessagingmessage.py:
     id: 2a9679199e62
     last_write_checksum: sha1:63da5d90b46b35a41adf91970f32b35c0cf7fda8
@@ -9494,8 +9550,8 @@ trackedFiles:
     pristine_git_object: b48d0f598c3c666cad9336b31bafa9d26d33303a
   src/unified_python_sdk/models/shared/__init__.py:
     id: 8825f2c566be
-    last_write_checksum: sha1:c70b3beebcf999e79f565cc518bd608431442ae1
-    pristine_git_object: 01ec55506d54fa769a3d36e673be10e22ffd0dfc
+    last_write_checksum: sha1:cbb680495c4616eade8a874b661c97e5eabf9bb5
+    pristine_git_object: aeb21cecb26a548c2ebc074043ffd0329a197b68
   src/unified_python_sdk/models/shared/accountingaccount.py:
     id: b8ab638302ba
     last_write_checksum: sha1:dd98fa266494a727f6f86b15104306ab9901723f
@@ -10064,26 +10120,34 @@ trackedFiles:
     id: 9dc9f1d4e806
     last_write_checksum: sha1:9bfae6ee76068151f7782ebb6dff3861f4b74713
     pristine_git_object: c69a54142003d49bab7d02a1d569959f824c1b92
+  src/unified_python_sdk/models/shared/messagingbutton.py:
+    id: 98f257a6db3b
+    last_write_checksum: sha1:c968cf7fe101b9cd10695f7164e6cc74a126baef
+    pristine_git_object: 89201d00d1989019ab3e84b71bd76637d1cd6b36
   src/unified_python_sdk/models/shared/messagingchannel.py:
     id: a6b1b234b690
     last_write_checksum: sha1:c814121b31ff3fe32791196af367a18ae383e177
     pristine_git_object: 50f03c8da3a9ac35183e38a51277d242270b033a
-  src/unified_python_sdk/models/shared/messagingchannelmessage.py:
-    id: 691ca015b9b5
-    last_write_checksum: sha1:4f60c388f02a69302b2dbb1c7f740c7e53c33bec
-    pristine_git_object: c5496cba9013cf3b6d376da8b66e56032e432a22
+  src/unified_python_sdk/models/shared/messagingevent.py:
+    id: 805749a64abb
+    last_write_checksum: sha1:7aa2bd08f18313a298bceae80d3278d0669e5e93
+    pristine_git_object: f0f6ee8ab6c1cf30e8b13cdc3578a4c7b4fec6f1
   src/unified_python_sdk/models/shared/messagingmember.py:
     id: 97e593d89938
     last_write_checksum: sha1:3b226aa8a8357d5e5aade756a5ca83ff470f9863
     pristine_git_object: acc1ef94bf74b0462baaceb1a6e390226bc9ddc8
   src/unified_python_sdk/models/shared/messagingmessage.py:
     id: f8fed8574a10
-    last_write_checksum: sha1:2d813d1d7e030dc58c030d932aad802706439304
-    pristine_git_object: 0ba61bef7f70db2f7711ca73c980e254aea8a1a6
+    last_write_checksum: sha1:7a9906382feecf6ef5ce99210fe55463cc09a7c6
+    pristine_git_object: 1d47054c3111bf67ac7f5c74208980f74bfc7f95
   src/unified_python_sdk/models/shared/messagingreaction.py:
     id: 863c4f6f4066
     last_write_checksum: sha1:dd202230d0f3f6771309c7c8b4d4f01d965a92fd
     pristine_git_object: d0de9d621ab710bbc544e9bff326ef53512960eb
+  src/unified_python_sdk/models/shared/messagingreference.py:
+    id: c7f975dff4f2
+    last_write_checksum: sha1:8e4f0a0b757cc8453da89c4928ddd2d10139b338
+    pristine_git_object: 752a562399268315d15b369221a5e0f1d57df9f8
   src/unified_python_sdk/models/shared/metadatametadata.py:
     id: f2712643cc67
     last_write_checksum: sha1:51ecf93a2ec722da97c4a8eb9da2c97736309807
@@ -10304,6 +10368,26 @@ trackedFiles:
     id: f92ca12a66ec
     last_write_checksum: sha1:51a6bacaf253f0e17c22d0d3b917ae1ab67e524c
     pristine_git_object: d640801f9fdc7dc9fd236f7d5b75435f6f6eef34
+  src/unified_python_sdk/models/shared/property_messagingevent_button.py:
+    id: 5940faaf9659
+    last_write_checksum: sha1:79c4c6a39c742890c934083599b0e74e870567f9
+    pristine_git_object: 35d023fba48240024077cf60a5d34eab5057c982
+  src/unified_python_sdk/models/shared/property_messagingevent_channel.py:
+    id: b4424a4e8bb5
+    last_write_checksum: sha1:4141c6202dc2324574a9ff10f446467ea7cba198
+    pristine_git_object: 56deeeae480293223890e2cd7d7e695f3fec39eb
+  src/unified_python_sdk/models/shared/property_messagingevent_message.py:
+    id: de5232b522fe
+    last_write_checksum: sha1:f01946be94a52f0632a01e75d5daa95bc7f06348
+    pristine_git_object: 2f975cd9cc3b7a8dbab5dbc9994667cded30cdf1
+  src/unified_python_sdk/models/shared/property_messagingevent_message_author_member.py:
+    id: de049e6476b3
+    last_write_checksum: sha1:bddae5d882932c80d833b40e203c2749c99974e5
+    pristine_git_object: 405e6bae7901471bef33530bc52023bc1942a3e4
+  src/unified_python_sdk/models/shared/property_messagingevent_user.py:
+    id: d3f5bc5e36b3
+    last_write_checksum: sha1:34d6dffa6563362978406145bf4ddd4b337876f3
+    pristine_git_object: f0a5df2f3670d91a894876337f68b3c49666a540
   src/unified_python_sdk/models/shared/property_messagingmessage_author_member.py:
     id: a6fa5742c9ca
     last_write_checksum: sha1:fd7821f2acb30d03071b212c03f31d878f5eb315
@@ -15650,9 +15734,31 @@ examples:
       responses:
         "200":
           application/json: ["<value 1>", "<value 2>", "<value 3>"]
+  patchMessagingEvent:
+    speakeasy-default-patch-messaging-event:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {"type": "CHANNEL_JOINED"}
+      responses:
+        "200":
+          application/json: {"type": "USER_UPDATED"}
+  updateMessagingEvent:
+    speakeasy-default-update-messaging-event:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {"type": "CHANNEL_JOINED"}
+      responses:
+        "200":
+          application/json: {"type": "CHANNEL_LEFT"}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Python SDK Changes:\n* `unified_to.location.create_hris_location()`: \n  *  `request.hris_location.company_id` **Added**\n  *  `response.company_id` **Added**\n* `unified_to.location.get_hris_location()`:  `response.company_id` **Added**\n* `unified_to.location.list_hris_locations()`:  `response.[].company_id` **Added**\n* `unified_to.location.patch_hris_location()`: \n  *  `request.hris_location.company_id` **Added**\n  *  `response.company_id` **Added**\n* `unified_to.location.update_hris_location()`: \n  *  `request.hris_location.company_id` **Added**\n  *  `response.company_id` **Added**\n* `unified_to.hris.create_hris_employee()`: \n  *  `request.hris_employee.locations.[].company_id` **Added**\n  *  `response.locations.[].company_id` **Added**\n* `unified_to.hris.create_hris_location()`: \n  *  `request.hris_location.company_id` **Added**\n  *  `response.company_id` **Added**\n* `unified_to.hris.get_hris_employee()`:  `response.locations.[].company_id` **Added**\n* `unified_to.hris.get_hris_location()`:  `response.company_id` **Added**\n* `unified_to.hris.list_hris_employees()`:  `response.[].locations.[].company_id` **Added**\n* `unified_to.hris.list_hris_locations()`:  `response.[].company_id` **Added**\n* `unified_to.hris.patch_hris_employee()`: \n  *  `request.hris_employee.locations.[].company_id` **Added**\n  *  `response.locations.[].company_id` **Added**\n* `unified_to.hris.patch_hris_location()`: \n  *  `request.hris_location.company_id` **Added**\n  *  `response.company_id` **Added**\n* `unified_to.hris.update_hris_employee()`: \n  *  `request.hris_employee.locations.[].company_id` **Added**\n  *  `response.locations.[].company_id` **Added**\n* `unified_to.hris.update_hris_location()`: \n  *  `request.hris_location.company_id` **Added**\n  *  `response.company_id` **Added**\n* `unified_to.employee.create_hris_employee()`: \n  *  `request.hris_employee.locations.[].company_id` **Added**\n  *  `response.locations.[].company_id` **Added**\n* `unified_to.employee.get_hris_employee()`:  `response.locations.[].company_id` **Added**\n* `unified_to.employee.list_hris_employees()`:  `response.[].locations.[].company_id` **Added**\n* `unified_to.employee.patch_hris_employee()`: \n  *  `request.hris_employee.locations.[].company_id` **Added**\n  *  `response.locations.[].company_id` **Added**\n* `unified_to.employee.update_hris_employee()`: \n  *  `request.hris_employee.locations.[].company_id` **Added**\n  *  `response.locations.[].company_id` **Added**\n"
+releaseNotes: "## Python SDK Changes:\n* `unified_to.event.patch_messaging_event()`: **Added**\n* `unified_to.event.update_messaging_event()`: **Added**\n* `unified_to.messaging.patch_messaging_event()`: **Added**\n* `unified_to.messaging.update_messaging_event()`: **Added**\n* `unified_to.messaging.create_messaging_message()`: \n  *  `request.messaging_message.buttons` **Added**\n  *  `response.buttons` **Added**\n* `unified_to.messaging.get_messaging_message()`:  `response.buttons` **Added**\n* `unified_to.messaging.list_messaging_messages()`:  `response.[].buttons` **Added**\n* `unified_to.messaging.patch_messaging_message()`: \n  *  `request.messaging_message.buttons` **Added**\n  *  `response.buttons` **Added**\n* `unified_to.messaging.update_messaging_message()`: \n  *  `request.messaging_message.buttons` **Added**\n  *  `response.buttons` **Added**\n* `unified_to.message.create_messaging_message()`: \n  *  `request.messaging_message.buttons` **Added**\n  *  `response.buttons` **Added**\n* `unified_to.message.get_messaging_message()`:  `response.buttons` **Added**\n* `unified_to.message.list_messaging_messages()`:  `response.[].buttons` **Added**\n* `unified_to.message.patch_messaging_message()`: \n  *  `request.messaging_message.buttons` **Added**\n  *  `response.buttons` **Added**\n* `unified_to.message.update_messaging_message()`: \n  *  `request.messaging_message.buttons` **Added**\n  *  `response.buttons` **Added**\n"
 generatedFiles:
   - .gitattributes
   - .vscode/settings.json

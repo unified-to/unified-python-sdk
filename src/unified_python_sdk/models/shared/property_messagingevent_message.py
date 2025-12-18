@@ -6,9 +6,9 @@ from .messagingbutton import MessagingButton, MessagingButtonTypedDict
 from .messagingmember import MessagingMember, MessagingMemberTypedDict
 from .messagingreaction import MessagingReaction, MessagingReactionTypedDict
 from .messagingreference import MessagingReference, MessagingReferenceTypedDict
-from .property_messagingmessage_author_member import (
-    PropertyMessagingMessageAuthorMember,
-    PropertyMessagingMessageAuthorMemberTypedDict,
+from .property_messagingevent_message_author_member import (
+    PropertyMessagingEventMessageAuthorMember,
+    PropertyMessagingEventMessageAuthorMemberTypedDict,
 )
 from datetime import datetime
 from typing import Any, Dict, List, Optional
@@ -16,9 +16,9 @@ from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk.types import BaseModel
 
 
-class MessagingMessageTypedDict(TypedDict):
+class PropertyMessagingEventMessageTypedDict(TypedDict):
     attachments: NotRequired[List[MessagingAttachmentTypedDict]]
-    author_member: NotRequired[PropertyMessagingMessageAuthorMemberTypedDict]
+    author_member: NotRequired[PropertyMessagingEventMessageAuthorMemberTypedDict]
     buttons: NotRequired[List[MessagingButtonTypedDict]]
     channel_id: NotRequired[str]
     channel_ids: NotRequired[List[str]]
@@ -47,10 +47,10 @@ class MessagingMessageTypedDict(TypedDict):
     web_url: NotRequired[str]
 
 
-class MessagingMessage(BaseModel):
+class PropertyMessagingEventMessage(BaseModel):
     attachments: Optional[List[MessagingAttachment]] = None
 
-    author_member: Optional[PropertyMessagingMessageAuthorMember] = None
+    author_member: Optional[PropertyMessagingEventMessageAuthorMember] = None
 
     buttons: Optional[List[MessagingButton]] = None
 

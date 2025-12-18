@@ -9,8 +9,10 @@
 * [get_messaging_message](#get_messaging_message) - Retrieve a message
 * [list_messaging_channels](#list_messaging_channels) - List all channels
 * [list_messaging_messages](#list_messaging_messages) - List all messages
+* [patch_messaging_event](#patch_messaging_event) - Update an event
 * [patch_messaging_message](#patch_messaging_message) - Update a message
 * [remove_messaging_message](#remove_messaging_message) - Remove a message
+* [update_messaging_event](#update_messaging_event) - Update an event
 * [update_messaging_message](#update_messaging_message) - Update a message
 
 ## create_messaging_message
@@ -246,6 +248,56 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## patch_messaging_event
+
+Update an event
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="patchMessagingEvent" method="patch" path="/messaging/{connection_id}/event/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.messaging.patch_messaging_event(request={
+        "messaging_event": {
+            "type": shared.MessagingEventType.CHANNEL_JOINED,
+        },
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.messaging_event is not None
+
+    # Handle response
+    print(res.messaging_event)
+
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `request`                                                                                      | [operations.PatchMessagingEventRequest](../../models/operations/patchmessagingeventrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `retries`                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                               | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
+
+### Response
+
+**[operations.PatchMessagingEventResponse](../../models/operations/patchmessagingeventresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## patch_messaging_message
 
 Update a message
@@ -334,6 +386,56 @@ with UnifiedTo(
 ### Response
 
 **[operations.RemoveMessagingMessageResponse](../../models/operations/removemessagingmessageresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## update_messaging_event
+
+Update an event
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="updateMessagingEvent" method="put" path="/messaging/{connection_id}/event/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.messaging.update_messaging_event(request={
+        "messaging_event": {
+            "type": shared.MessagingEventType.CHANNEL_JOINED,
+        },
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.messaging_event is not None
+
+    # Handle response
+    print(res.messaging_event)
+
+```
+
+### Parameters
+
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `request`                                                                                        | [operations.UpdateMessagingEventRequest](../../models/operations/updatemessagingeventrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `retries`                                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                 | :heavy_minus_sign:                                                                               | Configuration to override the default retry behavior of the client.                              |
+
+### Response
+
+**[operations.UpdateMessagingEventResponse](../../models/operations/updatemessagingeventresponse.md)**
 
 ### Errors
 

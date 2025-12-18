@@ -604,14 +604,17 @@ if TYPE_CHECKING:
     from .marketinglist import MarketingList, MarketingListTypedDict
     from .marketingmember import MarketingMember, MarketingMemberTypedDict
     from .messagingattachment import MessagingAttachment, MessagingAttachmentTypedDict
+    from .messagingbutton import MessagingButton, MessagingButtonTypedDict
     from .messagingchannel import MessagingChannel, MessagingChannelTypedDict
-    from .messagingchannelmessage import (
-        MessagingChannelMessage,
-        MessagingChannelMessageTypedDict,
+    from .messagingevent import (
+        MessagingEvent,
+        MessagingEventType,
+        MessagingEventTypedDict,
     )
     from .messagingmember import MessagingMember, MessagingMemberTypedDict
     from .messagingmessage import MessagingMessage, MessagingMessageTypedDict
     from .messagingreaction import MessagingReaction, MessagingReactionTypedDict
+    from .messagingreference import MessagingReference, MessagingReferenceTypedDict
     from .metadatametadata import (
         MetadataMetadata,
         MetadataMetadataFormat,
@@ -819,6 +822,26 @@ if TYPE_CHECKING:
     from .property_lmsstudent_address import (
         PropertyLmsStudentAddress,
         PropertyLmsStudentAddressTypedDict,
+    )
+    from .property_messagingevent_button import (
+        PropertyMessagingEventButton,
+        PropertyMessagingEventButtonTypedDict,
+    )
+    from .property_messagingevent_channel import (
+        PropertyMessagingEventChannel,
+        PropertyMessagingEventChannelTypedDict,
+    )
+    from .property_messagingevent_message import (
+        PropertyMessagingEventMessage,
+        PropertyMessagingEventMessageTypedDict,
+    )
+    from .property_messagingevent_message_author_member import (
+        PropertyMessagingEventMessageAuthorMember,
+        PropertyMessagingEventMessageAuthorMemberTypedDict,
+    )
+    from .property_messagingevent_user import (
+        PropertyMessagingEventUser,
+        PropertyMessagingEventUserTypedDict,
     )
     from .property_messagingmessage_author_member import (
         PropertyMessagingMessageAuthorMember,
@@ -1497,16 +1520,21 @@ __all__ = [
     "MarketingMemberTypedDict",
     "MessagingAttachment",
     "MessagingAttachmentTypedDict",
+    "MessagingButton",
+    "MessagingButtonTypedDict",
     "MessagingChannel",
-    "MessagingChannelMessage",
-    "MessagingChannelMessageTypedDict",
     "MessagingChannelTypedDict",
+    "MessagingEvent",
+    "MessagingEventType",
+    "MessagingEventTypedDict",
     "MessagingMember",
     "MessagingMemberTypedDict",
     "MessagingMessage",
     "MessagingMessageTypedDict",
     "MessagingReaction",
     "MessagingReactionTypedDict",
+    "MessagingReference",
+    "MessagingReferenceTypedDict",
     "MetadataMetadata",
     "MetadataMetadataFormat",
     "MetadataMetadataTypedDict",
@@ -1638,6 +1666,16 @@ __all__ = [
     "PropertyIntegrationSupportWebhookEventsUpdated",
     "PropertyLmsStudentAddress",
     "PropertyLmsStudentAddressTypedDict",
+    "PropertyMessagingEventButton",
+    "PropertyMessagingEventButtonTypedDict",
+    "PropertyMessagingEventChannel",
+    "PropertyMessagingEventChannelTypedDict",
+    "PropertyMessagingEventMessage",
+    "PropertyMessagingEventMessageAuthorMember",
+    "PropertyMessagingEventMessageAuthorMemberTypedDict",
+    "PropertyMessagingEventMessageTypedDict",
+    "PropertyMessagingEventUser",
+    "PropertyMessagingEventUserTypedDict",
     "PropertyMessagingMessageAuthorMember",
     "PropertyMessagingMessageAuthorMemberTypedDict",
     "PropertyMessagingReactionMember",
@@ -2430,16 +2468,21 @@ _dynamic_imports: dict[str, str] = {
     "MarketingMemberTypedDict": ".marketingmember",
     "MessagingAttachment": ".messagingattachment",
     "MessagingAttachmentTypedDict": ".messagingattachment",
+    "MessagingButton": ".messagingbutton",
+    "MessagingButtonTypedDict": ".messagingbutton",
     "MessagingChannel": ".messagingchannel",
     "MessagingChannelTypedDict": ".messagingchannel",
-    "MessagingChannelMessage": ".messagingchannelmessage",
-    "MessagingChannelMessageTypedDict": ".messagingchannelmessage",
+    "MessagingEvent": ".messagingevent",
+    "MessagingEventType": ".messagingevent",
+    "MessagingEventTypedDict": ".messagingevent",
     "MessagingMember": ".messagingmember",
     "MessagingMemberTypedDict": ".messagingmember",
     "MessagingMessage": ".messagingmessage",
     "MessagingMessageTypedDict": ".messagingmessage",
     "MessagingReaction": ".messagingreaction",
     "MessagingReactionTypedDict": ".messagingreaction",
+    "MessagingReference": ".messagingreference",
+    "MessagingReferenceTypedDict": ".messagingreference",
     "MetadataMetadata": ".metadatametadata",
     "MetadataMetadataFormat": ".metadatametadata",
     "MetadataMetadataTypedDict": ".metadatametadata",
@@ -2555,6 +2598,16 @@ _dynamic_imports: dict[str, str] = {
     "PropertyIntegrationSupportWebhookEventsUpdated": ".property_integrationsupport_webhook_events_updated",
     "PropertyLmsStudentAddress": ".property_lmsstudent_address",
     "PropertyLmsStudentAddressTypedDict": ".property_lmsstudent_address",
+    "PropertyMessagingEventButton": ".property_messagingevent_button",
+    "PropertyMessagingEventButtonTypedDict": ".property_messagingevent_button",
+    "PropertyMessagingEventChannel": ".property_messagingevent_channel",
+    "PropertyMessagingEventChannelTypedDict": ".property_messagingevent_channel",
+    "PropertyMessagingEventMessage": ".property_messagingevent_message",
+    "PropertyMessagingEventMessageTypedDict": ".property_messagingevent_message",
+    "PropertyMessagingEventMessageAuthorMember": ".property_messagingevent_message_author_member",
+    "PropertyMessagingEventMessageAuthorMemberTypedDict": ".property_messagingevent_message_author_member",
+    "PropertyMessagingEventUser": ".property_messagingevent_user",
+    "PropertyMessagingEventUserTypedDict": ".property_messagingevent_user",
     "PropertyMessagingMessageAuthorMember": ".property_messagingmessage_author_member",
     "PropertyMessagingMessageAuthorMemberTypedDict": ".property_messagingmessage_author_member",
     "PropertyMessagingReactionMember": ".property_messagingreaction_member",
