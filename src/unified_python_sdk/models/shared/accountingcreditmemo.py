@@ -30,6 +30,7 @@ class AccountingCreditmemoStatus(str, Enum, metaclass=utils.OpenEnumMeta):
     PARTIALLY_PAID = "PARTIALLY_PAID"
     PARTIALLY_REFUNDED = "PARTIALLY_REFUNDED"
     REFUNDED = "REFUNDED"
+    OVERDUE = "OVERDUE"
 
 
 class AccountingCreditmemoTypedDict(TypedDict):
