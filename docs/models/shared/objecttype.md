@@ -81,6 +81,7 @@
 | `GENAI_EMBEDDING`          | genai_embedding            |
 | `MESSAGING_MESSAGE`        | messaging_message          |
 | `MESSAGING_CHANNEL`        | messaging_channel          |
+| `MESSAGING_EVENT`          | messaging_event            |
 | `KMS_SPACE`                | kms_space                  |
 | `KMS_PAGE`                 | kms_page                   |
 | `KMS_COMMENT`              | kms_comment                |

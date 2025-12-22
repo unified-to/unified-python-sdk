@@ -143,6 +143,8 @@
 | `MESSAGING_MESSAGE_READ`         | messaging_message_read           |
 | `MESSAGING_MESSAGE_WRITE`        | messaging_message_write          |
 | `MESSAGING_CHANNEL_READ`         | messaging_channel_read           |
+| `MESSAGING_EVENT_READ`           | messaging_event_read             |
+| `MESSAGING_EVENT_WRITE`          | messaging_event_write            |
 | `KMS_SPACE_READ`                 | kms_space_read                   |
 | `KMS_SPACE_WRITE`                | kms_space_write                  |
 | `KMS_PAGE_READ`                  | kms_page_read                    |

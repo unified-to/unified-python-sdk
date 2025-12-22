@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: dc843dc4-1925-45d6-bdd8-efe55bdf8fa2
 management:
-  docChecksum: 333cdf57ecb8fc0562c8da2e5dd0fd38
+  docChecksum: 33d600247d6caaa9557a7dac72257357
   docVersion: "1.0"
   speakeasyVersion: 1.680.3
   generationVersion: 2.788.5
-  releaseVersion: 0.56.6
-  configChecksum: 4611dfb1386f9239b7c49003236f8bd0
+  releaseVersion: 0.56.7
+  configChecksum: e32bcc7763514945fb1337d5bcc4aa2a
   repoURL: https://github.com/unified-to/unified-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-python-sdk.git
   published: true
 persistentEdits:
-  generation_id: e48cce55-257e-4d80-8ce6-705685438b56
-  pristine_commit_hash: f43be8c1ffc691e5e4705ebf28b15169a4e5c386
-  pristine_tree_hash: ff8ad73e2023ee03ff080187a6e28e83ea2b4df8
+  generation_id: 2c38f6ef-5010-42e7-bf26-3010575aee0c
+  pristine_commit_hash: f0b4b0d2e8bb5119b4c396d8a3f573c32fea15b5
+  pristine_tree_hash: 77d3fe7849436104e115a37b1cf6c73817677983
 features:
   python:
     acceptHeaders: 3.0.0
@@ -5686,8 +5686,8 @@ trackedFiles:
     pristine_git_object: d8a3e7590ea474b3f6cb805411c5d03600f7d0b6
   docs/models/shared/objecttype.md:
     id: 36ad755d3eb6
-    last_write_checksum: sha1:64a911b3fff257dba74186300b620f90e5458679
-    pristine_git_object: 7fb3748bbcde2cbf11b0e3458b93cd508fed8193
+    last_write_checksum: sha1:67330af75c0699f5d3fa29fa67f969c4f100e70e
+    pristine_git_object: 2d6c391dae8882c0f7b0c6b4327e124c3aa73da9
   docs/models/shared/one.md:
     id: 6a7e56546f7e
     last_write_checksum: sha1:cf4c9b7629bdfb5a4196cf3446928735be87767d
@@ -5858,8 +5858,8 @@ trackedFiles:
     pristine_git_object: 81bb8b6ba5ac9bb32f309fec4833e60142620b28
   docs/models/shared/propertyconnectionpermissions.md:
     id: ba669e8bae08
-    last_write_checksum: sha1:1c237f061eb54f46ed39e72623ecc28d6b80f088
-    pristine_git_object: e96e1e78d5b4bdc8cdb013e6f7b47b27bcc63f05
+    last_write_checksum: sha1:00ead70d426e8a2c7b05ae447dcc91d76c06bb33
+    pristine_git_object: 9f74750a4f4f61eeef8740a7d10f4453d9ec040f
   docs/models/shared/propertycrmcompanyaddress.md:
     id: 41f29a125712
     last_write_checksum: sha1:73f2561f7faf2feb9e98565137f1301b8a6b084c
@@ -7070,8 +7070,8 @@ trackedFiles:
     pristine_git_object: 2cc45ce653cbcac61ce0564ce800e33c37e3c2ab
   pyproject.toml:
     id: 5d07e7d72637
-    last_write_checksum: sha1:2aea2e84e658138b3e4fbf626c1ec74bf7b771c5
-    pristine_git_object: 45d06b24dcd74f954aee0b4029d4f3ca067d265f
+    last_write_checksum: sha1:ef821d5a56da6c644db2aa8d2819f8d7c55c5dd4
+    pristine_git_object: 7727287837a8e3777db13358be6dae64f10eda6b
   scripts/prepare_readme.py:
     id: e0c5957a6035
     last_write_checksum: sha1:dc5909a4bb9bb80be82679e1fb30cc5e749b2a96
@@ -7098,8 +7098,8 @@ trackedFiles:
     pristine_git_object: c68594b47b7cc67a5fe0b48892d7774ba2376fc8
   src/unified_python_sdk/_version.py:
     id: c87ca15cab1b
-    last_write_checksum: sha1:889b728abb681e33c4be94a32d6da496e41e5a5b
-    pristine_git_object: f479079bfe191c187d79ff3c9e57895a2c4216ce
+    last_write_checksum: sha1:283784b01778c801b52acbfc3a794572e3e5d09e
+    pristine_git_object: c74b1c8c8e9565c613c108931daf93c32823e1f9
   src/unified_python_sdk/account.py:
     id: 85b44a7c768c
     last_write_checksum: sha1:0e2594eba875e2aec32c26ec5e6d1d18e173840e
@@ -10266,8 +10266,8 @@ trackedFiles:
     pristine_git_object: d479ab3cceca26655c8af34427d9388afdebd9c6
   src/unified_python_sdk/models/shared/property_connection_permissions.py:
     id: 8046a25dee7c
-    last_write_checksum: sha1:53285aa138b0c493f54e1f3cfed3274a33505210
-    pristine_git_object: 43167ea8b3eb8888c06b3621b85f2e7ca4445509
+    last_write_checksum: sha1:14ee7d502d066b268135edf0c016f60cba59d847
+    pristine_git_object: 92851d8248c57d8140804d1571e75df6759b9627
   src/unified_python_sdk/models/shared/property_crmcompany_address.py:
     id: f5121a79f64a
     last_write_checksum: sha1:789b3a51aa4d682012e463aca4b8874331657586
@@ -10630,8 +10630,8 @@ trackedFiles:
     pristine_git_object: e7358043e2371849a91b80436c391775fbfa2d0b
   src/unified_python_sdk/models/shared/webhook.py:
     id: dc66d034e66f
-    last_write_checksum: sha1:60195088c37c6a0a11a7892765eb23dca82546c7
-    pristine_git_object: 5ad67b9c05adaa0a5fe146941483e47cc9aeb142
+    last_write_checksum: sha1:e73b2f2ba8443b1338440ffad823296f7fc950e5
+    pristine_git_object: f7ea0ec2461b136c81cc1f49583fb14535f55e5c
   src/unified_python_sdk/note.py:
     id: 0896571482f2
     last_write_checksum: sha1:4e1d4e5310fdf850c5a0459fc35971e8374c5758
