@@ -30,6 +30,8 @@ class AccountingSalesorderStatus(str, Enum, metaclass=utils.OpenEnumMeta):
     PARTIALLY_PAID = "PARTIALLY_PAID"
     PARTIALLY_REFUNDED = "PARTIALLY_REFUNDED"
     REFUNDED = "REFUNDED"
+    SUBMITTED = "SUBMITTED"
+    DELETED = "DELETED"
 
 
 class AccountingSalesorderTypedDict(TypedDict):
