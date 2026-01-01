@@ -1,0 +1,16 @@
+# AdsReport
+
+
+## Fields
+
+| Field                                                                    | Type                                                                     | Required                                                                 | Description                                                              |
+| ------------------------------------------------------------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ |
+| `created_at`                                                             | [date](https://docs.python.org/3/library/datetime.html#date-objects)     | :heavy_minus_sign:                                                       | N/A                                                                      |
+| `currency`                                                               | *Optional[str]*                                                          | :heavy_minus_sign:                                                       | N/A                                                                      |
+| `end_at`                                                                 | [date](https://docs.python.org/3/library/datetime.html#date-objects)     | :heavy_minus_sign:                                                       | N/A                                                                      |
+| `id`                                                                     | *Optional[str]*                                                          | :heavy_minus_sign:                                                       | N/A                                                                      |
+| `metrics`                                                                | List[[shared.AdsReportMetrics](../../models/shared/adsreportmetrics.md)] | :heavy_minus_sign:                                                       | N/A                                                                      |
+| `organization_id`                                                        | *Optional[str]*                                                          | :heavy_minus_sign:                                                       | N/A                                                                      |
+| `raw`                                                                    | Dict[str, *Any*]                                                         | :heavy_minus_sign:                                                       | N/A                                                                      |
+| `start_at`                                                               | [date](https://docs.python.org/3/library/datetime.html#date-objects)     | :heavy_minus_sign:                                                       | N/A                                                                      |
+| `updated_at`                                                             | [date](https://docs.python.org/3/library/datetime.html#date-objects)     | :heavy_minus_sign:                                                       | N/A                                                                      |

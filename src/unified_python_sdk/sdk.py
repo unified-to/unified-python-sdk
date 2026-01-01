@@ -19,6 +19,8 @@ if TYPE_CHECKING:
     from unified_python_sdk.account import Account
     from unified_python_sdk.accounting import Accounting
     from unified_python_sdk.activity import Activity
+    from unified_python_sdk.ad import Ad
+    from unified_python_sdk.ads import Ads
     from unified_python_sdk.apicall import Apicall
     from unified_python_sdk.application import Application
     from unified_python_sdk.applicationstatus import Applicationstatus
@@ -31,6 +33,7 @@ if TYPE_CHECKING:
     from unified_python_sdk.busy import Busy
     from unified_python_sdk.calendar import Calendar
     from unified_python_sdk.call import Call
+    from unified_python_sdk.campaign import Campaign
     from unified_python_sdk.candidate import Candidate
     from unified_python_sdk.cashflow import Cashflow
     from unified_python_sdk.category import Category
@@ -155,6 +158,10 @@ class UnifiedTo(BaseSDK):
     taxrate: "Taxrate"
     transaction: "Transaction"
     trialbalance: "Trialbalance"
+    ads: "Ads"
+    ad: "Ad"
+    campaign: "Campaign"
+    group: "Group"
     ats: "Ats"
     activity: "Activity"
     application: "Application"
@@ -192,7 +199,6 @@ class UnifiedTo(BaseSDK):
     deduction: "Deduction"
     device: "Device"
     employee: "Employee"
-    group: "Group"
     payslip: "Payslip"
     timeoff: "Timeoff"
     timeshift: "Timeshift"
@@ -268,6 +274,10 @@ class UnifiedTo(BaseSDK):
         "taxrate": ("unified_python_sdk.taxrate", "Taxrate"),
         "transaction": ("unified_python_sdk.transaction", "Transaction"),
         "trialbalance": ("unified_python_sdk.trialbalance", "Trialbalance"),
+        "ads": ("unified_python_sdk.ads", "Ads"),
+        "ad": ("unified_python_sdk.ad", "Ad"),
+        "campaign": ("unified_python_sdk.campaign", "Campaign"),
+        "group": ("unified_python_sdk.group", "Group"),
         "ats": ("unified_python_sdk.ats", "Ats"),
         "activity": ("unified_python_sdk.activity", "Activity"),
         "application": ("unified_python_sdk.application", "Application"),
@@ -308,7 +318,6 @@ class UnifiedTo(BaseSDK):
         "deduction": ("unified_python_sdk.deduction", "Deduction"),
         "device": ("unified_python_sdk.device", "Device"),
         "employee": ("unified_python_sdk.employee", "Employee"),
-        "group": ("unified_python_sdk.group", "Group"),
         "payslip": ("unified_python_sdk.payslip", "Payslip"),
         "timeoff": ("unified_python_sdk.timeoff", "Timeoff"),
         "timeshift": ("unified_python_sdk.timeshift", "Timeshift"),

@@ -193,3 +193,12 @@
 | `CALENDAR_RECORDING_WRITE`       | calendar_recording_write         |
 | `ENRICH_PERSON_READ`             | enrich_person_read               |
 | `ENRICH_COMPANY_READ`            | enrich_company_read              |
+| `ADS_AD_READ`                    | ads_ad_read                      |
+| `ADS_AD_WRITE`                   | ads_ad_write                     |
+| `ADS_CAMPAIGN_READ`              | ads_campaign_read                |
+| `ADS_CAMPAIGN_WRITE`             | ads_campaign_write               |
+| `ADS_GROUP_READ`                 | ads_group_read                   |
+| `ADS_GROUP_WRITE`                | ads_group_write                  |
+| `ADS_REPORT_READ`                | ads_report_read                  |
+| `ADS_ORGANIZATION_READ`          | ads_organization_read            |
+| `ADS_ORGANIZATION_WRITE`         | ads_organization_write           |

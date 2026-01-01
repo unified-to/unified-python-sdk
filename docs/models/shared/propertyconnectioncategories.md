@@ -28,3 +28,4 @@
 | `METADATA`     | metadata       |
 | `CALENDAR`     | calendar       |
 | `VERIFICATION` | verification   |
+| `ADS`          | ads            |

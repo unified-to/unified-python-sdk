@@ -1,0 +1,14 @@
+# PropertyAdsReportMetricsAdAdType
+
+
+## Values
+
+| Name         | Value        |
+| ------------ | ------------ |
+| `TEXT`       | TEXT         |
+| `IMAGE`      | IMAGE        |
+| `VIDEO`      | VIDEO        |
+| `RESPONSIVE` | RESPONSIVE   |
+| `SHOPPING`   | SHOPPING     |
+| `APP`        | APP          |
+| `CALL`       | CALL         |

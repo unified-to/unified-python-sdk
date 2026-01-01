@@ -34,6 +34,7 @@ class ListUnifiedIntegrationsQueryParamCategories(str, Enum):
     METADATA = "metadata"
     CALENDAR = "calendar"
     VERIFICATION = "verification"
+    ADS = "ads"
 
 
 class ListUnifiedIntegrationsRequestTypedDict(TypedDict):

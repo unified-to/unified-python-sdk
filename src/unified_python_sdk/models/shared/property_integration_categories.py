@@ -29,3 +29,4 @@ class PropertyIntegrationCategories(str, Enum, metaclass=utils.OpenEnumMeta):
     METADATA = "metadata"
     CALENDAR = "calendar"
     VERIFICATION = "verification"
+    ADS = "ads"

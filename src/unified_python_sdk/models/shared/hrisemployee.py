@@ -78,6 +78,7 @@ class HrisEmployeeTypedDict(TypedDict):
     gender: NotRequired[HrisEmployeeGender]
     groups: NotRequired[List[HrisGroupTypedDict]]
     r"""Which groups/teams/units that this employee/user belongs to.  May not have all of the Group fields present, but should have id, name, or email."""
+    has_mfa: NotRequired[bool]
     hired_at: NotRequired[datetime]
     id: NotRequired[str]
     image_url: NotRequired[str]
@@ -153,6 +154,8 @@ class HrisEmployee(BaseModel):
 
     groups: Optional[List[HrisGroup]] = None
     r"""Which groups/teams/units that this employee/user belongs to.  May not have all of the Group fields present, but should have id, name, or email."""
+
+    has_mfa: Optional[bool] = None
 
     hired_at: Optional[datetime] = None
 

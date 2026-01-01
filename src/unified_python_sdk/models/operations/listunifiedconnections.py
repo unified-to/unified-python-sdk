@@ -34,6 +34,7 @@ class Categories(str, Enum):
     METADATA = "metadata"
     CALENDAR = "calendar"
     VERIFICATION = "verification"
+    ADS = "ads"
 
 
 class ListUnifiedConnectionsRequestTypedDict(TypedDict):

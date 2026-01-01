@@ -283,6 +283,43 @@ asyncio.run(main())
 * [remove_ats_activity](docs/sdks/activity/README.md#remove_ats_activity) - Remove an activity
 * [update_ats_activity](docs/sdks/activity/README.md#update_ats_activity) - Update an activity
 
+### [Ad](docs/sdks/ad/README.md)
+
+* [create_ads_ad](docs/sdks/ad/README.md#create_ads_ad) - Create an ad
+* [get_ads_ad](docs/sdks/ad/README.md#get_ads_ad) - Retrieve an ad
+* [list_ads_ads](docs/sdks/ad/README.md#list_ads_ads) - List all ads
+* [patch_ads_ad](docs/sdks/ad/README.md#patch_ads_ad) - Update an ad
+* [remove_ads_ad](docs/sdks/ad/README.md#remove_ads_ad) - Remove an ad
+* [update_ads_ad](docs/sdks/ad/README.md#update_ads_ad) - Update an ad
+
+### [Ads](docs/sdks/ads/README.md)
+
+* [create_ads_ad](docs/sdks/ads/README.md#create_ads_ad) - Create an ad
+* [create_ads_campaign](docs/sdks/ads/README.md#create_ads_campaign) - Create a campaign
+* [create_ads_group](docs/sdks/ads/README.md#create_ads_group) - Create a group
+* [create_ads_organization](docs/sdks/ads/README.md#create_ads_organization) - Create an organization
+* [get_ads_ad](docs/sdks/ads/README.md#get_ads_ad) - Retrieve an ad
+* [get_ads_campaign](docs/sdks/ads/README.md#get_ads_campaign) - Retrieve a campaign
+* [get_ads_group](docs/sdks/ads/README.md#get_ads_group) - Retrieve a group
+* [get_ads_organization](docs/sdks/ads/README.md#get_ads_organization) - Retrieve an organization
+* [list_ads_ads](docs/sdks/ads/README.md#list_ads_ads) - List all ads
+* [list_ads_campaigns](docs/sdks/ads/README.md#list_ads_campaigns) - List all campaigns
+* [list_ads_groups](docs/sdks/ads/README.md#list_ads_groups) - List all groups
+* [list_ads_organizations](docs/sdks/ads/README.md#list_ads_organizations) - List all organizations
+* [list_ads_reports](docs/sdks/ads/README.md#list_ads_reports) - List all reports
+* [patch_ads_ad](docs/sdks/ads/README.md#patch_ads_ad) - Update an ad
+* [patch_ads_campaign](docs/sdks/ads/README.md#patch_ads_campaign) - Update a campaign
+* [patch_ads_group](docs/sdks/ads/README.md#patch_ads_group) - Update a group
+* [patch_ads_organization](docs/sdks/ads/README.md#patch_ads_organization) - Update an organization
+* [remove_ads_ad](docs/sdks/ads/README.md#remove_ads_ad) - Remove an ad
+* [remove_ads_campaign](docs/sdks/ads/README.md#remove_ads_campaign) - Remove a campaign
+* [remove_ads_group](docs/sdks/ads/README.md#remove_ads_group) - Remove a group
+* [remove_ads_organization](docs/sdks/ads/README.md#remove_ads_organization) - Remove an organization
+* [update_ads_ad](docs/sdks/ads/README.md#update_ads_ad) - Update an ad
+* [update_ads_campaign](docs/sdks/ads/README.md#update_ads_campaign) - Update a campaign
+* [update_ads_group](docs/sdks/ads/README.md#update_ads_group) - Update a group
+* [update_ads_organization](docs/sdks/ads/README.md#update_ads_organization) - Update an organization
+
 ### [Apicall](docs/sdks/apicall/README.md)
 
 * [get_unified_apicall](docs/sdks/apicall/README.md#get_unified_apicall) - Retrieve specific API Call by its ID
@@ -422,6 +459,15 @@ asyncio.run(main())
 
 * [get_uc_call](docs/sdks/call/README.md#get_uc_call) - Retrieve a call
 * [list_uc_calls](docs/sdks/call/README.md#list_uc_calls) - List all calls
+
+### [Campaign](docs/sdks/campaign/README.md)
+
+* [create_ads_campaign](docs/sdks/campaign/README.md#create_ads_campaign) - Create a campaign
+* [get_ads_campaign](docs/sdks/campaign/README.md#get_ads_campaign) - Retrieve a campaign
+* [list_ads_campaigns](docs/sdks/campaign/README.md#list_ads_campaigns) - List all campaigns
+* [patch_ads_campaign](docs/sdks/campaign/README.md#patch_ads_campaign) - Update a campaign
+* [remove_ads_campaign](docs/sdks/campaign/README.md#remove_ads_campaign) - Remove a campaign
+* [update_ads_campaign](docs/sdks/campaign/README.md#update_ads_campaign) - Update a campaign
 
 ### [Candidate](docs/sdks/candidate/README.md)
 
@@ -771,16 +817,22 @@ asyncio.run(main())
 
 ### [Group](docs/sdks/group/README.md)
 
+* [create_ads_group](docs/sdks/group/README.md#create_ads_group) - Create a group
 * [create_hris_group](docs/sdks/group/README.md#create_hris_group) - Create a group
 * [create_scim_groups](docs/sdks/group/README.md#create_scim_groups) - Create group
+* [get_ads_group](docs/sdks/group/README.md#get_ads_group) - Retrieve a group
 * [get_hris_group](docs/sdks/group/README.md#get_hris_group) - Retrieve a group
 * [get_scim_groups](docs/sdks/group/README.md#get_scim_groups) - Get group
+* [list_ads_groups](docs/sdks/group/README.md#list_ads_groups) - List all groups
 * [list_hris_groups](docs/sdks/group/README.md#list_hris_groups) - List all groups
 * [list_scim_groups](docs/sdks/group/README.md#list_scim_groups) - List groups
+* [patch_ads_group](docs/sdks/group/README.md#patch_ads_group) - Update a group
 * [patch_hris_group](docs/sdks/group/README.md#patch_hris_group) - Update a group
 * [patch_scim_groups](docs/sdks/group/README.md#patch_scim_groups) - Update group
+* [remove_ads_group](docs/sdks/group/README.md#remove_ads_group) - Remove a group
 * [remove_hris_group](docs/sdks/group/README.md#remove_hris_group) - Remove a group
 * [remove_scim_groups](docs/sdks/group/README.md#remove_scim_groups) - Delete group
+* [update_ads_group](docs/sdks/group/README.md#update_ads_group) - Update a group
 * [update_hris_group](docs/sdks/group/README.md#update_hris_group) - Update a group
 * [update_scim_groups](docs/sdks/group/README.md#update_scim_groups) - Update group
 
@@ -1093,13 +1145,19 @@ asyncio.run(main())
 
 ### [Organization](docs/sdks/organization/README.md)
 
+* [create_ads_organization](docs/sdks/organization/README.md#create_ads_organization) - Create an organization
 * [create_repo_organization](docs/sdks/organization/README.md#create_repo_organization) - Create an organization
 * [get_accounting_organization](docs/sdks/organization/README.md#get_accounting_organization) - Retrieve an organization
+* [get_ads_organization](docs/sdks/organization/README.md#get_ads_organization) - Retrieve an organization
 * [get_repo_organization](docs/sdks/organization/README.md#get_repo_organization) - Retrieve an organization
 * [list_accounting_organizations](docs/sdks/organization/README.md#list_accounting_organizations) - List all organizations
+* [list_ads_organizations](docs/sdks/organization/README.md#list_ads_organizations) - List all organizations
 * [list_repo_organizations](docs/sdks/organization/README.md#list_repo_organizations) - List all organizations
+* [patch_ads_organization](docs/sdks/organization/README.md#patch_ads_organization) - Update an organization
 * [patch_repo_organization](docs/sdks/organization/README.md#patch_repo_organization) - Update an organization
+* [remove_ads_organization](docs/sdks/organization/README.md#remove_ads_organization) - Remove an organization
 * [remove_repo_organization](docs/sdks/organization/README.md#remove_repo_organization) - Remove an organization
+* [update_ads_organization](docs/sdks/organization/README.md#update_ads_organization) - Update an organization
 * [update_repo_organization](docs/sdks/organization/README.md#update_repo_organization) - Update an organization
 
 ### [Package](docs/sdks/package/README.md)
@@ -1264,6 +1322,7 @@ asyncio.run(main())
 
 * [get_accounting_report](docs/sdks/report/README.md#get_accounting_report) - Retrieve a report
 * [list_accounting_reports](docs/sdks/report/README.md#list_accounting_reports) - List all reports
+* [list_ads_reports](docs/sdks/report/README.md#list_ads_reports) - List all reports
 
 ### [Repository](docs/sdks/repository/README.md)
 

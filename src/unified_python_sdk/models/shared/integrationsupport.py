@@ -28,6 +28,12 @@ class ListAccountID(str, Enum, metaclass=utils.OpenEnumMeta):
     NOT_SUPPORTED = "not-supported"
 
 
+class ListAdID(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
 class ListApplicationID(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
@@ -53,6 +59,12 @@ class ListCalendarID(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class ListCallID(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
+class ListCampaignID(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
     NOT_SUPPORTED = "not-supported"
@@ -149,6 +161,12 @@ class ListExpand(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class ListExpandRecurringEvents(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
+class ListGroupID(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
     NOT_SUPPORTED = "not-supported"
@@ -466,6 +484,12 @@ class SearchTwitter(str, Enum, metaclass=utils.OpenEnumMeta):
     NOT_SUPPORTED = "not-supported"
 
 
+class VirtualWebhookAdID(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
 class VirtualWebhookApplicationID(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
@@ -485,6 +509,12 @@ class VirtualWebhookCalendarID(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class VirtualWebhookCallID(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
+class VirtualWebhookCampaignID(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
     NOT_SUPPORTED = "not-supported"
@@ -557,6 +587,12 @@ class VirtualWebhookExpand(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class VirtualWebhookFields(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
+class VirtualWebhookGroupID(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
     NOT_SUPPORTED = "not-supported"
@@ -704,11 +740,13 @@ class IntegrationSupportTypedDict(TypedDict):
     from_webhook: NotRequired[FromWebhook]
     inbound_fields: NotRequired[Dict[str, str]]
     list_account_id: NotRequired[ListAccountID]
+    list_ad_id: NotRequired[ListAdID]
     list_application_id: NotRequired[ListApplicationID]
     list_benefit_id: NotRequired[ListBenefitID]
     list_branch_id: NotRequired[ListBranchID]
     list_calendar_id: NotRequired[ListCalendarID]
     list_call_id: NotRequired[ListCallID]
+    list_campaign_id: NotRequired[ListCampaignID]
     list_candidate_id: NotRequired[ListCandidateID]
     list_category_id: NotRequired[ListCategoryID]
     list_channel_id: NotRequired[ListChannelID]
@@ -725,6 +763,7 @@ class IntegrationSupportTypedDict(TypedDict):
     list_event_id: NotRequired[ListEventID]
     list_expand: NotRequired[ListExpand]
     list_expand_recurring_events: NotRequired[ListExpandRecurringEvents]
+    list_group_id: NotRequired[ListGroupID]
     list_instructor_id: NotRequired[ListInstructorID]
     list_interview_id: NotRequired[ListInterviewID]
     list_invoice_id: NotRequired[ListInvoiceID]
@@ -782,10 +821,12 @@ class IntegrationSupportTypedDict(TypedDict):
     search_name: NotRequired[SearchName]
     search_twitter: NotRequired[SearchTwitter]
     slow_fields: NotRequired[List[str]]
+    virtual_webhook_ad_id: NotRequired[VirtualWebhookAdID]
     virtual_webhook_application_id: NotRequired[VirtualWebhookApplicationID]
     virtual_webhook_branch_id: NotRequired[VirtualWebhookBranchID]
     virtual_webhook_calendar_id: NotRequired[VirtualWebhookCalendarID]
     virtual_webhook_call_id: NotRequired[VirtualWebhookCallID]
+    virtual_webhook_campaign_id: NotRequired[VirtualWebhookCampaignID]
     virtual_webhook_candidate_id: NotRequired[VirtualWebhookCandidateID]
     virtual_webhook_channel_id: NotRequired[VirtualWebhookChannelID]
     virtual_webhook_collection_id: NotRequired[VirtualWebhookCollectionID]
@@ -798,6 +839,7 @@ class IntegrationSupportTypedDict(TypedDict):
     virtual_webhook_event_id: NotRequired[VirtualWebhookEventID]
     virtual_webhook_expand: NotRequired[VirtualWebhookExpand]
     virtual_webhook_fields: NotRequired[VirtualWebhookFields]
+    virtual_webhook_group_id: NotRequired[VirtualWebhookGroupID]
     virtual_webhook_item_id: NotRequired[VirtualWebhookItemID]
     virtual_webhook_item_variant_id: NotRequired[VirtualWebhookItemVariantID]
     virtual_webhook_job_id: NotRequired[VirtualWebhookJobID]
@@ -835,6 +877,10 @@ class IntegrationSupport(BaseModel):
         Optional[ListAccountID], PlainValidator(validate_open_enum(False))
     ] = None
 
+    list_ad_id: Annotated[
+        Optional[ListAdID], PlainValidator(validate_open_enum(False))
+    ] = None
+
     list_application_id: Annotated[
         Optional[ListApplicationID], PlainValidator(validate_open_enum(False))
     ] = None
@@ -853,6 +899,10 @@ class IntegrationSupport(BaseModel):
 
     list_call_id: Annotated[
         Optional[ListCallID], PlainValidator(validate_open_enum(False))
+    ] = None
+
+    list_campaign_id: Annotated[
+        Optional[ListCampaignID], PlainValidator(validate_open_enum(False))
     ] = None
 
     list_candidate_id: Annotated[
@@ -917,6 +967,10 @@ class IntegrationSupport(BaseModel):
 
     list_expand_recurring_events: Annotated[
         Optional[ListExpandRecurringEvents], PlainValidator(validate_open_enum(False))
+    ] = None
+
+    list_group_id: Annotated[
+        Optional[ListGroupID], PlainValidator(validate_open_enum(False))
     ] = None
 
     list_instructor_id: Annotated[
@@ -1136,6 +1190,10 @@ class IntegrationSupport(BaseModel):
 
     slow_fields: Optional[List[str]] = None
 
+    virtual_webhook_ad_id: Annotated[
+        Optional[VirtualWebhookAdID], PlainValidator(validate_open_enum(False))
+    ] = None
+
     virtual_webhook_application_id: Annotated[
         Optional[VirtualWebhookApplicationID], PlainValidator(validate_open_enum(False))
     ] = None
@@ -1150,6 +1208,10 @@ class IntegrationSupport(BaseModel):
 
     virtual_webhook_call_id: Annotated[
         Optional[VirtualWebhookCallID], PlainValidator(validate_open_enum(False))
+    ] = None
+
+    virtual_webhook_campaign_id: Annotated[
+        Optional[VirtualWebhookCampaignID], PlainValidator(validate_open_enum(False))
     ] = None
 
     virtual_webhook_candidate_id: Annotated[
@@ -1198,6 +1260,10 @@ class IntegrationSupport(BaseModel):
 
     virtual_webhook_fields: Annotated[
         Optional[VirtualWebhookFields], PlainValidator(validate_open_enum(False))
+    ] = None
+
+    virtual_webhook_group_id: Annotated[
+        Optional[VirtualWebhookGroupID], PlainValidator(validate_open_enum(False))
     ] = None
 
     virtual_webhook_item_id: Annotated[
@@ -1314,6 +1380,15 @@ class IntegrationSupport(BaseModel):
                 return value
         return value
 
+    @field_serializer("list_ad_id")
+    def serialize_list_ad_id(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.ListAdID(value)
+            except ValueError:
+                return value
+        return value
+
     @field_serializer("list_application_id")
     def serialize_list_application_id(self, value):
         if isinstance(value, str):
@@ -1355,6 +1430,15 @@ class IntegrationSupport(BaseModel):
         if isinstance(value, str):
             try:
                 return shared.ListCallID(value)
+            except ValueError:
+                return value
+        return value
+
+    @field_serializer("list_campaign_id")
+    def serialize_list_campaign_id(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.ListCampaignID(value)
             except ValueError:
                 return value
         return value
@@ -1499,6 +1583,15 @@ class IntegrationSupport(BaseModel):
         if isinstance(value, str):
             try:
                 return shared.ListExpandRecurringEvents(value)
+            except ValueError:
+                return value
+        return value
+
+    @field_serializer("list_group_id")
+    def serialize_list_group_id(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.ListGroupID(value)
             except ValueError:
                 return value
         return value
@@ -1971,6 +2064,15 @@ class IntegrationSupport(BaseModel):
                 return value
         return value
 
+    @field_serializer("virtual_webhook_ad_id")
+    def serialize_virtual_webhook_ad_id(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.VirtualWebhookAdID(value)
+            except ValueError:
+                return value
+        return value
+
     @field_serializer("virtual_webhook_application_id")
     def serialize_virtual_webhook_application_id(self, value):
         if isinstance(value, str):
@@ -2003,6 +2105,15 @@ class IntegrationSupport(BaseModel):
         if isinstance(value, str):
             try:
                 return shared.VirtualWebhookCallID(value)
+            except ValueError:
+                return value
+        return value
+
+    @field_serializer("virtual_webhook_campaign_id")
+    def serialize_virtual_webhook_campaign_id(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.VirtualWebhookCampaignID(value)
             except ValueError:
                 return value
         return value
@@ -2111,6 +2222,15 @@ class IntegrationSupport(BaseModel):
         if isinstance(value, str):
             try:
                 return shared.VirtualWebhookFields(value)
+            except ValueError:
+                return value
+        return value
+
+    @field_serializer("virtual_webhook_group_id")
+    def serialize_virtual_webhook_group_id(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.VirtualWebhookGroupID(value)
             except ValueError:
                 return value
         return value
