@@ -6,27 +6,55 @@ from .property_adsgroup_targeting import (
     PropertyAdsGroupTargetingTypedDict,
 )
 from datetime import datetime
+from enum import Enum
+from pydantic import field_serializer
+from pydantic.functional_validators import PlainValidator
 from typing import Any, Dict, Optional
-from typing_extensions import NotRequired, TypedDict
+from typing_extensions import Annotated, NotRequired, TypedDict
+from unified_python_sdk import utils
+from unified_python_sdk.models import shared
 from unified_python_sdk.types import BaseModel
+from unified_python_sdk.utils import validate_open_enum
+
+
+class AdsGroupBudgetPeriod(str, Enum, metaclass=utils.OpenEnumMeta):
+    DAILY = "DAILY"
+    MONTHLY = "MONTHLY"
+    TOTAL = "TOTAL"
+    LIFETIME = "LIFETIME"
 
 
 class AdsGroupTypedDict(TypedDict):
+    bid_amount: NotRequired[float]
+    budget_amount: NotRequired[float]
+    budget_period: NotRequired[AdsGroupBudgetPeriod]
     campaign_id: NotRequired[str]
     created_at: NotRequired[datetime]
+    end_at: NotRequired[datetime]
     id: NotRequired[str]
     is_active: NotRequired[bool]
     name: NotRequired[str]
     organization_id: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
+    start_at: NotRequired[datetime]
     targeting: NotRequired[PropertyAdsGroupTargetingTypedDict]
     updated_at: NotRequired[datetime]
 
 
 class AdsGroup(BaseModel):
+    bid_amount: Optional[float] = None
+
+    budget_amount: Optional[float] = None
+
+    budget_period: Annotated[
+        Optional[AdsGroupBudgetPeriod], PlainValidator(validate_open_enum(False))
+    ] = None
+
     campaign_id: Optional[str] = None
 
     created_at: Optional[datetime] = None
+
+    end_at: Optional[datetime] = None
 
     id: Optional[str] = None
 
@@ -38,6 +66,17 @@ class AdsGroup(BaseModel):
 
     raw: Optional[Dict[str, Any]] = None
 
+    start_at: Optional[datetime] = None
+
     targeting: Optional[PropertyAdsGroupTargeting] = None
 
     updated_at: Optional[datetime] = None
+
+    @field_serializer("budget_period")
+    def serialize_budget_period(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.AdsGroupBudgetPeriod(value)
+            except ValueError:
+                return value
+        return value

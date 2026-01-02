@@ -9,19 +9,25 @@ from unified_python_sdk.types import BaseModel
 
 class AdsOrganizationTypedDict(TypedDict):
     created_at: NotRequired[datetime]
+    currency: NotRequired[str]
     id: NotRequired[str]
     name: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
+    timezone: NotRequired[str]
     updated_at: NotRequired[datetime]
 
 
 class AdsOrganization(BaseModel):
     created_at: Optional[datetime] = None
 
+    currency: Optional[str] = None
+
     id: Optional[str] = None
 
     name: Optional[str] = None
 
     raw: Optional[Dict[str, Any]] = None
+
+    timezone: Optional[str] = None
 
     updated_at: Optional[datetime] = None

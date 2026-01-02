@@ -153,7 +153,7 @@ if TYPE_CHECKING:
     )
     from .adsad import AdType, AdsAd, AdsAdTypedDict
     from .adscampaign import AdsCampaign, AdsCampaignTypedDict, BudgetPeriod
-    from .adsgroup import AdsGroup, AdsGroupTypedDict
+    from .adsgroup import AdsGroup, AdsGroupBudgetPeriod, AdsGroupTypedDict
     from .adsorganization import AdsOrganization, AdsOrganizationTypedDict
     from .adsreport import AdsReport, AdsReportTypedDict
     from .adsreportmetrics import (
@@ -735,6 +735,7 @@ if TYPE_CHECKING:
     )
     from .property_adsreportmetrics_group import (
         PropertyAdsReportMetricsGroup,
+        PropertyAdsReportMetricsGroupBudgetPeriod,
         PropertyAdsReportMetricsGroupTypedDict,
     )
     from .property_adsreportmetrics_group_targeting import (
@@ -1172,6 +1173,7 @@ __all__ = [
     "AdsCampaign",
     "AdsCampaignTypedDict",
     "AdsGroup",
+    "AdsGroupBudgetPeriod",
     "AdsGroupTypedDict",
     "AdsOrganization",
     "AdsOrganizationTypedDict",
@@ -1684,6 +1686,7 @@ __all__ = [
     "PropertyAdsReportMetricsCampaignTargetingTypedDict",
     "PropertyAdsReportMetricsCampaignTypedDict",
     "PropertyAdsReportMetricsGroup",
+    "PropertyAdsReportMetricsGroupBudgetPeriod",
     "PropertyAdsReportMetricsGroupTargeting",
     "PropertyAdsReportMetricsGroupTargetingTypedDict",
     "PropertyAdsReportMetricsGroupTypedDict",
@@ -2092,6 +2095,7 @@ _dynamic_imports: dict[str, str] = {
     "AdsCampaignTypedDict": ".adscampaign",
     "BudgetPeriod": ".adscampaign",
     "AdsGroup": ".adsgroup",
+    "AdsGroupBudgetPeriod": ".adsgroup",
     "AdsGroupTypedDict": ".adsgroup",
     "AdsOrganization": ".adsorganization",
     "AdsOrganizationTypedDict": ".adsorganization",
@@ -2659,6 +2663,7 @@ _dynamic_imports: dict[str, str] = {
     "PropertyAdsReportMetricsCampaignTargeting": ".property_adsreportmetrics_campaign_targeting",
     "PropertyAdsReportMetricsCampaignTargetingTypedDict": ".property_adsreportmetrics_campaign_targeting",
     "PropertyAdsReportMetricsGroup": ".property_adsreportmetrics_group",
+    "PropertyAdsReportMetricsGroupBudgetPeriod": ".property_adsreportmetrics_group",
     "PropertyAdsReportMetricsGroupTypedDict": ".property_adsreportmetrics_group",
     "PropertyAdsReportMetricsGroupTargeting": ".property_adsreportmetrics_group_targeting",
     "PropertyAdsReportMetricsGroupTargetingTypedDict": ".property_adsreportmetrics_group_targeting",

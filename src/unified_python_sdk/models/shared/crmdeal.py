@@ -13,6 +13,7 @@ class CrmDealTypedDict(TypedDict):
 
     amount: NotRequired[float]
     closed_at: NotRequired[datetime]
+    closing_at: NotRequired[datetime]
     company_ids: NotRequired[List[str]]
     contact_ids: NotRequired[List[str]]
     created_at: NotRequired[datetime]
@@ -40,6 +41,8 @@ class CrmDeal(BaseModel):
     amount: Optional[float] = None
 
     closed_at: Optional[datetime] = None
+
+    closing_at: Optional[datetime] = None
 
     company_ids: Optional[List[str]] = None
 

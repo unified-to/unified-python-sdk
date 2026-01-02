@@ -34,6 +34,14 @@ class AdsReportMetricsType(str, Enum, metaclass=utils.OpenEnumMeta):
     CONVERSION_VALUE = "CONVERSION_VALUE"
     CPA = "CPA"
     ROAS = "ROAS"
+    CPM = "CPM"
+    ECPM = "ECPM"
+    ENGAGEMENT = "ENGAGEMENT"
+    VIDEO_COMPLETIONS = "VIDEO_COMPLETIONS"
+    VIDEO_VIEWS = "VIDEO_VIEWS"
+    LEADS = "LEADS"
+    ENGAGEMENTS = "ENGAGEMENTS"
+    SAVES = "SAVES"
 
 
 class AdsReportMetricsTypedDict(TypedDict):

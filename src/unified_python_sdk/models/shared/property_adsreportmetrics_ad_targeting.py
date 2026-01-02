@@ -9,12 +9,22 @@ from unified_python_sdk.types import BaseModel
 class PropertyAdsReportMetricsAdTargetingTypedDict(TypedDict):
     age_ranges: NotRequired[List[str]]
     audiences: NotRequired[List[str]]
+    companies: NotRequired[List[str]]
+    company_sizes: NotRequired[List[str]]
+    degrees: NotRequired[List[str]]
     devices: NotRequired[List[str]]
     genders: NotRequired[List[str]]
+    industries: NotRequired[List[str]]
+    interests: NotRequired[List[str]]
+    job_functions: NotRequired[List[str]]
+    job_titles: NotRequired[List[str]]
     keywords: NotRequired[List[str]]
     languages: NotRequired[List[str]]
     locations: NotRequired[List[str]]
     placements: NotRequired[List[str]]
+    schools: NotRequired[List[str]]
+    seniorities: NotRequired[List[str]]
+    skills: NotRequired[List[str]]
 
 
 class PropertyAdsReportMetricsAdTargeting(BaseModel):
@@ -22,9 +32,23 @@ class PropertyAdsReportMetricsAdTargeting(BaseModel):
 
     audiences: Optional[List[str]] = None
 
+    companies: Optional[List[str]] = None
+
+    company_sizes: Optional[List[str]] = None
+
+    degrees: Optional[List[str]] = None
+
     devices: Optional[List[str]] = None
 
     genders: Optional[List[str]] = None
+
+    industries: Optional[List[str]] = None
+
+    interests: Optional[List[str]] = None
+
+    job_functions: Optional[List[str]] = None
+
+    job_titles: Optional[List[str]] = None
 
     keywords: Optional[List[str]] = None
 
@@ -33,3 +57,9 @@ class PropertyAdsReportMetricsAdTargeting(BaseModel):
     locations: Optional[List[str]] = None
 
     placements: Optional[List[str]] = None
+
+    schools: Optional[List[str]] = None
+
+    seniorities: Optional[List[str]] = None
+
+    skills: Optional[List[str]] = None

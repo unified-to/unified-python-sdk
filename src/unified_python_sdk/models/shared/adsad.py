@@ -25,6 +25,8 @@ class AdType(str, Enum, metaclass=utils.OpenEnumMeta):
     SHOPPING = "SHOPPING"
     APP = "APP"
     CALL = "CALL"
+    CAROUSEL = "CAROUSEL"
+    SOCIAL = "SOCIAL"
 
 
 class AdsAdTypedDict(TypedDict):

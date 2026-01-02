@@ -21,6 +21,8 @@ class ListAdsOrganizationsRequestTypedDict(TypedDict):
     limit: NotRequired[float]
     offset: NotRequired[float]
     order: NotRequired[str]
+    parent_id: NotRequired[str]
+    r"""The parent ID to filter by"""
     query: NotRequired[str]
     r"""Query string to search. eg. email address or name"""
     raw: NotRequired[str]
@@ -56,6 +58,12 @@ class ListAdsOrganizationsRequest(BaseModel):
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
+
+    parent_id: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+    r"""The parent ID to filter by"""
 
     query: Annotated[
         Optional[str],
