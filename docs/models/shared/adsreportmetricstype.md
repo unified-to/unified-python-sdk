@@ -22,3 +22,7 @@
 | `LEADS`             | LEADS               |
 | `ENGAGEMENTS`       | ENGAGEMENTS         |
 | `SAVES`             | SAVES               |
+| `LIKES`             | LIKES               |
+| `SHARES`            | SHARES              |
+| `COMMENTS`          | COMMENTS            |
+| `FOLLOWS`           | FOLLOWS             |

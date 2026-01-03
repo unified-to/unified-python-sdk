@@ -12,6 +12,7 @@ class AdsOrganizationTypedDict(TypedDict):
     currency: NotRequired[str]
     id: NotRequired[str]
     name: NotRequired[str]
+    parent_id: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
     timezone: NotRequired[str]
     updated_at: NotRequired[datetime]
@@ -25,6 +26,8 @@ class AdsOrganization(BaseModel):
     id: Optional[str] = None
 
     name: Optional[str] = None
+
+    parent_id: Optional[str] = None
 
     raw: Optional[Dict[str, Any]] = None
 

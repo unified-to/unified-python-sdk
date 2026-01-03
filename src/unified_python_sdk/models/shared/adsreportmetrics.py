@@ -42,6 +42,10 @@ class AdsReportMetricsType(str, Enum, metaclass=utils.OpenEnumMeta):
     LEADS = "LEADS"
     ENGAGEMENTS = "ENGAGEMENTS"
     SAVES = "SAVES"
+    LIKES = "LIKES"
+    SHARES = "SHARES"
+    COMMENTS = "COMMENTS"
+    FOLLOWS = "FOLLOWS"
 
 
 class AdsReportMetricsTypedDict(TypedDict):
