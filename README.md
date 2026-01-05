@@ -808,6 +808,26 @@ asyncio.run(main())
 * [remove_storage_file](docs/sdks/file/README.md#remove_storage_file) - Remove a file
 * [update_storage_file](docs/sdks/file/README.md#update_storage_file) - Update a file
 
+### [Form](docs/sdks/form/README.md)
+
+* [create_forms_form](docs/sdks/form/README.md#create_forms_form) - Create a form
+* [get_forms_form](docs/sdks/form/README.md#get_forms_form) - Retrieve a form
+* [list_forms_forms](docs/sdks/form/README.md#list_forms_forms) - List all forms
+* [patch_forms_form](docs/sdks/form/README.md#patch_forms_form) - Update a form
+* [remove_forms_form](docs/sdks/form/README.md#remove_forms_form) - Remove a form
+* [update_forms_form](docs/sdks/form/README.md#update_forms_form) - Update a form
+
+### [Forms](docs/sdks/forms/README.md)
+
+* [create_forms_form](docs/sdks/forms/README.md#create_forms_form) - Create a form
+* [get_forms_form](docs/sdks/forms/README.md#get_forms_form) - Retrieve a form
+* [get_forms_submission](docs/sdks/forms/README.md#get_forms_submission) - Retrieve a submission
+* [list_forms_forms](docs/sdks/forms/README.md#list_forms_forms) - List all forms
+* [list_forms_submissions](docs/sdks/forms/README.md#list_forms_submissions) - List all submissions
+* [patch_forms_form](docs/sdks/forms/README.md#patch_forms_form) - Update a form
+* [remove_forms_form](docs/sdks/forms/README.md#remove_forms_form) - Remove a form
+* [update_forms_form](docs/sdks/forms/README.md#update_forms_form) - Update a form
+
 ### [Genai](docs/sdks/genai/README.md)
 
 * [create_genai_embedding](docs/sdks/genai/README.md#create_genai_embedding) - Create an embedding
@@ -1419,6 +1439,11 @@ asyncio.run(main())
 * [patch_lms_student](docs/sdks/student/README.md#patch_lms_student) - Update a student
 * [remove_lms_student](docs/sdks/student/README.md#remove_lms_student) - Remove a student
 * [update_lms_student](docs/sdks/student/README.md#update_lms_student) - Update a student
+
+### [Submission](docs/sdks/submission/README.md)
+
+* [get_forms_submission](docs/sdks/submission/README.md#get_forms_submission) - Retrieve a submission
+* [list_forms_submissions](docs/sdks/submission/README.md#list_forms_submissions) - List all submissions
 
 ### [Subscription](docs/sdks/subscription/README.md)
 

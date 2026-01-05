@@ -111,3 +111,5 @@
 | `ADS_CAMPAIGN`             | ads_campaign               |
 | `ADS_REPORT`               | ads_report                 |
 | `ADS_GROUP`                | ads_group                  |
+| `FORMS_FORM`               | forms_form                 |
+| `FORMS_SUBMISSION`         | forms_submission           |

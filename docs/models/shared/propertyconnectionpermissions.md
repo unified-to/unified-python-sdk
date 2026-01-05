@@ -202,3 +202,7 @@
 | `ADS_REPORT_READ`                | ads_report_read                  |
 | `ADS_ORGANIZATION_READ`          | ads_organization_read            |
 | `ADS_ORGANIZATION_WRITE`         | ads_organization_write           |
+| `FORMS_FORM_READ`                | forms_form_read                  |
+| `FORMS_FORM_WRITE`               | forms_form_write                 |
+| `FORMS_SUBMISSION_READ`          | forms_submission_read            |
+| `FORMS_SUBMISSION_WRITE`         | forms_submission_write           |

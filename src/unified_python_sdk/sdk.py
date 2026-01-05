@@ -62,6 +62,8 @@ if TYPE_CHECKING:
     from unified_python_sdk.event import Event
     from unified_python_sdk.expense import Expense
     from unified_python_sdk.file import File
+    from unified_python_sdk.form import Form
+    from unified_python_sdk.forms import Forms
     from unified_python_sdk.genai import Genai
     from unified_python_sdk.group import Group
     from unified_python_sdk.hris import Hris
@@ -117,6 +119,7 @@ if TYPE_CHECKING:
     from unified_python_sdk.space import Space
     from unified_python_sdk.storage import Storage
     from unified_python_sdk.student import Student
+    from unified_python_sdk.submission import Submission
     from unified_python_sdk.subscription import Subscription
     from unified_python_sdk.task import Task
     from unified_python_sdk.taxrate import Taxrate
@@ -190,6 +193,9 @@ class UnifiedTo(BaseSDK):
     pipeline: "Pipeline"
     enrich: "Enrich"
     person: "Person"
+    forms: "Forms"
+    form: "Form"
+    submission: "Submission"
     genai: "Genai"
     embedding: "Embedding"
     model: "Model"
@@ -309,6 +315,9 @@ class UnifiedTo(BaseSDK):
         "pipeline": ("unified_python_sdk.pipeline", "Pipeline"),
         "enrich": ("unified_python_sdk.enrich", "Enrich"),
         "person": ("unified_python_sdk.person", "Person"),
+        "forms": ("unified_python_sdk.forms", "Forms"),
+        "form": ("unified_python_sdk.form", "Form"),
+        "submission": ("unified_python_sdk.submission", "Submission"),
         "genai": ("unified_python_sdk.genai", "Genai"),
         "embedding": ("unified_python_sdk.embedding", "Embedding"),
         "model": ("unified_python_sdk.model", "Model"),

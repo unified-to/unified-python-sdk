@@ -29,3 +29,4 @@
 | `CALENDAR`     | calendar       |
 | `VERIFICATION` | verification   |
 | `ADS`          | ads            |
+| `FORMS`        | forms          |

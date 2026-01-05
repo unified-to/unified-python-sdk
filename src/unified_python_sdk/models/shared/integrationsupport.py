@@ -166,6 +166,12 @@ class ListExpandRecurringEvents(str, Enum, metaclass=utils.OpenEnumMeta):
     NOT_SUPPORTED = "not-supported"
 
 
+class ListFormID(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
 class ListGroupID(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
@@ -436,6 +442,12 @@ class NativeWebhookEventID(str, Enum, metaclass=utils.OpenEnumMeta):
     NOT_SUPPORTED = "not-supported"
 
 
+class NativeWebhookFormID(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
 class NativeWebhookParentID(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
@@ -587,6 +599,12 @@ class VirtualWebhookExpand(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class VirtualWebhookFields(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
+class VirtualWebhookFormID(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
     NOT_SUPPORTED = "not-supported"
@@ -763,6 +781,7 @@ class IntegrationSupportTypedDict(TypedDict):
     list_event_id: NotRequired[ListEventID]
     list_expand: NotRequired[ListExpand]
     list_expand_recurring_events: NotRequired[ListExpandRecurringEvents]
+    list_form_id: NotRequired[ListFormID]
     list_group_id: NotRequired[ListGroupID]
     list_instructor_id: NotRequired[ListInstructorID]
     list_interview_id: NotRequired[ListInterviewID]
@@ -809,6 +828,7 @@ class IntegrationSupportTypedDict(TypedDict):
     native_webhook_channel_id: NotRequired[NativeWebhookChannelID]
     native_webhook_company_id: NotRequired[NativeWebhookCompanyID]
     native_webhook_event_id: NotRequired[NativeWebhookEventID]
+    native_webhook_form_id: NotRequired[NativeWebhookFormID]
     native_webhook_parent_id: NotRequired[NativeWebhookParentID]
     native_webhook_project_id: NotRequired[NativeWebhookProjectID]
     native_webhook_task_id: NotRequired[NativeWebhookTaskID]
@@ -839,6 +859,7 @@ class IntegrationSupportTypedDict(TypedDict):
     virtual_webhook_event_id: NotRequired[VirtualWebhookEventID]
     virtual_webhook_expand: NotRequired[VirtualWebhookExpand]
     virtual_webhook_fields: NotRequired[VirtualWebhookFields]
+    virtual_webhook_form_id: NotRequired[VirtualWebhookFormID]
     virtual_webhook_group_id: NotRequired[VirtualWebhookGroupID]
     virtual_webhook_item_id: NotRequired[VirtualWebhookItemID]
     virtual_webhook_item_variant_id: NotRequired[VirtualWebhookItemVariantID]
@@ -967,6 +988,10 @@ class IntegrationSupport(BaseModel):
 
     list_expand_recurring_events: Annotated[
         Optional[ListExpandRecurringEvents], PlainValidator(validate_open_enum(False))
+    ] = None
+
+    list_form_id: Annotated[
+        Optional[ListFormID], PlainValidator(validate_open_enum(False))
     ] = None
 
     list_group_id: Annotated[
@@ -1151,6 +1176,10 @@ class IntegrationSupport(BaseModel):
         Optional[NativeWebhookEventID], PlainValidator(validate_open_enum(False))
     ] = None
 
+    native_webhook_form_id: Annotated[
+        Optional[NativeWebhookFormID], PlainValidator(validate_open_enum(False))
+    ] = None
+
     native_webhook_parent_id: Annotated[
         Optional[NativeWebhookParentID], PlainValidator(validate_open_enum(False))
     ] = None
@@ -1260,6 +1289,10 @@ class IntegrationSupport(BaseModel):
 
     virtual_webhook_fields: Annotated[
         Optional[VirtualWebhookFields], PlainValidator(validate_open_enum(False))
+    ] = None
+
+    virtual_webhook_form_id: Annotated[
+        Optional[VirtualWebhookFormID], PlainValidator(validate_open_enum(False))
     ] = None
 
     virtual_webhook_group_id: Annotated[
@@ -1583,6 +1616,15 @@ class IntegrationSupport(BaseModel):
         if isinstance(value, str):
             try:
                 return shared.ListExpandRecurringEvents(value)
+            except ValueError:
+                return value
+        return value
+
+    @field_serializer("list_form_id")
+    def serialize_list_form_id(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.ListFormID(value)
             except ValueError:
                 return value
         return value
@@ -1992,6 +2034,15 @@ class IntegrationSupport(BaseModel):
                 return value
         return value
 
+    @field_serializer("native_webhook_form_id")
+    def serialize_native_webhook_form_id(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.NativeWebhookFormID(value)
+            except ValueError:
+                return value
+        return value
+
     @field_serializer("native_webhook_parent_id")
     def serialize_native_webhook_parent_id(self, value):
         if isinstance(value, str):
@@ -2222,6 +2273,15 @@ class IntegrationSupport(BaseModel):
         if isinstance(value, str):
             try:
                 return shared.VirtualWebhookFields(value)
+            except ValueError:
+                return value
+        return value
+
+    @field_serializer("virtual_webhook_form_id")
+    def serialize_virtual_webhook_form_id(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.VirtualWebhookFormID(value)
             except ValueError:
                 return value
         return value

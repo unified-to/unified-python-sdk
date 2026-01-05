@@ -1,0 +1,15 @@
+# FormsSubmission
+
+
+## Fields
+
+| Field                                                                | Type                                                                 | Required                                                             | Description                                                          |
+| -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| `answers`                                                            | List[[shared.FormAnswer](../../models/shared/formanswer.md)]         | :heavy_check_mark:                                                   | N/A                                                                  |
+| `created_at`                                                         | [date](https://docs.python.org/3/library/datetime.html#date-objects) | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `form_id`                                                            | *str*                                                                | :heavy_check_mark:                                                   | N/A                                                                  |
+| `id`                                                                 | *Optional[str]*                                                      | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `raw`                                                                | Dict[str, *Any*]                                                     | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `respondent_email`                                                   | *Optional[str]*                                                      | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `respondent_name`                                                    | *Optional[str]*                                                      | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `updated_at`                                                         | [date](https://docs.python.org/3/library/datetime.html#date-objects) | :heavy_minus_sign:                                                   | N/A                                                                  |
