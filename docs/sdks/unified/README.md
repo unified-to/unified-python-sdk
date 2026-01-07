@@ -5,7 +5,7 @@
 ### Available Operations
 
 * [create_unified_connection](#create_unified_connection) - Create connection
-* [create_unified_environment](#create_unified_environment)
+* [create_unified_environment](#create_unified_environment) - Create new environments
 * [create_unified_webhook](#create_unified_webhook) - Create webhook subscription
 * [get_unified_apicall](#get_unified_apicall) - Retrieve specific API Call by its ID
 * [get_unified_connection](#get_unified_connection) - Retrieve connection
@@ -14,7 +14,7 @@
 * [get_unified_webhook](#get_unified_webhook) - Retrieve webhook by its ID
 * [list_unified_apicalls](#list_unified_apicalls) - Returns API Calls
 * [list_unified_connections](#list_unified_connections) - List all connections
-* [list_unified_environments](#list_unified_environments)
+* [list_unified_environments](#list_unified_environments) - Returns all environments
 * [list_unified_integration_workspaces](#list_unified_integration_workspaces) - Returns all activated integrations in a workspace
 * [list_unified_integrations](#list_unified_integrations) - Returns all integrations
 * [list_unified_issues](#list_unified_issues) - List support issues
@@ -23,7 +23,7 @@
 * [patch_unified_webhook](#patch_unified_webhook) - Update webhook subscription
 * [patch_unified_webhook_trigger](#patch_unified_webhook_trigger) - Trigger webhook
 * [remove_unified_connection](#remove_unified_connection) - Remove connection
-* [remove_unified_environment](#remove_unified_environment)
+* [remove_unified_environment](#remove_unified_environment) - Remove an environment
 * [remove_unified_webhook](#remove_unified_webhook) - Remove webhook subscription
 * [update_unified_connection](#update_unified_connection) - Update connection
 * [update_unified_webhook](#update_unified_webhook) - Update webhook subscription
@@ -81,6 +81,8 @@ with UnifiedTo(
 
 ## create_unified_environment
 
+Create new environments
+
 ### Example Usage
 
 <!-- UsageSnippet language="python" operationID="createUnifiedEnvironment" method="post" path="/unified/environment" -->
@@ -97,10 +99,10 @@ with UnifiedTo(
 
     res = unified_to.unified.create_unified_environment(request=[])
 
-    assert res.s is not None
+    assert res.environments is not None
 
     # Handle response
-    print(res.s)
+    print(res.environments)
 
 ```
 
@@ -492,6 +494,8 @@ with UnifiedTo(
 
 ## list_unified_environments
 
+Returns all environments
+
 ### Example Usage
 
 <!-- UsageSnippet language="python" operationID="listUnifiedEnvironments" method="get" path="/unified/environment" -->
@@ -508,10 +512,10 @@ with UnifiedTo(
 
     res = unified_to.unified.list_unified_environments()
 
-    assert res.s is not None
+    assert res.environments is not None
 
     # Handle response
-    print(res.s)
+    print(res.environments)
 
 ```
 
@@ -909,6 +913,8 @@ with UnifiedTo(
 
 ## remove_unified_environment
 
+Remove an environment
+
 ### Example Usage
 
 <!-- UsageSnippet language="python" operationID="removeUnifiedEnvironment" method="delete" path="/unified/environment/{env}" -->
@@ -927,10 +933,10 @@ with UnifiedTo(
         "env": "<value>",
     })
 
-    assert res.s is not None
+    assert res.environments is not None
 
     # Handle response
-    print(res.s)
+    print(res.environments)
 
 ```
 

@@ -19,7 +19,8 @@ class Environment(BaseSDK):
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateUnifiedEnvironmentResponse:
-        r"""
+        r"""Create new environments
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -79,7 +80,7 @@ class Environment(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateUnifiedEnvironmentResponse(
-                s=unmarshal_json_response(Optional[List[str]], http_res),
+                environments=unmarshal_json_response(Optional[List[str]], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -102,7 +103,8 @@ class Environment(BaseSDK):
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateUnifiedEnvironmentResponse:
-        r"""
+        r"""Create new environments
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -162,7 +164,7 @@ class Environment(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.CreateUnifiedEnvironmentResponse(
-                s=unmarshal_json_response(Optional[List[str]], http_res),
+                environments=unmarshal_json_response(Optional[List[str]], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -184,7 +186,8 @@ class Environment(BaseSDK):
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListUnifiedEnvironmentsResponse:
-        r"""
+        r"""Returns all environments
+
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
         :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
@@ -239,7 +242,7 @@ class Environment(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListUnifiedEnvironmentsResponse(
-                s=unmarshal_json_response(Optional[List[str]], http_res),
+                environments=unmarshal_json_response(Optional[List[str]], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -261,7 +264,8 @@ class Environment(BaseSDK):
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListUnifiedEnvironmentsResponse:
-        r"""
+        r"""Returns all environments
+
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
         :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
@@ -316,7 +320,7 @@ class Environment(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.ListUnifiedEnvironmentsResponse(
-                s=unmarshal_json_response(Optional[List[str]], http_res),
+                environments=unmarshal_json_response(Optional[List[str]], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -342,7 +346,8 @@ class Environment(BaseSDK):
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveUnifiedEnvironmentResponse:
-        r"""
+        r"""Remove an environment
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -405,7 +410,7 @@ class Environment(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.RemoveUnifiedEnvironmentResponse(
-                s=unmarshal_json_response(Optional[List[str]], http_res),
+                environments=unmarshal_json_response(Optional[List[str]], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,
@@ -431,7 +436,8 @@ class Environment(BaseSDK):
         timeout_ms: Optional[int] = None,
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveUnifiedEnvironmentResponse:
-        r"""
+        r"""Remove an environment
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -494,7 +500,7 @@ class Environment(BaseSDK):
 
         if utils.match_response(http_res, "200", "application/json"):
             return operations.RemoveUnifiedEnvironmentResponse(
-                s=unmarshal_json_response(Optional[List[str]], http_res),
+                environments=unmarshal_json_response(Optional[List[str]], http_res),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
                 raw_response=http_res,

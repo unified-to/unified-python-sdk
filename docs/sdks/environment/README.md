@@ -4,11 +4,13 @@
 
 ### Available Operations
 
-* [create_unified_environment](#create_unified_environment)
-* [list_unified_environments](#list_unified_environments)
-* [remove_unified_environment](#remove_unified_environment)
+* [create_unified_environment](#create_unified_environment) - Create new environments
+* [list_unified_environments](#list_unified_environments) - Returns all environments
+* [remove_unified_environment](#remove_unified_environment) - Remove an environment
 
 ## create_unified_environment
+
+Create new environments
 
 ### Example Usage
 
@@ -26,10 +28,10 @@ with UnifiedTo(
 
     res = unified_to.environment.create_unified_environment(request=[])
 
-    assert res.s is not None
+    assert res.environments is not None
 
     # Handle response
-    print(res.s)
+    print(res.environments)
 
 ```
 
@@ -52,6 +54,8 @@ with UnifiedTo(
 
 ## list_unified_environments
 
+Returns all environments
+
 ### Example Usage
 
 <!-- UsageSnippet language="python" operationID="listUnifiedEnvironments" method="get" path="/unified/environment" -->
@@ -68,10 +72,10 @@ with UnifiedTo(
 
     res = unified_to.environment.list_unified_environments()
 
-    assert res.s is not None
+    assert res.environments is not None
 
     # Handle response
-    print(res.s)
+    print(res.environments)
 
 ```
 
@@ -93,6 +97,8 @@ with UnifiedTo(
 
 ## remove_unified_environment
 
+Remove an environment
+
 ### Example Usage
 
 <!-- UsageSnippet language="python" operationID="removeUnifiedEnvironment" method="delete" path="/unified/environment/{env}" -->
@@ -111,10 +117,10 @@ with UnifiedTo(
         "env": "<value>",
     })
 
-    assert res.s is not None
+    assert res.environments is not None
 
     # Handle response
-    print(res.s)
+    print(res.environments)
 
 ```
 

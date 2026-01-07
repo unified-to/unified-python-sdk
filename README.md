@@ -769,9 +769,9 @@ asyncio.run(main())
 
 ### [Environment](docs/sdks/environment/README.md)
 
-* [create_unified_environment](docs/sdks/environment/README.md#create_unified_environment)
-* [list_unified_environments](docs/sdks/environment/README.md#list_unified_environments)
-* [remove_unified_environment](docs/sdks/environment/README.md#remove_unified_environment)
+* [create_unified_environment](docs/sdks/environment/README.md#create_unified_environment) - Create new environments
+* [list_unified_environments](docs/sdks/environment/README.md#list_unified_environments) - Returns all environments
+* [remove_unified_environment](docs/sdks/environment/README.md#remove_unified_environment) - Remove an environment
 
 ### [Event](docs/sdks/event/README.md)
 
@@ -1576,7 +1576,7 @@ asyncio.run(main())
 ### [Unified](docs/sdks/unified/README.md)
 
 * [create_unified_connection](docs/sdks/unified/README.md#create_unified_connection) - Create connection
-* [create_unified_environment](docs/sdks/unified/README.md#create_unified_environment)
+* [create_unified_environment](docs/sdks/unified/README.md#create_unified_environment) - Create new environments
 * [create_unified_webhook](docs/sdks/unified/README.md#create_unified_webhook) - Create webhook subscription
 * [get_unified_apicall](docs/sdks/unified/README.md#get_unified_apicall) - Retrieve specific API Call by its ID
 * [get_unified_connection](docs/sdks/unified/README.md#get_unified_connection) - Retrieve connection
@@ -1585,7 +1585,7 @@ asyncio.run(main())
 * [get_unified_webhook](docs/sdks/unified/README.md#get_unified_webhook) - Retrieve webhook by its ID
 * [list_unified_apicalls](docs/sdks/unified/README.md#list_unified_apicalls) - Returns API Calls
 * [list_unified_connections](docs/sdks/unified/README.md#list_unified_connections) - List all connections
-* [list_unified_environments](docs/sdks/unified/README.md#list_unified_environments)
+* [list_unified_environments](docs/sdks/unified/README.md#list_unified_environments) - Returns all environments
 * [list_unified_integration_workspaces](docs/sdks/unified/README.md#list_unified_integration_workspaces) - Returns all activated integrations in a workspace
 * [list_unified_integrations](docs/sdks/unified/README.md#list_unified_integrations) - Returns all integrations
 * [list_unified_issues](docs/sdks/unified/README.md#list_unified_issues) - List support issues
@@ -1594,7 +1594,7 @@ asyncio.run(main())
 * [patch_unified_webhook](docs/sdks/unified/README.md#patch_unified_webhook) - Update webhook subscription
 * [patch_unified_webhook_trigger](docs/sdks/unified/README.md#patch_unified_webhook_trigger) - Trigger webhook
 * [remove_unified_connection](docs/sdks/unified/README.md#remove_unified_connection) - Remove connection
-* [remove_unified_environment](docs/sdks/unified/README.md#remove_unified_environment)
+* [remove_unified_environment](docs/sdks/unified/README.md#remove_unified_environment) - Remove an environment
 * [remove_unified_webhook](docs/sdks/unified/README.md#remove_unified_webhook) - Remove webhook subscription
 * [update_unified_connection](docs/sdks/unified/README.md#update_unified_connection) - Update connection
 * [update_unified_webhook](docs/sdks/unified/README.md#update_unified_webhook) - Update webhook subscription

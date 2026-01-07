@@ -9,6 +9,7 @@ from unified_python_sdk.types import BaseModel
 
 class GenaiPromptTypedDict(TypedDict):
     max_tokens: NotRequired[float]
+    mcp_deferred_tools: NotRequired[List[str]]
     mcp_url: NotRequired[str]
     messages: NotRequired[List[GenaiContentTypedDict]]
     model_id: NotRequired[str]
@@ -20,6 +21,8 @@ class GenaiPromptTypedDict(TypedDict):
 
 class GenaiPrompt(BaseModel):
     max_tokens: Optional[float] = None
+
+    mcp_deferred_tools: Optional[List[str]] = None
 
     mcp_url: Optional[str] = None
 

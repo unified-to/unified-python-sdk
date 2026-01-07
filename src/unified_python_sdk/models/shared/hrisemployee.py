@@ -101,6 +101,7 @@ class HrisEmployeeTypedDict(TypedDict):
     storage_quota_used: NotRequired[float]
     telephones: NotRequired[List[HrisTelephoneTypedDict]]
     terminated_at: NotRequired[datetime]
+    termination_reason: NotRequired[str]
     timezone: NotRequired[str]
     title: NotRequired[str]
     updated_at: NotRequired[datetime]
@@ -201,6 +202,8 @@ class HrisEmployee(BaseModel):
     telephones: Optional[List[HrisTelephone]] = None
 
     terminated_at: Optional[datetime] = None
+
+    termination_reason: Optional[str] = None
 
     timezone: Optional[str] = None
 

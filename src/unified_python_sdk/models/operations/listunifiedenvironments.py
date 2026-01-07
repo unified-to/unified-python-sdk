@@ -14,7 +14,7 @@ class ListUnifiedEnvironmentsResponseTypedDict(TypedDict):
     r"""HTTP response status code for this operation"""
     raw_response: httpx.Response
     r"""Raw HTTP response; suitable for custom response parsing"""
-    s: NotRequired[List[str]]
+    environments: NotRequired[List[str]]
     r"""Successful"""
 
 
@@ -28,5 +28,5 @@ class ListUnifiedEnvironmentsResponse(BaseModel):
     raw_response: httpx.Response
     r"""Raw HTTP response; suitable for custom response parsing"""
 
-    s: Optional[List[str]] = None
+    environments: Optional[List[str]] = None
     r"""Successful"""
