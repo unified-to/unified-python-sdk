@@ -24,7 +24,7 @@ class ListUnifiedWebhooksRequestTypedDict(TypedDict):
     order: NotRequired[str]
     sort: NotRequired[str]
     updated_gte: NotRequired[str]
-    r"""Return only results whose updated date is equal or greater to this value"""
+    r"""Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class ListUnifiedWebhooksRequest(BaseModel):
@@ -81,7 +81,7 @@ class ListUnifiedWebhooksRequest(BaseModel):
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
-    r"""Return only results whose updated date is equal or greater to this value"""
+    r"""Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
 
 class ListUnifiedWebhooksResponseTypedDict(TypedDict):

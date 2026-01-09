@@ -4,13 +4,11 @@ from __future__ import annotations
 from datetime import datetime
 from enum import Enum
 from pydantic import field_serializer
-from pydantic.functional_validators import PlainValidator
 from typing import Optional
-from typing_extensions import Annotated, NotRequired, TypedDict
+from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk import utils
 from unified_python_sdk.models import shared
 from unified_python_sdk.types import BaseModel
-from unified_python_sdk.utils import validate_open_enum
 
 
 class Priority(str, Enum, metaclass=utils.OpenEnumMeta):
@@ -45,13 +43,9 @@ class PropertyCrmEventTask(BaseModel):
 
     name: Optional[str] = None
 
-    priority: Annotated[
-        Optional[Priority], PlainValidator(validate_open_enum(False))
-    ] = None
+    priority: Optional[Priority] = None
 
-    status: Annotated[
-        Optional[PropertyCrmEventTaskStatus], PlainValidator(validate_open_enum(False))
-    ] = None
+    status: Optional[PropertyCrmEventTaskStatus] = None
 
     @field_serializer("priority")
     def serialize_priority(self, value):

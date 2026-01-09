@@ -5,13 +5,11 @@ from datetime import datetime
 from enum import Enum
 import pydantic
 from pydantic import field_serializer
-from pydantic.functional_validators import PlainValidator
 from typing import Optional
 from typing_extensions import Annotated, NotRequired, TypedDict
 from unified_python_sdk import utils
 from unified_python_sdk.models import shared
 from unified_python_sdk.types import BaseModel
-from unified_python_sdk.utils import validate_open_enum
 
 
 class PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20UserGender(
@@ -36,12 +34,7 @@ class PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20User(BaseModel):
     ] = None
 
     gender: Annotated[
-        Annotated[
-            Optional[
-                PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20UserGender
-            ],
-            PlainValidator(validate_open_enum(False)),
-        ],
+        Optional[PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20UserGender],
         pydantic.Field(alias="Gender"),
     ] = None
 

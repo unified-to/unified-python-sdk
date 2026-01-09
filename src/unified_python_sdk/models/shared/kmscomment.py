@@ -4,13 +4,11 @@ from __future__ import annotations
 from datetime import datetime
 from enum import Enum
 from pydantic import field_serializer
-from pydantic.functional_validators import PlainValidator
 from typing import Any, Dict, Optional
-from typing_extensions import Annotated, NotRequired, TypedDict
+from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk import utils
 from unified_python_sdk.models import shared
 from unified_python_sdk.types import BaseModel
-from unified_python_sdk.utils import validate_open_enum
 
 
 class ContentType(str, Enum, metaclass=utils.OpenEnumMeta):
@@ -41,9 +39,7 @@ class KmsCommentTypedDict(TypedDict):
 class KmsComment(BaseModel):
     content: str
 
-    content_type: Annotated[
-        Optional[ContentType], PlainValidator(validate_open_enum(False))
-    ] = None
+    content_type: Optional[ContentType] = None
 
     created_at: Optional[datetime] = None
 
@@ -55,9 +51,7 @@ class KmsComment(BaseModel):
 
     raw: Optional[Dict[str, Any]] = None
 
-    type: Annotated[
-        Optional[KmsCommentType], PlainValidator(validate_open_enum(False))
-    ] = None
+    type: Optional[KmsCommentType] = None
 
     updated_at: Optional[datetime] = None
 

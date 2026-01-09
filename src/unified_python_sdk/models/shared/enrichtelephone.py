@@ -3,13 +3,11 @@
 from __future__ import annotations
 from enum import Enum
 from pydantic import field_serializer
-from pydantic.functional_validators import PlainValidator
 from typing import Optional
-from typing_extensions import Annotated, NotRequired, TypedDict
+from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk import utils
 from unified_python_sdk.models import shared
 from unified_python_sdk.types import BaseModel
-from unified_python_sdk.utils import validate_open_enum
 
 
 class EnrichTelephoneType(str, Enum, metaclass=utils.OpenEnumMeta):
@@ -28,9 +26,7 @@ class EnrichTelephoneTypedDict(TypedDict):
 class EnrichTelephone(BaseModel):
     telephone: str
 
-    type: Annotated[
-        Optional[EnrichTelephoneType], PlainValidator(validate_open_enum(False))
-    ] = None
+    type: Optional[EnrichTelephoneType] = None
 
     @field_serializer("type")
     def serialize_type(self, value):

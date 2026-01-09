@@ -6,13 +6,11 @@ from .accountinglineitem import AccountingLineitem, AccountingLineitemTypedDict
 from datetime import datetime
 from enum import Enum
 from pydantic import field_serializer
-from pydantic.functional_validators import PlainValidator
 from typing import Any, Dict, List, Optional
-from typing_extensions import Annotated, NotRequired, TypedDict
+from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk import utils
 from unified_python_sdk.models import shared
 from unified_python_sdk.types import BaseModel
-from unified_python_sdk.utils import validate_open_enum
 
 
 class AccountingCreditmemoPaymentCollectionMethod(
@@ -93,10 +91,9 @@ class AccountingCreditmemo(BaseModel):
 
     paid_at: Optional[datetime] = None
 
-    payment_collection_method: Annotated[
-        Optional[AccountingCreditmemoPaymentCollectionMethod],
-        PlainValidator(validate_open_enum(False)),
-    ] = None
+    payment_collection_method: Optional[AccountingCreditmemoPaymentCollectionMethod] = (
+        None
+    )
 
     posted_at: Optional[datetime] = None
 
@@ -110,9 +107,7 @@ class AccountingCreditmemo(BaseModel):
 
     send: Optional[bool] = None
 
-    status: Annotated[
-        Optional[AccountingCreditmemoStatus], PlainValidator(validate_open_enum(False))
-    ] = None
+    status: Optional[AccountingCreditmemoStatus] = None
 
     tax_amount: Optional[float] = None
 

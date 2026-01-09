@@ -4,13 +4,11 @@ from __future__ import annotations
 from enum import Enum
 import pydantic
 from pydantic import field_serializer
-from pydantic.functional_validators import PlainValidator
 from typing import Any, Dict, List, Optional, Union
 from typing_extensions import Annotated, NotRequired, TypeAliasType, TypedDict
 from unified_python_sdk import utils
 from unified_python_sdk.models import shared
 from unified_python_sdk.types import BaseModel
-from unified_python_sdk.utils import validate_open_enum
 
 
 class OneTypedDict(TypedDict):
@@ -84,30 +82,21 @@ class AtsMetadataTypedDict(TypedDict):
     extra_data: NotRequired[ExtraDataTypedDict]
     format_: NotRequired[Format]
     id: NotRequired[str]
-    key: NotRequired[str]
     namespace: NotRequired[str]
     slug: NotRequired[str]
-    type: NotRequired[str]
     value: NotRequired[ValueTypedDict]
 
 
 class AtsMetadata(BaseModel):
     extra_data: Optional[ExtraData] = None
 
-    format_: Annotated[
-        Annotated[Optional[Format], PlainValidator(validate_open_enum(False))],
-        pydantic.Field(alias="format"),
-    ] = None
+    format_: Annotated[Optional[Format], pydantic.Field(alias="format")] = None
 
     id: Optional[str] = None
-
-    key: Optional[str] = None
 
     namespace: Optional[str] = None
 
     slug: Optional[str] = None
-
-    type: Optional[str] = None
 
     value: Optional[Value] = None
 

@@ -3,13 +3,11 @@
 from __future__ import annotations
 from enum import Enum
 from pydantic import field_serializer
-from pydantic.functional_validators import PlainValidator
 from typing import Optional
-from typing_extensions import Annotated, NotRequired, TypedDict
+from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk import utils
 from unified_python_sdk.models import shared
 from unified_python_sdk.types import BaseModel
-from unified_python_sdk.utils import validate_open_enum
 
 
 class TicketingEmailType(str, Enum, metaclass=utils.OpenEnumMeta):
@@ -26,9 +24,7 @@ class TicketingEmailTypedDict(TypedDict):
 class TicketingEmail(BaseModel):
     email: str
 
-    type: Annotated[
-        Optional[TicketingEmailType], PlainValidator(validate_open_enum(False))
-    ] = None
+    type: Optional[TicketingEmailType] = None
 
     @field_serializer("type")
     def serialize_type(self, value):

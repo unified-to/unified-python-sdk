@@ -6,13 +6,11 @@ from .verificationtime import VerificationTime, VerificationTimeTypedDict
 from datetime import datetime
 from enum import Enum
 from pydantic import field_serializer
-from pydantic.functional_validators import PlainValidator
 from typing import Any, Dict, List, Optional
-from typing_extensions import Annotated, NotRequired, TypedDict
+from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk import utils
 from unified_python_sdk.models import shared
 from unified_python_sdk.types import BaseModel
-from unified_python_sdk.utils import validate_open_enum
 
 
 class VerificationPackageType(str, Enum, metaclass=utils.OpenEnumMeta):
@@ -55,7 +53,7 @@ class VerificationPackage(BaseModel):
 
     name: str
 
-    type: Annotated[VerificationPackageType, PlainValidator(validate_open_enum(False))]
+    type: VerificationPackageType
 
     aliases: Optional[List[str]] = None
 

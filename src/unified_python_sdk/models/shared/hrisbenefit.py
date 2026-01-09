@@ -4,13 +4,11 @@ from __future__ import annotations
 from datetime import datetime
 from enum import Enum
 from pydantic import field_serializer
-from pydantic.functional_validators import PlainValidator
 from typing import Any, Dict, Optional
-from typing_extensions import Annotated, NotRequired, TypedDict
+from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk import utils
 from unified_python_sdk.models import shared
 from unified_python_sdk.types import BaseModel
-from unified_python_sdk.utils import validate_open_enum
 
 
 class CoverageLevel(str, Enum, metaclass=utils.OpenEnumMeta):
@@ -91,9 +89,7 @@ class HrisBenefit(BaseModel):
 
     company_id: Optional[str] = None
 
-    coverage_level: Annotated[
-        Optional[CoverageLevel], PlainValidator(validate_open_enum(False))
-    ] = None
+    coverage_level: Optional[CoverageLevel] = None
 
     created_at: Optional[datetime] = None
 
@@ -105,13 +101,9 @@ class HrisBenefit(BaseModel):
 
     employer_contribution_max_amount: Optional[float] = None
 
-    employer_contribution_type: Annotated[
-        Optional[EmployerContributionType], PlainValidator(validate_open_enum(False))
-    ] = None
+    employer_contribution_type: Optional[EmployerContributionType] = None
 
-    frequency: Annotated[
-        Optional[HrisBenefitFrequency], PlainValidator(validate_open_enum(False))
-    ] = None
+    frequency: Optional[HrisBenefitFrequency] = None
 
     id: Optional[str] = None
 
@@ -121,11 +113,9 @@ class HrisBenefit(BaseModel):
 
     raw: Optional[Dict[str, Any]] = None
 
-    tax: Annotated[Optional[Tax], PlainValidator(validate_open_enum(False))] = None
+    tax: Optional[Tax] = None
 
-    type: Annotated[
-        Optional[HrisBenefitType], PlainValidator(validate_open_enum(False))
-    ] = None
+    type: Optional[HrisBenefitType] = None
 
     updated_at: Optional[datetime] = None
 

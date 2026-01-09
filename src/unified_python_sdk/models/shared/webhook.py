@@ -4,13 +4,11 @@ from __future__ import annotations
 from datetime import datetime
 from enum import Enum
 from pydantic import field_serializer
-from pydantic.functional_validators import PlainValidator
 from typing import Dict, List, Optional
-from typing_extensions import Annotated, NotRequired, TypedDict
+from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk import utils
 from unified_python_sdk.models import shared
 from unified_python_sdk.types import BaseModel
-from unified_python_sdk.utils import validate_open_enum
 
 
 class DbType(str, Enum, metaclass=utils.OpenEnumMeta):
@@ -178,9 +176,9 @@ class Webhook(BaseModel):
 
     connection_id: str
 
-    event: Annotated[Event, PlainValidator(validate_open_enum(False))]
+    event: Event
 
-    object_type: Annotated[ObjectType, PlainValidator(validate_open_enum(False))]
+    object_type: ObjectType
 
     checked_at: Optional[datetime] = None
 
@@ -190,9 +188,7 @@ class Webhook(BaseModel):
 
     db_schema: Optional[str] = None
 
-    db_type: Annotated[Optional[DbType], PlainValidator(validate_open_enum(False))] = (
-        None
-    )
+    db_type: Optional[DbType] = None
 
     db_url: Optional[str] = None
 
@@ -221,9 +217,7 @@ class Webhook(BaseModel):
 
     updated_at: Optional[datetime] = None
 
-    webhook_type: Annotated[
-        Optional[WebhookType], PlainValidator(validate_open_enum(False))
-    ] = None
+    webhook_type: Optional[WebhookType] = None
 
     workspace_id: Optional[str] = None
 

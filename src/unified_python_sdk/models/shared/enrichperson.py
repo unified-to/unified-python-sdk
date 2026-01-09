@@ -14,13 +14,11 @@ from .property_enrichperson_address import (
 from datetime import datetime
 from enum import Enum
 from pydantic import field_serializer
-from pydantic.functional_validators import PlainValidator
 from typing import Any, Dict, List, Optional
-from typing_extensions import Annotated, NotRequired, TypedDict
+from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk import utils
 from unified_python_sdk.models import shared
 from unified_python_sdk.types import BaseModel
-from unified_python_sdk.utils import validate_open_enum
 
 
 class Gender(str, Enum, metaclass=utils.OpenEnumMeta):
@@ -85,9 +83,7 @@ class EnrichPerson(BaseModel):
 
     first_name: Optional[str] = None
 
-    gender: Annotated[Optional[Gender], PlainValidator(validate_open_enum(False))] = (
-        None
-    )
+    gender: Optional[Gender] = None
 
     github_url: Optional[str] = None
 

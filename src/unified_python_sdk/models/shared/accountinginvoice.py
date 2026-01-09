@@ -6,13 +6,11 @@ from .accountinglineitem import AccountingLineitem, AccountingLineitemTypedDict
 from datetime import datetime
 from enum import Enum
 from pydantic import field_serializer
-from pydantic.functional_validators import PlainValidator
 from typing import Any, Dict, List, Optional
-from typing_extensions import Annotated, NotRequired, TypedDict
+from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk import utils
 from unified_python_sdk.models import shared
 from unified_python_sdk.types import BaseModel
-from unified_python_sdk.utils import validate_open_enum
 
 
 class AccountingInvoicePaymentCollectionMethod(str, Enum, metaclass=utils.OpenEnumMeta):
@@ -102,10 +100,7 @@ class AccountingInvoice(BaseModel):
 
     paid_at: Optional[datetime] = None
 
-    payment_collection_method: Annotated[
-        Optional[AccountingInvoicePaymentCollectionMethod],
-        PlainValidator(validate_open_enum(False)),
-    ] = None
+    payment_collection_method: Optional[AccountingInvoicePaymentCollectionMethod] = None
 
     posted_at: Optional[datetime] = None
 
@@ -121,17 +116,13 @@ class AccountingInvoice(BaseModel):
 
     send: Optional[bool] = None
 
-    status: Annotated[
-        Optional[AccountingInvoiceStatus], PlainValidator(validate_open_enum(False))
-    ] = None
+    status: Optional[AccountingInvoiceStatus] = None
 
     tax_amount: Optional[float] = None
 
     total_amount: Optional[float] = None
 
-    type: Annotated[
-        Optional[AccountingInvoiceType], PlainValidator(validate_open_enum(False))
-    ] = None
+    type: Optional[AccountingInvoiceType] = None
 
     updated_at: Optional[datetime] = None
 

@@ -10,13 +10,11 @@ from datetime import datetime
 from enum import Enum
 import pydantic
 from pydantic import field_serializer
-from pydantic.functional_validators import PlainValidator
 from typing import Any, Dict, List, Optional
 from typing_extensions import Annotated, NotRequired, TypedDict
 from unified_python_sdk import utils
 from unified_python_sdk.models import shared
 from unified_python_sdk.types import BaseModel
-from unified_python_sdk.utils import validate_open_enum
 
 
 class AtsActivityType(str, Enum, metaclass=utils.OpenEnumMeta):
@@ -32,7 +30,6 @@ class AtsActivityTypedDict(TypedDict):
     cc: NotRequired[List[AtsEmailTypedDict]]
     created_at: NotRequired[datetime]
     description: NotRequired[str]
-    document_id: NotRequired[str]
     document_ids: NotRequired[List[str]]
     r"""IDs for AtsDocument.get"""
     from_: NotRequired[PropertyAtsActivityFromTypedDict]
@@ -63,8 +60,6 @@ class AtsActivity(BaseModel):
 
     description: Optional[str] = None
 
-    document_id: Optional[str] = None
-
     document_ids: Optional[List[str]] = None
     r"""IDs for AtsDocument.get"""
 
@@ -88,9 +83,7 @@ class AtsActivity(BaseModel):
 
     to: Optional[List[AtsEmail]] = None
 
-    type: Annotated[
-        Optional[AtsActivityType], PlainValidator(validate_open_enum(False))
-    ] = None
+    type: Optional[AtsActivityType] = None
 
     updated_at: Optional[datetime] = None
 

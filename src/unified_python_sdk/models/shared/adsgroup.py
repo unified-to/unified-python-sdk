@@ -8,13 +8,11 @@ from .property_adsgroup_targeting import (
 from datetime import datetime
 from enum import Enum
 from pydantic import field_serializer
-from pydantic.functional_validators import PlainValidator
 from typing import Any, Dict, Optional
-from typing_extensions import Annotated, NotRequired, TypedDict
+from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk import utils
 from unified_python_sdk.models import shared
 from unified_python_sdk.types import BaseModel
-from unified_python_sdk.utils import validate_open_enum
 
 
 class AdsGroupBudgetPeriod(str, Enum, metaclass=utils.OpenEnumMeta):
@@ -46,9 +44,7 @@ class AdsGroup(BaseModel):
 
     budget_amount: Optional[float] = None
 
-    budget_period: Annotated[
-        Optional[AdsGroupBudgetPeriod], PlainValidator(validate_open_enum(False))
-    ] = None
+    budget_period: Optional[AdsGroupBudgetPeriod] = None
 
     campaign_id: Optional[str] = None
 

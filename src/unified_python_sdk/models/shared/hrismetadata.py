@@ -4,13 +4,11 @@ from __future__ import annotations
 from enum import Enum
 import pydantic
 from pydantic import field_serializer
-from pydantic.functional_validators import PlainValidator
 from typing import Any, Dict, List, Optional, Union
 from typing_extensions import Annotated, NotRequired, TypeAliasType, TypedDict
 from unified_python_sdk import utils
 from unified_python_sdk.models import shared
 from unified_python_sdk.types import BaseModel
-from unified_python_sdk.utils import validate_open_enum
 
 
 class HrisMetadata1TypedDict(TypedDict):
@@ -92,32 +90,23 @@ class HrisMetadataTypedDict(TypedDict):
     extra_data: NotRequired[HrisMetadataExtraDataTypedDict]
     format_: NotRequired[HrisMetadataFormat]
     id: NotRequired[str]
-    key: NotRequired[str]
     namespace: NotRequired[str]
     slug: NotRequired[str]
-    type: NotRequired[str]
     value: NotRequired[HrisMetadataValueTypedDict]
 
 
 class HrisMetadata(BaseModel):
     extra_data: Optional[HrisMetadataExtraData] = None
 
-    format_: Annotated[
-        Annotated[
-            Optional[HrisMetadataFormat], PlainValidator(validate_open_enum(False))
-        ],
-        pydantic.Field(alias="format"),
-    ] = None
+    format_: Annotated[Optional[HrisMetadataFormat], pydantic.Field(alias="format")] = (
+        None
+    )
 
     id: Optional[str] = None
-
-    key: Optional[str] = None
 
     namespace: Optional[str] = None
 
     slug: Optional[str] = None
-
-    type: Optional[str] = None
 
     value: Optional[HrisMetadataValue] = None
 

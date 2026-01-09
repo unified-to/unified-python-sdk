@@ -4,13 +4,11 @@ from __future__ import annotations
 from enum import Enum
 import pydantic
 from pydantic import field_serializer
-from pydantic.functional_validators import PlainValidator
 from typing import Optional
 from typing_extensions import Annotated, NotRequired, TypedDict
 from unified_python_sdk import utils
 from unified_python_sdk.models import shared
 from unified_python_sdk.types import BaseModel
-from unified_python_sdk.utils import validate_open_enum
 
 
 class PropertyScimUserMetaResourceType(str, Enum, metaclass=utils.OpenEnumMeta):
@@ -34,11 +32,7 @@ class PropertyScimUserMeta(BaseModel):
     location: Optional[str] = None
 
     resource_type: Annotated[
-        Annotated[
-            Optional[PropertyScimUserMetaResourceType],
-            PlainValidator(validate_open_enum(False)),
-        ],
-        pydantic.Field(alias="resourceType"),
+        Optional[PropertyScimUserMetaResourceType], pydantic.Field(alias="resourceType")
     ] = None
 
     version: Optional[str] = None

@@ -7,13 +7,11 @@ from .property_integrationsupport_webhook_events import (
 )
 from enum import Enum
 from pydantic import field_serializer
-from pydantic.functional_validators import PlainValidator
 from typing import Dict, List, Optional
-from typing_extensions import Annotated, NotRequired, TypedDict
+from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk import utils
 from unified_python_sdk.models import shared
 from unified_python_sdk.types import BaseModel
-from unified_python_sdk.utils import validate_open_enum
 
 
 class FromWebhook(str, Enum, metaclass=utils.OpenEnumMeta):
@@ -136,12 +134,6 @@ class ListDocumentID(str, Enum, metaclass=utils.OpenEnumMeta):
     NOT_SUPPORTED = "not-supported"
 
 
-class ListEndLe(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
 class ListEndLt(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
@@ -155,12 +147,6 @@ class ListEventID(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class ListExpand(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class ListExpandRecurringEvents(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
     NOT_SUPPORTED = "not-supported"
@@ -574,12 +560,6 @@ class VirtualWebhookDealID(str, Enum, metaclass=utils.OpenEnumMeta):
     NOT_SUPPORTED = "not-supported"
 
 
-class VirtualWebhookEndLe(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
 class VirtualWebhookEndLt(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
@@ -776,11 +756,9 @@ class IntegrationSupportTypedDict(TypedDict):
     list_customer_id: NotRequired[ListCustomerID]
     list_deal_id: NotRequired[ListDealID]
     list_document_id: NotRequired[ListDocumentID]
-    list_end_le: NotRequired[ListEndLe]
     list_end_lt: NotRequired[ListEndLt]
     list_event_id: NotRequired[ListEventID]
     list_expand: NotRequired[ListExpand]
-    list_expand_recurring_events: NotRequired[ListExpandRecurringEvents]
     list_form_id: NotRequired[ListFormID]
     list_group_id: NotRequired[ListGroupID]
     list_instructor_id: NotRequired[ListInstructorID]
@@ -854,7 +832,6 @@ class IntegrationSupportTypedDict(TypedDict):
     virtual_webhook_contact_id: NotRequired[VirtualWebhookContactID]
     virtual_webhook_customer_id: NotRequired[VirtualWebhookCustomerID]
     virtual_webhook_deal_id: NotRequired[VirtualWebhookDealID]
-    virtual_webhook_end_le: NotRequired[VirtualWebhookEndLe]
     virtual_webhook_end_lt: NotRequired[VirtualWebhookEndLt]
     virtual_webhook_event_id: NotRequired[VirtualWebhookEventID]
     virtual_webhook_expand: NotRequired[VirtualWebhookExpand]
@@ -888,510 +865,256 @@ class IntegrationSupportTypedDict(TypedDict):
 
 
 class IntegrationSupport(BaseModel):
-    from_webhook: Annotated[
-        Optional[FromWebhook], PlainValidator(validate_open_enum(False))
-    ] = None
+    from_webhook: Optional[FromWebhook] = None
 
     inbound_fields: Optional[Dict[str, str]] = None
 
-    list_account_id: Annotated[
-        Optional[ListAccountID], PlainValidator(validate_open_enum(False))
-    ] = None
-
-    list_ad_id: Annotated[
-        Optional[ListAdID], PlainValidator(validate_open_enum(False))
-    ] = None
-
-    list_application_id: Annotated[
-        Optional[ListApplicationID], PlainValidator(validate_open_enum(False))
-    ] = None
-
-    list_benefit_id: Annotated[
-        Optional[ListBenefitID], PlainValidator(validate_open_enum(False))
-    ] = None
-
-    list_branch_id: Annotated[
-        Optional[ListBranchID], PlainValidator(validate_open_enum(False))
-    ] = None
-
-    list_calendar_id: Annotated[
-        Optional[ListCalendarID], PlainValidator(validate_open_enum(False))
-    ] = None
-
-    list_call_id: Annotated[
-        Optional[ListCallID], PlainValidator(validate_open_enum(False))
-    ] = None
-
-    list_campaign_id: Annotated[
-        Optional[ListCampaignID], PlainValidator(validate_open_enum(False))
-    ] = None
-
-    list_candidate_id: Annotated[
-        Optional[ListCandidateID], PlainValidator(validate_open_enum(False))
-    ] = None
-
-    list_category_id: Annotated[
-        Optional[ListCategoryID], PlainValidator(validate_open_enum(False))
-    ] = None
-
-    list_channel_id: Annotated[
-        Optional[ListChannelID], PlainValidator(validate_open_enum(False))
-    ] = None
-
-    list_class_id: Annotated[
-        Optional[ListClassID], PlainValidator(validate_open_enum(False))
-    ] = None
-
-    list_collection_id: Annotated[
-        Optional[ListCollectionID], PlainValidator(validate_open_enum(False))
-    ] = None
-
-    list_company_id: Annotated[
-        Optional[ListCompanyID], PlainValidator(validate_open_enum(False))
-    ] = None
-
-    list_contact_id: Annotated[
-        Optional[ListContactID], PlainValidator(validate_open_enum(False))
-    ] = None
-
-    list_course_id: Annotated[
-        Optional[ListCourseID], PlainValidator(validate_open_enum(False))
-    ] = None
-
-    list_customer_id: Annotated[
-        Optional[ListCustomerID], PlainValidator(validate_open_enum(False))
-    ] = None
-
-    list_deal_id: Annotated[
-        Optional[ListDealID], PlainValidator(validate_open_enum(False))
-    ] = None
-
-    list_document_id: Annotated[
-        Optional[ListDocumentID], PlainValidator(validate_open_enum(False))
-    ] = None
-
-    list_end_le: Annotated[
-        Optional[ListEndLe], PlainValidator(validate_open_enum(False))
-    ] = None
-
-    list_end_lt: Annotated[
-        Optional[ListEndLt], PlainValidator(validate_open_enum(False))
-    ] = None
-
-    list_event_id: Annotated[
-        Optional[ListEventID], PlainValidator(validate_open_enum(False))
-    ] = None
-
-    list_expand: Annotated[
-        Optional[ListExpand], PlainValidator(validate_open_enum(False))
-    ] = None
-
-    list_expand_recurring_events: Annotated[
-        Optional[ListExpandRecurringEvents], PlainValidator(validate_open_enum(False))
-    ] = None
-
-    list_form_id: Annotated[
-        Optional[ListFormID], PlainValidator(validate_open_enum(False))
-    ] = None
-
-    list_group_id: Annotated[
-        Optional[ListGroupID], PlainValidator(validate_open_enum(False))
-    ] = None
-
-    list_instructor_id: Annotated[
-        Optional[ListInstructorID], PlainValidator(validate_open_enum(False))
-    ] = None
-
-    list_interview_id: Annotated[
-        Optional[ListInterviewID], PlainValidator(validate_open_enum(False))
-    ] = None
-
-    list_invoice_id: Annotated[
-        Optional[ListInvoiceID], PlainValidator(validate_open_enum(False))
-    ] = None
-
-    list_item_id: Annotated[
-        Optional[ListItemID], PlainValidator(validate_open_enum(False))
-    ] = None
-
-    list_item_variant_id: Annotated[
-        Optional[ListItemVariantID], PlainValidator(validate_open_enum(False))
-    ] = None
-
-    list_job_id: Annotated[
-        Optional[ListJobID], PlainValidator(validate_open_enum(False))
-    ] = None
-
-    list_lead_id: Annotated[
-        Optional[ListLeadID], PlainValidator(validate_open_enum(False))
-    ] = None
-
-    list_limit: Annotated[
-        Optional[ListLimit], PlainValidator(validate_open_enum(False))
-    ] = None
-
-    list_link_id: Annotated[
-        Optional[ListLinkID], PlainValidator(validate_open_enum(False))
-    ] = None
-
-    list_list_id: Annotated[
-        Optional[ListListID], PlainValidator(validate_open_enum(False))
-    ] = None
-
-    list_location_id: Annotated[
-        Optional[ListLocationID], PlainValidator(validate_open_enum(False))
-    ] = None
-
-    list_offset: Annotated[
-        Optional[ListOffset], PlainValidator(validate_open_enum(False))
-    ] = None
-
-    list_order: Annotated[
-        Optional[ListOrder], PlainValidator(validate_open_enum(False))
-    ] = None
-
-    list_org_id: Annotated[
-        Optional[ListOrgID], PlainValidator(validate_open_enum(False))
-    ] = None
-
-    list_package_id: Annotated[
-        Optional[ListPackageID], PlainValidator(validate_open_enum(False))
-    ] = None
-
-    list_page_id: Annotated[
-        Optional[ListPageID], PlainValidator(validate_open_enum(False))
-    ] = None
-
-    list_parent_id: Annotated[
-        Optional[ListParentID], PlainValidator(validate_open_enum(False))
-    ] = None
-
-    list_payment_id: Annotated[
-        Optional[ListPaymentID], PlainValidator(validate_open_enum(False))
-    ] = None
-
-    list_payslip_id: Annotated[
-        Optional[ListPayslipID], PlainValidator(validate_open_enum(False))
-    ] = None
-
-    list_pipeline_id: Annotated[
-        Optional[ListPipelineID], PlainValidator(validate_open_enum(False))
-    ] = None
-
-    list_project_id: Annotated[
-        Optional[ListProjectID], PlainValidator(validate_open_enum(False))
-    ] = None
-
-    list_query: Annotated[
-        Optional[ListQuery], PlainValidator(validate_open_enum(False))
-    ] = None
-
-    list_raw_fields: Annotated[
-        Optional[ListRawFields], PlainValidator(validate_open_enum(False))
-    ] = None
-
-    list_repo_id: Annotated[
-        Optional[ListRepoID], PlainValidator(validate_open_enum(False))
-    ] = None
-
-    list_root_id: Annotated[
-        Optional[ListRootID], PlainValidator(validate_open_enum(False))
-    ] = None
-
-    list_saleschannel_id: Annotated[
-        Optional[ListSaleschannelID], PlainValidator(validate_open_enum(False))
-    ] = None
-
-    list_sort_by_created_at: Annotated[
-        Optional[ListSortByCreatedAt], PlainValidator(validate_open_enum(False))
-    ] = None
-
-    list_sort_by_name: Annotated[
-        Optional[ListSortByName], PlainValidator(validate_open_enum(False))
-    ] = None
-
-    list_sort_by_updated_at: Annotated[
-        Optional[ListSortByUpdatedAt], PlainValidator(validate_open_enum(False))
-    ] = None
-
-    list_space_id: Annotated[
-        Optional[ListSpaceID], PlainValidator(validate_open_enum(False))
-    ] = None
-
-    list_start_gte: Annotated[
-        Optional[ListStartGte], PlainValidator(validate_open_enum(False))
-    ] = None
-
-    list_status: Annotated[
-        Optional[ListStatus], PlainValidator(validate_open_enum(False))
-    ] = None
-
-    list_student_id: Annotated[
-        Optional[ListStudentID], PlainValidator(validate_open_enum(False))
-    ] = None
-
-    list_task_id: Annotated[
-        Optional[ListTaskID], PlainValidator(validate_open_enum(False))
-    ] = None
-
-    list_teacher_id: Annotated[
-        Optional[ListTeacherID], PlainValidator(validate_open_enum(False))
-    ] = None
-
-    list_ticket_id: Annotated[
-        Optional[ListTicketID], PlainValidator(validate_open_enum(False))
-    ] = None
-
-    list_type: Annotated[
-        Optional[ListType], PlainValidator(validate_open_enum(False))
-    ] = None
-
-    list_updated_gte: Annotated[
-        Optional[ListUpdatedGte], PlainValidator(validate_open_enum(False))
-    ] = None
-
-    list_user_id: Annotated[
-        Optional[ListUserID], PlainValidator(validate_open_enum(False))
-    ] = None
-
-    list_user_mentioned_id: Annotated[
-        Optional[ListUserMentionedID], PlainValidator(validate_open_enum(False))
-    ] = None
+    list_account_id: Optional[ListAccountID] = None
+
+    list_ad_id: Optional[ListAdID] = None
+
+    list_application_id: Optional[ListApplicationID] = None
+
+    list_benefit_id: Optional[ListBenefitID] = None
+
+    list_branch_id: Optional[ListBranchID] = None
+
+    list_calendar_id: Optional[ListCalendarID] = None
+
+    list_call_id: Optional[ListCallID] = None
+
+    list_campaign_id: Optional[ListCampaignID] = None
+
+    list_candidate_id: Optional[ListCandidateID] = None
+
+    list_category_id: Optional[ListCategoryID] = None
+
+    list_channel_id: Optional[ListChannelID] = None
+
+    list_class_id: Optional[ListClassID] = None
+
+    list_collection_id: Optional[ListCollectionID] = None
+
+    list_company_id: Optional[ListCompanyID] = None
+
+    list_contact_id: Optional[ListContactID] = None
+
+    list_course_id: Optional[ListCourseID] = None
+
+    list_customer_id: Optional[ListCustomerID] = None
+
+    list_deal_id: Optional[ListDealID] = None
+
+    list_document_id: Optional[ListDocumentID] = None
+
+    list_end_lt: Optional[ListEndLt] = None
+
+    list_event_id: Optional[ListEventID] = None
+
+    list_expand: Optional[ListExpand] = None
+
+    list_form_id: Optional[ListFormID] = None
+
+    list_group_id: Optional[ListGroupID] = None
+
+    list_instructor_id: Optional[ListInstructorID] = None
+
+    list_interview_id: Optional[ListInterviewID] = None
+
+    list_invoice_id: Optional[ListInvoiceID] = None
+
+    list_item_id: Optional[ListItemID] = None
+
+    list_item_variant_id: Optional[ListItemVariantID] = None
+
+    list_job_id: Optional[ListJobID] = None
+
+    list_lead_id: Optional[ListLeadID] = None
+
+    list_limit: Optional[ListLimit] = None
+
+    list_link_id: Optional[ListLinkID] = None
+
+    list_list_id: Optional[ListListID] = None
+
+    list_location_id: Optional[ListLocationID] = None
+
+    list_offset: Optional[ListOffset] = None
+
+    list_order: Optional[ListOrder] = None
+
+    list_org_id: Optional[ListOrgID] = None
+
+    list_package_id: Optional[ListPackageID] = None
+
+    list_page_id: Optional[ListPageID] = None
+
+    list_parent_id: Optional[ListParentID] = None
+
+    list_payment_id: Optional[ListPaymentID] = None
+
+    list_payslip_id: Optional[ListPayslipID] = None
+
+    list_pipeline_id: Optional[ListPipelineID] = None
+
+    list_project_id: Optional[ListProjectID] = None
+
+    list_query: Optional[ListQuery] = None
+
+    list_raw_fields: Optional[ListRawFields] = None
+
+    list_repo_id: Optional[ListRepoID] = None
+
+    list_root_id: Optional[ListRootID] = None
+
+    list_saleschannel_id: Optional[ListSaleschannelID] = None
+
+    list_sort_by_created_at: Optional[ListSortByCreatedAt] = None
+
+    list_sort_by_name: Optional[ListSortByName] = None
+
+    list_sort_by_updated_at: Optional[ListSortByUpdatedAt] = None
+
+    list_space_id: Optional[ListSpaceID] = None
+
+    list_start_gte: Optional[ListStartGte] = None
+
+    list_status: Optional[ListStatus] = None
+
+    list_student_id: Optional[ListStudentID] = None
+
+    list_task_id: Optional[ListTaskID] = None
+
+    list_teacher_id: Optional[ListTeacherID] = None
+
+    list_ticket_id: Optional[ListTicketID] = None
+
+    list_type: Optional[ListType] = None
+
+    list_updated_gte: Optional[ListUpdatedGte] = None
+
+    list_user_id: Optional[ListUserID] = None
+
+    list_user_mentioned_id: Optional[ListUserMentionedID] = None
 
     methods: Optional[Dict[str, bool]] = None
 
-    native_webhook_calendar_id: Annotated[
-        Optional[NativeWebhookCalendarID], PlainValidator(validate_open_enum(False))
-    ] = None
+    native_webhook_calendar_id: Optional[NativeWebhookCalendarID] = None
 
-    native_webhook_channel_id: Annotated[
-        Optional[NativeWebhookChannelID], PlainValidator(validate_open_enum(False))
-    ] = None
+    native_webhook_channel_id: Optional[NativeWebhookChannelID] = None
 
-    native_webhook_company_id: Annotated[
-        Optional[NativeWebhookCompanyID], PlainValidator(validate_open_enum(False))
-    ] = None
+    native_webhook_company_id: Optional[NativeWebhookCompanyID] = None
 
-    native_webhook_event_id: Annotated[
-        Optional[NativeWebhookEventID], PlainValidator(validate_open_enum(False))
-    ] = None
+    native_webhook_event_id: Optional[NativeWebhookEventID] = None
 
-    native_webhook_form_id: Annotated[
-        Optional[NativeWebhookFormID], PlainValidator(validate_open_enum(False))
-    ] = None
+    native_webhook_form_id: Optional[NativeWebhookFormID] = None
 
-    native_webhook_parent_id: Annotated[
-        Optional[NativeWebhookParentID], PlainValidator(validate_open_enum(False))
-    ] = None
+    native_webhook_parent_id: Optional[NativeWebhookParentID] = None
 
-    native_webhook_project_id: Annotated[
-        Optional[NativeWebhookProjectID], PlainValidator(validate_open_enum(False))
-    ] = None
+    native_webhook_project_id: Optional[NativeWebhookProjectID] = None
 
-    native_webhook_task_id: Annotated[
-        Optional[NativeWebhookTaskID], PlainValidator(validate_open_enum(False))
-    ] = None
+    native_webhook_task_id: Optional[NativeWebhookTaskID] = None
 
     outbound_fields: Optional[Dict[str, str]] = None
 
     raw_objects: Optional[List[str]] = None
     r"""objects that we map from in the integration"""
 
-    search_domain: Annotated[
-        Optional[SearchDomain], PlainValidator(validate_open_enum(False))
-    ] = None
+    search_domain: Optional[SearchDomain] = None
 
-    search_email: Annotated[
-        Optional[SearchEmail], PlainValidator(validate_open_enum(False))
-    ] = None
+    search_email: Optional[SearchEmail] = None
 
-    search_linkedinurl: Annotated[
-        Optional[SearchLinkedinurl], PlainValidator(validate_open_enum(False))
-    ] = None
+    search_linkedinurl: Optional[SearchLinkedinurl] = None
 
-    search_name: Annotated[
-        Optional[SearchName], PlainValidator(validate_open_enum(False))
-    ] = None
+    search_name: Optional[SearchName] = None
 
-    search_twitter: Annotated[
-        Optional[SearchTwitter], PlainValidator(validate_open_enum(False))
-    ] = None
+    search_twitter: Optional[SearchTwitter] = None
 
     slow_fields: Optional[List[str]] = None
 
-    virtual_webhook_ad_id: Annotated[
-        Optional[VirtualWebhookAdID], PlainValidator(validate_open_enum(False))
-    ] = None
+    virtual_webhook_ad_id: Optional[VirtualWebhookAdID] = None
 
-    virtual_webhook_application_id: Annotated[
-        Optional[VirtualWebhookApplicationID], PlainValidator(validate_open_enum(False))
-    ] = None
+    virtual_webhook_application_id: Optional[VirtualWebhookApplicationID] = None
 
-    virtual_webhook_branch_id: Annotated[
-        Optional[VirtualWebhookBranchID], PlainValidator(validate_open_enum(False))
-    ] = None
+    virtual_webhook_branch_id: Optional[VirtualWebhookBranchID] = None
 
-    virtual_webhook_calendar_id: Annotated[
-        Optional[VirtualWebhookCalendarID], PlainValidator(validate_open_enum(False))
-    ] = None
+    virtual_webhook_calendar_id: Optional[VirtualWebhookCalendarID] = None
 
-    virtual_webhook_call_id: Annotated[
-        Optional[VirtualWebhookCallID], PlainValidator(validate_open_enum(False))
-    ] = None
+    virtual_webhook_call_id: Optional[VirtualWebhookCallID] = None
 
-    virtual_webhook_campaign_id: Annotated[
-        Optional[VirtualWebhookCampaignID], PlainValidator(validate_open_enum(False))
-    ] = None
+    virtual_webhook_campaign_id: Optional[VirtualWebhookCampaignID] = None
 
-    virtual_webhook_candidate_id: Annotated[
-        Optional[VirtualWebhookCandidateID], PlainValidator(validate_open_enum(False))
-    ] = None
+    virtual_webhook_candidate_id: Optional[VirtualWebhookCandidateID] = None
 
-    virtual_webhook_channel_id: Annotated[
-        Optional[VirtualWebhookChannelID], PlainValidator(validate_open_enum(False))
-    ] = None
+    virtual_webhook_channel_id: Optional[VirtualWebhookChannelID] = None
 
-    virtual_webhook_collection_id: Annotated[
-        Optional[VirtualWebhookCollectionID], PlainValidator(validate_open_enum(False))
-    ] = None
+    virtual_webhook_collection_id: Optional[VirtualWebhookCollectionID] = None
 
-    virtual_webhook_company_id: Annotated[
-        Optional[VirtualWebhookCompanyID], PlainValidator(validate_open_enum(False))
-    ] = None
+    virtual_webhook_company_id: Optional[VirtualWebhookCompanyID] = None
 
-    virtual_webhook_contact_id: Annotated[
-        Optional[VirtualWebhookContactID], PlainValidator(validate_open_enum(False))
-    ] = None
+    virtual_webhook_contact_id: Optional[VirtualWebhookContactID] = None
 
-    virtual_webhook_customer_id: Annotated[
-        Optional[VirtualWebhookCustomerID], PlainValidator(validate_open_enum(False))
-    ] = None
+    virtual_webhook_customer_id: Optional[VirtualWebhookCustomerID] = None
 
-    virtual_webhook_deal_id: Annotated[
-        Optional[VirtualWebhookDealID], PlainValidator(validate_open_enum(False))
-    ] = None
+    virtual_webhook_deal_id: Optional[VirtualWebhookDealID] = None
 
-    virtual_webhook_end_le: Annotated[
-        Optional[VirtualWebhookEndLe], PlainValidator(validate_open_enum(False))
-    ] = None
+    virtual_webhook_end_lt: Optional[VirtualWebhookEndLt] = None
 
-    virtual_webhook_end_lt: Annotated[
-        Optional[VirtualWebhookEndLt], PlainValidator(validate_open_enum(False))
-    ] = None
+    virtual_webhook_event_id: Optional[VirtualWebhookEventID] = None
 
-    virtual_webhook_event_id: Annotated[
-        Optional[VirtualWebhookEventID], PlainValidator(validate_open_enum(False))
-    ] = None
+    virtual_webhook_expand: Optional[VirtualWebhookExpand] = None
 
-    virtual_webhook_expand: Annotated[
-        Optional[VirtualWebhookExpand], PlainValidator(validate_open_enum(False))
-    ] = None
+    virtual_webhook_fields: Optional[VirtualWebhookFields] = None
 
-    virtual_webhook_fields: Annotated[
-        Optional[VirtualWebhookFields], PlainValidator(validate_open_enum(False))
-    ] = None
+    virtual_webhook_form_id: Optional[VirtualWebhookFormID] = None
 
-    virtual_webhook_form_id: Annotated[
-        Optional[VirtualWebhookFormID], PlainValidator(validate_open_enum(False))
-    ] = None
+    virtual_webhook_group_id: Optional[VirtualWebhookGroupID] = None
 
-    virtual_webhook_group_id: Annotated[
-        Optional[VirtualWebhookGroupID], PlainValidator(validate_open_enum(False))
-    ] = None
+    virtual_webhook_item_id: Optional[VirtualWebhookItemID] = None
 
-    virtual_webhook_item_id: Annotated[
-        Optional[VirtualWebhookItemID], PlainValidator(validate_open_enum(False))
-    ] = None
+    virtual_webhook_item_variant_id: Optional[VirtualWebhookItemVariantID] = None
 
-    virtual_webhook_item_variant_id: Annotated[
-        Optional[VirtualWebhookItemVariantID], PlainValidator(validate_open_enum(False))
-    ] = None
+    virtual_webhook_job_id: Optional[VirtualWebhookJobID] = None
 
-    virtual_webhook_job_id: Annotated[
-        Optional[VirtualWebhookJobID], PlainValidator(validate_open_enum(False))
-    ] = None
+    virtual_webhook_lead_id: Optional[VirtualWebhookLeadID] = None
 
-    virtual_webhook_lead_id: Annotated[
-        Optional[VirtualWebhookLeadID], PlainValidator(validate_open_enum(False))
-    ] = None
+    virtual_webhook_limit: Optional[VirtualWebhookLimit] = None
 
-    virtual_webhook_limit: Annotated[
-        Optional[VirtualWebhookLimit], PlainValidator(validate_open_enum(False))
-    ] = None
+    virtual_webhook_list_id: Optional[VirtualWebhookListID] = None
 
-    virtual_webhook_list_id: Annotated[
-        Optional[VirtualWebhookListID], PlainValidator(validate_open_enum(False))
-    ] = None
+    virtual_webhook_location_id: Optional[VirtualWebhookLocationID] = None
 
-    virtual_webhook_location_id: Annotated[
-        Optional[VirtualWebhookLocationID], PlainValidator(validate_open_enum(False))
-    ] = None
+    virtual_webhook_org_id: Optional[VirtualWebhookOrgID] = None
 
-    virtual_webhook_org_id: Annotated[
-        Optional[VirtualWebhookOrgID], PlainValidator(validate_open_enum(False))
-    ] = None
+    virtual_webhook_page_id: Optional[VirtualWebhookPageID] = None
 
-    virtual_webhook_page_id: Annotated[
-        Optional[VirtualWebhookPageID], PlainValidator(validate_open_enum(False))
-    ] = None
+    virtual_webhook_parent_id: Optional[VirtualWebhookParentID] = None
 
-    virtual_webhook_parent_id: Annotated[
-        Optional[VirtualWebhookParentID], PlainValidator(validate_open_enum(False))
-    ] = None
+    virtual_webhook_pipeline_id: Optional[VirtualWebhookPipelineID] = None
 
-    virtual_webhook_pipeline_id: Annotated[
-        Optional[VirtualWebhookPipelineID], PlainValidator(validate_open_enum(False))
-    ] = None
+    virtual_webhook_project_id: Optional[VirtualWebhookProjectID] = None
 
-    virtual_webhook_project_id: Annotated[
-        Optional[VirtualWebhookProjectID], PlainValidator(validate_open_enum(False))
-    ] = None
+    virtual_webhook_repo_id: Optional[VirtualWebhookRepoID] = None
 
-    virtual_webhook_repo_id: Annotated[
-        Optional[VirtualWebhookRepoID], PlainValidator(validate_open_enum(False))
-    ] = None
+    virtual_webhook_saleschannel_id: Optional[VirtualWebhookSaleschannelID] = None
 
-    virtual_webhook_saleschannel_id: Annotated[
-        Optional[VirtualWebhookSaleschannelID],
-        PlainValidator(validate_open_enum(False)),
-    ] = None
+    virtual_webhook_space_id: Optional[VirtualWebhookSpaceID] = None
 
-    virtual_webhook_space_id: Annotated[
-        Optional[VirtualWebhookSpaceID], PlainValidator(validate_open_enum(False))
-    ] = None
+    virtual_webhook_start_gte: Optional[VirtualWebhookStartGte] = None
 
-    virtual_webhook_start_gte: Annotated[
-        Optional[VirtualWebhookStartGte], PlainValidator(validate_open_enum(False))
-    ] = None
+    virtual_webhook_status: Optional[VirtualWebhookStatus] = None
 
-    virtual_webhook_status: Annotated[
-        Optional[VirtualWebhookStatus], PlainValidator(validate_open_enum(False))
-    ] = None
+    virtual_webhook_task_id: Optional[VirtualWebhookTaskID] = None
 
-    virtual_webhook_task_id: Annotated[
-        Optional[VirtualWebhookTaskID], PlainValidator(validate_open_enum(False))
-    ] = None
+    virtual_webhook_ticket_id: Optional[VirtualWebhookTicketID] = None
 
-    virtual_webhook_ticket_id: Annotated[
-        Optional[VirtualWebhookTicketID], PlainValidator(validate_open_enum(False))
-    ] = None
+    virtual_webhook_type: Optional[VirtualWebhookType] = None
 
-    virtual_webhook_type: Annotated[
-        Optional[VirtualWebhookType], PlainValidator(validate_open_enum(False))
-    ] = None
+    virtual_webhook_updated_gte: Optional[VirtualWebhookUpdatedGte] = None
 
-    virtual_webhook_updated_gte: Annotated[
-        Optional[VirtualWebhookUpdatedGte], PlainValidator(validate_open_enum(False))
-    ] = None
+    virtual_webhook_user_id: Optional[VirtualWebhookUserID] = None
 
-    virtual_webhook_user_id: Annotated[
-        Optional[VirtualWebhookUserID], PlainValidator(validate_open_enum(False))
-    ] = None
-
-    virtual_webhook_user_mentioned_id: Annotated[
-        Optional[VirtualWebhookUserMentionedID],
-        PlainValidator(validate_open_enum(False)),
-    ] = None
+    virtual_webhook_user_mentioned_id: Optional[VirtualWebhookUserMentionedID] = None
 
     webhook_events: Optional[PropertyIntegrationSupportWebhookEvents] = None
 
@@ -1575,15 +1298,6 @@ class IntegrationSupport(BaseModel):
                 return value
         return value
 
-    @field_serializer("list_end_le")
-    def serialize_list_end_le(self, value):
-        if isinstance(value, str):
-            try:
-                return shared.ListEndLe(value)
-            except ValueError:
-                return value
-        return value
-
     @field_serializer("list_end_lt")
     def serialize_list_end_lt(self, value):
         if isinstance(value, str):
@@ -1607,15 +1321,6 @@ class IntegrationSupport(BaseModel):
         if isinstance(value, str):
             try:
                 return shared.ListExpand(value)
-            except ValueError:
-                return value
-        return value
-
-    @field_serializer("list_expand_recurring_events")
-    def serialize_list_expand_recurring_events(self, value):
-        if isinstance(value, str):
-            try:
-                return shared.ListExpandRecurringEvents(value)
             except ValueError:
                 return value
         return value
@@ -2228,15 +1933,6 @@ class IntegrationSupport(BaseModel):
         if isinstance(value, str):
             try:
                 return shared.VirtualWebhookDealID(value)
-            except ValueError:
-                return value
-        return value
-
-    @field_serializer("virtual_webhook_end_le")
-    def serialize_virtual_webhook_end_le(self, value):
-        if isinstance(value, str):
-            try:
-                return shared.VirtualWebhookEndLe(value)
             except ValueError:
                 return value
         return value

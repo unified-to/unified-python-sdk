@@ -8,13 +8,11 @@ from .property_adsreportmetrics_ad_targeting import (
 from datetime import datetime
 from enum import Enum
 from pydantic import field_serializer
-from pydantic.functional_validators import PlainValidator
 from typing import Any, Dict, Optional
-from typing_extensions import Annotated, NotRequired, TypedDict
+from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk import utils
 from unified_python_sdk.models import shared
 from unified_python_sdk.types import BaseModel
-from unified_python_sdk.utils import validate_open_enum
 
 
 class PropertyAdsReportMetricsAdAdType(str, Enum, metaclass=utils.OpenEnumMeta):
@@ -52,10 +50,7 @@ class PropertyAdsReportMetricsAdTypedDict(TypedDict):
 class PropertyAdsReportMetricsAd(BaseModel):
     ad_copy: Optional[str] = None
 
-    ad_type: Annotated[
-        Optional[PropertyAdsReportMetricsAdAdType],
-        PlainValidator(validate_open_enum(False)),
-    ] = None
+    ad_type: Optional[PropertyAdsReportMetricsAdAdType] = None
 
     campaign_id: Optional[str] = None
 

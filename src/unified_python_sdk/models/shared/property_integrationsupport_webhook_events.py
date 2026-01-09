@@ -10,11 +10,9 @@ from .property_integrationsupport_webhook_events_deleted import (
 from .property_integrationsupport_webhook_events_updated import (
     PropertyIntegrationSupportWebhookEventsUpdated,
 )
-from pydantic.functional_validators import PlainValidator
 from typing import List, Optional
-from typing_extensions import Annotated, NotRequired, TypedDict
+from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk.types import BaseModel
-from unified_python_sdk.utils import validate_open_enum
 
 
 class PropertyIntegrationSupportWebhookEventsTypedDict(TypedDict):
@@ -24,29 +22,8 @@ class PropertyIntegrationSupportWebhookEventsTypedDict(TypedDict):
 
 
 class PropertyIntegrationSupportWebhookEvents(BaseModel):
-    created: Optional[
-        List[
-            Annotated[
-                PropertyIntegrationSupportWebhookEventsCreated,
-                PlainValidator(validate_open_enum(False)),
-            ]
-        ]
-    ] = None
+    created: Optional[List[PropertyIntegrationSupportWebhookEventsCreated]] = None
 
-    deleted: Optional[
-        List[
-            Annotated[
-                PropertyIntegrationSupportWebhookEventsDeleted,
-                PlainValidator(validate_open_enum(False)),
-            ]
-        ]
-    ] = None
+    deleted: Optional[List[PropertyIntegrationSupportWebhookEventsDeleted]] = None
 
-    updated: Optional[
-        List[
-            Annotated[
-                PropertyIntegrationSupportWebhookEventsUpdated,
-                PlainValidator(validate_open_enum(False)),
-            ]
-        ]
-    ] = None
+    updated: Optional[List[PropertyIntegrationSupportWebhookEventsUpdated]] = None
